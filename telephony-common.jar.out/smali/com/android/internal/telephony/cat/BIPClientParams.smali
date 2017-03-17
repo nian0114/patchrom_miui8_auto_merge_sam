@@ -17,16 +17,12 @@
     .param p3, "has_alpha_id"    # Z
 
     .prologue
-    .line 272
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 273
     iput-object p2, p0, Lcom/android/internal/telephony/cat/BIPClientParams;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 274
     iput-boolean p3, p0, Lcom/android/internal/telephony/cat/BIPClientParams;->mHasAlphaId:Z
 
-    .line 275
     return-void
 .end method
 
@@ -37,22 +33,18 @@
     .param p1, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 279
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/BIPClientParams;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     if-eqz v0, :cond_0
 
-    .line 280
     iget-object v0, p0, Lcom/android/internal/telephony/cat/BIPClientParams;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-object p1, v0, Lcom/android/internal/telephony/cat/TextMessage;->icon:Landroid/graphics/Bitmap;
 
-    .line 281
     const/4 v0, 0x1
 
-    .line 283
     :goto_0
     return v0
 

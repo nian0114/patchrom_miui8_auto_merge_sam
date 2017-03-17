@@ -27,13 +27,10 @@
     .param p1, "locator"    # Lmf/org/apache/xerces/xni/XMLLocator;
 
     .prologue
-    .line 2211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2212
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
-    .line 2213
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 2235
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/XMLLocator;->getColumnNumber()I
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 2244
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/XMLLocator;->getEncoding()Ljava/lang/String;
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 2230
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/XMLLocator;->getLineNumber()I
@@ -85,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 2221
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/XMLLocator;->getPublicId()Ljava/lang/String;
@@ -99,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 2226
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/XMLLocator;->getExpandedSystemId()Ljava/lang/String;
@@ -113,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 2240
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractSAXParser$LocatorProxy;->fLocator:Lmf/org/apache/xerces/xni/XMLLocator;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/XMLLocator;->getXMLVersion()Ljava/lang/String;

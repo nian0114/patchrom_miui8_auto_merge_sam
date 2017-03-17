@@ -14,7 +14,6 @@
     .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/params/HttpParams;
@@ -37,7 +36,6 @@
     .param p1, "allow"    # Z
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -52,7 +50,6 @@
     .param p1, "factory"    # Lorg/apache/http/conn/ClientConnectionManagerFactory;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -67,7 +64,6 @@
     .param p1, "factory"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -82,7 +78,6 @@
     .param p1, "policy"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -105,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 16
     .local p1, "headers":Ljava/util/Collection;, "Ljava/util/Collection<Lorg/apache/http/Header;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -121,7 +115,6 @@
     .param p1, "host"    # Lorg/apache/http/HttpHost;
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -136,7 +129,6 @@
     .param p1, "handle"    # Z
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -151,7 +143,6 @@
     .param p1, "handle"    # Z
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -166,7 +157,6 @@
     .param p1, "maxRedirects"    # I
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -181,7 +171,6 @@
     .param p1, "reject"    # Z
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -196,7 +185,6 @@
     .param p1, "host"    # Lorg/apache/http/HttpHost;
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

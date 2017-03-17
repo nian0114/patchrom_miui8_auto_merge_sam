@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6275
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$6$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$6;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 6277
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$6$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$6;
 
     iget-object v0, v0, Lcom/android/server/enterprise/application/ApplicationPolicy$6;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -45,6 +43,5 @@
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->adjustMyKNOX()V
     invoke-static {v0}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$2900(Lcom/android/server/enterprise/application/ApplicationPolicy;)V
 
-    .line 6278
     return-void
 .end method

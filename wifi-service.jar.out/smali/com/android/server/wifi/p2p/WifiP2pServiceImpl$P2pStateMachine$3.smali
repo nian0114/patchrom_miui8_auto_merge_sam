@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 4606
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$3;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     iput-object p2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$3;->val$gestureDetector:Landroid/view/GestureDetector;
@@ -46,7 +45,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4608
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$3;->val$gestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z

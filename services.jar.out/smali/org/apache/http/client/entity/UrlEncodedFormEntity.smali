@@ -28,7 +28,6 @@
     .end annotation
 
     .prologue
-    .line 7
     .local p1, "parameters":Ljava/util/List;, "Ljava/util/List<+Lorg/apache/http/NameValuePair;>;"
     const/4 v0, 0x0
 
@@ -67,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 6
     .local p1, "parameters":Ljava/util/List;, "Ljava/util/List<+Lorg/apache/http/NameValuePair;>;"
     const/4 v0, 0x0
 

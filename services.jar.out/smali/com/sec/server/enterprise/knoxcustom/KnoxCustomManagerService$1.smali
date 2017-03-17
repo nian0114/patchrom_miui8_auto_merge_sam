@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 365
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -54,10 +52,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 367
     const/4 v2, 0x0
 
-    .line 370
     .local v2, "speakerOn":Z
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -71,7 +67,7 @@
 
     const-string v5, "KNOX_CUSTOM"
 
-    const-string/jumbo v6, "deviceSpeakerEnabledState"
+    const-string v6, "deviceSpeakerEnabledState"
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBoolean(ILjava/lang/String;Ljava/lang/String;)Z
     :try_end_0
@@ -79,11 +75,9 @@
 
     move-result v2
 
-    .line 375
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 376
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -99,11 +93,9 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 377
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0, v7}, Landroid/media/AudioManager;->setForceSpeakerOn(Z)V
 
-    .line 380
     .end local v0    # "am":Landroid/media/AudioManager;
     :cond_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -114,7 +106,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 381
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-virtual {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getUsbMassStorageState()Z
@@ -123,18 +114,15 @@
 
     if-eqz v3, :cond_3
 
-    .line 382
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # invokes: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->startProKioskMode()V
     invoke-static {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->access$200(Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;)V
 
-    .line 383
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-virtual {v3, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbMassStorageState(Z)I
 
-    .line 391
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -142,17 +130,14 @@
     # invokes: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->refreshStatusbar()V
     invoke-static {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->access$300(Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;)V
 
-    .line 393
     .end local v2    # "speakerOn":Z
     :cond_2
     return-void
 
-    .line 371
     .restart local v2    # "speakerOn":Z
     :catch_0
     move-exception v1
 
-    .line 372
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -160,7 +145,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "getSpeaker failed - persistence problem "
+    const-string v5, "getSpeaker failed - persistence problem "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -178,7 +163,6 @@
 
     goto :goto_0
 
-    .line 386
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;

@@ -47,17 +47,14 @@
     .locals 1
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 40
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -71,42 +68,35 @@
     .locals 2
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->instance:Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     if-nez v0, :cond_1
 
-    .line 55
     const-class v1, Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     monitor-enter v1
 
-    .line 56
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->instance:Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     if-nez v0, :cond_0
 
-    .line 57
     new-instance v0, Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/manager/ListenerListManager;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->instance:Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
-    .line 59
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->instance:Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     return-object v0
 
-    .line 59
     :catchall_0
     move-exception v0
 
@@ -124,10 +114,8 @@
     .param p2, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 223
     const/4 v0, 0x0
 
-    .line 225
     .local v0, "count":I
     iget-object v6, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -143,14 +131,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 226
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
 
-    .line 227
     .local v1, "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     if-eqz v1, :cond_0
 
@@ -164,7 +150,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 229
     check-cast v1, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;
 
     .end local v1    # "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
@@ -172,7 +157,6 @@
 
     move-result-object v4
 
-    .line 231
     .local v4, "list":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Ljava/lang/String;>;"
     if-eqz v4, :cond_0
 
@@ -182,7 +166,6 @@
 
     if-nez v6, :cond_0
 
-    .line 235
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -196,14 +179,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 236
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 237
     .local v5, "subCollector":Ljava/lang/String;
     if-eqz v5, :cond_1
 
@@ -213,21 +194,18 @@
 
     if-nez v6, :cond_1
 
-    .line 240
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->isAggregator(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 241
     invoke-direct {p0, v5, p2}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->getUsedSubCollectionCount(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v6
 
     add-int/2addr v0, v6
 
-    .line 244
     :cond_2
     invoke-virtual {v5, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -235,12 +213,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 245
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 251
     .end local v3    # "j":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v4    # "list":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Ljava/lang/String;>;"
     .end local v5    # "subCollector":Ljava/lang/String;
@@ -253,7 +229,6 @@
     .param p1, "collector"    # Ljava/lang/String;
 
     .prologue
-    .line 262
     iget-object v2, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -268,14 +243,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 263
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
 
-    .line 264
     .local v0, "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     if-eqz v0, :cond_0
 
@@ -289,10 +262,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 266
     const/4 v2, 0x1
 
-    .line 270
     .end local v0    # "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     :goto_0
     return v2
@@ -310,7 +281,6 @@
     .param p1, "listener"    # Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
 
     .prologue
-    .line 89
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -321,12 +291,10 @@
 
     if-nez v0, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -336,7 +304,6 @@
     .param p1, "watcher"    # Lcom/samsung/android/contextaware/manager/ContextAwareService$Watcher;
 
     .prologue
-    .line 101
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mWatcherList:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -347,12 +314,10 @@
 
     if-nez v0, :cond_0
 
-    .line 102
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mWatcherList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
     :cond_0
     return-void
 .end method
@@ -362,10 +327,8 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 138
     const/4 v1, 0x0
 
-    .line 139
     .local v1, "listener":Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
     iget-object v3, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -381,14 +344,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 140
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
 
-    .line 141
     .local v2, "next":Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getToken()Landroid/os/IBinder;
 
@@ -400,10 +361,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 142
     move-object v1, v2
 
-    .line 147
     .end local v2    # "next":Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
     :cond_1
     return-object v1
@@ -422,7 +381,6 @@
     .end annotation
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -433,10 +391,8 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     const/4 v0, 0x0
 
-    .line 172
     .local v0, "count":I
     iget-object v4, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -453,14 +409,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 173
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
 
-    .line 174
     .local v3, "next":Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
     invoke-static {}, Lcom/samsung/android/contextaware/ContextList;->getInstance()Lcom/samsung/android/contextaware/ContextList;
 
@@ -470,7 +424,6 @@
 
     move-result v2
 
-    .line 175
     .local v2, "key":I
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -486,7 +439,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 176
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v4
@@ -509,7 +461,6 @@
 
     goto :goto_0
 
-    .line 180
     .end local v2    # "key":I
     .end local v3    # "next":Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
     :cond_1
@@ -521,10 +472,8 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 191
     const/4 v1, 0x0
 
-    .line 193
     .local v1, "count":I
     iget-object v8, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -540,14 +489,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 194
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
 
-    .line 195
     .local v7, "listener":Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
     invoke-virtual {v7}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -557,13 +504,11 @@
 
     move-result-object v6
 
-    .line 196
     .local v6, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 197
     .local v3, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     move-object v4, v3
 
@@ -576,7 +521,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 198
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -587,7 +531,6 @@
 
     move-result v5
 
-    .line 200
     .local v5, "key":I
     invoke-static {}, Lcom/samsung/android/contextaware/ContextList;->getInstance()Lcom/samsung/android/contextaware/ContextList;
 
@@ -597,7 +540,6 @@
 
     move-result-object v0
 
-    .line 202
     .local v0, "code":Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -607,17 +549,14 @@
 
     if-nez v8, :cond_1
 
-    .line 205
     invoke-direct {p0, v0, p1}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->getUsedSubCollectionCount(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v8
 
     add-int/2addr v1, v8
 
-    .line 206
     goto :goto_0
 
-    .line 209
     .end local v0    # "code":Ljava/lang/String;
     .end local v3    # "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     .end local v4    # "j":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
@@ -633,7 +572,6 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->getUsedServiceCount(Ljava/lang/String;)I
 
     move-result v0
@@ -660,7 +598,6 @@
     .end annotation
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mWatcherList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -671,7 +608,6 @@
     .param p1, "listener"    # Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
 
     .prologue
-    .line 113
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -682,12 +618,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mListenerList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 116
     :cond_0
     return-void
 .end method
@@ -697,7 +631,6 @@
     .param p1, "watcher"    # Lcom/samsung/android/contextaware/manager/ContextAwareService$Watcher;
 
     .prologue
-    .line 125
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mWatcherList:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -708,12 +641,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 126
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mWatcherList:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 128
     :cond_0
     return-void
 .end method
@@ -731,10 +662,8 @@
     .end annotation
 
     .prologue
-    .line 281
     .local p1, "creator":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     iput-object p1, p0, Lcom/samsung/android/contextaware/manager/ListenerListManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 282
     return-void
 .end method

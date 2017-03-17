@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 18
     new-instance v0, Lcom/android/server/display/CmdInfo$1;
 
     invoke-direct {v0}, Lcom/android/server/display/CmdInfo$1;-><init>()V
@@ -56,32 +55,25 @@
     .param p2, "aCmdDetail"    # I
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const-string v0, "WfdBridgeServer"
 
     iput-object v0, p0, Lcom/android/server/display/CmdInfo;->TAG:Ljava/lang/String;
 
-    .line 68
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 69
     sget-object v0, Lcom/android/server/display/CmdInfo$CmdType;->START_PLAYER:Lcom/android/server/display/CmdInfo$CmdType;
 
     iput-object v0, p0, Lcom/android/server/display/CmdInfo;->cmdType:Lcom/android/server/display/CmdInfo$CmdType;
 
-    .line 72
     :goto_0
     iput p2, p0, Lcom/android/server/display/CmdInfo;->cmdDetail:I
 
-    .line 73
     return-void
 
-    .line 71
     :cond_0
     sget-object v0, Lcom/android/server/display/CmdInfo$CmdType;->START_SOURCE:Lcom/android/server/display/CmdInfo$CmdType;
 
@@ -95,18 +87,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const-string v0, "WfdBridgeServer"
 
     iput-object v0, p0, Lcom/android/server/display/CmdInfo;->TAG:Ljava/lang/String;
 
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/server/display/CmdInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 55
     return-void
 .end method
 
@@ -116,7 +104,6 @@
     .param p2, "x1"    # Lcom/android/server/display/CmdInfo$1;
 
     .prologue
-    .line 6
     invoke-direct {p0, p1}, Lcom/android/server/display/CmdInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -127,23 +114,18 @@
     .param p1, "aCmdType"    # Lcom/android/server/display/CmdInfo$CmdType;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const-string v0, "WfdBridgeServer"
 
     iput-object v0, p0, Lcom/android/server/display/CmdInfo;->TAG:Ljava/lang/String;
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/display/CmdInfo;->cmdType:Lcom/android/server/display/CmdInfo$CmdType;
 
-    .line 59
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/display/CmdInfo;->cmdDetail:I
 
-    .line 60
     return-void
 .end method
 
@@ -153,21 +135,16 @@
     .param p2, "aCmdDetail"    # I
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const-string v0, "WfdBridgeServer"
 
     iput-object v0, p0, Lcom/android/server/display/CmdInfo;->TAG:Ljava/lang/String;
 
-    .line 63
     iput-object p1, p0, Lcom/android/server/display/CmdInfo;->cmdType:Lcom/android/server/display/CmdInfo$CmdType;
 
-    .line 64
     iput p2, p0, Lcom/android/server/display/CmdInfo;->cmdDetail:I
 
-    .line 65
     return-void
 .end method
 
@@ -177,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 31
     const/4 v0, 0x0
 
     return v0
@@ -187,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Lcom/android/server/display/CmdInfo;->cmdDetail:I
 
     return v0
@@ -197,7 +172,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/server/display/CmdInfo;->cmdType:Lcom/android/server/display/CmdInfo$CmdType;
 
     return-object v0
@@ -208,7 +182,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 42
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -222,7 +195,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
     :goto_0
     :try_start_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -233,15 +205,12 @@
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 51
     :goto_1
     return-void
 
-    .line 43
     :catch_0
     move-exception v0
 
-    .line 44
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const/4 v1, 0x0
 
@@ -249,12 +218,10 @@
 
     goto :goto_0
 
-    .line 48
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v0
 
-    .line 49
     .restart local v0    # "e":Ljava/lang/IllegalArgumentException;
     const/4 v1, 0x0
 
@@ -269,7 +236,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/android/server/display/CmdInfo;->cmdType:Lcom/android/server/display/CmdInfo$CmdType;
 
     if-nez v0, :cond_0
@@ -279,15 +245,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 37
     iget v0, p0, Lcom/android/server/display/CmdInfo;->cmdDetail:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 38
     return-void
 
-    .line 36
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/CmdInfo;->cmdType:Lcom/android/server/display/CmdInfo$CmdType;
 

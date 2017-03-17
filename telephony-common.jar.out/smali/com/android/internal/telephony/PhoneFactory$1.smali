@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 325
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,14 +35,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 327
     const-string v0, "PhoneFactory"
 
     const-string v1, "ImsTelephonyService onServiceConnected"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     return-void
 .end method
 
@@ -52,13 +49,11 @@
     .param p1, "arg0"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 331
     const-string v0, "PhoneFactory"
 
     const-string v1, "ImsTelephonyService onServiceDisconnected"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     return-void
 .end method

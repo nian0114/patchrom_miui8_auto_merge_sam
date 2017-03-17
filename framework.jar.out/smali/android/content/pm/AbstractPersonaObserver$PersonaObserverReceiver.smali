@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/content/pm/AbstractPersonaObserver$1;
 
     .prologue
-    .line 110
     invoke-direct {p0, p1}, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;-><init>(Landroid/content/pm/AbstractPersonaObserver;)V
 
     return-void
@@ -53,12 +51,10 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 115
     invoke-virtual {p2}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 116
     .local v2, "categories":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -77,7 +73,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 118
     const-string v6, "com.sec.knox.container.extra.observer.newstate"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -88,7 +83,6 @@
 
     move-result-object v4
 
-    .line 119
     .local v4, "newState":Landroid/content/pm/PersonaState;
     const-string v6, "com.sec.knox.container.extra.observer.previousstate"
 
@@ -100,20 +94,17 @@
 
     move-result-object v5
 
-    .line 120
     .local v5, "previousState":Landroid/content/pm/PersonaState;
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
     invoke-virtual {v6, v4, v5}, Landroid/content/pm/AbstractPersonaObserver;->onStateChange(Landroid/content/pm/PersonaState;Landroid/content/pm/PersonaState;)V
 
-    .line 140
     .end local v4    # "newState":Landroid/content/pm/PersonaState;
     .end local v5    # "previousState":Landroid/content/pm/PersonaState;
     :cond_0
     :goto_0
     return-void
 
-    .line 122
     :cond_1
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -132,14 +123,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 124
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
     invoke-virtual {v6}, Landroid/content/pm/AbstractPersonaObserver;->onSessionExpired()V
 
     goto :goto_0
 
-    .line 126
     :cond_2
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -158,14 +147,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 128
     const-string v6, "com.sec.knox.container.extra.observer.keyguardstate"
 
     invoke-virtual {p2, v6, v7}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 129
     .local v3, "enabled":Z
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -173,7 +160,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v3    # "enabled":Z
     :cond_3
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
@@ -193,7 +179,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 133
     const-string v6, "com.sec.knox.container.extra.observer.attribute"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -204,7 +189,6 @@
 
     move-result-object v0
 
-    .line 134
     .local v0, "attribute":Landroid/content/pm/PersonaAttribute;
     const-string v6, "com.sec.knox.container.extra.observer.attribute.state"
 
@@ -212,7 +196,6 @@
 
     move-result v1
 
-    .line 135
     .local v1, "attributeEnabled":Z
     iget-object v6, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 

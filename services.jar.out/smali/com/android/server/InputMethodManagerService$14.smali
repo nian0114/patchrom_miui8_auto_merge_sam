@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6021
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$14;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +40,13 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 6023
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$14;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->changeKeyboard()V
 
-    .line 6024
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$14;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->hideKeyboardDialog()V
 
-    .line 6028
     return-void
 .end method

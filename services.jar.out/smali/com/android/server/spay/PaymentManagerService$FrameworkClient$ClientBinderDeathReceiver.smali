@@ -26,12 +26,10 @@
     .locals 0
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .param p0, "x0"    # Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->deleteClient()V
 
     return-void
@@ -50,14 +47,12 @@
     .locals 6
 
     .prologue
-    .line 89
     const-string v4, "PaymentManagerService"
 
     const-string v5, "Error: Client stopped. Clearing Databstructures "
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     iget-object v4, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     iget-object v4, v4, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;->mCommnInfo:Landroid/spay/PaymentTZServiceCommnInfo;
@@ -86,7 +81,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 91
     .local v3, "s":Ljava/lang/Integer;
     iget-object v4, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
@@ -100,7 +94,6 @@
 
     check-cast v0, Lcom/android/server/spay/TAController;
 
-    .line 93
     .local v0, "controller":Lcom/android/server/spay/TAController;
     :try_start_0
     invoke-virtual {v0}, Lcom/android/server/spay/TAController;->unloadTA()V
@@ -109,17 +102,14 @@
 
     goto :goto_0
 
-    .line 94
     :catch_0
     move-exception v1
 
-    .line 96
     .local v1, "e":Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 99
     .end local v0    # "controller":Lcom/android/server/spay/TAController;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v3    # "s":Ljava/lang/Integer;
@@ -133,7 +123,6 @@
     # setter for: Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClient:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
     invoke-static {v4, v5}, Lcom/android/server/spay/PaymentManagerService;->access$002(Lcom/android/server/spay/PaymentManagerService;Lcom/android/server/spay/PaymentManagerService$FrameworkClient;)Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
-    .line 100
     return-void
 .end method
 
@@ -143,16 +132,13 @@
     .locals 2
 
     .prologue
-    .line 84
     const-string v0, "PaymentManagerService"
 
     const-string v1, "Error: Framework App dead, unloading loaded TAs"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-direct {p0}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->deleteClient()V
 
-    .line 86
     return-void
 .end method

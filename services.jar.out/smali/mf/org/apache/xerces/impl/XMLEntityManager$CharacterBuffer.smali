@@ -27,18 +27,14 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 2974
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2975
     iput-boolean p1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;->isExternal:Z
 
-    .line 2976
     new-array v0, p2, [C
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;->ch:[C
 
-    .line 2977
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 2969
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;->ch:[C
 
     return-object v0
@@ -56,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 2972
     iget-boolean v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;->isExternal:Z
 
     return v0

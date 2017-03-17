@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 3729
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherMasterUtilState;-><init>(Lcom/android/server/connectivity/Tethering$TetherMasterSM;)V
 
-    .line 3730
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
@@ -48,19 +46,15 @@
 
     const/4 v1, 0x0
 
-    .line 3733
     invoke-virtual {p0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->turnOnMasterTetherSettings()Z
 
-    .line 3734
     iget-object v2, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # invokes: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->startListeningForSimChanges()V
     invoke-static {v2}, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->access$9800(Lcom/android/server/connectivity/Tethering$TetherMasterSM;)V
 
-    .line 3736
     iput-boolean v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
-    .line 3738
     const-string v2, "TEL"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -79,18 +73,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 3740
     iget-object v2, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     iput v1, v2, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mRetryCount:I
 
-    .line 3742
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
     invoke-virtual {p0, v2}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->chooseUpstreamType(Z)V
 
-    .line 3743
     iget-boolean v2, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
     if-nez v2, :cond_1
@@ -98,13 +89,11 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
-    .line 3744
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 3743
     goto :goto_0
 .end method
 
@@ -114,19 +103,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3747
     invoke-virtual {p0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->turnOffUpstreamMobileConnection()Z
 
-    .line 3748
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # invokes: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->stopListeningForSimChanges()V
     invoke-static {v0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->access$9900(Lcom/android/server/connectivity/Tethering$TetherMasterSM;)V
 
-    .line 3751
     invoke-virtual {p0, v1, v1}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->notifyTetheredOfNewUpstreamIface(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3752
     return-void
 .end method
 
@@ -139,7 +124,6 @@
 
     const/4 v8, 0x1
 
-    .line 3755
     const-string v10, "Tethering"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -164,30 +148,24 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3756
     const/4 v6, 0x1
 
-    .line 3757
     .local v6, "retValue":Z
     iget v10, p1, Landroid/os/Message;->what:I
 
     packed-switch v10, :pswitch_data_0
 
-    .line 3840
     const/4 v6, 0x0
 
-    .line 3843
     :cond_0
     :goto_0
     return v6
 
-    .line 3759
     :pswitch_0
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v7, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 3760
     .local v7, "who":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     const-string v8, "Tethering"
 
@@ -211,7 +189,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3761
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -221,14 +198,12 @@
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3765
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 3766
     .local v3, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    const-string/jumbo v8, "iface"
+    const-string v8, "iface"
 
     iget-object v9, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -239,7 +214,6 @@
 
     invoke-virtual {v3, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3767
     const-string v8, "actualIface"
 
     iget-object v9, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
@@ -251,14 +225,12 @@
 
     invoke-virtual {v3, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3768
     const/16 v8, 0xc
 
     invoke-virtual {v7, v8, v3}, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;->sendMessage(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 3772
     .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v7    # "who":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :pswitch_1
@@ -266,7 +238,6 @@
 
     check-cast v7, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 3773
     .restart local v7    # "who":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     const-string v10, "Tethering"
 
@@ -290,7 +261,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3774
     iget-object v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -302,13 +272,11 @@
 
     move-result v2
 
-    .line 3775
     .local v2, "index":I
     const/4 v10, -0x1
 
     if-eq v2, v10, :cond_4
 
-    .line 3776
     const-string v10, "Tethering"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -331,7 +299,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3777
     iget-object v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -341,7 +308,6 @@
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 3778
     iget-object v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -355,10 +321,8 @@
 
     if-eqz v10, :cond_2
 
-    .line 3779
     invoke-virtual {p0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->turnOffMasterTetherSettings()Z
 
-    .line 3797
     :cond_1
     :goto_1
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
@@ -370,7 +334,6 @@
 
     goto/16 :goto_0
 
-    .line 3782
     :cond_2
     const-string v10, "Tethering"
 
@@ -411,7 +374,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3784
     iget-object v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -460,7 +422,6 @@
 
     goto :goto_2
 
-    .line 3787
     .end local v5    # "o":Ljava/lang/Object;
     :cond_3
     iget-object v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
@@ -476,7 +437,6 @@
 
     if-ne v10, v8, :cond_1
 
-    .line 3788
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -490,9 +450,8 @@
 
     check-cast v0, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 3789
     .local v0, "curSM":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
-    const-string/jumbo v8, "ncm0"
+    const-string v8, "ncm0"
 
     iget-object v9, v0, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;->mIfaceName:Ljava/lang/String;
 
@@ -502,12 +461,10 @@
 
     if-eqz v8, :cond_1
 
-    .line 3790
     invoke-virtual {p0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->blockDataForNCM()V
 
     goto/16 :goto_1
 
-    .line 3795
     .end local v0    # "curSM":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_4
@@ -535,7 +492,6 @@
 
     goto/16 :goto_1
 
-    .line 3800
     .end local v2    # "index":I
     .end local v7    # "who":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :pswitch_2
@@ -545,15 +501,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3802
     iput-boolean v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
-    .line 3803
     iget-boolean v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
     invoke-virtual {p0, v10}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->chooseUpstreamType(Z)V
 
-    .line 3804
     iget-boolean v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
     if-nez v10, :cond_5
@@ -568,7 +521,6 @@
 
     goto :goto_3
 
-    .line 3809
     :pswitch_3
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -581,14 +533,12 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 3811
     const-string v8, "Tethering"
 
-    const-string/jumbo v9, "renewing mobile connection - requeuing for another 40000ms"
+    const-string v9, "renewing mobile connection - requeuing for another 40000ms"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3814
     const-string v8, "TEL"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -607,7 +557,6 @@
 
     if-nez v8, :cond_6
 
-    .line 3816
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     # getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mMobileApnReserved:I
@@ -619,23 +568,20 @@
 
     goto/16 :goto_0
 
-    .line 3818
     :cond_6
     const-string v8, "Tethering"
 
-    const-string/jumbo v9, "ignore CMD_CELL_CONNECTION_RENEW"
+    const-string v9, "ignore CMD_CELL_CONNECTION_RENEW"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3823
     :pswitch_4
     iget-boolean v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
     invoke-virtual {p0, v10}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->chooseUpstreamType(Z)V
 
-    .line 3824
     iget-boolean v10, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->mTryCell:Z
 
     if-nez v10, :cond_7
@@ -650,11 +596,9 @@
 
     goto :goto_4
 
-    .line 3829
     :pswitch_5
     const/4 v4, 0x0
 
-    .line 3831
     .local v4, "nwkInfo":Landroid/net/NetworkInfo;
     :try_start_0
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
@@ -674,7 +618,6 @@
 
     move-result-object v4
 
-    .line 3833
     :goto_5
     if-eqz v4, :cond_0
 
@@ -684,27 +627,23 @@
 
     if-eqz v8, :cond_0
 
-    .line 3834
     const-string v8, "Tethering"
 
-    const-string/jumbo v10, "wifi is connected, reset retry count."
+    const-string v10, "wifi is connected, reset retry count."
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3835
     iget-object v8, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$TetherModeAliveState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     iput v9, v8, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mRetryCount:I
 
     goto/16 :goto_0
 
-    .line 3832
     :catch_0
     move-exception v8
 
     goto :goto_5
 
-    .line 3757
     nop
 
     :pswitch_data_0

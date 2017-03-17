@@ -28,22 +28,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1578
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1575
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 1576
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->authIDProvider:Lorg/w3c/dom/Node;
 
-    .line 1579
     iput-object p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 1580
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->update()V
 
-    .line 1581
     return-void
 .end method
 
@@ -52,7 +46,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     .prologue
-    .line 1574
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->getAuthIDProvider()Lorg/w3c/dom/Node;
 
     move-result-object v0
@@ -65,7 +58,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     .prologue
-    .line 1574
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->update()V
 
     return-void
@@ -76,7 +68,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     .prologue
-    .line 1574
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->getAuthIdpPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 1613
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->authIDProvider:Lorg/w3c/dom/Node;
 
     return-object v0
@@ -98,27 +88,22 @@
     .locals 2
 
     .prologue
-    .line 1617
     iget-object v1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->authIDProvider:Lorg/w3c/dom/Node;
 
     if-nez v1, :cond_0
 
-    .line 1618
     const/4 v1, 0x0
 
-    .line 1620
     :goto_0
     return-object v1
 
-    .line 1619
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->authIDProvider:Lorg/w3c/dom/Node;
 
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 1620
     .local v0, "e":Lorg/w3c/dom/Element;
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -131,29 +116,24 @@
     .locals 3
 
     .prologue
-    .line 1585
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->updateIDAuthenticator()V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1593
     :cond_0
     :goto_0
     return-void
 
-    .line 1586
     :catch_0
     move-exception v0
 
-    .line 1587
     .local v0, "e":Ljava/lang/NullPointerException;
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1588
     const-string v1, "EnterpriseIdentity"
 
     const-string v2, "In AuthenticationConfigDocument update: Exception"
@@ -162,18 +142,15 @@
 
     goto :goto_0
 
-    .line 1589
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 1590
     .local v0, "e":Ljava/lang/Exception;
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1591
     const-string v1, "EnterpriseIdentity"
 
     const-string v2, "In AuthenticationConfigDocument update: Exception"
@@ -187,25 +164,21 @@
     .locals 6
 
     .prologue
-    .line 1596
     iget-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
 
     move-result-object v1
 
-    .line 1597
     .local v1, "root":Lorg/w3c/dom/Node;
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->authIDProvider:Lorg/w3c/dom/Node;
 
-    .line 1598
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v3
 
-    .line 1599
     .local v3, "solutionNodes":Lorg/w3c/dom/NodeList;
     if-eqz v3, :cond_0
 
@@ -215,12 +188,10 @@
 
     if-nez v4, :cond_1
 
-    .line 1610
     :cond_0
     :goto_0
     return-void
 
-    .line 1602
     :cond_1
     const/4 v0, 0x0
 
@@ -232,12 +203,10 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 1603
     invoke-interface {v3, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 1604
     .local v2, "solution":Lorg/w3c/dom/Node;
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -259,12 +228,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 1606
     iput-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->authIDProvider:Lorg/w3c/dom/Node;
 
     goto :goto_0
 
-    .line 1602
     :cond_2
     add-int/lit8 v0, v0, 0x1
 

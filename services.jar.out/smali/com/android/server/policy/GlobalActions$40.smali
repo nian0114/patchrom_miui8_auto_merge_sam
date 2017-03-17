@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4568
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$40;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,27 +39,23 @@
     .locals 3
 
     .prologue
-    .line 4570
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4571
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v1, 0x20000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 4572
-    const-string/jumbo v1, "state"
+    const-string v1, "state"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4573
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$40;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -72,6 +67,5 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 4574
     return-void
 .end method

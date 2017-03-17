@@ -91,7 +91,6 @@
 
     const/4 v3, 0x0
 
-    .line 3102
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_3DES_CBC"
@@ -100,7 +99,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_3DES_CBC:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3108
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CBC_128"
@@ -109,7 +107,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CBC_128:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3114
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CBC_192"
@@ -118,7 +115,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CBC_192:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3120
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CBC_256"
@@ -127,7 +123,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CBC_256:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3126
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CTR_128"
@@ -136,7 +131,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CTR_128:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3132
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CTR_192"
@@ -147,7 +141,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CTR_192:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3138
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CTR_256"
@@ -158,7 +151,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CTR_256:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3144
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CCM_128"
@@ -169,7 +161,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CCM_128:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3150
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CCM_192"
@@ -180,7 +171,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CCM_192:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3156
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_CCM_256"
@@ -191,7 +181,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_CCM_256:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3162
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_GCM_128"
@@ -202,7 +191,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_GCM_128:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3168
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_GCM_192"
@@ -213,7 +201,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_GCM_192:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3174
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_GCM_256"
@@ -224,7 +211,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_GCM_256:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3180
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_GMAC_128"
@@ -235,7 +221,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_GMAC_128:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3186
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_GMAC_192"
@@ -246,7 +231,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_GMAC_192:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3192
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_AES_GMAC_256"
@@ -257,7 +241,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_AES_GMAC_256:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3198
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_BASIC"
@@ -268,7 +251,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_BASIC:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3204
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_ANY"
@@ -279,7 +261,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_ANY:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3210
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_SUITE_B_GCM_128"
@@ -290,7 +271,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_SUITE_B_GCM_128:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3216
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     const-string v1, "IPSEC_ENCRYPTION_SUITE_B_GCM_256"
@@ -301,7 +281,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->IPSEC_ENCRYPTION_SUITE_B_GCM_256:Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
-    .line 3095
     const/16 v0, 0x14
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
@@ -430,7 +409,6 @@
     .end annotation
 
     .prologue
-    .line 3095
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -441,7 +419,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3095
     const-class v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -457,7 +434,6 @@
     .locals 1
 
     .prologue
-    .line 3095
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->clone()Ljava/lang/Object;

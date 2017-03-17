@@ -27,15 +27,11 @@
     .param p2, "endChar"    # I
 
     .prologue
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput p1, p0, Landroid/media/TimedText$CharPos;->startChar:I
 
-    .line 156
     iput p2, p0, Landroid/media/TimedText$CharPos;->endChar:I
 
-    .line 157
     return-void
 .end method

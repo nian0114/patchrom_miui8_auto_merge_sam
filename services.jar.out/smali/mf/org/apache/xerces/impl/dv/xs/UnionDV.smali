@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .end annotation
 
     .prologue
-    .line 42
     return-object p1
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/16 v0, 0x808
 
     return v0

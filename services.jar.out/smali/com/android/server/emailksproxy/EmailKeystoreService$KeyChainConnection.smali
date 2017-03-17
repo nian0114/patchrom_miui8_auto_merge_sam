@@ -33,19 +33,14 @@
     .param p3, "service"    # Landroid/security/IKeyChainService;
 
     .prologue
-    .line 425
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 426
     iput-object p1, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->context:Landroid/content/Context;
 
-    .line 427
     iput-object p2, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->serviceConnection:Landroid/content/ServiceConnection;
 
-    .line 428
     iput-object p3, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->service:Landroid/security/IKeyChainService;
 
-    .line 429
     return-void
 .end method
 
@@ -57,7 +52,6 @@
     .param p4, "x3"    # Lcom/android/server/emailksproxy/EmailKeystoreService$1;
 
     .prologue
-    .line 420
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;-><init>(Landroid/content/Context;Landroid/content/ServiceConnection;Landroid/security/IKeyChainService;)V
 
     return-void
@@ -69,14 +63,12 @@
     .locals 2
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->serviceConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 433
     return-void
 .end method
 
@@ -84,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 436
     iget-object v0, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->service:Landroid/security/IKeyChainService;
 
     return-object v0

@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 359
     iput-object p1, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$2;->val$q:Ljava/util/concurrent/BlockingQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 360
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$2;->mConnectedAtLeastOnce:Z
@@ -49,24 +47,20 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 364
     iget-boolean v1, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$2;->mConnectedAtLeastOnce:Z
 
     if-nez v1, :cond_0
 
-    .line 365
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$2;->mConnectedAtLeastOnce:Z
 
-    .line 367
     const-string v1, "EmailKeystoreService"
 
     const-string v2, "Bind to keychain service happened"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -80,16 +74,13 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 377
     :cond_0
     :goto_0
     return-void
 
-    .line 371
     :catch_0
     move-exception v0
 
-    .line 374
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
@@ -101,6 +92,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 381
     return-void
 .end method

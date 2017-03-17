@@ -17,12 +17,10 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 58
     return-void
 .end method
 
@@ -31,14 +29,12 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 194
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "HH:mm:ss.SSS"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 195
     .local v0, "sdf":Ljava/text/SimpleDateFormat;
     new-instance v1, Ljava/util/Date;
 
@@ -55,14 +51,12 @@
     .locals 10
 
     .prologue
-    .line 161
     new-instance v4, Ljava/io/File;
 
     const-string v6, "/data/log/CAE"
 
     invoke-direct {v4, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 162
     .local v4, "folder":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -70,10 +64,8 @@
 
     if-nez v6, :cond_0
 
-    .line 163
     invoke-virtual {v4}, Ljava/io/File;->mkdirs()Z
 
-    .line 166
     :cond_0
     new-instance v3, Ljava/io/File;
 
@@ -81,11 +73,9 @@
 
     invoke-direct {v3, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 167
     .local v3, "file":Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 169
     .local v1, "fOutStream":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
@@ -97,12 +87,10 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 170
     .end local v1    # "fOutStream":Ljava/io/FileOutputStream;
     .local v2, "fOutStream":Ljava/io/FileOutputStream;
     if-eqz v2, :cond_1
 
-    .line 171
     :try_start_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -130,7 +118,6 @@
 
     move-result-object v5
 
-    .line 172
     .local v5, "out":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->getBytes()[B
 
@@ -141,12 +128,10 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 178
     .end local v5    # "out":Ljava/lang/String;
     :cond_1
     if-eqz v2, :cond_4
 
-    .line 180
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -154,36 +139,30 @@
 
     move-object v1, v2
 
-    .line 190
     .end local v2    # "fOutStream":Ljava/io/FileOutputStream;
     .restart local v1    # "fOutStream":Ljava/io/FileOutputStream;
     :cond_2
     :goto_0
     return-void
 
-    .line 181
     .end local v1    # "fOutStream":Ljava/io/FileOutputStream;
     .restart local v2    # "fOutStream":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v0
 
-    .line 182
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     move-object v1, v2
 
-    .line 183
     .end local v2    # "fOutStream":Ljava/io/FileOutputStream;
     .restart local v1    # "fOutStream":Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 175
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 176
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -195,10 +174,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 178
     if-eqz v1, :cond_2
 
-    .line 180
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -206,16 +183,13 @@
 
     goto :goto_0
 
-    .line 181
     :catch_2
     move-exception v0
 
-    .line 182
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 178
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v6
@@ -223,28 +197,23 @@
     :goto_2
     if-eqz v1, :cond_3
 
-    .line 180
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 183
     :cond_3
     :goto_3
     throw v6
 
-    .line 181
     :catch_3
     move-exception v0
 
-    .line 182
     .restart local v0    # "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 178
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "fOutStream":Ljava/io/FileOutputStream;
     .restart local v2    # "fOutStream":Ljava/io/FileOutputStream;
@@ -257,7 +226,6 @@
     .restart local v1    # "fOutStream":Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 175
     .end local v1    # "fOutStream":Ljava/io/FileOutputStream;
     .restart local v2    # "fOutStream":Ljava/io/FileOutputStream;
     :catch_4
@@ -285,13 +253,10 @@
     .locals 0
 
     .prologue
-    .line 254
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 255
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 256
     return-void
 .end method
 
@@ -299,13 +264,10 @@
     .locals 0
 
     .prologue
-    .line 243
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 244
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 245
     return-void
 .end method
 
@@ -313,13 +275,10 @@
     .locals 0
 
     .prologue
-    .line 230
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 231
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 232
     return-void
 .end method
 
@@ -327,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 68
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_ABNORMAL_PRESSURE_MONITOR:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -341,26 +299,25 @@
     .locals 3
 
     .prologue
-    .line 93
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "xaxis"
+    const-string v2, "xaxis"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "yaxis"
+    const-string v2, "yaxis"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string/jumbo v2, "zaxis"
+    const-string v2, "zaxis"
 
     aput-object v2, v0, v1
 
@@ -377,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 267
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalPressureMonitorRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -388,7 +344,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 268
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -400,7 +355,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/16 v0, 0x31
 
     return v0
@@ -410,7 +364,6 @@
     .locals 0
 
     .prologue
-    .line 206
     return-object p0
 .end method
 
@@ -418,7 +371,6 @@
     .locals 0
 
     .prologue
-    .line 218
     return-object p0
 .end method
 
@@ -438,19 +390,15 @@
 
     const/4 v7, 0x0
 
-    .line 110
     move v1, p2
 
-    .line 112
     .local v1, "tmpNext":I
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 114
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalPressureMonitorRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 116
     .local v0, "names":[Ljava/lang/String;
     array-length v3, p1
 
@@ -460,7 +408,6 @@
 
     if-gez v3, :cond_0
 
-    .line 117
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -469,14 +416,11 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 118
     const/4 v3, -0x1
 
-    .line 153
     :goto_0
     return v3
 
-    .line 121
     :cond_0
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -534,7 +478,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;F)V
 
-    .line 128
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -591,7 +534,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;F)V
 
-    .line 135
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -648,7 +590,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;F)V
 
-    .line 142
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -705,11 +646,9 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;F)V
 
-    .line 149
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->notifyObserver()V
 
     move v3, v1
 
-    .line 153
     goto/16 :goto_0
 .end method

@@ -29,16 +29,13 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p4, "collectionList":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/manager/ContextComponent;>;"
     invoke-direct/range {p0 .. p5}, Lcom/samsung/android/contextaware/aggregator/Aggregator;-><init>(ILandroid/content/Context;Landroid/os/Looper;Ljava/util/concurrent/CopyOnWriteArrayList;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->mLoggingStatus:I
 
-    .line 59
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget v0, p0, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->mLoggingStatus:I
 
     return v0
@@ -66,7 +62,6 @@
     .param p2, "valueName"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getDoubleArray(Ljava/lang/String;)[D
 
     move-result-object v0
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 124
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
@@ -91,12 +85,10 @@
     .param p1, "compensationData"    # [D
 
     .prologue
-    .line 134
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
     .local v0, "names":[Ljava/lang/String;
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -108,10 +100,8 @@
 
     invoke-virtual {v1, v2, p1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 137
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->notifyObserver()V
 
-    .line 138
     return-void
 .end method
 
@@ -127,11 +117,9 @@
     .end annotation
 
     .prologue
-    .line 173
     .local p2, "value":Ljava/lang/Object;, "TE;"
     const/4 v2, 0x0
 
-    .line 174
     .local v2, "result":Z
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getSubCollectors()Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -141,7 +129,6 @@
 
     move-result-object v0
 
-    .line 175
     .local v0, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -150,28 +137,23 @@
 
     if-eqz v3, :cond_1
 
-    .line 176
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/samsung/android/contextaware/manager/ContextProvider;
 
-    .line 177
     .local v1, "next":Lcom/samsung/android/contextaware/manager/ContextProvider;
     if-eqz v1, :cond_0
 
-    .line 180
     instance-of v3, v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;
 
     if-eqz v3, :cond_0
 
-    .line 183
     invoke-virtual {v1, p1, p2}, Lcom/samsung/android/contextaware/manager/ContextProvider;->setPropertyValue(ILjava/lang/Object;)Z
 
     move-result v2
 
-    .line 186
     .end local v1    # "next":Lcom/samsung/android/contextaware/manager/ContextProvider;
     :cond_1
     return v2
@@ -183,15 +165,12 @@
     .param p2, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 70
     if-nez p2, :cond_1
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 74
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getRawSensorValueNames()[Ljava/lang/String;
 
@@ -199,14 +178,12 @@
 
     if-nez v8, :cond_2
 
-    .line 75
     const-string v8, "getRawSensorValueNames() is null"
 
     invoke-static {v8}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 78
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getRawSensorValueNames()[Ljava/lang/String;
 
@@ -214,18 +191,15 @@
 
     array-length v1, v8
 
-    .line 79
     .local v1, "bufSize":I
     if-gtz v1, :cond_3
 
-    .line 80
     const-string v8, "length of getRawSensorValueNames() is zero"
 
     invoke-static {v8}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 84
     :cond_3
     const-string v8, "LoggingStatus"
 
@@ -235,14 +209,11 @@
 
     iput v8, p0, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->mLoggingStatus:I
 
-    .line 86
     new-array v7, v1, [[D
 
-    .line 87
     .local v7, "rawData":[[D
     const/4 v6, 0x0
 
-    .line 89
     .local v6, "num":I
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getRawSensorValueNames()[Ljava/lang/String;
 
@@ -260,7 +231,6 @@
 
     aget-object v3, v0, v4
 
-    .line 90
     .local v3, "i":Ljava/lang/String;
     invoke-virtual {p0, p2, v3}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getRawSensorData(Landroid/os/Bundle;Ljava/lang/String;)[D
 
@@ -268,7 +238,6 @@
 
     aput-object v8, v7, v6
 
-    .line 91
     aget-object v8, v7, v6
 
     if-eqz v8, :cond_4
@@ -279,13 +248,12 @@
 
     if-gtz v8, :cond_5
 
-    .line 92
     :cond_4
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "rawData["
+    const-string v9, "rawData["
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -313,23 +281,19 @@
 
     goto :goto_0
 
-    .line 96
     :cond_5
     add-int/lit8 v6, v6, 0x1
 
-    .line 89
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 99
     .end local v3    # "i":Ljava/lang/String;
     :cond_6
     invoke-virtual {p0, v7}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->compensateForRawData([[D)[D
 
     move-result-object v2
 
-    .line 100
     .local v2, "compensationData":[D
     if-eqz v2, :cond_0
 
@@ -339,7 +303,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 105
     invoke-virtual {p0, v2}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->notifyCompensationData([D)V
 
     goto :goto_0

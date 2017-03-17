@@ -64,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, -0x1
 
     sput v0, Lcom/samsung/android/mdnie/MdnieManager;->RETURN_ERROR:I
@@ -77,24 +76,19 @@
     .param p1, "service"    # Lcom/samsung/android/mdnie/IMdnieManager;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     if-nez p1, :cond_0
 
-    .line 89
     const-string v0, "MdnieManager"
 
     const-string v1, "In Constructor Stub-Service(IMdnieManager) is null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
-    .line 92
     return-void
 .end method
 
@@ -104,19 +98,15 @@
     .locals 2
 
     .prologue
-    .line 109
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v1, :cond_0
 
-    .line 110
     sget v1, Lcom/samsung/android/mdnie/MdnieManager;->RETURN_ERROR:I
 
-    .line 116
     :goto_0
     return v1
 
-    .line 114
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -129,11 +119,9 @@
 
     goto :goto_0
 
-    .line 115
     :catch_0
     move-exception v0
 
-    .line 116
     .local v0, "e":Landroid/os/RemoteException;
     sget v1, Lcom/samsung/android/mdnie/MdnieManager;->RETURN_ERROR:I
 
@@ -144,19 +132,15 @@
     .locals 2
 
     .prologue
-    .line 96
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v1, :cond_0
 
-    .line 97
     sget v1, Lcom/samsung/android/mdnie/MdnieManager;->RETURN_ERROR:I
 
-    .line 103
     :goto_0
     return v1
 
-    .line 101
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -169,11 +153,9 @@
 
     goto :goto_0
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     .local v0, "e":Landroid/os/RemoteException;
     sget v1, Lcom/samsung/android/mdnie/MdnieManager;->RETURN_ERROR:I
 
@@ -187,16 +169,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 146
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 153
     :goto_0
     return v1
 
-    .line 151
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -209,11 +188,9 @@
 
     goto :goto_0
 
-    .line 152
     :catch_0
     move-exception v0
 
-    .line 153
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -225,16 +202,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 133
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 140
     :goto_0
     return v1
 
-    .line 138
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -247,11 +221,9 @@
 
     goto :goto_0
 
-    .line 139
     :catch_0
     move-exception v0
 
-    .line 140
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -263,16 +235,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 121
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 128
     :goto_0
     return v1
 
-    .line 126
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -285,11 +254,9 @@
 
     goto :goto_0
 
-    .line 127
     :catch_0
     move-exception v0
 
-    .line 128
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -302,16 +269,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 206
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 213
     :goto_0
     return v1
 
-    .line 211
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -324,11 +288,9 @@
 
     goto :goto_0
 
-    .line 212
     :catch_0
     move-exception v0
 
-    .line 213
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -341,16 +303,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 158
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 165
     :goto_0
     return v1
 
-    .line 163
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -363,11 +322,9 @@
 
     goto :goto_0
 
-    .line 164
     :catch_0
     move-exception v0
 
-    .line 165
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -379,16 +336,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 194
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 201
     :goto_0
     return v1
 
-    .line 199
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -401,11 +355,9 @@
 
     goto :goto_0
 
-    .line 200
     :catch_0
     move-exception v0
 
-    .line 201
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -417,16 +369,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 170
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 177
     :goto_0
     return v1
 
-    .line 175
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -439,11 +388,9 @@
 
     goto :goto_0
 
-    .line 176
     :catch_0
     move-exception v0
 
-    .line 177
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -455,16 +402,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 182
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
 
     if-nez v2, :cond_0
 
-    .line 189
     :goto_0
     return v1
 
-    .line 187
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManager;->mService:Lcom/samsung/android/mdnie/IMdnieManager;
@@ -477,11 +421,9 @@
 
     goto :goto_0
 
-    .line 188
     :catch_0
     move-exception v0
 
-    .line 189
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method

@@ -27,10 +27,8 @@
     .locals 2
 
     .prologue
-    .line 2262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2263
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -39,12 +37,10 @@
 
     iput-wide v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mStartTime:J
 
-    .line 2264
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
-    .line 2265
     return-void
 .end method
 
@@ -56,7 +52,6 @@
     .param p2, "limitTime"    # J
 
     .prologue
-    .line 2280
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -65,7 +60,6 @@
 
     sub-long v0, v2, v4
 
-    .line 2281
     .local v0, "executionTime":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -73,12 +67,10 @@
 
     iput-wide v2, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mLapTime:J
 
-    .line 2283
     cmp-long v2, v0, p2
 
     if-ltz v2, :cond_0
 
-    .line 2284
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -108,7 +100,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "ms"
+    const-string v4, "ms"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,7 +112,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2286
     :cond_0
     return-void
 .end method
@@ -131,12 +122,10 @@
     .param p2, "limitTime"    # J
 
     .prologue
-    .line 2268
     iget-boolean v2, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
     if-nez v2, :cond_1
 
-    .line 2269
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -145,13 +134,11 @@
 
     sub-long v0, v2, v4
 
-    .line 2271
     .local v0, "executionTime":J
     cmp-long v2, v0, p2
 
     if-ltz v2, :cond_0
 
-    .line 2272
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -181,7 +168,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "ms"
+    const-string v4, "ms"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -193,13 +180,11 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2275
     :cond_0
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
-    .line 2277
     .end local v0    # "executionTime":J
     :cond_1
     return-void
@@ -209,7 +194,6 @@
     .locals 2
 
     .prologue
-    .line 2290
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -218,11 +202,9 @@
 
     iput-wide v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mStartTime:J
 
-    .line 2291
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
-    .line 2292
     return-void
 .end method

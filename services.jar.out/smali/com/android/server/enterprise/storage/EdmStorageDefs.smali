@@ -2452,12 +2452,11 @@
 
     const/4 v3, 0x0
 
-    .line 1700
     const/16 v0, 0xf
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "id"
+    const-string v1, "id"
 
     aput-object v1, v0, v3
 
@@ -2465,47 +2464,47 @@
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "ipAddress"
+    const-string v1, "ipAddress"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "portNumber"
+    const-string v1, "portNumber"
 
     aput-object v1, v0, v6
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "portLocation"
+    const-string v2, "portLocation"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string/jumbo v2, "signature"
+    const-string v2, "signature"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string/jumbo v2, "networkInterface"
+    const-string v2, "networkInterface"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string/jumbo v2, "direction"
+    const-string v2, "direction"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string/jumbo v2, "protocol"
+    const-string v2, "protocol"
 
     aput-object v2, v0, v1
 
@@ -2517,55 +2516,53 @@
 
     const/16 v1, 0xb
 
-    const-string/jumbo v2, "targetIpAddress"
+    const-string v2, "targetIpAddress"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    const-string/jumbo v2, "ruleType"
+    const-string v2, "ruleType"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    const-string/jumbo v2, "targetPortNumber"
+    const-string v2, "targetPortNumber"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    const-string/jumbo v2, "status"
+    const-string v2, "status"
 
     aput-object v2, v0, v1
 
     sput-object v0, Lcom/android/server/enterprise/storage/EdmStorageDefs;->FIREWALL_RULE_COLUMNS:[Ljava/lang/String;
 
-    .line 1718
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "adminUid"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "userID"
+    const-string v1, "userID"
 
     aput-object v1, v0, v4
 
     sput-object v0, Lcom/android/server/enterprise/storage/EdmStorageDefs;->FIREWALL_POLICY_STATUS_COLUMNS:[Ljava/lang/String;
 
-    .line 1723
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "adminUid"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "ipAddress"
+    const-string v1, "ipAddress"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "hostName"
+    const-string v1, "hostName"
 
     aput-object v1, v0, v5
 
@@ -2578,7 +2575,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

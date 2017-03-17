@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$1;->this$0:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     iput-object p2, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$1;->val$icb:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$InstallationCallback;
@@ -48,11 +47,9 @@
     .end annotation
 
     .prologue
-    .line 347
     iget-object v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$1;->val$icb:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$InstallationCallback;
 
     invoke-interface {v0, p1, p2}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$InstallationCallback;->packageInstalled(Ljava/lang/String;I)V
 
-    .line 348
     return-void
 .end method

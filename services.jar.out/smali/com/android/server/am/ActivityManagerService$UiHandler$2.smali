@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2136
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$UiHandler$2;->this$1:Lcom/android/server/am/ActivityManagerService$UiHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 2140
     const-string v0, "GATE"
 
     const-string v1, "<GATE-M>APP_FC:FC dialog has been cleared</GATE-M>"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2141
     return-void
 .end method

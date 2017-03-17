@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/android/server/enterprise/otp/OtpCallback$1;->val$tokenId:Ljava/lang/String;
 
     iput p2, p0, Lcom/android/server/enterprise/otp/OtpCallback$1;->val$result:I
@@ -53,12 +52,10 @@
     .locals 4
 
     .prologue
-    .line 42
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 43
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "OTP_TOKEN_ID"
 
@@ -66,36 +63,30 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 44
     const-string v2, "OTP_CALL_STATUS"
 
     iget v3, p0, Lcom/android/server/enterprise/otp/OtpCallback$1;->val$result:I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 45
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OtpCallback$1;->val$pkgName:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 46
     const-string v2, "com.samsung.action.knox.otp.OTP_CALLBACK_STATUS"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 47
     new-instance v1, Landroid/os/UserHandle;
 
     iget v2, p0, Lcom/android/server/enterprise/otp/OtpCallback$1;->val$containerId:I
 
     invoke-direct {v1, v2}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 48
     .local v1, "usr":Landroid/os/UserHandle;
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OtpCallback$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v2, v0, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 49
     return-void
 .end method

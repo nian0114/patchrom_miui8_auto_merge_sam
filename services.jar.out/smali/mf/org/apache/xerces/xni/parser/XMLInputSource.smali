@@ -25,19 +25,14 @@
     .param p3, "baseSystemId"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fPublicId:Ljava/lang/String;
 
-    .line 85
     iput-object p2, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fSystemId:Ljava/lang/String;
 
-    .line 86
     iput-object p3, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fBaseSystemId:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -50,25 +45,18 @@
     .param p5, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fPublicId:Ljava/lang/String;
 
-    .line 122
     iput-object p2, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fSystemId:Ljava/lang/String;
 
-    .line 123
     iput-object p3, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fBaseSystemId:Ljava/lang/String;
 
-    .line 124
     iput-object p4, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fByteStream:Ljava/io/InputStream;
 
-    .line 125
     iput-object p5, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fEncoding:Ljava/lang/String;
 
-    .line 126
     return-void
 .end method
 
@@ -81,25 +69,18 @@
     .param p5, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 147
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fPublicId:Ljava/lang/String;
 
-    .line 148
     iput-object p2, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fSystemId:Ljava/lang/String;
 
-    .line 149
     iput-object p3, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fBaseSystemId:Ljava/lang/String;
 
-    .line 150
     iput-object p4, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fCharStream:Ljava/io/Reader;
 
-    .line 151
     iput-object p5, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fEncoding:Ljava/lang/String;
 
-    .line 152
     return-void
 .end method
 
@@ -108,31 +89,26 @@
     .param p1, "resourceIdentifier"    # Lmf/org/apache/xerces/xni/XMLResourceIdentifier;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     invoke-interface {p1}, Lmf/org/apache/xerces/xni/XMLResourceIdentifier;->getPublicId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fPublicId:Ljava/lang/String;
 
-    .line 99
     invoke-interface {p1}, Lmf/org/apache/xerces/xni/XMLResourceIdentifier;->getLiteralSystemId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fSystemId:Ljava/lang/String;
 
-    .line 100
     invoke-interface {p1}, Lmf/org/apache/xerces/xni/XMLResourceIdentifier;->getBaseSystemId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fBaseSystemId:Ljava/lang/String;
 
-    .line 101
     return-void
 .end method
 
@@ -142,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fBaseSystemId:Ljava/lang/String;
 
     return-object v0
@@ -152,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fByteStream:Ljava/io/InputStream;
 
     return-object v0
@@ -162,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fCharStream:Ljava/io/Reader;
 
     return-object v0
@@ -172,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fEncoding:Ljava/lang/String;
 
     return-object v0
@@ -182,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 169
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fPublicId:Ljava/lang/String;
 
     return-object v0
@@ -192,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fSystemId:Ljava/lang/String;
 
     return-object v0
@@ -203,10 +173,8 @@
     .param p1, "baseSystemId"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fBaseSystemId:Ljava/lang/String;
 
-    .line 193
     return-void
 .end method
 
@@ -215,10 +183,8 @@
     .param p1, "byteStream"    # Ljava/io/InputStream;
 
     .prologue
-    .line 210
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fByteStream:Ljava/io/InputStream;
 
-    .line 211
     return-void
 .end method
 
@@ -227,10 +193,8 @@
     .param p1, "charStream"    # Ljava/io/Reader;
 
     .prologue
-    .line 230
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fCharStream:Ljava/io/Reader;
 
-    .line 231
     return-void
 .end method
 
@@ -239,10 +203,8 @@
     .param p1, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 244
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fEncoding:Ljava/lang/String;
 
-    .line 245
     return-void
 .end method
 
@@ -251,10 +213,8 @@
     .param p1, "publicId"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fPublicId:Ljava/lang/String;
 
-    .line 165
     return-void
 .end method
 
@@ -263,9 +223,7 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lmf/org/apache/xerces/xni/parser/XMLInputSource;->fSystemId:Ljava/lang/String;
 
-    .line 179
     return-void
 .end method

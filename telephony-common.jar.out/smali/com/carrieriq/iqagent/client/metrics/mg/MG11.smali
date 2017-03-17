@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 9
     const-string v0, "MG11"
 
     invoke-static {v0}, Lcom/carrieriq/iqagent/client/metrics/mg/MG11;->idFromString(Ljava/lang/String;)I
@@ -44,12 +43,10 @@
     .locals 1
 
     .prologue
-    .line 21
     sget v0, Lcom/carrieriq/iqagent/client/metrics/mg/MG11;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 22
     return-void
 .end method
 
@@ -65,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 25
     const/4 v0, -0x1
 
     return v0

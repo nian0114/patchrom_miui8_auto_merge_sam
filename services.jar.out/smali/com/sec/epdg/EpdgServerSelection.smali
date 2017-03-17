@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgServerSelection;->INSTANCE:Lcom/sec/epdg/EpdgServerSelection;
@@ -64,50 +63,36 @@
 
     const/4 v1, 0x0
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpAddress:Ljava/net/InetAddress;
 
-    .line 28
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
-    .line 29
     iput v3, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
-    .line 30
     iput-boolean v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mIpv6AddressUpdated:Z
 
-    .line 33
     iput-boolean v4, p0, Lcom/sec/epdg/EpdgServerSelection;->mUseHome:Z
 
-    .line 38
     iput-boolean v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mDnsTimeout:Z
 
-    .line 43
     iput v3, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
-    .line 44
     iput-boolean v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mIpv6AddressUpdated:Z
 
-    .line 45
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
-    .line 46
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpAddress:Ljava/net/InetAddress;
 
-    .line 47
     iput-boolean v4, p0, Lcom/sec/epdg/EpdgServerSelection;->mUseHome:Z
 
-    .line 48
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 49
     .local v0, "ctx":Landroid/content/Context;
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -117,7 +102,6 @@
 
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
-    .line 51
     return-void
 .end method
 
@@ -125,7 +109,6 @@
     .locals 4
 
     .prologue
-    .line 136
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -137,7 +120,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "getCachedEpdgServerIpAddress() epdg server ip address is: "
+    const-string v3, "getCachedEpdgServerIpAddress() epdg server ip address is: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,7 +138,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 138
     iget-object v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpAddress:Ljava/net/InetAddress;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -164,7 +146,6 @@
 
     return-object v0
 
-    .line 136
     :catchall_0
     move-exception v0
 
@@ -177,7 +158,6 @@
     .locals 3
 
     .prologue
-    .line 57
     const-class v1, Lcom/sec/epdg/EpdgServerSelection;
 
     monitor-enter v1
@@ -187,21 +167,18 @@
 
     if-nez v0, :cond_0
 
-    .line 58
     const-string v0, "[EpdgServerSelection]"
 
     const-string v2, "Creating EpdgServerSelection instance"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
     new-instance v0, Lcom/sec/epdg/EpdgServerSelection;
 
     invoke-direct {v0}, Lcom/sec/epdg/EpdgServerSelection;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/EpdgServerSelection;->INSTANCE:Lcom/sec/epdg/EpdgServerSelection;
 
-    .line 61
     :cond_0
     sget-object v0, Lcom/sec/epdg/EpdgServerSelection;->INSTANCE:Lcom/sec/epdg/EpdgServerSelection;
     :try_end_0
@@ -211,7 +188,6 @@
 
     return-object v0
 
-    .line 57
     :catchall_0
     move-exception v0
 
@@ -224,14 +200,13 @@
     .locals 3
 
     .prologue
-    .line 65
     const-string v0, "[EpdgServerSelection]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "getIpv6AddressUpdated(): returning : "
+    const-string v2, "getIpv6AddressUpdated(): returning : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -249,7 +224,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mIpv6AddressUpdated:Z
 
     return v0
@@ -259,10 +233,8 @@
     .locals 4
 
     .prologue
-    .line 142
     const/4 v0, 0x0
 
-    .line 143
     .local v0, "result":Z
     iget-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
@@ -280,10 +252,8 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 145
     const/4 v0, 0x1
 
-    .line 147
     :cond_0
     const-string v1, "[EpdgServerSelection]"
 
@@ -291,7 +261,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isIpPoolAndCounterValid: mEpdgServerIpArray is: "
+    const-string v3, "isIpPoolAndCounterValid: mEpdgServerIpArray is: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -319,7 +289,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "returning result: "
+    const-string v3, "returning result: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -335,7 +305,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 150
     return v0
 .end method
 
@@ -347,7 +316,6 @@
 
     const/4 v3, 0x0
 
-    .line 310
     monitor-enter p0
 
     :try_start_0
@@ -355,14 +323,13 @@
 
     if-eqz v4, :cond_4
 
-    .line 311
     const-string v4, "[EpdgServerSelection]"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "mCurrentEpdgIpCounter is: "
+    const-string v6, "mCurrentEpdgIpCounter is: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -394,7 +361,6 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 313
     iget v4, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
     iget-object v5, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
@@ -405,19 +371,16 @@
 
     if-ge v4, v5, :cond_3
 
-    .line 314
     const-string v4, "[EpdgServerSelection]"
 
     const-string v5, "Next epdg ip address is available, remove route for existing epdg ip and add route for next epdg ip"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     iget v4, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
     add-int/lit8 v1, v4, 0x1
 
-    .line 317
     .local v1, "tempIpCounter":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceContext()Landroid/content/Context;
 
@@ -431,13 +394,11 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 319
     .local v0, "mConnMgr":Landroid/net/ConnectivityManager;
     iget v4, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
     if-ltz v4, :cond_0
 
-    .line 321
     const/4 v4, 0x1
 
     iget-object v5, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
@@ -452,7 +413,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 323
     const/4 v4, 0x0
 
     const-string v5, "[EpdgServerSelection]"
@@ -489,7 +449,6 @@
 
     invoke-static {v4, v5, v6}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 330
     :cond_0
     :goto_0
     const/4 v4, 0x1
@@ -504,7 +463,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 332
     const/4 v3, 0x0
 
     const-string v4, "[EpdgServerSelection]"
@@ -539,12 +497,10 @@
 
     invoke-static {v3, v4, v5}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 336
     iput v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 351
     .end local v0    # "mConnMgr":Landroid/net/ConnectivityManager;
     .end local v1    # "tempIpCounter":I
     :goto_1
@@ -552,7 +508,6 @@
 
     return v2
 
-    .line 326
     .restart local v0    # "mConnMgr":Landroid/net/ConnectivityManager;
     .restart local v1    # "tempIpCounter":I
     :cond_1
@@ -591,7 +546,6 @@
 
     goto :goto_0
 
-    .line 310
     .end local v0    # "mConnMgr":Landroid/net/ConnectivityManager;
     .end local v1    # "tempIpCounter":I
     :catchall_0
@@ -601,7 +555,6 @@
 
     throw v2
 
-    .line 339
     .restart local v0    # "mConnMgr":Landroid/net/ConnectivityManager;
     .restart local v1    # "tempIpCounter":I
     :cond_2
@@ -640,29 +593,25 @@
 
     move v2, v3
 
-    .line 341
     goto :goto_1
 
-    .line 344
     .end local v0    # "mConnMgr":Landroid/net/ConnectivityManager;
     .end local v1    # "tempIpCounter":I
     :cond_3
     const-string v2, "[EpdgServerSelection]"
 
-    const-string/jumbo v4, "peekAndAddRouteForNextEpdgServerIp: No new epdg server ip is available"
+    const-string v4, "peekAndAddRouteForNextEpdgServerIp: No new epdg server ip is available"
 
     invoke-static {v2, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v2, v3
 
-    .line 346
     goto :goto_1
 
-    .line 349
     :cond_4
     const-string v2, "[EpdgServerSelection]"
 
-    const-string/jumbo v4, "peekAndAddRouteForNextEpdgServerIp: mEpdgServerIpArray itself is not initialized, returning false"
+    const-string v4, "peekAndAddRouteForNextEpdgServerIp: mEpdgServerIpArray itself is not initialized, returning false"
 
     invoke-static {v2, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
@@ -670,7 +619,6 @@
 
     move v2, v3
 
-    .line 351
     goto :goto_1
 .end method
 
@@ -681,10 +629,8 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 415
     const/4 v6, 0x0
 
-    .line 416
     .local v6, "mConnMgr":Landroid/net/ConnectivityManager;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceContext()Landroid/content/Context;
 
@@ -699,18 +645,15 @@
     .end local v6    # "mConnMgr":Landroid/net/ConnectivityManager;
     check-cast v6, Landroid/net/ConnectivityManager;
 
-    .line 419
     .restart local v6    # "mConnMgr":Landroid/net/ConnectivityManager;
     const/4 v4, 0x0
 
-    .line 420
     .local v4, "inetAddressArray":[Ljava/net/InetAddress;
     :try_start_0
     invoke-static {p1}, Ljava/net/InetAddress;->getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;
 
     move-result-object v4
 
-    .line 421
     const-string v8, "[EpdgServerSelection]"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -735,26 +678,22 @@
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 423
     array-length v8, v4
 
     if-nez v8, :cond_0
 
-    .line 424
     const-string v8, "[EpdgServerSelection]"
 
-    const-string/jumbo v10, "performDnsAndAddRoute: No ip address is returned."
+    const-string v10, "performDnsAndAddRoute: No ip address is returned."
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v4, v9
 
-    .line 524
     .end local v4    # "inetAddressArray":[Ljava/net/InetAddress;
     :goto_0
     return-object v4
 
-    .line 427
     .restart local v4    # "inetAddressArray":[Ljava/net/InetAddress;
     :cond_0
     new-instance v5, Ljava/util/ArrayList;
@@ -763,20 +702,16 @@
 
     invoke-direct {v5, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 429
     .local v5, "inetAddressList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/net/InetAddress;>;"
     if-nez v5, :cond_1
 
     move-object v4, v9
 
-    .line 430
     goto :goto_0
 
-    .line 432
     :cond_1
     const/4 v1, 0x0
 
-    .line 437
     .local v1, "address":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -788,7 +723,6 @@
 
     if-nez v8, :cond_7
 
-    .line 438
     const/4 v3, 0x0
 
     .local v3, "iloop":I
@@ -797,28 +731,24 @@
 
     if-ge v3, v8, :cond_2
 
-    .line 439
     const-string v8, "[EpdgServerSelection]"
 
     const-string v10, "IPv6 address support is not enabled"
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 440
     aget-object v8, v4, v3
 
     invoke-virtual {v8}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 441
     invoke-static {v1}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv4Address(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
-    .line 442
     const-string v10, "[EpdgServerSelection]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -850,12 +780,10 @@
 
     invoke-static {v10, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 444
     aget-object v8, v4, v3
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 445
     sget-boolean v8, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_MULTIPLE_EPDGIP:Z
 
     if-nez v8, :cond_5
@@ -866,7 +794,6 @@
 
     if-nez v8, :cond_5
 
-    .line 499
     :cond_2
     :goto_3
     invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
@@ -875,7 +802,6 @@
 
     if-eqz v8, :cond_f
 
-    .line 500
     const-string v8, "[EpdgServerSelection]"
 
     const-string v10, "All ip addresses format of epdg server is invalid"
@@ -884,16 +810,13 @@
 
     move-object v4, v9
 
-    .line 501
     goto :goto_0
 
     :cond_3
     move-object v8, v1
 
-    .line 442
     goto :goto_2
 
-    .line 449
     :cond_4
     invoke-static {v1}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv6Address(Ljava/lang/String;)Z
 
@@ -901,21 +824,18 @@
 
     if-eqz v8, :cond_6
 
-    .line 450
     const-string v8, "[EpdgServerSelection]"
 
     const-string v10, "Ignoring the EPDG FQDN resolved to IPv6 address, as user selected to use IPV4 address"
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
     :cond_5
     :goto_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 452
     :cond_6
     const-string v8, "[EpdgServerSelection]"
 
@@ -927,14 +847,12 @@
 
     goto :goto_4
 
-    .line 522
     .end local v1    # "address":Ljava/lang/String;
     .end local v3    # "iloop":I
     .end local v5    # "inetAddressList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/net/InetAddress;>;"
     :catch_0
     move-exception v2
 
-    .line 523
     .local v2, "e":Ljava/net/UnknownHostException;
     const-string v8, "[EpdgServerSelection]"
 
@@ -960,17 +878,14 @@
 
     move-object v4, v9
 
-    .line 524
     goto/16 :goto_0
 
-    .line 457
     .end local v2    # "e":Ljava/net/UnknownHostException;
     .restart local v1    # "address":Ljava/lang/String;
     .restart local v5    # "inetAddressList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/net/InetAddress;>;"
     :cond_7
     const/4 v7, 0x0
 
-    .line 458
     .local v7, "prefAddrIndex":I
     const/4 v3, 0x0
 
@@ -981,7 +896,6 @@
 
     if-ge v3, v8, :cond_a
 
-    .line 459
     const-string v8, "[EpdgServerSelection]"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1006,14 +920,12 @@
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 460
     aget-object v8, v4, v3
 
     invoke-virtual {v8}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 461
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v8
@@ -1024,21 +936,18 @@
 
     if-eqz v8, :cond_c
 
-    .line 462
     const-string v8, "[EpdgServerSelection]"
 
     const-string v10, "IPv6 address support is enabled and ipv6 is preferred"
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 463
     invoke-static {v1}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv4Address(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_9
 
-    .line 464
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v8
@@ -1047,14 +956,12 @@
 
     invoke-virtual {v5, v8, v10}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 458
     :cond_8
     :goto_6
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_5
 
-    .line 466
     :cond_9
     invoke-static {v1}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv6Address(Ljava/lang/String;)Z
 
@@ -1062,14 +969,13 @@
 
     if-eqz v8, :cond_b
 
-    .line 467
     const-string v8, "[EpdgServerSelection]"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "performDnsAndAddRoute: prefAddrIndex is: "
+    const-string v11, "performDnsAndAddRoute: prefAddrIndex is: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1085,25 +991,20 @@
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 468
     aget-object v8, v4, v3
 
     invoke-virtual {v5, v7, v8}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 469
     add-int/lit8 v7, v7, 0x1
 
-    .line 470
     const/4 v8, 0x1
 
     invoke-direct {p0, v8}, Lcom/sec/epdg/EpdgServerSelection;->setIpv6AddressUpdated(Z)V
 
-    .line 471
     sget-boolean v8, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_MULTIPLE_EPDGIP:Z
 
     if-nez v8, :cond_8
 
-    .line 497
     :cond_a
     :goto_7
     const-string v8, "[EpdgServerSelection]"
@@ -1114,7 +1015,6 @@
 
     goto/16 :goto_3
 
-    .line 475
     :cond_b
     const-string v8, "[EpdgServerSelection]"
 
@@ -1124,7 +1024,6 @@
 
     goto :goto_6
 
-    .line 479
     :cond_c
     const-string v8, "[EpdgServerSelection]"
 
@@ -1132,14 +1031,12 @@
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 480
     invoke-static {v1}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv6Address(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_d
 
-    .line 481
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v8
@@ -1148,14 +1045,12 @@
 
     invoke-virtual {v5, v8, v10}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 483
     const/4 v8, 0x1
 
     invoke-direct {p0, v8}, Lcom/sec/epdg/EpdgServerSelection;->setIpv6AddressUpdated(Z)V
 
     goto :goto_6
 
-    .line 484
     :cond_d
     invoke-static {v1}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv4Address(Ljava/lang/String;)Z
 
@@ -1163,19 +1058,17 @@
 
     if-eqz v8, :cond_e
 
-    .line 485
     aget-object v8, v4, v3
 
     invoke-virtual {v5, v7, v8}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 486
     const-string v8, "[EpdgServerSelection]"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "performDnsAndAddRoute: prefAddrIndex is: "
+    const-string v11, "performDnsAndAddRoute: prefAddrIndex is: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1191,17 +1084,14 @@
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 487
     add-int/lit8 v7, v7, 0x1
 
-    .line 488
     sget-boolean v8, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_MULTIPLE_EPDGIP:Z
 
     if-nez v8, :cond_8
 
     goto :goto_7
 
-    .line 492
     :cond_e
     const-string v8, "[EpdgServerSelection]"
 
@@ -1211,7 +1101,6 @@
 
     goto/16 :goto_6
 
-    .line 506
     .end local v7    # "prefAddrIndex":I
     :cond_f
     sget-boolean v8, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_MULTIPLE_EPDGIP:Z
@@ -1224,14 +1113,12 @@
 
     if-nez v8, :cond_10
 
-    .line 508
     const-string v8, "[EpdgServerSelection]"
 
     const-string v10, "Multiple ip address support is disabled, copying 1st ip address"
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 510
     const/4 v8, 0x1
 
     new-array v8, v8, [Ljava/net/InetAddress;
@@ -1246,7 +1133,6 @@
 
     move-object v4, v0
 
-    .line 516
     :goto_8
     const-string v8, "[EpdgServerSelection]"
 
@@ -1272,7 +1158,6 @@
 
     invoke-static {v8, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 518
     const/4 v8, 0x1
 
     const/4 v10, 0x0
@@ -1283,7 +1168,6 @@
 
     goto/16 :goto_0
 
-    .line 513
     :cond_10
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -1313,18 +1197,14 @@
     .prologue
     const/4 v12, 0x1
 
-    .line 274
     const/4 v6, 0x0
 
-    .line 275
     .local v6, "result":Z
     const-wide/16 v0, 0x0
 
-    .line 276
     .local v0, "dnsBegin":J
     const-wide/16 v2, 0x0
 
-    .line 277
     .local v2, "dnsEnd":J
     iget-boolean v8, p0, Lcom/sec/epdg/EpdgServerSelection;->mUseHome:Z
 
@@ -1332,26 +1212,22 @@
 
     move-result-object v4
 
-    .line 278
     .local v4, "epdgServerIP":Ljava/lang/String;
     if-nez v4, :cond_0
 
-    .line 279
     const-string v8, "[EpdgServerSelection]"
 
-    const-string/jumbo v9, "performDnsAndSetEpdgServerIpPool: ERROR!!! epdg FQDN is null, returning"
+    const-string v9, "performDnsAndSetEpdgServerIpPool: ERROR!!! epdg FQDN is null, returning"
 
     invoke-static {v8, v9}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v7, v6
 
-    .line 306
     .end local v6    # "result":Z
     .local v7, "result":I
     :goto_0
     return v7
 
-    .line 282
     .end local v7    # "result":I
     .restart local v6    # "result":Z
     :cond_0
@@ -1396,44 +1272,35 @@
 
     invoke-static {v9, v8}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 286
     const/4 v5, 0x1
 
     .local v5, "i":I
     :goto_2
     if-gt v5, p1, :cond_1
 
-    .line 287
     invoke-direct {p0, v4}, Lcom/sec/epdg/EpdgServerSelection;->setEpdgServerIpPoolFromFqdn(Ljava/lang/String;)Z
 
     move-result v6
 
-    .line 288
     if-ne v6, v12, :cond_4
 
-    .line 290
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
-    .line 291
     const/4 v6, 0x1
 
-    .line 299
     :cond_1
     if-nez v6, :cond_2
 
-    .line 300
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 301
     sub-long v8, v2, v0
 
     const-wide/16 v10, 0x1388
@@ -1442,10 +1309,8 @@
 
     if-lez v8, :cond_2
 
-    .line 302
     iput-boolean v12, p0, Lcom/sec/epdg/EpdgServerSelection;->mDnsTimeout:Z
 
-    .line 303
     const-string v8, "[EpdgServerSelection]"
 
     const-string v9, "DNS server does not respond"
@@ -1455,7 +1320,6 @@
     :cond_2
     move v7, v6
 
-    .line 306
     .restart local v7    # "result":I
     goto :goto_0
 
@@ -1464,15 +1328,12 @@
     :cond_3
     move-object v8, v4
 
-    .line 282
     goto :goto_1
 
-    .line 294
     .restart local v5    # "i":I
     :cond_4
     if-ge v5, p1, :cond_5
 
-    .line 295
     const-string v8, "[EpdgServerSelection]"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1501,7 +1362,6 @@
 
     invoke-static {v8, v9}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 286
     :cond_5
     add-int/lit8 v5, v5, 0x1
 
@@ -1515,7 +1375,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 206
     monitor-enter p0
 
     const/4 v1, 0x0
@@ -1527,7 +1386,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setEpdgServerIpPoolFromFqdn() ePDG FQDN is: "
+    const-string v4, "setEpdgServerIpPoolFromFqdn() ePDG FQDN is: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1543,41 +1402,34 @@
 
     invoke-static {v1, v2, v3}, Lcom/sec/epdg/Log;->i(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     if-nez p1, :cond_1
 
-    .line 208
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpAddress:Ljava/net/InetAddress;
 
-    .line 209
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
-    .line 210
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
-    .line 211
     const-string v1, "[EpdgServerSelection]"
 
-    const-string/jumbo v2, "setEpdgServerIpPoolFromFqdn() FQDN is null, resetting cached server ip to null"
+    const-string v2, "setEpdgServerIpPoolFromFqdn() FQDN is null, resetting cached server ip to null"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 215
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 214
     :cond_1
     :try_start_1
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgServerSelection;->performDnsAndAddRoute(Ljava/lang/String;)[Ljava/net/InetAddress;
@@ -1586,7 +1438,6 @@
 
     iput-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
-    .line 215
     iget-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1597,7 +1448,6 @@
 
     goto :goto_0
 
-    .line 206
     :catchall_0
     move-exception v0
 
@@ -1611,14 +1461,13 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 70
     const-string v0, "[EpdgServerSelection]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setIpv6AddressUpdated() value is: "
+    const-string v2, "setIpv6AddressUpdated() value is: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1634,10 +1483,8 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 71
     iput-boolean p1, p0, Lcom/sec/epdg/EpdgServerSelection;->mIpv6AddressUpdated:Z
 
-    .line 72
     return-void
 .end method
 
@@ -1647,7 +1494,6 @@
     .locals 4
 
     .prologue
-    .line 160
     monitor-enter p0
 
     :try_start_0
@@ -1657,14 +1503,12 @@
 
     if-nez v0, :cond_2
 
-    .line 161
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->isIpPoolAndCounterValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 162
     const-string v1, "[EpdgServerSelection]"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1696,7 +1540,6 @@
 
     invoke-static {v1, v0}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     iget-object v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
     iget v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
@@ -1707,13 +1550,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 171
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 162
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
@@ -1724,7 +1565,6 @@
 
     goto :goto_0
 
-    .line 166
     :cond_1
     const-string v0, "[EpdgServerSelection]"
 
@@ -1736,7 +1576,6 @@
 
     goto :goto_1
 
-    .line 160
     :catchall_0
     move-exception v0
 
@@ -1744,7 +1583,6 @@
 
     throw v0
 
-    .line 169
     :cond_2
     :try_start_2
     const-string v0, "[EpdgServerSelection]"
@@ -1766,7 +1604,6 @@
 
     const/4 v0, 0x0
 
-    .line 536
     monitor-enter p0
 
     :try_start_0
@@ -1780,7 +1617,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 538
     :cond_0
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgServerSelection;->isEpdgServerDnsValid()Z
 
@@ -1794,14 +1630,12 @@
 
     if-nez v2, :cond_2
 
-    .line 539
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->peekAndAddRouteForNextEpdgServerIp()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 540
     const-string v0, "[EpdgServerSelection]"
 
     const-string v2, "New epdg server ip address is available"
@@ -1812,13 +1646,11 @@
 
     move v0, v1
 
-    .line 567
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 543
     :cond_1
     :try_start_1
     const-string v1, "[EpdgServerSelection]"
@@ -1831,7 +1663,6 @@
 
     goto :goto_0
 
-    .line 536
     :catchall_0
     move-exception v0
 
@@ -1839,7 +1670,6 @@
 
     throw v0
 
-    .line 546
     :cond_2
     :try_start_2
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgServerSelection;->isEpdgServerDnsValid()Z
@@ -1860,26 +1690,22 @@
 
     if-nez v2, :cond_4
 
-    .line 549
     const-string v2, "[EpdgServerSelection]"
 
     const-string v3, "First connection failed on IWLAN over last cached ip address, now checking from the first ip address from pool"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 551
     sget-object v2, Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;->RESET_CACHED_IP:Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;
 
     invoke-virtual {p0, v2}, Lcom/sec/epdg/EpdgServerSelection;->resetEpdgServerIpAddressAndPool(Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;)V
 
-    .line 553
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->peekAndAddRouteForNextEpdgServerIp()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 554
     const-string v0, "[EpdgServerSelection]"
 
     const-string v2, "New epdg server ip address is available"
@@ -1888,10 +1714,8 @@
 
     move v0, v1
 
-    .line 555
     goto :goto_0
 
-    .line 557
     :cond_3
     const-string v1, "[EpdgServerSelection]"
 
@@ -1901,7 +1725,6 @@
 
     goto :goto_0
 
-    .line 561
     :cond_4
     const-string v1, "[EpdgServerSelection]"
 
@@ -1911,7 +1734,6 @@
 
     goto :goto_0
 
-    .line 566
     :cond_5
     const-string v1, "[EpdgServerSelection]"
 
@@ -1937,19 +1759,16 @@
 
     const/4 v9, 0x0
 
-    .line 75
     const-string v6, "[EpdgServerSelection]"
 
     const-string v7, " generateEpdgFqdn(): "
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgFqdn()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 78
     .local v0, "defaultFqdn":Ljava/lang/String;
     const-string v6, "NoEpdgServerIp"
 
@@ -1959,22 +1778,18 @@
 
     if-eqz v6, :cond_0
 
-    .line 79
     const-string v6, "[EpdgServerSelection]"
 
     const-string v7, "VoWIFI is not provisioning return null"
 
     invoke-static {v9, v6, v7}, Lcom/sec/epdg/Log;->e(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     const/4 v0, 0x0
 
-    .line 132
     .end local v0    # "defaultFqdn":Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 82
     .restart local v0    # "defaultFqdn":Ljava/lang/String;
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getIsDynamicFqdn()Z
@@ -1985,17 +1800,14 @@
 
     if-ne v6, v7, :cond_b
 
-    .line 83
     const/4 v2, 0x0
 
     .local v2, "mcc":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 84
     .local v3, "mnc":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 85
     .local v4, "operatorNumeric":Ljava/lang/String;
     if-nez p1, :cond_5
 
@@ -2007,14 +1819,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 86
     iget-object v6, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v6}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 87
     if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
@@ -2023,7 +1833,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 88
     :cond_1
     const-string v6, "[EpdgServerSelection]"
 
@@ -2031,7 +1840,6 @@
 
     invoke-static {v9, v6, v7}, Lcom/sec/epdg/Log;->e(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
 
     move-result-object v6
@@ -2042,7 +1850,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 90
     iget-object v6, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
@@ -2053,7 +1860,6 @@
 
     move-result-object v4
 
-    .line 105
     :cond_2
     :goto_1
     if-eqz v4, :cond_3
@@ -2064,7 +1870,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 106
     :cond_3
     const-string v6, "[EpdgServerSelection]"
 
@@ -2090,7 +1895,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_4
     iget-object v6, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
@@ -2100,7 +1904,6 @@
 
     goto :goto_1
 
-    .line 96
     :cond_5
     if-eqz v4, :cond_6
 
@@ -2110,7 +1913,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 97
     :cond_6
     const-string v6, "[EpdgServerSelection]"
 
@@ -2118,7 +1920,6 @@
 
     invoke-static {v9, v6, v7}, Lcom/sec/epdg/Log;->e(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 98
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
 
     move-result-object v6
@@ -2129,7 +1930,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 99
     iget-object v6, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
@@ -2142,7 +1942,6 @@
 
     goto :goto_1
 
-    .line 101
     :cond_7
     iget-object v6, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
@@ -2152,7 +1951,6 @@
 
     goto :goto_1
 
-    .line 109
     :cond_8
     const-string v6, "[EpdgServerSelection]"
 
@@ -2160,7 +1958,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "prepareFQDN: operatorNumeric:"
+    const-string v8, "prepareFQDN: operatorNumeric:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2176,19 +1974,16 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v6
 
     if-ne v6, v11, :cond_9
 
-    .line 111
     invoke-virtual {v4, v9, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 112
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2211,15 +2006,12 @@
 
     move-result-object v3
 
-    .line 120
     :goto_2
     const/4 v5, 0x0
 
-    .line 121
     .local v5, "prefix":Ljava/lang/String;
-    const-string/jumbo v5, "epdg.epc.mnc"
+    const-string v5, "epdg.epc.mnc"
 
-    .line 122
     new-instance v1, Ljava/lang/StringBuilder;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2256,7 +2048,6 @@
 
     invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 125
     .local v1, "finalFQDN":Ljava/lang/StringBuilder;
     const-string v6, "[EpdgServerSelection]"
 
@@ -2284,14 +2075,12 @@
 
     invoke-static {v9, v6, v7}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 113
     .end local v1    # "finalFQDN":Ljava/lang/StringBuilder;
     .end local v5    # "prefix":Ljava/lang/String;
     :cond_9
@@ -2301,29 +2090,25 @@
 
     if-ne v6, v12, :cond_a
 
-    .line 114
     invoke-virtual {v4, v9, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 115
     invoke-virtual {v4, v10, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
     goto :goto_2
 
-    .line 117
     :cond_a
     const-string v6, "[EpdgServerSelection]"
 
-    const-string/jumbo v7, "operator numeric has wrong length use default"
+    const-string v7, "operator numeric has wrong length use default"
 
     invoke-static {v9, v6, v7}, Lcom/sec/epdg/Log;->e(ZLjava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 130
     .end local v2    # "mcc":Ljava/lang/String;
     .end local v3    # "mnc":Ljava/lang/String;
     .end local v4    # "operatorNumeric":Ljava/lang/String;
@@ -2359,7 +2144,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 363
     monitor-enter p0
 
     :try_start_0
@@ -2373,14 +2157,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 364
     const-string v3, "[EpdgServerSelection]"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getNextEpdgServerIp(): getIpv6AddressUpdated(): "
+    const-string v4, "getNextEpdgServerIp(): getIpv6AddressUpdated(): "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2433,7 +2216,6 @@
 
     invoke-static {v3, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 368
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->getCachedEpdgServerIpAddress()Ljava/net/InetAddress;
 
     move-result-object v2
@@ -2452,12 +2234,10 @@
 
     if-nez v2, :cond_0
 
-    .line 370
     const/4 v2, 0x0
 
     invoke-direct {p0, v2}, Lcom/sec/epdg/EpdgServerSelection;->setIpv6AddressUpdated(Z)V
 
-    .line 371
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->getCachedEpdgServerIpAddress()Ljava/net/InetAddress;
 
     move-result-object v2
@@ -2466,7 +2246,6 @@
 
     move-result-object v0
 
-    .line 372
     .local v0, "address":Ljava/lang/String;
     invoke-static {v0}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv6Address(Ljava/lang/String;)Z
 
@@ -2474,19 +2253,16 @@
 
     if-nez v2, :cond_3
 
-    .line 373
     const-string v2, "[EpdgServerSelection]"
 
     const-string v3, "Cached ip is ipv4 but now the pool is updated with ipv6 address, so resetting the cached ipv4 address"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
     sget-object v2, Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;->RESET_CACHED_IP:Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;
 
     invoke-virtual {p0, v2}, Lcom/sec/epdg/EpdgServerSelection;->resetEpdgServerIpAddressAndPool(Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;)V
 
-    .line 381
     .end local v0    # "address":Ljava/lang/String;
     :cond_0
     :goto_1
@@ -2496,28 +2272,25 @@
 
     if-nez v2, :cond_7
 
-    .line 382
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgServerSelection;->isEpdgServerDnsValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
-    .line 383
     iget v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
     const/4 v3, -0x1
 
     if-ne v2, v3, :cond_1
 
-    .line 384
     const-string v2, "[EpdgServerSelection]"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mCurrentEpdgIpCounter is: "
+    const-string v4, "mCurrentEpdgIpCounter is: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2535,7 +2308,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "it to first IP address of pool"
+    const-string v4, "it to first IP address of pool"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2547,12 +2320,10 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 387
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
-    .line 389
     :cond_1
     iget v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
@@ -2566,14 +2337,12 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 391
     iget-object v2, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
     iget v3, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
     aget-object v1, v2, v3
 
-    .line 392
     .local v1, "newEpdgIp":Ljava/net/InetAddress;
     const-string v3, "[EpdgServerSelection]"
 
@@ -2620,14 +2389,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 410
     .end local v1    # "newEpdgIp":Ljava/net/InetAddress;
     :goto_3
     monitor-exit p0
 
     return-object v1
 
-    .line 364
     :cond_2
     :try_start_1
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->getCachedEpdgServerIpAddress()Ljava/net/InetAddress;
@@ -2636,7 +2403,6 @@
 
     goto/16 :goto_0
 
-    .line 377
     .restart local v0    # "address":Ljava/lang/String;
     :cond_3
     const-string v2, "[EpdgServerSelection]"
@@ -2649,7 +2415,6 @@
 
     goto/16 :goto_1
 
-    .line 363
     .end local v0    # "address":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -2662,10 +2427,8 @@
     :cond_4
     move-object v2, v1
 
-    .line 392
     goto :goto_2
 
-    .line 397
     .end local v1    # "newEpdgIp":Ljava/net/InetAddress;
     :cond_5
     :try_start_2
@@ -2677,17 +2440,15 @@
 
     goto :goto_3
 
-    .line 402
     :cond_6
     const-string v2, "[EpdgServerSelection]"
 
-    const-string/jumbo v3, "getEpdgServerIp: Epdg server ip pool is not  yet initialized, returning null ip address"
+    const-string v3, "getEpdgServerIp: Epdg server ip pool is not  yet initialized, returning null ip address"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 407
     :cond_7
     const-string v3, "[EpdgServerSelection]"
 
@@ -2720,14 +2481,12 @@
 
     invoke-static {v3, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->getCachedEpdgServerIpAddress()Ljava/net/InetAddress;
 
     move-result-object v1
 
     goto :goto_3
 
-    .line 407
     :cond_8
     invoke-direct {p0}, Lcom/sec/epdg/EpdgServerSelection;->getCachedEpdgServerIpAddress()Ljava/net/InetAddress;
     :try_end_2
@@ -2742,22 +2501,18 @@
     .locals 4
 
     .prologue
-    .line 578
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 579
     .local v0, "result":Z
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
     if-eqz v1, :cond_0
 
-    .line 580
     const/4 v0, 0x1
 
-    .line 582
     :cond_0
     const-string v1, "[EpdgServerSelection]"
 
@@ -2765,7 +2520,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isEpdgServerDnsValid(): returning result"
+    const-string v3, "isEpdgServerDnsValid(): returning result"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2783,12 +2538,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 583
     monitor-exit p0
 
     return v0
 
-    .line 578
     :catchall_0
     move-exception v1
 
@@ -2806,10 +2559,8 @@
 
     const/4 v4, 0x0
 
-    .line 225
     const/4 v1, 0x0
 
-    .line 226
     .local v1, "dnsRetryCount":I
     sget-object v3, Lcom/sec/epdg/EpdgServerSelection$1;->$SwitchMap$com$sec$epdg$EpdgService$DnsRetryReason:[I
 
@@ -2821,7 +2572,6 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 244
     const-string v3, "[EpdgServerSelection]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2844,7 +2594,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string v4, "Invalid DnsRetryReason received"
@@ -2853,7 +2602,6 @@
 
     throw v3
 
-    .line 229
     :pswitch_0
     iget-object v3, p0, Lcom/sec/epdg/EpdgServerSelection;->mTelManager:Landroid/telephony/TelephonyManager;
 
@@ -2877,14 +2625,13 @@
     :goto_0
     iput-boolean v3, p0, Lcom/sec/epdg/EpdgServerSelection;->mUseHome:Z
 
-    .line 231
     const-string v6, "[EpdgServerSelection]"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "roaming ? "
+    const-string v7, "roaming ? "
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2907,27 +2654,22 @@
 
     invoke-static {v6, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
     const/4 v1, 0x3
 
-    .line 247
     :goto_2
     sget-object v3, Lcom/sec/epdg/EpdgService$DnsRetryReason;->WIFI_IPTYPE_CHANGE:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     if-eq p1, v3, :cond_1
 
-    .line 248
     sget-object v3, Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;->RESET_ALL:Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;
 
     invoke-virtual {p0, v3}, Lcom/sec/epdg/EpdgServerSelection;->resetEpdgServerIpAddressAndPool(Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;)V
 
-    .line 250
     :cond_1
     invoke-direct {p0, v1}, Lcom/sec/epdg/EpdgServerSelection;->performDnsAndSetEpdgServerIpPoolInternal(I)Z
 
     move-result v2
 
-    .line 251
     .local v2, "result":Z
     if-nez v2, :cond_2
 
@@ -2935,15 +2677,12 @@
 
     if-nez v3, :cond_2
 
-    .line 252
     iput-boolean v5, p0, Lcom/sec/epdg/EpdgServerSelection;->mUseHome:Z
 
-    .line 253
     invoke-direct {p0, v1}, Lcom/sec/epdg/EpdgServerSelection;->performDnsAndSetEpdgServerIpPoolInternal(I)Z
 
     move-result v2
 
-    .line 255
     :cond_2
     if-nez v2, :cond_3
 
@@ -2957,16 +2696,13 @@
 
     if-nez v3, :cond_3
 
-    .line 256
-    const-string/jumbo v0, "ims"
+    const-string v0, "ims"
 
-    .line 257
     .local v0, "apnType":Ljava/lang/String;
     iget-boolean v3, p0, Lcom/sec/epdg/EpdgServerSelection;->mDnsTimeout:Z
 
     if-eqz v3, :cond_6
 
-    .line 258
     new-instance v3, Lcom/sec/epdg/IWlanError;
 
     sget-object v5, Lcom/sec/epdg/IWlanError$EpdgError;->DNS_A_QUERY_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
@@ -2981,10 +2717,8 @@
 
     invoke-static {v0, v3}, Lcom/sec/epdg/EpdgService;->sendIpsecConnFailIntent(Ljava/lang/String;Lcom/sec/epdg/IWlanError;)V
 
-    .line 261
     iput-boolean v4, p0, Lcom/sec/epdg/EpdgServerSelection;->mDnsTimeout:Z
 
-    .line 268
     .end local v0    # "apnType":Ljava/lang/String;
     :cond_3
     :goto_3
@@ -2994,7 +2728,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "performDnsAndSetEpdgServerIpPool: result is: "
+    const-string v6, "performDnsAndSetEpdgServerIpPool: result is: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3020,37 +2754,29 @@
 
     invoke-static {v4, v3, v5}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 270
     return v2
 
     .end local v2    # "result":Z
     :cond_4
     move v3, v4
 
-    .line 229
     goto/16 :goto_0
 
-    .line 231
     :cond_5
     const-string v3, "Yes"
 
     goto :goto_1
 
-    .line 237
     :pswitch_1
     const/4 v1, 0x3
 
-    .line 238
     goto :goto_2
 
-    .line 241
     :pswitch_2
     const/4 v1, 0x1
 
-    .line 242
     goto :goto_2
 
-    .line 263
     .restart local v0    # "apnType":Ljava/lang/String;
     .restart local v2    # "result":Z
     :cond_6
@@ -3070,7 +2796,6 @@
 
     goto :goto_3
 
-    .line 226
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3087,7 +2812,6 @@
     .param p1, "reason"    # Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;
 
     .prologue
-    .line 182
     monitor-enter p0
 
     :try_start_0
@@ -3097,7 +2821,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "resetEpdgServerIpAddressAndPool: reason is: "
+    const-string v2, "resetEpdgServerIpAddressAndPool: reason is: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3113,7 +2837,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 183
     sget-object v0, Lcom/sec/epdg/EpdgServerSelection$1;->$SwitchMap$com$sec$epdg$EpdgService$EpdgServerIpResetReason:[I
 
     invoke-virtual {p1}, Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;->ordinal()I
@@ -3124,7 +2847,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 200
     const-string v0, "[EpdgServerSelection]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3147,7 +2869,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Invalid epdg server ip reset reason:"
@@ -3158,7 +2879,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 182
     :catchall_0
     move-exception v0
 
@@ -3166,32 +2886,27 @@
 
     throw v0
 
-    .line 186
     :pswitch_0
     const/4 v0, 0x0
 
     :try_start_1
     iput-object v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpArray:[Ljava/net/InetAddress;
 
-    .line 187
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpAddress:Ljava/net/InetAddress;
 
-    .line 188
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 203
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 191
     :pswitch_1
     :try_start_2
     invoke-static {}, Lcom/sec/epdg/EpdgService;->isAnyPdnConnectedOverWifi()Z
@@ -3200,19 +2915,16 @@
 
     if-nez v0, :cond_0
 
-    .line 192
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mEpdgServerIpAddress:Ljava/net/InetAddress;
 
-    .line 193
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/sec/epdg/EpdgServerSelection;->mCurrentEpdgIpCounter:I
 
     goto :goto_0
 
-    .line 195
     :cond_0
     const-string v0, "[EpdgServerSelection]"
 
@@ -3224,7 +2936,6 @@
 
     goto :goto_0
 
-    .line 183
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

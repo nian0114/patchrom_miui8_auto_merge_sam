@@ -32,18 +32,13 @@
     .param p3, "pDisplayId"    # I
 
     .prologue
-    .line 265
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
     iput-object p1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayResolveInfo;->ri:Landroid/content/pm/ResolveInfo;
 
-    .line 267
     iput-object p2, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayResolveInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 268
     iput p3, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayResolveInfo;->displayId:I
 
-    .line 269
     return-void
 .end method

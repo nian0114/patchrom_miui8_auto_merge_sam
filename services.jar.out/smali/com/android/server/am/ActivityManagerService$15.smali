@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 15828
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$15;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$15;->val$origPid:I
@@ -64,7 +63,6 @@
     .locals 6
 
     .prologue
-    .line 15831
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$15;->val$origPid:I
 
     const/4 v1, -0x1
@@ -79,14 +77,13 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 15834
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "ignore appNotResponding for re-used "
+    const-string v2, "ignore appNotResponding for re-used "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -128,11 +125,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15838
     :goto_0
     return-void
 
-    .line 15837
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$15;->this$0:Lcom/android/server/am/ActivityManagerService;
 

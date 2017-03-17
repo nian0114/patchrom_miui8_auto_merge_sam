@@ -25,7 +25,6 @@
     .param p3, "x1"    # Z
 
     .prologue
-    .line 7061
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$5;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-direct {p0, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
@@ -42,12 +41,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 7073
     const/4 v2, 0x6
 
     if-ne p1, v2, :cond_1
 
-    .line 7074
     iget-object v2, p0, Landroid/widget/AbsHorizontalListView$5;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v2}, Landroid/widget/AbsHorizontalListView;->getContext()Landroid/content/Context;
@@ -62,11 +59,9 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 7077
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
-    .line 7078
     iget-object v2, p0, Landroid/widget/AbsHorizontalListView$5;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v2}, Landroid/widget/AbsHorizontalListView;->getWindowToken()Landroid/os/IBinder;
@@ -75,11 +70,9 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 7080
     :cond_0
     const/4 v1, 0x1
 
-    .line 7082
     .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_1
     return v1
@@ -90,7 +83,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 7066
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$5;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mDefInputConnection:Landroid/view/inputmethod/InputConnection;
@@ -110,7 +102,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 7090
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$5;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mDefInputConnection:Landroid/view/inputmethod/InputConnection;

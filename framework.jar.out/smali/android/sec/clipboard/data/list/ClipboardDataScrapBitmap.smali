@@ -8,12 +8,10 @@
     .locals 1
 
     .prologue
-    .line 33
     const/16 v0, 0xa
 
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/ClipboardData;-><init>(I)V
 
-    .line 34
     return-void
 .end method
 
@@ -23,7 +21,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     return-object v0
@@ -35,7 +32,6 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 37
     const/4 v0, 0x0
 
     return v0
@@ -46,7 +42,6 @@
     .param p1, "FilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     return v0
@@ -56,7 +51,6 @@
     .locals 0
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -64,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -75,7 +68,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -84,7 +76,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -94,6 +85,5 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 57
     return-void
 .end method

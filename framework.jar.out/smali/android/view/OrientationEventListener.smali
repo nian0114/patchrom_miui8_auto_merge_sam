@@ -70,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     sput v0, Landroid/view/OrientationEventListener;->mRotationMode:I
@@ -83,12 +82,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 76
     const/4 v0, 0x3
 
     invoke-direct {p0, p1, v0}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;I)V
 
-    .line 77
     return-void
 .end method
 
@@ -106,70 +103,52 @@
 
     const/4 v2, 0x0
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput v3, p0, Landroid/view/OrientationEventListener;->mOrientation:I
 
-    .line 36
     iput v3, p0, Landroid/view/OrientationEventListener;->mPreOrientation:I
 
-    .line 38
     iput-boolean v2, p0, Landroid/view/OrientationEventListener;->mEnabled:Z
 
-    .line 42
     iput-boolean v2, p0, Landroid/view/OrientationEventListener;->mEnabledGyro:Z
 
-    .line 46
     iput-boolean v2, p0, Landroid/view/OrientationEventListener;->mAccStuckCheckMode:Z
 
-    .line 49
     iput v2, p0, Landroid/view/OrientationEventListener;->mX_StuckCnt:I
 
-    .line 50
     iput v2, p0, Landroid/view/OrientationEventListener;->mY_StuckCnt:I
 
-    .line 51
     iput v2, p0, Landroid/view/OrientationEventListener;->mZ_StuckCnt:I
 
-    .line 52
     iput v2, p0, Landroid/view/OrientationEventListener;->m_StableCnt:I
 
-    .line 56
     iput v1, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Y:F
 
-    .line 57
     iput v1, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Z:F
 
-    .line 59
     iput-boolean v2, p0, Landroid/view/OrientationEventListener;->mDataIndex:Z
 
-    .line 60
     const/4 v1, 0x3
 
     new-array v1, v1, [F
 
     iput-object v1, p0, Landroid/view/OrientationEventListener;->mPredata:[F
 
-    .line 89
-    const-string/jumbo v1, "ro.product.name"
+    const-string v1, "ro.product.name"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 91
     .local v0, "DEVICE_NAME":Ljava/lang/String;
     if-nez v0, :cond_3
 
-    .line 92
     iput-boolean v2, p0, Landroid/view/OrientationEventListener;->mAccStuckCheckMode:Z
 
-    .line 100
     :cond_0
     :goto_0
-    const-string/jumbo v1, "sensor"
+    const-string v1, "sensor"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -179,10 +158,8 @@
 
     iput-object v1, p0, Landroid/view/OrientationEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 102
     iput p2, p0, Landroid/view/OrientationEventListener;->mRate:I
 
-    .line 103
     iget-object v1, p0, Landroid/view/OrientationEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     invoke-virtual {v1, v4}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
@@ -191,25 +168,21 @@
 
     iput-object v1, p0, Landroid/view/OrientationEventListener;->mSensor:Landroid/hardware/Sensor;
 
-    .line 104
     iget-object v1, p0, Landroid/view/OrientationEventListener;->mSensor:Landroid/hardware/Sensor;
 
     if-eqz v1, :cond_1
 
-    .line 106
     new-instance v1, Landroid/view/OrientationEventListener$SensorEventListenerImpl;
 
     invoke-direct {v1, p0}, Landroid/view/OrientationEventListener$SensorEventListenerImpl;-><init>(Landroid/view/OrientationEventListener;)V
 
     iput-object v1, p0, Landroid/view/OrientationEventListener;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 109
     :cond_1
     iget-boolean v1, p0, Landroid/view/OrientationEventListener;->mAccStuckCheckMode:Z
 
     if-eqz v1, :cond_2
 
-    .line 110
     iget-object v1, p0, Landroid/view/OrientationEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v2, 0x4
@@ -220,17 +193,14 @@
 
     iput-object v1, p0, Landroid/view/OrientationEventListener;->mGyro:Landroid/hardware/Sensor;
 
-    .line 112
     iget v1, p0, Landroid/view/OrientationEventListener;->mRate:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 130
     const/16 v1, 0xa
 
     iput v1, p0, Landroid/view/OrientationEventListener;->m_StcukDurationTHD:I
 
-    .line 133
     :goto_1
     const-string v1, "OrientationEventListener"
 
@@ -238,7 +208,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mRate"
+    const-string v3, "mRate"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -262,13 +232,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     :cond_2
     return-void
 
-    .line 94
     :cond_3
-    const-string/jumbo v1, "zerolte"
+    const-string v1, "zerolte"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -276,7 +244,7 @@
 
     if-nez v1, :cond_4
 
-    const-string/jumbo v1, "zeroflte"
+    const-string v1, "zeroflte"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -284,11 +252,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 96
     :cond_4
     iput-boolean v4, p0, Landroid/view/OrientationEventListener;->mAccStuckCheckMode:Z
 
-    .line 97
     const-string v1, "OrientationEventListener"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -315,7 +281,6 @@
 
     goto/16 :goto_0
 
-    .line 114
     :pswitch_0
     const/16 v1, 0x90
 
@@ -323,7 +288,6 @@
 
     goto :goto_1
 
-    .line 118
     :pswitch_1
     const/16 v1, 0x24
 
@@ -331,7 +295,6 @@
 
     goto :goto_1
 
-    .line 122
     :pswitch_2
     const/16 v1, 0xc
 
@@ -339,7 +302,6 @@
 
     goto :goto_1
 
-    .line 126
     :pswitch_3
     const/4 v1, 0x6
 
@@ -347,7 +309,6 @@
 
     goto :goto_1
 
-    .line 112
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -362,7 +323,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Landroid/view/OrientationEventListener;->mAccStuckCheckMode:Z
 
     return v0
@@ -372,7 +332,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget v0, Landroid/view/OrientationEventListener;->mRotationMode:I
 
     return v0
@@ -383,7 +342,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Landroid/view/OrientationEventListener;->mDataIndex:Z
 
     return v0
@@ -395,7 +353,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 31
     iput-boolean p1, p0, Landroid/view/OrientationEventListener;->mDataIndex:Z
 
     return p1
@@ -406,7 +363,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 31
     sput p0, Landroid/view/OrientationEventListener;->mRotationMode:I
 
     return p0
@@ -417,7 +373,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mPredata:[F
 
     return-object v0
@@ -428,7 +383,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mOrientation:I
 
     return v0
@@ -440,7 +394,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->mOrientation:I
 
     return p1
@@ -451,7 +404,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mOldListener:Landroid/view/OrientationListener;
 
     return-object v0
@@ -462,7 +414,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mPreOrientation:I
 
     return v0
@@ -474,7 +425,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->mPreOrientation:I
 
     return p1
@@ -485,7 +435,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Y:F
 
     return v0
@@ -497,7 +446,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Y:F
 
     return p1
@@ -509,7 +457,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Y:F
 
     float-to-double v0, v0
@@ -528,7 +475,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Z:F
 
     return v0
@@ -540,7 +486,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Z:F
 
     return p1
@@ -552,7 +497,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->fSumRotateAngle_Z:F
 
     float-to-double v0, v0
@@ -571,7 +515,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mX_StuckCnt:I
 
     return v0
@@ -583,7 +526,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->mX_StuckCnt:I
 
     return p1
@@ -594,7 +536,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mX_StuckCnt:I
 
     add-int/lit8 v1, v0, 0x1
@@ -609,7 +550,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mY_StuckCnt:I
 
     return v0
@@ -621,7 +561,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->mY_StuckCnt:I
 
     return p1
@@ -632,7 +571,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mY_StuckCnt:I
 
     add-int/lit8 v1, v0, 0x1
@@ -647,7 +585,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mZ_StuckCnt:I
 
     return v0
@@ -659,7 +596,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->mZ_StuckCnt:I
 
     return p1
@@ -670,7 +606,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->mZ_StuckCnt:I
 
     add-int/lit8 v1, v0, 0x1
@@ -685,7 +620,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->m_StcukDurationTHD:I
 
     return v0
@@ -696,7 +630,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->m_StableCnt:I
 
     return v0
@@ -708,7 +641,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 31
     iput p1, p0, Landroid/view/OrientationEventListener;->m_StableCnt:I
 
     return p1
@@ -719,7 +651,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget v0, p0, Landroid/view/OrientationEventListener;->m_StableCnt:I
 
     add-int/lit8 v1, v0, 0x1
@@ -734,7 +665,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Landroid/view/OrientationEventListener;->mEnabledGyro:Z
 
     return v0
@@ -746,7 +676,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 31
     iput-boolean p1, p0, Landroid/view/OrientationEventListener;->mEnabledGyro:Z
 
     return p1
@@ -757,7 +686,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mGyro:Landroid/hardware/Sensor;
 
     return-object v0
@@ -768,7 +696,6 @@
     .param p0, "x0"    # Landroid/view/OrientationEventListener;
 
     .prologue
-    .line 31
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     return-object v0
@@ -780,7 +707,6 @@
     .locals 1
 
     .prologue
-    .line 470
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mSensor:Landroid/hardware/Sensor;
 
     if-eqz v0, :cond_0
@@ -802,24 +728,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 165
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mSensor:Landroid/hardware/Sensor;
 
     if-nez v0, :cond_1
 
-    .line 166
     const-string v0, "OrientationEventListener"
 
     const-string v1, "Cannot detect sensors. Invalid disable"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     :cond_0
     :goto_0
     return-void
 
-    .line 169
     :cond_1
     iget-boolean v0, p0, Landroid/view/OrientationEventListener;->mEnabled:Z
 
@@ -827,32 +749,25 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 172
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Landroid/view/OrientationEventListener;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 173
     iput-boolean v2, p0, Landroid/view/OrientationEventListener;->mEnabled:Z
 
-    .line 176
     :cond_2
     iget-boolean v0, p0, Landroid/view/OrientationEventListener;->mAccStuckCheckMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 177
     sput v2, Landroid/view/OrientationEventListener;->mRotationMode:I
 
-    .line 178
     iput v2, p0, Landroid/view/OrientationEventListener;->mX_StuckCnt:I
 
-    .line 179
     iput v2, p0, Landroid/view/OrientationEventListener;->mY_StuckCnt:I
 
-    .line 180
     iput v2, p0, Landroid/view/OrientationEventListener;->mZ_StuckCnt:I
 
     goto :goto_0
@@ -862,30 +777,25 @@
     .locals 4
 
     .prologue
-    .line 147
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mSensor:Landroid/hardware/Sensor;
 
     if-nez v0, :cond_1
 
-    .line 148
     const-string v0, "OrientationEventListener"
 
     const-string v1, "Cannot detect sensors. Not enabled"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     :cond_0
     :goto_0
     return-void
 
-    .line 151
     :cond_1
     iget-boolean v0, p0, Landroid/view/OrientationEventListener;->mEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 154
     iget-object v0, p0, Landroid/view/OrientationEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Landroid/view/OrientationEventListener;->mSensorEventListener:Landroid/hardware/SensorEventListener;
@@ -896,7 +806,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 156
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/view/OrientationEventListener;->mEnabled:Z
@@ -912,9 +821,7 @@
     .param p1, "lis"    # Landroid/view/OrientationListener;
 
     .prologue
-    .line 138
     iput-object p1, p0, Landroid/view/OrientationEventListener;->mOldListener:Landroid/view/OrientationListener;
 
-    .line 139
     return-void
 .end method

@@ -32,30 +32,25 @@
     .locals 4
 
     .prologue
-    .line 2184
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2185
     const-string v2, "LpnetManagerService"
 
     const-string v3, "LpnetManagerServiceExt is instantiated"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2186
     new-instance v1, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerThread;
 
     const-string v2, "LpnetManagerWorker"
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerThread;-><init>(Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;Ljava/lang/String;)V
 
-    .line 2187
     .local v1, "mWorker":Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerThread;
     invoke-virtual {v1}, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerThread;->start()V
 
-    .line 2189
     const-wide/16 v2, 0xc8
 
     :try_start_0
@@ -63,11 +58,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2191
     :goto_0
     return-void
 
-    .line 2190
     :catch_0
     move-exception v0
 
@@ -83,7 +76,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 2181
     invoke-direct {p0, p1}, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->handleSendMessage(Landroid/os/Message;)V
 
     return-void
@@ -95,7 +87,6 @@
     .param p1, "x1"    # Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;
 
     .prologue
-    .line 2181
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->mHandler:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;
 
     return-object p1
@@ -106,11 +97,9 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2194
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->mHandler:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;
 
     invoke-virtual {v0, p1}, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2195
     return-void
 .end method

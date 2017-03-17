@@ -46,12 +46,10 @@
     .locals 2
 
     .prologue
-    .line 188
     iput-object p1, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 193
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     const/4 v1, 0x1
@@ -69,7 +67,6 @@
     .param p2, "x1"    # Lcom/android/server/VRManagerService$1;
 
     .prologue
-    .line 188
     invoke-direct {p0, p1}, Lcom/android/server/VRManagerService$VRRecord;-><init>(Lcom/android/server/VRManagerService;)V
 
     return-void
@@ -80,7 +77,6 @@
     .param p0, "x0"    # Lcom/android/server/VRManagerService$VRRecord;
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
     return-object v0
@@ -92,7 +88,6 @@
     .param p1, "x1"    # Lcom/android/internal/app/IVRManagerService;
 
     .prologue
-    .line 188
     iput-object p1, p0, Lcom/android/server/VRManagerService$VRRecord;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
     return-object p1
@@ -103,7 +98,6 @@
     .param p0, "x0"    # Lcom/android/server/VRManagerService$VRRecord;
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->mBinder:Landroid/os/IBinder;
 
     return-object v0
@@ -117,19 +111,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 201
     const-string v0, "VRManagerService"
 
     const-string v1, "binderDied()"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mVRRecord:Lcom/android/server/VRManagerService$VRRecord;
@@ -139,7 +130,6 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -149,7 +139,6 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -161,7 +150,6 @@
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 207
     :cond_0
     return-void
 .end method
@@ -170,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 239
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
     return-object v0
@@ -182,14 +169,13 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 211
     const-string v0, "VRManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onServiceConnected() mBound="
+    const-string v2, "onServiceConnected() mBound="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -246,7 +232,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mVRRecord:Lcom/android/server/VRManagerService$VRRecord;
@@ -260,16 +245,13 @@
 
     if-nez v0, :cond_0
 
-    .line 218
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/VRManagerService$VRRecord;->mConnected:Z
 
-    .line 219
     iput-object p2, p0, Lcom/android/server/VRManagerService$VRRecord;->mBinder:Landroid/os/IBinder;
 
-    .line 220
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->q:Ljava/util/concurrent/BlockingQueue;
 
     invoke-static {p2}, Lcom/android/internal/app/IVRManagerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IVRManagerService;
@@ -280,21 +262,18 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 226
     :goto_0
     return-void
 
-    .line 224
     :cond_0
     const-string v0, "VRManagerService"
 
-    const-string/jumbo v1, "onServiceConnected() ignored."
+    const-string v1, "onServiceConnected() ignored."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 221
     :catch_0
     move-exception v0
 
@@ -308,19 +287,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 230
     const-string v0, "VRManagerService"
 
-    const-string/jumbo v1, "onServiceDisconnected()"
+    const-string v1, "onServiceDisconnected()"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mVRRecord:Lcom/android/server/VRManagerService$VRRecord;
@@ -330,7 +306,6 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -340,7 +315,6 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 234
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRRecord;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -352,7 +326,6 @@
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 236
     :cond_0
     return-void
 .end method

@@ -83,7 +83,6 @@
 
     const/4 v1, 0x0
 
-    .line 55
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -95,10 +94,8 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
-    .line 81
     sput v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mBoosterFLAG:I
 
-    .line 98
     sget-object v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;->FullMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
     sput-object v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
@@ -122,85 +119,65 @@
 
     const/4 v11, 0x0
 
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-boolean v11, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mEnableTrafficStatsPoll:Z
 
-    .line 67
     iput v11, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTrafficStatsPollToken:I
 
-    .line 71
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
 
-    .line 72
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuCoreBooster:Landroid/os/DVFSHelper;
 
-    .line 73
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mLpm:Landroid/os/DVFSHelper;
 
-    .line 74
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
 
-    .line 75
     iput v11, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
 
-    .line 79
     new-array v0, v2, [J
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
-    .line 86
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mContext:Landroid/content/Context;
 
-    .line 88
     new-array v0, v2, [I
 
     fill-array-data v0, :array_1
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
 
-    .line 91
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentL1ssCtrl:I
 
-    .line 92
     iput-boolean v11, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSetMif:Z
 
-    .line 101
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mContext:Landroid/content/Context;
 
-    .line 102
     iput-object p2, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mInterface:Ljava/lang/String;
 
-    .line 103
     new-instance v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$TrafficHandler;
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$TrafficHandler;-><init>(Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;)V
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTrafficHandler:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$TrafficHandler;
 
-    .line 105
     new-instance v6, Landroid/content/IntentFilter;
 
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 106
     .local v6, "filter":Landroid/content/IntentFilter;
     const-string v0, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 109
     const-string v0, "android.bluetooth.adapter.action.STATE_CHANGED"
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mContext:Landroid/content/Context;
 
     new-instance v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;
@@ -209,7 +186,6 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 155
     new-instance v0, Landroid/os/DVFSHelper;
 
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mContext:Landroid/content/Context;
@@ -222,25 +198,21 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedCPUFrequency()[I
 
     move-result-object v10
 
-    .line 159
     .local v10, "supportedCPUFreqTable":[I
     if-eqz v10, :cond_0
 
-    .line 160
     array-length v0, v10
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
 
-    .line 161
     sget-boolean v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -269,11 +241,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->setCpuFreqIndex()V
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
 
     sget-object v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
@@ -288,11 +258,9 @@
 
     aget v7, v0, v1
 
-    .line 169
     .local v7, "mCpuFreqIndex_0":I
     if-eqz v10, :cond_2
 
-    .line 170
     sget-boolean v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v0, :cond_1
@@ -321,7 +289,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
 
@@ -349,7 +316,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 177
     :cond_2
     new-instance v0, Landroid/os/DVFSHelper;
 
@@ -363,18 +329,15 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuCoreBooster:Landroid/os/DVFSHelper;
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuCoreBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedCPUCoreNum()[I
 
     move-result-object v9
 
-    .line 179
     .local v9, "supportedCPUCoreTable":[I
     if-eqz v9, :cond_4
 
-    .line 180
     sget-boolean v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v0, :cond_3
@@ -403,7 +366,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     :cond_3
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuCoreBooster:Landroid/os/DVFSHelper;
 
@@ -415,7 +377,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 185
     :cond_4
     new-instance v0, Landroid/os/DVFSHelper;
 
@@ -429,7 +390,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mLpm:Landroid/os/DVFSHelper;
 
-    .line 186
     new-instance v0, Landroid/os/DVFSHelper;
 
     const-string v2, "WIFI_P2P_MIF"
@@ -442,18 +402,15 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedBUSFrequency()[I
 
     move-result-object v8
 
-    .line 188
     .local v8, "supportedBUSFreqTable":[I
     if-eqz v8, :cond_6
 
-    .line 189
     sget-boolean v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v0, :cond_5
@@ -482,7 +439,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     :cond_5
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
 
@@ -494,11 +450,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 193
     :cond_6
     return-void
 
-    .line 79
     :array_0
     .array-data 8
         -0x1
@@ -509,7 +463,6 @@
         -0x1
     .end array-data
 
-    .line 88
     :array_1
     .array-data 4
         -0x1
@@ -526,7 +479,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -538,7 +490,6 @@
     .param p1, "x1"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object p1
@@ -549,7 +500,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
     .prologue
-    .line 53
     sput-object p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
     return-object p0
@@ -560,7 +510,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTrafficHandler:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$TrafficHandler;
 
     return-object v0
@@ -571,7 +520,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentL1ssCtrl:I
 
     return v0
@@ -583,7 +531,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 53
     iput p1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentL1ssCtrl:I
 
     return p1
@@ -594,7 +541,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mLpm:Landroid/os/DVFSHelper;
 
     return-object v0
@@ -605,7 +551,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget-boolean v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSetMif:Z
 
     return v0
@@ -617,7 +562,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 53
     iput-boolean p1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSetMif:Z
 
     return p1
@@ -628,7 +572,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
 
     return-object v0
@@ -639,7 +582,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget-boolean v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mEnableTrafficStatsPoll:Z
 
     return v0
@@ -651,7 +593,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 53
     iput-boolean p1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mEnableTrafficStatsPoll:Z
 
     return p1
@@ -662,7 +603,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTrafficStatsPollToken:I
 
     return v0
@@ -673,7 +613,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     .prologue
-    .line 53
     iget v0, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTrafficStatsPollToken:I
 
     add-int/lit8 v1, v0, 0x1
@@ -692,7 +631,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 353
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -715,7 +653,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 354
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -738,7 +675,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 355
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -761,7 +697,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 356
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -784,7 +719,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 357
     return-void
 .end method
 
@@ -792,7 +726,6 @@
     .locals 28
 
     .prologue
-    .line 223
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTxPkts:J
@@ -802,7 +735,6 @@
 
     iget-wide v10, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mRxPkts:J
 
-    .line 226
     .local v10, "preRxPkts":J
     move-object/from16 v0, p0
 
@@ -820,7 +752,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTxPkts:J
 
-    .line 227
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mInterface:Ljava/lang/String;
@@ -837,7 +768,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mRxPkts:J
 
-    .line 229
     const-wide/16 v24, 0x0
 
     cmp-long v24, v14, v24
@@ -850,7 +780,6 @@
 
     if-lez v24, :cond_8
 
-    .line 232
     :cond_0
     move-object/from16 v0, p0
 
@@ -861,7 +790,6 @@
 
     iget-wide v8, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mRxBytes:J
 
-    .line 234
     .local v8, "preRxBytes":J
     move-object/from16 v0, p0
 
@@ -879,7 +807,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTxBytes:J
 
-    .line 235
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mInterface:Ljava/lang/String;
@@ -896,7 +823,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mRxBytes:J
 
-    .line 242
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
@@ -919,7 +845,6 @@
 
     mul-long v18, v24, v26
 
-    .line 243
     .local v18, "threshold_0":J
     move-object/from16 v0, p0
 
@@ -943,7 +868,6 @@
 
     mul-long v20, v24, v26
 
-    .line 244
     .local v20, "threshold_1":J
     move-object/from16 v0, p0
 
@@ -967,7 +891,6 @@
 
     mul-long v22, v24, v26
 
-    .line 245
     .local v22, "threshold_2":J
     move-object/from16 v0, p0
 
@@ -979,11 +902,9 @@
 
     move-result-object v7
 
-    .line 247
     .local v7, "supportedCPUFreqTable":[I
     if-eqz v7, :cond_1
 
-    .line 248
     array-length v0, v7
 
     move/from16 v24, v0
@@ -996,15 +917,12 @@
 
     iput v0, v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
 
-    .line 251
     :cond_1
     const-wide/32 v16, 0x12c0000
 
-    .line 253
     .local v16, "setL1ss_tp":J
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->setCpuFreqIndex()V
 
-    .line 254
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
@@ -1023,7 +941,6 @@
 
     aget v4, v24, v25
 
-    .line 255
     .local v4, "mCpuFreqIndex_0":I
     move-object/from16 v0, p0
 
@@ -1043,7 +960,6 @@
 
     aget v5, v24, v25
 
-    .line 256
     .local v5, "mCpuFreqIndex_1":I
     move-object/from16 v0, p0
 
@@ -1063,7 +979,6 @@
 
     aget v6, v24, v25
 
-    .line 259
     .local v6, "mCpuFreqIndex_2":I
     move-object/from16 v0, p0
 
@@ -1087,7 +1002,6 @@
 
     if-lez v24, :cond_9
 
-    .line 260
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentL1ssCtrl:I
@@ -1102,7 +1016,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mLpm:Landroid/os/DVFSHelper;
@@ -1111,7 +1024,6 @@
 
     invoke-virtual/range {v24 .. v24}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 262
     const/16 v24, 0x0
 
     move/from16 v0, v24
@@ -1120,7 +1032,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentL1ssCtrl:I
 
-    .line 263
     sget-boolean v24, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v24, :cond_2
@@ -1131,7 +1042,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     :cond_2
     move-object/from16 v0, p0
 
@@ -1141,7 +1051,6 @@
 
     if-nez v24, :cond_3
 
-    .line 266
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
@@ -1150,7 +1059,6 @@
 
     invoke-virtual/range {v24 .. v24}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 267
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -1159,7 +1067,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSetMif:Z
 
-    .line 282
     :cond_3
     :goto_0
     move-object/from16 v0, p0
@@ -1186,11 +1093,9 @@
 
     if-lez v24, :cond_b
 
-    .line 287
     :cond_4
     if-eqz v7, :cond_6
 
-    .line 288
     sget-boolean v24, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v24, :cond_5
@@ -1219,7 +1124,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     :cond_5
     move-object/from16 v0, p0
 
@@ -1251,7 +1155,6 @@
 
     invoke-virtual/range {v24 .. v26}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 294
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
@@ -1262,7 +1165,6 @@
 
     invoke-virtual/range {v24 .. v25}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 299
     :cond_6
     move-object/from16 v0, p0
 
@@ -1272,7 +1174,6 @@
 
     if-eqz v24, :cond_8
 
-    .line 300
     sget-boolean v24, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v24, :cond_7
@@ -1283,7 +1184,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     :cond_7
     move-object/from16 v0, p0
 
@@ -1295,7 +1195,6 @@
 
     invoke-virtual/range {v24 .. v25}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 350
     .end local v4    # "mCpuFreqIndex_0":I
     .end local v5    # "mCpuFreqIndex_1":I
     .end local v6    # "mCpuFreqIndex_2":I
@@ -1310,7 +1209,6 @@
     :goto_1
     return-void
 
-    .line 270
     .restart local v4    # "mCpuFreqIndex_0":I
     .restart local v5    # "mCpuFreqIndex_1":I
     .restart local v6    # "mCpuFreqIndex_2":I
@@ -1330,7 +1228,6 @@
 
     if-nez v24, :cond_a
 
-    .line 271
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mLpm:Landroid/os/DVFSHelper;
@@ -1339,7 +1236,6 @@
 
     invoke-virtual/range {v24 .. v24}, Landroid/os/DVFSHelper;->release()V
 
-    .line 272
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -1348,7 +1244,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentL1ssCtrl:I
 
-    .line 273
     sget-boolean v24, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v24, :cond_a
@@ -1359,7 +1254,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     :cond_a
     move-object/from16 v0, p0
 
@@ -1369,7 +1263,6 @@
 
     if-eqz v24, :cond_3
 
-    .line 276
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mMifBooster:Landroid/os/DVFSHelper;
@@ -1378,7 +1271,6 @@
 
     invoke-virtual/range {v24 .. v24}, Landroid/os/DVFSHelper;->release()V
 
-    .line 277
     const/16 v24, 0x0
 
     move/from16 v0, v24
@@ -1389,7 +1281,6 @@
 
     goto/16 :goto_0
 
-    .line 304
     :cond_b
     move-object/from16 v0, p0
 
@@ -1415,11 +1306,9 @@
 
     if-lez v24, :cond_e
 
-    .line 309
     :cond_c
     if-eqz v7, :cond_8
 
-    .line 310
     sget-boolean v24, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v24, :cond_d
@@ -1448,7 +1337,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
     :cond_d
     move-object/from16 v0, p0
 
@@ -1480,7 +1368,6 @@
 
     invoke-virtual/range {v24 .. v26}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
@@ -1493,7 +1380,6 @@
 
     goto/16 :goto_1
 
-    .line 318
     :cond_e
     move-object/from16 v0, p0
 
@@ -1519,11 +1405,9 @@
 
     if-lez v24, :cond_8
 
-    .line 323
     :cond_f
     if-eqz v7, :cond_8
 
-    .line 324
     sget-boolean v24, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v24, :cond_10
@@ -1552,7 +1436,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     :cond_10
     move-object/from16 v0, p0
 
@@ -1584,7 +1467,6 @@
 
     invoke-virtual/range {v24 .. v26}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 330
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuBooster:Landroid/os/DVFSHelper;
@@ -1602,10 +1484,8 @@
     .locals 6
 
     .prologue
-    .line 466
     const-string v0, "0,5,11,2,5,11,2,5,11"
 
-    .line 467
     .local v0, "dbCpuFreq":Ljava/lang/String;
     const-string v4, ","
 
@@ -1613,11 +1493,9 @@
 
     move-result-object v3
 
-    .line 469
     .local v3, "values":[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 470
     .local v2, "tempFreqIndex":I
     const/4 v1, 0x0
 
@@ -1627,14 +1505,12 @@
 
     if-ge v1, v4, :cond_2
 
-    .line 471
     iget-object v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
 
     aget v4, v4, v1
 
     if-gez v4, :cond_0
 
-    .line 472
     aget-object v4, v3, v1
 
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -1645,7 +1521,6 @@
 
     move-result v2
 
-    .line 473
     iget-object v5, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
 
     iget v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
@@ -1657,19 +1532,16 @@
     :goto_1
     aput v4, v5, v1
 
-    .line 470
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 473
     :cond_1
     iget v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
 
     goto :goto_1
 
-    .line 476
     :cond_2
     const/4 v1, 0x3
 
@@ -1678,14 +1550,12 @@
 
     if-ge v1, v4, :cond_5
 
-    .line 477
     iget-object v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
 
     aget v4, v4, v1
 
     if-gez v4, :cond_3
 
-    .line 478
     add-int/lit8 v4, v1, 0x3
 
     aget-object v4, v3, v4
@@ -1698,7 +1568,6 @@
 
     move-result v2
 
-    .line 479
     iget-object v5, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCpuFreqindex:[I
 
     iget v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
@@ -1710,19 +1579,16 @@
     :goto_3
     aput v4, v5, v1
 
-    .line 476
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 479
     :cond_4
     iget v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mSupportedCPUFreqTableMaxIndex:I
 
     goto :goto_3
 
-    .line 494
     :cond_5
     return-void
 .end method
@@ -1731,10 +1597,8 @@
     .locals 14
 
     .prologue
-    .line 402
     const/4 v0, 0x0
 
-    .line 404
     .local v0, "br":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
@@ -1750,7 +1614,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 405
     .end local v0    # "br":Ljava/io/BufferedReader;
     .local v1, "br":Ljava/io/BufferedReader;
     :try_start_1
@@ -1758,22 +1621,18 @@
 
     move-result-object v2
 
-    .line 406
     .local v2, "brRead":Ljava/lang/String;
     if-eqz v2, :cond_3
 
-    .line 407
     const-string v8, ","
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 409
     .local v7, "values":[Ljava/lang/String;
     if-eqz v7, :cond_3
 
-    .line 410
     const/4 v5, 0x0
 
     .local v5, "i":I
@@ -1782,7 +1641,6 @@
 
     if-ge v5, v8, :cond_1
 
-    .line 411
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     aget-wide v8, v8, v5
@@ -1793,7 +1651,6 @@
 
     if-gez v8, :cond_0
 
-    .line 412
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     aget-object v9, v7, v5
@@ -1808,13 +1665,11 @@
 
     aput-wide v10, v8, v5
 
-    .line 410
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 416
     :cond_1
     const/4 v5, 0x3
 
@@ -1823,7 +1678,6 @@
 
     if-ge v5, v8, :cond_3
 
-    .line 417
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     aget-wide v8, v8, v5
@@ -1834,7 +1688,6 @@
 
     if-gez v8, :cond_2
 
-    .line 418
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     add-int/lit8 v9, v5, 0x3
@@ -1854,13 +1707,11 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 416
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 440
     .end local v5    # "i":I
     .end local v7    # "values":[Ljava/lang/String;
     :cond_3
@@ -1868,7 +1719,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 441
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1903,7 +1753,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1938,7 +1787,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1973,7 +1821,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2008,7 +1855,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2043,7 +1889,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 451
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2078,11 +1923,9 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_4
     if-eqz v1, :cond_e
 
-    .line 456
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -2090,7 +1933,6 @@
 
     move-object v0, v1
 
-    .line 462
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v2    # "brRead":Ljava/lang/String;
     .restart local v0    # "br":Ljava/io/BufferedReader;
@@ -2098,14 +1940,12 @@
     :goto_2
     return-void
 
-    .line 457
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "brRead":Ljava/lang/String;
     :catch_0
     move-exception v4
 
-    .line 458
     .local v4, "e":Ljava/io/IOException;
     const-string v8, "WifiP2pTrafficPoller"
 
@@ -2115,18 +1955,15 @@
 
     move-object v0, v1
 
-    .line 459
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 424
     .end local v2    # "brRead":Ljava/lang/String;
     .end local v4    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v6
 
-    .line 425
     .local v6, "ignore":Ljava/lang/Exception;
     :goto_3
     :try_start_3
@@ -2134,7 +1971,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 426
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2157,11 +1993,9 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     :cond_6
     const-string v3, "10240,5120,1280,10240,5120,1280,10240,5120,1280"
 
-    .line 428
     .local v3, "dbThreshold":Ljava/lang/String;
     const-string v8, ","
 
@@ -2169,7 +2003,6 @@
 
     move-result-object v7
 
-    .line 429
     .restart local v7    # "values":[Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -2179,7 +2012,6 @@
 
     if-ge v5, v8, :cond_8
 
-    .line 430
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     aget-wide v8, v8, v5
@@ -2190,7 +2022,6 @@
 
     if-gez v8, :cond_7
 
-    .line 431
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     aget-object v9, v7, v5
@@ -2205,13 +2036,11 @@
 
     aput-wide v10, v8, v5
 
-    .line 429
     :cond_7
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 434
     :cond_8
     const/4 v5, 0x3
 
@@ -2220,7 +2049,6 @@
 
     if-ge v5, v8, :cond_a
 
-    .line 435
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     aget-wide v8, v8, v5
@@ -2231,7 +2059,6 @@
 
     if-gez v8, :cond_9
 
-    .line 436
     iget-object v8, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     add-int/lit8 v9, v5, 0x3
@@ -2250,19 +2077,16 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 434
     :cond_9
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_5
 
-    .line 440
     :cond_a
     sget-boolean v8, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v8, :cond_b
 
-    .line 441
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2297,7 +2121,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2332,7 +2155,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2367,7 +2189,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2402,7 +2223,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2437,7 +2257,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 451
     const-string v8, "WifiP2pTrafficPoller"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2472,11 +2291,9 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_b
     if-eqz v0, :cond_5
 
-    .line 456
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -2484,11 +2301,9 @@
 
     goto/16 :goto_2
 
-    .line 457
     :catch_2
     move-exception v4
 
-    .line 458
     .restart local v4    # "e":Ljava/io/IOException;
     const-string v8, "WifiP2pTrafficPoller"
 
@@ -2498,7 +2313,6 @@
 
     goto/16 :goto_2
 
-    .line 440
     .end local v3    # "dbThreshold":Ljava/lang/String;
     .end local v4    # "e":Ljava/io/IOException;
     .end local v5    # "i":I
@@ -2512,7 +2326,6 @@
 
     if-eqz v9, :cond_c
 
-    .line 441
     const-string v9, "WifiP2pTrafficPoller"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2547,7 +2360,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const-string v9, "WifiP2pTrafficPoller"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2582,7 +2394,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
     const-string v9, "WifiP2pTrafficPoller"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2617,7 +2428,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
     const-string v9, "WifiP2pTrafficPoller"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2652,7 +2462,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
     const-string v9, "WifiP2pTrafficPoller"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2687,7 +2496,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 451
     const-string v9, "WifiP2pTrafficPoller"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2722,26 +2530,21 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_c
     if-eqz v0, :cond_d
 
-    .line 456
     :try_start_5
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 459
     :cond_d
     :goto_7
     throw v8
 
-    .line 457
     :catch_3
     move-exception v4
 
-    .line 458
     .restart local v4    # "e":Ljava/io/IOException;
     const-string v9, "WifiP2pTrafficPoller"
 
@@ -2751,7 +2554,6 @@
 
     goto :goto_7
 
-    .line 440
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v4    # "e":Ljava/io/IOException;
     .restart local v1    # "br":Ljava/io/BufferedReader;
@@ -2764,7 +2566,6 @@
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto/16 :goto_6
 
-    .line 424
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :catch_4
@@ -2791,10 +2592,8 @@
     .locals 12
 
     .prologue
-    .line 361
     const/4 v0, 0x0
 
-    .line 363
     .local v0, "br":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
@@ -2810,7 +2609,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 364
     .end local v0    # "br":Ljava/io/BufferedReader;
     .local v1, "br":Ljava/io/BufferedReader;
     :try_start_1
@@ -2818,22 +2616,18 @@
 
     move-result-object v2
 
-    .line 365
     .local v2, "brRead":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 366
     const-string v6, ","
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 368
     .local v5, "values":[Ljava/lang/String;
     if-eqz v5, :cond_0
 
-    .line 369
     iget-object v6, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     const/4 v7, 0x0
@@ -2852,7 +2646,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 370
     iget-object v6, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     const/4 v7, 0x1
@@ -2874,14 +2667,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 385
     .end local v5    # "values":[Ljava/lang/String;
     :cond_0
     sget-boolean v6, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v6, :cond_1
 
-    .line 386
     const-string v6, "WifiP2pTrafficPoller"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2916,7 +2707,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     const-string v6, "WifiP2pTrafficPoller"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2951,11 +2741,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_1
     if-eqz v1, :cond_9
 
-    .line 392
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -2963,7 +2751,6 @@
 
     move-object v0, v1
 
-    .line 398
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v2    # "brRead":Ljava/lang/String;
     .restart local v0    # "br":Ljava/io/BufferedReader;
@@ -2971,14 +2758,12 @@
     :goto_0
     return-void
 
-    .line 393
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "brRead":Ljava/lang/String;
     :catch_0
     move-exception v3
 
-    .line 394
     .local v3, "e":Ljava/io/IOException;
     const-string v6, "WifiP2pTrafficPoller"
 
@@ -2988,18 +2773,15 @@
 
     move-object v0, v1
 
-    .line 395
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_0
 
-    .line 373
     .end local v2    # "brRead":Ljava/lang/String;
     .end local v3    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v4
 
-    .line 374
     .local v4, "ignore":Ljava/lang/Exception;
     :goto_1
     :try_start_3
@@ -3007,7 +2789,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 375
     const-string v6, "WifiP2pTrafficPoller"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3030,7 +2811,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     :cond_3
     iget-object v6, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
@@ -3044,7 +2824,6 @@
 
     if-gez v6, :cond_4
 
-    .line 377
     iget-object v6, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     const/4 v7, 0x0
@@ -3057,7 +2836,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 380
     :cond_4
     iget-object v6, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
@@ -3071,7 +2849,6 @@
 
     if-gez v6, :cond_5
 
-    .line 381
     iget-object v6, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mThresholdKbytes:[J
 
     const/4 v7, 0x1
@@ -3086,13 +2863,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 385
     :cond_5
     sget-boolean v6, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->DBG:Z
 
     if-eqz v6, :cond_6
 
-    .line 386
     const-string v6, "WifiP2pTrafficPoller"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3127,7 +2902,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     const-string v6, "WifiP2pTrafficPoller"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3162,11 +2936,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_6
     if-eqz v0, :cond_2
 
-    .line 392
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -3174,11 +2946,9 @@
 
     goto/16 :goto_0
 
-    .line 393
     :catch_2
     move-exception v3
 
-    .line 394
     .restart local v3    # "e":Ljava/io/IOException;
     const-string v6, "WifiP2pTrafficPoller"
 
@@ -3188,7 +2958,6 @@
 
     goto/16 :goto_0
 
-    .line 385
     .end local v3    # "e":Ljava/io/IOException;
     .end local v4    # "ignore":Ljava/lang/Exception;
     :catchall_0
@@ -3199,7 +2968,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 386
     const-string v7, "WifiP2pTrafficPoller"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3234,7 +3002,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     const-string v7, "WifiP2pTrafficPoller"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3269,26 +3036,21 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_7
     if-eqz v0, :cond_8
 
-    .line 392
     :try_start_5
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 395
     :cond_8
     :goto_3
     throw v6
 
-    .line 393
     :catch_3
     move-exception v3
 
-    .line 394
     .restart local v3    # "e":Ljava/io/IOException;
     const-string v7, "WifiP2pTrafficPoller"
 
@@ -3298,7 +3060,6 @@
 
     goto :goto_3
 
-    .line 385
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v3    # "e":Ljava/io/IOException;
     .restart local v1    # "br":Ljava/io/BufferedReader;
@@ -3311,7 +3072,6 @@
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 373
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :catch_4

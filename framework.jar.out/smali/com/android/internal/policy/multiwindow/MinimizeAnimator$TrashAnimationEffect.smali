@@ -83,52 +83,38 @@
 
     const/4 v1, 0x0
 
-    .line 1047
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1030
     iput-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
 
-    .line 1033
     iput v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mTopBgFocusEffectMargin:I
 
-    .line 1034
     iput v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mTrashMargin:I
 
-    .line 1035
     iput v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mRedCircleHeight:I
 
-    .line 1036
     iput v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mTopMargin:I
 
-    .line 1038
     iput v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->TRASH_DIRECTION_NONE:I
 
-    .line 1039
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->TRASH_DIRECTION_LEFT:I
 
-    .line 1040
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->TRASH_DIRECTION_RIGHT:I
 
-    .line 1043
     iput-boolean v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsShowingTrash:Z
 
-    .line 1044
     iput-boolean v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mNeedAnimation:Z
 
-    .line 1045
     iput-boolean v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsTrashOpen:Z
 
-    .line 1048
     iput v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
-    .line 1049
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -147,7 +133,6 @@
     # setter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mMoveInterval:I
     invoke-static {p1, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$2802(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;I)I
 
-    .line 1051
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -165,7 +150,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mTopBgFocusEffectMargin:I
 
-    .line 1053
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -183,7 +167,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mTrashMargin:I
 
-    .line 1055
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -201,7 +184,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mRedCircleHeight:I
 
-    .line 1057
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -219,7 +201,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mRemoveRangeRectMargin:I
 
-    .line 1059
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -237,7 +218,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundBlackColor:I
 
-    .line 1061
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3400(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)Landroid/content/Context;
 
@@ -255,7 +235,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundRedColor:I
 
-    .line 1063
     return-void
 .end method
 
@@ -265,7 +244,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 1011
     invoke-direct {p0, p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->bounceShowRedCircleAnimation(Z)V
 
     return-void
@@ -276,7 +254,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawableItem:Landroid/graphics/drawable/GradientDrawable;
 
     return-object v0
@@ -287,7 +264,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawable:Landroid/graphics/drawable/LayerDrawable;
 
     return-object v0
@@ -298,7 +274,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
     return-object v0
@@ -309,7 +284,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeTrashAnimation()V
 
     return-void
@@ -320,7 +294,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeTrashTextAnimation()V
 
     return-void
@@ -331,7 +304,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeRedCircleAnimation()V
 
     return-void
@@ -342,7 +314,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeTrashCoverCloseAnimation()V
 
     return-void
@@ -353,7 +324,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trash:Landroid/view/View;
 
     return-object v0
@@ -364,7 +334,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     return-object v0
@@ -375,7 +344,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashText:Landroid/widget/TextView;
 
     return-object v0
@@ -386,7 +354,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
 
     return-object v0
@@ -397,7 +364,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeTrashBodyFrameAnimation()V
 
     return-void
@@ -408,7 +374,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->openTrashCoverAnimation()V
 
     return-void
@@ -419,7 +384,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->shakeTrashCoverAnimation()V
 
     return-void
@@ -430,7 +394,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     .prologue
-    .line 1011
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->closeTrashCoverAnimation()V
 
     return-void
@@ -441,14 +404,11 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 1268
     move v9, p1
 
-    .line 1270
     .local v9, "openTrash":Z
     if-eqz v9, :cond_0
 
-    .line 1271
     new-instance v10, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -457,7 +417,6 @@
 
     invoke-direct {v10, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1272
     .local v10, "topEffectAlphaAnim":Landroid/view/animation/AlphaAnimation;
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
@@ -479,80 +438,66 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1280
     .local v0, "topEffectScaleAnim":Landroid/view/animation/ScaleAnimation;
     :goto_0
     const-wide/16 v2, 0xe9
 
     invoke-virtual {v10, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1281
     new-instance v1, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
 
     invoke-virtual {v10, v1}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1282
     const/4 v1, 0x1
 
     invoke-virtual {v10, v1}, Landroid/view/animation/AlphaAnimation;->setFillEnabled(Z)V
 
-    .line 1283
     const/4 v1, 0x1
 
     invoke-virtual {v10, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 1284
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$4;
 
     invoke-direct {v1, p0, v9}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$4;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;Z)V
 
     invoke-virtual {v10, v1}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1306
     const-wide/16 v2, 0xdf
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1307
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillEnabled(Z)V
 
-    .line 1308
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1309
     new-instance v1, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1310
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$5;
 
     invoke-direct {v1, p0, v9}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$5;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;Z)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1325
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1326
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectOuter:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v10}, Landroid/widget/LinearLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1327
     return-void
 
-    .line 1275
     .end local v0    # "topEffectScaleAnim":Landroid/view/animation/ScaleAnimation;
     .end local v10    # "topEffectAlphaAnim":Landroid/view/animation/AlphaAnimation;
     :cond_0
@@ -564,7 +509,6 @@
 
     invoke-direct {v10, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1276
     .restart local v10    # "topEffectAlphaAnim":Landroid/view/animation/AlphaAnimation;
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
@@ -595,12 +539,10 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 1221
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->changeRedCircleColor(ZZ)V
 
-    .line 1222
     return-void
 .end method
 
@@ -614,55 +556,44 @@
 
     const/4 v3, 0x0
 
-    .line 1225
     if-eqz p1, :cond_1
 
-    .line 1226
     iget-boolean v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsTrashOpen:Z
 
     if-eqz v2, :cond_2
 
-    .line 1263
     :cond_0
     :goto_0
     return-void
 
-    .line 1230
     :cond_1
     iget-boolean v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsTrashOpen:Z
 
     if-eqz v2, :cond_0
 
-    .line 1235
     :cond_2
     if-eqz p2, :cond_4
 
-    .line 1236
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
-    .line 1238
     .local v0, "circleColors":[I
     if-eqz p1, :cond_3
 
-    .line 1239
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundBlackColor:I
 
     aput v2, v0, v3
 
-    .line 1240
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundRedColor:I
 
     aput v2, v0, v4
 
-    .line 1245
     :goto_1
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofArgb([I)Landroid/animation/ValueAnimator;
 
     move-result-object v1
 
-    .line 1246
     .local v1, "transAnim":Landroid/animation/ValueAnimator;
     new-instance v2, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$3;
 
@@ -670,43 +601,36 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1253
     const-wide/16 v2, 0xc8
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1254
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
     goto :goto_0
 
-    .line 1242
     .end local v1    # "transAnim":Landroid/animation/ValueAnimator;
     :cond_3
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundRedColor:I
 
     aput v2, v0, v3
 
-    .line 1243
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundBlackColor:I
 
     aput v2, v0, v4
 
     goto :goto_1
 
-    .line 1256
     .end local v0    # "circleColors":[I
     :cond_4
     if-eqz p1, :cond_5
 
-    .line 1257
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawableItem:Landroid/graphics/drawable/GradientDrawable;
 
     iget v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeBackGroundRedColor:I
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 1261
     :goto_2
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
@@ -716,7 +640,6 @@
 
     goto :goto_0
 
-    .line 1259
     :cond_5
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawableItem:Landroid/graphics/drawable/GradientDrawable;
 
@@ -734,18 +657,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1561
     const/4 v0, 0x1
 
     invoke-direct {p0, v1, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->changeRedCircleColor(ZZ)V
 
-    .line 1562
     invoke-direct {p0, p1, v1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->shakeRedCircleTrashCoverAnimation(IZ)V
 
-    .line 1563
     invoke-direct {p0, v1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->scaleRedCircleTrashCoverAnimation(Z)V
 
-    .line 1564
     return-void
 .end method
 
@@ -757,7 +676,6 @@
 
     const/4 v1, 0x1
 
-    .line 2057
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     const v6, -0x42b33333    # -0.05f
@@ -774,28 +692,23 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 2060
     .local v0, "transAnim":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 2061
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 2062
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$27;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$27;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 2073
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2074
     return-void
 .end method
 
@@ -806,16 +719,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1555
     invoke-direct {p0, v0, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->changeRedCircleColor(ZZ)V
 
-    .line 1556
     invoke-direct {p0, p1, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->shakeRedCircleTrashCoverAnimation(IZ)V
 
-    .line 1557
     invoke-direct {p0, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->scaleRedCircleTrashCoverAnimation(Z)V
 
-    .line 1558
     return-void
 .end method
 
@@ -827,7 +736,6 @@
 
     const/4 v1, 0x1
 
-    .line 2014
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     const v8, -0x42b33333    # -0.05f
@@ -844,31 +752,25 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 2017
     .local v0, "transAnim":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v2, 0xfa
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 2018
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setFillEnabled(Z)V
 
-    .line 2019
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 2020
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$25;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$25;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 2031
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2032
     return-void
 .end method
 
@@ -876,7 +778,6 @@
     .locals 28
 
     .prologue
-    .line 1689
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -890,7 +791,6 @@
 
     move-result v22
 
-    .line 1691
     .local v22, "minimizeIconWidth":I
     move-object/from16 v0, p0
 
@@ -900,7 +800,6 @@
 
     move-result v27
 
-    .line 1693
     .local v27, "trashHeight":I
     move-object/from16 v0, p0
 
@@ -915,7 +814,6 @@
 
     move-result v23
 
-    .line 1694
     .local v23, "originalX":F
     move-object/from16 v0, p0
 
@@ -930,7 +828,6 @@
 
     move-result v24
 
-    .line 1696
     .local v24, "originalY":F
     move-object/from16 v0, p0
 
@@ -947,7 +844,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setLeft(I)V
 
-    .line 1697
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -965,7 +861,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setRight(I)V
 
-    .line 1698
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -981,7 +876,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setTop(I)V
 
-    .line 1699
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -999,7 +893,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBottom(I)V
 
-    .line 1700
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -1013,7 +906,6 @@
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setX(F)V
 
-    .line 1701
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -1027,7 +919,6 @@
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setY(F)V
 
-    .line 1703
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -1044,7 +935,6 @@
 
     mul-float v25, v3, v4
 
-    .line 1704
     .local v25, "trashDestinationX":F
     move-object/from16 v0, p0
 
@@ -1062,7 +952,6 @@
 
     sub-float v26, v3, v4
 
-    .line 1706
     .local v26, "trashDestinationY":F
     sub-float v3, v25, v23
 
@@ -1072,7 +961,6 @@
 
     div-float v6, v3, v4
 
-    .line 1707
     .local v6, "distanceX":F
     sub-float v3, v26, v24
 
@@ -1082,7 +970,6 @@
 
     div-float v10, v3, v4
 
-    .line 1709
     .local v10, "distanceY":F
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
@@ -1100,30 +987,25 @@
 
     invoke-direct/range {v2 .. v10}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 1712
     .local v2, "minimizeIconRemoveTransAnim":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v4, 0x10a
 
     invoke-virtual {v2, v4, v5}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 1713
     new-instance v3, Landroid/view/animation/interpolator/SineInOut90;
 
     invoke-direct {v3}, Landroid/view/animation/interpolator/SineInOut90;-><init>()V
 
     invoke-virtual {v2, v3}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1714
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/view/animation/TranslateAnimation;->setFillEnabled(Z)V
 
-    .line 1715
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 1716
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$14;
 
     move-object/from16 v0, p0
@@ -1132,7 +1014,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1730
     new-instance v11, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v12, 0x3f800000    # 1.0f
@@ -1153,7 +1034,6 @@
 
     invoke-direct/range {v11 .. v19}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1732
     .local v11, "minimizeIconRemoveScaleAnim":Landroid/view/animation/ScaleAnimation;
     new-instance v3, Landroid/view/animation/interpolator/SineInOut33;
 
@@ -1161,22 +1041,18 @@
 
     invoke-virtual {v11, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1733
     const-wide/16 v4, 0x10a
 
     invoke-virtual {v11, v4, v5}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1734
     const/4 v3, 0x1
 
     invoke-virtual {v11, v3}, Landroid/view/animation/ScaleAnimation;->setFillEnabled(Z)V
 
-    .line 1735
     const/4 v3, 0x1
 
     invoke-virtual {v11, v3}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1736
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$15;
 
     move-object/from16 v0, p0
@@ -1185,7 +1061,6 @@
 
     invoke-virtual {v11, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1754
     new-instance v21, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -1196,7 +1071,6 @@
 
     invoke-direct {v0, v3, v4}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1755
     .local v21, "minimizeIconRemoveAlphaAnim":Landroid/view/animation/AlphaAnimation;
     const-wide/16 v4, 0x10a
 
@@ -1204,7 +1078,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1756
     new-instance v3, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v3}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
@@ -1213,21 +1086,18 @@
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1757
     const/4 v3, 0x1
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setFillEnabled(Z)V
 
-    .line 1758
     const/4 v3, 0x1
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 1759
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$16;
 
     move-object/from16 v0, p0
@@ -1238,7 +1108,6 @@
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1779
     new-instance v20, Landroid/view/animation/AnimationSet;
 
     const/4 v3, 0x0
@@ -1247,21 +1116,17 @@
 
     invoke-direct {v0, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1780
     .local v20, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual/range {v20 .. v21}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1781
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v11}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1782
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v2}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1783
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -1275,7 +1140,6 @@
 
     invoke-virtual {v3, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1784
     return-void
 .end method
 
@@ -1293,7 +1157,6 @@
 
     const/4 v5, 0x1
 
-    .line 1871
     new-instance v10, Landroid/view/animation/AlphaAnimation;
 
     const v3, 0x3ecccccd    # 0.4f
@@ -1302,31 +1165,25 @@
 
     invoke-direct {v10, v3, v4}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1872
     .local v10, "topEffectRemoveAlphaAnim":Landroid/view/animation/AlphaAnimation;
     invoke-virtual {v10, v12, v13}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1873
     new-instance v3, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v3}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
 
     invoke-virtual {v10, v3}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1874
     invoke-virtual {v10, v5}, Landroid/view/animation/AlphaAnimation;->setFillEnabled(Z)V
 
-    .line 1875
     invoke-virtual {v10, v5}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 1876
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$20;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$20;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v10, v3}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1894
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     move v3, v1
@@ -1339,50 +1196,40 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1896
     .local v0, "topEffectRemoveScaleAnim":Landroid/view/animation/ScaleAnimation;
     invoke-virtual {v0, v12, v13}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1897
     new-instance v1, Landroid/view/animation/interpolator/SineInOut80;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut80;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1898
     invoke-virtual {v0, v5}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1899
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$21;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$21;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1914
     new-instance v9, Landroid/view/animation/AnimationSet;
 
     const/4 v1, 0x0
 
     invoke-direct {v9, v1}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1915
     .local v9, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v9, v10}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1916
     invoke-virtual {v9, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1917
     invoke-virtual {v9, v5}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 1918
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v9}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1919
     return-void
 .end method
 
@@ -1398,7 +1245,6 @@
 
     const/4 v1, 0x1
 
-    .line 1787
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     const/high16 v8, 0x3e800000    # 0.25f
@@ -1415,26 +1261,21 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 1790
     .local v0, "removeTrashTransAnim":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v4, 0x10a
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 1791
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setFillEnabled(Z)V
 
-    .line 1792
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 1793
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$17;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$17;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v3}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1808
     new-instance v2, Landroid/view/animation/ScaleAnimation;
 
     move v3, v9
@@ -1455,48 +1296,38 @@
 
     invoke-direct/range {v2 .. v10}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1810
     .local v2, "removeTrashScaleMaintainAnim":Landroid/view/animation/ScaleAnimation;
     const-wide/16 v4, 0x14d
 
     invoke-virtual {v2, v4, v5}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1811
     invoke-virtual {v2, v1}, Landroid/view/animation/ScaleAnimation;->setFillEnabled(Z)V
 
-    .line 1812
     invoke-virtual {v2, v1}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1813
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$18;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$18;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1837
     new-instance v11, Landroid/view/animation/AnimationSet;
 
     const/4 v3, 0x0
 
     invoke-direct {v11, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1838
     .local v11, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v11, v2}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1839
     invoke-virtual {v11, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1840
     invoke-virtual {v11, v1}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 1841
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trash:Landroid/view/View;
 
     invoke-virtual {v1, v11}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1842
     return-void
 .end method
 
@@ -1504,7 +1335,6 @@
     .locals 2
 
     .prologue
-    .line 1922
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -1512,20 +1342,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1923
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeTrashBodyFrameAnimation() Start of FrameAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1924
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mFrameTrashBodyAnim:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 1926
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1536,19 +1363,16 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mFrameTrashBodyAnim:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 1927
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mFrameTrashBodyAnim:Landroid/graphics/drawable/AnimationDrawable;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/AnimationDrawable;->setOneShot(Z)V
 
-    .line 1928
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mFrameTrashBodyAnim:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 1929
     return-void
 .end method
 
@@ -1556,10 +1380,8 @@
     .locals 12
 
     .prologue
-    .line 1932
     const/16 v11, 0xf
 
-    .line 1933
     .local v11, "degreeByDirection":I
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
@@ -1567,10 +1389,8 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1934
     mul-int/lit8 v11, v11, -0x1
 
-    .line 1937
     :cond_0
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
@@ -1588,7 +1408,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    .line 1940
     .local v0, "removeTrashRotateAnim":Landroid/view/animation/RotateAnimation;
     new-instance v2, Landroid/view/animation/interpolator/SineInOut80;
 
@@ -1596,29 +1415,24 @@
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1941
     const-wide/16 v2, 0x64
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
 
-    .line 1942
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setFillEnabled(Z)V
 
-    .line 1943
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setFillAfter(Z)V
 
-    .line 1944
     new-instance v2, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$22;
 
     invoke-direct {v2, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$22;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1962
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     const/4 v2, 0x1
@@ -1639,56 +1453,46 @@
 
     invoke-direct/range {v1 .. v9}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 1964
     .local v1, "removeTrashTransAnim":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v2, 0x64
 
     invoke-virtual {v1, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 1965
     new-instance v2, Landroid/view/animation/interpolator/SineInOut80;
 
     invoke-direct {v2}, Landroid/view/animation/interpolator/SineInOut80;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1966
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 1967
     new-instance v2, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$23;
 
     invoke-direct {v2, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$23;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v1, v2}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1980
     new-instance v10, Landroid/view/animation/AnimationSet;
 
     const/4 v2, 0x0
 
     invoke-direct {v10, v2}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1981
     .local v10, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v10, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1982
     invoke-virtual {v10, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1983
     const/4 v2, 0x1
 
     invoke-virtual {v10, v2}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 1984
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v10}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1985
     return-void
 .end method
 
@@ -1698,7 +1502,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1845
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -1707,38 +1510,31 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1846
     .local v0, "trashTextAnim":Landroid/view/animation/AlphaAnimation;
     const-wide/16 v2, 0xe9
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1847
     new-instance v1, Landroid/view/animation/interpolator/SineInOut80;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut80;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1848
     invoke-virtual {v0, v4}, Landroid/view/animation/AlphaAnimation;->setFillEnabled(Z)V
 
-    .line 1849
     invoke-virtual {v0, v4}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 1850
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$19;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$19;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1867
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1868
     return-void
 .end method
 
@@ -1747,14 +1543,11 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 1638
     move v9, p1
 
-    .line 1640
     .local v9, "openTrash":Z
     if-eqz p1, :cond_1
 
-    .line 1641
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -1775,7 +1568,6 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1648
     .local v0, "scaleAnim":Landroid/view/animation/ScaleAnimation;
     :goto_0
     new-instance v1, Landroid/view/animation/interpolator/SineInOut80;
@@ -1784,29 +1576,24 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1649
     const-wide/16 v2, 0x85
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1650
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillEnabled(Z)V
 
-    .line 1651
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1652
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$12;
 
     invoke-direct {v1, p0, v9}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$12;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;Z)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1669
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -1816,7 +1603,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1670
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -1830,11 +1616,9 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1677
     :cond_0
     return-void
 
-    .line 1644
     .end local v0    # "scaleAnim":Landroid/view/animation/ScaleAnimation;
     :cond_1
     new-instance v0, Landroid/view/animation/ScaleAnimation;
@@ -1873,7 +1657,6 @@
 
     const/4 v5, 0x1
 
-    .line 1995
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     move v3, v1
@@ -1886,28 +1669,23 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1997
     .local v0, "scaleAnim":Landroid/view/animation/ScaleAnimation;
     const-wide/16 v2, 0xfa
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1998
     invoke-virtual {v0, v5}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1999
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$24;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$24;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 2010
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trash:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2011
     return-void
 .end method
 
@@ -1917,31 +1695,24 @@
     .param p2, "open"    # Z
 
     .prologue
-    .line 1567
     const/16 v11, 0xf
 
-    .line 1568
     .local v11, "degreeByDirection":I
     const/4 v2, 0x2
 
     if-ne p1, v2, :cond_0
 
-    .line 1569
     mul-int/lit8 v11, v11, -0x1
 
-    .line 1572
     :cond_0
     move v12, p2
 
-    .line 1574
     .local v12, "openTrash":Z
     const/4 v1, 0x0
 
-    .line 1575
     .local v1, "transAnim":Landroid/view/animation/TranslateAnimation;
     if-eqz p2, :cond_2
 
-    .line 1576
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     const/4 v1, 0x0
@@ -1958,7 +1729,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    .line 1578
     .end local v1    # "transAnim":Landroid/view/animation/TranslateAnimation;
     .local v0, "rotateAnim":Landroid/view/animation/RotateAnimation;
     new-instance v1, Landroid/view/animation/TranslateAnimation;
@@ -1981,7 +1751,6 @@
 
     invoke-direct/range {v1 .. v9}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 1587
     .restart local v1    # "transAnim":Landroid/view/animation/TranslateAnimation;
     :goto_0
     new-instance v2, Landroid/view/animation/interpolator/SineInOut80;
@@ -1990,67 +1759,55 @@
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1588
     const-wide/16 v2, 0x10a
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
 
-    .line 1589
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setFillAfter(Z)V
 
-    .line 1590
     new-instance v2, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$9;
 
     invoke-direct {v2, p0, v12}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$9;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;Z)V
 
     invoke-virtual {v0, v2}, Landroid/view/animation/RotateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1608
     const-wide/16 v2, 0x10a
 
     invoke-virtual {v1, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 1609
     new-instance v2, Landroid/view/animation/interpolator/SineInOut80;
 
     invoke-direct {v2}, Landroid/view/animation/interpolator/SineInOut80;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1610
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 1611
     new-instance v2, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$10;
 
     invoke-direct {v2, p0, v12}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$10;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;Z)V
 
     invoke-virtual {v1, v2}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1622
     new-instance v10, Landroid/view/animation/AnimationSet;
 
     const/4 v2, 0x0
 
     invoke-direct {v10, v2}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1623
     .local v10, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v10, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1624
     invoke-virtual {v10, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1625
     const/4 v2, 0x1
 
     invoke-virtual {v10, v2}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 1627
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -2060,7 +1817,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1628
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -2074,11 +1830,9 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1635
     :cond_1
     return-void
 
-    .line 1581
     .end local v0    # "rotateAnim":Landroid/view/animation/RotateAnimation;
     .end local v10    # "animSet":Landroid/view/animation/AnimationSet;
     :cond_2
@@ -2100,7 +1854,6 @@
 
     invoke-direct/range {v2 .. v8}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    .line 1583
     .restart local v0    # "rotateAnim":Landroid/view/animation/RotateAnimation;
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
@@ -2135,7 +1888,6 @@
 
     const/4 v3, 0x1
 
-    .line 2035
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     const/high16 v1, -0x3f600000    # -5.0f
@@ -2150,34 +1902,27 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    .line 2038
     .local v0, "rotateAnim":Landroid/view/animation/RotateAnimation;
     const-wide/16 v4, 0x3c
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
 
-    .line 2039
     invoke-virtual {v0, v7}, Landroid/view/animation/RotateAnimation;->setRepeatCount(I)V
 
-    .line 2040
     invoke-virtual {v0, v7}, Landroid/view/animation/RotateAnimation;->setRepeatMode(I)V
 
-    .line 2041
     invoke-virtual {v0, v3}, Landroid/view/animation/RotateAnimation;->setFillAfter(Z)V
 
-    .line 2042
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$26;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$26;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/RotateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 2053
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2054
     return-void
 .end method
 
@@ -2188,7 +1933,6 @@
     .param p1, "hideTrash"    # Z
 
     .prologue
-    .line 1528
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mIsSupportSimplificationUI:Z
@@ -2198,18 +1942,15 @@
 
     if-nez v0, :cond_1
 
-    .line 1545
     :cond_0
     :goto_0
     return-void
 
-    .line 1532
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1533
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -2217,7 +1958,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1534
     const-string v0, "MinimizeAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2247,16 +1987,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1538
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 1539
     invoke-virtual {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->hideTrash()V
 
     goto :goto_0
 
-    .line 1543
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2276,12 +2013,10 @@
 
     const/16 v1, 0x8
 
-    .line 1420
     iget-boolean v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsTrashOpen:Z
 
     if-nez v0, :cond_1
 
-    .line 1421
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -2289,19 +2024,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 1422
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::closeTrash() trash is already closed."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1441
     :cond_0
     :goto_0
     return-void
 
-    .line 1426
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2312,49 +2044,40 @@
 
     if-eqz v0, :cond_2
 
-    .line 1427
     iget v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->closeRedCircleTrashCoverAnimation(I)V
 
-    .line 1439
     :goto_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mNeedAnimation:Z
 
-    .line 1440
     iput-boolean v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsTrashOpen:Z
 
     goto :goto_0
 
-    .line 1429
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->coveredTrash:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1430
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1431
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1433
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBody:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1435
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trash:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 1436
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
@@ -2368,22 +2091,18 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1371
     iget-boolean v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsShowingTrash:Z
 
     if-eqz v3, :cond_0
 
-    .line 1372
     iput-boolean v5, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsShowingTrash:Z
 
-    .line 1373
     iget-object v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
 
     const/16 v4, 0x8
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1375
     iget-object v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->createLayoutParams(Z)Landroid/view/WindowManager$LayoutParams;
@@ -2391,7 +2110,6 @@
 
     move-result-object v2
 
-    .line 1376
     .local v2, "windowAttributes":Landroid/view/WindowManager$LayoutParams;
     iget-object v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2402,7 +2120,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1377
     iget-object v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mWindow:Landroid/view/Window;
@@ -2414,11 +2131,9 @@
 
     move-result-object v0
 
-    .line 1378
     .local v0, "decor":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 1380
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2431,20 +2146,17 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1387
     .end local v0    # "decor":Landroid/view/View;
     .end local v2    # "windowAttributes":Landroid/view/WindowManager$LayoutParams;
     :cond_0
     :goto_0
     return-void
 
-    .line 1381
     .restart local v0    # "decor":Landroid/view/View;
     .restart local v2    # "windowAttributes":Landroid/view/WindowManager$LayoutParams;
     :catch_0
     move-exception v1
 
-    .line 1382
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
@@ -2456,12 +2168,10 @@
     .param p1, "removeTask"    # Z
 
     .prologue
-    .line 1472
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->hideTrashScaleAlphaAnimation(ZLandroid/graphics/Rect;)V
 
-    .line 1473
     return-void
 .end method
 
@@ -2471,7 +2181,6 @@
     .param p2, "touchableRegion"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1476
     new-instance v10, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -2480,25 +2189,21 @@
 
     invoke-direct {v10, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1477
     .local v10, "hideTrashAlphaAnim":Landroid/view/animation/AlphaAnimation;
     const-wide/16 v2, 0x14d
 
     invoke-virtual {v10, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1478
     new-instance v1, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
 
     invoke-virtual {v10, v1}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1479
     const/4 v1, 0x1
 
     invoke-virtual {v10, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 1481
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -2519,56 +2224,46 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1483
     .local v0, "hideTrashScaleAnim":Landroid/view/animation/ScaleAnimation;
     const-wide/16 v2, 0x14d
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1484
     new-instance v1, Landroid/view/animation/interpolator/SineInOut90;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut90;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1485
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1486
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;ZLandroid/graphics/Rect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1520
     new-instance v9, Landroid/view/animation/AnimationSet;
 
     const/4 v1, 0x0
 
     invoke-direct {v9, v1}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1521
     .local v9, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v9, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1522
     invoke-virtual {v9, v10}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1523
     const/4 v1, 0x1
 
     invoke-virtual {v9, v1}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 1524
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashWithText:Landroid/view/View;
 
     invoke-virtual {v1, v9}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1525
     return-void
 .end method
 
@@ -2576,7 +2271,6 @@
     .locals 1
 
     .prologue
-    .line 1066
     iget-boolean v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsShowingTrash:Z
 
     return v0
@@ -2592,7 +2286,6 @@
 
     const/4 v4, 0x0
 
-    .line 1391
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mIsSupportSimplificationUI:Z
@@ -2602,7 +2295,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1392
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getWidth()I
@@ -2621,20 +2313,16 @@
 
     move v0, v1
 
-    .line 1394
     .local v0, "currentDirection":I
     :goto_0
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
     if-eq v2, v0, :cond_0
 
-    .line 1395
     iput-boolean v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mNeedAnimation:Z
 
-    .line 1396
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
-    .line 1405
     .end local v0    # "currentDirection":I
     :cond_0
     :goto_1
@@ -2642,10 +2330,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 1406
     iput-boolean v4, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mNeedAnimation:Z
 
-    .line 1407
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mIsSupportSimplificationUI:Z
@@ -2655,56 +2341,46 @@
 
     if-eqz v2, :cond_4
 
-    .line 1408
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
     if-eqz v2, :cond_1
 
-    .line 1409
     iget v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mShowTrashDirection:I
 
     invoke-direct {p0, v2}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->openRedCircleTrashCoverAnimation(I)V
 
-    .line 1416
     :cond_1
     :goto_2
     iput-boolean v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsTrashOpen:Z
 
-    .line 1417
     return-void
 
-    .line 1392
     :cond_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 1399
     :cond_3
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1400
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->coveredTrash:Landroid/widget/ImageView;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1401
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1402
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBody:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 1412
     :cond_4
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->scaleTrashAnimation()V
 
@@ -2715,7 +2391,6 @@
     .locals 14
 
     .prologue
-    .line 1330
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mMinimizedIcon:Landroid/view/View;
@@ -2740,7 +2415,6 @@
 
     add-float v6, v12, v13
 
-    .line 1331
     .local v6, "minimizedIconCenterX":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2766,7 +2440,6 @@
 
     add-float v7, v12, v13
 
-    .line 1333
     .local v7, "minimizedIconCenterY":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2779,7 +2452,6 @@
 
     move-result v5
 
-    .line 1334
     .local v5, "left":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2792,7 +2464,6 @@
 
     add-float v10, v5, v12
 
-    .line 1335
     .local v10, "right":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2805,7 +2476,6 @@
 
     move-result v11
 
-    .line 1336
     .local v11, "top":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2818,7 +2488,6 @@
 
     add-float v0, v11, v12
 
-    .line 1338
     .local v0, "bottom":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mRemoveRangeRect:Landroid/graphics/Rect;
 
@@ -2838,7 +2507,6 @@
 
     add-float v9, v12, v13
 
-    .line 1339
     .local v9, "removeRectCenterY":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mRemoveRangeRect:Landroid/graphics/Rect;
 
@@ -2858,7 +2526,6 @@
 
     add-float v8, v12, v13
 
-    .line 1341
     .local v8, "removeRectCenterX":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2879,7 +2546,6 @@
 
     int-to-float v1, v12
 
-    .line 1342
     .local v1, "compareDistanceHeight":F
     iget-object v12, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -2900,15 +2566,12 @@
 
     int-to-float v2, v12
 
-    .line 1344
     .local v2, "compareDistanceWidth":F
     sub-float v3, v6, v8
 
-    .line 1345
     .local v3, "distanceX":F
     sub-float v4, v7, v9
 
-    .line 1347
     .local v4, "distanceY":F
     const/4 v12, 0x0
 
@@ -2916,7 +2579,6 @@
 
     if-ltz v12, :cond_0
 
-    .line 1348
     :goto_0
     const/4 v12, 0x0
 
@@ -2924,7 +2586,6 @@
 
     if-ltz v12, :cond_1
 
-    .line 1350
     :goto_1
     cmpg-float v12, v3, v2
 
@@ -2934,14 +2595,11 @@
 
     if-gtz v12, :cond_2
 
-    .line 1351
     const/4 v12, 0x1
 
-    .line 1353
     :goto_2
     return v12
 
-    .line 1347
     :cond_0
     const/high16 v12, -0x40800000    # -1.0f
 
@@ -2949,7 +2607,6 @@
 
     goto :goto_0
 
-    .line 1348
     :cond_1
     const/high16 v12, -0x40800000    # -1.0f
 
@@ -2957,7 +2614,6 @@
 
     goto :goto_1
 
-    .line 1353
     :cond_2
     const/4 v12, 0x0
 
@@ -2968,7 +2624,6 @@
     .locals 18
 
     .prologue
-    .line 1070
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -2982,7 +2637,6 @@
 
     move-result-object v5
 
-    .line 1071
     .local v5, "layoutInflater":Landroid/view/LayoutInflater;
     const v13, 0x1090097
 
@@ -2996,7 +2650,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
 
-    .line 1072
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3013,7 +2666,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashWithText:Landroid/view/View;
 
-    .line 1073
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3030,7 +2682,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trash:Landroid/view/View;
 
-    .line 1074
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3047,7 +2698,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->coveredTrash:Landroid/widget/ImageView;
 
-    .line 1075
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3064,7 +2714,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
 
-    .line 1076
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3081,7 +2730,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBody:Landroid/widget/ImageView;
 
-    .line 1077
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3098,10 +2746,8 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashText:Landroid/widget/TextView;
 
-    .line 1079
     const/4 v9, 0x0
 
-    .line 1080
     .local v9, "rootView":Landroid/widget/FrameLayout;
     move-object/from16 v0, p0
 
@@ -3114,7 +2760,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 1081
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -3137,14 +2782,12 @@
     .end local v9    # "rootView":Landroid/widget/FrameLayout;
     check-cast v9, Landroid/widget/FrameLayout;
 
-    .line 1084
     .restart local v9    # "rootView":Landroid/widget/FrameLayout;
     :cond_0
     new-instance v4, Landroid/graphics/Point;
 
     invoke-direct {v4}, Landroid/graphics/Point;-><init>()V
 
-    .line 1085
     .local v4, "fullscreen":Landroid/graphics/Point;
     move-object/from16 v0, p0
 
@@ -3153,7 +2796,6 @@
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->getDisplaySize(Landroid/graphics/Point;)Z
     invoke-static {v13, v4}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$2700(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Landroid/graphics/Point;)Z
 
-    .line 1087
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -3165,7 +2807,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 1088
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3182,7 +2823,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
 
-    .line 1089
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
@@ -3191,7 +2831,6 @@
 
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 1091
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
@@ -3200,7 +2839,6 @@
 
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1092
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
@@ -3209,7 +2847,6 @@
 
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1093
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->coveredTrash:Landroid/widget/ImageView;
@@ -3218,7 +2855,6 @@
 
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1095
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3235,7 +2871,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
-    .line 1096
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3252,7 +2887,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectOuter:Landroid/widget/LinearLayout;
 
-    .line 1098
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -3280,7 +2914,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawable:Landroid/graphics/drawable/LayerDrawable;
 
-    .line 1099
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawable:Landroid/graphics/drawable/LayerDrawable;
@@ -3297,18 +2930,15 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffectDrawableItem:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 1101
     iget v13, v4, Landroid/graphics/Point;->x:I
 
     div-int/lit8 v6, v13, 0x8
 
-    .line 1102
     .local v6, "left":I
     iget v13, v4, Landroid/graphics/Point;->x:I
 
     sub-int v8, v13, v6
 
-    .line 1103
     .local v8, "right":I
     move-object/from16 v0, p0
 
@@ -3320,7 +2950,6 @@
 
     sub-int v10, v13, v14
 
-    .line 1104
     .local v10, "top":I
     move-object/from16 v0, p0
 
@@ -3340,7 +2969,6 @@
 
     add-int v1, v13, v14
 
-    .line 1105
     .local v1, "bottom":I
     new-instance v13, Landroid/graphics/Rect;
 
@@ -3350,10 +2978,8 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mRemoveRangeRect:Landroid/graphics/Rect;
 
-    .line 1107
     if-eqz v9, :cond_1
 
-    .line 1108
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3374,7 +3000,6 @@
 
     invoke-virtual {v9, v13, v14, v15}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1112
     :cond_1
     move-object/from16 v0, p0
 
@@ -3384,24 +3009,20 @@
 
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1114
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->showTrashScaleAlphaAnimation()V
 
-    .line 1115
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->changeRedCircleColor(Z)V
 
-    .line 1116
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->bounceShowRedCircleAnimation(Z)V
 
-    .line 1145
     .end local v1    # "bottom":I
     .end local v6    # "left":I
     .end local v8    # "right":I
@@ -3413,14 +3034,12 @@
 
     iput-boolean v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mIsShowingTrash:Z
 
-    .line 1146
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->mNeedAnimation:Z
 
-    .line 1148
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -3432,7 +3051,6 @@
 
     move-result-object v11
 
-    .line 1149
     .local v11, "windowAttributes":Landroid/view/WindowManager$LayoutParams;
     move-object/from16 v0, p0
 
@@ -3445,7 +3063,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 1150
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -3459,11 +3076,9 @@
 
     move-result-object v2
 
-    .line 1151
     .local v2, "decor":Landroid/view/View;
     if-eqz v2, :cond_2
 
-    .line 1153
     :try_start_0
     move-object/from16 v0, p0
 
@@ -3478,13 +3093,11 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1159
     .end local v2    # "decor":Landroid/view/View;
     :cond_2
     :goto_1
     return-void
 
-    .line 1119
     .end local v11    # "windowAttributes":Landroid/view/WindowManager$LayoutParams;
     :cond_3
     move-object/from16 v0, p0
@@ -3503,7 +3116,6 @@
 
     iput-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->topBgFocusEffect:Landroid/widget/ImageView;
 
-    .line 1121
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->coveredTrash:Landroid/widget/ImageView;
@@ -3512,7 +3124,6 @@
 
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1122
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3523,10 +3134,8 @@
 
     invoke-virtual {v13, v14}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 1124
     if-eqz v9, :cond_4
 
-    .line 1125
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3554,10 +3163,9 @@
 
     invoke-virtual {v9, v13, v14, v15}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1130
     :cond_4
     :try_start_1
-    const-string/jumbo v13, "window"
+    const-string v13, "window"
 
     invoke-static {v13}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -3567,7 +3175,6 @@
 
     move-result-object v12
 
-    .line 1132
     .local v12, "wm":Landroid/view/IWindowManager;
     invoke-interface {v12}, Landroid/view/IWindowManager;->isStatusBarVisible()Z
 
@@ -3575,7 +3182,6 @@
 
     if-eqz v13, :cond_5
 
-    .line 1133
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -3591,7 +3197,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1138
     .end local v12    # "wm":Landroid/view/IWindowManager;
     :cond_5
     :goto_2
@@ -3607,7 +3212,6 @@
 
     invoke-direct {v7, v13}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1139
     .local v7, "removeLayoutParam":Landroid/view/ViewGroup$MarginLayoutParams;
     move-object/from16 v0, p0
 
@@ -3615,7 +3219,6 @@
 
     iput v13, v7, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 1140
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
@@ -3626,25 +3229,21 @@
 
     invoke-virtual {v13, v14}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1142
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->showTrashTranslateAnimation()V
 
     goto/16 :goto_0
 
-    .line 1154
     .end local v7    # "removeLayoutParam":Landroid/view/ViewGroup$MarginLayoutParams;
     .restart local v2    # "decor":Landroid/view/View;
     .restart local v11    # "windowAttributes":Landroid/view/WindowManager$LayoutParams;
     :catch_0
     move-exception v3
 
-    .line 1155
     .local v3, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v3}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 1135
     .end local v2    # "decor":Landroid/view/View;
     .end local v3    # "e":Ljava/lang/IllegalArgumentException;
     .end local v11    # "windowAttributes":Landroid/view/WindowManager$LayoutParams;
@@ -3668,33 +3267,27 @@
 
     const/4 v5, 0x1
 
-    .line 1168
     new-instance v10, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v10, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1169
     .local v10, "showTrashAlphaAnim":Landroid/view/animation/AlphaAnimation;
     invoke-virtual {v10, v12, v13}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1170
     new-instance v3, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v3}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
 
     invoke-virtual {v10, v3}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1171
     invoke-virtual {v10, v5}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 1172
     new-instance v3, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$1;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$1;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v10, v3}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1192
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     move v3, v1
@@ -3707,50 +3300,40 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 1194
     .local v0, "showTrashScaleUpAnim":Landroid/view/animation/ScaleAnimation;
     invoke-virtual {v0, v12, v13}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1195
     new-instance v1, Landroid/view/animation/interpolator/SineInOut90;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut90;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1196
     invoke-virtual {v0, v5}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 1197
     new-instance v1, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$2;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$2;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1213
     new-instance v9, Landroid/view/animation/AnimationSet;
 
     const/4 v1, 0x0
 
     invoke-direct {v9, v1}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1214
     .local v9, "animSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v9, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1215
     invoke-virtual {v9, v10}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1216
     invoke-virtual {v9, v5}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 1217
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashWithText:Landroid/view/View;
 
     invoke-virtual {v1, v9}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1218
     return-void
 .end method
 
@@ -3762,7 +3345,6 @@
 
     const/4 v1, 0x1
 
-    .line 1362
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     const/high16 v6, -0x40800000    # -1.0f
@@ -3779,23 +3361,19 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 1365
     .local v0, "anim":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v2, 0x12c
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 1366
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1367
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeLayout:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1368
     return-void
 .end method
 
@@ -3803,7 +3381,6 @@
     .locals 6
 
     .prologue
-    .line 1445
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -3814,16 +3391,13 @@
 
     if-nez v1, :cond_1
 
-    .line 1469
     :cond_0
     :goto_0
     return-void
 
-    .line 1449
     :cond_1
     invoke-direct {p0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->removeMinimizedIconAnimation()V
 
-    .line 1450
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -3833,7 +3407,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1451
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -3849,7 +3422,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1459
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -3869,11 +3441,9 @@
 
     goto :goto_0
 
-    .line 1466
     :catch_0
     move-exception v0
 
-    .line 1467
     .local v0, "e":Ljava/lang/IllegalStateException;
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 

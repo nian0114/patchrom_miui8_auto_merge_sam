@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLValidation;->mContext:Landroid/content/Context;
@@ -31,26 +29,21 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 47
     iget-object v11, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLValidation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 48
     .local v2, "resource":Landroid/content/res/Resources;
     const/4 v9, 0x0
 
-    .line 49
     .local v9, "xsdStream":Ljava/io/InputStream;
     const/4 v7, 0x0
 
-    .line 50
     .local v7, "xmlStream":Ljava/io/InputStream;
     if-eqz v2, :cond_0
 
-    .line 52
     :try_start_0
     invoke-virtual {v2}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
@@ -60,7 +53,6 @@
 
     move-result-object v9
 
-    .line 53
     new-instance v8, Ljava/io/ByteArrayInputStream;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -71,51 +63,43 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
     .end local v7    # "xmlStream":Ljava/io/InputStream;
     .local v8, "xmlStream":Ljava/io/InputStream;
     new-instance v1, Lmf/org/apache/xerces/jaxp/validation/XMLSchemaFactory;
 
     invoke-direct {v1}, Lmf/org/apache/xerces/jaxp/validation/XMLSchemaFactory;-><init>()V
 
-    .line 64
     .local v1, "factory":Lmf/javax/xml/validation/SchemaFactory;
     new-instance v5, Lmf/javax/xml/transform/stream/StreamSource;
 
     invoke-direct {v5, v9}, Lmf/javax/xml/transform/stream/StreamSource;-><init>(Ljava/io/InputStream;)V
 
-    .line 65
     .local v5, "srcXsd":Lmf/javax/xml/transform/stream/StreamSource;
     new-instance v4, Lmf/javax/xml/transform/stream/StreamSource;
 
     invoke-direct {v4, v8}, Lmf/javax/xml/transform/stream/StreamSource;-><init>(Ljava/io/InputStream;)V
 
-    .line 68
     .local v4, "srcXml":Lmf/javax/xml/transform/stream/StreamSource;
     :try_start_1
     invoke-virtual {v1, v5}, Lmf/javax/xml/validation/SchemaFactory;->newSchema(Lmf/javax/xml/transform/Source;)Lmf/javax/xml/validation/Schema;
 
     move-result-object v3
 
-    .line 69
     .local v3, "schema":Lmf/javax/xml/validation/Schema;
     invoke-virtual {v3}, Lmf/javax/xml/validation/Schema;->newValidator()Lmf/javax/xml/validation/Validator;
 
     move-result-object v6
 
-    .line 70
     .local v6, "validator":Lmf/javax/xml/validation/Validator;
     invoke-virtual {v6, v4}, Lmf/javax/xml/validation/Validator;->validate(Lmf/javax/xml/transform/Source;)V
     :try_end_1
     .catch Lorg/xml/sax/SAXException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 78
     const-string v10, "XMLValidation::schemaValidation: XML is Valid."
 
     invoke-static {v10}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 79
     const/4 v10, 0x1
 
     move-object v7, v8
@@ -130,11 +114,9 @@
     :goto_0
     return v10
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     .local v0, "e":Ljava/io/IOException;
     const-string v11, "XMLValidation::schemaValidation: unable to open xsd"
 
@@ -142,7 +124,6 @@
 
     goto :goto_0
 
-    .line 59
     .end local v0    # "e":Ljava/io/IOException;
     :cond_0
     const-string v11, "XMLValidation::schemaValidation: resources not found"
@@ -151,7 +132,6 @@
 
     goto :goto_0
 
-    .line 71
     .end local v7    # "xmlStream":Ljava/io/InputStream;
     .restart local v1    # "factory":Lmf/javax/xml/validation/SchemaFactory;
     .restart local v4    # "srcXml":Lmf/javax/xml/transform/stream/StreamSource;
@@ -160,7 +140,6 @@
     :catch_1
     move-exception v0
 
-    .line 72
     .local v0, "e":Lorg/xml/sax/SAXException;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -188,19 +167,16 @@
 
     move-object v7, v8
 
-    .line 73
     .end local v8    # "xmlStream":Ljava/io/InputStream;
     .restart local v7    # "xmlStream":Ljava/io/InputStream;
     goto :goto_0
 
-    .line 74
     .end local v0    # "e":Lorg/xml/sax/SAXException;
     .end local v7    # "xmlStream":Ljava/io/InputStream;
     .restart local v8    # "xmlStream":Ljava/io/InputStream;
     :catch_2
     move-exception v0
 
-    .line 75
     .local v0, "e":Ljava/io/IOException;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -228,7 +204,6 @@
 
     move-object v7, v8
 
-    .line 76
     .end local v8    # "xmlStream":Ljava/io/InputStream;
     .restart local v7    # "xmlStream":Ljava/io/InputStream;
     goto :goto_0
@@ -242,7 +217,6 @@
     .param p2, "xmlBuffer"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const/4 v0, 0x1
 
     return v0
@@ -254,17 +228,13 @@
     .param p2, "xmlBuffer"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     const/4 v0, 0x0
 
-    .line 38
     .local v0, "result":Z
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLValidation;->mContext:Landroid/content/Context;
 
-    .line 39
-    const-string/jumbo v1, "pskc_schema.xsd"
+    const-string v1, "pskc_schema.xsd"
 
-    .line 40
     .local v1, "xsdFilePath":Ljava/lang/String;
     invoke-direct {p0, p2, v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLValidation;->schemaValidation(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -272,10 +242,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 41
     const/4 v0, 0x1
 
-    .line 43
     :cond_0
     return v0
 .end method

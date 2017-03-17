@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,12 +23,10 @@
     .locals 4
 
     .prologue
-    .line 40
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 48
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -39,7 +36,6 @@
 
     move-result-object v1
 
-    .line 51
     new-instance v2, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
@@ -52,7 +48,6 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 54
     :goto_0
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -60,10 +55,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 55
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 56
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -72,11 +65,9 @@
 
     goto :goto_0
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Execution of command \'"
@@ -97,7 +88,6 @@
 
     move-result-object v1
 
-    .line 66
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -124,7 +114,6 @@
 
     throw v2
 
-    .line 69
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

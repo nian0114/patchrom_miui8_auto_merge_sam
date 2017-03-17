@@ -14,7 +14,6 @@
     .param p1, "pMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;

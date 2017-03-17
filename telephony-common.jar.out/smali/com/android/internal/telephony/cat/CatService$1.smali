@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 455
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatService$1;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 457
     # getter for: Lcom/android/internal/telephony/cat/CatService;->mIccRecords:[Lcom/android/internal/telephony/uicc/IccRecords;
     invoke-static {}, Lcom/android/internal/telephony/cat/CatService;->access$000()[Lcom/android/internal/telephony/uicc/IccRecords;
 
@@ -57,6 +55,5 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/IccRecords;->refreshUiccVer()V
 
-    .line 458
     return-void
 .end method

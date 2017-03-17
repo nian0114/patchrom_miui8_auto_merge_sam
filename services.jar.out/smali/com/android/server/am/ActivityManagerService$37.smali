@@ -39,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 28743
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$37;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -74,7 +73,6 @@
 
     const/4 v1, -0x1
 
-    .line 28747
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
@@ -89,7 +87,6 @@
 
     if-eq v3, v0, :cond_1
 
-    .line 28748
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
@@ -106,17 +103,14 @@
 
     move v0, v1
 
-    .line 28753
     :goto_0
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 28748
     goto :goto_0
 
-    .line 28750
     :cond_1
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -136,7 +130,6 @@
 
     if-eq v3, v0, :cond_3
 
-    .line 28751
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -165,7 +158,6 @@
 
     goto :goto_1
 
-    .line 28753
     :cond_3
     const/4 v0, 0x0
 
@@ -178,7 +170,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 28743
     check-cast p1, Landroid/util/Pair;
 
     .end local p1    # "x0":Ljava/lang/Object;

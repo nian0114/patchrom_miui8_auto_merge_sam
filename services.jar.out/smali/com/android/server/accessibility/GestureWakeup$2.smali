@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 227
     iput-object p1, p0, Lcom/android/server/accessibility/GestureWakeup$2;->this$0:Lcom/android/server/accessibility/GestureWakeup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 229
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getApproachContext()Landroid/hardware/scontext/SContextApproach;
 
     move-result-object v0
 
-    .line 230
     .local v0, "approach":Landroid/hardware/scontext/SContextApproach;
     invoke-virtual {v0}, Landroid/hardware/scontext/SContextApproach;->getUserID()I
 
     move-result v1
 
-    .line 232
     .local v1, "userId":I
     iget-object v2, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
@@ -62,12 +58,10 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 244
     :cond_0
     :goto_0
     return-void
 
-    .line 235
     :pswitch_0
     const-string v2, "GestureWakeup"
 
@@ -75,7 +69,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onSContextChanged() Approach, userId : "
+    const-string v4, "onSContextChanged() Approach, userId : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -135,7 +129,6 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     iget-object v2, p0, Lcom/android/server/accessibility/GestureWakeup$2;->this$0:Lcom/android/server/accessibility/GestureWakeup;
 
     sget-object v3, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
@@ -152,7 +145,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 237
     iget-object v2, p0, Lcom/android/server/accessibility/GestureWakeup$2;->this$0:Lcom/android/server/accessibility/GestureWakeup;
 
     # invokes: Lcom/android/server/accessibility/GestureWakeup;->launchGestureWakeup()V
@@ -160,7 +152,6 @@
 
     goto :goto_0
 
-    .line 232
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

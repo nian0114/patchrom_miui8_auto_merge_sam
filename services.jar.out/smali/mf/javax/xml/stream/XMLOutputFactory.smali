@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,13 +28,10 @@
     .end annotation
 
     .prologue
-    .line 173
-    const-string/jumbo v0, "javax.xml.stream.XMLOutputFactory"
+    const-string v0, "javax.xml.stream.XMLOutputFactory"
 
-    .line 174
     const-string v1, "com.sun.xml.internal.stream.XMLOutputFactoryImpl"
 
-    .line 173
     invoke-static {v0, v1}, Lmf/javax/xml/stream/FactoryFinder;->find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -56,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 225
     const/4 v1, 0x0
 
     :try_start_0
@@ -70,11 +65,9 @@
 
     return-object v1
 
-    .line 226
     :catch_0
     move-exception v0
 
-    .line 227
     .local v0, "e":Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/stream/FactoryConfigurationError;
 
@@ -82,12 +75,10 @@
 
     move-result-object v2
 
-    .line 228
     invoke-virtual {v0}, Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 227
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/stream/FactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1
@@ -104,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 196
     const/4 v1, 0x0
 
     :try_start_0
@@ -118,11 +108,9 @@
 
     return-object v1
 
-    .line 197
     :catch_0
     move-exception v0
 
-    .line 198
     .local v0, "e":Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/stream/FactoryConfigurationError;
 
@@ -130,12 +118,10 @@
 
     move-result-object v2
 
-    .line 199
     invoke-virtual {v0}, Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 198
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/stream/FactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1
@@ -150,13 +136,10 @@
     .end annotation
 
     .prologue
-    .line 141
-    const-string/jumbo v0, "javax.xml.stream.XMLOutputFactory"
+    const-string v0, "javax.xml.stream.XMLOutputFactory"
 
-    .line 142
     const-string v1, "com.sun.xml.internal.stream.XMLOutputFactoryImpl"
 
-    .line 141
     invoke-static {v0, v1}, Lmf/javax/xml/stream/FactoryFinder;->find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0

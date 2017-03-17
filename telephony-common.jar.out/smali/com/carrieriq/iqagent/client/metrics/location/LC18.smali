@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 9
     const-string v0, "LC18"
 
     invoke-static {v0}, Lcom/carrieriq/iqagent/client/metrics/location/LC18;->idFromString(Ljava/lang/String;)I
@@ -58,12 +57,10 @@
     .locals 1
 
     .prologue
-    .line 27
     sget v0, Lcom/carrieriq/iqagent/client/metrics/location/LC18;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 28
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 31
     return-void
 .end method
 
@@ -87,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 49
     const/4 v0, -0x1
 
     return v0
@@ -98,7 +93,6 @@
     .param p1, "meters"    # D
 
     .prologue
-    .line 40
     return-void
 .end method
 
@@ -107,7 +101,6 @@
     .param p1, "degrees"    # F
 
     .prologue
-    .line 46
     return-void
 .end method
 
@@ -116,7 +109,6 @@
     .param p1, "degrees"    # D
 
     .prologue
-    .line 34
     return-void
 .end method
 
@@ -125,7 +117,6 @@
     .param p1, "degrees"    # D
 
     .prologue
-    .line 37
     return-void
 .end method
 
@@ -134,6 +125,5 @@
     .param p1, "meters_per_sec"    # F
 
     .prologue
-    .line 43
     return-void
 .end method

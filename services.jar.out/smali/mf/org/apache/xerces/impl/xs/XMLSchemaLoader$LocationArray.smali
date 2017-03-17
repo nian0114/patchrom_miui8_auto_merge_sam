@@ -25,17 +25,14 @@
     .locals 1
 
     .prologue
-    .line 909
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 912
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
 
-    .line 909
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p1, "location"    # Ljava/lang/String;
 
     .prologue
-    .line 922
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->length:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
@@ -55,7 +51,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 923
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->length:I
 
     const/4 v1, 0x1
@@ -70,7 +65,6 @@
 
     invoke-virtual {p0, v0, v1}, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->resize(II)V
 
-    .line 925
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
 
@@ -82,7 +76,6 @@
 
     aput-object p1, v0, v1
 
-    .line 926
     return-void
 .end method
 
@@ -90,7 +83,6 @@
     .locals 2
 
     .prologue
-    .line 936
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->length:I
 
     if-lez v0, :cond_0
@@ -114,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 940
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->length:I
 
     return v0
@@ -124,7 +115,6 @@
     .locals 2
 
     .prologue
-    .line 929
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->length:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
@@ -133,7 +123,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 930
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
 
     array-length v0, v0
@@ -142,7 +131,6 @@
 
     invoke-virtual {p0, v0, v1}, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->resize(II)V
 
-    .line 932
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
 
@@ -157,10 +145,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 915
     new-array v0, p2, [Ljava/lang/String;
 
-    .line 916
     .local v0, "temp":[Ljava/lang/String;
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
 
@@ -170,16 +156,13 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 917
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->locations:[Ljava/lang/String;
 
-    .line 918
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
     iput v1, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaLoader$LocationArray;->length:I
 
-    .line 919
     return-void
 .end method

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1201
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$2;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$2;->val$holder:Lcom/android/internal/app/ChooserActivity$RowViewHolder;
@@ -49,7 +48,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1204
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$2;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     iget-object v0, v0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->this$0:Lcom/android/internal/app/ChooserActivity;
@@ -68,6 +66,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/app/ChooserActivity;->startSelected(IZZ)V
 
-    .line 1205
     return-void
 .end method

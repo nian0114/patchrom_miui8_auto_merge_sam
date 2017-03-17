@@ -18,7 +18,6 @@
     .param p2, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/http/message/AbstractHttpMessage;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -37,7 +36,6 @@
     .param p3, "ver"    # Lorg/apache/http/ProtocolVersion;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Lorg/apache/http/message/AbstractHttpMessage;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -54,7 +52,6 @@
     .param p1, "requestline"    # Lorg/apache/http/RequestLine;
 
     .prologue
-    .line 9
     invoke-direct {p0}, Lorg/apache/http/message/AbstractHttpMessage;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -72,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -86,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

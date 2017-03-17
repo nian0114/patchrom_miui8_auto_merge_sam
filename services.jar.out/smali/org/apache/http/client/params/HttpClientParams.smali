@@ -13,7 +13,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -30,7 +29,6 @@
     .param p0, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -45,7 +43,6 @@
     .param p0, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -60,7 +57,6 @@
     .param p0, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -76,7 +72,6 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -92,7 +87,6 @@
     .param p1, "cookiePolicy"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -108,7 +102,6 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

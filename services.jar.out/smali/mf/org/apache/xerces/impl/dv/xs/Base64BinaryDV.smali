@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -35,16 +34,13 @@
     .end annotation
 
     .prologue
-    .line 42
     invoke-static {p1}, Lmf/org/apache/xerces/impl/dv/util/Base64;->decode(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 43
     .local v0, "decoded":[B
     if-nez v0, :cond_0
 
-    .line 44
     new-instance v1, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v2, "cvc-datatype-valid.1.2.1"
@@ -67,7 +63,6 @@
 
     throw v1
 
-    .line 46
     :cond_0
     new-instance v1, Lmf/org/apache/xerces/impl/dv/xs/Base64BinaryDV$XBase64;
 
@@ -80,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const/16 v0, 0x81f
 
     return v0
@@ -91,7 +85,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 51
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/Base64BinaryDV$XBase64;
 
     .end local p1    # "value":Ljava/lang/Object;

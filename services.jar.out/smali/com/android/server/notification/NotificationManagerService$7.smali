@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2344
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
     .param p9, "userId"    # I
 
     .prologue
-    .line 2348
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     move-object v1, p1
@@ -72,7 +70,6 @@
 
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/notification/NotificationManagerService;->enqueueNotificationInternal(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;ILandroid/app/Notification;[II)V
 
-    .line 2350
     return-void
 .end method
 
@@ -83,18 +80,15 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 2355
     # invokes: Lcom/android/server/notification/NotificationManagerService;->checkCallerIsSystem()V
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$3600()V
 
-    .line 2356
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, v3, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 2357
     :try_start_0
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -104,18 +98,16 @@
 
     move-result v0
 
-    .line 2358
     .local v0, "i":I
     if-gez v0, :cond_0
 
-    .line 2359
     const-string v3, "NotificationService"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "stripForegroundServiceFlag: Could not find notification with pkg="
+    const-string v6, "stripForegroundServiceFlag: Could not find notification with pkg="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -151,14 +143,11 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2361
     monitor-exit v4
 
-    .line 2374
     :goto_0
     return-void
 
-    .line 2363
     :cond_0
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -170,11 +159,9 @@
 
     check-cast v1, Lcom/android/server/notification/NotificationRecord;
 
-    .line 2364
     .local v1, "r":Lcom/android/server/notification/NotificationRecord;
     iget-object v2, v1, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 2369
     .local v2, "sbn":Landroid/service/notification/StatusBarNotification;
     invoke-virtual {v2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -186,7 +173,6 @@
 
     iput v5, v3, Landroid/app/Notification;->flags:I
 
-    .line 2371
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mRankingHelper:Lcom/android/server/notification/RankingHelper;
@@ -200,7 +186,6 @@
 
     invoke-virtual {v3, v5}, Lcom/android/server/notification/RankingHelper;->sort(Ljava/util/ArrayList;)V
 
-    .line 2372
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mListeners:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
@@ -210,7 +195,6 @@
 
     invoke-virtual {v3, v2, v2}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->notifyPostedLocked(Landroid/service/notification/StatusBarNotification;Landroid/service/notification/StatusBarNotification;)V
 
-    .line 2373
     monitor-exit v4
 
     goto :goto_0

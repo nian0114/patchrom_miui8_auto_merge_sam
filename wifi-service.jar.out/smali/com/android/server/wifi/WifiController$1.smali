@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 269
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v6, 0x1
 
-    .line 272
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 273
     .local v0, "action":Ljava/lang/String;
     const-string v5, "com.samsung.android.net.wifi.WIFI_MHS"
 
@@ -58,24 +55,19 @@
 
     if-eqz v5, :cond_1
 
-    .line 275
     new-instance v3, Landroid/os/Message;
 
     invoke-direct {v3}, Landroid/os/Message;-><init>()V
 
-    .line 276
     .local v3, "msg":Landroid/os/Message;
     const v5, 0x2600a
 
     iput v5, v3, Landroid/os/Message;->what:I
 
-    .line 277
     iput v6, v3, Landroid/os/Message;->arg1:I
 
-    .line 278
     iput v6, v3, Landroid/os/Message;->arg2:I
 
-    .line 279
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     # getter for: Lcom/android/server/wifi/WifiController;->tempWifiConfig:Landroid/net/wifi/WifiConfiguration;
@@ -85,7 +77,6 @@
 
     iput-object v5, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 280
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v6, "WIFI_ENABLED_FROM_MHS intent received! with msg.arg1 = 1 = arg2;!"
@@ -93,18 +84,15 @@
     # invokes: Lcom/android/server/wifi/WifiController;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiController;->access$100(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 281
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-virtual {v5, v3}, Lcom/android/server/wifi/WifiController;->sendMessage(Landroid/os/Message;)V
 
-    .line 314
     .end local v3    # "msg":Landroid/os/Message;
     :cond_0
     :goto_0
     return-void
 
-    .line 282
     :cond_1
     const-string v5, "com.samsung.android.net.wifi.softap_interface"
 
@@ -114,7 +102,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 284
     const-string v5, "interface_state"
 
     const/4 v6, 0x3
@@ -123,7 +110,6 @@
 
     move-result v1
 
-    .line 285
     .local v1, "apState":I
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -148,7 +134,6 @@
     # invokes: Lcom/android/server/wifi/WifiController;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiController;->access$200(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 286
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
@@ -163,7 +148,6 @@
 
     if-ne v1, v5, :cond_0
 
-    .line 287
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v6, "Not required to handled this msg"
@@ -173,7 +157,6 @@
 
     goto :goto_0
 
-    .line 290
     .end local v1    # "apState":I
     :cond_2
     const-string v5, "com.android.server.WifiManager.action.DEVICE_IDLE"
@@ -184,7 +167,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 291
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v6, 0x26005
@@ -193,7 +175,6 @@
 
     goto :goto_0
 
-    .line 292
     :cond_3
     const-string v5, "android.net.wifi.STATE_CHANGE"
 
@@ -203,7 +184,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 293
     iget-object v6, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v5, "networkInfo"
@@ -218,7 +198,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_4
     const-string v5, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
@@ -228,18 +207,15 @@
 
     if-eqz v5, :cond_5
 
-    .line 296
     const-string v5, "wifi_state"
 
     invoke-virtual {p2, v5, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 299
     .local v4, "state":I
     if-ne v4, v7, :cond_0
 
-    .line 300
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v6, "WifiControllerSoftAP start failed"
@@ -247,7 +223,6 @@
     # invokes: Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiController;->access$400(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 301
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v6, 0x2600d
@@ -256,7 +231,6 @@
 
     goto/16 :goto_0
 
-    .line 303
     .end local v4    # "state":I
     :cond_5
     const-string v5, "android.net.wifi.ERROR"
@@ -267,7 +241,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 305
     const-string v5, "errorCode"
 
     const/4 v6, 0x0
@@ -276,13 +249,11 @@
 
     move-result v2
 
-    .line 306
     .local v2, "errorCode":I
     const/16 v5, 0xa
 
     if-ne v2, v5, :cond_0
 
-    .line 307
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v6, 0x26014
@@ -291,7 +262,6 @@
 
     goto/16 :goto_0
 
-    .line 309
     .end local v2    # "errorCode":I
     :cond_6
     const-string v5, "android.intent.action.ACTION_SHUTDOWN"
@@ -302,13 +272,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 311
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     # setter for: Lcom/android/server/wifi/WifiController;->isShutDown:Z
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiController;->access$502(Lcom/android/server/wifi/WifiController;Z)Z
 
-    .line 312
     iget-object v5, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v6, "KSR shutdown intent received!!"

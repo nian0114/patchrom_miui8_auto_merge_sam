@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 635
     iput-object p1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,14 +54,12 @@
 
     const/4 v7, 0x0
 
-    .line 659
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     const/4 v2, 0x5
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->setScannerState(I)V
 
-    .line 660
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
@@ -71,7 +68,6 @@
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->setDispatcher(Lmf/org/apache/xerces/impl/XMLDocumentFragmentScannerImpl$Dispatcher;)V
 
-    .line 664
     :try_start_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -85,7 +81,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 665
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     iget v2, v1, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fMarkupDepth:I
@@ -94,7 +89,6 @@
 
     iput v2, v1, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fMarkupDepth:I
 
-    .line 668
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     iget-object v1, v1, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fEntityScanner:Lmf/org/apache/xerces/impl/XMLEntityScanner;
@@ -109,7 +103,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 669
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fStringBuffer:Lmf/org/apache/xerces/util/XMLStringBuffer;
@@ -119,7 +112,6 @@
 
     invoke-virtual {v1}, Lmf/org/apache/xerces/util/XMLStringBuffer;->clear()V
 
-    .line 670
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fStringBuffer:Lmf/org/apache/xerces/util/XMLStringBuffer;
@@ -131,14 +123,12 @@
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/util/XMLStringBuffer;->append(Ljava/lang/String;)V
 
-    .line 671
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     iget-boolean v1, v1, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fNamespaces:Z
 
     if-eqz v1, :cond_3
 
-    .line 672
     :goto_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -154,7 +144,6 @@
 
     if-nez v1, :cond_1
 
-    .line 681
     :goto_1
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -191,7 +180,6 @@
 
     move-result-object v6
 
-    .line 682
     .local v6, "target":Ljava/lang/String;
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -204,7 +192,6 @@
 
     invoke-virtual {v1, v6, v2}, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->scanPIData(Ljava/lang/String;Lmf/org/apache/xerces/xni/XMLString;)V
 
-    .line 690
     .end local v6    # "target":Ljava/lang/String;
     :cond_0
     :goto_2
@@ -218,11 +205,9 @@
 
     iput-boolean v2, v1, Lmf/org/apache/xerces/impl/XMLEntityManager$ScannedEntity;->mayReadChunks:Z
 
-    .line 712
     :goto_3
     return v0
 
-    .line 673
     :cond_1
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -249,11 +234,9 @@
 
     goto :goto_0
 
-    .line 696
     :catch_0
     move-exception v5
 
-    .line 697
     .local v5, "e":Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -267,20 +250,16 @@
 
     move-result-object v2
 
-    .line 698
     invoke-virtual {v5}, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->getArguments()[Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 697
     invoke-virtual/range {v0 .. v5}, Lmf/org/apache/xerces/impl/XMLErrorReporter;->reportError(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;SLjava/lang/Exception;)Ljava/lang/String;
 
     move v0, v7
 
-    .line 699
     goto :goto_3
 
-    .line 678
     .end local v5    # "e":Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;
     :cond_2
     :try_start_1
@@ -303,7 +282,6 @@
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/util/XMLStringBuffer;->append(C)V
 
-    .line 677
     :cond_3
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -321,7 +299,6 @@
 
     goto :goto_1
 
-    .line 687
     :cond_4
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -335,36 +312,28 @@
 
     goto :goto_2
 
-    .line 701
     :catch_1
     move-exception v5
 
-    .line 702
     .local v5, "e":Ljava/io/CharConversionException;
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
     iget-object v0, v0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;->fErrorReporter:Lmf/org/apache/xerces/impl/XMLErrorReporter;
 
-    .line 703
     const-string v1, "http://www.w3.org/TR/1998/REC-xml-19980210"
 
-    .line 704
     const-string v2, "CharConversionFailure"
 
-    .line 702
     invoke-virtual/range {v0 .. v5}, Lmf/org/apache/xerces/impl/XMLErrorReporter;->reportError(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;SLjava/lang/Exception;)Ljava/lang/String;
 
     move v0, v7
 
-    .line 707
     goto :goto_3
 
-    .line 710
     .end local v5    # "e":Ljava/io/CharConversionException;
     :catch_2
     move-exception v5
 
-    .line 711
     .local v5, "e":Ljava/io/EOFException;
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;
 
@@ -374,6 +343,5 @@
 
     move v0, v7
 
-    .line 712
     goto :goto_3
 .end method

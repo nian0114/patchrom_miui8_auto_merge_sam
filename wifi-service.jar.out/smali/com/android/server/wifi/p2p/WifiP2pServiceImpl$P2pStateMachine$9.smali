@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4731
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$9;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 4742
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
     move-result v0
@@ -60,7 +58,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4743
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$9;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
@@ -79,11 +76,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 4747
     :goto_0
     return-void
 
-    .line 4745
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$9;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
@@ -113,7 +108,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 4738
     return-void
 .end method
 
@@ -125,6 +119,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 4734
     return-void
 .end method

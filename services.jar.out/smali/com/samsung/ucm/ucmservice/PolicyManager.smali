@@ -56,15 +56,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->mUCMService:Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
-    .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -91,10 +88,8 @@
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->hiddenPluginPackages:Ljava/util/ArrayList;
 
-    .line 60
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->mContext:Landroid/content/Context;
 
-    .line 61
     return-void
 .end method
 
@@ -105,10 +100,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 457
     const/4 v2, 0x0
 
-    .line 459
     .local v2, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -119,14 +112,13 @@
 
     move-result-object v2
 
-    .line 460
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "uid : "
+    const-string v6, "uid : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -142,7 +134,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "packageName : "
+    const-string v6, "packageName : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -160,7 +152,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 464
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -170,25 +161,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 465
     const-string v4, ":"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 466
     .local v1, "index":I
     const/4 v4, -0x1
 
     if-eq v1, v4, :cond_0
 
-    .line 467
     invoke-virtual {v2, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 469
     :cond_0
     const-string v4, "android.uid.systemui"
 
@@ -198,19 +185,15 @@
 
     if-eqz v4, :cond_1
 
-    .line 470
     const/4 v3, 0x1
 
-    .line 473
     .end local v1    # "index":I
     :cond_1
     return v3
 
-    .line 461
     :catch_0
     move-exception v0
 
-    .line 462
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -225,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 64
     monitor-enter p0
 
     :try_start_0
@@ -233,8 +215,7 @@
 
     if-nez v0, :cond_0
 
-    .line 65
-    const-string/jumbo v0, "knox_ucsm_policy"
+    const-string v0, "knox_ucsm_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -246,7 +227,6 @@
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->mUCMService:Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
-    .line 67
     :cond_0
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->mUCMService:Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :try_end_0
@@ -256,7 +236,6 @@
 
     return-object v0
 
-    .line 64
     :catchall_0
     move-exception v0
 
@@ -272,23 +251,19 @@
     .param p3, "calleruid"    # I
 
     .prologue
-    .line 299
     const-string v2, "PolicyManager"
 
-    const-string/jumbo v3, "isAuthEnabled() called"
+    const-string v3, "isAuthEnabled() called"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     invoke-virtual {p0, p1, p2}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getStorageAuthenticationType(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)I
 
     move-result v0
 
-    .line 301
     .local v0, "authType":I
     const/4 v1, 0x0
 
-    .line 302
     .local v1, "status":Z
     const-string v2, "PolicyManager"
 
@@ -296,7 +271,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "isAuthEnabled authType = "
+    const-string v4, "isAuthEnabled authType = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -312,26 +287,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     const/16 v2, 0x64
 
     if-ne v2, v0, :cond_0
 
-    .line 305
     invoke-virtual {p0, p3, p2}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isPackageFromExemptList(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 306
     const-string v2, "PolicyManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "isAuthEnabled calleruid = "
+    const-string v4, "isAuthEnabled calleruid = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -353,12 +325,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     invoke-direct {p0, p1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isAuthTypeLockforUser(I)Z
 
     move-result v1
 
-    .line 312
     :cond_0
     :goto_0
     const-string v2, "PolicyManager"
@@ -367,7 +337,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "isAuthEnabled() status - "
+    const-string v4, "isAuthEnabled() status - "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -383,10 +353,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     return v1
 
-    .line 309
     :cond_1
     const-string v2, "PolicyManager"
 
@@ -394,7 +362,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "isAuthEnabled calleruid = "
+    const-string v4, "isAuthEnabled calleruid = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -428,27 +396,23 @@
 
     const/4 v3, 0x0
 
-    .line 317
     const-string v5, "PolicyManager"
 
-    const-string/jumbo v6, "isAuthTypeLockforUser() called"
+    const-string v6, "isAuthTypeLockforUser() called"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     if-nez p1, :cond_2
 
-    .line 320
     const-string v5, "PolicyManager"
 
-    const-string/jumbo v6, "isAuthTypeLockforUser() userid == UserHandle.USER_OWNER"
+    const-string v6, "isAuthTypeLockforUser() userid == UserHandle.USER_OWNER"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     iget-object v5, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "keyguard"
+    const-string v6, "keyguard"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -456,24 +420,20 @@
 
     check-cast v0, Landroid/app/KeyguardManager;
 
-    .line 322
     .local v0, "kgm":Landroid/app/KeyguardManager;
     if-nez v0, :cond_1
 
-    .line 323
     const-string v4, "PolicyManager"
 
-    const-string/jumbo v5, "isAuthTypeLockforUser() KeyguardManager is null"
+    const-string v5, "isAuthTypeLockforUser() KeyguardManager is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     .end local v0    # "kgm":Landroid/app/KeyguardManager;
     :cond_0
     :goto_0
     return v3
 
-    .line 326
     .restart local v0    # "kgm":Landroid/app/KeyguardManager;
     :cond_1
     invoke-virtual {v0}, Landroid/app/KeyguardManager;->inKeyguardRestrictedInputMode()Z
@@ -482,31 +442,27 @@
 
     if-eqz v5, :cond_0
 
-    .line 327
     const-string v3, "PolicyManager"
 
-    const-string/jumbo v5, "isAuthTypeLockforUser() Keyguard is locked."
+    const-string v5, "isAuthTypeLockforUser() Keyguard is locked."
 
     invoke-static {v3, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move v3, v4
 
-    .line 328
     goto :goto_0
 
-    .line 332
     .end local v0    # "kgm":Landroid/app/KeyguardManager;
     :cond_2
     const-string v5, "PolicyManager"
 
-    const-string/jumbo v6, "isAuthTypeLockforUser() userid can be KNOX"
+    const-string v6, "isAuthTypeLockforUser() userid can be KNOX"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     iget-object v5, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "persona"
+    const-string v6, "persona"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -514,20 +470,17 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 334
     .local v1, "pm":Landroid/os/PersonaManager;
     if-nez v1, :cond_3
 
-    .line 335
     const-string v4, "PolicyManager"
 
-    const-string/jumbo v5, "isAuthTypeLockforUser() PersonaManager is null"
+    const-string v5, "isAuthTypeLockforUser() PersonaManager is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 340
     :cond_3
     invoke-virtual {v1, p1}, Landroid/os/PersonaManager;->exists(I)Z
 
@@ -535,14 +488,13 @@
 
     if-nez v5, :cond_4
 
-    .line 341
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "isAuthTypeLockforUser():  userid is not KNOX container: "
+    const-string v6, "isAuthTypeLockforUser():  userid is not KNOX container: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -560,13 +512,11 @@
 
     goto :goto_0
 
-    .line 344
     :cond_4
     invoke-virtual {v1, p1}, Landroid/os/PersonaManager;->getStateManager(I)Landroid/os/PersonaManager$StateManager;
 
     move-result-object v2
 
-    .line 345
     .local v2, "sm":Landroid/os/PersonaManager$StateManager;
     const-string v5, "PolicyManager"
 
@@ -574,7 +524,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "isAuthTypeLockforUser():  Knox state is: "
+    const-string v7, "isAuthTypeLockforUser():  Knox state is: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -594,7 +544,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     sget-object v5, Landroid/content/pm/PersonaState;->ACTIVE:Landroid/content/pm/PersonaState;
 
     invoke-virtual {v2, v5}, Landroid/os/PersonaManager$StateManager;->inState(Landroid/content/pm/PersonaState;)Z
@@ -605,7 +554,6 @@
 
     move v3, v4
 
-    .line 347
     goto :goto_0
 .end method
 
@@ -618,7 +566,6 @@
     .param p3, "grant"    # Z
 
     .prologue
-    .line 536
     return-void
 .end method
 
@@ -627,7 +574,6 @@
     .param p1, "user"    # I
 
     .prologue
-    .line 544
     return-void
 .end method
 
@@ -637,7 +583,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 540
     return-void
 .end method
 
@@ -660,7 +605,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 482
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -683,29 +627,24 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 485
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, p1, p2}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->getCertificateAliases(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 486
     .local v1, "aliasesStrArr":[Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 496
     .end local v1    # "aliasesStrArr":[Ljava/lang/String;
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return-object v0
 
-    .line 489
     .restart local v1    # "aliasesStrArr":[Ljava/lang/String;
     .restart local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :cond_0
@@ -733,25 +672,21 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 490
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 491
     .local v0, "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_0
 
-    .line 492
     .end local v0    # "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v1    # "aliasesStrArr":[Ljava/lang/String;
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :catch_0
     move-exception v2
 
-    .line 493
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -779,7 +714,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -791,20 +725,17 @@
     .param p2, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 117
     const-string v2, "PolicyManager"
 
     const-string v3, "PolicyManager.getStorageAuthenticationType() "
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v1
 
-    .line 120
     .local v1, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v1, p1, p2}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->getStorageAuthenticationType(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)I
     :try_end_0
@@ -812,16 +743,13 @@
 
     move-result v2
 
-    .line 125
     .end local v1    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v2
 
-    .line 121
     :catch_0
     move-exception v0
 
-    .line 122
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PolicyManager"
 
@@ -849,10 +777,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 125
     const/4 v2, -0x1
 
     goto :goto_0
@@ -863,12 +789,10 @@
     .param p1, "csAgent"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 279
     new-instance v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     invoke-direct {v1}, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;-><init>()V
 
-    .line 280
     .local v1, "cs":Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
     iget-object v4, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
@@ -876,7 +800,6 @@
 
     iput-object v4, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->name:Ljava/lang/String;
 
-    .line 282
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -901,7 +824,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     iget-object v4, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -910,7 +832,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 284
     iget-object v4, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -919,14 +840,12 @@
 
     iput-object v4, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->packageName:Ljava/lang/String;
 
-    .line 287
     :cond_0
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 288
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, v1}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->getAllCertificateAliases(Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)[Ljava/lang/String;
     :try_end_0
@@ -934,16 +853,13 @@
 
     move-result-object v0
 
-    .line 294
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return-object v0
 
-    .line 290
     :catch_0
     move-exception v2
 
-    .line 291
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -971,10 +887,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 294
     const/4 v0, 0x0
 
     goto :goto_0
@@ -986,12 +900,10 @@
     .param p2, "csAgent"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 228
     new-instance v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     invoke-direct {v1}, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;-><init>()V
 
-    .line 229
     .local v1, "cs":Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
     iget-object v4, p2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
@@ -999,7 +911,6 @@
 
     iput-object v4, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->name:Ljava/lang/String;
 
-    .line 231
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1022,7 +933,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     iget-object v4, p2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1031,7 +941,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 233
     iget-object v4, p2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1040,14 +949,12 @@
 
     iput-object v4, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->packageName:Ljava/lang/String;
 
-    .line 236
     :cond_0
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 237
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, p1, v1}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->getCertificateAliases(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)[Ljava/lang/String;
     :try_end_0
@@ -1055,16 +962,13 @@
 
     move-result-object v0
 
-    .line 243
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return-object v0
 
-    .line 239
     :catch_0
     move-exception v2
 
-    .line 240
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -1092,10 +996,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 243
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1107,12 +1009,10 @@
     .param p2, "csAgent"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 254
     new-instance v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     invoke-direct {v1}, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;-><init>()V
 
-    .line 255
     .local v1, "cs":Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
     iget-object v4, p2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
@@ -1120,7 +1020,6 @@
 
     iput-object v4, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->name:Ljava/lang/String;
 
-    .line 257
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1143,7 +1042,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     iget-object v4, p2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1152,7 +1050,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 259
     iget-object v4, p2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1161,14 +1058,12 @@
 
     iput-object v4, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->packageName:Ljava/lang/String;
 
-    .line 262
     :cond_0
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 263
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, p1, v1}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->getCertificateAliasesAsUser(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)[Ljava/lang/String;
     :try_end_0
@@ -1176,16 +1071,13 @@
 
     move-result-object v0
 
-    .line 269
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return-object v0
 
-    .line 265
     :catch_0
     move-exception v2
 
-    .line 266
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -1213,10 +1105,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 269
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1228,7 +1118,6 @@
     .param p2, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 154
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1251,12 +1140,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 157
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "access_type"
 
@@ -1264,19 +1151,16 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 159
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 160
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, p1, p2, v0}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->isAccessAllowed(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;Landroid/os/Bundle;)Z
 
     move-result v2
 
-    .line 161
     .local v2, "result":Z
     const-string v4, "PolicyManager"
 
@@ -1302,17 +1186,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 167
     .end local v2    # "result":Z
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v2
 
-    .line 163
     :catch_0
     move-exception v1
 
-    .line 164
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -1340,10 +1221,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 167
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1356,7 +1235,6 @@
     .param p3, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 180
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1379,12 +1257,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 183
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "access_type"
 
@@ -1392,24 +1268,20 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 184
     const-string v4, "alias"
 
     invoke-virtual {v0, v4, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 186
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 187
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, p1, p3, v0}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->isAccessAllowed(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;Landroid/os/Bundle;)Z
 
     move-result v2
 
-    .line 188
     .local v2, "result":Z
     const-string v4, "PolicyManager"
 
@@ -1435,17 +1307,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 194
     .end local v2    # "result":Z
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v2
 
-    .line 190
     :catch_0
     move-exception v1
 
-    .line 191
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -1473,10 +1342,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 194
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1489,7 +1356,6 @@
     .param p3, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 207
     const-string v4, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1512,19 +1378,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v3
 
-    .line 211
     .local v3, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v3, p1, p3}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->getCertificateAliases(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 212
     .local v0, "aliasArray":[Ljava/lang/String;
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -1536,17 +1399,14 @@
 
     move-result v2
 
-    .line 218
     .end local v0    # "aliasArray":[Ljava/lang/String;
     .end local v3    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v2
 
-    .line 214
     :catch_0
     move-exception v1
 
-    .line 215
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "PolicyManager"
 
@@ -1574,10 +1434,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 218
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1590,7 +1448,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 355
     iget-object v2, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1599,14 +1456,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 356
     iget-object v2, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 357
     .local v0, "cspkgname":Ljava/lang/String;
     const-string v2, "PolicyManager"
 
@@ -1644,23 +1499,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     :goto_0
     if-nez v0, :cond_2
 
-    .line 363
     const-string v2, "PolicyManager"
 
-    const-string/jumbo v3, "cspkgname = NULL. Unknown CS. CS Not Obscure"
+    const-string v3, "cspkgname = NULL. Unknown CS. CS Not Obscure"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     :cond_0
     :goto_1
     return v1
 
-    .line 359
     .end local v0    # "cspkgname":Ljava/lang/String;
     :cond_1
     const/4 v0, 0x0
@@ -1668,7 +1519,6 @@
     .restart local v0    # "cspkgname":Ljava/lang/String;
     goto :goto_0
 
-    .line 366
     :cond_2
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/PolicyManager;->hiddenPluginPackages:Ljava/util/ArrayList;
 
@@ -1678,7 +1528,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 367
     const/4 v1, 0x1
 
     goto :goto_1
@@ -1690,7 +1539,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 531
     const/4 v0, 0x1
 
     return v0
@@ -1702,20 +1550,17 @@
     .param p2, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 134
     const-string v2, "PolicyManager"
 
     const-string v3, "PolicyManager.isPackageFromExemptList() "
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v1
 
-    .line 137
     .local v1, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     const/16 v2, 0x6a
 
@@ -1725,16 +1570,13 @@
 
     move-result v2
 
-    .line 142
     .end local v1    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v2
 
-    .line 138
     :catch_0
     move-exception v0
 
-    .line 139
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PolicyManager"
 
@@ -1762,10 +1604,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 142
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1784,7 +1624,6 @@
 
     const/4 v4, 0x0
 
-    .line 373
     const-string v5, "PolicyManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1831,16 +1670,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     move v0, p3
 
-    .line 377
     .local v0, "calleruid":I
     new-instance v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     invoke-direct {v1}, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;-><init>()V
 
-    .line 378
     .local v1, "cs":Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
     iget-object v5, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
@@ -1848,7 +1684,6 @@
 
     iput-object v5, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->name:Ljava/lang/String;
 
-    .line 379
     iget-object v5, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1857,7 +1692,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 380
     iget-object v5, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1866,7 +1700,6 @@
 
     iput-object v5, v1, Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;->packageName:Ljava/lang/String;
 
-    .line 381
     const-string v5, "PolicyManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1903,18 +1736,15 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     invoke-virtual {p0, p1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isCSobscure(Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 453
     :goto_0
     return v3
 
-    .line 383
     :cond_0
     const-string v3, "PolicyManager"
 
@@ -1924,10 +1754,8 @@
 
     move v3, v4
 
-    .line 384
     goto :goto_0
 
-    .line 392
     :cond_1
     invoke-virtual {p0, p2, v1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isStorageEnabled(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
@@ -1935,16 +1763,13 @@
 
     if-nez v5, :cond_3
 
-    .line 393
     iget-object v5, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
     iget-boolean v2, v5, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->enforceManagement:Z
 
-    .line 394
     .local v2, "enforceManagement":Z
     if-eqz v2, :cond_2
 
-    .line 395
     const-string v3, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1979,10 +1804,8 @@
 
     move v3, v4
 
-    .line 396
     goto :goto_0
 
-    .line 398
     :cond_2
     const-string v4, "PolicyManager"
 
@@ -2018,7 +1841,6 @@
 
     goto :goto_0
 
-    .line 404
     .end local v2    # "enforceManagement":Z
     :cond_3
     invoke-virtual {p0, p2, v1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isStorageLocked(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
@@ -2027,7 +1849,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 405
     const-string v3, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2052,14 +1873,11 @@
 
     move v3, v4
 
-    .line 406
     goto :goto_0
 
-    .line 410
     :cond_4
     if-eqz p4, :cond_5
 
-    .line 411
     const-string v4, "PolicyManager"
 
     const-string v5, "MDM or KNOX licensed caller. Skipping additional validation"
@@ -2068,7 +1886,6 @@
 
     goto/16 :goto_0
 
-    .line 414
     :cond_5
     const-string v5, "PolicyManager"
 
@@ -2076,14 +1893,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     invoke-direct {p0, p2, v1, v0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isAuthEnabled(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;I)Z
 
     move-result v5
 
     if-eqz v5, :cond_6
 
-    .line 419
     const-string v3, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2108,10 +1923,8 @@
 
     move v3, v4
 
-    .line 420
     goto/16 :goto_0
 
-    .line 424
     :cond_6
     const/16 v5, 0x3f2
 
@@ -2121,7 +1934,6 @@
 
     if-ne v0, v5, :cond_8
 
-    .line 425
     :cond_7
     const-string v4, "PolicyManager"
 
@@ -2131,7 +1943,6 @@
 
     goto/16 :goto_0
 
-    .line 430
     :cond_8
     invoke-direct {p0, v0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getPackageNameForUid(I)Z
 
@@ -2139,7 +1950,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 431
     const-string v4, "PolicyManager"
 
     const-string v5, "Calling Id is SystemUI application"
@@ -2148,7 +1958,6 @@
 
     goto/16 :goto_0
 
-    .line 436
     :cond_9
     invoke-virtual {p0, v0, v1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isAccessAllowedforUid(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
@@ -2156,7 +1965,6 @@
 
     if-nez v5, :cond_a
 
-    .line 437
     const-string v3, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2181,21 +1989,17 @@
 
     move v3, v4
 
-    .line 438
     goto/16 :goto_0
 
-    .line 440
     :cond_a
     if-eqz p5, :cond_c
 
-    .line 441
     invoke-virtual {p0, v0, p5, v1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isAliasknown(ILjava/lang/String;Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
     move-result v5
 
     if-nez v5, :cond_b
 
-    .line 442
     const-string v3, "PolicyManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2218,12 +2022,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const/4 v3, 0x2
 
     goto/16 :goto_0
 
-    .line 445
     :cond_b
     invoke-virtual {p0, v0, p5, v1}, Lcom/samsung/ucm/ucmservice/PolicyManager;->isAliasAllowedforUid(ILjava/lang/String;Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
@@ -2231,7 +2033,6 @@
 
     if-nez v5, :cond_c
 
-    .line 446
     const-string v3, "PolicyManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2256,14 +2057,12 @@
 
     move v3, v4
 
-    .line 447
     goto/16 :goto_0
 
-    .line 451
     :cond_c
     const-string v4, "PolicyManager"
 
-    const-string/jumbo v5, "isSEStorageAccessAllowed() VALIDATED....."
+    const-string v5, "isSEStorageAccessAllowed() VALIDATED....."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2276,7 +2075,6 @@
     .param p2, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 77
     const-string v3, "PolicyManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2299,23 +2097,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     const/4 v1, 0x0
 
-    .line 80
     .local v1, "result":Z
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v2
 
-    .line 81
     .local v2, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v2, p1, p2}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->isCredentialStorageManagedAsUser(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
     move-result v1
 
-    .line 82
     const-string v3, "PolicyManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2340,16 +2134,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 87
     .end local v2    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v1
 
-    .line 83
     :catch_0
     move-exception v0
 
-    .line 84
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "PolicyManager"
 
@@ -2377,7 +2168,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -2389,7 +2179,6 @@
     .param p2, "cs"    # Lcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;
 
     .prologue
-    .line 96
     const-string v3, "PolicyManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2412,23 +2201,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     const/4 v1, 0x0
 
-    .line 99
     .local v1, "result":Z
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/PolicyManager;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
 
     move-result-object v2
 
-    .line 100
     .local v2, "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     invoke-interface {v2, p1, p2}, Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;->isCredentialStorageLockedAsUser(ILcom/sec/enterprise/knox/ucm/configurator/CredentialStorage;)Z
 
     move-result v1
 
-    .line 101
     const-string v3, "PolicyManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2453,16 +2238,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 106
     .end local v2    # "ucmService":Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
     :goto_0
     return v1
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "PolicyManager"
 
@@ -2490,7 +2272,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

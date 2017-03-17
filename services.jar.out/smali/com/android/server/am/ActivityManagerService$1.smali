@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 1264
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$1;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
@@ -48,7 +47,6 @@
     .param p1, "x0"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 1264
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     .end local p1    # "x0":Landroid/content/IntentFilter;
@@ -62,15 +60,12 @@
     .param p1, "f"    # Lcom/android/server/am/BroadcastFilter;
 
     .prologue
-    .line 1300
     invoke-super {p0, p1}, Lcom/android/server/IntentResolver;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 1301
     const/4 v0, 0x1
 
     iput-boolean v0, p1, Lcom/android/server/am/BroadcastFilter;->added:Z
 
-    .line 1302
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .param p2, "x1"    # Ljava/util/List;
 
     .prologue
-    .line 1264
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     .end local p1    # "x0":Landroid/content/IntentFilter;
@@ -106,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 1268
     .local p2, "dest":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/am/BroadcastFilter;>;"
     iget-object v2, p1, Lcom/android/server/am/BroadcastFilter;->receiverList:Lcom/android/server/am/ReceiverList;
 
@@ -116,7 +109,6 @@
 
     move-result-object v1
 
-    .line 1269
     .local v1, "target":Landroid/os/IBinder;
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -128,7 +120,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 1270
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -145,20 +136,16 @@
 
     if-ne v2, v1, :cond_0
 
-    .line 1271
     const/4 v2, 0x0
 
-    .line 1274
     :goto_1
     return v2
 
-    .line 1269
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1274
     :cond_1
     const/4 v2, 0x1
 
@@ -171,7 +158,6 @@
     .param p2, "x1"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 1264
     check-cast p2, Lcom/android/server/am/BroadcastFilter;
 
     .end local p2    # "x1":Landroid/content/IntentFilter;
@@ -188,7 +174,6 @@
     .param p2, "filter"    # Lcom/android/server/am/BroadcastFilter;
 
     .prologue
-    .line 1293
     iget-object v0, p2, Lcom/android/server/am/BroadcastFilter;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -203,7 +188,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 1264
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService$1;->newArray(I)[Lcom/android/server/am/BroadcastFilter;
 
     move-result-object v0
@@ -216,7 +200,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1288
     new-array v0, p1, [Lcom/android/server/am/BroadcastFilter;
 
     return-object v0
@@ -231,7 +214,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 1279
     if-eq p3, v1, :cond_0
 
     iget v0, p1, Lcom/android/server/am/BroadcastFilter;->owningUserId:I
@@ -242,7 +224,6 @@
 
     if-ne p3, v0, :cond_1
 
-    .line 1281
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/IntentResolver;->newResult(Landroid/content/IntentFilter;II)Ljava/lang/Object;
 
@@ -250,7 +231,6 @@
 
     check-cast v0, Lcom/android/server/am/BroadcastFilter;
 
-    .line 1283
     :goto_0
     return-object v0
 
@@ -267,7 +247,6 @@
     .param p3, "x2"    # I
 
     .prologue
-    .line 1264
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     .end local p1    # "x0":Landroid/content/IntentFilter;
@@ -283,7 +262,6 @@
     .param p1, "x0"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 1264
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     .end local p1    # "x0":Landroid/content/IntentFilter;
@@ -297,14 +275,11 @@
     .param p1, "f"    # Lcom/android/server/am/BroadcastFilter;
 
     .prologue
-    .line 1306
     invoke-super {p0, p1}, Lcom/android/server/IntentResolver;->removeFilter(Landroid/content/IntentFilter;)V
 
-    .line 1307
     const/4 v0, 0x0
 
     iput-boolean v0, p1, Lcom/android/server/am/BroadcastFilter;->added:Z
 
-    .line 1308
     return-void
 .end method

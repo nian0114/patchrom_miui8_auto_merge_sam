@@ -25,28 +25,22 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 31
     const/16 v0, 0x46
 
     iput v0, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
-    .line 33
     const/16 v0, 0x7f
 
     iput v0, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mHighTemperature:I
 
-    .line 35
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mIsIncluding:Z
 
-    .line 41
     invoke-direct {p0}, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->setAttribute()V
 
-    .line 42
     return-void
 .end method
 
@@ -57,37 +51,28 @@
     .param p3, "isIncluding"    # Z
 
     .prologue
-    .line 57
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 31
     const/16 v0, 0x46
 
     iput v0, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
-    .line 33
     const/16 v0, 0x7f
 
     iput v0, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mHighTemperature:I
 
-    .line 35
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mIsIncluding:Z
 
-    .line 58
     iput p1, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
-    .line 59
     iput p2, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mHighTemperature:I
 
-    .line 60
     iput-boolean p3, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mIsIncluding:Z
 
-    .line 61
     invoke-direct {p0}, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->setAttribute()V
 
-    .line 62
     return-void
 .end method
 
@@ -95,39 +80,33 @@
     .locals 3
 
     .prologue
-    .line 85
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 86
     .local v0, "attribute":Landroid/os/Bundle;
-    const-string/jumbo v1, "low_temperature"
+    const-string v1, "low_temperature"
 
     iget v2, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 87
-    const-string/jumbo v1, "high_temperature"
+    const-string v1, "high_temperature"
 
     iget v2, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 88
-    const-string/jumbo v1, "including"
+    const-string v1, "including"
 
     iget-boolean v2, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mIsIncluding:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 89
     const/16 v1, 0x17
 
     invoke-super {p0, v1, v0}, Landroid/hardware/scontext/SContextAttribute;->setAttribute(ILandroid/os/Bundle;)V
 
-    .line 90
     return-void
 .end method
 
@@ -143,7 +122,6 @@
 
     const/4 v0, 0x0
 
-    .line 67
     iget v1, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
     if-lt v1, v2, :cond_0
@@ -152,7 +130,6 @@
 
     if-le v1, v3, :cond_1
 
-    .line 69
     :cond_0
     const-string v1, "SContextTemperatureAlertAttribute"
 
@@ -160,11 +137,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :goto_0
     return v0
 
-    .line 72
     :cond_1
     iget v1, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mHighTemperature:I
 
@@ -174,7 +149,6 @@
 
     if-le v1, v3, :cond_3
 
-    .line 74
     :cond_2
     const-string v1, "SContextTemperatureAlertAttribute"
 
@@ -184,7 +158,6 @@
 
     goto :goto_0
 
-    .line 77
     :cond_3
     iget v1, p0, Landroid/hardware/scontext/SContextTemperatureAlertAttribute;->mLowTemperature:I
 
@@ -192,7 +165,6 @@
 
     if-le v1, v2, :cond_4
 
-    .line 78
     const-string v1, "SContextTemperatureAlertAttribute"
 
     const-string v2, "The low temperature must be less than the high temperature."
@@ -201,7 +173,6 @@
 
     goto :goto_0
 
-    .line 81
     :cond_4
     const/4 v0, 0x1
 

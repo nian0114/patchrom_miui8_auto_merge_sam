@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 142
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 159
     monitor-enter p0
 
-    .line 160
     :try_start_0
     iget-object v4, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -55,14 +52,12 @@
 
     iput-object v5, v4, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->mIoTelephony:Lcom/itsoninc/android/oemfw/api/v17/IItsOnTelephony;
 
-    .line 161
     iget-object v4, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     iget-object v4, v4, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->mIoTelephony:Lcom/itsoninc/android/oemfw/api/v17/IItsOnTelephony;
 
     if-eqz v4, :cond_1
 
-    .line 171
     iget-object v4, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     # getter for: Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->registerCallbacks:Z
@@ -74,7 +69,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 177
     :try_start_1
     const-string v4, "com.android.internal.telephony.PhoneFactory"
 
@@ -82,7 +76,6 @@
 
     move-result-object v3
 
-    .line 179
     .local v3, "phoneFactoryClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "getDefaultPhone"
 
@@ -94,7 +87,6 @@
 
     move-result-object v2
 
-    .line 181
     .local v2, "getDefaultPhone":Ljava/lang/reflect/Method;
     iget-object v5, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -113,7 +105,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 187
     .end local v2    # "getDefaultPhone":Ljava/lang/reflect/Method;
     .end local v3    # "phoneFactoryClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
@@ -134,29 +125,24 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 195
     :cond_0
     :goto_1
     :try_start_3
     monitor-exit p0
 
-    .line 196
     :goto_2
     return-void
 
-    .line 167
     :cond_1
     iget-object v4, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     # invokes: Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->scheduleRebind()V
     invoke-static {v4}, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->access$000(Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;)V
 
-    .line 168
     monitor-exit p0
 
     goto :goto_2
 
-    .line 195
     :catchall_0
     move-exception v4
 
@@ -166,11 +152,9 @@
 
     throw v4
 
-    .line 182
     :catch_0
     move-exception v0
 
-    .line 183
     .local v0, "e":Ljava/lang/Exception;
     :try_start_4
     const-string v4, "ItsOnOEM.TelephonyConnector"
@@ -181,12 +165,10 @@
 
     goto :goto_0
 
-    .line 188
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 189
     .local v1, "e1":Landroid/os/RemoteException;
     const-string v4, "ItsOnOEM.TelephonyConnector"
 
@@ -204,10 +186,8 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 144
     monitor-enter p0
 
-    .line 145
     :try_start_0
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -215,27 +195,22 @@
 
     iput-object v1, v0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->mIoTelephony:Lcom/itsoninc/android/oemfw/api/v17/IItsOnTelephony;
 
-    .line 146
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     iget-boolean v0, v0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->keepBind:Z
 
     if-eqz v0, :cond_0
 
-    .line 149
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$1;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     # invokes: Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->scheduleRebind()V
     invoke-static {v0}, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->access$000(Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;)V
 
-    .line 155
     :cond_0
     monitor-exit p0
 
-    .line 156
     return-void
 
-    .line 155
     :catchall_0
     move-exception v0
 

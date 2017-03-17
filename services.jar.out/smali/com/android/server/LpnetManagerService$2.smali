@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 698
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 702
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 703
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.PACKAGE_ADDED"
 
@@ -78,7 +75,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 707
     :cond_0
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -93,7 +89,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "mIntentRecvForPM Action : "
+    const-string v6, "mIntentRecvForPM Action : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,17 +105,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     :cond_1
     move-object v3, v0
 
-    .line 709
     .local v3, "varAction":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 710
     .local v2, "uri":Landroid/net/Uri;
     const-string v4, "android.intent.extra.REPLACING"
 
@@ -129,7 +122,6 @@
 
     move-result v1
 
-    .line 711
     .local v1, "isReInstall":Z
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -144,7 +136,6 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 810
     .end local v1    # "isReInstall":Z
     .end local v2    # "uri":Landroid/net/Uri;
     .end local v3    # "varAction":Ljava/lang/String;

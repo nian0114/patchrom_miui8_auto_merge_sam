@@ -384,7 +384,7 @@
 
     invoke-direct {v1, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureInput;-><init>(Lorg/w3c/dom/Node;)V
 
-    const-string/jumbo v0, "text/xml"
+    const-string v0, "text/xml"
 
     invoke-virtual {v1, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureInput;->setMIMEType(Ljava/lang/String;)V
 
@@ -436,7 +436,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;
 
-    const-string/jumbo v2, "signature.Verification.MissingID"
+    const-string v2, "signature.Verification.MissingID"
 
     invoke-direct {v1, v2, v0, p1, p2}, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Attr;Ljava/lang/String;)V
 

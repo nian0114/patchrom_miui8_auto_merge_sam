@@ -14,12 +14,10 @@
     .locals 1
 
     .prologue
-    .line 39
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/ClipboardData;-><init>(I)V
 
-    .line 40
     return-void
 .end method
 
@@ -31,12 +29,10 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 51
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
 
-    .line 52
     .local v0, "Result":Z
     if-eqz v0, :cond_0
 
@@ -54,31 +50,25 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 53
     :cond_0
     const/4 v1, 0x0
 
-    .line 63
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :goto_0
     return v1
 
-    .line 55
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :cond_1
     packed-switch p1, :pswitch_data_0
 
-    .line 60
     const/4 v0, 0x0
 
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :goto_1
     move v1, v0
 
-    .line 63
     goto :goto_0
 
-    .line 57
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_0
     check-cast p2, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;
@@ -90,10 +80,8 @@
 
     move-result v0
 
-    .line 58
     goto :goto_1
 
-    .line 55
     :pswitch_data_0
     .packed-switch 0x8
         :pswitch_0
@@ -104,12 +92,10 @@
     .locals 1
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
-    .line 90
     return-void
 .end method
 
@@ -118,23 +104,19 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 103
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 104
     const-string v2, "ClipboardDataMultipleType"
 
-    const-string/jumbo v3, "multiple type equals"
+    const-string v3, "multiple type equals"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_0
     const/4 v0, 0x0
 
-    .line 107
     .local v0, "Result":Z
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/ClipboardData;->equals(Ljava/lang/Object;)Z
 
@@ -142,13 +124,11 @@
 
     if-nez v2, :cond_2
 
-    .line 116
     .end local v0    # "Result":Z
     :cond_1
     :goto_0
     return v0
 
-    .line 111
     .restart local v0    # "Result":Z
     :cond_2
     instance-of v2, p1, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;
@@ -157,10 +137,8 @@
 
     move-object v1, p1
 
-    .line 115
     check-cast v1, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;
 
-    .line 116
     .local v1, "trgData":Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
@@ -179,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
     return-object v0
@@ -189,15 +166,12 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
     if-nez v0, :cond_0
 
-    .line 95
     const/4 v0, 0x0
 
-    .line 97
     :goto_0
     return v0
 
@@ -212,7 +186,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 151
     return-void
 .end method
 
@@ -221,7 +194,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 137
     :try_start_0
     const-class v1, Landroid/content/ClipData;
 
@@ -237,7 +209,6 @@
 
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
-    .line 138
     const-class v1, Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -256,12 +227,10 @@
 
     iput-boolean v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mIsProtected:Z
 
-    .line 139
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 140
     const-string v1, "ClipboardDataMultipleType"
 
     const-string v2, "ClipboardDataMultipleType : readFromSource : "
@@ -270,16 +239,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 145
     :cond_0
     :goto_0
     return-void
 
-    .line 142
     :catch_0
     move-exception v0
 
-    .line 143
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "ClipboardDataMultipleType"
 
@@ -287,7 +253,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "readFromSource~Exception :"
+    const-string v3, "readFromSource~Exception :"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -315,10 +281,8 @@
     .param p1, "clipdata"    # Landroid/content/ClipData;
 
     .prologue
-    .line 71
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
-    .line 72
     const/4 v0, 0x1
 
     return v0
@@ -330,28 +294,23 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 122
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 123
     const-string v0, "ClipboardDataMultipleType"
 
     const-string v1, "Multiple Type write to parcel"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 126
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
     if-nez v0, :cond_1
 
-    .line 127
     const-string v0, ""
 
     const-string v1, ""
@@ -362,13 +321,11 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
-    .line 129
     :cond_1
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mClipdata:Landroid/content/ClipData;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 130
     iget-boolean v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataMultipleType;->mIsProtected:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -377,6 +334,5 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 131
     return-void
 .end method

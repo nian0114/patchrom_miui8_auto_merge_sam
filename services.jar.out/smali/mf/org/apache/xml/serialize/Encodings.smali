@@ -22,14 +22,12 @@
     .locals 3
 
     .prologue
-    .line 51
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    .line 52
     const-string v2, "Unicode"
 
     aput-object v2, v0, v1
@@ -64,17 +62,14 @@
 
     aput-object v2, v0, v1
 
-    .line 51
     sput-object v0, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
 
-    .line 60
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
 
-    .line 120
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -103,14 +97,11 @@
 
     const v6, 0xffff
 
-    .line 66
     const/4 v0, 0x0
 
-    .line 67
     .local v0, "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     if-nez p0, :cond_1
 
-    .line 68
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
 
     const-string v5, "UTF8"
@@ -127,13 +118,11 @@
 
     move-object v1, v0
 
-    .line 114
     .end local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     .local v1, "eInfo":Ljava/lang/Object;
     :goto_0
     return-object v1
 
-    .line 70
     .end local v1    # "eInfo":Ljava/lang/Object;
     .restart local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     :cond_0
@@ -150,7 +139,6 @@
 
     invoke-direct {v0, v4, v5, v6}, Lmf/org/apache/xml/serialize/EncodingInfo;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 71
     .restart local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
 
@@ -160,11 +148,9 @@
 
     move-object v1, v0
 
-    .line 72
     .restart local v1    # "eInfo":Ljava/lang/Object;
     goto :goto_0
 
-    .line 75
     .end local v1    # "eInfo":Ljava/lang/Object;
     :cond_1
     sget-object v4, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -173,22 +159,17 @@
 
     move-result-object p0
 
-    .line 76
     invoke-static {p0}, Lmf/org/apache/xerces/util/EncodingMap;->getIANA2JavaMapping(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 77
     .local v3, "jName":Ljava/lang/String;
     if-nez v3, :cond_7
 
-    .line 79
     if-eqz p1, :cond_6
 
-    .line 80
     invoke-static {p0}, Lmf/org/apache/xml/serialize/EncodingInfo;->testJavaEncodingName(Ljava/lang/String;)V
 
-    .line 81
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
 
     invoke-virtual {v4, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,16 +184,13 @@
 
     move-object v1, v0
 
-    .line 82
     .restart local v1    # "eInfo":Ljava/lang/Object;
     goto :goto_0
 
-    .line 84
     .end local v1    # "eInfo":Ljava/lang/Object;
     :cond_2
     const/4 v2, 0x0
 
-    .line 85
     .local v2, "i":I
     :goto_1
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
@@ -221,7 +199,6 @@
 
     if-lt v2, v4, :cond_4
 
-    .line 91
     :goto_2
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
 
@@ -229,7 +206,6 @@
 
     if-ne v2, v4, :cond_3
 
-    .line 92
     new-instance v0, Lmf/org/apache/xml/serialize/EncodingInfo;
 
     .end local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
@@ -239,7 +215,6 @@
 
     invoke-direct {v0, v4, p0, v5}, Lmf/org/apache/xml/serialize/EncodingInfo;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 94
     .restart local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     :cond_3
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
@@ -248,11 +223,9 @@
 
     move-object v1, v0
 
-    .line 95
     .restart local v1    # "eInfo":Ljava/lang/Object;
     goto :goto_0
 
-    .line 86
     .end local v1    # "eInfo":Ljava/lang/Object;
     :cond_4
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
@@ -265,7 +238,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 87
     new-instance v0, Lmf/org/apache/xml/serialize/EncodingInfo;
 
     .end local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
@@ -275,17 +247,14 @@
 
     invoke-direct {v0, v4, p0, v6}, Lmf/org/apache/xml/serialize/EncodingInfo;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 88
     .restart local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     goto :goto_2
 
-    .line 85
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 97
     .end local v2    # "i":I
     :cond_6
     new-instance v4, Ljava/io/UnsupportedEncodingException;
@@ -294,7 +263,6 @@
 
     throw v4
 
-    .line 99
     :cond_7
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
 
@@ -310,16 +278,13 @@
 
     move-object v1, v0
 
-    .line 100
     .restart local v1    # "eInfo":Ljava/lang/Object;
     goto :goto_0
 
-    .line 103
     .end local v1    # "eInfo":Ljava/lang/Object;
     :cond_8
     const/4 v2, 0x0
 
-    .line 104
     .restart local v2    # "i":I
     :goto_3
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
@@ -328,7 +293,6 @@
 
     if-lt v2, v4, :cond_a
 
-    .line 110
     :goto_4
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
 
@@ -336,13 +300,11 @@
 
     if-ne v2, v4, :cond_9
 
-    .line 111
     new-instance v0, Lmf/org/apache/xml/serialize/EncodingInfo;
 
     .end local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     invoke-direct {v0, p0, v3, v5}, Lmf/org/apache/xml/serialize/EncodingInfo;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 113
     .restart local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     :cond_9
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->_encodings:Ljava/util/Hashtable;
@@ -351,11 +313,9 @@
 
     move-object v1, v0
 
-    .line 114
     .restart local v1    # "eInfo":Ljava/lang/Object;
     goto/16 :goto_0
 
-    .line 105
     .end local v1    # "eInfo":Ljava/lang/Object;
     :cond_a
     sget-object v4, Lmf/org/apache/xml/serialize/Encodings;->UNICODE_ENCODINGS:[Ljava/lang/String;
@@ -368,17 +328,14 @@
 
     if-eqz v4, :cond_b
 
-    .line 106
     new-instance v0, Lmf/org/apache/xml/serialize/EncodingInfo;
 
     .end local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     invoke-direct {v0, p0, v3, v6}, Lmf/org/apache/xml/serialize/EncodingInfo;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 107
     .restart local v0    # "eInfo":Lmf/org/apache/xml/serialize/EncodingInfo;
     goto :goto_4
 
-    .line 104
     :cond_b
     add-int/lit8 v2, v2, 0x1
 

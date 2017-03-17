@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 475
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$PropertyType;-><init>(Ljava/lang/String;ILcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$1;)V
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 485
     # getter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->doubleHashSetVal:Ljava/util/HashSet;
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$2100()Ljava/util/HashSet;
 
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 479
     .local p1, "value":Ljava/lang/Object;, "TT;"
     check-cast p1, Ljava/util/HashSet;
 
@@ -68,6 +65,5 @@
     # setter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->doubleHashSetVal:Ljava/util/HashSet;
     invoke-static {p1}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$2102(Ljava/util/HashSet;)Ljava/util/HashSet;
 
-    .line 480
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 436
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$2;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -38,14 +37,13 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 451
     const-string v0, "KnoxTimeoutHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "switching event received for "
+    const-string v2, "switching event received for "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,13 +59,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 452
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$2;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # setter for: Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentPersonaId:I
     invoke-static {v0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler;->access$1002(Lcom/android/server/pm/KnoxTimeoutHandler;I)I
 
-    .line 453
     return-void
 .end method
 
@@ -76,7 +72,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 439
     return-void
 .end method
 
@@ -85,7 +80,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 443
     return-void
 .end method
 
@@ -94,7 +88,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 447
     return-void
 .end method
 
@@ -105,6 +98,5 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 457
     return-void
 .end method

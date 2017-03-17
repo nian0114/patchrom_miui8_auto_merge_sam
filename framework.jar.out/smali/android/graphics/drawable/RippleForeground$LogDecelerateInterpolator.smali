@@ -37,21 +37,16 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 373
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 374
     iput p1, p0, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->mBase:F
 
-    .line 375
     iput p3, p0, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->mDrift:F
 
-    .line 376
     div-float v0, v1, p2
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->mTimeScale:F
 
-    .line 378
     invoke-direct {p0, v1}, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->computeLog(F)F
 
     move-result v0
@@ -60,7 +55,6 @@
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->mOutputScale:F
 
-    .line 379
     return-void
 .end method
 
@@ -69,7 +63,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 382
     const/high16 v0, 0x3f800000    # 1.0f
 
     iget v1, p0, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->mBase:F
@@ -108,7 +101,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 387
     invoke-direct {p0, p1}, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;->computeLog(F)F
 
     move-result v0

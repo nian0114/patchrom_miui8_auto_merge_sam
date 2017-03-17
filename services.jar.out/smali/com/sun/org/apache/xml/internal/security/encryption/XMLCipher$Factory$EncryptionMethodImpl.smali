@@ -165,7 +165,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v1, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "EncryptionMethod"
 
@@ -199,7 +199,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v3, "KeySize"
 
@@ -248,7 +248,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v3, "OAEPparams"
 

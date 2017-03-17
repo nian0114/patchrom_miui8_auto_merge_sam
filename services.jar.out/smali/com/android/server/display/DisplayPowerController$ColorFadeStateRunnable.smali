@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 3372
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$ColorFadeStateRunnable;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3373
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerController$ColorFadeStateRunnable;->mExit:Z
@@ -47,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 3375
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$ColorFadeStateRunnable;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # getter for: Lcom/android/server/display/DisplayPowerController;->mCallbacks:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
@@ -59,7 +56,6 @@
 
     invoke-interface {v0, v1}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->onColorFadeExit(Z)V
 
-    .line 3376
     return-void
 .end method
 
@@ -68,18 +64,14 @@
     .param p1, "exit"    # Z
 
     .prologue
-    .line 3378
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerController$ColorFadeStateRunnable;->mExit:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 3379
     iput-boolean p1, p0, Lcom/android/server/display/DisplayPowerController$ColorFadeStateRunnable;->mExit:Z
 
-    .line 3380
     invoke-virtual {p0}, Lcom/android/server/display/DisplayPowerController$ColorFadeStateRunnable;->run()V
 
-    .line 3382
     :cond_0
     return-void
 .end method

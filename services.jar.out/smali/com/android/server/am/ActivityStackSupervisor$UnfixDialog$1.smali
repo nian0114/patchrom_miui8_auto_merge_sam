@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 7820
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 7823
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 7848
     :cond_0
     :goto_0
     :pswitch_0
@@ -71,7 +68,6 @@
 
     invoke-interface {v1, v2}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 7849
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
@@ -80,10 +76,8 @@
 
     iput-boolean v2, v1, Lcom/android/server/am/ActivityStackSupervisor;->mUnfixDialogShow:Z
 
-    .line 7850
     return-void
 
-    .line 7827
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
@@ -93,14 +87,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 7828
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v0, v1, Lcom/android/server/am/ActivityStackSupervisor;->mFixedTask:Lcom/android/server/am/TaskRecord;
 
-    .line 7829
     .local v0, "fixedTR":Lcom/android/server/am/TaskRecord;
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
@@ -108,7 +100,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/ActivityStackSupervisor;->setFixedTask(Lcom/android/server/am/TaskRecord;)V
 
-    .line 7830
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
@@ -119,7 +110,6 @@
 
     packed-switch v1, :pswitch_data_1
 
-    .line 7843
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
@@ -134,7 +124,6 @@
 
     goto :goto_0
 
-    .line 7832
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;->this$1:Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;
 
@@ -162,7 +151,6 @@
 
     goto :goto_1
 
-    .line 7835
     :pswitch_3
     invoke-virtual {v0, v2}, Lcom/android/server/am/TaskRecord;->topRunningActivityLocked(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityRecord;
 
@@ -170,7 +158,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 7836
     iget-object v1, v0, Lcom/android/server/am/TaskRecord;->stack:Lcom/android/server/am/ActivityStack;
 
     invoke-virtual {v0, v2}, Lcom/android/server/am/TaskRecord;->topRunningActivityLocked(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityRecord;
@@ -181,7 +168,6 @@
 
     goto :goto_1
 
-    .line 7840
     :pswitch_4
     iget-object v1, v0, Lcom/android/server/am/TaskRecord;->stack:Lcom/android/server/am/ActivityStack;
 
@@ -191,7 +177,6 @@
 
     goto :goto_1
 
-    .line 7823
     nop
 
     :pswitch_data_0
@@ -200,7 +185,6 @@
         :pswitch_1
     .end packed-switch
 
-    .line 7830
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_2

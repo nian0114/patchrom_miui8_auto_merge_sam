@@ -25,17 +25,14 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 173
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op;-><init>(I)V
 
-    .line 174
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0, p2}, Ljava/util/Vector;-><init>(I)V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$UnionOp;->branches:Ljava/util/Vector;
 
-    .line 175
     return-void
 .end method
 
@@ -46,12 +43,10 @@
     .param p1, "op"    # Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     .prologue
-    .line 177
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$UnionOp;->branches:Ljava/util/Vector;
 
     invoke-virtual {v0, p1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 178
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 183
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$UnionOp;->branches:Ljava/util/Vector;
 
     invoke-virtual {v0, p1}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
@@ -76,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$UnionOp;->branches:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I

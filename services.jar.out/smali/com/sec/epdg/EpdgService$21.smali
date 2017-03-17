@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4803
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$21;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 4806
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -52,14 +50,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4807
     const-string v0, "[EPDGService]"
 
     const-string v1, "L2W handover profiling is running, stop it and retry L2W handover"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4808
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -67,7 +63,6 @@
 
     invoke-virtual {v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->stopL2WHandoverProfiling()V
 
-    .line 4809
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$21;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
@@ -81,7 +76,6 @@
     # invokes: Lcom/sec/epdg/EpdgService;->retryL2WHandoverIfRequired(Ljava/lang/String;)Z
     invoke-static {v0, v1}, Lcom/sec/epdg/EpdgService;->access$4900(Lcom/sec/epdg/EpdgService;Ljava/lang/String;)Z
 
-    .line 4811
     :cond_0
     return-void
 .end method

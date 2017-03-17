@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,28 +44,23 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 77
     .local v1, "eventType":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 78
     .local v2, "language":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 79
     .local v0, "browserTerminationCause":I
     packed-switch v1, :pswitch_data_0
 
-    .line 88
     :pswitch_0
     new-instance v3, Lcom/android/internal/telephony/cat/CatEventDownload;
 
@@ -77,7 +71,6 @@
     :goto_0
     return-object v3
 
-    .line 82
     :pswitch_1
     new-instance v3, Lcom/android/internal/telephony/cat/CatEventDownload;
 
@@ -85,7 +78,6 @@
 
     goto :goto_0
 
-    .line 84
     :pswitch_2
     new-instance v3, Lcom/android/internal/telephony/cat/CatEventDownload;
 
@@ -93,7 +85,6 @@
 
     goto :goto_0
 
-    .line 86
     :pswitch_3
     new-instance v3, Lcom/android/internal/telephony/cat/CatEventDownload;
 
@@ -101,7 +92,6 @@
 
     goto :goto_0
 
-    .line 79
     nop
 
     :pswitch_data_0
@@ -119,7 +109,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 73
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cat/CatEventDownload$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/cat/CatEventDownload;
 
     move-result-object v0
@@ -132,7 +121,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 94
     new-array v0, p1, [Lcom/android/internal/telephony/cat/CatEventDownload;
 
     return-object v0
@@ -143,7 +131,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 73
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cat/CatEventDownload$1;->newArray(I)[Lcom/android/internal/telephony/cat/CatEventDownload;
 
     move-result-object v0

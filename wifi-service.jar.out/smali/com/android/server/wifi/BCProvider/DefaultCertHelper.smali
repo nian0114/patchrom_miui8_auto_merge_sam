@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lcom/android/server/wifi/BCProvider/CertHelper;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .end annotation
 
     .prologue
-    .line 12
     invoke-static {p1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v0

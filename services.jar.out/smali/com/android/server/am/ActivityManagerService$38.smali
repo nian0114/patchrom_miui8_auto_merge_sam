@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 28821
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$38;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "app2"    # Lcom/android/server/am/BroadcastFilter;
 
     .prologue
-    .line 28825
     invoke-virtual {p2}, Lcom/android/server/am/BroadcastFilter;->getPackageWeight()Ljava/lang/Integer;
 
     move-result-object v1
@@ -65,7 +63,6 @@
 
     move-result v0
 
-    .line 28826
     .local v0, "returnValue":I
     return v0
 .end method
@@ -76,7 +73,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 28821
     check-cast p1, Lcom/android/server/am/BroadcastFilter;
 
     .end local p1    # "x0":Ljava/lang/Object;

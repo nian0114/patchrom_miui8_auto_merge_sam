@@ -48,8 +48,7 @@
     .locals 1
 
     .prologue
-    .line 1160
-    const-string/jumbo v0, "internal"
+    const-string v0, "internal"
 
     invoke-static {v0}, Landroid/provider/MediaStore$Images$Thumbnails;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/provider/MediaStore$Images$Thumbnails;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1167
     const-string v0, "external"
 
     invoke-static {v0}, Landroid/provider/MediaStore$Images$Thumbnails;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
@@ -73,7 +71,6 @@
     .locals 0
 
     .prologue
-    .line 1066
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,7 +82,6 @@
     .param p1, "origId"    # J
 
     .prologue
-    .line 1092
     sget-object v3, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const-wide/16 v4, 0x0
@@ -96,7 +92,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/provider/MediaStore$InternalThumbnails;->cancelThumbnailRequest(Landroid/content/ContentResolver;JLandroid/net/Uri;J)V
 
-    .line 1094
     return-void
 .end method
 
@@ -107,7 +102,6 @@
     .param p3, "groupId"    # J
 
     .prologue
-    .line 1124
     sget-object v3, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     move-object v0, p0
@@ -118,7 +112,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/provider/MediaStore$InternalThumbnails;->cancelThumbnailRequest(Landroid/content/ContentResolver;JLandroid/net/Uri;J)V
 
-    .line 1125
     return-void
 .end method
 
@@ -127,7 +120,6 @@
     .param p0, "volumeName"    # Ljava/lang/String;
 
     .prologue
-    .line 1153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +159,6 @@
     .param p4, "options"    # Landroid/graphics/BitmapFactory$Options;
 
     .prologue
-    .line 1109
     const-wide/16 v4, 0x0
 
     sget-object v8, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
@@ -198,7 +189,6 @@
     .param p6, "options"    # Landroid/graphics/BitmapFactory$Options;
 
     .prologue
-    .line 1141
     sget-object v8, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v9, 0x0
@@ -229,8 +219,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1068
-    const-string/jumbo v5, "image_id ASC"
+    const-string v5, "image_id ASC"
 
     move-object v0, p0
 
@@ -257,14 +246,13 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1078
     sget-object v1, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "image_id = "
+    const-string v2, "image_id = "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -280,7 +268,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "kind"
+    const-string v2, "kind"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -321,12 +309,11 @@
     .param p3, "projection"    # [Ljava/lang/String;
 
     .prologue
-    .line 1073
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "kind = "
+    const-string v1, "kind = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -342,7 +329,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "image_id ASC"
+    const-string v5, "image_id ASC"
 
     move-object v0, p0
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,10 +42,8 @@
     .locals 3
 
     .prologue
-    .line 99
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 100
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This Transformer, \""
@@ -71,7 +68,6 @@
 
     move-result-object v1
 
-    .line 101
     const-string v2, "  Specification \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -100,7 +96,6 @@
 
     move-result-object v1
 
-    .line 102
     const-string v2, " version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -129,12 +124,10 @@
 
     move-result-object v1
 
-    .line 100
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 99
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0

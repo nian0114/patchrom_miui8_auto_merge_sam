@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1792
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$22;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1795
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$22;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mIpRemoteDisplayController:Lcom/android/server/display/IpRemoteDisplayController;
@@ -68,7 +66,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1796
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$22;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mIpRemoteDisplayController:Lcom/android/server/display/IpRemoteDisplayController;
@@ -85,12 +82,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/IpRemoteDisplayController;->requestDisableWifiDisplay(I)I
 
-    .line 1800
     :cond_0
     :goto_0
     return-void
 
-    .line 1797
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$22;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
@@ -110,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1798
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$22;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;

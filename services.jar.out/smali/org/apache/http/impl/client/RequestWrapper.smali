@@ -22,7 +22,6 @@
     .end annotation
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/http/message/AbstractHttpMessage;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -59,7 +57,6 @@
     .locals 2
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -73,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -87,7 +83,6 @@
     .locals 2
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -101,7 +96,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -115,7 +109,6 @@
     .locals 2
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -129,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -143,7 +135,6 @@
     .locals 2
 
     .prologue
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -157,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -171,7 +161,6 @@
     .locals 2
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -185,7 +174,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -200,7 +188,6 @@
     .param p1, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -215,7 +202,6 @@
     .param p1, "version"    # Lorg/apache/http/ProtocolVersion;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -230,7 +216,6 @@
     .param p1, "uri"    # Ljava/net/URI;
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

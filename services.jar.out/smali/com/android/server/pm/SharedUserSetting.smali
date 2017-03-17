@@ -34,33 +34,26 @@
     .param p3, "_pkgPrivateFlags"    # I
 
     .prologue
-    .line 40
     invoke-direct {p0, p2, p3}, Lcom/android/server/pm/SettingBase;-><init>(II)V
 
-    .line 35
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
-    .line 37
     new-instance v0, Lcom/android/server/pm/PackageSignatures;
 
     invoke-direct {v0}, Lcom/android/server/pm/PackageSignatures;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedUserSetting;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 41
     iput p2, p0, Lcom/android/server/pm/SharedUserSetting;->uidFlags:I
 
-    .line 42
     iput p3, p0, Lcom/android/server/pm/SharedUserSetting;->uidPrivateFlags:I
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/pm/SharedUserSetting;->name:Ljava/lang/String;
 
-    .line 44
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .param p1, "packageSetting"    # Lcom/android/server/pm/PackageSetting;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
@@ -80,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget v0, p0, Lcom/android/server/pm/SharedUserSetting;->pkgFlags:I
 
     iget v1, p1, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
@@ -89,7 +80,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/pm/SharedUserSetting;->setFlags(I)V
 
-    .line 75
     iget v0, p0, Lcom/android/server/pm/SharedUserSetting;->pkgPrivateFlags:I
 
     iget v1, p1, Lcom/android/server/pm/PackageSetting;->pkgPrivateFlags:I
@@ -98,7 +88,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/pm/SharedUserSetting;->setPrivateFlags(I)V
 
-    .line 77
     :cond_0
     return-void
 .end method
@@ -116,12 +105,10 @@
     .end annotation
 
     .prologue
-    .line 80
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 81
     .local v1, "permissionAll":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
@@ -143,7 +130,6 @@
 
     check-cast v2, Lcom/android/server/pm/PackageSetting;
 
-    .line 82
     .local v2, "setting":Lcom/android/server/pm/PackageSetting;
     iget-object v3, v2, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
@@ -151,7 +137,6 @@
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
-    .line 83
     iget-object v3, v2, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iget-object v3, v3, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
@@ -160,7 +145,6 @@
 
     goto :goto_0
 
-    .line 85
     .end local v2    # "setting":Lcom/android/server/pm/PackageSetting;
     :cond_0
     return-object v1
@@ -171,7 +155,6 @@
     .param p1, "packageSetting"    # Lcom/android/server/pm/PackageSetting;
 
     .prologue
-    .line 53
     iget-object v4, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
     invoke-virtual {v4, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
@@ -180,7 +163,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 55
     iget v4, p0, Lcom/android/server/pm/SharedUserSetting;->pkgFlags:I
 
     iget v5, p1, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
@@ -189,10 +171,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 56
     iget v0, p0, Lcom/android/server/pm/SharedUserSetting;->uidFlags:I
 
-    .line 57
     .local v0, "aggregatedFlags":I
     iget-object v4, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
@@ -214,21 +194,17 @@
 
     check-cast v3, Lcom/android/server/pm/PackageSetting;
 
-    .line 58
     .local v3, "ps":Lcom/android/server/pm/PackageSetting;
     iget v4, v3, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
 
     or-int/2addr v0, v4
 
-    .line 59
     goto :goto_0
 
-    .line 60
     .end local v3    # "ps":Lcom/android/server/pm/PackageSetting;
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/pm/SharedUserSetting;->setFlags(I)V
 
-    .line 62
     .end local v0    # "aggregatedFlags":I
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_1
@@ -240,10 +216,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 63
     iget v1, p0, Lcom/android/server/pm/SharedUserSetting;->uidPrivateFlags:I
 
-    .line 64
     .local v1, "aggregatedPrivateFlags":I
     iget-object v4, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
@@ -265,21 +239,17 @@
 
     check-cast v3, Lcom/android/server/pm/PackageSetting;
 
-    .line 65
     .restart local v3    # "ps":Lcom/android/server/pm/PackageSetting;
     iget v4, v3, Lcom/android/server/pm/PackageSetting;->pkgPrivateFlags:I
 
     or-int/2addr v1, v4
 
-    .line 66
     goto :goto_1
 
-    .line 67
     .end local v3    # "ps":Lcom/android/server/pm/PackageSetting;
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/server/pm/SharedUserSetting;->setPrivateFlags(I)V
 
-    .line 70
     .end local v1    # "aggregatedPrivateFlags":I
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_3
@@ -290,7 +260,6 @@
     .locals 2
 
     .prologue
-    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -337,7 +306,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

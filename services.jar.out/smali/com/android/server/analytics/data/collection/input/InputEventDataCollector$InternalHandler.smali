@@ -28,13 +28,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/analytics/data/collection/input/InputEventDataCollector$InternalHandler;->this$0:Lcom/android/server/analytics/data/collection/input/InputEventDataCollector;
 
-    .line 88
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 89
     return-void
 .end method
 
@@ -45,16 +42,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 93
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 95
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/input/InputEventDataCollector$InternalHandler;->this$0:Lcom/android/server/analytics/data/collection/input/InputEventDataCollector;
 
@@ -72,7 +66,6 @@
 
     goto :goto_0
 
-    .line 93
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

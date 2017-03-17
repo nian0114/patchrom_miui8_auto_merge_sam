@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/stream/SecuritySupport$2;->this$0:Lmf/javax/xml/stream/SecuritySupport;
 
     iput-object p2, p0, Lmf/javax/xml/stream/SecuritySupport$2;->val$propName:Ljava/lang/String;
 
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lmf/javax/xml/stream/SecuritySupport$2;->val$propName:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;

@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 9
     new-instance v0, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
 
     const-string v1, "UNKNOWN"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;->CDMA:Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
 
-    .line 8
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
@@ -100,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 8
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 8
     const-class v0, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 8
     sget-object v0, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;->$VALUES:[Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
 
     invoke-virtual {v0}, [Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;->clone()Ljava/lang/Object;

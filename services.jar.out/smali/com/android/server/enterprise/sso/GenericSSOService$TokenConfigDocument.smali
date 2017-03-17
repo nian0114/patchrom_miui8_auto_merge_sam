@@ -42,35 +42,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4398
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4376
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 4381
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->tokens:Ljava/util/HashMap;
 
-    .line 4385
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->deviceCert:Lorg/w3c/dom/Node;
 
-    .line 4389
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->userCert:Lorg/w3c/dom/Node;
 
-    .line 4399
     iput-object p1, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 4400
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->tokens:Ljava/util/HashMap;
 
-    .line 4401
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->update()V
 
-    .line 4402
     return-void
 .end method
 
@@ -79,7 +70,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     .prologue
-    .line 4375
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->update()V
 
     return-void
@@ -90,7 +80,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     .prologue
-    .line 4375
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getUserCertificate()Lorg/w3c/dom/Node;
 
     move-result-object v0
@@ -103,7 +92,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     .prologue
-    .line 4375
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getDeviceCertificate()Lorg/w3c/dom/Node;
 
     move-result-object v0
@@ -117,7 +105,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 4375
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getSSOTokenNode(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v0
@@ -129,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 4445
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->deviceCert:Lorg/w3c/dom/Node;
 
     return-object v0
@@ -140,10 +126,8 @@
     .param p1, "appPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 4453
     if-eqz p1, :cond_0
 
-    .line 4454
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->tokens:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -152,7 +136,6 @@
 
     check-cast v0, Lorg/w3c/dom/Node;
 
-    .line 4455
     :goto_0
     return-object v0
 
@@ -166,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 4449
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->userCert:Lorg/w3c/dom/Node;
 
     return-object v0
@@ -176,29 +158,24 @@
     .locals 3
 
     .prologue
-    .line 4409
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->updateToken()V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4417
     :cond_0
     :goto_0
     return-void
 
-    .line 4410
     :catch_0
     move-exception v0
 
-    .line 4411
     .local v0, "e":Ljava/lang/NullPointerException;
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 4412
     const-string v1, "GenericSSOService"
 
     const-string v2, "In update: Exception"
@@ -207,18 +184,15 @@
 
     goto :goto_0
 
-    .line 4413
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 4414
     .local v0, "e":Ljava/lang/Exception;
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 4415
     const-string v1, "GenericSSOService"
 
     const-string v2, "In update: Exception"
@@ -236,31 +210,25 @@
 
     const/4 v7, 0x1
 
-    .line 4420
     iget-object v5, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v5}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 4421
     .local v2, "root":Lorg/w3c/dom/Node;
     iget-object v5, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->tokens:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
-    .line 4422
     iput-object v6, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->deviceCert:Lorg/w3c/dom/Node;
 
-    .line 4423
     iput-object v6, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->userCert:Lorg/w3c/dom/Node;
 
-    .line 4424
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v4
 
-    .line 4425
     .local v4, "tokenNodes":Lorg/w3c/dom/NodeList;
     const/4 v1, 0x0
 
@@ -272,12 +240,10 @@
 
     if-ge v1, v5, :cond_3
 
-    .line 4426
     invoke-interface {v4, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 4427
     .local v3, "token":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -297,12 +263,11 @@
 
     if-eqz v5, :cond_1
 
-    .line 4429
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v5
 
-    const-string/jumbo v6, "packagename"
+    const-string v6, "packagename"
 
     invoke-interface {v5, v6}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -312,13 +277,11 @@
 
     move-result-object v0
 
-    .line 4432
     .local v0, "appPkgName":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->tokens:Ljava/util/HashMap;
 
     invoke-virtual {v5, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4425
     .end local v0    # "appPkgName":Ljava/lang/String;
     :cond_0
     :goto_1
@@ -326,7 +289,6 @@
 
     goto :goto_0
 
-    .line 4433
     :cond_1
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -338,7 +300,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "devicecertificate"
+    const-string v6, "devicecertificate"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -346,12 +308,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 4436
     iput-object v3, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->deviceCert:Lorg/w3c/dom/Node;
 
     goto :goto_1
 
-    .line 4437
     :cond_2
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -363,7 +323,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "usercertificate"
+    const-string v6, "usercertificate"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -371,12 +331,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 4439
     iput-object v3, p0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->userCert:Lorg/w3c/dom/Node;
 
     goto :goto_1
 
-    .line 4442
     .end local v3    # "token":Lorg/w3c/dom/Node;
     :cond_3
     return-void

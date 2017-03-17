@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
-    .line 214
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 215
     return-void
 .end method
 
@@ -45,18 +42,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 219
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 281
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 221
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -65,14 +59,12 @@
 
     goto :goto_0
 
-    .line 224
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->clearRetryCountDelayedMsg()V
     invoke-static {v1}, Lcom/android/server/cover/NfcLedCoverController;->access$100(Lcom/android/server/cover/NfcLedCoverController;)V
 
-    .line 225
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/NfcLedCoverController;->mPrevCommand:I
@@ -84,13 +76,11 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 226
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->sendCurrentClockCommand()V
     invoke-static {v1}, Lcom/android/server/cover/NfcLedCoverController;->access$300(Lcom/android/server/cover/NfcLedCoverController;)V
 
-    .line 231
     :goto_1
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
@@ -106,7 +96,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 232
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/NfcLedCoverController;->mLedOnOffWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -120,17 +109,14 @@
 
     goto :goto_0
 
-    .line 234
     :catch_0
     move-exception v0
 
-    .line 235
     .local v0, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 228
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :cond_1
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
@@ -144,14 +130,12 @@
 
     goto :goto_1
 
-    .line 239
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->clearRetryCountDelayedMsg()V
     invoke-static {v1}, Lcom/android/server/cover/NfcLedCoverController;->access$100(Lcom/android/server/cover/NfcLedCoverController;)V
 
-    .line 241
     :pswitch_4
     iget-object v2, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -166,7 +150,6 @@
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->handleSendDataToNfcLedCover(I[B)V
     invoke-static {v2, v3, v1}, Lcom/android/server/cover/NfcLedCoverController;->access$400(Lcom/android/server/cover/NfcLedCoverController;I[B)V
 
-    .line 243
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -226,7 +209,6 @@
 
     if-nez v1, :cond_0
 
-    .line 247
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/NfcLedCoverController;->mSendLedDataWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -240,17 +222,14 @@
 
     goto/16 :goto_0
 
-    .line 249
     :catch_1
     move-exception v0
 
-    .line 250
     .restart local v0    # "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 254
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :pswitch_5
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
@@ -262,7 +241,6 @@
 
     goto/16 :goto_0
 
-    .line 257
     :pswitch_6
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -275,7 +253,6 @@
 
     goto/16 :goto_0
 
-    .line 260
     :pswitch_7
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -284,7 +261,6 @@
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->handleClearOngoingEvent(I)V
     invoke-static {v1, v2}, Lcom/android/server/cover/NfcLedCoverController;->access$1000(Lcom/android/server/cover/NfcLedCoverController;I)V
 
-    .line 262
     :try_start_2
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -344,7 +320,6 @@
 
     if-nez v1, :cond_0
 
-    .line 266
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/NfcLedCoverController;->mSendLedDataWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -358,17 +333,14 @@
 
     goto/16 :goto_0
 
-    .line 268
     :catch_2
     move-exception v0
 
-    .line 269
     .restart local v0    # "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 273
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :pswitch_8
     iget-object v2, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
@@ -382,7 +354,6 @@
 
     goto/16 :goto_0
 
-    .line 276
     :pswitch_9
     iget-object v2, p0, Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -395,7 +366,6 @@
 
     goto/16 :goto_0
 
-    .line 219
     nop
 
     :pswitch_data_0

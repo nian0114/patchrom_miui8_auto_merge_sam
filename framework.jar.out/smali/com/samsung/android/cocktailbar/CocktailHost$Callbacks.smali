@@ -33,17 +33,14 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 66
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/ICocktailHost$Stub;-><init>()V
 
-    .line 67
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
-    .line 68
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 192
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,15 +60,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 193
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 198
     :goto_0
     return-void
 
-    .line 196
     :cond_0
     const/16 v3, 0x66
 
@@ -85,13 +78,11 @@
 
     move-result-object v1
 
-    .line 197
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 196
     .end local v1    # "msg":Landroid/os/Message;
     :cond_1
     const/4 v2, 0x0
@@ -106,7 +97,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 112
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -115,15 +105,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 113
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 118
     :goto_0
     return-void
 
-    .line 116
     :cond_0
     const/4 v2, 0x5
 
@@ -135,7 +122,6 @@
 
     move-result-object v1
 
-    .line 117
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -150,7 +136,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 142
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -159,15 +144,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 143
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 148
     :goto_0
     return-void
 
-    .line 146
     :cond_0
     const/16 v3, 0x64
 
@@ -178,13 +160,11 @@
 
     move-result-object v1
 
-    .line 147
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 146
     .end local v1    # "msg":Landroid/os/Message;
     :cond_1
     const/4 v2, 0x0
@@ -199,7 +179,6 @@
     .param p3, "reason"    # I
 
     .prologue
-    .line 152
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -208,15 +187,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 153
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 158
     :goto_0
     return-void
 
-    .line 156
     :cond_0
     const/16 v3, 0x65
 
@@ -233,13 +209,11 @@
 
     move-result-object v1
 
-    .line 157
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 156
     .end local v1    # "msg":Landroid/os/Message;
     :cond_1
     const/4 v2, 0x0
@@ -254,7 +228,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 82
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -263,15 +236,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 83
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 88
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     const/4 v2, 0x2
 
@@ -279,7 +249,6 @@
 
     move-result-object v1
 
-    .line 87
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -292,7 +261,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 92
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -301,15 +269,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 93
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     const/4 v2, 0x3
 
@@ -317,7 +282,6 @@
 
     move-result-object v1
 
-    .line 97
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -330,7 +294,6 @@
     .param p2, "extraData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 172
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -339,15 +302,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 173
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 178
     :goto_0
     return-void
 
-    .line 176
     :cond_0
     const/16 v2, 0xc
 
@@ -357,7 +317,6 @@
 
     move-result-object v1
 
-    .line 177
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -370,7 +329,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 182
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -379,15 +337,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 183
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 188
     :goto_0
     return-void
 
-    .line 186
     :cond_0
     const/16 v2, 0x9
 
@@ -395,7 +350,6 @@
 
     move-result-object v1
 
-    .line 187
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -408,7 +362,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 102
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -417,15 +370,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 103
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 108
     :goto_0
     return-void
 
-    .line 106
     :cond_0
     const/4 v2, 0x4
 
@@ -433,7 +383,6 @@
 
     move-result-object v1
 
-    .line 107
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -445,7 +394,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 162
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -454,15 +402,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 163
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 168
     :goto_0
     return-void
 
-    .line 166
     :cond_0
     const/16 v2, 0xa
 
@@ -472,7 +417,6 @@
 
     move-result-object v1
 
-    .line 167
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -486,7 +430,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 72
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -495,15 +438,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 73
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 78
     :goto_0
     return-void
 
-    .line 76
     :cond_0
     const/4 v2, 0x1
 
@@ -511,7 +451,6 @@
 
     move-result-object v1
 
-    .line 77
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -523,7 +462,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 132
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -532,15 +470,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 133
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 138
     :goto_0
     return-void
 
-    .line 136
     :cond_0
     const/4 v2, 0x7
 
@@ -550,7 +485,6 @@
 
     move-result-object v1
 
-    .line 137
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
@@ -564,7 +498,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 122
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -573,15 +506,12 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 123
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 128
     :goto_0
     return-void
 
-    .line 126
     :cond_0
     const/4 v2, 0x6
 
@@ -593,7 +523,6 @@
 
     move-result-object v1
 
-    .line 127
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 

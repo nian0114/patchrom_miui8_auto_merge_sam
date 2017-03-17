@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 19499
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$21;->val$deletedPs:Lcom/android/server/pm/PackageSetting;
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 19503
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$21;->val$deletedPs:Lcom/android/server/pm/PackageSetting;
@@ -55,11 +53,10 @@
 
     iget v2, v2, Lcom/android/server/pm/PackageSetting;->appId:I
 
-    const-string/jumbo v3, "permission grant or revoke changed gids"
+    const-string v3, "permission grant or revoke changed gids"
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->killApplication(Ljava/lang/String;ILjava/lang/String;)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->access$6300(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 19505
     return-void
 .end method

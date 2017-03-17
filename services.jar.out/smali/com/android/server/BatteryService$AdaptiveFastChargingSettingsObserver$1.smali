@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 495
     iput-object p1, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 498
     iget-object v2, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -54,7 +52,6 @@
 
     monitor-enter v2
 
-    .line 499
     :try_start_0
     iget-object v3, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;
 
@@ -69,7 +66,6 @@
 
     move-result-object v0
 
-    .line 500
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     iget-object v3, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;
 
@@ -91,7 +87,6 @@
     # setter for: Lcom/android/server/BatteryService;->mAdaptiveFastChargingSettingsEnable:Z
     invoke-static {v3, v1}, Lcom/android/server/BatteryService;->access$1402(Lcom/android/server/BatteryService;Z)Z
 
-    .line 501
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -126,7 +121,6 @@
 
     invoke-static {v1, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     iget-object v1, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -142,19 +136,15 @@
 
     invoke-virtual {v1, v3}, Lcom/android/server/BatteryService;->setAdaptiveFastCharging(Z)Z
 
-    .line 504
     monitor-exit v2
 
-    .line 505
     return-void
 
-    .line 500
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 504
     .end local v0    # "contentResolver":Landroid/content/ContentResolver;
     :catchall_0
     move-exception v1

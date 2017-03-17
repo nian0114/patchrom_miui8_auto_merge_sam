@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1915
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgContentObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 1916
     invoke-direct {p0, p2}, Lcom/sec/epdg/EpdgContentObserverBase;-><init>(Landroid/os/Handler;)V
 
-    .line 1917
     return-void
 .end method
 
@@ -46,7 +43,6 @@
 
     const/4 v5, 0x0
 
-    .line 1921
     const-string v0, "[EPDGService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,15 +65,12 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1922
     if-nez p2, :cond_1
 
-    .line 1945
     :cond_0
     :goto_0
     return-void
 
-    .line 1926
     :cond_1
     sget-object v0, Lcom/sec/epdg/mapcon/MapconConstants;->CONTENT_URI_MAPCON_TABLE:Landroid/net/Uri;
 
@@ -87,7 +80,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1928
     new-instance v0, Lcom/sec/epdg/EpdgService$MapconDatabaseTask;
 
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgContentObserver;->this$0:Lcom/sec/epdg/EpdgService;
@@ -107,7 +99,6 @@
 
     goto :goto_0
 
-    .line 1929
     :cond_2
     sget-object v0, Lcom/sec/epdg/mapcon/MapconConstants;->CONTENT_URI_IFOM_TABLE:Landroid/net/Uri;
 
@@ -117,7 +108,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1933
     new-instance v6, Lcom/sec/epdg/EpdgService$MapconDatabaseTask;
 
     iget-object v7, p0, Lcom/sec/epdg/EpdgService$EpdgContentObserver;->this$0:Lcom/sec/epdg/EpdgService;
@@ -141,7 +131,6 @@
 
     goto :goto_0
 
-    .line 1934
     :cond_3
     sget-object v0, Lcom/sec/epdg/EpdgWfcProfileReader;->CONTENT_URI_WFCPROFILE:Landroid/net/Uri;
 
@@ -151,7 +140,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1938
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$EpdgContentObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->isWifiConnected()Z
@@ -161,7 +149,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1939
     new-instance v0, Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgContentObserver;->this$0:Lcom/sec/epdg/EpdgService;
@@ -185,7 +172,6 @@
     # setter for: Lcom/sec/epdg/EpdgService;->mWfcProfileTask:Lcom/sec/epdg/EpdgService$WfcProfileTask;
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$2902(Lcom/sec/epdg/EpdgService$WfcProfileTask;)Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
-    .line 1940
     # getter for: Lcom/sec/epdg/EpdgService;->mWfcProfileTask:Lcom/sec/epdg/EpdgService$WfcProfileTask;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2900()Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
@@ -197,7 +183,6 @@
 
     goto :goto_0
 
-    .line 1943
     :cond_4
     new-instance v0, Lcom/sec/epdg/EpdgService$DatabaseAccessTask;
 

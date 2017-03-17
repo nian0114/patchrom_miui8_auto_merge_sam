@@ -16,15 +16,12 @@
     .locals 1
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 46
     const-string v0, "c-general-xpath"
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xpath/XPathException;->fKey:Ljava/lang/String;
 
-    .line 47
     return-void
 .end method
 
@@ -33,13 +30,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 52
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/XPathException;->fKey:Ljava/lang/String;
 
-    .line 53
     return-void
 .end method
 
@@ -49,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/XPathException;->fKey:Ljava/lang/String;
 
     return-object v0

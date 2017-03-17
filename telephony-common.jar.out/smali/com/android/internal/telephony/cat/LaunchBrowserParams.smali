@@ -22,19 +22,14 @@
     .param p4, "mode"    # Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 94
     iput-object p2, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mConfirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 95
     iput-object p4, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mMode:Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
-    .line 96
     iput-object p3, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mUrl:Ljava/lang/String;
 
-    .line 97
     return-void
 .end method
 
@@ -47,22 +42,16 @@
     .param p5, "gatewayProxy"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 103
     iput-object p2, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mConfirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 104
     iput-object p4, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mMode:Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
-    .line 105
     iput-object p3, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mUrl:Ljava/lang/String;
 
-    .line 106
     iput-object p5, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mGatewayProxy:Ljava/lang/String;
 
-    .line 107
     return-void
 .end method
 
@@ -76,13 +65,10 @@
     .param p6, "hasIcon"    # Z
 
     .prologue
-    .line 111
     invoke-direct/range {p0 .. p5}, Lcom/android/internal/telephony/cat/LaunchBrowserParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;Ljava/lang/String;Lcom/android/internal/telephony/cat/LaunchBrowserMode;Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {p0, p6}, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->setHasIconTag(Z)V
 
-    .line 113
     return-void
 .end method
 
@@ -93,22 +79,18 @@
     .param p1, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 118
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mConfirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     if-eqz v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mConfirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-object p1, v0, Lcom/android/internal/telephony/cat/TextMessage;->icon:Landroid/graphics/Bitmap;
 
-    .line 120
     const/4 v0, 0x1
 
-    .line 122
     :goto_0
     return v0
 
@@ -122,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

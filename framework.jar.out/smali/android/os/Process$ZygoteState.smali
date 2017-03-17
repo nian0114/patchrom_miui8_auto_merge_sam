@@ -55,23 +55,17 @@
     .end annotation
 
     .prologue
-    .line 494
     .local p4, "abiList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 495
     iput-object p1, p0, Landroid/os/Process$ZygoteState;->socket:Landroid/net/LocalSocket;
 
-    .line 496
     iput-object p2, p0, Landroid/os/Process$ZygoteState;->inputStream:Ljava/io/DataInputStream;
 
-    .line 497
     iput-object p3, p0, Landroid/os/Process$ZygoteState;->writer:Ljava/io/BufferedWriter;
 
-    .line 498
     iput-object p4, p0, Landroid/os/Process$ZygoteState;->abiList:Ljava/util/List;
 
-    .line 499
     return-void
 .end method
 
@@ -85,20 +79,16 @@
     .end annotation
 
     .prologue
-    .line 502
     const/4 v2, 0x0
 
-    .line 503
     .local v2, "zygoteInputStream":Ljava/io/DataInputStream;
     const/4 v5, 0x0
 
-    .line 504
     .local v5, "zygoteWriter":Ljava/io/BufferedWriter;
     new-instance v4, Landroid/net/LocalSocket;
 
     invoke-direct {v4}, Landroid/net/LocalSocket;-><init>()V
 
-    .line 507
     .local v4, "zygoteSocket":Landroid/net/LocalSocket;
     :try_start_0
     new-instance v6, Landroid/net/LocalSocketAddress;
@@ -109,7 +99,6 @@
 
     invoke-virtual {v4, v6}, Landroid/net/LocalSocket;->connect(Landroid/net/LocalSocketAddress;)V
 
-    .line 510
     new-instance v3, Ljava/io/DataInputStream;
 
     invoke-virtual {v4}, Landroid/net/LocalSocket;->getInputStream()Ljava/io/InputStream;
@@ -120,7 +109,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 512
     .end local v2    # "zygoteInputStream":Ljava/io/DataInputStream;
     .local v3, "zygoteInputStream":Ljava/io/DataInputStream;
     :try_start_1
@@ -141,14 +129,12 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 523
     .restart local v5    # "zygoteWriter":Ljava/io/BufferedWriter;
     # invokes: Landroid/os/Process;->getAbiList(Ljava/io/BufferedWriter;Ljava/io/DataInputStream;)Ljava/lang/String;
     invoke-static {v5, v3}, Landroid/os/Process;->access$000(Ljava/io/BufferedWriter;Ljava/io/DataInputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 524
     .local v0, "abiListString":Ljava/lang/String;
     const-string v6, "Zygote"
 
@@ -172,7 +158,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     new-instance v6, Landroid/os/Process$ZygoteState;
 
     const-string v7, ","
@@ -189,14 +174,12 @@
 
     return-object v6
 
-    .line 514
     .end local v0    # "abiListString":Ljava/lang/String;
     .end local v3    # "zygoteInputStream":Ljava/io/DataInputStream;
     .restart local v2    # "zygoteInputStream":Ljava/io/DataInputStream;
     :catch_0
     move-exception v1
 
-    .line 516
     .end local v5    # "zygoteWriter":Ljava/io/BufferedWriter;
     .local v1, "ex":Ljava/io/IOException;
     :goto_0
@@ -205,17 +188,14 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 520
     :goto_1
     throw v1
 
-    .line 517
     :catch_1
     move-exception v6
 
     goto :goto_1
 
-    .line 514
     .end local v1    # "ex":Ljava/io/IOException;
     .end local v2    # "zygoteInputStream":Ljava/io/DataInputStream;
     .restart local v3    # "zygoteInputStream":Ljava/io/DataInputStream;
@@ -235,7 +215,6 @@
     .locals 3
 
     .prologue
-    .line 536
     :try_start_0
     iget-object v1, p0, Landroid/os/Process$ZygoteState;->socket:Landroid/net/LocalSocket;
 
@@ -243,20 +222,16 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 541
     :goto_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/os/Process$ZygoteState;->mClosed:Z
 
-    .line 542
     return-void
 
-    .line 537
     :catch_0
     move-exception v0
 
-    .line 538
     .local v0, "ex":Ljava/io/IOException;
     const-string v1, "Process"
 
@@ -271,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 545
     iget-boolean v0, p0, Landroid/os/Process$ZygoteState;->mClosed:Z
 
     return v0
@@ -282,7 +256,6 @@
     .param p1, "abi"    # Ljava/lang/String;
 
     .prologue
-    .line 531
     iget-object v0, p0, Landroid/os/Process$ZygoteState;->abiList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z

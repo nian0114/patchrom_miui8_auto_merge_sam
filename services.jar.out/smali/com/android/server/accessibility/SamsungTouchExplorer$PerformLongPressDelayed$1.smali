@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2429
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 2433
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
@@ -50,6 +48,5 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->isLongPressPerformed:Z
     invoke-static {v0, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$2902(Lcom/android/server/accessibility/SamsungTouchExplorer;Z)Z
 
-    .line 2434
     return-void
 .end method

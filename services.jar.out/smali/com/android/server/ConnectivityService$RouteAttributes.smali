@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 605
     iput-object p1, p0, Lcom/android/server/ConnectivityService$RouteAttributes;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 609
     # ++operator for: Lcom/android/server/ConnectivityService;->mRouteIdCtr:I
     invoke-static {p1}, Lcom/android/server/ConnectivityService;->access$004(Lcom/android/server/ConnectivityService;)I
 
@@ -40,12 +38,10 @@
 
     iput v0, p0, Lcom/android/server/ConnectivityService$RouteAttributes;->tableId:I
 
-    .line 610
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/ConnectivityService$RouteAttributes;->metric:I
 
-    .line 611
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 618
     iget v0, p0, Lcom/android/server/ConnectivityService$RouteAttributes;->metric:I
 
     return v0
@@ -65,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 614
     iget v0, p0, Lcom/android/server/ConnectivityService$RouteAttributes;->tableId:I
 
     return v0
@@ -76,9 +70,7 @@
     .param p1, "m"    # I
 
     .prologue
-    .line 622
     iput p1, p0, Lcom/android/server/ConnectivityService$RouteAttributes;->metric:I
 
-    .line 623
     return-void
 .end method

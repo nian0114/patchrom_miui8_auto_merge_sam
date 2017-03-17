@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 21
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mIterationCount:I
 
     return v0
@@ -40,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 13
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mMac:Ljava/lang/String;
 
     return-object v0
@@ -50,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mMacAlgo:Ljava/lang/String;
 
     return-object v0
@@ -60,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mNonce:Ljava/lang/String;
 
     return-object v0
@@ -71,10 +66,8 @@
     .param p1, "mIterationCount"    # I
 
     .prologue
-    .line 25
     iput p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mIterationCount:I
 
-    .line 26
     return-void
 .end method
 
@@ -83,10 +76,8 @@
     .param p1, "mMac"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mMac:Ljava/lang/String;
 
-    .line 18
     return-void
 .end method
 
@@ -95,10 +86,8 @@
     .param p1, "mMacAlgo"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mMacAlgo:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -107,9 +96,7 @@
     .param p1, "mNonce"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;->mNonce:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method

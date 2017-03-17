@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 201
     iput-object p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
-    .line 202
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 203
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 207
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
@@ -60,7 +56,6 @@
     # setter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mPrevScreenModeForReadingMode:I
     invoke-static {v0, v1}, Lcom/samsung/android/mdnie/MdnieManagerService;->access$602(Lcom/samsung/android/mdnie/MdnieManagerService;I)I
 
-    .line 208
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
@@ -74,7 +69,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "screen_mode_setting"
+    const-string v2, "screen_mode_setting"
 
     const/4 v3, -0x2
 
@@ -85,7 +80,6 @@
     # setter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenModeForReadingMode:I
     invoke-static {v0, v1}, Lcom/samsung/android/mdnie/MdnieManagerService;->access$702(Lcom/samsung/android/mdnie/MdnieManagerService;I)I
 
-    .line 209
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # getter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mPrevScreenModeForReadingMode:I
@@ -102,7 +96,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 210
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # getter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mPowerManager:Landroid/os/PowerManager;
@@ -112,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # getter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenModeForReadingMode:I
@@ -129,7 +121,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 212
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # getter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mPowerManager:Landroid/os/PowerManager;
@@ -141,12 +132,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->setAutoBrightnessForEbookOnly(Z)V
 
-    .line 221
     :cond_0
     :goto_0
     return-void
 
-    .line 215
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
@@ -164,7 +153,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 216
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # getter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mPowerManager:Landroid/os/PowerManager;

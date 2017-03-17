@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 129
     new-instance v0, Landroid/location/FusedBatchOptions;
 
     invoke-direct {v0}, Landroid/location/FusedBatchOptions;-><init>()V
 
-    .line 130
     .local v0, "options":Landroid/location/FusedBatchOptions;
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
@@ -58,35 +55,30 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/location/FusedBatchOptions;->setMaxPowerAllocationInMW(D)V
 
-    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     invoke-virtual {v0, v2, v3}, Landroid/location/FusedBatchOptions;->setPeriodInNS(J)V
 
-    .line 132
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/location/FusedBatchOptions;->setSourceToUse(I)V
 
-    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/location/FusedBatchOptions;->setFlag(I)V
 
-    .line 134
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/location/FusedBatchOptions;->setSmallestDisplacementMeters(F)V
 
-    .line 135
     return-object v0
 .end method
 
@@ -95,7 +87,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 126
     invoke-virtual {p0, p1}, Landroid/location/FusedBatchOptions$1;->createFromParcel(Landroid/os/Parcel;)Landroid/location/FusedBatchOptions;
 
     move-result-object v0
@@ -108,7 +99,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 140
     new-array v0, p1, [Landroid/location/FusedBatchOptions;
 
     return-object v0
@@ -119,7 +109,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 126
     invoke-virtual {p0, p1}, Landroid/location/FusedBatchOptions$1;->newArray(I)[Landroid/location/FusedBatchOptions;
 
     move-result-object v0

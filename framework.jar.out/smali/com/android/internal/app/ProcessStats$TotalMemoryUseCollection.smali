@@ -53,42 +53,33 @@
     .prologue
     const/16 v1, 0xe
 
-    .line 3861
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3867
     new-array v0, v1, [J
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->processStatePss:[J
 
-    .line 3868
     new-array v0, v1, [D
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->processStateWeight:[D
 
-    .line 3869
     new-array v0, v1, [J
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->processStateTime:[J
 
-    .line 3870
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->processStateSamples:[I
 
-    .line 3871
     const/16 v0, 0x10
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->sysMemUsage:[J
 
-    .line 3862
     iput-object p1, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->screenStates:[I
 
-    .line 3863
     iput-object p2, p0, Lcom/android/internal/app/ProcessStats$TotalMemoryUseCollection;->memStates:[I
 
-    .line 3864
     return-void
 .end method

@@ -64,15 +64,12 @@
     .param p2, "viewRootImplGateway"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
     .prologue
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
 
-    .line 88
     new-instance v1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -83,22 +80,17 @@
 
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mHandler:Landroid/os/Handler;
 
-    .line 100
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
-    .line 101
     iput-object p2, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
-    .line 103
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 104
     .local v0, "pm":Landroid/content/pm/PackageManager;
     if-eqz v0, :cond_0
 
-    .line 106
     const-string v1, "com.samsung.android.smartclip.DEBUG"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -107,12 +99,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 107
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
 
-    .line 110
     :cond_0
     return-void
 .end method
@@ -123,7 +113,6 @@
     .param p1, "x1"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->dispatchAirCommandHitTest(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
     return-void
@@ -135,7 +124,6 @@
     .param p1, "x1"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->dispatchScrollableAreaInfo(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
     return-void
@@ -147,7 +135,6 @@
     .param p1, "x1"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->dispatchScrollableViewInfo(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
     return-void
@@ -159,7 +146,6 @@
     .param p1, "x1"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->dispatchInputEventInjection(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
     return-void
@@ -170,7 +156,6 @@
     .param p0, "x0"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
     .prologue
-    .line 56
     iget-boolean v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
 
     return v0
@@ -183,7 +168,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->enqueueInputEvent(Landroid/view/InputEvent;Z)V
 
     return-void
@@ -196,7 +180,6 @@
     .param p2, "x2"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->sendResult(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;Landroid/os/Parcelable;)V
 
     return-void
@@ -207,51 +190,42 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 378
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 380
     .local v0, "bundle":Landroid/os/Bundle;
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
-    .line 381
     .local v2, "hashCode":I
     invoke-static {p1}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v4
 
-    .line 382
     .local v4, "screenRectOfView":Landroid/graphics/Rect;
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->getViewHierarchyTable(Landroid/view/View;)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 384
     .local v5, "viewHierarchy":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v6, "hashCode"
 
     invoke-virtual {v0, v6, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 385
-    const-string/jumbo v6, "screenRect"
+    const-string v6, "screenRect"
 
     invoke-virtual {v0, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 386
     const-string v6, "hierarchy"
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 388
     iget-boolean v6, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
 
     if-eqz v6, :cond_0
 
-    .line 389
     const-string v6, "SmartClipRemoteRequestDispatcher"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -292,7 +266,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -311,7 +284,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 391
     .local v1, "clsName":Ljava/lang/String;
     const-string v6, "SmartClipRemoteRequestDispatcher"
 
@@ -337,7 +309,6 @@
 
     goto :goto_0
 
-    .line 395
     .end local v1    # "clsName":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_0
@@ -349,14 +320,12 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 339
     iget-object v11, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
     invoke-interface {v11}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;->getScaleFactor()Landroid/graphics/PointF;
 
     move-result-object v2
 
-    .line 340
     .local v2, "mScaleFactor":Landroid/graphics/PointF;
     iget-object v11, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
@@ -364,17 +333,14 @@
 
     move-result-object v3
 
-    .line 342
     .local v3, "mView":Landroid/view/View;
     const/4 v6, -0x1
 
-    .line 343
     .local v6, "result":I
     iget-object v0, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 344
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v11, "id"
 
@@ -384,9 +350,8 @@
 
     move-result v1
 
-    .line 345
     .local v1, "id":I
-    const-string/jumbo v11, "x"
+    const-string v11, "x"
 
     const v12, -0xf423f
 
@@ -394,9 +359,8 @@
 
     move-result v9
 
-    .line 346
     .local v9, "x":I
-    const-string/jumbo v11, "y"
+    const-string v11, "y"
 
     const v12, -0xf423f
 
@@ -404,11 +368,9 @@
 
     move-result v10
 
-    .line 348
     .local v10, "y":I
     if-eqz v3, :cond_2
 
-    .line 350
     iget-object v11, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
     if-eqz v11, :cond_1
@@ -429,11 +391,10 @@
 
     if-eqz v11, :cond_1
 
-    .line 353
     :cond_0
     iget-object v11, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v12, "multiwindow_facade"
+    const-string v12, "multiwindow_facade"
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -441,7 +402,6 @@
 
     check-cast v4, Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
-    .line 354
     .local v4, "multiWindowFacade":Lcom/samsung/android/multiwindow/MultiWindowFacade;
     iget-object v11, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
@@ -453,11 +413,9 @@
 
     move-result-object v5
 
-    .line 355
     .local v5, "pos":Landroid/graphics/Point;
     if-eqz v5, :cond_1
 
-    .line 356
     iget v11, v5, Landroid/graphics/Point;->x:I
 
     sub-int v11, v9, v11
@@ -478,7 +436,6 @@
 
     float-to-int v9, v11
 
-    .line 357
     iget v11, v5, Landroid/graphics/Point;->y:I
 
     sub-int v11, v10, v11
@@ -499,7 +456,6 @@
 
     float-to-int v10, v11
 
-    .line 362
     .end local v4    # "multiWindowFacade":Lcom/samsung/android/multiwindow/MultiWindowFacade;
     .end local v5    # "pos":Landroid/graphics/Point;
     :cond_1
@@ -507,7 +463,6 @@
 
     move-result-object v8
 
-    .line 363
     .local v8, "targetView":Landroid/view/View;
     if-eqz v8, :cond_4
 
@@ -517,10 +472,8 @@
 
     if-eqz v11, :cond_4
 
-    .line 364
     const/4 v6, 0x1
 
-    .line 370
     .end local v8    # "targetView":Landroid/view/View;
     :cond_2
     :goto_0
@@ -528,26 +481,21 @@
 
     if-eqz v11, :cond_3
 
-    .line 371
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 372
     .local v7, "resultData":Landroid/os/Bundle;
-    const-string/jumbo v11, "result"
+    const-string v11, "result"
 
     invoke-virtual {v7, v11, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 373
     invoke-direct {p0, p1, v7}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->sendResult(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;Landroid/os/Parcelable;)V
 
-    .line 375
     .end local v7    # "resultData":Landroid/os/Bundle;
     :cond_3
     return-void
 
-    .line 366
     .restart local v8    # "targetView":Landroid/view/View;
     :cond_4
     const/4 v6, 0x0
@@ -560,14 +508,12 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 176
     move-object/from16 v0, p1
 
     iget-object v3, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
 
     if-eqz v3, :cond_a
 
-    .line 177
     move-object/from16 v0, p1
 
     iget-object v3, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
@@ -576,25 +522,21 @@
 
     if-eqz v3, :cond_3
 
-    .line 178
     move-object/from16 v0, p1
 
     iget-object v15, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
 
     check-cast v15, Landroid/view/MotionEvent;
 
-    .line 179
     .local v15, "motionEvent":Landroid/view/MotionEvent;
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->transformTouchPosition(Landroid/view/MotionEvent;)V
 
-    .line 180
     invoke-virtual {v15}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v8
 
-    .line 181
     .local v8, "action":I
     move-object/from16 v0, p0
 
@@ -614,7 +556,6 @@
 
     if-ne v8, v3, :cond_1
 
-    .line 182
     :cond_0
     invoke-virtual {v15}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -624,7 +565,6 @@
 
     move/from16 v17, v0
 
-    .line 183
     .local v17, "x":I
     invoke-virtual {v15}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -634,7 +574,6 @@
 
     move/from16 v18, v0
 
-    .line 184
     .local v18, "y":I
     const-string v3, "SmartClipRemoteRequestDispatcher"
 
@@ -694,7 +633,6 @@
 
     invoke-static {v3, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     .end local v17    # "x":I
     .end local v18    # "y":I
     :cond_1
@@ -704,7 +642,6 @@
 
     check-cast v14, Landroid/view/InputEvent;
 
-    .line 188
     .local v14, "inputEvent":Landroid/view/InputEvent;
     const/4 v3, 0x1
 
@@ -712,7 +649,6 @@
 
     invoke-direct {v0, v14, v3}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->enqueueInputEvent(Landroid/view/InputEvent;Z)V
 
-    .line 242
     .end local v8    # "action":I
     .end local v14    # "inputEvent":Landroid/view/InputEvent;
     .end local v15    # "motionEvent":Landroid/view/MotionEvent;
@@ -720,7 +656,6 @@
     :goto_0
     return-void
 
-    .line 189
     :cond_3
     move-object/from16 v0, p1
 
@@ -730,7 +665,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 190
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
@@ -739,7 +673,6 @@
 
     check-cast v16, Landroid/os/Bundle;
 
-    .line 191
     .local v16, "reqData":Landroid/os/Bundle;
     const-string v3, "events"
 
@@ -749,12 +682,10 @@
 
     move-result-object v5
 
-    .line 192
     .local v5, "events":[Landroid/os/Parcelable;
     if-eqz v5, :cond_9
 
-    .line 193
-    const-string/jumbo v3, "waitUntilConsume"
+    const-string v3, "waitUntilConsume"
 
     move-object/from16 v0, v16
 
@@ -762,7 +693,6 @@
 
     move-result v6
 
-    .line 194
     .local v6, "waitUntilConsume":Z
     array-length v3, v5
 
@@ -778,7 +708,6 @@
 
     move-result-wide v12
 
-    .line 196
     .local v12, "firstEventTime":J
     :goto_1
     move-object/from16 v0, p0
@@ -787,7 +716,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 197
     const-string v3, "SmartClipRemoteRequestDispatcher"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -830,7 +758,6 @@
 
     invoke-static {v3, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_4
     const/4 v9, 0x0
 
@@ -840,22 +767,18 @@
 
     if-ge v9, v3, :cond_2
 
-    .line 201
     aget-object v4, v5, v9
 
     check-cast v4, Landroid/view/InputEvent;
 
-    .line 202
     .local v4, "event":Landroid/view/InputEvent;
     if-nez v4, :cond_6
 
-    .line 200
     :goto_3
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 194
     .end local v4    # "event":Landroid/view/InputEvent;
     .end local v9    # "i":I
     .end local v12    # "firstEventTime":J
@@ -864,7 +787,6 @@
 
     goto :goto_1
 
-    .line 206
     .restart local v4    # "event":Landroid/view/InputEvent;
     .restart local v9    # "i":I
     .restart local v12    # "firstEventTime":J
@@ -875,14 +797,12 @@
 
     move-object v3, v4
 
-    .line 207
     check-cast v3, Landroid/view/MotionEvent;
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->transformTouchPosition(Landroid/view/MotionEvent;)V
 
-    .line 210
     :cond_7
     new-instance v2, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$5;
 
@@ -892,7 +812,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$5;-><init>(Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;Landroid/view/InputEvent;[Landroid/os/Parcelable;ZLcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
-    .line 228
     .local v2, "runnable":Ljava/lang/Runnable;
     invoke-virtual {v4}, Landroid/view/InputEvent;->getEventTime()J
 
@@ -900,7 +819,6 @@
 
     sub-long v10, v20, v12
 
-    .line 229
     .local v10, "delay":J
     const-wide/16 v20, 0x0
 
@@ -908,7 +826,6 @@
 
     if-lez v3, :cond_8
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mHandler:Landroid/os/Handler;
@@ -917,13 +834,11 @@
 
     goto :goto_3
 
-    .line 232
     :cond_8
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
     goto :goto_3
 
-    .line 236
     .end local v2    # "runnable":Ljava/lang/Runnable;
     .end local v4    # "event":Landroid/view/InputEvent;
     .end local v6    # "waitUntilConsume":Z
@@ -939,7 +854,6 @@
 
     goto/16 :goto_0
 
-    .line 240
     .end local v5    # "events":[Landroid/os/Parcelable;
     .end local v16    # "reqData":Landroid/os/Bundle;
     :cond_a
@@ -957,7 +871,6 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 245
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
@@ -966,28 +879,23 @@
 
     move-result-object v6
 
-    .line 247
     .local v6, "rootView":Landroid/view/View;
     if-eqz v6, :cond_3
 
-    .line 248
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 249
     .local v8, "scrollableViews":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 251
     .local v10, "unscrollableViews":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     invoke-static {v6}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v13
 
-    .line 252
     .local v13, "windowRect":Landroid/graphics/Rect;
     const-string v14, "SmartClipRemoteRequestDispatcher"
 
@@ -1011,23 +919,19 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6, v13, v8, v10}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->findScrollableViews(Landroid/view/View;Landroid/graphics/Rect;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 256
     new-instance v5, Landroid/os/Bundle;
 
     invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
 
-    .line 259
     .local v5, "resultData":Landroid/os/Bundle;
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 260
     .local v7, "scrollableViewInfo":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Bundle;>;"
     invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1047,7 +951,6 @@
 
     check-cast v11, Landroid/view/View;
 
-    .line 261
     .local v11, "view":Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -1055,13 +958,11 @@
 
     move-result-object v12
 
-    .line 262
     .local v12, "viewInfo":Landroid/os/Bundle;
     invoke-virtual {v7, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 264
     .end local v11    # "view":Landroid/view/View;
     .end local v12    # "viewInfo":Landroid/os/Bundle;
     :cond_0
@@ -1091,17 +992,14 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
-    const-string/jumbo v14, "scrollableViews"
+    const-string v14, "scrollableViews"
 
     invoke-virtual {v5, v14, v7}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 268
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 269
     .local v9, "unscrollableViewInfo":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Bundle;>;"
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1120,7 +1018,6 @@
 
     check-cast v11, Landroid/view/View;
 
-    .line 270
     .restart local v11    # "view":Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -1128,13 +1025,11 @@
 
     move-result-object v12
 
-    .line 271
     .restart local v12    # "viewInfo":Landroid/os/Bundle;
     invoke-virtual {v9, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 273
     .end local v11    # "view":Landroid/view/View;
     .end local v12    # "viewInfo":Landroid/os/Bundle;
     :cond_1
@@ -1164,18 +1059,15 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
-    const-string/jumbo v14, "unscrollableViews"
+    const-string v14, "unscrollableViews"
 
     invoke-virtual {v5, v14, v9}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 277
-    const-string/jumbo v14, "windowRect"
+    const-string v14, "windowRect"
 
     invoke-virtual {v5, v14, v13}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 278
-    const-string/jumbo v14, "windowLayer"
+    const-string v14, "windowLayer"
 
     move-object/from16 v0, p1
 
@@ -1183,7 +1075,6 @@
 
     invoke-virtual {v5, v14, v15}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 281
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
@@ -1192,17 +1083,14 @@
 
     move-result-object v4
 
-    .line 282
     .local v4, "pkgName":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 283
     .local v2, "activityName":Ljava/lang/String;
-    const-string/jumbo v14, "packageName"
+    const-string v14, "packageName"
 
     invoke-virtual {v5, v14, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 284
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
@@ -1211,7 +1099,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 285
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
@@ -1224,12 +1111,10 @@
 
     move-result-object v2
 
-    .line 286
     const-string v14, "activityName"
 
     invoke-virtual {v5, v14, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 288
     :cond_2
     const-string v14, "SmartClipRemoteRequestDispatcher"
 
@@ -1263,14 +1148,12 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
     invoke-direct {v0, v1, v5}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->sendResult(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;Landroid/os/Parcelable;)V
 
-    .line 294
     .end local v2    # "activityName":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "pkgName":Ljava/lang/String;
@@ -1283,7 +1166,6 @@
     :goto_2
     return-void
 
-    .line 292
     :cond_3
     const-string v14, "SmartClipRemoteRequestDispatcher"
 
@@ -1299,7 +1181,6 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
@@ -1308,11 +1189,9 @@
 
     move-result-object v8
 
-    .line 299
     .local v8, "rootView":Landroid/view/View;
     if-eqz v8, :cond_1
 
-    .line 300
     move-object/from16 v0, p1
 
     iget-object v14, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
@@ -1327,59 +1206,49 @@
 
     move-result v12
 
-    .line 301
     .local v12, "viewHash":I
     const/4 v14, -0x1
 
     if-eq v12, v14, :cond_3
 
-    .line 302
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8, v12}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->findViewByHashCode(Landroid/view/View;I)Landroid/view/View;
 
     move-result-object v11
 
-    .line 305
     .local v11, "view":Landroid/view/View;
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 306
     .local v7, "resultData":Landroid/os/Bundle;
     if-eqz v11, :cond_2
 
-    .line 308
     invoke-static {v8}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v13
 
-    .line 309
     .local v13, "windowRect":Landroid/graphics/Rect;
-    const-string/jumbo v14, "windowRect"
+    const-string v14, "windowRect"
 
     invoke-virtual {v7, v14, v13}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 312
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->createViewInfoAsBundle(Landroid/view/View;)Landroid/os/Bundle;
 
     move-result-object v9
 
-    .line 313
     .local v9, "targetViewInfo":Landroid/os/Bundle;
-    const-string/jumbo v14, "targetView"
+    const-string v14, "targetView"
 
     invoke-virtual {v7, v14, v9}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 316
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 317
     .local v4, "childInfoArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Bundle;>;"
     instance-of v14, v11, Landroid/view/ViewGroup;
 
@@ -1387,16 +1256,13 @@
 
     move-object v10, v11
 
-    .line 318
     check-cast v10, Landroid/view/ViewGroup;
 
-    .line 319
     .local v10, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v10}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
-    .line 320
     .local v2, "childCount":I
     const/4 v6, 0x0
 
@@ -1404,12 +1270,10 @@
     :goto_0
     if-ge v6, v2, :cond_0
 
-    .line 321
     invoke-virtual {v10, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 322
     .local v5, "childView":Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -1417,16 +1281,13 @@
 
     move-result-object v3
 
-    .line 323
     .local v3, "childInfo":Landroid/os/Bundle;
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 320
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 326
     .end local v2    # "childCount":I
     .end local v3    # "childInfo":Landroid/os/Bundle;
     .end local v5    # "childView":Landroid/view/View;
@@ -1437,7 +1298,6 @@
 
     invoke-virtual {v7, v14, v4}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 327
     const-string v14, "SmartClipRemoteRequestDispatcher"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1474,7 +1334,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     .end local v4    # "childInfoArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Bundle;>;"
     .end local v9    # "targetViewInfo":Landroid/os/Bundle;
     .end local v13    # "windowRect":Landroid/graphics/Rect;
@@ -1485,7 +1344,6 @@
 
     invoke-direct {v0, v1, v7}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->sendResult(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;Landroid/os/Parcelable;)V
 
-    .line 336
     .end local v7    # "resultData":Landroid/os/Bundle;
     .end local v11    # "view":Landroid/view/View;
     .end local v12    # "viewHash":I
@@ -1493,7 +1351,6 @@
     :goto_2
     return-void
 
-    .line 329
     .restart local v7    # "resultData":Landroid/os/Bundle;
     .restart local v11    # "view":Landroid/view/View;
     .restart local v12    # "viewHash":I
@@ -1522,7 +1379,6 @@
 
     goto :goto_1
 
-    .line 333
     .end local v7    # "resultData":Landroid/os/Bundle;
     .end local v11    # "view":Landroid/view/View;
     :cond_3
@@ -1541,23 +1397,19 @@
     .param p2, "processImmediately"    # Z
 
     .prologue
-    .line 612
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
     if-nez v0, :cond_0
 
-    .line 613
     const-string v0, "SmartClipRemoteRequestDispatcher"
 
     const-string v1, "enqueueInputEvent : Gateway is null!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 617
     :goto_0
     return-void
 
-    .line 615
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
@@ -1591,7 +1443,6 @@
     .end annotation
 
     .prologue
-    .line 445
     .local p3, "scrollableViews":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     .local p4, "unscrollableViews":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     if-eqz p1, :cond_0
@@ -1614,12 +1465,10 @@
 
     if-nez v18, :cond_1
 
-    .line 561
     :cond_0
     :goto_0
     return-void
 
-    .line 449
     :cond_1
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1629,7 +1478,6 @@
 
     move-result-object v16
 
-    .line 450
     .local v16, "viewClassName":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1643,13 +1491,11 @@
 
     move-result-object v14
 
-    .line 451
     .local v14, "parentClassName":Ljava/lang/String;
     invoke-static/range {p1 .. p1}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v15
 
-    .line 453
     .local v15, "screenRectOfView":Landroid/graphics/Rect;
     move-object/from16 v0, p2
 
@@ -1665,7 +1511,6 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 454
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v18
@@ -1678,7 +1523,6 @@
 
     move-result-object v8
 
-    .line 457
     .local v8, "hashCode":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -1704,7 +1548,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 458
     :cond_2
     move-object/from16 v0, p0
 
@@ -1720,7 +1563,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 459
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1809,7 +1651,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     :cond_3
     move-object/from16 v0, p3
 
@@ -1819,7 +1660,6 @@
 
     goto/16 :goto_0
 
-    .line 466
     :cond_4
     move-object/from16 v0, p1
 
@@ -1831,16 +1671,13 @@
 
     move-object/from16 v17, p1
 
-    .line 467
     check-cast v17, Landroid/view/ViewGroup;
 
-    .line 468
     .local v17, "viewGroup":Landroid/view/ViewGroup;
     invoke-virtual/range {v17 .. v17}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v4
 
-    .line 470
     .local v4, "childCount":I
     add-int/lit8 v11, v4, -0x1
 
@@ -1848,14 +1685,12 @@
     :goto_1
     if-ltz v11, :cond_5
 
-    .line 471
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v11}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 473
     .local v7, "curView":Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -1867,12 +1702,10 @@
 
     invoke-direct {v0, v7, v1, v2, v3}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->findScrollableViews(Landroid/view/View;Landroid/graphics/Rect;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 470
     add-int/lit8 v11, v11, -0x1
 
     goto :goto_1
 
-    .line 478
     .end local v4    # "childCount":I
     .end local v7    # "curView":Landroid/view/View;
     .end local v11    # "i":I
@@ -1894,7 +1727,6 @@
 
     if-eqz v18, :cond_8
 
-    .line 479
     :cond_6
     move-object/from16 v0, p0
 
@@ -1910,7 +1742,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 480
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1999,7 +1830,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 482
     :cond_7
     move-object/from16 v0, p4
 
@@ -2009,21 +1839,17 @@
 
     goto/16 :goto_0
 
-    .line 485
     :cond_8
     const/4 v10, 0x0
 
-    .line 486
     .local v10, "haveCustomTouchEventHandler":Z
     const/4 v9, 0x0
 
-    .line 488
     .local v9, "haveCustomDrawHandler":Z
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 489
     .local v5, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/16 v18, 0x1
 
@@ -2037,7 +1863,6 @@
 
     aput-object v19, v13, v18
 
-    .line 490
     .local v13, "paramEvent":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     const/16 v18, 0x1
 
@@ -2051,17 +1876,14 @@
 
     aput-object v19, v12, v18
 
-    .line 491
     .local v12, "paramCanvas":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     :goto_2
     if-eqz v5, :cond_9
 
-    .line 492
     invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 493
     .local v6, "clsName":Ljava/lang/String;
     const-string v18, "android.view."
 
@@ -2111,12 +1933,10 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 548
     .end local v6    # "clsName":Ljava/lang/String;
     :cond_9
     if-eqz v10, :cond_0
 
-    .line 552
     move-object/from16 v0, p3
 
     move-object/from16 v1, p1
@@ -2125,7 +1945,6 @@
 
     goto/16 :goto_0
 
-    .line 500
     .restart local v6    # "clsName":Ljava/lang/String;
     :cond_a
     const-string v18, "dispatchTouchEvent"
@@ -2146,10 +1965,8 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 501
     const/4 v10, 0x1
 
-    .line 503
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
@@ -2158,7 +1975,6 @@
 
     if-eqz v18, :cond_b
 
-    .line 504
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -2223,9 +2039,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 509
     :cond_b
-    const-string/jumbo v18, "onTouchEvent"
+    const-string v18, "onTouchEvent"
 
     move-object/from16 v0, p0
 
@@ -2243,10 +2058,8 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 510
     const/4 v10, 0x1
 
-    .line 511
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
@@ -2255,7 +2068,6 @@
 
     if-eqz v18, :cond_c
 
-    .line 512
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -2320,9 +2132,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 517
     :cond_c
-    const-string/jumbo v18, "onDraw"
+    const-string v18, "onDraw"
 
     move-object/from16 v0, p0
 
@@ -2340,10 +2151,8 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 518
     const/4 v9, 0x1
 
-    .line 519
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
@@ -2352,7 +2161,6 @@
 
     if-eqz v18, :cond_d
 
-    .line 520
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -2417,7 +2225,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     :cond_d
     const-string v18, "draw"
 
@@ -2437,10 +2244,8 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 526
     const/4 v9, 0x1
 
-    .line 527
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
@@ -2449,7 +2254,6 @@
 
     if-eqz v18, :cond_e
 
-    .line 528
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -2514,7 +2318,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 533
     :cond_e
     const-string v18, "dispatchDraw"
 
@@ -2534,10 +2337,8 @@
 
     if-ne v0, v1, :cond_f
 
-    .line 534
     const/4 v9, 0x1
 
-    .line 535
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
@@ -2546,7 +2347,6 @@
 
     if-eqz v18, :cond_f
 
-    .line 536
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -2611,22 +2411,18 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     :cond_f
     if-eqz v10, :cond_10
 
     if-nez v9, :cond_9
 
-    .line 545
     :cond_10
     invoke-virtual {v5}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 546
     goto/16 :goto_2
 
-    .line 557
     .end local v5    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v6    # "clsName":Ljava/lang/String;
     .end local v8    # "hashCode":Ljava/lang/String;
@@ -2643,7 +2439,6 @@
 
     if-eqz v18, :cond_0
 
-    .line 558
     const-string v18, "SmartClipRemoteRequestDispatcher"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -2706,7 +2501,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 413
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
@@ -2730,18 +2524,15 @@
     :cond_0
     move-object v4, v6
 
-    .line 441
     :cond_1
     :goto_0
     return-object v4
 
-    .line 417
     :cond_2
     invoke-static {p1}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 419
     .local v3, "screenRect":Landroid/graphics/Rect;
     invoke-virtual {v3, p2, p3}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -2751,23 +2542,19 @@
 
     if-ne v7, v8, :cond_5
 
-    .line 420
     instance-of v7, p1, Landroid/view/ViewGroup;
 
     if-eqz v7, :cond_3
 
     move-object v5, p1
 
-    .line 421
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 422
     .local v5, "viewGroup":Landroid/view/ViewGroup;
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 424
     .local v0, "childCount":I
     add-int/lit8 v2, v0, -0x1
 
@@ -2775,27 +2562,22 @@
     :goto_1
     if-ltz v2, :cond_3
 
-    .line 425
     invoke-virtual {v5, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 427
     .local v1, "curView":Landroid/view/View;
     invoke-direct {p0, v1, p2, p3}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->findTopmostViewByPosition(Landroid/view/View;II)Landroid/view/View;
 
     move-result-object v4
 
-    .line 428
     .local v4, "topMostView":Landroid/view/View;
     if-nez v4, :cond_1
 
-    .line 424
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 434
     .end local v0    # "childCount":I
     .end local v1    # "curView":Landroid/view/View;
     .end local v2    # "i":I
@@ -2810,19 +2592,16 @@
 
     move-object v4, p1
 
-    .line 435
     goto :goto_0
 
     :cond_4
     move-object v4, v6
 
-    .line 437
     goto :goto_0
 
     :cond_5
     move-object v4, v6
 
-    .line 441
     goto :goto_0
 .end method
 
@@ -2834,18 +2613,15 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 575
     if-nez p1, :cond_1
 
     move-object p1, v5
 
-    .line 596
     .end local p1    # "view":Landroid/view/View;
     :cond_0
     :goto_0
     return-object p1
 
-    .line 579
     .restart local p1    # "view":Landroid/view/View;
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
@@ -2854,23 +2630,19 @@
 
     if-eq v6, p2, :cond_0
 
-    .line 583
     instance-of v6, p1, Landroid/view/ViewGroup;
 
     if-eqz v6, :cond_3
 
     move-object v4, p1
 
-    .line 584
     check-cast v4, Landroid/view/ViewGroup;
 
-    .line 585
     .local v4, "viewGroup":Landroid/view/ViewGroup;
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 587
     .local v0, "childCount":I
     add-int/lit8 v3, v0, -0x1
 
@@ -2878,27 +2650,22 @@
     :goto_1
     if-ltz v3, :cond_3
 
-    .line 588
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 590
     .local v1, "curView":Landroid/view/View;
     invoke-direct {p0, v1, p2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->findViewByHashCode(Landroid/view/View;I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 591
     .local v2, "foundView":Landroid/view/View;
     if-eqz v2, :cond_2
 
     move-object p1, v2
 
-    .line 592
     goto :goto_0
 
-    .line 587
     :cond_2
     add-int/lit8 v3, v3, -0x1
 
@@ -2912,7 +2679,6 @@
     :cond_3
     move-object p1, v5
 
-    .line 596
     goto :goto_0
 .end method
 
@@ -2932,32 +2698,26 @@
     .end annotation
 
     .prologue
-    .line 399
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 400
     .local v2, "hierarchy":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 401
     .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 402
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 403
     .local v1, "clsName":Ljava/lang/String;
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 404
     const-string v3, "android.view.View"
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2966,19 +2726,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 409
     .end local v1    # "clsName":Ljava/lang/String;
     :cond_0
     return-object v2
 
-    .line 407
     .restart local v1    # "clsName":Ljava/lang/String;
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 408
     goto :goto_0
 .end method
 
@@ -2998,7 +2755,6 @@
     .end annotation
 
     .prologue
-    .line 565
     .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .local p3, "paramTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     :try_start_0
@@ -3008,23 +2764,18 @@
 
     move-result-object v0
 
-    .line 566
     .local v0, "method":Ljava/lang/reflect/Method;
     if-eqz v0, :cond_0
 
-    .line 567
     const/4 v1, 0x1
 
-    .line 571
     .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v1
 
-    .line 569
     :catch_0
     move-exception v1
 
-    .line 571
     :cond_0
     const/4 v1, 0x0
 
@@ -3037,10 +2788,9 @@
     .param p2, "resultData"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 620
     iget-object v2, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "spengestureservice"
+    const-string v3, "spengestureservice"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3048,7 +2798,6 @@
 
     check-cast v1, Lcom/samsung/android/smartclip/SpenGestureManager;
 
-    .line 621
     .local v1, "spenGestureManager":Lcom/samsung/android/smartclip/SpenGestureManager;
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
@@ -3058,11 +2807,9 @@
 
     invoke-direct {v0, v2, v3, p2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;-><init>(IILandroid/os/Parcelable;)V
 
-    .line 622
     .local v0, "result":Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
     invoke-virtual {v1, v0}, Lcom/samsung/android/smartclip/SpenGestureManager;->sendSmartClipRemoteRequestResult(Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;)V
 
-    .line 623
     return-void
 .end method
 
@@ -3071,44 +2818,36 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 627
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mViewRootImplGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
     invoke-interface {v9}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;->getRootView()Landroid/view/View;
 
     move-result-object v3
 
-    .line 628
     .local v3, "rootView":Landroid/view/View;
     if-nez v3, :cond_1
 
-    .line 629
     const-string v9, "SmartClipRemoteRequestDispatcher"
 
-    const-string/jumbo v10, "transformTouchPosition : Root view is not exists"
+    const-string v10, "transformTouchPosition : Root view is not exists"
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 647
     :cond_0
     :goto_0
     return-void
 
-    .line 633
     :cond_1
     invoke-static {v3}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v4
 
-    .line 634
     .local v4, "windowRect":Landroid/graphics/Rect;
     iget v5, v4, Landroid/graphics/Rect;->left:I
 
-    .line 635
     .local v5, "windowX":I
     iget v6, v4, Landroid/graphics/Rect;->top:I
 
-    .line 636
     .local v6, "windowY":I
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
@@ -3118,7 +2857,6 @@
 
     iget v0, v9, Landroid/content/pm/ApplicationInfo;->dssScale:F
 
-    .line 637
     .local v0, "dssScale":F
     if-nez v5, :cond_2
 
@@ -3130,19 +2868,16 @@
 
     if-eqz v9, :cond_0
 
-    .line 638
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v1
 
-    .line 639
     .local v1, "rawX":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v2
 
-    .line 640
     .local v2, "rawY":F
     int-to-float v9, v5
 
@@ -3150,7 +2885,6 @@
 
     mul-float v7, v9, v0
 
-    .line 641
     .local v7, "x":F
     int-to-float v9, v6
 
@@ -3158,25 +2892,22 @@
 
     mul-float v8, v9, v0
 
-    .line 642
     .local v8, "y":F
     invoke-virtual {p1, v7, v8}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 643
     iget-boolean v9, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
 
     const/4 v10, 0x1
 
     if-ne v9, v10, :cond_0
 
-    .line 644
     const-string v9, "SmartClipRemoteRequestDispatcher"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "transformMotionEvent : Window offsetX="
+    const-string v11, "transformMotionEvent : Window offsetX="
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3244,7 +2975,6 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 117
     iget-object v2, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, p1, p2, p3}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
@@ -3255,12 +2985,10 @@
 
     const/4 v1, 0x1
 
-    .line 119
     .local v1, "havePermission":Z
     :goto_0
     if-nez v1, :cond_1
 
-    .line 120
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3285,7 +3013,6 @@
 
     move-result-object v0
 
-    .line 121
     .local v0, "errStr":Ljava/lang/String;
     const-string v2, "SmartClipRemoteRequestDispatcher"
 
@@ -3309,14 +3036,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     new-instance v2, Ljava/lang/SecurityException;
 
     invoke-direct {v2, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 117
     .end local v0    # "errStr":Ljava/lang/String;
     .end local v1    # "havePermission":Z
     :cond_0
@@ -3324,7 +3049,6 @@
 
     goto :goto_0
 
-    .line 124
     .restart local v1    # "havePermission":Z
     :cond_1
     return-void
@@ -3335,12 +3059,10 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 128
     iget v0, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 170
     const-string v0, "SmartClipRemoteRequestDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3371,11 +3093,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :goto_0
     return-void
 
-    .line 130
     :pswitch_0
     const-string v0, "com.samsung.android.permission.EXTRACT_SMARTCLIP_DATA"
 
@@ -3385,7 +3105,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->checkPermission(Ljava/lang/String;II)V
 
-    .line 131
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$1;
@@ -3396,7 +3115,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_1
     const-string v0, "com.samsung.android.permission.EXTRACT_SMARTCLIP_DATA"
 
@@ -3406,7 +3124,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->checkPermission(Ljava/lang/String;II)V
 
-    .line 141
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$2;
@@ -3417,7 +3134,6 @@
 
     goto :goto_0
 
-    .line 150
     :pswitch_2
     const-string v0, "com.samsung.android.permission.EXTRACT_SMARTCLIP_DATA"
 
@@ -3427,7 +3143,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->checkPermission(Ljava/lang/String;II)V
 
-    .line 151
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$3;
@@ -3438,7 +3153,6 @@
 
     goto :goto_0
 
-    .line 160
     :pswitch_3
     const-string v0, "android.permission.INJECT_EVENTS"
 
@@ -3448,7 +3162,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->checkPermission(Ljava/lang/String;II)V
 
-    .line 161
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$4;
@@ -3459,7 +3172,6 @@
 
     goto :goto_0
 
-    .line 128
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -3473,7 +3185,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-boolean v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->DEBUG:Z
 
     return v0

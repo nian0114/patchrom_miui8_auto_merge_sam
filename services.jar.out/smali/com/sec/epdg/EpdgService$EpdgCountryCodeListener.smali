@@ -26,13 +26,10 @@
     .locals 0
 
     .prologue
-    .line 4333
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgCountryCodeListener;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 4334
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4335
     return-void
 .end method
 
@@ -43,14 +40,12 @@
     .param p1, "country"    # Landroid/location/Country;
 
     .prologue
-    .line 4339
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Landroid/location/Country;->getCountryIso()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4340
     .local v1, "countryIso":Ljava/lang/String;
     :goto_0
     const-string v2, "[EPDGService]"
@@ -59,7 +54,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onCountryDetected "
+    const-string v4, "onCountryDetected "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,7 +87,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4341
     if-eqz v1, :cond_0
 
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$EpdgCountryCodeListener;->this$0:Lcom/sec/epdg/EpdgService;
@@ -108,7 +102,6 @@
 
     if-nez v2, :cond_0
 
-    .line 4342
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2500()Landroid/content/Context;
 
@@ -122,7 +115,6 @@
 
     check-cast v0, Landroid/location/CountryDetector;
 
-    .line 4343
     .local v0, "countryDetector":Landroid/location/CountryDetector;
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$EpdgCountryCodeListener;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -133,7 +125,6 @@
 
     invoke-virtual {v0, v2}, Landroid/location/CountryDetector;->removeCountryListener(Landroid/location/CountryListener;)V
 
-    .line 4344
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$EpdgCountryCodeListener;->this$0:Lcom/sec/epdg/EpdgService;
 
     sget-object v3, Lcom/sec/epdg/EpdgService$EpdgTempBlockReason;->ALLOWED:Lcom/sec/epdg/EpdgService$EpdgTempBlockReason;
@@ -141,7 +132,6 @@
     # invokes: Lcom/sec/epdg/EpdgService;->setEpdgTemporaryBlocked(Lcom/sec/epdg/EpdgService$EpdgTempBlockReason;)V
     invoke-static {v2, v3}, Lcom/sec/epdg/EpdgService;->access$7700(Lcom/sec/epdg/EpdgService;Lcom/sec/epdg/EpdgService$EpdgTempBlockReason;)V
 
-    .line 4345
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$EpdgCountryCodeListener;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->isWifiConnected()Z
@@ -157,7 +147,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4346
     new-instance v2, Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$EpdgCountryCodeListener;->this$0:Lcom/sec/epdg/EpdgService;
@@ -181,7 +170,6 @@
     # setter for: Lcom/sec/epdg/EpdgService;->mWfcProfileTask:Lcom/sec/epdg/EpdgService$WfcProfileTask;
     invoke-static {v2}, Lcom/sec/epdg/EpdgService;->access$2902(Lcom/sec/epdg/EpdgService$WfcProfileTask;)Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
-    .line 4347
     # getter for: Lcom/sec/epdg/EpdgService;->mWfcProfileTask:Lcom/sec/epdg/EpdgService$WfcProfileTask;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2900()Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
@@ -193,12 +181,10 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/epdg/EpdgService$WfcProfileTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 4350
     .end local v0    # "countryDetector":Landroid/location/CountryDetector;
     :cond_0
     return-void
 
-    .line 4339
     .end local v1    # "countryIso":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x0

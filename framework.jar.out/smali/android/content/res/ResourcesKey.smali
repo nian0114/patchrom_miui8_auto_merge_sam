@@ -26,7 +26,6 @@
     .param p4, "scale"    # F
 
     .prologue
-    .line 43
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -47,7 +46,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/content/res/ResourcesKey;-><init>(Ljava/lang/String;ILandroid/content/res/Configuration;FI)V
 
-    .line 45
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 49
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -77,7 +74,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/content/res/ResourcesKey;-><init>(Ljava/lang/String;ILandroid/content/res/Configuration;FILandroid/os/IBinder;)V
 
-    .line 51
     return-void
 .end method
 
@@ -91,32 +87,24 @@
     .param p6, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput p5, p0, Landroid/content/res/ResourcesKey;->mUserId:I
 
-    .line 57
     iput-object p1, p0, Landroid/content/res/ResourcesKey;->mResDir:Ljava/lang/String;
 
-    .line 58
     iput p2, p0, Landroid/content/res/ResourcesKey;->mDisplayId:I
 
-    .line 59
     if-eqz p3, :cond_0
 
     .end local p3    # "overrideConfiguration":Landroid/content/res/Configuration;
     :goto_0
     iput-object p3, p0, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
 
-    .line 61
     iput p4, p0, Landroid/content/res/ResourcesKey;->mScale:F
 
-    .line 63
     const/16 v0, 0x11
 
-    .line 64
     .local v0, "hash":I
     iget-object v1, p0, Landroid/content/res/ResourcesKey;->mResDir:Ljava/lang/String;
 
@@ -127,14 +115,12 @@
     :goto_1
     add-int/lit16 v0, v1, 0x20f
 
-    .line 65
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/content/res/ResourcesKey;->mDisplayId:I
 
     add-int v0, v1, v2
 
-    .line 66
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
@@ -145,7 +131,6 @@
 
     add-int v0, v1, v2
 
-    .line 67
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/content/res/ResourcesKey;->mScale:F
@@ -156,20 +141,16 @@
 
     add-int v0, v1, v2
 
-    .line 69
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/content/res/ResourcesKey;->mUserId:I
 
     add-int v0, v1, v2
 
-    .line 75
     iput v0, p0, Landroid/content/res/ResourcesKey;->mHash:I
 
-    .line 76
     return-void
 
-    .line 59
     .end local v0    # "hash":I
     .restart local p3    # "overrideConfiguration":Landroid/content/res/Configuration;
     :cond_0
@@ -177,7 +158,6 @@
 
     goto :goto_0
 
-    .line 64
     .end local p3    # "overrideConfiguration":Landroid/content/res/Configuration;
     .restart local v0    # "hash":I
     :cond_1
@@ -199,12 +179,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 89
     instance-of v2, p1, Landroid/content/res/ResourcesKey;
 
     if-nez v2, :cond_1
 
-    .line 111
     :cond_0
     :goto_0
     return v1
@@ -212,10 +190,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 92
     check-cast v0, Landroid/content/res/ResourcesKey;
 
-    .line 94
     .local v0, "peer":Landroid/content/res/ResourcesKey;
     iget-object v2, p0, Landroid/content/res/ResourcesKey;->mResDir:Ljava/lang/String;
 
@@ -227,14 +203,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 97
     iget v2, p0, Landroid/content/res/ResourcesKey;->mDisplayId:I
 
     iget v3, v0, Landroid/content/res/ResourcesKey;->mDisplayId:I
 
     if-ne v2, v3, :cond_0
 
-    .line 100
     iget-object v2, p0, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
 
     iget-object v3, v0, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
@@ -245,7 +219,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 103
     iget v2, p0, Landroid/content/res/ResourcesKey;->mScale:F
 
     iget v3, v0, Landroid/content/res/ResourcesKey;->mScale:F
@@ -254,14 +227,12 @@
 
     if-nez v2, :cond_0
 
-    .line 107
     iget v2, p0, Landroid/content/res/ResourcesKey;->mUserId:I
 
     iget v3, v0, Landroid/content/res/ResourcesKey;->mUserId:I
 
     if-ne v2, v3, :cond_0
 
-    .line 111
     const/4 v1, 0x1
 
     goto :goto_0
@@ -271,7 +242,6 @@
     .locals 2
 
     .prologue
-    .line 79
     sget-object v0, Landroid/content/res/Configuration;->EMPTY:Landroid/content/res/Configuration;
 
     iget-object v1, p0, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
@@ -297,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget v0, p0, Landroid/content/res/ResourcesKey;->mHash:I
 
     return v0
@@ -307,7 +276,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget v0, p0, Landroid/content/res/ResourcesKey;->mHash:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;

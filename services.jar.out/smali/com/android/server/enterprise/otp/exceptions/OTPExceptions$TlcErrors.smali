@@ -100,7 +100,6 @@
 
     const/4 v4, 0x0
 
-    .line 11
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_SUCCESS"
@@ -109,7 +108,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_SUCCESS:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 12
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_FILE_OPEN_FAILED"
@@ -118,7 +116,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_FILE_OPEN_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 13
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_FILE_READ_ERROR"
@@ -127,7 +124,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_FILE_READ_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 14
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_FILE_WRITE_ERROR"
@@ -136,7 +132,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_FILE_WRITE_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 15
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_FILE_DELETE_FAILED"
@@ -145,7 +140,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_FILE_DELETE_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 16
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_NULL_POINTER"
@@ -158,7 +152,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_NULL_POINTER:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 17
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_STRING_OPERATION_FAILED"
@@ -171,7 +164,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_STRING_OPERATION_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 18
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_BOOT_MEASUREMENT_FILE_ERROR"
@@ -184,7 +176,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_BOOT_MEASUREMENT_FILE_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 19
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_OPEN_FAILED"
@@ -197,7 +188,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_OPEN_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 20
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_CLOSE_DEVICE_FAILED"
@@ -210,7 +200,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_CLOSE_DEVICE_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 21
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_COMMUNICATE_FAILED"
@@ -223,7 +212,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_COMMUNICATE_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 22
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_CLOSE_SESSION_FAILED"
@@ -236,7 +224,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_CLOSE_SESSION_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 23
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_APP_ALREADY_LOADED"
@@ -249,7 +236,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_APP_ALREADY_LOADED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 24
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_INVALID_MEMORY"
@@ -262,7 +248,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_INVALID_MEMORY:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 25
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_APP_NOT_FOUND"
@@ -275,7 +260,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_APP_NOT_FOUND:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 26
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_MEMORY_UNAVAILABLE"
@@ -288,7 +272,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_MEMORY_UNAVAILABLE:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 27
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_BACKEND_OPEN_FAILED"
@@ -301,7 +284,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_BACKEND_OPEN_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 28
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_BACKEND_CLOSE_FAILED"
@@ -314,7 +296,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_BACKEND_CLOSE_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 29
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_INVALID_ARGUMENT"
@@ -327,7 +308,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_INVALID_ARGUMENT:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 30
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_SHARED_MEMORY_ERROR"
@@ -340,7 +320,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_SHARED_MEMORY_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 31
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_COMMUNICATION_ERROR"
@@ -353,7 +332,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_COMMUNICATION_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 32
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_KNOX_KEY_ERROR"
@@ -366,7 +344,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_KNOX_KEY_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 33
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_BOOT_MEASUREMENT_CHECK_FAILED"
@@ -379,7 +356,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_BOOT_MEASUREMENT_CHECK_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 34
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_INVALID_NONCE"
@@ -392,7 +368,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_INVALID_NONCE:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 35
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_CERTIFICATE_NOT_SUPPORTED"
@@ -405,7 +380,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_CERTIFICATE_NOT_SUPPORTED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 36
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_CERTIFICATE_GENERATION_FAILED"
@@ -418,7 +392,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_CERTIFICATE_GENERATION_FAILED:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 40
     new-instance v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     const-string v1, "TLC_OTP_UNKNOWN_ERROR"
@@ -431,7 +404,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->TLC_OTP_UNKNOWN_ERROR:Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
-    .line 10
     const/16 v0, 0x1b
 
     new-array v0, v0, [Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
@@ -603,13 +575,10 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 45
     iput p3, p0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->errorCode:I
 
-    .line 46
     return-void
 .end method
 
@@ -618,7 +587,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     const-class v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -634,7 +602,6 @@
     .locals 1
 
     .prologue
-    .line 10
     sget-object v0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->$VALUES:[Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->clone()Ljava/lang/Object;
@@ -652,7 +619,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget v0, p0, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->errorCode:I
 
     return v0

@@ -14,12 +14,10 @@
     .locals 1
 
     .prologue
-    .line 11
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     sput-object v0, Lcom/samsung/android/sdk/SsdkVendorCheck;->strBrand:Ljava/lang/String;
 
-    .line 12
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     sput-object v0, Lcom/samsung/android/sdk/SsdkVendorCheck;->strManufacturer:Ljava/lang/String;
@@ -31,10 +29,8 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 24
     sget-object v1, Lcom/samsung/android/sdk/SsdkVendorCheck;->strBrand:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -53,12 +48,10 @@
 
     if-nez v1, :cond_1
 
-    .line 29
     :cond_0
     :goto_0
     return v0
 
-    .line 26
     :cond_1
     sget-object v1, Lcom/samsung/android/sdk/SsdkVendorCheck;->strBrand:Ljava/lang/String;
 
@@ -70,7 +63,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 27
     sget-object v1, Lcom/samsung/android/sdk/SsdkVendorCheck;->strManufacturer:Ljava/lang/String;
 
     const-string v2, "Samsung"
@@ -81,7 +73,6 @@
 
     if-nez v1, :cond_0
 
-    .line 29
     :cond_2
     const/4 v0, 0x1
 

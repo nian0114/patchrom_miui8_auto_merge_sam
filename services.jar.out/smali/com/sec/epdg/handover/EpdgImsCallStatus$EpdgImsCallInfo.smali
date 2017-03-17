@@ -38,21 +38,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 52
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->this$0:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     invoke-virtual {p0, p2}, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->update(Lcom/sec/ims/volte2/data/ImsCallInfo;)V
 
-    .line 54
     invoke-virtual {p0}, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->resetAckRcvd()V
 
-    .line 55
     invoke-virtual {p0, v0, v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->storeDedicatedBearerState(II)V
 
-    .line 56
     return-void
 .end method
 
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mCallType:Ljava/lang/Integer;
 
     return-object v0
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mIsDowngradedVideoCall:Z
 
     return v0
@@ -82,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-boolean v0, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->misDowngradedAtEstablish:Z
 
     return v0
@@ -92,14 +84,12 @@
     .locals 3
 
     .prologue
-    .line 109
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mCallType:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 110
     .local v0, "callType":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -115,10 +105,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 111
     iget-boolean v1, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mIsAckRecvd:Z
 
-    .line 113
     :goto_0
     return v1
 
@@ -193,12 +181,10 @@
     .locals 1
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mIsAckRecvd:Z
 
-    .line 74
     return-void
 .end method
 
@@ -214,14 +200,11 @@
 
     const/4 v1, 0x0
 
-    .line 77
     sparse-switch p2, :sswitch_data_0
 
-    .line 94
     :goto_0
     return-void
 
-    .line 79
     :sswitch_0
     if-eq p1, v2, :cond_0
 
@@ -235,7 +218,6 @@
 
     goto :goto_1
 
-    .line 84
     :sswitch_1
     if-eq p1, v2, :cond_1
 
@@ -249,16 +231,13 @@
 
     goto :goto_2
 
-    .line 88
     :sswitch_2
     iput-boolean v1, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mVoiceDedicatedBearerUp:Z
 
-    .line 89
     iput-boolean v1, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mVideoDedicatedBearerUp:Z
 
     goto :goto_0
 
-    .line 77
     :sswitch_data_0
     .sparse-switch
         -0x1 -> :sswitch_2
@@ -272,7 +251,6 @@
     .locals 2
 
     .prologue
-    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,7 +343,6 @@
 
     const/4 v2, 0x1
 
-    .line 60
     :try_start_0
     # invokes: Lcom/sec/epdg/handover/EpdgImsCallStatus;->getCallType(Lcom/sec/ims/volte2/data/ImsCallInfo;)Ljava/lang/Integer;
     invoke-static {p1}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->access$000(Lcom/sec/ims/volte2/data/ImsCallInfo;)Ljava/lang/Integer;
@@ -374,26 +351,22 @@
 
     iput-object v3, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mCallType:Ljava/lang/Integer;
 
-    .line 61
     invoke-virtual {p1}, Lcom/sec/ims/volte2/data/ImsCallInfo;->isDowngradedVideoCall()Z
 
     move-result v3
 
     iput-boolean v3, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mIsDowngradedVideoCall:Z
 
-    .line 62
     invoke-virtual {p1}, Lcom/sec/ims/volte2/data/ImsCallInfo;->isDowngradedAtEstablish()Z
 
     move-result v3
 
     iput-boolean v3, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->misDowngradedAtEstablish:Z
 
-    .line 63
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mIsAckRecvd:Z
 
-    .line 64
     const/4 v3, 0x1
 
     invoke-virtual {p1, v3}, Lcom/sec/ims/volte2/data/ImsCallInfo;->getDedicatedBearerState(I)I
@@ -407,7 +380,6 @@
     :goto_0
     iput-boolean v3, p0, Lcom/sec/epdg/handover/EpdgImsCallStatus$EpdgImsCallInfo;->mVoiceDedicatedBearerUp:Z
 
-    .line 65
     const/4 v3, 0x2
 
     invoke-virtual {p1, v3}, Lcom/sec/ims/volte2/data/ImsCallInfo;->getDedicatedBearerState(I)I
@@ -432,21 +404,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     :goto_1
     return-void
 
     :cond_2
     move v3, v1
 
-    .line 64
     goto :goto_0
 
-    .line 67
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2399
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$23;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions$23;->val$imageFrameLayout:Landroid/widget/FrameLayout;
@@ -45,7 +44,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2423
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2412
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$23;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -70,7 +67,6 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    .line 2413
     .local v0, "mAccessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     if-eqz v0, :cond_0
 
@@ -80,14 +76,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 2414
     const/16 v2, 0x4000
 
     invoke-static {v2}, Landroid/view/accessibility/AccessibilityEvent;->obtain(I)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object v1
 
-    .line 2415
     .local v1, "mTalkbackEvent":Landroid/view/accessibility/AccessibilityEvent;
     invoke-virtual {v1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
@@ -95,7 +89,6 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 2416
     invoke-virtual {v1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
     move-result-object v2
@@ -108,10 +101,8 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2417
     invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityManager;->sendAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 2419
     .end local v1    # "mTalkbackEvent":Landroid/view/accessibility/AccessibilityEvent;
     :cond_0
     return-void
@@ -122,7 +113,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2408
     return-void
 .end method
 
@@ -131,6 +121,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2404
     return-void
 .end method

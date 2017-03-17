@@ -31,10 +31,8 @@
     .locals 1
 
     .prologue
-    .line 1677
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1678
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20DMHandler$DBParam;->nodeName:Ljava/lang/String;

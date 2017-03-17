@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,12 +26,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     const-string v0, "OTPFW"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     return-void
 .end method
 
@@ -41,12 +38,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     const-string v0, "OTPFW"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     return-void
 .end method
 
@@ -55,12 +50,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     const-string v0, "OTPFW"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     return-void
 .end method
 
@@ -75,10 +68,8 @@
 
     const/4 v9, 0x1
 
-    .line 70
     if-eqz p0, :cond_3
 
-    .line 72
     new-instance v5, Ljava/lang/Exception;
 
     invoke-direct {v5}, Ljava/lang/Exception;-><init>()V
@@ -89,7 +80,6 @@
 
     aget-object v3, v5, v9
 
-    .line 73
     .local v3, "ste":Ljava/lang/StackTraceElement;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -129,7 +119,6 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "caller":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -151,7 +140,6 @@
 
     invoke-static {v5}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v5
@@ -175,7 +163,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 77
     .local v2, "key":Ljava/lang/String;
     const-string v5, "SHARED_SECRET"
 
@@ -233,17 +220,14 @@
 
     if-eqz v5, :cond_2
 
-    .line 84
     :cond_1
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 85
     .local v4, "value":Ljava/lang/Object;
     if-eqz v4, :cond_0
 
-    .line 86
     const-string v5, "%s = *** [%s] "
 
     new-array v6, v11, [Ljava/lang/Object;
@@ -266,8 +250,7 @@
 
     invoke-static {v5}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 87
-    const-string/jumbo v5, "value = %s"
+    const-string v5, "value = %s"
 
     new-array v6, v9, [Ljava/lang/Object;
 
@@ -285,18 +268,15 @@
 
     goto :goto_0
 
-    .line 90
     .end local v4    # "value":Ljava/lang/Object;
     :cond_2
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 91
     .restart local v4    # "value":Ljava/lang/Object;
     if-eqz v4, :cond_0
 
-    .line 92
     const-string v5, "%s = %s [%s]"
 
     const/4 v6, 0x3
@@ -329,7 +309,6 @@
 
     goto/16 :goto_0
 
-    .line 98
     .end local v0    # "caller":Ljava/lang/String;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "key":Ljava/lang/String;
@@ -344,7 +323,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -354,7 +332,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -363,7 +340,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 48
     .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/android/server/enterprise/otp/engine/common/Print$1;
 
@@ -371,7 +347,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 55
     return-void
 .end method
 
@@ -381,7 +356,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -390,7 +364,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 60
     .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/android/server/enterprise/otp/engine/common/Print$2;
 
@@ -398,6 +371,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 66
     return-void
 .end method

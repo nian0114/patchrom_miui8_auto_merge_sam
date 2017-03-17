@@ -69,12 +69,10 @@
     .locals 2
 
     .prologue
-    .line 8
-    const-string/jumbo v0, "hotspot"
+    const-string v0, "hotspot"
 
     sput-object v0, Landroid/net/wifi/hs20/WifiHs20DBStore;->AUTHORITY:Ljava/lang/String;
 
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,10 +108,8 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 390
     return-void
 .end method
 
@@ -121,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Landroid/net/wifi/hs20/WifiHs20DBStore;->AUTHORITY_SLASH:Ljava/lang/String;
 
     return-object v0

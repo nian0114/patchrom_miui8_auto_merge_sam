@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4738
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$GlobalActionsDialog$1;->this$0:Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 4740
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$GlobalActionsDialog$1;->this$0:Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;
 
     # getter for: Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;->mHandler:Landroid/os/Handler;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 4741
     return-void
 .end method

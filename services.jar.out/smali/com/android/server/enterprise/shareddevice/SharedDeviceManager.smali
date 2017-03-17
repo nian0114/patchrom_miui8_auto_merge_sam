@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 20
     const-class v0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -62,17 +61,14 @@
     .param p1, "mContext"    # Landroid/content/Context;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mContext:Landroid/content/Context;
 
-    .line 46
     return-void
 .end method
 
@@ -81,7 +77,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -93,7 +88,6 @@
     .param p1, "x1"    # Ljava/util/concurrent/CountDownLatch;
 
     .prologue
-    .line 19
     iput-object p1, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object p1
@@ -110,14 +104,12 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 138
     sget-object v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
 
     const-string v3, "Executing bindToService()..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->isConnected()Z
@@ -126,12 +118,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 159
     :cond_0
     :goto_0
     return-void
 
-    .line 143
     :cond_1
     sget-object v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
 
@@ -139,7 +129,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mContext:Landroid/content/Context;
 
     new-instance v3, Landroid/content/Intent;
@@ -172,7 +161,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 146
     :try_start_0
     new-instance v2, Ljava/util/concurrent/CountDownLatch;
 
@@ -182,12 +170,10 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 147
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v2, :cond_0
 
-    .line 148
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/16 v4, 0x4e20
@@ -198,11 +184,9 @@
 
     move-result v0
 
-    .line 149
     .local v0, "countDownTimeout":Z
     if-nez v0, :cond_0
 
-    .line 150
     sget-object v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
 
     const-string v3, "In bindToService: CoutnDownLatch returns false"
@@ -213,12 +197,10 @@
 
     goto :goto_0
 
-    .line 153
     .end local v0    # "countDownTimeout":Z
     :catch_0
     move-exception v1
 
-    .line 154
     .local v1, "e":Ljava/lang/InterruptedException;
     sget-object v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
 
@@ -254,7 +236,6 @@
 
     goto :goto_0
 
-    .line 157
     .end local v1    # "e":Ljava/lang/InterruptedException;
     :cond_2
     new-instance v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
@@ -271,7 +252,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 38
     const-class v1, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     monitor-enter v1
@@ -281,14 +261,12 @@
 
     if-nez v0, :cond_0
 
-    .line 39
     new-instance v0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->sSharedDeviceManager:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
-    .line 41
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->sSharedDeviceManager:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
     :try_end_0
@@ -298,7 +276,6 @@
 
     return-object v0
 
-    .line 38
     :catchall_0
     move-exception v0
 
@@ -311,7 +288,6 @@
     .locals 2
 
     .prologue
-    .line 131
     monitor-enter p0
 
     :try_start_0
@@ -319,7 +295,6 @@
 
     if-nez v0, :cond_0
 
-    .line 132
     new-instance v0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     const/4 v1, 0x0
@@ -328,7 +303,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
-    .line 134
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
     :try_end_0
@@ -338,7 +312,6 @@
 
     return-object v0
 
-    .line 131
     :catchall_0
     move-exception v0
 
@@ -351,14 +324,12 @@
     .locals 2
 
     .prologue
-    .line 162
     sget-object v0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
 
     const-string v1, "Unbinding from the service."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     if-eqz v0, :cond_0
@@ -371,20 +342,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 165
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
-    .line 166
     return-void
 .end method
 
@@ -400,7 +368,6 @@
     .end annotation
 
     .prologue
-    .line 77
     monitor-enter p0
 
     :try_start_0
@@ -412,7 +379,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 80
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->getServiceConnectionInstance()Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
@@ -420,10 +386,8 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
-    .line 81
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->bindToService()V
 
-    .line 82
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->isConnected()Z
@@ -432,7 +396,6 @@
 
     if-nez v2, :cond_1
 
-    .line 83
     new-instance v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v3, "Service Connection Not Available."
@@ -444,11 +407,9 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 92
     :catch_0
     move-exception v0
 
-    .line 93
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     sget-object v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
@@ -483,7 +444,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     new-instance v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v3, "API Call Failed."
@@ -494,7 +454,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 96
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v2
@@ -508,7 +467,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 97
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->releaseService()V
 
     :cond_0
@@ -516,7 +474,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 77
     :catchall_1
     move-exception v2
 
@@ -524,7 +481,6 @@
 
     throw v2
 
-    .line 86
     :cond_1
     :try_start_4
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
@@ -533,11 +489,9 @@
 
     move-result-object v1
 
-    .line 87
     .local v1, "sharedDeviceMgmtService":Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
     if-nez v1, :cond_2
 
-    .line 88
     new-instance v2, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v3, "Service Connection Not Available."
@@ -546,14 +500,12 @@
 
     throw v2
 
-    .line 91
     :cond_2
     invoke-interface {v1, p1}, Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;->notifyUserSignedIn(Lcom/sec/enterprise/knox/shareddevice/aidl/UserCredentials;)V
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 96
     :try_start_5
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
@@ -563,12 +515,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 97
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->releaseService()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 100
     :cond_3
     monitor-exit p0
 
@@ -585,12 +535,10 @@
     .end annotation
 
     .prologue
-    .line 49
     monitor-enter p0
 
     const/4 v0, -0x1
 
-    .line 50
     .local v0, "authStatus":I
     :try_start_0
     sget-object v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
@@ -601,7 +549,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 53
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->getServiceConnectionInstance()Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
@@ -609,10 +556,8 @@
 
     iput-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
-    .line 54
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->bindToService()V
 
-    .line 55
     iget-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->isConnected()Z
@@ -621,7 +566,6 @@
 
     if-nez v3, :cond_1
 
-    .line 56
     new-instance v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v4, "Service Connection Not Available."
@@ -633,11 +577,9 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 65
     :catch_0
     move-exception v1
 
-    .line 66
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_2
     sget-object v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
@@ -672,7 +614,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     new-instance v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v4, "API Call Failed."
@@ -683,7 +624,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 69
     .end local v1    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v3
@@ -697,7 +637,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 70
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->releaseService()V
 
     :cond_0
@@ -705,7 +644,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 49
     :catchall_1
     move-exception v3
 
@@ -713,7 +651,6 @@
 
     throw v3
 
-    .line 59
     :cond_1
     :try_start_4
     iget-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
@@ -722,11 +659,9 @@
 
     move-result-object v2
 
-    .line 60
     .local v2, "sharedDeviceMgmtService":Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
     if-nez v2, :cond_2
 
-    .line 61
     new-instance v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v4, "Service Connection Not Available."
@@ -735,7 +670,6 @@
 
     throw v3
 
-    .line 64
     :cond_2
     invoke-interface {v2, p1}, Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;->performUserAuthentication(Lcom/sec/enterprise/knox/shareddevice/aidl/UserCredentials;)I
     :try_end_4
@@ -744,7 +678,6 @@
 
     move-result v0
 
-    .line 69
     :try_start_5
     iget-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
@@ -754,12 +687,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 70
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->releaseService()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 73
     :cond_3
     monitor-exit p0
 
@@ -776,12 +707,10 @@
     .end annotation
 
     .prologue
-    .line 103
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 104
     .local v2, "success":Z
     :try_start_0
     sget-object v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
@@ -814,7 +743,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 107
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->getServiceConnectionInstance()Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
@@ -822,10 +750,8 @@
 
     iput-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
-    .line 108
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->bindToService()V
 
-    .line 109
     iget-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->isConnected()Z
@@ -834,7 +760,6 @@
 
     if-nez v3, :cond_1
 
-    .line 110
     new-instance v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v4, "Service Connection Not Available."
@@ -846,11 +771,9 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 119
     :catch_0
     move-exception v0
 
-    .line 120
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     sget-object v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->TAG:Ljava/lang/String;
@@ -885,7 +808,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     new-instance v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v4, "API Call Failed."
@@ -896,7 +818,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 123
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v3
@@ -910,7 +831,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 124
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->releaseService()V
 
     :cond_0
@@ -918,7 +838,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 103
     :catchall_1
     move-exception v3
 
@@ -926,7 +845,6 @@
 
     throw v3
 
-    .line 113
     :cond_1
     :try_start_4
     iget-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
@@ -935,11 +853,9 @@
 
     move-result-object v1
 
-    .line 114
     .local v1, "sharedDeviceMgmtService":Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
     if-nez v1, :cond_2
 
-    .line 115
     new-instance v3, Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
 
     const-string v4, "Service Connection Not Available."
@@ -948,7 +864,6 @@
 
     throw v3
 
-    .line 118
     :cond_2
     invoke-interface {v1, p1}, Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;->signOutUser(Z)Z
     :try_end_4
@@ -957,7 +872,6 @@
 
     move-result v2
 
-    .line 123
     :try_start_5
     iget-object v3, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mServiceConnection:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;
 
@@ -967,12 +881,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 124
     invoke-direct {p0}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->releaseService()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 127
     :cond_3
     monitor-exit p0
 

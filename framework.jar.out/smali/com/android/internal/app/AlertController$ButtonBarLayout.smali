@@ -20,10 +20,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1295
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1296
     return-void
 .end method
 
@@ -33,10 +31,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 1291
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1292
     return-void
 .end method
 
@@ -47,10 +43,8 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 1287
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 1288
     return-void
 .end method
 
@@ -62,10 +56,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 1282
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 1283
     return-void
 .end method
 
@@ -81,22 +73,18 @@
 
     const/high16 v9, -0x80000000
 
-    .line 1300
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 1302
     invoke-virtual {p0}, Lcom/android/internal/app/AlertController$ButtonBarLayout;->getChildCount()I
 
     move-result v3
 
-    .line 1303
     .local v3, "count":I
     const/4 v1, 0x0
 
     .local v1, "beforeChildrenWidth":I
     const/4 v0, 0x0
 
-    .line 1304
     .local v0, "afterChildrenWidth":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -114,7 +102,6 @@
 
     sub-int v6, v7, v8
 
-    .line 1305
     .local v6, "width":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -132,7 +119,6 @@
 
     sub-int v4, v7, v8
 
-    .line 1307
     .local v4, "height":I
     const/4 v5, 0x0
 
@@ -140,12 +126,10 @@
     :goto_0
     if-ge v5, v3, :cond_1
 
-    .line 1308
     invoke-virtual {p0, v5}, Lcom/android/internal/app/AlertController$ButtonBarLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1309
     .local v2, "child":Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
@@ -159,14 +143,12 @@
 
     if-nez v7, :cond_0
 
-    .line 1310
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
     add-int/2addr v1, v7
 
-    .line 1311
     invoke-static {v6, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v7
@@ -177,27 +159,23 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/view/View;->measure(II)V
 
-    .line 1313
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
     add-int/2addr v0, v7
 
-    .line 1307
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 1317
     .end local v2    # "child":Landroid/view/View;
     :cond_1
     if-lt v1, v0, :cond_2
 
     if-ge v6, v0, :cond_4
 
-    .line 1318
     :cond_2
     invoke-virtual {p0}, Lcom/android/internal/app/AlertController$ButtonBarLayout;->getOrientation()I
 
@@ -205,18 +183,14 @@
 
     if-eq v7, v10, :cond_3
 
-    .line 1319
     invoke-virtual {p0, v10}, Lcom/android/internal/app/AlertController$ButtonBarLayout;->setOrientation(I)V
 
-    .line 1325
     :cond_3
     :goto_1
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 1326
     return-void
 
-    .line 1321
     :cond_4
     invoke-virtual {p0}, Lcom/android/internal/app/AlertController$ButtonBarLayout;->getOrientation()I
 
@@ -224,7 +198,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 1322
     const/4 v7, 0x0
 
     invoke-virtual {p0, v7}, Lcom/android/internal/app/AlertController$ButtonBarLayout;->setOrientation(I)V

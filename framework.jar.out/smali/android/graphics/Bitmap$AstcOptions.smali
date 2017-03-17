@@ -142,55 +142,49 @@
 
     const/4 v4, 0x0
 
-    .line 1148
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast4x4lowPriority"
+    const-string v1, "veryfast4x4lowPriority"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/graphics/Bitmap$AstcOptions;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast4x4lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1149
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast4x4mediumPriority"
+    const-string v1, "veryfast4x4mediumPriority"
 
     invoke-direct {v0, v1, v5, v5}, Landroid/graphics/Bitmap$AstcOptions;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast4x4mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1150
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast4x4highPriority"
+    const-string v1, "veryfast4x4highPriority"
 
     invoke-direct {v0, v1, v6, v6}, Landroid/graphics/Bitmap$AstcOptions;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast4x4highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1154
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast6x6lowPriority"
+    const-string v1, "veryfast6x6lowPriority"
 
     invoke-direct {v0, v1, v7, v7}, Landroid/graphics/Bitmap$AstcOptions;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast6x6lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1155
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast6x6mediumPriority"
+    const-string v1, "veryfast6x6mediumPriority"
 
     invoke-direct {v0, v1, v8, v8}, Landroid/graphics/Bitmap$AstcOptions;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast6x6mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1156
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast6x6highPriority"
+    const-string v1, "veryfast6x6highPriority"
 
     const/4 v2, 0x5
 
@@ -200,10 +194,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast6x6highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1160
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast8x8lowPriority"
+    const-string v1, "veryfast8x8lowPriority"
 
     const/4 v2, 0x6
 
@@ -213,10 +206,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast8x8lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1161
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast8x8mediumPriority"
+    const-string v1, "veryfast8x8mediumPriority"
 
     const/4 v2, 0x7
 
@@ -226,10 +218,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast8x8mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1162
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast8x8highPriority"
+    const-string v1, "veryfast8x8highPriority"
 
     const/16 v2, 0x8
 
@@ -239,10 +230,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast8x8highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1166
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast12x12lowPriority"
+    const-string v1, "veryfast12x12lowPriority"
 
     const/16 v2, 0x9
 
@@ -252,10 +242,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast12x12lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1167
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast12x12mediumPriority"
+    const-string v1, "veryfast12x12mediumPriority"
 
     const/16 v2, 0xa
 
@@ -265,10 +254,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast12x12mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1168
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "veryfast12x12highPriority"
+    const-string v1, "veryfast12x12highPriority"
 
     const/16 v2, 0xb
 
@@ -278,7 +266,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->veryfast12x12highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1172
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast4x4lowPriority"
@@ -291,7 +278,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast4x4lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1173
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast4x4mediumPriority"
@@ -304,7 +290,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast4x4mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1174
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast4x4highPriority"
@@ -317,7 +302,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast4x4highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1178
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast6x6lowPriority"
@@ -330,7 +314,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast6x6lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1179
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast6x6mediumPriority"
@@ -343,7 +326,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast6x6mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1180
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast6x6highPriority"
@@ -356,7 +338,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast6x6highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1184
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast8x8lowPriority"
@@ -369,7 +350,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast8x8lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1185
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast8x8mediumPriority"
@@ -382,7 +362,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast8x8mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1186
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast8x8highPriority"
@@ -395,7 +374,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast8x8highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1190
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast12x12lowPriority"
@@ -408,7 +386,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast12x12lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1191
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast12x12mediumPriority"
@@ -421,7 +398,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast12x12mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1192
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
     const-string v1, "fast12x12highPriority"
@@ -434,10 +410,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->fast12x12highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1196
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium4x4lowPriority"
+    const-string v1, "medium4x4lowPriority"
 
     const/16 v2, 0x18
 
@@ -447,10 +422,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium4x4lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1197
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium4x4mediumPriority"
+    const-string v1, "medium4x4mediumPriority"
 
     const/16 v2, 0x19
 
@@ -460,10 +434,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium4x4mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1198
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium4x4highPriority"
+    const-string v1, "medium4x4highPriority"
 
     const/16 v2, 0x1a
 
@@ -473,10 +446,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium4x4highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1202
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium6x6lowPriority"
+    const-string v1, "medium6x6lowPriority"
 
     const/16 v2, 0x1b
 
@@ -486,10 +458,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium6x6lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1203
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium6x6mediumPriority"
+    const-string v1, "medium6x6mediumPriority"
 
     const/16 v2, 0x1c
 
@@ -499,10 +470,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium6x6mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1204
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium6x6highPriority"
+    const-string v1, "medium6x6highPriority"
 
     const/16 v2, 0x1d
 
@@ -512,10 +482,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium6x6highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1208
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium8x8lowPriority"
+    const-string v1, "medium8x8lowPriority"
 
     const/16 v2, 0x1e
 
@@ -525,10 +494,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium8x8lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1209
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium8x8mediumPriority"
+    const-string v1, "medium8x8mediumPriority"
 
     const/16 v2, 0x1f
 
@@ -538,10 +506,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium8x8mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1210
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium8x8highPriority"
+    const-string v1, "medium8x8highPriority"
 
     const/16 v2, 0x20
 
@@ -551,10 +518,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium8x8highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1214
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium12x12lowPriority"
+    const-string v1, "medium12x12lowPriority"
 
     const/16 v2, 0x21
 
@@ -564,10 +530,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium12x12lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1215
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium12x12mediumPriority"
+    const-string v1, "medium12x12mediumPriority"
 
     const/16 v2, 0x22
 
@@ -577,10 +542,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium12x12mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1216
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "medium12x12highPriority"
+    const-string v1, "medium12x12highPriority"
 
     const/16 v2, 0x23
 
@@ -590,10 +554,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->medium12x12highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1220
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough4x4lowPriority"
+    const-string v1, "thorough4x4lowPriority"
 
     const/16 v2, 0x24
 
@@ -603,10 +566,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough4x4lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1221
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough4x4mediumPriority"
+    const-string v1, "thorough4x4mediumPriority"
 
     const/16 v2, 0x25
 
@@ -616,10 +578,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough4x4mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1222
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough4x4highPriority"
+    const-string v1, "thorough4x4highPriority"
 
     const/16 v2, 0x26
 
@@ -629,10 +590,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough4x4highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1226
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough6x6lowPriority"
+    const-string v1, "thorough6x6lowPriority"
 
     const/16 v2, 0x27
 
@@ -642,10 +602,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough6x6lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1227
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough6x6mediumPriority"
+    const-string v1, "thorough6x6mediumPriority"
 
     const/16 v2, 0x28
 
@@ -655,10 +614,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough6x6mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1228
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough6x6highPriority"
+    const-string v1, "thorough6x6highPriority"
 
     const/16 v2, 0x29
 
@@ -668,10 +626,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough6x6highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1232
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough8x8lowPriority"
+    const-string v1, "thorough8x8lowPriority"
 
     const/16 v2, 0x2a
 
@@ -681,10 +638,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough8x8lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1233
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough8x8mediumPriority"
+    const-string v1, "thorough8x8mediumPriority"
 
     const/16 v2, 0x2b
 
@@ -694,10 +650,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough8x8mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1234
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough8x8highPriority"
+    const-string v1, "thorough8x8highPriority"
 
     const/16 v2, 0x2c
 
@@ -707,10 +662,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough8x8highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1238
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough12x12lowPriority"
+    const-string v1, "thorough12x12lowPriority"
 
     const/16 v2, 0x2d
 
@@ -720,10 +674,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough12x12lowPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1239
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough12x12mediumPriority"
+    const-string v1, "thorough12x12mediumPriority"
 
     const/16 v2, 0x2e
 
@@ -733,10 +686,9 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough12x12mediumPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1240
     new-instance v0, Landroid/graphics/Bitmap$AstcOptions;
 
-    const-string/jumbo v1, "thorough12x12highPriority"
+    const-string v1, "thorough12x12highPriority"
 
     const/16 v2, 0x2f
 
@@ -746,7 +698,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$AstcOptions;->thorough12x12highPriority:Landroid/graphics/Bitmap$AstcOptions;
 
-    .line 1144
     const/16 v0, 0x30
 
     new-array v0, v0, [Landroid/graphics/Bitmap$AstcOptions;
@@ -1044,13 +995,10 @@
     .end annotation
 
     .prologue
-    .line 1244
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1245
     iput p3, p0, Landroid/graphics/Bitmap$AstcOptions;->nativeValue:I
 
-    .line 1246
     return-void
 .end method
 
@@ -1059,7 +1007,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1144
     const-class v0, Landroid/graphics/Bitmap$AstcOptions;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1075,7 +1022,6 @@
     .locals 1
 
     .prologue
-    .line 1144
     sget-object v0, Landroid/graphics/Bitmap$AstcOptions;->$VALUES:[Landroid/graphics/Bitmap$AstcOptions;
 
     invoke-virtual {v0}, [Landroid/graphics/Bitmap$AstcOptions;->clone()Ljava/lang/Object;
@@ -1093,7 +1039,6 @@
     .locals 1
 
     .prologue
-    .line 1255
     iget v0, p0, Landroid/graphics/Bitmap$AstcOptions;->nativeValue:I
 
     return v0

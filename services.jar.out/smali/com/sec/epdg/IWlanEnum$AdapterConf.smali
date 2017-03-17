@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 280
     new-instance v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     const-string v1, "VIRTUAL_ADAPTER_CONF_INTERNAL"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;->VIRTUAL_ADAPTER_CONF_INTERNAL:Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
-    .line 281
     new-instance v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     const-string v1, "VIRTUAL_ADAPTER_CONF_NONE"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;->VIRTUAL_ADAPTER_CONF_NONE:Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
-    .line 282
     new-instance v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     const-string v1, "VIRTUAL_ADAPTER_CONF_NONE_TUN"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;->VIRTUAL_ADAPTER_CONF_NONE_TUN:Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
-    .line 279
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/sec/epdg/IWlanEnum$AdapterConf;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 279
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 279
     const-class v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 279
     sget-object v0, Lcom/sec/epdg/IWlanEnum$AdapterConf;->$VALUES:[Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/IWlanEnum$AdapterConf;->clone()Ljava/lang/Object;

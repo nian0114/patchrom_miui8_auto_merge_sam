@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 337
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$1;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 9
 
     .prologue
-    .line 341
     const/4 v2, 0x0
 
-    .line 342
     .local v2, "isExecuteCleauUpService":Z
     :try_start_0
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$1;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -55,7 +52,6 @@
 
     if-nez v6, :cond_3
 
-    .line 343
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$1;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mPm:Landroid/os/PersonaManager;
@@ -67,7 +63,6 @@
 
     move-result-object v4
 
-    .line 344
     .local v4, "mPersonaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v4, :cond_1
 
@@ -77,16 +72,13 @@
 
     if-nez v6, :cond_1
 
-    .line 345
     const/4 v3, 0x0
 
-    .line 346
     .local v3, "mPersonaInfo":Landroid/content/pm/PersonaInfo;
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 347
     .local v5, "mPersonaIter":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/PersonaInfo;>;"
     :cond_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
@@ -95,7 +87,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 348
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -103,7 +94,6 @@
     .end local v3    # "mPersonaInfo":Landroid/content/pm/PersonaInfo;
     check-cast v3, Landroid/content/pm/PersonaInfo;
 
-    .line 349
     .restart local v3    # "mPersonaInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v3, :cond_0
 
@@ -119,10 +109,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 353
     const/4 v2, 0x1
 
-    .line 360
     .end local v3    # "mPersonaInfo":Landroid/content/pm/PersonaInfo;
     .end local v4    # "mPersonaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     .end local v5    # "mPersonaIter":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/PersonaInfo;>;"
@@ -170,15 +158,12 @@
 
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     if-eqz v2, :cond_2
 
-    .line 363
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 364
     .local v0, "cleanupIntent":Landroid/content/Intent;
     new-instance v6, Landroid/content/ComponentName;
 
@@ -190,7 +175,6 @@
 
     invoke-virtual {v0, v6}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 367
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$1;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mContext:Landroid/content/Context;
@@ -207,7 +191,6 @@
 
     invoke-virtual {v6, v0, v7}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 368
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$1;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # invokes: Lcom/android/server/bridge/BridgeProxy;->doSyncForAllSyncers()V
@@ -215,23 +198,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 373
     .end local v0    # "cleanupIntent":Landroid/content/Intent;
     :cond_2
     :goto_1
     return-void
 
-    .line 358
     :cond_3
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 370
     :catch_0
     move-exception v1
 
-    .line 371
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

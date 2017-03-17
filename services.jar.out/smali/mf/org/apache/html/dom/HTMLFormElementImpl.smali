@@ -21,10 +21,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 160
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 161
     return-void
 .end method
 
@@ -35,20 +33,17 @@
     .param p1, "deep"    # Z
 
     .prologue
-    .line 148
     invoke-super {p0, p1}, Lmf/org/apache/html/dom/HTMLElementImpl;->cloneNode(Z)Lmf/org/w3c/dom/Node;
 
     move-result-object v0
 
     check-cast v0, Lmf/org/apache/html/dom/HTMLFormElementImpl;
 
-    .line 149
     .local v0, "clonedNode":Lmf/org/apache/html/dom/HTMLFormElementImpl;
     const/4 v1, 0x0
 
     iput-object v1, v0, Lmf/org/apache/html/dom/HTMLFormElementImpl;->_elements:Lmf/org/apache/html/dom/HTMLCollectionImpl;
 
-    .line 150
     return-object v0
 .end method
 
@@ -56,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const-string v0, "accept-charset"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -70,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 78
     const-string v0, "action"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -84,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getChildNodesUnoptimized()Lmf/org/w3c/dom/NodeList;
 
     move-result-object v0
@@ -96,12 +88,10 @@
     .locals 2
 
     .prologue
-    .line 40
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLFormElementImpl;->_elements:Lmf/org/apache/html/dom/HTMLCollectionImpl;
 
     if-nez v0, :cond_0
 
-    .line 41
     new-instance v0, Lmf/org/apache/html/dom/HTMLCollectionImpl;
 
     const/16 v1, 0x8
@@ -110,7 +100,6 @@
 
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLFormElementImpl;->_elements:Lmf/org/apache/html/dom/HTMLCollectionImpl;
 
-    .line 42
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLFormElementImpl;->_elements:Lmf/org/apache/html/dom/HTMLCollectionImpl;
 
@@ -121,8 +110,7 @@
     .locals 1
 
     .prologue
-    .line 90
-    const-string/jumbo v0, "enctype"
+    const-string v0, "enctype"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -135,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 48
     invoke-virtual {p0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getElements()Lmf/org/w3c/dom/html/HTMLCollection;
 
     move-result-object v0
@@ -151,8 +138,7 @@
     .locals 1
 
     .prologue
-    .line 102
-    const-string/jumbo v0, "method"
+    const-string v0, "method"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -169,8 +155,7 @@
     .locals 1
 
     .prologue
-    .line 54
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -183,8 +168,7 @@
     .locals 1
 
     .prologue
-    .line 114
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -197,7 +181,6 @@
     .locals 0
 
     .prologue
-    .line 133
     return-void
 .end method
 
@@ -206,12 +189,10 @@
     .param p1, "acceptCharset"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     const-string v0, "accept-charset"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     return-void
 .end method
 
@@ -220,12 +201,10 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     const-string v0, "action"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 85
     return-void
 .end method
 
@@ -234,12 +213,10 @@
     .param p1, "enctype"    # Ljava/lang/String;
 
     .prologue
-    .line 96
-    const-string/jumbo v0, "enctype"
+    const-string v0, "enctype"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
     return-void
 .end method
 
@@ -248,12 +225,10 @@
     .param p1, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 108
-    const-string/jumbo v0, "method"
+    const-string v0, "method"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     return-void
 .end method
 
@@ -262,12 +237,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 60
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -276,12 +249,10 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 120
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLFormElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 121
     return-void
 .end method
 
@@ -289,6 +260,5 @@
     .locals 0
 
     .prologue
-    .line 127
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$1;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,16 +39,13 @@
     .locals 1
 
     .prologue
-    .line 45
     const/4 v0, -0x4
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 46
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
-    .line 47
     return-void
 .end method

@@ -27,13 +27,10 @@
     .param p2, "rat"    # I
 
     .prologue
-    .line 69
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgRilInterface$BaseRxRequest;-><init>(I)V
 
-    .line 70
     iput p2, p0, Lcom/sec/epdg/EpdgRilInterface$ApnHandoverResponse;->mRat:I
 
-    .line 71
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnHandoverResponse;->mRat:I
 
     const/16 v1, 0x30
@@ -45,10 +42,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnHandoverResponse;->mWifiOrMobile:Z
 
-    .line 72
     return-void
 
-    .line 71
     :cond_0
     const/4 v0, 0x0
 
@@ -61,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnHandoverResponse;->mRat:I
 
     return v0
@@ -71,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnHandoverResponse;->mWifiOrMobile:Z
 
     return v0

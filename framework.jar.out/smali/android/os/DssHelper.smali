@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
@@ -64,34 +63,28 @@
     .locals 1
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/os/DssHelper;->DEFAULT_GAME_SIOP_LEVEL:I
 
-    .line 54
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
-    .line 56
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/os/DssHelper;->mWhiteAdssList:Ljava/util/HashMap;
 
-    .line 145
     const/high16 v0, 0x3f000000    # 0.5f
 
     iput v0, p0, Landroid/os/DssHelper;->DEFAULT_FACTOR:F
 
-    .line 59
     return-void
 .end method
 
@@ -99,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 64
     const-class v1, Landroid/os/DssHelper;
 
     monitor-enter v1
@@ -109,14 +101,12 @@
 
     if-nez v0, :cond_0
 
-    .line 65
     new-instance v0, Landroid/os/DssHelper;
 
     invoke-direct {v0}, Landroid/os/DssHelper;-><init>()V
 
     sput-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
 
-    .line 67
     :cond_0
     sget-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
     :try_end_0
@@ -126,7 +116,6 @@
 
     return-object v0
 
-    .line 64
     :catchall_0
     move-exception v0
 
@@ -143,7 +132,6 @@
     .param p2, "scalingFactor"    # F
 
     .prologue
-    .line 91
     monitor-enter p0
 
     :try_start_0
@@ -151,23 +139,19 @@
 
     invoke-direct {v0, p0}, Landroid/os/DssHelper$DssAppDate;-><init>(Landroid/os/DssHelper;)V
 
-    .line 92
     .local v0, "dssAppData":Landroid/os/DssHelper$DssAppDate;
     invoke-virtual {v0, p2}, Landroid/os/DssHelper$DssAppDate;->addPackage(F)V
 
-    .line 93
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteAdssList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 94
     monitor-exit p0
 
     return-void
 
-    .line 91
     .end local v0    # "dssAppData":Landroid/os/DssHelper$DssAppDate;
     :catchall_0
     move-exception v1
@@ -183,7 +167,6 @@
     .param p2, "scalingFactor"    # F
 
     .prologue
-    .line 75
     monitor-enter p0
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -192,19 +175,16 @@
 
     if-nez v0, :cond_0
 
-    .line 76
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/os/DssHelper;->removePackage(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 78
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1, p2}, Landroid/os/DssHelper;->addPackageData(Ljava/lang/String;F)V
@@ -213,7 +193,6 @@
 
     goto :goto_0
 
-    .line 75
     :catchall_0
     move-exception v0
 
@@ -228,7 +207,6 @@
     .param p2, "scalingFactor"    # F
 
     .prologue
-    .line 83
     monitor-enter p0
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -237,19 +215,16 @@
 
     if-nez v0, :cond_0
 
-    .line 84
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/os/DssHelper;->removePackage(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 86
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1, p2}, Landroid/os/DssHelper;->addPackageData(Ljava/lang/String;F)V
@@ -258,7 +233,6 @@
 
     goto :goto_0
 
-    .line 83
     :catchall_0
     move-exception v0
 
@@ -273,7 +247,6 @@
     .param p2, "scalingFactor"    # F
 
     .prologue
-    .line 122
     monitor-enter p0
 
     :try_start_0
@@ -281,23 +254,19 @@
 
     invoke-direct {v0, p0}, Landroid/os/DssHelper$DssAppDate;-><init>(Landroid/os/DssHelper;)V
 
-    .line 123
     .local v0, "dssAppData":Landroid/os/DssHelper$DssAppDate;
     invoke-virtual {v0, p2}, Landroid/os/DssHelper$DssAppDate;->addPackage(F)V
 
-    .line 124
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 125
     monitor-exit p0
 
     return-void
 
-    .line 122
     .end local v0    # "dssAppData":Landroid/os/DssHelper$DssAppDate;
     :catchall_0
     move-exception v1
@@ -314,7 +283,6 @@
     .param p3, "gameSiopLevel"    # I
 
     .prologue
-    .line 128
     monitor-enter p0
 
     :try_start_0
@@ -322,23 +290,19 @@
 
     invoke-direct {v0, p0}, Landroid/os/DssHelper$DssAppDate;-><init>(Landroid/os/DssHelper;)V
 
-    .line 129
     .local v0, "dssAppData":Landroid/os/DssHelper$DssAppDate;
     invoke-virtual {v0, p2, p3}, Landroid/os/DssHelper$DssAppDate;->addPackage(FI)V
 
-    .line 130
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 131
     monitor-exit p0
 
     return-void
 
-    .line 128
     .end local v0    # "dssAppData":Landroid/os/DssHelper$DssAppDate;
     :catchall_0
     move-exception v1
@@ -356,18 +320,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 167
     monitor-enter p0
 
     if-eqz p2, :cond_0
 
-    .line 168
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/os/DssHelper;->getScalingFactor(Ljava/lang/String;)F
 
     move-result v1
 
-    .line 170
     .local v1, "resolutionFactorf":F
     invoke-virtual {p2}, Landroid/view/SurfaceView;->getWidth()I
 
@@ -375,7 +336,6 @@
 
     int-to-float v2, v3
 
-    .line 171
     .local v2, "width":F
     invoke-virtual {p2}, Landroid/view/SurfaceView;->getHeight()I
 
@@ -383,14 +343,11 @@
 
     int-to-float v0, v3
 
-    .line 173
     .local v0, "height":F
     mul-float/2addr v2, v1
 
-    .line 174
     mul-float/2addr v0, v1
 
-    .line 176
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_0
@@ -399,7 +356,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 177
     invoke-virtual {p2}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v3
@@ -412,7 +368,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 180
     .end local v0    # "height":F
     .end local v1    # "resolutionFactorf":F
     .end local v2    # "width":F
@@ -421,7 +376,6 @@
 
     return-void
 
-    .line 167
     :catchall_0
     move-exception v3
 
@@ -435,7 +389,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     monitor-enter p0
 
     :try_start_0
@@ -447,7 +400,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 114
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -456,13 +408,11 @@
 
     check-cast v0, Landroid/os/DssHelper$DssAppDate;
 
-    .line 115
     .local v0, "result":Landroid/os/DssHelper$DssAppDate;
     iget v1, v0, Landroid/os/DssHelper$DssAppDate;->mGameSiopLevel:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 118
     .end local v0    # "result":Landroid/os/DssHelper$DssAppDate;
     :goto_0
     monitor-exit p0
@@ -474,7 +424,6 @@
 
     goto :goto_0
 
-    .line 113
     :catchall_0
     move-exception v1
 
@@ -487,7 +436,6 @@
     .locals 1
 
     .prologue
-    .line 148
     monitor-enter p0
 
     const/high16 v0, 0x3f000000    # 0.5f
@@ -502,7 +450,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     monitor-enter p0
 
     :try_start_0
@@ -514,7 +461,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 153
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteAdssList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -523,20 +469,17 @@
 
     check-cast v0, Landroid/os/DssHelper$DssAppDate;
 
-    .line 154
     .local v0, "result":Landroid/os/DssHelper$DssAppDate;
     iget v1, v0, Landroid/os/DssHelper$DssAppDate;->mScale:F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 160
     .end local v0    # "result":Landroid/os/DssHelper$DssAppDate;
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 156
     :cond_0
     :try_start_1
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
@@ -547,7 +490,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 157
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -556,7 +498,6 @@
 
     check-cast v0, Landroid/os/DssHelper$DssAppDate;
 
-    .line 158
     .restart local v0    # "result":Landroid/os/DssHelper$DssAppDate;
     iget v1, v0, Landroid/os/DssHelper$DssAppDate;->mScale:F
     :try_end_1
@@ -564,14 +505,12 @@
 
     goto :goto_0
 
-    .line 160
     .end local v0    # "result":Landroid/os/DssHelper$DssAppDate;
     :cond_1
     const/high16 v1, 0x3f000000    # 0.5f
 
     goto :goto_0
 
-    .line 152
     :catchall_0
     move-exception v1
 
@@ -585,7 +524,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 184
     monitor-enter p0
 
     :try_start_0
@@ -597,7 +535,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 185
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -606,7 +543,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -619,13 +555,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 188
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteAdssList:Ljava/util/HashMap;
@@ -640,7 +574,6 @@
 
     goto :goto_0
 
-    .line 190
     :cond_1
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
@@ -650,7 +583,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 191
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -665,13 +597,11 @@
 
     goto :goto_0
 
-    .line 193
     :cond_2
     const/high16 v0, 0x3f000000    # 0.5f
 
     goto :goto_0
 
-    .line 184
     :catchall_0
     move-exception v0
 
@@ -684,24 +614,20 @@
     .locals 8
 
     .prologue
-    .line 204
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 206
     .local v5, "sb":Ljava/lang/StringBuilder;
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 207
     .local v0, "dss0_5List":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 209
     .local v1, "dss0_75List":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v6, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
@@ -728,7 +654,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 210
     .local v2, "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/DssHelper$DssAppDate;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -744,7 +669,6 @@
 
     if-nez v6, :cond_1
 
-    .line 211
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -753,7 +677,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_1
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -769,7 +692,6 @@
 
     if-nez v6, :cond_0
 
-    .line 213
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -778,19 +700,16 @@
 
     goto :goto_0
 
-    .line 217
     .end local v2    # "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/DssHelper$DssAppDate;>;"
     :cond_2
     const-string v6, "DSS 0.5 Group\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     const-string v6, "=============\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 219
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -808,35 +727,29 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 220
     .local v4, "packageName":Ljava/lang/String;
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 221
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 223
     .end local v4    # "packageName":Ljava/lang/String;
     :cond_3
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 225
     const-string v6, "DSS 0.75 Group\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 226
     const-string v6, "=============\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 227
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -854,25 +767,21 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 228
     .restart local v4    # "packageName":Ljava/lang/String;
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 229
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 231
     .end local v4    # "packageName":Ljava/lang/String;
     :cond_4
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 233
     return-object v5
 .end method
 
@@ -881,7 +790,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     monitor-enter p0
 
     :try_start_0
@@ -895,10 +803,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 107
     const/4 v0, 0x1
 
-    .line 109
     :goto_0
     monitor-exit p0
 
@@ -909,7 +815,6 @@
 
     goto :goto_0
 
-    .line 106
     :catchall_0
     move-exception v0
 
@@ -923,12 +828,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 97
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 98
     .local v0, "result":Z
     :try_start_0
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteAdssList:Ljava/util/HashMap;
@@ -941,17 +844,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 99
     const/4 v0, 0x1
 
-    .line 102
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 100
     :cond_1
     :try_start_1
     iget-object v1, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
@@ -964,12 +864,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 101
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 97
     :catchall_0
     move-exception v1
 
@@ -983,7 +881,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 140
     monitor-enter p0
 
     :try_start_0
@@ -995,20 +892,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteAdssList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 143
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 140
     :catchall_0
     move-exception v0
 
@@ -1022,7 +916,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 134
     monitor-enter p0
 
     :try_start_0
@@ -1034,20 +927,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 135
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 137
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 134
     :catchall_0
     move-exception v0
 
@@ -1060,7 +950,6 @@
     .locals 5
 
     .prologue
-    .line 197
     monitor-enter p0
 
     :try_start_0
@@ -1088,7 +977,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 198
     .local v0, "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/DssHelper$DssAppDate;>;"
     const-string v3, "DssHelper"
 
@@ -1158,7 +1046,6 @@
 
     goto :goto_0
 
-    .line 197
     .end local v0    # "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/DssHelper$DssAppDate;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -1168,7 +1055,6 @@
 
     throw v2
 
-    .line 201
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     monitor-exit p0

@@ -26,7 +26,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/android/server/os/BackgroundCompactionService$3;->this$0:Lcom/android/server/os/BackgroundCompactionService;
 
     iput-object p3, p0, Lcom/android/server/os/BackgroundCompactionService$3;->val$jobParams:Landroid/app/job/JobParameters;
@@ -42,7 +41,6 @@
     .locals 4
 
     .prologue
-    .line 176
     const-string v0, "BackgroundCompactionService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,14 +71,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
-    const-string/jumbo v0, "sys.sysctl.compact_memory"
+    const-string v0, "sys.sysctl.compact_memory"
 
     const-string v1, "1"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/os/BackgroundCompactionService$3;->this$0:Lcom/android/server/os/BackgroundCompactionService;
 
     iget-object v1, p0, Lcom/android/server/os/BackgroundCompactionService$3;->val$jobParams:Landroid/app/job/JobParameters;
@@ -89,14 +85,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/os/BackgroundCompactionService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
-    .line 179
     sget v0, Lcom/android/server/os/BackgroundCompactionService;->bgc_counts:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Lcom/android/server/os/BackgroundCompactionService;->bgc_counts:I
 
-    .line 180
     new-instance v0, Landroid/app/job/JobInfo$Builder;
 
     const/16 v1, 0x322
@@ -126,27 +120,23 @@
 
     sput-object v0, Lcom/android/server/os/BackgroundCompactionService;->job_idle:Landroid/app/job/JobInfo;
 
-    .line 184
     const-string v0, "BackgroundCompactionService"
 
     const-string v1, "compact_memory command done"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     const-string v0, "BackgroundCompactionService"
 
     const-string v1, "Schedule Type2 BGCompaction"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     sget-object v0, Lcom/android/server/os/BackgroundCompactionService;->js_idle:Landroid/app/job/JobScheduler;
 
     sget-object v1, Lcom/android/server/os/BackgroundCompactionService;->job_idle:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0, v1}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 188
     return-void
 .end method

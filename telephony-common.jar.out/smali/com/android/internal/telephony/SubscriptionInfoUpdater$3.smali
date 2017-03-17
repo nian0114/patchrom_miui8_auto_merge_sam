@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$3;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 274
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionHelper;->isEnabled()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 275
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$3;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     const-string v5, "PHONE2_ON Observer onChange hit !!!"
@@ -56,18 +53,15 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$000(Lcom/android/internal/telephony/SubscriptionInfoUpdater;Ljava/lang/String;)V
 
-    .line 276
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v2
 
-    .line 277
     .local v2, "subCtrlr":Lcom/android/internal/telephony/SubscriptionController;
     invoke-virtual {v2, v7}, Lcom/android/internal/telephony/SubscriptionController;->getSubIdUsingPhoneId(I)I
 
     move-result v3
 
-    .line 278
     .local v3, "subId":I
     # getter for: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$200()Landroid/content/Context;
@@ -86,14 +80,11 @@
 
     move-result v1
 
-    .line 279
     .local v1, "phoneOnState":I
     invoke-virtual {v2, v3, v1}, Lcom/android/internal/telephony/SubscriptionController;->setSubState(II)I
 
-    .line 280
     invoke-virtual {v2}, Lcom/android/internal/telephony/SubscriptionController;->refreshSubInfo()V
 
-    .line 284
     .end local v1    # "phoneOnState":I
     .end local v2    # "subCtrlr":Lcom/android/internal/telephony/SubscriptionController;
     .end local v3    # "subId":I
@@ -117,12 +108,10 @@
 
     move-result-object v0
 
-    .line 285
     .local v0, "phoneOn":Ljava/lang/String;
     const-string v4, "persist.radio.sim.onoff"
 
     invoke-static {v7, v4, v0}, Landroid/telephony/TelephonyManager;->setTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 287
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3886
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,29 +46,24 @@
 
     const/4 v5, 0x1
 
-    .line 3889
     iget-object v1, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 3890
     .local v1, "scontext":Landroid/hardware/scontext/SContext;
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getFlipMotionContext()Landroid/hardware/scontext/SContextFlipMotion;
 
     move-result-object v0
 
-    .line 3891
     .local v0, "flipMotion":Landroid/hardware/scontext/SContextFlipMotion;
     invoke-virtual {v0}, Landroid/hardware/scontext/SContextFlipMotion;->getStatus()I
 
     move-result v2
 
-    .line 3892
     .local v2, "status":I
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # setter for: Lcom/android/server/input/InputManagerService;->mLastFlipMotionState:I
     invoke-static {v3, v2}, Lcom/android/server/input/InputManagerService;->access$3502(Lcom/android/server/input/InputManagerService;I)I
 
-    .line 3893
     invoke-virtual {v1}, Landroid/hardware/scontext/SContext;->getType()I
 
     move-result v3
@@ -89,17 +83,14 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 3896
     packed-switch v2, :pswitch_data_0
 
-    .line 3914
     const-string v3, "InputManager"
 
-    const-string/jumbo v4, "flip motion status : FLIP_MOTION_STATUS_UNKNOWN"
+    const-string v4, "flip motion status : FLIP_MOTION_STATUS_UNKNOWN"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3918
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
@@ -111,18 +102,15 @@
 
     invoke-interface {v3, v2}, Lcom/android/server/input/InputManagerService$WindowManagerCallbacks;->notifyWrapAroundModeChanged(I)V
 
-    .line 3919
     return-void
 
-    .line 3898
     :pswitch_0
     const-string v3, "InputManager"
 
-    const-string/jumbo v4, "flip motion status : FLIP_MOTION_STATUS_FRONT"
+    const-string v4, "flip motion status : FLIP_MOTION_STATUS_FRONT"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3899
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayInputDropForMillisecond(ZZZI)V
@@ -130,15 +118,13 @@
 
     goto :goto_0
 
-    .line 3902
     :pswitch_1
     const-string v3, "InputManager"
 
-    const-string/jumbo v4, "flip motion status : FLIP_MOTION_STATUS_BACK"
+    const-string v4, "flip motion status : FLIP_MOTION_STATUS_BACK"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3903
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayInputDropForMillisecond(ZZZI)V
@@ -146,15 +132,13 @@
 
     goto :goto_0
 
-    .line 3906
     :pswitch_2
     const-string v3, "InputManager"
 
-    const-string/jumbo v4, "flip motion status : FLIP_MOTION_STATUS_START"
+    const-string v4, "flip motion status : FLIP_MOTION_STATUS_START"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3907
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayInputDrop(ZZZ)V
@@ -162,15 +146,13 @@
 
     goto :goto_0
 
-    .line 3910
     :pswitch_3
     const-string v3, "InputManager"
 
-    const-string/jumbo v4, "flip motion status : FLIP_MOTION_STATUS_RESET"
+    const-string v4, "flip motion status : FLIP_MOTION_STATUS_RESET"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3911
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayInputDrop(ZZZ)V
@@ -178,7 +160,6 @@
 
     goto :goto_0
 
-    .line 3896
     nop
 
     :pswitch_data_0

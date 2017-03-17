@@ -17,13 +17,10 @@
     .param p1, "service"    # Lcom/android/server/wm/WindowManagerService;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-object p1, p0, Lcom/android/server/wm/DualScreenInputMethodManager;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 22
     return-void
 .end method
 
@@ -36,25 +33,20 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 64
     if-nez p1, :cond_0
 
-    .line 65
     iget-object v1, p0, Lcom/android/server/wm/DualScreenInputMethodManager;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowManagerService;->getDefaultDisplayContentLocked()Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
-    .line 87
     :goto_0
     return-object v1
 
-    .line 68
     :cond_0
     const/4 v0, 0x0
 
-    .line 70
     .local v0, "isSamsungIME":Z
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DualScreenInputMethodManager;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -67,16 +59,13 @@
 
     move-result v0
 
-    .line 74
     :goto_1
     if-nez v0, :cond_1
 
-    .line 75
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     goto :goto_0
 
-    .line 78
     :cond_1
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -86,12 +75,10 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 79
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     goto :goto_0
 
-    .line 82
     :cond_2
     iget-object v1, p0, Lcom/android/server/wm/DualScreenInputMethodManager;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -127,7 +114,6 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 84
     iget-object v1, p0, Lcom/android/server/wm/DualScreenInputMethodManager;->mService:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v2, 0x3
@@ -138,13 +124,11 @@
 
     goto :goto_0
 
-    .line 87
     :cond_3
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     goto :goto_0
 
-    .line 71
     :catch_0
     move-exception v1
 
@@ -155,12 +139,10 @@
     .locals 1
 
     .prologue
-    .line 25
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DualScreenInputMethodManager;->printDebugInfo(Ljava/lang/String;)V
 
-    .line 26
     return-void
 .end method
 
@@ -169,10 +151,8 @@
     .param p1, "tags"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DualScreenInputMethodManager;->printDebugInfoLineByLine(Ljava/lang/String;)V
 
-    .line 30
     return-void
 .end method
 
@@ -181,10 +161,8 @@
     .param p1, "tags"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const/4 v0, 0x1
 
-    .line 34
     .local v0, "addTagsToBack":Z
     if-eqz v0, :cond_1
 
@@ -212,17 +190,15 @@
 
     move-result-object v1
 
-    .line 35
     .local v1, "endTags":Ljava/lang/String;
     :goto_0
     if-eqz v0, :cond_2
 
     const-string v4, ""
 
-    .line 36
     .local v4, "startTags":Ljava/lang/String;
     :goto_1
-    const-string/jumbo v5, "debug.dualscreen.ime.callstack"
+    const-string v5, "debug.dualscreen.ime.callstack"
 
     const-string v6, "0"
 
@@ -230,7 +206,6 @@
 
     move-result-object v2
 
-    .line 37
     .local v2, "showCallstack":Ljava/lang/String;
     const-string v5, "1"
 
@@ -240,7 +215,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 38
     const-string v5, "DSIMM"
 
     new-instance v6, Ljava/lang/RuntimeException;
@@ -249,12 +223,10 @@
 
     invoke-static {v5, v1, v6}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 42
     :goto_2
     const-string v1, ""
 
-    .line 44
-    const-string/jumbo v5, "debug.dualscreen.ime.detail"
+    const-string v5, "debug.dualscreen.ime.detail"
 
     const-string v6, "1"
 
@@ -262,7 +234,6 @@
 
     move-result-object v3
 
-    .line 45
     .local v3, "showDetail":Ljava/lang/String;
     const-string v5, "1"
 
@@ -272,7 +243,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 46
     const-string v5, "DSIMM"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -307,7 +277,6 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     const-string v5, "DSIMM"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -342,7 +311,6 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     const-string v5, "DSIMM"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -377,7 +345,6 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     const-string v6, "DSIMM"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -437,11 +404,9 @@
 
     invoke-static {v6, v5}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     :cond_0
     return-void
 
-    .line 34
     .end local v1    # "endTags":Ljava/lang/String;
     .end local v2    # "showCallstack":Ljava/lang/String;
     .end local v3    # "showDetail":Ljava/lang/String;
@@ -455,10 +420,8 @@
     :cond_2
     move-object v4, p1
 
-    .line 35
     goto/16 :goto_1
 
-    .line 40
     .restart local v2    # "showCallstack":Ljava/lang/String;
     .restart local v4    # "startTags":Ljava/lang/String;
     :cond_3
@@ -468,7 +431,6 @@
 
     goto/16 :goto_2
 
-    .line 49
     .restart local v3    # "showDetail":Ljava/lang/String;
     :cond_4
     const/4 v5, 0x0
@@ -483,18 +445,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 55
     if-eq p1, v0, :cond_0
 
     const/4 v1, 0x3
 
     if-ne p1, v1, :cond_1
 
-    .line 56
     :cond_0
     const/4 v0, 0x2
 
-    .line 58
     :cond_1
     return v0
 .end method

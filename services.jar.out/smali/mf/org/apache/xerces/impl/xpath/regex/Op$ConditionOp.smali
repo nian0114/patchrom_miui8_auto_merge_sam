@@ -34,21 +34,15 @@
     .param p5, "noflow"    # Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     .prologue
-    .line 245
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op;-><init>(I)V
 
-    .line 246
     iput p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;->refNumber:I
 
-    .line 247
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;->condition:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 248
     iput-object p4, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;->yes:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 249
     iput-object p5, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;->no:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 250
     return-void
 .end method

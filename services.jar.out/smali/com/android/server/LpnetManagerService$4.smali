@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 821
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$4;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 823
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -49,11 +47,10 @@
 
     const-string v0, "LpnetManagerService"
 
-    const-string/jumbo v1, "onChange - Whitelist()"
+    const-string v1, "onChange - Whitelist()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 826
     :cond_0
     return-void
 .end method

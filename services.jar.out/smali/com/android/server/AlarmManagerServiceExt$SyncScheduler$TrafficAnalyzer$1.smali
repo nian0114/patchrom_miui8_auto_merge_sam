@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3391
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3397
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
     # invokes: Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;->getConnectivityManager()Landroid/net/ConnectivityManager;
@@ -51,7 +49,6 @@
 
     move-result-object v0
 
-    .line 3398
     .local v0, "networkInfo":Landroid/net/NetworkInfo;
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
@@ -68,7 +65,6 @@
     :goto_0
     iput-boolean v1, v2, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;->mDataConnectionIsConnected:Z
 
-    .line 3399
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
 
@@ -76,7 +72,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3400
     const-string v1, "AlarmManagerEXT"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -103,11 +98,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3402
     :cond_0
     return-void
 
-    .line 3398
     :cond_1
     const/4 v1, 0x0
 

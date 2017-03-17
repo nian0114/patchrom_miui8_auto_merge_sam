@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 4267
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$38;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,12 +38,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 4270
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$38;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->onAirplaneModeChanged()V
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$8400(Lcom/android/server/policy/GlobalActions;)V
 
-    .line 4271
     return-void
 .end method

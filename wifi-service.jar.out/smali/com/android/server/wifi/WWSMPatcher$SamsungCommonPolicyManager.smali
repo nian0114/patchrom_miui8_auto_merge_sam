@@ -74,15 +74,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 374
     iput-object p1, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->this$0:Lcom/android/server/wifi/WWSMPatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 375
     iput-object p2, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mContext:Landroid/content/Context;
 
-    .line 376
     return-void
 .end method
 
@@ -92,7 +89,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 379
     iget-object v1, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -129,33 +125,26 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->isSCPMClientExist()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 398
     const/4 v2, 0x0
 
-    .line 445
     :goto_0
     return-object v2
 
-    .line 400
     :cond_0
     const/4 v12, 0x0
 
-    .line 401
     .local v12, "cursorPolicy":Landroid/database/Cursor;
     const/4 v11, 0x0
 
-    .line 402
     .local v11, "cursorData":Landroid/database/Cursor;
     const/16 v19, 0x0
 
-    .line 403
     .local v19, "sb":Ljava/lang/StringBuffer;
     const/4 v2, 0x5
 
@@ -193,7 +182,6 @@
 
     aput-object v4, v17, v2
 
-    .line 405
     .local v17, "projection":[Ljava/lang/String;
     :try_start_0
     const-string v2, "content://com.samsung.android.sm.policy/policy_item/policy_list"
@@ -202,7 +190,6 @@
 
     move-result-object v3
 
-    .line 406
     .local v3, "policyCategory":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -224,7 +211,6 @@
 
     move-result-object v12
 
-    .line 407
     new-instance v20, Ljava/lang/StringBuffer;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuffer;-><init>()V
@@ -232,7 +218,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 408
     .end local v19    # "sb":Ljava/lang/StringBuffer;
     .local v20, "sb":Ljava/lang/StringBuffer;
     :cond_1
@@ -244,7 +229,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 409
     const-string v2, "policyName"
 
     invoke-interface {v12, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -255,7 +239,6 @@
 
     move-result-object v15
 
-    .line 410
     .local v15, "policyName":Ljava/lang/String;
     const-string v2, "policyVersion"
 
@@ -267,7 +250,6 @@
 
     move-result-object v16
 
-    .line 411
     .local v16, "policyVersion":Ljava/lang/String;
     const-string v2, "wwsmpatcher"
 
@@ -277,7 +259,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 412
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,7 +304,6 @@
 
     goto :goto_1
 
-    .line 428
     .end local v15    # "policyName":Ljava/lang/String;
     .end local v16    # "policyVersion":Ljava/lang/String;
     :catch_0
@@ -331,7 +311,6 @@
 
     move-object/from16 v19, v20
 
-    .line 429
     .end local v3    # "policyCategory":Landroid/net/Uri;
     .end local v20    # "sb":Ljava/lang/StringBuffer;
     .local v13, "e":Ljava/lang/Exception;
@@ -339,7 +318,6 @@
     :goto_2
     const/16 v19, 0x0
 
-    .line 430
     :try_start_2
     const-string v2, "WWSMPatcher/SCPM"
 
@@ -349,26 +327,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 432
     if-eqz v11, :cond_2
 
-    .line 433
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 435
     :cond_2
     if-eqz v12, :cond_3
 
-    .line 436
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
-    .line 440
     .end local v13    # "e":Ljava/lang/Exception;
     :cond_3
     :goto_3
     if-eqz v19, :cond_b
 
-    .line 441
     invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -385,7 +357,6 @@
 
     iput-object v2, v0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedStringFromDB:Ljava/lang/String;
 
-    .line 442
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedStringFromDB:Ljava/lang/String;
@@ -398,14 +369,12 @@
 
     iput-object v2, v0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedHashMapFromDB:Ljava/util/HashMap;
 
-    .line 443
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedHashMapFromDB:Ljava/util/HashMap;
 
     goto/16 :goto_0
 
-    .line 416
     .end local v19    # "sb":Ljava/lang/StringBuffer;
     .restart local v3    # "policyCategory":Landroid/net/Uri;
     .restart local v20    # "sb":Ljava/lang/StringBuffer;
@@ -417,7 +386,6 @@
 
     move-result-object v5
 
-    .line 417
     .local v5, "wwsmpatcherCategoryUri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -439,14 +407,11 @@
 
     move-result-object v11
 
-    .line 418
     const-string v18, ""
 
-    .line 419
     .local v18, "record":Ljava/lang/String;
     const-string v10, ""
 
-    .line 420
     .local v10, "category":Ljava/lang/String;
     :cond_5
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
@@ -455,7 +420,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 421
     const/4 v14, 0x0
 
     .local v14, "i":I
@@ -464,7 +428,6 @@
 
     if-ge v14, v2, :cond_5
 
-    .line 422
     aget-object v2, v17, v14
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -475,10 +438,8 @@
 
     move-result-object v18
 
-    .line 423
     if-eqz v18, :cond_6
 
-    .line 424
     move-object/from16 v0, v20
 
     move-object/from16 v1, v18
@@ -488,25 +449,20 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 421
     :cond_6
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_4
 
-    .line 432
     .end local v14    # "i":I
     :cond_7
     if-eqz v11, :cond_8
 
-    .line 433
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 435
     :cond_8
     if-eqz v12, :cond_c
 
-    .line 436
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
     move-object/from16 v19, v20
@@ -515,7 +471,6 @@
     .restart local v19    # "sb":Ljava/lang/StringBuffer;
     goto :goto_3
 
-    .line 432
     .end local v3    # "policyCategory":Landroid/net/Uri;
     .end local v5    # "wwsmpatcherCategoryUri":Landroid/net/Uri;
     .end local v10    # "category":Ljava/lang/String;
@@ -526,26 +481,21 @@
     :goto_5
     if-eqz v11, :cond_9
 
-    .line 433
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 435
     :cond_9
     if-eqz v12, :cond_a
 
-    .line 436
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
     :cond_a
     throw v2
 
-    .line 445
     :cond_b
     const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 432
     .end local v19    # "sb":Ljava/lang/StringBuffer;
     .restart local v3    # "policyCategory":Landroid/net/Uri;
     .restart local v20    # "sb":Ljava/lang/StringBuffer;
@@ -558,7 +508,6 @@
     .restart local v19    # "sb":Ljava/lang/StringBuffer;
     goto :goto_5
 
-    .line 428
     .end local v3    # "policyCategory":Landroid/net/Uri;
     :catch_1
     move-exception v13
@@ -593,7 +542,6 @@
     .end annotation
 
     .prologue
-    .line 391
     const-string v0, "/data/misc/wifi/.scpm_wwsmpatch"
 
     invoke-static {v0}, Lcom/android/server/wifi/WWSMPatcher$Util;->loadDataFromFile(Ljava/lang/String;)Ljava/lang/String;
@@ -602,7 +550,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedStringFromFile:Ljava/lang/String;
 
-    .line 392
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedStringFromFile:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/server/wifi/WWSMPatcher$Util;->getHashMapFromString(Ljava/lang/String;)Ljava/util/HashMap;
@@ -611,7 +558,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedHashMapFromFile:Ljava/util/HashMap;
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedHashMapFromFile:Ljava/util/HashMap;
 
     return-object v0
@@ -623,7 +569,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 383
     const-string v1, "/data/misc/wifi/.scpm_wwsmpatch"
 
     iget-object v2, p0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;->mLoadedStringFromDB:Ljava/lang/String;
@@ -634,14 +579,12 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 384
     const-string v1, "WWSMPatcher/SCPM"
 
     const-string v2, "sdtf failed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     :goto_0
     return v0
 

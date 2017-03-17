@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 303
     new-instance v0, Lcom/sec/epdg/IWlanEnum$DataState;
 
     const-string v1, "DATA_STATE_UNKNOWN"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$DataState;->DATA_STATE_UNKNOWN:Lcom/sec/epdg/IWlanEnum$DataState;
 
-    .line 304
     new-instance v0, Lcom/sec/epdg/IWlanEnum$DataState;
 
     const-string v1, "DATA_STATE_SUSPEND"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$DataState;->DATA_STATE_SUSPEND:Lcom/sec/epdg/IWlanEnum$DataState;
 
-    .line 305
     new-instance v0, Lcom/sec/epdg/IWlanEnum$DataState;
 
     const-string v1, "DATA_STATE_RESUME"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$DataState;->DATA_STATE_RESUME:Lcom/sec/epdg/IWlanEnum$DataState;
 
-    .line 302
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/sec/epdg/IWlanEnum$DataState;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 302
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 302
     const-class v0, Lcom/sec/epdg/IWlanEnum$DataState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 302
     sget-object v0, Lcom/sec/epdg/IWlanEnum$DataState;->$VALUES:[Lcom/sec/epdg/IWlanEnum$DataState;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/IWlanEnum$DataState;->clone()Ljava/lang/Object;

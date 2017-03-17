@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 6481
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/pm/PersonaManagerService$4;->val$removePersona:Z
@@ -46,25 +45,22 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 6494
-    const-string/jumbo v8, "userStopAborted"
+    const-string v8, "userStopAborted"
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v8}, Lcom/android/server/pm/PersonaManagerService;->access$1300(Ljava/lang/String;)I
 
-    .line 6495
     iget-boolean v8, p0, Lcom/android/server/pm/PersonaManagerService$4;->val$removePersona:Z
 
     if-nez v8, :cond_3
 
-    .line 6496
     const-string v8, "PersonaManagerService"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "user stop (not removal) is aborted for "
+    const-string v10, "user stop (not removal) is aborted for "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -80,7 +76,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6497
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v8, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -92,7 +87,6 @@
 
     invoke-direct {v1, v8}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 6498
     .local v1, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     iget v8, p0, Lcom/android/server/pm/PersonaManagerService$4;->val$personaId:I
 
@@ -100,7 +94,6 @@
 
     move-result v4
 
-    .line 6499
     .local v4, "ownerUid":I
     iget-object v8, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -117,11 +110,9 @@
 
     move-result-object v7
 
-    .line 6500
     .local v7, "pkgNames":[Ljava/lang/String;
     if-eqz v7, :cond_0
 
-    .line 6501
     move-object v0, v7
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -136,7 +127,6 @@
 
     aget-object v6, v0, v2
 
-    .line 6502
     .local v6, "pkgName":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -145,12 +135,10 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->sendIntentForAdminLock(Ljava/lang/String;II)V
     invoke-static {v8, v6, v9, v4}, Lcom/android/server/pm/PersonaManagerService;->access$6500(Lcom/android/server/pm/PersonaManagerService;Ljava/lang/String;II)V
 
-    .line 6501
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 6505
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -165,7 +153,6 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->sendIntentForAdminLock(Ljava/lang/String;II)V
     invoke-static {v8, v9, v10, v4}, Lcom/android/server/pm/PersonaManagerService;->access$6500(Lcom/android/server/pm/PersonaManagerService;Ljava/lang/String;II)V
 
-    .line 6507
     :cond_1
     iget-object v8, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -175,16 +162,13 @@
 
     move-result-object v5
 
-    .line 6508
     .local v5, "personaInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v5, :cond_2
 
-    .line 6509
     const/4 v8, 0x0
 
     iput-boolean v8, v5, Landroid/content/pm/PersonaInfo;->lockInProgress:Z
 
-    .line 6515
     .end local v1    # "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .end local v4    # "ownerUid":I
     .end local v5    # "personaInfo":Landroid/content/pm/PersonaInfo;
@@ -193,11 +177,10 @@
     :goto_1
     return-void
 
-    .line 6512
     :cond_3
     const-string v8, "PersonaManagerService"
 
-    const-string/jumbo v9, "userStopAborted called. we cannot remove the persona properly. User needs to reboot."
+    const-string v9, "userStopAborted called. we cannot remove the persona properly. User needs to reboot."
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -209,13 +192,11 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 6484
-    const-string/jumbo v1, "userStopped"
+    const-string v1, "userStopped"
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v1}, Lcom/android/server/pm/PersonaManagerService;->access$1300(Ljava/lang/String;)I
 
-    .line 6485
     const-string v1, "PersonaManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -238,7 +219,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6486
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaHandler:Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -252,11 +232,9 @@
 
     move-result-object v0
 
-    .line 6487
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 6488
     iget-boolean v1, p0, Lcom/android/server/pm/PersonaManagerService$4;->val$removePersona:Z
 
     if-eqz v1, :cond_0
@@ -266,7 +244,6 @@
     :goto_0
     iput v1, v0, Landroid/os/Message;->arg2:I
 
-    .line 6489
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaHandler:Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -276,10 +253,8 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/PersonaManagerService$PersonaHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6490
     return-void
 
-    .line 6488
     :cond_0
     const/4 v1, 0x0
 

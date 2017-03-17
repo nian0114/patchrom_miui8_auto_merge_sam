@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 403
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 404
     iput-object p1, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 405
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 408
     iget-object v0, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -58,25 +54,21 @@
     .end annotation
 
     .prologue
-    .line 992
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 993
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 996
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 997
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x21
@@ -85,34 +77,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 998
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 999
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 1002
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1003
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1005
     return v2
 
-    .line 1002
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1003
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -128,28 +113,23 @@
     .end annotation
 
     .prologue
-    .line 865
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 866
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 869
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 870
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 871
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x1a
@@ -158,34 +138,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 872
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 873
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 876
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 877
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 879
     return v2
 
-    .line 876
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 877
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -200,25 +173,21 @@
     .end annotation
 
     .prologue
-    .line 512
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 513
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 516
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 517
     iget-object v4, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v5, 0x7
@@ -227,34 +196,27 @@
 
     invoke-interface {v4, v5, v0, v1, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 518
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 519
     invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 522
     .local v2, "_result":J
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 523
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 525
     return-wide v2
 
-    .line 522
     .end local v2    # "_result":J
     :catchall_0
     move-exception v4
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 523
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v4
@@ -269,25 +231,21 @@
     .end annotation
 
     .prologue
-    .line 529
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 530
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 533
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 534
     iget-object v4, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v5, 0x8
@@ -296,34 +254,27 @@
 
     invoke-interface {v4, v5, v0, v1, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 535
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 536
     invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 539
     .local v2, "_result":J
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 540
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 542
     return-wide v2
 
-    .line 539
     .end local v2    # "_result":J
     :catchall_0
     move-exception v4
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 540
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v4
@@ -333,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 412
     const-string v0, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     return-object v0
@@ -350,25 +300,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 546
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 547
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 550
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 551
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x9
@@ -377,10 +323,8 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 552
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 553
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -391,25 +335,20 @@
 
     const/4 v2, 0x1
 
-    .line 556
     .local v2, "_result":Z
     :cond_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 557
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 559
     return v2
 
-    .line 556
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 557
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -424,25 +363,21 @@
     .end annotation
 
     .prologue
-    .line 478
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 479
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 482
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 483
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x5
@@ -451,34 +386,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 484
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 485
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 488
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 489
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 491
     return v2
 
-    .line 488
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 489
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -495,25 +423,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 461
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 462
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 465
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 466
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x4
@@ -522,10 +446,8 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 467
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 468
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -536,25 +458,20 @@
 
     const/4 v2, 0x1
 
-    .line 471
     .local v2, "_result":Z
     :cond_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 472
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 474
     return v2
 
-    .line 471
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 472
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -569,25 +486,21 @@
     .end annotation
 
     .prologue
-    .line 619
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 620
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 623
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 624
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xd
@@ -596,34 +509,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 625
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 626
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 629
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 630
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 632
     return v2
 
-    .line 629
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 630
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -638,25 +544,21 @@
     .end annotation
 
     .prologue
-    .line 495
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 496
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 499
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 500
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x6
@@ -665,34 +567,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 501
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 502
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 505
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 506
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 508
     return v2
 
-    .line 505
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 506
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -707,25 +602,21 @@
     .end annotation
 
     .prologue
-    .line 417
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 418
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 420
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 421
     iget-object v2, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x1
@@ -734,27 +625,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 422
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 425
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 426
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 428
     return-void
 
-    .line 425
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 426
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -772,25 +657,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 636
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 637
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 640
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 641
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -798,7 +679,6 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 642
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xe
@@ -807,34 +687,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 643
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 644
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 647
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 648
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 650
     return v2
 
-    .line 647
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 648
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -849,25 +722,21 @@
     .end annotation
 
     .prologue
-    .line 1009
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1010
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1013
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1014
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x22
@@ -876,34 +745,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 1015
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 1016
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 1019
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1020
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1022
     return v2
 
-    .line 1019
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1020
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -919,25 +781,21 @@
     .end annotation
 
     .prologue
-    .line 431
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 432
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 434
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 435
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/broadcom/fm/fmreceiver/IFmReceiverCallback;->asBinder()Landroid/os/IBinder;
@@ -947,7 +805,6 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 436
     iget-object v2, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x2
@@ -956,33 +813,26 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 437
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 440
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 441
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 443
     return-void
 
-    .line 435
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 440
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 441
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -1001,37 +851,29 @@
     .end annotation
 
     .prologue
-    .line 698
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 699
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 702
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 703
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 704
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 705
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 706
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 707
     iget-object v4, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v5, 0x11
@@ -1040,34 +882,27 @@
 
     invoke-interface {v4, v5, v0, v1, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 708
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 709
     invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 712
     .local v2, "_result":J
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 713
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 715
     return-wide v2
 
-    .line 712
     .end local v2    # "_result":J
     :catchall_0
     move-exception v4
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 713
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v4
@@ -1084,31 +919,25 @@
     .end annotation
 
     .prologue
-    .line 654
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 655
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 658
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 659
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 660
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 661
     iget-object v4, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v5, 0xf
@@ -1117,34 +946,27 @@
 
     invoke-interface {v4, v5, v0, v1, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 662
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 663
     invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 666
     .local v2, "_result":J
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 667
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 669
     return-wide v2
 
-    .line 666
     .end local v2    # "_result":J
     :catchall_0
     move-exception v4
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 667
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v4
@@ -1159,25 +981,21 @@
     .end annotation
 
     .prologue
-    .line 719
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 720
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 723
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 724
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x12
@@ -1186,34 +1004,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 725
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 726
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 729
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 730
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 732
     return v2
 
-    .line 729
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 730
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1238,40 +1049,31 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 673
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 674
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 677
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 678
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 679
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 680
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 681
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 682
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 683
     if-eqz p6, :cond_0
 
     const/4 v3, 0x1
@@ -1279,13 +1081,10 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 684
     invoke-virtual {v0, p7}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 685
     invoke-virtual {v0, p8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 686
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x10
@@ -1294,34 +1093,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 687
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 688
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 691
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 692
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 694
     return v2
 
-    .line 691
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 692
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1337,28 +1129,23 @@
     .end annotation
 
     .prologue
-    .line 775
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 776
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 779
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 780
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 781
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x15
@@ -1367,34 +1154,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 782
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 783
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 786
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 787
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 789
     return v2
 
-    .line 786
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 787
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1410,28 +1190,23 @@
     .end annotation
 
     .prologue
-    .line 793
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 794
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 797
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 798
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 799
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x16
@@ -1440,34 +1215,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 800
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 801
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 804
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 805
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 807
     return v2
 
-    .line 804
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 805
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1483,28 +1251,23 @@
     .end annotation
 
     .prologue
-    .line 938
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 939
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 942
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 943
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 944
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x1e
@@ -1513,34 +1276,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 945
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 946
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 949
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 950
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 952
     return v2
 
-    .line 949
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 950
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1556,28 +1312,23 @@
     .end annotation
 
     .prologue
-    .line 847
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 848
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 851
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 852
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 853
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x19
@@ -1586,34 +1337,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 854
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 855
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 858
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 859
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 861
     return v2
 
-    .line 858
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 859
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1631,25 +1375,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 974
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 975
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 978
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 979
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -1657,7 +1397,6 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 980
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x20
@@ -1666,34 +1405,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 981
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 982
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 985
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 986
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 988
     return v2
 
-    .line 985
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 986
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1709,28 +1441,23 @@
     .end annotation
 
     .prologue
-    .line 902
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 903
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 906
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 907
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 908
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x1c
@@ -1739,34 +1466,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 909
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 910
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 913
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 914
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 916
     return v2
 
-    .line 913
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 914
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1785,25 +1505,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 883
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 884
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 887
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 888
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -1811,10 +1527,8 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 889
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 890
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x1b
@@ -1823,34 +1537,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 891
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 892
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 895
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 896
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 898
     return v2
 
-    .line 895
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 896
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1866,28 +1573,23 @@
     .end annotation
 
     .prologue
-    .line 757
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 758
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 761
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 762
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 763
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x14
@@ -1896,34 +1598,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 764
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 765
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 768
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 769
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 771
     return v2
 
-    .line 768
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 769
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1942,37 +1637,29 @@
     .end annotation
 
     .prologue
-    .line 736
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 737
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 740
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 741
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 742
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 743
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 744
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 745
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x13
@@ -1981,34 +1668,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 746
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 747
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 750
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 751
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 753
     return v2
 
-    .line 750
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 751
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2026,25 +1706,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 956
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 957
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 960
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 961
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -2052,7 +1728,6 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 962
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x1f
@@ -2061,34 +1736,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 963
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 964
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 967
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 968
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 970
     return v2
 
-    .line 967
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 968
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2104,28 +1772,23 @@
     .end annotation
 
     .prologue
-    .line 920
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 921
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 924
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 925
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 926
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x1d
@@ -2134,34 +1797,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 927
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 928
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 931
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 932
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 934
     return v2
 
-    .line 931
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 932
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2177,28 +1833,23 @@
     .end annotation
 
     .prologue
-    .line 811
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 812
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 815
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 816
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 817
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x17
@@ -2207,34 +1858,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 818
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 819
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 822
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 823
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 825
     return v2
 
-    .line 822
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 823
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2250,28 +1894,23 @@
     .end annotation
 
     .prologue
-    .line 829
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 830
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 833
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 834
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 835
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x18
@@ -2280,34 +1919,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 836
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 837
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 840
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 841
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 843
     return v2
 
-    .line 840
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 841
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2323,28 +1955,23 @@
     .end annotation
 
     .prologue
-    .line 601
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 602
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 605
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 606
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 607
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xc
@@ -2353,34 +1980,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 608
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 609
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 612
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 613
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 615
     return v2
 
-    .line 612
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 613
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2398,25 +2018,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 563
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 564
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 567
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v4, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 568
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -2424,7 +2040,6 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 569
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xa
@@ -2433,34 +2048,27 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 570
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 571
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 574
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 575
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 577
     return v2
 
-    .line 574
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 575
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2477,31 +2085,25 @@
     .end annotation
 
     .prologue
-    .line 581
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 582
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 585
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 586
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 587
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeCharArray([C)V
 
-    .line 588
     iget-object v3, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xb
@@ -2510,37 +2112,29 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 589
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 590
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 591
     .local v2, "_result":I
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->readCharArray([C)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 594
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 595
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 597
     return v2
 
-    .line 594
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 595
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -2556,25 +2150,21 @@
     .end annotation
 
     .prologue
-    .line 446
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 447
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 449
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.broadcom.fm.fmreceiver.IFmReceiverService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 450
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/broadcom/fm/fmreceiver/IFmReceiverCallback;->asBinder()Landroid/os/IBinder;
@@ -2584,7 +2174,6 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 451
     iget-object v2, p0, Lcom/broadcom/fm/fmreceiver/IFmReceiverService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x3
@@ -2593,33 +2182,26 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 452
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 455
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 456
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 458
     return-void
 
-    .line 450
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 455
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 456
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 268
     iput-object p1, p0, Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;->this$0:Lcom/android/server/enterprise/license/LicenseLogService;
 
-    .line 269
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 270
     return-void
 .end method
 
@@ -41,20 +38,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 273
     if-eqz p1, :cond_0
 
-    .line 274
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 289
     :cond_0
     :goto_0
     return-void
 
-    .line 276
     :pswitch_0
     const-string v1, "LicenseLogService"
 
@@ -62,7 +55,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     iget-object v1, p0, Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;->this$0:Lcom/android/server/enterprise/license/LicenseLogService;
 
     # invokes: Lcom/android/server/enterprise/license/LicenseLogService;->handleLicenseLogCleanNotification()V
@@ -70,13 +62,11 @@
 
     goto :goto_0
 
-    .line 281
     :pswitch_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 282
     .local v0, "data":Landroid/os/Bundle;
     iget-object v1, p0, Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;->this$0:Lcom/android/server/enterprise/license/LicenseLogService;
 
@@ -97,7 +87,6 @@
 
     goto :goto_0
 
-    .line 274
     nop
 
     :pswitch_data_0

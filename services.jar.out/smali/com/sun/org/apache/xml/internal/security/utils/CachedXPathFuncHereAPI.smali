@@ -217,7 +217,7 @@
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "java.lang.String"
+    const-string v0, "java.lang.String"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -232,7 +232,7 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "javax.xml.transform.SourceLocator"
+    const-string v0, "javax.xml.transform.SourceLocator"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -268,7 +268,7 @@
 
     if-nez v0, :cond_4
 
-    const-string/jumbo v0, "javax.xml.transform.ErrorListener"
+    const-string v0, "javax.xml.transform.ErrorListener"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -442,7 +442,7 @@
 
     if-nez v2, :cond_3
 
-    const-string/jumbo v2, "java.lang.String"
+    const-string v2, "java.lang.String"
 
     invoke-static {v2}, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -483,7 +483,7 @@
     sput-object v2, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$com$sun$org$apache$xpath$internal$compiler$FunctionTable:Ljava/lang/Class;
 
     :goto_2
-    const-string/jumbo v4, "installFunction"
+    const-string v4, "installFunction"
 
     invoke-virtual {v2, v4, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -503,7 +503,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "here"
+    const-string v5, "here"
 
     aput-object v5, v3, v4
 
@@ -546,7 +546,7 @@
 
     if-nez v0, :cond_7
 
-    const-string/jumbo v0, "java.lang.String"
+    const-string v0, "java.lang.String"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -563,7 +563,7 @@
 
     if-nez v0, :cond_8
 
-    const-string/jumbo v0, "java.lang.Class"
+    const-string v0, "java.lang.Class"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -587,7 +587,7 @@
     sput-object v0, Lcom/sun/org/apache/xml/internal/security/utils/CachedXPathFuncHereAPI;->class$com$sun$org$apache$xpath$internal$compiler$FunctionTable:Ljava/lang/Class;
 
     :goto_6
-    const-string/jumbo v4, "installFunction"
+    const-string v4, "installFunction"
 
     invoke-virtual {v0, v4, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -599,7 +599,7 @@
 
     const/4 v0, 0x0
 
-    const-string/jumbo v5, "here"
+    const-string v5, "here"
 
     aput-object v5, v4, v0
 
@@ -984,7 +984,7 @@
 
     if-eq p3, v0, :cond_1
 
-    const-string/jumbo v0, "here()"
+    const-string v0, "here()"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
@@ -1075,7 +1075,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "endorsed.jdk1.4.0"
+    const-string v3, "endorsed.jdk1.4.0"
 
     invoke-static {v3}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1145,7 +1145,7 @@
 
     if-eq p3, v1, :cond_3
 
-    const-string/jumbo v1, "here()"
+    const-string v1, "here()"
 
     invoke-virtual {p3, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 

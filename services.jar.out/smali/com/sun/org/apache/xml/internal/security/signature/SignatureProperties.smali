@@ -194,7 +194,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

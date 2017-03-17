@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 244
     invoke-static {}, Landroid/hardware/display/DisplayManager$WfdAppState;->values()[Landroid/hardware/display/DisplayManager$WfdAppState;
 
     move-result-object v0

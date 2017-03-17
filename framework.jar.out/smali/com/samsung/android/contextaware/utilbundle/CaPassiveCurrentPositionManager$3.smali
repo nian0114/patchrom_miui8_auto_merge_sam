@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 222
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager$3;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 231
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager$3;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->registerGpsListener()V
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->access$300(Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;)V
 
-    .line 232
     return-void
 .end method

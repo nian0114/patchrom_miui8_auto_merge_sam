@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2077
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "info"    # Landroid/net/wifi/p2p/WifiP2pGroup;
 
     .prologue
-    .line 2080
     const-string v1, "WifiDisplayController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,22 +67,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2081
     if-nez p1, :cond_1
 
-    .line 2090
     :cond_0
     :goto_0
     return-void
 
-    .line 2085
     :cond_1
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # setter for: Lcom/android/server/display/WifiDisplayController;->mConnectedDeviceGroupInfo:Landroid/net/wifi/p2p/WifiP2pGroup;
     invoke-static {v1, p1}, Lcom/android/server/display/WifiDisplayController;->access$3702(Lcom/android/server/display/WifiDisplayController;Landroid/net/wifi/p2p/WifiP2pGroup;)Landroid/net/wifi/p2p/WifiP2pGroup;
 
-    .line 2086
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-virtual {p1}, Landroid/net/wifi/p2p/WifiP2pGroup;->getFrequency()I
@@ -94,7 +88,6 @@
     # setter for: Lcom/android/server/display/WifiDisplayController;->mWfdFrequency:I
     invoke-static {v1, v2}, Lcom/android/server/display/WifiDisplayController;->access$4202(Lcom/android/server/display/WifiDisplayController;I)I
 
-    .line 2087
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # invokes: Lcom/android/server/display/WifiDisplayController;->getChangedClientDevice(Landroid/net/wifi/p2p/WifiP2pGroup;)Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -102,11 +95,9 @@
 
     move-result-object v0
 
-    .line 2088
     .local v0, "updatedClient":Landroid/net/wifi/p2p/WifiP2pDevice;
     if-eqz v0, :cond_0
 
-    .line 2089
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mListener:Lcom/android/server/display/WifiDisplayController$Listener;

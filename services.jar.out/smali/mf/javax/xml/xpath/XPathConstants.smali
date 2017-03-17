@@ -22,10 +22,9 @@
     .locals 3
 
     .prologue
-    .line 70
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
-    const-string/jumbo v1, "http://www.w3.org/1999/XSL/Transform"
+    const-string v1, "http://www.w3.org/1999/XSL/Transform"
 
     const-string v2, "NUMBER"
 
@@ -33,10 +32,9 @@
 
     sput-object v0, Lmf/javax/xml/xpath/XPathConstants;->NUMBER:Lmf/javax/xml/namespace/QName;
 
-    .line 77
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
-    const-string/jumbo v1, "http://www.w3.org/1999/XSL/Transform"
+    const-string v1, "http://www.w3.org/1999/XSL/Transform"
 
     const-string v2, "STRING"
 
@@ -44,10 +42,9 @@
 
     sput-object v0, Lmf/javax/xml/xpath/XPathConstants;->STRING:Lmf/javax/xml/namespace/QName;
 
-    .line 84
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
-    const-string/jumbo v1, "http://www.w3.org/1999/XSL/Transform"
+    const-string v1, "http://www.w3.org/1999/XSL/Transform"
 
     const-string v2, "BOOLEAN"
 
@@ -55,10 +52,9 @@
 
     sput-object v0, Lmf/javax/xml/xpath/XPathConstants;->BOOLEAN:Lmf/javax/xml/namespace/QName;
 
-    .line 91
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
-    const-string/jumbo v1, "http://www.w3.org/1999/XSL/Transform"
+    const-string v1, "http://www.w3.org/1999/XSL/Transform"
 
     const-string v2, "NODESET"
 
@@ -66,10 +62,9 @@
 
     sput-object v0, Lmf/javax/xml/xpath/XPathConstants;->NODESET:Lmf/javax/xml/namespace/QName;
 
-    .line 98
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
-    const-string/jumbo v1, "http://www.w3.org/1999/XSL/Transform"
+    const-string v1, "http://www.w3.org/1999/XSL/Transform"
 
     const-string v2, "NODE"
 
@@ -77,7 +72,6 @@
 
     sput-object v0, Lmf/javax/xml/xpath/XPathConstants;->NODE:Lmf/javax/xml/namespace/QName;
 
-    .line 103
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

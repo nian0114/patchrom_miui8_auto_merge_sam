@@ -172,14 +172,14 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "utils.resolver.noClass"
+    const-string v2, "utils.resolver.noClass"
 
     invoke-direct {v0, v2, v1}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
     throw v0
 
     :cond_0
-    const-string/jumbo v0, "null"
+    const-string v0, "null"
 
     goto :goto_1
 
@@ -258,14 +258,14 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "utils.resolver.noClass"
+    const-string v2, "utils.resolver.noClass"
 
     invoke-direct {v0, v2, v1}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
     throw v0
 
     :cond_5
-    const-string/jumbo v0, "null"
+    const-string v0, "null"
 
     goto :goto_2
 .end method
@@ -313,7 +313,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v1, "utils.resolver.noClass"
+    const-string v1, "utils.resolver.noClass"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;)V
 

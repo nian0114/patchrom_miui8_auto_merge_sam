@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 429
     invoke-static {}, Lcom/ipsec/client/IPsecEvent;->values()[Lcom/ipsec/client/IPsecEvent;
 
     move-result-object v0

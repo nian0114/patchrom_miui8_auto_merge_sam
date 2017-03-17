@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,17 +39,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 160
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->data:Landroid/os/Bundle;
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->data:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "swap"
+    const-string v1, "swap"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -58,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     # getter for: Lcom/android/server/enterprise/auditlog/LogWritter;->mCircularBuffer:Lcom/android/server/enterprise/auditlog/CircularBuffer;
@@ -70,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->write(Ljava/lang/String;)V
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     # getter for: Lcom/android/server/enterprise/auditlog/LogWritter;->mObserver:Lcom/android/server/enterprise/auditlog/IObserver;
@@ -82,15 +77,13 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/enterprise/auditlog/IObserver;->notifyReadyToDump(Z)V
 
-    .line 172
     :goto_0
     return-void
 
-    .line 166
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->data:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "log"
+    const-string v1, "log"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -98,7 +91,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     # getter for: Lcom/android/server/enterprise/auditlog/LogWritter;->mCircularBuffer:Lcom/android/server/enterprise/auditlog/CircularBuffer;
@@ -108,7 +100,7 @@
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->data:Landroid/os/Bundle;
 
-    const-string/jumbo v2, "log"
+    const-string v2, "log"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -118,7 +110,6 @@
 
     goto :goto_0
 
-    .line 170
     :cond_1
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 

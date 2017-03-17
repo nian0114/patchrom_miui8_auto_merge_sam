@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 123
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$1;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 126
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 145
     :goto_0
     return-void
 
-    .line 141
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$1;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 126
     :pswitch_data_0
     .packed-switch 0x7d0
         :pswitch_0

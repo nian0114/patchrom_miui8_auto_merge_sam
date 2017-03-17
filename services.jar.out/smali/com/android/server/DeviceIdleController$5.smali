@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 310
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$5;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,24 +40,19 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 313
     iget-object v1, p0, Lcom/android/server/DeviceIdleController$5;->this$0:Lcom/android/server/DeviceIdleController;
 
     monitor-enter v1
 
-    .line 314
     :try_start_0
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$5;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-virtual {v0, p1}, Lcom/android/server/DeviceIdleController;->receivedGpsLocationLocked(Landroid/location/Location;)V
 
-    .line 315
     monitor-exit v1
 
-    .line 316
     return-void
 
-    .line 315
     :catchall_0
     move-exception v0
 
@@ -74,7 +68,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 328
     return-void
 .end method
 
@@ -83,7 +76,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 324
     return-void
 .end method
 
@@ -94,6 +86,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 320
     return-void
 .end method

@@ -35,12 +35,10 @@
     .locals 2
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/sec/epdg/DnsPinger$ActivePing;->this$0:Lcom/sec/epdg/DnsPinger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -56,7 +54,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/DnsPinger$1;
 
     .prologue
-    .line 99
     invoke-direct {p0, p1}, Lcom/sec/epdg/DnsPinger$ActivePing;-><init>(Lcom/sec/epdg/DnsPinger;)V
 
     return-void

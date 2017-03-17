@@ -35,27 +35,21 @@
     .param p6, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 1734
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1735
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->packageName:Ljava/lang/String;
 
-    .line 1736
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->uid:I
 
-    .line 1737
     iput-wide p4, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->firstInstallTime:J
 
-    .line 1738
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p2, p6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->componentName:Landroid/content/ComponentName;
 
-    .line 1739
     return-void
 .end method

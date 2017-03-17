@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 286
     iput-object p1, p0, Lcom/android/server/LocationManagerService$1;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 290
     const-string v1, "CHN"
 
     # getter for: Lcom/android/server/LocationManagerService;->mSecSalesCode:Ljava/lang/String;
@@ -107,11 +105,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 292
     :cond_0
     const v0, 0x1070029
 
-    .line 293
     .local v0, "id_config_locationProviderPackageNames":I
     const-string v1, "CHM"
 
@@ -126,10 +122,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 294
     const v0, 0x1070082
 
-    .line 298
     :goto_0
     iget-object v1, p0, Lcom/android/server/LocationManagerService$1;->this$0:Lcom/android/server/LocationManagerService;
 
@@ -146,19 +140,16 @@
 
     move-result-object v1
 
-    .line 301
     .end local v0    # "id_config_locationProviderPackageNames":I
     :goto_1
     return-object v1
 
-    .line 296
     .restart local v0    # "id_config_locationProviderPackageNames":I
     :cond_1
     const v0, 0x1070081
 
     goto :goto_0
 
-    .line 301
     .end local v0    # "id_config_locationProviderPackageNames":I
     :cond_2
     iget-object v1, p0, Lcom/android/server/LocationManagerService$1;->this$0:Lcom/android/server/LocationManagerService;

@@ -28,10 +28,8 @@
     .locals 1
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -47,25 +45,21 @@
     .locals 2
 
     .prologue
-    .line 31
     iget-object v1, p0, Landroid/content/pm/PersonaValidator;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 32
     :try_start_0
     iget-object v0, p0, Landroid/content/pm/PersonaValidator;->mActualValidator:Landroid/content/pm/PersonaValidator$LocalBinder;
 
     if-nez v0, :cond_0
 
-    .line 33
     new-instance v0, Landroid/content/pm/PersonaValidator$LocalBinder;
 
     invoke-direct {v0, p0}, Landroid/content/pm/PersonaValidator$LocalBinder;-><init>(Landroid/content/pm/PersonaValidator;)V
 
     iput-object v0, p0, Landroid/content/pm/PersonaValidator;->mActualValidator:Landroid/content/pm/PersonaValidator$LocalBinder;
 
-    .line 35
     :cond_0
     iget-object v0, p0, Landroid/content/pm/PersonaValidator;->mActualValidator:Landroid/content/pm/PersonaValidator$LocalBinder;
 
@@ -73,7 +67,6 @@
 
     return-object v0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -91,7 +84,6 @@
     .param p4, "personaId"    # I
 
     .prologue
-    .line 50
     const-string v0, "Abstract-PersonaValidator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +116,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     const/4 v0, -0x1
 
     return v0

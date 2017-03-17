@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Landroid/service/ISEDenialService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 54
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/service/ISEDenialService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const-string v0, "android.service.ISEDenialService"
 
     return-object v0

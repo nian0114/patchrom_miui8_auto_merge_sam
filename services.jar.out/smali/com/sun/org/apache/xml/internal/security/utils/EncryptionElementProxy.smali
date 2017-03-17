@@ -29,7 +29,7 @@
 .method public final getBaseNamespace()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     return-object v0
 .end method

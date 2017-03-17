@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 10
     new-instance v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     const-string v1, "VENDOR_ERROR"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->VENDOR_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 15
     new-instance v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     const-string v1, "IKE_NEGOTIATION_ERROR"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->IKE_NEGOTIATION_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 20
     new-instance v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     const-string v1, "DNS_RESOLUTION_FAILED_ERROR"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->DNS_RESOLUTION_FAILED_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 24
     new-instance v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     const-string v1, "TIMEOUT_ERROR"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->TIMEOUT_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 28
     new-instance v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     const-string v1, "CERTIFICATION_ERROR"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->CERTIFICATION_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 32
     new-instance v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     const-string v1, "DNS_A_QUERY_ERROR"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->DNS_A_QUERY_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 5
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/sec/epdg/IWlanError$EpdgError;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 5
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 5
     const-class v0, Lcom/sec/epdg/IWlanError$EpdgError;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 5
     sget-object v0, Lcom/sec/epdg/IWlanError$EpdgError;->$VALUES:[Lcom/sec/epdg/IWlanError$EpdgError;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/IWlanError$EpdgError;->clone()Ljava/lang/Object;

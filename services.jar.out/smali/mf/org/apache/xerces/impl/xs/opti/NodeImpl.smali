@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/opti/DefaultNode;-><init>()V
 
-    .line 38
     return-void
 .end method
 
@@ -38,25 +36,18 @@
     .param p5, "nodeType"    # S
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/opti/DefaultNode;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->prefix:Ljava/lang/String;
 
-    .line 43
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->localpart:Ljava/lang/String;
 
-    .line 44
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->rawname:Ljava/lang/String;
 
-    .line 45
     iput-object p4, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->uri:Ljava/lang/String;
 
-    .line 46
     iput-short p5, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->nodeType:S
 
-    .line 47
     return-void
 .end method
 
@@ -66,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->localpart:Ljava/lang/String;
 
     return-object v0
@@ -76,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->uri:Ljava/lang/String;
 
     return-object v0
@@ -86,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->rawname:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->nodeType:S
 
     return v0
@@ -106,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->prefix:Ljava/lang/String;
 
     return-object v0
@@ -116,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->hidden:Z
 
     return v0
@@ -128,10 +113,8 @@
     .param p2, "deep"    # Z
 
     .prologue
-    .line 78
     iput-boolean p1, p0, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;->hidden:Z
 
-    .line 79
     return-void
 .end method
 
@@ -139,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "["

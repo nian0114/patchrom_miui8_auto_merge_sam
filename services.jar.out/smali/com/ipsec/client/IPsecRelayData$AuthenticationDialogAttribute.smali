@@ -26,13 +26,10 @@
     .param p1, "aName"    # Ljava/lang/String;
 
     .prologue
-    .line 312
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 313
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeName:Ljava/lang/String;
 
-    .line 314
     return-void
 .end method
 
@@ -42,16 +39,12 @@
     .param p2, "aValue"    # Ljava/lang/String;
 
     .prologue
-    .line 306
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 307
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeName:Ljava/lang/String;
 
-    .line 308
     iput-object p2, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeValue:Ljava/lang/String;
 
-    .line 309
     return-void
 .end method
 
@@ -61,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 323
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeName:Ljava/lang/String;
 
     return-object v0
@@ -71,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 333
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeValue:Ljava/lang/String;
 
     return-object v0
@@ -82,10 +73,8 @@
     .param p1, "aValue"    # Ljava/lang/String;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeValue:Ljava/lang/String;
 
-    .line 344
     return-void
 .end method
 
@@ -93,10 +82,8 @@
     .locals 3
 
     .prologue
-    .line 349
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeValue:Ljava/lang/String;
 
-    .line 351
     .local v0, "value":Ljava/lang/String;
     iget-object v1, p0, Lcom/ipsec/client/IPsecRelayData$AuthenticationDialogAttribute;->attributeName:Ljava/lang/String;
 
@@ -108,7 +95,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 353
     new-instance v0, Ljava/lang/String;
 
     .end local v0    # "value":Ljava/lang/String;
@@ -116,7 +102,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "length="
+    const-string v2, "length="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -138,7 +124,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 356
     .restart local v0    # "value":Ljava/lang/String;
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -167,7 +152,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

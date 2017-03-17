@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 711
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iput-object p2, p0, Lcom/android/server/LpnetManagerService$2$1;->val$uri:Landroid/net/Uri;
@@ -52,23 +51,19 @@
     .locals 10
 
     .prologue
-    .line 714
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->val$uri:Landroid/net/Uri;
 
     if-eqz v6, :cond_0
 
-    .line 715
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->val$uri:Landroid/net/Uri;
 
     invoke-virtual {v6}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 716
     .local v4, "pkgName":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 717
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->val$varAction:Ljava/lang/String;
 
     const-string v7, "android.intent.action.PACKAGE_REMOVED"
@@ -79,18 +74,15 @@
 
     if-eqz v6, :cond_1
 
-    .line 718
     iget-boolean v6, p0, Lcom/android/server/LpnetManagerService$2$1;->val$isReInstall:Z
 
     if-nez v6, :cond_0
 
-    .line 807
     .end local v4    # "pkgName":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 741
     .restart local v4    # "pkgName":Ljava/lang/String;
     :cond_1
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->val$varAction:Ljava/lang/String;
@@ -103,7 +95,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 742
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -115,7 +106,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 743
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -127,7 +117,6 @@
 
     monitor-enter v7
 
-    .line 744
     :try_start_0
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -144,7 +133,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 745
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -156,7 +144,6 @@
 
     invoke-virtual {v6, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 746
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -166,7 +153,6 @@
     # invokes: Lcom/android/server/LpnetManagerService;->updateDB(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v6, v4, v8}, Lcom/android/server/LpnetManagerService;->access$600(Lcom/android/server/LpnetManagerService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 748
     :cond_2
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -181,7 +167,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "mUserFSPackages : "
+    const-string v9, "mUserFSPackages : "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -210,7 +196,6 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
     :cond_3
     monitor-exit v7
 
@@ -225,11 +210,9 @@
 
     throw v6
 
-    .line 755
     :cond_4
     const/4 v3, 0x0
 
-    .line 756
     .local v3, "otherPkgs":Z
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -242,7 +225,6 @@
 
     monitor-enter v7
 
-    .line 757
     :try_start_1
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -277,13 +259,11 @@
     :cond_5
     const/4 v3, 0x1
 
-    .line 758
     :cond_6
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 759
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -312,11 +292,9 @@
 
     if-eqz v3, :cond_0
 
-    .line 760
     :cond_7
     const/4 v1, 0x0
 
-    .line 762
     .local v1, "appStatus":Z
     :try_start_2
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
@@ -334,18 +312,15 @@
 
     move-result-object v0
 
-    .line 763
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget-boolean v1, v0, Landroid/content/pm/ApplicationInfo;->enabled:Z
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 767
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :goto_1
     if-eqz v1, :cond_a
 
-    .line 769
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -361,7 +336,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 774
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -371,11 +345,9 @@
 
     move-result v5
 
-    .line 775
     .local v5, "versionMatch":Z
     if-nez v5, :cond_8
 
-    .line 777
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -387,7 +359,6 @@
 
     monitor-enter v7
 
-    .line 778
     :try_start_3
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -400,16 +371,13 @@
 
     invoke-virtual {v6, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 779
     monitor-exit v7
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 782
     :cond_8
     if-eqz v5, :cond_0
 
-    .line 783
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -419,11 +387,9 @@
 
     move-result v2
 
-    .line 784
     .local v2, "c2dmPermExists":Z
     if-nez v2, :cond_9
 
-    .line 786
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
     iget-object v6, v6, Lcom/android/server/LpnetManagerService$2;->this$0:Lcom/android/server/LpnetManagerService;
@@ -435,7 +401,6 @@
 
     monitor-enter v7
 
-    .line 787
     :try_start_4
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -448,7 +413,6 @@
 
     invoke-virtual {v6, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 788
     monitor-exit v7
 
     goto/16 :goto_0
@@ -462,7 +426,6 @@
 
     throw v6
 
-    .line 758
     .end local v1    # "appStatus":Z
     .end local v2    # "c2dmPermExists":Z
     .end local v5    # "versionMatch":Z
@@ -476,7 +439,6 @@
 
     throw v6
 
-    .line 779
     .restart local v1    # "appStatus":Z
     .restart local v5    # "versionMatch":Z
     :catchall_3
@@ -489,7 +451,6 @@
 
     throw v6
 
-    .line 791
     .restart local v2    # "c2dmPermExists":Z
     :cond_9
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
@@ -503,7 +464,6 @@
 
     monitor-enter v7
 
-    .line 792
     :try_start_7
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -516,7 +476,6 @@
 
     invoke-virtual {v6, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 793
     monitor-exit v7
 
     goto/16 :goto_0
@@ -530,7 +489,6 @@
 
     throw v6
 
-    .line 799
     .end local v2    # "c2dmPermExists":Z
     .end local v5    # "versionMatch":Z
     :cond_a
@@ -545,7 +503,6 @@
 
     monitor-enter v7
 
-    .line 800
     :try_start_8
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$2$1;->this$1:Lcom/android/server/LpnetManagerService$2;
 
@@ -558,7 +515,6 @@
 
     invoke-virtual {v6, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 801
     monitor-exit v7
 
     goto/16 :goto_0
@@ -572,7 +528,6 @@
 
     throw v6
 
-    .line 764
     :catch_0
     move-exception v6
 

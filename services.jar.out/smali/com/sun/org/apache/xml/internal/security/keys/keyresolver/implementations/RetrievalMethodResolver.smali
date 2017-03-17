@@ -326,7 +326,7 @@
 
     if-eqz v2, :cond_5
 
-    const-string/jumbo v1, "http://www.w3.org/2000/09/xmldsig#rawX509Certificate"
+    const-string v1, "http://www.w3.org/2000/09/xmldsig#rawX509Certificate"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -378,7 +378,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v4, "we have to parse "
+    const-string v4, "we have to parse "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -439,7 +439,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "}"
+    const-string v4, "}"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -808,7 +808,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "http://www.w3.org/2000/09/xmldsig#rawX509Certificate"
+    const-string v2, "http://www.w3.org/2000/09/xmldsig#rawX509Certificate"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -856,7 +856,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v4, "we have to parse "
+    const-string v4, "we have to parse "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -917,7 +917,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "}"
+    const-string v4, "}"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1088,7 +1088,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1099,7 +1099,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1110,7 +1110,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

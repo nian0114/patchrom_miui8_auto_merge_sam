@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 23499
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$13;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$13;->val$win:Lcom/android/server/wm/WindowState;
@@ -44,10 +43,8 @@
     .locals 8
 
     .prologue
-    .line 23502
     const-wide/16 v2, 0x0
 
-    .line 23503
     .local v2, "inputMethodAnimationDuration":J
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$13;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -73,7 +70,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 23505
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$13;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
@@ -82,11 +78,9 @@
 
     iget-object v0, v1, Lcom/android/server/wm/WindowStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 23506
     .local v0, "a":Landroid/view/animation/Animation;
     if-eqz v0, :cond_1
 
-    .line 23507
     invoke-virtual {v0}, Landroid/view/animation/Animation;->getStartOffset()J
 
     move-result-wide v4
@@ -105,7 +99,6 @@
 
     add-long v2, v4, v6
 
-    .line 23509
     sget-boolean v1, Lcom/android/server/wm/WindowManagerService;->DEBUG_RESIZE:Z
 
     if-eqz v1, :cond_0
@@ -132,7 +125,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23511
     :cond_0
     const-wide/16 v4, 0x0
 
@@ -140,10 +132,8 @@
 
     if-gez v1, :cond_1
 
-    .line 23512
     const-wide/16 v2, 0x0
 
-    .line 23515
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$13;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -155,12 +145,10 @@
 
     invoke-virtual {v1, v4, v2, v3}, Lcom/android/server/wm/WindowManagerService$H;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 23532
     .end local v0    # "a":Landroid/view/animation/Animation;
     :goto_0
     return-void
 
-    .line 23526
     :cond_2
     const-string v1, "WindowManager"
 
@@ -168,19 +156,16 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23528
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$13;->val$win:Lcom/android/server/wm/WindowState;
 
     const/4 v4, 0x0
 
     iput-boolean v4, v1, Lcom/android/server/wm/WindowState;->mDelayedResize:Z
 
-    .line 23529
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$13;->val$win:Lcom/android/server/wm/WindowState;
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->reportResized()V
 
-    .line 23530
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$13;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mResizingWindows:Ljava/util/ArrayList;

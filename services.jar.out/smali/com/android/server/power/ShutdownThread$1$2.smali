@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 566
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$1$2;->this$0:Lcom/android/server/power/ShutdownThread$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 569
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$1$2;->this$0:Lcom/android/server/power/ShutdownThread$1;
 
     # invokes: Lcom/android/server/power/ShutdownThread$1;->animateDismiss()V
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread$1;->access$500(Lcom/android/server/power/ShutdownThread$1;)V
 
-    .line 570
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/android/server/usb/UsbNotificationHandler$2;->this$0:Lcom/android/server/usb/UsbNotificationHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/usb/UsbNotificationHandler$2;->this$0:Lcom/android/server/usb/UsbNotificationHandler;
 
     # getter for: Lcom/android/server/usb/UsbNotificationHandler;->TAG:Ljava/lang/String;
@@ -47,15 +45,13 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "locale changed"
+    const-string v1, "locale changed"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/usb/UsbNotificationHandler$2;->this$0:Lcom/android/server/usb/UsbNotificationHandler;
 
     invoke-virtual {v0}, Lcom/android/server/usb/UsbNotificationHandler;->reflashNotificaton()V
 
-    .line 72
     return-void
 .end method

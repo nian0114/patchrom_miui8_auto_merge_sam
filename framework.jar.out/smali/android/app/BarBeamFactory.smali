@@ -22,15 +22,12 @@
     .end annotation
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
-    .line 39
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/app/BarBeamFactory;->getBarBeamCommand(Landroid/content/Context;)Landroid/app/BarBeamCommand;
 
@@ -40,18 +37,14 @@
     :try_end_0
     .catch Landroid/app/BarBeamException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 45
     return-void
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 42
     .local v0, "e":Landroid/app/BarBeamException;
     invoke-virtual {v0}, Landroid/app/BarBeamException;->printStackTrace()V
 
-    .line 43
     new-instance v1, Landroid/app/BarBeamException;
 
     const-string v2, "BarBeamException in getBarBeam :"
@@ -72,15 +65,12 @@
     .end annotation
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
-    .line 52
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/app/BarBeamFactory;->getBarBeamCommand(Landroid/content/Context;)Landroid/app/BarBeamCommand;
 
@@ -90,12 +80,10 @@
     :try_end_0
     .catch Landroid/app/BarBeamException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     iget-object v1, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     if-eqz v1, :cond_0
 
-    .line 59
     :try_start_1
     iget-object v1, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
@@ -103,19 +91,15 @@
     :try_end_1
     .catch Landroid/app/BarBeamException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 64
     :cond_0
     return-void
 
-    .line 53
     :catch_0
     move-exception v0
 
-    .line 54
     .local v0, "e":Landroid/app/BarBeamException;
     invoke-virtual {v0}, Landroid/app/BarBeamException;->printStackTrace()V
 
-    .line 55
     new-instance v1, Landroid/app/BarBeamException;
 
     const-string v2, "BarBeamException in getBarBeam :"
@@ -124,16 +108,13 @@
 
     throw v1
 
-    .line 60
     .end local v0    # "e":Landroid/app/BarBeamException;
     :catch_1
     move-exception v0
 
-    .line 61
     .restart local v0    # "e":Landroid/app/BarBeamException;
     invoke-virtual {v0}, Landroid/app/BarBeamException;->printStackTrace()V
 
-    .line 62
     new-instance v1, Landroid/app/BarBeamException;
 
     const-string v2, "BarBeamException in setHopSequence :"
@@ -155,22 +136,18 @@
     .end annotation
 
     .prologue
-    .line 111
     const/4 v2, 0x0
 
-    .line 113
     .local v2, "ret":Z
     :try_start_0
     iget-object v3, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     invoke-interface {v3, p1}, Landroid/app/BarBeamCommand;->setBarcode([B)V
 
-    .line 114
     iget-object v3, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     invoke-interface {v3}, Landroid/app/BarBeamCommand;->startBeaming()V
 
-    .line 115
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -179,7 +156,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 117
     iget-object v3, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     check-cast v3, Landroid/app/BarBeamCommandImpl;
@@ -194,14 +170,11 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 118
     const/4 v2, 0x1
 
-    .line 131
     :cond_0
     return v2
 
-    .line 122
     :cond_1
     const-wide/16 v4, 0x64
 
@@ -211,18 +184,15 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 115
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 126
     .end local v1    # "i":I
     :catch_0
     move-exception v0
 
-    .line 127
     .local v0, "e":Ljava/lang/Throwable;
     const-string v3, "BarBeamFactory"
 
@@ -230,7 +200,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 128
     new-instance v3, Landroid/app/BarBeamException;
 
     const-string v4, "BarBeamException in setHopSequence :"
@@ -239,7 +208,6 @@
 
     throw v3
 
-    .line 123
     .end local v0    # "e":Ljava/lang/Throwable;
     .restart local v1    # "i":I
     :catch_1
@@ -257,17 +225,14 @@
     .end annotation
 
     .prologue
-    .line 140
     const/4 v2, 0x0
 
-    .line 142
     .local v2, "ret":Z
     :try_start_0
     iget-object v3, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     invoke-interface {v3}, Landroid/app/BarBeamCommand;->stopBeaming()V
 
-    .line 143
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -276,7 +241,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 145
     iget-object v3, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     check-cast v3, Landroid/app/BarBeamCommandImpl;
@@ -289,14 +253,11 @@
 
     if-nez v3, :cond_1
 
-    .line 146
     const/4 v2, 0x1
 
-    .line 158
     :cond_0
     return v2
 
-    .line 150
     :cond_1
     const-wide/16 v4, 0x64
 
@@ -306,18 +267,15 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 143
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 154
     .end local v1    # "i":I
     :catch_0
     move-exception v0
 
-    .line 155
     .local v0, "e":Ljava/lang/Throwable;
     const-string v3, "BarBeamFactory"
 
@@ -325,7 +283,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 156
     new-instance v3, Landroid/app/BarBeamException;
 
     const-string v4, "BarBeamException in getCurrentStatus :"
@@ -334,7 +291,6 @@
 
     throw v3
 
-    .line 151
     .end local v0    # "e":Ljava/lang/Throwable;
     .restart local v1    # "i":I
     :catch_1
@@ -353,7 +309,6 @@
     .end annotation
 
     .prologue
-    .line 75
     if-nez p1, :cond_0
 
     new-instance v2, Landroid/app/BarBeamException;
@@ -364,7 +319,6 @@
 
     throw v2
 
-    .line 78
     :cond_0
     :try_start_0
     const-string v2, "barbeam"
@@ -375,7 +329,6 @@
 
     check-cast v1, Landroid/app/BarBeamCommand;
 
-    .line 79
     .local v1, "m":Landroid/app/BarBeamCommand;
     invoke-interface {v1}, Landroid/app/BarBeamCommand;->isImplementationCompatible()Z
     :try_end_0
@@ -387,12 +340,10 @@
 
     return-object v1
 
-    .line 80
     .end local v1    # "m":Landroid/app/BarBeamCommand;
     :catch_0
     move-exception v0
 
-    .line 81
     .local v0, "e":Ljava/lang/Throwable;
     const-string v2, "BarBeamFactory"
 
@@ -400,7 +351,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 84
     .end local v0    # "e":Ljava/lang/Throwable;
     :cond_1
     new-instance v2, Landroid/app/BarBeamException;
@@ -422,12 +372,10 @@
     .end annotation
 
     .prologue
-    .line 94
     iget-object v1, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
     if-eqz v1, :cond_0
 
-    .line 96
     :try_start_0
     iget-object v1, p0, Landroid/app/BarBeamFactory;->mbarbeamcmd:Landroid/app/BarBeamCommand;
 
@@ -435,19 +383,15 @@
     :try_end_0
     .catch Landroid/app/BarBeamException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
     :cond_0
     return-void
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 99
     .local v0, "e":Landroid/app/BarBeamException;
     invoke-virtual {v0}, Landroid/app/BarBeamException;->printStackTrace()V
 
-    .line 100
     new-instance v1, Landroid/app/BarBeamException;
 
     const-string v2, "BarBeamException in setHopSequence :"

@@ -25,13 +25,10 @@
     .param p2, "data"    # I
 
     .prologue
-    .line 161
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op;-><init>(I)V
 
-    .line 162
     iput p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;->charData:I
 
-    .line 163
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;->charData:I
 
     return v0

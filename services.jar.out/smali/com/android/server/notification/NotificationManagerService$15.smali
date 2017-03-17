@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 4630
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 4632
     new-instance v0, Ljava/lang/Integer;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 4630
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService$15;->initialValue()Ljava/lang/Integer;
 
     move-result-object v0

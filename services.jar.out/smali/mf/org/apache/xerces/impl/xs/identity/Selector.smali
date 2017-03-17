@@ -27,16 +27,12 @@
     .param p2, "identityConstraint"    # Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;
 
-    .line 62
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector;->fIdentityConstraint:Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;
 
-    .line 63
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .param p2, "initialDepth"    # I
 
     .prologue
-    .line 87
     new-instance v0, Lmf/org/apache/xerces/impl/xs/identity/Selector$Matcher;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector;->fIdentityConstraint:Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;
 
     return-object v0
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;
 
     return-object v0
@@ -82,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;->toString()Ljava/lang/String;

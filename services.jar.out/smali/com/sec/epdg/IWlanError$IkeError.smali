@@ -24,13 +24,10 @@
     .param p1, "ikeErrorCode"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput p1, p0, Lcom/sec/epdg/IWlanError$IkeError;->mIkeErrorCode:I
 
-    .line 41
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget v0, p0, Lcom/sec/epdg/IWlanError$IkeError;->mIkeErrorCode:I
 
     return v0
@@ -50,10 +46,8 @@
     .locals 2
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
-    .line 50
     .local v0, "ret":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
@@ -65,18 +59,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 51
     iget v1, p0, Lcom/sec/epdg/IWlanError$IkeError;->mIkeErrorCode:I
 
     invoke-static {v1}, Lcom/sec/epdg/VerizonIkeError;->printVerizonIkeErrorCode(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 55
     :goto_0
     return-object v0
 
-    .line 53
     :cond_0
     iget v1, p0, Lcom/sec/epdg/IWlanError$IkeError;->mIkeErrorCode:I
 

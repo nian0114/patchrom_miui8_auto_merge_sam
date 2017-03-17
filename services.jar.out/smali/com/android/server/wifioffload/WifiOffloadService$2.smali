@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 708
     iput-object p1, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v5, 0x0
 
-    .line 712
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 713
     .local v0, "action":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -56,12 +53,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 757
     :cond_0
     :goto_0
     return-void
 
-    .line 717
     :cond_1
     const-string v6, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -71,8 +66,7 @@
 
     if-eqz v6, :cond_5
 
-    .line 718
-    const-string/jumbo v6, "wifi_state"
+    const-string v6, "wifi_state"
 
     const/4 v7, 0x4
 
@@ -80,7 +74,6 @@
 
     move-result v2
 
-    .line 721
     .local v2, "currentWifiState":I
     iget-object v6, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
@@ -97,7 +90,6 @@
     # setter for: Lcom/android/server/wifioffload/WifiOffloadService;->mWifiEnabled:Z
     invoke-static {v6, v4}, Lcom/android/server/wifioffload/WifiOffloadService;->access$302(Lcom/android/server/wifioffload/WifiOffloadService;Z)Z
 
-    .line 722
     iget-object v4, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     # getter for: Lcom/android/server/wifioffload/WifiOffloadService;->mWifiEnabled:Z
@@ -107,13 +99,11 @@
 
     if-eqz v4, :cond_3
 
-    .line 723
     iget-object v4, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     # setter for: Lcom/android/server/wifioffload/WifiOffloadService;->mIsTimerRunning:Z
     invoke-static {v4, v5}, Lcom/android/server/wifioffload/WifiOffloadService;->access$402(Lcom/android/server/wifioffload/WifiOffloadService;Z)Z
 
-    .line 725
     :cond_3
     const-string v4, "WifiOffloadService"
 
@@ -159,10 +149,8 @@
     :cond_4
     move v4, v5
 
-    .line 721
     goto :goto_1
 
-    .line 729
     .end local v2    # "currentWifiState":I
     :cond_5
     const-string v6, "android.net.wifi.STATE_CHANGE"
@@ -173,8 +161,7 @@
 
     if-eqz v6, :cond_8
 
-    .line 731
-    const-string/jumbo v6, "networkInfo"
+    const-string v6, "networkInfo"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -182,11 +169,9 @@
 
     check-cast v3, Landroid/net/NetworkInfo;
 
-    .line 734
     .local v3, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v3, :cond_6
 
-    .line 735
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v6
@@ -199,13 +184,11 @@
 
     if-eqz v6, :cond_7
 
-    .line 737
     iget-object v5, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     # setter for: Lcom/android/server/wifioffload/WifiOffloadService;->mWifiConnectedToAP:Z
     invoke-static {v5, v4}, Lcom/android/server/wifioffload/WifiOffloadService;->access$502(Lcom/android/server/wifioffload/WifiOffloadService;Z)Z
 
-    .line 743
     :cond_6
     :goto_2
     const-string v4, "WifiOffloadService"
@@ -239,7 +222,6 @@
 
     goto/16 :goto_0
 
-    .line 738
     :cond_7
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -253,7 +235,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 740
     iget-object v4, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     # setter for: Lcom/android/server/wifioffload/WifiOffloadService;->mWifiConnectedToAP:Z
@@ -261,7 +242,6 @@
 
     goto :goto_2
 
-    .line 748
     .end local v3    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_8
     const-string v6, "android.net.wifi.WIFI_AP_STATE_CHANGED"
@@ -272,8 +252,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 750
-    const-string/jumbo v6, "wifi_state"
+    const-string v6, "wifi_state"
 
     const/16 v7, 0xe
 
@@ -281,7 +260,6 @@
 
     move-result v1
 
-    .line 753
     .local v1, "currentAPState":I
     iget-object v6, p0, Lcom/android/server/wifioffload/WifiOffloadService$2;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
@@ -300,7 +278,6 @@
     # setter for: Lcom/android/server/wifioffload/WifiOffloadService;->mMobileHotSpotEnabled:Z
     invoke-static {v6, v5}, Lcom/android/server/wifioffload/WifiOffloadService;->access$602(Lcom/android/server/wifioffload/WifiOffloadService;Z)Z
 
-    .line 754
     const-string v4, "WifiOffloadService"
 
     new-instance v5, Ljava/lang/StringBuilder;

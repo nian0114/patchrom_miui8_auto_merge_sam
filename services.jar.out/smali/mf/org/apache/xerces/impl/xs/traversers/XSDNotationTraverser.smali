@@ -10,10 +10,8 @@
     .param p2, "gAttrCheck"    # Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
 
     .prologue
-    .line 52
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractTraverser;-><init>(Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;)V
 
-    .line 53
     return-void
 .end method
 
@@ -26,7 +24,6 @@
     .param p3, "grammar"    # Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
 
     .prologue
-    .line 60
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDNotationTraverser;->fAttrChecker:Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
@@ -41,7 +38,6 @@
 
     move-result-object v5
 
-    .line 62
     .local v5, "attrValues":[Ljava/lang/Object;
     sget v2, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_NAME:I
 
@@ -49,7 +45,6 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 64
     .local v13, "nameAttr":Ljava/lang/String;
     sget v2, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_PUBLIC:I
 
@@ -57,7 +52,6 @@
 
     check-cast v16, Ljava/lang/String;
 
-    .line 65
     .local v16, "publicAttr":Ljava/lang/String;
     sget v2, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_SYSTEM:I
 
@@ -65,11 +59,9 @@
 
     check-cast v17, Ljava/lang/String;
 
-    .line 66
     .local v17, "systemAttr":Ljava/lang/String;
     if-nez v13, :cond_0
 
-    .line 67
     const-string v2, "s4s-att-must-appear"
 
     const/4 v3, 0x2
@@ -94,7 +86,6 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lmf/org/apache/xerces/impl/xs/traversers/XSDNotationTraverser;->reportSchemaError(Ljava/lang/String;[Ljava/lang/Object;Lmf/org/w3c/dom/Element;)V
 
-    .line 68
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDNotationTraverser;->fAttrChecker:Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
@@ -103,20 +94,16 @@
 
     invoke-virtual {v2, v5, v0}, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->returnAttrArray([Ljava/lang/Object;Lmf/org/apache/xerces/impl/xs/traversers/XSDocumentInfo;)V
 
-    .line 69
     const/4 v14, 0x0
 
-    .line 130
     :goto_0
     return-object v14
 
-    .line 72
     :cond_0
     if-nez v17, :cond_1
 
     if-nez v16, :cond_1
 
-    .line 73
     const-string v2, "PublicSystemOnNotation"
 
     const/4 v3, 0x0
@@ -127,46 +114,37 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lmf/org/apache/xerces/impl/xs/traversers/XSDNotationTraverser;->reportSchemaError(Ljava/lang/String;[Ljava/lang/Object;Lmf/org/w3c/dom/Element;)V
 
-    .line 74
     const-string v16, "missing"
 
-    .line 77
     :cond_1
     new-instance v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;
 
     invoke-direct {v14}, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;-><init>()V
 
-    .line 78
     .local v14, "notation":Lmf/org/apache/xerces/impl/xs/XSNotationDecl;
     iput-object v13, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fName:Ljava/lang/String;
 
-    .line 79
     move-object/from16 v0, p2
 
     iget-object v2, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDocumentInfo;->fTargetNamespace:Ljava/lang/String;
 
     iput-object v2, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fTargetNamespace:Ljava/lang/String;
 
-    .line 80
     move-object/from16 v0, v16
 
     iput-object v0, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fPublicId:Ljava/lang/String;
 
-    .line 81
     move-object/from16 v0, v17
 
     iput-object v0, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fSystemId:Ljava/lang/String;
 
-    .line 84
     invoke-static/range {p1 .. p1}, Lmf/org/apache/xerces/util/DOMUtil;->getFirstChildElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
     move-result-object v11
 
-    .line 85
     .local v11, "content":Lmf/org/w3c/dom/Element;
     const/4 v8, 0x0
 
-    .line 87
     .local v8, "annotation":Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
     if-eqz v11, :cond_8
 
@@ -182,7 +160,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 88
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -193,17 +170,14 @@
 
     move-result-object v8
 
-    .line 89
     invoke-static {v11}, Lmf/org/apache/xerces/util/DOMUtil;->getNextSiblingElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
     move-result-object v11
 
-    .line 98
     :cond_2
     :goto_1
     if-eqz v8, :cond_9
 
-    .line 99
     new-instance v9, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-direct {v9}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;-><init>()V
@@ -211,19 +185,15 @@
     .local v9, "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
     move-object v2, v9
 
-    .line 100
     check-cast v2, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-virtual {v2, v8}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->addXSObject(Lmf/org/apache/xerces/xs/XSObject;)V
 
-    .line 104
     :goto_2
     iput-object v9, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 105
     if-eqz v11, :cond_3
 
-    .line 106
     const/4 v2, 0x3
 
     new-array v10, v2, [Ljava/lang/Object;
@@ -248,7 +218,6 @@
 
     aput-object v3, v10, v2
 
-    .line 107
     .local v10, "args":[Ljava/lang/Object;
     const-string v2, "s4s-elt-must-match.1"
 
@@ -256,7 +225,6 @@
 
     invoke-virtual {v0, v2, v10, v11}, Lmf/org/apache/xerces/impl/xs/traversers/XSDNotationTraverser;->reportSchemaError(Ljava/lang/String;[Ljava/lang/Object;Lmf/org/w3c/dom/Element;)V
 
-    .line 110
     .end local v10    # "args":[Ljava/lang/Object;
     :cond_3
     iget-object v2, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fName:Ljava/lang/String;
@@ -269,12 +237,10 @@
 
     if-nez v2, :cond_4
 
-    .line 111
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v14}, Lmf/org/apache/xerces/impl/xs/SchemaGrammar;->addGlobalNotationDecl(Lmf/org/apache/xerces/impl/xs/XSNotationDecl;)V
 
-    .line 115
     :cond_4
     move-object/from16 v0, p0
 
@@ -286,7 +252,6 @@
 
     move-result-object v12
 
-    .line 116
     .local v12, "loc":Ljava/lang/String;
     iget-object v2, v14, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fName:Ljava/lang/String;
 
@@ -296,16 +261,13 @@
 
     move-result-object v15
 
-    .line 117
     .local v15, "notation2":Lmf/org/apache/xerces/impl/xs/XSNotationDecl;
     if-nez v15, :cond_5
 
-    .line 118
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v14, v12}, Lmf/org/apache/xerces/impl/xs/SchemaGrammar;->addGlobalNotationDecl(Lmf/org/apache/xerces/impl/xs/XSNotationDecl;Ljava/lang/String;)V
 
-    .line 122
     :cond_5
     move-object/from16 v0, p0
 
@@ -315,13 +277,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 123
     if-eqz v15, :cond_6
 
-    .line 124
     move-object v14, v15
 
-    .line 126
     :cond_6
     move-object/from16 v0, p0
 
@@ -329,7 +288,6 @@
 
     invoke-virtual {v2, v14}, Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;->addGlobalNotationDecl(Lmf/org/apache/xerces/impl/xs/XSNotationDecl;)V
 
-    .line 128
     :cond_7
     move-object/from16 v0, p0
 
@@ -341,7 +299,6 @@
 
     goto/16 :goto_0
 
-    .line 92
     .end local v9    # "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
     .end local v12    # "loc":Ljava/lang/String;
     .end local v15    # "notation2":Lmf/org/apache/xerces/impl/xs/XSNotationDecl;
@@ -350,11 +307,9 @@
 
     move-result-object v4
 
-    .line 93
     .local v4, "text":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 94
     const/4 v6, 0x0
 
     move-object/from16 v2, p0
@@ -369,7 +324,6 @@
 
     goto/16 :goto_1
 
-    .line 102
     .end local v4    # "text":Ljava/lang/String;
     :cond_9
     sget-object v9, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;

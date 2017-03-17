@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "intersect"
+    const-string v1, "intersect"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -86,7 +86,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "subtract"
+    const-string v1, "subtract"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -94,7 +94,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "union"
+    const-string v1, "union"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -118,7 +118,7 @@
 
     const/4 v0, 0x2
 
-    const-string/jumbo v2, "intersect, subtract or union"
+    const-string v2, "intersect, subtract or union"
 
     aput-object v2, v1, v0
 
@@ -154,7 +154,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/transforms/params/XPath2FilterContainer;
 
-    const-string/jumbo v1, "intersect"
+    const-string v1, "intersect"
 
     invoke-direct {v0, p0, p1, v1}, Lcom/sun/org/apache/xml/internal/security/transforms/params/XPath2FilterContainer;-><init>(Lorg/w3c/dom/Document;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -166,7 +166,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/transforms/params/XPath2FilterContainer;
 
-    const-string/jumbo v1, "subtract"
+    const-string v1, "subtract"
 
     invoke-direct {v0, p0, p1, v1}, Lcom/sun/org/apache/xml/internal/security/transforms/params/XPath2FilterContainer;-><init>(Lorg/w3c/dom/Document;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -178,7 +178,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/transforms/params/XPath2FilterContainer;
 
-    const-string/jumbo v1, "union"
+    const-string v1, "union"
 
     invoke-direct {v0, p0, p1, v1}, Lcom/sun/org/apache/xml/internal/security/transforms/params/XPath2FilterContainer;-><init>(Lorg/w3c/dom/Document;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -219,7 +219,7 @@
 
     aget-object v4, v4, v5
 
-    const-string/jumbo v5, "intersect"
+    const-string v5, "intersect"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -227,7 +227,7 @@
 
     if-nez v5, :cond_0
 
-    const-string/jumbo v5, "subtract"
+    const-string v5, "subtract"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -235,7 +235,7 @@
 
     if-nez v5, :cond_0
 
-    const-string/jumbo v5, "union"
+    const-string v5, "union"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -323,7 +323,7 @@
 .method public final getBaseNamespace()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2002/06/xmldsig-filter2"
+    const-string v0, "http://www.w3.org/2002/06/xmldsig-filter2"
 
     return-object v0
 .end method
@@ -399,7 +399,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "intersect"
+    const-string v1, "intersect"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -421,7 +421,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "subtract"
+    const-string v1, "subtract"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -443,7 +443,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "union"
+    const-string v1, "union"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

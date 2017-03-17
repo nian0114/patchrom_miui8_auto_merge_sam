@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p2, "value2"    # Ljava/lang/Object;
 
     .prologue
-    .line 53
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/DecimalDV$XDecimal;
 
     .end local p1    # "value1":Ljava/lang/Object;
@@ -55,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 46
     :try_start_0
     new-instance v1, Lmf/org/apache/xerces/impl/dv/xs/DecimalDV$XDecimal;
 
@@ -65,11 +62,9 @@
 
     return-object v1
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     .local v0, "nfe":Ljava/lang/NumberFormatException;
     new-instance v1, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
@@ -98,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const/16 v0, 0xff8
 
     return v0
@@ -109,7 +103,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 61
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/DecimalDV$XDecimal;
 
     .end local p1    # "value":Ljava/lang/Object;
@@ -123,7 +116,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 57
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/DecimalDV$XDecimal;
 
     .end local p1    # "value":Ljava/lang/Object;

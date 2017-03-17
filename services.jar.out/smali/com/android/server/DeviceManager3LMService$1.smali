@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 318
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$1;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V

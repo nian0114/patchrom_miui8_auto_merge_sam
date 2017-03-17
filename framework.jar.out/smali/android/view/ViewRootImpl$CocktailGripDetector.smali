@@ -35,35 +35,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 9059
     iput-object p1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9052
     const-string v1, "CocktailGripDetector"
 
     iput-object v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->TAG:Ljava/lang/String;
 
-    .line 9054
     const/4 v1, 0x3
 
     iput v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->DEADZONE_THRESHOLD:I
 
-    .line 9055
     iput-boolean v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mbTouchBlock:Z
 
-    .line 9056
     iput v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadSize:I
 
-    .line 9057
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
-    .line 9060
     iget-object v1, p1, Landroid/view/ViewRootImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -74,7 +67,6 @@
 
     move-result-object v0
 
-    .line 9061
     .local v0, "dm":Landroid/util/DisplayMetrics;
     const/high16 v1, 0x40400000    # 3.0f
 
@@ -86,7 +78,6 @@
 
     iput v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadSize:I
 
-    .line 9062
     return-void
 .end method
 
@@ -96,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 9115
     iget-boolean v0, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mbTouchBlock:Z
 
     return v0
@@ -111,7 +101,6 @@
 
     const/4 v0, 0x1
 
-    .line 9065
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -123,11 +112,9 @@
     :cond_0
     move v0, v1
 
-    .line 9111
     :goto_0
     return v0
 
-    .line 9067
     :pswitch_0
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
@@ -139,15 +126,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 9068
     iput-boolean v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mbTouchBlock:Z
 
-    .line 9069
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 9071
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v2, v2, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
@@ -158,7 +142,6 @@
 
     if-nez v2, :cond_1
 
-    .line 9072
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v2, v2, Landroid/view/ViewRootImpl;->mLastConfiguration:Landroid/content/res/Configuration;
@@ -167,7 +150,6 @@
 
     if-ne v2, v0, :cond_3
 
-    .line 9073
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v2, v2, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
@@ -176,7 +158,6 @@
 
     if-nez v2, :cond_2
 
-    .line 9074
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
     iget-object v3, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
@@ -185,14 +166,12 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 9075
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
     iget v3, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadSize:I
 
     iput v3, v2, Landroid/graphics/Rect;->right:I
 
-    .line 9088
     :cond_1
     :goto_1
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
@@ -215,19 +194,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 9089
     const-string v1, "CocktailGripDetector"
 
     const-string v2, "Touch Block : Dead Zone (DOWN) !!!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secW(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9090
     iput-boolean v0, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mbTouchBlock:Z
 
     goto :goto_0
 
-    .line 9077
     :cond_2
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
@@ -237,7 +213,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 9078
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
     iget-object v3, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
@@ -252,7 +227,6 @@
 
     goto :goto_1
 
-    .line 9081
     :cond_3
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
@@ -262,7 +236,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 9082
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
     iget-object v3, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
@@ -271,7 +244,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 9083
     iget-object v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
 
     iget-object v3, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mDeadZone:Landroid/graphics/Rect;
@@ -286,7 +258,6 @@
 
     goto :goto_1
 
-    .line 9096
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -298,7 +269,6 @@
 
     if-ne v2, v0, :cond_4
 
-    .line 9097
     const/16 v2, 0x31
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
@@ -315,7 +285,6 @@
 
     if-lez v2, :cond_4
 
-    .line 9098
     const-string v1, "CocktailGripDetector"
 
     const-string v2, "Touch Block : Grip Flag !!!"
@@ -324,16 +293,13 @@
 
     goto/16 :goto_0
 
-    .line 9103
     :cond_4
     iget-boolean v2, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mbTouchBlock:Z
 
     if-eqz v2, :cond_0
 
-    .line 9104
     iput-boolean v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->mbTouchBlock:Z
 
-    .line 9105
     const-string v1, "CocktailGripDetector"
 
     const-string v2, "Touch Block : Dead Zone !!!"
@@ -342,7 +308,6 @@
 
     goto/16 :goto_0
 
-    .line 9065
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

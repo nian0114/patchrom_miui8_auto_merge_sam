@@ -31,7 +31,6 @@
     .param p9, "x7"    # Landroid/net/NetworkMisc;
 
     .prologue
-    .line 1660
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$3;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     move-object v0, p0
@@ -63,6 +62,5 @@
     .locals 0
 
     .prologue
-    .line 1664
     return-void
 .end method

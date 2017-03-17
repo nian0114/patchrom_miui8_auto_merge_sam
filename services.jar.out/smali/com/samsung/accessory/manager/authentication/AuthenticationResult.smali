@@ -88,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 8
     const-class v0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -106,25 +105,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mBundle:Landroid/os/Bundle;
 
-    .line 47
     iput-boolean v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mAuthenticationResult:Z
 
-    .line 56
     const/16 v0, 0x5a
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mReason:I
 
-    .line 60
     iput-boolean v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->isUrlExist:Z
 
     return-void
@@ -137,15 +131,12 @@
     .param p1, "input"    # [B
 
     .prologue
-    .line 183
     if-eqz p1, :cond_1
 
-    .line 184
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 185
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -155,7 +146,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 186
     const-string v2, "%02x"
 
     const/4 v3, 0x1
@@ -178,25 +168,22 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 188
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 190
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .end local v1    # "i":I
     :goto_1
     return-object v2
 
     :cond_1
-    const-string/jumbo v2, "null"
+    const-string v2, "null"
 
     goto :goto_1
 .end method
@@ -205,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mByteArrayExtraData:[B
 
     return-object v0
@@ -215,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mByteArrayManagerURI:[B
 
     return-object v0
@@ -225,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mConnectivityType:I
 
     return v0
@@ -235,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mExtraID:[B
 
     return-object v0
@@ -245,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->publicKey:Ljava/lang/String;
 
     return-object v0
@@ -255,7 +237,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mReason:I
 
     return v0
@@ -265,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mRequestPkg:Ljava/lang/String;
 
     return-object v0
@@ -275,21 +255,18 @@
     .locals 3
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mExtraID:[B
 
     if-eqz v0, :cond_0
 
-    .line 154
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mBundle:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "extra"
+    const-string v1, "extra"
 
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mExtraID:[B
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 155
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mBundle:Landroid/os/Bundle;
 
@@ -300,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mStringExtraData:Ljava/lang/String;
 
     return-object v0
@@ -310,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mStringManagerURI:Ljava/lang/String;
 
     return-object v0
@@ -320,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-boolean v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->isKeyChanged:Z
 
     return v0
@@ -330,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->needKeyChange:Z
 
     return v0
@@ -341,10 +314,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 145
     iput p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mConnectivityType:I
 
-    .line 146
     return-void
 .end method
 
@@ -353,13 +324,10 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 102
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mByteArrayExtraData:[B
 
-    .line 103
     if-eqz p1, :cond_0
 
-    .line 105
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
@@ -369,7 +337,6 @@
 
     iput-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mStringExtraData:Ljava/lang/String;
 
-    .line 106
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mStringExtraData:Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -382,16 +349,13 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
     :cond_0
     :goto_0
     return-void
 
-    .line 107
     :catch_0
     move-exception v0
 
-    .line 108
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v1, ""
 
@@ -409,31 +373,26 @@
 
     const/4 v3, 0x0
 
-    .line 119
     if-eqz p1, :cond_1
 
-    .line 120
     array-length v1, p1
 
     new-array v1, v1, [B
 
     iput-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mExtraID:[B
 
-    .line 121
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mExtraID:[B
 
     array-length v2, p1
 
     invoke-static {p1, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 122
     array-length v1, p1
 
     const/16 v2, 0x17
 
     if-ne v1, v2, :cond_0
 
-    .line 123
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mExtraID:[B
 
     const/16 v2, 0x15
@@ -442,24 +401,20 @@
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 124
     .local v0, "url":I
     if-ne v0, v4, :cond_0
 
-    .line 125
     iput-boolean v4, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->isUrlExist:Z
 
-    .line 130
     .end local v0    # "url":I
     :cond_0
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     sget-object v1, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "setExtraId : data is null"
+    const-string v2, "setExtraId : data is null"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -471,10 +426,8 @@
     .param p1, "isKeyChanged"    # Z
 
     .prologue
-    .line 163
     iput-boolean p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->isKeyChanged:Z
 
-    .line 164
     return-void
 .end method
 
@@ -483,13 +436,10 @@
     .param p1, "uri"    # [B
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mByteArrayManagerURI:[B
 
-    .line 87
     if-eqz p1, :cond_0
 
-    .line 89
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
@@ -499,7 +449,6 @@
 
     iput-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mStringManagerURI:Ljava/lang/String;
 
-    .line 90
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mStringManagerURI:Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -512,16 +461,13 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 91
     :catch_0
     move-exception v0
 
-    .line 92
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v1, ""
 
@@ -535,10 +481,8 @@
     .param p1, "needKeyChange"    # Z
 
     .prologue
-    .line 82
     iput-boolean p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->needKeyChange:Z
 
-    .line 83
     return-void
 .end method
 
@@ -547,10 +491,8 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->publicKey:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
@@ -561,34 +503,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 171
     iput p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mReason:I
 
-    .line 172
     if-nez p1, :cond_0
 
-    .line 173
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mBundle:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "reason"
+    const-string v1, "reason"
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 174
     iput-boolean v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->isKeyChanged:Z
 
-    .line 175
     iput-boolean v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->needKeyChange:Z
 
-    .line 180
     :goto_0
     return-void
 
-    .line 179
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mBundle:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "reason"
+    const-string v1, "reason"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -600,9 +535,7 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->mRequestPkg:Ljava/lang/String;
 
-    .line 138
     return-void
 .end method

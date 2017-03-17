@@ -12,7 +12,6 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 49
     const v5, 0xea60
 
     move-object v0, p0
@@ -27,7 +26,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/builtin/OrientationSensorRunner;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;I)V
 
-    .line 50
     return-void
 .end method
 
@@ -40,10 +38,8 @@
     .param p5, "rate"    # I
 
     .prologue
-    .line 69
     invoke-direct/range {p0 .. p5}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawSensorProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;I)V
 
-    .line 70
     return-void
 .end method
 
@@ -53,13 +49,10 @@
     .locals 0
 
     .prologue
-    .line 153
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 154
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawSensorProvider;->disable()V
 
-    .line 155
     return-void
 .end method
 
@@ -67,13 +60,10 @@
     .locals 0
 
     .prologue
-    .line 140
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 141
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawSensorProvider;->enable()V
 
-    .line 142
     return-void
 .end method
 
@@ -81,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 105
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->ANDROID_RUNNER_ORIENTATION_SENSOR:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -95,7 +84,6 @@
     .locals 3
 
     .prologue
-    .line 94
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -125,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/builtin/OrientationSensorRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -136,7 +123,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 167
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawSensorProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -148,7 +134,6 @@
     .locals 0
 
     .prologue
-    .line 116
     return-object p0
 .end method
 
@@ -156,7 +141,6 @@
     .locals 0
 
     .prologue
-    .line 128
     return-object p0
 .end method
 
@@ -164,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 82
     const/4 v0, 0x3
 
     return v0

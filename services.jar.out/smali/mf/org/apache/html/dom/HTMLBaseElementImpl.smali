@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 66
     return-void
 .end method
 
@@ -30,8 +28,7 @@
     .locals 1
 
     .prologue
-    .line 37
-    const-string/jumbo v0, "href"
+    const-string v0, "href"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLBaseElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 48
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLBaseElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -59,12 +55,10 @@
     .param p1, "href"    # Ljava/lang/String;
 
     .prologue
-    .line 43
-    const-string/jumbo v0, "href"
+    const-string v0, "href"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLBaseElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -73,11 +67,9 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 54
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLBaseElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     return-void
 .end method

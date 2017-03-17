@@ -45,17 +45,14 @@
     .locals 1
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/service/gesture/GestureProviderInfo;->mSupportedGestures:Ljava/util/List;
 
-    .line 108
     return-void
 .end method
 
@@ -65,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureProviderInfo;->mName:Ljava/lang/String;
 
     return-object v0
@@ -84,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureProviderInfo;->mSupportedGestures:Ljava/util/List;
 
     return-object v0
@@ -95,10 +90,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/samsung/android/service/gesture/GestureProviderInfo;->mName:Ljava/lang/String;
 
-    .line 119
     return-void
 .end method
 
@@ -115,10 +108,8 @@
     .end annotation
 
     .prologue
-    .line 138
     .local p1, "supportedGestures":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iput-object p1, p0, Lcom/samsung/android/service/gesture/GestureProviderInfo;->mSupportedGestures:Ljava/util/List;
 
-    .line 139
     return-void
 .end method

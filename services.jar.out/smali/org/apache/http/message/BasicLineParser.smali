@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const/4 v0, 0x0
 
     sput-object v0, Lorg/apache/http/message/BasicLineParser;->DEFAULT:Lorg/apache/http/message/BasicLineParser;
@@ -36,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -53,7 +51,6 @@
     .param p1, "proto"    # Lorg/apache/http/ProtocolVersion;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -76,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -97,7 +93,6 @@
     .end annotation
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -118,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -139,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -157,7 +150,6 @@
     .param p2, "minor"    # I
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -174,7 +166,6 @@
     .param p3, "ver"    # Lorg/apache/http/ProtocolVersion;
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -191,7 +182,6 @@
     .param p3, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -207,7 +197,6 @@
     .param p2, "cursor"    # Lorg/apache/http/message/ParserCursor;
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -227,7 +216,6 @@
     .end annotation
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -248,7 +236,6 @@
     .end annotation
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -269,7 +256,6 @@
     .end annotation
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -290,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -306,7 +291,6 @@
     .param p2, "cursor"    # Lorg/apache/http/message/ParserCursor;
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

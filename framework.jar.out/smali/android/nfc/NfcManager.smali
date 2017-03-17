@@ -17,21 +17,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-boolean v3, p0, Landroid/nfc/NfcManager;->mIsBinded:Z
 
-    .line 48
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 49
     if-nez p1, :cond_0
 
-    .line 50
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "context not associated with any application (using a mock context?)"
@@ -40,14 +35,12 @@
 
     throw v2
 
-    .line 54
     :cond_0
     :try_start_0
     invoke-static {p1}, Landroid/nfc/NfcAdapter;->getNfcAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
-    .line 55
     .local v0, "adapter":Landroid/nfc/NfcAdapter;
     const/4 v2, 0x1
 
@@ -55,23 +48,18 @@
     :try_end_0
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 61
     :goto_0
     iput-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
 
-    .line 62
     return-void
 
-    .line 56
     .end local v0    # "adapter":Landroid/nfc/NfcAdapter;
     :catch_0
     move-exception v1
 
-    .line 58
     .local v1, "e":Ljava/lang/UnsupportedOperationException;
     const/4 v0, 0x0
 
-    .line 59
     .restart local v0    # "adapter":Landroid/nfc/NfcAdapter;
     iput-boolean v3, p0, Landroid/nfc/NfcManager;->mIsBinded:Z
 
@@ -85,25 +73,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 72
     iget-boolean v2, p0, Landroid/nfc/NfcManager;->mIsBinded:Z
 
     if-eqz v2, :cond_0
 
-    .line 89
     :goto_0
     return-void
 
-    .line 74
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 75
     if-nez p1, :cond_1
 
-    .line 76
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "context not associated with any application (using a mock context?)"
@@ -112,14 +95,12 @@
 
     throw v2
 
-    .line 80
     :cond_1
     :try_start_0
     invoke-static {p1}, Landroid/nfc/NfcAdapter;->getNfcAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
-    .line 81
     .local v0, "adapter":Landroid/nfc/NfcAdapter;
     const/4 v2, 0x1
 
@@ -127,22 +108,18 @@
     :try_end_0
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
     :goto_1
     iput-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
 
     goto :goto_0
 
-    .line 82
     .end local v0    # "adapter":Landroid/nfc/NfcAdapter;
     :catch_0
     move-exception v1
 
-    .line 84
     .local v1, "e":Ljava/lang/UnsupportedOperationException;
     const/4 v0, 0x0
 
-    .line 85
     .restart local v0    # "adapter":Landroid/nfc/NfcAdapter;
     const/4 v2, 0x0
 
@@ -155,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
 
     return-object v0

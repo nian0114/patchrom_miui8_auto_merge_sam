@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 19018
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$27;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 19027
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -71,7 +69,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19028
     :cond_0
     return-void
 .end method
@@ -80,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 19022
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -94,7 +90,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19023
     :cond_0
     return-void
 .end method

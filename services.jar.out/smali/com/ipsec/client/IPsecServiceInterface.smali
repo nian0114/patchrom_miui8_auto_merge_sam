@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +29,10 @@
     .param p1, "connection"    # Landroid/content/ServiceConnection;
 
     .prologue
-    .line 54
     invoke-static {}, Lcom/ipsec/client/IPsecServiceInterface;->newServiceIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 56
     .local v0, "serviceIntent":Landroid/content/Intent;
     const-string v1, "IPSC"
 
@@ -45,7 +42,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "startService(): serviceIntent: "
+    const-string v4, "startService(): serviceIntent: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,10 +66,8 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/ipsec/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 59
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 61
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
@@ -87,7 +82,6 @@
     .param p0, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     invoke-static {p0}, Lcom/ipsec/client/IIPsecService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/ipsec/client/IIPsecService;
 
     move-result-object v0
@@ -100,7 +94,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-static {}, Lcom/ipsec/client/IPsecServiceInterface;->newServiceIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -112,12 +105,10 @@
     .locals 3
 
     .prologue
-    .line 35
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 36
     .local v0, "serviceIntent":Landroid/content/Intent;
     const-string v1, "com.ipsec.service"
 
@@ -125,6 +116,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 39
     return-object v0
 .end method

@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 558
     invoke-static {}, Lcom/android/internal/telephony/Call$State;->values()[Lcom/android/internal/telephony/Call$State;
 
     move-result-object v0
@@ -67,7 +66,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_5
 
-    .line 533
     :goto_1
     invoke-static {}, Lcom/movial/ipphone/SessionCall$State;->values()[Lcom/movial/ipphone/SessionCall$State;
 
@@ -186,7 +184,6 @@
 
     goto :goto_2
 
-    .line 558
     :catch_5
     move-exception v0
 

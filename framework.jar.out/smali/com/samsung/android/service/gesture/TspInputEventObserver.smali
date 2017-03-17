@@ -19,15 +19,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/service/gesture/TspInputEventObserver;->mConnected:Z
 
-    .line 42
     new-instance v0, Lcom/samsung/android/service/gesture/GestureManager;
 
     new-instance v1, Lcom/samsung/android/service/gesture/TspInputEventObserver$1;
@@ -38,7 +35,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/service/gesture/TspInputEventObserver;->mGestureManager:Lcom/samsung/android/service/gesture/GestureManager;
 
-    .line 53
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 23
     iput-boolean p1, p0, Lcom/samsung/android/service/gesture/TspInputEventObserver;->mConnected:Z
 
     return p1
@@ -61,17 +56,14 @@
     .param p1, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 63
     iget-boolean v0, p0, Lcom/samsung/android/service/gesture/TspInputEventObserver;->mConnected:Z
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v0, p0, Lcom/samsung/android/service/gesture/TspInputEventObserver;->mGestureManager:Lcom/samsung/android/service/gesture/GestureManager;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/service/gesture/GestureManager;->sendInputEvent(Landroid/view/InputEvent;)V
 
-    .line 66
     :cond_0
     return-void
 .end method

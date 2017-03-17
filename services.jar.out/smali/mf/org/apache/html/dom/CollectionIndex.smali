@@ -13,13 +13,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 524
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 526
     iput p1, p0, Lmf/org/apache/html/dom/CollectionIndex;->_index:I
 
-    .line 527
     return-void
 .end method
 
@@ -29,14 +26,12 @@
     .locals 1
 
     .prologue
-    .line 503
     iget v0, p0, Lmf/org/apache/html/dom/CollectionIndex;->_index:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lmf/org/apache/html/dom/CollectionIndex;->_index:I
 
-    .line 504
     return-void
 .end method
 
@@ -44,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 494
     iget v0, p0, Lmf/org/apache/html/dom/CollectionIndex;->_index:I
 
     return v0
@@ -54,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 514
     iget v0, p0, Lmf/org/apache/html/dom/CollectionIndex;->_index:I
 
     if-gtz v0, :cond_0

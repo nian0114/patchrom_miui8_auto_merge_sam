@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "color"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLBaseFontElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -48,8 +45,7 @@
     .locals 1
 
     .prologue
-    .line 49
-    const-string/jumbo v0, "face"
+    const-string v0, "face"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLBaseFontElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -66,8 +62,7 @@
     .locals 1
 
     .prologue
-    .line 61
-    const-string/jumbo v0, "size"
+    const-string v0, "size"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLBaseFontElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -81,12 +76,10 @@
     .param p1, "color"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-string v0, "color"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLBaseFontElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -95,12 +88,10 @@
     .param p1, "face"    # Ljava/lang/String;
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "face"
+    const-string v0, "face"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLBaseFontElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -109,11 +100,9 @@
     .param p1, "size"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "size"
+    const-string v0, "size"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLBaseFontElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

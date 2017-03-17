@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const-string v0, "XmlResolver"
 
     return-object v0
@@ -28,7 +26,6 @@
     .locals 2
 
     .prologue
-    .line 37
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-static {}, Lmf/org/apache/xml/resolver/Version;->getProduct()Ljava/lang/String;
@@ -66,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const-string v0, "1.2"
 
     return-object v0
@@ -77,7 +73,6 @@
     .param p0, "argv"    # [Ljava/lang/String;
 
     .prologue
-    .line 65
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-static {}, Lmf/org/apache/xml/resolver/Version;->getVersion()Ljava/lang/String;
@@ -86,6 +81,5 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 66
     return-void
 .end method

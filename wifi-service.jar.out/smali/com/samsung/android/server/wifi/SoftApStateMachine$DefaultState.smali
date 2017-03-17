@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 676
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 5
 
     .prologue
-    .line 680
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -58,15 +56,12 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 686
     :goto_0
     return-void
 
-    .line 681
     :catch_0
     move-exception v1
 
-    .line 682
     .local v1, "re":Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -93,12 +88,10 @@
 
     goto :goto_0
 
-    .line 683
     .end local v1    # "re":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 684
     .local v0, "ie":Ljava/lang/IllegalStateException;
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -131,7 +124,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 689
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1200()Z
 
@@ -173,13 +165,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 690
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 709
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -203,7 +193,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1700(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 712
     :cond_1
     :goto_0
     :pswitch_0
@@ -211,7 +200,6 @@
 
     return v0
 
-    .line 702
     :pswitch_1
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -219,7 +207,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 703
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const/16 v1, 0xe
@@ -228,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->setWifiApState(II)V
 
-    .line 704
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -236,7 +222,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mLastDriverErrorMessage:I
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1602(Lcom/samsung/android/server/wifi/SoftApStateMachine;I)I
 
-    .line 705
     const-string v0, "SoftApStateMachine"
 
     const-string v1, "CMD_START_AP_FAILURE because of wifi & supplicant got failed"
@@ -245,7 +230,6 @@
 
     goto :goto_0
 
-    .line 690
     nop
 
     :pswitch_data_0

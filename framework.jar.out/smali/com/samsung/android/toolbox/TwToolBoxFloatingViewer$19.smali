@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1203
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$19;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 1205
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$19;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onToolClick()V
     invoke-static {v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$4300(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
-    .line 1206
     return-void
 .end method

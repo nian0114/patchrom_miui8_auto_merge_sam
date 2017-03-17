@@ -26,7 +26,7 @@
 .method public final engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v0, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     return-object v0
 .end method

@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/validation/SecuritySupport$4;->this$0:Lmf/javax/xml/validation/SecuritySupport;
 
     iput-object p2, p0, Lmf/javax/xml/validation/SecuritySupport$4;->val$url:Ljava/net/URL;
 
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
     .end annotation
 
     .prologue
-    .line 110
     iget-object v0, p0, Lmf/javax/xml/validation/SecuritySupport$4;->val$url:Ljava/net/URL;
 
     invoke-virtual {v0}, Ljava/net/URL;->openStream()Ljava/io/InputStream;

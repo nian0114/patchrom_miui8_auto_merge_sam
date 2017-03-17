@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 292
     iput-object p1, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver$Stub;-><init>()V
@@ -39,15 +38,12 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 295
     monitor-enter p0
 
-    .line 296
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_2
 
-    .line 297
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
@@ -58,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # getter for: Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
@@ -74,7 +69,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/RestrictionToastManager;->show(Ljava/lang/String;)V
 
-    .line 304
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
@@ -82,7 +76,6 @@
     # invokes: Lcom/android/server/enterprise/utils/PackageDownloader;->postDownload(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/android/server/enterprise/utils/PackageDownloader;->access$500(Lcom/android/server/enterprise/utils/PackageDownloader;Ljava/lang/String;)V
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # getter for: Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
@@ -105,7 +98,6 @@
 
     if-nez v0, :cond_1
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # getter for: Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
@@ -115,14 +107,11 @@
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 308
     :cond_1
     monitor-exit p0
 
-    .line 309
     return-void
 
-    .line 300
     :cond_2
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
@@ -133,7 +122,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 301
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader$2;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # getter for: Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
@@ -151,7 +139,6 @@
 
     goto :goto_0
 
-    .line 308
     :catchall_0
     move-exception v0
 

@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 215
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     return-void
 .end method
 
@@ -39,14 +37,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 709
     if-eqz p1, :cond_0
 
     instance-of v1, p1, Lmf/javax/xml/datatype/XMLGregorianCalendar;
 
     if-nez v1, :cond_1
 
-    .line 712
     .end local p1    # "obj":Ljava/lang/Object;
     :cond_0
     :goto_0
@@ -87,19 +83,15 @@
     .locals 3
 
     .prologue
-    .line 630
     invoke-virtual {p0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getFractionalSecond()Ljava/math/BigDecimal;
 
     move-result-object v0
 
-    .line 633
     .local v0, "fractionalSeconds":Ljava/math/BigDecimal;
     if-nez v0, :cond_0
 
-    .line 634
     const/high16 v1, -0x80000000
 
-    .line 637
     :goto_0
     return v1
 
@@ -146,77 +138,60 @@
     .locals 4
 
     .prologue
-    .line 727
     invoke-virtual {p0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getTimezone()I
 
     move-result v1
 
-    .line 728
     .local v1, "timezone":I
     const/high16 v2, -0x80000000
 
     if-ne v1, v2, :cond_0
 
-    .line 729
     const/4 v1, 0x0
 
-    .line 731
     :cond_0
     move-object v0, p0
 
-    .line 732
     .local v0, "gc":Lmf/javax/xml/datatype/XMLGregorianCalendar;
     if-eqz v1, :cond_1
 
-    .line 733
     invoke-virtual {p0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->normalize()Lmf/javax/xml/datatype/XMLGregorianCalendar;
 
     move-result-object v0
 
-    .line 735
     :cond_1
     invoke-virtual {v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getYear()I
 
     move-result v2
 
-    .line 736
     invoke-virtual {v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getMonth()I
 
     move-result v3
 
-    .line 735
     add-int/2addr v2, v3
 
-    .line 737
     invoke-virtual {v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getDay()I
 
     move-result v3
 
-    .line 735
     add-int/2addr v2, v3
 
-    .line 738
     invoke-virtual {v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getHour()I
 
     move-result v3
 
-    .line 735
     add-int/2addr v2, v3
 
-    .line 739
     invoke-virtual {v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getMinute()I
 
     move-result v3
 
-    .line 735
     add-int/2addr v2, v3
 
-    .line 740
     invoke-virtual {v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->getSecond()I
 
     move-result v3
 
-    .line 735
     add-int/2addr v2, v3
 
     return v2
@@ -259,14 +234,10 @@
     .param p3, "second"    # I
 
     .prologue
-    .line 366
-    .line 370
     const/4 v0, 0x0
 
-    .line 366
     invoke-virtual {p0, p1, p2, p3, v0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setTime(IIILjava/math/BigDecimal;)V
 
-    .line 372
     return-void
 .end method
 
@@ -278,19 +249,14 @@
     .param p4, "millisecond"    # I
 
     .prologue
-    .line 485
     invoke-virtual {p0, p1}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setHour(I)V
 
-    .line 486
     invoke-virtual {p0, p2}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setMinute(I)V
 
-    .line 487
     invoke-virtual {p0, p3}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setSecond(I)V
 
-    .line 488
     invoke-virtual {p0, p4}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setMillisecond(I)V
 
-    .line 489
     return-void
 .end method
 
@@ -302,19 +268,14 @@
     .param p4, "fractional"    # Ljava/math/BigDecimal;
 
     .prologue
-    .line 460
     invoke-virtual {p0, p1}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setHour(I)V
 
-    .line 461
     invoke-virtual {p0, p2}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setMinute(I)V
 
-    .line 462
     invoke-virtual {p0, p3}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setSecond(I)V
 
-    .line 463
     invoke-virtual {p0, p4}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->setFractionalSecond(Ljava/math/BigDecimal;)V
 
-    .line 464
     return-void
 .end method
 
@@ -337,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 886
     invoke-virtual {p0}, Lmf/javax/xml/datatype/XMLGregorianCalendar;->toXMLFormat()Ljava/lang/String;
 
     move-result-object v0

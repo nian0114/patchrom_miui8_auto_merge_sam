@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 44
     const-class v0, Lcom/android/server/usb/UsbMirrorLinkManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -45,27 +44,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     new-instance v0, Lcom/android/server/usb/UsbMirrorLinkManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/usb/UsbMirrorLinkManager$1;-><init>(Lcom/android/server/usb/UsbMirrorLinkManager;)V
 
     iput-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->mUEventObserver:Landroid/os/UEventObserver;
 
-    .line 104
     iput-object p1, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->mContext:Landroid/content/Context;
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->mUEventObserver:Landroid/os/UEventObserver;
 
     const-string v1, "DEVPATH=/devices/virtual/misc/usb_ncm"
 
     invoke-virtual {v0, v1}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 106
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -84,7 +77,6 @@
     .param p0, "x0"    # Lcom/android/server/usb/UsbMirrorLinkManager;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -95,7 +87,6 @@
     .param p0, "x0"    # Lcom/android/server/usb/UsbMirrorLinkManager;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     return-object v0
@@ -107,7 +98,6 @@
     .param p1, "x1"    # Landroid/os/DVFSHelper;
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     return-object p1
@@ -119,14 +109,12 @@
     .locals 13
 
     .prologue
-    .line 112
     new-instance v8, Ljava/lang/StringBuffer;
 
     const-string v11, ""
 
     invoke-direct {v8, v11}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 113
     .local v8, "strContent":Ljava/lang/StringBuffer;
     new-instance v4, Ljava/io/File;
 
@@ -134,11 +122,9 @@
 
     invoke-direct {v4, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 114
     .local v4, "mUsbfile":Ljava/io/File;
     const/4 v2, 0x0
 
-    .line 116
     .local v2, "fin":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
@@ -148,7 +134,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 117
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .local v3, "fin":Ljava/io/FileInputStream;
     :goto_0
@@ -162,7 +147,6 @@
 
     if-eq v0, v11, :cond_2
 
-    .line 118
     int-to-char v11, v0
 
     invoke-virtual {v8, v11}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
@@ -172,14 +156,12 @@
 
     goto :goto_0
 
-    .line 120
     .end local v0    # "ch":I
     :catch_0
     move-exception v1
 
     move-object v2, v3
 
-    .line 121
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .local v1, "e":Ljava/io/FileNotFoundException;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
@@ -190,7 +172,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     :goto_2
     new-instance v9, Ljava/util/StringTokenizer;
@@ -203,25 +184,21 @@
 
     invoke-direct {v9, v11, v12}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 126
     .local v9, "tokenizer":Ljava/util/StringTokenizer;
     const/4 v8, 0x0
 
-    .line 127
     invoke-virtual {v9}, Ljava/util/StringTokenizer;->hasMoreElements()Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 128
     invoke-virtual {v9}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 129
     .local v10, "val":Ljava/lang/String;
-    const-string/jumbo v11, "major"
+    const-string v11, "major"
 
     invoke-virtual {v11, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -229,12 +206,10 @@
 
     if-eqz v11, :cond_4
 
-    .line 130
     invoke-virtual {v9}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 131
     .local v5, "majorVal":Ljava/lang/String;
     const-string v11, "0"
 
@@ -244,13 +219,11 @@
 
     if-eqz v11, :cond_3
 
-    .line 132
     invoke-virtual {v9}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 133
-    const-string/jumbo v11, "minor"
+    const-string v11, "minor"
 
     invoke-virtual {v11, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -258,12 +231,10 @@
 
     if-eqz v11, :cond_0
 
-    .line 134
     invoke-virtual {v9}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 135
     .local v6, "minorVal":Ljava/lang/String;
     const-string v11, "1"
 
@@ -273,34 +244,29 @@
 
     if-eqz v11, :cond_0
 
-    .line 136
     sget-object v11, Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "systemReady terminal_version : major 0 minor 1"
+    const-string v12, "systemReady terminal_version : major 0 minor 1"
 
     invoke-static {v11, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     new-instance v7, Landroid/content/Intent;
 
     const-string v11, "com.samsung.android.mirrorlink.action.ML_UEVENT"
 
     invoke-direct {v7, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 138
     .local v7, "mlCommand":Landroid/content/Intent;
-    const-string/jumbo v11, "mirrorlink"
+    const-string v11, "mirrorlink"
 
     const-string v12, "START"
 
     invoke-virtual {v7, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 139
     iget-object v11, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11, v7}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 159
     .end local v5    # "majorVal":Ljava/lang/String;
     .end local v6    # "minorVal":Ljava/lang/String;
     .end local v7    # "mlCommand":Landroid/content/Intent;
@@ -309,7 +275,6 @@
     :goto_3
     const/4 v9, 0x0
 
-    .line 161
     if-eqz v2, :cond_1
 
     :try_start_2
@@ -319,7 +284,6 @@
 
     const/4 v2, 0x0
 
-    .line 165
     :cond_1
     :goto_4
     return-void
@@ -331,17 +295,14 @@
     :cond_2
     move-object v2, v3
 
-    .line 124
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 122
     .end local v0    # "ch":I
     :catch_1
     move-exception v1
 
-    .line 123
     .local v1, "e":Ljava/io/IOException;
     :goto_5
     sget-object v11, Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
@@ -352,7 +313,6 @@
 
     goto :goto_2
 
-    .line 144
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v5    # "majorVal":Ljava/lang/String;
     .restart local v9    # "tokenizer":Ljava/util/StringTokenizer;
@@ -362,8 +322,7 @@
 
     move-result-object v10
 
-    .line 145
-    const-string/jumbo v11, "minor"
+    const-string v11, "minor"
 
     invoke-virtual {v11, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -371,59 +330,51 @@
 
     if-eqz v11, :cond_0
 
-    .line 146
     sget-object v11, Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "systemReady terminal_version : major 1 minor"
+    const-string v12, "systemReady terminal_version : major 1 minor"
 
     invoke-static {v11, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     new-instance v7, Landroid/content/Intent;
 
     const-string v11, "com.samsung.android.mirrorlink.action.ML_UEVENT"
 
     invoke-direct {v7, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 148
     .restart local v7    # "mlCommand":Landroid/content/Intent;
-    const-string/jumbo v11, "mirrorlink"
+    const-string v11, "mirrorlink"
 
     const-string v12, "START"
 
     invoke-virtual {v7, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 149
     iget-object v11, p0, Lcom/android/server/usb/UsbMirrorLinkManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11, v7}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_3
 
-    .line 154
     .end local v5    # "majorVal":Ljava/lang/String;
     .end local v7    # "mlCommand":Landroid/content/Intent;
     :cond_4
     sget-object v11, Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "systemReady major version is not present"
+    const-string v12, "systemReady major version is not present"
 
     invoke-static {v11, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 162
     .end local v10    # "val":Ljava/lang/String;
     :catch_2
     move-exception v1
 
-    .line 163
     .restart local v1    # "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 122
     .end local v1    # "e":Ljava/io/IOException;
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v9    # "tokenizer":Ljava/util/StringTokenizer;
@@ -437,7 +388,6 @@
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_5
 
-    .line 120
     :catch_4
     move-exception v1
 

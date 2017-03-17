@@ -50,24 +50,20 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 2975
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2976
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mCerts:Ljava/util/Set;
 
-    .line 2977
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mPkgMap:Ljava/util/Map;
 
-    .line 2978
     return-void
 .end method
 
@@ -76,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/Policy$PolicyBuilder;
 
     .prologue
-    .line 2968
     iget-object v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mSeinfo:Ljava/lang/String;
 
     return-object v0
@@ -87,7 +82,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/Policy$PolicyBuilder;
 
     .prologue
-    .line 2968
     iget-boolean v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mDefaultStanza:Z
 
     return v0
@@ -98,7 +92,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/Policy$PolicyBuilder;
 
     .prologue
-    .line 2968
     iget-object v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mCerts:Ljava/util/Set;
 
     return-object v0
@@ -109,7 +102,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/Policy$PolicyBuilder;
 
     .prologue
-    .line 2968
     iget-object v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mPkgMap:Ljava/util/Map;
 
     return-object v0
@@ -122,15 +114,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3086
     if-nez p1, :cond_1
 
-    .line 3094
     :cond_0
     :goto_0
     return v0
 
-    .line 3090
     :cond_1
     const-string v1, "\\A[\\.\\w]+\\z"
 
@@ -140,7 +129,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3094
     const/4 v0, 0x1
 
     goto :goto_0
@@ -154,14 +142,12 @@
     .param p2, "seinfo"    # Ljava/lang/String;
 
     .prologue
-    .line 3059
     invoke-direct {p0, p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->validateValue(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 3060
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,7 +166,6 @@
 
     move-result-object v0
 
-    .line 3061
     .local v0, "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -188,7 +173,6 @@
 
     throw v2
 
-    .line 3063
     .end local v0    # "err":Ljava/lang/String;
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/pm/Policy$PolicyBuilder;->validateValue(Ljava/lang/String;)Z
@@ -197,7 +181,6 @@
 
     if-nez v2, :cond_1
 
-    .line 3064
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +199,6 @@
 
     move-result-object v0
 
-    .line 3065
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -224,7 +206,6 @@
 
     throw v2
 
-    .line 3068
     .end local v0    # "err":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mPkgMap:Ljava/util/Map;
@@ -235,7 +216,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 3069
     .local v1, "pkgValue":Ljava/lang/String;
     if-eqz v1, :cond_2
 
@@ -245,10 +225,8 @@
 
     if-nez v2, :cond_2
 
-    .line 3070
     const-string v0, "Conflicting seinfo value found"
 
-    .line 3071
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -256,14 +234,12 @@
 
     throw v2
 
-    .line 3074
     .end local v0    # "err":Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mPkgMap:Ljava/util/Map;
 
     invoke-interface {v2, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3075
     return-object p0
 .end method
 
@@ -272,10 +248,8 @@
     .param p1, "cert"    # Ljava/lang/String;
 
     .prologue
-    .line 3004
     if-nez p1, :cond_0
 
-    .line 3005
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,7 +268,6 @@
 
     move-result-object v0
 
-    .line 3006
     .local v0, "err":Ljava/lang/String;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -302,7 +275,6 @@
 
     throw v1
 
-    .line 3009
     .end local v0    # "err":Ljava/lang/String;
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mCerts:Ljava/util/Set;
@@ -313,7 +285,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3010
     return-object p0
 .end method
 
@@ -321,14 +292,12 @@
     .locals 4
 
     .prologue
-    .line 3124
     new-instance v1, Lcom/android/server/pm/Policy;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/pm/Policy;-><init>(Lcom/android/server/pm/Policy$PolicyBuilder;Lcom/android/server/pm/Policy$1;)V
 
-    .line 3126
     .local v1, "p":Lcom/android/server/pm/Policy;
     # getter for: Lcom/android/server/pm/Policy;->mDefaultStanza:Z
     invoke-static {v1}, Lcom/android/server/pm/Policy;->access$500(Lcom/android/server/pm/Policy;)Z
@@ -337,15 +306,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 3127
     iget-object v2, v1, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 3128
     const-string v0, "Missing global seinfo tag with default stanza."
 
-    .line 3129
     .local v0, "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -353,7 +319,6 @@
 
     throw v2
 
-    .line 3131
     .end local v0    # "err":Ljava/lang/String;
     :cond_0
     # getter for: Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
@@ -367,10 +332,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 3132
     const-string v0, "Certs not allowed with default stanza."
 
-    .line 3133
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -378,7 +341,6 @@
 
     throw v2
 
-    .line 3135
     .end local v0    # "err":Ljava/lang/String;
     :cond_1
     iget-object v2, v1, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
@@ -389,10 +351,8 @@
 
     if-nez v2, :cond_5
 
-    .line 3136
     const-string v0, "Inner package mappings not allowed with default stanza."
 
-    .line 3137
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -400,7 +360,6 @@
 
     throw v2
 
-    .line 3140
     .end local v0    # "err":Ljava/lang/String;
     :cond_2
     # getter for: Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
@@ -414,10 +373,8 @@
 
     if-nez v2, :cond_3
 
-    .line 3141
     const-string v0, "Missing certs with signer tag. Expecting at least one."
 
-    .line 3142
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -425,7 +382,6 @@
 
     throw v2
 
-    .line 3144
     .end local v0    # "err":Ljava/lang/String;
     :cond_3
     iget-object v2, v1, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
@@ -445,10 +401,8 @@
 
     if-nez v2, :cond_5
 
-    .line 3145
     const-string v0, "Only seinfo tag XOR package tags are allowed within a signer stanza."
 
-    .line 3147
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -456,14 +410,12 @@
 
     throw v2
 
-    .line 3144
     .end local v0    # "err":Ljava/lang/String;
     :cond_4
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 3151
     :cond_5
     return-object v1
 .end method
@@ -472,12 +424,10 @@
     .locals 1
 
     .prologue
-    .line 2989
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mDefaultStanza:Z
 
-    .line 2990
     return-object p0
 .end method
 
@@ -486,14 +436,12 @@
     .param p1, "seinfo"    # Ljava/lang/String;
 
     .prologue
-    .line 3028
     invoke-direct {p0, p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->validateValue(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3029
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -512,7 +460,6 @@
 
     move-result-object v0
 
-    .line 3030
     .local v0, "err":Ljava/lang/String;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -520,7 +467,6 @@
 
     throw v1
 
-    .line 3033
     .end local v0    # "err":Ljava/lang/String;
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mSeinfo:Ljava/lang/String;
@@ -535,10 +481,8 @@
 
     if-nez v1, :cond_1
 
-    .line 3034
     const-string v0, "Duplicate seinfo tag found"
 
-    .line 3035
     .restart local v0    # "err":Ljava/lang/String;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -546,11 +490,9 @@
 
     throw v1
 
-    .line 3038
     .end local v0    # "err":Ljava/lang/String;
     :cond_1
     iput-object p1, p0, Lcom/android/server/pm/Policy$PolicyBuilder;->mSeinfo:Ljava/lang/String;
 
-    .line 3039
     return-object p0
 .end method

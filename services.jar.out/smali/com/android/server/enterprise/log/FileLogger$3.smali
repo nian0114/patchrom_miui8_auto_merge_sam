@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 376
     iput-object p1, p0, Lcom/android/server/enterprise/log/FileLogger$3;->this$0:Lcom/android/server/enterprise/log/FileLogger;
 
     iput-object p2, p0, Lcom/android/server/enterprise/log/FileLogger$3;->val$file:Ljava/io/File;
@@ -60,10 +59,8 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
 
-    .line 398
     return-void
 .end method
 
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 376
     check-cast p1, Ljava/io/FileInputStream;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -95,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 380
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object v1, p0, Lcom/android/server/enterprise/log/FileLogger$3;->val$file:Ljava/io/File;
@@ -114,7 +109,6 @@
     .end annotation
 
     .prologue
-    .line 376
     invoke-virtual {p0}, Lcom/android/server/enterprise/log/FileLogger$3;->open()Ljava/io/FileInputStream;
 
     move-result-object v0
@@ -132,12 +126,10 @@
     .end annotation
 
     .prologue
-    .line 386
     const/16 v2, 0x1000
 
     new-array v0, v2, [B
 
-    .line 388
     .local v0, "buffer":[B
     :goto_0
     invoke-virtual {p1, v0}, Ljava/io/FileInputStream;->read([B)I
@@ -147,7 +139,6 @@
     .local v1, "bytesRead":I
     if-ltz v1, :cond_0
 
-    .line 389
     iget-object v2, p0, Lcom/android/server/enterprise/log/FileLogger$3;->val$outFile:Ljava/io/FileOutputStream;
 
     const/4 v3, 0x0
@@ -156,7 +147,6 @@
 
     goto :goto_0
 
-    .line 391
     :cond_0
     return-void
 .end method
@@ -171,7 +161,6 @@
     .end annotation
 
     .prologue
-    .line 376
     check-cast p1, Ljava/io/FileInputStream;
 
     .end local p1    # "x0":Ljava/lang/Object;

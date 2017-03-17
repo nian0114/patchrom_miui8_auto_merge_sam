@@ -38,18 +38,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     const-string v0, "AggregationRunnable"
 
     iput-object v0, p0, Landroid/net/wifi/AggregationRunnable;->TAG:Ljava/lang/String;
 
-    .line 65
     iput-object p1, p0, Landroid/net/wifi/AggregationRunnable;->mContext:Landroid/content/Context;
 
-    .line 66
     return-void
 .end method
 
@@ -58,7 +54,6 @@
     .param p0, "x0"    # Landroid/net/wifi/AggregationRunnable;
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/net/wifi/AggregationRunnable;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +64,6 @@
     .param p0, "x0"    # Landroid/net/wifi/AggregationRunnable;
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/net/wifi/AggregationRunnable;->xmlreader:Lorg/xml/sax/XMLReader;
 
     return-object v0
@@ -80,7 +74,6 @@
     .param p0, "x0"    # Landroid/net/wifi/AggregationRunnable;
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/net/wifi/AggregationRunnable;->handler:Landroid/net/wifi/AggregationHandler;
 
     return-object v0
@@ -91,7 +84,6 @@
     .param p0, "x0"    # Landroid/net/wifi/AggregationRunnable;
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/net/wifi/AggregationRunnable;->cm:Landroid/net/ConnectivityManager;
 
     return-object v0
@@ -105,21 +97,18 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 70
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->TAG:Ljava/lang/String;
 
     const-string v4, "run() method"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     new-instance v3, Landroid/net/wifi/AggregationHandler;
 
     invoke-direct {v3}, Landroid/net/wifi/AggregationHandler;-><init>()V
 
     iput-object v3, p0, Landroid/net/wifi/AggregationRunnable;->handler:Landroid/net/wifi/AggregationHandler;
 
-    .line 73
     :try_start_0
     const-string v3, "org.ccil.cowan.tagsoup.Parser"
 
@@ -129,7 +118,6 @@
 
     iput-object v3, p0, Landroid/net/wifi/AggregationRunnable;->xmlreader:Lorg/xml/sax/XMLReader;
 
-    .line 74
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->xmlreader:Lorg/xml/sax/XMLReader;
 
     const-string v4, "http://xml.org/sax/properties/lexical-handler"
@@ -140,7 +128,6 @@
     :try_end_0
     .catch Lorg/xml/sax/SAXException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 80
     :goto_0
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->xmlreader:Lorg/xml/sax/XMLReader;
 
@@ -148,7 +135,6 @@
 
     invoke-interface {v3, v4}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 83
     const-wide/16 v4, 0x3e8
 
     :try_start_1
@@ -156,13 +142,11 @@
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 87
     :goto_1
     new-instance v2, Landroid/net/wifi/AggregationRunnable$TestHttpGet;
 
     invoke-direct {v2, p0}, Landroid/net/wifi/AggregationRunnable$TestHttpGet;-><init>(Landroid/net/wifi/AggregationRunnable;)V
 
-    .line 89
     .local v2, "test":Landroid/net/wifi/AggregationRunnable$TestHttpGet;
     :try_start_2
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->mContext:Landroid/content/Context;
@@ -177,40 +161,33 @@
 
     iput-object v3, p0, Landroid/net/wifi/AggregationRunnable;->cm:Landroid/net/ConnectivityManager;
 
-    .line 90
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->cm:Landroid/net/ConnectivityManager;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/net/ConnectivityManager;->setNetworkPreference(I)V
 
-    .line 91
     invoke-virtual {v2}, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->executeHttpGet()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 100
     :goto_2
     return-void
 
-    .line 75
     .end local v2    # "test":Landroid/net/wifi/AggregationRunnable$TestHttpGet;
     :catch_0
     move-exception v1
 
-    .line 77
     .local v1, "e1":Lorg/xml/sax/SAXException;
     invoke-virtual {v1}, Lorg/xml/sax/SAXException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 92
     .end local v1    # "e1":Lorg/xml/sax/SAXException;
     .restart local v2    # "test":Landroid/net/wifi/AggregationRunnable$TestHttpGet;
     :catch_1
     move-exception v0
 
-    .line 94
     .local v0, "e":Ljava/lang/Exception;
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->TAG:Ljava/lang/String;
 
@@ -218,12 +195,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->cm:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v3, v6}, Landroid/net/ConnectivityManager;->setNetworkPreference(I)V
 
-    .line 97
     iget-object v3, p0, Landroid/net/wifi/AggregationRunnable;->mContext:Landroid/content/Context;
 
     new-instance v4, Landroid/content/Intent;
@@ -234,12 +209,10 @@
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 98
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 84
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "test":Landroid/net/wifi/AggregationRunnable$TestHttpGet;
     :catch_2

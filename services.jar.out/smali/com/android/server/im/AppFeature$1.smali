@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 230
     iput-object p1, p0, Lcom/android/server/im/AppFeature$1;->this$0:Lcom/android/server/im/AppFeature;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 233
     # getter for: Lcom/android/server/im/AppFeature;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/im/AppFeature;->access$000()Ljava/lang/String;
 
@@ -72,17 +70,14 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 270
     :cond_0
     :goto_0
     return-void
 
-    .line 237
     :pswitch_0
     # getter for: Lcom/android/server/im/AppFeature;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/im/AppFeature;->access$000()Ljava/lang/String;
@@ -93,12 +88,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 239
     .local v6, "start":J
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -112,7 +105,6 @@
 
     check-cast v2, Lcom/android/server/im/InjectionFeatureInfo;
 
-    .line 242
     .local v2, "featureinfo":Lcom/android/server/im/InjectionFeatureInfo;
     # getter for: Lcom/android/server/im/AppFeature;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/im/AppFeature;->access$000()Ljava/lang/String;
@@ -143,20 +135,17 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     iget-object v9, p0, Lcom/android/server/im/AppFeature$1;->this$0:Lcom/android/server/im/AppFeature;
 
     # invokes: Lcom/android/server/im/AppFeature;->addToTargetSpecificMap(Lcom/android/server/im/InjectionFeatureInfo;)V
     invoke-static {v9, v2}, Lcom/android/server/im/AppFeature;->access$100(Lcom/android/server/im/AppFeature;Lcom/android/server/im/InjectionFeatureInfo;)V
 
-    .line 244
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
     sub-long v0, v10, v6
 
-    .line 246
     .local v0, "end":J
     # getter for: Lcom/android/server/im/AppFeature;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/im/AppFeature;->access$000()Ljava/lang/String;
@@ -213,7 +202,6 @@
 
     goto :goto_0
 
-    .line 249
     .end local v0    # "end":J
     .end local v2    # "featureinfo":Lcom/android/server/im/InjectionFeatureInfo;
     .end local v6    # "start":J
@@ -228,7 +216,6 @@
 
     move-result-object v4
 
-    .line 253
     .local v4, "packageList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     # getter for: Lcom/android/server/im/AppFeature;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/im/AppFeature;->access$000()Ljava/lang/String;
@@ -255,7 +242,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -274,7 +260,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 255
     .local v5, "packagename":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/im/AppFeature$1;->this$0:Lcom/android/server/im/AppFeature;
 
@@ -282,7 +267,6 @@
 
     goto :goto_1
 
-    .line 259
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "packageList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v5    # "packagename":Ljava/lang/String;
@@ -295,7 +279,6 @@
 
     move-result-object v8
 
-    .line 261
     .local v8, "targetList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     # getter for: Lcom/android/server/im/AppFeature;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/im/AppFeature;->access$000()Ljava/lang/String;
@@ -322,7 +305,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     invoke-interface {v8}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -341,7 +323,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 263
     .restart local v5    # "packagename":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/im/AppFeature$1;->this$0:Lcom/android/server/im/AppFeature;
 
@@ -349,7 +330,6 @@
 
     goto :goto_2
 
-    .line 234
     nop
 
     :pswitch_data_0

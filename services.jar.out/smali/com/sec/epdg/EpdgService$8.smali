@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1410
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$8;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1413
     const/4 v0, 0x0
 
     return-object v0
@@ -50,19 +48,16 @@
     .param p1, "state"    # Ljava/lang/Object;
 
     .prologue
-    .line 1418
     const-string v0, "[EPDGService]"
 
     const-string v1, "Internet Keep alive timer expired send keep alive packet"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1420
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$8;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->onInternetKeepAliveTimerExpiry()V
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$1900(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1421
     return-void
 .end method

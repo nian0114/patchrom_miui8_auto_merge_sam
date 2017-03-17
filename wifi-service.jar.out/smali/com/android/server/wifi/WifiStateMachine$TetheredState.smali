@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 17032
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v2, 0x0
 
-    .line 17035
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -58,25 +56,21 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Ljava/lang/String;)V
     invoke-static {v3, p1, v4}, Lcom/android/server/wifi/WifiStateMachine;->access$4200(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Ljava/lang/String;)V
 
-    .line 17037
     iget v3, p1, Landroid/os/Message;->what:I
 
     sparse-switch v3, :sswitch_data_0
 
     move v1, v2
 
-    .line 17058
     :cond_0
     :goto_0
     return v1
 
-    .line 17039
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/wifi/WifiStateMachine$TetherStateChange;
 
-    .line 17040
     .local v0, "stateChange":Lcom/android/server/wifi/WifiStateMachine$TetherStateChange;
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -89,20 +83,17 @@
 
     if-nez v3, :cond_0
 
-    .line 17041
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const-string v4, "Tethering reports wifi as untethered!, shut down soft Ap"
 
     invoke-virtual {v3, v4}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 17042
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->sendErrorBroadcast(I)V
     invoke-static {v3, v5}, Lcom/android/server/wifi/WifiStateMachine;->access$10700(Lcom/android/server/wifi/WifiStateMachine;I)V
 
-    .line 17043
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const/4 v4, 0x0
@@ -111,7 +102,6 @@
 
     goto :goto_0
 
-    .line 17048
     .end local v0    # "stateChange":Lcom/android/server/wifi/WifiStateMachine$TetherStateChange;
     :sswitch_1
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
@@ -127,19 +117,16 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 17049
     :cond_1
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v3, v5, v2}, Lcom/android/server/wifi/WifiStateMachine;->setWifiApState(II)V
 
-    .line 17050
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->stopTethering()V
     invoke-static {v2}, Lcom/android/server/wifi/WifiStateMachine;->access$47700(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 17051
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -152,7 +139,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$47900(Lcom/android/server/wifi/WifiStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 17053
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$TetheredState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->deferMessage(Landroid/os/Message;)V
@@ -160,7 +146,6 @@
 
     goto :goto_0
 
-    .line 17037
     nop
 
     :sswitch_data_0

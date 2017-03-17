@@ -23,8 +23,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 27
-    const-string/jumbo v0, "wifioffloadnew.db"
+    const-string v0, "wifioffloadnew.db"
 
     const/4 v1, 0x0
 
@@ -32,7 +31,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 28
     return-void
 .end method
 
@@ -45,21 +43,17 @@
     .param p3, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     if-nez p1, :cond_0
 
-    .line 60
     invoke-virtual {p0}, Lcom/android/server/wifioffload/WifiOffloadDB;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
-    .line 62
     :cond_0
     const-string v0, ""
 
     invoke-virtual {p1, p3, v0, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 63
     return-void
 .end method
 
@@ -68,7 +62,6 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 33
     :try_start_0
     const-string v1, "CREATE TABLE app_datausage(_id INTEGER PRIMARY KEY AUTOINCREMENT,packagename TEXT NOT NULL,launchcount INTEGER);"
 
@@ -76,15 +69,12 @@
     :try_end_0
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 39
     :goto_0
     return-void
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     .local v0, "e":Landroid/database/SQLException;
     const-string v1, "WifiOffloadDB"
 
@@ -118,7 +108,6 @@
     .param p3, "currentVersion"    # I
 
     .prologue
-    .line 43
     const-string v0, "WifiOffloadDB"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -151,7 +140,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     return-void
 .end method
 
@@ -167,12 +155,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 50
     new-instance v0, Landroid/database/sqlite/SQLiteQueryBuilder;
 
     invoke-direct {v0}, Landroid/database/sqlite/SQLiteQueryBuilder;-><init>()V
 
-    .line 51
     .local v0, "sqlBuilder":Landroid/database/sqlite/SQLiteQueryBuilder;
     invoke-virtual {v0, p6}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
@@ -188,12 +174,10 @@
 
     move-object v7, p5
 
-    .line 53
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteQueryBuilder;->query(Landroid/database/sqlite/SQLiteDatabase;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v8
 
-    .line 55
     .local v8, "cursor":Landroid/database/Cursor;
     return-object v8
 .end method
@@ -207,25 +191,20 @@
     .param p5, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
-    .line 68
     .local v0, "count":I
     if-nez p1, :cond_0
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/wifioffload/WifiOffloadDB;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
-    .line 71
     :cond_0
     invoke-virtual {p1, p5, p2, p3, p4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
-    .line 72
     return v0
 .end method
 
@@ -238,7 +217,6 @@
     .param p5, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     invoke-virtual {p1, p5, p2, p3, p4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0

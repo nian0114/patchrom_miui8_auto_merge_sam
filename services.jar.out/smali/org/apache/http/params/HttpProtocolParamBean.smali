@@ -14,7 +14,6 @@
     .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/params/HttpParams;
@@ -37,7 +36,6 @@
     .param p1, "contentCharset"    # Ljava/lang/String;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -52,7 +50,6 @@
     .param p1, "httpElementCharset"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -67,7 +64,6 @@
     .param p1, "useExpectContinue"    # Z
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -82,7 +78,6 @@
     .param p1, "userAgent"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -97,7 +92,6 @@
     .param p1, "version"    # Lorg/apache/http/HttpVersion;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

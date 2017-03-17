@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 356
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 360
     new-instance v0, Landroid/hardware/scontext/SContextAttribute;
 
     invoke-direct {v0, p1}, Landroid/hardware/scontext/SContextAttribute;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 356
     invoke-virtual {p0, p1}, Landroid/hardware/scontext/SContextAttribute$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/scontext/SContextAttribute;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 365
     new-array v0, p1, [Landroid/hardware/scontext/SContextAttribute;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 356
     invoke-virtual {p0, p1}, Landroid/hardware/scontext/SContextAttribute$1;->newArray(I)[Landroid/hardware/scontext/SContextAttribute;
 
     move-result-object v0

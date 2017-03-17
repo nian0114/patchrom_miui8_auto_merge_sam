@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/android/server/enterprise/log/FileLogger$2;->this$0:Lcom/android/server/enterprise/log/FileLogger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "f2"    # Ljava/io/File;
 
     .prologue
-    .line 368
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -61,7 +59,6 @@
 
     move-result-wide v0
 
-    .line 369
     .local v0, "t1":J
     invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -71,7 +68,6 @@
 
     move-result-wide v2
 
-    .line 370
     .local v2, "t2":J
     cmp-long v4, v0, v2
 
@@ -103,7 +99,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 365
     check-cast p1, Ljava/io/File;
 
     .end local p1    # "x0":Ljava/lang/Object;

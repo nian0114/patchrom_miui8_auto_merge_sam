@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 595
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$6;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 598
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 599
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -56,31 +53,26 @@
 
     if-eqz v1, :cond_1
 
-    .line 600
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$6;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     iput-boolean v2, v1, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mBootCompleted:Z
 
-    .line 601
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$6;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     iget-object v1, v1, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mRestrictionPolicyOberver:Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;
 
     if-eqz v1, :cond_0
 
-    .line 602
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$6;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     iget-object v1, v1, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mRestrictionPolicyOberver:Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;
 
     invoke-virtual {v1}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->onBootCompleted()V
 
-    .line 607
     :cond_0
     :goto_0
     return-void
 
-    .line 603
     :cond_1
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -90,12 +82,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 604
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$6;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     iput-boolean v2, v1, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mIsShutingdown:Z
 
-    .line 605
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$6;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     const-wide/16 v2, 0x0

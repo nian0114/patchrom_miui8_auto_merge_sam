@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 594
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
-    .line 595
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 596
     return-void
 .end method
 
@@ -41,6 +38,5 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 600
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$DynamicIntentReceiver;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$DynamicIntentReceiver;->getSendingUserId()I
 
     move-result v3
 
-    .line 92
     .local v3, "userHandle":I
     # getter for: Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->mContainerAdminIntentFWDList:Ljava/util/HashMap;
     invoke-static {}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->access$300()Ljava/util/HashMap;
@@ -61,7 +58,6 @@
 
     if-nez v4, :cond_2
 
-    .line 93
     # getter for: Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->mContainerAdminIntentFWDList:Ljava/util/HashMap;
     invoke-static {}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->access$300()Ljava/util/HashMap;
 
@@ -95,7 +91,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 94
     .local v1, "intentFwd":Ljava/lang/String;
     const-string v4, ":"
 
@@ -103,7 +98,6 @@
 
     move-result-object v2
 
-    .line 95
     .local v2, "intentMetaData":[Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -119,7 +113,6 @@
 
     if-nez v4, :cond_0
 
-    .line 102
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "intentFwd":Ljava/lang/String;
     .end local v2    # "intentMetaData":[Ljava/lang/String;
@@ -127,7 +120,6 @@
     :goto_0
     return-void
 
-    .line 101
     :cond_2
     iget-object v4, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$DynamicIntentReceiver;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 

@@ -39,12 +39,10 @@
     .locals 7
 
     .prologue
-    .line 5323
     iput-object p1, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5321
     new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v4, 0x8
@@ -57,46 +55,38 @@
 
     iput-object v3, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 5324
     const v2, 0x7fffffff
 
-    .line 5325
     .local v2, "remainingDevices":I
     const/16 v3, 0x9
 
     iput v3, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndexMax:I
 
-    .line 5326
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 5327
     const/4 v3, 0x1
 
     shl-int v0, v3, v1
 
-    .line 5328
     .local v0, "device":I
     and-int v3, v0, v2
 
     if-nez v3, :cond_0
 
-    .line 5326
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 5331
     :cond_0
     xor-int/lit8 v3, v0, -0x1
 
     and-int/2addr v2, v3
 
-    .line 5332
     iget-object v3, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,7 +103,6 @@
 
     goto :goto_1
 
-    .line 5334
     .end local v0    # "device":I
     :cond_1
     return-void
@@ -125,7 +114,6 @@
     .param p2, "x1"    # Lcom/android/server/audio/AudioService$1;
 
     .prologue
-    .line 5318
     invoke-direct {p0, p1}, Lcom/android/server/audio/AudioService$FineVolumeState;-><init>(Lcom/android/server/audio/AudioService;)V
 
     return-void
@@ -136,26 +124,21 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 5363
     if-gez p1, :cond_1
 
-    .line 5364
     const/4 p1, 0x0
 
-    .line 5368
     .end local p1    # "index":I
     :cond_0
     :goto_0
     return p1
 
-    .line 5365
     .restart local p1    # "index":I
     :cond_1
     iget v0, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndexMax:I
 
     if-le p1, v0, :cond_0
 
-    .line 5366
     iget p1, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndexMax:I
 
     goto :goto_0
@@ -168,7 +151,6 @@
     .param p1, "device"    # I
 
     .prologue
-    .line 5373
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,7 +175,6 @@
 
     invoke-static {v0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 5374
     return-void
 .end method
 
@@ -202,12 +183,10 @@
     .param p1, "device"    # I
 
     .prologue
-    .line 5349
     const-class v2, Lcom/android/server/audio/AudioService$VolumeStreamState;
 
     monitor-enter v2
 
-    .line 5350
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -221,11 +200,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 5351
     .local v0, "index":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 5353
     iget-object v1, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/high16 v3, 0x40000000    # 2.0f
@@ -241,7 +218,6 @@
     .end local v0    # "index":Ljava/lang/Integer;
     check-cast v0, Ljava/lang/Integer;
 
-    .line 5355
     .restart local v0    # "index":Ljava/lang/Integer;
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -252,7 +228,6 @@
 
     return v1
 
-    .line 5356
     .end local v0    # "index":Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -268,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 5359
     iget v0, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndexMax:I
 
     return v0
@@ -280,29 +254,24 @@
     .param p2, "device"    # I
 
     .prologue
-    .line 5337
     const-class v2, Lcom/android/server/audio/AudioService$FineVolumeState;
 
     monitor-enter v2
 
-    .line 5338
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/audio/AudioService$FineVolumeState;->getIndex(I)I
 
     move-result v0
 
-    .line 5339
     .local v0, "oldIndex":I
     invoke-direct {p0, p1}, Lcom/android/server/audio/AudioService$FineVolumeState;->getValidIndex(I)I
 
     move-result p1
 
-    .line 5341
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 5342
     :try_start_1
     iget-object v1, p0, Lcom/android/server/audio/AudioService$FineVolumeState;->mIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -316,12 +285,10 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5343
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5344
     const/4 v1, 0x1
 
     :try_start_2
@@ -331,7 +298,6 @@
 
     return v1
 
-    .line 5343
     :catchall_0
     move-exception v1
 
@@ -343,7 +309,6 @@
     :try_start_4
     throw v1
 
-    .line 5345
     .end local v0    # "oldIndex":I
     :catchall_1
     move-exception v1

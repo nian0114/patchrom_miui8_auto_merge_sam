@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 101
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 119
     :goto_0
     return-void
 
-    .line 103
     :pswitch_0
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -56,7 +52,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->broadcastDefaultDataSubIdChanged(I)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->access$600(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;I)V
 
-    .line 106
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -70,13 +65,11 @@
 
     goto :goto_0
 
-    .line 110
     :pswitch_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Message;
 
-    .line 111
     .local v1, "replyMsg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -102,7 +95,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->log(Ljava/lang/String;)V
 
-    .line 112
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -118,7 +110,6 @@
 
     check-cast v0, Lcom/android/internal/telephony/PhoneBase;
 
-    .line 113
     .local v0, "pb":Lcom/android/internal/telephony/PhoneBase;
     iget-object v2, v0, Lcom/android/internal/telephony/PhoneBase;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -128,7 +119,6 @@
 
     goto :goto_0
 
-    .line 101
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

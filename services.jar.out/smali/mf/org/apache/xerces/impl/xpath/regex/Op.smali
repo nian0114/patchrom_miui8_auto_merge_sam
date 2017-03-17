@@ -74,12 +74,10 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     sput v0, Lmf/org/apache/xerces/impl/xpath/regex/Op;->nofinstances:I
 
-    .line 50
     return-void
 .end method
 
@@ -88,18 +86,14 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op;->next:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 131
     iput p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op;->type:I
 
-    .line 132
     return-void
 .end method
 
@@ -108,7 +102,6 @@
     .param p0, "data"    # I
 
     .prologue
-    .line 62
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;
 
     const/4 v1, 0x5
@@ -123,7 +116,6 @@
     .param p0, "refno"    # I
 
     .prologue
-    .line 100
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;
 
     const/16 v1, 0x10
@@ -139,18 +131,15 @@
     .param p1, "next"    # Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     .prologue
-    .line 66
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;
 
     const/16 v1, 0xf
 
     invoke-direct {v0, v1, p0}, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;-><init>(II)V
 
-    .line 67
     .local v0, "op":Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;
     iput-object p1, v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;->next:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 68
     return-object v0
 .end method
 
@@ -159,7 +148,6 @@
     .param p0, "data"    # I
 
     .prologue
-    .line 58
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$CharOp;
 
     const/4 v1, 0x1
@@ -174,7 +162,6 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 77
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ModifierOp;
 
     const/4 v1, 0x7
@@ -195,7 +182,6 @@
     .param p4, "noflow"    # Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     .prologue
-    .line 122
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;
 
     const/16 v1, 0x1a
@@ -210,11 +196,9 @@
 
     invoke-direct/range {v0 .. v5}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;-><init>(IILmf/org/apache/xerces/impl/xpath/regex/Op;Lmf/org/apache/xerces/impl/xpath/regex/Op;Lmf/org/apache/xerces/impl/xpath/regex/Op;)V
 
-    .line 123
     .local v0, "op":Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;
     iput-object p0, v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ConditionOp;->next:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 124
     return-object v0
 .end method
 
@@ -222,7 +206,6 @@
     .locals 2
 
     .prologue
-    .line 54
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     const/4 v1, 0x0
@@ -238,21 +221,17 @@
     .param p1, "branch"    # Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     .prologue
-    .line 108
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;
 
     const/16 v1, 0x18
 
     invoke-direct {v0, v1}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;-><init>(I)V
 
-    .line 109
     .local v0, "op":Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;
     invoke-virtual {v0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;->setChild(Lmf/org/apache/xerces/impl/xpath/regex/Op;)V
 
-    .line 110
     iput-object p0, v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;->next:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 111
     return-object v0
 .end method
 
@@ -263,19 +242,15 @@
     .param p2, "branch"    # Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
     .prologue
-    .line 93
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;
 
     invoke-direct {v0, p0}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;-><init>(I)V
 
-    .line 94
     .local v0, "op":Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;
     invoke-virtual {v0, p2}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;->setChild(Lmf/org/apache/xerces/impl/xpath/regex/Op;)V
 
-    .line 95
     iput-object p1, v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;->next:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 96
     return-object v0
 .end method
 
@@ -287,21 +262,17 @@
     .param p3, "mask"    # I
 
     .prologue
-    .line 115
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ModifierOp;
 
     const/16 v1, 0x19
 
     invoke-direct {v0, v1, p2, p3}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ModifierOp;-><init>(III)V
 
-    .line 116
     .local v0, "op":Lmf/org/apache/xerces/impl/xpath/regex/Op$ModifierOp;
     invoke-virtual {v0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op$ModifierOp;->setChild(Lmf/org/apache/xerces/impl/xpath/regex/Op;)V
 
-    .line 117
     iput-object p0, v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ModifierOp;->next:Lmf/org/apache/xerces/impl/xpath/regex/Op;
 
-    .line 118
     return-object v0
 .end method
 
@@ -309,7 +280,6 @@
     .locals 2
 
     .prologue
-    .line 81
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;
 
     const/16 v1, 0x8
@@ -324,7 +294,6 @@
     .param p0, "nongreedy"    # Z
 
     .prologue
-    .line 85
     new-instance v1, Lmf/org/apache/xerces/impl/xpath/regex/Op$ChildOp;
 
     if-eqz p0, :cond_0
@@ -347,7 +316,6 @@
     .param p0, "tok"    # Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     .prologue
-    .line 89
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$RangeOp;
 
     const/4 v1, 0x3
@@ -362,7 +330,6 @@
     .param p0, "literal"    # Ljava/lang/String;
 
     .prologue
-    .line 104
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$StringOp;
 
     const/4 v1, 0x6
@@ -377,7 +344,6 @@
     .param p0, "size"    # I
 
     .prologue
-    .line 73
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/regex/Op$UnionOp;
 
     const/16 v1, 0xb
@@ -394,7 +360,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 138
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -422,7 +387,6 @@
     .locals 3
 
     .prologue
-    .line 141
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -450,7 +414,6 @@
     .locals 3
 
     .prologue
-    .line 145
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -478,7 +441,6 @@
     .locals 3
 
     .prologue
-    .line 148
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -506,7 +468,6 @@
     .locals 3
 
     .prologue
-    .line 154
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -534,7 +495,6 @@
     .locals 3
 
     .prologue
-    .line 151
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -562,7 +522,6 @@
     .locals 1
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
     return v0

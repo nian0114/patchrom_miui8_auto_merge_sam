@@ -51,80 +51,65 @@
     .locals 2
 
     .prologue
-    .line 3468
-    const-string/jumbo v0, "debug_table"
+    const-string v0, "debug_table"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TABLE_DEBUG:Ljava/lang/String;
 
-    .line 3471
     const-string v0, "action_type"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_TYPE:Ljava/lang/String;
 
-    .line 3472
-    const-string/jumbo v0, "time"
+    const-string v0, "time"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TIMESTAMP:Ljava/lang/String;
 
-    .line 3473
     const-string v0, "caller_uid"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->CALLER_UID:Ljava/lang/String;
 
-    .line 3474
-    const-string/jumbo v0, "table_name"
+    const-string v0, "table_name"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TABLE_NAME:Ljava/lang/String;
 
-    .line 3475
-    const-string/jumbo v0, "primary_key"
+    const-string v0, "primary_key"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->KEY:Ljava/lang/String;
 
-    .line 3480
     const-string v0, "action_set_password"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_SET_PASSWORD:Ljava/lang/String;
 
-    .line 3481
     const-string v0, "action_clear_password"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CLEAR_PASSWORD:Ljava/lang/String;
 
-    .line 3482
     const-string v0, "action_account_add"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_ADD:Ljava/lang/String;
 
-    .line 3483
     const-string v0, "action_account_remove"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_REMOVE:Ljava/lang/String;
 
-    .line 3484
     const-string v0, "action_authenticator_remove"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_AUTHENTICATOR_REMOVE:Ljava/lang/String;
 
-    .line 3485
     const-string v0, "action_account_rename"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_RENAME:Ljava/lang/String;
 
-    .line 3492
     const-string v0, "action_called_account_add"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CALLED_ACCOUNT_ADD:Ljava/lang/String;
 
-    .line 3493
     const-string v0, "action_called_account_remove"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CALLED_ACCOUNT_REMOVE:Ljava/lang/String;
 
-    .line 3495
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss"
+    const-string v1, "yyyy-MM-dd HH:mm:ss"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
@@ -137,10 +122,8 @@
     .locals 0
 
     .prologue
-    .line 3465
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3466
     return-void
 .end method
 
@@ -148,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_ADD:Ljava/lang/String;
 
     return-object v0
@@ -158,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_RENAME:Ljava/lang/String;
 
     return-object v0
@@ -168,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CALLED_ACCOUNT_REMOVE:Ljava/lang/String;
 
     return-object v0
@@ -178,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_REMOVE:Ljava/lang/String;
 
     return-object v0
@@ -188,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CLEAR_PASSWORD:Ljava/lang/String;
 
     return-object v0
@@ -198,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_SET_PASSWORD:Ljava/lang/String;
 
     return-object v0
@@ -208,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CALLED_ACCOUNT_ADD:Ljava/lang/String;
 
     return-object v0
@@ -218,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->dateFromat:Ljava/text/SimpleDateFormat;
 
     return-object v0
@@ -228,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TABLE_DEBUG:Ljava/lang/String;
 
     return-object v0
@@ -238,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->KEY:Ljava/lang/String;
 
     return-object v0
@@ -248,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TIMESTAMP:Ljava/lang/String;
 
     return-object v0
@@ -259,7 +231,6 @@
     .param p0, "x0"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 3464
     invoke-static {p0}, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->createDebugTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
     return-void
@@ -269,7 +240,6 @@
     .locals 1
 
     .prologue
-    .line 3464
     sget-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_AUTHENTICATOR_REMOVE:Ljava/lang/String;
 
     return-object v0
@@ -280,7 +250,6 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 3498
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -381,7 +350,6 @@
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 3505
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,6 +390,5 @@
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 3506
     return-void
 .end method

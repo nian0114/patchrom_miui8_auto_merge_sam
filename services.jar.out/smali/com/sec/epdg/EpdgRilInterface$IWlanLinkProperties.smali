@@ -63,40 +63,28 @@
     .param p10, "ipv6Addr"    # Ljava/lang/String;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 189
     iput p1, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4PrefixLen:I
 
-    .line 190
     iput p2, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6PrefixLen:I
 
-    .line 191
     iput-object p3, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpType:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
-    .line 192
     iput-object p4, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIntfName:Ljava/lang/String;
 
-    .line 193
     iput-object p5, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4Dnses:[Ljava/lang/String;
 
-    .line 194
     iput-object p6, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6Dnses:[Ljava/lang/String;
 
-    .line 195
     iput-object p7, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4PcscfAddr:[Ljava/lang/String;
 
-    .line 196
     iput-object p8, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6PcscfAddr:[Ljava/lang/String;
 
-    .line 197
     iput-object p9, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4Addr:Ljava/lang/String;
 
-    .line 198
     iput-object p10, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6Addr:Ljava/lang/String;
 
-    .line 199
     return-void
 .end method
 
@@ -104,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 212
     const/4 v0, 0x2
 
     return v0
@@ -114,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 205
     invoke-static {}, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->isIpc4VolteInterimUpdate()Z
 
     move-result v0
@@ -136,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 209
     const/4 v0, 0x3
 
     return v0
@@ -146,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 202
     const/4 v0, 0x1
 
     return v0
@@ -158,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIntfName:Ljava/lang/String;
 
     return-object v0
@@ -168,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 222
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpType:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
     return-object v0
@@ -178,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4PcscfAddr:[Ljava/lang/String;
 
     return-object v0
@@ -188,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 240
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4Addr:Ljava/lang/String;
 
     return-object v0
@@ -198,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4PrefixLen:I
 
     return v0
@@ -208,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 234
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6PcscfAddr:[Ljava/lang/String;
 
     return-object v0
@@ -218,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 243
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6Addr:Ljava/lang/String;
 
     return-object v0
@@ -228,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 219
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6PrefixLen:I
 
     return v0
@@ -238,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv4Dnses:[Ljava/lang/String;
 
     return-object v0
@@ -248,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 231
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;->mIpv6Dnses:[Ljava/lang/String;
 
     return-object v0

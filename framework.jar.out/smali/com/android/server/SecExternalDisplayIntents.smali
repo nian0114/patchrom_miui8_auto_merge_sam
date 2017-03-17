@@ -96,10 +96,8 @@
 
     const/4 v2, 0x0
 
-    .line 148
     invoke-direct {p0, p1}, Lcom/android/server/SecExternalDisplayOrientation;-><init>(Lcom/android/server/SecExternalDisplayService;)V
 
-    .line 53
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "com.samsung.sec.android.clockpackage.alarm.ALARM_STARTED_IN_ALERT"
@@ -116,7 +114,6 @@
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STARTED:[Ljava/lang/String;
 
-    .line 58
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "com.samsung.sec.android.clockpackage.alarm.ALARM_STOPPED_IN_ALERT"
@@ -133,27 +130,22 @@
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STOPPED:[Ljava/lang/String;
 
-    .line 220
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/SecExternalDisplayIntents$1;-><init>(Lcom/android/server/SecExternalDisplayIntents;)V
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->mReceiver2:Landroid/content/BroadcastReceiver;
 
-    .line 149
     iput-object p1, p0, Lcom/android/server/SecExternalDisplayIntents;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
-    .line 150
     const-string v0, "SecExternalDisplayIntents_Java"
 
     const-string v1, "SecExternalDisplayIntents +"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     invoke-virtual {p0}, Lcom/android/server/SecExternalDisplayIntents;->SecExternalDisplayRegistIntentReceiver()V
 
-    .line 153
     return-void
 .end method
 
@@ -162,12 +154,10 @@
     .param p0, "edsObj"    # Lcom/android/server/SecExternalDisplayService;
 
     .prologue
-    .line 144
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents;
 
     invoke-direct {v0, p0}, Lcom/android/server/SecExternalDisplayIntents;-><init>(Lcom/android/server/SecExternalDisplayService;)V
 
-    .line 145
     .local v0, "intentObj":Lcom/android/server/SecExternalDisplayIntents;
     return-void
 .end method
@@ -177,7 +167,6 @@
     .param p0, "x0"    # Lcom/android/server/SecExternalDisplayIntents;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     return-object v0
@@ -199,145 +188,119 @@
 
     const/4 v7, 0x1
 
-    .line 157
     sget-boolean v0, Lcom/android/server/SecExternalDisplayIntents;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 158
     const-string v0, "SecExternalDisplayIntents_Java"
 
     const-string v1, "entered SecExternalDisplayRegistIntentReceiver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :cond_0
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 161
     .local v3, "filter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.HDMI_PLUGGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 162
     const-string v0, "com.sec.android.app.camera.ACTION_START_BACK_CAMERA"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 163
     const-string v0, "com.sec.android.app.camera.ACTION_START_FRONT_CAMERA"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 164
     const-string v0, "com.sec.android.app.camera.ACTION_STOP_CAMERA"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 165
     const-string v0, "android.intent.action.WIFI_DISPLAY"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 166
     const-string v0, "android.intent.action.USBHID_MOUSE_EVENT"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 167
     const-string v0, "android.intent.action.SCREENRECORDER_INFORMATION"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 168
     const-string v0, "com.samsung.android.app.camera.RVF"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 169
     const-string v0, "com.sec.android.sidesync.source.SIDESYNC_CONNECTED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 170
     const-string v0, "com.sec.android.sidesync.source.SERVICE_DESTROY"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 174
     const/4 v6, 0x0
 
     .local v6, "i":I
     :goto_0
     if-ge v6, v9, :cond_1
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STARTED:[Ljava/lang/String;
 
     aget-object v0, v0, v6
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 174
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 177
     :cond_1
     const/4 v6, 0x0
 
     :goto_1
     if-ge v6, v9, :cond_2
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STOPPED:[Ljava/lang/String;
 
     aget-object v0, v0, v6
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 177
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 180
     :cond_2
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 181
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 182
     const-string v0, "com.sec.android.app.videoplayer.REMOVE_BLACK_SCREEN"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 183
     const-string v0, "com.sec.android.app.videoplayer.SHOW_BLACK_SCREEN"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 184
     const-string v0, "com.kddi.android.sptab_source.SUCCESS_CONNECT_SOURCE"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 185
     const-string v0, "com.kddi.android.sptab_source.SUCCESS_DISCONNECT_SOURCE"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/SecExternalDisplayService;->getEDSContext()Landroid/content/Context;
@@ -352,14 +315,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 191
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "android.intent.action.HDMI_PLUGGED"
@@ -370,7 +331,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.app.camera.ACTION_START_BACK_CAMERA"
@@ -381,7 +341,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.app.camera.ACTION_START_FRONT_CAMERA"
@@ -392,7 +351,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.app.camera.ACTION_STOP_CAMERA"
@@ -405,7 +363,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.samsung.android.app.camera.RVF"
@@ -418,7 +375,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "android.intent.action.WIFI_DISPLAY"
@@ -431,7 +387,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STARTED:[Ljava/lang/String;
@@ -446,7 +401,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STARTED:[Ljava/lang/String;
@@ -461,7 +415,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STARTED:[Ljava/lang/String;
@@ -476,7 +429,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STOPPED:[Ljava/lang/String;
@@ -491,7 +443,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STOPPED:[Ljava/lang/String;
@@ -506,7 +457,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/android/server/SecExternalDisplayIntents;->ALARM_STOPPED:[Ljava/lang/String;
@@ -521,7 +471,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.sidesync.source.SIDESYNC_CONNECTED"
@@ -534,7 +483,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.sidesync.source.SERVICE_DESTROY"
@@ -547,7 +495,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "android.intent.action.SCREENRECORDER_INFORMATION"
@@ -560,7 +507,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "android.intent.action.USBHID_MOUSE_EVENT"
@@ -573,7 +519,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "android.intent.action.SCREEN_OFF"
@@ -586,7 +531,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "android.intent.action.USER_PRESENT"
@@ -599,7 +543,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.app.videoplayer.REMOVE_BLACK_SCREEN"
@@ -612,7 +555,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.app.videoplayer.SHOW_BLACK_SCREEN"
@@ -625,7 +567,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.kddi.android.sptab_source.SUCCESS_CONNECT_SOURCE"
@@ -638,7 +579,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.kddi.android.sptab_source.SUCCESS_DISCONNECT_SOURCE"
@@ -651,7 +591,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.samsung.intent.action.SEC_PRESENTATION_START"
@@ -664,7 +603,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayIntents;->BroadcastMap:Ljava/util/HashMap;
 
     const-string v1, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
@@ -677,6 +615,5 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 217
     return-void
 .end method

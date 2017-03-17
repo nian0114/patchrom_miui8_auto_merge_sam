@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$MyHandler$1;->this$1:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$MyHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,24 +45,19 @@
     .end annotation
 
     .prologue
-    .line 176
     new-instance v1, Ljava/io/OutputStreamWriter;
 
     const-string v2, "UTF-8"
 
     invoke-direct {v1, p1, v2}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 177
     .local v1, "writer":Ljava/io/OutputStreamWriter;
     const-string v0, "<script> window.open(\'\',\'_self\').close() </script>"
 
-    .line 178
     .local v0, "resp":Ljava/lang/String;
     invoke-virtual {v1, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->flush()V
 
-    .line 180
     return-void
 .end method

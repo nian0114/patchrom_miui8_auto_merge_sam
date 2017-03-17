@@ -16,16 +16,12 @@
     .param p2, "attrValues"    # Lcom/android/org/bouncycastle/asn1/ASN1Set;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/org/bouncycastle/asn1/ASN1Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrType:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
-    .line 50
     iput-object p2, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrValues:Lcom/android/org/bouncycastle/asn1/ASN1Set;
 
-    .line 51
     return-void
 .end method
 
@@ -34,10 +30,8 @@
     .param p1, "seq"    # Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lcom/android/org/bouncycastle/asn1/ASN1Object;-><init>()V
 
-    .line 41
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;->getObjectAt(I)Lcom/android/org/bouncycastle/asn1/ASN1Encodable;
@@ -48,7 +42,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrType:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
-    .line 42
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;->getObjectAt(I)Lcom/android/org/bouncycastle/asn1/ASN1Encodable;
@@ -59,7 +52,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrValues:Lcom/android/org/bouncycastle/asn1/ASN1Set;
 
-    .line 43
     return-void
 .end method
 
@@ -68,30 +60,25 @@
     .param p0, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 27
     if-eqz p0, :cond_0
 
     instance-of v0, p0, Lcom/android/server/wifi/BCProvider/Attribute;
 
     if-eqz v0, :cond_1
 
-    .line 29
     :cond_0
     check-cast p0, Lcom/android/server/wifi/BCProvider/Attribute;
 
-    .line 33
     .end local p0    # "o":Ljava/lang/Object;
     :goto_0
     return-object p0
 
-    .line 31
     .restart local p0    # "o":Ljava/lang/Object;
     :cond_1
     instance-of v0, p0, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
 
     if-eqz v0, :cond_2
 
-    .line 33
     new-instance v0, Lcom/android/server/wifi/BCProvider/Attribute;
 
     check-cast p0, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
@@ -103,7 +90,6 @@
 
     goto :goto_0
 
-    .line 35
     .restart local p0    # "o":Ljava/lang/Object;
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -145,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrType:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
     return-object v0
@@ -155,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrValues:Lcom/android/org/bouncycastle/asn1/ASN1Set;
 
     return-object v0
@@ -165,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrValues:Lcom/android/org/bouncycastle/asn1/ASN1Set;
 
     invoke-virtual {v0}, Lcom/android/org/bouncycastle/asn1/ASN1Set;->toArray()[Lcom/android/org/bouncycastle/asn1/ASN1Encodable;
@@ -179,23 +162,19 @@
     .locals 2
 
     .prologue
-    .line 79
     new-instance v0, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
 
     invoke-direct {v0}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;-><init>()V
 
-    .line 81
     .local v0, "v":Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
     iget-object v1, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrType:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 82
     iget-object v1, p0, Lcom/android/server/wifi/BCProvider/Attribute;->attrValues:Lcom/android/org/bouncycastle/asn1/ASN1Set;
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 84
     new-instance v1, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
     invoke-direct {v1, v0}, Lcom/android/org/bouncycastle/asn1/DERSequence;-><init>(Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;)V

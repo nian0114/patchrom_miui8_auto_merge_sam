@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 231
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$1;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 235
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,13 +50,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 236
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$1;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     # invokes: Lcom/android/server/enterprise/firewall/FirewallPolicy;->applyNetworkForMarketOnBoot()V
     invoke-static {v1}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->access$000(Lcom/android/server/enterprise/firewall/FirewallPolicy;)V
 
-    .line 237
     # getter for: Lcom/android/server/enterprise/firewall/FirewallPolicy;->mIsHostnameHashMapCreated:Z
     invoke-static {}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->access$100()Z
 
@@ -66,7 +62,6 @@
 
     if-nez v1, :cond_0
 
-    .line 238
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$1;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     const/4 v2, -0x1
@@ -76,7 +71,6 @@
     # invokes: Lcom/android/server/enterprise/firewall/FirewallPolicy;->loadHostnameMapFromDb(IZ)V
     invoke-static {v1, v2, v3}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->access$200(Lcom/android/server/enterprise/firewall/FirewallPolicy;IZ)V
 
-    .line 242
     :cond_0
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -102,7 +96,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 244
     :cond_1
     const-string v1, "FirewallPolicy"
 
@@ -110,20 +103,17 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 246
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$1;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     # invokes: Lcom/android/server/enterprise/firewall/FirewallPolicy;->getNetworkManagementService()Landroid/os/INetworkManagementService;
     invoke-static {v1}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->access$300(Lcom/android/server/enterprise/firewall/FirewallPolicy;)Landroid/os/INetworkManagementService;
 
-    .line 247
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$1;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     # invokes: Lcom/android/server/enterprise/firewall/FirewallPolicy;->getConnectivityManagerService()Landroid/net/IConnectivityManager;
     invoke-static {v1}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->access$400(Lcom/android/server/enterprise/firewall/FirewallPolicy;)Landroid/net/IConnectivityManager;
 
-    .line 248
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$1;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     # invokes: Lcom/android/server/enterprise/firewall/FirewallPolicy;->refreshProxyRules()Z
@@ -131,16 +121,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     :cond_2
     :goto_0
     return-void
 
-    .line 249
     :catch_0
     move-exception v0
 
-    .line 250
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "FirewallPolicy"
 

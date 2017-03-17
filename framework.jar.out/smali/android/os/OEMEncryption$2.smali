@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 134
     iput-object p1, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -42,14 +41,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 138
     const-string v0, "OEMEncryption"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onStorageStateChanged called for  "
+    const-string v2, "onStorageStateChanged called for  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,7 +73,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     iget-object v0, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     # getter for: Landroid/os/OEMEncryption;->dem:Landroid/dirEncryption/DirEncryptionManager;
@@ -93,20 +90,17 @@
 
     if-nez v0, :cond_1
 
-    .line 176
     :cond_0
     :goto_0
     return-void
 
-    .line 144
     :cond_1
     iget-object v0, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     # setter for: Landroid/os/OEMEncryption;->EXTERNAL_SD_STATE:Ljava/lang/String;
     invoke-static {v0, p3}, Landroid/os/OEMEncryption;->access$302(Landroid/os/OEMEncryption;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 150
-    const-string/jumbo v0, "mounted"
+    const-string v0, "mounted"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -114,14 +108,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 151
     const-string v0, "OEMEncryption"
 
     const-string v1, "In (newState.equals(Environment.MEDIA_MOUNTED))"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     iget-object v0, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     invoke-virtual {v0}, Landroid/os/OEMEncryption;->isCurrentSDCardEncrypted()Z
@@ -130,14 +122,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 155
     const-string v0, "OEMEncryption"
 
     const-string v1, "Dismissing the notification beacuse SD card is encrypted now."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iget-object v0, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     # getter for: Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;
@@ -147,7 +137,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 165
     :cond_2
     const-string v0, "checking"
 
@@ -166,7 +155,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 166
     iget-object v0, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     iget-object v1, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
@@ -178,9 +166,8 @@
 
     invoke-virtual {v0, v1}, Landroid/os/OEMEncryption;->setSDEncryptionPolicy(Z)V
 
-    .line 170
     :cond_3
-    const-string/jumbo v0, "unmounted"
+    const-string v0, "unmounted"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -188,14 +175,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 171
     const-string v0, "OEMEncryption"
 
     const-string v1, "Dismissing the notification beacuse SD card was unmounted."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v0, p0, Landroid/os/OEMEncryption$2;->this$0:Landroid/os/OEMEncryption;
 
     # getter for: Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;

@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     iput-object p2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->val$bundle:Landroid/os/Bundle;
@@ -55,14 +54,11 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 199
     const/4 v0, 0x0
 
-    .line 202
     .local v0, "ret":I
     if-nez v0, :cond_0
 
-    .line 203
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     # getter for: Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -76,7 +72,6 @@
 
     move-result v0
 
-    .line 204
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,11 +92,9 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 208
     :cond_0
     if-nez v0, :cond_1
 
-    .line 209
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     # getter for: Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -115,7 +108,6 @@
 
     move-result v0
 
-    .line 210
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,11 +128,9 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 215
     :cond_1
     if-nez v0, :cond_2
 
-    .line 216
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->val$bundle:Landroid/os/Bundle;
@@ -150,18 +140,15 @@
 
     move-result v0
 
-    .line 219
     :cond_2
     if-nez v0, :cond_3
 
-    .line 220
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->val$bundle:Landroid/os/Bundle;
 
     invoke-static {v2, v4}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->checkSecureStorageData(Landroid/os/Bundle;Z)I
 
     move-result v0
 
-    .line 223
     :cond_3
     if-nez v0, :cond_4
 
@@ -169,7 +156,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 224
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v2
@@ -180,7 +166,6 @@
 
     move-result v0
 
-    .line 225
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,11 +186,9 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 230
     :cond_4
     if-nez v0, :cond_5
 
-    .line 231
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     # getter for: Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -221,7 +204,6 @@
 
     move-result v0
 
-    .line 232
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,11 +230,9 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 237
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 238
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v2
@@ -261,7 +241,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->deleteToken(Ljava/lang/String;)I
 
-    .line 239
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     # getter for: Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -273,7 +252,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->removeOtpToken(Ljava/lang/String;)I
 
-    .line 240
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     iget-object v2, v2, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;->mContext:Landroid/content/Context;
@@ -282,7 +260,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->showUserToast(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 241
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +288,6 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 249
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
@@ -326,7 +302,6 @@
 
     move-result-object v1
 
-    .line 250
     .local v1, "vendorTokenId":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
@@ -338,10 +313,8 @@
 
     invoke-static {v2, v1, v3, v4, v0}, Lcom/android/server/enterprise/otp/OtpCallback;->otpStatusCallback(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 251
     return-void
 
-    .line 244
     .end local v1    # "vendorTokenId":Ljava/lang/String;
     :cond_6
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision$1;->this$0:Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
@@ -352,7 +325,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->showUserToast(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 245
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

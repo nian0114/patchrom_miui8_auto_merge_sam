@@ -24,7 +24,6 @@
 
     const/4 v4, 0x0
 
-    .line 29
     const/16 v0, 0x1c
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -424,7 +423,6 @@
     .locals 0
 
     .prologue
-    .line 64
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteException;-><init>()V
 
     return-void
@@ -435,7 +433,6 @@
     .param p1, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -458,7 +455,6 @@
 
     invoke-direct {p0, v0}, Landroid/database/sqlite/SQLiteException;-><init>(Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -467,7 +463,6 @@
     .param p0, "errMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     if-eqz p0, :cond_0
 
     const-string v0, "(code "
@@ -478,10 +473,8 @@
 
     if-lez v0, :cond_0
 
-    .line 72
     const-string v0, ""
 
-    .line 73
     :goto_0
     return-object v0
 
@@ -498,10 +491,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 78
     const-string v0, ""
 
-    .line 79
     .local v0, "caused":Ljava/lang/String;
     sget-object v1, Landroid/database/sqlite/SQLiteDiskIOException;->errString:[[Ljava/lang/String;
 
@@ -519,7 +510,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 80
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -550,11 +540,9 @@
 
     move-result-object v0
 
-    .line 83
     :goto_0
     return-object v0
 
-    .line 82
     :cond_0
     sget-object v1, Landroid/database/sqlite/SQLiteDiskIOException;->errString:[[Ljava/lang/String;
 

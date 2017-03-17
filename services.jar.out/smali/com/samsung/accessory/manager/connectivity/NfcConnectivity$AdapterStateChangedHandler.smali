@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$1;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;-><init>(Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;)V
 
     return-void
@@ -56,14 +54,12 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 63
     const-string v1, "android.nfc.extra.ADAPTER_STATE"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 64
     .local v0, "state":I
     # getter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->access$100()Ljava/lang/String;
@@ -90,22 +86,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     # setter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->mState:I
     invoke-static {v1, v0}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->access$402(Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;I)I
 
-    .line 66
     packed-switch v0, :pswitch_data_0
 
-    .line 91
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 69
     :pswitch_1
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
@@ -116,7 +108,6 @@
 
     goto :goto_0
 
-    .line 78
     :pswitch_2
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
@@ -131,7 +122,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 79
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     const/4 v2, 0x0
@@ -139,7 +129,6 @@
     # invokes: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->enableInternal(Z)Z
     invoke-static {v1, v2}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->access$500(Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;Z)Z
 
-    .line 83
     :cond_1
     :pswitch_3
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
@@ -151,7 +140,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 84
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     const/4 v2, 0x2
@@ -159,7 +147,6 @@
     # invokes: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->sendStateChanged(I)V
     invoke-static {v1, v2}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->access$300(Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;I)V
 
-    .line 85
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     # setter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->mPrevState:I
@@ -167,7 +154,6 @@
 
     goto :goto_0
 
-    .line 66
     nop
 
     :pswitch_data_0

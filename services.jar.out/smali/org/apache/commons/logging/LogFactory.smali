@@ -35,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -53,7 +52,6 @@
     .param p1, "classLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -72,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -87,7 +84,6 @@
     .param p0, "clazz"    # Ljava/lang/Class;
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -106,7 +102,6 @@
     .end annotation
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -125,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -145,7 +139,6 @@
     .end annotation
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -165,7 +158,6 @@
     .end annotation
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -179,7 +171,6 @@
     .locals 2
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -194,7 +185,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -210,7 +200,6 @@
     .param p1, "classLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 22
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -232,7 +221,6 @@
     .end annotation
 
     .prologue
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -247,7 +235,6 @@
     .param p0, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 26
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -262,7 +249,6 @@
     .param p0, "classLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -276,7 +262,6 @@
     .locals 2
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

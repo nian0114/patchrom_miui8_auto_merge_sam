@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/common/Print$2;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/android/server/enterprise/otp/engine/common/Print$2;->val$msg:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/common/Print$2;->val$context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/common/Print$2;->val$msg:Ljava/lang/String;
@@ -57,6 +55,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 64
     return-void
 .end method

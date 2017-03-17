@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 828
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$2;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,8 +38,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 831
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -48,7 +46,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 832
     .local v0, "telephonyManager":Landroid/telephony/TelephonyManager;
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$2;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -61,14 +58,13 @@
     # setter for: Lcom/android/server/net/NetworkStatsService;->mIsVideoCall:Z
     invoke-static {v1, v2}, Lcom/android/server/net/NetworkStatsService;->access$1002(Lcom/android/server/net/NetworkStatsService;Z)Z
 
-    .line 833
     const-string v1, "NetworkStats"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mVideoCallReceiver - mIsVideoCall: "
+    const-string v3, "mVideoCallReceiver - mIsVideoCall: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -91,6 +87,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 835
     return-void
 .end method

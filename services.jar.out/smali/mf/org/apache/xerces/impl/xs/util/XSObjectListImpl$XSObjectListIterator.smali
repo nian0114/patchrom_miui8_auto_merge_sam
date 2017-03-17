@@ -29,15 +29,12 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 226
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->this$0:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     iput p2, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
-    .line 228
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 260
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -60,7 +56,6 @@
     .locals 2
 
     .prologue
-    .line 230
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->this$0:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
@@ -87,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 239
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
     if-lez v0, :cond_0
@@ -107,7 +101,6 @@
     .locals 3
 
     .prologue
-    .line 233
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->this$0:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
@@ -119,7 +112,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 234
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->this$0:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->fArray:[Lmf/org/apache/xerces/xs/XSObject;
@@ -137,7 +129,6 @@
 
     return-object v0
 
-    .line 236
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -150,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
     return v0
@@ -160,12 +150,10 @@
     .locals 2
 
     .prologue
-    .line 242
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
     if-lez v0, :cond_0
 
-    .line 243
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->this$0:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->fArray:[Lmf/org/apache/xerces/xs/XSObject;
@@ -183,7 +171,6 @@
 
     return-object v0
 
-    .line 245
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -196,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 251
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl$XSObjectListIterator;->index:I
 
     add-int/lit8 v0, v0, -0x1
@@ -208,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 254
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -221,7 +206,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 257
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

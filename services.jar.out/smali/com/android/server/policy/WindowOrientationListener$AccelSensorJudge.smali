@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 470
     iput-object p1, p0, Lcom/android/server/policy/WindowOrientationListener$AccelSensorJudge;->this$0:Lcom/android/server/policy/WindowOrientationListener;
 
     invoke-direct {p0, p1}, Lcom/android/server/policy/WindowOrientationListener$OrientationJudge;-><init>(Lcom/android/server/policy/WindowOrientationListener;)V
@@ -39,7 +38,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 495
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 474
     const/4 v0, 0x0
 
     return v0
@@ -59,7 +56,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 500
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 510
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 505
     return-void
 .end method
 
@@ -86,7 +80,6 @@
     .param p1, "whenElapsedNanos"    # J
 
     .prologue
-    .line 485
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 480
     return-void
 .end method
 
@@ -102,6 +94,5 @@
     .locals 0
 
     .prologue
-    .line 490
     return-void
 .end method

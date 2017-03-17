@@ -46,7 +46,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 65
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -69,38 +68,28 @@
 
     const/4 v1, 0x0
 
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/wm/CustomStartingWindowData;->key:Ljava/lang/String;
 
-    .line 81
     iput-object v2, p0, Lcom/android/server/wm/CustomStartingWindowData;->packageName:Ljava/lang/String;
 
-    .line 84
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wm/CustomStartingWindowData;->taskUserId:I
 
-    .line 90
     iput v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfDefaultLayout:I
 
-    .line 93
     iput v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfReverseLayout:I
 
-    .line 96
     iput-object v2, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImage:Ljava/lang/String;
 
-    .line 98
     iput-object v2, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImageQualifier:Ljava/lang/String;
 
-    .line 101
     iput-boolean v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->bitmapIsLoaded:Z
 
-    .line 105
     return-void
 .end method
 
@@ -115,46 +104,34 @@
 
     const/4 v4, 0x0
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->key:Ljava/lang/String;
 
-    .line 81
     iput-object v5, p0, Lcom/android/server/wm/CustomStartingWindowData;->packageName:Ljava/lang/String;
 
-    .line 84
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->taskUserId:I
 
-    .line 90
     iput v4, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfDefaultLayout:I
 
-    .line 93
     iput v4, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfReverseLayout:I
 
-    .line 96
     iput-object v5, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImage:Ljava/lang/String;
 
-    .line 98
     iput-object v5, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImageQualifier:Ljava/lang/String;
 
-    .line 101
     iput-boolean v4, p0, Lcom/android/server/wm/CustomStartingWindowData;->bitmapIsLoaded:Z
 
-    .line 109
     if-nez p1, :cond_1
 
-    .line 143
     :cond_0
     :goto_0
     return-void
 
-    .line 114
     :cond_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
@@ -162,7 +139,6 @@
 
     iput-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->key:Ljava/lang/String;
 
-    .line 115
     iget-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->key:Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -181,24 +157,19 @@
 
     iput-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->key:Ljava/lang/String;
 
-    .line 116
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->packageName:Ljava/lang/String;
 
-    .line 119
     iput p3, p0, Lcom/android/server/wm/CustomStartingWindowData;->taskUserId:I
 
-    .line 123
     iget-object v0, p2, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    .line 124
     .local v0, "metaData":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 126
     const-string v1, "com.samsung.android.startingwindow.LAYOUT_RESID"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
@@ -207,19 +178,16 @@
 
     iput v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfDefaultLayout:I
 
-    .line 127
     iget v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfDefaultLayout:I
 
     if-eqz v1, :cond_2
 
-    .line 128
     const-string v1, "CustomStartingWindowData"
 
     const-string v2, "CustomStartingWindow DefaultLayout support app"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     :cond_2
     const-string v1, "com.samsung.android.startingwindow.REVERSE_LAYOUT_RESID"
 
@@ -229,19 +197,16 @@
 
     iput v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfReverseLayout:I
 
-    .line 133
     iget v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfReverseLayout:I
 
     if-eqz v1, :cond_3
 
-    .line 134
     const-string v1, "CustomStartingWindowData"
 
     const-string v2, "CustomStartingWindow Reverse Layout support app"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     :cond_3
     const-string v1, "com.samsung.android.startingwindow.IMAGE_PATH"
 
@@ -251,7 +216,6 @@
 
     iput-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImage:Ljava/lang/String;
 
-    .line 138
     const-string v1, "com.samsung.android.startingwindow.IMAGE_PATH_QUALIFIER"
 
     invoke-virtual {v0, v1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -260,7 +224,6 @@
 
     iput-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImageQualifier:Ljava/lang/String;
 
-    .line 139
     iget-object v1, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImage:Ljava/lang/String;
 
     if-nez v1, :cond_4
@@ -269,7 +232,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 140
     :cond_4
     const-string v1, "CustomStartingWindowData"
 
@@ -287,15 +249,12 @@
     .param p2, "rotation"    # I
 
     .prologue
-    .line 194
     invoke-static {p0, p1}, Lcom/android/server/wm/CustomStartingWindowData;->getQualifierFilePath(Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 197
     packed-switch p2, :pswitch_data_0
 
-    .line 205
     :pswitch_0
     new-instance v0, Ljava/io/File;
 
@@ -303,12 +262,10 @@
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 209
     .local v0, "file":Ljava/io/File;
     :goto_0
     return-object v0
 
-    .line 200
     .end local v0    # "file":Ljava/io/File;
     :pswitch_1
     new-instance v0, Ljava/io/File;
@@ -317,11 +274,9 @@
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 201
     .restart local v0    # "file":Ljava/io/File;
     goto :goto_0
 
-    .line 197
     nop
 
     :pswitch_data_0
@@ -338,13 +293,10 @@
     .param p1, "filePath"    # Ljava/io/File;
 
     .prologue
-    .line 213
     if-eqz p0, :cond_3
 
-    .line 214
-    const-string/jumbo v6, "qualifier"
+    const-string v6, "qualifier"
 
-    .line 215
     .local v6, "qualifierFilePath":Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -356,11 +308,9 @@
 
     move-result-object v7
 
-    .line 217
     .local v7, "qualifiers":[Ljava/lang/String;
     const/4 v2, 0x1
 
-    .line 218
     .local v2, "findFolder":Z
     move-object v0, v7
 
@@ -376,9 +326,8 @@
 
     aget-object v5, v0, v3
 
-    .line 219
     .local v5, "qualifier":Ljava/lang/String;
-    const-string/jumbo v9, "locale"
+    const-string v9, "locale"
 
     invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -386,7 +335,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 220
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -417,16 +365,14 @@
 
     move-result-object v6
 
-    .line 218
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 221
     :cond_1
-    const-string/jumbo v9, "font"
+    const-string v9, "font"
 
     invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -434,7 +380,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 222
     sget-object v9, Lcom/android/server/wm/CustomStartingWindowData;->mContext:Landroid/content/Context;
 
     const/4 v10, 0x1
@@ -443,7 +388,6 @@
 
     move-result-object v8
 
-    .line 223
     .local v8, "selectedFont":Ljava/lang/String;
     const-string v9, "/"
 
@@ -461,10 +405,8 @@
 
     move-result-object v8
 
-    .line 224
     if-eqz v8, :cond_0
 
-    .line 225
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -489,13 +431,11 @@
 
     goto :goto_1
 
-    .line 230
     .end local v5    # "qualifier":Ljava/lang/String;
     .end local v8    # "selectedFont":Ljava/lang/String;
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 231
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -504,7 +444,6 @@
     .local v1, "filePath":Ljava/io/File;
     move-object p1, v1
 
-    .line 235
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "filePath":Ljava/io/File;
     .end local v2    # "findFolder":Z
@@ -528,10 +467,8 @@
 
     const/4 v7, 0x0
 
-    .line 146
     const/4 v2, 0x0
 
-    .line 148
     .local v2, "bitmap":Landroid/graphics/Bitmap;
     iget-object v8, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImage:Ljava/lang/String;
 
@@ -541,26 +478,21 @@
 
     if-nez v8, :cond_1
 
-    .line 190
     :cond_0
     :goto_0
     return-object v7
 
-    .line 152
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 153
     .local v0, "before":J
     const/4 v5, 0x0
 
-    .line 155
     .local v5, "file":Ljava/io/File;
     const/4 v3, 0x0
 
-    .line 156
     .local v3, "customImageFile":Ljava/io/File;
     iget-object v8, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImage:Ljava/lang/String;
 
@@ -581,7 +513,6 @@
 
     if-eqz v8, :cond_7
 
-    .line 159
     :cond_3
     new-instance v6, Ljava/io/File;
 
@@ -619,7 +550,6 @@
 
     invoke-direct {v6, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 160
     .local v6, "tmpFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -627,36 +557,30 @@
 
     if-eqz v8, :cond_6
 
-    .line 161
     const-string v8, "CustomStartingWindowData"
 
     const-string v9, "CustomStartingWindow system takes"
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     move-object v3, v6
 
-    .line 170
     .end local v6    # "tmpFile":Ljava/io/File;
     :goto_1
     if-eqz v3, :cond_4
 
-    .line 171
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
-    .line 172
     iget-object v8, p0, Lcom/android/server/wm/CustomStartingWindowData;->customImageQualifier:Ljava/lang/String;
 
     invoke-static {v8, v3, p1}, Lcom/android/server/wm/CustomStartingWindowData;->getBitmapFile(Ljava/lang/String;Ljava/io/File;I)Ljava/io/File;
 
     move-result-object v5
 
-    .line 176
     :cond_4
     if-eqz v5, :cond_8
 
@@ -666,7 +590,6 @@
 
     if-eqz v8, :cond_8
 
-    .line 178
     :try_start_0
     new-instance v8, Landroid/graphics/BitmapFactory;
 
@@ -680,7 +603,6 @@
 
     move-result-object v2
 
-    .line 179
     sget-boolean v8, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z
 
     if-eqz v8, :cond_5
@@ -728,10 +650,8 @@
     :cond_5
     move-object v7, v2
 
-    .line 190
     goto/16 :goto_0
 
-    .line 164
     .restart local v6    # "tmpFile":Ljava/io/File;
     :cond_6
     new-instance v3, Ljava/io/File;
@@ -780,7 +700,6 @@
     .restart local v3    # "customImageFile":Ljava/io/File;
     goto :goto_1
 
-    .line 167
     .end local v6    # "tmpFile":Ljava/io/File;
     :cond_7
     new-instance v3, Ljava/io/File;
@@ -793,11 +712,9 @@
     .restart local v3    # "customImageFile":Ljava/io/File;
     goto/16 :goto_1
 
-    .line 180
     :catch_0
     move-exception v4
 
-    .line 181
     .local v4, "e":Ljava/lang/OutOfMemoryError;
     sget-boolean v8, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z
 
@@ -857,7 +774,6 @@
 
     goto/16 :goto_0
 
-    .line 185
     .end local v4    # "e":Ljava/lang/OutOfMemoryError;
     :cond_8
     sget-boolean v8, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z

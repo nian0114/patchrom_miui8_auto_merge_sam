@@ -30,14 +30,12 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/xpath/SecuritySupport$6;->this$0:Lmf/javax/xml/xpath/SecuritySupport;
 
     iput-object p2, p0, Lmf/javax/xml/xpath/SecuritySupport$6;->val$cl:Ljava/lang/ClassLoader;
 
     iput-object p3, p0, Lmf/javax/xml/xpath/SecuritySupport$6;->val$name:Ljava/lang/String;
 
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,24 +52,20 @@
     .end annotation
 
     .prologue
-    .line 140
     iget-object v1, p0, Lmf/javax/xml/xpath/SecuritySupport$6;->val$cl:Ljava/lang/ClassLoader;
 
     if-nez v1, :cond_0
 
-    .line 141
     iget-object v1, p0, Lmf/javax/xml/xpath/SecuritySupport$6;->val$name:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/ClassLoader;->getSystemResources(Ljava/lang/String;)Ljava/util/Enumeration;
 
     move-result-object v0
 
-    .line 145
     .local v0, "enumeration":Ljava/util/Enumeration;
     :goto_0
     return-object v0
 
-    .line 143
     .end local v0    # "enumeration":Ljava/util/Enumeration;
     :cond_0
     iget-object v1, p0, Lmf/javax/xml/xpath/SecuritySupport$6;->val$cl:Ljava/lang/ClassLoader;

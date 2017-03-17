@@ -29,18 +29,14 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$AppForeGroundUsage;->appLaunchCount:I
 
-    .line 137
     iput-wide v2, p0, Lcom/android/server/enterprise/application/ApplicationUsage$AppForeGroundUsage;->appLastLaunchTime:J
 
-    .line 138
     iput-wide v2, p0, Lcom/android/server/enterprise/application/ApplicationUsage$AppForeGroundUsage;->appLastPausetime:J
 
     return-void
@@ -51,7 +47,6 @@
     .param p1, "x0"    # Lcom/android/server/enterprise/application/ApplicationUsage$1;
 
     .prologue
-    .line 135
     invoke-direct {p0}, Lcom/android/server/enterprise/application/ApplicationUsage$AppForeGroundUsage;-><init>()V
 
     return-void

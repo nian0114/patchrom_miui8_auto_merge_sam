@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 236
     iput-object p1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,12 +38,10 @@
     .locals 1
 
     .prologue
-    .line 241
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->retryCount:I
 
-    .line 242
     return-void
 .end method
 
@@ -57,10 +54,8 @@
 
     const v4, 0x2015e
 
-    .line 246
     const/4 v0, 0x1
 
-    .line 247
     .local v0, "retValue":Z
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$000()Z
@@ -103,20 +98,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     :cond_0
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 265
     const/4 v0, 0x0
 
-    .line 268
     :goto_0
     return v0
 
-    .line 250
     :sswitch_0
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -127,7 +118,6 @@
 
     invoke-virtual {v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitor;->startMonitoring()V
 
-    .line 251
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     iget-object v2, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
@@ -142,7 +132,6 @@
 
     goto :goto_0
 
-    .line 254
     :sswitch_1
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -153,7 +142,6 @@
 
     invoke-virtual {v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitor;->stopMonitoring()V
 
-    .line 255
     iget v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->retryCount:I
 
     add-int/lit8 v2, v1, -0x1
@@ -162,7 +150,6 @@
 
     if-lez v1, :cond_1
 
-    .line 256
     const-string v1, "OxygenStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -187,14 +174,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-virtual {v1, v4, v6, v7}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendMessageDelayed(IJ)V
 
     goto :goto_0
 
-    .line 259
     :cond_1
     const-string v1, "OxygenStateMachine"
 
@@ -202,12 +187,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-virtual {v1, v4, v6, v7}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendMessageDelayed(IJ)V
 
-    .line 261
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     iget-object v2, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStoppedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
@@ -222,7 +205,6 @@
 
     goto :goto_0
 
-    .line 248
     nop
 
     :sswitch_data_0

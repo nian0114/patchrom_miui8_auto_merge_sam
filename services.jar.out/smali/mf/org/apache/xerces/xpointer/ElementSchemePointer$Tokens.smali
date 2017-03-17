@@ -48,12 +48,10 @@
 
     const/4 v2, 0x0
 
-    .line 535
     iput-object p1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 513
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -62,60 +60,48 @@
 
     aput-object v1, v0, v2
 
-    .line 514
     const-string v1, "XPTRTOKEN_ELEM_CHILD"
 
     aput-object v1, v0, v3
 
     iput-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fgTokenNames:[Ljava/lang/String;
 
-    .line 519
     const/16 v0, 0x100
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
-    .line 521
     iput v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
-    .line 528
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
-    .line 536
     iput-object p2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fSymbolTable:Lmf/org/apache/xerces/util/SymbolTable;
 
-    .line 538
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
     new-instance v1, Ljava/lang/Integer;
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 539
     const-string v2, "XPTRTOKEN_ELEM_NCNAME"
 
-    .line 538
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 540
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
     new-instance v1, Ljava/lang/Integer;
 
     invoke-direct {v1, v3}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 541
     const-string v2, "XPTRTOKEN_ELEM_CHILD"
 
-    .line 540
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 542
     return-void
 .end method
 
@@ -123,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 535
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;-><init>(Lmf/org/apache/xerces/xpointer/ElementSchemePointer;Lmf/org/apache/xerces/util/SymbolTable;)V
 
     return-void
@@ -133,7 +118,6 @@
     .locals 0
 
     .prologue
-    .line 581
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->addToken(I)V
 
     return-void
@@ -143,7 +127,6 @@
     .locals 0
 
     .prologue
-    .line 567
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->addToken(Ljava/lang/String;)V
 
     return-void
@@ -153,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 549
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->getTokenString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -165,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 653
     invoke-direct {p0}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->getTokenCount()I
 
     move-result v0
@@ -177,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 604
     invoke-direct {p0}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->hasMore()Z
 
     move-result v0
@@ -194,7 +174,6 @@
     .end annotation
 
     .prologue
-    .line 615
     invoke-direct {p0}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->nextToken()I
 
     move-result v0
@@ -209,7 +188,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 583
     :try_start_0
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
@@ -219,7 +197,6 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 590
     :goto_0
     iget v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
@@ -227,18 +204,14 @@
 
     iput v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
-    .line 591
     return-void
 
-    .line 584
     :catch_0
     move-exception v0
 
-    .line 585
     .local v0, "ex":Ljava/lang/ArrayIndexOutOfBoundsException;
     iget-object v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
-    .line 586
     .local v1, "oldList":[I
     iget v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
@@ -248,14 +221,12 @@
 
     iput-object v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
-    .line 587
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
     iget v3, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
     invoke-static {v1, v4, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 588
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
     iget v3, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
@@ -270,7 +241,6 @@
     .param p1, "tokenStr"    # Ljava/lang/String;
 
     .prologue
-    .line 568
     iget-object v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -279,11 +249,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 569
     .local v0, "tokenInt":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 570
     new-instance v0, Ljava/lang/Integer;
 
     .end local v0    # "tokenInt":Ljava/lang/Integer;
@@ -295,13 +263,11 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 571
     .restart local v0    # "tokenInt":Ljava/lang/Integer;
     iget-object v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 573
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -309,7 +275,6 @@
 
     invoke-direct {p0, v1}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->addToken(I)V
 
-    .line 574
     return-void
 .end method
 
@@ -318,7 +283,6 @@
     .param p1, "token"    # I
 
     .prologue
-    .line 559
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
     new-instance v1, Ljava/lang/Integer;
@@ -338,7 +302,6 @@
     .locals 1
 
     .prologue
-    .line 654
     iget v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
     return v0
@@ -349,7 +312,6 @@
     .param p1, "token"    # I
 
     .prologue
-    .line 550
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenNames:Ljava/util/HashMap;
 
     new-instance v1, Ljava/lang/Integer;
@@ -369,7 +331,6 @@
     .locals 2
 
     .prologue
-    .line 605
     iget v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fCurrentTokenIndex:I
 
     iget v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
@@ -396,14 +357,12 @@
     .end annotation
 
     .prologue
-    .line 616
     iget v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fCurrentTokenIndex:I
 
     iget v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
     if-ne v0, v1, :cond_0
 
-    .line 617
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     const-string v1, "XPointerElementSchemeProcessingError"
@@ -412,7 +371,6 @@
 
     invoke-virtual {v0, v1, v2}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer;->reportError(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 618
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
@@ -436,7 +394,6 @@
     .end annotation
 
     .prologue
-    .line 643
     invoke-direct {p0}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->nextToken()I
 
     move-result v1
@@ -445,11 +402,9 @@
 
     move-result-object v0
 
-    .line 644
     .local v0, "s":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 645
     iget-object v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     const-string v2, "XPointerElementSchemeProcessingError"
@@ -458,7 +413,6 @@
 
     invoke-virtual {v1, v2, v3}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer;->reportError(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 646
     :cond_0
     return-object v0
 .end method
@@ -472,14 +426,12 @@
     .end annotation
 
     .prologue
-    .line 629
     iget v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fCurrentTokenIndex:I
 
     iget v1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokenCount:I
 
     if-ne v0, v1, :cond_0
 
-    .line 630
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     const-string v1, "XPointerElementSchemeProcessingError"
@@ -488,7 +440,6 @@
 
     invoke-virtual {v0, v1, v2}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer;->reportError(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 631
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fTokens:[I
 
@@ -503,11 +454,9 @@
     .locals 1
 
     .prologue
-    .line 597
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->fCurrentTokenIndex:I
 
-    .line 598
     return-void
 .end method

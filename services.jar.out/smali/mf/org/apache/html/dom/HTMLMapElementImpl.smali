@@ -21,10 +21,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 75
     return-void
 .end method
 
@@ -35,20 +33,17 @@
     .param p1, "deep"    # Z
 
     .prologue
-    .line 62
     invoke-super {p0, p1}, Lmf/org/apache/html/dom/HTMLElementImpl;->cloneNode(Z)Lmf/org/w3c/dom/Node;
 
     move-result-object v0
 
     check-cast v0, Lmf/org/apache/html/dom/HTMLMapElementImpl;
 
-    .line 63
     .local v0, "clonedNode":Lmf/org/apache/html/dom/HTMLMapElementImpl;
     const/4 v1, 0x0
 
     iput-object v1, v0, Lmf/org/apache/html/dom/HTMLMapElementImpl;->_areas:Lmf/org/w3c/dom/html/HTMLCollection;
 
-    .line 64
     return-object v0
 .end method
 
@@ -56,12 +51,10 @@
     .locals 2
 
     .prologue
-    .line 39
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLMapElementImpl;->_areas:Lmf/org/w3c/dom/html/HTMLCollection;
 
     if-nez v0, :cond_0
 
-    .line 40
     new-instance v0, Lmf/org/apache/html/dom/HTMLCollectionImpl;
 
     const/4 v1, -0x1
@@ -70,7 +63,6 @@
 
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLMapElementImpl;->_areas:Lmf/org/w3c/dom/html/HTMLCollection;
 
-    .line 41
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLMapElementImpl;->_areas:Lmf/org/w3c/dom/html/HTMLCollection;
 
@@ -81,8 +73,7 @@
     .locals 1
 
     .prologue
-    .line 47
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLMapElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -96,11 +87,9 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 53
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLMapElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     return-void
 .end method

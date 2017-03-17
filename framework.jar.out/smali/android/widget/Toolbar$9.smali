@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1630
     iput-object p1, p0, Landroid/widget/Toolbar$9;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 1633
     iget-object v0, p0, Landroid/widget/Toolbar$9;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mTriangleToRight:Landroid/view/View;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setX(F)V
 
-    .line 1634
     return-void
 .end method

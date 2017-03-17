@@ -24,12 +24,9 @@
     .param p1, "bytes"    # [B
 
     .prologue
-    .line 258
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 259
     iput-object p1, p0, Landroid/speech/tts/SynthesisPlaybackQueueItem$ListEntry;->mBytes:[B
 
-    .line 260
     return-void
 .end method

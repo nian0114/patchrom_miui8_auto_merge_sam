@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,10 +20,8 @@
     .param p2, "outSizes"    # [J
 
     .prologue
-    .line 45
     invoke-static {p0, p1, p2}, Landroid/os/Process;->readProcLines(Ljava/lang/String;[Ljava/lang/String;[J)V
 
-    .line 46
     return-void
 .end method
 
@@ -33,23 +30,19 @@
     .param p0, "userID"    # I
 
     .prologue
-    .line 38
     invoke-static {}, Lcom/android/server/accounts/AccountManagerService;->getSingleton()Lcom/android/server/accounts/AccountManagerService;
 
     move-result-object v0
 
-    .line 39
     .local v0, "ams":Lcom/android/server/accounts/AccountManagerService;
     if-eqz v0, :cond_0
 
-    .line 40
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, p0, v2}, Lcom/android/server/accounts/AccountManagerService;->onServiceChanged(Landroid/accounts/AuthenticatorDescription;IZ)V
 
-    .line 42
     :cond_0
     return-void
 .end method

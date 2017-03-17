@@ -31,25 +31,20 @@
     .locals 1
 
     .prologue
-    .line 4514
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4515
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->registerObs()V
 
-    .line 4516
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->update()V
 
-    .line 4518
     new-instance v0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer$1;-><init>(Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;Lcom/android/server/notification/NotificationManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mMotionListener:Lcom/samsung/android/motion/MRListener;
 
-    .line 4540
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;
 
     .prologue
-    .line 4508
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->update()V
 
     return-void
@@ -70,7 +64,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4567
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -81,9 +74,8 @@
 
     move-result-object v0
 
-    .line 4568
     .local v0, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v1, "master_motion"
+    const-string v1, "master_motion"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -102,8 +94,7 @@
 
     invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 4574
-    const-string/jumbo v1, "motion_overturn"
+    const-string v1, "motion_overturn"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -122,7 +113,6 @@
 
     invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 4580
     return-void
 .end method
 
@@ -134,7 +124,6 @@
 
     const/4 v3, 0x0
 
-    .line 4583
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -145,9 +134,8 @@
 
     move-result-object v0
 
-    .line 4584
     .local v0, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v1, "master_motion"
+    const-string v1, "master_motion"
 
     invoke-static {v0, v1, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -160,13 +148,11 @@
     :goto_0
     iput-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mMotionOn:Z
 
-    .line 4585
     iget-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mMotionOn:Z
 
     if-eqz v1, :cond_0
 
-    .line 4586
-    const-string/jumbo v1, "motion_overturn"
+    const-string v1, "motion_overturn"
 
     invoke-static {v0, v1, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -177,20 +163,17 @@
     :goto_1
     iput-boolean v2, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mOverTurnOn:Z
 
-    .line 4589
     :cond_0
     return-void
 
     :cond_1
     move v1, v3
 
-    .line 4584
     goto :goto_0
 
     :cond_2
     move v2, v3
 
-    .line 4586
     goto :goto_1
 .end method
 
@@ -200,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 4543
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mMotionOn:Z
 
     if-eqz v0, :cond_0
@@ -224,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 4547
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mIsRegister:Z
 
     return v0
@@ -236,14 +217,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 4551
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const-string/jumbo v2, "motion_recognition"
+    const-string v2, "motion_recognition"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -251,23 +231,19 @@
 
     check-cast v0, Lcom/samsung/android/motion/MotionRecognitionManager;
 
-    .line 4553
     .local v0, "mrm":Lcom/samsung/android/motion/MotionRecognitionManager;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mMotionListener:Lcom/samsung/android/motion/MRListener;
 
     invoke-virtual {v0, v1, v3}, Lcom/samsung/android/motion/MotionRecognitionManager;->registerListenerEvent(Lcom/samsung/android/motion/MRListener;I)V
 
-    .line 4554
     iput-boolean v3, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mIsRegister:Z
 
-    .line 4555
     const-string v1, "NotificationService"
 
     const-string v2, "Reg. OverTurn"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4556
     return-void
 .end method
 
@@ -275,14 +251,13 @@
     .locals 3
 
     .prologue
-    .line 4559
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const-string/jumbo v2, "motion_recognition"
+    const-string v2, "motion_recognition"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -290,24 +265,20 @@
 
     check-cast v0, Lcom/samsung/android/motion/MotionRecognitionManager;
 
-    .line 4561
     .local v0, "mrm":Lcom/samsung/android/motion/MotionRecognitionManager;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mMotionListener:Lcom/samsung/android/motion/MRListener;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/motion/MotionRecognitionManager;->unregisterListener(Lcom/samsung/android/motion/MRListener;)V
 
-    .line 4562
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->mIsRegister:Z
 
-    .line 4563
     const-string v1, "NotificationService"
 
     const-string v2, "UnReg. OverTurn"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4564
     return-void
 .end method

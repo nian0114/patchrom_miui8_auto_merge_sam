@@ -17,15 +17,12 @@
     .param p1, "parts"    # [Lcom/android/internal/http/multipart/Part;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/entity/AbstractHttpEntity;-><init>()V
 
-    .line 15
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/http/multipart/MultipartEntity;->parts:[Lcom/android/internal/http/multipart/Part;
 
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -41,15 +38,12 @@
     .param p2, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 5
     invoke-direct {p0}, Lorg/apache/http/entity/AbstractHttpEntity;-><init>()V
 
-    .line 15
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/http/multipart/MultipartEntity;->parts:[Lcom/android/internal/http/multipart/Part;
 
-    .line 5
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -71,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -85,7 +78,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -99,7 +91,6 @@
     .locals 2
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -113,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -127,7 +117,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -141,7 +130,6 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -161,7 +149,6 @@
     .end annotation
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

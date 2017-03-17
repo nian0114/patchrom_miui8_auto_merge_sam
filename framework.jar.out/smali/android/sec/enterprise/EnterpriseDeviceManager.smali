@@ -76,10 +76,8 @@
     .locals 1
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mKnoxCustomManager:Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
@@ -93,7 +91,6 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 94
     :try_start_0
     const-string v3, "android.app.enterprise.EnterpriseDeviceManager"
 
@@ -101,7 +98,6 @@
 
     move-result-object v0
 
-    .line 95
     .local v0, "c":Ljava/lang/Class;
     const/4 v3, 0x1
 
@@ -117,7 +113,6 @@
 
     move-result-object v1
 
-    .line 96
     .local v1, "constructor":Ljava/lang/reflect/Constructor;
     const/4 v3, 0x1
 
@@ -133,21 +128,17 @@
 
     move-result-object v3
 
-    .line 100
     .end local v0    # "c":Ljava/lang/Class;
     .end local v1    # "constructor":Ljava/lang/reflect/Constructor;
     :goto_0
     return-object v3
 
-    .line 97
     :catch_0
     move-exception v2
 
-    .line 98
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 100
     const/4 v3, 0x0
 
     goto :goto_0
@@ -161,7 +152,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 105
     :try_start_0
     const-string v3, "com.sec.enterprise.knox.EnterpriseKnoxManager"
 
@@ -169,7 +159,6 @@
 
     move-result-object v0
 
-    .line 108
     .local v0, "c":Ljava/lang/Class;
     const-string v3, "getInstance"
 
@@ -181,7 +170,6 @@
 
     move-result-object v2
 
-    .line 109
     .local v2, "m":Ljava/lang/reflect/Method;
     const/4 v5, 0x0
 
@@ -195,23 +183,19 @@
 
     move-result-object v3
 
-    .line 113
     .end local v0    # "c":Ljava/lang/Class;
     .end local v2    # "m":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
-    .line 110
     :catch_0
     move-exception v1
 
-    .line 111
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v3, v4
 
-    .line 113
     goto :goto_0
 .end method
 
@@ -219,47 +203,39 @@
     .locals 2
 
     .prologue
-    .line 117
     sget-boolean v0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mInstanceCreated:Z
 
     if-nez v0, :cond_1
 
-    .line 118
     const-class v1, Landroid/sec/enterprise/EnterpriseDeviceManager;
 
     monitor-enter v1
 
-    .line 119
     :try_start_0
     sget-boolean v0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mInstanceCreated:Z
 
     if-nez v0, :cond_0
 
-    .line 120
     new-instance v0, Landroid/sec/enterprise/EnterpriseDeviceManager;
 
     invoke-direct {v0}, Landroid/sec/enterprise/EnterpriseDeviceManager;-><init>()V
 
     sput-object v0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mInstance:Landroid/sec/enterprise/EnterpriseDeviceManager;
 
-    .line 121
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mInstanceCreated:Z
 
-    .line 123
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 125
     :cond_1
     sget-object v0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mInstance:Landroid/sec/enterprise/EnterpriseDeviceManager;
 
     return-object v0
 
-    .line 123
     :catchall_0
     move-exception v0
 
@@ -275,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 89
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
@@ -289,24 +264,18 @@
     .locals 3
 
     .prologue
-    .line 168
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mApplicationPolicy:Landroid/sec/enterprise/ApplicationPolicy;
 
-    .line 169
     .local v0, "result":Landroid/sec/enterprise/ApplicationPolicy;
     if-nez v0, :cond_1
 
-    .line 170
     monitor-enter p0
 
-    .line 171
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mApplicationPolicy:Landroid/sec/enterprise/ApplicationPolicy;
 
-    .line 172
     if-nez v0, :cond_0
 
-    .line 173
     new-instance v1, Landroid/sec/enterprise/ApplicationPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/ApplicationPolicy;-><init>()V
@@ -322,18 +291,15 @@
 
     move-object v0, v1
 
-    .line 175
     .end local v1    # "result":Landroid/sec/enterprise/ApplicationPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/ApplicationPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 177
     :cond_1
     return-object v0
 
-    .line 175
     :catchall_0
     move-exception v2
 
@@ -360,24 +326,18 @@
     .locals 3
 
     .prologue
-    .line 441
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mAuditLog:Landroid/sec/enterprise/auditlog/AuditLog;
 
-    .line 442
     .local v0, "result":Landroid/sec/enterprise/auditlog/AuditLog;
     if-nez v0, :cond_1
 
-    .line 443
     monitor-enter p0
 
-    .line 444
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mAuditLog:Landroid/sec/enterprise/auditlog/AuditLog;
 
-    .line 445
     if-nez v0, :cond_0
 
-    .line 446
     new-instance v1, Landroid/sec/enterprise/auditlog/AuditLog;
 
     invoke-direct {v1}, Landroid/sec/enterprise/auditlog/AuditLog;-><init>()V
@@ -393,18 +353,15 @@
 
     move-object v0, v1
 
-    .line 448
     .end local v1    # "result":Landroid/sec/enterprise/auditlog/AuditLog;
     .restart local v0    # "result":Landroid/sec/enterprise/auditlog/AuditLog;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 450
     :cond_1
     return-object v0
 
-    .line 448
     :catchall_0
     move-exception v2
 
@@ -431,24 +388,18 @@
     .locals 3
 
     .prologue
-    .line 294
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mBluetoothPolicy:Landroid/sec/enterprise/BluetoothPolicy;
 
-    .line 295
     .local v0, "result":Landroid/sec/enterprise/BluetoothPolicy;
     if-nez v0, :cond_1
 
-    .line 296
     monitor-enter p0
 
-    .line 297
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mBluetoothPolicy:Landroid/sec/enterprise/BluetoothPolicy;
 
-    .line 298
     if-nez v0, :cond_0
 
-    .line 299
     new-instance v1, Landroid/sec/enterprise/BluetoothPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/BluetoothPolicy;-><init>()V
@@ -464,18 +415,15 @@
 
     move-object v0, v1
 
-    .line 301
     .end local v1    # "result":Landroid/sec/enterprise/BluetoothPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/BluetoothPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 303
     :cond_1
     return-object v0
 
-    .line 301
     :catchall_0
     move-exception v2
 
@@ -502,24 +450,18 @@
     .locals 3
 
     .prologue
-    .line 312
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mBrowserPolicy:Landroid/sec/enterprise/BrowserPolicy;
 
-    .line 313
     .local v0, "result":Landroid/sec/enterprise/BrowserPolicy;
     if-nez v0, :cond_1
 
-    .line 314
     monitor-enter p0
 
-    .line 315
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mBrowserPolicy:Landroid/sec/enterprise/BrowserPolicy;
 
-    .line 316
     if-nez v0, :cond_0
 
-    .line 317
     new-instance v1, Landroid/sec/enterprise/BrowserPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/BrowserPolicy;-><init>()V
@@ -535,18 +477,15 @@
 
     move-object v0, v1
 
-    .line 319
     .end local v1    # "result":Landroid/sec/enterprise/BrowserPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/BrowserPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 321
     :cond_1
     return-object v0
 
-    .line 319
     :catchall_0
     move-exception v2
 
@@ -573,24 +512,18 @@
     .locals 3
 
     .prologue
-    .line 421
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mCertificatePolicy:Landroid/sec/enterprise/certificate/CertificatePolicy;
 
-    .line 422
     .local v0, "result":Landroid/sec/enterprise/certificate/CertificatePolicy;
     if-nez v0, :cond_1
 
-    .line 423
     monitor-enter p0
 
-    .line 424
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mCertificatePolicy:Landroid/sec/enterprise/certificate/CertificatePolicy;
 
-    .line 425
     if-nez v0, :cond_0
 
-    .line 426
     new-instance v1, Landroid/sec/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/certificate/CertificatePolicy;-><init>()V
@@ -606,18 +539,15 @@
 
     move-object v0, v1
 
-    .line 428
     .end local v1    # "result":Landroid/sec/enterprise/certificate/CertificatePolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/certificate/CertificatePolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 430
     :cond_1
     return-object v0
 
-    .line 428
     :catchall_0
     move-exception v2
 
@@ -644,24 +574,18 @@
     .locals 3
 
     .prologue
-    .line 519
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mClientCertificateManager:Landroid/sec/enterprise/ClientCertificateManager;
 
-    .line 520
     .local v0, "result":Landroid/sec/enterprise/ClientCertificateManager;
     if-nez v0, :cond_1
 
-    .line 521
     monitor-enter p0
 
-    .line 522
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mClientCertificateManager:Landroid/sec/enterprise/ClientCertificateManager;
 
-    .line 523
     if-nez v0, :cond_0
 
-    .line 524
     new-instance v1, Landroid/sec/enterprise/ClientCertificateManager;
 
     invoke-direct {v1}, Landroid/sec/enterprise/ClientCertificateManager;-><init>()V
@@ -677,18 +601,15 @@
 
     move-object v0, v1
 
-    .line 526
     .end local v1    # "result":Landroid/sec/enterprise/ClientCertificateManager;
     .restart local v0    # "result":Landroid/sec/enterprise/ClientCertificateManager;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 528
     :cond_1
     return-object v0
 
-    .line 526
     :catchall_0
     move-exception v2
 
@@ -715,24 +636,18 @@
     .locals 3
 
     .prologue
-    .line 366
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mDateTimePolicy:Landroid/sec/enterprise/DateTimePolicy;
 
-    .line 367
     .local v0, "result":Landroid/sec/enterprise/DateTimePolicy;
     if-nez v0, :cond_1
 
-    .line 368
     monitor-enter p0
 
-    .line 369
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mDateTimePolicy:Landroid/sec/enterprise/DateTimePolicy;
 
-    .line 370
     if-nez v0, :cond_0
 
-    .line 371
     new-instance v1, Landroid/sec/enterprise/DateTimePolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/DateTimePolicy;-><init>()V
@@ -748,18 +663,15 @@
 
     move-object v0, v1
 
-    .line 373
     .end local v1    # "result":Landroid/sec/enterprise/DateTimePolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/DateTimePolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 375
     :cond_1
     return-object v0
 
-    .line 373
     :catchall_0
     move-exception v2
 
@@ -786,24 +698,18 @@
     .locals 3
 
     .prologue
-    .line 456
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mDeviceAccountPolicy:Landroid/sec/enterprise/DeviceAccountPolicy;
 
-    .line 457
     .local v0, "result":Landroid/sec/enterprise/DeviceAccountPolicy;
     if-nez v0, :cond_1
 
-    .line 458
     monitor-enter p0
 
-    .line 459
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mDeviceAccountPolicy:Landroid/sec/enterprise/DeviceAccountPolicy;
 
-    .line 460
     if-nez v0, :cond_0
 
-    .line 461
     new-instance v1, Landroid/sec/enterprise/DeviceAccountPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/DeviceAccountPolicy;-><init>()V
@@ -819,18 +725,15 @@
 
     move-object v0, v1
 
-    .line 463
     .end local v1    # "result":Landroid/sec/enterprise/DeviceAccountPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/DeviceAccountPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 465
     :cond_1
     return-object v0
 
-    .line 463
     :catchall_0
     move-exception v2
 
@@ -857,24 +760,18 @@
     .locals 3
 
     .prologue
-    .line 258
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mDeviceInventory:Landroid/sec/enterprise/DeviceInventory;
 
-    .line 259
     .local v0, "result":Landroid/sec/enterprise/DeviceInventory;
     if-nez v0, :cond_1
 
-    .line 260
     monitor-enter p0
 
-    .line 261
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mDeviceInventory:Landroid/sec/enterprise/DeviceInventory;
 
-    .line 262
     if-nez v0, :cond_0
 
-    .line 263
     new-instance v1, Landroid/sec/enterprise/DeviceInventory;
 
     invoke-direct {v1}, Landroid/sec/enterprise/DeviceInventory;-><init>()V
@@ -890,18 +787,15 @@
 
     move-object v0, v1
 
-    .line 265
     .end local v1    # "result":Landroid/sec/enterprise/DeviceInventory;
     .restart local v0    # "result":Landroid/sec/enterprise/DeviceInventory;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 267
     :cond_1
     return-object v0
 
-    .line 265
     :catchall_0
     move-exception v2
 
@@ -940,7 +834,6 @@
     .end annotation
 
     .prologue
-    .line 506
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager;->getService()Landroid/sec/enterprise/IEDMProxy;
 
@@ -952,15 +845,12 @@
 
     move-result-object v1
 
-    .line 508
     :goto_0
     return-object v1
 
-    .line 507
     :catch_0
     move-exception v0
 
-    .line 508
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -971,24 +861,18 @@
     .locals 3
 
     .prologue
-    .line 386
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mFirewallPolicy:Landroid/sec/enterprise/FirewallPolicy;
 
-    .line 387
     .local v0, "result":Landroid/sec/enterprise/FirewallPolicy;
     if-nez v0, :cond_1
 
-    .line 388
     monitor-enter p0
 
-    .line 389
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mFirewallPolicy:Landroid/sec/enterprise/FirewallPolicy;
 
-    .line 390
     if-nez v0, :cond_0
 
-    .line 391
     new-instance v1, Landroid/sec/enterprise/FirewallPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/FirewallPolicy;-><init>()V
@@ -1004,18 +888,15 @@
 
     move-object v0, v1
 
-    .line 393
     .end local v1    # "result":Landroid/sec/enterprise/FirewallPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/FirewallPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 395
     :cond_1
     return-object v0
 
-    .line 393
     :catchall_0
     move-exception v2
 
@@ -1042,24 +923,18 @@
     .locals 3
 
     .prologue
-    .line 401
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mKioskMode:Landroid/sec/enterprise/kioskmode/KioskMode;
 
-    .line 402
     .local v0, "result":Landroid/sec/enterprise/kioskmode/KioskMode;
     if-nez v0, :cond_1
 
-    .line 403
     monitor-enter p0
 
-    .line 404
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mKioskMode:Landroid/sec/enterprise/kioskmode/KioskMode;
 
-    .line 405
     if-nez v0, :cond_0
 
-    .line 406
     new-instance v1, Landroid/sec/enterprise/kioskmode/KioskMode;
 
     invoke-direct {v1}, Landroid/sec/enterprise/kioskmode/KioskMode;-><init>()V
@@ -1075,18 +950,15 @@
 
     move-object v0, v1
 
-    .line 408
     .end local v1    # "result":Landroid/sec/enterprise/kioskmode/KioskMode;
     .restart local v0    # "result":Landroid/sec/enterprise/kioskmode/KioskMode;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 410
     :cond_1
     return-object v0
 
-    .line 408
     :catchall_0
     move-exception v2
 
@@ -1113,24 +985,18 @@
     .locals 3
 
     .prologue
-    .line 471
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mKnoxCustomManager:Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
 
-    .line 472
     .local v0, "result":Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
     if-nez v0, :cond_1
 
-    .line 473
     monitor-enter p0
 
-    .line 474
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mKnoxCustomManager:Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
 
-    .line 475
     if-nez v0, :cond_0
 
-    .line 476
     new-instance v1, Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
 
     invoke-direct {v1}, Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;-><init>()V
@@ -1146,18 +1012,15 @@
 
     move-object v0, v1
 
-    .line 478
     .end local v1    # "result":Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
     .restart local v0    # "result":Lcom/sec/enterprise/knoxcustom/KnoxCustomManager;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 480
     :cond_1
     return-object v0
 
-    .line 478
     :catchall_0
     move-exception v2
 
@@ -1184,24 +1047,18 @@
     .locals 3
 
     .prologue
-    .line 276
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mLocationPolicy:Landroid/sec/enterprise/LocationPolicy;
 
-    .line 277
     .local v0, "result":Landroid/sec/enterprise/LocationPolicy;
     if-nez v0, :cond_1
 
-    .line 278
     monitor-enter p0
 
-    .line 279
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mLocationPolicy:Landroid/sec/enterprise/LocationPolicy;
 
-    .line 280
     if-nez v0, :cond_0
 
-    .line 281
     new-instance v1, Landroid/sec/enterprise/LocationPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/LocationPolicy;-><init>()V
@@ -1217,18 +1074,15 @@
 
     move-object v0, v1
 
-    .line 283
     .end local v1    # "result":Landroid/sec/enterprise/LocationPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/LocationPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 285
     :cond_1
     return-object v0
 
-    .line 283
     :catchall_0
     move-exception v2
 
@@ -1255,24 +1109,18 @@
     .locals 3
 
     .prologue
-    .line 186
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mMiscPolicy:Landroid/sec/enterprise/general/MiscPolicy;
 
-    .line 187
     .local v0, "result":Landroid/sec/enterprise/general/MiscPolicy;
     if-nez v0, :cond_1
 
-    .line 188
     monitor-enter p0
 
-    .line 189
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mMiscPolicy:Landroid/sec/enterprise/general/MiscPolicy;
 
-    .line 190
     if-nez v0, :cond_0
 
-    .line 191
     new-instance v1, Landroid/sec/enterprise/general/MiscPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/general/MiscPolicy;-><init>()V
@@ -1288,18 +1136,15 @@
 
     move-object v0, v1
 
-    .line 193
     .end local v1    # "result":Landroid/sec/enterprise/general/MiscPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/general/MiscPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 195
     :cond_1
     return-object v0
 
-    .line 193
     :catchall_0
     move-exception v2
 
@@ -1326,24 +1171,18 @@
     .locals 3
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mPasswordPolicy:Landroid/sec/enterprise/PasswordPolicy;
 
-    .line 241
     .local v0, "result":Landroid/sec/enterprise/PasswordPolicy;
     if-nez v0, :cond_1
 
-    .line 242
     monitor-enter p0
 
-    .line 243
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mPasswordPolicy:Landroid/sec/enterprise/PasswordPolicy;
 
-    .line 244
     if-nez v0, :cond_0
 
-    .line 245
     new-instance v1, Landroid/sec/enterprise/PasswordPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/PasswordPolicy;-><init>()V
@@ -1359,18 +1198,15 @@
 
     move-object v0, v1
 
-    .line 247
     .end local v1    # "result":Landroid/sec/enterprise/PasswordPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/PasswordPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 249
     :cond_1
     return-object v0
 
-    .line 247
     :catchall_0
     move-exception v2
 
@@ -1397,24 +1233,18 @@
     .locals 3
 
     .prologue
-    .line 330
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mPhonePolicy:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
-    .line 331
     .local v0, "result":Landroid/sec/enterprise/PhoneRestrictionPolicy;
     if-nez v0, :cond_1
 
-    .line 332
     monitor-enter p0
 
-    .line 333
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mPhonePolicy:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
-    .line 334
     if-nez v0, :cond_0
 
-    .line 335
     new-instance v1, Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/PhoneRestrictionPolicy;-><init>()V
@@ -1430,18 +1260,15 @@
 
     move-object v0, v1
 
-    .line 337
     .end local v1    # "result":Landroid/sec/enterprise/PhoneRestrictionPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/PhoneRestrictionPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 339
     :cond_1
     return-object v0
 
-    .line 337
     :catchall_0
     move-exception v2
 
@@ -1468,24 +1295,18 @@
     .locals 3
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mRestrictionPolicy:Landroid/sec/enterprise/RestrictionPolicy;
 
-    .line 223
     .local v0, "result":Landroid/sec/enterprise/RestrictionPolicy;
     if-nez v0, :cond_1
 
-    .line 224
     monitor-enter p0
 
-    .line 225
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mRestrictionPolicy:Landroid/sec/enterprise/RestrictionPolicy;
 
-    .line 226
     if-nez v0, :cond_0
 
-    .line 227
     new-instance v1, Landroid/sec/enterprise/RestrictionPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/RestrictionPolicy;-><init>()V
@@ -1501,18 +1322,15 @@
 
     move-object v0, v1
 
-    .line 229
     .end local v1    # "result":Landroid/sec/enterprise/RestrictionPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/RestrictionPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 231
     :cond_1
     return-object v0
 
-    .line 229
     :catchall_0
     move-exception v2
 
@@ -1539,24 +1357,18 @@
     .locals 3
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mRoamingPolicy:Landroid/sec/enterprise/RoamingPolicy;
 
-    .line 205
     .local v0, "result":Landroid/sec/enterprise/RoamingPolicy;
     if-nez v0, :cond_1
 
-    .line 206
     monitor-enter p0
 
-    .line 207
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mRoamingPolicy:Landroid/sec/enterprise/RoamingPolicy;
 
-    .line 208
     if-nez v0, :cond_0
 
-    .line 209
     new-instance v1, Landroid/sec/enterprise/RoamingPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/RoamingPolicy;-><init>()V
@@ -1572,18 +1384,15 @@
 
     move-object v0, v1
 
-    .line 211
     .end local v1    # "result":Landroid/sec/enterprise/RoamingPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/RoamingPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 213
     :cond_1
     return-object v0
 
-    .line 211
     :catchall_0
     move-exception v2
 
@@ -1610,24 +1419,18 @@
     .locals 3
 
     .prologue
-    .line 492
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mSmartCardAccessPolicy:Landroid/sec/enterprise/SmartCardAccessPolicy;
 
-    .line 493
     .local v0, "result":Landroid/sec/enterprise/SmartCardAccessPolicy;
     if-nez v0, :cond_1
 
-    .line 494
     monitor-enter p0
 
-    .line 495
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mSmartCardAccessPolicy:Landroid/sec/enterprise/SmartCardAccessPolicy;
 
-    .line 496
     if-nez v0, :cond_0
 
-    .line 497
     new-instance v1, Landroid/sec/enterprise/SmartCardAccessPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/SmartCardAccessPolicy;-><init>()V
@@ -1643,18 +1446,15 @@
 
     move-object v0, v1
 
-    .line 499
     .end local v1    # "result":Landroid/sec/enterprise/SmartCardAccessPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/SmartCardAccessPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 501
     :cond_1
     return-object v0
 
-    .line 499
     :catchall_0
     move-exception v2
 
@@ -1681,24 +1481,18 @@
     .locals 3
 
     .prologue
-    .line 538
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mTimaKeystore:Landroid/sec/enterprise/TimaKeystore;
 
-    .line 539
     .local v0, "result":Landroid/sec/enterprise/TimaKeystore;
     if-nez v0, :cond_1
 
-    .line 540
     monitor-enter p0
 
-    .line 541
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mTimaKeystore:Landroid/sec/enterprise/TimaKeystore;
 
-    .line 542
     if-nez v0, :cond_0
 
-    .line 543
     new-instance v1, Landroid/sec/enterprise/TimaKeystore;
 
     invoke-direct {v1}, Landroid/sec/enterprise/TimaKeystore;-><init>()V
@@ -1714,18 +1508,15 @@
 
     move-object v0, v1
 
-    .line 545
     .end local v1    # "result":Landroid/sec/enterprise/TimaKeystore;
     .restart local v0    # "result":Landroid/sec/enterprise/TimaKeystore;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 547
     :cond_1
     return-object v0
 
-    .line 545
     :catchall_0
     move-exception v2
 
@@ -1752,24 +1543,18 @@
     .locals 3
 
     .prologue
-    .line 348
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mWifiPolicy:Landroid/sec/enterprise/WifiPolicy;
 
-    .line 349
     .local v0, "result":Landroid/sec/enterprise/WifiPolicy;
     if-nez v0, :cond_1
 
-    .line 350
     monitor-enter p0
 
-    .line 351
     :try_start_0
     iget-object v0, p0, Landroid/sec/enterprise/EnterpriseDeviceManager;->mWifiPolicy:Landroid/sec/enterprise/WifiPolicy;
 
-    .line 352
     if-nez v0, :cond_0
 
-    .line 353
     new-instance v1, Landroid/sec/enterprise/WifiPolicy;
 
     invoke-direct {v1}, Landroid/sec/enterprise/WifiPolicy;-><init>()V
@@ -1785,18 +1570,15 @@
 
     move-object v0, v1
 
-    .line 355
     .end local v1    # "result":Landroid/sec/enterprise/WifiPolicy;
     .restart local v0    # "result":Landroid/sec/enterprise/WifiPolicy;
     :cond_0
     :try_start_2
     monitor-exit p0
 
-    .line 357
     :cond_1
     return-object v0
 
-    .line 355
     :catchall_0
     move-exception v2
 

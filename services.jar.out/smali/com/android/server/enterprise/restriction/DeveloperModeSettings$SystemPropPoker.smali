@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 557
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 557
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -61,7 +59,6 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 562
     :try_start_0
     const-string v8, "DeveloperModeSettings"
 
@@ -69,14 +66,12 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 563
     invoke-static {}, Landroid/os/ServiceManager;->listServices()[Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v7
 
-    .line 567
     .local v7, "services":[Ljava/lang/String;
     if-eqz v7, :cond_0
 
@@ -84,7 +79,6 @@
 
     if-nez v8, :cond_2
 
-    .line 568
     :cond_0
     const-string v8, "DeveloperModeSettings"
 
@@ -92,21 +86,17 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 584
     .end local v7    # "services":[Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v11
 
-    .line 564
     :catch_0
     move-exception v2
 
-    .line 565
     .local v2, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 571
     .end local v2    # "e":Landroid/os/RemoteException;
     .restart local v7    # "services":[Ljava/lang/String;
     :cond_2
@@ -124,22 +114,18 @@
 
     aget-object v6, v0, v3
 
-    .line 572
     .local v6, "service":Ljava/lang/String;
     invoke-static {v6}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v5
 
-    .line 573
     .local v5, "obj":Landroid/os/IBinder;
     if-eqz v5, :cond_3
 
-    .line 574
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 576
     .local v1, "data":Landroid/os/Parcel;
     const v8, 0x5f535052
 
@@ -152,23 +138,19 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 581
     :goto_2
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 571
     .end local v1    # "data":Landroid/os/Parcel;
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 577
     .restart local v1    # "data":Landroid/os/Parcel;
     :catch_1
     move-exception v2
 
-    .line 578
     .restart local v2    # "e":Landroid/os/RemoteException;
     const-string v8, "DeveloperModeSettings"
 

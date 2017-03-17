@@ -13,10 +13,8 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     invoke-direct {p0, p1}, Lmf/javax/xml/xpath/XPathException;-><init>(Ljava/lang/String;)V
 
-    .line 78
     return-void
 .end method
 
@@ -25,9 +23,7 @@
     .param p1, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 92
     invoke-direct {p0, p1}, Lmf/javax/xml/xpath/XPathException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 93
     return-void
 .end method

@@ -14,10 +14,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 63
     invoke-direct {p0, v0, v0, v0}, Lmf/org/apache/xerces/parsers/SecurityConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 64
     return-void
 .end method
 
@@ -28,10 +26,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 72
     invoke-direct {p0, p1, v0, v0}, Lmf/org/apache/xerces/parsers/SecurityConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 73
     return-void
 .end method
 
@@ -41,12 +37,10 @@
     .param p2, "grammarPool"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     .prologue
-    .line 88
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lmf/org/apache/xerces/parsers/SecurityConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 89
     return-void
 .end method
 
@@ -57,10 +51,8 @@
     .param p3, "parentSettings"    # Lmf/org/apache/xerces/xni/parser/XMLComponentManager;
 
     .prologue
-    .line 106
     invoke-direct {p0, p1, p2, p3}, Lmf/org/apache/xerces/parsers/XIncludeAwareParserConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 109
     const-string v0, "http://apache.org/xml/properties/security-manager"
 
     new-instance v1, Lmf/org/apache/xerces/util/SecurityManager;
@@ -69,6 +61,5 @@
 
     invoke-virtual {p0, v0, v1}, Lmf/org/apache/xerces/parsers/SecurityConfiguration;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 110
     return-void
 .end method

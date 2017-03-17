@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
-    .line 93
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 94
     return-void
 .end method
 
@@ -38,17 +35,14 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
-    .line 97
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 98
     return-void
 .end method
 
@@ -59,17 +53,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 102
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 117
     :cond_0
     :goto_0
     return-void
 
-    .line 104
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
@@ -78,7 +69,6 @@
 
     goto :goto_0
 
-    .line 108
     :pswitch_1
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
@@ -89,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
     # getter for: Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mStillDown:Z
@@ -99,7 +88,6 @@
 
     if-nez v0, :cond_1
 
-    .line 110
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
     # getter for: Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDoubleTapListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadDoubleTapListener;
@@ -118,7 +106,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;->this$0:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
@@ -129,7 +116,6 @@
 
     goto :goto_0
 
-    .line 102
     nop
 
     :pswitch_data_0

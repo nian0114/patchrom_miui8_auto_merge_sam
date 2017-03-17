@@ -30,17 +30,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2339
     iput-object p1, p0, Lcom/android/server/wm/DualScreenTransition$H;->this$0:Lcom/android/server/wm/DualScreenTransition;
 
-    .line 2340
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 2341
     return-void
 .end method
 
@@ -51,23 +48,19 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2345
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2357
     const-string v0, "DualScreenTransition"
 
     const-string v1, "No Valid Message To Handle"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2360
     :goto_0
     return-void
 
-    .line 2347
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wm/DualScreenTransition$H;->this$0:Lcom/android/server/wm/DualScreenTransition;
 
@@ -82,7 +75,6 @@
 
     monitor-enter v1
 
-    .line 2348
     :try_start_0
     const-string v0, "DualScreenTransition"
 
@@ -90,21 +82,18 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2350
     iget-object v0, p0, Lcom/android/server/wm/DualScreenTransition$H;->this$0:Lcom/android/server/wm/DualScreenTransition;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/android/server/wm/DualScreenTransition;->kill(Z)V
 
-    .line 2351
     iget-object v0, p0, Lcom/android/server/wm/DualScreenTransition$H;->this$0:Lcom/android/server/wm/DualScreenTransition;
 
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Lcom/android/server/wm/DualScreenTransition;->setTransition(I)V
 
-    .line 2352
     iget-object v0, p0, Lcom/android/server/wm/DualScreenTransition$H;->this$0:Lcom/android/server/wm/DualScreenTransition;
 
     # getter for: Lcom/android/server/wm/DualScreenTransition;->mWindowAnimator:Lcom/android/server/wm/WindowAnimator;
@@ -116,7 +105,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/wm/WindowAnimator;->setDualScreenTransitionLocked(Lcom/android/server/wm/DualScreenTransition;)V
 
-    .line 2353
     monitor-exit v1
 
     goto :goto_0
@@ -130,7 +118,6 @@
 
     throw v0
 
-    .line 2345
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

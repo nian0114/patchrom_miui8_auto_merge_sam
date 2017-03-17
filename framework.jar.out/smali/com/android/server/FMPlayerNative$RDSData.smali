@@ -30,13 +30,10 @@
     .param p4, "radioText"    # [B
 
     .prologue
-    .line 268
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 269
     iput-wide p1, p0, Lcom/android/server/FMPlayerNative$RDSData;->mFreq:J
 
-    .line 271
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
@@ -46,7 +43,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 276
     :goto_0
     :try_start_1
     new-instance v1, Ljava/lang/String;
@@ -57,26 +53,21 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 280
     :goto_1
     return-void
 
-    .line 272
     :catch_0
     move-exception v0
 
-    .line 273
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 277
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 278
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -89,7 +80,6 @@
     .locals 4
 
     .prologue
-    .line 283
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 3443
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 3443
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$AbstractObjectList;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 3445
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$AbstractObjectList;->getLength()I
@@ -54,14 +51,12 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 3446
     invoke-virtual {p0, p1}, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$AbstractObjectList;->item(I)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 
-    .line 3448
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -88,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 3451
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$AbstractObjectList;->getLength()I
 
     move-result v0

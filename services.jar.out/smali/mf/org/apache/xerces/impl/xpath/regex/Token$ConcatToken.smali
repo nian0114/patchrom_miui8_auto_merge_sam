@@ -34,18 +34,14 @@
     .param p2, "t2"    # Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     .prologue
-    .line 1113
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/impl/xpath/regex/Token;-><init>(I)V
 
-    .line 1114
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 1115
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child2:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 1116
     return-void
 .end method
 
@@ -56,7 +52,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1122
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child:Lmf/org/apache/xerces/impl/xpath/regex/Token;
@@ -74,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 1119
     const/4 v0, 0x2
 
     return v0
@@ -87,7 +81,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1127
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child2:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     iget v1, v1, Lmf/org/apache/xerces/impl/xpath/regex/Token;->type:I
@@ -106,7 +99,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1128
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child:Lmf/org/apache/xerces/impl/xpath/regex/Token;
@@ -131,12 +123,10 @@
 
     move-result-object v0
 
-    .line 1133
     .local v0, "ret":Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 1129
     .end local v0    # "ret":Ljava/lang/String;
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child2:Lmf/org/apache/xerces/impl/xpath/regex/Token;
@@ -157,7 +147,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1130
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConcatToken;->child:Lmf/org/apache/xerces/impl/xpath/regex/Token;
@@ -182,11 +171,9 @@
 
     move-result-object v0
 
-    .line 1131
     .restart local v0    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1132
     .end local v0    # "ret":Ljava/lang/String;
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;

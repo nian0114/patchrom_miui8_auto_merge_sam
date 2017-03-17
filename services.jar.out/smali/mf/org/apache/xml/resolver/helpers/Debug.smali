@@ -12,15 +12,12 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xml/resolver/helpers/Debug;->debug:I
 
-    .line 41
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget v0, p0, Lmf/org/apache/xml/resolver/helpers/Debug;->debug:I
 
     return v0
@@ -42,17 +38,14 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     iget v0, p0, Lmf/org/apache/xml/resolver/helpers/Debug;->debug:I
 
     if-lt v0, p1, :cond_0
 
-    .line 66
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0, p2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 68
     :cond_0
     return-void
 .end method
@@ -64,12 +57,10 @@
     .param p3, "spec"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     iget v0, p0, Lmf/org/apache/xml/resolver/helpers/Debug;->debug:I
 
     if-lt v0, p1, :cond_0
 
-    .line 84
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,7 +87,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 86
     :cond_0
     return-void
 .end method
@@ -109,12 +99,10 @@
     .param p4, "spec2"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     iget v0, p0, Lmf/org/apache/xml/resolver/helpers/Debug;->debug:I
 
     if-lt v0, p1, :cond_0
 
-    .line 104
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -141,7 +129,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 105
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -160,7 +147,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 107
     :cond_0
     return-void
 .end method
@@ -170,9 +156,7 @@
     .param p1, "newDebug"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lmf/org/apache/xml/resolver/helpers/Debug;->debug:I
 
-    .line 46
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/android/server/ConsumerIrService$1;->this$0:Lcom/android/server/ConsumerIrService;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 175
     iget-object v0, p0, Lcom/android/server/ConsumerIrService$1;->this$0:Lcom/android/server/ConsumerIrService;
 
     const/4 v1, 0x0
@@ -45,6 +43,5 @@
     # invokes: Lcom/android/server/ConsumerIrService;->swtichLED(Z)Z
     invoke-static {v0, v1}, Lcom/android/server/ConsumerIrService;->access$000(Lcom/android/server/ConsumerIrService;Z)Z
 
-    .line 176
     return-void
 .end method

@@ -51,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 613
     .local p3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/widget/RemoteViews;>;"
     iput-object p1, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->this$0:Landroid/widget/RemoteViews;
 
@@ -59,16 +58,12 @@
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 614
     iput p2, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewId:I
 
-    .line 615
     iput-object p3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->list:Ljava/util/ArrayList;
 
-    .line 616
     iput p4, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewTypeCount:I
 
-    .line 617
     return-void
 .end method
 
@@ -77,33 +72,28 @@
     .param p2, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 619
     iput-object p1, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v3}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 620
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewId:I
 
-    .line 621
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewTypeCount:I
 
-    .line 622
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 623
     .local v0, "count":I
     new-instance v3, Ljava/util/ArrayList;
 
@@ -111,14 +101,12 @@
 
     iput-object v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->list:Ljava/util/ArrayList;
 
-    .line 625
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 626
     sget-object v3, Landroid/widget/RemoteViews;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -127,18 +115,15 @@
 
     check-cast v2, Landroid/widget/RemoteViews;
 
-    .line 627
     .local v2, "rv":Landroid/widget/RemoteViews;
     iget-object v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 625
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 629
     .end local v2    # "rv":Landroid/widget/RemoteViews;
     :cond_0
     return-void
@@ -153,29 +138,24 @@
     .param p3, "handler"    # Landroid/widget/RemoteViews$OnClickHandler;
 
     .prologue
-    .line 650
     iget v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewId:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 651
     .local v1, "target":Landroid/view/View;
     if-nez v1, :cond_1
 
-    .line 702
     :cond_0
     :goto_0
     return-void
 
-    .line 654
     :cond_1
     instance-of v3, p2, Landroid/appwidget/AppWidgetHostView;
 
     if-nez v3, :cond_2
 
-    .line 655
     const-string v3, "RemoteViews"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -208,7 +188,6 @@
 
     goto :goto_0
 
-    .line 662
     :cond_2
     instance-of v3, v1, Landroid/widget/AbsListView;
 
@@ -222,7 +201,6 @@
 
     if-nez v3, :cond_3
 
-    .line 663
     const-string v3, "RemoteViews"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -255,7 +233,6 @@
 
     goto :goto_0
 
-    .line 675
     :cond_3
     instance-of v3, v1, Landroid/widget/AbsListView;
 
@@ -263,16 +240,13 @@
 
     move-object v2, v1
 
-    .line 676
     check-cast v2, Landroid/widget/AbsListView;
 
-    .line 677
     .local v2, "v":Landroid/widget/AbsListView;
     invoke-virtual {v2}, Landroid/widget/AbsListView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 678
     .local v0, "a":Landroid/widget/Adapter;
     instance-of v3, v0, Landroid/widget/RemoteViewsListAdapter;
 
@@ -286,7 +260,6 @@
 
     if-gt v3, v4, :cond_4
 
-    .line 679
     check-cast v0, Landroid/widget/RemoteViewsListAdapter;
 
     .end local v0    # "a":Landroid/widget/Adapter;
@@ -296,7 +269,6 @@
 
     goto :goto_0
 
-    .line 681
     .restart local v0    # "a":Landroid/widget/Adapter;
     :cond_4
     new-instance v3, Landroid/widget/RemoteViewsListAdapter;
@@ -315,7 +287,6 @@
 
     goto/16 :goto_0
 
-    .line 683
     .end local v0    # "a":Landroid/widget/Adapter;
     .end local v2    # "v":Landroid/widget/AbsListView;
     :cond_5
@@ -325,16 +296,13 @@
 
     move-object v2, v1
 
-    .line 684
     check-cast v2, Landroid/widget/AdapterViewAnimator;
 
-    .line 685
     .local v2, "v":Landroid/widget/AdapterViewAnimator;
     invoke-virtual {v2}, Landroid/widget/AdapterViewAnimator;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 686
     .restart local v0    # "a":Landroid/widget/Adapter;
     instance-of v3, v0, Landroid/widget/RemoteViewsListAdapter;
 
@@ -348,7 +316,6 @@
 
     if-gt v3, v4, :cond_6
 
-    .line 687
     check-cast v0, Landroid/widget/RemoteViewsListAdapter;
 
     .end local v0    # "a":Landroid/widget/Adapter;
@@ -358,7 +325,6 @@
 
     goto/16 :goto_0
 
-    .line 689
     .restart local v0    # "a":Landroid/widget/Adapter;
     :cond_6
     new-instance v3, Landroid/widget/RemoteViewsListAdapter;
@@ -377,7 +343,6 @@
 
     goto/16 :goto_0
 
-    .line 692
     .end local v0    # "a":Landroid/widget/Adapter;
     .end local v2    # "v":Landroid/widget/AdapterViewAnimator;
     :cond_7
@@ -387,16 +352,13 @@
 
     move-object v2, v1
 
-    .line 693
     check-cast v2, Landroid/widget/AbsHorizontalListView;
 
-    .line 694
     .local v2, "v":Landroid/widget/AbsHorizontalListView;
     invoke-virtual {v2}, Landroid/widget/AbsHorizontalListView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 695
     .restart local v0    # "a":Landroid/widget/Adapter;
     instance-of v3, v0, Landroid/widget/RemoteViewsListAdapter;
 
@@ -410,7 +372,6 @@
 
     if-gt v3, v4, :cond_8
 
-    .line 696
     check-cast v0, Landroid/widget/RemoteViewsListAdapter;
 
     .end local v0    # "a":Landroid/widget/Adapter;
@@ -420,7 +381,6 @@
 
     goto/16 :goto_0
 
-    .line 698
     .restart local v0    # "a":Landroid/widget/Adapter;
     :cond_8
     new-instance v3, Landroid/widget/RemoteViewsListAdapter;
@@ -444,7 +404,6 @@
     .locals 1
 
     .prologue
-    .line 705
     const-string v0, "SetRemoteViewsAdapterList"
 
     return-object v0
@@ -456,22 +415,18 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 632
     const/16 v3, 0xf
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 633
     iget v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewId:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 634
     iget v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->viewTypeCount:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 636
     iget-object v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->list:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_0
@@ -484,17 +439,14 @@
 
     if-nez v3, :cond_2
 
-    .line 637
     :cond_0
     const/4 v3, 0x0
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 646
     :cond_1
     return-void
 
-    .line 639
     :cond_2
     iget-object v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->list:Ljava/util/ArrayList;
 
@@ -502,18 +454,15 @@
 
     move-result v0
 
-    .line 640
     .local v0, "count":I
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 641
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 642
     iget-object v3, p0, Landroid/widget/RemoteViews$SetRemoteViewsAdapterList;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -522,11 +471,9 @@
 
     check-cast v2, Landroid/widget/RemoteViews;
 
-    .line 643
     .local v2, "rv":Landroid/widget/RemoteViews;
     invoke-virtual {v2, p1, p2}, Landroid/widget/RemoteViews;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 641
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

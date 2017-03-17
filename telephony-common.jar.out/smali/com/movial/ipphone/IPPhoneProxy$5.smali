@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 616
     iput-object p1, p0, Lcom/movial/ipphone/IPPhoneProxy$5;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 618
     iget-object v0, p0, Lcom/movial/ipphone/IPPhoneProxy$5;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     # invokes: Lcom/movial/ipphone/IPPhoneProxy;->bindToIPRegistry()V
     invoke-static {v0}, Lcom/movial/ipphone/IPPhoneProxy;->access$1400(Lcom/movial/ipphone/IPPhoneProxy;)V
 
-    .line 619
     return-void
 .end method

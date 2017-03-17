@@ -33,7 +33,6 @@
     .locals 3
 
     .prologue
-    .line 2450
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -52,7 +51,6 @@
 
     sput-object v0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mVertexShaderCode:[Ljava/lang/String;
 
-    .line 2504
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nvarying vec2 vNeighborTexCoord[12];\nuniform sampler2D baseSampler;\n\nvoid main(void) {\n   highp vec4 fragColorBlur = vec4(0.0, 0.0, 0.0, 0.0);\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[0])  * 0.00903788620091937;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[1])  * 0.0217894371884468;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[2])  * 0.0447649434011506;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[3])  * 0.0783687553896893;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[4])  * 0.116912444814134;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[5])  * 0.148624846131112;\n   fragColorBlur += texture2D(baseSampler, outTexCoords        )  * 0.161003373749805;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[6])  * 0.148624846131112;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[7])  * 0.116912444814134;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[8])  * 0.0783687553896893;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[9])  * 0.0447649434011506;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[10]) * 0.0217894371884468;\n   fragColorBlur += texture2D(baseSampler, vNeighborTexCoord[11]) * 0.00903788620091937;\n   gl_FragColor = fragColorBlur;\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mFragmentShaderCode:Ljava/lang/String;
@@ -64,7 +62,6 @@
     .locals 5
 
     .prologue
-    .line 2535
     const/4 v0, 0x2
 
     sget-object v1, Landroid/graphics/ImageFilter$SgiBlurFilter;->mVertexShaderCode:[Ljava/lang/String;
@@ -81,17 +78,14 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 2529
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mRadius:F
 
-    .line 2536
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$SgiBlurFilter;->setRadius(F)V
 
-    .line 2537
     return-void
 .end method
 
@@ -102,14 +96,12 @@
     .param p1, "radius"    # F
 
     .prologue
-    .line 2548
     iget v0, p0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mRadius:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 2550
     const/4 v0, 0x0
 
     const/high16 v1, 0x42700000    # 60.0f
@@ -124,20 +116,16 @@
 
     iput v0, p0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mRadius:F
 
-    .line 2552
     const/4 v0, 0x1
 
     iget v1, p0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mRadius:F
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$SgiBlurFilter;->setParam(IF)V
 
-    .line 2553
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$SgiBlurFilter;->setupDownSampling()V
 
-    .line 2554
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$SgiBlurFilter;->notifyWorkerFilters()V
 
-    .line 2556
     :cond_0
     return-void
 .end method
@@ -148,14 +136,12 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 2559
     iget v1, p0, Landroid/graphics/ImageFilter$SgiBlurFilter;->mRadius:F
 
     const/high16 v2, 0x40c00000    # 6.0f
 
     div-float v0, v1, v2
 
-    .line 2560
     .local v0, "downSampleRate":F
     cmpg-float v1, v0, v3
 
@@ -163,17 +149,14 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2563
     :cond_0
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v0, v3}, Landroid/graphics/ImageFilter$SgiBlurFilter;->setSamplingRate(IFF)V
 
-    .line 2564
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1, v0, v0}, Landroid/graphics/ImageFilter$SgiBlurFilter;->setSamplingRate(IFF)V
 
-    .line 2566
     return-void
 .end method

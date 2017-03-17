@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 18202
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$16;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$16;->val$path:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 18204
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$16;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -61,7 +59,6 @@
 
     check-cast v0, Landroid/os/CustomFrequencyManager;
 
-    .line 18205
     .local v0, "mCustomFreqManager":Landroid/os/CustomFrequencyManager;
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$16;->val$path:Ljava/lang/String;
 
@@ -69,6 +66,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/CustomFrequencyManager;->reviewPackage(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 18206
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 445
     iput-object p1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$3;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "notifyReason"    # I
 
     .prologue
-    .line 449
     invoke-static {p1}, Lcom/samsung/android/sdk/dualscreen/SDualScreenManagerReflector;->convertToSdkDualScreenEnum(Ljava/lang/Object;)Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     move-result-object v0
 
-    .line 452
     .local v0, "toSdkScreen":Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
     iget-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$3;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
@@ -58,7 +55,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 453
     iget-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$3;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     # getter for: Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;->mSdkShrinkRequestListener:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ShrinkRequestListener;
@@ -68,7 +64,6 @@
 
     invoke-interface {v1, v0, p2}, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ShrinkRequestListener;->onShrinkRequested(Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;I)V
 
-    .line 455
     :cond_0
     return-void
 .end method

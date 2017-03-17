@@ -27,16 +27,12 @@
     .param p2, "width"    # I
 
     .prologue
-    .line 423
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 424
     iput p1, p0, Lcom/android/server/smartclip/SmartClipView$CroppingMatrix$MarkingPolicy;->mHeight:I
 
-    .line 425
     iput p2, p0, Lcom/android/server/smartclip/SmartClipView$CroppingMatrix$MarkingPolicy;->mWidth:I
 
-    .line 426
     return-void
 .end method
 

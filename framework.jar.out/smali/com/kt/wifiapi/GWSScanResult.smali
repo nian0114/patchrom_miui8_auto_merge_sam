@@ -32,7 +32,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 30
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -59,34 +58,24 @@
     .param p8, "vendorSpecificContents"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lcom/kt/wifiapi/GWSScanResult;->SSID:Ljava/lang/String;
 
-    .line 36
     iput-object p2, p0, Lcom/kt/wifiapi/GWSScanResult;->BSSID:Ljava/lang/String;
 
-    .line 37
     iput-object p3, p0, Lcom/kt/wifiapi/GWSScanResult;->capabilities:Ljava/lang/String;
 
-    .line 38
     iput p4, p0, Lcom/kt/wifiapi/GWSScanResult;->level:I
 
-    .line 39
     iput p5, p0, Lcom/kt/wifiapi/GWSScanResult;->frequency:I
 
-    .line 40
     iput-object p6, p0, Lcom/kt/wifiapi/GWSScanResult;->BSSLoadElement:Ljava/lang/String;
 
-    .line 41
     iput-object p7, p0, Lcom/kt/wifiapi/GWSScanResult;->vendorSpecificOUI:Ljava/lang/String;
 
-    .line 42
     iput-object p8, p0, Lcom/kt/wifiapi/GWSScanResult;->vendorSpecificContents:Ljava/lang/String;
 
-    .line 43
     return-void
 .end method
 
@@ -96,22 +85,18 @@
     .locals 4
 
     .prologue
-    .line 47
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 48
     .local v1, "sb":Ljava/lang/StringBuffer;
     const-string v0, "<none>"
 
-    .line 50
     .local v0, "none":Ljava/lang/String;
     sget-boolean v2, Lcom/kt/wifiapi/GWSScanResult;->DBG:Z
 
     if-eqz v2, :cond_0
 
-    .line 51
     const-string v2, "SSID: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -144,7 +129,6 @@
     :goto_1
     invoke-virtual {v3, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 56
     :cond_0
     const-string v2, ", capabilities: "
 
@@ -220,14 +204,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 69
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 51
     .restart local v0    # "none":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/kt/wifiapi/GWSScanResult;->SSID:Ljava/lang/String;
@@ -239,7 +221,6 @@
 
     goto :goto_1
 
-    .line 56
     :cond_3
     iget-object v0, p0, Lcom/kt/wifiapi/GWSScanResult;->capabilities:Ljava/lang/String;
 

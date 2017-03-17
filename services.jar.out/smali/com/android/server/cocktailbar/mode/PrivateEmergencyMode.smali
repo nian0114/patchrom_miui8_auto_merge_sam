@@ -20,7 +20,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 18
     const-class v1, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -29,7 +28,6 @@
 
     sput-object v1, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->TAG:Ljava/lang/String;
 
-    .line 20
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -52,24 +50,19 @@
     .param p4, "listener"    # Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILandroid/content/BroadcastReceiver;Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 26
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 27
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 28
     invoke-virtual {p0, p3, v0}, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->registerBroadcastReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 29
     return-void
 .end method
 
@@ -79,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x2
 
     return v0
@@ -89,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x1
 
     return v0
@@ -99,8 +90,7 @@
     .locals 1
 
     .prologue
-    .line 62
-    const-string/jumbo v0, "emergencymode"
+    const-string v0, "emergencymode"
 
     return-object v0
 .end method
@@ -109,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/sec/android/emergencymode/EmergencyManager;->isEmergencyMode(Landroid/content/Context;)Z
@@ -128,12 +117,10 @@
 
     const/4 v4, 0x0
 
-    .line 33
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 34
     .local v0, "action":Ljava/lang/String;
     const-string v5, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
@@ -143,20 +130,17 @@
 
     if-eqz v5, :cond_4
 
-    .line 35
-    const-string/jumbo v5, "reason"
+    const-string v5, "reason"
 
     invoke-virtual {p1, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 36
     .local v2, "reason":I
     sget-boolean v4, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 37
     sget-object v4, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -179,23 +163,19 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     if-ne v2, v3, :cond_1
 
-    .line 52
     .end local v2    # "reason":I
     :goto_0
     return v3
 
-    .line 41
     .restart local v2    # "reason":I
     :cond_1
     const/4 v3, 0x5
 
     if-ne v2, v3, :cond_3
 
-    .line 42
     iget-object v3, p0, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->isSupportCocktailBar(Landroid/content/Context;)Z
@@ -204,21 +184,18 @@
 
     if-nez v3, :cond_2
 
-    .line 43
     sget-object v3, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "start cocktailbarservice"
+    const-string v4, "start cocktailbarservice"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.MAIN"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 45
     .local v1, "i":Landroid/content/Intent;
     const-string v3, "com.samsung.android.app.cocktailbarservice"
 
@@ -226,7 +203,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 46
     iget-object v3, p0, Lcom/android/server/cocktailbar/mode/PrivateEmergencyMode;->mContext:Landroid/content/Context;
 
     new-instance v4, Landroid/os/UserHandle;
@@ -239,14 +215,12 @@
 
     invoke-virtual {v3, v1, v4}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 48
     .end local v1    # "i":Landroid/content/Intent;
     :cond_2
     const/4 v3, 0x3
 
     goto :goto_0
 
-    .line 50
     :cond_3
     const/4 v3, 0x1
 
@@ -256,6 +230,5 @@
     :cond_4
     move v3, v4
 
-    .line 52
     goto :goto_0
 .end method

@@ -31,19 +31,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1802
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1790
     iput-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->fileNameDigest:Ljava/security/MessageDigest;
 
-    .line 1793
     iput-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->contentDigest:Ljava/security/MessageDigest;
 
-    .line 1799
     iput-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->fileAttributeDigest:Ljava/security/MessageDigest;
 
-    .line 1805
     :try_start_0
     const-string v2, "SHA-256"
 
@@ -53,7 +48,6 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->fileNameDigest:Ljava/security/MessageDigest;
 
-    .line 1807
     const-string v2, "SHA-256"
 
     invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
@@ -62,7 +56,6 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->contentDigest:Ljava/security/MessageDigest;
 
-    .line 1811
     const-string v2, "SHA-256"
 
     invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
@@ -73,14 +66,11 @@
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1819
     return-void
 
-    .line 1813
     :catch_0
     move-exception v0
 
-    .line 1814
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v2, "Algorithm %s does not exist"
 
@@ -98,7 +88,6 @@
 
     move-result-object v1
 
-    .line 1816
     .local v1, "msg":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$000()Z
@@ -114,7 +103,6 @@
 
     invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1817
     :cond_0
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -128,7 +116,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;
 
     .prologue
-    .line 1785
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->fileNameDigest:Ljava/security/MessageDigest;
 
     return-object v0
@@ -139,7 +126,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;
 
     .prologue
-    .line 1785
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->fileAttributeDigest:Ljava/security/MessageDigest;
 
     return-object v0
@@ -150,7 +136,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;
 
     .prologue
-    .line 1785
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ScanResult;->contentDigest:Ljava/security/MessageDigest;
 
     return-object v0

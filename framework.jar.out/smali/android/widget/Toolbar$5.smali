@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1329
     iput-object p1, p0, Landroid/widget/Toolbar$5;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1333
     iget-object v1, p0, Landroid/widget/Toolbar$5;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mIsThemeDeviceDefaultFamily:Z
@@ -51,12 +49,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1334
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 1335
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
@@ -70,7 +66,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1336
     iget-object v1, p0, Landroid/widget/Toolbar$5;->this$0:Landroid/widget/Toolbar;
 
     iget-object v1, v1, Landroid/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
@@ -83,7 +78,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1338
     :cond_0
     iget-object v1, p0, Landroid/widget/Toolbar$5;->this$0:Landroid/widget/Toolbar;
 
@@ -103,12 +97,10 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1343
     .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :goto_0
     return-void
 
-    .line 1340
     :cond_1
     iget-object v1, p0, Landroid/widget/Toolbar$5;->this$0:Landroid/widget/Toolbar;
 

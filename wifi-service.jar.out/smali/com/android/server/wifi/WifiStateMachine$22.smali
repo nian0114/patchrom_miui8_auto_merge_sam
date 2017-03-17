@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2398
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$22;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2401
     const-string v1, "WifiStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,15 +66,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2402
     packed-switch p2, :pswitch_data_0
 
-    .line 2422
     :cond_0
     :goto_0
     return-void
 
-    .line 2404
     :pswitch_0
     const-string v1, "registrationinfo"
 
@@ -86,7 +81,6 @@
 
     check-cast v0, Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;
 
-    .line 2405
     .local v0, "registrationinfo":Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;
     const-string v1, "WifiStateMachine"
 
@@ -128,7 +122,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2408
     invoke-virtual {v0}, Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;->getFeatureMask()I
 
     move-result v1
@@ -141,13 +134,11 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 2409
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$22;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mImsRegistered:Z
     invoke-static {v1, v4}, Lcom/android/server/wifi/WifiStateMachine;->access$3602(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 2410
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$22;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->updatePoorNetworkParameters()V
@@ -155,7 +146,6 @@
 
     goto :goto_0
 
-    .line 2415
     .end local v0    # "registrationinfo":Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$22;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -165,7 +155,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mImsRegistered:Z
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$3602(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 2416
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$22;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->updatePoorNetworkParameters()V
@@ -173,7 +162,6 @@
 
     goto :goto_0
 
-    .line 2402
     :pswitch_data_0
     .packed-switch 0x3ec
         :pswitch_0

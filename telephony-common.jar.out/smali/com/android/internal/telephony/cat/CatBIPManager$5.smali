@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1346
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$5;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -38,20 +37,16 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1349
     invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onAvailable(Landroid/net/Network;)V
 
-    .line 1350
     sget-object v0, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
     sput-object v0, Lcom/android/internal/telephony/cat/CatBIPManager;->mAPNState:Landroid/net/NetworkInfo$State;
 
-    .line 1351
     const-string v0, "onAvailable "
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1352
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatBIPManager$5;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     # getter for: Lcom/android/internal/telephony/cat/CatBIPManager;->connMgr:Landroid/net/ConnectivityManager;
@@ -61,7 +56,6 @@
 
     invoke-virtual {v0, p1}, Landroid/net/ConnectivityManager;->bindProcessToNetwork(Landroid/net/Network;)Z
 
-    .line 1353
     return-void
 .end method
 
@@ -71,15 +65,12 @@
     .param p2, "networkCapabilities"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 1372
     invoke-super {p0, p1, p2}, Landroid/net/ConnectivityManager$NetworkCallback;->onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
 
-    .line 1373
     const-string v0, "onCapabilitiesChanged "
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1374
     return-void
 .end method
 
@@ -89,20 +80,16 @@
     .param p2, "maxMsToLive"    # I
 
     .prologue
-    .line 1357
     invoke-super {p0, p1, p2}, Landroid/net/ConnectivityManager$NetworkCallback;->onLosing(Landroid/net/Network;I)V
 
-    .line 1358
     sget-object v0, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     sput-object v0, Lcom/android/internal/telephony/cat/CatBIPManager;->mAPNState:Landroid/net/NetworkInfo$State;
 
-    .line 1359
     const-string v0, "onLosing "
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1360
     return-void
 .end method
 
@@ -111,19 +98,15 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1364
     invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onLost(Landroid/net/Network;)V
 
-    .line 1365
     sget-object v0, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     sput-object v0, Lcom/android/internal/telephony/cat/CatBIPManager;->mAPNState:Landroid/net/NetworkInfo$State;
 
-    .line 1366
     const-string v0, "onLost "
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1367
     return-void
 .end method

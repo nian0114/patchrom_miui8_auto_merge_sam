@@ -195,7 +195,7 @@
 
     sget-object v1, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v2, "writeBytesToFilename got null byte[] pointed"
+    const-string v2, "writeBytesToFilename got null byte[] pointed"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
     :try_end_0

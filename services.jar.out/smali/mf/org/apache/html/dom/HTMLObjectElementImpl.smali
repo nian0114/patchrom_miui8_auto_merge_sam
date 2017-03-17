@@ -18,10 +18,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 251
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 252
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const-string v0, "align"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -49,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const-string v0, "archive"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -63,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const-string v0, "border"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -77,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "code"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -91,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const-string v0, "codebase"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -105,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 96
     const-string v0, "codetype"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -119,8 +111,7 @@
     .locals 1
 
     .prologue
-    .line 108
-    const-string/jumbo v0, "data"
+    const-string v0, "data"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -133,8 +124,7 @@
     .locals 1
 
     .prologue
-    .line 120
-    const-string/jumbo v0, "declare"
+    const-string v0, "declare"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getBinary(Ljava/lang/String;)Z
 
@@ -147,8 +137,7 @@
     .locals 1
 
     .prologue
-    .line 132
-    const-string/jumbo v0, "height"
+    const-string v0, "height"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -161,8 +150,7 @@
     .locals 1
 
     .prologue
-    .line 144
-    const-string/jumbo v0, "hspace"
+    const-string v0, "hspace"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -175,8 +163,7 @@
     .locals 1
 
     .prologue
-    .line 155
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -189,8 +176,7 @@
     .locals 1
 
     .prologue
-    .line 167
-    const-string/jumbo v0, "standby"
+    const-string v0, "standby"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -203,9 +189,8 @@
     .locals 2
 
     .prologue
-    .line 180
     :try_start_0
-    const-string/jumbo v1, "tabindex"
+    const-string v1, "tabindex"
 
     invoke-virtual {p0, v1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -217,15 +202,12 @@
 
     move-result v1
 
-    .line 184
     :goto_0
     return v1
 
-    .line 182
     :catch_0
     move-exception v0
 
-    .line 184
     .local v0, "except":Ljava/lang/NumberFormatException;
     const/4 v1, 0x0
 
@@ -236,8 +218,7 @@
     .locals 1
 
     .prologue
-    .line 197
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -250,8 +231,7 @@
     .locals 1
 
     .prologue
-    .line 209
-    const-string/jumbo v0, "useMap"
+    const-string v0, "useMap"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -264,8 +244,7 @@
     .locals 1
 
     .prologue
-    .line 221
-    const-string/jumbo v0, "vspace"
+    const-string v0, "vspace"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -278,8 +257,7 @@
     .locals 1
 
     .prologue
-    .line 233
-    const-string/jumbo v0, "width"
+    const-string v0, "width"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -293,12 +271,10 @@
     .param p1, "align"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     const-string v0, "align"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -307,12 +283,10 @@
     .param p1, "archive"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const-string v0, "archive"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -321,12 +295,10 @@
     .param p1, "border"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     const-string v0, "border"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method
 
@@ -335,12 +307,10 @@
     .param p1, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-string v0, "code"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -349,12 +319,10 @@
     .param p1, "codeBase"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-string v0, "codebase"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     return-void
 .end method
 
@@ -363,12 +331,10 @@
     .param p1, "codeType"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     const-string v0, "codetype"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     return-void
 .end method
 
@@ -377,12 +343,10 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 114
-    const-string/jumbo v0, "data"
+    const-string v0, "data"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 115
     return-void
 .end method
 
@@ -391,12 +355,10 @@
     .param p1, "declare"    # Z
 
     .prologue
-    .line 126
-    const-string/jumbo v0, "declare"
+    const-string v0, "declare"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 127
     return-void
 .end method
 
@@ -405,12 +367,10 @@
     .param p1, "height"    # Ljava/lang/String;
 
     .prologue
-    .line 138
-    const-string/jumbo v0, "height"
+    const-string v0, "height"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     return-void
 .end method
 
@@ -419,12 +379,10 @@
     .param p1, "hspace"    # Ljava/lang/String;
 
     .prologue
-    .line 150
-    const-string/jumbo v0, "hspace"
+    const-string v0, "hspace"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
     return-void
 .end method
 
@@ -433,12 +391,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 161
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     return-void
 .end method
 
@@ -447,12 +403,10 @@
     .param p1, "standby"    # Ljava/lang/String;
 
     .prologue
-    .line 173
-    const-string/jumbo v0, "standby"
+    const-string v0, "standby"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
     return-void
 .end method
 
@@ -461,8 +415,7 @@
     .param p1, "tabIndex"    # I
 
     .prologue
-    .line 191
-    const-string/jumbo v0, "tabindex"
+    const-string v0, "tabindex"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -470,7 +423,6 @@
 
     invoke-virtual {p0, v0, v1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
     return-void
 .end method
 
@@ -479,12 +431,10 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 203
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 204
     return-void
 .end method
 
@@ -493,12 +443,10 @@
     .param p1, "useMap"    # Ljava/lang/String;
 
     .prologue
-    .line 215
-    const-string/jumbo v0, "useMap"
+    const-string v0, "useMap"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 216
     return-void
 .end method
 
@@ -507,12 +455,10 @@
     .param p1, "vspace"    # Ljava/lang/String;
 
     .prologue
-    .line 227
-    const-string/jumbo v0, "vspace"
+    const-string v0, "vspace"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 228
     return-void
 .end method
 
@@ -521,11 +467,9 @@
     .param p1, "width"    # Ljava/lang/String;
 
     .prologue
-    .line 239
-    const-string/jumbo v0, "width"
+    const-string v0, "width"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLObjectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
     return-void
 .end method

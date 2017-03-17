@@ -26,20 +26,16 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 221
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->mCocktailList:Landroid/util/SparseBooleanArray;
 
-    .line 222
     iput p1, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->mUserId:I
 
-    .line 223
     return-void
 .end method
 
@@ -50,12 +46,10 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 234
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->mCocktailList:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 235
     return-void
 .end method
 
@@ -64,14 +58,12 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 230
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->mCocktailList:Landroid/util/SparseBooleanArray;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 231
     return-void
 .end method
 
@@ -79,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->mUserId:I
 
     return v0
@@ -90,7 +81,6 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 238
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->mCocktailList:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z

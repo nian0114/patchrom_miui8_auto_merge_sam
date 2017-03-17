@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 27
     iput-object p1, p0, Lcom/android/server/cover/CoverTestModeUtils$1;->this$0:Lcom/android/server/cover/CoverTestModeUtils;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 29
     # getter for: Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
     invoke-static {}, Lcom/android/server/cover/CoverTestModeUtils;->access$000()I
 
@@ -48,7 +46,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 30
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils$1;->this$0:Lcom/android/server/cover/CoverTestModeUtils;
 
     # getter for: Lcom/android/server/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;
@@ -65,7 +62,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;->onCoverTestModeChanged(IZ)V
 
-    .line 32
     :cond_0
     return-void
 .end method

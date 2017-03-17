@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 468
     invoke-direct {p0}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;-><init>()V
 
-    .line 469
     return-void
 .end method
 
@@ -31,10 +29,8 @@
     .param p1, "initialCapacity"    # I
 
     .prologue
-    .line 473
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;-><init>(I)V
 
-    .line 474
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 478
     iget v0, p0, Lmf/org/apache/xerces/jaxp/validation/XMLSchemaFactory$XMLGrammarPoolImplExtension;->fGrammarCount:I
 
     return v0

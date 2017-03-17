@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 728
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 728
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 731
     const-string v0, "EF_CSIM_IMSIM"
 
     return-object v0
@@ -69,7 +66,6 @@
 
     const/4 v8, 0x1
 
-    .line 736
     iget-object v7, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v7, [B
@@ -78,7 +74,6 @@
 
     check-cast v1, [B
 
-    .line 745
     .local v1, "data":[B
     const/4 v7, 0x7
 
@@ -92,12 +87,10 @@
 
     move v5, v8
 
-    .line 747
     .local v5, "provisioned":Z
     :goto_0
     if-eqz v5, :cond_3
 
-    .line 748
     const/4 v7, 0x2
 
     aget-byte v7, v1, v7
@@ -112,7 +105,6 @@
 
     add-int v3, v7, v10
 
-    .line 749
     .local v3, "first3digits":I
     const/4 v7, 0x5
 
@@ -130,7 +122,6 @@
 
     shr-int/lit8 v6, v7, 0x6
 
-    .line 750
     .local v6, "second3digits":I
     aget-byte v7, v1, v11
 
@@ -138,7 +129,6 @@
 
     and-int/lit8 v2, v7, 0xf
 
-    .line 751
     .local v2, "digit7":I
     const/16 v7, 0x9
 
@@ -146,7 +136,6 @@
 
     const/4 v2, 0x0
 
-    .line 752
     :cond_0
     aget-byte v7, v1, v11
 
@@ -162,7 +151,6 @@
 
     or-int v4, v7, v10
 
-    .line 753
     .local v4, "last3digits":I
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -171,7 +159,6 @@
 
     move-result v3
 
-    .line 754
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/RuimRecords;->adjstMinDigits(I)I
@@ -179,7 +166,6 @@
 
     move-result v6
 
-    .line 755
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/RuimRecords;->adjstMinDigits(I)I
@@ -187,12 +173,10 @@
 
     move-result v4
 
-    .line 757
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 758
     .local v0, "builder":Ljava/lang/StringBuilder;
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -212,7 +196,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 759
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v10, "%03d"
@@ -231,7 +214,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 760
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v10, "%d"
@@ -250,7 +232,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 761
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v10, "%03d"
@@ -269,7 +250,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 762
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -279,7 +259,6 @@
     # setter for: Lcom/android/internal/telephony/uicc/RuimRecords;->mMin:Ljava/lang/String;
     invoke-static {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->access$502(Lcom/android/internal/telephony/uicc/RuimRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 763
     sget-boolean v7, Lcom/android/internal/telephony/uicc/IccRecords;->SHIP_BUILD:Z
 
     if-nez v7, :cond_1
@@ -313,7 +292,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 775
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .end local v2    # "digit7":I
     .end local v3    # "first3digits":I
@@ -327,10 +305,8 @@
     :cond_2
     move v5, v9
 
-    .line 745
     goto/16 :goto_0
 
-    .line 765
     .restart local v5    # "provisioned":Z
     :cond_3
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
@@ -339,7 +315,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 766
     const-string v7, "SPR"
 
     iget-object v8, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
@@ -356,14 +331,12 @@
 
     if-eqz v7, :cond_4
 
-    .line 767
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     const-string v8, "For SPR - default MIN is same as default MDN"
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 768
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     iget-object v8, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
@@ -373,7 +346,6 @@
     # setter for: Lcom/android/internal/telephony/uicc/RuimRecords;->mMin:Ljava/lang/String;
     invoke-static {v7, v8}, Lcom/android/internal/telephony/uicc/RuimRecords;->access$502(Lcom/android/internal/telephony/uicc/RuimRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 769
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -405,7 +377,6 @@
 
     goto :goto_1
 
-    .line 771
     :cond_4
     const-string v7, "USC"
 
@@ -423,7 +394,6 @@
 
     if-nez v7, :cond_1
 
-    .line 772
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimImsimLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     const-string v8, "1111110111"

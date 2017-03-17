@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 475
     iput-object p1, p0, Lcom/android/server/RCPManagerService$2;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "newProfileId"    # I
 
     .prologue
-    .line 527
     return-void
 .end method
 
@@ -47,13 +45,11 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 519
-    const-string/jumbo v0, "onUserSwitchComplete"
+    const-string v0, "onUserSwitchComplete"
 
     # invokes: Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0}, Lcom/android/server/RCPManagerService;->access$300(Ljava/lang/String;)I
 
-    .line 520
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -63,7 +59,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onUserSwitchComplete with userid = "
+    const-string v2, "onUserSwitchComplete with userid = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -79,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
     return-void
 .end method
 
@@ -89,13 +84,11 @@
     .param p2, "reply"    # Landroid/os/IRemoteCallback;
 
     .prologue
-    .line 479
-    const-string/jumbo v3, "onUserSwitching"
+    const-string v3, "onUserSwitching"
 
     # invokes: Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v3}, Lcom/android/server/RCPManagerService;->access$300(Ljava/lang/String;)I
 
-    .line 480
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -105,7 +98,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onUserSwitching with userid = "
+    const-string v5, "onUserSwitching with userid = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -121,7 +114,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
     iget-object v3, p0, Lcom/android/server/RCPManagerService$2;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->mBridgeCommandExeUserMap:Ljava/util/HashMap;
@@ -139,11 +131,9 @@
 
     check-cast v1, Landroid/content/ICommandExeCallBack;
 
-    .line 485
     .local v1, "commandExeCallback":Landroid/content/ICommandExeCallBack;
     if-eqz v1, :cond_0
 
-    .line 486
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -175,7 +165,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 490
     :try_start_0
     iget-object v3, p0, Lcom/android/server/RCPManagerService$2;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -194,7 +183,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 491
     iget-object v3, p0, Lcom/android/server/RCPManagerService$2;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
@@ -212,7 +200,6 @@
 
     check-cast v0, Landroid/app/Command;
 
-    .line 493
     .local v0, "command":Landroid/app/Command;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -239,10 +226,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     if-eqz v0, :cond_0
 
-    .line 497
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -268,12 +253,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     invoke-interface {v1, v0}, Landroid/content/ICommandExeCallBack;->execute(Landroid/app/Command;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 510
     .end local v0    # "command":Landroid/app/Command;
     :cond_0
     :goto_0
@@ -281,26 +264,21 @@
 
     invoke-virtual {v3, p1}, Lcom/android/server/RCPManagerService;->startRCPProxy(I)V
 
-    .line 511
     if-nez p1, :cond_1
 
-    .line 512
     iget-object v3, p0, Lcom/android/server/RCPManagerService$2;->this$0:Lcom/android/server/RCPManagerService;
 
-    const-string/jumbo v4, "samsung.knox.intent.action.MODE_SWITCH_CHANGED"
+    const-string v4, "samsung.knox.intent.action.MODE_SWITCH_CHANGED"
 
     # invokes: Lcom/android/server/RCPManagerService;->startKnoxModeSwitcher(Ljava/lang/String;I)V
     invoke-static {v3, v4, p1}, Lcom/android/server/RCPManagerService;->access$600(Lcom/android/server/RCPManagerService;Ljava/lang/String;I)V
 
-    .line 515
     :cond_1
     return-void
 
-    .line 503
     :catch_0
     move-exception v2
 
-    .line 504
     .local v2, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;

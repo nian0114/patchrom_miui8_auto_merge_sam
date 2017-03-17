@@ -13,13 +13,10 @@
     .param p1, "providerName"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     invoke-direct {p0}, Lcom/android/server/wifi/BCProvider/CertHelper;-><init>()V
 
-    .line 14
     iput-object p1, p0, Lcom/android/server/wifi/BCProvider/NamedCertHelper;->providerName:Ljava/lang/String;
 
-    .line 15
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .end annotation
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/android/server/wifi/BCProvider/NamedCertHelper;->providerName:Ljava/lang/String;
 
     invoke-static {p1, v0}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/cert/CertificateFactory;

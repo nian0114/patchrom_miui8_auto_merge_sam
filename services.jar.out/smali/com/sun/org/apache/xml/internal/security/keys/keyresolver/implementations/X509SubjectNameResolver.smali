@@ -367,7 +367,7 @@
     :cond_3
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -542,7 +542,7 @@
 
     sget-object v2, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v3, "match !!! "
+    const-string v3, "match !!! "
 
     invoke-virtual {v0, v2, v3}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
@@ -566,7 +566,7 @@
 
     sget-object v6, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v7, "no match..."
+    const-string v7, "no match..."
 
     invoke-virtual {v5, v6, v7}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
     :try_end_1

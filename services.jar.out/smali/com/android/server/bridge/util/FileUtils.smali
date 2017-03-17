@@ -68,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,24 +80,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 54
     const-string v3, "."
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 55
     .local v0, "dotPos":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_0
 
-    .line 66
     :goto_0
     return v2
 
-    .line 58
     :cond_0
     add-int/lit8 v3, v0, 0x1
 
@@ -114,7 +109,6 @@
 
     move-result-object v1
 
-    .line 60
     .local v1, "fileExtName":Ljava/lang/String;
     const-string v3, "apk"
 
@@ -124,7 +118,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 61
     const-string v2, "FileUtils"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -147,12 +140,10 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 65
     :cond_1
     const-string v3, "FileUtils"
 

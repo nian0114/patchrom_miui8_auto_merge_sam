@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 274
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-direct {p0}, Landroid/sec/clipboard/IClipboardDataUiEvent$Stub;-><init>()V
@@ -46,14 +45,12 @@
     .end annotation
 
     .prologue
-    .line 292
     iget-object v1, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-virtual {v1, p1, p2}, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->getClipboarddata(ILandroid/sec/clipboard/IClipboardDataPasteEvent;)Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v0
 
-    .line 293
     .local v0, "clipboarddata":Landroid/sec/clipboard/data/ClipboardData;
     return-object v0
 .end method
@@ -67,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 283
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-virtual {v0}, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->removeAll()Z
@@ -87,12 +83,10 @@
     .end annotation
 
     .prologue
-    .line 279
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-virtual {v0, p1}, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->removeItem(I)V
 
-    .line 280
     return-void
 .end method
 
@@ -106,12 +100,10 @@
     .end annotation
 
     .prologue
-    .line 310
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-virtual {v0, p1}, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->removeScrapItem(I)V
 
-    .line 311
     return-void
 .end method
 
@@ -126,12 +118,10 @@
     .end annotation
 
     .prologue
-    .line 288
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->selectItem(ILandroid/sec/clipboard/IClipboardDataPasteEvent;)V
 
-    .line 289
     return-void
 .end method
 
@@ -146,12 +136,10 @@
     .end annotation
 
     .prologue
-    .line 315
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->selectScrapItem(ILandroid/sec/clipboard/IClipboardDataPasteEvent;)V
 
-    .line 316
     return-void
 .end method
 
@@ -165,10 +153,8 @@
     .end annotation
 
     .prologue
-    .line 298
     if-eqz p1, :cond_0
 
-    .line 299
     const/4 v1, 0x0
 
     invoke-static {v1}, Landroid/sec/clipboard/ClipboardConverter;->getInstance(Landroid/content/Context;)Landroid/sec/clipboard/ClipboardConverter;
@@ -177,18 +163,15 @@
 
     iput-object v1, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->mClipboardConverter:Landroid/sec/clipboard/ClipboardConverter;
 
-    .line 300
     iget-object v1, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->mClipboardConverter:Landroid/sec/clipboard/ClipboardConverter;
 
     invoke-virtual {v1, p1}, Landroid/sec/clipboard/ClipboardConverter;->ClipDataToClipboardData(Landroid/content/ClipData;)Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v0
 
-    .line 301
     .local v0, "clipboardData":Landroid/sec/clipboard/data/ClipboardData;
     if-eqz v0, :cond_0
 
-    .line 302
     iget-object v1, p0, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp$1;->this$1:Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;
 
     iget-object v1, v1, Lcom/android/server/clipboardex/ClipboardExService$ClipBoardDataUiEventImp;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
@@ -199,7 +182,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/clipboardex/ClipboardExService;->SetClipboardDataOriginalToEx(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
-    .line 305
     .end local v0    # "clipboardData":Landroid/sec/clipboard/data/ClipboardData;
     :cond_0
     return-void

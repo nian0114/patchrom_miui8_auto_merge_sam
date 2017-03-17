@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 36
     iput-object p1, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager$1;->this$0:Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager$1;->this$0:Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;
 
     # getter for: Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mContext:Landroid/content/Context;
@@ -52,6 +50,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread;->shutdown(Landroid/content/Context;Z)V
 
-    .line 40
     return-void
 .end method

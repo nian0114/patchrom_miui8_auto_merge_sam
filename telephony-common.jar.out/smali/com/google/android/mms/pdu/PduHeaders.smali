@@ -410,22 +410,18 @@
     .locals 1
 
     .prologue
-    .line 331
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 326
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
-    .line 332
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
-    .line 333
     return-void
 .end method
 
@@ -437,21 +433,17 @@
     .param p2, "field"    # I
 
     .prologue
-    .line 654
     if-nez p1, :cond_0
 
-    .line 655
     new-instance v1, Ljava/lang/NullPointerException;
 
     invoke-direct {v1}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v1
 
-    .line 658
     :cond_0
     sparse-switch p2, :sswitch_data_0
 
-    .line 664
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Invalid header field!"
@@ -460,7 +452,6 @@
 
     throw v1
 
-    .line 667
     :sswitch_0
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
@@ -474,22 +465,18 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 669
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/google/android/mms/pdu/EncodedStringValue;>;"
     if-nez v0, :cond_1
 
-    .line 670
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/google/android/mms/pdu/EncodedStringValue;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 672
     .restart local v0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/google/android/mms/pdu/EncodedStringValue;>;"
     :cond_1
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 673
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -498,10 +485,8 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 674
     return-void
 
-    .line 658
     nop
 
     :sswitch_data_0
@@ -517,7 +502,6 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 553
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -538,7 +522,6 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 564
     iget-object v2, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -551,18 +534,14 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 566
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/google/android/mms/pdu/EncodedStringValue;>;"
     if-nez v0, :cond_0
 
-    .line 567
     const/4 v2, 0x0
 
-    .line 570
     :goto_0
     return-object v2
 
-    .line 569
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -570,7 +549,6 @@
 
     new-array v1, v2, [Lcom/google/android/mms/pdu/EncodedStringValue;
 
-    .line 570
     .local v1, "values":[Lcom/google/android/mms/pdu/EncodedStringValue;
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -586,7 +564,6 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 685
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -599,14 +576,11 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 686
     .local v0, "longInteger":Ljava/lang/Long;
     if-nez v0, :cond_0
 
-    .line 687
     const-wide/16 v2, -0x1
 
-    .line 690
     :goto_0
     return-wide v2
 
@@ -623,7 +597,6 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 344
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -636,14 +609,11 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 345
     .local v0, "octet":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 346
     const/4 v1, 0x0
 
-    .line 349
     :goto_0
     return v1
 
@@ -660,7 +630,6 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 504
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -684,21 +653,17 @@
     .param p2, "field"    # I
 
     .prologue
-    .line 587
     if-nez p1, :cond_0
 
-    .line 588
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 591
     :cond_0
     sparse-switch p2, :sswitch_data_0
 
-    .line 604
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Invalid header field!"
@@ -707,7 +672,6 @@
 
     throw v0
 
-    .line 607
     :sswitch_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
@@ -717,10 +681,8 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 608
     return-void
 
-    .line 591
     nop
 
     :sswitch_data_0
@@ -743,21 +705,17 @@
     .param p2, "field"    # I
 
     .prologue
-    .line 624
     if-nez p1, :cond_0
 
-    .line 625
     new-instance v2, Ljava/lang/NullPointerException;
 
     invoke-direct {v2}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v2
 
-    .line 628
     :cond_0
     sparse-switch p2, :sswitch_data_0
 
-    .line 635
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "Invalid header field!"
@@ -766,13 +724,11 @@
 
     throw v2
 
-    .line 638
     :sswitch_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 639
     .local v1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/google/android/mms/pdu/EncodedStringValue;>;"
     const/4 v0, 0x0
 
@@ -782,17 +738,14 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 640
     aget-object v2, p1, v0
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 639
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 642
     :cond_1
     iget-object v2, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
@@ -802,10 +755,8 @@
 
     invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 643
     return-void
 
-    .line 628
     :sswitch_data_0
     .sparse-switch
         0x81 -> :sswitch_0
@@ -820,10 +771,8 @@
     .param p3, "field"    # I
 
     .prologue
-    .line 704
     sparse-switch p3, :sswitch_data_0
 
-    .line 719
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Invalid header field!"
@@ -832,7 +781,6 @@
 
     throw v0
 
-    .line 721
     :sswitch_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
@@ -846,10 +794,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 722
     return-void
 
-    .line 704
     nop
 
     :sswitch_data_0
@@ -889,10 +835,8 @@
 
     const/16 v1, 0x80
 
-    .line 365
     packed-switch p2, :pswitch_data_0
 
-    .line 491
     :pswitch_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -902,13 +846,11 @@
 
     throw v0
 
-    .line 377
     :pswitch_1
     if-eq v1, p1, :cond_5
 
     if-eq v0, p1, :cond_5
 
-    .line 379
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
     const-string v1, "Invalid Octet value!"
@@ -917,13 +859,11 @@
 
     throw v0
 
-    .line 383
     :pswitch_2
     if-eq v1, p1, :cond_5
 
     if-eq v0, p1, :cond_5
 
-    .line 386
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
     const-string v1, "Invalid Octet value!"
@@ -932,13 +872,11 @@
 
     throw v0
 
-    .line 390
     :pswitch_3
     if-eq v1, p1, :cond_5
 
     if-eq v0, p1, :cond_5
 
-    .line 393
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
     const-string v1, "Invalid Octet value!"
@@ -947,7 +885,6 @@
 
     throw v0
 
-    .line 397
     :pswitch_4
     if-lt p1, v1, :cond_0
 
@@ -955,7 +892,6 @@
 
     if-le p1, v0, :cond_5
 
-    .line 399
     :cond_0
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
@@ -965,7 +901,6 @@
 
     throw v0
 
-    .line 403
     :pswitch_5
     if-lt p1, v1, :cond_1
 
@@ -973,7 +908,6 @@
 
     if-le p1, v0, :cond_5
 
-    .line 405
     :cond_1
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
@@ -983,7 +917,6 @@
 
     throw v0
 
-    .line 409
     :pswitch_6
     if-lt p1, v1, :cond_2
 
@@ -991,7 +924,6 @@
 
     if-le p1, v0, :cond_5
 
-    .line 412
     :cond_2
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
@@ -1001,7 +933,6 @@
 
     throw v0
 
-    .line 416
     :pswitch_7
     if-lt p1, v1, :cond_3
 
@@ -1009,7 +940,6 @@
 
     if-le p1, v0, :cond_5
 
-    .line 418
     :cond_3
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
@@ -1019,11 +949,9 @@
 
     throw v0
 
-    .line 422
     :pswitch_8
     if-eq v1, p1, :cond_5
 
-    .line 424
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
     const-string v1, "Invalid Octet value!"
@@ -1032,7 +960,6 @@
 
     throw v0
 
-    .line 428
     :pswitch_9
     if-lt p1, v1, :cond_4
 
@@ -1040,7 +967,6 @@
 
     if-le p1, v0, :cond_5
 
-    .line 431
     :cond_4
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
@@ -1050,7 +976,6 @@
 
     throw v0
 
-    .line 436
     :pswitch_a
     const/16 v0, 0xc2
 
@@ -1058,10 +983,8 @@
 
     if-ge p1, v4, :cond_6
 
-    .line 438
     const/16 p1, 0xc0
 
-    .line 493
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
@@ -1076,10 +999,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 494
     return-void
 
-    .line 439
     :cond_6
     const/16 v0, 0xe3
 
@@ -1087,12 +1008,10 @@
 
     if-gt p1, v2, :cond_7
 
-    .line 441
     const/16 p1, 0xe0
 
     goto :goto_0
 
-    .line 442
     :cond_7
     if-lt p1, v1, :cond_9
 
@@ -1103,13 +1022,11 @@
     :cond_8
     if-le p1, v2, :cond_5
 
-    .line 446
     :cond_9
     const/16 p1, 0xe0
 
     goto :goto_0
 
-    .line 451
     :pswitch_b
     const/16 v0, 0xc1
 
@@ -1117,12 +1034,10 @@
 
     if-ge p1, v4, :cond_a
 
-    .line 453
     const/16 p1, 0xc0
 
     goto :goto_0
 
-    .line 454
     :cond_a
     const/16 v0, 0xe4
 
@@ -1130,12 +1045,10 @@
 
     if-gt p1, v2, :cond_b
 
-    .line 456
     const/16 p1, 0xe0
 
     goto :goto_0
 
-    .line 457
     :cond_b
     if-lt p1, v1, :cond_d
 
@@ -1146,13 +1059,11 @@
     :cond_c
     if-le p1, v2, :cond_5
 
-    .line 461
     :cond_d
     const/16 p1, 0xe0
 
     goto :goto_0
 
-    .line 466
     :pswitch_c
     const/16 v0, 0xc4
 
@@ -1160,12 +1071,10 @@
 
     if-ge p1, v4, :cond_e
 
-    .line 468
     const/16 p1, 0xc0
 
     goto :goto_0
 
-    .line 469
     :cond_e
     const/16 v0, 0xeb
 
@@ -1185,13 +1094,11 @@
     :cond_10
     if-le p1, v2, :cond_5
 
-    .line 475
     :cond_11
     const/16 p1, 0xe0
 
     goto :goto_0
 
-    .line 479
     :pswitch_d
     const/16 v0, 0x10
 
@@ -1201,13 +1108,11 @@
 
     if-le p1, v0, :cond_5
 
-    .line 480
     :cond_12
     const/16 p1, 0x12
 
     goto :goto_0
 
-    .line 484
     :pswitch_e
     if-lt p1, v1, :cond_13
 
@@ -1215,7 +1120,6 @@
 
     if-le p1, v0, :cond_5
 
-    .line 486
     :cond_13
     new-instance v0, Lcom/google/android/mms/InvalidHeaderValueException;
 
@@ -1225,7 +1129,6 @@
 
     throw v0
 
-    .line 365
     nop
 
     :pswitch_data_0
@@ -1297,21 +1200,17 @@
     .param p2, "field"    # I
 
     .prologue
-    .line 521
     if-nez p1, :cond_0
 
-    .line 522
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 525
     :cond_0
     sparse-switch p2, :sswitch_data_0
 
-    .line 540
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Invalid header field!"
@@ -1320,7 +1219,6 @@
 
     throw v0
 
-    .line 542
     :sswitch_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduHeaders;->mHeaderMap:Ljava/util/HashMap;
 
@@ -1330,10 +1228,8 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 543
     return-void
 
-    .line 525
     nop
 
     :sswitch_data_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/server/wm/FocusedStackFrame$1;->this$0:Lcom/android/server/wm/FocusedStackFrame;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 88
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 89
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.android.theme.themecenter.THEME_APPLY"
 
@@ -54,7 +51,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 90
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -65,7 +61,6 @@
 
     move-result v1
 
-    .line 92
     .local v1, "lineColor":I
     iget-object v2, p0, Lcom/android/server/wm/FocusedStackFrame$1;->this$0:Lcom/android/server/wm/FocusedStackFrame;
 
@@ -76,7 +71,6 @@
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/NinePatchDrawable;->setTint(I)V
 
-    .line 93
     const-string v2, "FocusedStackFrame"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -103,7 +97,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     .end local v1    # "lineColor":I
     :cond_0
     return-void

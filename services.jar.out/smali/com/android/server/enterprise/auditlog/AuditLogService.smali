@@ -41,7 +41,6 @@
     .locals 3
 
     .prologue
-    .line 80
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -60,7 +59,7 @@
 
     const/4 v1, 0x2
 
-    const-string/jumbo v2, "keystore"
+    const-string v2, "keystore"
 
     aput-object v2, v0, v1
 
@@ -114,7 +113,7 @@
 
     const/16 v1, 0xb
 
-    const-string/jumbo v2, "ecryptfs"
+    const-string v2, "ecryptfs"
 
     aput-object v2, v0, v1
 
@@ -128,20 +127,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Lcom/sec/enterprise/knox/auditlog/IAuditLog$Stub;-><init>()V
 
-    .line 142
     new-instance v4, Lcom/android/server/enterprise/auditlog/AuditLogService$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/enterprise/auditlog/AuditLogService$1;-><init>(Lcom/android/server/enterprise/auditlog/AuditLogService;)V
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
-    .line 113
     new-instance v4, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
@@ -150,19 +145,16 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 114
     new-instance v4, Lcom/android/server/enterprise/auditlog/IptablesLogging;
 
     invoke-direct {v4}, Lcom/android/server/enterprise/auditlog/IptablesLogging;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIptablesLogging:Lcom/android/server/enterprise/auditlog/IptablesLogging;
 
-    .line 115
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIsBootCompleted:Z
 
-    .line 116
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
@@ -173,17 +165,14 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
-    .line 117
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContainerOwnerCache:Landroid/content/ContentValues;
 
-    .line 118
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->createAdmins()V
 
-    .line 119
     const-string v4, "(^Admin) ([0-9]+) (.*$)"
 
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -192,7 +181,6 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mPattern:Ljava/util/regex/Pattern;
 
-    .line 120
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v4
@@ -201,44 +189,36 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/enterprise/auditlog/InformFailure;->setContext(Landroid/content/Context;)V
 
-    .line 122
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 123
     .local v1, "IFilter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 124
     const-string v4, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 125
     const-string v4, "android.intent.action.REBOOT"
 
     invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 126
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v4, v5, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 128
     const/4 v2, 0x0
 
-    .line 129
     .local v2, "admin":Lcom/android/server/enterprise/auditlog/Admin;
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     monitor-enter v5
 
-    .line 131
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -250,7 +230,6 @@
 
     move-result-object v3
 
-    .line 132
     .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/Admin;>;"
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -259,7 +238,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 133
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -270,26 +248,21 @@
 
     move-object v2, v0
 
-    .line 134
     invoke-virtual {v2}, Lcom/android/server/enterprise/auditlog/Admin;->getIptablesLogging()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 135
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIptablesLogging:Lcom/android/server/enterprise/auditlog/IptablesLogging;
 
     invoke-virtual {v4}, Lcom/android/server/enterprise/auditlog/IptablesLogging;->turnNetworkLogOn()V
 
-    .line 139
     :cond_1
     monitor-exit v5
 
-    .line 140
     return-void
 
-    .line 139
     .end local v3    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/Admin;>;"
     :catchall_0
     move-exception v4
@@ -314,15 +287,12 @@
     .param p9, "asUser"    # Z
 
     .prologue
-    .line 964
     if-nez p9, :cond_1
 
-    .line 965
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->checkIptablesEnabledForAdmins()Z
 
     move-result v17
 
-    .line 966
     .local v17, "isIptablesNeeded":Z
     if-eqz p1, :cond_6
 
@@ -330,12 +300,10 @@
 
     iget v15, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 967
     .local v15, "callingUid":I
     :goto_0
     const/16 v16, 0x0
 
-    .line 972
     .local v16, "isChangedByIptables":Z
     if-eqz v17, :cond_7
 
@@ -351,7 +319,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 973
     move-object/from16 v0, p0
 
     move-object/from16 v1, p6
@@ -364,10 +331,8 @@
 
     move-result p8
 
-    .line 975
     const/16 v16, 0x1
 
-    .line 976
     const-string v4, "IPT_MDM_LOG"
 
     const-string v5, "IPT_MDM_LOG "
@@ -378,7 +343,6 @@
 
     move-result-object p7
 
-    .line 990
     :goto_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -401,10 +365,8 @@
     :cond_0
     if-nez v16, :cond_1
 
-    .line 992
     const/16 p8, -0x1
 
-    .line 999
     .end local v15    # "callingUid":I
     .end local v16    # "isChangedByIptables":Z
     .end local v17    # "isIptablesNeeded":Z
@@ -419,7 +381,6 @@
 
     if-nez v4, :cond_a
 
-    .line 1000
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
@@ -428,11 +389,9 @@
 
     move-result-object v14
 
-    .line 1001
     .local v14, "c":Ljava/util/Collection;
     const/4 v12, 0x0
 
-    .line 1002
     .local v12, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     move-object/from16 v0, p0
 
@@ -442,13 +401,11 @@
 
     monitor-enter v20
 
-    .line 1003
     :try_start_0
     invoke-interface {v14}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v18
 
-    .line 1004
     .local v18, "it":Ljava/util/Iterator;
     :cond_2
     :goto_2
@@ -458,7 +415,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 1005
     invoke-interface/range {v18 .. v18}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -469,7 +425,6 @@
 
     move-object v12, v0
 
-    .line 1006
     invoke-virtual {v12}, Lcom/android/server/enterprise/auditlog/Admin;->getUid()I
 
     move-result v4
@@ -478,7 +433,6 @@
 
     move-result v13
 
-    .line 1009
     .local v13, "adminUserId":I
     const/4 v4, -0x1
 
@@ -516,7 +470,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1017
     :cond_5
     invoke-virtual {v12}, Lcom/android/server/enterprise/auditlog/Admin;->getAuditLogRulesInfo()Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
@@ -542,12 +495,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 1019
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1020
     .local v19, "messageBuilder":Ljava/lang/StringBuilder;
     new-instance v4, Ljava/util/Date;
 
@@ -561,42 +512,36 @@
 
     invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1021
     const-string v4, " "
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1022
     move-object/from16 v0, v19
 
     move/from16 v1, p2
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1023
     const-string v4, "/"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1024
     move-object/from16 v0, v19
 
     move/from16 v1, p3
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1025
     const-string v4, "/"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1026
     const/4 v4, 0x1
 
     move/from16 v0, p4
@@ -610,70 +555,60 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1027
     const-string v4, "/"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1028
     move-object/from16 v0, v19
 
     move/from16 v1, p5
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1029
     const-string v4, "/"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1030
     move-object/from16 v0, v19
 
     move/from16 v1, p8
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1031
     const-string v4, "/"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1032
     move-object/from16 v0, v19
 
     move-object/from16 v1, p6
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1033
     const-string v4, "/"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1034
     move-object/from16 v0, v19
 
     move-object/from16 v1, p7
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1035
     const-string v4, "\n"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1036
     invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -682,7 +617,6 @@
 
     goto/16 :goto_2
 
-    .line 1040
     .end local v13    # "adminUserId":I
     .end local v18    # "it":Ljava/util/Iterator;
     .end local v19    # "messageBuilder":Ljava/lang/StringBuilder;
@@ -695,7 +629,6 @@
 
     throw v4
 
-    .line 966
     .end local v12    # "ad":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v14    # "c":Ljava/util/Collection;
     .restart local v17    # "isIptablesNeeded":Z
@@ -706,7 +639,6 @@
 
     goto/16 :goto_0
 
-    .line 984
     .restart local v15    # "callingUid":I
     .restart local v16    # "isChangedByIptables":Z
     :cond_7
@@ -716,7 +648,6 @@
 
     goto/16 :goto_1
 
-    .line 1026
     .end local v15    # "callingUid":I
     .end local v16    # "isChangedByIptables":Z
     .end local v17    # "isIptablesNeeded":Z
@@ -731,7 +662,6 @@
 
     goto :goto_3
 
-    .line 1040
     .end local v13    # "adminUserId":I
     .end local v19    # "messageBuilder":Ljava/lang/StringBuilder;
     :cond_9
@@ -739,7 +669,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1042
     .end local v12    # "ad":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v14    # "c":Ljava/util/Collection;
     .end local v18    # "it":Ljava/util/Iterator;
@@ -752,7 +681,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/auditlog/AuditLogService;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     return-object v0
@@ -764,7 +692,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 75
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIsBootCompleted:Z
 
     return p1
@@ -775,7 +702,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/auditlog/AuditLogService;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
     return-void
@@ -786,18 +712,15 @@
     .param p1, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 928
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 929
     .local v5, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 930
     .local v4, "callingPid":I
     iget-object v9, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
@@ -809,11 +732,9 @@
 
     move-result-object v3
 
-    .line 931
     .local v3, "callingPackageFromUid":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 932
     .local v2, "callingPackage":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
@@ -825,22 +746,18 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 934
     .local v0, "am":Landroid/app/ActivityManager;
     if-eqz v0, :cond_1
 
-    .line 935
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 936
     .local v10, "token":J
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 938
     .local v1, "appProcess":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     :try_start_0
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
@@ -849,13 +766,10 @@
 
     move-result-object v1
 
-    .line 940
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 942
     if-eqz v1, :cond_1
 
-    .line 943
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -875,18 +789,15 @@
 
     check-cast v8, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 944
     .local v8, "pi":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v9, v8, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v4, v9, :cond_0
 
-    .line 945
     iget-object v2, v8, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 940
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v8    # "pi":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :catchall_0
@@ -896,7 +807,6 @@
 
     throw v9
 
-    .line 948
     .end local v1    # "appProcess":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     .end local v10    # "token":J
     :cond_1
@@ -904,40 +814,31 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 949
     .local v7, "messageBuilder":Ljava/lang/StringBuilder;
     invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 950
     const-string v9, "\n[logged by: "
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 951
     invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 952
     const-string v9, "/"
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 953
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 954
     const-string v9, ", pid: "
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 955
     invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 956
     const-string v9, "]"
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 957
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -953,14 +854,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 906
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditServiceRunning()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 908
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -973,7 +872,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 909
     :cond_0
     const-string v5, "AuditLogService"
 
@@ -981,16 +879,13 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 924
     :cond_1
     :goto_0
     return v0
 
-    .line 913
     :cond_2
     const/4 v0, 0x0
 
-    .line 914
     .local v0, "allowed":Z
     sget-object v1, Lcom/android/server/enterprise/auditlog/AuditLogService;->swComponentWhitelist:[Ljava/lang/String;
 
@@ -1006,7 +901,6 @@
 
     aget-object v4, v1, v2
 
-    .line 915
     .local v4, "swComponentAllowed":Ljava/lang/String;
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1014,13 +908,10 @@
 
     if-eqz v5, :cond_3
 
-    .line 916
     const/4 v0, 0x1
 
-    .line 917
     goto :goto_0
 
-    .line 914
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
@@ -1031,7 +922,6 @@
     .locals 9
 
     .prologue
-    .line 747
     iget-object v7, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     invoke-interface {v7}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1042,19 +932,15 @@
 
     move-result-object v4
 
-    .line 748
     .local v4, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
-    .line 749
     .local v3, "isIptablesLogsEnabled":Z
     const/4 v1, 0x0
 
-    .line 750
     .local v1, "isAuditEnabled":Z
     const/4 v5, 0x0
 
-    .line 751
     .local v5, "ret":Z
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -1063,7 +949,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 752
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
@@ -1074,7 +959,6 @@
 
     move-result v6
 
-    .line 753
     .local v6, "uid":I
     iget-object v7, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -1088,22 +972,18 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 754
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->getIptablesLogging()Z
 
     move-result v2
 
-    .line 755
     .local v2, "isIptablesEnables":Z
     move v3, v2
 
-    .line 756
     invoke-direct {p0, v6}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditLogEnabledInternal(I)Z
 
     move-result v1
 
-    .line 757
     if-eqz v3, :cond_0
 
     if-eqz v1, :cond_0
@@ -1113,16 +993,13 @@
     :goto_1
     or-int/2addr v5, v7
 
-    .line 758
     goto :goto_0
 
-    .line 757
     :cond_0
     const/4 v7, 0x0
 
     goto :goto_1
 
-    .line 759
     .end local v0    # "ad":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v2    # "isIptablesEnables":Z
     .end local v6    # "uid":I
@@ -1134,7 +1011,6 @@
     .locals 7
 
     .prologue
-    .line 729
     iget-object v6, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1145,19 +1021,15 @@
 
     move-result-object v2
 
-    .line 730
     .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     const/4 v1, 0x0
 
-    .line 731
     .local v1, "isKernelEnabled":Z
     const/4 v0, 0x0
 
-    .line 732
     .local v0, "isAuditEnabled":Z
     const/4 v3, 0x0
 
-    .line 733
     .local v3, "ret":Z
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1166,7 +1038,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 734
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
@@ -1177,24 +1048,20 @@
 
     move-result v5
 
-    .line 735
     .local v5, "uid":I
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/auditlog/AuditLogService;->getRulesInfoFromDB(I)Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     move-result-object v4
 
-    .line 736
     .local v4, "rulesInfo":Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
     invoke-virtual {v4}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->isKernelLogsEnabled()Z
 
     move-result v1
 
-    .line 737
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditLogEnabledInternal(I)Z
 
     move-result v0
 
-    .line 738
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
@@ -1204,16 +1071,13 @@
     :goto_1
     or-int/2addr v3, v6
 
-    .line 739
     goto :goto_0
 
-    .line 738
     :cond_0
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 740
     .end local v4    # "rulesInfo":Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
     .end local v5    # "uid":I
     :cond_1
@@ -1228,12 +1092,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1045
     const/16 v5, 0x64
 
     if-lt p1, v5, :cond_3
 
-    .line 1047
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContainerOwnerCache:Landroid/content/ContentValues;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1246,7 +1108,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 1048
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContainerOwnerCache:Landroid/content/ContentValues;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1261,42 +1122,35 @@
 
     move-result v3
 
-    .line 1051
     .local v3, "ownerUid":I
     if-ne v3, p2, :cond_1
 
-    .line 1079
     .end local v3    # "ownerUid":I
     :cond_0
     :goto_0
     return v4
 
-    .line 1055
     .restart local v3    # "ownerUid":I
     :cond_1
     invoke-static {v3}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v2
 
-    .line 1056
     .local v2, "ownerAppId":I
     invoke-static {p2}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 1057
     .local v0, "adminAppId":I
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 1058
     .local v1, "adminUserId":I
     if-ne v2, v0, :cond_2
 
     if-eq p1, v1, :cond_0
 
-    .line 1064
     .end local v0    # "adminAppId":I
     .end local v1    # "adminUserId":I
     .end local v2    # "ownerAppId":I
@@ -1308,7 +1162,6 @@
 
     move-result v3
 
-    .line 1065
     .restart local v3    # "ownerUid":I
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContainerOwnerCache:Landroid/content/ContentValues;
 
@@ -1322,33 +1175,27 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1067
     if-eq v3, p2, :cond_0
 
-    .line 1071
     invoke-static {v3}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v2
 
-    .line 1072
     .restart local v2    # "ownerAppId":I
     invoke-static {p2}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 1073
     .restart local v0    # "adminAppId":I
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 1074
     .restart local v1    # "adminUserId":I
     if-ne v2, v0, :cond_3
 
     if-eq p1, v1, :cond_0
 
-    .line 1079
     .end local v0    # "adminAppId":I
     .end local v1    # "adminUserId":I
     .end local v2    # "ownerAppId":I
@@ -1365,7 +1212,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 223
     iget-object v6, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "AUDITLOG"
@@ -1374,17 +1220,14 @@
 
     move-result-object v3
 
-    .line 226
     .local v3, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     const/4 v1, 0x0
 
-    .line 227
     .local v1, "cv":Landroid/content/ContentValues;
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 228
     .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/ContentValues;>;"
     :cond_0
     :goto_0
@@ -1394,7 +1237,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 229
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1402,7 +1244,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 230
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string v6, "adminUid"
 
@@ -1418,7 +1259,6 @@
 
     move-result v5
 
-    .line 231
     .local v5, "uid":I
     const-string v6, "auditLogEnabled"
 
@@ -1426,7 +1266,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "true"
+    const-string v7, "true"
 
     invoke-virtual {v6, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1434,7 +1274,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 232
     new-instance v0, Lcom/android/server/enterprise/auditlog/Admin;
 
     iget-object v6, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
@@ -1445,7 +1284,6 @@
 
     invoke-direct {v0, v5, v6, v7}, Lcom/android/server/enterprise/auditlog/Admin;-><init>(ILandroid/content/Context;Ljava/lang/String;)V
 
-    .line 233
     .local v0, "admin":Lcom/android/server/enterprise/auditlog/Admin;
     const-string v6, "auditCriticalSize"
 
@@ -1459,7 +1297,6 @@
 
     invoke-virtual {v0, v6}, Lcom/android/server/enterprise/auditlog/Admin;->setCriticalLogSize(I)V
 
-    .line 234
     const-string v6, "auditMaximumSize"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1472,14 +1309,13 @@
 
     invoke-virtual {v0, v6}, Lcom/android/server/enterprise/auditlog/Admin;->setMaximumLogSize(I)V
 
-    .line 235
     const-string v6, "auditLogIptables"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
-    const-string/jumbo v7, "true"
+    const-string v7, "true"
 
     invoke-virtual {v6, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1487,14 +1323,13 @@
 
     invoke-virtual {v0, v6}, Lcom/android/server/enterprise/auditlog/Admin;->setIptablesLogging(Z)V
 
-    .line 236
     const-string v6, "auditLogMDM"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
-    const-string/jumbo v7, "true"
+    const-string v7, "true"
 
     invoke-virtual {v6, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1502,7 +1337,6 @@
 
     invoke-virtual {v0, v6}, Lcom/android/server/enterprise/auditlog/Admin;->setMDMLogging(Z)V
 
-    .line 237
     const-string v6, "auditLogBufferSize"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
@@ -1515,14 +1349,12 @@
 
     invoke-virtual {v0, v6, v7}, Lcom/android/server/enterprise/auditlog/Admin;->setBufferSize(J)V
 
-    .line 239
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->extractRulesFromCv(Landroid/content/ContentValues;)Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     move-result-object v6
 
     invoke-virtual {v0, v6}, Lcom/android/server/enterprise/auditlog/Admin;->setAuditLogRulesInfo(Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;)V
 
-    .line 241
     iget-object v6, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v7, Ljava/lang/Integer;
@@ -1531,18 +1363,15 @@
 
     invoke-interface {v6, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->getDeviceInfo()Ljava/util/List;
 
     move-result-object v4
 
-    .line 243
     .local v4, "stringList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {v0, v4}, Lcom/android/server/enterprise/auditlog/Admin;->setDeviceInfo(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 246
     .end local v0    # "admin":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v4    # "stringList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v5    # "uid":I
@@ -1555,7 +1384,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 569
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1574,7 +1402,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 561
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1593,16 +1420,13 @@
     .param p1, "cv"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 249
     new-instance v7, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     invoke-direct {v7}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;-><init>()V
 
-    .line 250
     .local v7, "rulesInfo":Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
     if-eqz p1, :cond_2
 
-    .line 251
     const-string v12, "auditLogRuleSeverity"
 
     invoke-virtual {p1, v12}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1613,7 +1437,6 @@
 
     move-result v9
 
-    .line 252
     .local v9, "severityRule":I
     const-string v12, "auditLogRuleOutcome"
 
@@ -1625,7 +1448,6 @@
 
     move-result v6
 
-    .line 253
     .local v6, "outcomeRule":I
     const-string v12, "auditLogKernelEnabled"
 
@@ -1633,13 +1455,12 @@
 
     move-result-object v12
 
-    const-string/jumbo v13, "true"
+    const-string v13, "true"
 
     invoke-virtual {v12, v13}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 255
     .local v1, "enableKernelLogs":Z
     const-string v12, "auditLogRuleGroups"
 
@@ -1647,11 +1468,9 @@
 
     move-result-object v3
 
-    .line 256
     .local v3, "groupsRuleString":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 257
     .local v2, "groupsRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1659,13 +1478,11 @@
 
     if-nez v12, :cond_0
 
-    .line 258
     new-instance v2, Ljava/util/ArrayList;
 
     .end local v2    # "groupsRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 259
     .restart local v2    # "groupsRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const-string v12, ","
 
@@ -1685,7 +1502,6 @@
 
     aget-object v8, v0, v4
 
-    .line 260
     .local v8, "s":Ljava/lang/String;
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -1693,12 +1509,10 @@
 
     invoke-interface {v2, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 259
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 264
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v4    # "i$":I
     .end local v5    # "len$":I
@@ -1710,11 +1524,9 @@
 
     move-result-object v11
 
-    .line 265
     .local v11, "usersRuleString":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 266
     .local v10, "usersRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1722,13 +1534,11 @@
 
     if-nez v12, :cond_1
 
-    .line 267
     new-instance v10, Ljava/util/ArrayList;
 
     .end local v10    # "usersRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 268
     .restart local v10    # "usersRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const-string v12, ","
 
@@ -1748,7 +1558,6 @@
 
     aget-object v8, v0, v4
 
-    .line 269
     .restart local v8    # "s":Ljava/lang/String;
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -1756,12 +1565,10 @@
 
     invoke-interface {v10, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 268
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 273
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v4    # "i$":I
     .end local v5    # "len$":I
@@ -1769,19 +1576,14 @@
     :cond_1
     invoke-virtual {v7, v9}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->setSeverityRule(I)V
 
-    .line 274
     invoke-virtual {v7, v6}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->setOutcomeRule(I)V
 
-    .line 275
     invoke-virtual {v7, v2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->setGroupsRule(Ljava/util/List;)V
 
-    .line 276
     invoke-virtual {v7, v1}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->setKernelLogsEnabled(Z)V
 
-    .line 277
     invoke-virtual {v7, v10}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->setUsersRule(Ljava/util/List;)V
 
-    .line 279
     .end local v1    # "enableKernelLogs":Z
     .end local v2    # "groupsRule":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v3    # "groupsRuleString":Ljava/lang/String;
@@ -1799,7 +1601,6 @@
     .param p2, "auditLogRulesInfo"    # Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     .prologue
-    .line 1355
     invoke-virtual {p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getGroupsRule()Ljava/util/List;
 
     move-result-object v0
@@ -1830,11 +1631,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 1358
     :cond_0
     const/4 v0, 0x1
 
-    .line 1360
     :goto_0
     return v0
 
@@ -1852,7 +1651,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1343
     invoke-virtual {p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getOutcomeRule()I
 
     move-result v1
@@ -1878,7 +1676,6 @@
 
     if-nez v1, :cond_2
 
-    .line 1350
     :cond_1
     :goto_0
     return v0
@@ -1895,17 +1692,14 @@
     .param p2, "auditLogRulesInfo"    # Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     .prologue
-    .line 1336
     invoke-virtual {p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getSeverityRule()I
 
     move-result v0
 
     if-gt p1, v0, :cond_0
 
-    .line 1337
     const/4 v0, 0x1
 
-    .line 1339
     :goto_0
     return v0
 
@@ -1921,7 +1715,6 @@
     .param p2, "auditLogRulesInfo"    # Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     .prologue
-    .line 1364
     invoke-virtual {p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getUsersRule()Ljava/util/List;
 
     move-result-object v0
@@ -1956,11 +1749,9 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1368
     :cond_0
     const/4 v0, 0x1
 
-    .line 1370
     :goto_0
     return v0
 
@@ -1980,7 +1771,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1381
     const-string v2, "KERNEL"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1989,33 +1779,28 @@
 
     if-eqz v2, :cond_0
 
-    .line 1385
     const-string v2, "IPT"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1386
     .local v0, "index":I
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_1
 
-    .line 1387
     invoke-virtual {p4}, Lcom/android/server/enterprise/auditlog/Admin;->getIptablesLogging()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 1400
     .end local v0    # "index":I
     :cond_0
     :goto_0
     return v1
 
-    .line 1390
     .restart local v0    # "index":I
     :cond_1
     invoke-virtual {p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->isKernelLogsEnabled()Z
@@ -2024,7 +1809,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1400
     :cond_2
     const/4 v1, 0x0
 
@@ -2043,7 +1827,6 @@
     .param p8, "admin"    # Lcom/android/server/enterprise/auditlog/Admin;
 
     .prologue
-    .line 1322
     invoke-direct {p0, p2, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->filterBySeverity(ILcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;)Z
 
     move-result v0
@@ -2074,10 +1857,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1327
     const/4 v0, 0x1
 
-    .line 1329
     :goto_0
     return v0
 
@@ -2092,12 +1873,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1307
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 1308
     .local v0, "appUid":I
     const/16 v2, 0x3e8
 
@@ -2111,16 +1890,13 @@
 
     if-le v0, v2, :cond_2
 
-    .line 1309
     :cond_0
     const-string v1, "com.sec.enterprise.knox.cloudmdm.smdms"
 
-    .line 1316
     :cond_1
     :goto_0
     return-object v1
 
-    .line 1312
     :cond_2
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2128,11 +1904,9 @@
 
     move-result-object v1
 
-    .line 1313
     .local v1, "pkgName":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 1314
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2153,23 +1927,19 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 1407
     const-string v3, "UID="
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1408
     .local v1, "init":I
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_1
 
-    .line 1409
     move v0, v1
 
-    .line 1410
     .local v0, "end":I
     :goto_0
     invoke-virtual {p2, v0}, Ljava/lang/String;->charAt(I)C
@@ -2180,12 +1950,10 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1411
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1413
     :cond_0
     add-int/lit8 v3, v1, 0x4
 
@@ -2197,23 +1965,19 @@
 
     move-result v2
 
-    .line 1414
     .local v2, "uid":I
     const/16 v3, 0x3e8
 
     if-ne v2, v3, :cond_2
 
-    .line 1415
     const/4 p3, -0x1
 
-    .line 1420
     .end local v0    # "end":I
     .end local v2    # "uid":I
     :cond_1
     :goto_1
     return p3
 
-    .line 1417
     .restart local v0    # "end":I
     .restart local v2    # "uid":I
     :cond_2
@@ -2237,7 +2001,6 @@
     .end annotation
 
     .prologue
-    .line 194
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v4
@@ -2246,21 +2009,17 @@
 
     move-result-object v1
 
-    .line 195
     .local v1, "deviceInventory":Landroid/app/enterprise/DeviceInventory;
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 197
     .local v3, "stringList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v2, " -----------------------------------------\n"
 
-    .line 198
     .local v2, "separator":Ljava/lang/String;
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 200
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2285,7 +2044,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 202
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2310,7 +2068,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 204
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2335,7 +2092,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 206
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2360,7 +2116,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 208
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2385,16 +2140,13 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 210
     invoke-virtual {v1}, Landroid/app/enterprise/DeviceInventory;->getModemFirmware()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 211
     .local v0, "baseband":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 212
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2415,7 +2167,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 214
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2441,10 +2192,8 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 215
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 216
     return-object v3
 .end method
 
@@ -2452,15 +2201,13 @@
     .locals 2
 
     .prologue
-    .line 577
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 578
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "enterprise_policy"
+    const-string v1, "enterprise_policy"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2470,7 +2217,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 581
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2482,18 +2228,15 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 475
     new-instance v3, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     invoke-direct {v3}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;-><init>()V
 
-    .line 476
     .local v3, "ruleInfo":Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 477
     .local v1, "filterValues":Landroid/content/ContentValues;
     const-string v4, "adminUid"
 
@@ -2503,7 +2246,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 478
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "AUDITLOG"
@@ -2514,7 +2256,6 @@
 
     move-result-object v2
 
-    .line 480
     .local v2, "returnedValues":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
@@ -2522,7 +2263,6 @@
 
     if-nez v4, :cond_0
 
-    .line 481
     const/4 v4, 0x0
 
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2531,13 +2271,11 @@
 
     check-cast v0, Landroid/content/ContentValues;
 
-    .line 482
     .local v0, "cv":Landroid/content/ContentValues;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->extractRulesFromCv(Landroid/content/ContentValues;)Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     move-result-object v3
 
-    .line 484
     .end local v0    # "cv":Landroid/content/ContentValues;
     :cond_0
     return-object v3
@@ -2548,7 +2286,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 320
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2561,10 +2298,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 321
     const/4 v0, 0x1
 
-    .line 323
     :goto_0
     return v0
 
@@ -2580,7 +2315,6 @@
     .param p2, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 1427
     const-string v1, "KERNEL"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2589,23 +2323,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 1428
     const-string v1, "IPT_MDM_LOG"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1429
     .local v0, "index":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 1430
     const/4 v1, 0x1
 
-    .line 1433
     .end local v0    # "index":I
     :goto_0
     return v1
@@ -2621,16 +2351,13 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 655
     const-wide/16 v22, -0x1
 
-    .line 657
     .local v22, "ret":J
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v20
 
-    .line 658
     .local v20, "path":Ljava/io/File;
     new-instance v21, Landroid/os/StatFs;
 
@@ -2642,7 +2369,6 @@
 
     invoke-direct {v0, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 660
     .local v21, "stat":Landroid/os/StatFs;
     invoke-virtual/range {v21 .. v21}, Landroid/os/StatFs;->getBlockSize()I
 
@@ -2652,7 +2378,6 @@
 
     move-wide/from16 v16, v0
 
-    .line 661
     .local v16, "blockSize":J
     invoke-virtual/range {v21 .. v21}, Landroid/os/StatFs;->getAvailableBlocks()I
 
@@ -2660,11 +2385,9 @@
 
     int-to-long v14, v2
 
-    .line 662
     .local v14, "availableBlocks":J
     mul-long v18, v14, v16
 
-    .line 664
     .local v18, "freeBytesInternal":J
     const-wide/16 v2, 0x5
 
@@ -2674,7 +2397,6 @@
 
     div-long v6, v2, v4
 
-    .line 666
     .local v6, "availableSpace":J
     const-wide/32 v2, 0xa00000
 
@@ -2688,7 +2410,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 667
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -2705,15 +2426,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 669
     move-wide/from16 v22, v6
 
-    .line 678
     :cond_0
     :goto_0
     return-wide v22
 
-    .line 672
     :cond_1
     const-wide/32 v2, 0x3200000
 
@@ -2721,7 +2439,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 673
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -2740,7 +2457,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 675
     const-wide/32 v22, 0x3200000
 
     goto :goto_0
@@ -2750,48 +2466,40 @@
     .locals 1
 
     .prologue
-    .line 176
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditServiceRunning()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/sec/enterprise/internal/EDMNativeHelper;->setAuditEnabled(Z)V
 
-    .line 177
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->checkKernelEnabledForAdmins()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/sec/enterprise/internal/EDMNativeHelper;->setKernelLogsEnabled(Z)V
 
-    .line 179
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->checkIptablesEnabledForAdmins()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 180
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/sec/enterprise/internal/EDMNativeHelper;->setIptablesLogsEnabled(Z)V
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIptablesLogging:Lcom/android/server/enterprise/auditlog/IptablesLogging;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/IptablesLogging;->turnNetworkLogOff()V
 
-    .line 186
     :goto_0
     return-void
 
-    .line 183
     :cond_0
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/sec/enterprise/internal/EDMNativeHelper;->setIptablesLogsEnabled(Z)V
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIptablesLogging:Lcom/android/server/enterprise/auditlog/IptablesLogging;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/IptablesLogging;->turnNetworkLogOn()V
@@ -2808,15 +2516,12 @@
 
     const/4 v0, 0x0
 
-    .line 1438
     if-nez p1, :cond_1
 
-    .line 1449
     :cond_0
     :goto_0
     return v0
 
-    .line 1441
     :cond_1
     invoke-virtual {p1}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getSeverityRule()I
 
@@ -2832,7 +2537,6 @@
 
     if-lt v2, v1, :cond_0
 
-    .line 1445
     invoke-virtual {p1}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getOutcomeRule()I
 
     move-result v2
@@ -2849,7 +2553,6 @@
 
     move v0, v1
 
-    .line 1449
     goto :goto_0
 .end method
 
@@ -2866,7 +2569,6 @@
     .param p7, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 819
     move-object/from16 v0, p6
 
     move-object/from16 v1, p7
@@ -2875,11 +2577,9 @@
 
     move-result v12
 
-    .line 821
     .local v12, "checkPermission":Z
     if-eqz v12, :cond_0
 
-    .line 822
     const/4 v10, -0x1
 
     const/4 v11, 0x0
@@ -2902,7 +2602,6 @@
 
     invoke-direct/range {v2 .. v11}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerInternal(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 825
     :cond_0
     return-void
 .end method
@@ -2919,7 +2618,6 @@
     .param p8, "userId"    # I
 
     .prologue
-    .line 840
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -2932,11 +2630,9 @@
 
     move-result v15
 
-    .line 841
     .local v15, "checkPermission":Z
     if-eqz v15, :cond_1
 
-    .line 846
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mPattern:Ljava/util/regex/Pattern;
@@ -2947,7 +2643,6 @@
 
     move-result-object v16
 
-    .line 847
     .local v16, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual/range {v16 .. v16}, Ljava/util/regex/Matcher;->find()Z
 
@@ -2955,7 +2650,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 848
     const/4 v4, 0x2
 
     move-object/from16 v0, v16
@@ -2968,7 +2662,6 @@
 
     move-result v14
 
-    .line 849
     .local v14, "appUid":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3016,7 +2709,6 @@
 
     move-result-object p7
 
-    .line 853
     .end local v14    # "appUid":I
     :cond_0
     const/4 v13, 0x1
@@ -3041,7 +2733,6 @@
 
     invoke-direct/range {v4 .. v13}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerInternal(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 856
     .end local v16    # "matcher":Ljava/util/regex/Matcher;
     :cond_1
     return-void
@@ -3058,7 +2749,6 @@
     .param p7, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 873
     move-object/from16 v0, p6
 
     move-object/from16 v1, p7
@@ -3069,14 +2759,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 874
     move-object/from16 v0, p7
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->appendLogMessageWithCallingUser(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 876
     .local v9, "appendedMessage":Ljava/lang/String;
     const/4 v10, -0x1
 
@@ -3098,7 +2786,6 @@
 
     invoke-direct/range {v2 .. v11}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerInternal(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 879
     .end local v9    # "appendedMessage":Ljava/lang/String;
     :cond_0
     return-void
@@ -3116,7 +2803,6 @@
     .param p8, "userId"    # I
 
     .prologue
-    .line 897
     move-object/from16 v0, p6
 
     move-object/from16 v1, p7
@@ -3127,14 +2813,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 898
     move-object/from16 v0, p7
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->appendLogMessageWithCallingUser(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 900
     .local v9, "appendedMessage":Ljava/lang/String;
     const/4 v11, 0x1
 
@@ -3156,7 +2840,6 @@
 
     invoke-direct/range {v2 .. v11}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerInternal(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 903
     .end local v9    # "appendedMessage":Ljava/lang/String;
     :cond_0
     return-void
@@ -3171,14 +2854,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 764
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditServiceRunning()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 766
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -3191,7 +2872,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 767
     :cond_0
     const-string v5, "AuditLogService"
 
@@ -3199,12 +2879,10 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 803
     :cond_1
     :goto_0
     return v4
 
-    .line 770
     :cond_2
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
@@ -3214,7 +2892,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 771
     const-string v5, "AuditLogService"
 
     const-string v6, " AuditLogger calls from Profile return default value"
@@ -3223,13 +2900,11 @@
 
     goto :goto_0
 
-    .line 775
     :cond_3
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 776
     .local v1, "callingUid":I
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
@@ -3241,11 +2916,9 @@
 
     move-result-object v0
 
-    .line 778
     .local v0, "callingPackage":Ljava/lang/String;
     const/4 v3, 0x1
 
-    .line 780
     .local v3, "isEnforce":Z
     const-string v4, "com.android.mms"
 
@@ -3259,32 +2932,26 @@
 
     if-ne v1, v4, :cond_5
 
-    .line 781
     :cond_4
     const/4 v3, 0x0
 
-    .line 784
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 787
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceLoggerPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 800
     :cond_6
     :goto_1
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 788
     :catch_0
     move-exception v2
 
-    .line 791
     .local v2, "ex":Ljava/lang/SecurityException;
     const-string v4, "com.android.chrome"
 
@@ -3294,7 +2961,6 @@
 
     if-nez v4, :cond_7
 
-    .line 792
     const-string v4, "AuditLogService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3317,7 +2983,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 796
     :cond_7
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
@@ -3337,21 +3002,17 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 687
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 688
     move-object/from16 v0, p1
 
     iget v14, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 689
     .local v14, "uid":I
     const/4 v13, 0x1
 
-    .line 690
     .local v13, "ret":Z
     move-object/from16 v0, p0
 
@@ -3367,16 +3028,13 @@
 
     check-cast v10, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 692
     .local v10, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v10, :cond_0
 
-    .line 693
     new-instance v11, Landroid/content/ContentValues;
 
     invoke-direct {v11}, Landroid/content/ContentValues;-><init>()V
 
-    .line 694
     .local v11, "changeValues":Landroid/content/ContentValues;
     const-string v1, "auditLogEnabled"
 
@@ -3388,12 +3046,10 @@
 
     invoke-virtual {v11, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 695
     new-instance v12, Landroid/content/ContentValues;
 
     invoke-direct {v12}, Landroid/content/ContentValues;-><init>()V
 
-    .line 696
     .local v12, "filterValues":Landroid/content/ContentValues;
     const-string v1, "adminUid"
 
@@ -3403,7 +3059,6 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 697
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -3414,14 +3069,11 @@
 
     move-result v15
 
-    .line 698
     .local v15, "updated":I
     if-lez v15, :cond_2
 
-    .line 699
     invoke-virtual {v10}, Lcom/android/server/enterprise/auditlog/Admin;->deleteAllFiles()V
 
-    .line 700
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
@@ -3432,10 +3084,8 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 701
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
-    .line 703
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
@@ -3448,10 +3098,8 @@
 
     invoke-static {v1, v2, v3}, Lcom/android/server/enterprise/content/SecContentProvider;->notifyPolicyChangesAsUser(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 707
     const/4 v13, 0x1
 
-    .line 713
     .end local v11    # "changeValues":Landroid/content/ContentValues;
     .end local v12    # "filterValues":Landroid/content/ContentValues;
     .end local v15    # "updated":I
@@ -3459,7 +3107,6 @@
     :goto_0
     if-eqz v13, :cond_1
 
-    .line 714
     const/4 v3, 0x5
 
     const/4 v4, 0x2
@@ -3484,11 +3131,9 @@
 
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerAsUser(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 719
     :cond_1
     return v13
 
-    .line 709
     .restart local v11    # "changeValues":Landroid/content/ContentValues;
     .restart local v12    # "filterValues":Landroid/content/ContentValues;
     .restart local v15    # "updated":I
@@ -3505,15 +3150,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 368
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 369
     iget v12, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 370
     .local v12, "uid":I
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -3527,30 +3169,24 @@
 
     check-cast v9, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 371
     .local v9, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     const/4 v11, 0x0
 
-    .line 373
     .local v11, "ret":Z
     if-eqz v9, :cond_0
 
-    .line 374
     invoke-virtual {v9}, Lcom/android/server/enterprise/auditlog/Admin;->getIptablesLogging()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 375
     const/4 v11, 0x1
 
-    .line 386
     :cond_0
     :goto_0
     if-eqz v11, :cond_1
 
-    .line 387
     const/4 v2, 0x5
 
     const/4 v3, 0x2
@@ -3575,17 +3211,14 @@
 
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerAsUser(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 391
     :cond_1
     return v11
 
-    .line 377
     :cond_2
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 378
     .local v10, "cv":Landroid/content/ContentValues;
     const-string v0, "auditLogIptables"
 
@@ -3595,7 +3228,6 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 379
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "AUDITLOG"
@@ -3604,13 +3236,10 @@
 
     move-result v11
 
-    .line 380
     if-eqz v11, :cond_0
 
-    .line 381
     invoke-virtual {v9, v2}, Lcom/android/server/enterprise/auditlog/Admin;->setIptablesLogging(Z)V
 
-    .line 382
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
     goto :goto_0
@@ -3625,7 +3254,6 @@
     .param p7, "outputFile"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 1211
     monitor-enter p0
 
     if-eqz p7, :cond_0
@@ -3647,26 +3275,22 @@
 
     if-nez v4, :cond_1
 
-    .line 1213
     :cond_0
     const-string v4, "AuditLogService"
 
-    const-string/jumbo v5, "invalid output file"
+    const-string v5, "invalid output file"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1214
     const/4 v4, 0x0
 
-    .line 1244
     :goto_0
     monitor-exit p0
 
     return v4
 
-    .line 1216
     :cond_1
     :try_start_1
     invoke-virtual/range {p7 .. p7}, Landroid/os/ParcelFileDescriptor;->canDetectErrors()Z
@@ -3677,7 +3301,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1218
     :try_start_2
     const-string v4, "AuditLogService"
 
@@ -3685,20 +3308,17 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1219
     invoke-virtual/range {p7 .. p7}, Landroid/os/ParcelFileDescriptor;->checkError()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1227
     :cond_2
     :try_start_3
     new-instance v9, Ljava/lang/SecurityManager;
 
     invoke-direct {v9}, Ljava/lang/SecurityManager;-><init>()V
 
-    .line 1228
     .local v9, "sm":Ljava/lang/SecurityManager;
     invoke-virtual/range {p7 .. p7}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -3709,16 +3329,13 @@
     .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1233
     :try_start_4
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1234
     iget v10, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1235
     .local v10, "uid":I
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -3732,18 +3349,15 @@
 
     check-cast v3, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1236
     .local v3, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v3, :cond_4
 
-    .line 1237
     invoke-virtual {v3}, Lcom/android/server/enterprise/auditlog/Admin;->getDumpState()Z
 
     move-result v4
 
     if-nez v4, :cond_4
 
-    .line 1238
     move-object/from16 v0, p6
 
     invoke-virtual {v3, v0}, Lcom/android/server/enterprise/auditlog/Admin;->setFilter(Ljava/lang/String;)Z
@@ -3752,37 +3366,31 @@
 
     if-nez v4, :cond_3
 
-    .line 1239
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1220
     .end local v3    # "ad":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v9    # "sm":Ljava/lang/SecurityManager;
     .end local v10    # "uid":I
     :catch_0
     move-exception v2
 
-    .line 1221
     .local v2, "ex":Ljava/lang/Exception;
     const-string v4, "AuditLogService"
 
-    const-string/jumbo v5, "error checking file descriptor"
+    const-string v5, "error checking file descriptor"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1222
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1229
     .end local v2    # "ex":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 1230
     .local v2, "ex":Ljava/lang/SecurityException;
     const-string v4, "AuditLogService"
 
@@ -3790,7 +3398,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1231
     const/4 v4, 0x0
 
     goto :goto_0
@@ -3806,7 +3413,6 @@
 
     move-object/from16 v8, p7
 
-    .line 1241
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/enterprise/auditlog/Admin;->dump(JJLandroid/os/ParcelFileDescriptor;)Z
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -3815,13 +3421,11 @@
 
     goto :goto_0
 
-    .line 1244
     :cond_4
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1211
     .end local v3    # "ad":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v9    # "sm":Ljava/lang/SecurityManager;
     .end local v10    # "uid":I
@@ -3838,23 +3442,19 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 591
     const/16 v17, 0x0
 
-    .line 592
     .local v17, "ret":Z
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 593
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     move/from16 v18, v0
 
-    .line 596
     .local v18, "uid":I
     :try_start_0
     move-object/from16 v0, p0
@@ -3873,20 +3473,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 597
     const/4 v2, 0x1
 
-    .line 645
     :goto_0
     return v2
 
-    .line 599
     :cond_0
     new-instance v14, Landroid/content/ContentValues;
 
     invoke-direct {v14}, Landroid/content/ContentValues;-><init>()V
 
-    .line 600
     .local v14, "cv":Landroid/content/ContentValues;
     const-string v2, "auditLogEnabled"
 
@@ -3898,7 +3494,6 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 601
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -3911,7 +3506,6 @@
 
     move-result v17
 
-    .line 603
     move-object/from16 v0, p0
 
     move/from16 v1, v18
@@ -3920,7 +3514,6 @@
 
     move-result-wide v12
 
-    .line 604
     .local v12, "allocatedSize":J
     const-wide/16 v2, 0x0
 
@@ -3928,19 +3521,15 @@
 
     if-gez v2, :cond_1
 
-    .line 605
     const/16 v17, 0x0
 
-    .line 607
     :cond_1
     if-eqz v17, :cond_2
 
-    .line 608
     new-instance v16, Landroid/content/ContentValues;
 
     invoke-direct/range {v16 .. v16}, Landroid/content/ContentValues;-><init>()V
 
-    .line 609
     .local v16, "filterValue":Landroid/content/ContentValues;
     const-string v2, "adminUid"
 
@@ -3952,14 +3541,12 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 611
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mIsBootCompleted:Z
 
-    .line 612
     new-instance v11, Lcom/android/server/enterprise/auditlog/Admin;
 
     move-object/from16 v0, p0
@@ -3978,7 +3565,6 @@
 
     invoke-direct {v11, v0, v2, v3}, Lcom/android/server/enterprise/auditlog/Admin;-><init>(ILandroid/content/Context;Ljava/lang/String;)V
 
-    .line 613
     .local v11, "adm":Lcom/android/server/enterprise/auditlog/Admin;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->getDeviceInfo()Ljava/util/List;
 
@@ -3986,7 +3572,6 @@
 
     invoke-virtual {v11, v2}, Lcom/android/server/enterprise/auditlog/Admin;->setDeviceInfo(Ljava/util/List;)V
 
-    .line 614
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
@@ -3995,7 +3580,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 615
     :try_start_1
     move-object/from16 v0, p0
 
@@ -4009,12 +3593,10 @@
 
     invoke-interface {v2, v4, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 616
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 618
     :try_start_2
     move-object/from16 v0, p0
 
@@ -4022,7 +3604,6 @@
 
     invoke-virtual {v11, v2}, Lcom/android/server/enterprise/auditlog/Admin;->setBootCompleted(Z)V
 
-    .line 620
     move-object/from16 v0, p0
 
     move/from16 v1, v18
@@ -4033,19 +3614,14 @@
 
     invoke-virtual {v11, v2}, Lcom/android/server/enterprise/auditlog/Admin;->setAuditLogRulesInfo(Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;)V
 
-    .line 622
     invoke-virtual {v11, v12, v13}, Lcom/android/server/enterprise/auditlog/Admin;->setBufferSize(J)V
 
-    .line 624
     invoke-virtual {v11}, Lcom/android/server/enterprise/auditlog/Admin;->createBubbleDirectory()V
 
-    .line 625
     invoke-virtual {v11}, Lcom/android/server/enterprise/auditlog/Admin;->createBubbleFile()V
 
-    .line 627
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
-    .line 629
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
@@ -4060,7 +3636,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 638
     .end local v11    # "adm":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v12    # "allocatedSize":J
     .end local v14    # "cv":Landroid/content/ContentValues;
@@ -4069,7 +3644,6 @@
     :goto_1
     if-eqz v17, :cond_3
 
-    .line 639
     const/4 v4, 0x5
 
     const/4 v5, 0x2
@@ -4097,10 +3671,8 @@
     :cond_3
     move/from16 v2, v17
 
-    .line 645
     goto/16 :goto_0
 
-    .line 616
     .restart local v11    # "adm":Lcom/android/server/enterprise/auditlog/Admin;
     .restart local v12    # "allocatedSize":J
     .restart local v14    # "cv":Landroid/content/ContentValues;
@@ -4118,7 +3690,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 633
     .end local v11    # "adm":Lcom/android/server/enterprise/auditlog/Admin;
     .end local v12    # "allocatedSize":J
     .end local v14    # "cv":Landroid/content/ContentValues;
@@ -4126,11 +3697,9 @@
     :catch_0
     move-exception v15
 
-    .line 634
     .local v15, "e":Ljava/lang/Exception;
     invoke-virtual {v15}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 635
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v2
@@ -4155,15 +3724,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 339
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 340
     iget v12, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 341
     .local v12, "uid":I
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -4177,32 +3743,26 @@
 
     check-cast v9, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 342
     .local v9, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     const/4 v11, 0x0
 
-    .line 343
     .local v11, "ret":Z
     if-eqz v9, :cond_1
 
-    .line 344
     invoke-virtual {v9}, Lcom/android/server/enterprise/auditlog/Admin;->getIptablesLogging()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 361
     :goto_0
     return v4
 
-    .line 347
     :cond_0
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 348
     .local v10, "cv":Landroid/content/ContentValues;
     const-string v0, "auditLogIptables"
 
@@ -4212,7 +3772,6 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 349
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "AUDITLOG"
@@ -4221,21 +3780,16 @@
 
     move-result v11
 
-    .line 350
     if-eqz v11, :cond_1
 
-    .line 351
     invoke-virtual {v9, v4}, Lcom/android/server/enterprise/auditlog/Admin;->setIptablesLogging(Z)V
 
-    .line 352
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
-    .line 356
     .end local v10    # "cv":Landroid/content/ContentValues;
     :cond_1
     if-eqz v11, :cond_2
 
-    .line 357
     const/4 v2, 0x5
 
     const/4 v3, 0x2
@@ -4261,7 +3815,6 @@
     :cond_2
     move v4, v11
 
-    .line 361
     goto :goto_0
 .end method
 
@@ -4270,15 +3823,12 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 412
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 413
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 414
     .local v1, "uid":I
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -4292,16 +3842,13 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 415
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 416
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->getAuditLogRulesInfo()Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     move-result-object v2
 
-    .line 418
     :goto_0
     return-object v2
 
@@ -4318,12 +3865,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1139
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1140
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4338,16 +3883,13 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1142
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 1143
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->getCriticalLogSize()I
 
     move-result v1
 
-    .line 1145
     :goto_0
     return v1
 
@@ -4362,12 +3904,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1087
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1088
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4382,16 +3922,13 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1090
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 1091
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->getCurrentLogFileSize()I
 
     move-result v1
 
-    .line 1094
     :goto_0
     return v1
 
@@ -4406,12 +3943,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1189
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1190
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4426,16 +3961,13 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1192
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 1193
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->getMaximumLogSize()I
 
     move-result v1
 
-    .line 1195
     :goto_0
     return v1
 
@@ -4450,7 +3982,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 285
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isManagedProfileUser(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)Z
@@ -4459,27 +3990,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 286
     const-string v0, "AuditLogService"
 
     const-string v1, " isAuditLogEnabled calls from Profile return default value"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
     const/4 v0, 0x0
 
-    .line 290
     :goto_0
     return v0
 
-    .line 289
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 290
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditLogEnabledInternal(I)Z
@@ -4496,7 +4022,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 297
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -4507,7 +4032,6 @@
 
     move-result-object v1
 
-    .line 298
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -4516,7 +4040,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 299
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -4527,13 +4050,11 @@
 
     move-result v2
 
-    .line 300
     .local v2, "uid":I
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 301
     .local v0, "adminUserId":I
     const/4 v3, -0x1
 
@@ -4541,13 +4062,11 @@
 
     move v3, v4
 
-    .line 316
     .end local v0    # "adminUserId":I
     .end local v2    # "uid":I
     :goto_0
     return v3
 
-    .line 304
     .restart local v0    # "adminUserId":I
     .restart local v2    # "uid":I
     :cond_1
@@ -4555,7 +4074,6 @@
 
     if-ge p1, v3, :cond_3
 
-    .line 305
     if-eqz v0, :cond_2
 
     if-ne v0, p1, :cond_0
@@ -4563,10 +4081,8 @@
     :cond_2
     move v3, v4
 
-    .line 307
     goto :goto_0
 
-    .line 310
     :cond_3
     invoke-direct {p0, p1, v2}, Lcom/android/server/enterprise/auditlog/AuditLogService;->checkOwnContainerOrSelf(II)Z
 
@@ -4576,10 +4092,8 @@
 
     move v3, v4
 
-    .line 312
     goto :goto_0
 
-    .line 316
     .end local v0    # "adminUserId":I
     .end local v2    # "uid":I
     :cond_4
@@ -4592,7 +4106,6 @@
     .locals 1
 
     .prologue
-    .line 330
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -4601,10 +4114,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 331
     const/4 v0, 0x0
 
-    .line 332
     :goto_0
     return v0
 
@@ -4621,7 +4132,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 398
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mContext:Landroid/content/Context;
 
     invoke-static {v2, p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isManagedProfileUser(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)Z
@@ -4630,25 +4140,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 399
     const-string v2, "AuditLogService"
 
     const-string v3, " isIPTablesLoggingEnabled calls from Profile return default value"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 408
     :cond_0
     :goto_0
     return v1
 
-    .line 402
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 403
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v3, Ljava/lang/Integer;
@@ -4663,11 +4169,9 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 405
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 406
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->getIptablesLogging()Z
 
     move-result v1
@@ -4680,7 +4184,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1268
     return-void
 .end method
 
@@ -4689,7 +4192,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1294
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4702,11 +4204,9 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1295
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 1296
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4715,16 +4215,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1297
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->shutdown()V
 
-    .line 1298
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->deleteAllFiles()V
 
-    .line 1299
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
-    .line 1301
     :cond_0
     return-void
 .end method
@@ -4734,7 +4230,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1277
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4747,11 +4242,9 @@
 
     check-cast v0, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1278
     .local v0, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v0, :cond_0
 
-    .line 1279
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/Integer;
@@ -4760,16 +4253,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1280
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->shutdown()V
 
-    .line 1281
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/Admin;->deleteAllFiles()V
 
-    .line 1282
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
-    .line 1284
     :cond_0
     return-void
 .end method
@@ -4780,19 +4269,16 @@
     .param p2, "auditLogRulesInfo"    # Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;
 
     .prologue
-    .line 422
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/auditlog/AuditLogService;->enforceAuditLogPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 423
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     move/from16 v19, v0
 
-    .line 424
     .local v19, "uid":I
     move-object/from16 v0, p0
 
@@ -4804,15 +4290,12 @@
 
     if-nez v2, :cond_1
 
-    .line 425
     const/4 v15, 0x0
 
-    .line 471
     :cond_0
     :goto_0
     return v15
 
-    .line 427
     :cond_1
     move-object/from16 v0, p0
 
@@ -4830,21 +4313,17 @@
 
     check-cast v11, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 428
     .local v11, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     const/4 v15, 0x0
 
-    .line 429
     .local v15, "ret":Z
     new-instance v14, Landroid/content/ContentValues;
 
     invoke-direct {v14}, Landroid/content/ContentValues;-><init>()V
 
-    .line 430
     .local v14, "insertionValues":Landroid/content/ContentValues;
     if-eqz v11, :cond_2
 
-    .line 431
     const-string v2, "auditLogEnabled"
 
     const/4 v3, 0x1
@@ -4855,13 +4334,11 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 433
     :cond_2
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 434
     .local v16, "sb":Ljava/lang/StringBuilder;
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getGroupsRule()Ljava/util/List;
 
@@ -4879,7 +4356,6 @@
 
     if-nez v2, :cond_3
 
-    .line 435
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getGroupsRule()Ljava/util/List;
 
     move-result-object v2
@@ -4902,7 +4378,6 @@
 
     check-cast v12, Ljava/lang/Integer;
 
-    .line 436
     .local v12, "i":Ljava/lang/Integer;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4932,7 +4407,6 @@
 
     goto :goto_1
 
-    .line 439
     .end local v12    # "i":Ljava/lang/Integer;
     .end local v13    # "i$":Ljava/util/Iterator;
     :cond_3
@@ -4940,7 +4414,6 @@
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 440
     .local v17, "sbUsersRule":Ljava/lang/StringBuilder;
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getUsersRule()Ljava/util/List;
 
@@ -4958,7 +4431,6 @@
 
     if-nez v2, :cond_4
 
-    .line 441
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getUsersRule()Ljava/util/List;
 
     move-result-object v2
@@ -4981,7 +4453,6 @@
 
     check-cast v12, Ljava/lang/Integer;
 
-    .line 442
     .restart local v12    # "i":Ljava/lang/Integer;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5011,7 +4482,6 @@
 
     goto :goto_2
 
-    .line 445
     .end local v12    # "i":Ljava/lang/Integer;
     .end local v13    # "i$":Ljava/util/Iterator;
     :cond_4
@@ -5027,7 +4497,6 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 446
     const-string v2, "auditLogRuleSeverity"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->getSeverityRule()I
@@ -5040,7 +4509,6 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 447
     const-string v2, "auditLogRuleGroups"
 
     invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -5049,7 +4517,6 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 448
     const-string v2, "auditLogKernelEnabled"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;->isKernelLogsEnabled()Z
@@ -5062,7 +4529,6 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 449
     const-string v2, "auditLogRuleUsers"
 
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -5071,12 +4537,10 @@
 
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 451
     new-instance v18, Landroid/content/ContentValues;
 
     invoke-direct/range {v18 .. v18}, Landroid/content/ContentValues;-><init>()V
 
-    .line 452
     .local v18, "selectionValues":Landroid/content/ContentValues;
     const-string v2, "adminUid"
 
@@ -5088,7 +4552,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 453
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5101,10 +4564,8 @@
 
     move-result v15
 
-    .line 454
     if-nez v15, :cond_5
 
-    .line 455
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v2
@@ -5117,23 +4578,18 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/enterprise/auditlog/InformFailure;->broadcastFailure(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 459
     :cond_5
     if-eqz v11, :cond_6
 
-    .line 460
     move-object/from16 v0, p2
 
     invoke-virtual {v11, v0}, Lcom/android/server/enterprise/auditlog/Admin;->setAuditLogRulesInfo(Lcom/sec/enterprise/knox/auditlog/AuditLogRulesInfo;)V
 
-    .line 461
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/auditlog/AuditLogService;->updateEDMNativeHelperStatus()V
 
-    .line 464
     :cond_6
     if-eqz v15, :cond_0
 
-    .line 465
     const/4 v4, 0x5
 
     const/4 v5, 0x2
@@ -5169,10 +4625,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1105
     const/4 v10, 0x0
 
-    .line 1107
     .local v10, "ret":Z
     if-lt p2, v4, :cond_0
 
@@ -5183,13 +4637,11 @@
     :cond_0
     move v11, v10
 
-    .line 1130
     .end local v10    # "ret":Z
     .local v11, "ret":I
     :goto_0
     return v11
 
-    .line 1110
     .end local v11    # "ret":I
     .restart local v10    # "ret":Z
     :cond_1
@@ -5197,10 +4649,8 @@
 
     move-result-object p1
 
-    .line 1111
     iget v12, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1112
     .local v12, "uid":I
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -5214,11 +4664,9 @@
 
     check-cast v9, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1114
     .local v9, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v9, :cond_3
 
-    .line 1115
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "AUDITLOG"
@@ -5229,10 +4677,8 @@
 
     move-result v10
 
-    .line 1117
     if-nez v10, :cond_2
 
-    .line 1118
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v0
@@ -5245,15 +4691,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/auditlog/InformFailure;->broadcastFailure(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1121
     :cond_2
     invoke-virtual {v9, p2}, Lcom/android/server/enterprise/auditlog/Admin;->setCriticalLogSize(I)V
 
-    .line 1124
     :cond_3
     if-eqz v10, :cond_4
 
-    .line 1125
     const/4 v2, 0x5
 
     const/4 v3, 0x2
@@ -5295,7 +4738,6 @@
     :cond_4
     move v11, v10
 
-    .line 1130
     .restart local v11    # "ret":I
     goto :goto_0
 .end method
@@ -5308,10 +4750,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1155
     const/4 v10, 0x0
 
-    .line 1157
     .local v10, "ret":Z
     if-lt p2, v4, :cond_0
 
@@ -5322,13 +4762,11 @@
     :cond_0
     move v11, v10
 
-    .line 1180
     .end local v10    # "ret":Z
     .local v11, "ret":I
     :goto_0
     return v11
 
-    .line 1160
     .end local v11    # "ret":I
     .restart local v10    # "ret":Z
     :cond_1
@@ -5336,10 +4774,8 @@
 
     move-result-object p1
 
-    .line 1161
     iget v12, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1162
     .local v12, "uid":I
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mLinkedHashMap:Ljava/util/Map;
 
@@ -5353,11 +4789,9 @@
 
     check-cast v9, Lcom/android/server/enterprise/auditlog/Admin;
 
-    .line 1164
     .local v9, "ad":Lcom/android/server/enterprise/auditlog/Admin;
     if-eqz v9, :cond_3
 
-    .line 1165
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/AuditLogService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "AUDITLOG"
@@ -5368,10 +4802,8 @@
 
     move-result v10
 
-    .line 1167
     if-nez v10, :cond_2
 
-    .line 1168
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v0
@@ -5384,15 +4816,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/auditlog/InformFailure;->broadcastFailure(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1171
     :cond_2
     invoke-virtual {v9, p2}, Lcom/android/server/enterprise/auditlog/Admin;->setMaximumLogSize(I)V
 
-    .line 1174
     :cond_3
     if-eqz v10, :cond_4
 
-    .line 1175
     const/4 v2, 0x5
 
     const/4 v3, 0x2
@@ -5434,7 +4863,6 @@
     :cond_4
     move v11, v10
 
-    .line 1180
     .restart local v11    # "ret":I
     goto :goto_0
 .end method
@@ -5443,6 +4871,5 @@
     .locals 0
 
     .prologue
-    .line 1258
     return-void
 .end method

@@ -62,40 +62,31 @@
     .param p4, "_mode"    # I
 
     .prologue
-    .line 181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 168
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/AppOpsService$Op;->proxyUid:I
 
-    .line 182
     iput p1, p0, Lcom/android/server/AppOpsService$Op;->uid:I
 
-    .line 183
     iput-object p2, p0, Lcom/android/server/AppOpsService$Op;->packageName:Ljava/lang/String;
 
-    .line 184
     iput p3, p0, Lcom/android/server/AppOpsService$Op;->op:I
 
-    .line 185
     iput p4, p0, Lcom/android/server/AppOpsService$Op;->mode:I
 
-    .line 186
     new-instance v0, Lcom/android/server/PermissionDialogReqQueue;
 
     invoke-direct {v0}, Lcom/android/server/PermissionDialogReqQueue;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$Op;->dialogReqQueue:Lcom/android/server/PermissionDialogReqQueue;
 
-    .line 187
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$Op;->clientTokens:Ljava/util/ArrayList;
 
-    .line 188
     return-void
 .end method

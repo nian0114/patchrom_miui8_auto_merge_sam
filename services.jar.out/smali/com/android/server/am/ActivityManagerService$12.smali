@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 9868
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 9874
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     # getter for: Lcom/android/server/am/ActivityManagerService;->mBootPartialWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -67,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9875
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     # getter for: Lcom/android/server/am/ActivityManagerService;->mBootPartialWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -77,13 +74,11 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 9877
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 9878
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -97,13 +92,10 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Lcom/android/server/am/ActivityManagerService;->requestPssAllProcsLocked(JZZ)V
 
-    .line 9880
     monitor-exit v1
 
-    .line 9881
     return-void
 
-    .line 9880
     :catchall_0
     move-exception v0
 

@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1521
     iput-object p1, p0, Lcom/android/server/am/MARsDBManager$SmartManagerObserver;->this$0:Lcom/android/server/am/MARsDBManager;
 
-    .line 1522
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1523
     return-void
 .end method
 
@@ -43,15 +40,12 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 1527
     if-nez p2, :cond_1
 
-    .line 1539
     :cond_0
     :goto_0
     return-void
 
-    .line 1530
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/MARsDBManager$SmartManagerObserver;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -61,14 +55,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 1531
     const-string v0, "MARsDBManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onChange - mSmartManagerObserver! Uri = "
+    const-string v2, "onChange - mSmartManagerObserver! Uri = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -84,7 +77,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1534
     :cond_2
     const-string v0, "MARs-self"
 
@@ -96,7 +88,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1538
     iget-object v0, p0, Lcom/android/server/am/MARsDBManager$SmartManagerObserver;->this$0:Lcom/android/server/am/MARsDBManager;
 
     iget-object v0, v0, Lcom/android/server/am/MARsDBManager;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;

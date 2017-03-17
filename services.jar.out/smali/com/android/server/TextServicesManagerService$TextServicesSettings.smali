@@ -35,30 +35,24 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1085
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1081
     const/4 v0, 0x0
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentProfileIds:[I
 
-    .line 1083
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mLock:Ljava/lang/Object;
 
-    .line 1086
     iput-object p1, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    .line 1087
     iput p2, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
-    .line 1088
     return-void
 .end method
 
@@ -68,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 1116
     iget v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
     return v0
@@ -78,10 +71,9 @@
     .locals 3
 
     .prologue
-    .line 1136
     iget-object v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "selected_spell_checker"
+    const-string v1, "selected_spell_checker"
 
     iget v2, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
@@ -96,10 +88,9 @@
     .locals 3
 
     .prologue
-    .line 1141
     iget-object v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "selected_spell_checker_subtype"
+    const-string v1, "selected_spell_checker_subtype"
 
     iget v2, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
@@ -117,12 +108,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1106
     iget-object v2, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1107
     :try_start_0
     iget v3, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
@@ -130,11 +119,9 @@
 
     monitor-exit v2
 
-    .line 1111
     :goto_0
     return v1
 
-    .line 1108
     :cond_0
     const/4 v0, 0x0
 
@@ -146,7 +133,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 1109
     iget-object v3, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentProfileIds:[I
 
     aget v3, v3, v0
@@ -157,7 +143,6 @@
 
     goto :goto_0
 
-    .line 1112
     .end local v0    # "i":I
     :catchall_0
     move-exception v1
@@ -168,14 +153,12 @@
 
     throw v1
 
-    .line 1108
     .restart local v0    # "i":I
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1111
     :cond_2
     const/4 v1, 0x0
 
@@ -193,10 +176,9 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1146
     iget-object v1, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "spell_checker_enabled"
+    const-string v2, "spell_checker_enabled"
 
     iget v3, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
@@ -220,16 +202,14 @@
     .param p1, "sciId"    # Ljava/lang/String;
 
     .prologue
-    .line 1120
     iget-object v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "selected_spell_checker"
+    const-string v1, "selected_spell_checker"
 
     iget v2, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1122
     return-void
 .end method
 
@@ -238,10 +218,9 @@
     .param p1, "hashCode"    # I
 
     .prologue
-    .line 1125
     iget-object v0, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "selected_spell_checker_subtype"
+    const-string v1, "selected_spell_checker_subtype"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -251,7 +230,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1128
     return-void
 .end method
 
@@ -260,22 +238,17 @@
     .param p1, "currentProfileIds"    # [I
 
     .prologue
-    .line 1100
     iget-object v1, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1101
     :try_start_0
     iput-object p1, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentProfileIds:[I
 
-    .line 1102
     monitor-exit v1
 
-    .line 1103
     return-void
 
-    .line 1102
     :catchall_0
     move-exception v0
 
@@ -291,10 +264,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1096
     iput p1, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mCurrentUserId:I
 
-    .line 1097
     return-void
 .end method
 
@@ -303,10 +274,9 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 1131
     iget-object v1, p0, Lcom/android/server/TextServicesManagerService$TextServicesSettings;->mResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "spell_checker_enabled"
+    const-string v2, "spell_checker_enabled"
 
     if-eqz p1, :cond_0
 
@@ -317,10 +287,8 @@
 
     invoke-static {v1, v2, v0, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 1133
     return-void
 
-    .line 1131
     :cond_0
     const/4 v0, 0x0
 

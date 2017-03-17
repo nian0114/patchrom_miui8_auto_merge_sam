@@ -25,25 +25,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fName:Ljava/lang/String;
 
-    .line 43
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fTargetNamespace:Ljava/lang/String;
 
-    .line 45
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fModelGroup:Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
 
-    .line 47
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 50
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fNamespaceItem:Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
-    .line 38
     return-void
 .end method
 
@@ -53,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 87
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     if-eqz v0, :cond_0
@@ -81,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     if-eqz v0, :cond_0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fModelGroup:Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
 
     return-object v0
@@ -111,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fName:Ljava/lang/String;
 
     return-object v0
@@ -121,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fTargetNamespace:Ljava/lang/String;
 
     return-object v0
@@ -131,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fNamespaceItem:Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
     return-object v0
@@ -141,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x6
 
     return v0
@@ -152,9 +138,7 @@
     .param p1, "namespaceItem"    # Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
     .prologue
-    .line 105
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XSGroupDecl;->fNamespaceItem:Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
-    .line 106
     return-void
 .end method

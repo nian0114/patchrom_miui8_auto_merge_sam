@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2735
     iput-object p1, p0, Lcom/android/server/enterprise/security/PasswordPolicy$3;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
 
     iput p2, p0, Lcom/android/server/enterprise/security/PasswordPolicy$3;->val$userId:I
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 2744
     :try_start_0
     iget v2, p0, Lcom/android/server/enterprise/security/PasswordPolicy$3;->val$userId:I
 
@@ -54,12 +52,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 2757
     :cond_0
     :goto_0
     return-void
 
-    .line 2747
     :cond_1
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->getInstance()Lcom/sec/enterprise/knox/sdp/SdpUtil;
 
@@ -71,11 +67,9 @@
 
     move-result-object v1
 
-    .line 2748
     .local v1, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v1, :cond_0
 
-    .line 2749
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->getInstance()Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
     move-result-object v2
@@ -86,10 +80,9 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->unlock(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2750
     const-string v2, "PasswordPolicy"
 
-    const-string/jumbo v3, "setPwdChangeRequested SDP_USER_0 calling SDP UNLOCK successful. "
+    const-string v3, "setPwdChangeRequested SDP_USER_0 calling SDP UNLOCK successful. "
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
@@ -97,12 +90,10 @@
 
     goto :goto_0
 
-    .line 2752
     .end local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :catch_0
     move-exception v0
 
-    .line 2753
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PasswordPolicy"
 
@@ -128,7 +119,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2754
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

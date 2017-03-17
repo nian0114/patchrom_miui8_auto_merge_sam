@@ -45,8 +45,7 @@
 
     const/4 v1, 0x0
 
-    .line 205
-    const-string/jumbo v0, "ro.csc.sales_code"
+    const-string v0, "ro.csc.sales_code"
 
     const-string v3, "NONE"
 
@@ -64,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
 
-    .line 206
     const-string v0, "VZW"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -75,7 +73,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->VZW:Z
 
-    .line 207
     const-string v0, "ATT"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -112,7 +109,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->ATT:Z
 
-    .line 208
     const-string v0, "TMB"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -139,7 +135,6 @@
     :goto_1
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->TMO:Z
 
-    .line 209
     const-string v0, "SPR"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -186,7 +181,6 @@
     :goto_2
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->SPR:Z
 
-    .line 211
     const-string v0, "USC"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -223,7 +217,6 @@
     :goto_3
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->USCC:Z
 
-    .line 212
     const-string v0, "RWC"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -420,7 +413,6 @@
     :goto_4
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->CANADA:Z
 
-    .line 217
     const-string v0, "CHN"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -477,7 +469,6 @@
     :goto_5
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->CHINA:Z
 
-    .line 219
     const-string v0, "DCM"
 
     sget-object v3, Lcom/android/server/power/PowerManagerUtil$Sales;->SALES_CODE:Ljava/lang/String;
@@ -488,7 +479,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->JAPAN:Z
 
-    .line 220
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil$Sales;->VZW:Z
 
     if-nez v0, :cond_6
@@ -580,37 +570,31 @@
     :cond_8
     move v0, v1
 
-    .line 207
     goto/16 :goto_0
 
     :cond_9
     move v0, v1
 
-    .line 208
     goto/16 :goto_1
 
     :cond_a
     move v0, v1
 
-    .line 209
     goto/16 :goto_2
 
     :cond_b
     move v0, v1
 
-    .line 211
     goto/16 :goto_3
 
     :cond_c
     move v0, v1
 
-    .line 212
     goto/16 :goto_4
 
     :cond_d
     move v0, v1
 
-    .line 217
     goto :goto_5
 .end method
 
@@ -618,7 +602,6 @@
     .locals 0
 
     .prologue
-    .line 204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

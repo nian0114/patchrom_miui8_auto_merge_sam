@@ -167,9 +167,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Document;->createAttributeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -414,7 +414,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -425,7 +425,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -520,7 +520,7 @@
 
     check-cast v0, Lorg/w3c/dom/Attr;
 
-    const-string/jumbo v5, "http://www.w3.org/2000/xmlns/"
+    const-string v5, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -554,7 +554,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "xml"
+    const-string v7, "xml"
 
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -562,7 +562,7 @@
 
     if-eqz v7, :cond_7
 
-    const-string/jumbo v7, "http://www.w3.org/XML/1998/namespace"
+    const-string v7, "http://www.w3.org/XML/1998/namespace"
 
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -576,7 +576,7 @@
     goto :goto_3
 
     :cond_8
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     invoke-virtual {p1, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/implementations/NameSpaceSymbTable;->getMappingWithoutRendered(Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -596,7 +596,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     const-string v1, ""
 
@@ -1253,7 +1253,7 @@
     :pswitch_1
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;)V
 
@@ -1539,7 +1539,7 @@
     :pswitch_1
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;)V
 
@@ -1981,7 +1981,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1992,7 +1992,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2003,7 +2003,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2014,7 +2014,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2117,7 +2117,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v3, "empty"
+    const-string v3, "empty"
 
     invoke-direct {v2, v3, v1}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2128,7 +2128,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v3, "empty"
+    const-string v3, "empty"
 
     invoke-direct {v2, v3, v1}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

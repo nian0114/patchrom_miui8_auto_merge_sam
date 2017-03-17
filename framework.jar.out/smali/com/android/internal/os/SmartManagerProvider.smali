@@ -24,7 +24,6 @@
     .locals 4
 
     .prologue
-    .line 30
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -33,7 +32,6 @@
 
     sput-object v0, Lcom/android/internal/os/SmartManagerProvider;->uriMatcher:Landroid/content/UriMatcher;
 
-    .line 32
     sget-object v0, Lcom/android/internal/os/SmartManagerProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.smartmanager.provider"
@@ -44,18 +42,16 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 33
     sget-object v0, Lcom/android/internal/os/SmartManagerProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.smartmanager.provider"
 
-    const-string/jumbo v2, "power_consuming_packages"
+    const-string v2, "power_consuming_packages"
 
     const/4 v3, 0x3
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 34
     sget-object v0, Lcom/android/internal/os/SmartManagerProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.smartmanager.provider"
@@ -66,7 +62,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 35
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -89,7 +83,6 @@
     .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 127
     const/4 v0, 0x0
 
     return v0
@@ -100,7 +93,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 115
     const/4 v0, 0x0
 
     return-object v0
@@ -112,7 +104,6 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 121
     const/4 v0, 0x0
 
     return-object v0
@@ -122,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-virtual {p0}, Lcom/android/internal/os/SmartManagerProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -133,15 +123,12 @@
 
     iput-object v0, p0, Lcom/android/internal/os/SmartManagerProvider;->batteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
 
-    .line 42
     iget-object v0, p0, Lcom/android/internal/os/SmartManagerProvider;->batteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
 
     if-eqz v0, :cond_0
 
-    .line 44
     const/4 v0, 0x1
 
-    .line 46
     :goto_0
     return v0
 
@@ -160,19 +147,15 @@
     .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     const/4 v9, 0x0
 
-    .line 57
     .local v9, "cursor":Landroid/database/Cursor;
     if-eqz p1, :cond_1
 
-    .line 58
     iget-object v12, p0, Lcom/android/internal/os/SmartManagerProvider;->batteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
 
     monitor-enter v12
 
-    .line 60
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/os/SmartManagerProvider;->batteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
 
@@ -180,7 +163,6 @@
 
     move-result-object v0
 
-    .line 62
     .local v0, "database":Landroid/database/sqlite/SQLiteDatabase;
     sget-object v1, Lcom/android/internal/os/SmartManagerProvider;->uriMatcher:Landroid/content/UriMatcher;
 
@@ -190,12 +172,10 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 92
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 93
     .local v8, "contentURI":Ljava/lang/String;
     const-string v1, "content://com.sec.smartmanager.provider"
 
@@ -205,7 +185,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 95
     const-string v1, "content://com.sec.smartmanager.provider/"
 
     const-string v2, ""
@@ -214,7 +193,6 @@
 
     move-result-object v10
 
-    .line 96
     .local v10, "newURI":Ljava/lang/String;
     invoke-virtual {v10}, Ljava/lang/String;->isEmpty()Z
 
@@ -222,7 +200,6 @@
 
     if-nez v1, :cond_0
 
-    .line 97
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,26 +240,22 @@
 
     move-result-object v9
 
-    .line 106
     .end local v8    # "contentURI":Ljava/lang/String;
     .end local v10    # "newURI":Ljava/lang/String;
     :cond_0
     :goto_0
     monitor-exit v12
 
-    .line 109
     .end local v0    # "database":Landroid/database/sqlite/SQLiteDatabase;
     :cond_1
     return-object v9
 
-    .line 65
     .restart local v0    # "database":Landroid/database/sqlite/SQLiteDatabase;
     :pswitch_0
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 67
     .local v11, "table_name":Ljava/lang/String;
     const-string v1, "*"
 
@@ -292,7 +265,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 68
     const-string v1, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\' AND name!=\'all\'"
 
     const/4 v2, 0x0
@@ -303,7 +275,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -345,10 +316,8 @@
 
     move-result-object v9
 
-    .line 75
     goto :goto_0
 
-    .line 79
     .end local v11    # "table_name":Ljava/lang/String;
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/os/SmartManagerProvider;->batteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
@@ -371,14 +340,12 @@
 
     move-result-object v9
 
-    .line 82
     goto :goto_0
 
-    .line 86
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/os/SmartManagerProvider;->batteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
 
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
     const/4 v6, 0x0
 
@@ -396,10 +363,8 @@
 
     move-result-object v9
 
-    .line 88
     goto :goto_0
 
-    .line 104
     .restart local v8    # "contentURI":Ljava/lang/String;
     :cond_3
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -426,7 +391,6 @@
 
     throw v1
 
-    .line 106
     .end local v0    # "database":Landroid/database/sqlite/SQLiteDatabase;
     .end local v8    # "contentURI":Ljava/lang/String;
     :catchall_0
@@ -438,7 +402,6 @@
 
     throw v1
 
-    .line 62
     nop
 
     :pswitch_data_0
@@ -457,7 +420,6 @@
     .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 133
     const/4 v0, 0x0
 
     return v0

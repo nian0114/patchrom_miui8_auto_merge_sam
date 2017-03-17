@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcom/samsung/android/dualscreen/DualScreenManager$1;->this$0:Lcom/samsung/android/dualscreen/DualScreenManager;
 
     invoke-direct {p0}, Lcom/samsung/android/multidisplay/dualscreen/IDualScreenCallbacks$Stub;-><init>()V
@@ -43,12 +42,10 @@
     .end annotation
 
     .prologue
-    .line 114
     iget-object v1, p0, Lcom/samsung/android/dualscreen/DualScreenManager$1;->this$0:Lcom/samsung/android/dualscreen/DualScreenManager;
 
     iget-object v0, v1, Lcom/samsung/android/dualscreen/DualScreenManager;->mListenerInfo:Lcom/samsung/android/dualscreen/DualScreenManager$ListenerInfo;
 
-    .line 115
     .local v0, "li":Lcom/samsung/android/dualscreen/DualScreenManager$ListenerInfo;
     if-eqz v0, :cond_0
 
@@ -56,12 +53,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 116
     iget-object v1, v0, Lcom/samsung/android/dualscreen/DualScreenManager$ListenerInfo;->mScreenFocusChangeListener:Lcom/samsung/android/sdk/dualscreen/SDualScreenListener$ScreenFocusChangeListener;
 
     invoke-interface {v1, p1}, Lcom/samsung/android/sdk/dualscreen/SDualScreenListener$ScreenFocusChangeListener;->onScreenFocusChanged(Lcom/samsung/android/dualscreen/DualScreen;)V
 
-    .line 118
     :cond_0
     return-void
 .end method

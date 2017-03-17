@@ -85,7 +85,6 @@
 
     const/4 v3, 0x0
 
-    .line 3375
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_3DES_CBC"
@@ -94,7 +93,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_3DES_CBC:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3381
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CBC_128"
@@ -103,7 +101,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CBC_128:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3387
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CBC_192"
@@ -112,7 +109,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CBC_192:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3393
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CBC_256"
@@ -121,7 +117,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CBC_256:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3399
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CTR_128"
@@ -130,7 +125,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CTR_128:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3405
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CTR_192"
@@ -141,7 +135,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CTR_192:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3411
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CTR_256"
@@ -152,7 +145,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CTR_256:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3417
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CCM_128"
@@ -163,7 +155,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CCM_128:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3423
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CCM_192"
@@ -174,7 +165,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CCM_192:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3429
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_CCM_256"
@@ -185,7 +175,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_CCM_256:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3435
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_GCM_128"
@@ -196,7 +185,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_GCM_128:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3441
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_GCM_192"
@@ -207,7 +195,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_GCM_192:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3447
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_AES_GCM_256"
@@ -218,7 +205,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_AES_GCM_256:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3453
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_BASIC"
@@ -229,7 +215,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_BASIC:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3459
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_ANY"
@@ -240,7 +225,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_ANY:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3465
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_SUITE_B_GCM_128"
@@ -251,7 +235,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_SUITE_B_GCM_128:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3471
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     const-string v1, "IKE_ENCRYPTION_SUITE_B_GCM_256"
@@ -262,7 +245,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->IKE_ENCRYPTION_SUITE_B_GCM_256:Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
-    .line 3368
     const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IkeEncryption;
@@ -373,7 +355,6 @@
     .end annotation
 
     .prologue
-    .line 3368
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -384,7 +365,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3368
     const-class v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -400,7 +380,6 @@
     .locals 1
 
     .prologue
-    .line 3368
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IkeEncryption;->clone()Ljava/lang/Object;

@@ -52,67 +52,52 @@
     .param p5, "splitRevisionCodes"    # [I
 
     .prologue
-    .line 341
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 342
     iget-object v0, p2, Landroid/content/pm/PackageParser$ApkLite;->packageName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$PackageLite;->packageName:Ljava/lang/String;
 
-    .line 343
     iget v0, p2, Landroid/content/pm/PackageParser$ApkLite;->versionCode:I
 
     iput v0, p0, Landroid/content/pm/PackageParser$PackageLite;->versionCode:I
 
-    .line 344
     iget v0, p2, Landroid/content/pm/PackageParser$ApkLite;->installLocation:I
 
     iput v0, p0, Landroid/content/pm/PackageParser$PackageLite;->installLocation:I
 
-    .line 345
     iget-object v0, p2, Landroid/content/pm/PackageParser$ApkLite;->verifiers:[Landroid/content/pm/VerifierInfo;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$PackageLite;->verifiers:[Landroid/content/pm/VerifierInfo;
 
-    .line 346
     iput-object p3, p0, Landroid/content/pm/PackageParser$PackageLite;->splitNames:[Ljava/lang/String;
 
-    .line 347
     iput-object p1, p0, Landroid/content/pm/PackageParser$PackageLite;->codePath:Ljava/lang/String;
 
-    .line 348
     iget-object v0, p2, Landroid/content/pm/PackageParser$ApkLite;->codePath:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$PackageLite;->baseCodePath:Ljava/lang/String;
 
-    .line 349
     iput-object p4, p0, Landroid/content/pm/PackageParser$PackageLite;->splitCodePaths:[Ljava/lang/String;
 
-    .line 350
     iget v0, p2, Landroid/content/pm/PackageParser$ApkLite;->revisionCode:I
 
     iput v0, p0, Landroid/content/pm/PackageParser$PackageLite;->baseRevisionCode:I
 
-    .line 351
     iput-object p5, p0, Landroid/content/pm/PackageParser$PackageLite;->splitRevisionCodes:[I
 
-    .line 352
     iget-boolean v0, p2, Landroid/content/pm/PackageParser$ApkLite;->coreApp:Z
 
     iput-boolean v0, p0, Landroid/content/pm/PackageParser$PackageLite;->coreApp:Z
 
-    .line 353
     iget-boolean v0, p2, Landroid/content/pm/PackageParser$ApkLite;->multiArch:Z
 
     iput-boolean v0, p0, Landroid/content/pm/PackageParser$PackageLite;->multiArch:Z
 
-    .line 354
     iget-boolean v0, p2, Landroid/content/pm/PackageParser$ApkLite;->extractNativeLibs:Z
 
     iput-boolean v0, p0, Landroid/content/pm/PackageParser$PackageLite;->extractNativeLibs:Z
 
-    .line 355
     return-void
 .end method
 
@@ -131,18 +116,15 @@
     .end annotation
 
     .prologue
-    .line 358
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 359
     .local v0, "paths":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v1, p0, Landroid/content/pm/PackageParser$PackageLite;->baseCodePath:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 360
     iget-object v1, p0, Landroid/content/pm/PackageParser$PackageLite;->splitCodePaths:[Ljava/lang/String;
 
     invoke-static {v1}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
@@ -151,12 +133,10 @@
 
     if-nez v1, :cond_0
 
-    .line 361
     iget-object v1, p0, Landroid/content/pm/PackageParser$PackageLite;->splitCodePaths:[Ljava/lang/String;
 
     invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 363
     :cond_0
     return-object v0
 .end method

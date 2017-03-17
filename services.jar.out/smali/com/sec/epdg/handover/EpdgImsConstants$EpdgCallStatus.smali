@@ -60,51 +60,46 @@
 
     const/4 v5, 0x0
 
-    .line 8
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     const-string v1, "CALL_IDLE"
 
-    const-string/jumbo v2, "idle"
+    const-string v2, "idle"
 
     invoke-direct {v0, v1, v5, v5, v2}, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_IDLE:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
-    .line 9
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     const-string v1, "CALL_VOICEONLY"
 
-    const-string/jumbo v2, "imsvoicecall"
+    const-string v2, "imsvoicecall"
 
     invoke-direct {v0, v1, v6, v6, v2}, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_VOICEONLY:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
-    .line 10
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     const-string v1, "CALL_VIDEO"
 
-    const-string/jumbo v2, "imsvideocall"
+    const-string v2, "imsvideocall"
 
     invoke-direct {v0, v1, v7, v7, v2}, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_VIDEO:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
-    .line 11
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     const-string v1, "CALL_E911"
 
-    const-string/jumbo v2, "e911call"
+    const-string v2, "e911call"
 
     invoke-direct {v0, v1, v8, v8, v2}, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_E911:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
-    .line 12
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     const-string v1, "CALL_BLOCKHANDOFF"
@@ -115,7 +110,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_BLOCKHANDOFF:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
-    .line 13
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     const-string v1, "CALL_VIDEO_VOICE"
@@ -124,13 +118,12 @@
 
     const/4 v3, 0x5
 
-    const-string/jumbo v4, "imsvideovoicecall"
+    const-string v4, "imsvideovoicecall"
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_VIDEO_VOICE:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
-    .line 7
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -179,16 +172,12 @@
     .end annotation
 
     .prologue
-    .line 19
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
     iput p3, p0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->mStatus:I
 
-    .line 21
     iput-object p4, p0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->mText:Ljava/lang/String;
 
-    .line 22
     return-void
 .end method
 
@@ -197,7 +186,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     const-class v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -213,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 7
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->$VALUES:[Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->clone()Ljava/lang/Object;
@@ -231,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget v0, p0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->mStatus:I
 
     return v0
@@ -241,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->mText:Ljava/lang/String;
 
     return-object v0

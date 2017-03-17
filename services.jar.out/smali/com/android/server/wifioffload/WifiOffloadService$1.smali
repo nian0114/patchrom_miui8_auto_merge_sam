@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 637
     iput-object p1, p0, Lcom/android/server/wifioffload/WifiOffloadService$1;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 643
     const-string v0, "WifiOffloadService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -63,14 +61,12 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x65
 
     if-ne v0, v1, :cond_1
 
-    .line 645
     iget-object v0, p0, Lcom/android/server/wifioffload/WifiOffloadService$1;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     iget-object v1, p0, Lcom/android/server/wifioffload/WifiOffloadService$1;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
@@ -83,12 +79,10 @@
     # invokes: Lcom/android/server/wifioffload/WifiOffloadService;->checkWifiOffloadConditions(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifioffload/WifiOffloadService;->access$100(Lcom/android/server/wifioffload/WifiOffloadService;Ljava/lang/String;)V
 
-    .line 652
     :cond_0
     :goto_0
     return-void
 
-    .line 649
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -96,7 +90,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 650
     iget-object v0, p0, Lcom/android/server/wifioffload/WifiOffloadService$1;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     # invokes: Lcom/android/server/wifioffload/WifiOffloadService;->startWifiOffloadActivity()V

@@ -98,7 +98,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "KA-Nonce"
 
@@ -125,7 +125,7 @@
     invoke-interface {v1, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/AgreementMethod;->setKANonce([B)V
 
     :cond_1
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "OriginatorKeyInfo"
 
@@ -153,7 +153,7 @@
     .catch Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_2
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "RecipientKeyInfo"
 
@@ -188,7 +188,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -199,7 +199,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -235,7 +235,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    const-string/jumbo v4, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v4, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v5, "CipherValue"
 
@@ -249,7 +249,7 @@
 
     if-lez v4, :cond_3
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v4, "CipherValue"
 
@@ -284,7 +284,7 @@
     return-object v4
 
     :cond_3
-    const-string/jumbo v4, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v4, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v5, "CipherReference"
 
@@ -298,7 +298,7 @@
 
     if-lez v4, :cond_1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v4, "CipherReference"
 
@@ -358,7 +358,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher$Factory$CipherReferenceImpl;-><init>(Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher$Factory;Lorg/w3c/dom/Attr;)V
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "Transforms"
 
@@ -418,7 +418,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -429,7 +429,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -440,7 +440,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -491,7 +491,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v1, "CipherData"
 
@@ -579,7 +579,7 @@
     .catch Lcom/sun/org/apache/xml/internal/utils/URI$MalformedURIException; {:try_start_0 .. :try_end_0} :catch_1
 
     :goto_0
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "EncryptionMethod"
 
@@ -602,7 +602,7 @@
     invoke-interface {v1, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/EncryptedType;->setEncryptionMethod(Lcom/sun/org/apache/xml/internal/security/encryption/EncryptionMethod;)V
 
     :cond_0
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v2, "KeyInfo"
 
@@ -630,7 +630,7 @@
     .catch Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException; {:try_start_1 .. :try_end_1} :catch_0
 
     :cond_1
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "EncryptionProperties"
 
@@ -692,7 +692,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v1, "CipherData"
 
@@ -790,7 +790,7 @@
     .catch Lcom/sun/org/apache/xml/internal/utils/URI$MalformedURIException; {:try_start_0 .. :try_end_0} :catch_1
 
     :goto_0
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "EncryptionMethod"
 
@@ -813,7 +813,7 @@
     invoke-interface {v1, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/EncryptedType;->setEncryptionMethod(Lcom/sun/org/apache/xml/internal/security/encryption/EncryptionMethod;)V
 
     :cond_0
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v2, "KeyInfo"
 
@@ -841,7 +841,7 @@
     .catch Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException; {:try_start_1 .. :try_end_1} :catch_0
 
     :cond_1
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "EncryptionProperties"
 
@@ -864,7 +864,7 @@
     invoke-interface {v1, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/EncryptedType;->setEncryptionProperties(Lcom/sun/org/apache/xml/internal/security/encryption/EncryptionProperties;)V
 
     :cond_2
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "ReferenceList"
 
@@ -887,7 +887,7 @@
     invoke-interface {v1, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/EncryptedKey;->setReferenceList(Lcom/sun/org/apache/xml/internal/security/encryption/ReferenceList;)V
 
     :cond_3
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "CarriedKeyName"
 
@@ -956,7 +956,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "KeySize"
 
@@ -991,7 +991,7 @@
     invoke-interface {v1, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/EncryptionMethod;->setKeySize(I)V
 
     :cond_0
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "OAEPparams"
 
@@ -1048,7 +1048,7 @@
 
     invoke-interface {v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/EncryptionProperties;->setId(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v1, "EncryptionProperty"
 
@@ -1164,7 +1164,7 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "DataReference"
 
@@ -1191,7 +1191,7 @@
     return-object v2
 
     :cond_1
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "KeyReference"
 
@@ -1210,7 +1210,7 @@
     goto :goto_0
 
     :pswitch_0
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v3, "DataReference"
 
@@ -1248,7 +1248,7 @@
     goto :goto_1
 
     :pswitch_1
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v3, "KeyReference"
 

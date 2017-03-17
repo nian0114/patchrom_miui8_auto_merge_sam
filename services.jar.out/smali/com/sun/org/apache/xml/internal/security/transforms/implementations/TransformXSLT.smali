@@ -26,7 +26,7 @@
 .method protected engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/TR/1999/REC-xslt-19991116"
+    const-string v0, "http://www.w3.org/TR/1999/REC-xslt-19991116"
 
     return-object v0
 .end method
@@ -73,9 +73,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/1999/XSL/Transform"
+    const-string v1, "http://www.w3.org/1999/XSL/Transform"
 
-    const-string/jumbo v2, "stylesheet"
+    const-string v2, "stylesheet"
 
     const/4 v3, 0x0
 
@@ -91,7 +91,7 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "xslt:stylesheet"
+    const-string v2, "xslt:stylesheet"
 
     aput-object v2, v0, v1
 
@@ -103,7 +103,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "xml.WrongContent"
+    const-string v2, "xml.WrongContent"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -126,7 +126,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v3, "generic.EmptyMessage"
+    const-string v3, "generic.EmptyMessage"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -245,7 +245,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v3, "generic.EmptyMessage"
+    const-string v3, "generic.EmptyMessage"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -264,7 +264,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v3, "generic.EmptyMessage"
+    const-string v3, "generic.EmptyMessage"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 

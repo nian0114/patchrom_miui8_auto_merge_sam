@@ -27,16 +27,12 @@
     .param p3, "cn"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     .prologue
-    .line 646
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$CallbackHandler;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
-    .line 647
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 648
     iput-object p3, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$CallbackHandler;->mCn:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 649
     return-void
 .end method
 
@@ -47,12 +43,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 653
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 654
     .local v0, "bundle":Landroid/os/Bundle;
     const-class v2, Landroid/net/NetworkRequest;
 
@@ -66,11 +60,9 @@
 
     check-cast v1, Landroid/net/NetworkRequest;
 
-    .line 655
     .local v1, "req":Landroid/net/NetworkRequest;
     if-eqz v1, :cond_0
 
-    .line 656
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$CallbackHandler;->mCn:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget v3, v1, Landroid/net/NetworkRequest;->requestId:I
@@ -82,7 +74,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 657
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$CallbackHandler;->mCn:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget v3, p1, Landroid/os/Message;->what:I
@@ -90,12 +81,10 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->onDefaultNetworkChanged(Landroid/os/Bundle;I)V
     invoke-static {v2, v0, v3}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$900(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Landroid/os/Bundle;I)V
 
-    .line 662
     :cond_0
     :goto_0
     return-void
 
-    .line 658
     :cond_1
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$CallbackHandler;->mCn:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -108,7 +97,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 659
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$CallbackHandler;->mCn:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget v3, p1, Landroid/os/Message;->what:I

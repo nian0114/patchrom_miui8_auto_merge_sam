@@ -118,7 +118,6 @@
 
     const/4 v2, 0x0
 
-    .line 143
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "ContextDNS1"
@@ -131,7 +130,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->EXTRA_CONTEXT_DNS:[Ljava/lang/String;
 
-    .line 144
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "ContextV6DNS1"
@@ -144,14 +142,12 @@
 
     sput-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->EXTRA_CONTEXT_V6DNS:[Ljava/lang/String;
 
-    .line 163
     new-instance v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/PDPContextStateBroadcaster$1;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sExcludeTypes:Ljava/util/HashSet;
 
-    .line 170
     new-instance v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster$2;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/PDPContextStateBroadcaster$2;-><init>()V
@@ -165,22 +161,18 @@
     .locals 1
 
     .prologue
-    .line 260
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mApnIdMap:Ljava/util/HashMap;
 
-    .line 221
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mNextContextId:I
 
-    .line 262
     return-void
 .end method
 
@@ -191,20 +183,17 @@
     .param p2, "targetIndex"    # I
 
     .prologue
-    .line 418
     aget-object v1, p1, p2
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
-    .line 419
     .local v0, "empty":Z
     if-eqz v0, :cond_0
 
     aput-object p0, p1, p2
 
-    .line 420
     :cond_0
     return v0
 .end method
@@ -215,10 +204,8 @@
     .param p1, "targetArray"    # [Ljava/lang/String;
 
     .prologue
-    .line 408
     const/4 v0, 0x0
 
-    .line 409
     .local v0, "index":I
     :goto_0
     add-int/lit8 v1, v0, 0x1
@@ -231,12 +218,10 @@
 
     if-nez v2, :cond_0
 
-    .line 410
     array-length v2, p1
 
     if-ne v1, v2, :cond_1
 
-    .line 412
     :cond_0
     return-void
 
@@ -254,7 +239,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 362
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -263,7 +247,6 @@
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 364
     return-void
 .end method
 
@@ -272,16 +255,13 @@
     .param p1, "contextId"    # I
 
     .prologue
-    .line 242
     const/4 v3, 0x0
 
-    .line 243
     .local v3, "inUse":Z
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 244
     .local v1, "contextIdValue":Ljava/lang/Integer;
     iget-object v4, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mApnIdMap:Ljava/util/HashMap;
 
@@ -307,7 +287,6 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 245
     .local v0, "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsValue(Ljava/lang/Object;)Z
 
@@ -315,10 +294,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 246
     const/4 v3, 0x1
 
-    .line 250
     .end local v0    # "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_1
     return v3
@@ -330,20 +307,17 @@
     .param p1, "contextId"    # Ljava/lang/Integer;
 
     .prologue
-    .line 355
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "diagandroid.data.PDPContextState"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 356
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "ContextState"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 357
     const-string v1, "ContextID"
 
     invoke-virtual {p1}, Ljava/lang/Integer;->toString()Ljava/lang/String;
@@ -352,7 +326,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 358
     return-object v0
 .end method
 
@@ -360,7 +333,6 @@
     .locals 2
 
     .prologue
-    .line 50
     const-class v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     monitor-enter v0
@@ -372,12 +344,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
     monitor-exit v0
 
     return-void
 
-    .line 50
     :catchall_0
     move-exception v1
 
@@ -390,7 +360,6 @@
     .locals 2
 
     .prologue
-    .line 46
     const-class v1, Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     monitor-enter v1
@@ -408,13 +377,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 47
     :cond_0
     monitor-exit v1
 
     return-void
 
-    .line 46
     :catchall_0
     move-exception v0
 
@@ -428,16 +395,13 @@
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
 
     .prologue
-    .line 224
     const/4 v2, 0x0
 
-    .line 225
     .local v2, "result":Ljava/lang/Integer;
     invoke-virtual {p1}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getApnSetting()Lcom/android/internal/telephony/dataconnection/ApnSetting;
 
     move-result-object v0
 
-    .line 226
     .local v0, "apnSetting":Lcom/android/internal/telephony/dataconnection/ApnSetting;
     iget-object v3, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mApnIdMap:Ljava/util/HashMap;
 
@@ -453,7 +417,6 @@
 
     check-cast v1, Ljava/util/HashMap;
 
-    .line 227
     .local v1, "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz v1, :cond_0
 
@@ -468,7 +431,6 @@
     .end local v2    # "result":Ljava/lang/Integer;
     check-cast v2, Ljava/lang/Integer;
 
-    .line 228
     .restart local v2    # "result":Ljava/lang/Integer;
     :cond_0
     return-object v2
@@ -479,7 +441,6 @@
     .param p0, "apnType"    # Ljava/lang/String;
 
     .prologue
-    .line 279
     const-string v0, "default"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -503,7 +464,6 @@
     .locals 3
 
     .prologue
-    .line 269
     :cond_0
     iget v0, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mNextContextId:I
 
@@ -511,7 +471,6 @@
 
     iput v1, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mNextContextId:I
 
-    .line 271
     .local v0, "nextId":I
     iget v1, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mNextContextId:I
 
@@ -519,12 +478,10 @@
 
     if-le v1, v2, :cond_1
 
-    .line 272
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mNextContextId:I
 
-    .line 274
     :cond_1
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->contextIdInUse(I)Z
 
@@ -532,7 +489,6 @@
 
     if-nez v1, :cond_0
 
-    .line 275
     return v0
 .end method
 
@@ -541,7 +497,6 @@
     .param p0, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 283
     sget-object v1, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sTermCodeMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -550,7 +505,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 285
     .local v0, "termCode":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
@@ -565,7 +519,6 @@
     .end local v0    # "termCode":Ljava/lang/Integer;
     check-cast v0, Ljava/lang/Integer;
 
-    .line 286
     .restart local v0    # "termCode":Ljava/lang/Integer;
     :cond_0
     return-object v0
@@ -590,7 +543,6 @@
     .end annotation
 
     .prologue
-    .line 394
     .local p0, "addresses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -611,20 +563,16 @@
 
     check-cast v0, Ljava/net/InetAddress;
 
-    .line 395
     .local v0, "address":Ljava/net/InetAddress;
     const/4 v2, 0x0
 
-    .line 396
     .local v2, "targetArray":[Ljava/lang/String;
     instance-of v3, v0, Ljava/net/Inet4Address;
 
     if-eqz v3, :cond_2
 
-    .line 397
     move-object v2, p1
 
-    .line 402
     :cond_1
     :goto_1
     if-eqz v2, :cond_0
@@ -637,18 +585,15 @@
 
     goto :goto_0
 
-    .line 398
     :cond_2
     instance-of v3, v0, Ljava/net/Inet6Address;
 
     if-eqz v3, :cond_1
 
-    .line 399
     move-object v2, p2
 
     goto :goto_1
 
-    .line 404
     .end local v0    # "address":Ljava/net/InetAddress;
     .end local v2    # "targetArray":[Ljava/lang/String;
     :cond_3
@@ -671,7 +616,6 @@
     .end annotation
 
     .prologue
-    .line 376
     .local p0, "addresses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -692,13 +636,11 @@
 
     check-cast v0, Ljava/net/InetAddress;
 
-    .line 377
     .local v0, "address":Ljava/net/InetAddress;
     instance-of v2, v0, Ljava/net/Inet4Address;
 
     if-eqz v2, :cond_1
 
-    .line 378
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v2
@@ -709,13 +651,11 @@
 
     goto :goto_0
 
-    .line 380
     :cond_1
     instance-of v2, v0, Ljava/net/Inet6Address;
 
     if-eqz v2, :cond_0
 
-    .line 381
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v2
@@ -726,7 +666,6 @@
 
     goto :goto_0
 
-    .line 385
     .end local v0    # "address":Ljava/net/InetAddress;
     :cond_2
     return-void
@@ -737,12 +676,10 @@
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
 
     .prologue
-    .line 232
     invoke-virtual {p1}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getApnSetting()Lcom/android/internal/telephony/dataconnection/ApnSetting;
 
     move-result-object v1
 
-    .line 233
     .local v1, "apnSetting":Lcom/android/internal/telephony/dataconnection/ApnSetting;
     iget v3, v1, Lcom/android/internal/telephony/dataconnection/ApnSetting;->id:I
 
@@ -750,7 +687,6 @@
 
     move-result-object v0
 
-    .line 234
     .local v0, "apnIdValue":Ljava/lang/Integer;
     iget-object v3, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mApnIdMap:Ljava/util/HashMap;
 
@@ -760,18 +696,15 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 235
     .local v2, "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz v2, :cond_0
 
-    .line 236
     invoke-virtual {p1}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getApnType()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
@@ -782,7 +715,6 @@
 
     invoke-virtual {v3, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     :cond_0
     return-void
 .end method
@@ -793,7 +725,6 @@
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
 
     .prologue
-    .line 67
     const-class v9, Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     monitor-enter v9
@@ -807,7 +738,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
     :try_start_1
     invoke-virtual {p1}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getDcAc()Lcom/android/internal/telephony/dataconnection/DcAsyncChannel;
 
@@ -817,11 +747,9 @@
 
     move-result-object v8
 
-    .line 71
     .local v8, "linkProperties":Landroid/net/LinkProperties;
     if-eqz v8, :cond_0
 
-    .line 73
     const/4 v0, 0x2
 
     new-array v7, v0, [Ljava/lang/String;
@@ -838,7 +766,6 @@
 
     aput-object v1, v7, v0
 
-    .line 74
     .local v7, "ipAddresses":[Ljava/lang/String;
     const/4 v0, 0x2
 
@@ -856,7 +783,6 @@
 
     aput-object v1, v5, v0
 
-    .line 75
     .local v5, "ipv4DNS":[Ljava/lang/String;
     const/4 v0, 0x2
 
@@ -874,7 +800,6 @@
 
     aput-object v1, v6, v0
 
-    .line 78
     .local v6, "ipv6DNS":[Ljava/lang/String;
     invoke-virtual {v8}, Landroid/net/LinkProperties;->getAddresses()Ljava/util/List;
 
@@ -882,14 +807,12 @@
 
     invoke-static {v0, v7}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->processIPAddresses(Ljava/util/Collection;[Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {v8}, Landroid/net/LinkProperties;->getDnses()Ljava/util/Collection;
 
     move-result-object v0
 
     invoke-static {v0, v5, v6}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->processDNSAddresses(Ljava/util/Collection;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 83
     sget-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sInstance:Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     const/4 v1, 0x0
@@ -909,7 +832,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 91
     .end local v5    # "ipv4DNS":[Ljava/lang/String;
     .end local v6    # "ipv6DNS":[Ljava/lang/String;
     .end local v7    # "ipAddresses":[Ljava/lang/String;
@@ -920,7 +842,6 @@
 
     return-void
 
-    .line 67
     :catchall_0
     move-exception v0
 
@@ -928,7 +849,6 @@
 
     throw v0
 
-    .line 87
     :catch_0
     move-exception v0
 
@@ -941,7 +861,6 @@
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
 
     .prologue
-    .line 96
     const-class v1, Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     monitor-enter v1
@@ -955,7 +874,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 99
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sInstance:Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
@@ -968,14 +886,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 104
     :cond_0
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 96
     :catchall_0
     move-exception v0
 
@@ -983,7 +899,6 @@
 
     throw v0
 
-    .line 100
     :catch_0
     move-exception v0
 
@@ -997,7 +912,6 @@
     .param p2, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     const-class v1, Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     monitor-enter v1
@@ -1011,7 +925,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 113
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sInstance:Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
@@ -1020,14 +933,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 118
     :cond_0
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 110
     :catchall_0
     move-exception v0
 
@@ -1035,7 +946,6 @@
 
     throw v0
 
-    .line 114
     :catch_0
     move-exception v0
 
@@ -1052,34 +962,28 @@
     .param p6, "ipv6DNS"    # [Ljava/lang/String;
 
     .prologue
-    .line 322
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->getContextId(Lcom/android/internal/telephony/dataconnection/ApnContext;)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 323
     .local v0, "contextId":Ljava/lang/Integer;
     if-eqz v0, :cond_1
 
-    .line 325
     const-string v3, "CONNECTED"
 
     invoke-static {v3, v0}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->createIntent(Ljava/lang/String;Ljava/lang/Integer;)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 326
     .local v2, "intent":Landroid/content/Intent;
     const-string v3, "ContextIPV4Addr"
 
     invoke-virtual {v2, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 327
     const-string v3, "ContextIPV6Addr"
 
     invoke-virtual {v2, v3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 328
     const/4 v1, 0x0
 
     .local v1, "dnsExtraIndex":I
@@ -1088,7 +992,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 329
     sget-object v3, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->EXTRA_CONTEXT_DNS:[Ljava/lang/String;
 
     aget-object v3, v3, v1
@@ -1097,7 +1000,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 330
     sget-object v3, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->EXTRA_CONTEXT_V6DNS:[Ljava/lang/String;
 
     aget-object v3, v3, v1
@@ -1106,16 +1008,13 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 328
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 333
     :cond_0
     invoke-direct {p0, p1, v2}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->broadcast(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 335
     .end local v1    # "dnsExtraIndex":I
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_1
@@ -1129,26 +1028,21 @@
     .param p3, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 339
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->getContextId(Lcom/android/internal/telephony/dataconnection/ApnContext;)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 340
     .local v0, "contextId":Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
-    .line 343
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->removeContextId(Lcom/android/internal/telephony/dataconnection/ApnContext;)V
 
-    .line 344
     const-string v3, "DISCONNECTED"
 
     invoke-static {v3, v0}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->createIntent(Ljava/lang/String;Ljava/lang/Integer;)Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 345
     .local v1, "intent":Landroid/content/Intent;
     const-string v3, "ContextInitiator"
 
@@ -1156,12 +1050,10 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 346
     invoke-static {p3}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->getTermCode(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 347
     .local v2, "termCode":Ljava/lang/Integer;
     const-string v3, "ContextTermCode"
 
@@ -1171,7 +1063,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 348
     const-string v3, "ContextErrorCode"
 
     const/4 v4, -0x1
@@ -1182,10 +1073,8 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 350
     invoke-direct {p0, p1, v1}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->broadcast(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 352
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "termCode":Ljava/lang/Integer;
     :cond_0
@@ -1200,38 +1089,31 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 290
     invoke-virtual {p2}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getApnSetting()Lcom/android/internal/telephony/dataconnection/ApnSetting;
 
     move-result-object v2
 
-    .line 291
     .local v2, "apnSetting":Lcom/android/internal/telephony/dataconnection/ApnSetting;
     iget v0, v2, Lcom/android/internal/telephony/dataconnection/ApnSetting;->id:I
 
-    .line 292
     .local v0, "apnId":I
     iget-object v5, v2, Lcom/android/internal/telephony/dataconnection/ApnSetting;->apn:Ljava/lang/String;
 
-    .line 293
     .local v5, "contextApn":Ljava/lang/String;
     invoke-virtual {p2}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getApnType()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 294
     .local v3, "apnType":Ljava/lang/String;
     invoke-static {v3}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->getContextType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 295
     .local v7, "contextType":Ljava/lang/String;
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 296
     .local v1, "apnIdObject":Ljava/lang/Integer;
     iget-object v9, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mApnIdMap:Ljava/util/HashMap;
 
@@ -1241,23 +1123,19 @@
 
     check-cast v4, Ljava/util/HashMap;
 
-    .line 297
     .local v4, "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-nez v4, :cond_0
 
-    .line 299
     new-instance v4, Ljava/util/HashMap;
 
     .end local v4    # "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 300
     .restart local v4    # "apnTypeIdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     iget-object v9, p0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->mApnIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v9, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 304
     :cond_0
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -1265,7 +1143,6 @@
 
     if-nez v9, :cond_1
 
-    .line 306
     invoke-direct {p0}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->getNextContextId()I
 
     move-result v9
@@ -1274,18 +1151,15 @@
 
     move-result-object v6
 
-    .line 307
     .local v6, "contextId":Ljava/lang/Integer;
     invoke-virtual {v4, v3, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 308
     const-string v9, "REQUEST"
 
     invoke-static {v9, v6}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->createIntent(Ljava/lang/String;Ljava/lang/Integer;)Landroid/content/Intent;
 
     move-result-object v8
 
-    .line 309
     .local v8, "intent":Landroid/content/Intent;
     const-string v9, "ContextInitiator"
 
@@ -1293,12 +1167,10 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 310
     const-string v9, "ContextType"
 
     invoke-virtual {v8, v9, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 311
     const-string v9, "ContextNSAPI"
 
     invoke-static {v11}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1307,7 +1179,6 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 312
     const-string v9, "ContextSAPI"
 
     invoke-static {v11}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1316,15 +1187,12 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 313
     const-string v9, "ContextAPN"
 
     invoke-virtual {v8, v9, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 315
     invoke-direct {p0, p1, v8}, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->broadcast(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 317
     .end local v6    # "contextId":Ljava/lang/Integer;
     .end local v8    # "intent":Landroid/content/Intent;
     :cond_1
@@ -1337,7 +1205,6 @@
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
 
     .prologue
-    .line 55
     const-class v1, Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     monitor-enter v1
@@ -1351,7 +1218,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 58
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sInstance:Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
@@ -1360,14 +1226,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 63
     :cond_0
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 55
     :catchall_0
     move-exception v0
 
@@ -1375,7 +1239,6 @@
 
     throw v0
 
-    .line 59
     :catch_0
     move-exception v0
 
@@ -1387,7 +1250,6 @@
     .param p0, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
 
     .prologue
-    .line 254
     sget-object v0, Lcom/android/internal/telephony/PDPContextStateBroadcaster;->sInstance:Lcom/android/internal/telephony/PDPContextStateBroadcaster;
 
     if-eqz v0, :cond_0

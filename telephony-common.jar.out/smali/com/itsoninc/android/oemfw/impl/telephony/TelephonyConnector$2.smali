@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 334
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$2;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     iput-object p2, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$2;->val$address:Ljava/lang/String;
@@ -56,7 +55,6 @@
     .locals 5
 
     .prologue
-    .line 337
     :try_start_0
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$2;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -75,17 +73,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 345
     :goto_0
     return-void
 
-    .line 341
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 338
     :catch_1
     move-exception v0
 

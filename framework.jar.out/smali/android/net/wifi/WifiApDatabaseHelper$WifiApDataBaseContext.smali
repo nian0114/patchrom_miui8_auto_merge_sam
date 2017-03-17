@@ -27,16 +27,12 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 591
     invoke-direct {p0}, Landroid/content/Context;-><init>()V
 
-    .line 592
     iput-object p1, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
-    .line 593
     iput-object p2, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mDbPath:Ljava/lang/String;
 
-    .line 594
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 1060
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
@@ -67,7 +62,6 @@
     .param p4, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1066
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
@@ -82,7 +76,6 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 1107
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
@@ -98,7 +91,6 @@
     .param p2, "modeFlags"    # I
 
     .prologue
-    .line 1158
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->checkCallingOrSelfUriPermission(Landroid/net/Uri;I)I
@@ -113,7 +105,6 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 1102
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
@@ -129,7 +120,6 @@
     .param p2, "modeFlags"    # I
 
     .prologue
-    .line 1153
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->checkCallingUriPermission(Landroid/net/Uri;I)I
@@ -146,7 +136,6 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 1091
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
@@ -164,7 +153,6 @@
     .param p4, "callerToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1097
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
@@ -179,7 +167,6 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 1112
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
@@ -197,7 +184,6 @@
     .param p4, "modeFlags"    # I
 
     .prologue
-    .line 1142
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->checkUriPermission(Landroid/net/Uri;III)I
@@ -216,7 +202,6 @@
     .param p5, "callerToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1148
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->checkUriPermission(Landroid/net/Uri;III)I
@@ -236,7 +221,6 @@
     .param p6, "modeFlags"    # I
 
     .prologue
-    .line 1163
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -270,12 +254,10 @@
     .end annotation
 
     .prologue
-    .line 839
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->clearWallpaper()V
 
-    .line 840
     return-void
 .end method
 
@@ -290,7 +272,6 @@
     .end annotation
 
     .prologue
-    .line 1188
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->createApplicationContext(Landroid/content/pm/ApplicationInfo;I)Landroid/content/Context;
@@ -305,7 +286,6 @@
     .param p1, "overrideConfiguration"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 1215
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
@@ -320,7 +300,6 @@
     .param p1, "display"    # Landroid/view/Display;
 
     .prologue
-    .line 1220
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->createDisplayContext(Landroid/view/Display;)Landroid/content/Context;
@@ -341,7 +320,6 @@
     .end annotation
 
     .prologue
-    .line 1193
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
@@ -363,7 +341,6 @@
     .end annotation
 
     .prologue
-    .line 1204
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;Ljava/lang/ClassLoader;I)Landroid/content/Context;
@@ -385,7 +362,6 @@
     .end annotation
 
     .prologue
-    .line 1198
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/Context;
@@ -408,7 +384,6 @@
     .end annotation
 
     .prologue
-    .line 1210
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;Ljava/lang/ClassLoader;ILandroid/os/UserHandle;)Landroid/content/Context;
@@ -422,7 +397,6 @@
     .locals 1
 
     .prologue
-    .line 797
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->databaseList()[Ljava/lang/String;
@@ -437,7 +411,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 783
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
@@ -452,7 +425,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 702
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->deleteFile(Ljava/lang/String;)Z
@@ -468,12 +440,10 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1127
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1128
     return-void
 .end method
 
@@ -484,12 +454,10 @@
     .param p3, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1178
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->enforceCallingOrSelfUriPermission(Landroid/net/Uri;ILjava/lang/String;)V
 
-    .line 1179
     return-void
 .end method
 
@@ -499,12 +467,10 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1122
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1123
     return-void
 .end method
 
@@ -515,12 +481,10 @@
     .param p3, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1173
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->enforceCallingUriPermission(Landroid/net/Uri;ILjava/lang/String;)V
 
-    .line 1174
     return-void
 .end method
 
@@ -532,12 +496,10 @@
     .param p4, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1117
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 1118
     return-void
 .end method
 
@@ -550,7 +512,6 @@
     .param p5, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1168
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -565,7 +526,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->enforceUriPermission(Landroid/net/Uri;IIILjava/lang/String;)V
 
-    .line 1169
     return-void
 .end method
 
@@ -580,7 +540,6 @@
     .param p7, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1183
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -599,7 +558,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->enforceUriPermission(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;)V
 
-    .line 1184
     return-void
 .end method
 
@@ -607,7 +565,6 @@
     .locals 1
 
     .prologue
-    .line 767
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->fileList()[Ljava/lang/String;
@@ -621,7 +578,6 @@
     .locals 1
 
     .prologue
-    .line 623
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -635,7 +591,6 @@
     .locals 1
 
     .prologue
-    .line 665
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -649,7 +604,6 @@
     .locals 1
 
     .prologue
-    .line 598
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -663,7 +617,6 @@
     .locals 1
 
     .prologue
-    .line 654
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getBasePackageName()Ljava/lang/String;
@@ -677,7 +630,6 @@
     .locals 1
 
     .prologue
-    .line 737
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
@@ -691,7 +643,6 @@
     .locals 1
 
     .prologue
-    .line 643
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
@@ -705,7 +656,6 @@
     .locals 1
 
     .prologue
-    .line 742
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;
@@ -719,7 +669,6 @@
     .locals 1
 
     .prologue
-    .line 613
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -734,7 +683,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 788
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -763,7 +711,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 789
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -775,14 +722,12 @@
 
     if-nez v1, :cond_0
 
-    .line 790
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 792
     :cond_0
     return-object v0
 .end method
@@ -793,7 +738,6 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 1253
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
@@ -808,7 +752,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1248
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getDisplayAdjustments(I)Landroid/view/DisplayAdjustments;
@@ -822,7 +765,6 @@
     .locals 1
 
     .prologue
-    .line 1226
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getDisplayId()I
@@ -836,7 +778,6 @@
     .locals 1
 
     .prologue
-    .line 747
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getExternalCacheDir()Ljava/io/File;
@@ -850,7 +791,6 @@
     .locals 1
 
     .prologue
-    .line 752
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getExternalCacheDirs()[Ljava/io/File;
@@ -865,7 +805,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 717
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
@@ -880,7 +819,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 722
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getExternalFilesDirs(Ljava/lang/String;)[Ljava/io/File;
@@ -894,7 +832,6 @@
     .locals 1
 
     .prologue
-    .line 757
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getExternalMediaDirs()[Ljava/io/File;
@@ -909,7 +846,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 762
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
@@ -923,7 +859,6 @@
     .locals 1
 
     .prologue
-    .line 707
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -937,7 +872,6 @@
     .locals 1
 
     .prologue
-    .line 618
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -951,7 +885,6 @@
     .locals 1
 
     .prologue
-    .line 712
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
@@ -965,7 +898,6 @@
     .locals 1
 
     .prologue
-    .line 727
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getObbDir()Ljava/io/File;
@@ -979,7 +911,6 @@
     .locals 1
 
     .prologue
-    .line 732
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getObbDirs()[Ljava/io/File;
@@ -993,7 +924,6 @@
     .locals 1
 
     .prologue
-    .line 660
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
@@ -1007,7 +937,6 @@
     .locals 1
 
     .prologue
-    .line 1264
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getOuterContext()Landroid/content/Context;
@@ -1021,7 +950,6 @@
     .locals 1
 
     .prologue
-    .line 675
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageCodePath()Ljava/lang/String;
@@ -1035,7 +963,6 @@
     .locals 1
 
     .prologue
-    .line 608
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1049,7 +976,6 @@
     .locals 1
 
     .prologue
-    .line 648
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -1063,7 +989,6 @@
     .locals 1
 
     .prologue
-    .line 670
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageResourcePath()Ljava/lang/String;
@@ -1077,7 +1002,6 @@
     .locals 1
 
     .prologue
-    .line 603
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1093,7 +1017,6 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 685
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -1108,7 +1031,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 680
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
@@ -1122,7 +1044,6 @@
     .locals 1
 
     .prologue
-    .line 1238
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getShrinkRequested()Z
@@ -1137,7 +1058,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1081
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1159,7 +1079,6 @@
     .end annotation
 
     .prologue
-    .line 1086
     .local p1, "serviceClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
@@ -1174,7 +1093,6 @@
     .locals 1
 
     .prologue
-    .line 638
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -1188,7 +1106,6 @@
     .locals 1
 
     .prologue
-    .line 633
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getThemeResId()I
@@ -1202,7 +1119,6 @@
     .locals 1
 
     .prologue
-    .line 1259
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getUserId()I
@@ -1218,7 +1134,6 @@
     .end annotation
 
     .prologue
-    .line 803
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getWallpaper()Landroid/graphics/drawable/Drawable;
@@ -1234,7 +1149,6 @@
     .end annotation
 
     .prologue
-    .line 821
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getWallpaperDesiredMinimumHeight()I
@@ -1250,7 +1164,6 @@
     .end annotation
 
     .prologue
-    .line 815
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getWallpaperDesiredMinimumWidth()I
@@ -1267,12 +1180,10 @@
     .param p3, "modeFlags"    # I
 
     .prologue
-    .line 1132
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 1133
     return-void
 .end method
 
@@ -1280,7 +1191,6 @@
     .locals 1
 
     .prologue
-    .line 1243
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->isRestricted()Z
@@ -1300,7 +1210,6 @@
     .end annotation
 
     .prologue
-    .line 691
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->openFileInput(Ljava/lang/String;)Ljava/io/FileInputStream;
@@ -1321,7 +1230,6 @@
     .end annotation
 
     .prologue
-    .line 697
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
@@ -1338,7 +1246,6 @@
     .param p3, "factory"    # Landroid/database/sqlite/SQLiteDatabase$CursorFactory;
 
     .prologue
-    .line 772
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
@@ -1364,7 +1271,6 @@
     .param p4, "errorHandler"    # Landroid/database/DatabaseErrorHandler;
 
     .prologue
-    .line 778
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
@@ -1388,7 +1294,6 @@
     .end annotation
 
     .prologue
-    .line 809
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->peekWallpaper()Landroid/graphics/drawable/Drawable;
@@ -1404,7 +1309,6 @@
     .param p2, "filter"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 1020
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -1422,7 +1326,6 @@
     .param p4, "scheduler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1025
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
@@ -1441,7 +1344,6 @@
     .param p5, "scheduler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1030
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1466,12 +1368,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 999
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->removeStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 1000
     return-void
 .end method
 
@@ -1481,12 +1381,10 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1015
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->removeStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1016
     return-void
 .end method
 
@@ -1496,12 +1394,10 @@
     .param p2, "modeFlags"    # I
 
     .prologue
-    .line 1137
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 1138
     return-void
 .end method
 
@@ -1510,12 +1406,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 898
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 899
     return-void
 .end method
 
@@ -1525,12 +1419,10 @@
     .param p2, "receiverPermission"    # Ljava/lang/String;
 
     .prologue
-    .line 903
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 904
     return-void
 .end method
 
@@ -1541,12 +1433,10 @@
     .param p3, "appOp"    # I
 
     .prologue
-    .line 923
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;I)V
 
-    .line 924
     return-void
 .end method
 
@@ -1557,12 +1447,10 @@
     .param p3, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 918
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 919
     return-void
 .end method
 
@@ -1572,12 +1460,10 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 953
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 954
     return-void
 .end method
 
@@ -1588,12 +1474,10 @@
     .param p3, "receiverPermission"    # Ljava/lang/String;
 
     .prologue
-    .line 958
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 959
     return-void
 .end method
 
@@ -1605,12 +1489,10 @@
     .param p4, "appOp"    # I
 
     .prologue
-    .line 963
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;I)V
 
-    .line 964
     return-void
 .end method
 
@@ -1620,12 +1502,10 @@
     .param p2, "receiverPermissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 908
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendBroadcastMultiplePermissions(Landroid/content/Intent;[Ljava/lang/String;)V
 
-    .line 909
     return-void
 .end method
 
@@ -1636,12 +1516,10 @@
     .param p3, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 913
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->sendBroadcastMultiplePermissionsAsUser(Landroid/content/Intent;[Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 914
     return-void
 .end method
 
@@ -1651,12 +1529,10 @@
     .param p2, "receiverPermission"    # Ljava/lang/String;
 
     .prologue
-    .line 928
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 929
     return-void
 .end method
 
@@ -1672,7 +1548,6 @@
     .param p8, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 947
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1693,7 +1568,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 949
     return-void
 .end method
 
@@ -1708,7 +1582,6 @@
     .param p7, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 934
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1727,7 +1600,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 936
     return-void
 .end method
 
@@ -1743,7 +1615,6 @@
     .param p8, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 941
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1764,7 +1635,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 942
     return-void
 .end method
 
@@ -1781,7 +1651,6 @@
     .param p9, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 977
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1804,7 +1673,6 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;ILandroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 978
     return-void
 .end method
 
@@ -1822,7 +1690,6 @@
     .param p10, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 983
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1847,7 +1714,6 @@
 
     invoke-virtual/range {v0 .. v10}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;ILandroid/os/Bundle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 984
     return-void
 .end method
 
@@ -1863,7 +1729,6 @@
     .param p8, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 970
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1884,7 +1749,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 972
     return-void
 .end method
 
@@ -1893,12 +1757,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 988
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 989
     return-void
 .end method
 
@@ -1908,12 +1770,10 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1004
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1005
     return-void
 .end method
 
@@ -1927,7 +1787,6 @@
     .param p6, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 994
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1944,7 +1803,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/content/Context;->sendStickyOrderedBroadcast(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 995
     return-void
 .end method
 
@@ -1959,7 +1817,6 @@
     .param p7, "initialExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1010
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -1978,7 +1835,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->sendStickyOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1011
     return-void
 .end method
 
@@ -1987,12 +1843,10 @@
     .param p1, "display"    # Landroid/view/Display;
 
     .prologue
-    .line 1232
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setDisplay(Landroid/view/Display;)V
 
-    .line 1233
     return-void
 .end method
 
@@ -2001,12 +1855,10 @@
     .param p1, "resid"    # I
 
     .prologue
-    .line 628
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setTheme(I)V
 
-    .line 629
     return-void
 .end method
 
@@ -2023,12 +1875,10 @@
     .end annotation
 
     .prologue
-    .line 827
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setWallpaper(Landroid/graphics/Bitmap;)V
 
-    .line 828
     return-void
 .end method
 
@@ -2045,12 +1895,10 @@
     .end annotation
 
     .prologue
-    .line 833
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setWallpaper(Ljava/io/InputStream;)V
 
-    .line 834
     return-void
 .end method
 
@@ -2059,12 +1907,10 @@
     .param p1, "intents"    # [Landroid/content/Intent;
 
     .prologue
-    .line 866
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
 
-    .line 867
     return-void
 .end method
 
@@ -2074,12 +1920,10 @@
     .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 877
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivities([Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 878
     return-void
 .end method
 
@@ -2090,12 +1934,10 @@
     .param p3, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 872
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->startActivitiesAsUser([Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 873
     return-void
 .end method
 
@@ -2104,12 +1946,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 844
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 845
     return-void
 .end method
 
@@ -2119,12 +1959,10 @@
     .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 855
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 856
     return-void
 .end method
 
@@ -2135,12 +1973,10 @@
     .param p3, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 861
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 862
     return-void
 .end method
 
@@ -2150,12 +1986,10 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 850
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 851
     return-void
 .end method
 
@@ -2166,7 +2000,6 @@
     .param p3, "arguments"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1076
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->startInstrumentation(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/Bundle;)Z
@@ -2190,7 +2023,6 @@
     .end annotation
 
     .prologue
-    .line 884
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -2205,7 +2037,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;III)V
 
-    .line 886
     return-void
 .end method
 
@@ -2224,7 +2055,6 @@
     .end annotation
 
     .prologue
-    .line 892
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     move-object v1, p1
@@ -2241,7 +2071,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/content/Context;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;IIILandroid/os/Bundle;)V
 
-    .line 894
     return-void
 .end method
 
@@ -2250,7 +2079,6 @@
     .param p1, "service"    # Landroid/content/Intent;
 
     .prologue
-    .line 1040
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -2266,7 +2094,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1050
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
@@ -2281,7 +2108,6 @@
     .param p1, "service"    # Landroid/content/Intent;
 
     .prologue
-    .line 1045
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
@@ -2297,7 +2123,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1055
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->stopServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Z
@@ -2312,12 +2137,10 @@
     .param p1, "conn"    # Landroid/content/ServiceConnection;
 
     .prologue
-    .line 1071
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1072
     return-void
 .end method
 
@@ -2326,11 +2149,9 @@
     .param p1, "receiver"    # Landroid/content/BroadcastReceiver;
 
     .prologue
-    .line 1035
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataBaseContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 1036
     return-void
 .end method

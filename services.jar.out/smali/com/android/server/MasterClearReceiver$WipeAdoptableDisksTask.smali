@@ -42,25 +42,20 @@
     .param p3, "chainedTask"    # Ljava/lang/Thread;
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->this$0:Lcom/android/server/MasterClearReceiver;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 106
     iput-object p2, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mContext:Landroid/content/Context;
 
-    .line 107
     iput-object p3, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mChainedTask:Ljava/lang/Thread;
 
-    .line 108
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p2}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    .line 109
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 100
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -87,17 +81,15 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 121
     const-string v1, "MasterClear"
 
     const-string v2, "Wiping adoptable disks"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "storage"
+    const-string v2, "storage"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -105,11 +97,9 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 124
     .local v0, "sm":Landroid/os/storage/StorageManager;
     invoke-virtual {v0}, Landroid/os/storage/StorageManager;->wipeAdoptableDisks()V
 
-    .line 125
     const/4 v1, 0x0
 
     return-object v1
@@ -120,7 +110,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 100
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -134,17 +123,14 @@
     .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mChainedTask:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 132
     return-void
 .end method
 
@@ -152,14 +138,12 @@
     .locals 3
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
@@ -170,7 +154,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mContext:Landroid/content/Context;
@@ -183,11 +166,9 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 117
     return-void
 .end method

@@ -32,10 +32,8 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 2838
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2839
     const v0, 0x1020014
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -46,7 +44,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$PageItemViewHolder;->text:Landroid/widget/TextView;
 
-    .line 2840
     const v0, 0x1020015
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -57,7 +54,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$PageItemViewHolder;->text2:Landroid/widget/TextView;
 
-    .line 2841
     const v0, 0x10204c9
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -68,7 +64,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$PageItemViewHolder;->text3:Landroid/widget/TextView;
 
-    .line 2842
     const v0, 0x1020006
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -79,7 +74,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$PageItemViewHolder;->icon:Landroid/widget/ImageView;
 
-    .line 2843
     const v0, 0x102045f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -90,6 +84,5 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$PageItemViewHolder;->badge:Landroid/widget/ImageView;
 
-    .line 2844
     return-void
 .end method

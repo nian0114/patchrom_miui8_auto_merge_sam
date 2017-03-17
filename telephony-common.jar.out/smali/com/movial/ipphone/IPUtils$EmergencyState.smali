@@ -64,7 +64,6 @@
 
     const/4 v3, 0x0
 
-    .line 143
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "NOT_INITIALIZED"
@@ -73,7 +72,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->NOT_INITIALIZED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 144
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "IDLE"
@@ -82,7 +80,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->IDLE:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 145
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "CS_TURNING_ON_RADIO"
@@ -91,7 +88,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_TURNING_ON_RADIO:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 146
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "CS_CALL_DIALING"
@@ -100,7 +96,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_CALL_DIALING:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 147
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "CS_CALL_CONNECTED"
@@ -109,7 +104,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_CALL_CONNECTED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 148
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "CS_CALL_DISCONNECTED"
@@ -120,7 +114,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_CALL_DISCONNECTED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 149
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "CS_CALL_FAILED"
@@ -131,7 +124,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_CALL_FAILED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 150
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "IMS_CALL_DIALING"
@@ -142,7 +134,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->IMS_CALL_DIALING:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 151
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "IMS_CALL_CONNECTED"
@@ -153,7 +144,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->IMS_CALL_CONNECTED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 152
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "IMS_CALL_DISCONNECTED"
@@ -164,7 +154,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->IMS_CALL_DISCONNECTED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 153
     new-instance v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     const-string v1, "IMS_CALL_FAILED"
@@ -175,7 +164,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->IMS_CALL_FAILED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 142
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -250,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 142
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -261,7 +248,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 142
     const-class v0, Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -277,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 142
     sget-object v0, Lcom/movial/ipphone/IPUtils$EmergencyState;->$VALUES:[Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     invoke-virtual {v0}, [Lcom/movial/ipphone/IPUtils$EmergencyState;->clone()Ljava/lang/Object;

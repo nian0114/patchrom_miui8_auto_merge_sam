@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 140
     invoke-static {}, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->values()[Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
     move-result-object v0

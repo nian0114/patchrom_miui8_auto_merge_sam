@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const/4 v0, 0x0
 
     sput-object v0, Lorg/apache/http/impl/cookie/DateUtils;->GMT:Ljava/util/TimeZone;
@@ -35,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -52,7 +50,6 @@
     .param p0, "date"    # Ljava/util/Date;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -68,7 +65,6 @@
     .param p1, "pattern"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -88,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -109,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -131,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

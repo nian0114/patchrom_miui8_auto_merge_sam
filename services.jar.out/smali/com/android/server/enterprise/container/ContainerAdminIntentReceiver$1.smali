@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$1;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 124
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.USER_REMOVED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 126
     const-string v3, "android.intent.extra.user_handle"
 
     const/4 v4, -0x1
@@ -63,13 +59,11 @@
 
     move-result v2
 
-    .line 127
     .local v2, "userId":I
     const/4 v3, 0x1
 
     if-le v2, v3, :cond_1
 
-    .line 128
     # getter for: Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->mContainerAdminIntentFWDList:Ljava/util/HashMap;
     invoke-static {}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->access$300()Ljava/util/HashMap;
 
@@ -81,7 +75,6 @@
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$1;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 
@@ -92,7 +85,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "intentsFwdedToContainerAdmin"
+    const-string v5, "intentsFwdedToContainerAdmin"
 
     invoke-virtual {v3, v4, v5, v2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->removeGenericValueAsUser(ILjava/lang/String;I)I
 
@@ -100,7 +93,6 @@
 
     if-gez v3, :cond_0
 
-    .line 133
     # getter for: Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->access$100()Ljava/lang/String;
 
@@ -134,24 +126,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 139
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$1;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->registerDynamicIntents()V
 
-    .line 142
     .end local v2    # "userId":I
     :cond_1
     return-void
 
-    .line 136
     .restart local v2    # "userId":I
     :catch_0
     move-exception v1
 
-    .line 137
     .local v1, "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->access$100()Ljava/lang/String;

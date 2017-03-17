@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1553
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,30 +44,25 @@
 
     const/4 v1, 0x1
 
-    .line 1556
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
     move v1, v2
 
-    .line 1576
     :cond_0
     :goto_0
     return v1
 
-    .line 1558
     :pswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 1559
     .local v0, "flags":I
     iget-object v3, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # invokes: Lcom/android/server/net/NetworkStatsService;->performPoll(I)V
     invoke-static {v3, v0}, Lcom/android/server/net/NetworkStatsService;->access$1100(Lcom/android/server/net/NetworkStatsService;I)V
 
-    .line 1561
     iget-object v3, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # getter for: Lcom/android/server/net/NetworkStatsService;->mIsDuringVideoCall:Z
@@ -87,7 +81,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1562
     iget-object v3, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # getter for: Lcom/android/server/net/NetworkStatsService;->mHandler:Landroid/os/Handler;
@@ -112,7 +105,6 @@
 
     goto :goto_0
 
-    .line 1568
     .end local v0    # "flags":I
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
@@ -122,7 +114,6 @@
 
     goto :goto_0
 
-    .line 1572
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -131,7 +122,6 @@
 
     goto :goto_0
 
-    .line 1556
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

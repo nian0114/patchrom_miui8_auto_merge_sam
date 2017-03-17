@@ -62,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryPath:Ljava/lang/String;
@@ -95,45 +94,32 @@
 
     const/4 v0, 0x0
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 69
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPackageName:Ljava/lang/String;
 
-    .line 70
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeader:Ljava/lang/StringBuilder;
 
-    .line 71
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
-    .line 78
     iput-object p5, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPfd:Landroid/os/ParcelFileDescriptor;
 
-    .line 79
     iput-object p6, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpFilesList:Ljava/util/ArrayList;
 
-    .line 80
     iput-object p7, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mObserver:Lcom/android/server/enterprise/auditlog/IObserver;
 
-    .line 81
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
-    .line 82
     iput-wide p1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mBegin:J
 
-    .line 83
     iput-wide p3, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mEnd:J
 
-    .line 84
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpResult:Z
 
-    .line 85
     iput-boolean v2, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mIsFullDump:Z
 
-    .line 86
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +154,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryPath:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -188,33 +173,27 @@
     .end annotation
 
     .prologue
-    .line 485
     .local p2, "mDumpFilesList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     const/4 v3, 0x0
 
-    .line 487
     .local v3, "generatedFile":Ljava/io/File;
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 489
     .local v5, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     const/4 v2, 0x0
 
-    .line 490
     .local v2, "filesInCommand":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 491
     .local v10, "strBuilder":Ljava/lang/StringBuilder;
     const-string v11, "cat "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 493
     new-instance v11, Ljava/io/File;
 
     sget-object v12, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryPath:Ljava/lang/String;
@@ -223,7 +202,6 @@
 
     iput-object v11, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
-    .line 494
     iget-object v11, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
@@ -232,12 +210,10 @@
 
     if-nez v11, :cond_0
 
-    .line 495
     iget-object v11, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->mkdir()Z
 
-    .line 499
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
@@ -246,7 +222,6 @@
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 501
     :cond_1
     :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
@@ -255,14 +230,12 @@
 
     if-eqz v11, :cond_4
 
-    .line 502
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 503
     .local v6, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     invoke-virtual {v6}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getWasWritten()Z
 
@@ -270,22 +243,18 @@
 
     if-nez v11, :cond_3
 
-    .line 504
     invoke-virtual {v6}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 505
     invoke-interface {v5}, Ljava/util/Iterator;->remove()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 530
     .end local v6    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     :catch_0
     move-exception v1
 
-    .line 531
     .local v1, "e":Ljava/lang/Exception;
     const-string v11, "Dumper"
 
@@ -313,13 +282,11 @@
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 535
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_1
     return-object v3
 
-    .line 506
     .restart local v6    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     :cond_3
     :try_start_1
@@ -333,12 +300,10 @@
 
     if-eqz v11, :cond_1
 
-    .line 507
     const-string v11, " "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 508
     invoke-virtual {v6}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFile()Ljava/io/File;
 
     move-result-object v11
@@ -351,19 +316,16 @@
 
     goto :goto_0
 
-    .line 512
     .end local v6    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     :cond_4
     iget-object v11, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
     if-eqz v11, :cond_2
 
-    .line 513
     const-string v11, " > "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 514
     iget-object v11, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -372,17 +334,14 @@
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 515
     const-string v11, "/temp.gz"
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 516
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 517
     const/4 v11, 0x3
 
     new-array v0, v11, [Ljava/lang/String;
@@ -403,7 +362,6 @@
 
     aput-object v2, v0, v11
 
-    .line 520
     .local v0, "cmds":[Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -413,7 +371,6 @@
 
     move-result-object v7
 
-    .line 522
     .local v7, "proc":Ljava/lang/Process;
     new-instance v9, Ljava/io/BufferedReader;
 
@@ -427,11 +384,9 @@
 
     invoke-direct {v9, v11}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 524
     .local v9, "stdError":Ljava/io/BufferedReader;
     const-string v8, ""
 
-    .line 525
     .local v8, "s":Ljava/lang/String;
     invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -439,7 +394,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 526
     new-instance v11, Ljava/lang/Exception;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -464,7 +418,6 @@
 
     throw v11
 
-    .line 528
     :cond_5
     new-instance v4, Ljava/io/File;
 
@@ -509,43 +462,36 @@
     .locals 7
 
     .prologue
-    .line 125
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeader:Ljava/lang/StringBuilder;
 
-    .line 128
     new-instance v4, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v5, "yyyy-MM-dd \'at\' HH:mm:ss z"
+    const-string v5, "yyyy-MM-dd \'at\' HH:mm:ss z"
 
     invoke-direct {v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     iput-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeaderDate:Ljava/text/SimpleDateFormat;
 
-    .line 129
     const-string v2, "----------------------------------------------\n"
 
-    .line 131
     .local v2, "separator":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeader:Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mDeviceInfo:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 136
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     if-eqz v1, :cond_0
 
-    .line 137
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -553,7 +499,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 138
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -582,7 +527,6 @@
 
     move-result-object v3
 
-    .line 140
     .local v3, "temp":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeader:Ljava/lang/StringBuilder;
 
@@ -590,7 +534,6 @@
 
     goto :goto_0
 
-    .line 145
     .end local v3    # "temp":Ljava/lang/String;
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -627,18 +570,15 @@
 
     move-result-object v0
 
-    .line 146
     .local v0, "dateAndTime":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeader:Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 149
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mHeader:Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 151
     return-void
 .end method
 
@@ -652,14 +592,11 @@
     .end annotation
 
     .prologue
-    .line 338
     const/4 v2, 0x0
 
-    .line 339
     .local v2, "outputStream":Ljava/io/OutputStream;
     const/4 v0, 0x0
 
-    .line 342
     .local v0, "gzipStream":Ljava/util/zip/GZIPOutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -668,7 +605,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 343
     .end local v2    # "outputStream":Ljava/io/OutputStream;
     .local v3, "outputStream":Ljava/io/OutputStream;
     :try_start_1
@@ -682,7 +618,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 345
     .end local v0    # "gzipStream":Ljava/util/zip/GZIPOutputStream;
     .local v1, "gzipStream":Ljava/util/zip/GZIPOutputStream;
     :try_start_2
@@ -700,35 +635,28 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 348
     if-eqz v1, :cond_0
 
-    .line 350
     :try_start_3
     invoke-virtual {v1}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 351
     invoke-virtual {v1}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 354
     :cond_0
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 356
     :try_start_4
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 361
     :cond_1
     :goto_1
     return-void
 
-    .line 348
     .end local v1    # "gzipStream":Ljava/util/zip/GZIPOutputStream;
     .end local v3    # "outputStream":Ljava/io/OutputStream;
     .restart local v0    # "gzipStream":Ljava/util/zip/GZIPOutputStream;
@@ -739,27 +667,22 @@
     :goto_2
     if-eqz v0, :cond_2
 
-    .line 350
     :try_start_5
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 351
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 354
     :cond_2
     :goto_3
     if-eqz v2, :cond_3
 
-    .line 356
     :try_start_6
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 357
     :cond_3
     :goto_4
     throw v4
@@ -782,13 +705,11 @@
 
     goto :goto_4
 
-    .line 352
     :catch_2
     move-exception v5
 
     goto :goto_3
 
-    .line 348
     .end local v2    # "outputStream":Ljava/io/OutputStream;
     .restart local v3    # "outputStream":Ljava/io/OutputStream;
     :catchall_1
@@ -817,7 +738,6 @@
     .restart local v2    # "outputStream":Ljava/io/OutputStream;
     goto :goto_2
 
-    .line 352
     .end local v0    # "gzipStream":Ljava/util/zip/GZIPOutputStream;
     .end local v2    # "outputStream":Ljava/io/OutputStream;
     .restart local v1    # "gzipStream":Ljava/util/zip/GZIPOutputStream;
@@ -832,7 +752,6 @@
     .locals 31
 
     .prologue
-    .line 363
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpFilesList:Ljava/util/ArrayList;
@@ -843,43 +762,33 @@
 
     move-result-object v19
 
-    .line 365
     .local v19, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     sget-object v8, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryPath:Ljava/lang/String;
 
-    .line 366
     .local v8, "directoryPath":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 367
     .local v11, "fileStream":Ljava/io/InputStream;
     const/4 v13, 0x0
 
-    .line 369
     .local v13, "fileStreamFull":Ljava/io/InputStream;
     const/16 v17, 0x0
 
-    .line 370
     .local v17, "gzipStream":Ljava/io/InputStream;
     const/4 v15, 0x0
 
-    .line 371
     .local v15, "fileStreamOut":Ljava/io/OutputStream;
     const/16 v22, 0x0
 
-    .line 372
     .local v22, "mZos":Ljava/util/zip/GZIPOutputStream;
     const/4 v6, 0x0
 
-    .line 373
     .local v6, "decoder":Ljava/io/Reader;
     const/4 v4, 0x0
 
-    .line 375
     .local v4, "bufferedReader":Ljava/io/BufferedReader;
     const/16 v25, 0x0
 
-    .line 378
     .local v25, "tempHeaderFile":Ljava/io/File;
     :try_start_0
     new-instance v16, Ljava/io/FileOutputStream;
@@ -903,7 +812,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_15
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 379
     .end local v15    # "fileStreamOut":Ljava/io/OutputStream;
     .local v16, "fileStreamOut":Ljava/io/OutputStream;
     :try_start_1
@@ -926,7 +834,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_16
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 381
     .end local v22    # "mZos":Ljava/util/zip/GZIPOutputStream;
     .local v23, "mZos":Ljava/util/zip/GZIPOutputStream;
     :try_start_2
@@ -955,7 +862,6 @@
     .local v18, "gzipStream":Ljava/io/InputStream;
     move-object v12, v11
 
-    .line 382
     .end local v11    # "fileStream":Ljava/io/InputStream;
     .local v12, "fileStream":Ljava/io/InputStream;
     :cond_0
@@ -967,14 +873,12 @@
 
     if-eqz v27, :cond_1e
 
-    .line 383
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v24
 
     check-cast v24, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 384
     .local v24, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     invoke-virtual/range {v24 .. v24}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getWasWritten()Z
 
@@ -982,10 +886,8 @@
 
     if-nez v27, :cond_8
 
-    .line 385
     invoke-virtual/range {v24 .. v24}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 386
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->remove()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -993,7 +895,6 @@
 
     goto :goto_0
 
-    .line 426
     .end local v24    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     :catch_0
     move-exception v9
@@ -1020,7 +921,6 @@
     .restart local v17    # "gzipStream":Ljava/io/InputStream;
     move-object v11, v12
 
-    .line 427
     .end local v12    # "fileStream":Ljava/io/InputStream;
     .local v9, "e":Ljava/lang/Exception;
     .restart local v11    # "fileStream":Ljava/io/InputStream;
@@ -1034,14 +934,13 @@
 
     iput-boolean v0, v1, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpResult:Z
 
-    .line 428
     const-string v27, "Dumper"
 
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v29, "fullDump.Exception: "
+    const-string v29, "fullDump.Exception: "
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1061,7 +960,6 @@
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 429
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v27
@@ -1080,87 +978,70 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 432
     if-eqz v25, :cond_1
 
-    .line 433
     invoke-virtual/range {v25 .. v25}, Ljava/io/File;->delete()Z
 
-    .line 437
     :cond_1
     if-eqz v22, :cond_2
 
-    .line 438
     :try_start_5
     invoke-virtual/range {v22 .. v22}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 439
     invoke-virtual/range {v22 .. v22}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_9
 
-    .line 445
     .end local v9    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_2
     if-eqz v4, :cond_3
 
-    .line 447
     :try_start_6
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_a
 
-    .line 452
     :cond_3
     :goto_3
     if-eqz v17, :cond_4
 
-    .line 454
     :try_start_7
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_b
 
-    .line 460
     :cond_4
     :goto_4
     if-eqz v11, :cond_5
 
-    .line 462
     :try_start_8
     invoke-virtual {v11}, Ljava/io/InputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_c
 
-    .line 467
     :cond_5
     :goto_5
     if-eqz v15, :cond_6
 
-    .line 469
     :try_start_9
     invoke-virtual {v15}, Ljava/io/OutputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_d
 
-    .line 474
     :cond_6
     :goto_6
     if-eqz v13, :cond_7
 
-    .line 476
     :try_start_a
     invoke-virtual {v13}, Ljava/io/InputStream;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_e
 
-    .line 482
     :cond_7
     :goto_7
     return-void
 
-    .line 388
     .end local v4    # "bufferedReader":Ljava/io/BufferedReader;
     .end local v6    # "decoder":Ljava/io/Reader;
     .end local v11    # "fileStream":Ljava/io/InputStream;
@@ -1186,7 +1067,6 @@
 
     if-eqz v27, :cond_0
 
-    .line 390
     new-instance v11, Ljava/io/FileInputStream;
 
     invoke-virtual/range {v24 .. v24}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFile()Ljava/io/File;
@@ -1200,7 +1080,6 @@
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_0
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    .line 391
     .end local v12    # "fileStream":Ljava/io/InputStream;
     .restart local v11    # "fileStream":Ljava/io/InputStream;
     :try_start_c
@@ -1213,7 +1092,6 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_17
     .catchall {:try_start_c .. :try_end_c} :catchall_4
 
-    .line 392
     .end local v18    # "gzipStream":Ljava/io/InputStream;
     .restart local v17    # "gzipStream":Ljava/io/InputStream;
     :try_start_d
@@ -1230,7 +1108,6 @@
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_18
     .catchall {:try_start_d .. :try_end_d} :catchall_5
 
-    .line 393
     .end local v7    # "decoder":Ljava/io/Reader;
     .restart local v6    # "decoder":Ljava/io/Reader;
     :try_start_e
@@ -1241,7 +1118,6 @@
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_19
     .catchall {:try_start_e .. :try_end_e} :catchall_6
 
-    .line 395
     .end local v5    # "bufferedReader":Ljava/io/BufferedReader;
     .restart local v4    # "bufferedReader":Ljava/io/BufferedReader;
     :cond_9
@@ -1254,7 +1130,6 @@
     .local v21, "line":Ljava/lang/String;
     if-eqz v21, :cond_a
 
-    .line 396
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mFilter:Lcom/android/server/enterprise/auditlog/Filter;
@@ -1271,7 +1146,6 @@
 
     if-eqz v27, :cond_9
 
-    .line 397
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -1306,7 +1180,6 @@
 
     goto :goto_8
 
-    .line 426
     .end local v21    # "line":Ljava/lang/String;
     .end local v24    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     :catch_1
@@ -1343,12 +1216,10 @@
     .restart local v18    # "gzipStream":Ljava/io/InputStream;
     move-object v12, v11
 
-    .line 397
     .end local v11    # "fileStream":Ljava/io/InputStream;
     .restart local v12    # "fileStream":Ljava/io/InputStream;
     goto/16 :goto_0
 
-    .line 404
     .end local v5    # "bufferedReader":Ljava/io/BufferedReader;
     .end local v7    # "decoder":Ljava/io/Reader;
     .end local v12    # "fileStream":Ljava/io/InputStream;
@@ -1362,7 +1233,6 @@
     :cond_b
     if-eqz v8, :cond_e
 
-    .line 406
     new-instance v27, Ljava/io/File;
 
     sget-object v28, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryPath:Ljava/lang/String;
@@ -1375,7 +1245,6 @@
 
     iput-object v0, v1, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
-    .line 407
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
@@ -1388,7 +1257,6 @@
 
     if-nez v27, :cond_c
 
-    .line 408
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
@@ -1397,7 +1265,6 @@
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/File;->mkdir()Z
 
-    .line 410
     :cond_c
     new-instance v26, Ljava/io/File;
 
@@ -1434,7 +1301,6 @@
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_1
     .catchall {:try_start_f .. :try_end_f} :catchall_2
 
-    .line 411
     .end local v25    # "tempHeaderFile":Ljava/io/File;
     .local v26, "tempHeaderFile":Ljava/io/File;
     :try_start_10
@@ -1444,7 +1310,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/auditlog/Dumper;->createHeaderTempFile(Ljava/io/File;)V
 
-    .line 412
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpFilesList:Ljava/util/ArrayList;
@@ -1461,11 +1326,9 @@
 
     move-result-object v10
 
-    .line 413
     .local v10, "f":Ljava/io/File;
     if-eqz v10, :cond_1d
 
-    .line 416
     new-instance v14, Ljava/io/FileInputStream;
 
     invoke-direct {v14, v10}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -1473,7 +1336,6 @@
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_1a
     .catchall {:try_start_10 .. :try_end_10} :catchall_7
 
-    .line 417
     .end local v13    # "fileStreamFull":Ljava/io/InputStream;
     .local v14, "fileStreamFull":Ljava/io/InputStream;
     const/high16 v27, 0x10000
@@ -1483,7 +1345,6 @@
 
     new-array v3, v0, [B
 
-    .line 419
     .local v3, "buffer":[B
     :goto_9
     invoke-virtual {v14, v3}, Ljava/io/InputStream;->read([B)I
@@ -1493,7 +1354,6 @@
     .local v20, "length":I
     if-lez v20, :cond_d
 
-    .line 420
     const/16 v27, 0x0
 
     move-object/from16 v0, v16
@@ -1506,7 +1366,6 @@
 
     goto :goto_9
 
-    .line 426
     .end local v3    # "buffer":[B
     .end local v20    # "length":I
     :catch_2
@@ -1530,7 +1389,6 @@
     .restart local v13    # "fileStreamFull":Ljava/io/InputStream;
     goto/16 :goto_1
 
-    .line 422
     .end local v13    # "fileStreamFull":Ljava/io/InputStream;
     .end local v15    # "fileStreamOut":Ljava/io/OutputStream;
     .end local v22    # "mZos":Ljava/util/zip/GZIPOutputStream;
@@ -1553,7 +1411,6 @@
     .restart local v25    # "tempHeaderFile":Ljava/io/File;
     move-object v13, v14
 
-    .line 432
     .end local v3    # "buffer":[B
     .end local v10    # "f":Ljava/io/File;
     .end local v14    # "fileStreamFull":Ljava/io/InputStream;
@@ -1563,72 +1420,58 @@
     :goto_a
     if-eqz v25, :cond_f
 
-    .line 433
     invoke-virtual/range {v25 .. v25}, Ljava/io/File;->delete()Z
 
-    .line 437
     :cond_f
     if-eqz v23, :cond_10
 
-    .line 438
     :try_start_12
     invoke-virtual/range {v23 .. v23}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 439
     invoke-virtual/range {v23 .. v23}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_12
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_3
 
-    .line 445
     :cond_10
     :goto_b
     if-eqz v4, :cond_11
 
-    .line 447
     :try_start_13
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_4
 
-    .line 452
     :cond_11
     :goto_c
     if-eqz v17, :cond_12
 
-    .line 454
     :try_start_14
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_14
     .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_5
 
-    .line 460
     :cond_12
     :goto_d
     if-eqz v11, :cond_13
 
-    .line 462
     :try_start_15
     invoke-virtual {v11}, Ljava/io/InputStream;->close()V
     :try_end_15
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_6
 
-    .line 467
     :cond_13
     :goto_e
     if-eqz v16, :cond_14
 
-    .line 469
     :try_start_16
     invoke-virtual/range {v16 .. v16}, Ljava/io/OutputStream;->close()V
     :try_end_16
     .catch Ljava/io/IOException; {:try_start_16 .. :try_end_16} :catch_7
 
-    .line 474
     :cond_14
     :goto_f
     if-eqz v13, :cond_1c
 
-    .line 476
     :try_start_17
     invoke-virtual {v13}, Ljava/io/InputStream;->close()V
     :try_end_17
@@ -1640,12 +1483,10 @@
     .restart local v22    # "mZos":Ljava/util/zip/GZIPOutputStream;
     move-object/from16 v15, v16
 
-    .line 479
     .end local v16    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v15    # "fileStreamOut":Ljava/io/OutputStream;
     goto/16 :goto_7
 
-    .line 441
     .end local v15    # "fileStreamOut":Ljava/io/OutputStream;
     .end local v22    # "mZos":Ljava/util/zip/GZIPOutputStream;
     .restart local v16    # "fileStreamOut":Ljava/io/OutputStream;
@@ -1653,7 +1494,6 @@
     :catch_3
     move-exception v9
 
-    .line 442
     .local v9, "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
@@ -1661,7 +1501,7 @@
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v29, "run.IOException "
+    const-string v29, "run.IOException "
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1683,76 +1523,66 @@
 
     goto :goto_b
 
-    .line 448
     .end local v9    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v9
 
-    .line 449
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close bufferedReader at fullDump"
+    const-string v28, "failed to close bufferedReader at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_c
 
-    .line 456
     .end local v9    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v9
 
-    .line 457
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close gizp stream at fullDump"
+    const-string v28, "failed to close gizp stream at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_d
 
-    .line 463
     .end local v9    # "e":Ljava/io/IOException;
     :catch_6
     move-exception v9
 
-    .line 464
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close fileStream at fullDump"
+    const-string v28, "failed to close fileStream at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_e
 
-    .line 470
     .end local v9    # "e":Ljava/io/IOException;
     :catch_7
     move-exception v9
 
-    .line 471
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close outStream at fullDump"
+    const-string v28, "failed to close outStream at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_f
 
-    .line 477
     .end local v9    # "e":Ljava/io/IOException;
     :catch_8
     move-exception v9
 
-    .line 478
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close fileStreamFull at fullDump"
+    const-string v28, "failed to close fileStreamFull at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1762,17 +1592,14 @@
     .restart local v22    # "mZos":Ljava/util/zip/GZIPOutputStream;
     move-object/from16 v15, v16
 
-    .line 479
     .end local v16    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v15    # "fileStreamOut":Ljava/io/OutputStream;
     goto/16 :goto_7
 
-    .line 441
     .local v9, "e":Ljava/lang/Exception;
     :catch_9
     move-exception v9
 
-    .line 442
     .local v9, "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
@@ -1780,7 +1607,7 @@
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v29, "run.IOException "
+    const-string v29, "run.IOException "
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1802,82 +1629,71 @@
 
     goto/16 :goto_2
 
-    .line 448
     .end local v9    # "e":Ljava/io/IOException;
     :catch_a
     move-exception v9
 
-    .line 449
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close bufferedReader at fullDump"
+    const-string v28, "failed to close bufferedReader at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
-    .line 456
     .end local v9    # "e":Ljava/io/IOException;
     :catch_b
     move-exception v9
 
-    .line 457
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close gizp stream at fullDump"
+    const-string v28, "failed to close gizp stream at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_4
 
-    .line 463
     .end local v9    # "e":Ljava/io/IOException;
     :catch_c
     move-exception v9
 
-    .line 464
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close fileStream at fullDump"
+    const-string v28, "failed to close fileStream at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
-    .line 470
     .end local v9    # "e":Ljava/io/IOException;
     :catch_d
     move-exception v9
 
-    .line 471
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close outStream at fullDump"
+    const-string v28, "failed to close outStream at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_6
 
-    .line 477
     .end local v9    # "e":Ljava/io/IOException;
     :catch_e
     move-exception v9
 
-    .line 478
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v27, "Dumper"
 
-    const-string/jumbo v28, "failed to close fileStreamFull at fullDump"
+    const-string v28, "failed to close fileStreamFull at fullDump"
 
     invoke-static/range {v27 .. v28}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_7
 
-    .line 432
     .end local v9    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v27
@@ -1885,87 +1701,70 @@
     :goto_10
     if-eqz v25, :cond_15
 
-    .line 433
     invoke-virtual/range {v25 .. v25}, Ljava/io/File;->delete()Z
 
-    .line 437
     :cond_15
     if-eqz v22, :cond_16
 
-    .line 438
     :try_start_18
     invoke-virtual/range {v22 .. v22}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 439
     invoke-virtual/range {v22 .. v22}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_18
     .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_f
 
-    .line 445
     :cond_16
     :goto_11
     if-eqz v4, :cond_17
 
-    .line 447
     :try_start_19
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_19
     .catch Ljava/io/IOException; {:try_start_19 .. :try_end_19} :catch_10
 
-    .line 452
     :cond_17
     :goto_12
     if-eqz v17, :cond_18
 
-    .line 454
     :try_start_1a
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_1a
     .catch Ljava/io/IOException; {:try_start_1a .. :try_end_1a} :catch_11
 
-    .line 460
     :cond_18
     :goto_13
     if-eqz v11, :cond_19
 
-    .line 462
     :try_start_1b
     invoke-virtual {v11}, Ljava/io/InputStream;->close()V
     :try_end_1b
     .catch Ljava/io/IOException; {:try_start_1b .. :try_end_1b} :catch_12
 
-    .line 467
     :cond_19
     :goto_14
     if-eqz v15, :cond_1a
 
-    .line 469
     :try_start_1c
     invoke-virtual {v15}, Ljava/io/OutputStream;->close()V
     :try_end_1c
     .catch Ljava/io/IOException; {:try_start_1c .. :try_end_1c} :catch_13
 
-    .line 474
     :cond_1a
     :goto_15
     if-eqz v13, :cond_1b
 
-    .line 476
     :try_start_1d
     invoke-virtual {v13}, Ljava/io/InputStream;->close()V
     :try_end_1d
     .catch Ljava/io/IOException; {:try_start_1d .. :try_end_1d} :catch_14
 
-    .line 479
     :cond_1b
     :goto_16
     throw v27
 
-    .line 441
     :catch_f
     move-exception v9
 
-    .line 442
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v28, "Dumper"
 
@@ -1973,7 +1772,7 @@
 
     invoke-direct/range {v29 .. v29}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v30, "run.IOException "
+    const-string v30, "run.IOException "
 
     invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1995,82 +1794,71 @@
 
     goto :goto_11
 
-    .line 448
     .end local v9    # "e":Ljava/io/IOException;
     :catch_10
     move-exception v9
 
-    .line 449
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v28, "Dumper"
 
-    const-string/jumbo v29, "failed to close bufferedReader at fullDump"
+    const-string v29, "failed to close bufferedReader at fullDump"
 
     invoke-static/range {v28 .. v29}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_12
 
-    .line 456
     .end local v9    # "e":Ljava/io/IOException;
     :catch_11
     move-exception v9
 
-    .line 457
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v28, "Dumper"
 
-    const-string/jumbo v29, "failed to close gizp stream at fullDump"
+    const-string v29, "failed to close gizp stream at fullDump"
 
     invoke-static/range {v28 .. v29}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_13
 
-    .line 463
     .end local v9    # "e":Ljava/io/IOException;
     :catch_12
     move-exception v9
 
-    .line 464
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v28, "Dumper"
 
-    const-string/jumbo v29, "failed to close fileStream at fullDump"
+    const-string v29, "failed to close fileStream at fullDump"
 
     invoke-static/range {v28 .. v29}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_14
 
-    .line 470
     .end local v9    # "e":Ljava/io/IOException;
     :catch_13
     move-exception v9
 
-    .line 471
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v28, "Dumper"
 
-    const-string/jumbo v29, "failed to close outStream at fullDump"
+    const-string v29, "failed to close outStream at fullDump"
 
     invoke-static/range {v28 .. v29}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_15
 
-    .line 477
     .end local v9    # "e":Ljava/io/IOException;
     :catch_14
     move-exception v9
 
-    .line 478
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v28, "Dumper"
 
-    const-string/jumbo v29, "failed to close fileStreamFull at fullDump"
+    const-string v29, "failed to close fileStreamFull at fullDump"
 
     invoke-static/range {v28 .. v29}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_16
 
-    .line 432
     .end local v9    # "e":Ljava/io/IOException;
     .end local v15    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v16    # "fileStreamOut":Ljava/io/OutputStream;
@@ -2283,7 +2071,6 @@
     .restart local v13    # "fileStreamFull":Ljava/io/InputStream;
     goto/16 :goto_10
 
-    .line 426
     .end local v10    # "f":Ljava/io/File;
     :catch_15
     move-exception v9
@@ -2476,38 +2263,29 @@
     .param p1, "f"    # Ljava/io/File;
 
     .prologue
-    .line 256
     const-wide/16 v2, 0x0
 
-    .line 260
     .local v2, "aTime":J
     const/16 v18, 0x0
 
-    .line 261
     .local v18, "returnFile":Ljava/io/File;
     const/4 v13, 0x0
 
-    .line 262
     .local v13, "gZipOut":Ljava/util/zip/GZIPOutputStream;
     const/4 v11, 0x0
 
-    .line 265
     .local v11, "fileStreamOut":Ljava/io/OutputStream;
     const/4 v9, 0x0
 
-    .line 266
     .local v9, "fileStream":Ljava/io/InputStream;
     const/4 v15, 0x0
 
-    .line 267
     .local v15, "gzipStream":Ljava/io/InputStream;
     const/4 v6, 0x0
 
-    .line 268
     .local v6, "decoder":Ljava/io/Reader;
     const/4 v4, 0x0
 
-    .line 271
     .local v4, "bufferedReader":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v21, Ljava/io/File;
@@ -2522,7 +2300,6 @@
 
     iput-object v0, v1, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
-    .line 272
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
@@ -2535,7 +2312,6 @@
 
     if-nez v21, :cond_0
 
-    .line 273
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
@@ -2544,7 +2320,6 @@
 
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->mkdir()Z
 
-    .line 276
     :cond_0
     new-instance v19, Ljava/io/File;
 
@@ -2593,7 +2368,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 277
     .end local v18    # "returnFile":Ljava/io/File;
     .local v19, "returnFile":Ljava/io/File;
     :try_start_1
@@ -2606,7 +2380,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 278
     .end local v11    # "fileStreamOut":Ljava/io/OutputStream;
     .local v12, "fileStreamOut":Ljava/io/OutputStream;
     :try_start_2
@@ -2625,7 +2398,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 280
     .end local v13    # "gZipOut":Ljava/util/zip/GZIPOutputStream;
     .local v14, "gZipOut":Ljava/util/zip/GZIPOutputStream;
     :try_start_3
@@ -2638,7 +2410,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
-    .line 281
     .end local v9    # "fileStream":Ljava/io/InputStream;
     .local v10, "fileStream":Ljava/io/InputStream;
     :try_start_4
@@ -2651,7 +2422,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_6
     .catchall {:try_start_4 .. :try_end_4} :catchall_5
 
-    .line 282
     .end local v15    # "gzipStream":Ljava/io/InputStream;
     .local v16, "gzipStream":Ljava/io/InputStream;
     :try_start_5
@@ -2668,7 +2438,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_7
     .catchall {:try_start_5 .. :try_end_5} :catchall_6
 
-    .line 283
     .end local v6    # "decoder":Ljava/io/Reader;
     .local v7, "decoder":Ljava/io/Reader;
     :try_start_6
@@ -2679,7 +2448,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_8
     .catchall {:try_start_6 .. :try_end_6} :catchall_7
 
-    .line 284
     .end local v4    # "bufferedReader":Ljava/io/BufferedReader;
     .local v5, "bufferedReader":Ljava/io/BufferedReader;
     :cond_1
@@ -2692,7 +2460,6 @@
     .local v17, "line":Ljava/lang/String;
     if-eqz v17, :cond_2
 
-    .line 285
     const-string v21, " "
 
     move-object/from16 v0, v17
@@ -2706,7 +2473,6 @@
 
     move-result-object v20
 
-    .line 287
     .local v20, "time":[Ljava/lang/String;
     const/16 v21, 0x0
 
@@ -2725,7 +2491,6 @@
 
     move-result-wide v2
 
-    .line 292
     :try_start_9
     move-object/from16 v0, p0
 
@@ -2740,24 +2505,18 @@
 
     if-lez v21, :cond_3
 
-    .line 311
     .end local v20    # "time":[Ljava/lang/String;
     :cond_2
     invoke-static {v5}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 312
     invoke-static {v7}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 313
     invoke-static/range {v16 .. v16}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 314
     invoke-static {v10}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 315
     invoke-static {v14}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 316
     invoke-static {v12}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
     move-object v4, v5
@@ -2786,14 +2545,12 @@
     .restart local v13    # "gZipOut":Ljava/util/zip/GZIPOutputStream;
     move-object/from16 v18, v19
 
-    .line 318
     .end local v17    # "line":Ljava/lang/String;
     .end local v19    # "returnFile":Ljava/io/File;
     .restart local v18    # "returnFile":Ljava/io/File;
     :goto_1
     return-object v18
 
-    .line 288
     .end local v4    # "bufferedReader":Ljava/io/BufferedReader;
     .end local v6    # "decoder":Ljava/io/Reader;
     .end local v9    # "fileStream":Ljava/io/InputStream;
@@ -2813,11 +2570,9 @@
     :catch_0
     move-exception v8
 
-    .line 289
     .local v8, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 
-    .line 295
     .end local v8    # "e":Ljava/lang/NumberFormatException;
     :cond_3
     :try_start_a
@@ -2841,7 +2596,6 @@
 
     if-gtz v21, :cond_1
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mFilter:Lcom/android/server/enterprise/auditlog/Filter;
@@ -2850,7 +2604,6 @@
 
     if-eqz v21, :cond_4
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mFilter:Lcom/android/server/enterprise/auditlog/Filter;
@@ -2867,7 +2620,6 @@
 
     if-eqz v21, :cond_1
 
-    .line 298
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -2903,7 +2655,6 @@
 
     goto/16 :goto_0
 
-    .line 307
     .end local v17    # "line":Ljava/lang/String;
     .end local v20    # "time":[Ljava/lang/String;
     :catch_1
@@ -2935,7 +2686,6 @@
     .restart local v13    # "gZipOut":Ljava/util/zip/GZIPOutputStream;
     move-object/from16 v18, v19
 
-    .line 308
     .end local v19    # "returnFile":Ljava/io/File;
     .local v8, "e":Ljava/lang/Exception;
     .restart local v18    # "returnFile":Ljava/io/File;
@@ -2943,11 +2693,10 @@
     :try_start_b
     const-string v21, "Dumper"
 
-    const-string/jumbo v22, "readFileLineByLine.IOException"
+    const-string v22, "readFileLineByLine.IOException"
 
     invoke-static/range {v21 .. v22}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 309
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v21
@@ -2966,27 +2715,20 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 311
     invoke-static {v4}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 312
     invoke-static {v6}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 313
     invoke-static {v15}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 314
     invoke-static {v9}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 315
     invoke-static {v13}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 316
     invoke-static {v11}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
     goto/16 :goto_1
 
-    .line 301
     .end local v4    # "bufferedReader":Ljava/io/BufferedReader;
     .end local v6    # "decoder":Ljava/io/Reader;
     .end local v8    # "e":Ljava/lang/Exception;
@@ -3041,7 +2783,6 @@
 
     goto/16 :goto_0
 
-    .line 311
     .end local v17    # "line":Ljava/lang/String;
     .end local v20    # "time":[Ljava/lang/String;
     :catchall_0
@@ -3078,24 +2819,18 @@
     :goto_3
     invoke-static {v4}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 312
     invoke-static {v6}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 313
     invoke-static {v15}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 314
     invoke-static {v9}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 315
     invoke-static {v13}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
-    .line 316
     invoke-static {v11}, Lcom/android/server/enterprise/auditlog/Dumper;->safeClose(Ljava/io/Closeable;)V
 
     throw v21
 
-    .line 311
     :catchall_1
     move-exception v21
 
@@ -3257,7 +2992,6 @@
     .restart local v18    # "returnFile":Ljava/io/File;
     goto :goto_3
 
-    .line 307
     :catch_2
     move-exception v8
 
@@ -3425,25 +3159,20 @@
     .param p0, "closeable"    # Ljava/io/Closeable;
 
     .prologue
-    .line 322
     if-eqz p0, :cond_0
 
-    .line 324
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 329
     :cond_0
     :goto_0
     return-void
 
-    .line 325
     :catch_0
     move-exception v0
 
-    .line 326
     .local v0, "ioE":Ljava/io/IOException;
     const-string v1, "Dumper"
 
@@ -3458,7 +3187,6 @@
     .locals 24
 
     .prologue
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpFilesList:Ljava/util/ArrayList;
@@ -3469,41 +3197,32 @@
 
     move-result-object v12
 
-    .line 156
     .local v12, "li":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     const/16 v18, 0x0
 
-    .line 157
     .local v18, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     const/4 v8, 0x1
 
-    .line 159
     .local v8, "firstFile":Z
     const/4 v9, 0x0
 
-    .line 160
     .local v9, "initFile":Ljava/io/File;
     const/4 v4, 0x0
 
-    .line 161
     .local v4, "endFile":Ljava/io/File;
     const/16 v17, 0x0
 
-    .line 162
     .local v17, "pfInitial":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     const/16 v16, 0x0
 
-    .line 163
     .local v16, "pfFinal":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 164
     .local v13, "listNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     const/16 v19, 0x0
 
-    .line 166
     .local v19, "tempHeaderFile":Ljava/io/File;
     :cond_0
     :goto_0
@@ -3513,7 +3232,6 @@
 
     if-eqz v20, :cond_3
 
-    .line 167
     invoke-interface {v12}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v18
@@ -3521,7 +3239,6 @@
     .end local v18    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     check-cast v18, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 168
     .restart local v18    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     invoke-virtual/range {v18 .. v18}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getTimestamp()J
 
@@ -3537,17 +3254,14 @@
 
     if-ltz v20, :cond_0
 
-    .line 171
     if-eqz v8, :cond_1
 
-    .line 172
     invoke-interface {v12}, Ljava/util/ListIterator;->hasPrevious()Z
 
     move-result v20
 
     if-eqz v20, :cond_1
 
-    .line 173
     invoke-virtual/range {v18 .. v18}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFile()Ljava/io/File;
 
     move-result-object v20
@@ -3560,7 +3274,6 @@
 
     move-result-object v9
 
-    .line 174
     new-instance v17, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     .end local v17    # "pfInitial":Lcom/android/server/enterprise/auditlog/PartialFileNode;
@@ -3572,7 +3285,6 @@
 
     invoke-direct {v0, v9, v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 176
     .restart local v17    # "pfInitial":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     const/16 v20, 0x1
 
@@ -3582,18 +3294,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setWasWritten(Z)V
 
-    .line 177
     move-object/from16 v0, v17
 
     invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 178
     const/4 v8, 0x0
 
-    .line 179
     goto :goto_0
 
-    .line 182
     :cond_1
     invoke-virtual/range {v18 .. v18}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getTimestamp()J
 
@@ -3609,14 +3317,12 @@
 
     if-gez v20, :cond_2
 
-    .line 183
     move-object/from16 v0, v18
 
     invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 185
     :cond_2
     invoke-virtual/range {v18 .. v18}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFile()Ljava/io/File;
 
@@ -3630,7 +3336,6 @@
 
     move-result-object v4
 
-    .line 186
     new-instance v16, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     .end local v16    # "pfFinal":Lcom/android/server/enterprise/auditlog/PartialFileNode;
@@ -3642,7 +3347,6 @@
 
     invoke-direct {v0, v4, v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 188
     .restart local v16    # "pfFinal":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     const/16 v20, 0x1
 
@@ -3652,12 +3356,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setWasWritten(Z)V
 
-    .line 189
     move-object/from16 v0, v16
 
     invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 194
     :cond_3
     new-instance v20, Ljava/io/File;
 
@@ -3671,7 +3373,6 @@
 
     iput-object v0, v1, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
 
-    .line 195
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
@@ -3684,7 +3385,6 @@
 
     if-nez v20, :cond_4
 
-    .line 196
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/Dumper;->mTemporaryDirectory:Ljava/io/File;
@@ -3693,7 +3393,6 @@
 
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->mkdir()Z
 
-    .line 199
     :cond_4
     new-instance v19, Ljava/io/File;
 
@@ -3728,19 +3427,15 @@
 
     invoke-direct/range {v19 .. v20}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 200
     .restart local v19    # "tempHeaderFile":Ljava/io/File;
     const/4 v5, 0x0
 
-    .line 201
     .local v5, "f":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 202
     .local v6, "fileStream":Ljava/io/InputStream;
     const/4 v14, 0x0
 
-    .line 204
     .local v14, "outStream":Ljava/io/OutputStream;
     :try_start_0
     move-object/from16 v0, p0
@@ -3749,7 +3444,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/auditlog/Dumper;->createHeaderTempFile(Ljava/io/File;)V
 
-    .line 205
     move-object/from16 v0, p0
 
     move-object/from16 v1, v19
@@ -3758,10 +3452,8 @@
 
     move-result-object v5
 
-    .line 207
     if-eqz v5, :cond_d
 
-    .line 210
     new-instance v7, Ljava/io/FileInputStream;
 
     invoke-direct {v7, v5}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -3769,7 +3461,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_7
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 211
     .end local v6    # "fileStream":Ljava/io/InputStream;
     .local v7, "fileStream":Ljava/io/InputStream;
     :try_start_1
@@ -3792,7 +3483,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_8
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 212
     .end local v14    # "outStream":Ljava/io/OutputStream;
     .local v15, "outStream":Ljava/io/OutputStream;
     const/high16 v20, 0x10000
@@ -3802,7 +3492,6 @@
 
     new-array v2, v0, [B
 
-    .line 214
     .local v2, "buffer":[B
     :goto_1
     invoke-virtual {v7, v2}, Ljava/io/InputStream;->read([B)I
@@ -3812,7 +3501,6 @@
     .local v11, "length":I
     if-lez v11, :cond_c
 
-    .line 215
     const/16 v20, 0x0
 
     move/from16 v0, v20
@@ -3824,7 +3512,6 @@
 
     goto :goto_1
 
-    .line 219
     .end local v2    # "buffer":[B
     .end local v11    # "length":I
     :catch_0
@@ -3836,7 +3523,6 @@
     .restart local v14    # "outStream":Ljava/io/OutputStream;
     move-object v6, v7
 
-    .line 220
     .end local v7    # "fileStream":Ljava/io/InputStream;
     .local v3, "e":Ljava/lang/Exception;
     .restart local v6    # "fileStream":Ljava/io/InputStream;
@@ -3848,7 +3534,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 221
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v20
@@ -3867,62 +3552,47 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 223
     if-eqz v9, :cond_5
 
-    .line 224
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 226
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 227
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 229
     :cond_6
     if-eqz v16, :cond_7
 
-    .line 230
     invoke-virtual/range {v16 .. v16}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 232
     :cond_7
     if-eqz v17, :cond_8
 
-    .line 233
     invoke-virtual/range {v17 .. v17}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 235
     :cond_8
     if-eqz v5, :cond_9
 
-    .line 236
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 238
     :cond_9
     if-eqz v6, :cond_a
 
-    .line 240
     :try_start_4
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 245
     :cond_a
     :goto_3
     if-eqz v14, :cond_b
 
-    .line 247
     :try_start_5
     invoke-virtual {v14}, Ljava/io/OutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 254
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_b
     :goto_4
@@ -3941,7 +3611,6 @@
     .restart local v14    # "outStream":Ljava/io/OutputStream;
     move-object v6, v7
 
-    .line 223
     .end local v2    # "buffer":[B
     .end local v7    # "fileStream":Ljava/io/InputStream;
     .end local v11    # "length":I
@@ -3949,53 +3618,40 @@
     :cond_d
     if-eqz v9, :cond_e
 
-    .line 224
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 226
     :cond_e
     if-eqz v4, :cond_f
 
-    .line 227
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 229
     :cond_f
     if-eqz v16, :cond_10
 
-    .line 230
     invoke-virtual/range {v16 .. v16}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 232
     :cond_10
     if-eqz v17, :cond_11
 
-    .line 233
     invoke-virtual/range {v17 .. v17}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 235
     :cond_11
     if-eqz v5, :cond_12
 
-    .line 236
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 238
     :cond_12
     if-eqz v6, :cond_13
 
-    .line 240
     :try_start_6
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 245
     :cond_13
     :goto_5
     if-eqz v14, :cond_b
 
-    .line 247
     :try_start_7
     invoke-virtual {v14}, Ljava/io/OutputStream;->close()V
     :try_end_7
@@ -4003,11 +3659,9 @@
 
     goto :goto_4
 
-    .line 248
     :catch_1
     move-exception v10
 
-    .line 249
     .local v10, "ioex":Ljava/lang/Exception;
     const-string v20, "Dumper"
 
@@ -4019,43 +3673,37 @@
 
     goto :goto_4
 
-    .line 241
     .end local v10    # "ioex":Ljava/lang/Exception;
     :catch_2
     move-exception v10
 
-    .line 242
     .local v10, "ioex":Ljava/io/IOException;
     const-string v20, "Dumper"
 
-    const-string/jumbo v21, "failed to close input stream file at selectDumpInterval"
+    const-string v21, "failed to close input stream file at selectDumpInterval"
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 
-    .line 241
     .end local v10    # "ioex":Ljava/io/IOException;
     .restart local v3    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v10
 
-    .line 242
     .restart local v10    # "ioex":Ljava/io/IOException;
     const-string v20, "Dumper"
 
-    const-string/jumbo v21, "failed to close input stream file at selectDumpInterval"
+    const-string v21, "failed to close input stream file at selectDumpInterval"
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 248
     .end local v10    # "ioex":Ljava/io/IOException;
     :catch_4
     move-exception v10
 
-    .line 249
     .local v10, "ioex":Ljava/lang/Exception;
     const-string v20, "Dumper"
 
@@ -4067,7 +3715,6 @@
 
     goto :goto_4
 
-    .line 223
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v10    # "ioex":Ljava/lang/Exception;
     :catchall_0
@@ -4076,83 +3723,65 @@
     :goto_6
     if-eqz v9, :cond_14
 
-    .line 224
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 226
     :cond_14
     if-eqz v4, :cond_15
 
-    .line 227
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 229
     :cond_15
     if-eqz v16, :cond_16
 
-    .line 230
     invoke-virtual/range {v16 .. v16}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 232
     :cond_16
     if-eqz v17, :cond_17
 
-    .line 233
     invoke-virtual/range {v17 .. v17}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 235
     :cond_17
     if-eqz v5, :cond_18
 
-    .line 236
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 238
     :cond_18
     if-eqz v6, :cond_19
 
-    .line 240
     :try_start_8
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 245
     :cond_19
     :goto_7
     if-eqz v14, :cond_1a
 
-    .line 247
     :try_start_9
     invoke-virtual {v14}, Ljava/io/OutputStream;->close()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_6
 
-    .line 250
     :cond_1a
     :goto_8
     throw v20
 
-    .line 241
     :catch_5
     move-exception v10
 
-    .line 242
     .local v10, "ioex":Ljava/io/IOException;
     const-string v21, "Dumper"
 
-    const-string/jumbo v22, "failed to close input stream file at selectDumpInterval"
+    const-string v22, "failed to close input stream file at selectDumpInterval"
 
     invoke-static/range {v21 .. v22}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_7
 
-    .line 248
     .end local v10    # "ioex":Ljava/io/IOException;
     :catch_6
     move-exception v10
 
-    .line 249
     .local v10, "ioex":Ljava/lang/Exception;
     const-string v21, "Dumper"
 
@@ -4164,7 +3793,6 @@
 
     goto :goto_8
 
-    .line 223
     .end local v6    # "fileStream":Ljava/io/InputStream;
     .end local v10    # "ioex":Ljava/lang/Exception;
     .restart local v7    # "fileStream":Ljava/io/InputStream;
@@ -4194,7 +3822,6 @@
     .restart local v6    # "fileStream":Ljava/io/InputStream;
     goto :goto_6
 
-    .line 219
     :catch_7
     move-exception v3
 
@@ -4230,10 +3857,8 @@
 
     const/4 v4, 0x0
 
-    .line 543
     const/4 v1, 0x0
 
-    .line 545
     .local v1, "fileStream":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
@@ -4242,7 +3867,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 546
     .end local v1    # "fileStream":Ljava/io/FileInputStream;
     .local v2, "fileStream":Ljava/io/FileInputStream;
     const/4 v5, 0x2
@@ -4250,7 +3874,6 @@
     :try_start_1
     new-array v0, v5, [B
 
-    .line 547
     .local v0, "bytes":[B
     const/4 v5, 0x0
 
@@ -4258,7 +3881,6 @@
 
     invoke-virtual {v2, v0, v5, v6}, Ljava/io/FileInputStream;->read([BII)I
 
-    .line 549
     if-eqz v0, :cond_0
 
     array-length v5, v0
@@ -4267,11 +3889,9 @@
 
     if-ge v5, v7, :cond_3
 
-    .line 557
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 558
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     :cond_1
@@ -4281,7 +3901,6 @@
     :goto_0
     return v3
 
-    .line 553
     :cond_3
     const/4 v5, 0x0
 
@@ -4302,11 +3921,9 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 557
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 558
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     goto :goto_0
@@ -4314,10 +3931,8 @@
     :cond_4
     move v3, v4
 
-    .line 553
     goto :goto_1
 
-    .line 557
     .end local v0    # "bytes":[B
     .end local v2    # "fileStream":Ljava/io/FileInputStream;
     .restart local v1    # "fileStream":Ljava/io/FileInputStream;
@@ -4327,13 +3942,11 @@
     :goto_2
     if-eqz v1, :cond_5
 
-    .line 558
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
 
     :cond_5
     throw v3
 
-    .line 557
     .end local v1    # "fileStream":Ljava/io/FileInputStream;
     .restart local v2    # "fileStream":Ljava/io/FileInputStream;
     :catchall_1
@@ -4352,11 +3965,9 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 100
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/Dumper;->createHeader()V
 
-    .line 101
     iget-wide v2, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mEnd:J
 
     cmp-long v1, v2, v4
@@ -4369,16 +3980,13 @@
 
     if-gez v1, :cond_3
 
-    .line 102
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/Dumper;->fullDump()V
 
-    .line 103
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
     if-nez v1, :cond_1
 
-    .line 104
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mIsFullDump:Z
@@ -4386,7 +3994,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 114
     :cond_1
     :goto_0
     :try_start_1
@@ -4394,14 +4001,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 115
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPfd:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 120
     :cond_2
     :goto_1
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mObserver:Lcom/android/server/enterprise/auditlog/IObserver;
@@ -4412,11 +4017,9 @@
 
     invoke-interface {v1, v2, v3}, Lcom/android/server/enterprise/auditlog/IObserver;->notifyDumpFinished(ZZ)V
 
-    .line 122
     :goto_2
     return-void
 
-    .line 106
     :cond_3
     :try_start_2
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/Dumper;->selectDumpInterval()V
@@ -4426,11 +4029,9 @@
 
     goto :goto_0
 
-    .line 108
     :catch_0
     move-exception v0
 
-    .line 109
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v1, "Dumper"
@@ -4439,7 +4040,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "run.Exception "
+    const-string v3, "run.Exception "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4459,12 +4060,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mDumpResult:Z
 
-    .line 111
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v1
@@ -4475,20 +4074,17 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 114
     :try_start_4
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPfd:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v1, :cond_4
 
-    .line 115
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPfd:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 120
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_4
     :goto_3
@@ -4502,54 +4098,46 @@
 
     goto :goto_2
 
-    .line 117
     :catch_1
     move-exception v0
 
-    .line 118
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "Dumper"
 
-    const-string/jumbo v2, "run.IOException"
+    const-string v2, "run.IOException"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 117
     .local v0, "e":Ljava/lang/Exception;
     :catch_2
     move-exception v0
 
-    .line 118
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "Dumper"
 
-    const-string/jumbo v2, "run.IOException"
+    const-string v2, "run.IOException"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 113
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v1
 
-    .line 114
     :try_start_5
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPfd:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v2, :cond_5
 
-    .line 115
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPfd:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 120
     :cond_5
     :goto_4
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mObserver:Lcom/android/server/enterprise/auditlog/IObserver;
@@ -4562,15 +4150,13 @@
 
     throw v1
 
-    .line 117
     :catch_3
     move-exception v0
 
-    .line 118
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v2, "Dumper"
 
-    const-string/jumbo v3, "run.IOException"
+    const-string v3, "run.IOException"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -4590,11 +4176,9 @@
     .end annotation
 
     .prologue
-    .line 90
     .local p1, "stringList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mDeviceInfo:Ljava/util/List;
 
-    .line 91
     return-void
 .end method
 
@@ -4603,10 +4187,8 @@
     .param p1, "filter"    # Lcom/android/server/enterprise/auditlog/Filter;
 
     .prologue
-    .line 538
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
-    .line 539
     return-void
 .end method
 
@@ -4615,9 +4197,7 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Dumper;->mPackageName:Ljava/lang/String;
 
-    .line 95
     return-void
 .end method

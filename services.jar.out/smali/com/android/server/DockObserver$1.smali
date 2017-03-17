@@ -24,7 +24,6 @@
     .param p2, "x0"    # Z
 
     .prologue
-    .line 427
     iput-object p1, p0, Lcom/android/server/DockObserver$1;->this$0:Lcom/android/server/DockObserver;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Z)V
@@ -39,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 430
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 443
     :goto_0
     return-void
 
-    .line 433
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/DockObserver$1;->this$0:Lcom/android/server/DockObserver;
 
@@ -92,14 +88,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 435
     :cond_1
     iget-object v0, p0, Lcom/android/server/DockObserver$1;->this$0:Lcom/android/server/DockObserver;
 
     # invokes: Lcom/android/server/DockObserver;->handleOtherStateChange()V
     invoke-static {v0}, Lcom/android/server/DockObserver;->access$400(Lcom/android/server/DockObserver;)V
 
-    .line 440
     :goto_1
     iget-object v0, p0, Lcom/android/server/DockObserver$1;->this$0:Lcom/android/server/DockObserver;
 
@@ -112,7 +106,6 @@
 
     goto :goto_0
 
-    .line 438
     :cond_2
     iget-object v0, p0, Lcom/android/server/DockObserver$1;->this$0:Lcom/android/server/DockObserver;
 
@@ -121,7 +114,6 @@
 
     goto :goto_1
 
-    .line 430
     nop
 
     :pswitch_data_0

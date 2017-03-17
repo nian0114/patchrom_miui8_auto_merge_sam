@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 4668
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$3;->this$0:Landroid/widget/AbsHorizontalListView;
 
     iput-object p2, p0, Landroid/widget/AbsHorizontalListView$3;->val$child:Landroid/view/View;
@@ -50,7 +49,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 4671
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$3;->this$0:Landroid/widget/AbsHorizontalListView;
 
     const/4 v1, 0x0
@@ -58,24 +56,20 @@
     # setter for: Landroid/widget/AbsHorizontalListView;->mTouchModeReset:Ljava/lang/Runnable;
     invoke-static {v0, v1}, Landroid/widget/AbsHorizontalListView;->access$1602(Landroid/widget/AbsHorizontalListView;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 4672
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$3;->this$0:Landroid/widget/AbsHorizontalListView;
 
     const/4 v1, -0x1
 
     iput v1, v0, Landroid/widget/AbsHorizontalListView;->mTouchMode:I
 
-    .line 4673
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$3;->val$child:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 4674
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$3;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v0, v2}, Landroid/widget/AbsHorizontalListView;->setPressed(Z)V
 
-    .line 4675
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$3;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mForcedClick:Z
@@ -99,13 +93,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 4676
     :cond_0
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$3;->val$performClick:Landroid/widget/AbsHorizontalListView$PerformClick;
 
     invoke-virtual {v0}, Landroid/widget/AbsHorizontalListView$PerformClick;->run()V
 
-    .line 4678
     :cond_1
     return-void
 .end method

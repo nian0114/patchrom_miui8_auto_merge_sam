@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 241
     iput-object p1, p0, Lcom/android/server/am/ProcessStatsService$2;->this$0:Lcom/android/server/am/ProcessStatsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 243
     iget-object v0, p0, Lcom/android/server/am/ProcessStatsService$2;->this$0:Lcom/android/server/am/ProcessStatsService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessStatsService;->performWriteState()V
 
-    .line 244
     return-void
 .end method

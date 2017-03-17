@@ -22,12 +22,9 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 5
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 6
     iput-short p1, p0, Lmf/org/w3c/dom/svg/SVGException;->code:S
 
-    .line 7
     return-void
 .end method

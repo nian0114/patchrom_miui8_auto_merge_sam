@@ -28,13 +28,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 243
     iput-object p1, p0, Landroid/drm/DrmManagerClient$InfoHandler;->this$0:Landroid/drm/DrmManagerClient;
 
-    .line 244
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 245
     return-void
 .end method
 
@@ -45,20 +42,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 248
     const/4 v2, 0x0
 
-    .line 249
     .local v2, "info":Landroid/drm/DrmInfoEvent;
     const/4 v1, 0x0
 
-    .line 251
     .local v1, "error":Landroid/drm/DrmErrorEvent;
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 288
     const-string v6, "DrmManagerClient"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -83,20 +76,16 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     :cond_0
     :goto_0
     return-void
 
-    .line 253
     :pswitch_0
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 254
     .local v5, "uniqueId":I
     iget v3, p1, Landroid/os/Message;->arg2:I
 
-    .line 255
     .local v3, "infoType":I
     iget-object v6, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -104,17 +93,14 @@
 
     move-result-object v4
 
-    .line 257
     .local v4, "message":Ljava/lang/String;
     packed-switch v3, :pswitch_data_1
 
-    .line 276
     new-instance v1, Landroid/drm/DrmErrorEvent;
 
     .end local v1    # "error":Landroid/drm/DrmErrorEvent;
     invoke-direct {v1, v5, v3, v4}, Landroid/drm/DrmErrorEvent;-><init>(IILjava/lang/String;)V
 
-    .line 280
     .restart local v1    # "error":Landroid/drm/DrmErrorEvent;
     :goto_1
     iget-object v6, p0, Landroid/drm/DrmManagerClient$InfoHandler;->this$0:Landroid/drm/DrmManagerClient;
@@ -128,7 +114,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 281
     iget-object v6, p0, Landroid/drm/DrmManagerClient$InfoHandler;->this$0:Landroid/drm/DrmManagerClient;
 
     # getter for: Landroid/drm/DrmManagerClient;->mOnInfoListener:Landroid/drm/DrmManagerClient$OnInfoListener;
@@ -140,7 +125,6 @@
 
     invoke-interface {v6, v7, v2}, Landroid/drm/DrmManagerClient$OnInfoListener;->onInfo(Landroid/drm/DrmManagerClient;Landroid/drm/DrmInfoEvent;)V
 
-    .line 283
     :cond_1
     iget-object v6, p0, Landroid/drm/DrmManagerClient$InfoHandler;->this$0:Landroid/drm/DrmManagerClient;
 
@@ -153,7 +137,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 284
     iget-object v6, p0, Landroid/drm/DrmManagerClient$InfoHandler;->this$0:Landroid/drm/DrmManagerClient;
 
     # getter for: Landroid/drm/DrmManagerClient;->mOnErrorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
@@ -167,35 +150,29 @@
 
     goto :goto_0
 
-    .line 260
     :pswitch_1
     :try_start_0
     invoke-static {v4}, Landroid/drm/DrmUtils;->removeFile(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :goto_2
     new-instance v2, Landroid/drm/DrmInfoEvent;
 
     .end local v2    # "info":Landroid/drm/DrmInfoEvent;
     invoke-direct {v2, v5, v3, v4}, Landroid/drm/DrmInfoEvent;-><init>(IILjava/lang/String;)V
 
-    .line 265
     .restart local v2    # "info":Landroid/drm/DrmInfoEvent;
     goto :goto_1
 
-    .line 261
     :catch_0
     move-exception v0
 
-    .line 262
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 272
     .end local v0    # "e":Ljava/io/IOException;
     :pswitch_2
     new-instance v2, Landroid/drm/DrmInfoEvent;
@@ -203,11 +180,9 @@
     .end local v2    # "info":Landroid/drm/DrmInfoEvent;
     invoke-direct {v2, v5, v3, v4}, Landroid/drm/DrmInfoEvent;-><init>(IILjava/lang/String;)V
 
-    .line 273
     .restart local v2    # "info":Landroid/drm/DrmInfoEvent;
     goto :goto_1
 
-    .line 251
     nop
 
     :pswitch_data_0
@@ -215,7 +190,6 @@
         :pswitch_0
     .end packed-switch
 
-    .line 257
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_2

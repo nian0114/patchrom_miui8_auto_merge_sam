@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2279
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$UiHandler$3;->this$1:Lcom/android/server/am/ActivityManagerService$UiHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 2281
     move-object v0, p1
 
     check-cast v0, Lcom/android/server/am/AppNotRespondingDialog;
 
-    .line 2282
     .local v0, "a":Lcom/android/server/am/AppNotRespondingDialog;
     const/4 v3, 0x2
 
     new-array v2, v3, [I
 
-    .line 2283
     .local v2, "xy":[I
     const/4 v3, -0x1
 
@@ -60,11 +56,9 @@
 
     move-result-object v1
 
-    .line 2284
     .local v1, "btn1":Landroid/widget/Button;
     invoke-virtual {v1, v2}, Landroid/widget/Button;->getLocationOnScreen([I)V
 
-    .line 2286
     const-string v3, "GATE"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -153,16 +147,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2289
     const-string v3, "GATE"
 
     const-string v4, "<GATE-M>APP_ANR:Storing dumpstate at /data/log/, dumpstate_app_anr</GATE-M>"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2291
     invoke-virtual {v1}, Landroid/widget/Button;->performClick()Z
 
-    .line 2292
     return-void
 .end method

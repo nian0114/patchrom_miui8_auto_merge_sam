@@ -27,16 +27,12 @@
     .param p3, "errorCode"    # I
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnDeRegistered;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
-    .line 366
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/handover/EpdgImsListener60$ImsRegRunnable;-><init>(Lcom/sec/epdg/handover/EpdgImsListener60;Lcom/sec/ims/ImsRegistration;)V
 
-    .line 367
     iput p3, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnDeRegistered;->mErrorCode:I
 
-    .line 368
     return-void
 .end method
 
@@ -46,14 +42,12 @@
     .locals 3
 
     .prologue
-    .line 371
     const-string v0, "[EpdgImsListener]"
 
-    const-string/jumbo v1, "onDeregistered: "
+    const-string v1, "onDeregistered: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 372
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsRegStatus:Lcom/sec/epdg/handover/EpdgImsRegStatus;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$1000()Lcom/sec/epdg/handover/EpdgImsRegStatus;
 
@@ -65,6 +59,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/epdg/handover/EpdgImsRegStatus;->onDeRegistered(Lcom/sec/ims/ImsRegistration;I)V
 
-    .line 373
     return-void
 .end method

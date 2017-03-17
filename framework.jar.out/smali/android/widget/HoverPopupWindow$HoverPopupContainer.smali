@@ -118,124 +118,88 @@
 
     const/4 v2, 0x0
 
-    .line 3229
     iput-object p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
 
-    .line 3230
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 3158
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOldLineEndX:I
 
-    .line 3160
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOldLineEndY:I
 
-    .line 3162
     iput v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineOverlappedHeight:I
 
-    .line 3164
     iput v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineThickness:I
 
-    .line 3166
     iput-boolean v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsRingEnabled:Z
 
-    .line 3174
     iput-boolean v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsFHEnabled:Z
 
-    .line 3177
     iput-boolean v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOverTopBoundaryEnabled:Z
 
-    .line 3180
     const/high16 v1, 0x41200000    # 10.0f
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->DEFAULT_BG_PADDING:F
 
-    .line 3183
     const/high16 v1, 0x3fc00000    # 1.5f
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->DEFAULT_BG_OUTLINE_THICKNESS:F
 
-    .line 3185
     iput-boolean v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->isFHmoveAnimation:Z
 
-    .line 3187
     iput-object v5, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->ani:Landroid/view/animation/Animation;
 
-    .line 3189
     iput-object v5, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mFHPopCContext:Landroid/content/Context;
 
-    .line 3191
     iput-boolean v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->misMovetoRight:Z
 
-    .line 3193
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLeftLimit:I
 
-    .line 3195
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRightLimit:I
 
-    .line 3197
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3199
     iput v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->POPUPSTATE_RIGHT:I
 
-    .line 3201
     const/4 v1, 0x1
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->POPUPSTATE_LEFT:I
 
-    .line 3203
     const/4 v1, 0x2
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->POPUPSTATE_CENTER:I
 
-    .line 3205
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerLineColor:I
 
-    .line 3207
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerLineColorOnBottom:I
 
-    .line 3209
     iput v3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerSpaceColor:I
 
-    .line 3211
     iput v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerOutlineThicknessPX:I
 
-    .line 3213
     iput v4, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerWidthPX:F
 
-    .line 3215
     iput v4, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerHeightPX:F
 
-    .line 3217
     iput v6, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingTopPX:F
 
-    .line 3219
     iput v6, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingBottomPX:F
 
-    .line 3221
     iput v2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTopPickerOffset:I
 
-    .line 3223
     const/16 v1, 0x64
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mAnimationAreaOffset:I
 
-    .line 3225
     iput v4, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTotalLeftLimit:F
 
-    .line 3227
     iput v4, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTotalRightLimit:F
 
-    .line 3232
     iput-object p2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mFHPopCContext:Landroid/content/Context;
 
-    .line 3233
     iget v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->POPUPSTATE_CENTER:I
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3236
     iget-object v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/android/internal/R$styleable;->Theme:[I
@@ -244,7 +208,6 @@
 
     move-result-object v0
 
-    .line 3237
     .local v0, "a":Landroid/content/res/TypedArray;
     const/16 v1, 0x162
 
@@ -256,7 +219,6 @@
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerLineColor:I
 
-    .line 3238
     const/16 v1, 0x163
 
     const v2, -0xa57f6f
@@ -267,7 +229,6 @@
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerLineColorOnBottom:I
 
-    .line 3239
     const/16 v1, 0x164
 
     const v2, -0xd0a99c
@@ -278,15 +239,12 @@
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerSpaceColor:I
 
-    .line 3241
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 3243
     iput v6, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingBottomPX:F
 
     iput v6, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingTopPX:F
 
-    .line 3245
     iget-object v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -301,7 +259,6 @@
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerOutlineThicknessPX:I
 
-    .line 3246
     # getter for: Landroid/widget/HoverPopupWindow;->TW:F
     invoke-static {p1}, Landroid/widget/HoverPopupWindow;->access$2100(Landroid/widget/HoverPopupWindow;)F
 
@@ -315,7 +272,6 @@
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerWidthPX:F
 
-    .line 3247
     # getter for: Landroid/widget/HoverPopupWindow;->H:F
     invoke-static {p1}, Landroid/widget/HoverPopupWindow;->access$2200(Landroid/widget/HoverPopupWindow;)F
 
@@ -329,7 +285,6 @@
 
     iput v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerHeightPX:F
 
-    .line 3248
     return-void
 .end method
 
@@ -340,10 +295,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 3345
     invoke-super/range {p0 .. p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3351
     invoke-virtual/range {p0 .. p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getChildCount()I
 
     move-result v2
@@ -360,12 +313,10 @@
 
     if-nez v2, :cond_1
 
-    .line 3815
     :cond_0
     :goto_0
     return-void
 
-    .line 3355
     :cond_1
     move-object/from16 v0, p0
 
@@ -373,7 +324,6 @@
 
     if-nez v2, :cond_2
 
-    .line 3356
     const v2, 0x1080375
 
     const v3, -0x866e57
@@ -382,7 +332,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->setGuideLine(II)V
 
-    .line 3360
     :cond_2
     move-object/from16 v0, p0
 
@@ -390,10 +339,8 @@
 
     if-eqz v2, :cond_6
 
-    .line 3361
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 3362
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineEndX:I
@@ -426,14 +373,12 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 3364
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsFHEnabled:Z
 
     if-nez v2, :cond_3
 
-    .line 3365
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingDrawable:Landroid/graphics/drawable/Drawable;
@@ -442,18 +387,15 @@
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3367
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 3369
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsFHEnabled:Z
 
     if-nez v2, :cond_4
 
-    .line 3370
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartY:I
@@ -464,7 +406,6 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 3371
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartX:I
@@ -517,7 +458,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 3385
     :cond_4
     :goto_1
     move-object/from16 v0, p0
@@ -531,7 +471,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3391
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -540,7 +479,6 @@
 
     if-nez v2, :cond_7
 
-    .line 3392
     const-string v2, "HoverPopupContainer"
 
     const-string v3, "HoverPopupContainer.draw(): mContentView is null, return"
@@ -549,7 +487,6 @@
 
     goto/16 :goto_0
 
-    .line 3373
     :cond_5
     move-object/from16 v0, p0
 
@@ -561,7 +498,6 @@
 
     if-le v2, v3, :cond_4
 
-    .line 3374
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartX:I
@@ -616,7 +552,6 @@
 
     goto :goto_1
 
-    .line 3381
     :cond_6
     move-object/from16 v0, p0
 
@@ -624,7 +559,6 @@
 
     if-nez v2, :cond_4
 
-    .line 3382
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartX:I
@@ -659,7 +593,6 @@
 
     goto :goto_1
 
-    .line 3396
     :cond_7
     move-object/from16 v0, p0
 
@@ -672,7 +605,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 3397
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -695,7 +627,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->W:F
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$2502(Landroid/widget/HoverPopupWindow;F)F
 
-    .line 3399
     :cond_8
     move-object/from16 v0, p0
 
@@ -708,7 +639,6 @@
 
     if-nez v2, :cond_9
 
-    .line 3403
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -737,7 +667,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->mCenterPoint:Landroid/graphics/PointF;
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$2602(Landroid/widget/HoverPopupWindow;Landroid/graphics/PointF;)Landroid/graphics/PointF;
 
-    .line 3404
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -774,7 +703,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->mLeftPoint:Landroid/graphics/PointF;
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$2702(Landroid/widget/HoverPopupWindow;Landroid/graphics/PointF;)Landroid/graphics/PointF;
 
-    .line 3405
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -811,7 +739,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->mRightPoint:Landroid/graphics/PointF;
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$2802(Landroid/widget/HoverPopupWindow;Landroid/graphics/PointF;)Landroid/graphics/PointF;
 
-    .line 3411
     :cond_9
     move-object/from16 v0, p0
 
@@ -833,7 +760,6 @@
 
     if-gez v2, :cond_b
 
-    .line 3414
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mContext:Landroid/content/Context;
@@ -854,7 +780,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingTopPX:F
 
-    .line 3415
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mContext:Landroid/content/Context;
@@ -875,17 +800,14 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingBottomPX:F
 
-    .line 3418
     invoke-virtual/range {p0 .. p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getChildCount()I
 
     move-result v2
 
     if-lez v2, :cond_b
 
-    .line 3419
     const/16 v19, 0x0
 
-    .line 3420
     .local v19, "d":Landroid/graphics/drawable/Drawable;
     const/4 v2, 0x0
 
@@ -895,25 +817,20 @@
 
     move-result-object v17
 
-    .line 3421
     .local v17, "child":Landroid/view/View;
     if-eqz v17, :cond_a
 
-    .line 3422
     invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v19
 
-    .line 3425
     :cond_a
     if-eqz v19, :cond_b
 
-    .line 3426
     new-instance v27, Landroid/graphics/Rect;
 
     invoke-direct/range {v27 .. v27}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3427
     .local v27, "r":Landroid/graphics/Rect;
     move-object/from16 v0, v19
 
@@ -921,7 +838,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 3428
     move-object/from16 v0, v27
 
     iget v2, v0, Landroid/graphics/Rect;->top:I
@@ -932,7 +848,6 @@
 
     if-ge v2, v3, :cond_b
 
-    .line 3429
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingTopPX:F
@@ -955,7 +870,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mBGPaddingTopPX:F
 
-    .line 3436
     .end local v17    # "child":Landroid/view/View;
     .end local v19    # "d":Landroid/graphics/drawable/Drawable;
     .end local v27    # "r":Landroid/graphics/Rect;
@@ -977,14 +891,12 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3437
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOverTopBoundaryEnabled:Z
 
     if-nez v2, :cond_14
 
-    .line 3438
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1014,11 +926,10 @@
 
     iput v3, v2, Landroid/graphics/PointF;->y:F
 
-    .line 3444
     :goto_2
     const-string v2, "americano"
 
-    const-string/jumbo v3, "ro.build.scafe"
+    const-string v3, "ro.build.scafe"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1030,7 +941,6 @@
 
     if-eqz v2, :cond_15
 
-    .line 3447
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1063,7 +973,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3453
     :goto_3
     move-object/from16 v0, p0
 
@@ -1071,7 +980,6 @@
 
     if-nez v2, :cond_16
 
-    .line 3454
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1103,7 +1011,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->y:F
 
-    .line 3460
     :goto_4
     move-object/from16 v0, p0
 
@@ -1133,7 +1040,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3461
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1156,7 +1062,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->y:F
 
-    .line 3476
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOverTopBoundaryEnabled:Z
@@ -1174,7 +1079,6 @@
 
     if-eqz v2, :cond_17
 
-    .line 3480
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1187,7 +1091,6 @@
 
     div-int/lit8 v18, v2, 0x2
 
-    .line 3481
     .local v18, "contentViewHalfWidth":I
     move-object/from16 v0, p0
 
@@ -1201,7 +1104,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTotalLeftLimit:F
 
-    .line 3482
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRightLimit:I
@@ -1216,7 +1118,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTotalRightLimit:F
 
-    .line 3496
     .end local v18    # "contentViewHalfWidth":I
     :goto_5
     move-object/from16 v0, p0
@@ -1246,7 +1147,6 @@
 
     div-int/lit8 v20, v2, 0x2
 
-    .line 3505
     .local v20, "movelength":I
     move-object/from16 v0, p0
 
@@ -1285,7 +1185,6 @@
 
     if-ne v2, v3, :cond_c
 
-    .line 3508
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1299,7 +1198,6 @@
 
     move/from16 v26, v0
 
-    .line 3509
     .local v26, "previousRightX":F
     move-object/from16 v0, p0
 
@@ -1314,7 +1212,6 @@
 
     move/from16 v25, v0
 
-    .line 3510
     .local v25, "previousLeftX":F
     move-object/from16 v0, p0
 
@@ -1329,7 +1226,6 @@
 
     move/from16 v24, v0
 
-    .line 3518
     .local v24, "previousCenterX":F
     move-object/from16 v0, p0
 
@@ -1359,7 +1255,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3519
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1388,10 +1283,9 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3520
     const-string v2, "americano"
 
-    const-string/jumbo v3, "ro.build.scafe"
+    const-string v3, "ro.build.scafe"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1403,7 +1297,6 @@
 
     if-eqz v2, :cond_18
 
-    .line 3523
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1436,7 +1329,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3530
     :goto_6
     move-object/from16 v0, p0
 
@@ -1492,7 +1384,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 3536
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1506,7 +1397,6 @@
 
     iput v0, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3537
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1520,7 +1410,6 @@
 
     iput v0, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3538
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1534,7 +1423,6 @@
 
     iput v0, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3553
     .end local v24    # "previousCenterX":F
     .end local v25    # "previousLeftX":F
     .end local v26    # "previousRightX":F
@@ -1577,7 +1465,6 @@
 
     if-ne v2, v3, :cond_d
 
-    .line 3556
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1591,7 +1478,6 @@
 
     move/from16 v26, v0
 
-    .line 3557
     .restart local v26    # "previousRightX":F
     move-object/from16 v0, p0
 
@@ -1606,7 +1492,6 @@
 
     move/from16 v25, v0
 
-    .line 3558
     .restart local v25    # "previousLeftX":F
     move-object/from16 v0, p0
 
@@ -1621,7 +1506,6 @@
 
     move/from16 v24, v0
 
-    .line 3566
     .restart local v24    # "previousCenterX":F
     move-object/from16 v0, p0
 
@@ -1651,7 +1535,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3567
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1680,10 +1563,9 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3568
     const-string v2, "americano"
 
-    const-string/jumbo v3, "ro.build.scafe"
+    const-string v3, "ro.build.scafe"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1695,7 +1577,6 @@
 
     if-eqz v2, :cond_1a
 
-    .line 3571
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1728,7 +1609,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3579
     :goto_8
     move-object/from16 v0, p0
 
@@ -1810,7 +1690,6 @@
 
     if-eqz v2, :cond_1b
 
-    .line 3586
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1824,7 +1703,6 @@
 
     iput v0, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3587
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1838,7 +1716,6 @@
 
     iput v0, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3588
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1852,7 +1729,6 @@
 
     iput v0, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3599
     .end local v24    # "previousCenterX":F
     .end local v25    # "previousLeftX":F
     .end local v26    # "previousRightX":F
@@ -1868,7 +1744,6 @@
 
     if-ne v2, v3, :cond_e
 
-    .line 3609
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1896,7 +1771,6 @@
 
     if-eq v2, v3, :cond_1c
 
-    .line 3611
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->POPUPSTATE_CENTER:I
@@ -1905,7 +1779,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3613
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1921,7 +1794,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 3635
     :cond_e
     :goto_a
     move-object/from16 v0, p0
@@ -1934,7 +1806,6 @@
 
     if-ne v2, v3, :cond_f
 
-    .line 3645
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1962,7 +1833,6 @@
 
     if-eq v2, v3, :cond_1e
 
-    .line 3647
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->POPUPSTATE_CENTER:I
@@ -1971,7 +1841,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3648
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -1987,7 +1856,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 3684
     :cond_f
     :goto_b
     move-object/from16 v0, p0
@@ -2001,10 +1869,8 @@
 
     if-nez v2, :cond_11
 
-    .line 3691
     const/16 v16, 0x0
 
-    .line 3693
     .local v16, "anchorViewCenter":I
     move-object/from16 v0, p0
 
@@ -2017,7 +1883,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 3694
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2057,7 +1922,6 @@
 
     sub-int v16, v2, v3
 
-    .line 3709
     :cond_10
     if-eqz v16, :cond_11
 
@@ -2096,7 +1960,6 @@
 
     if-ge v2, v3, :cond_11
 
-    .line 3710
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2121,7 +1984,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3711
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2154,7 +2016,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3712
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2183,7 +2044,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3723
     .end local v16    # "anchorViewCenter":I
     :cond_11
     move-object/from16 v0, p0
@@ -2203,7 +2063,6 @@
     :goto_c
     div-int/lit8 v11, v2, 0x2
 
-    .line 3724
     .local v11, "adjustPointer":I
     const/4 v12, 0x0
 
@@ -2216,7 +2075,6 @@
     .local v14, "adjustedRPointX":F
     const/4 v15, 0x0
 
-    .line 3725
     .local v15, "adjustedRPointY":F
     move-object/from16 v0, p0
 
@@ -2226,7 +2084,6 @@
 
     if-eq v2, v3, :cond_22
 
-    .line 3726
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2242,7 +2099,6 @@
 
     sub-float v12, v2, v3
 
-    .line 3727
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2258,14 +2114,12 @@
 
     add-float v14, v2, v3
 
-    .line 3728
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOverTopBoundaryEnabled:Z
 
     if-nez v2, :cond_21
 
-    .line 3729
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2281,7 +2135,6 @@
 
     sub-float v13, v2, v3
 
-    .line 3730
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2297,7 +2150,6 @@
 
     sub-float v15, v2, v3
 
-    .line 3745
     :goto_d
     move-object/from16 v0, p0
 
@@ -2347,7 +2199,6 @@
 
     if-nez v2, :cond_0
 
-    .line 3750
     :cond_12
     move-object/from16 v0, p0
 
@@ -2359,7 +2210,6 @@
 
     move-result-object v9
 
-    .line 3751
     .local v9, "a":Landroid/content/res/TypedArray;
     move-object/from16 v0, p0
 
@@ -2380,7 +2230,6 @@
 
     if-nez v2, :cond_23
 
-    .line 3752
     const/16 v2, 0x165
 
     const v3, -0xa29283
@@ -2393,18 +2242,15 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerSpaceColor:I
 
-    .line 3756
     :goto_e
     invoke-virtual {v9}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 3759
     new-instance v8, Landroid/graphics/Paint;
 
     const/4 v2, 0x1
 
     invoke-direct {v8, v2}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 3760
     .local v8, "Pnt":Landroid/graphics/Paint;
     move-object/from16 v0, p0
 
@@ -2414,24 +2260,20 @@
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 3761
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerSpaceColor:I
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3762
     const/4 v2, 0x1
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 3767
     new-instance v21, Landroid/graphics/Path;
 
     invoke-direct/range {v21 .. v21}, Landroid/graphics/Path;-><init>()V
 
-    .line 3768
     .local v21, "path1":Landroid/graphics/Path;
     sget-object v2, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
 
@@ -2439,12 +2281,10 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
 
-    .line 3769
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 3770
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2471,32 +2311,26 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 3771
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v14, v15}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 3772
     invoke-virtual/range {v21 .. v21}, Landroid/graphics/Path;->close()V
 
-    .line 3773
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 3774
     move-object/from16 v0, p1
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 3777
     new-instance v22, Landroid/graphics/Path;
 
     invoke-direct/range {v22 .. v22}, Landroid/graphics/Path;-><init>()V
 
-    .line 3778
     .local v22, "path2":Landroid/graphics/Path;
     move-object/from16 v0, p0
 
@@ -2504,14 +2338,12 @@
 
     if-nez v2, :cond_24
 
-    .line 3779
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerLineColor:I
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3784
     :goto_f
     move-object/from16 v0, p0
 
@@ -2521,22 +2353,18 @@
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 3785
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 3786
     sget-object v2, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 3787
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 3788
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2563,27 +2391,22 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 3789
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v14, v15}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 3790
     invoke-virtual/range {v22 .. v22}, Landroid/graphics/Path;->close()V
 
-    .line 3791
     move-object/from16 v0, p1
 
     move-object/from16 v1, v22
 
     invoke-virtual {v0, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 3798
     new-instance v23, Landroid/graphics/Path;
 
     invoke-direct/range {v23 .. v23}, Landroid/graphics/Path;-><init>()V
 
-    .line 3799
     .local v23, "path3":Landroid/graphics/Path;
     move-object/from16 v0, p0
 
@@ -2591,7 +2414,6 @@
 
     rem-int/lit8 v10, v2, 0x2
 
-    .line 3800
     .local v10, "adjustLineOffset":I
     move-object/from16 v0, p0
 
@@ -2601,7 +2423,6 @@
 
     if-ne v2, v3, :cond_13
 
-    .line 3801
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2617,7 +2438,6 @@
 
     sub-float v12, v2, v3
 
-    .line 3802
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2633,18 +2453,15 @@
 
     add-float v14, v2, v3
 
-    .line 3804
     :cond_13
     move-object/from16 v0, v23
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 3805
     move-object/from16 v0, v23
 
     invoke-virtual {v0, v14, v15}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 3807
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerOutlineThicknessPX:I
@@ -2655,27 +2472,22 @@
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 3808
     const/4 v2, 0x0
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 3809
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPickerSpaceColor:I
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3810
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 3811
     invoke-virtual/range {v23 .. v23}, Landroid/graphics/Path;->close()V
 
-    .line 3812
     move-object/from16 v0, p1
 
     move-object/from16 v1, v23
@@ -2684,7 +2496,6 @@
 
     goto/16 :goto_0
 
-    .line 3440
     .end local v8    # "Pnt":Landroid/graphics/Paint;
     .end local v9    # "a":Landroid/content/res/TypedArray;
     .end local v10    # "adjustLineOffset":I
@@ -2729,7 +2540,6 @@
 
     goto/16 :goto_2
 
-    .line 3451
     :cond_15
     move-object/from16 v0, p0
 
@@ -2765,7 +2575,6 @@
 
     goto/16 :goto_3
 
-    .line 3456
     :cond_16
     move-object/from16 v0, p0
 
@@ -2800,7 +2609,6 @@
 
     goto/16 :goto_4
 
-    .line 3487
     :cond_17
     move-object/from16 v0, p0
 
@@ -2831,7 +2639,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTotalLeftLimit:F
 
-    .line 3488
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRightLimit:I
@@ -2863,7 +2670,6 @@
 
     goto/16 :goto_5
 
-    .line 3527
     .restart local v20    # "movelength":I
     .restart local v24    # "previousCenterX":F
     .restart local v25    # "previousLeftX":F
@@ -2903,7 +2709,6 @@
 
     goto/16 :goto_6
 
-    .line 3544
     :cond_19
     move-object/from16 v0, p0
 
@@ -2913,7 +2718,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3545
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2931,7 +2735,6 @@
 
     goto/16 :goto_7
 
-    .line 3575
     :cond_1a
     move-object/from16 v0, p0
 
@@ -2967,7 +2770,6 @@
 
     goto/16 :goto_8
 
-    .line 3594
     :cond_1b
     move-object/from16 v0, p0
 
@@ -2977,7 +2779,6 @@
 
     iput v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3595
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -2995,7 +2796,6 @@
 
     goto/16 :goto_9
 
-    .line 3620
     .end local v24    # "previousCenterX":F
     .end local v25    # "previousLeftX":F
     .end local v26    # "previousRightX":F
@@ -3028,7 +2828,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3621
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3057,10 +2856,9 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3622
     const-string v2, "americano"
 
-    const-string/jumbo v3, "ro.build.scafe"
+    const-string v3, "ro.build.scafe"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3072,7 +2870,6 @@
 
     if-eqz v2, :cond_1d
 
-    .line 3625
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3107,7 +2904,6 @@
 
     goto/16 :goto_a
 
-    .line 3630
     :cond_1d
     move-object/from16 v0, p0
 
@@ -3143,7 +2939,6 @@
 
     goto/16 :goto_a
 
-    .line 3656
     :cond_1e
     move-object/from16 v0, p0
 
@@ -3173,7 +2968,6 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3657
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3202,10 +2996,9 @@
 
     iput v3, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3658
     const-string v2, "americano"
 
-    const-string/jumbo v3, "ro.build.scafe"
+    const-string v3, "ro.build.scafe"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3217,7 +3010,6 @@
 
     if-eqz v2, :cond_1f
 
-    .line 3661
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3252,7 +3044,6 @@
 
     goto/16 :goto_b
 
-    .line 3666
     :cond_1f
     move-object/from16 v0, p0
 
@@ -3288,7 +3079,6 @@
 
     goto/16 :goto_b
 
-    .line 3723
     :cond_20
     move-object/from16 v0, p0
 
@@ -3296,7 +3086,6 @@
 
     goto/16 :goto_c
 
-    .line 3733
     .restart local v11    # "adjustPointer":I
     .restart local v12    # "adjustedLPointX":F
     .restart local v13    # "adjustedLPointY":F
@@ -3318,7 +3107,6 @@
 
     add-float v13, v2, v3
 
-    .line 3734
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3336,7 +3124,6 @@
 
     goto/16 :goto_d
 
-    .line 3738
     :cond_22
     move-object/from16 v0, p0
 
@@ -3349,7 +3136,6 @@
 
     iget v12, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3739
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3361,7 +3147,6 @@
 
     iget v14, v2, Landroid/graphics/PointF;->x:F
 
-    .line 3740
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3373,7 +3158,6 @@
 
     iget v13, v2, Landroid/graphics/PointF;->y:F
 
-    .line 3741
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
@@ -3387,7 +3171,6 @@
 
     goto/16 :goto_d
 
-    .line 3754
     .restart local v9    # "a":Landroid/content/res/TypedArray;
     :cond_23
     const/16 v2, 0x164
@@ -3404,7 +3187,6 @@
 
     goto/16 :goto_e
 
-    .line 3782
     .restart local v8    # "Pnt":Landroid/graphics/Paint;
     .restart local v21    # "path1":Landroid/graphics/Path;
     .restart local v22    # "path2":Landroid/graphics/Path;
@@ -3422,7 +3204,6 @@
     .locals 1
 
     .prologue
-    .line 3307
     iget v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineEndX:I
 
     return v0
@@ -3432,7 +3213,6 @@
     .locals 1
 
     .prologue
-    .line 3315
     iget v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineOverlappedHeight:I
 
     return v0
@@ -3442,7 +3222,6 @@
     .locals 1
 
     .prologue
-    .line 3311
     iget v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartY:I
 
     return v0
@@ -3454,10 +3233,8 @@
     .param p2, "localY"    # I
 
     .prologue
-    .line 3818
     const/4 v0, 0x0
 
-    .line 3820
     .local v0, "ret":Z
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getPaddingTop()I
 
@@ -3469,7 +3246,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 3821
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getWidth()I
 
     move-result v1
@@ -3482,15 +3258,12 @@
 
     if-gt p2, v1, :cond_0
 
-    .line 3822
     const/4 v0, 0x1
 
-    .line 3832
     :cond_0
     :goto_0
     return v0
 
-    .line 3824
     :cond_1
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getPaddingTop()I
 
@@ -3502,7 +3275,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 3825
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getWidth()I
 
     move-result v1
@@ -3521,12 +3293,10 @@
 
     if-lt p2, v1, :cond_0
 
-    .line 3826
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 3829
     :cond_2
     const/4 v0, 0x0
 
@@ -3538,10 +3308,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 3251
     iput-boolean p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsFHEnabled:Z
 
-    .line 3252
     return-void
 .end method
 
@@ -3550,10 +3318,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 3255
     iput-boolean p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->isFHmoveAnimation:Z
 
-    .line 3256
     return-void
 .end method
 
@@ -3562,7 +3328,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 3338
     const-string v0, "HoverPopupContainer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3585,10 +3350,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3339
     iput p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mAnimationAreaOffset:I
 
-    .line 3340
     const-string v0, "HoverPopupContainer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3613,7 +3376,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3341
     return-void
 .end method
 
@@ -3627,7 +3389,6 @@
 
     const/4 v3, 0x0
 
-    .line 3276
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -3638,7 +3399,6 @@
 
     iput v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineOverlappedHeight:I
 
-    .line 3277
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
 
     const/high16 v1, 0x3fc00000    # 1.5f
@@ -3649,7 +3409,6 @@
 
     iput v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineThickness:I
 
-    .line 3279
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -3660,12 +3419,10 @@
 
     iput-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 3280
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 3281
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -3674,7 +3431,6 @@
 
     iput v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingWidth:I
 
-    .line 3282
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -3683,7 +3439,6 @@
 
     iput v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingHeight:I
 
-    .line 3283
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRingWidth:I
@@ -3692,7 +3447,6 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 3286
     :cond_0
     new-instance v0, Landroid/graphics/Paint;
 
@@ -3700,7 +3454,6 @@
 
     iput-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLinePaint:Landroid/graphics/Paint;
 
-    .line 3287
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLinePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineThickness:I
@@ -3709,26 +3462,22 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 3288
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLinePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 3289
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLinePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3290
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLinePaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 3291
     return-void
 .end method
 
@@ -3742,25 +3491,18 @@
     .param p6, "fHEnabled"    # Z
 
     .prologue
-    .line 3320
     iput p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartX:I
 
-    .line 3321
     iput p2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineStartY:I
 
-    .line 3322
     iput p3, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineEndX:I
 
-    .line 3323
     iput p4, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineEndY:I
 
-    .line 3324
     iput-boolean p5, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsRingEnabled:Z
 
-    .line 3325
     iput-boolean p6, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mIsFHEnabled:Z
 
-    .line 3326
     return-void
 .end method
 
@@ -3770,13 +3512,10 @@
     .param p2, "pointY"    # I
 
     .prologue
-    .line 3329
     iput p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineEndX:I
 
-    .line 3330
     iput p2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLineEndY:I
 
-    .line 3331
     return-void
 .end method
 
@@ -3785,7 +3524,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 3264
     const-string v0, "HoverPopupContainer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3808,10 +3546,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3265
     iput-boolean p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mOverTopBoundaryEnabled:Z
 
-    .line 3266
     const-string v0, "HoverPopupContainer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3836,7 +3572,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3267
     return-void
 .end method
 
@@ -3845,10 +3580,8 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 3270
     iput p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mTopPickerOffset:I
 
-    .line 3271
     return-void
 .end method
 
@@ -3858,13 +3591,10 @@
     .param p2, "rightlimit"    # I
 
     .prologue
-    .line 3259
     iput p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mLeftLimit:I
 
-    .line 3260
     iput p2, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mRightLimit:I
 
-    .line 3261
     return-void
 .end method
 
@@ -3873,10 +3603,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 3334
     iput p1, p0, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->mPopupState:I
 
-    .line 3335
     return-void
 .end method
 
@@ -3884,9 +3612,7 @@
     .locals 0
 
     .prologue
-    .line 3296
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$HoverPopupContainer;->invalidate()V
 
-    .line 3304
     return-void
 .end method

@@ -50,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 3694
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0xa
@@ -70,22 +69,16 @@
     .param p4, "current"    # F
 
     .prologue
-    .line 3734
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3735
     iput p1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mType:I
 
-    .line 3736
     iput p2, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMin:F
 
-    .line 3737
     iput p3, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMax:F
 
-    .line 3738
     iput p4, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mCurrent:F
 
-    .line 3739
     return-void
 .end method
 
@@ -95,21 +88,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3790
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mType:I
 
-    .line 3791
     iput v1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMin:F
 
-    .line 3792
     iput v1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMax:F
 
-    .line 3793
     iput v1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mCurrent:F
 
-    .line 3794
     return-void
 .end method
 
@@ -121,7 +109,6 @@
     .param p3, "current"    # F
 
     .prologue
-    .line 3722
     sget-object v1, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -130,7 +117,6 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
-    .line 3723
     .local v0, "info":Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
     if-eqz v0, :cond_0
 
@@ -153,7 +139,6 @@
     .param p0, "other"    # Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
     .prologue
-    .line 3710
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mType:I
 
     iget v1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMin:F
@@ -175,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 3778
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mCurrent:F
 
     return v0
@@ -185,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 3769
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMax:F
 
     return v0
@@ -195,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 3760
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mMin:F
 
     return v0
@@ -205,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 3751
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->mType:I
 
     return v0
@@ -215,14 +196,11 @@
     .locals 1
 
     .prologue
-    .line 3785
     invoke-direct {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->clear()V
 
-    .line 3786
     sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 3787
     return-void
 .end method

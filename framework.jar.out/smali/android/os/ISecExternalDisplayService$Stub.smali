@@ -74,15 +74,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p0, p0, v0}, Landroid/os/ISecExternalDisplayService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -91,17 +88,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.os.ISecExternalDisplayService"
 
@@ -109,7 +102,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -117,12 +109,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/os/ISecExternalDisplayService;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/os/ISecExternalDisplayService$Stub$Proxy;
 
@@ -138,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -159,10 +148,8 @@
 
     const/4 v7, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 275
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -170,7 +157,6 @@
     :goto_0
     return v7
 
-    .line 43
     :sswitch_0
     const-string v0, "android.os.ISecExternalDisplayService"
 
@@ -178,22 +164,18 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {p0}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDInit()Z
 
     move-result v6
 
-    .line 50
     .local v6, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 51
     if-eqz v6, :cond_0
 
     move v0, v7
@@ -208,23 +190,19 @@
 
     goto :goto_1
 
-    .line 56
     .end local v6    # "_result":Z
     :sswitch_2
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 57
     invoke-virtual {p0}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDDestroy()Z
 
     move-result v6
 
-    .line 58
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 59
     if-eqz v6, :cond_1
 
     move v8, v7
@@ -234,23 +212,19 @@
 
     goto :goto_0
 
-    .line 64
     .end local v6    # "_result":Z
     :sswitch_3
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {p0}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDRefresh()Z
 
     move-result v6
 
-    .line 66
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 67
     if-eqz v6, :cond_2
 
     move v8, v7
@@ -260,23 +234,19 @@
 
     goto :goto_0
 
-    .line 72
     .end local v6    # "_result":Z
     :sswitch_4
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {p0}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDOff()Z
 
     move-result v6
 
-    .line 74
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 75
     if-eqz v6, :cond_3
 
     move v8, v7
@@ -286,41 +256,34 @@
 
     goto :goto_0
 
-    .line 80
     .end local v6    # "_result":Z
     :sswitch_5
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v1
 
-    .line 84
     .local v1, "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 86
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 87
     .local v3, "_arg2":I
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDSetframe([BII)Z
 
     move-result v6
 
-    .line 88
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 89
     if-eqz v6, :cond_4
 
     move v8, v7
@@ -330,7 +293,6 @@
 
     goto :goto_0
 
-    .line 94
     .end local v1    # "_arg0":[B
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -340,30 +302,25 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 98
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 100
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 102
     .restart local v3    # "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 104
     .local v4, "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -372,16 +329,13 @@
     .local v5, "_arg4":I
     move-object v0, p0
 
-    .line 105
     invoke-virtual/range {v0 .. v5}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDSetLoop(IIIII)Z
 
     move-result v6
 
-    .line 106
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 107
     if-eqz v6, :cond_5
 
     move v8, v7
@@ -391,7 +345,6 @@
 
     goto/16 :goto_0
 
-    .line 112
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -403,30 +356,25 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 116
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 118
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 120
     .restart local v3    # "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 122
     .restart local v4    # "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -435,16 +383,13 @@
     .restart local v5    # "_arg4":I
     move-object v0, p0
 
-    .line 123
     invoke-virtual/range {v0 .. v5}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayLEDSetScroll(IIIII)Z
 
     move-result v6
 
-    .line 124
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 125
     if-eqz v6, :cond_6
 
     move v8, v7
@@ -454,7 +399,6 @@
 
     goto/16 :goto_0
 
-    .line 130
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -466,22 +410,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 132
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 133
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayGetStatus(I)Z
 
     move-result v6
 
-    .line 134
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 135
     if-eqz v6, :cond_7
 
     move v8, v7
@@ -491,7 +431,6 @@
 
     goto/16 :goto_0
 
-    .line 140
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_9
@@ -499,12 +438,10 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 142
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 144
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -514,18 +451,15 @@
 
     move v2, v7
 
-    .line 145
     .local v2, "_arg1":Z
     :goto_2
     invoke-virtual {p0, v1, v2}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySetStatus(IZ)Z
 
     move-result v6
 
-    .line 146
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 147
     if-eqz v6, :cond_8
 
     move v8, v7
@@ -540,32 +474,26 @@
     :cond_9
     move v2, v8
 
-    .line 144
     goto :goto_2
 
-    .line 152
     .end local v1    # "_arg0":I
     :sswitch_a
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 154
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 155
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySetResolution(I)Z
 
     move-result v6
 
-    .line 156
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 157
     if-eqz v6, :cond_a
 
     move v8, v7
@@ -575,7 +503,6 @@
 
     goto/16 :goto_0
 
-    .line 162
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_b
@@ -583,22 +510,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 164
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 165
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySetOutputMode(I)Z
 
     move-result v6
 
-    .line 166
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 167
     if-eqz v6, :cond_b
 
     move v8, v7
@@ -608,7 +531,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_c
@@ -616,7 +538,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 174
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -625,18 +546,15 @@
 
     move v1, v7
 
-    .line 175
     .local v1, "_arg0":Z
     :goto_3
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayRegisterEVF(Z)I
 
     move-result v6
 
-    .line 176
     .local v6, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 177
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
@@ -646,16 +564,13 @@
     :cond_c
     move v1, v8
 
-    .line 174
     goto :goto_3
 
-    .line 182
     :sswitch_d
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 184
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -664,18 +579,15 @@
 
     move v1, v7
 
-    .line 185
     .restart local v1    # "_arg0":Z
     :goto_4
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySetPause(Z)Z
 
     move-result v6
 
-    .line 186
     .local v6, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 187
     if-eqz v6, :cond_d
 
     move v8, v7
@@ -690,31 +602,25 @@
     :cond_e
     move v1, v8
 
-    .line 184
     goto :goto_4
 
-    .line 192
     :sswitch_e
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 194
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 195
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySetFPS(I)Z
 
     move-result v6
 
-    .line 196
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 197
     if-eqz v6, :cond_f
 
     move v8, v7
@@ -724,7 +630,6 @@
 
     goto/16 :goto_0
 
-    .line 202
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_f
@@ -732,69 +637,56 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 203
     invoke-virtual {p0}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayGetFPS()I
 
     move-result v6
 
-    .line 204
     .local v6, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 205
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 210
     .end local v6    # "_result":I
     :sswitch_10
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 211
     invoke-virtual {p0}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayGet3DMode()I
 
     move-result v6
 
-    .line 212
     .restart local v6    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 213
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 218
     .end local v6    # "_result":I
     :sswitch_11
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 220
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 221
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySet3DMode(I)I
 
     move-result v6
 
-    .line 222
     .restart local v6    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 223
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 228
     .end local v1    # "_arg0":I
     .end local v6    # "_result":I
     :sswitch_12
@@ -802,34 +694,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 230
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 232
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 234
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 235
     .restart local v3    # "_arg2":I
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayCreateSurface(Ljava/lang/String;II)Z
 
     move-result v6
 
-    .line 236
     .local v6, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 237
     if-eqz v6, :cond_10
 
     move v8, v7
@@ -839,7 +725,6 @@
 
     goto/16 :goto_0
 
-    .line 242
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -849,7 +734,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 244
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -858,18 +742,15 @@
 
     move v1, v7
 
-    .line 245
     .local v1, "_arg0":Z
     :goto_5
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayType(Z)Z
 
     move-result v6
 
-    .line 246
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 247
     if-eqz v6, :cond_11
 
     move v8, v7
@@ -884,31 +765,25 @@
     :cond_12
     move v1, v8
 
-    .line 244
     goto :goto_5
 
-    .line 252
     :sswitch_14
     const-string v0, "android.os.ISecExternalDisplayService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 255
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplaySetExternalUITransform(I)Z
 
     move-result v6
 
-    .line 256
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 257
     if-eqz v6, :cond_13
 
     move v8, v7
@@ -918,7 +793,6 @@
 
     goto/16 :goto_0
 
-    .line 262
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_15
@@ -926,34 +800,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 264
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 266
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 268
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 269
     .restart local v3    # "_arg2":I
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/ISecExternalDisplayService$Stub;->SecExternalDisplayDestroySurface(Ljava/lang/String;II)Z
 
     move-result v6
 
-    .line 270
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 271
     if-eqz v6, :cond_14
 
     move v8, v7
@@ -963,7 +831,6 @@
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

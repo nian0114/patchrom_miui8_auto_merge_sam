@@ -15,7 +15,6 @@
     .param p2, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/client/ClientProtocolException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -33,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

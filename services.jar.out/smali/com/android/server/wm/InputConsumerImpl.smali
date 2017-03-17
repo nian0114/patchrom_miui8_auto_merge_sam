@@ -30,12 +30,10 @@
     .param p3, "inputEventReceiverFactory"    # Landroid/view/InputEventReceiver$Factory;
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/server/wm/InputConsumerImpl;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/Looper;Landroid/view/InputEventReceiver$Factory;I)V
 
-    .line 46
     return-void
 .end method
 
@@ -55,33 +53,26 @@
 
     const/4 v4, 0x0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
-    const-string/jumbo v1, "input consumer"
+    const-string v1, "input consumer"
 
-    .line 57
     .local v1, "name":Ljava/lang/String;
     iput-object p1, p0, Lcom/android/server/wm/InputConsumerImpl;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 59
     invoke-static {v1}, Landroid/view/InputChannel;->openInputChannelPair(Ljava/lang/String;)[Landroid/view/InputChannel;
 
     move-result-object v0
 
-    .line 60
     .local v0, "channels":[Landroid/view/InputChannel;
     aget-object v2, v0, v4
 
     iput-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mServerChannel:Landroid/view/InputChannel;
 
-    .line 61
     aget-object v2, v0, v6
 
     iput-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mClientChannel:Landroid/view/InputChannel;
 
-    .line 62
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
@@ -90,7 +81,6 @@
 
     invoke-virtual {v2, v3, v5}, Lcom/android/server/input/InputManagerService;->registerInputChannel(Landroid/view/InputChannel;Lcom/android/server/input/InputWindowHandle;)V
 
-    .line 64
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mClientChannel:Landroid/view/InputChannel;
 
     invoke-interface {p3, v2, p2}, Landroid/view/InputEventReceiver$Factory;->createInputEventReceiver(Landroid/view/InputChannel;Landroid/os/Looper;)Landroid/view/InputEventReceiver;
@@ -99,24 +89,20 @@
 
     iput-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mInputEventReceiver:Landroid/view/InputEventReceiver;
 
-    .line 67
     new-instance v2, Lcom/android/server/input/InputApplicationHandle;
 
     invoke-direct {v2, v5}, Lcom/android/server/input/InputApplicationHandle;-><init>(Ljava/lang/Object;)V
 
     iput-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Lcom/android/server/input/InputApplicationHandle;
 
-    .line 68
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Lcom/android/server/input/InputApplicationHandle;
 
     iput-object v1, v2, Lcom/android/server/input/InputApplicationHandle;->name:Ljava/lang/String;
 
-    .line 69
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Lcom/android/server/input/InputApplicationHandle;
 
     iput-wide v8, v2, Lcom/android/server/input/InputApplicationHandle;->dispatchingTimeoutNanos:J
 
-    .line 72
     new-instance v2, Lcom/android/server/input/InputWindowHandle;
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Lcom/android/server/input/InputApplicationHandle;
@@ -125,26 +111,22 @@
 
     iput-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
-    .line 73
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-object v1, v2, Lcom/android/server/input/InputWindowHandle;->name:Ljava/lang/String;
 
-    .line 74
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mServerChannel:Landroid/view/InputChannel;
 
     iput-object v3, v2, Lcom/android/server/input/InputWindowHandle;->inputChannel:Landroid/view/InputChannel;
 
-    .line 75
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     const/16 v3, 0x7e6
 
     iput v3, v2, Lcom/android/server/input/InputWindowHandle;->layoutParamsType:I
 
-    .line 76
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iget v2, v2, Lcom/android/server/input/InputWindowHandle;->layoutParamsType:I
@@ -155,49 +137,40 @@
 
     iput v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowLayer:I
 
-    .line 77
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iget v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowLayer:I
 
     iput v3, v2, Lcom/android/server/input/InputWindowHandle;->layer:I
 
-    .line 78
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput v4, v2, Lcom/android/server/input/InputWindowHandle;->layoutParamsFlags:I
 
-    .line 79
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-wide v8, v2, Lcom/android/server/input/InputWindowHandle;->dispatchingTimeoutNanos:J
 
-    .line 81
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-boolean v6, v2, Lcom/android/server/input/InputWindowHandle;->visible:Z
 
-    .line 82
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-boolean v4, v2, Lcom/android/server/input/InputWindowHandle;->canReceiveKeys:Z
 
-    .line 83
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-boolean v4, v2, Lcom/android/server/input/InputWindowHandle;->hasFocus:Z
 
-    .line 84
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-boolean v4, v2, Lcom/android/server/input/InputWindowHandle;->hasWallpaper:Z
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput-boolean v4, v2, Lcom/android/server/input/InputWindowHandle;->paused:Z
 
-    .line 86
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -206,7 +179,6 @@
 
     iput v3, v2, Lcom/android/server/input/InputWindowHandle;->ownerPid:I
 
-    .line 87
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -215,19 +187,16 @@
 
     iput v3, v2, Lcom/android/server/input/InputWindowHandle;->ownerUid:I
 
-    .line 88
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput v4, v2, Lcom/android/server/input/InputWindowHandle;->inputFeatures:I
 
-    .line 89
     iget-object v2, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, v2, Lcom/android/server/input/InputWindowHandle;->scaleFactor:F
 
-    .line 90
     return-void
 .end method
 
@@ -236,7 +205,6 @@
     .param p1, "windowType"    # I
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/android/server/wm/InputConsumerImpl;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -258,17 +226,14 @@
     .locals 4
 
     .prologue
-    .line 102
     iget-object v1, p0, Lcom/android/server/wm/InputConsumerImpl;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v1, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 104
     const/4 v0, 0x0
 
-    .line 108
     .local v0, "res":Z
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/InputConsumerImpl;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -277,15 +242,12 @@
 
     move-result v0
 
-    .line 110
     if-eqz v0, :cond_0
 
-    .line 112
     iget-object v1, p0, Lcom/android/server/wm/InputConsumerImpl;->mInputEventReceiver:Landroid/view/InputEventReceiver;
 
     invoke-virtual {v1}, Landroid/view/InputEventReceiver;->dispose()V
 
-    .line 113
     iget-object v1, p0, Lcom/android/server/wm/InputConsumerImpl;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
@@ -294,24 +256,19 @@
 
     invoke-virtual {v1, v3}, Lcom/android/server/input/InputManagerService;->unregisterInputChannel(Landroid/view/InputChannel;)V
 
-    .line 114
     iget-object v1, p0, Lcom/android/server/wm/InputConsumerImpl;->mClientChannel:Landroid/view/InputChannel;
 
     invoke-virtual {v1}, Landroid/view/InputChannel;->dispose()V
 
-    .line 115
     iget-object v1, p0, Lcom/android/server/wm/InputConsumerImpl;->mServerChannel:Landroid/view/InputChannel;
 
     invoke-virtual {v1}, Landroid/view/InputChannel;->dispose()V
 
-    .line 117
     :cond_0
     monitor-exit v2
 
-    .line 118
     return-void
 
-    .line 117
     :catchall_0
     move-exception v1
 
@@ -330,33 +287,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iget-object v0, v0, Lcom/android/server/input/InputWindowHandle;->touchableRegion:Landroid/graphics/Region;
 
     invoke-virtual {v0, v1, v1, p1, p2}, Landroid/graphics/Region;->set(IIII)Z
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput v1, v0, Lcom/android/server/input/InputWindowHandle;->frameLeft:I
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput v1, v0, Lcom/android/server/input/InputWindowHandle;->frameTop:I
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput p1, v0, Lcom/android/server/input/InputWindowHandle;->frameRight:I
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
     iput p2, v0, Lcom/android/server/input/InputWindowHandle;->frameBottom:I
 
-    .line 98
     return-void
 .end method

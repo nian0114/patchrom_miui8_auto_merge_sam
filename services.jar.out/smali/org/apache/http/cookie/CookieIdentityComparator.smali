@@ -28,7 +28,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -48,7 +47,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 2
     check-cast p1, Lorg/apache/http/cookie/Cookie;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -68,7 +66,6 @@
     .param p2, "c2"    # Lorg/apache/http/cookie/Cookie;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

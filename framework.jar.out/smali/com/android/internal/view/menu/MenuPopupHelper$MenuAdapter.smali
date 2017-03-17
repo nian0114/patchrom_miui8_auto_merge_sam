@@ -28,23 +28,18 @@
     .param p2, "menu"    # Lcom/android/internal/view/menu/MenuBuilder;
 
     .prologue
-    .line 624
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 622
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
-    .line 625
     iput-object p2, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
-    .line 626
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->findExpandedIndex()V
 
-    .line 627
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .param p0, "x0"    # Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;
 
     .prologue
-    .line 620
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     return-object v0
@@ -65,7 +59,6 @@
     .locals 6
 
     .prologue
-    .line 675
     iget-object v5, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # getter for: Lcom/android/internal/view/menu/MenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -77,11 +70,9 @@
 
     move-result-object v1
 
-    .line 676
     .local v1, "expandedItem":Lcom/android/internal/view/menu/MenuItemImpl;
     if-eqz v1, :cond_1
 
-    .line 677
     iget-object v5, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # getter for: Lcom/android/internal/view/menu/MenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -93,13 +84,11 @@
 
     move-result-object v4
 
-    .line 678
     .local v4, "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 679
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -107,21 +96,17 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 680
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 681
     .local v3, "item":Lcom/android/internal/view/menu/MenuItemImpl;
     if-ne v3, v1, :cond_0
 
-    .line 682
     iput v2, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
-    .line 688
     .end local v0    # "count":I
     .end local v2    # "i":I
     .end local v3    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
@@ -129,7 +114,6 @@
     :goto_1
     return-void
 
-    .line 679
     .restart local v0    # "count":I
     .restart local v2    # "i":I
     .restart local v3    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
@@ -139,7 +123,6 @@
 
     goto :goto_0
 
-    .line 687
     .end local v0    # "count":I
     .end local v2    # "i":I
     .end local v3    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
@@ -156,7 +139,6 @@
     .locals 2
 
     .prologue
-    .line 630
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # getter for: Lcom/android/internal/view/menu/MenuPopupHelper;->mOverflowOnly:Z
@@ -172,23 +154,19 @@
 
     move-result-object v0
 
-    .line 632
     .local v0, "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     :goto_0
     iget v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
     if-gez v1, :cond_1
 
-    .line 633
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 635
     :goto_1
     return v1
 
-    .line 630
     .end local v0    # "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     :cond_0
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -199,7 +177,6 @@
 
     goto :goto_0
 
-    .line 635
     .restart local v0    # "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -216,7 +193,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 639
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # getter for: Lcom/android/internal/view/menu/MenuPopupHelper;->mOverflowOnly:Z
@@ -232,7 +208,6 @@
 
     move-result-object v0
 
-    .line 641
     .local v0, "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     :goto_0
     iget v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
@@ -243,10 +218,8 @@
 
     if-lt p1, v1, :cond_0
 
-    .line 642
     add-int/lit8 p1, p1, 0x1
 
-    .line 644
     :cond_0
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -256,7 +229,6 @@
 
     return-object v1
 
-    .line 639
     .end local v0    # "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/view/menu/MenuItemImpl;>;"
     :cond_1
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -273,7 +245,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 620
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
 
     move-result-object v0
@@ -286,7 +257,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 650
     int-to-long v0, p1
 
     return-wide v0
@@ -301,10 +271,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 654
     if-nez p2, :cond_0
 
-    .line 655
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # invokes: Lcom/android/internal/view/menu/MenuPopupHelper;->twIsPopupMenuDisplay()Z
@@ -314,7 +282,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 656
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # invokes: Lcom/android/internal/view/menu/MenuPopupHelper;->isSupportOverlapSubMenu()Z
@@ -334,7 +301,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 657
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     # getter for: Lcom/android/internal/view/menu/MenuPopupHelper;->mInflater:Landroid/view/LayoutInflater;
@@ -352,10 +318,8 @@
     :goto_0
     move-object v0, p2
 
-    .line 666
     check-cast v0, Lcom/android/internal/view/menu/MenuView$ItemView;
 
-    .line 667
     .local v0, "itemView":Lcom/android/internal/view/menu/MenuView$ItemView;
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
@@ -365,14 +329,12 @@
 
     move-object v1, p2
 
-    .line 668
     check-cast v1, Lcom/android/internal/view/menu/ListMenuItemView;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/android/internal/view/menu/ListMenuItemView;->setForceShowIcon(Z)V
 
-    .line 670
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
 
@@ -380,10 +342,8 @@
 
     invoke-interface {v0, v1, v3}, Lcom/android/internal/view/menu/MenuView$ItemView;->initialize(Lcom/android/internal/view/menu/MenuItemImpl;I)V
 
-    .line 671
     return-object p2
 
-    .line 659
     .end local v0    # "itemView":Lcom/android/internal/view/menu/MenuView$ItemView;
     :cond_2
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
@@ -401,7 +361,6 @@
 
     goto :goto_0
 
-    .line 662
     :cond_3
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
@@ -423,12 +382,9 @@
     .locals 0
 
     .prologue
-    .line 692
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->findExpandedIndex()V
 
-    .line 693
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 694
     return-void
 .end method

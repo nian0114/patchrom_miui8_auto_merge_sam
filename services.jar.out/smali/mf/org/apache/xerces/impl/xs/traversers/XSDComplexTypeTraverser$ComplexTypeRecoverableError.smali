@@ -31,16 +31,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 135
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 132
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError;->errorSubstText:[Ljava/lang/Object;
 
-    .line 133
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError;->errorElem:Lmf/org/w3c/dom/Element;
 
-    .line 136
     return-void
 .end method
 
@@ -53,21 +49,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 138
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 132
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError;->errorSubstText:[Ljava/lang/Object;
 
-    .line 133
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError;->errorElem:Lmf/org/w3c/dom/Element;
 
-    .line 139
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError;->errorSubstText:[Ljava/lang/Object;
 
-    .line 140
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError;->errorElem:Lmf/org/w3c/dom/Element;
 
-    .line 141
     return-void
 .end method

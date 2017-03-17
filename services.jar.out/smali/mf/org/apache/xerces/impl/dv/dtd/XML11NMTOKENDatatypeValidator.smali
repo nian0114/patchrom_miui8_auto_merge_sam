@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/dtd/NMTOKENDatatypeValidator;-><init>()V
 
-    .line 41
     return-void
 .end method
 
@@ -28,14 +26,12 @@
     .end annotation
 
     .prologue
-    .line 54
     invoke-static {p1}, Lmf/org/apache/xerces/util/XML11Char;->isXML11ValidNmtoken(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 55
     new-instance v0, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v1, "NMTOKENInvalid"
@@ -52,7 +48,6 @@
 
     throw v0
 
-    .line 57
     :cond_0
     return-void
 .end method

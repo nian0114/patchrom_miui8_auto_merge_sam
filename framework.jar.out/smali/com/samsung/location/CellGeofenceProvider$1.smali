@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     invoke-direct {p0}, Lcom/samsung/location/ISLocationCellInterface$Stub;-><init>()V
@@ -38,13 +37,11 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_add_cell_geofence(I)V
     invoke-static {v0, p1}, Lcom/samsung/location/CellGeofenceProvider;->access$100(Lcom/samsung/location/CellGeofenceProvider;I)V
 
-    .line 82
     return-void
 .end method
 
@@ -54,13 +51,11 @@
     .param p2, "geofenceState"    # I
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_enable_cell_geofence(II)V
     invoke-static {v0, p1, p2}, Lcom/samsung/location/CellGeofenceProvider;->access$200(Lcom/samsung/location/CellGeofenceProvider;II)V
 
-    .line 85
     return-void
 .end method
 
@@ -69,13 +64,11 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_init_cell_geofence(I)V
     invoke-static {v0, p1}, Lcom/samsung/location/CellGeofenceProvider;->access$000(Lcom/samsung/location/CellGeofenceProvider;I)V
 
-    .line 79
     return-void
 .end method
 
@@ -84,13 +77,11 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_remove_cell_geofence(I)V
     invoke-static {v0, p1}, Lcom/samsung/location/CellGeofenceProvider;->access$300(Lcom/samsung/location/CellGeofenceProvider;I)V
 
-    .line 88
     return-void
 .end method
 
@@ -99,13 +90,11 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_start_collect_cell(I)V
     invoke-static {v0, p1}, Lcom/samsung/location/CellGeofenceProvider;->access$400(Lcom/samsung/location/CellGeofenceProvider;I)V
 
-    .line 91
     return-void
 .end method
 
@@ -114,13 +103,11 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_stop_collect_cell(I)V
     invoke-static {v0, p1}, Lcom/samsung/location/CellGeofenceProvider;->access$500(Lcom/samsung/location/CellGeofenceProvider;I)V
 
-    .line 94
     return-void
 .end method
 
@@ -132,12 +119,10 @@
     .param p4, "enabledIdSize"    # I
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/samsung/location/CellGeofenceProvider$1;->this$0:Lcom/samsung/location/CellGeofenceProvider;
 
     # invokes: Lcom/samsung/location/CellGeofenceProvider;->native_sync_cell_geofence([II[II)V
     invoke-static {v0, p1, p2, p3, p4}, Lcom/samsung/location/CellGeofenceProvider;->access$600(Lcom/samsung/location/CellGeofenceProvider;[II[II)V
 
-    .line 97
     return-void
 .end method

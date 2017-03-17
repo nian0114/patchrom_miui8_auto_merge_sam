@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3394
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$LiveIconObject;->this$0:Landroid/app/ApplicationPackageManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,14 +46,12 @@
     .end annotation
 
     .prologue
-    .line 3405
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ApplicationPackageManager$LiveIconObject;
 
-    .line 3406
     .local v0, "temp":Landroid/app/ApplicationPackageManager$LiveIconObject;
     return-object v0
 .end method
@@ -63,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 3398
     iget-object v0, p0, Landroid/app/ApplicationPackageManager$LiveIconObject;->liveIcon:Ljava/lang/Object;
 
     return-object v0
@@ -74,9 +70,7 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 3402
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$LiveIconObject;->liveIcon:Ljava/lang/Object;
 
-    .line 3403
     return-void
 .end method

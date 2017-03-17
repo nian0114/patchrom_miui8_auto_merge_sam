@@ -21,20 +21,16 @@
     .param p2, "nodeIndex"    # I
 
     .prologue
-    .line 65
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/dom/TextImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 67
     iput p2, p0, Lmf/org/apache/xerces/dom/DeferredTextImpl;->fNodeIndex:I
 
-    .line 68
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lmf/org/apache/xerces/dom/DeferredTextImpl;->needsSyncData(Z)V
 
-    .line 70
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget v0, p0, Lmf/org/apache/xerces/dom/DeferredTextImpl;->fNodeIndex:I
 
     return v0
@@ -58,17 +53,14 @@
 
     const/4 v2, 0x0
 
-    .line 89
     invoke-virtual {p0, v2}, Lmf/org/apache/xerces/dom/DeferredTextImpl;->needsSyncData(Z)V
 
-    .line 93
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/DeferredTextImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v0
 
     check-cast v0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;
 
-    .line 94
     .local v0, "ownerDocument":Lmf/org/apache/xerces/dom/DeferredDocumentImpl;
     iget v3, p0, Lmf/org/apache/xerces/dom/DeferredTextImpl;->fNodeIndex:I
 
@@ -78,7 +70,6 @@
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredTextImpl;->data:Ljava/lang/String;
 
-    .line 101
     iget v3, p0, Lmf/org/apache/xerces/dom/DeferredTextImpl;->fNodeIndex:I
 
     invoke-virtual {v0, v3}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeExtra(I)I
@@ -90,12 +81,10 @@
     :goto_0
     invoke-virtual {p0, v1}, Lmf/org/apache/xerces/dom/DeferredTextImpl;->isIgnorableWhitespace(Z)V
 
-    .line 103
     return-void
 
     :cond_0
     move v1, v2
 
-    .line 101
     goto :goto_0
 .end method

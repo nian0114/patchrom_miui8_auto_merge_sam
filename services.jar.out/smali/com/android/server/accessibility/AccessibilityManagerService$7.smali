@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 802
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/16 v3, 0x3e8
 
-    .line 804
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mWarningToast:Landroid/widget/Toast;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 805
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mWarningToast:Landroid/widget/Toast;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
-    .line 807
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -82,7 +78,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 808
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
@@ -101,7 +96,6 @@
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mWarningToast:Landroid/widget/Toast;
     invoke-static {v0, v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$402(Lcom/android/server/accessibility/AccessibilityManagerService;Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 812
     :goto_0
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -112,10 +106,8 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 813
     return-void
 
-    .line 810
     :cond_1
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 

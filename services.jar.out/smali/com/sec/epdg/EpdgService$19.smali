@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4415
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$19;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 4418
     const/4 v0, 0x0
 
     return-object v0
@@ -50,11 +48,9 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 4423
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$19;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-virtual {v0}, Lcom/sec/epdg/EpdgService;->bootCompleted()V
 
-    .line 4424
     return-void
 .end method

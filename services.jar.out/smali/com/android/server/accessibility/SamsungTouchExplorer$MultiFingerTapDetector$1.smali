@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1863
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1865
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->onTouchInteractionEnd()V
 
-    .line 1867
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
@@ -60,7 +57,6 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendAccessibilityEvent(I)V
     invoke-static {v0, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$2000(Lcom/android/server/accessibility/SamsungTouchExplorer;I)V
 
-    .line 1869
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
@@ -70,7 +66,6 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendAccessibilityEvent(I)V
     invoke-static {v0, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$2000(Lcom/android/server/accessibility/SamsungTouchExplorer;I)V
 
-    .line 1873
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
@@ -82,7 +77,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/SamsungTouchExplorer$ExitGestureDetectionModeDelayed;->cancel()V
 
-    .line 1874
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
@@ -94,16 +88,13 @@
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->cancel()V
 
-    .line 1876
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1890
     :goto_0
     return-void
 
-    .line 1878
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
@@ -112,7 +103,6 @@
 
     goto :goto_0
 
-    .line 1881
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
@@ -121,7 +111,6 @@
 
     goto :goto_0
 
-    .line 1884
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
@@ -130,7 +119,6 @@
 
     goto :goto_0
 
-    .line 1887
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$1;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
@@ -139,7 +127,6 @@
 
     goto :goto_0
 
-    .line 1876
     nop
 
     :pswitch_data_0

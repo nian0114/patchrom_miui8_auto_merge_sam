@@ -121,7 +121,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "xml.WrongContent"
+    const-string v2, "xml.WrongContent"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -289,7 +289,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -363,7 +363,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -396,7 +396,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -487,7 +487,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -629,7 +629,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -640,7 +640,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -651,7 +651,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

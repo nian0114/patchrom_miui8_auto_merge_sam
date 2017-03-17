@@ -84,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/OemExtendedApi3LMService;->mCurrentUserId:I
@@ -104,17 +103,13 @@
 
     const/4 v3, -0x1
 
-    .line 182
     invoke-direct {p0}, Landroid/os/IOemExtendedApi3LM$Stub;-><init>()V
 
-    .line 62
     iput-boolean v4, p0, Lcom/android/server/OemExtendedApi3LMService;->isSimulatorPermitted:Z
 
-    .line 71
     iput v3, p0, Lcom/android/server/OemExtendedApi3LMService;->mOwnerInfoEnabled:I
 
-    .line 74
-    const-string/jumbo v2, "ro.csc.sales_code"
+    const-string v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -122,42 +117,34 @@
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->SalesCode:Ljava/lang/String;
 
-    .line 79
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->binder:Lcom/samsung/felicaremotelock/IFelica;
 
-    .line 80
     new-instance v2, Lcom/android/server/OemExtendedApi3LMService$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/OemExtendedApi3LMService$1;-><init>(Lcom/android/server/OemExtendedApi3LMService;)V
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 322
     iput v3, p0, Lcom/android/server/OemExtendedApi3LMService;->FelicaSavedState:I
 
-    .line 472
     new-instance v2, Lcom/android/server/OemExtendedApi3LMService$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/OemExtendedApi3LMService$2;-><init>(Lcom/android/server/OemExtendedApi3LMService;)V
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 183
     iput-object p1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
-    .line 184
     iput-object p2, p0, Lcom/android/server/OemExtendedApi3LMService;->mOem:Landroid/os/IDeviceManagerRestrictable3LM;
 
-    .line 185
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 186
     const-string v2, "DeviceManager3LM"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -168,17 +155,14 @@
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
-    .line 188
     new-instance v2, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;
 
     invoke-direct {v2, p1}, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mPublicKey3LM:Lcom/android/server/DeviceManager3LMService$PublicKey3LM;
 
-    .line 189
     iput v5, p0, Lcom/android/server/OemExtendedApi3LMService;->mOneSegState:I
 
-    .line 191
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/samsung/felicaremotelock/IFelica;
@@ -189,48 +173,40 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 192
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "com.samsung.felicaremotelock"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 193
     const-string v2, "OemExtendedApi3LM"
 
     const-string v3, "OemExtendedApi3LMService:  Bind to Felica Service"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     iget-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/OemExtendedApi3LMService;->mConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v2, v1, v3, v5}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 196
     iput v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mEmergencyLockState:I
 
-    .line 198
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 199
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 200
     iget-object v2, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/OemExtendedApi3LMService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 202
     return-void
 .end method
 
@@ -240,7 +216,6 @@
     .param p1, "x1"    # Lcom/samsung/felicaremotelock/IFelica;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/android/server/OemExtendedApi3LMService;->binder:Lcom/samsung/felicaremotelock/IFelica;
 
     return-object p1
@@ -252,7 +227,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 57
     invoke-direct {p0, p1}, Lcom/android/server/OemExtendedApi3LMService;->setCurrentUserId(I)V
 
     return-void
@@ -263,7 +237,6 @@
     .param p0, "x0"    # Lcom/android/server/OemExtendedApi3LMService;
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
     return-object v0
@@ -273,7 +246,6 @@
     .locals 3
 
     .prologue
-    .line 468
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -298,7 +270,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     sget v0, Lcom/android/server/OemExtendedApi3LMService;->mCurrentUserId:I
 
     return v0
@@ -308,7 +279,6 @@
     .locals 1
 
     .prologue
-    .line 207
     const/4 v0, 0x0
 
     return v0
@@ -319,10 +289,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 463
     sput p1, Lcom/android/server/OemExtendedApi3LMService;->mCurrentUserId:I
 
-    .line 464
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -347,7 +315,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
     return-void
 .end method
 
@@ -356,10 +323,8 @@
     .param p1, "CurentState"    # I
 
     .prologue
-    .line 332
     iput p1, p0, Lcom/android/server/OemExtendedApi3LMService;->FelicaSavedState:I
 
-    .line 333
     return-void
 .end method
 
@@ -369,14 +334,12 @@
     .locals 2
 
     .prologue
-    .line 265
     const-string v0, "OemExtendedApi3LM"
 
     const-string v1, "OEM clear()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     return-void
 .end method
 
@@ -384,7 +347,6 @@
     .locals 3
 
     .prologue
-    .line 443
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -409,14 +371,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "emergency_lock_call_state"
+    const-string v1, "emergency_lock_call_state"
 
     const/4 v2, 0x0
 
@@ -426,7 +387,6 @@
 
     iput v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mEmergencyLockCallState:I
 
-    .line 445
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -451,7 +411,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     iget v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mEmergencyLockCallState:I
 
     return v0
@@ -461,7 +420,6 @@
     .locals 1
 
     .prologue
-    .line 328
     iget v0, p0, Lcom/android/server/OemExtendedApi3LMService;->FelicaSavedState:I
 
     return v0
@@ -471,7 +429,6 @@
     .locals 1
 
     .prologue
-    .line 297
     const/4 v0, 0x1
 
     return v0
@@ -481,7 +438,6 @@
     .locals 1
 
     .prologue
-    .line 418
     const/4 v0, -0x1
 
     return v0
@@ -491,7 +447,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-boolean v0, p0, Lcom/android/server/OemExtendedApi3LMService;->isSimulatorPermitted:Z
 
     return v0
@@ -501,7 +456,6 @@
     .locals 1
 
     .prologue
-    .line 380
     const/4 v0, 0x1
 
     return v0
@@ -511,7 +465,6 @@
     .locals 1
 
     .prologue
-    .line 254
     const/4 v0, -0x1
 
     return v0
@@ -524,7 +477,6 @@
     .param p3, "alarm"    # Z
 
     .prologue
-    .line 523
     const/4 v0, 0x1
 
     return v0
@@ -535,7 +487,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 453
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -558,18 +509,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     invoke-direct {p0}, Lcom/android/server/OemExtendedApi3LMService;->isAccessPermitted()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 458
     :goto_0
     return-void
 
-    .line 456
     :cond_0
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
@@ -577,11 +525,10 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "emergency_lock_call_state"
+    const-string v1, "emergency_lock_call_state"
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 457
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -600,7 +547,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "emergency_lock_call_state"
+    const-string v3, "emergency_lock_call_state"
 
     const/4 v4, 0x0
 
@@ -626,7 +573,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 340
     return-void
 .end method
 
@@ -635,7 +581,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 432
     return-void
 .end method
 
@@ -644,7 +589,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 394
     return-void
 .end method
 
@@ -653,7 +597,6 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 98
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -676,17 +619,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     iput-boolean p1, p0, Lcom/android/server/OemExtendedApi3LMService;->isSimulatorPermitted:Z
 
-    .line 100
     const-string v0, "OemExtendedApi3LM"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "oem extended isSimulatorPermitted is set to "
+    const-string v2, "oem extended isSimulatorPermitted is set to "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -704,6 +645,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     return-void
 .end method

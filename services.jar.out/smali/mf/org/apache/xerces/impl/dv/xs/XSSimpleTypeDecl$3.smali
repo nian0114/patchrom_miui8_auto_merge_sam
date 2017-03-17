@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$3;->this$0:Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
-    .line 2259
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$AbstractObjectList;-><init>(Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$AbstractObjectList;)V
@@ -43,7 +41,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2264
     iget-object v2, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$3;->this$0:Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
     # getter for: Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;->fEnumeration:[Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
@@ -53,12 +50,10 @@
 
     if-nez v2, :cond_1
 
-    .line 2272
     :cond_0
     :goto_0
     return v1
 
-    .line 2267
     :cond_1
     const/4 v0, 0x0
 
@@ -73,7 +68,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 2268
     iget-object v2, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$3;->this$0:Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
     # getter for: Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;->fEnumeration:[Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
@@ -93,12 +87,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 2269
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 2267
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -109,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 2261
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$3;->this$0:Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
     # getter for: Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;->fEnumeration:[Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
@@ -140,7 +131,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 2275
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$3;->getLength()I
@@ -149,11 +139,9 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 2276
     :cond_0
     const/4 v0, 0x0
 
-    .line 2278
     :goto_0
     return-object v0
 

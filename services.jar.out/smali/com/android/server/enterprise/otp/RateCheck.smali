@@ -53,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 87
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/otp/RateCheck;->mInstance:Lcom/android/server/enterprise/otp/RateCheck;
@@ -67,16 +66,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object v0, p0, Lcom/android/server/enterprise/otp/RateCheck;->mCallLog:Ljava/util/ArrayList;
 
-    .line 28
     iput-object v0, p0, Lcom/android/server/enterprise/otp/RateCheck;->mBlockList:Ljava/util/HashMap;
 
-    .line 100
     return-void
 .end method
 
@@ -84,7 +79,6 @@
     .locals 3
 
     .prologue
-    .line 90
     const-class v1, Lcom/android/server/enterprise/otp/RateCheck;
 
     monitor-enter v1
@@ -94,14 +88,12 @@
 
     if-nez v0, :cond_0
 
-    .line 91
     new-instance v0, Lcom/android/server/enterprise/otp/RateCheck;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/RateCheck;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/otp/RateCheck;->mInstance:Lcom/android/server/enterprise/otp/RateCheck;
 
-    .line 92
     sget-object v0, Lcom/android/server/enterprise/otp/RateCheck;->mInstance:Lcom/android/server/enterprise/otp/RateCheck;
 
     new-instance v2, Ljava/util/ArrayList;
@@ -110,7 +102,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/RateCheck;->mCallLog:Ljava/util/ArrayList;
 
-    .line 93
     sget-object v0, Lcom/android/server/enterprise/otp/RateCheck;->mInstance:Lcom/android/server/enterprise/otp/RateCheck;
 
     new-instance v2, Ljava/util/HashMap;
@@ -119,7 +110,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/RateCheck;->mBlockList:Ljava/util/HashMap;
 
-    .line 95
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/otp/RateCheck;->mInstance:Lcom/android/server/enterprise/otp/RateCheck;
     :try_end_0
@@ -129,7 +119,6 @@
 
     return-object v0
 
-    .line 90
     :catchall_0
     move-exception v0
 
@@ -143,29 +132,24 @@
     .param p1, "caller"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 55
     .local v2, "failCount":I
     const/4 v6, 0x0
 
-    .line 56
     .local v6, "totalCount":I
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 57
     .local v0, "currentTime":J
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 59
     .local v5, "temp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/otp/RateCheck$RateData;>;"
     iget-object v7, p0, Lcom/android/server/enterprise/otp/RateCheck;->mCallLog:Ljava/util/ArrayList;
 
@@ -188,7 +172,6 @@
 
     check-cast v4, Lcom/android/server/enterprise/otp/RateCheck$RateData;
 
-    .line 60
     .local v4, "rd":Lcom/android/server/enterprise/otp/RateCheck$RateData;
     # getter for: Lcom/android/server/enterprise/otp/RateCheck$RateData;->caller:Ljava/lang/String;
     invoke-static {v4}, Lcom/android/server/enterprise/otp/RateCheck$RateData;->access$000(Lcom/android/server/enterprise/otp/RateCheck$RateData;)Ljava/lang/String;
@@ -201,7 +184,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 61
     # getter for: Lcom/android/server/enterprise/otp/RateCheck$RateData;->timestamp:J
     invoke-static {v4}, Lcom/android/server/enterprise/otp/RateCheck$RateData;->access$100(Lcom/android/server/enterprise/otp/RateCheck$RateData;)J
 
@@ -215,7 +197,6 @@
 
     if-gez v7, :cond_2
 
-    .line 62
     # getter for: Lcom/android/server/enterprise/otp/RateCheck$RateData;->result:Z
     invoke-static {v4}, Lcom/android/server/enterprise/otp/RateCheck$RateData;->access$200(Lcom/android/server/enterprise/otp/RateCheck$RateData;)Z
 
@@ -223,16 +204,13 @@
 
     if-nez v7, :cond_1
 
-    .line 63
     add-int/lit8 v2, v2, 0x1
 
-    .line 64
     :cond_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 66
     :cond_2
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -240,7 +218,6 @@
 
     goto :goto_0
 
-    .line 54
     .end local v0    # "currentTime":J
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "rd":Lcom/android/server/enterprise/otp/RateCheck$RateData;
@@ -252,7 +229,6 @@
 
     throw v7
 
-    .line 71
     .restart local v0    # "currentTime":J
     .restart local v3    # "i$":Ljava/util/Iterator;
     .restart local v5    # "temp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/otp/RateCheck$RateData;>;"
@@ -264,7 +240,6 @@
 
     if-lez v7, :cond_4
 
-    .line 72
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -282,7 +257,6 @@
 
     check-cast v4, Lcom/android/server/enterprise/otp/RateCheck$RateData;
 
-    .line 73
     .restart local v4    # "rd":Lcom/android/server/enterprise/otp/RateCheck$RateData;
     iget-object v7, p0, Lcom/android/server/enterprise/otp/RateCheck;->mCallLog:Ljava/util/ArrayList;
 
@@ -290,7 +264,6 @@
 
     goto :goto_1
 
-    .line 76
     .end local v4    # "rd":Lcom/android/server/enterprise/otp/RateCheck$RateData;
     :cond_4
     const/16 v7, 0x1e
@@ -301,7 +274,6 @@
 
     if-le v6, v7, :cond_6
 
-    .line 77
     :cond_5
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -337,7 +309,6 @@
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 78
     iget-object v7, p0, Lcom/android/server/enterprise/otp/RateCheck;->mBlockList:Ljava/util/HashMap;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -352,10 +323,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 79
     const/4 v7, 0x1
 
-    .line 82
     :goto_2
     monitor-exit p0
 
@@ -377,7 +346,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 31
     monitor-enter p0
 
     :try_start_0
@@ -411,7 +379,6 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, "caller":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/enterprise/otp/RateCheck;->mBlockList:Ljava/util/HashMap;
 
@@ -421,7 +388,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 34
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -446,12 +412,10 @@
 
     if-lez v1, :cond_0
 
-    .line 35
     iget-object v1, p0, Lcom/android/server/enterprise/otp/RateCheck;->mBlockList:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -476,13 +440,11 @@
 
     move v1, v2
 
-    .line 44
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 40
     :cond_0
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -507,7 +469,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 41
     const/4 v1, 0x1
 
     goto :goto_0
@@ -515,10 +476,8 @@
     :cond_1
     move v1, v2
 
-    .line 44
     goto :goto_0
 
-    .line 31
     .end local v0    # "caller":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -536,7 +495,6 @@
     .param p4, "result"    # Z
 
     .prologue
-    .line 48
     monitor-enter p0
 
     :try_start_0
@@ -570,7 +528,6 @@
 
     move-result-object v2
 
-    .line 49
     .local v2, "caller":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/enterprise/otp/RateCheck;->mCallLog:Ljava/util/ArrayList;
 
@@ -588,17 +545,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 50
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/otp/RateCheck;->validateCaller(Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
     monitor-exit p0
 
     return-void
 
-    .line 48
     .end local v2    # "caller":Ljava/lang/String;
     :catchall_0
     move-exception v0

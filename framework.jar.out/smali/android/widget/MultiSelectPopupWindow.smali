@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 670
     const/4 v0, 0x2
 
     new-array v0, v0, [F
@@ -62,16 +61,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     sput-object v0, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
-    .line 70
     sput-object v0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectQuickPopupWindow:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
-    .line 71
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow;->isTablet()Z
 
     move-result v0
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 51
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     return-object v0
@@ -103,7 +96,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -115,7 +107,6 @@
     .param p1, "x1"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 51
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
     return-object p1
@@ -128,7 +119,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Landroid/widget/MultiSelectPopupWindow;->isPositionVisible(II)Z
 
     move-result v0
@@ -141,7 +131,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow;->isShareViaEnable()Z
 
     move-result v0
@@ -154,7 +143,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow;->isDictionaryEnable()Z
 
     move-result v0
@@ -167,7 +155,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow;->isTranslatorEnable()Z
 
     move-result v0
@@ -180,7 +167,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow;->getPositionListener()Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
     move-result-object v0
@@ -194,7 +180,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 51
     invoke-direct {p0, p1}, Landroid/widget/MultiSelectPopupWindow;->isOffsetVisible(I)Z
 
     move-result v0
@@ -207,7 +192,6 @@
     .param p0, "x0"    # Landroid/widget/MultiSelectPopupWindow;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -219,7 +203,6 @@
     .param p1, "x1"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 51
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
     return-object p1
@@ -229,19 +212,16 @@
     .locals 1
 
     .prologue
-    .line 62
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->sInstance:Landroid/widget/MultiSelectPopupWindow;
 
     if-nez v0, :cond_0
 
-    .line 63
     new-instance v0, Landroid/widget/MultiSelectPopupWindow;
 
     invoke-direct {v0}, Landroid/widget/MultiSelectPopupWindow;-><init>()V
 
     sput-object v0, Landroid/widget/MultiSelectPopupWindow;->sInstance:Landroid/widget/MultiSelectPopupWindow;
 
-    .line 65
     :cond_0
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->sInstance:Landroid/widget/MultiSelectPopupWindow;
 
@@ -252,12 +232,10 @@
     .locals 2
 
     .prologue
-    .line 676
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mPositionListener:Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
     if-nez v0, :cond_0
 
-    .line 677
     new-instance v0, Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
     const/4 v1, 0x0
@@ -266,7 +244,6 @@
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mPositionListener:Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
-    .line 679
     :cond_0
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mPositionListener:Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
@@ -279,7 +256,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 637
     sget-object v3, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -290,7 +266,6 @@
 
     move-result-object v1
 
-    .line 638
     .local v1, "pm":Landroid/content/pm/PackageManager;
     new-instance v3, Landroid/content/Intent;
 
@@ -302,7 +277,6 @@
 
     move-result-object v0
 
-    .line 640
     .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -316,10 +290,8 @@
 
     if-nez v3, :cond_0
 
-    .line 641
     const/4 v2, 0x1
 
-    .line 644
     :cond_0
     return v2
 .end method
@@ -328,7 +300,6 @@
     .locals 2
 
     .prologue
-    .line 660
     sget-object v1, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -339,16 +310,13 @@
 
     move-result-object v0
 
-    .line 661
     .local v0, "em":Lcom/sec/android/emergencymode/EmergencyManager;
     if-eqz v0, :cond_0
 
-    .line 662
     invoke-virtual {v0}, Lcom/sec/android/emergencymode/EmergencyManager;->isEmergencyMode()Z
 
     move-result v1
 
-    .line 664
     :goto_0
     return v1
 
@@ -363,37 +331,30 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 619
     sget-object v4, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v0
 
-    .line 620
     .local v0, "layout":Landroid/text/Layout;
     if-nez v0, :cond_0
 
-    .line 621
     const/4 v4, 0x0
 
-    .line 628
     :goto_0
     return v4
 
-    .line 623
     :cond_0
     invoke-virtual {v0, p1}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v1
 
-    .line 625
     .local v1, "line":I
     invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineBaseline(I)I
 
     move-result v2
 
-    .line 626
     .local v2, "lineBaseLine":I
     invoke-virtual {v0, p1}, Landroid/text/Layout;->getPrimaryHorizontal(I)F
 
@@ -401,7 +362,6 @@
 
     float-to-int v3, v4
 
-    .line 628
     .local v3, "primaryHorizontal":I
     sget-object v4, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
@@ -438,16 +398,13 @@
 
     const/4 v4, 0x0
 
-    .line 703
     sget-object v6, Landroid/widget/MultiSelectPopupWindow;->TEMP_POSITION:[F
 
     monitor-enter v6
 
-    .line 704
     :try_start_0
     sget-object v2, Landroid/widget/MultiSelectPopupWindow;->TEMP_POSITION:[F
 
-    .line 705
     .local v2, "position":[F
     const/4 v7, 0x0
 
@@ -455,27 +412,22 @@
 
     aput v8, v2, v7
 
-    .line 706
     const/4 v7, 0x1
 
     int-to-float v8, p2
 
     aput v8, v2, v7
 
-    .line 707
     sget-object v3, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
-    .line 709
     .local v3, "view":Landroid/view/View;
     :goto_0
     if-eqz v3, :cond_5
 
-    .line 710
     sget-object v7, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     if-eq v3, v7, :cond_0
 
-    .line 711
     const/4 v7, 0x0
 
     aget v8, v2, v7
@@ -490,7 +442,6 @@
 
     aput v8, v2, v7
 
-    .line 712
     const/4 v7, 0x1
 
     aget v8, v2, v7
@@ -505,7 +456,6 @@
 
     aput v8, v2, v7
 
-    .line 715
     :cond_0
     const/4 v7, 0x0
 
@@ -551,15 +501,12 @@
 
     if-lez v7, :cond_2
 
-    .line 716
     :cond_1
     monitor-exit v6
 
-    .line 734
     :goto_1
     return v4
 
-    .line 719
     :cond_2
     invoke-virtual {v3}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
@@ -571,14 +518,12 @@
 
     if-nez v7, :cond_3
 
-    .line 720
     invoke-virtual {v3}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v7
 
     invoke-virtual {v7, v2}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    .line 723
     :cond_3
     const/4 v7, 0x0
 
@@ -594,7 +539,6 @@
 
     aput v8, v2, v7
 
-    .line 724
     const/4 v7, 0x1
 
     aget v8, v2, v7
@@ -609,18 +553,15 @@
 
     aput v8, v2, v7
 
-    .line 726
     invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 727
     .local v1, "parent":Landroid/view/ViewParent;
     instance-of v7, v1, Landroid/view/View;
 
     if-eqz v7, :cond_4
 
-    .line 728
     move-object v0, v1
 
     check-cast v0, Landroid/view/View;
@@ -629,23 +570,19 @@
 
     goto :goto_0
 
-    .line 730
     :cond_4
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 733
     .end local v1    # "parent":Landroid/view/ViewParent;
     :cond_5
     monitor-exit v6
 
     move v4, v5
 
-    .line 734
     goto :goto_1
 
-    .line 733
     .end local v2    # "position":[F
     .end local v3    # "view":Landroid/view/View;
     :catchall_0
@@ -662,7 +599,6 @@
     .locals 1
 
     .prologue
-    .line 632
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow;->isEmergencyMode()Z
 
     move-result v0
@@ -671,7 +607,6 @@
 
     const/4 v0, 0x0
 
-    .line 633
     :goto_0
     return v0
 
@@ -685,10 +620,9 @@
     .locals 2
 
     .prologue
-    .line 744
-    const-string/jumbo v0, "short"
+    const-string v0, "short"
 
-    const-string/jumbo v1, "ro.build.scafe.size"
+    const-string v1, "ro.build.scafe.size"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -700,10 +634,8 @@
 
     if-nez v0, :cond_0
 
-    .line 745
     const/4 v0, 0x1
 
-    .line 747
     :goto_0
     return v0
 
@@ -719,7 +651,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 649
     sget-object v3, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -730,7 +661,6 @@
 
     move-result-object v1
 
-    .line 650
     .local v1, "pm":Landroid/content/pm/PackageManager;
     new-instance v3, Landroid/content/Intent;
 
@@ -742,7 +672,6 @@
 
     move-result-object v0
 
-    .line 652
     .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -756,10 +685,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 653
     const/4 v2, 0x1
 
-    .line 655
     :cond_0
     return v2
 .end method
@@ -771,26 +698,21 @@
     .param p1, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 102
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     if-ne v0, p1, :cond_1
 
-    .line 107
     :cond_0
     :goto_0
     return-void
 
-    .line 104
     :cond_1
     sput-object p1, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
-    .line 105
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectQuickPopupWindow:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
     if-nez v0, :cond_0
 
-    .line 106
     new-instance v0, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
     invoke-direct {v0, p0}, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;-><init>(Landroid/widget/MultiSelectPopupWindow;)V
@@ -806,42 +728,35 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 689
     sget-object v2, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     if-nez v2, :cond_0
 
-    .line 699
     :goto_0
     return-object v1
 
-    .line 692
     :cond_0
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectController:Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     if-nez v2, :cond_1
 
-    .line 693
     new-instance v2, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     invoke-direct {v2, p0, v1}, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;-><init>(Landroid/widget/MultiSelectPopupWindow;Landroid/widget/MultiSelectPopupWindow$1;)V
 
     iput-object v2, p0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectController:Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
-    .line 695
     sget-object v1, Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 696
     .local v0, "observer":Landroid/view/ViewTreeObserver;
     iget-object v1, p0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectController:Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnTouchModeChangeListener(Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;)V
 
-    .line 699
     .end local v0    # "observer":Landroid/view/ViewTreeObserver;
     :cond_1
     iget-object v1, p0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectController:Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
@@ -853,19 +768,15 @@
     .locals 1
 
     .prologue
-    .line 90
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectQuickPopupWindow:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
     if-eqz v0, :cond_0
 
-    .line 91
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectQuickPopupWindow:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
-    .line 95
     :goto_0
     return-object v0
 
-    .line 94
     :cond_0
     new-instance v0, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
@@ -873,7 +784,6 @@
 
     sput-object v0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectQuickPopupWindow:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
-    .line 95
     sget-object v0, Landroid/widget/MultiSelectPopupWindow;->mMultiSelectQuickPopupWindow:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
     goto :goto_0
@@ -883,21 +793,18 @@
     .locals 1
 
     .prologue
-    .line 84
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 85
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;->hide()V
 
-    .line 87
     :cond_0
     return-void
 .end method
@@ -906,21 +813,18 @@
     .locals 1
 
     .prologue
-    .line 683
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 684
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;->initPreviousOffset()V
 
-    .line 686
     :cond_0
     return-void
 .end method
@@ -929,17 +833,14 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mPositionListener:Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
     if-eqz v0, :cond_0
 
-    .line 111
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow;->mPositionListener:Landroid/widget/MultiSelectPopupWindow$PositionListener;
 
     invoke-virtual {v0}, Landroid/widget/MultiSelectPopupWindow$PositionListener;->onScrollChanged()V
 
-    .line 113
     :cond_0
     return-void
 .end method
@@ -948,21 +849,18 @@
     .locals 1
 
     .prologue
-    .line 738
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 739
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;->relocateMultiSelectQuickPopupWindow()V
 
-    .line 741
     :cond_0
     return-void
 .end method
@@ -971,28 +869,24 @@
     .locals 1
 
     .prologue
-    .line 74
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 75
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;->hide()V
 
-    .line 76
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow;->getMultiSelectController()Landroid/widget/MultiSelectPopupWindow$MultiSelectController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/MultiSelectPopupWindow$MultiSelectController;->show()V
 
-    .line 78
     :cond_0
     return-void
 .end method

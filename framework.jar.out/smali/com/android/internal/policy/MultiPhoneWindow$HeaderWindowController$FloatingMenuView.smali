@@ -54,26 +54,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 3508
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
-    .line 3509
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 3503
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
-    .line 3505
     iput-boolean v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuCloseAnimating:Z
 
-    .line 3506
     iput-boolean v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
-    .line 3510
     invoke-virtual {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -82,7 +76,6 @@
 
     move-result-object v1
 
-    .line 3511
     .local v1, "inflater":Landroid/view/LayoutInflater;
     const v3, 0x1090093
 
@@ -94,7 +87,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
-    .line 3512
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
     const v4, 0x10203f8
@@ -105,12 +97,10 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
-    .line 3513
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setLayoutDirection(I)V
 
-    .line 3514
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
     const v4, 0x10203fc
@@ -123,7 +113,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
-    .line 3516
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -132,11 +121,9 @@
 
     check-cast v2, Landroid/graphics/drawable/RippleDrawable;
 
-    .line 3517
     .local v2, "ripple":Landroid/graphics/drawable/RippleDrawable;
     if-eqz v2, :cond_0
 
-    .line 3518
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -149,7 +136,6 @@
 
     move-result v0
 
-    .line 3519
     .local v0, "color":I
     const v3, 0xffffff
 
@@ -159,14 +145,12 @@
 
     or-int v0, v3, v4
 
-    .line 3520
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
 
-    .line 3524
     .end local v0    # "color":I
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
@@ -177,23 +161,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 3525
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->setFitsSystemWindows(Z)V
 
-    .line 3528
     :cond_1
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->addView(Landroid/view/View;)V
 
-    .line 3529
     invoke-virtual {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -203,7 +184,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 3530
     return-void
 .end method
 
@@ -212,7 +192,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     .prologue
-    .line 3496
     iget-boolean v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mIsAttached:Z
 
     return v0
@@ -223,7 +202,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     .prologue
-    .line 3496
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->removeSelf()V
 
     return-void
@@ -234,7 +212,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     .prologue
-    .line 3496
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -245,7 +222,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     .prologue
-    .line 3496
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
     return-object v0
@@ -257,7 +233,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 3496
     iput-boolean p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
     return p1
@@ -268,7 +243,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     .prologue
-    .line 3496
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->setFloatingButtonHoverListener()V
 
     return-void
@@ -279,7 +253,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     .prologue
-    .line 3496
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->animateFloatingMenuClose()V
 
     return-void
@@ -291,7 +264,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 3496
     iput-boolean p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuCloseAnimating:Z
 
     return p1
@@ -305,7 +277,6 @@
 
     const/4 v10, 0x0
 
-    .line 3735
     iget-boolean v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuCloseAnimating:Z
 
     if-nez v8, :cond_0
@@ -318,18 +289,14 @@
 
     if-gtz v8, :cond_1
 
-    .line 3785
     :cond_0
     return-void
 
-    .line 3738
     :cond_1
     iput-boolean v11, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuCloseAnimating:Z
 
-    .line 3739
     iput-boolean v10, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
-    .line 3741
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
     const v9, 0x10203f9
@@ -338,7 +305,6 @@
 
     move-result-object v4
 
-    .line 3742
     .local v4, "leftBackground":Landroid/view/View;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
@@ -348,7 +314,6 @@
 
     move-result-object v7
 
-    .line 3743
     .local v7, "rightBackground":Landroid/view/View;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
@@ -358,7 +323,6 @@
 
     move-result-object v2
 
-    .line 3745
     .local v2, "centerBackground":Landroid/view/View;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
@@ -368,7 +332,6 @@
 
     move-result-object v1
 
-    .line 3746
     .local v1, "centerAnim":Landroid/view/animation/Animation;
     new-instance v8, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView$2;
 
@@ -376,27 +339,22 @@
 
     invoke-virtual {v1, v8}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 3769
     invoke-virtual {v2, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3770
     invoke-direct {p0, v10, v11}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->getButtonAnimation(ZZ)Landroid/view/animation/TranslateAnimation;
 
     move-result-object v8
 
     invoke-virtual {v4, v8}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3771
     invoke-direct {p0, v10, v10}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->getButtonAnimation(ZZ)Landroid/view/animation/TranslateAnimation;
 
     move-result-object v8
 
     invoke-virtual {v7, v8}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3773
     const/4 v3, 0x0
 
-    .line 3774
     .local v3, "left":I
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
@@ -406,16 +364,13 @@
 
     add-int/lit8 v6, v8, -0x1
 
-    .line 3775
     .local v6, "right":I
     const/4 v5, 0x0
 
-    .line 3776
     .local v5, "offset":I
     :goto_0
     if-gt v3, v6, :cond_0
 
-    .line 3777
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
     const v9, 0x10a0054
@@ -424,7 +379,6 @@
 
     move-result-object v0
 
-    .line 3778
     .local v0, "a":Landroid/view/animation/Animation;
     mul-int/lit8 v8, v5, 0x64
 
@@ -432,10 +386,8 @@
 
     invoke-virtual {v0, v8, v9}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 3779
     if-eq v3, v6, :cond_2
 
-    .line 3780
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -446,7 +398,6 @@
 
     invoke-virtual {v8, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3782
     :cond_2
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
@@ -458,14 +409,12 @@
 
     invoke-virtual {v8, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3783
     add-int/lit8 v3, v3, 0x1
 
     add-int/lit8 v6, v6, -0x1
 
     add-int/lit8 v5, v5, 0x1
 
-    .line 3784
     goto :goto_0
 .end method
 
@@ -478,7 +427,6 @@
 
     const/4 v11, 0x1
 
-    .line 3655
     iget-boolean v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
     if-nez v9, :cond_0
@@ -491,18 +439,14 @@
 
     if-gtz v9, :cond_1
 
-    .line 3732
     :cond_0
     return-void
 
-    .line 3659
     :cond_1
     iput-boolean v12, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuCloseAnimating:Z
 
-    .line 3660
     iput-boolean v11, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
-    .line 3662
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
     const v10, 0x10203f9
@@ -511,7 +455,6 @@
 
     move-result-object v5
 
-    .line 3663
     .local v5, "leftBackground":Landroid/view/View;
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
@@ -521,7 +464,6 @@
 
     move-result-object v8
 
-    .line 3664
     .local v8, "rightBackground":Landroid/view/View;
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
@@ -531,7 +473,6 @@
 
     move-result-object v2
 
-    .line 3666
     .local v2, "centerBackground":Landroid/view/View;
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
@@ -541,7 +482,6 @@
 
     move-result-object v1
 
-    .line 3667
     .local v1, "centerAnim":Landroid/view/animation/Animation;
     new-instance v9, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView$1;
 
@@ -549,27 +489,22 @@
 
     invoke-virtual {v1, v9}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 3715
     invoke-virtual {v2, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3716
     invoke-direct {p0, v11, v11}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->getButtonAnimation(ZZ)Landroid/view/animation/TranslateAnimation;
 
     move-result-object v9
 
     invoke-virtual {v5, v9}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3717
     invoke-direct {p0, v11, v12}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->getButtonAnimation(ZZ)Landroid/view/animation/TranslateAnimation;
 
     move-result-object v9
 
     invoke-virtual {v8, v9}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3719
     const/4 v4, 0x0
 
-    .line 3720
     .local v4, "left":I
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
@@ -579,7 +514,6 @@
 
     add-int/lit8 v7, v9, -0x1
 
-    .line 3721
     .local v7, "right":I
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
@@ -601,7 +535,6 @@
 
     add-int/lit8 v3, v9, -0x1
 
-    .line 3722
     .local v3, "closer":I
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
@@ -615,12 +548,10 @@
 
     add-int/lit8 v6, v3, 0x1
 
-    .line 3723
     .local v6, "offset":I
     :goto_0
     if-gt v4, v7, :cond_0
 
-    .line 3724
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
     const v10, 0x10a0053
@@ -629,7 +560,6 @@
 
     move-result-object v0
 
-    .line 3725
     .local v0, "a":Landroid/view/animation/Animation;
     mul-int/lit8 v9, v6, 0x64
 
@@ -637,10 +567,8 @@
 
     invoke-virtual {v0, v10, v11}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 3726
     if-eq v4, v7, :cond_2
 
-    .line 3727
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -651,7 +579,6 @@
 
     invoke-virtual {v9, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3729
     :cond_2
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
@@ -663,14 +590,12 @@
 
     invoke-virtual {v9, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3730
     add-int/lit8 v4, v4, 0x1
 
     add-int/lit8 v7, v7, -0x1
 
     add-int/lit8 v6, v6, -0x1
 
-    .line 3731
     goto :goto_0
 
     .end local v0    # "a":Landroid/view/animation/Animation;
@@ -678,7 +603,6 @@
     :cond_3
     move v6, v3
 
-    .line 3722
     goto :goto_0
 .end method
 
@@ -688,37 +612,29 @@
     .prologue
     const/4 v2, -0x2
 
-    .line 3831
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 3832
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const v1, 0x800033
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 3833
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 3834
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 3835
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 3836
     const/16 v1, 0x3ef
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 3837
     const-string v1, "PenWindow Titlebar"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 3838
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -733,19 +649,16 @@
 
     iput-object v1, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 3839
     const v1, 0x40208
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 3843
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     or-int/lit8 v1, v1, 0x8
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
-    .line 3844
     return-object v0
 .end method
 
@@ -755,7 +668,6 @@
     .param p2, "left"    # Z
 
     .prologue
-    .line 3788
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
     const v2, 0x10203f9
@@ -764,7 +676,6 @@
 
     move-result-object v11
 
-    .line 3789
     .local v11, "leftBackground":Landroid/view/View;
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
@@ -774,7 +685,6 @@
 
     move-result-object v13
 
-    .line 3790
     .local v13, "rightBackground":Landroid/view/View;
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
@@ -788,7 +698,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 3793
     .local v0, "t":Landroid/view/animation/TranslateAnimation;
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -803,7 +712,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 3794
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
@@ -828,7 +736,6 @@
 
     add-int v12, v1, v2
 
-    .line 3799
     .local v12, "measureWidth":I
     :goto_0
     invoke-virtual {v11}, Landroid/view/View;->getMeasuredWidth()I
@@ -841,24 +748,19 @@
 
     add-int v10, v1, v2
 
-    .line 3800
     .local v10, "buttonsSideBgWidth":I
     div-int/lit8 v9, v12, 0x2
 
-    .line 3801
     .local v9, "buttonPopupHalfWidth":I
     div-int/lit8 v1, v10, 0x2
 
     sub-int v14, v9, v1
 
-    .line 3802
     .local v14, "showposition":I
     if-eqz p1, :cond_2
 
-    .line 3803
     if-eqz p2, :cond_1
 
-    .line 3804
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     .end local v0    # "t":Landroid/view/animation/TranslateAnimation;
@@ -880,21 +782,18 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 3816
     .restart local v0    # "t":Landroid/view/animation/TranslateAnimation;
     :goto_1
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 3817
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
     const v2, 0x10a0005
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/content/Context;I)V
 
-    .line 3818
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -911,10 +810,8 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 3819
     return-object v0
 
-    .line 3796
     .end local v9    # "buttonPopupHalfWidth":I
     .end local v10    # "buttonsSideBgWidth":I
     .end local v12    # "measureWidth":I
@@ -936,7 +833,6 @@
     .restart local v12    # "measureWidth":I
     goto :goto_0
 
-    .line 3806
     .restart local v9    # "buttonPopupHalfWidth":I
     .restart local v10    # "buttonsSideBgWidth":I
     .restart local v14    # "showposition":I
@@ -967,11 +863,9 @@
     .restart local v0    # "t":Landroid/view/animation/TranslateAnimation;
     goto :goto_1
 
-    .line 3809
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 3810
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     .end local v0    # "t":Landroid/view/animation/TranslateAnimation;
@@ -993,7 +887,6 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
-    .line 3814
     .restart local v0    # "t":Landroid/view/animation/TranslateAnimation;
     :goto_2
     const-wide/16 v2, 0xc8
@@ -1002,7 +895,6 @@
 
     goto :goto_1
 
-    .line 3812
     :cond_3
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
@@ -1037,7 +929,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3600
     iget-boolean v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
     if-nez v2, :cond_0
@@ -1046,7 +937,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 3601
     :cond_0
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
@@ -1058,7 +948,6 @@
 
     invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
 
-    .line 3602
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
     const v3, 0x10203fb
@@ -1069,7 +958,6 @@
 
     invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
 
-    .line 3603
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuBg:Landroid/view/View;
 
     const v3, 0x10203fa
@@ -1080,7 +968,6 @@
 
     invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
 
-    .line 3604
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1101,31 +988,25 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 3605
     .local v0, "button":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
     goto :goto_0
 
-    .line 3607
     .end local v0    # "button":Landroid/view/View;
     :cond_1
     iput-boolean v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuCloseAnimating:Z
 
-    .line 3608
     iput-boolean v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuOpenAnimating:Z
 
-    .line 3610
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v2, p0}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 3611
     iput-boolean v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mIsAttached:Z
 
-    .line 3612
     return-void
 .end method
 
@@ -1137,7 +1018,6 @@
 
     const/4 v6, 0x1
 
-    .line 3615
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1150,7 +1030,6 @@
 
     move-result v1
 
-    .line 3618
     .local v1, "hoverPopupTopMargin":I
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
@@ -1160,12 +1039,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 3619
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 3620
     .local v0, "di":Landroid/view/DisplayInfo;
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1181,12 +1058,10 @@
 
     invoke-virtual {v3, v0}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 3621
     iget v3, v0, Landroid/view/DisplayInfo;->rotation:I
 
     if-ne v3, v6, :cond_0
 
-    .line 3622
     iget v3, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     iget v4, v0, Landroid/view/DisplayInfo;->appHeight:I
@@ -1195,7 +1070,6 @@
 
     add-int/2addr v1, v3
 
-    .line 3627
     .end local v0    # "di":Landroid/view/DisplayInfo;
     :cond_0
     new-instance v2, Landroid/graphics/Rect;
@@ -1210,7 +1084,6 @@
 
     invoke-direct {v2, v3}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 3629
     .local v2, "stackBound":Landroid/graphics/Rect;
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1218,7 +1091,6 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3630
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnDragAndDrop:Landroid/view/View;
@@ -1229,7 +1101,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 3631
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnDragAndDrop:Landroid/view/View;
@@ -1260,7 +1131,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/HoverPopupWindow;->setPopupPosOffset(II)V
 
-    .line 3632
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnDragAndDrop:Landroid/view/View;
@@ -1271,7 +1141,6 @@
 
     invoke-virtual {v3, v7}, Landroid/widget/HoverPopupWindow;->setPopupGravity(I)V
 
-    .line 3635
     :cond_1
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1279,7 +1148,6 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3636
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMinimize:Landroid/view/View;
@@ -1290,7 +1158,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 3637
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMinimize:Landroid/view/View;
@@ -1321,7 +1188,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/HoverPopupWindow;->setPopupPosOffset(II)V
 
-    .line 3638
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMinimize:Landroid/view/View;
@@ -1332,7 +1198,6 @@
 
     invoke-virtual {v3, v7}, Landroid/widget/HoverPopupWindow;->setPopupGravity(I)V
 
-    .line 3641
     :cond_2
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1340,7 +1205,6 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3642
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMaximize:Landroid/view/View;
@@ -1351,7 +1215,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 3643
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMaximize:Landroid/view/View;
@@ -1382,7 +1245,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/HoverPopupWindow;->setPopupPosOffset(II)V
 
-    .line 3644
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMaximize:Landroid/view/View;
@@ -1393,7 +1255,6 @@
 
     invoke-virtual {v3, v7}, Landroid/widget/HoverPopupWindow;->setPopupGravity(I)V
 
-    .line 3647
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1401,7 +1262,6 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3648
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnExit:Landroid/view/View;
@@ -1412,7 +1272,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 3649
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnExit:Landroid/view/View;
@@ -1443,7 +1302,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/HoverPopupWindow;->setPopupPosOffset(II)V
 
-    .line 3650
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnExit:Landroid/view/View;
@@ -1454,7 +1312,6 @@
 
     invoke-virtual {v3, v7}, Landroid/widget/HoverPopupWindow;->setPopupGravity(I)V
 
-    .line 3652
     :cond_4
     return-void
 .end method
@@ -1469,12 +1326,10 @@
 
     const/4 v10, 0x0
 
-    .line 3533
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 3534
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v8, v8, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnDragAndDrop:Landroid/view/View;
@@ -1485,7 +1340,6 @@
 
     if-eq v8, v11, :cond_0
 
-    .line 3535
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
@@ -1494,7 +1348,6 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3537
     :cond_0
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1506,7 +1359,6 @@
 
     if-eq v8, v11, :cond_1
 
-    .line 3538
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
@@ -1515,7 +1367,6 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3540
     :cond_1
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1527,7 +1378,6 @@
 
     if-eq v8, v11, :cond_2
 
-    .line 3541
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
@@ -1536,7 +1386,6 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3543
     :cond_2
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1548,7 +1397,6 @@
 
     if-eq v8, v11, :cond_3
 
-    .line 3544
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     iget-object v9, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
@@ -1557,7 +1405,6 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3548
     :cond_3
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
@@ -1567,7 +1414,6 @@
 
     move-result-object v5
 
-    .line 3549
     .local v5, "leftImageView":Landroid/view/View;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
@@ -1577,7 +1423,6 @@
 
     move-result-object v6
 
-    .line 3550
     .local v6, "rightImageView":Landroid/view/View;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
@@ -1587,13 +1432,11 @@
 
     move-result-object v2
 
-    .line 3551
     .local v2, "centerImageView":Landroid/view/View;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
 
     invoke-virtual {v8, v10, v10}, Landroid/view/View;->measure(II)V
 
-    .line 3553
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
@@ -1609,7 +1452,6 @@
 
     check-cast v7, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 3554
     .local v7, "vlp":Landroid/view/ViewGroup$MarginLayoutParams;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
@@ -1624,12 +1466,10 @@
     # setter for: Lcom/android/internal/policy/MultiPhoneWindow;->mFloatingMenuRightMargin:I
     invoke-static {v8, v9}, Lcom/android/internal/policy/MultiPhoneWindow;->access$6202(Lcom/android/internal/policy/MultiPhoneWindow;I)I
 
-    .line 3556
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 3557
     .local v1, "centerImageParams":Landroid/view/ViewGroup$LayoutParams;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
@@ -1639,7 +1479,6 @@
 
     check-cast v3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 3558
     .local v3, "containerParams":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
@@ -1669,7 +1508,6 @@
 
     iput v8, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 3561
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mAvailableButtons:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1690,7 +1528,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 3562
     .local v0, "button":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getFitsSystemWindows()Z
 
@@ -1698,16 +1535,13 @@
 
     if-eqz v8, :cond_4
 
-    .line 3563
     invoke-virtual {v0, v10}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
-    .line 3565
     :cond_4
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     goto :goto_0
 
-    .line 3567
     .end local v0    # "button":Landroid/view/View;
     :cond_5
     return-void
@@ -1718,12 +1552,10 @@
     .param p1, "anim"    # Z
 
     .prologue
-    .line 3589
     iget-boolean v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mIsAttached:Z
 
     if-eqz v0, :cond_0
 
-    .line 3590
     const-string v0, "MultiPhoneWindow"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1746,18 +1578,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3591
     if-eqz p1, :cond_1
 
-    .line 3592
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->animateFloatingMenuClose()V
 
-    .line 3597
     :cond_0
     :goto_0
     return-void
 
-    .line 3594
     :cond_1
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->removeSelf()V
 
@@ -1769,7 +1597,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3824
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -1780,12 +1607,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3825
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->dismiss(Z)V
 
-    .line 3827
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1800,12 +1625,10 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3849
     invoke-virtual {p1, p2}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v2
 
-    .line 3850
     .local v2, "result":Z
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1813,7 +1636,6 @@
 
     if-nez v5, :cond_2
 
-    .line 3851
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v5}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1822,7 +1644,6 @@
 
     check-cast v3, Landroid/graphics/drawable/RippleDrawable;
 
-    .line 3852
     .local v3, "ripple":Landroid/graphics/drawable/RippleDrawable;
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mContext:Landroid/content/Context;
 
@@ -1836,15 +1657,12 @@
 
     move-result v4
 
-    .line 3853
     .local v4, "rippleSize":I
     const/4 v0, 0x0
 
-    .line 3854
     .local v0, "layoutLeft":I
     const/4 v1, 0x0
 
-    .line 3856
     .local v1, "layoutRight":I
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -1852,7 +1670,6 @@
 
     if-le v4, v5, :cond_1
 
-    .line 3857
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v5
@@ -1867,7 +1684,6 @@
 
     sub-int v0, v5, v6
 
-    .line 3858
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v5
@@ -1882,7 +1698,6 @@
 
     add-int v1, v5, v6
 
-    .line 3864
     :goto_0
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
@@ -1894,7 +1709,6 @@
 
     invoke-virtual {v3, v0, v5, v1, v6}, Landroid/graphics/drawable/RippleDrawable;->setHotspotBounds(IIII)V
 
-    .line 3865
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/view/View;->getX()F
@@ -1919,14 +1733,12 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/widget/LinearLayout;->drawableHotspotChanged(FF)V
 
-    .line 3866
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setPressed(Z)V
 
-    .line 3871
     .end local v0    # "layoutLeft":I
     .end local v1    # "layoutRight":I
     .end local v3    # "ripple":Landroid/graphics/drawable/RippleDrawable;
@@ -1935,7 +1747,6 @@
     :goto_1
     return v2
 
-    .line 3860
     .restart local v0    # "layoutLeft":I
     .restart local v1    # "layoutRight":I
     .restart local v3    # "ripple":Landroid/graphics/drawable/RippleDrawable;
@@ -1955,7 +1766,6 @@
 
     add-int v0, v5, v6
 
-    .line 3861
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v5
@@ -1972,7 +1782,6 @@
 
     goto :goto_0
 
-    .line 3867
     .end local v0    # "layoutLeft":I
     .end local v1    # "layoutRight":I
     .end local v3    # "ripple":Landroid/graphics/drawable/RippleDrawable;
@@ -1986,7 +1795,6 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 3869
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
 
     const/4 v6, 0x0
@@ -2005,19 +1813,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3570
     iget-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mIsAttached:Z
 
     if-nez v1, :cond_0
 
-    .line 3571
     const-string v1, "MultiPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "show menu at ("
+    const-string v3, "show menu at ("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2049,60 +1855,49 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3572
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->generateLayoutParam()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 3573
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 3574
     iput p2, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 3577
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnDragAndDrop:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3578
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3579
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnMaximize:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3580
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 3582
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v1, p0, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3583
     invoke-direct {p0, p3}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->animateFloatingMenuOpen(Z)V
 
-    .line 3584
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mIsAttached:Z
 
-    .line 3586
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_0
     return-void

@@ -27,16 +27,12 @@
     .param p3, "batteryLevel"    # I
 
     .prologue
-    .line 855
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 856
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->totalPower:D
 
-    .line 857
     iput p3, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->batteryLevel:I
 
-    .line 858
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p4, "x2"    # Lcom/android/internal/os/BatteryStatsDBHelper$1;
 
     .prologue
-    .line 851
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;-><init>(DI)V
 
     return-void
@@ -58,7 +53,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
 
     .prologue
-    .line 851
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->totalPower:D
 
     return-wide v0
@@ -69,7 +63,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
 
     .prologue
-    .line 851
     iget v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->batteryLevel:I
 
     return v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 447
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$3;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 450
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 452
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.extra.REPLACING"
 
@@ -54,17 +51,14 @@
 
     move-result v2
 
-    .line 454
     .local v2, "isReInstall":Z
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 455
     .local v1, "data":Landroid/net/Uri;
     if-eqz v1, :cond_0
 
-    .line 456
     iget-object v3, p0, Lcom/android/server/am/MARsTrigger$3;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v3, v3, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -75,7 +69,6 @@
 
     invoke-virtual {v3, v4, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->handlePackageStatusChange(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 458
     :cond_0
     return-void
 .end method

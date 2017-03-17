@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 107
     iput-object p1, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/16 v5, 0x6f
 
-    .line 110
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 111
     .local v0, "action":Ljava/lang/String;
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
@@ -61,7 +58,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "intent received "
+    const-string v4, "intent received "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -77,7 +74,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :cond_0
     const-string v2, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
@@ -87,14 +83,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 114
     const-string v2, "displayName"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 115
     .local v1, "name":I
     iget-object v2, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
@@ -109,7 +103,6 @@
     # setter for: Landroid/media/WFDUibcManager;->mPresentDisplayID:I
     invoke-static {v2, v3}, Landroid/media/WFDUibcManager;->access$102(Landroid/media/WFDUibcManager;I)I
 
-    .line 116
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
 
@@ -156,13 +149,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     .end local v1    # "name":I
     :cond_1
     :goto_0
     return-void
 
-    .line 117
     :cond_2
     const-string v2, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
@@ -172,14 +163,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 118
     const-string v2, "displayName"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 119
     .restart local v1    # "name":I
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z

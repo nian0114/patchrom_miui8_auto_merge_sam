@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 146
     iput-object p1, p0, Lcom/sec/android/emergencymode/EmergencyManager$2;->this$0:Lcom/sec/android/emergencymode/EmergencyManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,21 +40,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 149
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 150
     .local v0, "action":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 157
     :cond_0
     :goto_0
     return-void
 
-    .line 152
     :cond_1
     const-string v2, "EmergencyManager"
 
@@ -79,7 +74,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     const-string v2, "com.sec.android.emergencymode.UltraPowerSavingManager.ORDER_ULTRA_POWERSAVING_SERVICE"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -88,14 +82,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 154
     const-string v2, "enable"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 155
     .local v1, "enabled":Z
     iget-object v2, p0, Lcom/sec/android/emergencymode/EmergencyManager$2;->this$0:Lcom/sec/android/emergencymode/EmergencyManager;
 

@@ -103,11 +103,9 @@
 
     const/4 v4, 0x0
 
-    .line 119
     invoke-direct {p0}, Lcom/samsung/android/mdnie/IMdnieManager$Stub;-><init>()V
 
-    .line 74
-    const-string/jumbo v2, "eng"
+    const-string v2, "eng"
 
     sget-object v5, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
@@ -117,114 +115,86 @@
 
     iput-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->DEBUG:Z
 
-    .line 79
     iput-object v6, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->adaptiveDisplay:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
-    .line 81
-    const-string/jumbo v2, "screen_mode_automatic_setting"
+    const-string v2, "screen_mode_automatic_setting"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SCREEN_MODE_AUTOMATIC_SETTING:Ljava/lang/String;
 
-    .line 82
-    const-string/jumbo v2, "screen_mode_setting"
+    const-string v2, "screen_mode_setting"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SCREEN_MODE_SETTING:Ljava/lang/String;
 
-    .line 84
     const-string v2, "/sys/class/mdnie/mdnie/accessibility"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_VISION_MODE:Ljava/lang/String;
 
-    .line 85
     const-string v2, "/sys/class/mdnie_1/mdnie_1/accessibility"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_VISION_MODE_SUB:Ljava/lang/String;
 
-    .line 86
     const-string v2, "/sys/class/mdnie/mdnie/mode"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_SCREEN_MODE:Ljava/lang/String;
 
-    .line 87
     const-string v2, "/sys/class/mdnie/mdnie/scenario"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_CONTENT_MODE:Ljava/lang/String;
 
-    .line 89
     const-string v2, "/sys/class/mdnie/mdnie/negative"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_NEGATIVE:Ljava/lang/String;
 
-    .line 90
     const-string v2, "/sys/class/mdnie/mdnie/outdoor"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_OUTDOOR:Ljava/lang/String;
 
-    .line 91
     const-string v2, "/sys/class/mdnie/mdnie/playspeed"
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->SYSFS_MDNIE_PLAYSPEED:Ljava/lang/String;
 
-    .line 93
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mLock:Ljava/lang/Object;
 
-    .line 95
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieCustomized:Z
 
-    .line 104
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieWorkingCondition:Z
 
-    .line 105
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mDisplayOn:Z
 
-    .line 106
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mEmergencyModeDiabled:Z
 
-    .line 107
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenCurtainEnabled:Z
 
-    .line 108
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mNegativeColorEnabled:Z
 
-    .line 109
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mColorBlindEnabled:Z
 
-    .line 110
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mAutoModeEnabled:Z
 
-    .line 111
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mReadingModeEnabled:Z
 
-    .line 112
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mEbookScenarioEnabled:Z
 
-    .line 113
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mBrowserScenarioEnabled:Z
 
-    .line 115
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mUseAdaptiveDisplayColorServiceConfig:Z
 
-    .line 117
     iput-object v6, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 486
     iput-boolean v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mCurtainModeIsRunning:Z
 
-    .line 121
     iput-object p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
-    .line 123
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 125
     .local v1, "resolver":Landroid/content/ContentResolver;
     new-instance v2, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;
 
@@ -232,13 +202,11 @@
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mSettingsObserver:Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;
 
-    .line 128
     const/4 v2, 0x5
 
     iput v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mReadingScreenMode:I
 
-    .line 134
-    const-string/jumbo v2, "screen_mode_setting"
+    const-string v2, "screen_mode_setting"
 
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -248,33 +216,27 @@
 
     invoke-virtual {v1, v2, v4, v5, v7}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 137
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 138
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 139
     const-string v2, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 140
     const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 141
     const-string v2, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 142
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     new-instance v5, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;
@@ -283,8 +245,7 @@
 
     invoke-virtual {v2, v5, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 144
-    const-string/jumbo v2, "high_contrast"
+    const-string v2, "high_contrast"
 
     invoke-static {v1, v2, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -292,10 +253,8 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 145
     iput v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mVisionMode:I
 
-    .line 153
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
@@ -303,7 +262,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v5, "screen_mode_automatic_setting"
+    const-string v5, "screen_mode_automatic_setting"
 
     invoke-static {v2, v5, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -316,40 +275,31 @@
     :goto_1
     iput-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mAutoModeEnabled:Z
 
-    .line 154
     iget-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mAutoModeEnabled:Z
 
     if-eqz v2, :cond_5
 
-    .line 156
     const/4 v2, 0x4
 
     iput v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenMode:I
 
-    .line 163
     :goto_2
     iput v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContentMode:I
 
-    .line 165
     iput-boolean v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mDisplayOn:Z
 
-    .line 166
     iput-boolean v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mEmergencyModeDiabled:Z
 
-    .line 167
     iput-boolean v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieWorkingCondition:Z
 
-    .line 169
     iget v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenMode:I
 
     invoke-virtual {p0, v2}, Lcom/samsung/android/mdnie/MdnieManagerService;->setScreenMode(I)Z
 
-    .line 170
     iget v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContentMode:I
 
     invoke-virtual {p0, v2}, Lcom/samsung/android/mdnie/MdnieManagerService;->setContentMode(I)Z
 
-    .line 172
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -364,25 +314,21 @@
 
     iput-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mUseAdaptiveDisplayColorServiceConfig:Z
 
-    .line 174
     iget-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mUseAdaptiveDisplayColorServiceConfig:Z
 
     if-eqz v2, :cond_0
 
-    .line 175
     new-instance v2, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     invoke-direct {v2, p1}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->adaptiveDisplay:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
-    .line 176
     :cond_0
     return-void
 
-    .line 146
     :cond_1
-    const-string/jumbo v2, "lcd_curtain"
+    const-string v2, "lcd_curtain"
 
     invoke-static {v1, v2, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -390,14 +336,12 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 147
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mVisionMode:I
 
     goto :goto_0
 
-    .line 148
     :cond_2
     const-string v2, "color_blind"
 
@@ -407,14 +351,12 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 149
     const/4 v2, 0x3
 
     iput v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mVisionMode:I
 
     goto :goto_0
 
-    .line 151
     :cond_3
     iput v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mVisionMode:I
 
@@ -423,10 +365,8 @@
     :cond_4
     move v2, v4
 
-    .line 153
     goto :goto_1
 
-    .line 160
     :cond_5
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
@@ -434,7 +374,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v5, "screen_mode_setting"
+    const-string v5, "screen_mode_setting"
 
     invoke-static {v2, v5, v4, v7}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
@@ -450,7 +390,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mPowerManager:Landroid/os/PowerManager;
 
     return-object v0
@@ -462,7 +401,6 @@
     .param p1, "x1"    # Landroid/os/PowerManager;
 
     .prologue
-    .line 72
     iput-object p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mPowerManager:Landroid/os/PowerManager;
 
     return-object p1
@@ -473,7 +411,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -484,7 +421,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget-boolean v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mDisplayOn:Z
 
     return v0
@@ -496,7 +432,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 72
     iput-boolean p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mDisplayOn:Z
 
     return p1
@@ -508,7 +443,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 72
     iput-boolean p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieWorkingCondition:Z
 
     return p1
@@ -519,7 +453,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget-boolean v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mEmergencyModeDiabled:Z
 
     return v0
@@ -530,7 +463,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mPrevScreenModeForReadingMode:I
 
     return v0
@@ -542,7 +474,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 72
     iput p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mPrevScreenModeForReadingMode:I
 
     return p1
@@ -553,7 +484,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenModeForReadingMode:I
 
     return v0
@@ -565,7 +495,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 72
     iput p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenModeForReadingMode:I
 
     return p1
@@ -576,7 +505,6 @@
     .param p0, "x0"    # Lcom/samsung/android/mdnie/MdnieManagerService;
 
     .prologue
-    .line 72
     iget v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mReadingScreenMode:I
 
     return v0
@@ -590,10 +518,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 292
     const/4 v2, 0x0
 
-    .line 296
     .local v2, "out":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -607,7 +533,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 302
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .local v3, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -621,12 +546,10 @@
 
     invoke-virtual {v3, v5}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 303
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 314
     const/4 v4, 0x1
 
     move-object v2, v3
@@ -636,11 +559,9 @@
     :goto_0
     return v4
 
-    .line 297
     :catch_0
     move-exception v0
 
-    .line 298
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -649,17 +570,14 @@
 
     goto :goto_0
 
-    .line 304
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 305
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 307
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -667,17 +585,14 @@
 
     goto :goto_0
 
-    .line 308
     :catch_2
     move-exception v1
 
-    .line 309
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 304
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v2    # "out":Ljava/io/FileOutputStream;
@@ -705,10 +620,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 318
     const/4 v2, 0x0
 
-    .line 322
     .local v2, "out":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -722,7 +635,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 328
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .local v3, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -732,12 +644,10 @@
 
     invoke-virtual {v3, v5}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 329
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 340
     const/4 v4, 0x1
 
     move-object v2, v3
@@ -747,11 +657,9 @@
     :goto_0
     return v4
 
-    .line 323
     :catch_0
     move-exception v0
 
-    .line 324
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -760,17 +668,14 @@
 
     goto :goto_0
 
-    .line 330
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 331
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 333
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -778,17 +683,14 @@
 
     goto :goto_0
 
-    .line 334
     :catch_2
     move-exception v1
 
-    .line 335
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 330
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v2    # "out":Ljava/io/FileOutputStream;
@@ -814,14 +716,11 @@
 
     const/4 v6, 0x0
 
-    .line 375
     const/4 v3, 0x0
 
-    .line 376
     .local v3, "out":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 378
     .local v2, "mParameter":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -997,7 +896,6 @@
 
     move-result-object v2
 
-    .line 391
     :try_start_0
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -1010,7 +908,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 397
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .local v4, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -1020,24 +917,20 @@
 
     invoke-virtual {v4, v7}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 398
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
     move-object v3, v4
 
-    .line 425
     .end local v4    # "out":Ljava/io/FileOutputStream;
     .restart local v3    # "out":Ljava/io/FileOutputStream;
     :goto_0
     return v5
 
-    .line 392
     :catch_0
     move-exception v0
 
-    .line 393
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -1046,20 +939,16 @@
 
     move v5, v6
 
-    .line 394
     goto :goto_0
 
-    .line 399
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 400
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 402
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1068,20 +957,16 @@
     :goto_2
     move v5, v6
 
-    .line 406
     goto :goto_0
 
-    .line 403
     :catch_2
     move-exception v1
 
-    .line 404
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 399
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v3    # "out":Ljava/io/FileOutputStream;
@@ -1107,14 +992,11 @@
 
     const/4 v6, 0x0
 
-    .line 430
     const/4 v3, 0x0
 
-    .line 431
     .local v3, "out":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 433
     .local v2, "mParameter":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1344,7 +1226,6 @@
 
     move-result-object v2
 
-    .line 449
     :try_start_0
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -1357,7 +1238,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 455
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .local v4, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -1367,24 +1247,20 @@
 
     invoke-virtual {v4, v7}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 456
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
     move-object v3, v4
 
-    .line 483
     .end local v4    # "out":Ljava/io/FileOutputStream;
     .restart local v3    # "out":Ljava/io/FileOutputStream;
     :goto_0
     return v5
 
-    .line 450
     :catch_0
     move-exception v0
 
-    .line 451
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -1393,20 +1269,16 @@
 
     move v5, v6
 
-    .line 452
     goto :goto_0
 
-    .line 457
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 458
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 460
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1415,20 +1287,16 @@
     :goto_2
     move v5, v6
 
-    .line 464
     goto :goto_0
 
-    .line 461
     :catch_2
     move-exception v1
 
-    .line 462
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 457
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v3    # "out":Ljava/io/FileOutputStream;
@@ -1454,14 +1322,11 @@
 
     const/4 v6, 0x0
 
-    .line 345
     const/4 v3, 0x0
 
-    .line 346
     .local v3, "out":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 348
     .local v2, "mParameter":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1637,7 +1502,6 @@
 
     move-result-object v2
 
-    .line 354
     :try_start_0
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -1650,7 +1514,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 360
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .local v4, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -1660,24 +1523,20 @@
 
     invoke-virtual {v4, v7}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 361
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
     move-object v3, v4
 
-    .line 371
     .end local v4    # "out":Ljava/io/FileOutputStream;
     .restart local v3    # "out":Ljava/io/FileOutputStream;
     :goto_0
     return v5
 
-    .line 355
     :catch_0
     move-exception v0
 
-    .line 356
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -1686,20 +1545,16 @@
 
     move v5, v6
 
-    .line 357
     goto :goto_0
 
-    .line 362
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 363
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 365
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1708,20 +1563,16 @@
     :goto_2
     move v5, v6
 
-    .line 369
     goto :goto_0
 
-    .line 366
     :catch_2
     move-exception v1
 
-    .line 367
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 362
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v3    # "out":Ljava/io/FileOutputStream;
@@ -1742,7 +1593,6 @@
     .locals 1
 
     .prologue
-    .line 231
     iget v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContentMode:I
 
     return v0
@@ -1752,7 +1602,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenMode:I
 
     return v0
@@ -1763,24 +1612,19 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 277
     iget-boolean v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieWorkingCondition:Z
 
     if-eqz v0, :cond_1
 
-    .line 278
     if-eqz p1, :cond_0
 
-    .line 279
     const/4 p1, 0x1
 
-    .line 280
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 282
     :try_start_0
     const-string v0, "/sys/class/lcd/panel/power_reduce"
 
@@ -1790,11 +1634,9 @@
 
     monitor-exit v1
 
-    .line 288
     :goto_0
     return v0
 
-    .line 285
     :catchall_0
     move-exception v0
 
@@ -1804,7 +1646,6 @@
 
     throw v0
 
-    .line 288
     :cond_1
     const/4 v0, 0x0
 
@@ -1816,29 +1657,24 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 256
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 257
     .local v1, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 260
     .local v0, "pid":I
     iget-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieWorkingCondition:Z
 
     if-eqz v2, :cond_1
 
-    .line 261
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 262
     :try_start_0
     const-string v2, "/sys/class/mdnie/mdnie/scenario"
 
@@ -1848,29 +1684,23 @@
 
     if-eqz v2, :cond_0
 
-    .line 263
     iput p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContentMode:I
 
-    .line 264
     const/4 v2, 0x1
 
     monitor-exit v3
 
-    .line 269
     :goto_0
     return v2
 
-    .line 266
     :cond_0
     monitor-exit v3
 
-    .line 269
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 266
     :catchall_0
     move-exception v2
 
@@ -1886,29 +1716,24 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 237
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 238
     .local v1, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 241
     .local v0, "pid":I
     iget-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mMdnieWorkingCondition:Z
 
     if-eqz v2, :cond_1
 
-    .line 242
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 243
     :try_start_0
     const-string v2, "/sys/class/mdnie/mdnie/mode"
 
@@ -1918,29 +1743,23 @@
 
     if-eqz v2, :cond_0
 
-    .line 244
     iput p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mScreenMode:I
 
-    .line 245
     const/4 v2, 0x1
 
     monitor-exit v3
 
-    .line 250
     :goto_0
     return v2
 
-    .line 247
     :cond_0
     monitor-exit v3
 
-    .line 250
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 247
     :catchall_0
     move-exception v2
 
@@ -1959,7 +1778,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 643
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -1972,16 +1790,14 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 644
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "com.samsung.android.permission.CHANGE_DISPLAY_COLOR"
 
-    const-string/jumbo v5, "setmDNIeAccessibilityMode"
+    const-string v5, "setmDNIeAccessibilityMode"
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 645
     :cond_0
     const-string v3, "MdnieManagerService"
 
@@ -1989,7 +1805,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setmDNIeAccessibilityMode("
+    const-string v5, "setmDNIeAccessibilityMode("
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2021,28 +1837,23 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 647
     iget-boolean v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mCurtainModeIsRunning:Z
 
     if-nez v3, :cond_2
 
-    .line 650
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/sec/android/emergencymode/EmergencyManager;->getInstance(Landroid/content/Context;)Lcom/sec/android/emergencymode/EmergencyManager;
 
     move-result-object v1
 
-    .line 651
     .local v1, "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     if-eqz v1, :cond_3
 
-    .line 652
     invoke-virtual {v1}, Lcom/sec/android/emergencymode/EmergencyManager;->getEmergencyState()I
 
     move-result v0
 
-    .line 653
     .local v0, "emergencyState":I
     const/4 v3, 0x2
 
@@ -2052,7 +1863,6 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 657
     :cond_1
     const-string v2, "/sys/class/mdnie/mdnie/accessibility"
 
@@ -2062,7 +1872,6 @@
 
     move-result v2
 
-    .line 687
     .end local v0    # "emergencyState":I
     .end local v1    # "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     .end local p1    # "mode":I
@@ -2070,7 +1879,6 @@
     :goto_0
     return v2
 
-    .line 660
     .restart local v1    # "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     .restart local p1    # "mode":I
     :cond_3
@@ -2078,7 +1886,6 @@
 
     if-eq p1, v3, :cond_5
 
-    .line 664
     const-string v3, "/sys/class/mdnie/mdnie/accessibility"
 
     if-eqz p2, :cond_4
@@ -2097,7 +1904,6 @@
 
     goto :goto_1
 
-    .line 667
     :cond_5
     const-string v3, "/sys/class/backlight/panel/weakness_hbm_comp"
 
@@ -2126,7 +1932,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 497
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -2139,16 +1944,14 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 498
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "com.samsung.android.permission.CHANGE_DISPLAY_COLOR"
 
-    const-string/jumbo v4, "setmDNIeColorBlind"
+    const-string v4, "setmDNIeColorBlind"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 499
     :cond_0
     const-string v2, "MdnieManagerService"
 
@@ -2156,7 +1959,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setmDNIeColorBlind ("
+    const-string v4, "setmDNIeColorBlind ("
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2178,30 +1981,25 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     iget-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mCurtainModeIsRunning:Z
 
     if-nez v2, :cond_1
 
-    .line 504
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/sec/android/emergencymode/EmergencyManager;->getInstance(Landroid/content/Context;)Lcom/sec/android/emergencymode/EmergencyManager;
 
     move-result-object v0
 
-    .line 505
     .local v0, "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     if-eqz v0, :cond_2
 
-    .line 506
     invoke-virtual {v0}, Lcom/sec/android/emergencymode/EmergencyManager;->isEmergencyMode()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 510
     const-string v1, "/sys/class/mdnie/mdnie/accessibility"
 
     const/4 v2, 0x4
@@ -2210,13 +2008,11 @@
 
     move-result v1
 
-    .line 546
     .end local v0    # "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     :cond_1
     :goto_0
     return v1
 
-    .line 523
     .restart local v0    # "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     :cond_2
     const-string v2, "/sys/class/mdnie/mdnie/accessibility"
@@ -2238,7 +2034,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 623
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -2251,16 +2046,14 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 624
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.permission.CHANGE_DISPLAY_COLOR"
 
-    const-string/jumbo v3, "setmDNIeEmergencyMode"
+    const-string v3, "setmDNIeEmergencyMode"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 625
     :cond_0
     const-string v1, "MdnieManagerService"
 
@@ -2268,7 +2061,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setmDNIeEmergencyMode ("
+    const-string v3, "setmDNIeEmergencyMode ("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2290,7 +2083,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 627
     const-string v2, "/sys/class/mdnie/mdnie/accessibility"
 
     if-eqz p1, :cond_1
@@ -2302,11 +2094,9 @@
 
     move-result v0
 
-    .line 631
     .local v0, "result":Z
     return v0
 
-    .line 627
     .end local v0    # "result":Z
     :cond_1
     const/4 v1, 0x0
@@ -2321,7 +2111,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 559
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -2334,16 +2123,14 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 560
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "com.samsung.android.permission.CHANGE_DISPLAY_COLOR"
 
-    const-string/jumbo v4, "setmDNIeNegative"
+    const-string v4, "setmDNIeNegative"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
     :cond_0
     const-string v2, "MdnieManagerService"
 
@@ -2351,7 +2138,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setmDNIeNegative ("
+    const-string v4, "setmDNIeNegative ("
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2373,30 +2160,25 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 563
     iget-boolean v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mCurtainModeIsRunning:Z
 
     if-nez v2, :cond_1
 
-    .line 566
     iget-object v2, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/sec/android/emergencymode/EmergencyManager;->getInstance(Landroid/content/Context;)Lcom/sec/android/emergencymode/EmergencyManager;
 
     move-result-object v0
 
-    .line 567
     .local v0, "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     if-eqz v0, :cond_2
 
-    .line 568
     invoke-virtual {v0}, Lcom/sec/android/emergencymode/EmergencyManager;->isEmergencyMode()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 572
     const-string v1, "/sys/class/mdnie/mdnie/accessibility"
 
     const/4 v2, 0x4
@@ -2405,13 +2187,11 @@
 
     move-result v1
 
-    .line 592
     .end local v0    # "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     :cond_1
     :goto_0
     return v1
 
-    .line 578
     .restart local v0    # "mEmergencyManager":Lcom/sec/android/emergencymode/EmergencyManager;
     :cond_2
     const-string v2, "/sys/class/mdnie/mdnie/accessibility"
@@ -2433,7 +2213,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 604
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -2446,16 +2225,14 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 605
     iget-object v1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.permission.CHANGE_DISPLAY_COLOR"
 
-    const-string/jumbo v3, "setmDNIeScreenCurtain"
+    const-string v3, "setmDNIeScreenCurtain"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 606
     :cond_0
     const-string v1, "MdnieManagerService"
 
@@ -2463,7 +2240,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setmDNIeScreenCurtain ("
+    const-string v3, "setmDNIeScreenCurtain ("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2485,10 +2262,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     iput-boolean p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService;->mCurtainModeIsRunning:Z
 
-    .line 608
     const-string v2, "/sys/class/mdnie/mdnie/accessibility"
 
     if-eqz p1, :cond_1
@@ -2500,11 +2275,9 @@
 
     move-result v0
 
-    .line 612
     .local v0, "result":Z
     return v0
 
-    .line 608
     .end local v0    # "result":Z
     :cond_1
     const/4 v1, 0x0

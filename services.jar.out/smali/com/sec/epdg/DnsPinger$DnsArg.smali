@@ -32,20 +32,15 @@
     .param p4, "s"    # I
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/sec/epdg/DnsPinger$DnsArg;->this$0:Lcom/sec/epdg/DnsPinger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     iput-object p2, p0, Lcom/sec/epdg/DnsPinger$DnsArg;->dns:Ljava/net/InetAddress;
 
-    .line 116
     iput p4, p0, Lcom/sec/epdg/DnsPinger$DnsArg;->seq:I
 
-    .line 117
     iput-object p3, p0, Lcom/sec/epdg/DnsPinger$DnsArg;->network:Landroid/net/Network;
 
-    .line 118
     return-void
 .end method

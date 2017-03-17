@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2961
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$2;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 2964
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$2;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -52,7 +50,6 @@
 
     monitor-enter v1
 
-    .line 2965
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$2;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
@@ -70,7 +67,6 @@
     # invokes: Lcom/android/server/display/DisplayManagerService;->requestGlobalDisplayStateInternal(II)V
     invoke-static {v0, v2, v3}, Lcom/android/server/display/DisplayManagerService;->access$5100(Lcom/android/server/display/DisplayManagerService;II)V
 
-    .line 2966
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$2;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -80,13 +76,10 @@
     # setter for: Lcom/android/server/display/DisplayManagerService;->mIsForceUnblankDisplay:Z
     invoke-static {v0, v2}, Lcom/android/server/display/DisplayManagerService;->access$5902(Lcom/android/server/display/DisplayManagerService;Z)Z
 
-    .line 2967
     monitor-exit v1
 
-    .line 2968
     return-void
 
-    .line 2967
     :catchall_0
     move-exception v0
 

@@ -33,25 +33,18 @@
     .param p5, "isMT"    # Z
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput p1, p0, Lcom/itsoninc/android/DeviceCall;->index:I
 
-    .line 22
     iput-boolean p2, p0, Lcom/itsoninc/android/DeviceCall;->isVoice:Z
 
-    .line 23
     iput-object p3, p0, Lcom/itsoninc/android/DeviceCall;->state:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 24
     iput-object p4, p0, Lcom/itsoninc/android/DeviceCall;->number:Ljava/lang/String;
 
-    .line 25
     iput-boolean p5, p0, Lcom/itsoninc/android/DeviceCall;->isMT:Z
 
-    .line 26
     return-void
 .end method
 
@@ -64,19 +57,14 @@
     .end annotation
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-boolean p1, p0, Lcom/itsoninc/android/DeviceCall;->isVoice:Z
 
-    .line 32
     iput-object p2, p0, Lcom/itsoninc/android/DeviceCall;->state:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 33
     iput-object p3, p0, Lcom/itsoninc/android/DeviceCall;->number:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -86,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget v0, p0, Lcom/itsoninc/android/DeviceCall;->index:I
 
     return v0
@@ -96,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/itsoninc/android/DeviceCall;->number:Ljava/lang/String;
 
     return-object v0
@@ -106,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/itsoninc/android/DeviceCall;->state:Lcom/itsoninc/android/DeviceCall$CallState;
 
     return-object v0
@@ -116,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lcom/itsoninc/android/DeviceCall;->isMT:Z
 
     return v0
@@ -126,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcom/itsoninc/android/DeviceCall;->isVoice:Z
 
     return v0
@@ -136,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

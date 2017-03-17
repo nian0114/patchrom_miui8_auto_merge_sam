@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 18
     const-class v0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -64,10 +63,8 @@
     .param p2, "listener"    # Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicy$OnCocktailBarStateListener;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     const/4 v1, 0x2
@@ -76,22 +73,18 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
-    .line 29
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mWindowType:I
 
-    .line 31
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mLockMap:Landroid/util/SparseArray;
 
-    .line 34
     iput-object p2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mListener:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicy$OnCocktailBarStateListener;
 
-    .line 35
     return-void
 .end method
 
@@ -99,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -110,7 +102,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 171
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mLockMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -119,23 +110,19 @@
 
     check-cast v0, Landroid/util/SparseBooleanArray;
 
-    .line 172
     .local v0, "modeLock":Landroid/util/SparseBooleanArray;
     if-nez v0, :cond_0
 
-    .line 173
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     .end local v0    # "modeLock":Landroid/util/SparseBooleanArray;
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    .line 174
     .restart local v0    # "modeLock":Landroid/util/SparseBooleanArray;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mLockMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 176
     :cond_0
     return-object v0
 .end method
@@ -146,12 +133,10 @@
     .locals 3
 
     .prologue
-    .line 227
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v1
 
-    .line 228
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -159,13 +144,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 229
     monitor-exit v1
 
-    .line 230
     return-void
 
-    .line 229
     :catchall_0
     move-exception v0
 
@@ -180,12 +162,10 @@
     .locals 3
 
     .prologue
-    .line 213
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v1
 
-    .line 214
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -193,13 +173,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 216
     monitor-exit v1
 
-    .line 217
     return-void
 
-    .line 216
     :catchall_0
     move-exception v0
 
@@ -214,12 +191,10 @@
     .locals 3
 
     .prologue
-    .line 189
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v1
 
-    .line 190
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -227,13 +202,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 192
     monitor-exit v1
 
-    .line 193
     return-void
 
-    .line 192
     :catchall_0
     move-exception v0
 
@@ -248,10 +220,8 @@
     .locals 3
 
     .prologue
-    .line 160
     const-string v0, ""
 
-    .line 161
     .local v0, "result":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -271,7 +241,6 @@
 
     move-result-object v0
 
-    .line 162
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,7 +263,6 @@
 
     move-result-object v0
 
-    .line 163
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,7 +289,6 @@
 
     move-result-object v0
 
-    .line 164
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -348,7 +315,6 @@
 
     move-result-object v0
 
-    .line 165
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,7 +341,6 @@
 
     move-result-object v0
 
-    .line 166
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -400,7 +365,6 @@
 
     move-result-object v0
 
-    .line 167
     return-object v0
 .end method
 
@@ -408,7 +372,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     return-object v0
@@ -418,7 +381,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     iget v0, v0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
@@ -430,7 +392,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mWindowType:I
 
     return v0
@@ -470,12 +431,10 @@
     .locals 3
 
     .prologue
-    .line 196
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v1
 
-    .line 197
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -489,7 +448,6 @@
 
     return v0
 
-    .line 199
     :catchall_0
     move-exception v0
 
@@ -504,7 +462,6 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "CocktailBarVisibility"
@@ -513,12 +470,10 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateThread:Landroid/os/HandlerThread;
 
-    .line 40
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 41
     new-instance v0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;
 
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateThread:Landroid/os/HandlerThread;
@@ -531,7 +486,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
-    .line 42
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$1;
@@ -540,7 +494,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 49
     return-void
 .end method
 
@@ -549,12 +502,10 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 97
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 98
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -564,19 +515,15 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 101
     monitor-exit v2
 
-    .line 102
     return-void
 
-    .line 101
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -593,7 +540,6 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x64
@@ -604,16 +550,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 234
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->cancelHideTimer()V
 
-    .line 235
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->startHideTimer(I)V
 
-    .line 236
     const/4 v0, 0x1
 
-    .line 238
     :goto_0
     return v0
 
@@ -627,12 +569,10 @@
     .locals 3
 
     .prologue
-    .line 89
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v1
 
-    .line 90
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -640,13 +580,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 92
     monitor-exit v1
 
-    .line 93
     return-void
 
-    .line 92
     :catchall_0
     move-exception v0
 
@@ -663,12 +600,10 @@
     .param p2, "delayMills"    # J
 
     .prologue
-    .line 203
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 204
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -676,7 +611,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 206
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     const/16 v3, 0x34
@@ -687,19 +621,15 @@
 
     move-result-object v0
 
-    .line 208
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 209
     monitor-exit v2
 
-    .line 210
     return-void
 
-    .line 209
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -717,12 +647,10 @@
     .param p2, "delayMills"    # J
 
     .prologue
-    .line 180
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 181
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -734,19 +662,15 @@
 
     move-result-object v0
 
-    .line 184
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 185
     monitor-exit v2
 
-    .line 186
     return-void
 
-    .line 185
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -764,10 +688,8 @@
     .param p2, "flagOn"    # Z
 
     .prologue
-    .line 116
     invoke-virtual {p0, p1, p2, p1}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->setLockState(IZI)V
 
-    .line 117
     return-void
 .end method
 
@@ -778,16 +700,13 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 121
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->findModeLock(I)Landroid/util/SparseBooleanArray;
 
     move-result-object v0
 
-    .line 122
     .local v0, "modeLock":Landroid/util/SparseBooleanArray;
     if-eqz p2, :cond_1
 
-    .line 123
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     iget v2, v1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
@@ -796,17 +715,14 @@
 
     iput v2, v1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
-    .line 124
     const/4 v1, 0x1
 
     invoke-virtual {v0, p3, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 133
     :cond_0
     :goto_0
     return-void
 
-    .line 126
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/SparseBooleanArray;->indexOfKey(I)I
 
@@ -816,10 +732,8 @@
 
     if-le v1, v2, :cond_2
 
-    .line 127
     invoke-virtual {v0, p3}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 129
     :cond_2
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -827,7 +741,6 @@
 
     if-nez v1, :cond_0
 
-    .line 130
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     iget v2, v1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
@@ -846,12 +759,10 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 220
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v1
 
-    .line 221
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -861,13 +772,10 @@
 
     invoke-virtual {v0, v2, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 223
     monitor-exit v1
 
-    .line 224
     return-void
 
-    .line 223
     :catchall_0
     move-exception v0
 
@@ -885,12 +793,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 142
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 143
     :try_start_0
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -907,19 +813,15 @@
 
     move-result-object v0
 
-    .line 145
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 146
     monitor-exit v2
 
-    .line 147
     return-void
 
-    .line 146
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -937,12 +839,10 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 152
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -954,19 +854,15 @@
 
     move-result-object v0
 
-    .line 154
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 155
     monitor-exit v2
 
-    .line 156
     return-void
 
-    .line 155
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -983,12 +879,10 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 71
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 72
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -1000,19 +894,15 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 75
     monitor-exit v2
 
-    .line 76
     return-void
 
-    .line 75
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -1034,12 +924,10 @@
 
     const/4 v2, 0x0
 
-    .line 80
     iget-object v4, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v4
 
-    .line 81
     :try_start_0
     iget-object v5, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -1057,23 +945,19 @@
 
     move-result-object v0
 
-    .line 83
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 84
     monitor-exit v4
 
-    .line 85
     return-void
 
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     move v3, v2
 
-    .line 81
     goto :goto_0
 
     :cond_1
@@ -1081,7 +965,6 @@
 
     goto :goto_1
 
-    .line 84
     :catchall_0
     move-exception v1
 
@@ -1097,12 +980,10 @@
     .param p1, "windowType"    # I
 
     .prologue
-    .line 62
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 63
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -1114,19 +995,15 @@
 
     move-result-object v0
 
-    .line 65
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 66
     monitor-exit v2
 
-    .line 67
     return-void
 
-    .line 66
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -1143,12 +1020,10 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 53
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     monitor-enter v2
 
-    .line 54
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
@@ -1160,19 +1035,15 @@
 
     move-result-object v0
 
-    .line 56
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mCocktailBarStateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 57
     monitor-exit v2
 
-    .line 58
     return-void
 
-    .line 57
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1

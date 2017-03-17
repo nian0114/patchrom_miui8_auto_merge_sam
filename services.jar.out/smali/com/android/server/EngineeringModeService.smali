@@ -14,12 +14,10 @@
     .locals 1
 
     .prologue
-    .line 23
-    const-string/jumbo v0, "engmode"
+    const-string v0, "engmode"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 24
     return-void
 .end method
 
@@ -28,13 +26,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Lcom/samsung/android/service/EngineeringMode/IEngineeringModeService$Stub;-><init>()V
 
-    .line 31
     sput-object p1, Lcom/android/server/EngineeringModeService;->mContext:Landroid/content/Context;
 
-    .line 32
     return-void
 .end method
 
@@ -48,14 +43,12 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 36
     const-string v0, "EngineeringModeService"
 
-    const-string/jumbo v1, "getStatus() is called."
+    const-string v1, "getStatus() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     invoke-direct {p0, p1}, Lcom/android/server/EngineeringModeService;->nativeGetStatus(I)I
 
     move-result v0

@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 3396
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
     const/4 v0, 0x0
@@ -42,7 +41,6 @@
     .param p2, "x1"    # Landroid/widget/AbsHorizontalListView$1;
 
     .prologue
-    .line 3396
     invoke-direct {p0, p1}, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;-><init>(Landroid/widget/AbsHorizontalListView;)V
 
     return-void
@@ -56,7 +54,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 3399
     iget-object v3, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v3}, Landroid/widget/AbsHorizontalListView;->isPressed()Z
@@ -71,7 +68,6 @@
 
     if-ltz v3, :cond_0
 
-    .line 3400
     iget-object v3, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
     iget v3, v3, Landroid/widget/AbsHorizontalListView;->mSelectedPosition:I
@@ -82,7 +78,6 @@
 
     sub-int v1, v3, v4
 
-    .line 3401
     .local v1, "index":I
     iget-object v3, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
@@ -90,18 +85,15 @@
 
     move-result-object v2
 
-    .line 3403
     .local v2, "v":Landroid/view/View;
     if-nez v2, :cond_1
 
-    .line 3420
     .end local v1    # "index":I
     .end local v2    # "v":Landroid/view/View;
     :cond_0
     :goto_0
     return-void
 
-    .line 3406
     .restart local v1    # "index":I
     .restart local v2    # "v":Landroid/view/View;
     :cond_1
@@ -111,10 +103,8 @@
 
     if-nez v3, :cond_3
 
-    .line 3407
     const/4 v0, 0x0
 
-    .line 3408
     .local v0, "handled":Z
     invoke-virtual {p0}, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->sameWindow()Z
 
@@ -122,7 +112,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 3409
     iget-object v3, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
     iget-object v4, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
@@ -137,28 +126,23 @@
 
     move-result v0
 
-    .line 3411
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 3412
     iget-object v3, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v3, v8}, Landroid/widget/AbsHorizontalListView;->setPressed(Z)V
 
-    .line 3413
     invoke-virtual {v2, v8}, Landroid/view/View;->setPressed(Z)V
 
     goto :goto_0
 
-    .line 3416
     .end local v0    # "handled":Z
     :cond_3
     iget-object v3, p0, Landroid/widget/AbsHorizontalListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v3, v8}, Landroid/widget/AbsHorizontalListView;->setPressed(Z)V
 
-    .line 3417
     if-eqz v2, :cond_0
 
     invoke-virtual {v2, v8}, Landroid/view/View;->setPressed(Z)V

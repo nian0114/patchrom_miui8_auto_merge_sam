@@ -19,19 +19,14 @@
     .param p3, "iwlanError"    # Lcom/sec/epdg/IWlanError;
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput p1, p0, Lcom/sec/epdg/IWlanConnectResult;->mCId:I
 
-    .line 15
     iput-object p2, p0, Lcom/sec/epdg/IWlanConnectResult;->mIpSecConnection:Lcom/ipsec/client/IPsecConnection;
 
-    .line 16
     iput-object p3, p0, Lcom/sec/epdg/IWlanConnectResult;->mIwlanError:Lcom/sec/epdg/IWlanError;
 
-    .line 17
     return-void
 .end method
 
@@ -41,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 28
     iget v0, p0, Lcom/sec/epdg/IWlanConnectResult;->mCId:I
 
     return v0
@@ -51,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/sec/epdg/IWlanConnectResult;->mIpSecConnection:Lcom/ipsec/client/IPsecConnection;
 
     return-object v0
@@ -61,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/sec/epdg/IWlanConnectResult;->mIwlanError:Lcom/sec/epdg/IWlanError;
 
     return-object v0

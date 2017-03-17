@@ -17,15 +17,12 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;-><init>()V
 
-    .line 45
     const/4 v0, 0x2
 
     iput-short v0, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->nodeType:S
 
-    .line 46
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .param p6, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const/4 v5, 0x2
 
     move-object v0, p0
@@ -54,13 +50,10 @@
 
     invoke-direct/range {v0 .. v5}, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V
 
-    .line 60
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->element:Lmf/org/w3c/dom/Element;
 
-    .line 61
     iput-object p6, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->value:Ljava/lang/String;
 
-    .line 62
     return-void
 .end method
 
@@ -70,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->rawname:Ljava/lang/String;
 
     return-object v0
@@ -80,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 77
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->getValue()Ljava/lang/String;
 
     move-result-object v0
@@ -92,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->element:Lmf/org/w3c/dom/Element;
 
     invoke-interface {v0}, Lmf/org/w3c/dom/Element;->getOwnerDocument()Lmf/org/w3c/dom/Document;
@@ -106,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->element:Lmf/org/w3c/dom/Element;
 
     return-object v0
@@ -116,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 104
     const/4 v0, 0x0
 
     return-object v0
@@ -126,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x1
 
     return v0
@@ -136,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->value:Ljava/lang/String;
 
     return-object v0
@@ -146,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 96
     const/4 v0, 0x0
 
     return v0
@@ -162,10 +147,8 @@
     .end annotation
 
     .prologue
-    .line 89
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->value:Ljava/lang/String;
 
-    .line 90
     return-void
 .end method
 
@@ -173,7 +156,6 @@
     .locals 2
 
     .prologue
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/opti/AttrImpl;->getName()Ljava/lang/String;

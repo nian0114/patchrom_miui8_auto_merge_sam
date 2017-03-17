@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .end annotation
 
     .prologue
-    .line 46
     return-object p1
 .end method
 
@@ -43,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 40
     const/16 v0, 0x81f
 
     return v0
@@ -54,7 +51,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 51
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/ListDV$ListData;
 
     .end local p1    # "value":Ljava/lang/Object;

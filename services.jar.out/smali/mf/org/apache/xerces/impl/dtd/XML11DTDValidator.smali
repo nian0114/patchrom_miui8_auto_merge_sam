@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dtd/XMLDTDValidator;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -25,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 65
     iget-boolean v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fValidation:Z
 
     if-nez v1, :cond_0
@@ -34,11 +31,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 66
     :cond_0
     invoke-super {p0}, Lmf/org/apache/xerces/impl/dtd/XMLDTDValidator;->init()V
 
-    .line 70
     :try_start_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fDatatypeValidatorFactory:Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
 
@@ -50,7 +45,6 @@
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fValID:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 71
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fDatatypeValidatorFactory:Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
 
     const-string v2, "XML11IDREF"
@@ -61,7 +55,6 @@
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fValIDRef:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 72
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fDatatypeValidatorFactory:Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
 
     const-string v2, "XML11IDREFS"
@@ -72,7 +65,6 @@
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fValIDRefs:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 73
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fDatatypeValidatorFactory:Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
 
     const-string v2, "XML11NMTOKEN"
@@ -83,7 +75,6 @@
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fValNMTOKEN:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 74
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fDatatypeValidatorFactory:Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
 
     const-string v2, "XML11NMTOKENS"
@@ -96,16 +87,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 82
     :cond_1
     :goto_0
     return-void
 
-    .line 77
     :catch_0
     move-exception v0
 
-    .line 79
     .local v0, "e":Ljava/lang/Exception;
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -119,10 +107,8 @@
     .param p1, "manager"    # Lmf/org/apache/xerces/xni/parser/XMLComponentManager;
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
-    .line 57
     .local v0, "curr":Lmf/org/apache/xerces/impl/dtd/XMLDTDValidator;
     const-string v1, "http://apache.org/xml/properties/internal/validator/dtd"
 
@@ -136,20 +122,16 @@
     .restart local v0    # "curr":Lmf/org/apache/xerces/impl/dtd/XMLDTDValidator;
     if-eqz v0, :cond_0
 
-    .line 58
     if-eq v0, p0, :cond_0
 
-    .line 59
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dtd/XMLDTDValidator;->getGrammarBucket()Lmf/org/apache/xerces/impl/dtd/DTDGrammarBucket;
 
     move-result-object v1
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XML11DTDValidator;->fGrammarBucket:Lmf/org/apache/xerces/impl/dtd/DTDGrammarBucket;
 
-    .line 61
     :cond_0
     invoke-super {p0, p1}, Lmf/org/apache/xerces/impl/dtd/XMLDTDValidator;->reset(Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 62
     return-void
 .end method

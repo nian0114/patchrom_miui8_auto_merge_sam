@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 241
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,23 +33,19 @@
     .locals 2
 
     .prologue
-    .line 244
     :try_start_0
     # invokes: Lcom/android/internal/os/ZygoteInit;->preloadResources()V
     invoke-static {}, Lcom/android/internal/os/ZygoteInit;->access$000()V
 
-    .line 245
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/android/internal/os/ZygoteInit;->isParallelThreadRunning:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 247
     :goto_0
     return-void
 
-    .line 246
     :catch_0
     move-exception v0
 

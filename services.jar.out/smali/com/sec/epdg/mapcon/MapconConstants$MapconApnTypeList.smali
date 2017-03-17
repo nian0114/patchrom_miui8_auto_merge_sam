@@ -33,10 +33,8 @@
     .param p1, "dbString"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     const-class v6, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     invoke-static {v6}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -45,14 +43,12 @@
 
     iput-object v6, p0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnTypeList;->mMapconApnTypeList:Ljava/util/EnumSet;
 
-    .line 30
     const-string v6, ":"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 31
     .local v1, "apnTypeListStr":[Ljava/lang/String;
     move-object v3, v1
 
@@ -68,13 +64,11 @@
 
     aget-object v2, v3, v4
 
-    .line 32
     .local v2, "apnTypeStr":Ljava/lang/String;
     invoke-static {v2}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->getMapconApnType(Ljava/lang/String;)Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     move-result-object v0
 
-    .line 35
     .local v0, "apnType":Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
     iget-object v6, p0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnTypeList;->mMapconApnTypeList:Ljava/util/EnumSet;
 
@@ -84,7 +78,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 36
     new-instance v6, Ljava/lang/IllegalStateException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -109,18 +102,15 @@
 
     throw v6
 
-    .line 39
     :cond_0
     iget-object v6, p0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnTypeList;->mMapconApnTypeList:Ljava/util/EnumSet;
 
     invoke-virtual {v6, v0}, Ljava/util/EnumSet;->add(Ljava/lang/Object;)Z
 
-    .line 31
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 41
     .end local v0    # "apnType":Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
     .end local v2    # "apnTypeStr":Ljava/lang/String;
     :cond_1
@@ -142,7 +132,6 @@
     .end annotation
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnTypeList;->mMapconApnTypeList:Ljava/util/EnumSet;
 
     invoke-virtual {v0}, Ljava/util/EnumSet;->clone()Ljava/util/EnumSet;

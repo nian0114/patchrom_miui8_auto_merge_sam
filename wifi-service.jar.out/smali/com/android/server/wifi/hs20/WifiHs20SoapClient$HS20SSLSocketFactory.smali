@@ -34,13 +34,10 @@
     .end annotation
 
     .prologue
-    .line 246
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20SoapClient$HS20SSLSocketFactory;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SoapClient;
 
-    .line 247
     invoke-direct {p0, p2}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/security/KeyStore;)V
 
-    .line 243
     const-string v1, "TLS"
 
     invoke-static {v1}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
@@ -49,7 +46,6 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20SoapClient$HS20SSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
-    .line 249
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20SoapClient$HS20SSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
@@ -69,15 +65,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     :goto_0
     return-void
 
-    .line 250
     :catch_0
     move-exception v0
 
-    .line 251
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -95,7 +88,6 @@
     .end annotation
 
     .prologue
-    .line 265
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20SoapClient$HS20SSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -123,20 +115,17 @@
     .end annotation
 
     .prologue
-    .line 258
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20SoapClient$HS20SSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v2}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
 
-    .line 259
     .local v1, "socketFactory":Ljavax/net/ssl/SSLSocketFactory;
     invoke-virtual {v1, p1, p2, p3, p4}, Ljavax/net/ssl/SSLSocketFactory;->createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
 
     move-result-object v0
 
-    .line 260
     .local v0, "ocspSocket":Ljava/net/Socket;
     return-object v0
 .end method

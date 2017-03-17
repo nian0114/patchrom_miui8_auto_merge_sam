@@ -40,10 +40,9 @@
     .locals 3
 
     .prologue
-    .line 42
-    const-string/jumbo v0, "true"
+    const-string v0, "true"
 
-    const-string/jumbo v1, "ro.product_ship"
+    const-string v1, "ro.product_ship"
 
     const-string v2, "false"
 
@@ -64,7 +63,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,14 +72,12 @@
     .locals 2
 
     .prologue
-    .line 68
-    const-string/jumbo v1, "ro.csc.sales_code"
+    const-string v1, "ro.csc.sales_code"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 69
     .local v0, "salesCode":Ljava/lang/String;
     const-string v1, "CHC"
 
@@ -191,28 +187,23 @@
     .prologue
     const/16 v9, 0x80
 
-    .line 187
     aget-byte v0, p1, p2
 
-    .line 188
     .local v0, "b0":B
     add-int/lit8 v8, p2, 0x1
 
     aget-byte v1, p1, v8
 
-    .line 189
     .local v1, "b1":B
     add-int/lit8 v8, p2, 0x2
 
     aget-byte v2, p1, v8
 
-    .line 190
     .local v2, "b2":B
     add-int/lit8 v8, p2, 0x3
 
     aget-byte v3, p1, v8
 
-    .line 193
     .local v3, "b3":B
     and-int/lit16 v8, v0, 0x80
 
@@ -222,7 +213,6 @@
 
     add-int/lit16 v4, v8, 0x80
 
-    .line 194
     .local v4, "i0":I
     :goto_0
     and-int/lit16 v8, v1, 0x80
@@ -233,7 +223,6 @@
 
     add-int/lit16 v5, v8, 0x80
 
-    .line 195
     .local v5, "i1":I
     :goto_1
     and-int/lit16 v8, v2, 0x80
@@ -244,7 +233,6 @@
 
     add-int/lit16 v6, v8, 0x80
 
-    .line 196
     .local v6, "i2":I
     :goto_2
     and-int/lit16 v8, v3, 0x80
@@ -255,7 +243,6 @@
 
     add-int/lit16 v7, v8, 0x80
 
-    .line 198
     .local v7, "i3":I
     :goto_3
     int-to-long v8, v4
@@ -293,28 +280,24 @@
     :cond_0
     move v4, v0
 
-    .line 193
     goto :goto_0
 
     .restart local v4    # "i0":I
     :cond_1
     move v5, v1
 
-    .line 194
     goto :goto_1
 
     .restart local v5    # "i1":I
     :cond_2
     move v6, v2
 
-    .line 195
     goto :goto_2
 
     .restart local v6    # "i2":I
     :cond_3
     move v7, v3
 
-    .line 196
     goto :goto_3
 .end method
 
@@ -326,12 +309,10 @@
     .prologue
     const-wide/16 v6, 0x3e8
 
-    .line 206
     invoke-direct {p0, p1, p2}, Landroid/net/SntpClient;->read32([BI)J
 
     move-result-wide v2
 
-    .line 207
     .local v2, "seconds":J
     add-int/lit8 v4, p2, 0x4
 
@@ -339,7 +320,6 @@
 
     move-result-wide v0
 
-    .line 208
     .local v0, "fraction":J
     const-wide v4, 0x83aa7e80L
 
@@ -365,12 +345,10 @@
     .param p3, "time"    # J
 
     .prologue
-    .line 216
     const-wide/16 v8, 0x3e8
 
     div-long v6, p3, v8
 
-    .line 217
     .local v6, "seconds":J
     const-wide/16 v8, 0x3e8
 
@@ -378,13 +356,11 @@
 
     sub-long v2, p3, v8
 
-    .line 218
     .local v2, "milliseconds":J
     const-wide v8, 0x83aa7e80L
 
     add-long/2addr v6, v8
 
-    .line 221
     add-int/lit8 v4, p2, 0x1
 
     .end local p2    # "offset":I
@@ -399,7 +375,6 @@
 
     aput-byte v5, p1, p2
 
-    .line 222
     add-int/lit8 p2, v4, 0x1
 
     .end local v4    # "offset":I
@@ -414,7 +389,6 @@
 
     aput-byte v5, p1, v4
 
-    .line 223
     add-int/lit8 v4, p2, 0x1
 
     .end local p2    # "offset":I
@@ -429,7 +403,6 @@
 
     aput-byte v5, p1, p2
 
-    .line 224
     add-int/lit8 p2, v4, 0x1
 
     .end local v4    # "offset":I
@@ -444,7 +417,6 @@
 
     aput-byte v5, p1, v4
 
-    .line 226
     const-wide v8, 0x100000000L
 
     mul-long/2addr v8, v2
@@ -453,7 +425,6 @@
 
     div-long v0, v8, v10
 
-    .line 228
     .local v0, "fraction":J
     add-int/lit8 v4, p2, 0x1
 
@@ -469,7 +440,6 @@
 
     aput-byte v5, p1, p2
 
-    .line 229
     add-int/lit8 p2, v4, 0x1
 
     .end local v4    # "offset":I
@@ -484,7 +454,6 @@
 
     aput-byte v5, p1, v4
 
-    .line 230
     add-int/lit8 v4, p2, 0x1
 
     .end local p2    # "offset":I
@@ -499,7 +468,6 @@
 
     aput-byte v5, p1, p2
 
-    .line 232
     add-int/lit8 p2, v4, 0x1
 
     .end local v4    # "offset":I
@@ -518,7 +486,6 @@
 
     aput-byte v5, p1, v4
 
-    .line 233
     return-void
 .end method
 
@@ -528,7 +495,6 @@
     .locals 2
 
     .prologue
-    .line 161
     iget-wide v0, p0, Landroid/net/SntpClient;->mNtpTime:J
 
     return-wide v0
@@ -538,7 +504,6 @@
     .locals 2
 
     .prologue
-    .line 171
     iget-wide v0, p0, Landroid/net/SntpClient;->mNtpTimeReference:J
 
     return-wide v0
@@ -548,7 +513,6 @@
     .locals 2
 
     .prologue
-    .line 180
     iget-wide v0, p0, Landroid/net/SntpClient;->mRoundTripTime:J
 
     return-wide v0
@@ -560,10 +524,8 @@
     .param p2, "timeout"    # I
 
     .prologue
-    .line 83
     const/16 v19, 0x0
 
-    .line 85
     .local v19, "socket":Ljava/net/DatagramSocket;
     :try_start_0
     new-instance v26, Ljava/net/DatagramSocket;
@@ -573,7 +535,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 86
     .end local v19    # "socket":Ljava/net/DatagramSocket;
     .local v26, "socket":Ljava/net/DatagramSocket;
     :try_start_1
@@ -583,12 +544,10 @@
 
     invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
 
-    .line 87
     invoke-static/range {p1 .. p1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v4
 
-    .line 88
     .local v4, "address":Ljava/net/InetAddress;
     const/16 v27, 0x30
 
@@ -596,7 +555,6 @@
 
     new-array v5, v0, [B
 
-    .line 89
     .local v5, "buffer":[B
     new-instance v9, Ljava/net/DatagramPacket;
 
@@ -612,7 +570,6 @@
 
     invoke-direct {v9, v5, v0, v4, v1}, Ljava/net/DatagramPacket;-><init>([BILjava/net/InetAddress;I)V
 
-    .line 94
     .local v9, "request":Ljava/net/DatagramPacket;
     const/16 v27, 0x0
 
@@ -620,18 +577,15 @@
 
     aput-byte v30, v5, v27
 
-    .line 97
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v16
 
-    .line 98
     .local v16, "requestTime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v14
 
-    .line 99
     .local v14, "requestTicks":J
     const/16 v27, 0x28
 
@@ -643,12 +597,10 @@
 
     invoke-direct {v0, v5, v1, v2, v3}, Landroid/net/SntpClient;->writeTimeStamp([BIJ)V
 
-    .line 101
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v9}, Ljava/net/DatagramSocket;->send(Ljava/net/DatagramPacket;)V
 
-    .line 104
     new-instance v18, Ljava/net/DatagramPacket;
 
     array-length v0, v5
@@ -661,7 +613,6 @@
 
     invoke-direct {v0, v5, v1}, Ljava/net/DatagramPacket;-><init>([BI)V
 
-    .line 105
     .local v18, "response":Ljava/net/DatagramPacket;
     move-object/from16 v0, v26
 
@@ -669,18 +620,15 @@
 
     invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
 
-    .line 106
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v20
 
-    .line 107
     .local v20, "responseTicks":J
     sub-long v30, v20, v14
 
     add-long v22, v16, v30
 
-    .line 110
     .local v22, "responseTime":J
     const/16 v27, 0x18
 
@@ -692,7 +640,6 @@
 
     move-result-wide v10
 
-    .line 111
     .local v10, "originateTime":J
     const/16 v27, 0x20
 
@@ -704,7 +651,6 @@
 
     move-result-wide v12
 
-    .line 112
     .local v12, "receiveTime":J
     const/16 v27, 0x28
 
@@ -716,7 +662,6 @@
 
     move-result-wide v28
 
-    .line 113
     .local v28, "transmitTime":J
     sub-long v30, v20, v14
 
@@ -724,7 +669,6 @@
 
     sub-long v24, v30, v32
 
-    .line 122
     .local v24, "roundTripTime":J
     sub-long v30, v12, v10
 
@@ -736,7 +680,6 @@
 
     div-long v6, v30, v32
 
-    .line 126
     .local v6, "clockOffset":J
     const-wide/16 v30, 0x0
 
@@ -756,7 +699,6 @@
 
     if-gez v27, :cond_4
 
-    .line 127
     :cond_0
     invoke-static {}, Landroid/net/SntpClient;->isCHNOrHKTW()Z
 
@@ -764,19 +706,17 @@
 
     if-eqz v27, :cond_4
 
-    .line 128
     sget-boolean v27, Landroid/net/SntpClient;->SHIP_BUILD:Z
 
     if-nez v27, :cond_1
 
-    .line 129
     const-string v27, "SntpClient"
 
     new-instance v30, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v31, "time value is wrong originateTime : "
+    const-string v31, "time value is wrong originateTime : "
 
     invoke-virtual/range {v30 .. v31}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -827,20 +767,16 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 132
     :cond_1
     const/16 v27, 0x0
 
-    .line 147
     if-eqz v26, :cond_2
 
-    .line 148
     invoke-virtual/range {v26 .. v26}, Ljava/net/DatagramSocket;->close()V
 
     :cond_2
     move-object/from16 v19, v26
 
-    .line 152
     .end local v4    # "address":Ljava/net/InetAddress;
     .end local v5    # "buffer":[B
     .end local v6    # "clockOffset":J
@@ -860,7 +796,6 @@
     :goto_0
     return v27
 
-    .line 137
     .end local v19    # "socket":Ljava/net/DatagramSocket;
     .restart local v4    # "address":Ljava/net/InetAddress;
     .restart local v5    # "buffer":[B
@@ -886,14 +821,12 @@
 
     iput-wide v0, v2, Landroid/net/SntpClient;->mNtpTime:J
 
-    .line 138
     move-wide/from16 v0, v20
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/net/SntpClient;->mNtpTimeReference:J
 
-    .line 139
     move-wide/from16 v0, v24
 
     move-object/from16 v2, p0
@@ -903,13 +836,10 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 147
     if-eqz v26, :cond_5
 
-    .line 148
     invoke-virtual/range {v26 .. v26}, Ljava/net/DatagramSocket;->close()V
 
-    .line 152
     :cond_5
     const/16 v27, 0x1
 
@@ -919,7 +849,6 @@
     .restart local v19    # "socket":Ljava/net/DatagramSocket;
     goto :goto_0
 
-    .line 140
     .end local v4    # "address":Ljava/net/InetAddress;
     .end local v5    # "buffer":[B
     .end local v6    # "clockOffset":J
@@ -936,7 +865,6 @@
     :catch_0
     move-exception v8
 
-    .line 142
     .local v8, "e":Ljava/lang/Exception;
     :goto_1
     :try_start_3
@@ -950,14 +878,13 @@
 
     if-eqz v27, :cond_6
 
-    .line 143
     const-string v27, "SntpClient"
 
     new-instance v30, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v31, "request time failed server: "
+    const-string v31, "request time failed server: "
 
     invoke-virtual/range {v30 .. v31}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -995,19 +922,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 145
     :cond_6
     const/16 v27, 0x0
 
-    .line 147
     if-eqz v19, :cond_3
 
-    .line 148
     invoke-virtual/range {v19 .. v19}, Ljava/net/DatagramSocket;->close()V
 
     goto :goto_0
 
-    .line 147
     .end local v8    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v27
@@ -1015,13 +938,11 @@
     :goto_2
     if-eqz v19, :cond_7
 
-    .line 148
     invoke-virtual/range {v19 .. v19}, Ljava/net/DatagramSocket;->close()V
 
     :cond_7
     throw v27
 
-    .line 147
     .end local v19    # "socket":Ljava/net/DatagramSocket;
     .restart local v26    # "socket":Ljava/net/DatagramSocket;
     :catchall_1
@@ -1033,7 +954,6 @@
     .restart local v19    # "socket":Ljava/net/DatagramSocket;
     goto :goto_2
 
-    .line 140
     .end local v19    # "socket":Ljava/net/DatagramSocket;
     .restart local v26    # "socket":Ljava/net/DatagramSocket;
     :catch_1

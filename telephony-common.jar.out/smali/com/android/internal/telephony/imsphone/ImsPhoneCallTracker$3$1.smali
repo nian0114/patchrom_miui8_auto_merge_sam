@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1398
     iput-object p1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 
     iput-object p2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->val$call:Lcom/android/ims/ImsCall;
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 1402
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 
@@ -57,7 +55,6 @@
 
     move-result-object v0
 
-    .line 1403
     .local v0, "conn":Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 
@@ -83,7 +80,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1404
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 
     iget-object v2, v2, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
@@ -112,7 +108,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1405
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 
     iget-object v2, v2, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
@@ -122,7 +117,6 @@
     # invokes: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->setVideoCallProvider(Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;Lcom/android/ims/ImsCall;)V
     invoke-static {v2, v0, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$600(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;Lcom/android/ims/ImsCall;)V
 
-    .line 1406
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 
     iget-object v2, v2, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
@@ -153,16 +147,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1410
     .end local v0    # "conn":Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;
     :goto_0
     return-void
 
-    .line 1407
     :catch_0
     move-exception v1
 
-    .line 1408
     .local v1, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3$1;->this$1:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$3;
 

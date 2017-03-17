@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     return-void
 .end method
 
@@ -35,13 +33,10 @@
     .param p1, "handler"    # Lorg/xml/sax/ContentHandler;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     invoke-virtual {p0, p1}, Lmf/javax/xml/transform/sax/SAXResult;->setHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 80
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lmf/javax/xml/transform/sax/SAXResult;->handler:Lorg/xml/sax/ContentHandler;
 
     return-object v0
@@ -61,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lmf/javax/xml/transform/sax/SAXResult;->lexhandler:Lorg/xml/sax/ext/LexicalHandler;
 
     return-object v0
@@ -71,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lmf/javax/xml/transform/sax/SAXResult;->systemId:Ljava/lang/String;
 
     return-object v0
@@ -82,10 +74,8 @@
     .param p1, "handler"    # Lorg/xml/sax/ContentHandler;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lmf/javax/xml/transform/sax/SAXResult;->handler:Lorg/xml/sax/ContentHandler;
 
-    .line 89
     return-void
 .end method
 
@@ -94,10 +84,8 @@
     .param p1, "handler"    # Lorg/xml/sax/ext/LexicalHandler;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lmf/javax/xml/transform/sax/SAXResult;->lexhandler:Lorg/xml/sax/ext/LexicalHandler;
 
-    .line 113
     return-void
 .end method
 
@@ -106,9 +94,7 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 131
     iput-object p1, p0, Lmf/javax/xml/transform/sax/SAXResult;->systemId:Ljava/lang/String;
 
-    .line 132
     return-void
 .end method

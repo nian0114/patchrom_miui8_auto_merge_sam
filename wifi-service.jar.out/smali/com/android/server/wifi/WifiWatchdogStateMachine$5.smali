@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1388
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$5;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1391
     const-string v1, "WifiWatchdogStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,15 +66,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1392
     packed-switch p2, :pswitch_data_0
 
-    .line 1412
     :cond_0
     :goto_0
     return-void
 
-    .line 1394
     :pswitch_0
     const-string v1, "registrationinfo"
 
@@ -86,7 +81,6 @@
 
     check-cast v0, Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;
 
-    .line 1395
     .local v0, "registrationinfo":Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;
     const-string v1, "WifiWatchdogStateMachine"
 
@@ -128,7 +122,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1398
     invoke-virtual {v0}, Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;->getFeatureMask()I
 
     move-result v1
@@ -141,13 +134,11 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 1399
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$5;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mImsRegistered:Z
     invoke-static {v1, v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$3102(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)Z
 
-    .line 1400
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$5;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->updateSettings()V
@@ -155,7 +146,6 @@
 
     goto :goto_0
 
-    .line 1405
     .end local v0    # "registrationinfo":Lcom/samsung/commonimsinterface/imscommon/IMSRegistrationInfo;
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$5;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -165,7 +155,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mImsRegistered:Z
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$3102(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)Z
 
-    .line 1406
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$5;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->updateSettings()V
@@ -173,7 +162,6 @@
 
     goto :goto_0
 
-    .line 1392
     :pswitch_data_0
     .packed-switch 0x3ec
         :pswitch_0

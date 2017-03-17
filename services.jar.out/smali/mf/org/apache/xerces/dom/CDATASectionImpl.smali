@@ -17,10 +17,8 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/dom/TextImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const-string v0, "#cdata-section"
 
     return-object v0
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x4
 
     return v0

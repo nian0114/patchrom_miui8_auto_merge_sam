@@ -27,22 +27,18 @@
     .locals 1
 
     .prologue
-    .line 38
     iput-object p1, p0, Landroid/os/DssHelper$DssAppDate;->this$0:Landroid/os/DssHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/os/DssHelper$DssAppDate;->mScale:F
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/os/DssHelper$DssAppDate;->mGameSiopLevel:I
 
-    .line 41
     return-void
 .end method
 
@@ -53,15 +49,12 @@
     .param p1, "scalingFactor"    # F
 
     .prologue
-    .line 44
     iput p1, p0, Landroid/os/DssHelper$DssAppDate;->mScale:F
 
-    .line 45
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/os/DssHelper$DssAppDate;->mGameSiopLevel:I
 
-    .line 46
     return-void
 .end method
 
@@ -71,12 +64,9 @@
     .param p2, "gameSiopLevel"    # I
 
     .prologue
-    .line 49
     iput p1, p0, Landroid/os/DssHelper$DssAppDate;->mScale:F
 
-    .line 50
     iput p2, p0, Landroid/os/DssHelper$DssAppDate;->mGameSiopLevel:I
 
-    .line 51
     return-void
 .end method

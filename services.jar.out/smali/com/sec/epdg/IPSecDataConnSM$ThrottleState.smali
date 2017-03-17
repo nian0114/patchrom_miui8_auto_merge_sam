@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1240
     iput-object p1, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/IPSecDataConnSM$1;
 
     .prologue
-    .line 1240
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;-><init>(Lcom/sec/epdg/IPSecDataConnSM;)V
 
     return-void
@@ -49,14 +47,12 @@
     .locals 2
 
     .prologue
-    .line 1244
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM entered in Throttle state"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1245
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/IWlanApnContext;->setState(I)V
 
-    .line 1246
     return-void
 .end method
 
@@ -76,14 +71,12 @@
     .locals 2
 
     .prologue
-    .line 1250
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM exited from Throttle state"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1251
     return-void
 .end method
 
@@ -94,10 +87,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1255
     const/4 v1, 0x0
 
-    .line 1256
     .local v1, "status":Z
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -144,12 +135,10 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1258
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1302
     :pswitch_0
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -179,12 +168,10 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1307
     :cond_0
     :goto_0
     return v1
 
-    .line 1260
     :pswitch_1
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -214,7 +201,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1261
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -228,7 +214,6 @@
 
     goto :goto_0
 
-    .line 1270
     :pswitch_2
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -267,7 +252,6 @@
 
     goto :goto_0
 
-    .line 1274
     :pswitch_3
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -277,7 +261,6 @@
 
     goto :goto_0
 
-    .line 1278
     :pswitch_4
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -285,7 +268,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1280
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v2}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -296,7 +278,6 @@
 
     goto :goto_0
 
-    .line 1283
     :pswitch_5
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -304,7 +285,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1285
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -318,13 +298,11 @@
 
     goto :goto_0
 
-    .line 1288
     :pswitch_6
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-ne v2, v0, :cond_1
 
-    .line 1289
     .local v0, "isWifiConnected":Z
     :goto_1
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -332,10 +310,8 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->handleWifiStateChange(Landroid/os/Message;)V
     invoke-static {v2, p1}, Lcom/sec/epdg/IPSecDataConnSM;->access$2100(Lcom/sec/epdg/IPSecDataConnSM;Landroid/os/Message;)V
 
-    .line 1290
     if-eqz v0, :cond_0
 
-    .line 1291
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -349,14 +325,12 @@
 
     goto/16 :goto_0
 
-    .line 1288
     .end local v0    # "isWifiConnected":Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 1295
     :pswitch_7
     const-string v2, "[IPSECDATACONNSM]"
 
@@ -366,7 +340,6 @@
 
     goto/16 :goto_0
 
-    .line 1299
     :pswitch_8
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -381,7 +354,6 @@
 
     goto/16 :goto_0
 
-    .line 1258
     nop
 
     :pswitch_data_0

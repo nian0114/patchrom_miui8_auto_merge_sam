@@ -18,14 +18,12 @@
     .locals 1
 
     .prologue
-    .line 58
     new-instance v0, Lmf/org/apache/xerces/dom/CharacterDataImpl$1;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/dom/CharacterDataImpl$1;-><init>()V
 
     sput-object v0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->singletonNodeList:Lmf/org/w3c/dom/NodeList;
 
-    .line 61
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/ChildNode;-><init>()V
 
     return-void
@@ -45,13 +42,10 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/dom/ChildNode;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;)V
 
-    .line 72
     iput-object p2, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
-    .line 73
     return-void
 .end method
 
@@ -62,15 +56,13 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 187
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->isReadOnly()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 188
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NO_MODIFICATION_ALLOWED_ERR"
 
@@ -80,7 +72,6 @@
 
     move-result-object v0
 
-    .line 189
     .local v0, "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -90,16 +81,13 @@
 
     throw v1
 
-    .line 191
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     if-nez p1, :cond_1
 
-    .line 200
     :goto_0
     return-void
 
-    .line 194
     :cond_1
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
 
@@ -107,10 +95,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 195
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 198
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -146,12 +132,10 @@
     .end annotation
 
     .prologue
-    .line 217
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->internalDeleteData(IIZ)V
 
-    .line 218
     return-void
 .end method
 
@@ -159,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 81
     sget-object v0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->singletonNodeList:Lmf/org/w3c/dom/NodeList;
 
     return-object v0
@@ -169,17 +152,14 @@
     .locals 1
 
     .prologue
-    .line 160
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 161
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 163
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
@@ -190,17 +170,14 @@
     .locals 1
 
     .prologue
-    .line 171
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 172
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 174
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
@@ -215,17 +192,14 @@
     .locals 1
 
     .prologue
-    .line 88
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 89
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 91
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
@@ -243,12 +217,10 @@
     .end annotation
 
     .prologue
-    .line 274
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->internalInsertData(ILjava/lang/String;Z)V
 
-    .line 276
     return-void
 .end method
 
@@ -270,26 +242,22 @@
 
     const/4 v9, 0x0
 
-    .line 229
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v2
 
-    .line 230
     .local v2, "ownerDocument":Lmf/org/apache/xerces/dom/CoreDocumentImpl;
     iget-boolean v5, v2, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->errorChecking:Z
 
     if-eqz v5, :cond_1
 
-    .line 231
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->isReadOnly()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 232
-    const-string/jumbo v5, "http://www.w3.org/dom/DOMTR"
+    const-string v5, "http://www.w3.org/dom/DOMTR"
 
     const-string v6, "NO_MODIFICATION_ALLOWED_ERR"
 
@@ -297,7 +265,6 @@
 
     move-result-object v1
 
-    .line 233
     .local v1, "msg":Ljava/lang/String;
     new-instance v5, Lmf/org/w3c/dom/DOMException;
 
@@ -307,13 +274,11 @@
 
     throw v5
 
-    .line 236
     .end local v1    # "msg":Ljava/lang/String;
     :cond_0
     if-gez p2, :cond_1
 
-    .line 237
-    const-string/jumbo v5, "http://www.w3.org/dom/DOMTR"
+    const-string v5, "http://www.w3.org/dom/DOMTR"
 
     const-string v6, "INDEX_SIZE_ERR"
 
@@ -321,7 +286,6 @@
 
     move-result-object v1
 
-    .line 238
     .restart local v1    # "msg":Ljava/lang/String;
     new-instance v5, Lmf/org/w3c/dom/DOMException;
 
@@ -329,7 +293,6 @@
 
     throw v5
 
-    .line 242
     .end local v1    # "msg":Ljava/lang/String;
     :cond_1
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
@@ -338,10 +301,8 @@
 
     if-eqz v5, :cond_2
 
-    .line 243
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 245
     :cond_2
     iget-object v5, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
@@ -357,7 +318,6 @@
 
     move-result v3
 
-    .line 247
     .local v3, "tailLength":I
     :try_start_0
     new-instance v6, Ljava/lang/StringBuilder;
@@ -376,7 +336,6 @@
 
     invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 248
     if-lez v3, :cond_3
 
     iget-object v5, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
@@ -396,22 +355,17 @@
 
     move-result-object v5
 
-    .line 247
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 250
     .local v4, "value":Ljava/lang/String;
     invoke-virtual {p0, v4, p3}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->setNodeValueInternal(Ljava/lang/String;Z)V
 
-    .line 253
     invoke-virtual {v2, p0, p1, p2}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->deletedText(Lmf/org/apache/xerces/dom/CharacterDataImpl;II)V
 
-    .line 260
     return-void
 
-    .line 248
     .end local v4    # "value":Ljava/lang/String;
     :cond_3
     const-string v5, ""
@@ -420,13 +374,11 @@
 
     goto :goto_0
 
-    .line 255
     :catch_0
     move-exception v0
 
-    .line 256
     .local v0, "e":Ljava/lang/StringIndexOutOfBoundsException;
-    const-string/jumbo v5, "http://www.w3.org/dom/DOMTR"
+    const-string v5, "http://www.w3.org/dom/DOMTR"
 
     const-string v6, "INDEX_SIZE_ERR"
 
@@ -434,7 +386,6 @@
 
     move-result-object v1
 
-    .line 257
     .restart local v1    # "msg":Ljava/lang/String;
     new-instance v5, Lmf/org/w3c/dom/DOMException;
 
@@ -457,12 +408,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 288
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v2
 
-    .line 290
     .local v2, "ownerDocument":Lmf/org/apache/xerces/dom/CoreDocumentImpl;
     iget-boolean v4, v2, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->errorChecking:Z
 
@@ -474,8 +423,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 291
-    const-string/jumbo v4, "http://www.w3.org/dom/DOMTR"
+    const-string v4, "http://www.w3.org/dom/DOMTR"
 
     const-string v5, "NO_MODIFICATION_ALLOWED_ERR"
 
@@ -483,7 +431,6 @@
 
     move-result-object v1
 
-    .line 292
     .local v1, "msg":Ljava/lang/String;
     new-instance v4, Lmf/org/w3c/dom/DOMException;
 
@@ -493,7 +440,6 @@
 
     throw v4
 
-    .line 295
     .end local v1    # "msg":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
@@ -502,10 +448,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 296
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 300
     :cond_1
     :try_start_0
     new-instance v4, Ljava/lang/StringBuffer;
@@ -522,11 +466,9 @@
 
     move-result-object v3
 
-    .line 303
     .local v3, "value":Ljava/lang/String;
     invoke-virtual {p0, v3, p3}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->setNodeValueInternal(Ljava/lang/String;Z)V
 
-    .line 306
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -535,17 +477,14 @@
     :try_end_0
     .catch Ljava/lang/StringIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 313
     return-void
 
-    .line 308
     .end local v3    # "value":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 309
     .local v0, "e":Ljava/lang/StringIndexOutOfBoundsException;
-    const-string/jumbo v4, "http://www.w3.org/dom/DOMTR"
+    const-string v4, "http://www.w3.org/dom/DOMTR"
 
     const-string v5, "INDEX_SIZE_ERR"
 
@@ -553,7 +492,6 @@
 
     move-result-object v1
 
-    .line 310
     .restart local v1    # "msg":Ljava/lang/String;
     new-instance v4, Lmf/org/w3c/dom/DOMException;
 
@@ -578,12 +516,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 344
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v2
 
-    .line 352
     .local v2, "ownerDocument":Lmf/org/apache/xerces/dom/CoreDocumentImpl;
     iget-boolean v3, v2, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->errorChecking:Z
 
@@ -595,8 +531,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 353
-    const-string/jumbo v3, "http://www.w3.org/dom/DOMTR"
+    const-string v3, "http://www.w3.org/dom/DOMTR"
 
     const-string v4, "NO_MODIFICATION_ALLOWED_ERR"
 
@@ -606,7 +541,6 @@
 
     move-result-object v0
 
-    .line 354
     .local v0, "msg":Ljava/lang/String;
     new-instance v3, Lmf/org/w3c/dom/DOMException;
 
@@ -616,7 +550,6 @@
 
     throw v3
 
-    .line 357
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
@@ -625,29 +558,22 @@
 
     if-eqz v3, :cond_1
 
-    .line 358
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 362
     :cond_1
     invoke-virtual {v2, p0}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->replacingData(Lmf/org/apache/xerces/dom/NodeImpl;)V
 
-    .line 365
     iget-object v1, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
-    .line 367
     .local v1, "oldvalue":Ljava/lang/String;
     invoke-virtual {p0, p1, p2, v4}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->internalDeleteData(IIZ)V
 
-    .line 368
     invoke-virtual {p0, p1, p3, v4}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->internalInsertData(ILjava/lang/String;Z)V
 
-    .line 370
     iget-object v3, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
     invoke-virtual {v2, p0, v1, v3}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->replacedCharacterData(Lmf/org/apache/xerces/dom/NodeImpl;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 372
     return-void
 .end method
 
@@ -661,10 +587,8 @@
     .end annotation
 
     .prologue
-    .line 381
     invoke-virtual {p0, p1}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->setNodeValue(Ljava/lang/String;)V
 
-    .line 382
     return-void
 .end method
 
@@ -673,17 +597,14 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     invoke-virtual {p0, p1}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->setNodeValueInternal(Ljava/lang/String;)V
 
-    .line 144
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->replacedText(Lmf/org/apache/xerces/dom/CharacterDataImpl;)V
 
-    .line 145
     return-void
 .end method
 
@@ -692,12 +613,10 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->setNodeValueInternal(Ljava/lang/String;Z)V
 
-    .line 99
     return-void
 .end method
 
@@ -707,12 +626,10 @@
     .param p2, "replace"    # Z
 
     .prologue
-    .line 110
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v2
 
-    .line 112
     .local v2, "ownerDocument":Lmf/org/apache/xerces/dom/CoreDocumentImpl;
     iget-boolean v3, v2, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->errorChecking:Z
 
@@ -724,8 +641,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 113
-    const-string/jumbo v3, "http://www.w3.org/dom/DOMTR"
+    const-string v3, "http://www.w3.org/dom/DOMTR"
 
     const-string v4, "NO_MODIFICATION_ALLOWED_ERR"
 
@@ -735,7 +651,6 @@
 
     move-result-object v0
 
-    .line 114
     .local v0, "msg":Ljava/lang/String;
     new-instance v3, Lmf/org/w3c/dom/DOMException;
 
@@ -745,7 +660,6 @@
 
     throw v3
 
-    .line 119
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
@@ -754,24 +668,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 120
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 124
     :cond_1
     iget-object v1, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
-    .line 127
     .local v1, "oldvalue":Ljava/lang/String;
     invoke-virtual {v2, p0, p2}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->modifyingCharacterData(Lmf/org/apache/xerces/dom/NodeImpl;Z)V
 
-    .line 129
     iput-object p1, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
-    .line 132
     invoke-virtual {v2, p0, v1, p1, p2}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->modifiedCharacterData(Lmf/org/apache/xerces/dom/NodeImpl;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 133
     return-void
 .end method
 
@@ -786,17 +694,14 @@
     .end annotation
 
     .prologue
-    .line 407
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->needsSyncData()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 408
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/CharacterDataImpl;->synchronizeData()V
 
-    .line 411
     :cond_0
     iget-object v3, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 
@@ -804,7 +709,6 @@
 
     move-result v0
 
-    .line 412
     .local v0, "length":I
     if-ltz p2, :cond_1
 
@@ -814,9 +718,8 @@
 
     if-le p1, v3, :cond_2
 
-    .line 413
     :cond_1
-    const-string/jumbo v3, "http://www.w3.org/dom/DOMTR"
+    const-string v3, "http://www.w3.org/dom/DOMTR"
 
     const-string v4, "INDEX_SIZE_ERR"
 
@@ -826,7 +729,6 @@
 
     move-result-object v1
 
-    .line 414
     .local v1, "msg":Ljava/lang/String;
     new-instance v3, Lmf/org/w3c/dom/DOMException;
 
@@ -836,7 +738,6 @@
 
     throw v3
 
-    .line 417
     .end local v1    # "msg":Ljava/lang/String;
     :cond_2
     add-int v3, p1, p2
@@ -845,7 +746,6 @@
 
     move-result v2
 
-    .line 419
     .local v2, "tailIndex":I
     iget-object v3, p0, Lmf/org/apache/xerces/dom/CharacterDataImpl;->data:Ljava/lang/String;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 671
     iput-object p1, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     invoke-direct {p0}, Landroid/app/epm/IPluginManagerCallback$Stub;-><init>()V
@@ -44,12 +43,10 @@
     .end annotation
 
     .prologue
-    .line 689
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     invoke-virtual {v2}, Landroid/app/epm/PluginManager;->getComponentPackageMap()V
 
-    .line 690
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
@@ -76,7 +73,6 @@
 
     check-cast v1, Landroid/app/epm/PluginManager$IStatusListener;
 
-    .line 691
     .local v1, "isl":Landroid/app/epm/PluginManager$IStatusListener;
     # getter for: Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->access$200()Ljava/lang/String;
@@ -103,15 +99,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 692
     if-eqz v1, :cond_0
 
-    .line 693
     invoke-interface {v1, p1, p2}, Landroid/app/epm/PluginManager$IStatusListener;->onInstallCompleted(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 696
     .end local v1    # "isl":Landroid/app/epm/PluginManager$IStatusListener;
     :cond_1
     return-void
@@ -128,7 +121,6 @@
     .end annotation
 
     .prologue
-    .line 677
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
@@ -155,7 +147,6 @@
 
     check-cast v1, Landroid/app/epm/PluginManager$IStatusListener;
 
-    .line 678
     .local v1, "isl":Landroid/app/epm/PluginManager$IStatusListener;
     # getter for: Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->access$200()Ljava/lang/String;
@@ -192,15 +183,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 679
     if-eqz v1, :cond_0
 
-    .line 680
     invoke-interface {v1, p1, p2}, Landroid/app/epm/PluginManager$IStatusListener;->onInstallProgress(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 683
     .end local v1    # "isl":Landroid/app/epm/PluginManager$IStatusListener;
     :cond_1
     return-void
@@ -218,7 +206,6 @@
     .end annotation
 
     .prologue
-    .line 739
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
@@ -245,7 +232,6 @@
 
     check-cast v1, Landroid/app/epm/PluginManager$IStatusListener;
 
-    .line 740
     .local v1, "isl":Landroid/app/epm/PluginManager$IStatusListener;
     # getter for: Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->access$200()Ljava/lang/String;
@@ -272,15 +258,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 741
     if-eqz v1, :cond_0
 
-    .line 742
     invoke-interface {v1, p1, p2, p3}, Landroid/app/epm/PluginManager$IStatusListener;->onStateChangeCompleted(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 745
     .end local v1    # "isl":Landroid/app/epm/PluginManager$IStatusListener;
     :cond_1
     return-void
@@ -297,7 +280,6 @@
     .end annotation
 
     .prologue
-    .line 727
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
@@ -324,7 +306,6 @@
 
     check-cast v1, Landroid/app/epm/PluginManager$IStatusListener;
 
-    .line 728
     .local v1, "isl":Landroid/app/epm/PluginManager$IStatusListener;
     # getter for: Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->access$200()Ljava/lang/String;
@@ -351,15 +332,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
     if-eqz v1, :cond_0
 
-    .line 730
     invoke-interface {v1, p1, p2}, Landroid/app/epm/PluginManager$IStatusListener;->onStateChangeProgress(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 733
     .end local v1    # "isl":Landroid/app/epm/PluginManager$IStatusListener;
     :cond_1
     return-void
@@ -376,12 +354,10 @@
     .end annotation
 
     .prologue
-    .line 714
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     invoke-virtual {v2}, Landroid/app/epm/PluginManager;->getComponentPackageMap()V
 
-    .line 715
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
@@ -408,7 +384,6 @@
 
     check-cast v1, Landroid/app/epm/PluginManager$IStatusListener;
 
-    .line 716
     .local v1, "isl":Landroid/app/epm/PluginManager$IStatusListener;
     # getter for: Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->access$200()Ljava/lang/String;
@@ -435,15 +410,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     if-eqz v1, :cond_0
 
-    .line 718
     invoke-interface {v1, p1, p2}, Landroid/app/epm/PluginManager$IStatusListener;->onUninstallCompleted(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 721
     .end local v1    # "isl":Landroid/app/epm/PluginManager$IStatusListener;
     :cond_1
     return-void
@@ -460,7 +432,6 @@
     .end annotation
 
     .prologue
-    .line 702
     iget-object v2, p0, Landroid/app/epm/PluginManager$2;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
@@ -487,7 +458,6 @@
 
     check-cast v1, Landroid/app/epm/PluginManager$IStatusListener;
 
-    .line 703
     .local v1, "isl":Landroid/app/epm/PluginManager$IStatusListener;
     # getter for: Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->access$200()Ljava/lang/String;
@@ -514,15 +484,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 704
     if-eqz v1, :cond_0
 
-    .line 705
     invoke-interface {v1, p1, p2}, Landroid/app/epm/PluginManager$IStatusListener;->onUninstallProgress(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 708
     .end local v1    # "isl":Landroid/app/epm/PluginManager$IStatusListener;
     :cond_1
     return-void

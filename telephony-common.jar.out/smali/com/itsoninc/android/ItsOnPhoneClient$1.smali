@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$1;->this$0:Lcom/itsoninc/android/ItsOnPhoneClient;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V

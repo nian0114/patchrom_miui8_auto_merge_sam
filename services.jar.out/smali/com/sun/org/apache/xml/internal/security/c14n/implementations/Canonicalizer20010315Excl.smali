@@ -243,7 +243,7 @@
     goto :goto_1
 
     :cond_2
-    const-string/jumbo v10, "http://www.w3.org/2000/xmlns/"
+    const-string v10, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -263,7 +263,7 @@
 
     if-eqz v8, :cond_3
 
-    const-string/jumbo v9, "xml"
+    const-string v9, "xml"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -271,7 +271,7 @@
 
     if-nez v9, :cond_3
 
-    const-string/jumbo v9, "xmlns"
+    const-string v9, "xmlns"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -332,9 +332,9 @@
     :cond_5
     if-eqz v7, :cond_b
 
-    const-string/jumbo v0, "http://www.w3.org/2000/xmlns/"
+    const-string v0, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v1, "xmlns"
+    const-string v1, "xmlns"
 
     invoke-interface {p1, v0, v1}, Lorg/w3c/dom/Element;->getAttributeNodeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -348,7 +348,7 @@
 
     if-nez v0, :cond_6
 
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     const-string v1, ""
 
@@ -376,7 +376,7 @@
     if-nez v1, :cond_9
 
     :cond_7
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     invoke-interface {v4, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -415,7 +415,7 @@
     goto :goto_3
 
     :cond_a
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     invoke-interface {v4, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -529,7 +529,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "http://www.w3.org/2000/xmlns/"
+    const-string v9, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -547,7 +547,7 @@
 
     if-eqz v7, :cond_0
 
-    const-string/jumbo v8, "xml"
+    const-string v8, "xml"
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -555,7 +555,7 @@
 
     if-nez v8, :cond_0
 
-    const-string/jumbo v8, "xmlns"
+    const-string v8, "xmlns"
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -638,7 +638,7 @@
     if-nez v2, :cond_6
 
     :cond_4
-    const-string/jumbo v1, "xmlns"
+    const-string v1, "xmlns"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -677,7 +677,7 @@
     goto :goto_2
 
     :cond_7
-    const-string/jumbo v1, "xmlns"
+    const-string v1, "xmlns"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 

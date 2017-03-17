@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 122
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 150
     const-string v1, "WifiApConfigStore"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -66,13 +63,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     :goto_0
     const/4 v1, 0x1
 
     return v1
 
-    .line 127
     :sswitch_0
     const-string v1, "WifiApConfigStore"
 
@@ -98,7 +93,6 @@
 
     goto :goto_0
 
-    .line 130
     :sswitch_1
     const-string v1, "\t#ERROR#SSID#\n"
 
@@ -117,13 +111,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 131
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     # invokes: Lcom/android/server/wifi/WifiApConfigStore;->reGenerateAndWriteConfiguration()V
     invoke-static {v1}, Lcom/android/server/wifi/WifiApConfigStore;->access$100(Lcom/android/server/wifi/WifiApConfigStore;)V
 
-    .line 136
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
@@ -146,7 +138,6 @@
 
     goto :goto_0
 
-    .line 132
     :cond_1
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -177,7 +168,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 134
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     # invokes: Lcom/android/server/wifi/WifiApConfigStore;->reGenerateAndWriteConfiguration()V
@@ -185,11 +175,9 @@
 
     goto :goto_1
 
-    .line 141
     :sswitch_2
     const/4 v0, -0x1
 
-    .line 142
     .local v0, "txPowerMode":I
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
@@ -200,7 +188,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     # getter for: Lcom/android/server/wifi/WifiApConfigStore;->mWifiApConfig:Landroid/net/wifi/WifiConfiguration;
@@ -210,7 +197,6 @@
 
     iget v0, v1, Landroid/net/wifi/WifiConfiguration;->txPowerMode:I
 
-    .line 145
     :cond_2
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
@@ -225,7 +211,6 @@
 
     goto/16 :goto_0
 
-    .line 122
     nop
 
     :sswitch_data_0

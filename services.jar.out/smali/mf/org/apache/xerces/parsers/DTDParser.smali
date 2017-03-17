@@ -17,10 +17,8 @@
     .param p1, "symbolTable"    # Lmf/org/apache/xerces/util/SymbolTable;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/parsers/XMLGrammarParser;-><init>(Lmf/org/apache/xerces/util/SymbolTable;)V
 
-    .line 57
     return-void
 .end method
 
@@ -43,7 +41,6 @@
     .end annotation
 
     .prologue
-    .line 224
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 421
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 469
     return-void
 .end method
 
@@ -84,7 +79,6 @@
     .end annotation
 
     .prologue
-    .line 458
     return-void
 .end method
 
@@ -98,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 439
     return-void
 .end method
 
@@ -111,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 409
     return-void
 .end method
 
@@ -126,7 +118,6 @@
     .end annotation
 
     .prologue
-    .line 133
     return-void
 .end method
 
@@ -142,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 184
     return-void
 .end method
 
@@ -156,7 +146,6 @@
     .end annotation
 
     .prologue
-    .line 232
     return-void
 .end method
 
@@ -170,7 +159,6 @@
     .end annotation
 
     .prologue
-    .line 328
     return-void
 .end method
 
@@ -183,7 +171,6 @@
     .end annotation
 
     .prologue
-    .line 477
     return-void
 .end method
 
@@ -197,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 336
     return-void
 .end method
 
@@ -212,7 +198,6 @@
     .end annotation
 
     .prologue
-    .line 352
     return-void
 .end method
 
@@ -226,7 +211,6 @@
     .end annotation
 
     .prologue
-    .line 171
     return-void
 .end method
 
@@ -242,7 +226,6 @@
     .end annotation
 
     .prologue
-    .line 271
     return-void
 .end method
 
@@ -250,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return-object v0
@@ -269,7 +251,6 @@
     .end annotation
 
     .prologue
-    .line 252
     return-void
 .end method
 
@@ -283,7 +264,6 @@
     .end annotation
 
     .prologue
-    .line 393
     return-void
 .end method
 
@@ -299,7 +279,6 @@
     .end annotation
 
     .prologue
-    .line 306
     return-void
 .end method
 
@@ -315,7 +294,6 @@
     .end annotation
 
     .prologue
-    .line 154
     return-void
 .end method
 
@@ -330,7 +308,6 @@
     .end annotation
 
     .prologue
-    .line 196
     return-void
 .end method
 
@@ -345,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 320
     return-void
 .end method
 
@@ -360,7 +336,6 @@
     .end annotation
 
     .prologue
-    .line 375
     return-void
 .end method
 
@@ -375,7 +350,6 @@
     .end annotation
 
     .prologue
-    .line 123
     return-void
 .end method
 
@@ -392,7 +366,6 @@
     .end annotation
 
     .prologue
-    .line 99
     return-void
 .end method
 
@@ -407,7 +380,6 @@
     .end annotation
 
     .prologue
-    .line 163
     return-void
 .end method
 
@@ -422,7 +394,6 @@
     .end annotation
 
     .prologue
-    .line 114
     return-void
 .end method
 
@@ -439,6 +410,5 @@
     .end annotation
 
     .prologue
-    .line 290
     return-void
 .end method

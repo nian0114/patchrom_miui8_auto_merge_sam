@@ -27,15 +27,12 @@
     .locals 0
 
     .prologue
-    .line 1076
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1077
     invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->reset()V
 
-    .line 1078
     return-void
 .end method
 
@@ -45,18 +42,14 @@
     .param p4, "rxPkts"    # J
 
     .prologue
-    .line 1080
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1081
     iput-wide p2, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1082
     iput-wide p4, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->rxPkts:J
 
-    .line 1083
     return-void
 .end method
 
@@ -65,22 +58,18 @@
     .param p2, "sum"    # Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;
 
     .prologue
-    .line 1085
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1086
     iget-wide v0, p2, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1087
     iget-wide v0, p2, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->rxPkts:J
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->rxPkts:J
 
-    .line 1088
     return-void
 .end method
 
@@ -92,13 +81,10 @@
     .prologue
     const-wide/16 v0, -0x1
 
-    .line 1091
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1092
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->rxPkts:J
 
-    .line 1093
     return-void
 .end method
 
@@ -106,7 +92,6 @@
     .locals 4
 
     .prologue
-    .line 1097
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,21 +137,18 @@
     .locals 2
 
     .prologue
-    .line 1131
     invoke-static {}, Landroid/net/TrafficStats;->getMobileTcpTxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1132
     invoke-static {}, Landroid/net/TrafficStats;->getMobileTcpRxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->rxPkts:J
 
-    .line 1133
     return-void
 .end method
 
@@ -174,7 +156,6 @@
     .locals 2
 
     .prologue
-    .line 1111
     const-string v0, "VZW"
 
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
@@ -191,26 +172,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 1112
     invoke-static {}, Landroid/net/TrafficStats;->getMobileMeteredTxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1113
     invoke-static {}, Landroid/net/TrafficStats;->getMobileMeteredRxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->rxPkts:J
 
-    .line 1128
     :cond_0
     :goto_0
     return-void
 
-    .line 1114
     :cond_1
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -224,21 +201,18 @@
 
     if-eqz v0, :cond_3
 
-    .line 1115
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-boolean v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mExcludeImsPacketCount:Z
 
     if-eqz v0, :cond_2
 
-    .line 1116
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mImsMobileInterface:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 1117
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mImsMobileInterface:Ljava/lang/String;
@@ -249,7 +223,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1118
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mImsMobileInterface:Ljava/lang/String;
@@ -262,7 +235,6 @@
 
     goto :goto_0
 
-    .line 1121
     :cond_2
     invoke-static {}, Landroid/net/TrafficStats;->getMobileTxPackets()J
 
@@ -270,7 +242,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1122
     invoke-static {}, Landroid/net/TrafficStats;->getMobileRxPackets()J
 
     move-result-wide v0
@@ -279,7 +250,6 @@
 
     goto :goto_0
 
-    .line 1125
     :cond_3
     invoke-static {}, Landroid/net/TrafficStats;->getMobileTxPackets()J
 
@@ -287,7 +257,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
-    .line 1126
     invoke-static {}, Landroid/net/TrafficStats;->getMobileRxPackets()J
 
     move-result-wide v0

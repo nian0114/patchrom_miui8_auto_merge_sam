@@ -30,22 +30,16 @@
     .param p4, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-object p1, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
-    .line 43
     iput-object p2, p0, Landroid/hardware/display/VirtualDisplay;->mDisplay:Landroid/view/Display;
 
-    .line 44
     iput-object p3, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
-    .line 45
     iput-object p4, p0, Landroid/hardware/display/VirtualDisplay;->mSurface:Landroid/view/Surface;
 
-    .line 46
     return-void
 .end method
 
@@ -55,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mDisplay:Landroid/view/Display;
 
     return-object v0
@@ -65,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mSurface:Landroid/view/Surface;
 
     return-object v0
@@ -75,24 +67,20 @@
     .locals 2
 
     .prologue
-    .line 124
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
     if-eqz v0, :cond_0
 
-    .line 125
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManagerGlobal;->releaseVirtualDisplay(Landroid/hardware/display/IVirtualDisplayCallback;)V
 
-    .line 126
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
-    .line 128
     :cond_0
     return-void
 .end method
@@ -104,14 +92,12 @@
     .param p3, "densityDpi"    # I
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
     invoke-virtual {v0, v1, p1, p2, p3}, Landroid/hardware/display/DisplayManagerGlobal;->resizeVirtualDisplay(Landroid/hardware/display/IVirtualDisplayCallback;III)V
 
-    .line 91
     return-void
 .end method
 
@@ -120,14 +106,12 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 113
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
     invoke-virtual {v0, v1, p1}, Landroid/hardware/display/DisplayManagerGlobal;->setVirtualDisplayFixedOrientation(Landroid/hardware/display/IVirtualDisplayCallback;I)V
 
-    .line 114
     return-void
 .end method
 
@@ -136,14 +120,12 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
     invoke-virtual {v0, v1, p1}, Landroid/hardware/display/DisplayManagerGlobal;->setVirtualDisplayMirroringDisplay(Landroid/hardware/display/IVirtualDisplayCallback;I)V
 
-    .line 105
     return-void
 .end method
 
@@ -152,22 +134,18 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mSurface:Landroid/view/Surface;
 
     if-eq v0, p1, :cond_0
 
-    .line 76
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/hardware/display/IVirtualDisplayCallback;
 
     invoke-virtual {v0, v1, p1}, Landroid/hardware/display/DisplayManagerGlobal;->setVirtualDisplaySurface(Landroid/hardware/display/IVirtualDisplayCallback;Landroid/view/Surface;)V
 
-    .line 77
     iput-object p1, p0, Landroid/hardware/display/VirtualDisplay;->mSurface:Landroid/view/Surface;
 
-    .line 79
     :cond_0
     return-void
 .end method
@@ -176,7 +154,6 @@
     .locals 2
 
     .prologue
-    .line 132
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,7 +194,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

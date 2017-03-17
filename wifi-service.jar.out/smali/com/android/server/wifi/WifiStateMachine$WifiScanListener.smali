@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1521
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$WifiScanListener;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "description"    # Ljava/lang/String;
 
     .prologue
-    .line 1506
     const-string v0, "WifiStateMachine"
 
     const-string v1, "WifiScanListener onFailure"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1507
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p1, "fullScanResult"    # Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 1518
     const-string v0, "WifiStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -85,7 +81,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1519
     return-void
 .end method
 
@@ -94,7 +89,6 @@
     .param p1, "periodInMs"    # I
 
     .prologue
-    .line 1510
     const-string v0, "WifiStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -117,7 +111,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1511
     return-void
 .end method
 
@@ -126,7 +119,6 @@
     .param p1, "results"    # [Landroid/net/wifi/WifiScanner$ScanData;
 
     .prologue
-    .line 1514
     const-string v0, "WifiStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -151,7 +143,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1515
     return-void
 .end method
 
@@ -159,13 +150,11 @@
     .locals 2
 
     .prologue
-    .line 1502
     const-string v0, "WifiStateMachine"
 
     const-string v1, "WifiScanListener onSuccess"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1503
     return-void
 .end method

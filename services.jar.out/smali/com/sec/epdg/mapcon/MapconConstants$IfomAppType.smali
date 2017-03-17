@@ -58,51 +58,46 @@
 
     const/4 v4, 0x0
 
-    .line 411
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     const-string v1, "APP_TYPE_VOICE"
 
-    const-string/jumbo v2, "imsvoicecall"
+    const-string v2, "imsvoicecall"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->APP_TYPE_VOICE:Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
-    .line 412
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     const-string v1, "APP_TYPE_VIDEO"
 
-    const-string/jumbo v2, "imsvideocall"
+    const-string v2, "imsvideocall"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->APP_TYPE_VIDEO:Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
-    .line 413
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     const-string v1, "APP_TYPE_E911"
 
-    const-string/jumbo v2, "e911call"
+    const-string v2, "e911call"
 
     invoke-direct {v0, v1, v6, v2}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->APP_TYPE_E911:Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
-    .line 414
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     const-string v1, "NO_APP_IDLE"
 
-    const-string/jumbo v2, "idle"
+    const-string v2, "idle"
 
     invoke-direct {v0, v1, v7, v2}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->NO_APP_IDLE:Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
-    .line 415
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     const-string v1, "BLOCK_HO"
@@ -113,20 +108,18 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->BLOCK_HO:Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
-    .line 416
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     const-string v1, "APP_TYPE_VIDEO_VOICE"
 
     const/4 v2, 0x5
 
-    const-string/jumbo v3, "imsvideovoicecall"
+    const-string v3, "imsvideovoicecall"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->APP_TYPE_VIDEO_VOICE:Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
-    .line 410
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
@@ -174,13 +167,10 @@
     .end annotation
 
     .prologue
-    .line 420
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 421
     iput-object p3, p0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->mText:Ljava/lang/String;
 
-    .line 422
     return-void
 .end method
 
@@ -191,17 +181,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 425
     if-nez p0, :cond_1
 
     move-object v0, v4
 
-    .line 434
     :cond_0
     :goto_0
     return-object v0
 
-    .line 428
     :cond_1
     invoke-static {}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->values()[Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
@@ -219,7 +206,6 @@
 
     aget-object v0, v1, v2
 
-    .line 429
     .local v0, "appType":Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
     invoke-virtual {v0}, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->toString()Ljava/lang/String;
 
@@ -231,12 +217,10 @@
 
     if-nez v5, :cond_0
 
-    .line 428
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 433
     .end local v0    # "appType":Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
     :cond_2
     const-string v5, "[MAPCON]"
@@ -245,7 +229,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "getIfomAppType Invalid key: "
+    const-string v7, "getIfomAppType Invalid key: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -263,7 +247,6 @@
 
     move-object v0, v4
 
-    .line 434
     goto :goto_0
 .end method
 
@@ -272,7 +255,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 410
     const-class v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -288,7 +270,6 @@
     .locals 1
 
     .prologue
-    .line 410
     sget-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->$VALUES:[Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->clone()Ljava/lang/Object;
@@ -306,7 +287,6 @@
     .locals 1
 
     .prologue
-    .line 439
     iget-object v0, p0, Lcom/sec/epdg/mapcon/MapconConstants$IfomAppType;->mText:Ljava/lang/String;
 
     return-object v0

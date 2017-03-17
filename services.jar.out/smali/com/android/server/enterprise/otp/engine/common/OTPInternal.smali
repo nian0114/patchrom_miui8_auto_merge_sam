@@ -96,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -107,20 +106,16 @@
     .param p0, "input"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     const/4 v1, 0x0
 
-    .line 136
     .local v1, "output":Ljava/lang/String;
     if-nez p0, :cond_1
 
-    .line 144
     .end local p0    # "input":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 139
     .restart local p0    # "input":Ljava/lang/String;
     :cond_1
     const-string v2, "="
@@ -129,13 +124,11 @@
 
     move-result v0
 
-    .line 140
     .local v0, "equalIndex":I
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_0
 
-    .line 141
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -144,7 +137,6 @@
 
     move-object p0, v1
 
-    .line 144
     goto :goto_0
 .end method
 
@@ -161,12 +153,10 @@
     .end annotation
 
     .prologue
-    .line 89
     const/16 v0, 0x40c
 
     if-ne p0, v0, :cond_0
 
-    .line 90
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Token Blocked, Please try after sometime"
@@ -175,13 +165,11 @@
 
     throw v0
 
-    .line 92
     :cond_0
     const/16 v0, 0x408
 
     if-ne p0, v0, :cond_1
 
-    .line 93
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "No Such token present. Please check Token ID"
@@ -190,13 +178,11 @@
 
     throw v0
 
-    .line 95
     :cond_1
     const/16 v0, 0x40d
 
     if-ne p0, v0, :cond_2
 
-    .line 96
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Operation Failed due to Internal Error"
@@ -205,13 +191,11 @@
 
     throw v0
 
-    .line 98
     :cond_2
     const/16 v0, 0x4ff
 
     if-ne p0, v0, :cond_3
 
-    .line 99
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Caller Verificaiton failed due to lack of sufficient information"
@@ -220,13 +204,11 @@
 
     throw v0
 
-    .line 102
     :cond_3
     const/16 v0, 0x40a
 
     if-ne p0, v0, :cond_4
 
-    .line 103
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Trying to access token that is provisioned for different Container"
@@ -235,13 +217,11 @@
 
     throw v0
 
-    .line 106
     :cond_4
     const/16 v0, 0x402
 
     if-ne p0, v0, :cond_5
 
-    .line 107
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Caller is not whitelisted to perform the operation"
@@ -250,13 +230,11 @@
 
     throw v0
 
-    .line 109
     :cond_5
     const/16 v0, 0x407
 
     if-ne p0, v0, :cond_6
 
-    .line 110
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Token is not in Active state, Unable to generate OTP"
@@ -265,13 +243,11 @@
 
     throw v0
 
-    .line 112
     :cond_6
     const/16 v0, 0x409
 
     if-ne p0, v0, :cond_7
 
-    .line 113
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Policy defined for tokens has expied."
@@ -280,13 +256,11 @@
 
     throw v0
 
-    .line 115
     :cond_7
     const/16 v0, 0x406
 
     if-ne p0, v0, :cond_8
 
-    .line 116
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Pin is required for OTP Generation"
@@ -295,13 +269,11 @@
 
     throw v0
 
-    .line 118
     :cond_8
     const/16 v0, 0x405
 
     if-ne p0, v0, :cond_9
 
-    .line 119
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Challenge is required for OTP Generation"
@@ -310,13 +282,11 @@
 
     throw v0
 
-    .line 121
     :cond_9
     const/16 v0, 0x404
 
     if-ne p0, v0, :cond_a
 
-    .line 122
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "The Algorithm for OTP generation is not supported"
@@ -325,13 +295,11 @@
 
     throw v0
 
-    .line 125
     :cond_a
     const/16 v0, 0x40e
 
     if-ne p0, v0, :cond_b
 
-    .line 126
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Feature is not supported"
@@ -340,13 +308,11 @@
 
     throw v0
 
-    .line 128
     :cond_b
     const/16 v0, 0x412
 
     if-ne p0, v0, :cond_c
 
-    .line 129
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Feature is not supported by device."
@@ -355,7 +321,6 @@
 
     throw v0
 
-    .line 131
     :cond_c
     new-instance v0, Ljava/lang/SecurityException;
 

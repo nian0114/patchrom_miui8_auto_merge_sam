@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3982
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue$2;->this$2:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,16 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 3992
     sget-boolean v0, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG_RESIZE_VISUAL_CUE:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "MultiPhoneWindow"
 
-    const-string/jumbo v1, "mStartAnimation : onAnimationEnd() for ResizeVisualCue"
+    const-string v1, "mStartAnimation : onAnimationEnd() for ResizeVisualCue"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3993
     :cond_0
     return-void
 .end method
@@ -62,7 +59,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 3989
     return-void
 .end method
 
@@ -71,18 +67,16 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 3985
     sget-boolean v0, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG_RESIZE_VISUAL_CUE:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "MultiPhoneWindow"
 
-    const-string/jumbo v1, "mStartAnimation : onAnimationStart() for ResizeVisualCue"
+    const-string v1, "mStartAnimation : onAnimationStart() for ResizeVisualCue"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3986
     :cond_0
     return-void
 .end method

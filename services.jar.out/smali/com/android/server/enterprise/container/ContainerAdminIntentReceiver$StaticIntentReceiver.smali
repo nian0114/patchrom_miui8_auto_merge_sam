@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$StaticIntentReceiver;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$StaticIntentReceiver;->getSendingUserId()I
 
     move-result v1
 
-    .line 75
     .local v1, "userHandle":I
     iget-object v2, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$StaticIntentReceiver;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 
@@ -57,7 +54,6 @@
 
     move-result v0
 
-    .line 77
     .local v0, "mdmUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -65,7 +61,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 78
     # getter for: Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;->access$100()Ljava/lang/String;
 
@@ -75,11 +70,9 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver$StaticIntentReceiver;->this$0:Lcom/android/server/enterprise/container/ContainerAdminIntentReceiver;
 

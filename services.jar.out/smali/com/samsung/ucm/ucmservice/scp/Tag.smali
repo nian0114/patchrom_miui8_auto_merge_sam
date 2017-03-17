@@ -57,17 +57,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     and-int/lit8 v0, p1, -0x40
 
     int-to-byte v0, v0
 
     iput-byte v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mClass:B
 
-    .line 94
     and-int/lit8 v0, p1, 0x20
 
     const/16 v2, 0x20
@@ -79,25 +76,20 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mIsContructed:Z
 
-    .line 96
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
-    .line 97
     and-int/lit16 v0, p1, 0xff
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
-    .line 98
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/Tag;->getDescription()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mDescription:Ljava/lang/String;
 
-    .line 99
     return-void
 
-    .line 94
     :cond_0
     const/4 v0, 0x0
 
@@ -109,10 +101,8 @@
     .param p1, "tag"    # S
 
     .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     shr-int/lit8 v0, p1, 0x8
 
     and-int/lit8 v0, v0, -0x40
@@ -121,7 +111,6 @@
 
     iput-byte v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mClass:B
 
-    .line 103
     shr-int/lit8 v0, p1, 0x8
 
     and-int/lit8 v0, v0, 0x20
@@ -135,29 +124,24 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mIsContructed:Z
 
-    .line 105
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
-    .line 106
     const v0, 0xffff
 
     and-int/2addr v0, p1
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
-    .line 107
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/Tag;->getDescription()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mDescription:Ljava/lang/String;
 
-    .line 108
     return-void
 
-    .line 103
     :cond_0
     const/4 v0, 0x0
 
@@ -177,10 +161,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     aget-byte v0, p1, p2
 
     and-int/lit8 v0, v0, -0x40
@@ -189,7 +171,6 @@
 
     iput-byte v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mClass:B
 
-    .line 73
     aget-byte v0, p1, p2
 
     and-int/lit8 v0, v0, 0x20
@@ -203,17 +184,14 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mIsContructed:Z
 
-    .line 75
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
-    .line 76
     aget-byte v0, p1, p2
 
     and-int/lit16 v0, v0, 0xff
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
-    .line 78
     aget-byte v0, p1, p2
 
     and-int/lit8 v0, v0, 0x1f
@@ -222,7 +200,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 80
     :cond_0
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
@@ -230,10 +207,8 @@
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
-    .line 81
     add-int/lit8 p2, p2, 0x1
 
-    .line 82
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
     shl-int/lit8 v0, v0, 0x8
@@ -246,7 +221,6 @@
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
-    .line 83
     aget-byte v0, p1, p2
 
     and-int/lit16 v0, v0, 0x80
@@ -255,7 +229,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 85
     :cond_1
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
@@ -263,7 +236,6 @@
 
     if-le v0, v1, :cond_3
 
-    .line 86
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/BerTLV$BerTLVException;
 
     const-string v1, "Invalid tag"
@@ -272,13 +244,11 @@
 
     throw v0
 
-    .line 73
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 88
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/Tag;->getDescription()Ljava/lang/String;
 
@@ -286,7 +256,6 @@
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mDescription:Ljava/lang/String;
 
-    .line 89
     return-void
 .end method
 
@@ -297,7 +266,6 @@
     .param p1, "t"    # Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     .prologue
-    .line 125
     invoke-virtual {p1}, Lcom/samsung/ucm/ucmservice/scp/Tag;->getValue()I
 
     move-result v0
@@ -321,16 +289,13 @@
     .locals 3
 
     .prologue
-    .line 35
     const-string v0, ""
 
-    .line 36
     .local v0, "desc":Ljava/lang/String;
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 65
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,11 +314,9 @@
 
     move-result-object v0
 
-    .line 68
     :goto_0
     return-object v0
 
-    .line 38
     :sswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -373,10 +336,8 @@
 
     move-result-object v0
 
-    .line 39
     goto :goto_0
 
-    .line 41
     :sswitch_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -396,10 +357,8 @@
 
     move-result-object v0
 
-    .line 42
     goto :goto_0
 
-    .line 44
     :sswitch_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -419,10 +378,8 @@
 
     move-result-object v0
 
-    .line 45
     goto :goto_0
 
-    .line 47
     :sswitch_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -442,10 +399,8 @@
 
     move-result-object v0
 
-    .line 48
     goto :goto_0
 
-    .line 50
     :sswitch_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -465,10 +420,8 @@
 
     move-result-object v0
 
-    .line 51
     goto :goto_0
 
-    .line 53
     :sswitch_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -488,10 +441,8 @@
 
     move-result-object v0
 
-    .line 54
     goto :goto_0
 
-    .line 56
     :sswitch_6
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -511,10 +462,8 @@
 
     move-result-object v0
 
-    .line 57
     goto/16 :goto_0
 
-    .line 59
     :sswitch_7
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -534,10 +483,8 @@
 
     move-result-object v0
 
-    .line 60
     goto/16 :goto_0
 
-    .line 62
     :sswitch_8
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -557,10 +504,8 @@
 
     move-result-object v0
 
-    .line 63
     goto/16 :goto_0
 
-    .line 36
     :sswitch_data_0
     .sparse-switch
         0x6 -> :sswitch_5
@@ -579,7 +524,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 
     return v0
@@ -589,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
     return v0
@@ -599,7 +542,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-boolean v0, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mIsContructed:Z
 
     return v0
@@ -609,7 +551,6 @@
     .locals 3
 
     .prologue
-    .line 136
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mValue:I
 
     const v2, 0xffffff
@@ -636,7 +577,6 @@
 
     move-result-object v0
 
-    .line 137
     .local v0, "str":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -656,12 +596,10 @@
 
     move-result-object v0
 
-    .line 138
     iget-byte v1, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mClass:B
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 152
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -680,7 +618,6 @@
 
     move-result-object v0
 
-    .line 154
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -712,7 +649,6 @@
 
     move-result-object v0
 
-    .line 155
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -736,7 +672,6 @@
 
     move-result-object v0
 
-    .line 156
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -755,10 +690,8 @@
 
     move-result-object v0
 
-    .line 157
     return-object v0
 
-    .line 140
     :sswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -778,10 +711,8 @@
 
     move-result-object v0
 
-    .line 141
     goto :goto_0
 
-    .line 143
     :sswitch_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -801,10 +732,8 @@
 
     move-result-object v0
 
-    .line 144
     goto :goto_0
 
-    .line 146
     :sswitch_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -824,10 +753,8 @@
 
     move-result-object v0
 
-    .line 147
     goto/16 :goto_0
 
-    .line 149
     :sswitch_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -847,16 +774,13 @@
 
     move-result-object v0
 
-    .line 150
     goto/16 :goto_0
 
-    .line 155
     :cond_0
     const-string v1, "PRIMITIVE"
 
     goto :goto_1
 
-    .line 138
     nop
 
     :sswitch_data_0
@@ -874,7 +798,6 @@
     .param p2, "outOffset"    # I
 
     .prologue
-    .line 129
     const/4 v0, 0x1
 
     .local v0, "i":I
@@ -883,7 +806,6 @@
 
     if-gt v0, v2, :cond_0
 
-    .line 130
     add-int/lit8 v1, p2, 0x1
 
     .end local p2    # "outOffset":I
@@ -904,7 +826,6 @@
 
     aput-byte v2, p1, p2
 
-    .line 129
     add-int/lit8 v0, v0, 0x1
 
     move p2, v1
@@ -913,7 +834,6 @@
     .restart local p2    # "outOffset":I
     goto :goto_0
 
-    .line 132
     :cond_0
     iget v2, p0, Lcom/samsung/ucm/ucmservice/scp/Tag;->mLen:I
 

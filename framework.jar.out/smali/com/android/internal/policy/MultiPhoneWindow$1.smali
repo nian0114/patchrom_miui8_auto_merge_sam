@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 253
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V

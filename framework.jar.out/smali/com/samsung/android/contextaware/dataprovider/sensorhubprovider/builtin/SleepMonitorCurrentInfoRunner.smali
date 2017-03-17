@@ -11,10 +11,8 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 51
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SleepMonitorProviderForExtLib;-><init>(ILandroid/content/Context;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 52
     return-void
 .end method
 
@@ -24,13 +22,10 @@
     .locals 0
 
     .prologue
-    .line 181
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 182
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SleepMonitorProviderForExtLib;->clear()V
 
-    .line 183
     return-void
 .end method
 
@@ -40,10 +35,8 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 122
     if-nez p2, :cond_0
 
-    .line 123
     sget-object v0, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_BUNDLE_NULL_EXCEPTION:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getCode()I
@@ -56,20 +49,17 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 127
     :cond_0
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->setContextCollectionResultNotifyCompletion(Z)V
 
-    .line 128
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/SleepMonitorCurrentInfoRunner;->getContextTypeOfFaultDetection()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0, p2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/SleepMonitorCurrentInfoRunner;->notifyCmdProcessResultObserver(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 129
     return-void
 .end method
 
@@ -77,13 +67,10 @@
     .locals 0
 
     .prologue
-    .line 159
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 160
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SleepMonitorProviderForExtLib;->enable()V
 
-    .line 161
     return-void
 .end method
 
@@ -91,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 61
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->REQUEST_SENSORHUB_SLEEP_MONITOR_CURRENT_INFO:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -105,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     return-object v0
@@ -119,19 +104,15 @@
 
     const/4 v2, 0x0
 
-    .line 71
     const/4 v1, 0x2
 
     new-array v0, v1, [B
 
-    .line 72
     .local v0, "packet":[B
     aput-byte v3, v0, v2
 
-    .line 73
     aput-byte v2, v0, v3
 
-    .line 75
     return-object v0
 .end method
 
@@ -139,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 192
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/SleepMonitorCurrentInfoRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -150,7 +130,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 193
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SleepMonitorProviderForExtLib;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -162,7 +141,6 @@
     .locals 0
 
     .prologue
-    .line 138
     return-object p0
 .end method
 
@@ -170,7 +148,6 @@
     .locals 0
 
     .prologue
-    .line 149
     return-object p0
 .end method
 
@@ -178,7 +155,6 @@
     .locals 0
 
     .prologue
-    .line 171
     return-object p0
 .end method
 
@@ -190,7 +166,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 85
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     move-result-object v3
@@ -199,11 +174,9 @@
 
     move-result-object v0
 
-    .line 86
     .local v0, "libParser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-nez v0, :cond_0
 
-    .line 87
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PARSER_NOT_EXIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -216,11 +189,9 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 100
     :goto_0
     return v2
 
-    .line 92
     :cond_0
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;->LIBRARY_DATATYPE_SLEEP_MONITOR:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;
 
@@ -232,11 +203,9 @@
 
     move-result-object v1
 
-    .line 94
     .local v1, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
     if-nez v1, :cond_1
 
-    .line 95
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PARSER_NOT_EXIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -251,7 +220,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_1
     invoke-interface {v1, p2, p1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;->parse([BI)I
 

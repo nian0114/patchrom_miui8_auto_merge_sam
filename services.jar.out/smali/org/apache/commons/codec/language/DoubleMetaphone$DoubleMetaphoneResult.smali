@@ -24,7 +24,6 @@
     .param p2, "maxLength"    # I
 
     .prologue
-    .line 8
     iput-object p1, p0, Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;->this$0:Lorg/apache/commons/codec/language/DoubleMetaphone;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .param p1, "value"    # C
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -61,7 +59,6 @@
     .param p2, "alternate"    # C
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -76,7 +73,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -92,7 +88,6 @@
     .param p2, "alternate"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -107,7 +102,6 @@
     .param p1, "value"    # C
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -122,7 +116,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -137,7 +130,6 @@
     .param p1, "value"    # C
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -152,7 +144,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -166,7 +157,6 @@
     .locals 2
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -180,7 +170,6 @@
     .locals 2
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -194,7 +183,6 @@
     .locals 2
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

@@ -34,23 +34,18 @@
     .param p3, "listener"    # Lcom/sec/sdp/ISdpListener;
 
     .prologue
-    .line 2481
     iput-object p1, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->this$0:Lcom/android/server/SdpManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2479
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->caller:I
 
-    .line 2482
     iput-object p3, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->mListener:Lcom/sec/sdp/ISdpListener;
 
-    .line 2483
     iput-object p2, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->mAlias:Ljava/lang/String;
 
-    .line 2484
     return-void
 .end method
 
@@ -60,14 +55,12 @@
     .locals 4
 
     .prologue
-    .line 2494
     const-string v1, "SdpManagerService"
 
     const-string v2, "An ISdpListener has died!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2495
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->this$0:Lcom/android/server/SdpManagerService;
 
     # getter for: Lcom/android/server/SdpManagerService;->mBinderListeners:Ljava/util/Map;
@@ -77,7 +70,6 @@
 
     monitor-enter v2
 
-    .line 2496
     :try_start_0
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->this$0:Lcom/android/server/SdpManagerService;
 
@@ -94,11 +86,9 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 2499
     .local v0, "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;>;"
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2500
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->mListener:Lcom/sec/sdp/ISdpListener;
 
     invoke-interface {v1}, Lcom/sec/sdp/ISdpListener;->asBinder()Landroid/os/IBinder;
@@ -109,14 +99,12 @@
 
     invoke-interface {v1, p0, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 2502
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 2503
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->this$0:Lcom/android/server/SdpManagerService;
 
     # getter for: Lcom/android/server/SdpManagerService;->mBinderListeners:Ljava/util/Map;
@@ -128,14 +116,11 @@
 
     invoke-interface {v1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2504
     :cond_0
     monitor-exit v2
 
-    .line 2505
     return-void
 
-    .line 2504
     .end local v0    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;>;"
     :catchall_0
     move-exception v1
@@ -151,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 2491
     iget v0, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->caller:I
 
     return v0
@@ -162,9 +146,7 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 2487
     iput p1, p0, Lcom/android/server/SdpManagerService$SdpManagerServiceBinderListener;->caller:I
 
-    .line 2488
     return-void
 .end method

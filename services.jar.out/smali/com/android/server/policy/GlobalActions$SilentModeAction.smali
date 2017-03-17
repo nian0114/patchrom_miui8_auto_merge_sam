@@ -35,10 +35,8 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 4021
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4008
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -47,16 +45,12 @@
 
     iput-object v0, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->ITEM_IDS:[I
 
-    .line 4023
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 4024
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mHandler:Landroid/os/Handler;
 
-    .line 4026
     return-void
 
-    .line 4008
     :array_0
     .array-data 4
         0x10203b1
@@ -70,7 +64,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 4035
     return p1
 .end method
 
@@ -79,7 +72,6 @@
     .param p1, "ringerMode"    # I
 
     .prologue
-    .line 4030
     return p1
 .end method
 
@@ -99,18 +91,15 @@
 
     const/4 v7, 0x0
 
-    .line 4045
     const v5, 0x109006e
 
     invoke-virtual {p4, v5, p3, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v4
 
-    .line 4047
     .local v4, "v":Landroid/view/View;
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mContext:Landroid/content/Context;
 
-    .line 4050
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v5}, Landroid/media/AudioManager;->getRingerMode()I
@@ -121,7 +110,6 @@
 
     move-result v2
 
-    .line 4051
     .local v2, "selectedIndex":I
     const/4 v0, 0x0
 
@@ -131,7 +119,6 @@
 
     if-ge v0, v5, :cond_4
 
-    .line 4052
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->ITEM_IDS:[I
 
     aget v5, v5, v0
@@ -140,7 +127,6 @@
 
     move-result-object v1
 
-    .line 4057
     .local v1, "itemView":Landroid/view/View;
     if-ne v2, v0, :cond_3
 
@@ -149,20 +135,16 @@
     :goto_1
     invoke-virtual {v1, v5}, Landroid/view/View;->setActivated(Z)V
 
-    .line 4059
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 4060
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 4062
     if-ne v0, v6, :cond_0
 
-    .line 4063
     # getter for: Lcom/android/server/policy/GlobalActions;->mHasVibrator:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$7400()Z
 
@@ -170,35 +152,28 @@
 
     if-nez v5, :cond_0
 
-    .line 4064
     invoke-virtual {v1, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4065
     const v5, 0x10204be
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 4066
     .local v3, "spacer":Landroid/view/View;
     if-eqz v3, :cond_0
 
-    .line 4067
     invoke-virtual {v3, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4070
     .end local v3    # "spacer":Landroid/view/View;
     :cond_0
     if-eqz v0, :cond_1
 
     if-ne v0, v6, :cond_2
 
-    .line 4071
     :cond_1
     invoke-virtual {v1, v7}, Landroid/view/View;->setSoundEffectsEnabled(Z)V
 
-    .line 4051
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -207,10 +182,8 @@
     :cond_3
     move v5, v7
 
-    .line 4057
     goto :goto_1
 
-    .line 4085
     .end local v1    # "itemView":Landroid/view/View;
     :cond_4
     return-object v4
@@ -221,7 +194,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4040
     const/4 v0, 0x0
 
     return-object v0
@@ -231,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 4114
     const/4 v0, 0x1
 
     return v0
@@ -242,7 +213,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 4121
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
@@ -251,11 +221,9 @@
 
     if-nez v2, :cond_0
 
-    .line 4143
     :goto_0
     return-void
 
-    .line 4123
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -267,7 +235,6 @@
 
     move-result v1
 
-    .line 4126
     .local v1, "index":I
     const-string v2, "GlobalActions"
 
@@ -275,7 +242,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onClick() of Silentmode button = "
+    const-string v4, "onClick() of Silentmode button = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -297,19 +264,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4128
     const/4 v0, 0x0
 
-    .line 4129
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_1
 
-    .line 4130
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "enterprise_policy"
+    const-string v3, "enterprise_policy"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -318,7 +282,6 @@
     .end local v0    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 4133
     .restart local v0    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :cond_1
     if-eqz v0, :cond_2
@@ -335,16 +298,14 @@
 
     if-nez v2, :cond_2
 
-    .line 4135
     const-string v2, "GlobalActions"
 
-    const-string/jumbo v3, "restricted by MDM "
+    const-string v3, "restricted by MDM "
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 4140
     :cond_2
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mAudioManager:Landroid/media/AudioManager;
 
@@ -354,7 +315,6 @@
 
     invoke-virtual {v2, v3}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 4141
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mHandler:Landroid/os/Handler;
 
     const/4 v3, 0x0
@@ -370,7 +330,6 @@
     .locals 0
 
     .prologue
-    .line 4099
     return-void
 .end method
 
@@ -378,7 +337,6 @@
     .locals 1
 
     .prologue
-    .line 4106
     const/4 v0, 0x0
 
     return v0
@@ -388,7 +346,6 @@
     .locals 1
 
     .prologue
-    .line 4110
     const/4 v0, 0x1
 
     return v0
@@ -398,7 +355,6 @@
     .locals 1
 
     .prologue
-    .line 4102
     const/4 v0, 0x1
 
     return v0
@@ -408,7 +364,6 @@
     .locals 5
 
     .prologue
-    .line 4089
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v3}, Landroid/media/AudioManager;->getRingerMode()I
@@ -419,17 +374,14 @@
 
     move-result v2
 
-    .line 4090
     .local v2, "selectedIndex":I
     sget-object v3, Lcom/android/server/policy/GlobalActions;->mSilentModeView:Landroid/view/View;
 
     if-nez v3, :cond_1
 
-    .line 4096
     :cond_0
     return-void
 
-    .line 4091
     :cond_1
     const/4 v0, 0x0
 
@@ -439,7 +391,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 4092
     sget-object v3, Lcom/android/server/policy/GlobalActions;->mSilentModeView:Landroid/view/View;
 
     iget-object v4, p0, Lcom/android/server/policy/GlobalActions$SilentModeAction;->ITEM_IDS:[I
@@ -450,7 +401,6 @@
 
     move-result-object v1
 
-    .line 4093
     .local v1, "itemView":Landroid/view/View;
     if-ne v2, v0, :cond_2
 
@@ -459,19 +409,16 @@
     :goto_1
     invoke-virtual {v1, v3}, Landroid/view/View;->setActivated(Z)V
 
-    .line 4094
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 4091
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 4093
     :cond_2
     const/4 v3, 0x0
 
@@ -482,6 +429,5 @@
     .locals 0
 
     .prologue
-    .line 4118
     return-void
 .end method

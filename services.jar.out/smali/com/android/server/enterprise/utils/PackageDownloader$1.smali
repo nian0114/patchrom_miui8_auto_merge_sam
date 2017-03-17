@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/android/server/enterprise/utils/PackageDownloader$1;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 70
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -54,7 +51,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 72
     iget-object v4, p0, Lcom/android/server/enterprise/utils/PackageDownloader$1;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # getter for: Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
@@ -68,20 +64,17 @@
 
     if-lez v4, :cond_0
 
-    .line 73
     iget-object v4, p0, Lcom/android/server/enterprise/utils/PackageDownloader$1;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # invokes: Lcom/android/server/enterprise/utils/PackageDownloader;->handleNetworkState()V
     invoke-static {v4}, Lcom/android/server/enterprise/utils/PackageDownloader;->access$100(Lcom/android/server/enterprise/utils/PackageDownloader;)V
 
-    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 75
     :cond_1
-    const-string/jumbo v4, "edm.intent.action.sec.CHECK_REENROLLMENT"
+    const-string v4, "edm.intent.action.sec.CHECK_REENROLLMENT"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -89,8 +82,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 79
-    const-string/jumbo v4, "pkg"
+    const-string v4, "pkg"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -98,9 +90,8 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 80
     .local v1, "adminPkgName":Ljava/lang/String;
-    const-string/jumbo v4, "url"
+    const-string v4, "url"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -108,9 +99,8 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 81
     .local v2, "pkgUrl":Ljava/lang/String;
-    const-string/jumbo v4, "targetPkgName"
+    const-string v4, "targetPkgName"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -118,7 +108,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 83
     .local v3, "targetPkgName":Ljava/lang/String;
     if-eqz v1, :cond_2
 
@@ -126,7 +115,6 @@
 
     if-nez v3, :cond_2
 
-    .line 86
     iget-object v4, p0, Lcom/android/server/enterprise/utils/PackageDownloader$1;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # invokes: Lcom/android/server/enterprise/utils/PackageDownloader;->handleDownloadProcess(Ljava/lang/String;Ljava/lang/String;)V
@@ -134,13 +122,11 @@
 
     goto :goto_0
 
-    .line 87
     :cond_2
     if-eqz v2, :cond_0
 
     if-eqz v3, :cond_0
 
-    .line 90
     iget-object v4, p0, Lcom/android/server/enterprise/utils/PackageDownloader$1;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # invokes: Lcom/android/server/enterprise/utils/PackageDownloader;->handleDownloadProcess(Ljava/lang/String;Ljava/lang/String;)V
@@ -148,7 +134,6 @@
 
     goto :goto_0
 
-    .line 92
     .end local v1    # "adminPkgName":Ljava/lang/String;
     .end local v2    # "pkgUrl":Ljava/lang/String;
     .end local v3    # "targetPkgName":Ljava/lang/String;
@@ -161,7 +146,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 93
     iget-object v4, p0, Lcom/android/server/enterprise/utils/PackageDownloader$1;->this$0:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     # invokes: Lcom/android/server/enterprise/utils/PackageDownloader;->handleDownloadComplete()V

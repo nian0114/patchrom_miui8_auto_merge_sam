@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 28831
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$39;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "app2"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 28835
     invoke-virtual {p2}, Landroid/content/pm/ResolveInfo;->getPackageWeight()Ljava/lang/Integer;
 
     move-result-object v1
@@ -65,7 +63,6 @@
 
     move-result v0
 
-    .line 28836
     .local v0, "returnValue":I
     return v0
 .end method
@@ -76,7 +73,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 28831
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

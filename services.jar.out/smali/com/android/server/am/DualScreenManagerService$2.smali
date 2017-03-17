@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1429
     iput-object p1, p0, Lcom/android/server/am/DualScreenManagerService$2;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1432
     # getter for: Lcom/android/server/am/DualScreenManagerService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/am/DualScreenManagerService;->access$000()Z
 
@@ -47,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1433
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/am/DualScreenManagerService;->access$100()Ljava/lang/String;
 
@@ -57,7 +54,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onReceive() action="
+    const-string v2, "onReceive() action="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -77,7 +74,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1435
     :cond_0
     const-string v0, "android.intent.action.DUALSCREEN_TEST_SCREENOFF"
 
@@ -91,19 +87,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 1436
     iget-object v0, p0, Lcom/android/server/am/DualScreenManagerService$2;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/DualScreenManagerService;->reportShrinkRequestState(Z)V
 
-    .line 1440
     :cond_1
     :goto_0
     return-void
 
-    .line 1437
     :cond_2
     const-string v0, "android.intent.action.DUALSCREEN_TEST_SCREENON"
 
@@ -117,7 +110,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1438
     iget-object v0, p0, Lcom/android/server/am/DualScreenManagerService$2;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
     const/4 v1, 0x0

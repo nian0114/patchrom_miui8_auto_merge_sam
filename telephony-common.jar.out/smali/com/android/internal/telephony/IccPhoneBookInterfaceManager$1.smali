@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,23 +35,19 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 207
     iget-object v1, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     if-eqz v1, :cond_0
 
-    .line 208
     iget-object v0, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 209
     .local v0, "status":Ljava/util/concurrent/atomic/AtomicBoolean;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 211
     .end local v0    # "status":Ljava/util/concurrent/atomic/AtomicBoolean;
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
@@ -61,7 +56,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 212
     return-void
 .end method
 
@@ -76,22 +70,18 @@
 
     const/4 v1, 0x0
 
-    .line 96
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 204
     :goto_0
     return-void
 
-    .line 98
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 99
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -99,13 +89,11 @@
 
     monitor-enter v2
 
-    .line 100
     :try_start_0
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v1, :cond_0
 
-    .line 101
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -116,7 +104,6 @@
 
     iput-object v1, v3, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecordSize:[I
 
-    .line 105
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -183,11 +170,9 @@
 
     invoke-virtual {v1, v3}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 109
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->notifyPending(Landroid/os/AsyncResult;)V
 
-    .line 110
     monitor-exit v2
 
     goto :goto_0
@@ -201,14 +186,12 @@
 
     throw v1
 
-    .line 113
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 114
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -216,7 +199,6 @@
 
     monitor-enter v3
 
-    .line 115
     :try_start_1
     iget-object v4, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -229,14 +211,12 @@
     :cond_1
     iput-boolean v1, v4, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mSuccess:Z
 
-    .line 117
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-boolean v1, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mSuccess:Z
 
     if-eqz v1, :cond_4
 
-    .line 118
     iget-object v4, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -247,7 +227,6 @@
 
     iput v1, v4, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->returnIndex:I
 
-    .line 119
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -280,7 +259,6 @@
 
     invoke-virtual {v1, v4}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 121
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v1
@@ -310,7 +288,6 @@
 
     if-ltz v1, :cond_2
 
-    .line 123
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     const/4 v4, 0x0
@@ -318,14 +295,12 @@
     # setter for: Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mCurrentEfid:I
     invoke-static {v1, v4}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->access$002(Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;I)I
 
-    .line 124
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->notifyFdnUpdated()V
 
-    .line 127
     :cond_2
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -337,7 +312,6 @@
 
     if-le v1, v2, :cond_3
 
-    .line 128
     const-string v1, "CTC"
 
     const-string v2, "ro.csc.sales_code"
@@ -352,14 +326,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 129
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget v1, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->returnIndex:I
 
     if-nez v1, :cond_3
 
-    .line 130
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v2, Lcom/android/internal/telephony/CommandException;
@@ -374,7 +346,6 @@
 
     iput v2, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->returnIndex:I
 
-    .line 139
     :cond_3
     :goto_1
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
@@ -384,10 +355,8 @@
     # setter for: Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mCurrentEfid:I
     invoke-static {v1, v2}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->access$002(Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;I)I
 
-    .line 140
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->notifyPending(Landroid/os/AsyncResult;)V
 
-    .line 141
     monitor-exit v3
 
     goto/16 :goto_0
@@ -401,7 +370,6 @@
 
     throw v1
 
-    .line 135
     :cond_4
     :try_start_2
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
@@ -418,7 +386,6 @@
 
     iput v2, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->returnIndex:I
 
-    .line 136
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -455,14 +422,12 @@
 
     goto :goto_1
 
-    .line 144
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 145
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -470,13 +435,11 @@
 
     monitor-enter v2
 
-    .line 146
     :try_start_3
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v1, :cond_6
 
-    .line 147
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -485,12 +448,10 @@
 
     iput-object v1, v3, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecords:Ljava/util/List;
 
-    .line 154
     :cond_5
     :goto_2
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->notifyPending(Landroid/os/AsyncResult;)V
 
-    .line 155
     monitor-exit v2
 
     goto/16 :goto_0
@@ -504,7 +465,6 @@
 
     throw v1
 
-    .line 149
     :cond_6
     :try_start_4
     sget-boolean v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->DBG:Z
@@ -517,7 +477,6 @@
 
     invoke-virtual {v1, v3}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 150
     :cond_7
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -525,7 +484,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 151
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecords:Ljava/util/List;
@@ -536,14 +494,12 @@
 
     goto :goto_2
 
-    .line 159
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 160
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -551,13 +507,11 @@
 
     monitor-enter v2
 
-    .line 161
     :try_start_5
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v1, :cond_8
 
-    .line 162
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -568,7 +522,6 @@
 
     iput-object v1, v3, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->recordInfo:[I
 
-    .line 164
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -671,11 +624,9 @@
 
     invoke-virtual {v1, v3}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 172
     :cond_8
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->notifyPending(Landroid/os/AsyncResult;)V
 
-    .line 173
     monitor-exit v2
 
     goto/16 :goto_0
@@ -689,14 +640,12 @@
 
     throw v1
 
-    .line 177
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 178
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -704,13 +653,11 @@
 
     monitor-enter v2
 
-    .line 179
     :try_start_6
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v1, :cond_9
 
-    .line 180
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -741,7 +688,6 @@
 
     invoke-virtual {v3, v1}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 181
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v4, Lcom/android/internal/telephony/uicc/UsimPhonebookCapaInfo;
@@ -756,11 +702,9 @@
 
     iput-object v4, v3, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mUsimPhonebookCapaInfo:Lcom/android/internal/telephony/uicc/UsimPhonebookCapaInfo;
 
-    .line 185
     :cond_9
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->notifyPending(Landroid/os/AsyncResult;)V
 
-    .line 186
     monitor-exit v2
 
     goto/16 :goto_0
@@ -774,14 +718,12 @@
 
     throw v1
 
-    .line 190
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 191
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
@@ -789,13 +731,11 @@
 
     monitor-enter v2
 
-    .line 192
     :try_start_7
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v1, :cond_a
 
-    .line 193
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -828,7 +768,6 @@
 
     invoke-virtual {v3, v1}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 194
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -843,11 +782,9 @@
 
     iput v1, v3, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mSimFileStatusInfo:I
 
-    .line 199
     :goto_3
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->notifyPending(Landroid/os/AsyncResult;)V
 
-    .line 200
     monitor-exit v2
 
     goto/16 :goto_0
@@ -861,7 +798,6 @@
 
     throw v1
 
-    .line 196
     :cond_a
     :try_start_8
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
@@ -874,7 +810,6 @@
 
     goto :goto_3
 
-    .line 96
     nop
 
     :pswitch_data_0

@@ -56,12 +56,10 @@
     .locals 1
 
     .prologue
-    .line 707
     const/4 v0, 0x0
 
     sput v0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->TASK_CONTROLLER_TYPE_RUNNING:I
 
-    .line 712
     const/4 v0, 0x1
 
     sput v0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->TASK_CONTROLLER_TYPE_RECENT:I
@@ -74,18 +72,14 @@
     .param p1, "service"    # Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
-    .line 45
     iput-object p1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
-    .line 46
     return-void
 .end method
 
@@ -96,7 +90,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 541
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -104,15 +97,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 545
     :goto_0
     return-void
 
-    .line 542
     :catch_0
     move-exception v0
 
-    .line 543
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -124,7 +114,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 660
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -132,15 +121,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 664
     :goto_0
     return-void
 
-    .line 661
     :catch_0
     move-exception v0
 
-    .line 662
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -154,7 +140,6 @@
     .param p3, "bMinimize"    # Z
 
     .prologue
-    .line 380
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -164,19 +149,15 @@
 
     move-result v1
 
-    .line 384
     :goto_0
     return v1
 
-    .line 381
     :catch_0
     move-exception v0
 
-    .line 382
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 384
     const/4 v1, 0x0
 
     goto :goto_0
@@ -187,7 +168,6 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 369
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -195,15 +175,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 373
     :goto_0
     return-void
 
-    .line 370
     :catch_0
     move-exception v0
 
-    .line 371
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -214,7 +191,6 @@
     .locals 2
 
     .prologue
-    .line 841
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -224,19 +200,15 @@
 
     move-result v1
 
-    .line 845
     :goto_0
     return v1
 
-    .line 842
     :catch_0
     move-exception v0
 
-    .line 843
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 845
     const/4 v1, 0x0
 
     goto :goto_0
@@ -248,7 +220,6 @@
     .param p2, "zone2"    # I
 
     .prologue
-    .line 191
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -258,19 +229,15 @@
 
     move-result v1
 
-    .line 194
     :goto_0
     return v1
 
-    .line 192
     :catch_0
     move-exception v0
 
-    .line 193
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 194
     const/4 v1, 0x0
 
     goto :goto_0
@@ -281,7 +248,6 @@
     .param p1, "taskId"    # I
 
     .prologue
-    .line 249
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -289,15 +255,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     :goto_0
     return-void
 
-    .line 250
     :catch_0
     move-exception v0
 
-    .line 251
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -310,7 +273,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 582
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -318,15 +280,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 586
     :goto_0
     return-void
 
-    .line 583
     :catch_0
     move-exception v0
 
-    .line 584
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -337,7 +296,6 @@
     .locals 2
 
     .prologue
-    .line 263
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -347,19 +305,15 @@
 
     move-result v1
 
-    .line 266
     :goto_0
     return v1
 
-    .line 264
     :catch_0
     move-exception v0
 
-    .line 265
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 266
     const/4 v1, 0x0
 
     goto :goto_0
@@ -369,7 +323,6 @@
     .locals 2
 
     .prologue
-    .line 401
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -379,19 +332,15 @@
 
     move-result v1
 
-    .line 404
     :goto_0
     return v1
 
-    .line 402
     :catch_0
     move-exception v0
 
-    .line 403
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 404
     const/4 v1, 0x0
 
     goto :goto_0
@@ -402,7 +351,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 75
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -412,19 +360,15 @@
 
     move-result-object v1
 
-    .line 78
     :goto_0
     return-object v1
 
-    .line 76
     :catch_0
     move-exception v0
 
-    .line 77
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 78
     const/4 v1, 0x0
 
     goto :goto_0
@@ -434,13 +378,11 @@
     .locals 2
 
     .prologue
-    .line 695
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     if-eqz v1, :cond_0
 
-    .line 696
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     invoke-interface {v1}, Lcom/samsung/android/multiwindow/IMultiWindowFacade;->getCurrentOrientation()I
@@ -449,19 +391,15 @@
 
     move-result v1
 
-    .line 701
     :goto_0
     return v1
 
-    .line 698
     :catch_0
     move-exception v0
 
-    .line 699
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 701
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, -0x1
@@ -474,7 +412,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 333
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -484,19 +421,15 @@
 
     move-result v1
 
-    .line 337
     :goto_0
     return v1
 
-    .line 334
     :catch_0
     move-exception v0
 
-    .line 335
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 337
     const/4 v1, 0x0
 
     goto :goto_0
@@ -506,7 +439,6 @@
     .locals 4
 
     .prologue
-    .line 785
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -516,19 +448,15 @@
 
     move-result-wide v2
 
-    .line 789
     :goto_0
     return-wide v2
 
-    .line 786
     :catch_0
     move-exception v0
 
-    .line 787
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 789
     const-wide/16 v2, 0x0
 
     goto :goto_0
@@ -538,7 +466,6 @@
     .locals 2
 
     .prologue
-    .line 157
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -548,19 +475,15 @@
 
     move-result v1
 
-    .line 160
     :goto_0
     return v1
 
-    .line 158
     :catch_0
     move-exception v0
 
-    .line 159
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 160
     const/4 v1, -0x1
 
     goto :goto_0
@@ -570,7 +493,6 @@
     .locals 2
 
     .prologue
-    .line 275
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -580,19 +502,15 @@
 
     move-result v1
 
-    .line 278
     :goto_0
     return v1
 
-    .line 276
     :catch_0
     move-exception v0
 
-    .line 277
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 278
     const/4 v1, 0x0
 
     goto :goto_0
@@ -602,7 +520,6 @@
     .locals 2
 
     .prologue
-    .line 287
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -612,19 +529,15 @@
 
     move-result v1
 
-    .line 290
     :goto_0
     return v1
 
-    .line 288
     :catch_0
     move-exception v0
 
-    .line 289
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 290
     const/4 v1, 0x0
 
     goto :goto_0
@@ -635,7 +548,6 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 179
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -645,19 +557,15 @@
 
     move-result-object v1
 
-    .line 182
     :goto_0
     return-object v1
 
-    .line 180
     :catch_0
     move-exception v0
 
-    .line 181
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 182
     const/4 v1, 0x0
 
     goto :goto_0
@@ -667,7 +575,6 @@
     .locals 2
 
     .prologue
-    .line 357
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -677,19 +584,15 @@
 
     move-result v1
 
-    .line 360
     :goto_0
     return v1
 
-    .line 358
     :catch_0
     move-exception v0
 
-    .line 359
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 360
     const/4 v1, 0x0
 
     goto :goto_0
@@ -700,7 +603,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 113
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -710,19 +612,15 @@
 
     move-result-object v1
 
-    .line 116
     :goto_0
     return-object v1
 
-    .line 114
     :catch_0
     move-exception v0
 
-    .line 115
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 116
     const/4 v1, 0x0
 
     goto :goto_0
@@ -733,7 +631,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 810
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -743,19 +640,15 @@
 
     move-result v1
 
-    .line 813
     :goto_0
     return v1
 
-    .line 811
     :catch_0
     move-exception v0
 
-    .line 812
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 813
     const/4 v1, 0x0
 
     goto :goto_0
@@ -769,7 +662,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 882
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v2
@@ -778,31 +670,26 @@
 
     move-result-object v0
 
-    .line 883
     .local v0, "display":Landroid/view/Display;
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 884
     .local v1, "dm":Landroid/util/DisplayMetrics;
     if-eqz v0, :cond_0
 
-    .line 885
     invoke-virtual {v0}, Landroid/view/Display;->getDisplayAdjustments()Landroid/view/DisplayAdjustments;
 
     move-result-object v2
 
     invoke-virtual {p2, v1, v2}, Landroid/view/DisplayInfo;->getAppMetrics(Landroid/util/DisplayMetrics;Landroid/view/DisplayAdjustments;)V
 
-    .line 886
     iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v3, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
     invoke-virtual {p1, v4, v4, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 888
     :cond_0
     return v4
 .end method
@@ -813,7 +700,6 @@
     .param p2, "maxCount"    # I
 
     .prologue
-    .line 671
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -823,19 +709,15 @@
 
     move-result v1
 
-    .line 675
     :goto_0
     return v1
 
-    .line 672
     :catch_0
     move-exception v0
 
-    .line 673
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 675
     const/4 v1, -0x1
 
     goto :goto_0
@@ -845,7 +727,6 @@
     .locals 2
 
     .prologue
-    .line 855
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -855,19 +736,15 @@
 
     move-result v1
 
-    .line 859
     :goto_0
     return v1
 
-    .line 856
     :catch_0
     move-exception v0
 
-    .line 857
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 859
     const/4 v1, -0x1
 
     goto :goto_0
@@ -886,7 +763,6 @@
     .end annotation
 
     .prologue
-    .line 683
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -896,19 +772,15 @@
 
     move-result-object v1
 
-    .line 686
     :goto_0
     return-object v1
 
-    .line 684
     :catch_0
     move-exception v0
 
-    .line 685
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 686
     const/4 v1, 0x0
 
     goto :goto_0
@@ -935,7 +807,6 @@
     .end annotation
 
     .prologue
-    .line 238
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -945,19 +816,15 @@
 
     move-result-object v1
 
-    .line 241
     :goto_0
     return-object v1
 
-    .line 239
     :catch_0
     move-exception v0
 
-    .line 240
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 241
     const/4 v1, 0x0
 
     goto :goto_0
@@ -967,7 +834,6 @@
     .locals 2
 
     .prologue
-    .line 482
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -977,19 +843,15 @@
 
     move-result v1
 
-    .line 485
     :goto_0
     return v1
 
-    .line 483
     :catch_0
     move-exception v0
 
-    .line 484
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 485
     const/high16 v1, 0x3f800000    # 1.0f
 
     goto :goto_0
@@ -999,7 +861,6 @@
     .locals 2
 
     .prologue
-    .line 470
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1009,19 +870,15 @@
 
     move-result v1
 
-    .line 473
     :goto_0
     return v1
 
-    .line 471
     :catch_0
     move-exception v0
 
-    .line 472
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 473
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1032,7 +889,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 133
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1042,19 +898,15 @@
 
     move-result-object v1
 
-    .line 136
     :goto_0
     return-object v1
 
-    .line 134
     :catch_0
     move-exception v0
 
-    .line 135
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 136
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1065,7 +917,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 626
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1075,19 +926,15 @@
 
     move-result v1
 
-    .line 629
     :goto_0
     return v1
 
-    .line 627
     :catch_0
     move-exception v0
 
-    .line 628
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 629
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1098,7 +945,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 145
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1108,19 +954,15 @@
 
     move-result-object v1
 
-    .line 148
     :goto_0
     return-object v1
 
-    .line 146
     :catch_0
     move-exception v0
 
-    .line 147
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 148
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1131,7 +973,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 518
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1141,19 +982,15 @@
 
     move-result-object v1
 
-    .line 522
     :goto_0
     return-object v1
 
-    .line 519
     :catch_0
     move-exception v0
 
-    .line 520
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 522
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1163,7 +1000,6 @@
     .locals 2
 
     .prologue
-    .line 591
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1173,19 +1009,15 @@
 
     move-result-object v1
 
-    .line 595
     :goto_0
     return-object v1
 
-    .line 592
     :catch_0
     move-exception v0
 
-    .line 593
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 595
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1204,7 +1036,6 @@
     .end annotation
 
     .prologue
-    .line 603
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1214,19 +1045,15 @@
 
     move-result-object v1
 
-    .line 606
     :goto_0
     return-object v1
 
-    .line 604
     :catch_0
     move-exception v0
 
-    .line 605
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 606
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1237,7 +1064,6 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 299
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1247,19 +1073,15 @@
 
     move-result-object v1
 
-    .line 302
     :goto_0
     return-object v1
 
-    .line 300
     :catch_0
     move-exception v0
 
-    .line 301
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 302
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1269,7 +1091,6 @@
     .locals 3
 
     .prologue
-    .line 494
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1281,19 +1102,15 @@
 
     move-result v1
 
-    .line 498
     :goto_0
     return v1
 
-    .line 495
     :catch_0
     move-exception v0
 
-    .line 496
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 498
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1304,7 +1121,6 @@
     .param p1, "notIncludeTaskId"    # I
 
     .prologue
-    .line 506
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1314,19 +1130,15 @@
 
     move-result v1
 
-    .line 510
     :goto_0
     return v1
 
-    .line 507
     :catch_0
     move-exception v0
 
-    .line 508
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 510
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1337,7 +1149,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 869
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1347,19 +1158,15 @@
 
     move-result v1
 
-    .line 873
     :goto_0
     return v1
 
-    .line 870
     :catch_0
     move-exception v0
 
-    .line 871
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 873
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1372,7 +1179,6 @@
     .param p3, "stayResumed"    # Z
 
     .prologue
-    .line 392
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1382,19 +1188,15 @@
 
     move-result v1
 
-    .line 396
     :goto_0
     return v1
 
-    .line 393
     :catch_0
     move-exception v0
 
-    .line 394
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 396
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1405,7 +1207,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 53
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1413,15 +1214,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     :goto_0
     return-void
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1436,7 +1234,6 @@
     .param p4, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 448
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1444,15 +1241,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 452
     :goto_0
     return-void
 
-    .line 449
     :catch_0
     move-exception v0
 
-    .line 450
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1463,7 +1257,6 @@
     .locals 2
 
     .prologue
-    .line 202
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1473,19 +1266,15 @@
 
     move-result v1
 
-    .line 205
     :goto_0
     return v1
 
-    .line 203
     :catch_0
     move-exception v0
 
-    .line 204
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 205
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1496,7 +1285,6 @@
     .param p1, "taskId"    # I
 
     .prologue
-    .line 436
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1506,19 +1294,15 @@
 
     move-result v1
 
-    .line 439
     :goto_0
     return v1
 
-    .line 437
     :catch_0
     move-exception v0
 
-    .line 438
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 439
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1528,7 +1312,6 @@
     .locals 2
 
     .prologue
-    .line 345
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1538,19 +1321,15 @@
 
     move-result v1
 
-    .line 349
     :goto_0
     return v1
 
-    .line 346
     :catch_0
     move-exception v0
 
-    .line 347
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 349
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1561,7 +1340,6 @@
     .param p1, "observer"    # Landroid/sec/multiwindow/impl/IMultiWindowStyleChangedCallback;
 
     .prologue
-    .line 893
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1569,15 +1347,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 897
     :goto_0
     return-void
 
-    .line 894
     :catch_0
     move-exception v0
 
-    .line 895
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1589,7 +1364,6 @@
     .param p1, "taskController"    # Lcom/samsung/android/multiwindow/ITaskController;
 
     .prologue
-    .line 719
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1597,15 +1371,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 724
     :goto_0
     return-void
 
-    .line 720
     :catch_0
     move-exception v0
 
-    .line 721
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1618,7 +1389,6 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 731
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1626,15 +1396,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 736
     :goto_0
     return-void
 
-    .line 732
     :catch_0
     move-exception v0
 
-    .line 733
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1647,12 +1414,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 563
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->removeAllTasks(Landroid/os/IBinder;IZ)V
 
-    .line 564
     return-void
 .end method
 
@@ -1663,7 +1428,6 @@
     .param p3, "logging"    # Z
 
     .prologue
-    .line 571
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1671,15 +1435,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 575
     :goto_0
     return-void
 
-    .line 572
     :catch_0
     move-exception v0
 
-    .line 573
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1691,7 +1452,6 @@
     .param p1, "stackId"    # I
 
     .prologue
-    .line 552
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1701,19 +1461,15 @@
 
     move-result v1
 
-    .line 555
     :goto_0
     return v1
 
-    .line 553
     :catch_0
     move-exception v0
 
-    .line 554
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 555
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1725,7 +1481,6 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 649
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1733,15 +1488,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 653
     :goto_0
     return-void
 
-    .line 650
     :catch_0
     move-exception v0
 
-    .line 651
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1754,7 +1506,6 @@
     .param p2, "point"    # Landroid/graphics/Point;
 
     .prologue
-    .line 64
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1762,15 +1513,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
     :goto_0
     return-void
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1783,7 +1531,6 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 322
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1791,15 +1538,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 326
     :goto_0
     return-void
 
-    .line 323
     :catch_0
     move-exception v0
 
-    .line 324
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1811,7 +1555,6 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 413
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1819,15 +1562,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 417
     :goto_0
     return-void
 
-    .line 414
     :catch_0
     move-exception v0
 
-    .line 415
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1840,7 +1580,6 @@
     .param p2, "tapOutSide"    # Z
 
     .prologue
-    .line 615
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1848,15 +1587,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 619
     :goto_0
     return-void
 
-    .line 616
     :catch_0
     move-exception v0
 
-    .line 617
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1869,17 +1605,14 @@
     .param p2, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 100
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     if-nez v1, :cond_0
 
-    .line 106
     :goto_0
     return-void
 
-    .line 102
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1889,11 +1622,9 @@
 
     goto :goto_0
 
-    .line 103
     :catch_0
     move-exception v0
 
-    .line 104
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1907,17 +1638,14 @@
     .param p3, "loggingReason"    # I
 
     .prologue
-    .line 87
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     if-nez v1, :cond_0
 
-    .line 93
     :goto_0
     return-void
 
-    .line 89
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1927,11 +1655,9 @@
 
     goto :goto_0
 
-    .line 90
     :catch_0
     move-exception v0
 
-    .line 91
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1943,7 +1669,6 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 311
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1951,15 +1676,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 315
     :goto_0
     return-void
 
-    .line 312
     :catch_0
     move-exception v0
 
-    .line 313
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1972,7 +1694,6 @@
     .param p2, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 125
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -1980,15 +1701,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
     :goto_0
     return-void
 
-    .line 126
     :catch_0
     move-exception v0
 
-    .line 127
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2001,7 +1719,6 @@
     .param p2, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 638
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2009,15 +1726,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 642
     :goto_0
     return-void
 
-    .line 639
     :catch_0
     move-exception v0
 
-    .line 640
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2031,7 +1745,6 @@
     .param p3, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 459
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2039,15 +1752,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 463
     :goto_0
     return-void
 
-    .line 460
     :catch_0
     move-exception v0
 
-    .line 461
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2059,7 +1769,6 @@
     .param p1, "observer"    # Landroid/sec/multiwindow/impl/IMultiWindowStyleChangedCallback;
 
     .prologue
-    .line 901
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2067,15 +1776,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 905
     :goto_0
     return-void
 
-    .line 902
     :catch_0
     move-exception v0
 
-    .line 903
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2087,7 +1793,6 @@
     .param p1, "taskController"    # Lcom/samsung/android/multiwindow/ITaskController;
 
     .prologue
-    .line 743
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2095,15 +1800,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 748
     :goto_0
     return-void
 
-    .line 744
     :catch_0
     move-exception v0
 
-    .line 745
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2115,7 +1817,6 @@
     .param p1, "point"    # Landroid/graphics/Point;
 
     .prologue
-    .line 424
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2123,15 +1824,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 429
     :goto_0
     return-void
 
-    .line 425
     :catch_0
     move-exception v0
 
-    .line 426
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2144,7 +1842,6 @@
     .param p2, "size"    # [I
 
     .prologue
-    .line 530
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2152,15 +1849,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 534
     :goto_0
     return-void
 
-    .line 531
     :catch_0
     move-exception v0
 
-    .line 532
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2174,14 +1868,11 @@
     .param p3, "enable"    # Z
 
     .prologue
-    .line 823
     if-nez p1, :cond_0
 
-    .line 832
     :goto_0
     return-void
 
-    .line 826
     :cond_0
     :try_start_0
     const-string v1, "MultiWindowFacade"
@@ -2206,7 +1897,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     invoke-interface {v1, p1, p2, p3}, Lcom/samsung/android/multiwindow/IMultiWindowFacade;->updateMultiWindowSetting(Ljava/lang/String;Ljava/lang/String;Z)V
@@ -2215,11 +1905,9 @@
 
     goto :goto_0
 
-    .line 829
     :catch_0
     move-exception v0
 
-    .line 830
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2232,12 +1920,10 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 818
-    const-string/jumbo v0, "prev"
+    const-string v0, "prev"
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->updateMultiWindowSetting(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 819
     return-void
 .end method
 
@@ -2247,7 +1933,6 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 798
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowFacade;->mService:Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
@@ -2255,15 +1940,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 802
     :goto_0
     return-void
 
-    .line 799
     :catch_0
     move-exception v0
 
-    .line 800
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

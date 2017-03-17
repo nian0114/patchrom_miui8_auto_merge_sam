@@ -48,36 +48,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 671
     iput-object p1, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->this$0:Lcom/android/server/notification/ManagedServices;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 672
     iput-object p2, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->service:Landroid/os/IInterface;
 
-    .line 673
     iput-object p3, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->component:Landroid/content/ComponentName;
 
-    .line 674
     iput p4, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->userid:I
 
-    .line 675
     iput-boolean p5, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->isSystem:Z
 
-    .line 676
     iput-object p6, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->connection:Landroid/content/ServiceConnection;
 
-    .line 677
     iput p7, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->targetSdkVersion:I
 
-    .line 680
     iput-boolean v2, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->isBlackListedGear:Z
 
-    .line 681
     const/4 v0, 0x0
 
-    .line 683
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     iget-object v2, p1, Lcom/android/server/notification/ManagedServices;->mContext:Landroid/content/Context;
@@ -96,7 +86,6 @@
 
     move-result-object v0
 
-    .line 685
     if-eqz v0, :cond_0
 
     iget v2, v0, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -105,10 +94,8 @@
 
     if-nez v2, :cond_0
 
-    .line 687
     const-string v1, "com.samsung.permission.READ_KNOX_NOTIFICATION"
 
-    .line 688
     .local v1, "enforcedPermission":Ljava/lang/String;
     iget-object v2, p1, Lcom/android/server/notification/ManagedServices;->mContext:Landroid/content/Context;
 
@@ -130,39 +117,33 @@
 
     if-eqz v2, :cond_1
 
-    .line 690
     iget-boolean v2, p1, Lcom/android/server/notification/ManagedServices;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 691
     iget-object v2, p1, Lcom/android/server/notification/ManagedServices;->TAG:Ljava/lang/String;
 
     const-string v3, "ManagedServiceInfo : com.samsung.permission.READ_KNOX_NOTIFICATION not granted"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 702
     .end local v1    # "enforcedPermission":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 693
     .restart local v1    # "enforcedPermission":Ljava/lang/String;
     :cond_1
     iget-boolean v2, p1, Lcom/android/server/notification/ManagedServices;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 694
     iget-object v2, p1, Lcom/android/server/notification/ManagedServices;->TAG:Ljava/lang/String;
 
     const-string v3, "ManagedServiceInfo : com.samsung.permission.READ_KNOX_NOTIFICATION granted"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 695
     :cond_2
     const/4 v2, 0x1
 
@@ -172,7 +153,6 @@
 
     goto :goto_0
 
-    .line 698
     .end local v1    # "enforcedPermission":Ljava/lang/String;
     :catch_0
     move-exception v2
@@ -186,7 +166,6 @@
     .locals 3
 
     .prologue
-    .line 739
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iget-boolean v0, v0, Lcom/android/server/notification/ManagedServices;->DEBUG:Z
@@ -201,7 +180,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 744
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->this$0:Lcom/android/server/notification/ManagedServices;
 
@@ -212,7 +190,6 @@
     # invokes: Lcom/android/server/notification/ManagedServices;->removeServiceImpl(Landroid/os/IInterface;I)Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
     invoke-static {v0, v1, v2}, Lcom/android/server/notification/ManagedServices;->access$800(Lcom/android/server/notification/ManagedServices;Landroid/os/IInterface;I)Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
 
-    .line 745
     return-void
 .end method
 
@@ -227,7 +204,6 @@
 
     const/4 v1, 0x0
 
-    .line 717
     invoke-virtual {p0}, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->isEnabledForCurrentProfiles()Z
 
     move-result v2
@@ -236,12 +212,10 @@
 
     move v0, v1
 
-    .line 730
     :cond_0
     :goto_0
     return v0
 
-    .line 722
     :cond_1
     iget-boolean v2, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->isSystem:Z
 
@@ -261,34 +235,29 @@
 
     if-eq v2, p1, :cond_2
 
-    .line 723
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->this$0:Lcom/android/server/notification/ManagedServices;
 
     iget-object v0, v0, Lcom/android/server/notification/ManagedServices;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "enabledAndUserMatches : returning false"
+    const-string v2, "enabledAndUserMatches : returning false"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move v0, v1
 
-    .line 724
     goto :goto_0
 
-    .line 728
     :cond_2
     iget v2, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->userid:I
 
     if-eq v2, v3, :cond_0
 
-    .line 729
     if-eq p1, v3, :cond_0
 
     iget v2, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->userid:I
 
     if-eq p1, v2, :cond_0
 
-    .line 730
     invoke-virtual {p0}, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->supportsProfiles()Z
 
     move-result v2
@@ -318,18 +287,15 @@
     .locals 2
 
     .prologue
-    .line 749
     iget-boolean v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->isSystem:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 751
     :goto_0
     return v0
 
-    .line 750
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->connection:Landroid/content/ServiceConnection;
 
@@ -339,7 +305,6 @@
 
     goto :goto_0
 
-    .line 751
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->this$0:Lcom/android/server/notification/ManagedServices;
 
@@ -361,7 +326,6 @@
     .locals 2
 
     .prologue
-    .line 734
     iget v0, p0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->targetSdkVersion:I
 
     const/16 v1, 0x15
@@ -383,7 +347,6 @@
     .locals 2
 
     .prologue
-    .line 706
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ManagedServiceInfo["

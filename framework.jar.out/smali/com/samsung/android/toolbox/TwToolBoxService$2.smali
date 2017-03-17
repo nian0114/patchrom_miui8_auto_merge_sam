@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 123
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxService$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 126
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 127
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 128
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/toolbox/TwToolBoxService;->access$200()Ljava/lang/String;
 
@@ -64,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxService;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxService$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxService;
@@ -85,7 +80,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxService;->access$002(Lcom/samsung/android/toolbox/TwToolBoxService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 131
     :cond_0
     return-void
 .end method

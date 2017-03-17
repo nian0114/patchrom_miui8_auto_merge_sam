@@ -26,25 +26,20 @@
     .param p1, "owner"    # Lcom/movial/ipphone/IPCallTracker;
 
     .prologue
-    .line 81
     invoke-direct {p0}, Lcom/android/internal/telephony/Call;-><init>()V
 
-    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
-    .line 195
     const-string v0, "IPCall"
 
     iput-object v0, p0, Lcom/movial/ipphone/IPCall;->TAG:Ljava/lang/String;
 
-    .line 82
     iput-object p1, p0, Lcom/movial/ipphone/IPCall;->owner:Lcom/movial/ipphone/IPCallTracker;
 
-    .line 83
     return-void
 .end method
 
@@ -56,15 +51,12 @@
     .param p2, "state"    # Lcom/android/internal/telephony/Call$State;
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 118
     iput-object p2, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 119
     return-void
 .end method
 
@@ -72,7 +64,6 @@
     .locals 5
 
     .prologue
-    .line 182
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -85,7 +76,6 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 183
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -94,7 +84,6 @@
 
     check-cast v0, Lcom/movial/ipphone/IPConnection;
 
-    .line 185
     .local v0, "cn":Lcom/movial/ipphone/IPConnection;
     invoke-virtual {v0}, Lcom/movial/ipphone/IPConnection;->getState()Lcom/android/internal/telephony/Call$State;
 
@@ -104,18 +93,15 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 186
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 182
     :cond_0
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 189
     .end local v0    # "cn":Lcom/movial/ipphone/IPConnection;
     :cond_1
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->TAG:Ljava/lang/String;
@@ -146,7 +132,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -155,12 +140,10 @@
 
     if-nez v2, :cond_2
 
-    .line 191
     sget-object v2, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 193
     :cond_2
     return-void
 .end method
@@ -170,10 +153,8 @@
     .param p1, "conn"    # Lcom/movial/ipphone/IPConnection;
 
     .prologue
-    .line 141
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 142
     .local v2, "oldstate":Lcom/android/internal/telephony/Call$State;
     iget-object v4, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
@@ -181,10 +162,8 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 143
     const/4 v0, 0x1
 
-    .line 145
     .local v0, "hasOnlyDisconnectedConnections":Z
     const/4 v1, 0x0
 
@@ -199,7 +178,6 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 146
     iget-object v4, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -216,19 +194,15 @@
 
     if-eq v4, v5, :cond_2
 
-    .line 147
     const/4 v0, 0x0
 
-    .line 152
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 153
     sget-object v4, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
     iput-object v4, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 156
     .end local v0    # "hasOnlyDisconnectedConnections":Z
     .end local v1    # "i":I
     .end local v3    # "s":I
@@ -237,7 +211,6 @@
 
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 157
     iget-object v4, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
     if-eq v2, v4, :cond_3
@@ -247,7 +220,6 @@
     :goto_1
     return v4
 
-    .line 145
     .restart local v0    # "hasOnlyDisconnectedConnections":Z
     .restart local v1    # "i":I
     .restart local v3    # "s":I
@@ -256,7 +228,6 @@
 
     goto :goto_0
 
-    .line 157
     .end local v0    # "hasOnlyDisconnectedConnections":Z
     .end local v1    # "i":I
     .end local v3    # "s":I
@@ -271,12 +242,10 @@
     .param p1, "conn"    # Lcom/movial/ipphone/IPConnection;
 
     .prologue
-    .line 122
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 124
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -285,12 +254,10 @@
 
     if-nez v0, :cond_0
 
-    .line 125
     sget-object v0, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 127
     :cond_0
     return-void
 .end method
@@ -299,7 +266,6 @@
     .locals 0
 
     .prologue
-    .line 86
     return-void
 .end method
 
@@ -312,7 +278,6 @@
     .end annotation
 
     .prologue
-    .line 203
     new-instance v0, Lcom/android/internal/telephony/CallStateException;
 
     const-string v1, "fallbackHangupVTCall : Unsupported Action"
@@ -335,7 +300,6 @@
     .end annotation
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     return-object v0
@@ -345,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->owner:Lcom/movial/ipphone/IPCallTracker;
 
     iget-object v0, v0, Lcom/movial/ipphone/IPCallTracker;->phone:Lcom/movial/ipphone/IPPhone;
@@ -362,12 +325,10 @@
     .end annotation
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->owner:Lcom/movial/ipphone/IPCallTracker;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPCallTracker;->hangup(Lcom/movial/ipphone/IPCall;)V
 
-    .line 109
     return-void
 .end method
 
@@ -375,7 +336,6 @@
     .locals 2
 
     .prologue
-    .line 161
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -403,7 +363,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 100
     iget-object v1, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -425,7 +384,6 @@
     .locals 1
 
     .prologue
-    .line 198
     const/4 v0, 0x0
 
     return v0
@@ -435,7 +393,6 @@
     .locals 4
 
     .prologue
-    .line 171
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -449,7 +406,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 172
     iget-object v3, p0, Lcom/movial/ipphone/IPCall;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -458,23 +414,19 @@
 
     check-cast v0, Lcom/movial/ipphone/IPConnection;
 
-    .line 173
     .local v0, "cn":Lcom/movial/ipphone/IPConnection;
     invoke-virtual {v0}, Lcom/movial/ipphone/IPConnection;->onHangupLocal()V
 
-    .line 171
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 175
     .end local v0    # "cn":Lcom/movial/ipphone/IPConnection;
     :cond_0
     sget-object v3, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
     iput-object v3, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 176
     return-void
 .end method
 
@@ -482,7 +434,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call$State;->toString()Ljava/lang/String;
@@ -498,26 +449,20 @@
     .param p2, "newstate"    # Lcom/android/internal/telephony/Call$State;
 
     .prologue
-    .line 130
     move-object v1, p2
 
-    .line 131
     .local v1, "newState":Lcom/android/internal/telephony/Call$State;
     const/4 v0, 0x0
 
-    .line 133
     .local v0, "changed":Z
     iget-object v2, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
     if-eq v1, v2, :cond_0
 
-    .line 134
     iput-object v1, p0, Lcom/movial/ipphone/IPCall;->mState:Lcom/android/internal/telephony/Call$State;
 
-    .line 135
     const/4 v0, 0x1
 
-    .line 137
     :cond_0
     return v0
 .end method

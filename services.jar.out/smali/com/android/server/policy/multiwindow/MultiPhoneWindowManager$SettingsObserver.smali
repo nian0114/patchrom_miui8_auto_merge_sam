@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 334
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
-    .line 335
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 336
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 340
     iget-object v1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -51,9 +47,8 @@
 
     move-result-object v0
 
-    .line 343
     .local v0, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v1, "multi_window_enabled"
+    const-string v1, "multi_window_enabled"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -71,8 +66,7 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 360
-    const-string/jumbo v1, "device_provisioned"
+    const-string v1, "device_provisioned"
 
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -88,12 +82,10 @@
 
     invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 370
     iget-object v1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->updateSettings()V
 
-    .line 371
     return-void
 .end method
 
@@ -102,11 +94,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 374
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->updateSettings()V
 
-    .line 375
     return-void
 .end method

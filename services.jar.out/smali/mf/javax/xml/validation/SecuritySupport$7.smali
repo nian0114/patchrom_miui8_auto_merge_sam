@@ -30,14 +30,12 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/validation/SecuritySupport$7;->this$0:Lmf/javax/xml/validation/SecuritySupport;
 
     iput-object p2, p0, Lmf/javax/xml/validation/SecuritySupport$7;->val$cl:Ljava/lang/ClassLoader;
 
     iput-object p3, p0, Lmf/javax/xml/validation/SecuritySupport$7;->val$name:Ljava/lang/String;
 
-    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +47,10 @@
     .locals 3
 
     .prologue
-    .line 163
     iget-object v1, p0, Lmf/javax/xml/validation/SecuritySupport$7;->val$cl:Ljava/lang/ClassLoader;
 
     if-nez v1, :cond_0
 
-    .line 164
     const-class v1, Ljava/lang/Object;
 
     iget-object v2, p0, Lmf/javax/xml/validation/SecuritySupport$7;->val$name:Ljava/lang/String;
@@ -63,12 +59,10 @@
 
     move-result-object v0
 
-    .line 168
     .local v0, "ris":Ljava/io/InputStream;
     :goto_0
     return-object v0
 
-    .line 166
     .end local v0    # "ris":Ljava/io/InputStream;
     :cond_0
     iget-object v1, p0, Lmf/javax/xml/validation/SecuritySupport$7;->val$cl:Ljava/lang/ClassLoader;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1490
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$StartProfilingCallable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 1493
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$StartProfilingCallable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->algoForStartProfiling()Ljava/lang/Boolean;
@@ -65,7 +63,6 @@
     .end annotation
 
     .prologue
-    .line 1490
     invoke-virtual {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$StartProfilingCallable;->call()Ljava/lang/Boolean;
 
     move-result-object v0

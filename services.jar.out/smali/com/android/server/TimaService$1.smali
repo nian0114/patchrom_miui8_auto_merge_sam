@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 284
     iput-object p1, p0, Lcom/android/server/TimaService$1;->this$0:Lcom/android/server/TimaService;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,14 +36,12 @@
     .locals 3
 
     .prologue
-    .line 287
     const-string v0, "TimaService"
 
     const-string v1, "TIMA: TimaService scheduler is intialized. "
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/TimaService$1;->this$0:Lcom/android/server/TimaService;
 
     iget-object v0, v0, Lcom/android/server/TimaService;->mTimaServiceHandler:Lcom/android/server/TimaService$TimaServiceHandler;
@@ -53,7 +50,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/TimaService$TimaServiceHandler;->sendEmptyMessage(I)Z
 
-    .line 289
     iget-object v0, p0, Lcom/android/server/TimaService$1;->this$0:Lcom/android/server/TimaService;
 
     const v1, 0xc350
@@ -62,6 +58,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/TimaService;->checkEvent(II)Ljava/lang/String;
 
-    .line 290
     return-void
 .end method

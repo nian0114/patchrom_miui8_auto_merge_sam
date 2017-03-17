@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 29
     const-class v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenConstantsReflector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -44,10 +43,8 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;-><init>()V
 
-    .line 38
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 28
     sget-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenConstantsReflector;->TAG:Ljava/lang/String;
 
     return-object v0

@@ -26,37 +26,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlEventWriter:Lmf/javax/xml/stream/XMLEventWriter;
 
-    .line 89
     iput-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlStreamWriter:Lmf/javax/xml/stream/XMLStreamWriter;
 
-    .line 92
     iput-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->systemId:Ljava/lang/String;
 
-    .line 109
     if-nez p1, :cond_0
 
-    .line 110
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 111
     const-string v1, "StAXResult(XMLEventWriter) with XMLEventWriter == null"
 
-    .line 110
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 114
     :cond_0
     iput-object p1, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlEventWriter:Lmf/javax/xml/stream/XMLEventWriter;
 
-    .line 115
     return-void
 .end method
 
@@ -67,37 +57,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlEventWriter:Lmf/javax/xml/stream/XMLEventWriter;
 
-    .line 89
     iput-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlStreamWriter:Lmf/javax/xml/stream/XMLStreamWriter;
 
-    .line 92
     iput-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->systemId:Ljava/lang/String;
 
-    .line 132
     if-nez p1, :cond_0
 
-    .line 133
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 134
     const-string v1, "StAXResult(XMLStreamWriter) with XMLStreamWriter == null"
 
-    .line 133
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 137
     :cond_0
     iput-object p1, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlStreamWriter:Lmf/javax/xml/stream/XMLStreamWriter;
 
-    .line 138
     return-void
 .end method
 
@@ -107,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 201
     const/4 v0, 0x0
 
     return-object v0
@@ -117,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlEventWriter:Lmf/javax/xml/stream/XMLEventWriter;
 
     return-object v0
@@ -127,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 169
     iget-object v0, p0, Lmf/javax/xml/transform/stax/StAXResult;->xmlStreamWriter:Lmf/javax/xml/stream/XMLStreamWriter;
 
     return-object v0
@@ -138,13 +115,10 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 190
     const-string v1, "StAXResult#setSystemId(systemId) cannot set the system identifier for a StAXResult"
 
-    .line 189
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0

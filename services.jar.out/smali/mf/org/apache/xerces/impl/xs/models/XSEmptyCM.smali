@@ -17,7 +17,6 @@
     .locals 2
 
     .prologue
-    .line 48
     new-instance v0, Ljava/util/Vector;
 
     const/4 v1, 0x0
@@ -33,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +49,6 @@
     .end annotation
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     return v0
@@ -64,18 +61,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 97
     const/4 v0, 0x0
 
-    .line 98
     .local v0, "isFinal":Z
     aget v1, p1, v2
 
-    .line 103
     .local v1, "state":I
     if-gez v1, :cond_0
 
-    .line 108
     :goto_0
     return v2
 
@@ -90,7 +83,6 @@
     .param p1, "termId"    # I
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     return-object v0
@@ -100,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 143
     const/4 v0, 0x0
 
     return v0
@@ -111,7 +102,6 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
     return-object v0
@@ -128,21 +118,17 @@
 
     const/4 v1, 0x0
 
-    .line 80
     aget v0, p2, v1
 
     if-gez v0, :cond_0
 
-    .line 81
     const/4 v0, -0x2
 
     aput v0, p2, v1
 
-    .line 86
     :goto_0
     return-object v2
 
-    .line 85
     :cond_0
     const/4 v0, -0x1
 
@@ -155,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 65
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -168,7 +153,6 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 131
     sget-object v0, Lmf/org/apache/xerces/impl/xs/models/XSEmptyCM;->EMPTY:Ljava/util/Vector;
 
     return-object v0

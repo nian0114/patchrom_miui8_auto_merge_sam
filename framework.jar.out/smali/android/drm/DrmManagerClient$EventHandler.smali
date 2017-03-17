@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 138
     iput-object p1, p0, Landroid/drm/DrmManagerClient$EventHandler;->this$0:Landroid/drm/DrmManagerClient;
 
-    .line 139
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 140
     return-void
 .end method
 
@@ -41,20 +38,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 143
     const/4 v6, 0x0
 
-    .line 144
     .local v6, "event":Landroid/drm/DrmEvent;
     const/4 v5, 0x0
 
-    .line 145
     .local v5, "error":Landroid/drm/DrmErrorEvent;
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 147
     .local v1, "attributes":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     move-object/from16 v0, p1
 
@@ -62,7 +55,6 @@
 
     packed-switch v14, :pswitch_data_0
 
-    .line 214
     const-string v14, "DrmManagerClient"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -91,12 +83,10 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     :cond_0
     :goto_0
     return-void
 
-    .line 149
     :pswitch_0
     move-object/from16 v0, p1
 
@@ -104,7 +94,6 @@
 
     check-cast v3, Landroid/drm/DrmInfo;
 
-    .line 151
     .local v3, "drmInfo":Landroid/drm/DrmInfo;
     const-string v14, "drm_path"
 
@@ -114,11 +103,9 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 152
     .local v8, "filepath":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 154
     .local v9, "fis":Ljava/io/FileInputStream;
     if-eqz v8, :cond_1
 
@@ -128,7 +115,6 @@
 
     if-nez v14, :cond_1
 
-    .line 156
     :try_start_0
     new-instance v10, Ljava/io/FileInputStream;
 
@@ -136,7 +122,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 157
     .end local v9    # "fis":Ljava/io/FileInputStream;
     .local v10, "fis":Ljava/io/FileInputStream;
     :try_start_1
@@ -144,7 +129,6 @@
 
     move-result-object v7
 
-    .line 158
     .local v7, "fd":Ljava/io/FileDescriptor;
     const-string v14, "FileDescriptorKey"
 
@@ -158,7 +142,6 @@
 
     move-object v9, v10
 
-    .line 165
     .end local v7    # "fd":Ljava/io/FileDescriptor;
     .end local v10    # "fis":Ljava/io/FileInputStream;
     .restart local v9    # "fis":Ljava/io/FileInputStream;
@@ -182,27 +165,22 @@
 
     move-result-object v12
 
-    .line 167
     .local v12, "status":Landroid/drm/DrmInfoStatus;
     const-string v14, "drm_info_status_object"
 
     invoke-virtual {v1, v14, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     const-string v14, "drm_info_object"
 
     invoke-virtual {v1, v14, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     if-eqz v9, :cond_2
 
-    .line 173
     :try_start_2
     invoke-virtual {v9}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 177
     :cond_2
     :goto_2
     if-eqz v12, :cond_4
@@ -213,7 +191,6 @@
 
     if-ne v14, v15, :cond_4
 
-    .line 178
     new-instance v6, Landroid/drm/DrmEvent;
 
     .end local v6    # "event":Landroid/drm/DrmEvent;
@@ -245,7 +222,6 @@
 
     invoke-direct {v6, v14, v15, v0, v1}, Landroid/drm/DrmEvent;-><init>(IILjava/lang/String;Ljava/util/HashMap;)V
 
-    .line 217
     .end local v3    # "drmInfo":Landroid/drm/DrmInfo;
     .end local v8    # "filepath":Ljava/lang/String;
     .end local v9    # "fis":Ljava/io/FileInputStream;
@@ -265,7 +241,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 218
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/drm/DrmManagerClient$EventHandler;->this$0:Landroid/drm/DrmManagerClient;
@@ -281,7 +256,6 @@
 
     invoke-interface {v14, v15, v6}, Landroid/drm/DrmManagerClient$OnEventListener;->onEvent(Landroid/drm/DrmManagerClient;Landroid/drm/DrmEvent;)V
 
-    .line 220
     :cond_3
     move-object/from16 v0, p0
 
@@ -296,7 +270,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 221
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/drm/DrmManagerClient$EventHandler;->this$0:Landroid/drm/DrmManagerClient;
@@ -314,14 +287,12 @@
 
     goto/16 :goto_0
 
-    .line 160
     .restart local v3    # "drmInfo":Landroid/drm/DrmInfo;
     .restart local v8    # "filepath":Ljava/lang/String;
     .restart local v9    # "fis":Ljava/io/FileInputStream;
     :catch_0
     move-exception v4
 
-    .line 161
     .local v4, "e":Ljava/io/IOException;
     :goto_4
     const-string v14, "DrmManagerClient"
@@ -352,7 +323,6 @@
 
     goto/16 :goto_1
 
-    .line 181
     .end local v4    # "e":Ljava/io/IOException;
     .restart local v12    # "status":Landroid/drm/DrmInfoStatus;
     :cond_4
@@ -360,7 +330,6 @@
 
     iget v11, v12, Landroid/drm/DrmInfoStatus;->infoType:I
 
-    .line 184
     .local v11, "infoType":I
     :goto_5
     if-eqz v12, :cond_6
@@ -373,14 +342,12 @@
 
     if-eqz v14, :cond_6
 
-    .line 185
     iget-object v14, v12, Landroid/drm/DrmInfoStatus;->data:Landroid/drm/ProcessedData;
 
     invoke-virtual {v14}, Landroid/drm/ProcessedData;->getData()[B
 
     move-result-object v2
 
-    .line 186
     .local v2, "bytes":[B
     new-instance v13, Ljava/lang/String;
 
@@ -388,7 +355,6 @@
 
     invoke-direct {v13, v2, v14}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 189
     .local v13, "url":Ljava/lang/String;
     new-instance v5, Landroid/drm/DrmErrorEvent;
 
@@ -413,11 +379,9 @@
 
     invoke-direct {v5, v14, v15, v13, v1}, Landroid/drm/DrmErrorEvent;-><init>(IILjava/lang/String;Ljava/util/HashMap;)V
 
-    .line 190
     .restart local v5    # "error":Landroid/drm/DrmErrorEvent;
     goto/16 :goto_3
 
-    .line 181
     .end local v2    # "bytes":[B
     .end local v11    # "infoType":I
     .end local v13    # "url":Ljava/lang/String;
@@ -428,7 +392,6 @@
 
     goto :goto_5
 
-    .line 192
     .restart local v11    # "infoType":I
     :cond_6
     new-instance v5, Landroid/drm/DrmErrorEvent;
@@ -461,7 +424,6 @@
     .restart local v5    # "error":Landroid/drm/DrmErrorEvent;
     goto/16 :goto_3
 
-    .line 205
     .end local v3    # "drmInfo":Landroid/drm/DrmInfo;
     .end local v8    # "filepath":Ljava/lang/String;
     .end local v9    # "fis":Ljava/io/FileInputStream;
@@ -488,7 +450,6 @@
 
     if-nez v14, :cond_7
 
-    .line 206
     new-instance v6, Landroid/drm/DrmEvent;
 
     .end local v6    # "event":Landroid/drm/DrmEvent;
@@ -512,7 +473,6 @@
     .restart local v6    # "event":Landroid/drm/DrmEvent;
     goto/16 :goto_3
 
-    .line 208
     :cond_7
     new-instance v5, Landroid/drm/DrmErrorEvent;
 
@@ -534,11 +494,9 @@
 
     invoke-direct {v5, v14, v15, v0}, Landroid/drm/DrmErrorEvent;-><init>(IILjava/lang/String;)V
 
-    .line 211
     .restart local v5    # "error":Landroid/drm/DrmErrorEvent;
     goto/16 :goto_3
 
-    .line 174
     .restart local v3    # "drmInfo":Landroid/drm/DrmInfo;
     .restart local v8    # "filepath":Ljava/lang/String;
     .restart local v9    # "fis":Ljava/io/FileInputStream;
@@ -548,7 +506,6 @@
 
     goto/16 :goto_2
 
-    .line 160
     .end local v9    # "fis":Ljava/io/FileInputStream;
     .end local v12    # "status":Landroid/drm/DrmInfoStatus;
     .restart local v10    # "fis":Ljava/io/FileInputStream;
@@ -561,7 +518,6 @@
     .restart local v9    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_4
 
-    .line 147
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_1

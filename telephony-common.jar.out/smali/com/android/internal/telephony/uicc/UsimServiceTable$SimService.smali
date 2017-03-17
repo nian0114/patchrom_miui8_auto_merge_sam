@@ -154,7 +154,6 @@
 
     const/4 v3, 0x0
 
-    .line 133
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CHV1_DISABLE"
@@ -163,7 +162,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CHV1_DISABLE:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 134
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "ADN"
@@ -172,7 +170,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->ADN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 135
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "FDN"
@@ -181,7 +178,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->FDN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 136
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SMS"
@@ -190,7 +186,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SMS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 137
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "AOC"
@@ -199,7 +194,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->AOC:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 138
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CCP"
@@ -210,7 +204,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CCP:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 139
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "PLMN_SELECTOR"
@@ -221,7 +214,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->PLMN_SELECTOR:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 140
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "RFU1"
@@ -232,7 +224,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->RFU1:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 141
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "MSISDN"
@@ -243,7 +234,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->MSISDN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 142
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EXT_1"
@@ -254,7 +244,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EXT_1:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 143
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EXT_2"
@@ -265,7 +254,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EXT_2:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 144
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SMSP"
@@ -276,7 +264,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SMSP:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 145
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "LND"
@@ -287,7 +274,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->LND:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 146
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CBS_ID"
@@ -298,7 +284,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CBS_ID:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 147
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "GROUP_ID_LEVEL_1"
@@ -309,7 +294,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->GROUP_ID_LEVEL_1:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 148
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "GROUP_ID_LEVEL_2"
@@ -320,7 +304,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->GROUP_ID_LEVEL_2:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 149
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SPN"
@@ -331,7 +314,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SPN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 150
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SDN"
@@ -342,7 +324,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SDN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 151
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EXT_3"
@@ -353,7 +334,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EXT_3:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 152
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "RFU2"
@@ -364,7 +344,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->RFU2:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 153
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EFVGCS_EFVGCSS"
@@ -375,7 +354,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EFVGCS_EFVGCSS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 154
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EFVBS_EFVBSS"
@@ -386,7 +364,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EFVBS_EFVBSS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 155
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "PRECEDENCE_PREEMPTION"
@@ -397,7 +374,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->PRECEDENCE_PREEMPTION:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 156
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EMLPP"
@@ -408,7 +384,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EMLPP:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 157
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "DATA_DOWNLOAD_SMS_CB"
@@ -419,7 +394,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->DATA_DOWNLOAD_SMS_CB:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 158
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "DATA_DOWNLOAD_SMS_PP"
@@ -430,7 +404,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->DATA_DOWNLOAD_SMS_PP:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 159
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "MENU_SELECTION"
@@ -441,7 +414,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->MENU_SELECTION:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 160
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CALL_CONTROL"
@@ -452,7 +424,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CALL_CONTROL:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 161
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "PROACTIVE_SIM"
@@ -463,7 +434,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->PROACTIVE_SIM:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 162
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CBS_ID_RANGE"
@@ -474,7 +444,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CBS_ID_RANGE:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 163
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "BDN"
@@ -485,7 +454,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->BDN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 164
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EXT_4"
@@ -496,7 +464,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EXT_4:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 165
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "DEPERSONALISATION_CTRL_KEY"
@@ -507,7 +474,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->DEPERSONALISATION_CTRL_KEY:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 166
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "NETWORK_LIST"
@@ -518,7 +484,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->NETWORK_LIST:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 167
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SMSR"
@@ -529,7 +494,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SMSR:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 168
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "NIA"
@@ -540,7 +504,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->NIA:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 169
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "MO_SMS_SIM"
@@ -551,7 +514,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->MO_SMS_SIM:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 170
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "GPRS"
@@ -562,7 +524,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->GPRS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 171
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "IMG"
@@ -573,7 +534,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->IMG:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 172
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SOLSA"
@@ -584,7 +544,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SOLSA:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 173
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "USSD_CALL_CONTROL"
@@ -595,7 +554,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->USSD_CALL_CONTROL:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 174
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "RUN_AT_COMMAND"
@@ -606,7 +564,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->RUN_AT_COMMAND:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 175
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "USER_PLMN"
@@ -617,7 +574,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->USER_PLMN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 176
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "OPERATOR_PLMN"
@@ -628,7 +584,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->OPERATOR_PLMN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 177
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "HPLMN"
@@ -639,7 +594,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->HPLMN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 178
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CPBCCH"
@@ -650,7 +604,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CPBCCH:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 179
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "INVESTIGATION_SCAN"
@@ -661,7 +614,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->INVESTIGATION_SCAN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 180
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "EXT_CCP"
@@ -672,7 +624,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->EXT_CCP:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 181
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "MEXE"
@@ -683,7 +634,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->MEXE:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 182
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "RPLMN"
@@ -694,7 +644,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->RPLMN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 183
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "PNN"
@@ -705,7 +654,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->PNN:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 184
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "OPL"
@@ -716,7 +664,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->OPL:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 185
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "MAILBOX_DIALLING_NUMBERS"
@@ -727,7 +674,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->MAILBOX_DIALLING_NUMBERS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 186
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "MWIS"
@@ -738,7 +684,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->MWIS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 187
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "CFIS"
@@ -749,7 +694,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->CFIS:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 188
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     const-string v1, "SPDI"
@@ -760,7 +704,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->SPDI:Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
-    .line 132
     const/16 v0, 0x38
 
     new-array v0, v0, [Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
@@ -1105,7 +1048,6 @@
     .end annotation
 
     .prologue
-    .line 132
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1116,7 +1058,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     const-class v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1132,7 +1073,6 @@
     .locals 1
 
     .prologue
-    .line 132
     sget-object v0, Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->$VALUES:[Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/uicc/UsimServiceTable$SimService;->clone()Ljava/lang/Object;

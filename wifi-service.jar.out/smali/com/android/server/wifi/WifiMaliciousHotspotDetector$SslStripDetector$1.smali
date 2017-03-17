@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1085
     iput-object p1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector$1;->this$1:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;
 
     iput-object p2, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector$1;->val$targetUrl:Ljava/lang/String;
@@ -54,19 +53,16 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 1087
     iget-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector$1;->this$1:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;
 
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;->mSSDRespCode:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;->access$1902(Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;I)I
 
-    .line 1088
     iget-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector$1;->this$1:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;
 
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;->mSSDRespType:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;->access$2002(Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;I)I
 
-    .line 1089
     iget-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector$1;->this$1:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector$1;->val$targetUrl:Ljava/lang/String;
@@ -78,6 +74,5 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;->getResponse(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;->access$2100(Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SslStripDetector;Ljava/lang/String;II)V
 
-    .line 1090
     return-void
 .end method

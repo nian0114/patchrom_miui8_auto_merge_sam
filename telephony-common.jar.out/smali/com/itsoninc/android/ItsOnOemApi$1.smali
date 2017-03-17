@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 359
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnOemApi$1;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,14 +42,12 @@
 
     const/4 v9, 0x0
 
-    .line 362
     const-string v6, "ItsOnOemAPI"
 
     const-string v7, "Processing outgoing call intent"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     const-string v6, "telecom"
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -59,7 +56,6 @@
 
     check-cast v5, Landroid/telecom/TelecomManager;
 
-    .line 368
     .local v5, "telecomManager":Landroid/telecom/TelecomManager;
     invoke-virtual {v5}, Landroid/telecom/TelecomManager;->getCallCapablePhoneAccounts()Ljava/util/List;
 
@@ -71,27 +67,22 @@
 
     if-le v6, v10, :cond_1
 
-    .line 369
     const-string v6, "ItsOnOemAPI"
 
     const-string v7, "Cannot determine account -- bypass"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     :cond_0
     :goto_0
     return-void
 
-    .line 374
     :cond_1
     const/4 v1, -0x1
 
-    .line 375
     .local v1, "phoneId":I
     const/4 v4, -0x1
 
-    .line 376
     .local v4, "subId":I
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_getDefaultVoicePhoneId:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$000()Ljava/lang/reflect/Method;
@@ -107,7 +98,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 379
     :try_start_0
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_getDefaultVoicePhoneId:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$000()Ljava/lang/reflect/Method;
@@ -130,7 +120,6 @@
 
     move-result v1
 
-    .line 380
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_getDefaultVoiceSubId:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$100()Ljava/lang/reflect/Method;
 
@@ -154,7 +143,6 @@
 
     move-result v4
 
-    .line 386
     :cond_2
     :goto_1
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -167,7 +155,6 @@
 
     move-result-object v2
 
-    .line 388
     .local v2, "phoneNumber":Ljava/lang/String;
     iget-object v6, p0, Lcom/itsoninc/android/ItsOnOemApi$1;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
@@ -180,13 +167,11 @@
 
     move-result v3
 
-    .line 389
     .local v3, "phoneType":I
     const/4 v6, 0x2
 
     if-ne v3, v6, :cond_3
 
-    .line 392
     iget-object v6, p0, Lcom/itsoninc/android/ItsOnOemApi$1;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v6, v2, v1, v4}, Lcom/itsoninc/android/ItsOnOemApi;->dial(Ljava/lang/String;II)Z
@@ -195,7 +180,6 @@
 
     if-nez v6, :cond_0
 
-    .line 393
     iget-object v6, p0, Lcom/itsoninc/android/ItsOnOemApi$1;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
     # invokes: Lcom/itsoninc/android/ItsOnOemApi;->isAirplaneModeOn(Landroid/content/Context;)Z
@@ -205,18 +189,15 @@
 
     if-nez v6, :cond_0
 
-    .line 400
     invoke-virtual {p0, v9}, Lcom/itsoninc/android/ItsOnOemApi$1;->setResultData(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 381
     .end local v2    # "phoneNumber":Ljava/lang/String;
     .end local v3    # "phoneType":I
     :catch_0
     move-exception v0
 
-    .line 382
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "ItsOnOemAPI"
 
@@ -226,14 +207,12 @@
 
     goto :goto_1
 
-    .line 402
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v2    # "phoneNumber":Ljava/lang/String;
     .restart local v3    # "phoneType":I
     :cond_3
     if-ne v3, v10, :cond_4
 
-    .line 405
     iget-object v6, p0, Lcom/itsoninc/android/ItsOnOemApi$1;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v6, v2, v1, v4}, Lcom/itsoninc/android/ItsOnOemApi;->authorizeOutgoingVoice(Ljava/lang/String;II)Z
@@ -242,7 +221,6 @@
 
     if-nez v6, :cond_0
 
-    .line 406
     iget-object v6, p0, Lcom/itsoninc/android/ItsOnOemApi$1;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
     # invokes: Lcom/itsoninc/android/ItsOnOemApi;->isAirplaneModeOn(Landroid/content/Context;)Z
@@ -252,12 +230,10 @@
 
     if-nez v6, :cond_0
 
-    .line 413
     invoke-virtual {p0, v9}, Lcom/itsoninc/android/ItsOnOemApi$1;->setResultData(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 416
     :cond_4
     const-string v6, "ItsOnOemAPI"
 

@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
-    .line 136
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 137
     return-void
 .end method
 
@@ -51,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 141
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$100()Ljava/lang/String;
 
@@ -61,7 +57,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage : "
+    const-string v2, "handleMessage : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -79,18 +75,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 207
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 146
     :pswitch_1
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -105,7 +98,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 147
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     iget-object v0, v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
@@ -150,7 +142,6 @@
 
     if-nez v0, :cond_1
 
-    .line 151
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     const/16 v1, 0xc
@@ -158,7 +149,6 @@
     # invokes: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->replayAuthfail(I)V
     invoke-static {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$300(Lcom/samsung/accessory/manager/authentication/AuthenticationSession;I)V
 
-    .line 152
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # invokes: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->handleTearDown()V
@@ -166,7 +156,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_1
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -175,7 +164,6 @@
 
     goto :goto_0
 
-    .line 155
     :cond_2
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -190,13 +178,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # invokes: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->connect()V
     invoke-static {v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$700(Lcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
-    .line 157
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectAfterEnable:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -208,7 +194,6 @@
 
     goto :goto_0
 
-    .line 161
     :pswitch_2
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -223,7 +208,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 162
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -233,7 +217,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 163
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
@@ -247,7 +230,6 @@
 
     goto/16 :goto_0
 
-    .line 166
     :cond_3
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$100()Ljava/lang/String;
@@ -260,7 +242,6 @@
 
     goto/16 :goto_0
 
-    .line 170
     :pswitch_3
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -270,7 +251,6 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 171
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$100()Ljava/lang/String;
 
@@ -280,7 +260,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # setter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTurnedOffWhileRunning:Z
@@ -288,7 +267,6 @@
 
     goto/16 :goto_0
 
-    .line 176
     :pswitch_4
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -297,7 +275,6 @@
 
     goto/16 :goto_0
 
-    .line 179
     :pswitch_5
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -306,7 +283,6 @@
 
     goto/16 :goto_0
 
-    .line 182
     :pswitch_6
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -317,7 +293,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 183
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
@@ -331,14 +306,12 @@
 
     invoke-interface {v0, v1, v2}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;->onSessionEvent(ILcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
-    .line 184
     :cond_4
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # setter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTurnedOffWhileRunning:Z
     invoke-static {v0, v3}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$802(Lcom/samsung/accessory/manager/authentication/AuthenticationSession;Z)Z
 
-    .line 185
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     new-instance v1, Ljava/lang/Thread;
@@ -350,7 +323,6 @@
     # setter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
     invoke-static {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$1102(Lcom/samsung/accessory/manager/authentication/AuthenticationSession;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 186
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
@@ -360,7 +332,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 187
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # invokes: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
@@ -368,7 +339,6 @@
 
     goto/16 :goto_0
 
-    .line 193
     :pswitch_7
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -377,7 +347,6 @@
 
     goto/16 :goto_0
 
-    .line 196
     :pswitch_8
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -386,7 +355,6 @@
 
     goto/16 :goto_0
 
-    .line 199
     :pswitch_9
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
@@ -395,18 +363,16 @@
 
     goto/16 :goto_0
 
-    .line 202
     :pswitch_a
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$100()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "session is timed out!"
+    const-string v1, "session is timed out!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     const/16 v1, 0x1f
@@ -414,7 +380,6 @@
     # invokes: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->replayAuthfail(I)V
     invoke-static {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->access$300(Lcom/samsung/accessory/manager/authentication/AuthenticationSession;I)V
 
-    .line 204
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # invokes: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->handleStopSession(Z)V
@@ -422,7 +387,6 @@
 
     goto/16 :goto_0
 
-    .line 142
     nop
 
     :pswitch_data_0

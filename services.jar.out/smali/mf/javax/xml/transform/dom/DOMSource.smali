@@ -21,7 +21,6 @@
     .locals 0
 
     .prologue
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,13 +31,10 @@
     .param p1, "n"    # Lmf/org/w3c/dom/Node;
 
     .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     invoke-virtual {p0, p1}, Lmf/javax/xml/transform/dom/DOMSource;->setNode(Lmf/org/w3c/dom/Node;)V
 
-    .line 106
     return-void
 .end method
 
@@ -48,16 +44,12 @@
     .param p2, "systemID"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     invoke-virtual {p0, p1}, Lmf/javax/xml/transform/dom/DOMSource;->setNode(Lmf/org/w3c/dom/Node;)V
 
-    .line 117
     invoke-virtual {p0, p2}, Lmf/javax/xml/transform/dom/DOMSource;->setSystemId(Ljava/lang/String;)V
 
-    .line 118
     return-void
 .end method
 
@@ -67,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Lmf/javax/xml/transform/dom/DOMSource;->node:Lmf/org/w3c/dom/Node;
 
     return-object v0
@@ -77,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Lmf/javax/xml/transform/dom/DOMSource;->systemID:Ljava/lang/String;
 
     return-object v0
@@ -88,10 +78,8 @@
     .param p1, "node"    # Lmf/org/w3c/dom/Node;
 
     .prologue
-    .line 126
     iput-object p1, p0, Lmf/javax/xml/transform/dom/DOMSource;->node:Lmf/org/w3c/dom/Node;
 
-    .line 127
     return-void
 .end method
 
@@ -100,9 +88,7 @@
     .param p1, "systemID"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lmf/javax/xml/transform/dom/DOMSource;->systemID:Ljava/lang/String;
 
-    .line 146
     return-void
 .end method

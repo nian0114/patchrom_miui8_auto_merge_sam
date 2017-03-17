@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 916
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,10 +40,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 921
     const-string v0, ""
 
-    .line 922
     .local v0, "mMCCMNC":Ljava/lang/String;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -54,7 +51,6 @@
 
     move-result v1
 
-    .line 923
     .local v1, "simState_int":I
     const-string v2, "gsm.sim.operator.numeric"
 
@@ -62,7 +58,6 @@
 
     move-result-object v0
 
-    .line 924
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->filePathDefaultAp:Ljava/io/File;
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$2200()Ljava/io/File;
 
@@ -101,7 +96,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 925
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -111,7 +105,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->getVendorApInfo()[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
 
-    .line 926
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -122,7 +115,6 @@
     # invokes: Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->checkNetworkName()V
     invoke-static {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->access$2400(Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;)V
 
-    .line 927
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfileLoaded:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$1600()Z
 
@@ -130,7 +122,6 @@
 
     if-nez v2, :cond_0
 
-    .line 928
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mReMovableDefaultAp:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$2000()Z
 
@@ -138,7 +129,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 929
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->filePathDefaultApCheck:Ljava/io/File;
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$2100()Ljava/io/File;
 
@@ -150,7 +140,6 @@
 
     if-nez v2, :cond_0
 
-    .line 930
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -160,18 +149,15 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->addWifiVendorProfile()V
 
-    .line 935
     :cond_0
     :goto_0
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mFirstScanAddProfile:Z
     invoke-static {v4}, Lcom/android/server/wifi/WifiServiceImpl;->access$1702(Z)Z
 
-    .line 952
     :cond_1
     :goto_1
     return-void
 
-    .line 932
     :cond_2
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -184,7 +170,6 @@
 
     goto :goto_0
 
-    .line 936
     :cond_3
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->filePathGeneralinfo:Ljava/io/File;
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$2300()Ljava/io/File;
@@ -236,7 +221,6 @@
 
     if-nez v2, :cond_1
 
-    .line 937
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -246,7 +230,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->getVendorApInfo()[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
 
-    .line 938
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -256,7 +239,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->getGeneralNwInfo()[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
 
-    .line 939
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -266,7 +248,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->getPrevNetworkName()[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
 
-    .line 940
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -276,7 +257,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->removeChangedWifiProfile()V
 
-    .line 941
     const-string v2, ""
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mMatchedPrevNetworkName:Ljava/lang/String;
@@ -297,7 +277,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 942
     :cond_4
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mReMovableDefaultAp:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$2000()Z
@@ -306,7 +285,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 943
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->filePathDefaultApCheck:Ljava/io/File;
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$2100()Ljava/io/File;
 
@@ -318,7 +296,6 @@
 
     if-nez v2, :cond_5
 
-    .line 944
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfile:Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;
@@ -328,7 +305,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->addChangedWifiProfile()V
 
-    .line 949
     :cond_5
     :goto_2
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -340,13 +316,11 @@
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiServiceImpl$WifiProfile;->getPostNetworkName()V
 
-    .line 950
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mFirstScanAddProfile:Z
     invoke-static {v4}, Lcom/android/server/wifi/WifiServiceImpl;->access$1702(Z)Z
 
     goto/16 :goto_1
 
-    .line 946
     :cond_6
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 

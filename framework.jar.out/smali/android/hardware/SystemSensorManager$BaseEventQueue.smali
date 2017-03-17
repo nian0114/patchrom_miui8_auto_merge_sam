@@ -45,50 +45,42 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 403
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 393
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
-    .line 394
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mSensorAccuracies:Landroid/util/SparseIntArray;
 
-    .line 395
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mFirstEvent:Landroid/util/SparseBooleanArray;
 
-    .line 396
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    .line 397
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mScratch:[F
 
-    .line 404
     if-nez p4, :cond_0
 
     const-string p4, ""
 
-    .line 405
     :cond_0
     # getter for: Landroid/hardware/SystemSensorManager;->mNativeInstance:J
     invoke-static {p2}, Landroid/hardware/SystemSensorManager;->access$000(Landroid/hardware/SystemSensorManager;)J
@@ -124,17 +116,14 @@
 
     iput-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
-    .line 408
     iget-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     const-string v1, "dispose"
 
     invoke-virtual {v0, v1}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 409
     iput-object p2, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
 
-    .line 410
     return-void
 .end method
 
@@ -143,7 +132,6 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 510
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
     const-wide/16 v2, 0x0
@@ -158,7 +146,6 @@
 
     throw v0
 
-    .line 511
     :cond_0
     if-nez p1, :cond_1
 
@@ -168,7 +155,6 @@
 
     throw v0
 
-    .line 512
     :cond_1
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
@@ -190,26 +176,21 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 484
     iget-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     if-eqz v0, :cond_1
 
-    .line 485
     if-eqz p1, :cond_0
 
-    .line 486
     iget-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 488
     :cond_0
     iget-object v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->close()V
 
-    .line 490
     :cond_1
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
@@ -217,15 +198,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 491
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
     invoke-static {v0, v1}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nativeDestroySensorEventQueue(J)V
 
-    .line 492
     iput-wide v2, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
-    .line 494
     :cond_2
     return-void
 .end method
@@ -237,7 +215,6 @@
     .param p3, "maxBatchReportLatencyUs"    # I
 
     .prologue
-    .line 498
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
     const-wide/16 v2, 0x0
@@ -252,7 +229,6 @@
 
     throw v0
 
-    .line 499
     :cond_0
     if-nez p1, :cond_1
 
@@ -262,7 +238,6 @@
 
     throw v0
 
-    .line 500
     :cond_1
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
@@ -323,12 +298,10 @@
 
     const/4 v1, 0x0
 
-    .line 419
     invoke-virtual {p1}, Landroid/hardware/Sensor;->getHandle()I
 
     move-result v0
 
-    .line 420
     .local v0, "handle":I
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
@@ -338,27 +311,22 @@
 
     if-eqz v3, :cond_0
 
-    .line 433
     :goto_0
     return v1
 
-    .line 423
     :cond_0
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, v0, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 424
     invoke-virtual {p0, p1}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->addSensorEvent(Landroid/hardware/Sensor;)V
 
-    .line 425
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->enableSensor(Landroid/hardware/Sensor;II)I
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 427
     if-eqz p3, :cond_1
 
     if-lez p3, :cond_2
@@ -369,7 +337,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 429
     :cond_1
     invoke-virtual {p0, p1, v1}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->removeSensor(Landroid/hardware/Sensor;Z)Z
 
@@ -378,7 +345,6 @@
     :cond_2
     move v1, v2
 
-    .line 433
     goto :goto_0
 .end method
 
@@ -395,12 +361,10 @@
     .locals 1
 
     .prologue
-    .line 413
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->dispose(Z)V
 
-    .line 414
     return-void
 .end method
 
@@ -413,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 477
     const/4 v0, 0x1
 
     :try_start_0
@@ -421,13 +384,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 479
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 481
     return-void
 
-    .line 479
     :catchall_0
     move-exception v0
 
@@ -440,7 +400,6 @@
     .locals 4
 
     .prologue
-    .line 465
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
     const-wide/16 v2, 0x0
@@ -455,7 +414,6 @@
 
     throw v0
 
-    .line 466
     :cond_0
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
@@ -472,7 +430,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 471
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseBooleanArray;->indexOfValue(Z)I
@@ -498,7 +455,6 @@
     .param p4, "timestamp"    # J
 
     .prologue
-    .line 506
     iget-wide v0, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->nSensorEventQueue:J
 
     move v2, p1
@@ -522,7 +478,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 437
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -535,7 +490,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 438
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
@@ -544,14 +498,12 @@
 
     if-ne v3, v5, :cond_0
 
-    .line 439
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v0
 
-    .line 440
     .local v0, "handle":I
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
 
@@ -566,24 +518,19 @@
 
     check-cast v2, Landroid/hardware/Sensor;
 
-    .line 441
     .local v2, "sensor":Landroid/hardware/Sensor;
     if-eqz v2, :cond_0
 
-    .line 442
     invoke-direct {p0, v2}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->disableSensor(Landroid/hardware/Sensor;)I
 
-    .line 443
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v0, v4}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 444
     invoke-virtual {p0, v2}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->removeSensorEvent(Landroid/hardware/Sensor;)V
 
-    .line 437
     .end local v0    # "handle":I
     .end local v2    # "sensor":Landroid/hardware/Sensor;
     :cond_0
@@ -591,7 +538,6 @@
 
     goto :goto_0
 
-    .line 450
     :cond_1
     return v5
 .end method
@@ -604,12 +550,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 454
     invoke-virtual {p1}, Landroid/hardware/Sensor;->getHandle()I
 
     move-result v0
 
-    .line 455
     .local v0, "handle":I
     iget-object v2, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
@@ -619,12 +563,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 456
     if-eqz p2, :cond_0
 
     invoke-direct {p0, p1}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->disableSensor(Landroid/hardware/Sensor;)I
 
-    .line 457
     :cond_0
     iget-object v2, p0, Landroid/hardware/SystemSensorManager$BaseEventQueue;->mActiveSensors:Landroid/util/SparseBooleanArray;
 
@@ -634,13 +576,10 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 458
     invoke-virtual {p0, p1}, Landroid/hardware/SystemSensorManager$BaseEventQueue;->removeSensorEvent(Landroid/hardware/Sensor;)V
 
-    .line 459
     const/4 v1, 0x1
 
-    .line 461
     :cond_1
     return v1
 .end method

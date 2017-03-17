@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 28102
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$36;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$36;->val$uss:Lcom/android/server/am/UserState;
@@ -60,14 +59,12 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 28107
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$36;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 28108
     :try_start_0
     move-object/from16 v0, p0
 
@@ -79,14 +76,11 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 28110
     monitor-exit v2
 
-    .line 28123
     :goto_0
     return-void
 
-    .line 28112
     :cond_0
     move-object/from16 v0, p0
 
@@ -96,12 +90,10 @@
 
     iput v3, v1, Lcom/android/server/am/UserState;->mState:I
 
-    .line 28113
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 28114
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$36;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/server/am/BatteryStatsService;->noteEvent(ILjava/lang/String;I)V
 
-    .line 28117
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$36;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -137,7 +128,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/SystemServiceManager;->stopUser(I)V
 
-    .line 28118
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService$36;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -146,7 +136,6 @@
 
     monitor-enter v18
 
-    .line 28119
     :try_start_1
     move-object/from16 v0, p0
 
@@ -195,7 +184,6 @@
     # invokes: Lcom/android/server/am/ActivityManagerService;->broadcastIntentLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZIII)I
     invoke-static/range {v1 .. v17}, Lcom/android/server/am/ActivityManagerService;->access$200(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZIII)I
 
-    .line 28122
     monitor-exit v18
 
     goto :goto_0
@@ -209,7 +197,6 @@
 
     throw v1
 
-    .line 28113
     :catchall_1
     move-exception v1
 

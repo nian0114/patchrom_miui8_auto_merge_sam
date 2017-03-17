@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 439
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 441
     return-void
 .end method
 
@@ -50,15 +48,12 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 448
     if-nez p1, :cond_0
 
-    .line 449
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v0, v1, Lcom/android/internal/telephony/RIL;->mDefaultDisplayState:I
 
-    .line 451
     .local v0, "oldState":I
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -66,20 +61,17 @@
 
     if-nez v1, :cond_1
 
-    .line 452
     const-string v1, "RILJ"
 
     const-string v2, "There is no default display"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     .end local v0    # "oldState":I
     :cond_0
     :goto_0
     return-void
 
-    .line 456
     .restart local v0    # "oldState":I
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
@@ -94,14 +86,12 @@
 
     iput v2, v1, Lcom/android/internal/telephony/RIL;->mDefaultDisplayState:I
 
-    .line 457
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v1, v1, Lcom/android/internal/telephony/RIL;->mDefaultDisplayState:I
 
     if-eq v1, v0, :cond_0
 
-    .line 458
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     # invokes: Lcom/android/internal/telephony/RIL;->updateScreenState()V
@@ -115,6 +105,5 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 444
     return-void
 .end method

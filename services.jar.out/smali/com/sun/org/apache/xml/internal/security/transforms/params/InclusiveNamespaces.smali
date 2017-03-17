@@ -56,7 +56,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    const-string/jumbo v3, "xmlns"
+    const-string v3, "xmlns"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -170,7 +170,7 @@
 
     if-eqz v3, :cond_2
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -195,7 +195,7 @@
 .method public getBaseNamespace()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v0, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     return-object v0
 .end method

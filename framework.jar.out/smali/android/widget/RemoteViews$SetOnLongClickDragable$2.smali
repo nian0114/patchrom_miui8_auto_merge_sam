@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3912
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$2;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,21 +41,18 @@
     .param p2, "dragEvent"    # Landroid/view/DragEvent;
 
     .prologue
-    .line 3915
     invoke-virtual {p2}, Landroid/view/DragEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3948
     :cond_0
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 3917
     :pswitch_0
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$2;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
 
@@ -64,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3920
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -92,11 +87,9 @@
 
     goto :goto_0
 
-    .line 3924
     :catch_0
     move-exception v6
 
-    .line 3925
     .local v6, "e":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 
@@ -106,7 +99,6 @@
 
     goto :goto_0
 
-    .line 3931
     .end local v6    # "e":Landroid/content/IntentSender$SendIntentException;
     :pswitch_1
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$2;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
@@ -115,7 +107,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3934
     :try_start_1
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -143,11 +134,9 @@
 
     goto :goto_0
 
-    .line 3938
     :catch_1
     move-exception v6
 
-    .line 3939
     .restart local v6    # "e":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 
@@ -157,7 +146,6 @@
 
     goto :goto_0
 
-    .line 3915
     nop
 
     :pswitch_data_0

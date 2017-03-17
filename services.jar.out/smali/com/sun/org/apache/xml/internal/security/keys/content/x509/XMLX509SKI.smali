@@ -172,7 +172,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -206,7 +206,7 @@
     if-nez v1, :cond_1
 
     :try_start_2
-    const-string/jumbo v0, "org.bouncycastle.asn1.DERInputStream"
+    const-string v0, "org.bouncycastle.asn1.DERInputStream"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -224,7 +224,7 @@
 
     if-nez v0, :cond_5
 
-    const-string/jumbo v0, "java.io.InputStream"
+    const-string v0, "java.io.InputStream"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/keys/content/x509/XMLX509SKI;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -257,7 +257,7 @@
 
     check-cast v0, Ljava/io/InputStream;
 
-    const-string/jumbo v2, "readObject"
+    const-string v2, "readObject"
 
     const/4 v4, 0x0
 
@@ -384,7 +384,7 @@
     goto :goto_1
 
     :cond_6
-    const-string/jumbo v2, "org.bouncycastle.asn1.ASN1OctetString"
+    const-string v2, "org.bouncycastle.asn1.ASN1OctetString"
 
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -405,7 +405,7 @@
     throw v0
 
     :cond_7
-    const-string/jumbo v3, "getOctets"
+    const-string v3, "getOctets"
 
     const/4 v4, 0x0
 

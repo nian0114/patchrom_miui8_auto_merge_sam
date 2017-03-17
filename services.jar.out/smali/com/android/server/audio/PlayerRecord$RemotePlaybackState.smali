@@ -32,23 +32,17 @@
     .param p3, "volMax"    # I
 
     .prologue
-    .line 187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 188
     iput p1, p0, Lcom/android/server/audio/PlayerRecord$RemotePlaybackState;->mRccId:I
 
-    .line 189
     iput p2, p0, Lcom/android/server/audio/PlayerRecord$RemotePlaybackState;->mVolume:I
 
-    .line 190
     iput p3, p0, Lcom/android/server/audio/PlayerRecord$RemotePlaybackState;->mVolumeMax:I
 
-    .line 191
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/audio/PlayerRecord$RemotePlaybackState;->mVolumeHandling:I
 
-    .line 192
     return-void
 .end method

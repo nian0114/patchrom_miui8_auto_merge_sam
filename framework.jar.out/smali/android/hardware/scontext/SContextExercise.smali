@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 342
     new-instance v0, Landroid/hardware/scontext/SContextExercise$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextExercise$1;-><init>()V
@@ -41,22 +40,18 @@
     .locals 1
 
     .prologue
-    .line 112
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 113
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
-    .line 114
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
-    .line 115
     return-void
 .end method
 
@@ -65,13 +60,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 120
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 121
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextExercise;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 122
     return-void
 .end method
 
@@ -80,21 +72,18 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 333
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
-    .line 334
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
-    .line 335
     return-void
 .end method
 
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 101
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -116,16 +104,13 @@
     .locals 3
 
     .prologue
-    .line 203
     const/4 v0, 0x0
 
-    .line 204
     .local v0, "res":[F
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 205
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "AltitudeArray"
@@ -134,7 +119,6 @@
 
     move-result-object v0
 
-    .line 207
     :cond_0
     return-object v0
 .end method
@@ -143,16 +127,13 @@
     .locals 3
 
     .prologue
-    .line 173
     const/4 v0, 0x0
 
-    .line 174
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 175
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "LatitudeArray"
@@ -161,7 +142,6 @@
 
     move-result-object v0
 
-    .line 177
     :cond_0
     return-object v0
 .end method
@@ -170,16 +150,13 @@
     .locals 3
 
     .prologue
-    .line 143
     const/4 v0, 0x0
 
-    .line 144
     .local v0, "res":I
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 145
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "DataCount"
@@ -188,7 +165,6 @@
 
     move-result v0
 
-    .line 147
     :cond_0
     return v0
 .end method
@@ -197,16 +173,13 @@
     .locals 3
 
     .prologue
-    .line 188
     const/4 v0, 0x0
 
-    .line 189
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 190
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "LongitudeArray"
@@ -215,7 +188,6 @@
 
     move-result-object v0
 
-    .line 192
     :cond_0
     return-object v0
 .end method
@@ -224,7 +196,6 @@
     .locals 2
 
     .prologue
-    .line 132
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Mode"
@@ -240,16 +211,13 @@
     .locals 3
 
     .prologue
-    .line 248
     const/4 v0, 0x0
 
-    .line 249
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 250
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "PedoDistanceDiffArray"
@@ -258,7 +226,6 @@
 
     move-result-object v0
 
-    .line 252
     :cond_0
     return-object v0
 .end method
@@ -267,16 +234,13 @@
     .locals 3
 
     .prologue
-    .line 263
     const/4 v0, 0x0
 
-    .line 264
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 265
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "PedoSpeedArray"
@@ -285,7 +249,6 @@
 
     move-result-object v0
 
-    .line 267
     :cond_0
     return-object v0
 .end method
@@ -294,16 +257,13 @@
     .locals 3
 
     .prologue
-    .line 218
     const/4 v0, 0x0
 
-    .line 219
     .local v0, "res":[F
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 220
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "PressureArray"
@@ -312,7 +272,6 @@
 
     move-result-object v0
 
-    .line 222
     :cond_0
     return-object v0
 .end method
@@ -321,16 +280,13 @@
     .locals 3
 
     .prologue
-    .line 233
     const/4 v0, 0x0
 
-    .line 234
     .local v0, "res":[F
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 235
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "SpeedArray"
@@ -339,7 +295,6 @@
 
     move-result-object v0
 
-    .line 237
     :cond_0
     return-object v0
 .end method
@@ -348,10 +303,8 @@
     .locals 3
 
     .prologue
-    .line 293
     const/4 v0, 0x0
 
-    .line 294
     .local v0, "res":I
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
@@ -359,7 +312,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 295
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "GpsStatus"
@@ -368,7 +320,6 @@
 
     move-result v0
 
-    .line 297
     :cond_0
     return v0
 .end method
@@ -377,16 +328,13 @@
     .locals 3
 
     .prologue
-    .line 278
     const/4 v0, 0x0
 
-    .line 279
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 280
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "StepCountDiffArray"
@@ -395,7 +343,6 @@
 
     move-result-object v0
 
-    .line 282
     :cond_0
     return-object v0
 .end method
@@ -404,16 +351,13 @@
     .locals 3
 
     .prologue
-    .line 158
     const/4 v0, 0x0
 
-    .line 159
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     if-nez v1, :cond_0
 
-    .line 160
     iget-object v1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v2, "TimeStampArray"
@@ -422,7 +366,6 @@
 
     move-result-object v0
 
-    .line 162
     :cond_0
     return-object v0
 .end method
@@ -432,10 +375,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 307
     iput-object p1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
-    .line 308
     const-string v0, "Mode"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -444,7 +385,6 @@
 
     iput v0, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
-    .line 309
     return-void
 .end method
 
@@ -454,16 +394,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 322
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 323
     iget v0, p0, Landroid/hardware/scontext/SContextExercise;->mMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 324
     return-void
 .end method

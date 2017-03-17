@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1800
     iput-object p1, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,41 +41,34 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 1802
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsLiveCropThread:Z
     invoke-static {v8, v11}, Lcom/android/server/smartclip/SmartClipView;->access$602(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 1805
     :try_start_0
     const-string v8, "SmartClipView"
 
-    const-string/jumbo v9, "mSPenGestureCropDispatchThread run!!"
+    const-string v9, "mSPenGestureCropDispatchThread run!!"
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1806
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 1808
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    .line 1809
     .local v0, "boundsOfPath":Landroid/graphics/RectF;
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
-    .line 1810
     .local v1, "boundsOfSecondPath":Landroid/graphics/RectF;
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
-    .line 1812
     .local v4, "cropImgSaveHandler":Landroid/os/Handler;
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -87,7 +79,6 @@
 
     if-ne v8, v11, :cond_0
 
-    .line 1813
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mPathOfCurve:Landroid/graphics/Path;
@@ -99,7 +90,6 @@
 
     invoke-virtual {v8, v0, v9}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
-    .line 1815
     const-string v8, "SmartClipView"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -136,7 +126,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1818
     const-string v8, "SmartClipView"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -173,7 +162,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1820
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v0, Landroid/graphics/RectF;->right:F
@@ -183,7 +171,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3602(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1821
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v0, Landroid/graphics/RectF;->left:F
@@ -193,7 +180,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3702(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1822
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v0, Landroid/graphics/RectF;->bottom:F
@@ -203,7 +189,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3802(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1823
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v0, Landroid/graphics/RectF;->top:F
@@ -213,7 +198,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3902(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1826
     :cond_0
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -224,7 +208,6 @@
 
     if-ne v8, v11, :cond_4
 
-    .line 1827
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mSecondPathOfCurve:Landroid/graphics/Path;
@@ -236,7 +219,6 @@
 
     invoke-virtual {v8, v1, v9}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
-    .line 1829
     const-string v8, "SmartClipView"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -273,7 +255,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1833
     const-string v8, "SmartClipView"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -310,7 +291,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1836
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mIsUsablePath:Z
@@ -320,7 +300,6 @@
 
     if-ne v8, v11, :cond_5
 
-    .line 1837
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordX:I
@@ -336,7 +315,6 @@
 
     if-gez v8, :cond_1
 
-    .line 1838
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->right:F
@@ -346,7 +324,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3602(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1839
     :cond_1
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -363,7 +340,6 @@
 
     if-lez v8, :cond_2
 
-    .line 1840
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->left:F
@@ -373,7 +349,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3702(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1841
     :cond_2
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -390,7 +365,6 @@
 
     if-gez v8, :cond_3
 
-    .line 1842
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->bottom:F
@@ -400,7 +374,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3802(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1843
     :cond_3
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -417,7 +390,6 @@
 
     if-lez v8, :cond_4
 
-    .line 1844
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->top:F
@@ -427,7 +399,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3902(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1854
     :cond_4
     :goto_0
     const-string v8, "SmartClipView"
@@ -476,7 +447,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1857
     const-string v8, "SmartClipView"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -523,7 +493,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1860
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -538,7 +507,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3602(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1861
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -553,7 +521,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3702(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1862
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -568,7 +535,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3802(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1863
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -583,7 +549,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3902(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1865
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -605,7 +570,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mCropImageWidth:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$4202(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1866
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -627,18 +591,15 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mCropImageHeight:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$4302(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1868
     const-wide/16 v8, 0x64
 
     invoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 1870
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # invokes: Lcom/android/server/smartclip/SmartClipView;->GetDefaultDisplayBimap()Landroid/graphics/Bitmap;
     invoke-static {v8}, Lcom/android/server/smartclip/SmartClipView;->access$4400(Lcom/android/server/smartclip/SmartClipView;)Landroid/graphics/Bitmap;
 
-    .line 1872
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -664,7 +625,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mCropTempBitmap:Landroid/graphics/Bitmap;
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$4502(Lcom/android/server/smartclip/SmartClipView;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 1874
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -690,7 +650,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mCropTempBitmapForAnimation:Landroid/graphics/Bitmap;
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$4802(Lcom/android/server/smartclip/SmartClipView;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 1877
     new-instance v3, Landroid/graphics/Canvas;
 
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -702,7 +661,6 @@
 
     invoke-direct {v3, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1878
     .local v3, "canvasForCrop":Landroid/graphics/Canvas;
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -719,7 +677,6 @@
 
     invoke-virtual {v3, v8, v9, v10, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1887
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -745,7 +702,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mCropBitmap:Landroid/graphics/Bitmap;
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$5002(Lcom/android/server/smartclip/SmartClipView;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 1889
     new-instance v2, Landroid/graphics/Canvas;
 
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -757,7 +713,6 @@
 
     invoke-direct {v2, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1890
     .local v2, "canvasFinal":Landroid/graphics/Canvas;
     new-instance v7, Landroid/graphics/Rect;
 
@@ -791,7 +746,6 @@
 
     invoke-direct {v7, v8, v9, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1891
     .local v7, "srcRectForCrop":Landroid/graphics/Rect;
     new-instance v5, Landroid/graphics/Rect;
 
@@ -815,7 +769,6 @@
 
     invoke-direct {v5, v8, v9, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1892
     .local v5, "dstRectForCrop":Landroid/graphics/Rect;
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -828,7 +781,6 @@
 
     invoke-virtual {v2, v8, v7, v5, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 1932
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -841,7 +793,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordXForIntent:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$5102(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1933
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -854,7 +805,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordXForIntent:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$5202(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1934
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -867,7 +817,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordYForIntent:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$5302(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1935
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v9, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -880,7 +829,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordYForIntent:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$5402(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1937
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mCroppingMatrix:Lcom/android/server/smartclip/SmartClipView$CroppingMatrix;
@@ -890,13 +838,11 @@
 
     invoke-virtual {v8}, Lcom/android/server/smartclip/SmartClipView$CroppingMatrix;->reset()V
 
-    .line 1939
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # invokes: Lcom/android/server/smartclip/SmartClipView;->setPointGroupClear()V
     invoke-static {v8}, Lcom/android/server/smartclip/SmartClipView;->access$5600(Lcom/android/server/smartclip/SmartClipView;)V
 
-    .line 1940
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     const/4 v9, 0x1
@@ -904,7 +850,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsUsablePath:Z
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3402(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 1941
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     const/4 v9, 0x0
@@ -912,7 +857,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsUsableSecondPath:Z
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$4002(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 1942
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     const/4 v9, 0x0
@@ -920,7 +864,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mNumColsedCurves:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$5702(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1944
     new-instance v8, Lcom/android/server/smartclip/SmartClipView$8$1;
 
     invoke-direct {v8, p0}, Lcom/android/server/smartclip/SmartClipView$8$1;-><init>(Lcom/android/server/smartclip/SmartClipView$8;)V
@@ -929,7 +872,6 @@
 
     invoke-virtual {v4, v8, v10, v11}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1973
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mCropHandler:Landroid/os/Handler;
@@ -941,10 +883,8 @@
 
     invoke-virtual {v8, v9}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1976
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 1982
     .end local v0    # "boundsOfPath":Landroid/graphics/RectF;
     .end local v1    # "boundsOfSecondPath":Landroid/graphics/RectF;
     .end local v2    # "canvasFinal":Landroid/graphics/Canvas;
@@ -955,7 +895,6 @@
     :goto_1
     return-void
 
-    .line 1846
     .restart local v0    # "boundsOfPath":Landroid/graphics/RectF;
     .restart local v1    # "boundsOfSecondPath":Landroid/graphics/RectF;
     .restart local v4    # "cropImgSaveHandler":Landroid/os/Handler;
@@ -969,7 +908,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3602(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1847
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->left:F
@@ -979,7 +917,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMinCoordX:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3702(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1848
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->bottom:F
@@ -989,7 +926,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mMaxCoordY:I
     invoke-static {v8, v9}, Lcom/android/server/smartclip/SmartClipView;->access$3802(Lcom/android/server/smartclip/SmartClipView;I)I
 
-    .line 1849
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v9, v1, Landroid/graphics/RectF;->top:F
@@ -1003,14 +939,12 @@
 
     goto/16 :goto_0
 
-    .line 1977
     .end local v0    # "boundsOfPath":Landroid/graphics/RectF;
     .end local v1    # "boundsOfSecondPath":Landroid/graphics/RectF;
     .end local v4    # "cropImgSaveHandler":Landroid/os/Handler;
     :catch_0
     move-exception v6
 
-    .line 1978
     .local v6, "e":Ljava/lang/InterruptedException;
     iget-object v8, p0, Lcom/android/server/smartclip/SmartClipView$8;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -1023,10 +957,8 @@
 
     invoke-virtual {v8, v9}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1979
     invoke-virtual {v6}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 1980
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v8

@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/html/dom/SecuritySupport$4;->val$propName:Ljava/lang/String;
 
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Lmf/org/apache/html/dom/SecuritySupport$4;->val$propName:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;

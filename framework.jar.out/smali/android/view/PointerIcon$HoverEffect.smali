@@ -27,15 +27,12 @@
     .locals 1
 
     .prologue
-    .line 1394
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1395
     const-string v0, "/media/audio/ui/HoverPointer.ogg"
 
     iput-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->soundURIs:Ljava/lang/String;
 
-    .line 1398
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/PointerIcon$HoverEffect;->mSoundId:I
@@ -48,7 +45,6 @@
     .param p1, "x0"    # Landroid/view/PointerIcon$1;
 
     .prologue
-    .line 1394
     invoke-direct {p0}, Landroid/view/PointerIcon$HoverEffect;-><init>()V
 
     return-void
@@ -67,19 +63,16 @@
 
     const/4 v4, 0x1
 
-    .line 1401
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
 
     if-nez v0, :cond_0
 
-    .line 1402
     new-instance v0, Landroid/media/SoundPool;
 
     invoke-direct {v0, v4, v4, v5}, Landroid/media/SoundPool;-><init>(III)V
 
     iput-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
 
-    .line 1405
     :cond_0
     iget v0, p0, Landroid/view/PointerIcon$HoverEffect;->mSoundId:I
 
@@ -87,7 +80,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1406
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,7 +102,6 @@
 
     move-result-object v8
 
-    .line 1407
     .local v8, "soundPath":Ljava/lang/String;
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
 
@@ -120,7 +111,6 @@
 
     iput v0, p0, Landroid/view/PointerIcon$HoverEffect;->mSoundId:I
 
-    .line 1410
     .end local v8    # "soundPath":Ljava/lang/String;
     :cond_1
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
@@ -135,7 +125,6 @@
 
     move-result v7
 
-    .line 1411
     .local v7, "ret":I
     return-void
 .end method

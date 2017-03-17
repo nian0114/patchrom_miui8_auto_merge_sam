@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4082
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 4084
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mPrimaryActionModePopup:Landroid/widget/PopupWindow;
@@ -65,13 +63,11 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/os/IBinder;III)V
 
-    .line 4087
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # invokes: Lcom/android/internal/policy/PhoneWindow$DecorView;->endOnGoingFadeAnimation()V
     invoke-static {v0}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$3300(Lcom/android/internal/policy/PhoneWindow$DecorView;)V
 
-    .line 4088
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iget-object v1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -96,7 +92,6 @@
     # setter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
     invoke-static {v0, v1}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$3402(Lcom/android/internal/policy/PhoneWindow$DecorView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
 
-    .line 4090
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
@@ -110,7 +105,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4112
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$6;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
@@ -120,10 +114,8 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 4113
     return-void
 
-    .line 4088
     :array_0
     .array-data 4
         0x0

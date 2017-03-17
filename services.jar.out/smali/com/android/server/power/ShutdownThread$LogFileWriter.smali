@@ -31,19 +31,15 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 1861
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1862
     invoke-direct {p0, p1, p2}, Lcom/android/server/power/ShutdownThread$LogFileWriter;->generateFilename(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1863
     .local v1, "filename":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1865
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -69,16 +65,13 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1870
     :cond_0
     :goto_0
     return-void
 
-    .line 1866
     :catch_0
     move-exception v0
 
-    .line 1867
     .local v0, "e":Ljava/io/FileNotFoundException;
     const-string v2, "ShutdownThread"
 
@@ -95,14 +88,12 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 1873
     new-instance v5, Ljava/io/File;
 
     move-object/from16 v0, p1
 
     invoke-direct {v5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1874
     .local v5, "folder":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
@@ -110,7 +101,6 @@
 
     if-nez v16, :cond_0
 
-    .line 1876
     :try_start_0
     invoke-virtual {v5}, Ljava/io/File;->mkdir()Z
 
@@ -118,14 +108,13 @@
 
     if-eqz v16, :cond_2
 
-    .line 1877
     const-string v16, "ShutdownThread"
 
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v18, "create dir: "
+    const-string v18, "create dir: "
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -145,22 +134,18 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1888
     :cond_0
     invoke-virtual {v5}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v9
 
-    .line 1889
     .local v9, "listOfFiles":[Ljava/io/File;
     if-eqz v9, :cond_5
 
-    .line 1890
     new-instance v10, Ljava/util/TreeMap;
 
     invoke-direct {v10}, Ljava/util/TreeMap;-><init>()V
 
-    .line 1891
     .local v10, "loglist":Ljava/util/TreeMap;, "Ljava/util/TreeMap<Ljava/lang/Long;Ljava/lang/String;>;"
     move-object v2, v9
 
@@ -176,13 +161,11 @@
 
     aget-object v3, v2, v6
 
-    .line 1892
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1893
     .local v4, "fname":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/io/File;->isFile()Z
 
@@ -198,12 +181,10 @@
 
     if-eqz v16, :cond_1
 
-    .line 1894
     invoke-virtual {v3}, Ljava/io/File;->lastModified()J
 
     move-result-wide v14
 
-    .line 1895
     .local v14, "moddate":J
     invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -213,14 +194,12 @@
 
     invoke-virtual {v10, v0, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1891
     .end local v14    # "moddate":J
     :cond_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 1879
     .end local v2    # "arr$":[Ljava/io/File;
     .end local v3    # "file":Ljava/io/File;
     .end local v4    # "fname":Ljava/lang/String;
@@ -236,7 +215,7 @@
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v18, "create dir fail: "
+    const-string v18, "create dir fail: "
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -256,18 +235,14 @@
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1880
     const/16 v16, 0x0
 
-    .line 1908
     :goto_1
     return-object v16
 
-    .line 1882
     :catch_0
     move-exception v11
 
-    .line 1883
     .local v11, "se":Ljava/lang/SecurityException;
     const-string v16, "ShutdownThread"
 
@@ -279,12 +254,10 @@
 
     invoke-static {v0, v1, v11}, Lcom/android/server/power/ShutdownThread$Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)I
 
-    .line 1884
     const/16 v16, 0x0
 
     goto :goto_1
 
-    .line 1899
     .end local v11    # "se":Ljava/lang/SecurityException;
     .restart local v2    # "arr$":[Ljava/io/File;
     .restart local v6    # "i$":I
@@ -304,7 +277,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 1900
     const-string v16, "%s.%d.%s"
 
     const/16 v17, 0x3
@@ -335,7 +307,7 @@
 
     const/16 v18, 0x2
 
-    const-string/jumbo v19, "txt"
+    const-string v19, "txt"
 
     aput-object v19, v17, v18
 
@@ -345,7 +317,6 @@
 
     goto :goto_1
 
-    .line 1903
     :cond_4
     invoke-virtual {v10}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
 
@@ -355,7 +326,6 @@
 
     move-result-object v7
 
-    .line 1904
     .local v7, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Long;>;"
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -367,7 +337,6 @@
 
     move-result-wide v12
 
-    .line 1905
     .local v12, "modDate":J
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -383,7 +352,6 @@
 
     goto :goto_1
 
-    .line 1908
     .end local v2    # "arr$":[Ljava/io/File;
     .end local v6    # "i$":I
     .end local v7    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Long;>;"
@@ -402,16 +370,13 @@
     .locals 3
 
     .prologue
-    .line 1934
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     if-nez v1, :cond_0
 
-    .line 1942
     :goto_0
     return-void
 
-    .line 1938
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
@@ -422,11 +387,9 @@
 
     goto :goto_0
 
-    .line 1939
     :catch_0
     move-exception v0
 
-    .line 1940
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "ShutdownThread"
 
@@ -441,29 +404,24 @@
     .locals 4
 
     .prologue
-    .line 1945
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     if-nez v1, :cond_1
 
-    .line 1964
     :cond_0
     :goto_0
     return-void
 
-    .line 1949
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 1950
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1951
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
@@ -471,18 +429,15 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1956
     :try_start_1
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     if-eqz v1, :cond_0
 
-    .line 1957
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1958
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
@@ -491,11 +446,9 @@
 
     goto :goto_0
 
-    .line 1960
     :catch_0
     move-exception v0
 
-    .line 1961
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "ShutdownThread"
 
@@ -505,12 +458,10 @@
 
     goto :goto_0
 
-    .line 1952
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 1953
     .restart local v0    # "e":Ljava/io/IOException;
     :try_start_2
     const-string v1, "ShutdownThread"
@@ -521,18 +472,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1956
     :try_start_3
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     if-eqz v1, :cond_0
 
-    .line 1957
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1958
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
@@ -541,11 +489,9 @@
 
     goto :goto_0
 
-    .line 1960
     :catch_2
     move-exception v0
 
-    .line 1961
     const-string v1, "ShutdownThread"
 
     const-string v2, "LogFileWriter.saveAndClose error"
@@ -554,39 +500,32 @@
 
     goto :goto_0
 
-    .line 1955
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v1
 
-    .line 1956
     :try_start_4
     iget-object v2, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     if-eqz v2, :cond_2
 
-    .line 1957
     iget-object v2, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1958
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 1962
     :cond_2
     :goto_1
     throw v1
 
-    .line 1960
     :catch_3
     move-exception v0
 
-    .line 1961
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v2, "ShutdownThread"
 
@@ -607,33 +546,27 @@
 
     const/4 v7, 0x2
 
-    .line 1912
     iget-object v3, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
     if-nez v3, :cond_0
 
-    .line 1913
-    const-string/jumbo v3, "fos is null"
+    const-string v3, "fos is null"
 
     invoke-static {p1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1931
     :goto_0
     return-void
 
-    .line 1916
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1918
     .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
-    .line 1919
     .local v1, "oCalendar":Ljava/util/Calendar;
     const-string v3, "%02d-%02d %02d:%02d:%02d %s\n"
 
@@ -715,7 +648,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1927
     :try_start_0
     iget-object v3, p0, Lcom/android/server/power/ShutdownThread$LogFileWriter;->fos:Ljava/io/FileOutputStream;
 
@@ -733,11 +665,9 @@
 
     goto :goto_0
 
-    .line 1928
     :catch_0
     move-exception v0
 
-    .line 1929
     .local v0, "e":Ljava/io/IOException;
     const-string v3, "LogFileWriter.write fail"
 

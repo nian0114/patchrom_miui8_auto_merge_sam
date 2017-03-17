@@ -26,17 +26,14 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 1439
     iput-object p1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
-    .line 1440
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1441
     # getter for: Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {p1}, Lcom/android/server/VibratorService;->access$2500(Lcom/android/server/VibratorService;)Landroid/content/ContentResolver;
 
@@ -59,10 +56,8 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1442
     iput p2, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->mType:I
 
-    .line 1443
     return-void
 .end method
 
@@ -77,10 +72,8 @@
 
     const/4 v4, 0x5
 
-    .line 1452
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 1454
     # getter for: Lcom/android/server/VibratorService;->mIsEnableIntensity:Z
     invoke-static {}, Lcom/android/server/VibratorService;->access$2600()Z
 
@@ -88,18 +81,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1455
     const-string v1, "VibratorService"
 
-    const-string/jumbo v2, "mIsEnableIntensity is false (onChange)"
+    const-string v2, "mIsEnableIntensity is false (onChange)"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1489
     :goto_0
     return-void
 
-    .line 1459
     :cond_0
     iget v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->mType:I
 
@@ -107,7 +97,6 @@
 
     goto :goto_0
 
-    .line 1461
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -129,7 +118,6 @@
 
     move-result v0
 
-    .line 1462
     .local v0, "magnitudeLevel":I
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -140,7 +128,6 @@
     # setter for: Lcom/android/server/VibratorService;->mTouchMagnitude:I
     invoke-static {v1, v0}, Lcom/android/server/VibratorService;->access$2702(Lcom/android/server/VibratorService;I)I
 
-    .line 1464
     const-string v1, "VibratorService"
 
     const-string v2, "Feedback magnitude has changed"
@@ -149,7 +136,6 @@
 
     goto :goto_0
 
-    .line 1462
     .restart local v0    # "magnitudeLevel":I
     :cond_1
     # getter for: Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
@@ -161,7 +147,6 @@
 
     goto :goto_1
 
-    .line 1469
     .end local v0    # "magnitudeLevel":I
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
@@ -184,7 +169,6 @@
 
     move-result v0
 
-    .line 1470
     .restart local v0    # "magnitudeLevel":I
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -195,7 +179,6 @@
     # setter for: Lcom/android/server/VibratorService;->mCallMagnitude:I
     invoke-static {v1, v0}, Lcom/android/server/VibratorService;->access$2902(Lcom/android/server/VibratorService;I)I
 
-    .line 1472
     const-string v1, "VibratorService"
 
     const-string v2, "Call magnitude has changed"
@@ -204,7 +187,6 @@
 
     goto :goto_0
 
-    .line 1470
     .restart local v0    # "magnitudeLevel":I
     :cond_2
     # getter for: Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
@@ -216,7 +198,6 @@
 
     goto :goto_2
 
-    .line 1477
     .end local v0    # "magnitudeLevel":I
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
@@ -239,7 +220,6 @@
 
     move-result v0
 
-    .line 1478
     .restart local v0    # "magnitudeLevel":I
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -250,7 +230,6 @@
     # setter for: Lcom/android/server/VibratorService;->mNotiMagnitude:I
     invoke-static {v1, v0}, Lcom/android/server/VibratorService;->access$3002(Lcom/android/server/VibratorService;I)I
 
-    .line 1480
     # getter for: Lcom/android/server/VibratorService;->USE_SET_MAX_MAGNITUE:Z
     invoke-static {}, Lcom/android/server/VibratorService;->access$3100()Z
 
@@ -258,7 +237,6 @@
 
     if-nez v1, :cond_3
 
-    .line 1481
     iget-object v1, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
     iget-object v2, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
@@ -271,7 +249,6 @@
     # setter for: Lcom/android/server/VibratorService;->mDefaultMagnitude:I
     invoke-static {v1, v2}, Lcom/android/server/VibratorService;->access$1902(Lcom/android/server/VibratorService;I)I
 
-    .line 1484
     :cond_3
     const-string v1, "VibratorService"
 
@@ -281,7 +258,6 @@
 
     goto/16 :goto_0
 
-    .line 1478
     .restart local v0    # "magnitudeLevel":I
     :cond_4
     # getter for: Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
@@ -293,7 +269,6 @@
 
     goto :goto_3
 
-    .line 1459
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -306,7 +281,6 @@
     .locals 4
 
     .prologue
-    .line 1446
     iget-object v0, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
     # getter for: Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
@@ -316,7 +290,6 @@
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 1447
     iget-object v0, p0, Lcom/android/server/VibratorService$SecSettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
     # getter for: Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
@@ -343,6 +316,5 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1448
     return-void
 .end method

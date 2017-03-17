@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     const-string v0, "EmergencyMode"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -59,7 +57,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     const-string v0, "EmergencyMode"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -102,6 +98,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     return-void
 .end method

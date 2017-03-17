@@ -12,17 +12,14 @@
     .locals 1
 
     .prologue
-    .line 36
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
-    .line 38
     invoke-static {}, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->createBuiltInTypes()V
 
-    .line 39
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/DTDDVFactory;-><init>()V
 
     return-void
@@ -40,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 65
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     const-string v2, "string"
@@ -51,7 +46,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     const-string v2, "ID"
@@ -62,12 +56,10 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 67
     new-instance v0, Lmf/org/apache/xerces/impl/dv/dtd/IDREFDatatypeValidator;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/dv/dtd/IDREFDatatypeValidator;-><init>()V
 
-    .line 68
     .local v0, "dvTemp":Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
@@ -75,7 +67,6 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     const-string v2, "IDREFS"
@@ -86,13 +77,11 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     new-instance v0, Lmf/org/apache/xerces/impl/dv/dtd/ENTITYDatatypeValidator;
 
     .end local v0    # "dvTemp":Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/dv/dtd/ENTITYDatatypeValidator;-><init>()V
 
-    .line 71
     .restart local v0    # "dvTemp":Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
@@ -104,7 +93,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     const-string v2, "ENTITIES"
@@ -115,7 +103,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     const-string v2, "NOTATION"
@@ -126,13 +113,11 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     new-instance v0, Lmf/org/apache/xerces/impl/dv/dtd/NMTOKENDatatypeValidator;
 
     .end local v0    # "dvTemp":Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/dv/dtd/NMTOKENDatatypeValidator;-><init>()V
 
-    .line 75
     .restart local v0    # "dvTemp":Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
@@ -140,7 +125,6 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
     sget-object v1, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     const-string v2, "NMTOKENS"
@@ -151,7 +135,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     return-void
 .end method
 
@@ -162,7 +145,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     sget-object v0, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -178,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 57
     sget-object v0, Lmf/org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl;->fBuiltInTypes:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clone()Ljava/lang/Object;

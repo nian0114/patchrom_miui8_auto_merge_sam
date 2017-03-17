@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3957
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$6;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3960
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3961
     .local v1, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.USER_SWITCHED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3962
     const-string v2, "android.intent.extra.user_handle"
 
     const/4 v3, 0x0
@@ -63,7 +59,6 @@
 
     move-result v0
 
-    .line 3963
     .local v0, "UserId":I
     const-string v2, "DeviceManager3LM"
 
@@ -87,13 +82,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3964
     iget-object v2, p0, Lcom/android/server/DeviceManager3LMService$6;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     # invokes: Lcom/android/server/DeviceManager3LMService;->setCurrentUserId(I)V
     invoke-static {v2, v0}, Lcom/android/server/DeviceManager3LMService;->access$900(Lcom/android/server/DeviceManager3LMService;I)V
 
-    .line 3966
     .end local v0    # "UserId":I
     :cond_0
     return-void

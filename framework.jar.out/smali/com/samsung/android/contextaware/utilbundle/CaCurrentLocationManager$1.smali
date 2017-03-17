@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 119
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 128
     invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v0
@@ -52,46 +50,38 @@
 
     if-gtz v0, :cond_0
 
-    .line 129
     const-string v0, "Accuracy is low"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
-    .line 144
     :goto_0
     return-void
 
-    .line 133
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 134
     .local v2, "sysTime":J
     invoke-virtual {p1}, Landroid/location/Location;->getTime()J
 
     move-result-wide v4
 
-    .line 136
     .local v4, "timeStamp":J
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v6
 
-    .line 137
     .local v6, "latitude":D
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v8
 
-    .line 138
     .local v8, "longitude":D
     invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v10
 
-    .line 142
     .local v10, "altitude":D
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager;
 
@@ -105,12 +95,10 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     const-string v0, "Location service is disabled"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 149
     return-void
 .end method
 
@@ -119,12 +107,10 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     const-string v0, "Location service is enabled"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 124
     return-void
 .end method
 
@@ -135,30 +121,25 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 154
     packed-switch p2, :pswitch_data_0
 
-    .line 167
     :goto_0
     return-void
 
-    .line 156
     :pswitch_0
-    const-string/jumbo v0, "out of service"
+    const-string v0, "out of service"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 159
     :pswitch_1
-    const-string/jumbo v0, "temporarily unavailable"
+    const-string v0, "temporarily unavailable"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 162
     :pswitch_2
     const-string v0, "available"
 
@@ -166,7 +147,6 @@
 
     goto :goto_0
 
-    .line 154
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

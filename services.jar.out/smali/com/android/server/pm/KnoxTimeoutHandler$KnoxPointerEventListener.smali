@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 345
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$KnoxPointerEventListener;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/KnoxTimeoutHandler$1;
 
     .prologue
-    .line 345
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler$KnoxPointerEventListener;-><init>(Lcom/android/server/pm/KnoxTimeoutHandler;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 348
     iget-object v2, p0, Lcom/android/server/pm/KnoxTimeoutHandler$KnoxPointerEventListener;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # getter for: Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
@@ -65,7 +62,6 @@
 
     move-result v1
 
-    .line 349
     .local v1, "currentWindowId":I
     iget-object v2, p0, Lcom/android/server/pm/KnoxTimeoutHandler$KnoxPointerEventListener;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -82,17 +78,14 @@
 
     if-nez v2, :cond_0
 
-    .line 363
     :goto_0
     return-void
 
-    .line 353
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 354
     .local v0, "action":I
     and-int/lit16 v2, v0, 0xff
 
@@ -100,7 +93,6 @@
 
     goto :goto_0
 
-    .line 357
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/pm/KnoxTimeoutHandler$KnoxPointerEventListener;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -108,7 +100,6 @@
 
     goto :goto_0
 
-    .line 354
     nop
 
     :pswitch_data_0

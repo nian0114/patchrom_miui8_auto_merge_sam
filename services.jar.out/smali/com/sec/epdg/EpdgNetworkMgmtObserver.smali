@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Landroid/net/INetworkManagementEventObserver$Stub;-><init>()V
 
-    .line 118
     return-void
 .end method
 
@@ -61,7 +59,6 @@
     .param p2, "address"    # Landroid/net/LinkAddress;
 
     .prologue
-    .line 70
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -90,7 +87,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 71
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -101,7 +97,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 73
     return-void
 .end method
 
@@ -111,7 +106,6 @@
     .param p2, "address"    # Landroid/net/LinkAddress;
 
     .prologue
-    .line 64
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -140,7 +134,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -151,7 +144,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 67
     return-void
 .end method
 
@@ -160,7 +152,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -189,7 +180,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     return-void
 .end method
 
@@ -200,7 +190,6 @@
     .param p3, "tsNanos"    # J
 
     .prologue
-    .line 35
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -233,7 +222,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     return-void
 .end method
 
@@ -244,7 +232,6 @@
     .param p4, "servers"    # [Ljava/lang/String;
 
     .prologue
-    .line 77
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -261,7 +248,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "lifetime "
+    const-string v2, "lifetime "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -277,7 +264,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 78
     return-void
 .end method
 
@@ -287,7 +273,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 44
     const-string v1, "[NETMGMT]"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -312,7 +297,7 @@
 
     if-eqz p2, :cond_0
 
-    const-string/jumbo v0, "up"
+    const-string v0, "up"
 
     :goto_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -325,7 +310,6 @@
 
     invoke-static {v1, v0}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -336,12 +320,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 47
     return-void
 
-    .line 44
     :cond_0
-    const-string/jumbo v0, "down"
+    const-string v0, "down"
 
     goto :goto_0
 .end method
@@ -351,7 +333,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -380,7 +361,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     return-void
 .end method
 
@@ -390,7 +370,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 40
     const-string v1, "[NETMGMT]"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -409,7 +388,7 @@
 
     if-eqz p2, :cond_0
 
-    const-string/jumbo v0, "up"
+    const-string v0, "up"
 
     :goto_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -422,12 +401,10 @@
 
     invoke-static {v1, v0}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     return-void
 
-    .line 40
     :cond_0
-    const-string/jumbo v0, "down"
+    const-string v0, "down"
 
     goto :goto_0
 .end method
@@ -438,7 +415,6 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -471,7 +447,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
     return-void
 .end method
 
@@ -480,14 +455,13 @@
     .param p1, "route"    # Landroid/net/RouteInfo;
 
     .prologue
-    .line 85
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "routeRemoved"
+    const-string v2, "routeRemoved"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -503,7 +477,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
     return-void
 .end method
 
@@ -512,14 +485,13 @@
     .param p1, "route"    # Landroid/net/RouteInfo;
 
     .prologue
-    .line 81
     const-string v0, "[NETMGMT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "routeUpdated"
+    const-string v2, "routeUpdated"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -535,6 +507,5 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 82
     return-void
 .end method

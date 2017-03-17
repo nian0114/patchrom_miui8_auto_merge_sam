@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/server/pm/KnoxKeyguardUpdateMonitor$1;->this$0:Lcom/android/server/pm/KnoxKeyguardUpdateMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,19 +40,16 @@
     .prologue
     const/high16 v8, -0x80000000
 
-    .line 72
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     const-string v6, "BroadcastReceiver onReceive"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 76
     .local v0, "action":Ljava/lang/String;
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
@@ -77,7 +73,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     const-string v5, "android.bluetooth.device.action.ACL_CONNECTED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -110,12 +105,10 @@
 
     if-nez v5, :cond_1
 
-    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 85
     :cond_1
     const-string v5, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -125,21 +118,18 @@
 
     if-eqz v5, :cond_2
 
-    .line 87
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     const-string v6, "BroadcastReceiver onReceive BT state is changed"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     new-instance v2, Landroid/content/Intent;
 
-    const-string/jumbo v5, "samsung.knox.trust.action.BT_STATE_CHANGE_INTERNAL"
+    const-string v5, "samsung.knox.trust.action.BT_STATE_CHANGE_INTERNAL"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 89
     .local v2, "btIntent":Landroid/content/Intent;
     const-string v5, "android.bluetooth.adapter.extra.STATE"
 
@@ -153,7 +143,6 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 90
     sget-object v5, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const-string v6, "com.samsung.android.permission.RECEIVE_BT_GEAR"
@@ -162,7 +151,6 @@
 
     goto :goto_0
 
-    .line 94
     .end local v2    # "btIntent":Landroid/content/Intent;
     :cond_2
     const-string v5, "android.bluetooth.device.extra.DEVICE"
@@ -173,14 +161,11 @@
 
     check-cast v3, Landroid/bluetooth/BluetoothDevice;
 
-    .line 96
     .local v3, "device":Landroid/bluetooth/BluetoothDevice;
     if-eqz v3, :cond_0
 
-    .line 100
     const/4 v2, 0x0
 
-    .line 101
     .restart local v2    # "btIntent":Landroid/content/Intent;
     const-string v5, "android.bluetooth.device.action.ACL_CONNECTED"
 
@@ -190,22 +175,19 @@
 
     if-eqz v5, :cond_4
 
-    .line 102
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     const-string v6, "BroadcastReceiver ACTION_ACL_CONNECTED"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     new-instance v2, Landroid/content/Intent;
 
     .end local v2    # "btIntent":Landroid/content/Intent;
-    const-string/jumbo v5, "samsung.knox.trust.action.DEVICE_CONNECTED_INTERNAL"
+    const-string v5, "samsung.knox.trust.action.DEVICE_CONNECTED_INTERNAL"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 124
     .restart local v2    # "btIntent":Landroid/content/Intent;
     :cond_3
     :goto_1
@@ -213,7 +195,6 @@
 
     invoke-virtual {v2, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 125
     sget-object v5, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const-string v6, "com.samsung.android.permission.RECEIVE_BT_GEAR"
@@ -222,7 +203,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_4
     const-string v5, "android.bluetooth.device.action.ACL_DISCONNECTED"
 
@@ -232,25 +212,22 @@
 
     if-eqz v5, :cond_5
 
-    .line 105
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     const-string v6, "BroadcastReceiver ACTION_ACL_DISCONNECTED"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     new-instance v2, Landroid/content/Intent;
 
     .end local v2    # "btIntent":Landroid/content/Intent;
-    const-string/jumbo v5, "samsung.knox.trust.action.DEVICE_DISCONNECTED_INTERNAL"
+    const-string v5, "samsung.knox.trust.action.DEVICE_DISCONNECTED_INTERNAL"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .restart local v2    # "btIntent":Landroid/content/Intent;
     goto :goto_1
 
-    .line 107
     :cond_5
     const-string v5, "android.bluetooth.device.action.BOND_STATE_CHANGED"
 
@@ -260,21 +237,18 @@
 
     if-eqz v5, :cond_3
 
-    .line 108
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     const-string v6, "BroadcastReceiver ACTION_BOND_STATE_CHANGED"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     const-string v5, "android.bluetooth.device.extra.PREVIOUS_BOND_STATE"
 
     invoke-virtual {p2, v5, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 110
     .local v4, "prevBondState":I
     const-string v5, "android.bluetooth.device.extra.BOND_STATE"
 
@@ -282,7 +256,6 @@
 
     move-result v1
 
-    .line 112
     .local v1, "bondState":I
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
@@ -306,7 +279,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -329,7 +301,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     const/16 v5, 0xb
 
     if-ne v4, v5, :cond_6
@@ -338,25 +309,22 @@
 
     if-ne v1, v5, :cond_6
 
-    .line 116
     const-string v5, "KnoxKeyguardUpdateMonitor"
 
     const-string v6, "BroadcastReceiver ACTION_BOND_STATE_CHANGED it is bonded"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     new-instance v2, Landroid/content/Intent;
 
     .end local v2    # "btIntent":Landroid/content/Intent;
-    const-string/jumbo v5, "samsung.knox.trust.action.DEVICE_BONDED_STATE_INTERNAL"
+    const-string v5, "samsung.knox.trust.action.DEVICE_BONDED_STATE_INTERNAL"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .restart local v2    # "btIntent":Landroid/content/Intent;
     goto/16 :goto_1
 
-    .line 119
     :cond_6
     const-string v5, "KnoxKeyguardUpdateMonitor"
 

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 393
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
-    .line 394
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 395
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 399
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 443
     :goto_0
     :pswitch_0
     return-void
 
-    .line 401
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 406
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -75,7 +68,6 @@
 
     goto :goto_0
 
-    .line 410
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 414
     :pswitch_4
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 420
     :pswitch_5
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -116,7 +106,6 @@
 
     goto :goto_0
 
-    .line 425
     :pswitch_6
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -125,7 +114,6 @@
 
     goto :goto_0
 
-    .line 429
     :pswitch_7
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -137,7 +125,6 @@
 
     goto :goto_0
 
-    .line 433
     :pswitch_8
     # getter for: Lcom/android/server/audio/MediaFocusControl;->mAudioFocusLock:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->access$1500()Ljava/lang/Object;
@@ -146,7 +133,6 @@
 
     monitor-enter v2
 
-    .line 435
     :try_start_0
     # getter for: Lcom/android/server/audio/MediaFocusControl;->mAudioFocusLock:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->access$1500()Ljava/lang/Object;
@@ -158,7 +144,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 439
     :goto_1
     :try_start_1
     monitor-exit v2
@@ -174,11 +159,9 @@
 
     throw v1
 
-    .line 436
     :catch_0
     move-exception v0
 
-    .line 437
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v1, "MediaFocusControl"
@@ -191,7 +174,6 @@
 
     goto :goto_1
 
-    .line 399
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

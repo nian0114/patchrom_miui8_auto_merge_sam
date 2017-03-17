@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1683
     iput-object p1, p0, Landroid/widget/AbsSeekBar$1;->this$0:Landroid/widget/AbsSeekBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 1685
     iget-object v1, p0, Landroid/widget/AbsSeekBar$1;->this$0:Landroid/widget/AbsSeekBar;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -57,7 +55,6 @@
     # setter for: Landroid/widget/AbsSeekBar;->mCurrentProgressLevel:I
     invoke-static {v1, v0}, Landroid/widget/AbsSeekBar;->access$002(Landroid/widget/AbsSeekBar;I)I
 
-    .line 1686
     iget-object v0, p0, Landroid/widget/AbsSeekBar$1;->this$0:Landroid/widget/AbsSeekBar;
 
     iget-object v1, p0, Landroid/widget/AbsSeekBar$1;->this$0:Landroid/widget/AbsSeekBar;
@@ -69,6 +66,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsSeekBar;->onSlidingRefresh(I)V
 
-    .line 1687
     return-void
 .end method

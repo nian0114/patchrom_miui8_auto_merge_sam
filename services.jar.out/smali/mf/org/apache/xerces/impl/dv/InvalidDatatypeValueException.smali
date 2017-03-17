@@ -14,9 +14,7 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 42
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/impl/dv/DatatypeException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 43
     return-void
 .end method

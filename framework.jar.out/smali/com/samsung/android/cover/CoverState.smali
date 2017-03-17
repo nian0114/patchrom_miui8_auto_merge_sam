@@ -158,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 527
     new-instance v0, Lcom/samsung/android/cover/CoverState$1;
 
     invoke-direct {v0}, Lcom/samsung/android/cover/CoverState$1;-><init>()V
@@ -176,47 +175,34 @@
 
     const/4 v1, 0x0
 
-    .line 339
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 340
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 341
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 342
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 343
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 344
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 345
     iput-boolean v1, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 346
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 349
     iput-object v2, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
-    .line 350
     iput-object v2, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
-    .line 351
     iput-object v2, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
-    .line 352
     iput-boolean v1, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
-    .line 353
     return-void
 .end method
 
@@ -229,33 +215,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 363
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 364
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 365
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 366
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 367
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 368
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 369
     iput-boolean v1, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 370
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 371
     return-void
 .end method
 
@@ -264,13 +241,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 441
     invoke-direct {p0, p1}, Lcom/samsung/android/cover/CoverState;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 442
     return-void
 .end method
 
@@ -285,31 +259,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 382
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 383
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 384
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 385
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 386
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 387
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 388
     iput-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 389
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 390
     return-void
 .end method
 
@@ -323,33 +288,24 @@
     .param p6, "attached"    # Z
 
     .prologue
-    .line 401
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 402
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 403
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 404
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 405
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 406
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 407
     iput-boolean p6, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 408
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 409
     return-void
 .end method
 
@@ -364,31 +320,22 @@
     .param p7, "model"    # I
 
     .prologue
-    .line 411
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 412
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 413
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 414
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 415
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 416
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 417
     iput-boolean p6, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 418
     iput p7, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 419
     return-void
 .end method
 
@@ -405,37 +352,26 @@
     .param p9, "isFake"    # Z
 
     .prologue
-    .line 421
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 422
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 423
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 424
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 425
     iput-boolean p4, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 426
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 428
     iput-object p6, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
-    .line 429
     iput-object p7, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
-    .line 430
     iput-object p8, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
-    .line 431
     iput-boolean p9, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
-    .line 432
     return-void
 .end method
 
@@ -448,7 +384,6 @@
 
     const/4 v2, 0x1
 
-    .line 500
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -460,35 +395,30 @@
     :goto_0
     iput-boolean v1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 501
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 502
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 503
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 504
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 505
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -500,28 +430,24 @@
     :goto_1
     iput-boolean v1, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 506
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 507
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     if-ne v1, v2, :cond_0
 
-    .line 508
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
-    .line 510
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -529,23 +455,19 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 511
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 512
     .local v0, "smartCoverCookieLength":I
     new-array v1, v0, [B
 
     iput-object v1, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
-    .line 513
     iget-object v1, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 516
     .end local v0    # "smartCoverCookieLength":I
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -554,14 +476,12 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 517
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
-    .line 519
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -572,25 +492,21 @@
     :goto_2
     iput-boolean v2, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
-    .line 520
     return-void
 
     :cond_3
     move v1, v3
 
-    .line 500
     goto :goto_0
 
     :cond_4
     move v1, v3
 
-    .line 505
     goto :goto_1
 
     :cond_5
     move v2, v3
 
-    .line 519
     goto :goto_2
 .end method
 
@@ -601,62 +517,50 @@
     .param p1, "o"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 610
     iget-boolean v0, p1, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 611
     iget v0, p1, Lcom/samsung/android/cover/CoverState;->type:I
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 612
     iget v0, p1, Lcom/samsung/android/cover/CoverState;->color:I
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 613
     iget v0, p1, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 614
     iget v0, p1, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 615
     iget-boolean v0, p1, Lcom/samsung/android/cover/CoverState;->attached:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 616
     iget v0, p1, Lcom/samsung/android/cover/CoverState;->model:I
 
     iput v0, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 618
     iget-object v0, p1, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
-    .line 619
     iget-object v0, p1, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
     iput-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
-    .line 620
     iget-boolean v0, p1, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
-    .line 621
     iget-object v0, p1, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
-    .line 622
     return-void
 .end method
 
@@ -666,7 +570,6 @@
     .end annotation
 
     .prologue
-    .line 452
     const/4 v0, 0x0
 
     return v0
@@ -676,7 +579,6 @@
     .locals 1
 
     .prologue
-    .line 702
     iget-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
     return v0
@@ -686,7 +588,6 @@
     .locals 1
 
     .prologue
-    .line 662
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
     return v0
@@ -696,7 +597,6 @@
     .locals 1
 
     .prologue
-    .line 710
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
     return v0
@@ -706,7 +606,6 @@
     .locals 1
 
     .prologue
-    .line 743
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
     return-object v0
@@ -716,7 +615,6 @@
     .locals 1
 
     .prologue
-    .line 727
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
     return-object v0
@@ -726,7 +624,6 @@
     .locals 1
 
     .prologue
-    .line 719
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
     return-object v0
@@ -736,7 +633,6 @@
     .locals 1
 
     .prologue
-    .line 634
     iget-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     return v0
@@ -746,7 +642,6 @@
     .locals 1
 
     .prologue
-    .line 648
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
     return v0
@@ -756,7 +651,6 @@
     .locals 1
 
     .prologue
-    .line 688
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
     return v0
@@ -766,7 +660,6 @@
     .locals 1
 
     .prologue
-    .line 675
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
     return v0
@@ -776,7 +669,6 @@
     .locals 1
 
     .prologue
-    .line 735
     iget-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
     return v0
@@ -787,10 +679,8 @@
     .param p1, "attached"    # Z
 
     .prologue
-    .line 706
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 707
     return-void
 .end method
 
@@ -799,10 +689,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 666
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 667
     return-void
 .end method
 
@@ -811,10 +699,8 @@
     .param p1, "faked"    # Z
 
     .prologue
-    .line 739
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
-    .line 740
     return-void
 .end method
 
@@ -823,10 +709,8 @@
     .param p1, "model"    # I
 
     .prologue
-    .line 714
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 715
     return-void
 .end method
 
@@ -835,10 +719,8 @@
     .param p1, "serial"    # Ljava/lang/String;
 
     .prologue
-    .line 747
     iput-object p1, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
-    .line 748
     return-void
 .end method
 
@@ -847,10 +729,8 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 731
     iput-object p1, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
-    .line 732
     return-void
 .end method
 
@@ -859,10 +739,8 @@
     .param p1, "extraData"    # [B
 
     .prologue
-    .line 723
     iput-object p1, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
-    .line 724
     return-void
 .end method
 
@@ -871,10 +749,8 @@
     .param p1, "switchState"    # Z
 
     .prologue
-    .line 638
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 639
     return-void
 .end method
 
@@ -883,10 +759,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 652
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 653
     return-void
 .end method
 
@@ -895,10 +769,8 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 692
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 693
     return-void
 .end method
 
@@ -907,10 +779,8 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 679
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 680
     return-void
 .end method
 
@@ -918,7 +788,6 @@
     .locals 4
 
     .prologue
-    .line 547
     const-string v0, "CoverState(switchState=%b type=%d color=%d widthPixel=%d heightPixel=%d model=%d attached=%b)"
 
     const/4 v1, 0x7
@@ -1010,19 +879,14 @@
     .param p4, "heightPixel"    # I
 
     .prologue
-    .line 555
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 556
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 557
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 558
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 559
     return-void
 .end method
 
@@ -1035,22 +899,16 @@
     .param p5, "model"    # I
 
     .prologue
-    .line 584
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 585
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 586
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 587
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 588
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 589
     return-void
 .end method
 
@@ -1064,25 +922,18 @@
     .param p6, "model"    # I
 
     .prologue
-    .line 594
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 595
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 596
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 597
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 598
     iput-boolean p5, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 599
     iput p6, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
-    .line 600
     return-void
 .end method
 
@@ -1095,22 +946,16 @@
     .param p5, "heightPixel"    # I
 
     .prologue
-    .line 564
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 565
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 566
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 567
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 568
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 569
     return-void
 .end method
 
@@ -1124,25 +969,18 @@
     .param p6, "attached"    # Z
 
     .prologue
-    .line 574
     iput-boolean p1, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
-    .line 575
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
-    .line 576
     iput p3, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
-    .line 577
     iput p4, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 578
     iput p5, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 579
     iput-boolean p6, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
-    .line 580
     return-void
 .end method
 
@@ -1152,13 +990,10 @@
     .param p2, "heightPixel"    # I
 
     .prologue
-    .line 604
     iput p1, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
-    .line 605
     iput p2, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
-    .line 606
     return-void
 .end method
 
@@ -1174,7 +1009,6 @@
 
     const/4 v2, 0x0
 
-    .line 463
     iget-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     if-eqz v0, :cond_0
@@ -1184,27 +1018,22 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 464
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 465
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->color:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 466
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->widthPixel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 467
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->heightPixel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 468
     iget-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->attached:Z
 
     if-eqz v0, :cond_1
@@ -1214,38 +1043,30 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 469
     iget v0, p0, Lcom/samsung/android/cover/CoverState;->model:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 471
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
-    .line 472
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 477
     :goto_2
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
     if-nez v0, :cond_3
 
-    .line 478
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 484
     :goto_3
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
     if-nez v0, :cond_4
 
-    .line 485
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 490
     :goto_4
     iget-boolean v0, p0, Lcom/samsung/android/cover/CoverState;->fakeCover:Z
 
@@ -1254,55 +1075,45 @@
     :goto_5
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 491
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 463
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 468
     goto :goto_1
 
-    .line 474
     :cond_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 475
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverAppUri:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 480
     :cond_3
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 481
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 482
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->smartCoverCookie:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_3
 
-    .line 487
     :cond_4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 488
     iget-object v0, p0, Lcom/samsung/android/cover/CoverState;->serialNumber:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
@@ -1312,6 +1123,5 @@
     :cond_5
     move v1, v2
 
-    .line 490
     goto :goto_5
 .end method

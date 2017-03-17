@@ -119,18 +119,14 @@
 
     const/4 v1, 0x0
 
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     const-string v2, "MultiWindowConverter"
 
     iput-object v2, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->TAG:Ljava/lang/String;
 
-    .line 76
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DEBUG:Z
 
-    .line 77
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -142,77 +138,58 @@
     :cond_0
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->SAFE_DEBUG:Z
 
-    .line 79
     const v0, 0x3d8f5c29    # 0.07f
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DELTA_H_SCALE:F
 
-    .line 80
     const v0, 0x3d4ccccd    # 0.05f
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DELTA_V_SCALE:F
 
-    .line 81
     const v0, 0x3e051eb8    # 0.13f
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DELTA_H_SCALE_TERMINATE:F
 
-    .line 82
     const v0, 0x3e3851ec    # 0.18f
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DELTA_V_SCALE_TERMINATE:F
 
-    .line 83
     const v0, 0x3e570a3d    # 0.21f
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DELTA_H_SCALE_TERMINATE_TOP:F
 
-    .line 84
     const v0, 0x3db851ec    # 0.09f
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->DELTA_V_SCALE_TERMINATE_TOP:F
 
-    .line 85
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->INTERPORATION:I
 
-    .line 111
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 113
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMoved:Z
 
-    .line 114
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mValidMotion:Z
 
-    .line 116
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mForceDismissGuide:Z
 
-    .line 118
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mWasTargetChecked:Z
 
-    .line 119
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSplitWindow:Z
 
-    .line 120
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsRunningTask:Z
 
-    .line 121
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHasSubWindow:Z
 
-    .line 129
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mTaskId:I
 
-    .line 134
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 135
     iput-object p2, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 136
     return-void
 .end method
 
@@ -221,7 +198,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/MultiWindowPointerEventListener;
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     return-object v0
@@ -233,7 +209,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 74
     iput p1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
     return p1
@@ -245,7 +220,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 74
     iput-boolean p1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMoved:Z
 
     return p1
@@ -257,7 +231,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 74
     iput-boolean p1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mValidMotion:Z
 
     return p1
@@ -270,7 +243,6 @@
     .param p3, "screenHeight"    # I
 
     .prologue
-    .line 708
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -281,11 +253,9 @@
 
     add-int v0, v2, v3
 
-    .line 709
     .local v0, "boundaryX":I
     iget v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mContorllerBoundaryY:I
 
-    .line 710
     .local v1, "boundaryY":I
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
@@ -293,14 +263,12 @@
 
     if-le v2, v3, :cond_2
 
-    .line 711
     sub-int v2, p2, v0
 
     iget v3, p1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 715
     :cond_0
     :goto_0
     iget v2, p1, Landroid/graphics/Rect;->top:I
@@ -309,25 +277,21 @@
 
     if-le v2, v3, :cond_3
 
-    .line 716
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
     sub-int v3, p3, v1
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 720
     :cond_1
     :goto_1
     return-void
 
-    .line 712
     :cond_2
     iget v2, p1, Landroid/graphics/Rect;->right:I
 
     if-ge v2, v0, :cond_0
 
-    .line 713
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -340,7 +304,6 @@
 
     goto :goto_0
 
-    .line 717
     :cond_3
     iget v2, p1, Landroid/graphics/Rect;->top:I
 
@@ -354,7 +317,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 718
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
     iget v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mStatusBarHeight:I
@@ -376,7 +338,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 411
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenRatio:F
 
     iget v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
@@ -395,16 +356,13 @@
 
     move-result p1
 
-    .line 412
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeFlag:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 417
     :goto_0
     return p1
 
-    .line 414
     :pswitch_0
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -412,7 +370,6 @@
 
     goto :goto_0
 
-    .line 412
     nop
 
     :pswitch_data_0
@@ -429,7 +386,6 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 401
     int-to-float v0, p2
 
     iget v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
@@ -446,7 +402,6 @@
 
     if-lez v0, :cond_1
 
-    .line 402
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
     int-to-float v0, v0
@@ -465,13 +420,11 @@
 
     move-result p2
 
-    .line 407
     .end local p2    # "y":I
     :cond_0
     :goto_0
     return p2
 
-    .line 404
     .restart local p2    # "y":I
     :cond_1
     int-to-float v0, p2
@@ -490,7 +443,6 @@
 
     if-gez v0, :cond_0
 
-    .line 405
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
     int-to-float v0, v0
@@ -513,24 +465,20 @@
     .param p3, "exceptInternnalWindow"    # Z
 
     .prologue
-    .line 791
     move/from16 v0, p1
 
     float-to-int v11, v0
 
-    .line 792
     .local v11, "x":I
     move/from16 v0, p2
 
     float-to-int v12, v0
 
-    .line 793
     .local v12, "y":I
     new-instance v7, Landroid/graphics/Region;
 
     invoke-direct {v7}, Landroid/graphics/Region;-><init>()V
 
-    .line 794
     .local v7, "touchableRegion":Landroid/graphics/Region;
     move-object/from16 v0, p0
 
@@ -540,7 +488,6 @@
 
     monitor-enter v14
 
-    .line 795
     :try_start_0
     move-object/from16 v0, p0
 
@@ -550,11 +497,9 @@
 
     move-result-object v10
 
-    .line 796
     .local v10, "windows":Lcom/android/server/wm/WindowList;
     const/4 v6, 0x0
 
-    .line 797
     .local v6, "tempWin":Lcom/android/server/wm/WindowState;
     invoke-virtual {v10}, Lcom/android/server/wm/WindowList;->size()I
 
@@ -566,14 +511,12 @@
     :goto_0
     if-ltz v4, :cond_13
 
-    .line 798
     invoke-virtual {v10, v4}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Lcom/android/server/wm/WindowState;
 
-    .line 799
     .local v9, "win":Lcom/android/server/wm/WindowState;
     move-object/from16 v0, p0
 
@@ -587,7 +530,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v16, "finding target window : ["
+    const-string v16, "finding target window : ["
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -613,25 +556,21 @@
 
     invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 801
     :cond_0
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v3, v13, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 802
     .local v3, "flags":I
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v8, v13, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 803
     .local v8, "type":I
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v5, v13, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
-    .line 805
     .local v5, "multiWindowFlags":I
     const/16 v13, 0x7d0
 
@@ -653,12 +592,10 @@
 
     if-eqz v13, :cond_1
 
-    .line 808
     const/4 v9, 0x0
 
     monitor-exit v14
 
-    .line 920
     .end local v3    # "flags":I
     .end local v5    # "multiWindowFlags":I
     .end local v8    # "type":I
@@ -666,7 +603,6 @@
     :goto_1
     return-object v9
 
-    .line 812
     .restart local v3    # "flags":I
     .restart local v5    # "multiWindowFlags":I
     .restart local v8    # "type":I
@@ -692,21 +628,18 @@
 
     if-eqz v13, :cond_2
 
-    .line 815
     const-string v13, "MultiWindowConverter"
 
     const-string v15, "Pop up view is blocked by Shared device"
 
     invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 816
     const/4 v9, 0x0
 
     monitor-exit v14
 
     goto :goto_1
 
-    .line 919
     .end local v3    # "flags":I
     .end local v4    # "i":I
     .end local v5    # "multiWindowFlags":I
@@ -723,7 +656,6 @@
 
     throw v13
 
-    .line 820
     .restart local v3    # "flags":I
     .restart local v4    # "i":I
     .restart local v5    # "multiWindowFlags":I
@@ -739,14 +671,12 @@
 
     if-nez v13, :cond_4
 
-    .line 797
     :cond_3
     :goto_2
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_0
 
-    .line 825
     :cond_4
     invoke-virtual {v9}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -758,42 +688,35 @@
 
     if-nez v13, :cond_3
 
-    .line 829
     and-int/lit8 v13, v3, 0x10
 
     if-nez v13, :cond_3
 
-    .line 833
     and-int/lit8 v13, v3, 0x8
 
     if-nez v13, :cond_3
 
-    .line 837
     const/16 v13, 0x82f
 
     if-ne v8, v13, :cond_5
 
-    .line 838
     const/4 v9, 0x0
 
     monitor-exit v14
 
     goto :goto_1
 
-    .line 840
     :cond_5
     const/16 v13, 0x89b
 
     if-ne v8, v13, :cond_6
 
-    .line 841
     const/4 v9, 0x0
 
     monitor-exit v14
 
     goto :goto_1
 
-    .line 844
     :cond_6
     move-object/from16 v0, p0
 
@@ -807,7 +730,6 @@
 
     move-result v2
 
-    .line 845
     .local v2, "canChangeMultiWindowStyle":Z
     iget-boolean v13, v9, Lcom/android/server/wm/WindowState;->mMultiWindowStyleChanging:Z
 
@@ -815,7 +737,6 @@
 
     if-nez v2, :cond_8
 
-    .line 850
     :cond_7
     const-string v13, "MultiWindowConverter"
 
@@ -823,14 +744,13 @@
 
     invoke-static {v13, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 851
     const-string v13, "MultiWindowConverter"
 
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v16, "win.mMultiWindowStyleChanging="
+    const-string v16, "win.mMultiWindowStyleChanging="
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -860,25 +780,21 @@
 
     invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
     const/4 v9, 0x0
 
     monitor-exit v14
 
     goto/16 :goto_1
 
-    .line 858
     :cond_8
     and-int/lit16 v13, v5, 0x80
 
     if-eqz v13, :cond_a
 
-    .line 859
     invoke-virtual {v9}, Lcom/android/server/wm/WindowState;->getStackBounds()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 860
     .local v1, "bound":Landroid/graphics/Rect;
     if-eqz v1, :cond_9
 
@@ -888,13 +804,11 @@
 
     if-eqz v13, :cond_3
 
-    .line 864
     :cond_9
     monitor-exit v14
 
     goto/16 :goto_1
 
-    .line 867
     .end local v1    # "bound":Landroid/graphics/Rect;
     :cond_a
     const/4 v13, 0x2
@@ -905,7 +819,6 @@
 
     if-eq v8, v13, :cond_b
 
-    .line 869
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v13, v13, Landroid/view/WindowManager$LayoutParams;->width:I
@@ -930,14 +843,12 @@
 
     if-gt v8, v13, :cond_3
 
-    .line 873
     const/4 v9, 0x0
 
     monitor-exit v14
 
     goto/16 :goto_1
 
-    .line 878
     :cond_b
     if-eqz p3, :cond_c
 
@@ -951,7 +862,6 @@
 
     if-nez v13, :cond_3
 
-    .line 885
     :cond_c
     invoke-virtual {v9}, Lcom/android/server/wm/WindowState;->isFloating()Z
 
@@ -959,12 +869,10 @@
 
     if-eqz v13, :cond_d
 
-    .line 886
     invoke-virtual {v9}, Lcom/android/server/wm/WindowState;->getStackBounds()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 887
     .restart local v1    # "bound":Landroid/graphics/Rect;
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -982,35 +890,29 @@
 
     if-eqz v13, :cond_3
 
-    .line 889
     move-object v6, v9
 
     goto/16 :goto_2
 
-    .line 892
     .end local v1    # "bound":Landroid/graphics/Rect;
     :cond_d
     if-eqz v6, :cond_f
 
-    .line 893
     iget-object v13, v6, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;
 
     iget-object v15, v9, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;
 
     if-eq v13, v15, :cond_e
 
-    .line 894
     monitor-exit v14
 
     move-object v9, v6
 
     goto/16 :goto_1
 
-    .line 896
     :cond_e
     move-object v6, v9
 
-    .line 900
     :cond_f
     const/4 v13, 0x2
 
@@ -1020,7 +922,6 @@
 
     if-ne v8, v13, :cond_11
 
-    .line 902
     :cond_10
     invoke-virtual {v9}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -1034,30 +935,25 @@
 
     if-eqz v13, :cond_11
 
-    .line 904
     const-string v13, "MultiWindowConverter"
 
     const-string v15, "An activity with OPTION_FULLSCREEN_ONLY doesn\'t support the multi-window"
 
     invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 906
     monitor-exit v14
 
     goto/16 :goto_1
 
-    .line 911
     :cond_11
     invoke-virtual {v9, v7}, Lcom/android/server/wm/WindowState;->getTouchableRegion(Landroid/graphics/Region;)V
 
-    .line 912
     invoke-virtual {v7, v11, v12}, Landroid/graphics/Region;->contains(II)Z
 
     move-result v13
 
     if-eqz v13, :cond_3
 
-    .line 913
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v13, v13, Landroid/view/WindowManager$LayoutParams;->samsungFlags:I
@@ -1068,20 +964,17 @@
 
     if-eqz v13, :cond_12
 
-    .line 914
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHasSubWindow:Z
 
-    .line 916
     :cond_12
     monitor-exit v14
 
     goto/16 :goto_1
 
-    .line 919
     .end local v2    # "canChangeMultiWindowStyle":Z
     .end local v3    # "flags":I
     .end local v5    # "multiWindowFlags":I
@@ -1092,7 +985,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 920
     const/4 v9, 0x0
 
     goto/16 :goto_1
@@ -1105,7 +997,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 422
     :try_start_0
     iget-object v7, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1115,7 +1006,6 @@
 
     move-result-object v6
 
-    .line 423
     .local v6, "pm":Landroid/content/pm/PackageManager;
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -1127,7 +1017,6 @@
 
     move-result-object v5
 
-    .line 424
     .local v5, "parts":[Ljava/lang/String;
     array-length v7, v5
 
@@ -1137,14 +1026,12 @@
 
     move-object v1, v8
 
-    .line 439
     .end local v5    # "parts":[Ljava/lang/String;
     .end local v6    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 426
     .restart local v5    # "parts":[Ljava/lang/String;
     .restart local v6    # "pm":Landroid/content/pm/PackageManager;
     :cond_1
@@ -1152,7 +1039,6 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 427
     .local v3, "i":Landroid/content/Intent;
     new-instance v7, Landroid/content/ComponentName;
 
@@ -1168,14 +1054,12 @@
 
     invoke-virtual {v3, v7}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 428
     const/4 v7, 0x0
 
     invoke-virtual {v6, v3, v7}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v4
 
-    .line 429
     .local v4, "l":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v7, 0x0
 
@@ -1187,7 +1071,6 @@
 
     iget-object v0, v7, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 430
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     iget-object v7, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
@@ -1201,18 +1084,15 @@
 
     move-result-object v1
 
-    .line 431
     .local v1, "appName":Ljava/lang/CharSequence;
     if-nez v1, :cond_0
 
-    .line 432
     const-string v1, ""
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 435
     .end local v0    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v1    # "appName":Ljava/lang/CharSequence;
     .end local v3    # "i":Landroid/content/Intent;
@@ -1222,7 +1102,6 @@
     :catch_0
     move-exception v2
 
-    .line 436
     .local v2, "e":Ljava/lang/Exception;
     const-string v7, "MultiWindowConverter"
 
@@ -1230,7 +1109,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "getApplicationName is error:"
+    const-string v10, "getApplicationName is error:"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1246,12 +1125,10 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 437
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v1, v8
 
-    .line 439
     goto :goto_0
 .end method
 
@@ -1261,7 +1138,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 723
     iget v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
     int-to-float v1, v1
@@ -1280,14 +1156,11 @@
 
     float-to-int v0, v1
 
-    .line 724
     .local v0, "limitHeight":I
     if-ge p2, v0, :cond_0
 
-    .line 725
     const/4 v1, 0x1
 
-    .line 727
     :goto_0
     return v1
 
@@ -1307,22 +1180,17 @@
 
     const/4 v4, 0x1
 
-    .line 731
     const v0, 0x3e051eb8    # 0.13f
 
-    .line 732
     .local v0, "dh":F
     const v2, 0x3e3851ec    # 0.18f
 
-    .line 733
     .local v2, "dv":F
     const v1, 0x3e570a3d    # 0.21f
 
-    .line 734
     .local v1, "dht":F
     const v3, 0x3db851ec    # 0.09f
 
-    .line 736
     .local v3, "dvt":F
     iget v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
@@ -1330,32 +1198,25 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 737
     const v0, 0x3db851ec    # 0.09f
 
-    .line 738
     const v2, 0x3e570a3d    # 0.21f
 
-    .line 739
     const v1, 0x3e3851ec    # 0.18f
 
-    .line 740
     const v3, 0x3e051eb8    # 0.13f
 
-    .line 743
     :cond_0
     iget v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeFlag:I
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 766
     :cond_1
     const/4 v4, 0x0
 
     :goto_0
     return v4
 
-    .line 745
     :sswitch_0
     iget v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1377,7 +1238,6 @@
 
     if-le p2, v5, :cond_2
 
-    .line 746
     const-string v5, "MultiWindowConverter"
 
     const-string v6, "MultiWindow changing is blocked by terminative area"
@@ -1386,7 +1246,6 @@
 
     goto :goto_0
 
-    .line 749
     :cond_2
     iget v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1408,7 +1267,6 @@
 
     if-ge p2, v5, :cond_1
 
-    .line 750
     const-string v5, "MultiWindowConverter"
 
     const-string v6, "MultiWindow changing is blocked by terminative area"
@@ -1417,7 +1275,6 @@
 
     goto :goto_0
 
-    .line 756
     :sswitch_1
     iget v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1441,7 +1298,6 @@
 
     if-le p2, v5, :cond_3
 
-    .line 757
     const-string v5, "MultiWindowConverter"
 
     const-string v6, "MultiWindow changing is blocked by terminative area"
@@ -1450,7 +1306,6 @@
 
     goto :goto_0
 
-    .line 760
     :cond_3
     iget v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1474,7 +1329,6 @@
 
     if-ge p2, v5, :cond_1
 
-    .line 761
     const-string v5, "MultiWindowConverter"
 
     const-string v6, "MultiWindow changing is blocked by terminative area"
@@ -1483,7 +1337,6 @@
 
     goto :goto_0
 
-    .line 743
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_0
@@ -1499,14 +1352,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 770
     const v0, 0x3d8f5c29    # 0.07f
 
-    .line 771
     .local v0, "dh":F
     const v1, 0x3d4ccccd    # 0.05f
 
-    .line 772
     .local v1, "dv":F
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
@@ -1514,13 +1364,10 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 773
     const v0, 0x3d4ccccd    # 0.05f
 
-    .line 774
     const v1, 0x3d8f5c29    # 0.07f
 
-    .line 776
     :cond_0
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
@@ -1530,16 +1377,13 @@
 
     float-to-int v2, v4
 
-    .line 777
     .local v2, "limitHeight":I
     if-ge p2, v2, :cond_2
 
-    .line 783
     :cond_1
     :goto_0
     return v3
 
-    .line 780
     :cond_2
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mLastX:I
 
@@ -1559,7 +1403,6 @@
 
     if-lt v4, v5, :cond_1
 
-    .line 783
     const/4 v3, 0x1
 
     goto :goto_0
@@ -1570,7 +1413,6 @@
     .param p1, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 345
     iget-object v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v5}, Lcom/android/server/wm/WindowManagerService;->getDefaultDisplayContentLocked()Lcom/android/server/wm/DisplayContent;
@@ -1581,7 +1423,6 @@
 
     move-result-object v0
 
-    .line 346
     .local v0, "di":Landroid/view/DisplayInfo;
     iget v5, v0, Landroid/view/DisplayInfo;->rotation:I
 
@@ -1589,7 +1430,6 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 347
     iget v5, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     iget v6, v0, Landroid/view/DisplayInfo;->appWidth:I
@@ -1604,18 +1444,15 @@
 
     invoke-virtual {p1, v5, v6}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 356
     :cond_0
     :goto_0
     return-void
 
-    .line 348
     :cond_1
     iget-boolean v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHasSubWindow:Z
 
     if-eqz v5, :cond_0
 
-    .line 349
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v5
@@ -1628,7 +1465,6 @@
 
     div-float v1, v5, v6
 
-    .line 350
     .local v1, "hScale":F
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
@@ -1642,7 +1478,6 @@
 
     div-float v4, v5, v6
 
-    .line 351
     .local v4, "vScale":F
     iget v5, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
@@ -1656,7 +1491,6 @@
 
     float-to-int v2, v5
 
-    .line 352
     .local v2, "offsetX":I
     iget v5, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
@@ -1670,7 +1504,6 @@
 
     float-to-int v3, v5
 
-    .line 354
     .local v3, "offsetY":I
     neg-int v5, v2
 
@@ -1687,32 +1520,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 388
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/ui/GuideView;->init()V
 
-    .line 389
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 390
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeFlag:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 398
     :goto_0
     return-void
 
-    .line 392
     :sswitch_0
     invoke-direct {p0, v1, v1}, Lcom/android/server/wm/MultiWindowPointerEventListener;->showGuide(II)V
 
     goto :goto_0
 
-    .line 395
     :sswitch_1
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1720,7 +1547,6 @@
 
     goto :goto_0
 
-    .line 390
     nop
 
     :sswitch_data_0
@@ -1738,18 +1564,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 635
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
     sub-int v2, v4, p1
 
-    .line 636
     .local v2, "width":I
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
     sub-int v0, v4, p2
 
-    .line 637
     .local v0, "height":I
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
@@ -1759,7 +1582,6 @@
 
     const/4 v1, 0x1
 
-    .line 641
     .local v1, "isLandscape":Z
     :goto_0
     iget-boolean v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSplitWindow:Z
@@ -1768,40 +1590,33 @@
 
     if-nez p2, :cond_0
 
-    .line 642
     if-nez v1, :cond_3
 
-    .line 643
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mCenterBarPoint:Landroid/graphics/Point;
 
     iget v0, v4, Landroid/graphics/Point;->y:I
 
-    .line 653
     :cond_0
     :goto_1
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHandler:Landroid/os/Handler;
 
     if-nez v4, :cond_1
 
-    .line 654
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHandler:Landroid/os/Handler;
 
-    .line 656
     :cond_1
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v4}, Lcom/samsung/android/multiwindow/ui/GuideView;->init()V
 
-    .line 658
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeFlag:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 671
     :goto_2
     return-void
 
@@ -1809,22 +1624,18 @@
     :cond_2
     move v1, v3
 
-    .line 637
     goto :goto_0
 
-    .line 645
     .restart local v1    # "isLandscape":Z
     :cond_3
     if-nez p1, :cond_4
 
-    .line 646
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mCenterBarPoint:Landroid/graphics/Point;
 
     iget v2, v4, Landroid/graphics/Point;->x:I
 
     goto :goto_1
 
-    .line 648
     :cond_4
     iget v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1836,7 +1647,6 @@
 
     goto :goto_1
 
-    .line 660
     :sswitch_0
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
@@ -1844,7 +1654,6 @@
 
     goto :goto_2
 
-    .line 663
     :sswitch_1
     iget-boolean v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSplitWindow:Z
 
@@ -1854,7 +1663,6 @@
 
     if-nez p2, :cond_5
 
-    .line 665
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v5, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mCenterBarPoint:Landroid/graphics/Point;
@@ -1873,7 +1681,6 @@
 
     goto :goto_2
 
-    .line 667
     :cond_5
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
@@ -1881,7 +1688,6 @@
 
     goto :goto_2
 
-    .line 658
     nop
 
     :sswitch_data_0
@@ -1897,14 +1703,11 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 674
     iget v2, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mSelectiveOrientationWidth:I
 
-    .line 675
     .local v2, "width":I
     iget v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mSelectiveOrientationHeight:I
 
-    .line 676
     .local v0, "height":I
     iget v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
@@ -1914,7 +1717,6 @@
 
     const/4 v1, 0x1
 
-    .line 680
     .local v1, "isLandscape":Z
     :goto_0
     iget-boolean v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSplitWindow:Z
@@ -1923,63 +1725,52 @@
 
     if-nez p2, :cond_0
 
-    .line 681
     if-nez v1, :cond_3
 
-    .line 682
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mCenterBarPoint:Landroid/graphics/Point;
 
     iget v0, v3, Landroid/graphics/Point;->y:I
 
-    .line 692
     :cond_0
     :goto_1
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHandler:Landroid/os/Handler;
 
     if-nez v3, :cond_1
 
-    .line 693
     new-instance v3, Landroid/os/Handler;
 
     invoke-direct {v3}, Landroid/os/Handler;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHandler:Landroid/os/Handler;
 
-    .line 695
     :cond_1
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v3}, Lcom/samsung/android/multiwindow/ui/GuideView;->init()V
 
-    .line 696
     iget v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeFlag:I
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 704
     :goto_2
     return-void
 
-    .line 676
     .end local v1    # "isLandscape":Z
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 684
     .restart local v1    # "isLandscape":Z
     :cond_3
     if-nez p1, :cond_4
 
-    .line 685
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mCenterBarPoint:Landroid/graphics/Point;
 
     iget v2, v3, Landroid/graphics/Point;->x:I
 
     goto :goto_1
 
-    .line 687
     :cond_4
     iget v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
@@ -1991,7 +1782,6 @@
 
     goto :goto_1
 
-    .line 698
     :sswitch_0
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
@@ -1999,7 +1789,6 @@
 
     goto :goto_2
 
-    .line 701
     :sswitch_1
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
@@ -2009,7 +1798,6 @@
 
     goto :goto_2
 
-    .line 696
     nop
 
     :sswitch_data_0
@@ -2030,21 +1818,17 @@
 
     const/4 v2, 0x0
 
-    .line 443
     if-nez p1, :cond_1
 
-    .line 455
     :cond_0
     :goto_0
     return v2
 
-    .line 446
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 447
     .local v0, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     const/high16 v4, 0x1000000
 
@@ -2071,7 +1855,6 @@
     :cond_2
     move v1, v3
 
-    .line 451
     .local v1, "notSupport":Z
     :goto_1
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isCascade()Z
@@ -2099,14 +1882,12 @@
     :cond_3
     move v2, v3
 
-    .line 455
     goto :goto_0
 
     .end local v1    # "notSupport":Z
     :cond_4
     move v1, v2
 
-    .line 447
     goto :goto_1
 .end method
 
@@ -2117,10 +1898,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 360
     if-nez p1, :cond_2
 
-    .line 361
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/ui/GuideView;->getGuideViewAttached()Z
@@ -2129,25 +1908,22 @@
 
     if-nez v0, :cond_1
 
-    .line 385
     :cond_0
     :goto_0
     return-void
 
-    .line 365
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mForceDismissGuide:Z
 
-    .line 366
     const-string v0, "MultiWindowConverter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "dismissGuide() : to dissmis guide by WindowManagerService while relayouting window, mForceDismissGuide : "
+    const-string v2, "dismissGuide() : to dissmis guide by WindowManagerService while relayouting window, mForceDismissGuide : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2165,12 +1941,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 369
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/MultiWindowPointerEventListener$1;
@@ -2181,19 +1955,15 @@
 
     goto :goto_0
 
-    .line 380
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/ui/GuideView;->dismiss()V
 
-    .line 381
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 382
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMoved:Z
 
-    .line 383
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mValidMotion:Z
 
     goto :goto_0
@@ -2207,7 +1977,6 @@
 
     const/high16 v5, 0x447a0000    # 1000.0f
 
-    .line 139
     new-instance v1, Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -2226,14 +1995,12 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
-    .line 140
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     const/16 v2, 0x10
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/multiwindow/ui/GuideView;->setMultiWindowFlags(I)V
 
-    .line 141
     new-instance v1, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -2244,12 +2011,11 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeDetector:Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;
 
-    .line 142
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "vibrator"
+    const-string v2, "vibrator"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2259,7 +2025,6 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -2280,7 +2045,6 @@
 
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMinScale:F
 
-    .line 144
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -2301,12 +2065,10 @@
 
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMaxScale:F
 
-    .line 146
     sget-boolean v1, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SELECTIVE1ORIENTATION_ENABLED:Z
 
     if-eqz v1, :cond_0
 
-    .line 147
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -2323,7 +2085,6 @@
 
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mContorllerBoundaryY:I
 
-    .line 148
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -2338,7 +2099,6 @@
 
     move-result-object v0
 
-    .line 149
     .local v0, "drw":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_1
 
@@ -2349,7 +2109,6 @@
     :goto_0
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mControllerHeight:I
 
-    .line 150
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -2366,12 +2125,10 @@
 
     iput v1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mStatusBarHeight:I
 
-    .line 152
     .end local v0    # "drw":Landroid/graphics/drawable/Drawable;
     :cond_0
     return-void
 
-    .line 149
     .restart local v0    # "drw":Landroid/graphics/drawable/Drawable;
     :cond_1
     const/4 v1, 0x0
@@ -2383,7 +2140,6 @@
     .locals 1
 
     .prologue
-    .line 787
     iget-boolean v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mValidMotion:Z
 
     return v0
@@ -2394,18 +2150,15 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 164
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v13
 
     and-int/lit16 v1, v13, 0xff
 
-    .line 167
     .local v1, "action":I
     if-nez v1, :cond_0
 
-    .line 168
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -2414,7 +2167,6 @@
 
     move-result-object v5
 
-    .line 169
     .local v5, "dInfo":Landroid/view/DisplayInfo;
     move-object/from16 v0, p0
 
@@ -2428,21 +2180,18 @@
 
     if-nez v13, :cond_2
 
-    .line 170
     iget v13, v5, Landroid/view/DisplayInfo;->logicalWidth:I
 
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
-    .line 171
     iget v13, v5, Landroid/view/DisplayInfo;->logicalHeight:I
 
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
-    .line 179
     .end local v5    # "dInfo":Landroid/view/DisplayInfo;
     :cond_0
     :goto_0
@@ -2458,12 +2207,10 @@
 
     if-nez v13, :cond_3
 
-    .line 341
     :cond_1
     :goto_1
     return-void
 
-    .line 173
     .restart local v5    # "dInfo":Landroid/view/DisplayInfo;
     :cond_2
     iget v13, v5, Landroid/view/DisplayInfo;->appWidth:I
@@ -2472,7 +2219,6 @@
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
 
-    .line 174
     iget v13, v5, Landroid/view/DisplayInfo;->appHeight:I
 
     move-object/from16 v0, p0
@@ -2481,7 +2227,6 @@
 
     goto :goto_0
 
-    .line 184
     .end local v5    # "dInfo":Landroid/view/DisplayInfo;
     :cond_3
     move-object/from16 v0, p0
@@ -2496,7 +2241,6 @@
 
     if-nez v13, :cond_1
 
-    .line 189
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mForceDismissGuide:Z
@@ -2509,18 +2253,16 @@
 
     if-ne v1, v13, :cond_6
 
-    .line 191
     :cond_4
     if-nez v1, :cond_5
 
-    .line 192
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "onPointerEvent() ACTION_DOWN, mForceDismissGuide : "
+    const-string v15, "onPointerEvent() ACTION_DOWN, mForceDismissGuide : "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2542,20 +2284,18 @@
 
     goto :goto_1
 
-    .line 193
     :cond_5
     const/4 v13, 0x2
 
     if-ne v1, v13, :cond_1
 
-    .line 194
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "onPointerEvent() ACTION_MOVE, mForceDismissGuide : "
+    const-string v15, "onPointerEvent() ACTION_MOVE, mForceDismissGuide : "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2577,13 +2317,11 @@
 
     goto :goto_1
 
-    .line 200
     :cond_6
     packed-switch v1, :pswitch_data_0
 
     goto :goto_1
 
-    .line 202
     :pswitch_0
     const/4 v13, 0x0
 
@@ -2591,7 +2329,6 @@
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mTerminate:Z
 
-    .line 203
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
@@ -2610,7 +2347,6 @@
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenRatio:F
 
-    .line 204
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v13
@@ -2621,7 +2357,6 @@
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mLastX:I
 
-    .line 205
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v13
@@ -2632,21 +2367,18 @@
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mLastY:I
 
-    .line 206
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMoved:Z
 
-    .line 207
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mValidMotion:Z
 
-    .line 208
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mLastX:I
@@ -2678,7 +2410,6 @@
 
     invoke-virtual {v0, v13}, Lcom/android/server/wm/MultiWindowPointerEventListener;->startResizing(Lcom/android/server/wm/WindowState;)Z
 
-    .line 209
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
@@ -2693,7 +2424,6 @@
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeFlag:I
 
-    .line 210
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -2764,13 +2494,11 @@
 
     goto/16 :goto_1
 
-    .line 208
     :cond_7
     const/4 v13, 0x0
 
     goto :goto_2
 
-    .line 214
     :pswitch_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2778,7 +2506,6 @@
 
     float-to-int v11, v13
 
-    .line 215
     .local v11, "x":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -2786,7 +2513,6 @@
 
     float-to-int v12, v13
 
-    .line 217
     .local v12, "y":I
     move-object/from16 v0, p0
 
@@ -2820,7 +2546,6 @@
 
     if-le v13, v14, :cond_1
 
-    .line 218
     :cond_8
     move-object/from16 v0, p0
 
@@ -2846,7 +2571,6 @@
 
     if-nez v13, :cond_1
 
-    .line 221
     :cond_9
     move-object/from16 v0, p0
 
@@ -2866,7 +2590,6 @@
 
     if-eqz v13, :cond_1
 
-    .line 224
     :cond_a
     move-object/from16 v0, p0
 
@@ -2888,7 +2611,6 @@
 
     if-nez v13, :cond_1
 
-    .line 229
     :cond_b
     move-object/from16 v0, p0
 
@@ -2896,7 +2618,6 @@
 
     if-nez v13, :cond_10
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mVibrator:Landroid/os/SystemVibrator;
@@ -2907,7 +2628,6 @@
 
     if-eqz v13, :cond_c
 
-    .line 231
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mVibrator:Landroid/os/SystemVibrator;
@@ -2922,11 +2642,9 @@
 
     invoke-virtual/range {v13 .. v17}, Landroid/os/SystemVibrator;->vibrate(IILandroid/media/AudioAttributes;Landroid/os/Vibrator$MagnitudeTypes;)V
 
-    .line 233
     :cond_c
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wm/MultiWindowPointerEventListener;->showFullScreenGuide()V
 
-    .line 234
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
@@ -2943,7 +2661,6 @@
 
     if-ne v13, v14, :cond_e
 
-    .line 236
     :cond_d
     new-instance v4, Landroid/view/ContextThemeWrapper;
 
@@ -2957,7 +2674,6 @@
 
     invoke-direct {v4, v13, v14}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 237
     .local v4, "context":Landroid/content/Context;
     move-object/from16 v0, p0
 
@@ -2965,18 +2681,15 @@
 
     packed-switch v13, :pswitch_data_1
 
-    .line 247
     :goto_3
     sget-object v13, Lcom/android/server/wm/MultiWindowPointerEventListener;->toastAlert:Landroid/widget/Toast;
 
     invoke-virtual {v13}, Landroid/widget/Toast;->setShowForAllUsers()V
 
-    .line 248
     sget-object v13, Lcom/android/server/wm/MultiWindowPointerEventListener;->toastAlert:Landroid/widget/Toast;
 
     invoke-virtual {v13}, Landroid/widget/Toast;->show()V
 
-    .line 249
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3003,7 +2716,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
@@ -3012,7 +2724,6 @@
 
     goto/16 :goto_1
 
-    .line 239
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -3040,7 +2751,6 @@
 
     goto :goto_3
 
-    .line 243
     :pswitch_3
     move-object/from16 v0, p0
 
@@ -3068,7 +2778,6 @@
 
     goto :goto_3
 
-    .line 254
     .end local v4    # "context":Landroid/content/Context;
     :cond_e
     invoke-static {}, Lcom/android/server/am/MultiWindowFacadeService;->self()Lcom/android/server/am/MultiWindowFacadeService;
@@ -3081,7 +2790,6 @@
 
     if-nez v13, :cond_f
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -3090,7 +2798,6 @@
 
     invoke-virtual {v13, v14}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 256
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
@@ -3099,7 +2806,6 @@
 
     goto/16 :goto_1
 
-    .line 259
     :cond_f
     const/4 v13, 0x1
 
@@ -3109,7 +2815,6 @@
 
     goto/16 :goto_1
 
-    .line 263
     :cond_10
     move-object/from16 v0, p0
 
@@ -3119,10 +2824,8 @@
 
     if-eqz v13, :cond_11
 
-    .line 264
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wm/MultiWindowPointerEventListener;->showFullScreenGuide()V
 
-    .line 265
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
@@ -3131,7 +2834,6 @@
 
     goto/16 :goto_1
 
-    .line 269
     :cond_11
     sget-boolean v13, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SELECTIVE1ORIENTATION_ENABLED:Z
 
@@ -3143,21 +2845,18 @@
 
     if-eqz v13, :cond_12
 
-    .line 270
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMoved:Z
 
-    .line 271
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11, v12}, Lcom/android/server/wm/MultiWindowPointerEventListener;->showMovingGuide(II)V
 
     goto/16 :goto_1
 
-    .line 275
     :cond_12
     const/4 v13, 0x1
 
@@ -3165,14 +2864,12 @@
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mMoved:Z
 
-    .line 276
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11, v12}, Lcom/android/server/wm/MultiWindowPointerEventListener;->calcPosY(II)I
 
     move-result v3
 
-    .line 277
     .local v3, "adjustY":I
     move-object/from16 v0, p0
 
@@ -3180,7 +2877,6 @@
 
     move-result v2
 
-    .line 278
     .local v2, "adjustX":I
     if-eq v3, v12, :cond_13
 
@@ -3208,7 +2904,6 @@
 
     if-lt v3, v13, :cond_13
 
-    .line 279
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -3217,7 +2912,6 @@
 
     invoke-virtual {v13, v14}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 283
     :goto_4
     move-object/from16 v0, p0
 
@@ -3225,7 +2919,6 @@
 
     goto/16 :goto_1
 
-    .line 281
     :cond_13
     move-object/from16 v0, p0
 
@@ -3237,7 +2930,6 @@
 
     goto :goto_4
 
-    .line 287
     .end local v2    # "adjustX":I
     .end local v3    # "adjustY":I
     .end local v11    # "x":I
@@ -3249,14 +2941,12 @@
 
     if-eqz v13, :cond_19
 
-    .line 288
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v13}, Lcom/android/server/wm/MultiWindowPointerEventListener;->dismissGuide(Z)V
 
-    .line 289
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mVibrator:Landroid/os/SystemVibrator;
@@ -3267,7 +2957,6 @@
 
     if-eqz v13, :cond_14
 
-    .line 290
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mVibrator:Landroid/os/SystemVibrator;
@@ -3282,7 +2971,6 @@
 
     invoke-virtual/range {v13 .. v17}, Landroid/os/SystemVibrator;->vibrate(IILandroid/media/AudioAttributes;Landroid/os/Vibrator$MagnitudeTypes;)V
 
-    .line 292
     :cond_14
     new-instance v7, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -3290,7 +2978,6 @@
 
     invoke-direct {v7, v13}, Lcom/samsung/android/multiwindow/MultiWindowStyle;-><init>(I)V
 
-    .line 294
     .local v7, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     new-instance v8, Landroid/graphics/Rect;
 
@@ -3304,7 +2991,6 @@
 
     invoke-direct {v8, v13}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 297
     .local v8, "tmpRect":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -3318,12 +3004,10 @@
 
     if-eqz v13, :cond_15
 
-    .line 298
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/android/server/wm/MultiWindowPointerEventListener;->setStackBoundOffset(Landroid/graphics/Rect;)V
 
-    .line 302
     :cond_15
     sget-boolean v13, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SELECTIVE1ORIENTATION_ENABLED:Z
 
@@ -3335,12 +3019,10 @@
 
     if-eqz v13, :cond_16
 
-    .line 303
     new-instance v9, Landroid/graphics/Rect;
 
     invoke-direct {v9}, Landroid/graphics/Rect;-><init>()V
 
-    .line 304
     .local v9, "tmpScreen":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -3348,7 +3030,6 @@
 
     invoke-virtual {v13, v9}, Lcom/android/server/wm/DisplayContent;->getLogicalDisplayRect(Landroid/graphics/Rect;)V
 
-    .line 305
     invoke-virtual {v9}, Landroid/graphics/Rect;->width()I
 
     move-result v13
@@ -3361,26 +3042,22 @@
 
     invoke-direct {v0, v8, v13, v14}, Lcom/android/server/wm/MultiWindowPointerEventListener;->adjustFloatingStackBound(Landroid/graphics/Rect;II)V
 
-    .line 308
     .end local v9    # "tmpScreen":Landroid/graphics/Rect;
     :cond_16
     invoke-virtual {v7, v8}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 309
     const/4 v13, 0x2
 
     const/4 v14, 0x1
 
     invoke-virtual {v7, v13, v14}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 310
     const/16 v13, 0x800
 
     const/4 v14, 0x1
 
     invoke-virtual {v7, v13, v14}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 311
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -3391,7 +3068,6 @@
 
     invoke-virtual {v13, v14, v7}, Lcom/android/server/wm/WindowManagerService;->changeMultiWindowStyle(Lcom/android/server/wm/AppWindowToken;Lcom/samsung/android/multiwindow/MultiWindowStyle;)Z
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsRunningTask:Z
@@ -3406,7 +3082,6 @@
 
     if-eq v13, v14, :cond_17
 
-    .line 315
     invoke-static {}, Lcom/android/server/am/MultiWindowFacadeService;->self()Lcom/android/server/am/MultiWindowFacadeService;
 
     move-result-object v13
@@ -3423,14 +3098,13 @@
 
     invoke-virtual {v13, v14, v15, v0, v7}, Lcom/android/server/am/MultiWindowFacadeService;->moveOnlySpecificTaskToFront(ILandroid/os/Bundle;ILcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 316
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "moveOnlySpecificTaskToFront - style: "
+    const-string v15, "moveOnlySpecificTaskToFront - style: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3460,25 +3134,21 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsRunningTask:Z
 
-    .line 318
     const/4 v13, -0x1
 
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mTaskId:I
 
-    .line 321
     :cond_17
     const/4 v6, 0x0
 
-    .line 322
     .local v6, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3486,7 +3156,6 @@
 
     if-eqz v13, :cond_18
 
-    .line 323
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mAppToken:Lcom/android/server/wm/AppWindowToken;
@@ -3495,16 +3164,13 @@
 
     move-result-object v10
 
-    .line 324
     .local v10, "w":Lcom/android/server/wm/WindowState;
     if-eqz v10, :cond_18
 
-    .line 325
     invoke-virtual {v10}, Lcom/android/server/wm/WindowState;->getOwningPackage()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 328
     .end local v10    # "w":Lcom/android/server/wm/WindowState;
     :cond_18
     move-object/from16 v0, p0
@@ -3517,7 +3183,6 @@
 
     invoke-static {v13, v14, v6}, Lcom/samsung/android/multiwindow/MultiWindowLoggingHelper;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3562,7 +3227,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     .end local v6    # "packageName":Ljava/lang/String;
     .end local v7    # "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     .end local v8    # "tmpRect":Landroid/graphics/Rect;
@@ -3574,35 +3238,30 @@
 
     invoke-virtual {v0, v13}, Lcom/android/server/wm/MultiWindowPointerEventListener;->dismissGuide(Z)V
 
-    .line 334
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mWasTargetChecked:Z
 
-    .line 335
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSplitWindow:Z
 
-    .line 336
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mHasSubWindow:Z
 
-    .line 337
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mForceDismissGuide:Z
 
-    .line 338
     const-string v13, "MultiWindowConverter"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3631,7 +3290,6 @@
 
     goto/16 :goto_1
 
-    .line 200
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3640,7 +3298,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 237
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_2
@@ -3652,12 +3309,10 @@
     .locals 1
 
     .prologue
-    .line 924
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mEdgeDetector:Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->showMultiWindowGestureHelp()V
 
-    .line 925
     return-void
 .end method
 
@@ -3666,17 +3321,14 @@
     .param p1, "win"    # Lcom/android/server/wm/WindowState;
 
     .prologue
-    .line 459
     if-nez p1, :cond_0
 
-    .line 460
     const-string v21, "MultiWindowConverter"
 
     const-string v22, "The top window does not support multi-window"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -3685,20 +3337,16 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 462
     const/16 v21, 0x0
 
-    .line 631
     :goto_0
     return v21
 
-    .line 465
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getStack()Lcom/android/server/wm/TaskStack;
 
     move-result-object v16
 
-    .line 466
     .local v16, "stack":Lcom/android/server/wm/TaskStack;
     const/16 v21, 0x0
 
@@ -3708,14 +3356,11 @@
 
     iput-object v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mApplicationName:Ljava/lang/CharSequence;
 
-    .line 469
     const/16 v18, 0x0
 
-    .line 470
     .local v18, "taskOfThisWindow":Lcom/android/server/wm/Task;
     if-eqz v16, :cond_1
 
-    .line 471
     invoke-virtual/range {v16 .. v16}, Lcom/android/server/wm/TaskStack;->getTasks()Ljava/util/ArrayList;
 
     move-result-object v21
@@ -3737,7 +3382,6 @@
     .end local v18    # "taskOfThisWindow":Lcom/android/server/wm/Task;
     check-cast v18, Lcom/android/server/wm/Task;
 
-    .line 473
     .restart local v18    # "taskOfThisWindow":Lcom/android/server/wm/Task;
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -3777,7 +3421,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 475
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -3788,7 +3431,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 476
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -3799,7 +3441,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 477
     const/16 v21, 0x3
 
     move/from16 v0, v21
@@ -3808,7 +3449,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 479
     const-string v21, "MultiWindowConverter"
 
     new-instance v22, Ljava/lang/StringBuilder;
@@ -3835,12 +3475,10 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 485
     :cond_1
     if-eqz v16, :cond_2
 
@@ -3852,7 +3490,6 @@
 
     if-nez v21, :cond_2
 
-    .line 486
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -3861,19 +3498,16 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 487
     const-string v21, "MultiWindowConverter"
 
     const-string v22, "MultiWindow Gesture is not supported with launcher"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 491
     :cond_2
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -3887,7 +3521,6 @@
 
     if-eqz v21, :cond_3
 
-    .line 492
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -3896,19 +3529,16 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 493
     const-string v21, "MultiWindowConverter"
 
     const-string v22, "MultiWindow Gesture is not supported with recents multi window"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 496
     :cond_3
     move-object/from16 v0, p0
 
@@ -3924,7 +3554,6 @@
 
     monitor-enter v22
 
-    .line 497
     :try_start_0
     move-object/from16 v0, p0
 
@@ -3936,7 +3565,6 @@
 
     move-result-object v19
 
-    .line 498
     .local v19, "windows":Lcom/android/server/wm/WindowList;
     invoke-virtual/range {v19 .. v19}, Lcom/android/server/wm/WindowList;->size()I
 
@@ -3948,7 +3576,6 @@
     :goto_1
     if-ltz v9, :cond_5
 
-    .line 499
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v9}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
@@ -3957,7 +3584,6 @@
 
     check-cast v20, Lcom/android/server/wm/WindowState;
 
-    .line 500
     .local v20, "ws":Lcom/android/server/wm/WindowState;
     invoke-virtual/range {v20 .. v20}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -3981,7 +3607,6 @@
 
     if-eqz v21, :cond_4
 
-    .line 502
     const-string v21, "MultiWindowConverter"
 
     const-string v23, "MultiWindow Gesture is not supported with recents multi window"
@@ -3992,14 +3617,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     const/16 v21, 0x0
 
     monitor-exit v22
 
     goto/16 :goto_0
 
-    .line 506
     .end local v9    # "i":I
     .end local v19    # "windows":Lcom/android/server/wm/WindowList;
     .end local v20    # "ws":Lcom/android/server/wm/WindowState;
@@ -4012,7 +3635,6 @@
 
     throw v21
 
-    .line 498
     .restart local v9    # "i":I
     .restart local v19    # "windows":Lcom/android/server/wm/WindowList;
     .restart local v20    # "ws":Lcom/android/server/wm/WindowState;
@@ -4021,7 +3643,6 @@
 
     goto :goto_1
 
-    .line 506
     .end local v20    # "ws":Lcom/android/server/wm/WindowState;
     :cond_5
     :try_start_1
@@ -4029,7 +3650,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 509
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v21
@@ -4050,7 +3670,6 @@
 
     const/4 v8, 0x1
 
-    .line 510
     .local v8, "hasDisableFlag":Z
     :goto_2
     move-object/from16 v0, p0
@@ -4067,14 +3686,12 @@
 
     const/4 v10, 0x1
 
-    .line 512
     .local v10, "isCoverClosed":Z
     :goto_3
     if-nez v8, :cond_6
 
     if-eqz v10, :cond_a
 
-    .line 513
     :cond_6
     move-object/from16 v0, p0
 
@@ -4086,7 +3703,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 514
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4097,7 +3713,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 515
     const/16 v21, 0x3
 
     move/from16 v0, v21
@@ -4106,7 +3721,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 516
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->SAFE_DEBUG:Z
@@ -4115,14 +3729,13 @@
 
     if-eqz v21, :cond_7
 
-    .line 517
     const-string v21, "MultiWindowConverter"
 
     new-instance v22, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v22 .. v22}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v23, "failed to change floating style, win="
+    const-string v23, "failed to change floating style, win="
 
     invoke-virtual/range {v22 .. v23}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4166,13 +3779,11 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 520
     :cond_7
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 509
     .end local v8    # "hasDisableFlag":Z
     .end local v10    # "isCoverClosed":Z
     :cond_8
@@ -4180,31 +3791,25 @@
 
     goto :goto_2
 
-    .line 510
     .restart local v8    # "hasDisableFlag":Z
     :cond_9
     const/4 v10, 0x0
 
     goto :goto_3
 
-    .line 523
     .restart local v10    # "isCoverClosed":Z
     :cond_a
     const/4 v4, 0x0
 
-    .line 524
     .local v4, "currentTask":Lcom/android/server/wm/Task;
     const/4 v11, 0x0
 
-    .line 525
     .local v11, "mainWindowTitle":Ljava/lang/CharSequence;
     const/4 v5, 0x0
 
-    .line 527
     .local v5, "currentTaskInfo":Ljava/lang/String;
     if-eqz v16, :cond_b
 
-    .line 528
     :try_start_2
     invoke-virtual/range {v16 .. v16}, Lcom/android/server/wm/TaskStack;->getTasks()Ljava/util/ArrayList;
 
@@ -4230,12 +3835,10 @@
 
     move-object v4, v0
 
-    .line 529
     invoke-virtual {v4}, Lcom/android/server/wm/Task;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 530
     iget-object v0, v4, Lcom/android/server/wm/Task;->mAppTokens:Lcom/android/server/wm/AppTokenList;
 
     move-object/from16 v21, v0
@@ -4268,7 +3871,6 @@
 
     move-result-object v11
 
-    .line 541
     :goto_4
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -4284,7 +3886,6 @@
 
     if-eqz v21, :cond_c
 
-    .line 542
     invoke-interface {v11}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v21
@@ -4295,7 +3896,6 @@
 
     move-result-object v14
 
-    .line 543
     .local v14, "parts":[Ljava/lang/String;
     if-eqz v14, :cond_c
 
@@ -4337,7 +3937,6 @@
 
     if-eqz v21, :cond_c
 
-    .line 544
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4348,7 +3947,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 545
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4359,7 +3957,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 546
     const/16 v21, 0x3
 
     move/from16 v0, v21
@@ -4368,19 +3965,16 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 547
     const-string v21, "MultiWindowConverter"
 
     const-string v22, "MultiWindow Gesture is not supported with DISABLE_TRAY_BAR"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 548
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 532
     .end local v14    # "parts":[Ljava/lang/String;
     :cond_b
     :try_start_3
@@ -4396,11 +3990,9 @@
 
     goto :goto_4
 
-    .line 534
     :catch_0
     move-exception v7
 
-    .line 535
     .local v7, "e":Ljava/lang/Exception;
     const-string v21, "TAG"
 
@@ -4408,7 +4000,7 @@
 
     invoke-direct/range {v22 .. v22}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v23, "mainWindowTitle is error:"
+    const-string v23, "mainWindowTitle is error:"
 
     invoke-virtual/range {v22 .. v23}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4426,10 +4018,8 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 537
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v21
@@ -4440,14 +4030,12 @@
 
     goto/16 :goto_4
 
-    .line 552
     .end local v7    # "e":Ljava/lang/Exception;
     :cond_c
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v12
 
-    .line 553
     .local v12, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     const/high16 v21, 0x1000000
 
@@ -4508,7 +4096,6 @@
     :cond_d
     const/4 v13, 0x1
 
-    .line 558
     .local v13, "notSupport":Z
     :goto_5
     invoke-virtual {v12}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
@@ -4523,7 +4110,6 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 559
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -4532,7 +4118,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSplitWindow:Z
 
-    .line 560
     new-instance v21, Landroid/graphics/Point;
 
     invoke-static {}, Lcom/android/server/am/MultiWindowFacadeService;->self()Lcom/android/server/am/MultiWindowFacadeService;
@@ -4553,11 +4138,9 @@
 
     iput-object v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mCenterBarPoint:Landroid/graphics/Point;
 
-    .line 563
     :cond_e
     if-eqz v13, :cond_10
 
-    .line 564
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4568,7 +4151,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 565
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4579,7 +4161,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 566
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/android/server/wm/MultiWindowPointerEventListener;->getApplicationName(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -4592,7 +4173,6 @@
 
     iput-object v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mApplicationName:Ljava/lang/CharSequence;
 
-    .line 567
     const/16 v21, 0x2
 
     move/from16 v0, v21
@@ -4601,26 +4181,22 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 569
     const-string v21, "MultiWindowConverter"
 
     const-string v22, "This application or window do not support multiwindow"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 553
     .end local v13    # "notSupport":Z
     :cond_f
     const/4 v13, 0x0
 
     goto :goto_5
 
-    .line 573
     .restart local v13    # "notSupport":Z
     :cond_10
     invoke-virtual {v12}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isCascade()Z
@@ -4629,7 +4205,6 @@
 
     if-eqz v21, :cond_11
 
-    .line 574
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4640,7 +4215,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 575
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -4651,7 +4225,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 576
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/android/server/wm/MultiWindowPointerEventListener;->getApplicationName(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -4664,14 +4237,12 @@
 
     iput-object v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mApplicationName:Ljava/lang/CharSequence;
 
-    .line 578
     const-string v21, "MultiWindowConverter"
 
     const-string v22, "MultiWindow Gesture is not supported with ISOLATED or FullScreenOnly"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 580
     const/16 v21, 0x2
 
     move/from16 v0, v21
@@ -4680,12 +4251,10 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 581
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 584
     :cond_11
     const/16 v21, -0x1
 
@@ -4695,7 +4264,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mTaskId:I
 
-    .line 585
     if-eqz v4, :cond_12
 
     invoke-static {}, Lcom/android/server/am/MultiWindowFacadeService;->self()Lcom/android/server/am/MultiWindowFacadeService;
@@ -4712,7 +4280,6 @@
 
     if-eqz v21, :cond_12
 
-    .line 586
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -4721,7 +4288,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsRunningTask:Z
 
-    .line 587
     iget v0, v4, Lcom/android/server/wm/Task;->mTaskId:I
 
     move/from16 v21, v0
@@ -4732,7 +4298,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mTaskId:I
 
-    .line 590
     :cond_12
     const/16 v21, 0x1
 
@@ -4742,7 +4307,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mResizeState:I
 
-    .line 591
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;
@@ -4755,7 +4319,6 @@
 
     iput-object v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mAppToken:Lcom/android/server/wm/AppWindowToken;
 
-    .line 593
     const-string v21, "MultiWindowConverter"
 
     new-instance v22, Ljava/lang/StringBuilder;
@@ -4784,7 +4347,6 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 596
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -4803,14 +4365,12 @@
 
     if-eqz v21, :cond_13
 
-    .line 597
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->hasSubWindow()Z
 
     move-result v21
 
     if-eqz v21, :cond_13
 
-    .line 598
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -4821,7 +4381,6 @@
 
     move-result-object v6
 
-    .line 599
     .local v6, "dInfo":Landroid/view/DisplayInfo;
     iget v0, v6, Landroid/view/DisplayInfo;->alphaScreenAppWidth:I
 
@@ -4837,7 +4396,6 @@
 
     if-le v0, v1, :cond_16
 
-    .line 600
     iget v0, v6, Landroid/view/DisplayInfo;->alphaScreenAppHeight:I
 
     move/from16 v21, v0
@@ -4848,7 +4406,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenHeight:I
 
-    .line 607
     .end local v6    # "dInfo":Landroid/view/DisplayInfo;
     :cond_13
     :goto_6
@@ -4856,7 +4413,6 @@
 
     if-eqz v21, :cond_15
 
-    .line 608
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -4865,12 +4421,10 @@
 
     iput-boolean v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSelectiveOrientationMode:Z
 
-    .line 610
     invoke-virtual {v12}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getAppRequestOrientation()I
 
     move-result v2
 
-    .line 611
     .local v2, "appRequestedOrientation":I
     move-object/from16 v0, p0
 
@@ -4888,13 +4442,11 @@
 
     iget v3, v0, Landroid/content/res/Configuration;->orientation:I
 
-    .line 612
     .local v3, "currentConfigOrientation":I
     invoke-static {v2, v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->convertToConfigurationOrientation(II)I
 
     move-result v17
 
-    .line 615
     .local v17, "targetConfigOrientation":I
     move-object/from16 v0, p0
 
@@ -4908,7 +4460,6 @@
 
     if-eq v0, v3, :cond_14
 
-    .line 616
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -4917,7 +4468,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mIsSelectiveOrientationMode:Z
 
-    .line 617
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -4950,7 +4500,6 @@
 
     div-float v15, v21, v22
 
-    .line 619
     .local v15, "selectivePenWindowScale":F
     move-object/from16 v0, p0
 
@@ -4978,7 +4527,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mSelectiveOrientationWidth:I
 
-    .line 620
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wm/MultiWindowPointerEventListener;->mScreenWidth:I
@@ -5005,7 +4553,6 @@
 
     iput v0, v1, Lcom/android/server/wm/MultiWindowPointerEventListener;->mSelectiveOrientationHeight:I
 
-    .line 622
     .end local v15    # "selectivePenWindowScale":F
     :cond_14
     move-object/from16 v0, p0
@@ -5016,14 +4563,13 @@
 
     if-eqz v21, :cond_15
 
-    .line 623
     const-string v21, "MultiWindowConverter"
 
     new-instance v22, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v22 .. v22}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v23, "target win= "
+    const-string v23, "target win= "
 
     invoke-virtual/range {v22 .. v23}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5071,7 +4617,6 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 630
     .end local v2    # "appRequestedOrientation":I
     .end local v3    # "currentConfigOrientation":I
     .end local v17    # "targetConfigOrientation":I
@@ -5086,12 +4631,10 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 631
     const/16 v21, 0x1
 
     goto/16 :goto_0
 
-    .line 602
     .restart local v6    # "dInfo":Landroid/view/DisplayInfo;
     :cond_16
     iget v0, v6, Landroid/view/DisplayInfo;->alphaScreenAppWidth:I

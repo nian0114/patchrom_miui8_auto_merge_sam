@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 6261
     iput-object p1, p0, Landroid/app/Activity$2;->this$0:Landroid/app/Activity;
 
     iput-object p2, p0, Landroid/app/Activity$2;->val$callback:Landroid/app/Activity$TranslucentConversionStateListener;
@@ -45,11 +44,9 @@
     .param p1, "drawComplete"    # Z
 
     .prologue
-    .line 6264
     iget-object v0, p0, Landroid/app/Activity$2;->val$callback:Landroid/app/Activity$TranslucentConversionStateListener;
 
     invoke-interface {v0, p1}, Landroid/app/Activity$TranslucentConversionStateListener;->onTranslucentConversionStateComplete(Z)V
 
-    .line 6265
     return-void
 .end method

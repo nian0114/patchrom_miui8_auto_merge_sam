@@ -30,17 +30,14 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 1630
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1631
     const/4 v0, 0x0
 
     aget-object v0, p1, v0
 
     iput-object v0, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mOperatorNumber:Ljava/lang/String;
 
-    .line 1632
     const-string v0, "prefix"
 
     const/4 v1, 0x1
@@ -53,7 +50,6 @@
 
     iput-boolean v0, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mIsPrefix:Z
 
-    .line 1633
     array-length v0, p1
 
     if-le v0, v2, :cond_0
@@ -63,10 +59,8 @@
     :goto_0
     iput-object v0, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mGid1:Ljava/lang/String;
 
-    .line 1634
     return-void
 
-    .line 1633
     :cond_0
     const/4 v0, 0x0
 
@@ -79,7 +73,6 @@
     .locals 2
 
     .prologue
-    .line 1638
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -37,17 +37,14 @@
     .locals 1
 
     .prologue
-    .line 1227
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform sampler2D maskSampler;\n\nvoid main(void) {\n\tvec4 texColor = texture2D(baseSampler, outTexCoords);\n\tvec4 mask = texture2D(maskSampler, outTexCoords);\n\tgl_FragColor = mask + texColor * (1.0 - mask.a);\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$BlendingFilter;->mFragmentShaderCodeNormal:Ljava/lang/String;
 
-    .line 1242
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform sampler2D maskSampler;\n\nvoid main(void) {\n       vec4 texColor = texture2D(baseSampler, outTexCoords);\n\t\tvec4 mask = texture2D(maskSampler, outTexCoords);\n       gl_FragColor = texColor * mask;\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$BlendingFilter;->mFragmentShaderCodeMultipy:Ljava/lang/String;
 
-    .line 1256
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform sampler2D maskSampler;\n\nvoid main(void) {\n\t\tvec4 unitColor = vec4(1.0);\n       vec4 texColor = texture2D(baseSampler, outTexCoords);\n\t\tvec4 mask = texture2D(maskSampler, outTexCoords);\n       gl_FragColor = unitColor - ((unitColor-texColor) * (unitColor-mask));\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$BlendingFilter;->mFragmentShaderCodeScreen:Ljava/lang/String;
@@ -61,7 +58,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1296
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     invoke-static {v2}, Landroid/graphics/ImageFilter$BlendingFilter;->getFragmentShader(I)Ljava/lang/String;
@@ -70,13 +66,10 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1293
     iput v2, p0, Landroid/graphics/ImageFilter$BlendingFilter;->mBlendMode:I
 
-    .line 1297
     iput v2, p0, Landroid/graphics/ImageFilter$BlendingFilter;->mBlendMode:I
 
-    .line 1298
     return-void
 .end method
 
@@ -85,7 +78,6 @@
     .param p1, "operation"    # I
 
     .prologue
-    .line 1301
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     invoke-static {p1}, Landroid/graphics/ImageFilter$BlendingFilter;->getFragmentShader(I)Ljava/lang/String;
@@ -94,15 +86,12 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1293
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/graphics/ImageFilter$BlendingFilter;->mBlendMode:I
 
-    .line 1302
     iput p1, p0, Landroid/graphics/ImageFilter$BlendingFilter;->mBlendMode:I
 
-    .line 1303
     return-void
 .end method
 
@@ -111,7 +100,6 @@
     .param p0, "mode"    # I
 
     .prologue
-    .line 1334
     if-nez p0, :cond_0
 
     sget-object v0, Landroid/graphics/ImageFilter$BlendingFilter;->mFragmentShaderCodeNormal:Ljava/lang/String;
@@ -141,10 +129,8 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1313
     invoke-super {p0, p1}, Landroid/graphics/ImageFilter$GenericImageFilter;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1314
     return-void
 .end method
 
@@ -153,15 +139,12 @@
     .param p1, "operation"    # I
 
     .prologue
-    .line 1327
     iget v0, p0, Landroid/graphics/ImageFilter$BlendingFilter;->mBlendMode:I
 
     if-eq v0, p1, :cond_0
 
-    .line 1328
     iput p1, p0, Landroid/graphics/ImageFilter$BlendingFilter;->mBlendMode:I
 
-    .line 1329
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     invoke-static {p1}, Landroid/graphics/ImageFilter$BlendingFilter;->getFragmentShader(I)Ljava/lang/String;
@@ -170,7 +153,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$BlendingFilter;->setup(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1331
     :cond_0
     return-void
 .end method

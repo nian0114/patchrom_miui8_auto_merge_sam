@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 29410
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$41;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -40,14 +39,12 @@
     .param p3, "foregroundActivities"    # Z
 
     .prologue
-    .line 29412
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$41;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemApi;->onForegroundActivitiesChanged(IIZ)V
 
-    .line 29413
     return-void
 .end method
 
@@ -58,14 +55,12 @@
     .param p3, "importance"    # I
 
     .prologue
-    .line 29416
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$41;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemApi;->onImportanceChanged(III)V
 
-    .line 29417
     return-void
 .end method
 
@@ -75,14 +70,12 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 29423
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$41;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemApi;->onProcessDied(II)V
 
-    .line 29424
     return-void
 .end method
 
@@ -93,6 +86,5 @@
     .param p3, "procState"    # I
 
     .prologue
-    .line 29420
     return-void
 .end method

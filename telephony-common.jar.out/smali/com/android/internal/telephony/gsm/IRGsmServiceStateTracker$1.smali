@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 167
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 169
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 170
     .local v2, "action":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -66,7 +63,6 @@
 
     const/4 v6, 0x1
 
-    .line 172
     .local v6, "isAirplaneMode":Z
     :goto_0
     const-string v11, "IRGSMSST"
@@ -91,7 +87,6 @@
 
     invoke-static {v11, v14}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     const-string v11, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v11, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -100,13 +95,11 @@
 
     if-eqz v11, :cond_4
 
-    .line 177
     const/4 v11, 0x1
 
     # setter for: Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->mScreenOn:Z
     invoke-static {v11}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->access$002(Z)Z
 
-    .line 179
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -117,7 +110,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 180
     # getter for: Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->mGsmInSvc:Z
     invoke-static {}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->access$100()Z
 
@@ -132,7 +124,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 181
     :cond_0
     move-object/from16 v0, p0
 
@@ -148,19 +139,16 @@
 
     invoke-virtual {v11, v14, v15}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->processPwrSaveModeExpdTimer(Lcom/android/internal/telephony/PhoneBase;Z)V
 
-    .line 359
     :cond_1
     :goto_1
     return-void
 
-    .line 170
     .end local v6    # "isAirplaneMode":Z
     :cond_2
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 183
     .restart local v6    # "isAirplaneMode":Z
     :cond_3
     move-object/from16 v0, p0
@@ -179,7 +167,6 @@
 
     goto :goto_1
 
-    .line 186
     :cond_4
     const-string v11, "android.intent.action.SCREEN_OFF"
 
@@ -189,7 +176,6 @@
 
     if-eqz v11, :cond_5
 
-    .line 187
     const/4 v11, 0x0
 
     # setter for: Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->mScreenOn:Z
@@ -197,7 +183,6 @@
 
     goto :goto_1
 
-    .line 188
     :cond_5
     const-string v11, "android.intent.action.ACTION_GLOBAL_NOSVC_CHK_TIMER_EXPIRED_GSM"
 
@@ -207,17 +192,14 @@
 
     if-eqz v11, :cond_9
 
-    .line 189
     if-nez v6, :cond_8
 
-    .line 190
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
 
     invoke-virtual {v11}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->startGlobalNetworkSearchTimer()V
 
-    .line 191
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -264,7 +246,6 @@
 
     if-nez v11, :cond_1
 
-    .line 193
     :cond_7
     move-object/from16 v0, p0
 
@@ -274,7 +255,6 @@
 
     goto :goto_1
 
-    .line 196
     :cond_8
     move-object/from16 v0, p0
 
@@ -284,7 +264,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 197
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -293,7 +272,6 @@
 
     goto :goto_1
 
-    .line 199
     :cond_9
     const-string v11, "android.intent.action.ACTION_GLOBAL_NETWORK_SEARCH_TIMER_EXPIRED_INTERNAL_GSM"
 
@@ -303,10 +281,8 @@
 
     if-eqz v11, :cond_10
 
-    .line 200
     if-nez v6, :cond_f
 
-    .line 201
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -339,7 +315,6 @@
 
     if-eqz v11, :cond_e
 
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -368,7 +343,6 @@
 
     const/4 v4, 0x1
 
-    .line 204
     .local v4, "gsmManSrchOngoing":Z
     :goto_2
     move-object/from16 v0, p0
@@ -407,7 +381,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 205
     sget-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->IsManSelMode:Z
 
     if-nez v11, :cond_d
@@ -426,7 +399,6 @@
 
     if-nez v11, :cond_d
 
-    .line 208
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -437,7 +409,6 @@
 
     if-eqz v11, :cond_b
 
-    .line 209
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -454,14 +425,12 @@
 
     goto/16 :goto_1
 
-    .line 202
     .end local v4    # "gsmManSrchOngoing":Z
     :cond_a
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 211
     .restart local v4    # "gsmManSrchOngoing":Z
     :cond_b
     move-object/from16 v0, p0
@@ -472,12 +441,10 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->sendNetChangeIntent(Z)V
 
-    .line 212
     sget-boolean v11, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->oosTimerRunning:Z
 
     if-eqz v11, :cond_c
 
-    .line 213
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -486,7 +453,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -494,7 +460,6 @@
     # invokes: Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->stopManualOosTimer()V
     invoke-static {v11}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->access$700(Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;)V
 
-    .line 216
     :cond_c
     move-object/from16 v0, p0
 
@@ -504,14 +469,12 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->incNetSrchCnt(I)V
 
-    .line 220
     const/4 v11, 0x0
 
     sput v11, Lcom/android/internal/telephony/ServiceStateTracker;->currGsmMccInt:I
 
     goto/16 :goto_1
 
-    .line 223
     :cond_d
     move-object/from16 v0, p0
 
@@ -521,14 +484,12 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 224
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
 
     invoke-virtual {v11}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->stopGlobalNetworkSearchTimer()V
 
-    .line 226
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -537,7 +498,6 @@
 
     goto/16 :goto_1
 
-    .line 229
     .end local v4    # "gsmManSrchOngoing":Z
     :cond_e
     move-object/from16 v0, p0
@@ -548,7 +508,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -557,7 +516,6 @@
 
     goto/16 :goto_1
 
-    .line 233
     :cond_f
     move-object/from16 v0, p0
 
@@ -567,7 +525,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 234
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -576,7 +533,6 @@
 
     goto/16 :goto_1
 
-    .line 236
     :cond_10
     const-string v11, "android.intent.action.ACTION_GLOBAL_PWR_SAVE_MODE_STAY_TIMER_EXPIRED"
 
@@ -586,10 +542,8 @@
 
     if-eqz v11, :cond_14
 
-    .line 237
     if-nez v6, :cond_13
 
-    .line 238
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -634,7 +588,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 240
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -645,7 +598,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 241
     # getter for: Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->mGsmInSvc:Z
     invoke-static {}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->access$1000()Z
 
@@ -660,7 +612,6 @@
 
     if-eqz v11, :cond_12
 
-    .line 242
     :cond_11
     move-object/from16 v0, p0
 
@@ -678,7 +629,6 @@
 
     goto/16 :goto_1
 
-    .line 244
     :cond_12
     move-object/from16 v0, p0
 
@@ -696,7 +646,6 @@
 
     goto/16 :goto_1
 
-    .line 248
     :cond_13
     move-object/from16 v0, p0
 
@@ -708,7 +657,6 @@
 
     goto/16 :goto_1
 
-    .line 250
     :cond_14
     const-string v11, "android.intent.action.ACTION_GLOBAL_NET_SWITCH_SWITCH_BACK_TO_CDMA_IN_CHINA"
 
@@ -718,7 +666,6 @@
 
     if-eqz v11, :cond_15
 
-    .line 252
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -728,7 +675,6 @@
 
     goto/16 :goto_1
 
-    .line 253
     :cond_15
     const-string v11, "android.intent.action.ACTION_EVENT_OOS_TIMEOUT_RPT"
 
@@ -738,10 +684,8 @@
 
     if-eqz v11, :cond_1b
 
-    .line 255
     const/4 v7, 0x0
 
-    .line 259
     .local v7, "isGsmActive":Z
     move-object/from16 v0, p0
 
@@ -755,7 +699,6 @@
 
     move-result-object v10
 
-    .line 260
     .local v10, "simState":Ljava/lang/String;
     const-string v11, "READY"
 
@@ -763,7 +706,6 @@
 
     move-result v7
 
-    .line 262
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -843,12 +785,10 @@
 
     invoke-virtual {v14, v11}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 266
     const/4 v11, 0x1
 
     sput-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->alreadyExpired:Z
 
-    .line 272
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -868,12 +808,10 @@
     :cond_17
     const/4 v9, 0x1
 
-    .line 275
     .local v9, "needToSendOosIntent":Z
     :goto_4
     if-eqz v9, :cond_1a
 
-    .line 276
     if-nez v6, :cond_1
 
     move-object/from16 v0, p0
@@ -890,14 +828,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 278
     new-instance v5, Landroid/content/Intent;
 
     const-string v11, "com.samsung.intent.action.ACTION_200SEC_OOS_TIMER_EXPIRED"
 
     invoke-direct {v5, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 279
     .local v5, "intentFwd":Landroid/content/Intent;
     const-string v11, "currScanNetwork"
 
@@ -905,7 +841,6 @@
 
     invoke-virtual {v5, v11, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 280
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -918,7 +853,6 @@
 
     invoke-virtual {v11, v5}, Landroid/content/Context;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 281
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -928,7 +862,6 @@
 
     goto/16 :goto_1
 
-    .line 262
     .end local v5    # "intentFwd":Landroid/content/Intent;
     .end local v9    # "needToSendOosIntent":Z
     :cond_18
@@ -936,13 +869,11 @@
 
     goto :goto_3
 
-    .line 272
     :cond_19
     const/4 v9, 0x0
 
     goto :goto_4
 
-    .line 284
     .restart local v9    # "needToSendOosIntent":Z
     :cond_1a
     move-object/from16 v0, p0
@@ -954,7 +885,6 @@
 
     goto/16 :goto_1
 
-    .line 286
     .end local v7    # "isGsmActive":Z
     .end local v9    # "needToSendOosIntent":Z
     .end local v10    # "simState":Ljava/lang/String;
@@ -967,7 +897,6 @@
 
     if-eqz v11, :cond_1c
 
-    .line 287
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -978,7 +907,6 @@
 
     goto/16 :goto_1
 
-    .line 288
     :cond_1c
     const-string v11, "android.intent.action.ACTION_GLOBAL_NET_SWITCH_SWITCH_BACK_TO_GSM_IN_HONGKONG"
 
@@ -988,7 +916,6 @@
 
     if-eqz v11, :cond_1d
 
-    .line 291
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -997,7 +924,6 @@
 
     goto/16 :goto_1
 
-    .line 292
     :cond_1d
     const-string v11, "android.intent.action.ACTION_GLOBAL_NET_SWITCH_PENDING"
 
@@ -1007,12 +933,10 @@
 
     if-eqz v11, :cond_20
 
-    .line 293
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 294
     .local v3, "extra":Landroid/os/Bundle;
     const-string v11, "CDMA"
 
@@ -1028,7 +952,6 @@
 
     if-eqz v11, :cond_1f
 
-    .line 295
     const-string v11, "switchToCdmaInChinaMacauArea"
 
     invoke-virtual {v3, v11}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1037,7 +960,6 @@
 
     if-eqz v11, :cond_1e
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1050,7 +972,6 @@
 
     goto/16 :goto_1
 
-    .line 298
     :cond_1e
     move-object/from16 v0, p0
 
@@ -1064,7 +985,6 @@
 
     goto/16 :goto_1
 
-    .line 301
     :cond_1f
     move-object/from16 v0, p0
 
@@ -1098,7 +1018,6 @@
 
     goto/16 :goto_1
 
-    .line 303
     .end local v3    # "extra":Landroid/os/Bundle;
     :cond_20
     const-string v11, "android.intent.action.ACTION_GLOBAL_NET_SWITCH_PENDING_TIMER_EXPIRED"
@@ -1109,12 +1028,10 @@
 
     if-eqz v11, :cond_23
 
-    .line 304
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 305
     .restart local v3    # "extra":Landroid/os/Bundle;
     const-string v11, "CDMA"
 
@@ -1130,14 +1047,12 @@
 
     if-eqz v11, :cond_22
 
-    .line 306
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
 
     invoke-virtual {v11}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->stopPendingIntentTimer()V
 
-    .line 307
     const-string v11, "isSwitchToCdmaInChinaMacauArea"
 
     invoke-virtual {v3, v11}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1146,7 +1061,6 @@
 
     if-eqz v11, :cond_21
 
-    .line 308
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1157,7 +1071,6 @@
 
     goto/16 :goto_1
 
-    .line 310
     :cond_21
     move-object/from16 v0, p0
 
@@ -1169,7 +1082,6 @@
 
     goto/16 :goto_1
 
-    .line 313
     :cond_22
     move-object/from16 v0, p0
 
@@ -1203,7 +1115,6 @@
 
     goto/16 :goto_1
 
-    .line 315
     .end local v3    # "extra":Landroid/os/Bundle;
     :cond_23
     const-string v11, "ACTION_DUALMODE_SETTING"
@@ -1214,7 +1125,6 @@
 
     if-eqz v11, :cond_24
 
-    .line 316
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1225,7 +1135,6 @@
 
     goto/16 :goto_1
 
-    .line 317
     :cond_24
     const-string v11, "com.samsung.intent.action.Slot1SwitchCompleted"
 
@@ -1235,7 +1144,6 @@
 
     if-eqz v11, :cond_29
 
-    .line 319
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1244,7 +1152,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 320
     sget-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->mReduceSearchTimeShouldProceed:Z
 
     if-eqz v11, :cond_25
@@ -1272,13 +1179,11 @@
 
     if-nez v11, :cond_26
 
-    .line 322
     :cond_25
     const/4 v11, 0x0
 
     sput-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->mReduceSearchTimeShouldProceed:Z
 
-    .line 324
     :cond_26
     move-object/from16 v0, p0
 
@@ -1306,7 +1211,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 326
     const-string v11, "ril.mHasEverSwitchedToGsm"
 
     const/4 v14, 0x0
@@ -1317,7 +1221,6 @@
 
     move-result-object v8
 
-    .line 327
     .local v8, "mHasEverSwitchedToGsm":Ljava/lang/String;
     sget-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->mReduceSearchTimeShouldProceed:Z
 
@@ -1345,7 +1248,6 @@
 
     if-eqz v11, :cond_27
 
-    .line 330
     const-wide/32 v14, 0x11170
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1365,7 +1267,6 @@
 
     sub-long v12, v14, v16
 
-    .line 331
     .local v12, "timeElapsed":J
     move-object/from16 v0, p0
 
@@ -1391,21 +1292,18 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 332
     const-wide/16 v14, 0x3e8
 
     cmp-long v11, v12, v14
 
     if-lez v11, :cond_28
 
-    .line 334
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
 
     invoke-virtual {v11, v12, v13}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->startReduceSearchTimer(J)V
 
-    .line 342
     .end local v12    # "timeElapsed":J
     :cond_27
     :goto_5
@@ -1415,14 +1313,12 @@
 
     goto/16 :goto_1
 
-    .line 337
     .restart local v12    # "timeElapsed":J
     :cond_28
     const/4 v11, 0x1
 
     sput-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->mSlot1ShouldSwitchImmediately:Z
 
-    .line 338
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1433,7 +1329,6 @@
 
     goto :goto_5
 
-    .line 343
     .end local v8    # "mHasEverSwitchedToGsm":Ljava/lang/String;
     .end local v12    # "timeElapsed":J
     :cond_29
@@ -1445,7 +1340,6 @@
 
     if-eqz v11, :cond_2a
 
-    .line 344
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1454,7 +1348,6 @@
 
     invoke-virtual {v11, v14}, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 346
     const-string v11, "ril.mHasEverSwitchedToGsm"
 
     const/4 v14, 0x0
@@ -1465,7 +1358,6 @@
 
     move-result-object v8
 
-    .line 347
     .restart local v8    # "mHasEverSwitchedToGsm":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1512,12 +1404,10 @@
 
     if-eqz v11, :cond_1
 
-    .line 351
     const/4 v11, 0x1
 
     sput-boolean v11, Lcom/android/internal/telephony/ServiceStateTracker;->mSlot1ShouldSwitchImmediately:Z
 
-    .line 352
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1528,7 +1418,6 @@
 
     goto/16 :goto_1
 
-    .line 354
     .end local v8    # "mHasEverSwitchedToGsm":Ljava/lang/String;
     :cond_2a
     const-string v11, "com.samsung.intent.action.SlotSwitched"
@@ -1539,7 +1428,6 @@
 
     if-eqz v11, :cond_2b
 
-    .line 355
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/IRGsmServiceStateTracker;
@@ -1548,7 +1436,6 @@
 
     goto/16 :goto_1
 
-    .line 357
     :cond_2b
     const-string v11, "IRGSMSST"
 

@@ -28,30 +28,22 @@
 
     const/4 v1, 0x1
 
-    .line 43
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 30
     iput v1, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDeviceType:I
 
-    .line 32
     const/16 v0, 0xe10
 
     iput v0, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDuration:I
 
-    .line 34
     iput v1, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mAlertCount:I
 
-    .line 36
     iput v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mStartTime:I
 
-    .line 38
     iput v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mEndTime:I
 
-    .line 44
     invoke-direct {p0}, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->setAttribute()V
 
-    .line 45
     return-void
 .end method
 
@@ -68,45 +60,32 @@
 
     const/4 v1, 0x1
 
-    .line 69
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 30
     iput v1, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDeviceType:I
 
-    .line 32
     const/16 v0, 0xe10
 
     iput v0, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDuration:I
 
-    .line 34
     iput v1, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mAlertCount:I
 
-    .line 36
     iput v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mStartTime:I
 
-    .line 38
     iput v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mEndTime:I
 
-    .line 70
     iput p1, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDeviceType:I
 
-    .line 71
     iput p2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDuration:I
 
-    .line 72
     iput p3, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mAlertCount:I
 
-    .line 73
     iput p4, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mStartTime:I
 
-    .line 74
     iput p5, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mEndTime:I
 
-    .line 75
     invoke-direct {p0}, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->setAttribute()V
 
-    .line 76
     return-void
 .end method
 
@@ -114,12 +93,10 @@
     .locals 3
 
     .prologue
-    .line 106
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 107
     .local v0, "attribute":Landroid/os/Bundle;
     const-string v1, "device_type"
 
@@ -127,40 +104,34 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 108
     const-string v1, "duration"
 
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDuration:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 109
     const-string v1, "alert_count"
 
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mAlertCount:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 110
-    const-string/jumbo v1, "start_time"
+    const-string v1, "start_time"
 
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mStartTime:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 111
     const-string v1, "end_time"
 
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mEndTime:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 112
     const/16 v1, 0x23
 
     invoke-super {p0, v1, v0}, Landroid/hardware/scontext/SContextAttribute;->setAttribute(ILandroid/os/Bundle;)V
 
-    .line 113
     return-void
 .end method
 
@@ -174,7 +145,6 @@
 
     const/4 v0, 0x0
 
-    .line 81
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDeviceType:I
 
     if-eq v2, v1, :cond_0
@@ -185,24 +155,20 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 83
     const-string v1, "SContextInactiveTimerAttribute"
 
     const-string v2, "The deivce type is wrong."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :goto_0
     return v0
 
-    .line 86
     :cond_0
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mDuration:I
 
     if-gez v2, :cond_1
 
-    .line 87
     const-string v1, "SContextInactiveTimerAttribute"
 
     const-string v2, "The duration is wrong."
@@ -211,13 +177,11 @@
 
     goto :goto_0
 
-    .line 90
     :cond_1
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mAlertCount:I
 
     if-gez v2, :cond_2
 
-    .line 91
     const-string v1, "SContextInactiveTimerAttribute"
 
     const-string v2, "The alert count is wrong."
@@ -226,13 +190,11 @@
 
     goto :goto_0
 
-    .line 94
     :cond_2
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mStartTime:I
 
     if-gez v2, :cond_3
 
-    .line 95
     const-string v1, "SContextInactiveTimerAttribute"
 
     const-string v2, "The start time is wrong."
@@ -241,13 +203,11 @@
 
     goto :goto_0
 
-    .line 98
     :cond_3
     iget v2, p0, Landroid/hardware/scontext/SContextInactiveTimerAttribute;->mEndTime:I
 
     if-gez v2, :cond_4
 
-    .line 99
     const-string v1, "SContextInactiveTimerAttribute"
 
     const-string v2, "The end time is wrong."
@@ -259,6 +219,5 @@
     :cond_4
     move v0, v1
 
-    .line 102
     goto :goto_0
 .end method

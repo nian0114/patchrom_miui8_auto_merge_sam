@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 778
     iput-object p1, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/IPSecDataConnSM$1;
 
     .prologue
-    .line 778
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;-><init>(Lcom/sec/epdg/IPSecDataConnSM;)V
 
     return-void
@@ -55,14 +53,12 @@
 
     const/4 v8, 0x0
 
-    .line 782
     const-string v2, "[IPSECDATACONNSM]"
 
     const-string v3, "SM in ConnectedState state : Entered ConnectedState "
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 783
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -74,7 +70,6 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/epdg/IWlanApnContext;->setState(I)V
 
-    .line 785
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v2}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -100,7 +95,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 786
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -120,11 +114,9 @@
 
     move-result v1
 
-    .line 787
     .local v1, "nattTimer":I
     if-lez v1, :cond_0
 
-    .line 788
     const-string v2, "[IPSECDATACONNSM]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -153,7 +145,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 789
     invoke-static {}, Lcom/sec/epdg/EpdgPeriodicDpd;->getInstance()Lcom/sec/epdg/EpdgPeriodicDpd;
 
     move-result-object v2
@@ -162,7 +153,6 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/epdg/EpdgPeriodicDpd;->startTimerForNattKeepAlive(I)V
 
-    .line 791
     :cond_0
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -179,11 +169,9 @@
 
     move-result v0
 
-    .line 792
     .local v0, "dpdTimer":I
     if-lez v0, :cond_1
 
-    .line 793
     const-string v2, "[IPSECDATACONNSM]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -212,7 +200,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 794
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     mul-int/lit16 v3, v0, 0x3e8
@@ -221,7 +208,6 @@
 
     invoke-virtual {v2, v6, v4, v5}, Lcom/sec/epdg/IPSecDataConnSM;->sendMessageDelayed(IJ)V
 
-    .line 795
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mExpiredTimeTable:Ljava/util/HashMap;
@@ -249,7 +235,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 796
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v2
@@ -260,7 +245,6 @@
 
     if-nez v2, :cond_1
 
-    .line 797
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v2}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -281,7 +265,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 798
     const-string v2, "[IPSECDATACONNSM]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -310,7 +293,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 799
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mImsListener:Lcom/sec/epdg/handover/EpdgImsListener;
     invoke-static {}, Lcom/sec/epdg/IPSecDataConnSM;->access$4800()Lcom/sec/epdg/handover/EpdgImsListener;
 
@@ -322,7 +304,6 @@
 
     invoke-static {v2}, Lcom/sec/epdg/EpdgService;->setPreviousNonE911CallCount(I)V
 
-    .line 804
     .end local v0    # "dpdTimer":I
     .end local v1    # "nattTimer":I
     :cond_1
@@ -333,7 +314,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->sendWifiRssiIntentDelayToEpdg(Z)V
     invoke-static {v2, v3}, Lcom/sec/epdg/IPSecDataConnSM;->access$4900(Lcom/sec/epdg/IPSecDataConnSM;Z)V
 
-    .line 805
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v2}, Lcom/sec/epdg/IPSecDataConnSM;->isHandOver()Z
@@ -342,7 +322,6 @@
 
     if-nez v2, :cond_2
 
-    .line 810
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     const/16 v3, 0xb
@@ -351,14 +330,11 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/sec/epdg/IPSecDataConnSM;->sendMessageDelayed(IJ)V
 
-    .line 811
     iput-boolean v8, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->interfaceUpRecvd:Z
 
-    .line 815
     :goto_0
     return-void
 
-    .line 813
     :cond_2
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -373,14 +349,12 @@
     .prologue
     const/16 v2, 0x10
 
-    .line 819
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM in ConnectedState state : Exiting ConnectedState "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 820
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     const/16 v1, 0xb
@@ -388,7 +362,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->removeMessages(I)V
     invoke-static {v0, v1}, Lcom/sec/epdg/IPSecDataConnSM;->access$5000(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 821
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v0}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -401,20 +374,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 822
     invoke-static {}, Lcom/sec/epdg/EpdgPeriodicDpd;->getInstance()Lcom/sec/epdg/EpdgPeriodicDpd;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/sec/epdg/EpdgPeriodicDpd;->removeTimerForNattKeepAlive()V
 
-    .line 823
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->removeMessages(I)V
     invoke-static {v0, v2}, Lcom/sec/epdg/IPSecDataConnSM;->access$5100(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 824
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mExpiredTimeTable:Ljava/util/HashMap;
@@ -428,7 +398,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 826
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -437,7 +406,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->sendWifiRssiIntentDelayToEpdg(Z)V
     invoke-static {v0, v1}, Lcom/sec/epdg/IPSecDataConnSM;->access$4900(Lcom/sec/epdg/IPSecDataConnSM;Z)V
 
-    .line 827
     return-void
 .end method
 
@@ -456,14 +424,11 @@
 
     const/4 v9, 0x0
 
-    .line 831
     const/4 v5, 0x0
 
-    .line 832
     .local v5, "status":Z
     const/4 v1, 0x0
 
-    .line 833
     .local v1, "errorEnableEpdg":Z
     const-string v6, "[IPSECDATACONNSM]"
 
@@ -510,12 +475,10 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 835
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 975
     :pswitch_0
     const-string v6, "[IPSECDATACONNSM]"
 
@@ -545,12 +508,10 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 980
     :cond_0
     :goto_0
     return v5
 
-    .line 837
     :pswitch_1
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -560,7 +521,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 838
     const-string v6, "[IPSECDATACONNSM]"
 
     const-string v7, "Ignoring the time out  message as this is a handover request. Mobile Interface is already up."
@@ -569,13 +529,11 @@
 
     goto :goto_0
 
-    .line 839
     :cond_1
     iget-boolean v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->interfaceUpRecvd:Z
 
     if-ne v11, v6, :cond_2
 
-    .line 840
     const-string v6, "[IPSECDATACONNSM]"
 
     const-string v7, "Initial attach scenario. Mobile Interface is already up. Ignoring the timeout message. NO action needed"
@@ -584,7 +542,6 @@
 
     goto :goto_0
 
-    .line 842
     :cond_2
     const-string v6, "[IPSECDATACONNSM]"
 
@@ -621,7 +578,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 844
     const-string v6, "[IPSECDATACONNSM]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -650,7 +606,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 845
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mePdgHandler:Landroid/os/Handler;
@@ -662,13 +617,11 @@
 
     move-result-object v3
 
-    .line 846
     .local v3, "msgForDisconnect":Landroid/os/Message;
     const/16 v6, 0x29
 
     iput v6, v3, Landroid/os/Message;->what:I
 
-    .line 847
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6}, Lcom/sec/epdg/IPSecDataConnSM;->getmRilCid()I
@@ -677,7 +630,6 @@
 
     iput v6, v3, Landroid/os/Message;->arg1:I
 
-    .line 848
     new-instance v6, Landroid/os/AsyncResult;
 
     new-instance v7, Lcom/sec/epdg/EpdgRilInterface$ApnDetachRequest;
@@ -694,27 +646,23 @@
 
     iput-object v6, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 850
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
     goto/16 :goto_0
 
-    .line 854
     .end local v3    # "msgForDisconnect":Landroid/os/Message;
     :pswitch_2
     const-string v6, "[IPSECDATACONNSM]"
 
-    const-string/jumbo v7, "send DPD message"
+    const-string v7, "send DPD message"
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 855
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->removeMessages(I)V
     invoke-static {v6, v10}, Lcom/sec/epdg/IPSecDataConnSM;->access$5500(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 856
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mExpiredTimeTable:Ljava/util/HashMap;
@@ -728,13 +676,11 @@
 
     invoke-virtual {v6, v7}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 857
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->checkConnection()V
     invoke-static {v6}, Lcom/sec/epdg/IPSecDataConnSM;->access$5600(Lcom/sec/epdg/IPSecDataConnSM;)V
 
-    .line 859
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -760,7 +706,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 860
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -776,11 +721,9 @@
 
     move-result v0
 
-    .line 861
     .local v0, "dpdTimer":I
     if-lez v0, :cond_0
 
-    .line 862
     const-string v6, "[IPSECDATACONNSM]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -809,7 +752,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 863
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     mul-int/lit16 v7, v0, 0x3e8
@@ -818,7 +760,6 @@
 
     invoke-virtual {v6, v10, v8, v9}, Lcom/sec/epdg/IPSecDataConnSM;->sendMessageDelayed(IJ)V
 
-    .line 864
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mExpiredTimeTable:Ljava/util/HashMap;
@@ -848,29 +789,25 @@
 
     goto/16 :goto_0
 
-    .line 870
     .end local v0    # "dpdTimer":I
     :pswitch_3
     const-string v6, "[IPSECDATACONNSM]"
 
-    const-string/jumbo v7, "send NATT KEEPALIVE message"
+    const-string v7, "send NATT KEEPALIVE message"
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 871
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->sendKeepAlive()V
     invoke-static {v6}, Lcom/sec/epdg/IPSecDataConnSM;->access$5700(Lcom/sec/epdg/IPSecDataConnSM;)V
 
-    .line 872
     invoke-static {}, Lcom/sec/epdg/EpdgPeriodicDpd;->getInstance()Lcom/sec/epdg/EpdgPeriodicDpd;
 
     move-result-object v6
 
     invoke-virtual {v6}, Lcom/sec/epdg/EpdgPeriodicDpd;->removeTimerForNattKeepAlive()V
 
-    .line 873
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -896,7 +833,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 874
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -916,11 +852,9 @@
 
     move-result v4
 
-    .line 875
     .local v4, "nattTimer":I
     if-lez v4, :cond_0
 
-    .line 876
     const-string v6, "[IPSECDATACONNSM]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -949,7 +883,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 877
     invoke-static {}, Lcom/sec/epdg/EpdgPeriodicDpd;->getInstance()Lcom/sec/epdg/EpdgPeriodicDpd;
 
     move-result-object v6
@@ -960,7 +893,6 @@
 
     goto/16 :goto_0
 
-    .line 885
     .end local v4    # "nattTimer":I
     :pswitch_4
     const-string v6, "[IPSECDATACONNSM]"
@@ -998,7 +930,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 887
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget v7, p1, Landroid/os/Message;->arg1:I
@@ -1006,7 +937,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->handleTCRules(ZI)Z
     invoke-static {v6, v9, v7}, Lcom/sec/epdg/IPSecDataConnSM;->access$3600(Lcom/sec/epdg/IPSecDataConnSM;ZI)Z
 
-    .line 888
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6}, Lcom/sec/epdg/IPSecDataConnSM;->getmRilCid()I
@@ -1017,7 +947,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/EpdgCommands;->triggerHandover(ILjava/lang/Boolean;)V
 
-    .line 889
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v7, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -1031,7 +960,6 @@
 
     goto/16 :goto_0
 
-    .line 894
     :pswitch_5
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -1043,7 +971,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/EpdgCommands;->triggerHandover(ILjava/lang/Boolean;)V
 
-    .line 895
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v7, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -1057,7 +984,6 @@
 
     goto/16 :goto_0
 
-    .line 898
     :pswitch_6
     const-string v6, "[IPSECDATACONNSM]"
 
@@ -1094,7 +1020,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 900
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mRilCid:I
@@ -1108,7 +1033,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 901
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v7, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -1120,12 +1044,10 @@
 
     invoke-virtual {v6, v7}, Lcom/sec/epdg/IPSecDataConnSM;->deferTransitionTo(Lcom/android/internal/util/State;)V
 
-    .line 906
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6, v9}, Lcom/sec/epdg/IPSecDataConnSM;->setIsW2LRequested(Z)V
 
-    .line 907
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6}, Lcom/sec/epdg/IPSecDataConnSM;->getmRilCid()I
@@ -1138,7 +1060,6 @@
 
     goto/16 :goto_0
 
-    .line 911
     :pswitch_7
     const-string v6, "[IPSECDATACONNSM]"
 
@@ -1177,7 +1098,6 @@
 
     goto/16 :goto_0
 
-    .line 918
     :pswitch_8
     const-string v6, "[IPSECDATACONNSM]"
 
@@ -1214,16 +1134,13 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 929
     iput-boolean v9, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->interfaceUpRecvd:Z
 
-    .line 930
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->removeMessages(I)V
     invoke-static {v6, v13}, Lcom/sec/epdg/IPSecDataConnSM;->access$6300(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 931
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v6}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -1236,20 +1153,17 @@
 
     if-eqz v6, :cond_3
 
-    .line 932
     invoke-static {}, Lcom/sec/epdg/EpdgPeriodicDpd;->getInstance()Lcom/sec/epdg/EpdgPeriodicDpd;
 
     move-result-object v6
 
     invoke-virtual {v6}, Lcom/sec/epdg/EpdgPeriodicDpd;->removeTimerForNattKeepAlive()V
 
-    .line 933
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->removeMessages(I)V
     invoke-static {v6, v10}, Lcom/sec/epdg/IPSecDataConnSM;->access$6400(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 934
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mExpiredTimeTable:Ljava/util/HashMap;
@@ -1263,7 +1177,6 @@
 
     invoke-virtual {v6, v7}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 936
     :cond_3
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -1272,7 +1185,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->handleTCRules(ZI)Z
     invoke-static {v6, v9, v7}, Lcom/sec/epdg/IPSecDataConnSM;->access$3600(Lcom/sec/epdg/IPSecDataConnSM;ZI)Z
 
-    .line 938
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->disconnectEpdgConnection()V
@@ -1280,17 +1192,14 @@
 
     goto/16 :goto_0
 
-    .line 943
     :pswitch_9
     iput-boolean v11, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->interfaceUpRecvd:Z
 
-    .line 944
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->removeMessages(I)V
     invoke-static {v6, v13}, Lcom/sec/epdg/IPSecDataConnSM;->access$6500(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 945
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget v7, p1, Landroid/os/Message;->arg1:I
@@ -1300,7 +1209,6 @@
 
     move-result v1
 
-    .line 946
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget v7, p1, Landroid/os/Message;->arg1:I
@@ -1308,10 +1216,8 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->setEpdgInterfaceDropRule(ZI)V
     invoke-static {v6, v9, v7}, Lcom/sec/epdg/IPSecDataConnSM;->access$2600(Lcom/sec/epdg/IPSecDataConnSM;ZI)V
 
-    .line 947
     if-ne v11, v1, :cond_0
 
-    .line 948
     const-string v6, "[IPSECDATACONNSM]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1342,7 +1248,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 952
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mePdgHandler:Landroid/os/Handler;
@@ -1354,18 +1259,15 @@
 
     move-result-object v2
 
-    .line 953
     .local v2, "msg1":Landroid/os/Message;
     const/16 v6, 0x29
 
     iput v6, v2, Landroid/os/Message;->what:I
 
-    .line 954
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     iput v6, v2, Landroid/os/Message;->arg1:I
 
-    .line 955
     new-instance v6, Landroid/os/AsyncResult;
 
     new-instance v7, Lcom/sec/epdg/EpdgRilInterface$ApnDetachRequest;
@@ -1378,10 +1280,8 @@
 
     iput-object v6, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 957
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 958
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget v7, p1, Landroid/os/Message;->arg1:I
@@ -1391,7 +1291,6 @@
 
     goto/16 :goto_0
 
-    .line 966
     .end local v2    # "msg1":Landroid/os/Message;
     :pswitch_a
     const-string v6, "[IPSECDATACONNSM]"
@@ -1431,7 +1330,6 @@
 
     goto/16 :goto_0
 
-    .line 971
     :pswitch_b
     iget-object v6, p0, Lcom/sec/epdg/IPSecDataConnSM$ConnectedState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -1440,7 +1338,6 @@
 
     goto/16 :goto_0
 
-    .line 835
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_7

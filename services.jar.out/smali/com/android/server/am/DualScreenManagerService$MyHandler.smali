@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1481
     iput-object p1, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
-    .line 1482
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1483
     return-void
 .end method
 
@@ -41,55 +38,45 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1487
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 1539
     :goto_0
     return-void
 
-    .line 1489
     :pswitch_0
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/am/DualScreenManagerService;->access$100()Ljava/lang/String;
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : MOVE_TASK_TO_FRONT_MSG"
+    const-string v9, "handleMessage() : MOVE_TASK_TO_FRONT_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1490
     iget v6, p1, Landroid/os/Message;->arg1:I
 
-    .line 1491
     .local v6, "taskId":I
     iget v2, p1, Landroid/os/Message;->arg2:I
 
-    .line 1492
     .local v2, "flags":I
     const/4 v3, 0x0
 
-    .line 1493
     .local v3, "options":Landroid/os/Bundle;
     const/4 v7, 0x0
 
-    .line 1494
     .local v7, "toScreen":Lcom/samsung/android/dualscreen/DualScreen;
     iget-object v8, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v8, :cond_0
 
-    .line 1495
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 1496
     .local v0, "bundle":Landroid/os/Bundle;
-    const-string/jumbo v8, "dualscreen:displayid"
+    const-string v8, "dualscreen:displayid"
 
     invoke-virtual {v0, v8}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -98,9 +85,8 @@
     .end local v7    # "toScreen":Lcom/samsung/android/dualscreen/DualScreen;
     check-cast v7, Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 1497
     .restart local v7    # "toScreen":Lcom/samsung/android/dualscreen/DualScreen;
-    const-string/jumbo v8, "dualscreen:activityoption"
+    const-string v8, "dualscreen:activityoption"
 
     invoke-virtual {v0, v8}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -109,7 +95,6 @@
     .end local v3    # "options":Landroid/os/Bundle;
     check-cast v3, Landroid/os/Bundle;
 
-    .line 1499
     .end local v0    # "bundle":Landroid/os/Bundle;
     .restart local v3    # "options":Landroid/os/Bundle;
     :cond_0
@@ -119,7 +104,6 @@
 
     goto :goto_0
 
-    .line 1503
     .end local v2    # "flags":I
     .end local v3    # "options":Landroid/os/Bundle;
     .end local v6    # "taskId":I
@@ -130,11 +114,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : SWAP_TOP_TASK_MSG"
+    const-string v9, "handleMessage() : SWAP_TOP_TASK_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1504
     iget-object v8, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
     # invokes: Lcom/android/server/am/DualScreenManagerService;->handleSwapTopTask()V
@@ -142,23 +125,20 @@
 
     goto :goto_0
 
-    .line 1508
     :pswitch_2
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/am/DualScreenManagerService;->access$100()Ljava/lang/String;
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : REPORT_SCREEN_FOCUS_CHANGE_MSG"
+    const-string v9, "handleMessage() : REPORT_SCREEN_FOCUS_CHANGE_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1509
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 1510
     .local v4, "screen":Lcom/samsung/android/dualscreen/DualScreen;
     iget-object v8, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
@@ -167,7 +147,6 @@
 
     goto :goto_0
 
-    .line 1514
     .end local v4    # "screen":Lcom/samsung/android/dualscreen/DualScreen;
     :pswitch_3
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
@@ -175,16 +154,14 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : FOCUS_SCREEN_MSG"
+    const-string v9, "handleMessage() : FOCUS_SCREEN_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1515
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 1516
     .restart local v4    # "screen":Lcom/samsung/android/dualscreen/DualScreen;
     iget-object v8, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
@@ -193,7 +170,6 @@
 
     goto :goto_0
 
-    .line 1520
     .end local v4    # "screen":Lcom/samsung/android/dualscreen/DualScreen;
     :pswitch_4
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
@@ -201,11 +177,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : REPORT_SHRINK_REQUEST_STATE_MSG"
+    const-string v9, "handleMessage() : REPORT_SHRINK_REQUEST_STATE_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1521
     iget-object v8, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v8, Ljava/lang/Boolean;
@@ -214,7 +189,6 @@
 
     move-result v5
 
-    .line 1522
     .local v5, "shrinkRequested":Z
     iget-object v8, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
@@ -223,7 +197,6 @@
 
     goto :goto_0
 
-    .line 1526
     .end local v5    # "shrinkRequested":Z
     :pswitch_5
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
@@ -231,16 +204,14 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : REPORT_SCONTEXT_HALL_SENSOR_CHANGE_MSG"
+    const-string v9, "handleMessage() : REPORT_SCONTEXT_HALL_SENSOR_CHANGE_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1527
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/hardware/scontext/SContextEvent;
 
-    .line 1528
     .local v1, "event":Landroid/hardware/scontext/SContextEvent;
     iget-object v8, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
@@ -249,7 +220,6 @@
 
     goto/16 :goto_0
 
-    .line 1533
     .end local v1    # "event":Landroid/hardware/scontext/SContextEvent;
     :pswitch_6
     # getter for: Lcom/android/server/am/DualScreenManagerService;->TAG:Ljava/lang/String;
@@ -257,16 +227,14 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "handleMessage() : REPORT_SCONTEXT_MAIN_SCREEN_DETECTION_CHANGE_MSG"
+    const-string v9, "handleMessage() : REPORT_SCONTEXT_MAIN_SCREEN_DETECTION_CHANGE_MSG"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1534
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/hardware/scontext/SContextEvent;
 
-    .line 1535
     .restart local v1    # "event":Landroid/hardware/scontext/SContextEvent;
     iget-object v8, p0, Lcom/android/server/am/DualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
@@ -275,7 +243,6 @@
 
     goto/16 :goto_0
 
-    .line 1487
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_0

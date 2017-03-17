@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 437
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 440
     invoke-static {}, Landroid/view/textservice/TextServicesManager;->getInstance()Landroid/view/textservice/TextServicesManager;
 
     move-result-object v0
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 437
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$23;->createService()Landroid/view/textservice/TextServicesManager;
 
     move-result-object v0

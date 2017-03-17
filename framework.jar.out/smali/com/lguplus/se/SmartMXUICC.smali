@@ -46,13 +46,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
     sput-object v0, Lcom/lguplus/se/SmartMXUICC;->sInstance:Lcom/lguplus/se/SmartMXUICC;
 
-    .line 35
     sput-object v0, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
-    .line 37
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -61,7 +58,6 @@
 
     sput-object v0, Lcom/lguplus/se/SmartMXUICC;->handleId:[I
 
-    .line 40
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -70,7 +66,6 @@
 
     return-void
 
-    .line 37
     nop
 
     :array_0
@@ -87,40 +82,33 @@
     .locals 3
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     const-string v0, "SmartMXUICC"
 
     const-string v1, "SmartMXUICC"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     new-instance v0, Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/IccPcscProvider;-><init>()V
 
     sput-object v0, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
-    .line 57
     sget-object v0, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     if-nez v0, :cond_0
 
-    .line 58
     const-string v0, "SmartMXUICC"
 
     const-string v1, "SmartMXUICC pcscInstance return null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     const-string v0, "SmartMXUICC"
 
@@ -153,12 +141,10 @@
     .locals 3
 
     .prologue
-    .line 43
     const-class v1, Lcom/lguplus/se/SmartMXUICC;
 
     monitor-enter v1
 
-    .line 44
     :try_start_0
     const-string v0, "SmartMXUICC"
 
@@ -166,30 +152,25 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     sget-object v0, Lcom/lguplus/se/SmartMXUICC;->sInstance:Lcom/lguplus/se/SmartMXUICC;
 
     if-nez v0, :cond_0
 
-    .line 47
     new-instance v0, Lcom/lguplus/se/SmartMXUICC;
 
     invoke-direct {v0}, Lcom/lguplus/se/SmartMXUICC;-><init>()V
 
     sput-object v0, Lcom/lguplus/se/SmartMXUICC;->sInstance:Lcom/lguplus/se/SmartMXUICC;
 
-    .line 48
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     sget-object v0, Lcom/lguplus/se/SmartMXUICC;->sInstance:Lcom/lguplus/se/SmartMXUICC;
 
     return-object v0
 
-    .line 48
     :catchall_0
     move-exception v0
 
@@ -205,14 +186,12 @@
     .locals 4
 
     .prologue
-    .line 66
     sget-object v1, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/IccPcscProvider;->connect()I
 
     move-result v0
 
-    .line 69
     .local v0, "channel":I
     const/4 v1, 0x1
 
@@ -222,14 +201,13 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 70
     const-string v1, "SmartMXUICC"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "openLogicalChannel channel["
+    const-string v3, "openLogicalChannel channel["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -245,11 +223,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     :goto_0
     return v0
 
-    .line 74
     :cond_0
     const-string v1, "SmartMXUICC"
 
@@ -257,7 +233,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "openLogicalChannel Failed : "
+    const-string v3, "openLogicalChannel Failed : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -288,10 +264,8 @@
     .end annotation
 
     .prologue
-    .line 128
     move v0, p1
 
-    .line 130
     .local v0, "channel":I
     const-string v1, "SmartMXUICC"
 
@@ -315,29 +289,24 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     const/4 v1, 0x1
 
     if-ge v0, v1, :cond_0
 
-    .line 134
     const-string v1, "SmartMXUICC"
 
     const-string v2, "closeSecureElementConnection channel is wrong"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     :goto_0
     return-void
 
-    .line 138
     :cond_0
     sget-object v1, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/telephony/IccPcscProvider;->disconnect(I)I
 
-    .line 140
     const-string v1, "SmartMXUICC"
 
     const-string v2, "closeSecureElementConnection done!"
@@ -360,24 +329,19 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 101
     const/4 v2, 0x0
 
-    .line 102
     .local v2, "resSize":I
     move v1, p1
 
-    .line 103
     .local v1, "channel":I
     const/16 v4, 0x106
 
     new-array v0, v4, [B
 
-    .line 104
     .local v0, "apdu_res":[B
     const/4 v3, 0x0
 
-    .line 106
     .local v3, "response":[B
     const-string v4, "SmartMXUICC"
 
@@ -401,7 +365,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     aget-byte v4, p2, v7
 
     or-int/2addr v4, v1
@@ -410,34 +373,27 @@
 
     aput-byte v4, p2, v7
 
-    .line 110
     sget-object v4, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v4, v1, p2, v0}, Lcom/android/internal/telephony/IccPcscProvider;->transmit(I[B[B)I
 
     move-result v2
 
-    .line 112
     if-lez v2, :cond_0
 
-    .line 113
     new-array v3, v2, [B
 
-    .line 114
     invoke-static {v0, v7, v3, v7, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 118
     :cond_0
     if-nez v3, :cond_1
 
-    .line 120
     const-string v4, "SmartMXUICC"
 
     const-string v5, "exchangeAPDU return null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     new-instance v4, Ljava/io/IOException;
 
     const-string v5, "Response is NULL"
@@ -446,7 +402,6 @@
 
     throw v4
 
-    .line 124
     :cond_1
     return-object v3
 .end method
@@ -457,20 +412,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 154
     const/4 v2, 0x0
 
-    .line 155
     .local v2, "resSize":I
     const/16 v4, 0x106
 
     new-array v0, v4, [B
 
-    .line 156
     .local v0, "apdu_res":[B
     const/4 v3, 0x0
 
-    .line 158
     .local v3, "response":[B
     :try_start_0
     sget-object v4, Lcom/lguplus/se/SmartMXUICC;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
@@ -481,27 +432,21 @@
 
     move-result v2
 
-    .line 165
     if-lez v2, :cond_0
 
-    .line 166
     new-array v3, v2, [B
 
-    .line 167
     invoke-static {v0, v5, v3, v5, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
     :cond_0
     move-object v4, v3
 
-    .line 170
     :goto_0
     return-object v4
 
-    .line 160
     :catch_0
     move-exception v1
 
-    .line 161
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "SmartMXUICC"
 
@@ -509,7 +454,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     const/4 v4, 0x0
 
     goto :goto_0
@@ -525,7 +469,6 @@
     .end annotation
 
     .prologue
-    .line 146
     const/4 v0, 0x0
 
     return-object v0
@@ -541,7 +484,6 @@
     .end annotation
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     return-object v0
@@ -551,7 +493,6 @@
     .locals 1
 
     .prologue
-    .line 175
     const/4 v0, 0x0
 
     return v0
@@ -567,23 +508,19 @@
     .end annotation
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
-    .line 81
     .local v0, "retVal":I
     if-nez p1, :cond_0
 
-    .line 82
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "seType must not be null"
+    const-string v2, "seType must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 84
     :cond_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -597,10 +534,8 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 85
     const/4 v0, -0x2
 
-    .line 91
     :goto_0
     const-string v1, "SmartMXUICC"
 
@@ -608,7 +543,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "openSecureElementConnection, retVal:"
+    const-string v3, "openSecureElementConnection, retVal:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -624,12 +559,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_3
 
-    .line 95
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Fail to open channel"
@@ -638,7 +571,6 @@
 
     throw v1
 
-    .line 86
     :cond_1
     const-string v1, "android.nfc.uicc.ID"
 
@@ -648,20 +580,17 @@
 
     if-eqz v1, :cond_2
 
-    .line 87
     invoke-direct {p0}, Lcom/lguplus/se/SmartMXUICC;->openLogicalChannel()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 89
     :cond_2
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 97
     :cond_3
     return v0
 .end method

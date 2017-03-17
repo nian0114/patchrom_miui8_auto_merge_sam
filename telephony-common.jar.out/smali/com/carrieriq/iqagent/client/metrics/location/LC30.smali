@@ -54,7 +54,6 @@
 
     const/4 v1, 0x0
 
-    .line 9
     const-string v0, "LC30"
 
     invoke-static {v0}, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->idFromString(Ljava/lang/String;)I
@@ -63,36 +62,26 @@
 
     sput v0, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->ID:I
 
-    .line 18
     sput-byte v1, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_METHOD_UNKNOWN:B
 
-    .line 19
     sput-byte v2, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_METHOD_CELLULAR:B
 
-    .line 20
     sput-byte v3, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_METHOD_WIFI:B
 
-    .line 21
     sput-byte v4, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_METHOD_ALT:B
 
-    .line 23
     sput-byte v1, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_RESULTS_UNKNOWN:B
 
-    .line 24
     sput-byte v2, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_RESULTS_SUCCESS:B
 
-    .line 25
     sput-byte v3, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_RESULTS_UNAVAILABLE:B
 
-    .line 26
     sput-byte v4, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_RESULTS_IN_USE:B
 
-    .line 27
     const/4 v0, 0x4
 
     sput-byte v0, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_RESULTS_USER_DENIED:B
 
-    .line 28
     const/4 v0, 0x5
 
     sput-byte v0, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->IQ_LOC_RESULTS_USER_UNAUTHORIZED:B
@@ -104,12 +93,10 @@
     .locals 1
 
     .prologue
-    .line 31
     sget v0, Lcom/carrieriq/iqagent/client/metrics/location/LC30;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 32
     return-void
 .end method
 
@@ -119,7 +106,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-void
 .end method
 
@@ -133,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 59
     const/4 v0, -0x1
 
     return v0
@@ -144,7 +129,6 @@
     .param p1, "meters"    # S
 
     .prologue
-    .line 44
     return-void
 .end method
 
@@ -153,7 +137,6 @@
     .param p1, "timestamp"    # J
 
     .prologue
-    .line 47
     return-void
 .end method
 
@@ -162,7 +145,6 @@
     .param p1, "degrees"    # D
 
     .prologue
-    .line 38
     return-void
 .end method
 
@@ -171,7 +153,6 @@
     .param p1, "degrees"    # D
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -180,7 +161,6 @@
     .param p1, "method"    # B
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -189,7 +169,6 @@
     .param p1, "results"    # B
 
     .prologue
-    .line 50
     return-void
 .end method
 
@@ -198,6 +177,5 @@
     .param p1, "timestamp"    # J
 
     .prologue
-    .line 53
     return-void
 .end method

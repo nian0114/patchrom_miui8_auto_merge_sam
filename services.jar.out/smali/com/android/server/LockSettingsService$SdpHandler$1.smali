@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 2900
     iput-object p1, p0, Lcom/android/server/LockSettingsService$SdpHandler$1;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
     iput-object p2, p0, Lcom/android/server/LockSettingsService$SdpHandler$1;->val$newPassword:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 2903
     # getter for: Lcom/android/server/LockSettingsService;->SDP_LOCK:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/LockSettingsService;->access$1600()Ljava/lang/Object;
 
@@ -56,7 +54,6 @@
 
     monitor-enter v1
 
-    .line 2904
     :try_start_0
     iget-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler$1;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/LockSettingsService$SdpHandler;->setPasswordInternal(Ljava/lang/String;I)V
 
-    .line 2905
     iget-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler$1;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
     iget-object v0, v0, Lcom/android/server/LockSettingsService$SdpHandler;->this$0:Lcom/android/server/LockSettingsService;
@@ -76,13 +72,10 @@
     # invokes: Lcom/android/server/LockSettingsService;->clear(Ljava/lang/String;)V
     invoke-static {v0, v2}, Lcom/android/server/LockSettingsService;->access$1700(Lcom/android/server/LockSettingsService;Ljava/lang/String;)V
 
-    .line 2906
     monitor-exit v1
 
-    .line 2907
     return-void
 
-    .line 2906
     :catchall_0
     move-exception v0
 

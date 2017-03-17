@@ -30,10 +30,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 74
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -53,7 +50,6 @@
 
     move-result-object v0
 
-    .line 75
     .local v0, "s":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -61,10 +57,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 76
     const-string v0, "com.whitepages.nameid.tmobile"
 
-    .line 77
     :cond_0
     return-object v0
 .end method
@@ -73,16 +67,13 @@
     .locals 2
 
     .prologue
-    .line 56
     sget-object v0, Lcom/whitepages/nameid/NameIDBlockingHelper;->s_options:Landroid/os/Bundle;
 
-    .line 57
     .local v0, "options":Landroid/os/Bundle;
     const/4 v1, 0x0
 
     sput-object v1, Lcom/whitepages/nameid/NameIDBlockingHelper;->s_options:Landroid/os/Bundle;
 
-    .line 58
     return-object v0
 .end method
 
@@ -91,7 +82,6 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 70
     const-string v0, "NAME_ID_ORIGINAL_INTENT"
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -110,13 +100,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 81
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 82
     .local v3, "pm":Landroid/content/pm/PackageManager;
     invoke-static {p0}, Lcom/whitepages/nameid/NameIDBlockingHelper;->getActivePackageName(Landroid/content/Context;)Ljava/lang/String;
 
@@ -128,22 +116,18 @@
 
     move-result-object v2
 
-    .line 83
     .local v2, "p":Landroid/content/pm/PackageInfo;
     iget-object v1, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 84
     .local v1, "info":Landroid/content/pm/ApplicationInfo;
     if-nez v1, :cond_0
 
-    .line 91
     .end local v1    # "info":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "p":Landroid/content/pm/PackageInfo;
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
     :goto_0
     return v4
 
-    .line 86
     .restart local v1    # "info":Landroid/content/pm/ApplicationInfo;
     .restart local v2    # "p":Landroid/content/pm/PackageInfo;
     .restart local v3    # "pm":Landroid/content/pm/PackageManager;
@@ -172,21 +156,18 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     iget-boolean v4, v1, Landroid/content/pm/ApplicationInfo;->enabled:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 89
     .end local v1    # "info":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "p":Landroid/content/pm/PackageInfo;
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
     :catch_0
     move-exception v0
 
-    .line 90
     .local v0, "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, "NameIDHelper"
 
@@ -202,7 +183,6 @@
     .param p0, "sAction"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     const-string v0, "com.whitepages.nameid.action.CHECK_TEXT_BLOCK"
 
     invoke-static {v0, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -217,7 +197,6 @@
     .param p0, "rc"    # I
 
     .prologue
-    .line 62
     if-nez p0, :cond_0
 
     const/4 v0, 0x1
@@ -242,31 +221,26 @@
 
     const/4 v5, 0x0
 
-    .line 37
     invoke-static {p0}, Lcom/whitepages/nameid/NameIDBlockingHelper;->isNameIDInstalledAndEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 52
     .end local p1    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-object p1
 
-    .line 39
     .restart local p1    # "intent":Landroid/content/Intent;
     :cond_1
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 40
     .local v1, "sAction":Ljava/lang/String;
     sput-object p2, Lcom/whitepages/nameid/NameIDBlockingHelper;->s_options:Landroid/os/Bundle;
 
-    .line 42
     const-string v2, "android.provider.Telephony.WAP_PUSH_DELIVER"
 
     invoke-static {v2, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -283,7 +257,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 45
     :cond_2
     new-instance v0, Landroid/content/Intent;
 
@@ -291,7 +264,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 46
     .local v0, "newIntent":Landroid/content/Intent;
     const-string v2, "android.provider.Telephony.WAP_PUSH_DELIVER"
 
@@ -301,7 +273,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 47
     const-string v2, "%s/com.whitepages.nameid.service.MmsReceiver"
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -322,7 +293,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 51
     :goto_1
     const-string v2, "NAME_ID_ORIGINAL_INTENT"
 
@@ -330,10 +300,8 @@
 
     move-object p1, v0
 
-    .line 52
     goto :goto_0
 
-    .line 49
     :cond_3
     const-string v2, "%s/com.whitepages.nameid.service.SmsReceiver"
 

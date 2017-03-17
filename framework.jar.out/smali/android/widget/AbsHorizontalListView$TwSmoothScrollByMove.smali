@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6039
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/widget/AbsHorizontalListView$1;
 
     .prologue
-    .line 6039
     invoke-direct {p0, p1}, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;-><init>(Landroid/widget/AbsHorizontalListView;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 5
 
     .prologue
-    .line 6041
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mFlingRunnable:Landroid/widget/AbsHorizontalListView$FlingRunnable;
@@ -71,7 +68,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6042
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mTwTwScrollRemains:Ljava/util/LinkedList;
@@ -81,7 +77,6 @@
 
     monitor-enter v2
 
-    .line 6043
     :try_start_0
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
 
@@ -96,14 +91,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 6044
     monitor-exit v2
 
-    .line 6052
     :goto_0
     return-void
 
-    .line 6046
     :cond_0
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
 
@@ -122,7 +114,6 @@
 
     move-result v0
 
-    .line 6047
     .local v0, "remain":I
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
 
@@ -132,12 +123,10 @@
 
     invoke-virtual {v1, v0, v3, v4}, Landroid/widget/AbsHorizontalListView;->smoothScrollBy(IIZ)V
 
-    .line 6049
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6051
     .end local v0    # "remain":I
     :cond_1
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsHorizontalListView;
@@ -146,7 +135,6 @@
 
     goto :goto_0
 
-    .line 6049
     :catchall_0
     move-exception v1
 

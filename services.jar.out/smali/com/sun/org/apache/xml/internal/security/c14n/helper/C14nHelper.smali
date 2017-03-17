@@ -29,13 +29,13 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "xmlns"
+    const-string v1, "xmlns"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const-string/jumbo v2, "xmlns:"
+    const-string v2, "xmlns:"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

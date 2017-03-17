@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 92
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "content"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 50
-    const-string/jumbo v0, "http-equiv"
+    const-string v0, "http-equiv"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -58,8 +54,7 @@
     .locals 1
 
     .prologue
-    .line 62
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -72,8 +67,7 @@
     .locals 1
 
     .prologue
-    .line 74
-    const-string/jumbo v0, "scheme"
+    const-string v0, "scheme"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -87,12 +81,10 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-string v0, "content"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -101,12 +93,10 @@
     .param p1, "httpEquiv"    # Ljava/lang/String;
 
     .prologue
-    .line 56
-    const-string/jumbo v0, "http-equiv"
+    const-string v0, "http-equiv"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
     return-void
 .end method
 
@@ -115,12 +105,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 68
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     return-void
 .end method
 
@@ -129,11 +117,9 @@
     .param p1, "scheme"    # Ljava/lang/String;
 
     .prologue
-    .line 80
-    const-string/jumbo v0, "scheme"
+    const-string v0, "scheme"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLMetaElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 81
     return-void
 .end method

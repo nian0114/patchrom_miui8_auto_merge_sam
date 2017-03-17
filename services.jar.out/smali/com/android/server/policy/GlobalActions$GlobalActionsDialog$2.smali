@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4766
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$GlobalActionsDialog$2;->this$0:Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 4769
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$GlobalActionsDialog$2;->this$0:Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;
 
     invoke-virtual {v0}, Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;->dismiss()V
 
-    .line 4770
     return-void
 .end method

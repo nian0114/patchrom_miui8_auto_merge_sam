@@ -94,7 +94,6 @@
 
     const/4 v3, 0x0
 
-    .line 3486
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_768"
@@ -103,7 +102,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_768:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3492
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_1024"
@@ -112,7 +110,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_1024:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3498
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_1536"
@@ -121,7 +118,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_1536:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3504
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_2048"
@@ -130,7 +126,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_2048:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3510
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_3072"
@@ -139,7 +134,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_3072:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3516
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_4096"
@@ -150,7 +144,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_4096:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3522
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_6144"
@@ -161,7 +154,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_6144:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3528
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_8192"
@@ -172,7 +164,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_8192:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3534
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_ECP_256"
@@ -183,7 +174,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_ECP_256:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3540
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_ECP_384"
@@ -194,7 +184,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_ECP_384:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3546
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_ECP_521"
@@ -205,7 +194,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_ECP_521:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3552
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_1024_160"
@@ -216,7 +204,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_1024_160:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3558
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_2048_224"
@@ -227,7 +214,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_2048_224:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3564
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_MODP_2048_256"
@@ -238,7 +224,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_MODP_2048_256:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3570
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_ECP_192"
@@ -249,7 +234,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_ECP_192:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3576
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_ECP_224"
@@ -260,7 +244,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_ECP_224:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3582
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_BRAINPOOL_ECP_224"
@@ -271,7 +254,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_BRAINPOOL_ECP_224:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3588
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_BRAINPOOL_ECP_256"
@@ -282,7 +264,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_BRAINPOOL_ECP_256:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3594
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_BRAINPOOL_ECP_384"
@@ -293,7 +274,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_BRAINPOOL_ECP_384:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3600
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_BRAINPOOL_ECP_512"
@@ -304,7 +284,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_BRAINPOOL_ECP_512:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3606
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_ANY"
@@ -315,7 +294,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_ANY:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3612
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_SUITE_B_GCM_128"
@@ -326,7 +304,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_SUITE_B_GCM_128:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3618
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     const-string v1, "IKE_GROUP_SUITE_B_GCM_256"
@@ -337,7 +314,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->IKE_GROUP_SUITE_B_GCM_256:Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
-    .line 3479
     const/16 v0, 0x17
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IkeGroup;
@@ -484,7 +460,6 @@
     .end annotation
 
     .prologue
-    .line 3479
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -495,7 +470,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3479
     const-class v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -511,7 +485,6 @@
     .locals 1
 
     .prologue
-    .line 3479
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IkeGroup;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IkeGroup;->clone()Ljava/lang/Object;

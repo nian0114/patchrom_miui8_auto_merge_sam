@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignatureValue;->mId:Ljava/lang/String;
 
     return-object v0
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignatureValue;->mSignatureValue:[B
 
     return-object v0
@@ -47,10 +44,8 @@
     .param p1, "mName"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignatureValue;->mId:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -59,9 +54,7 @@
     .param p1, "mSignatureValue"    # [B
 
     .prologue
-    .line 26
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignatureValue;->mSignatureValue:[B
 
-    .line 27
     return-void
 .end method

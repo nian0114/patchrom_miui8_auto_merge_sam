@@ -25,16 +25,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-boolean v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_ignoreWhitespace:Z
 
-    .line 72
     iput-boolean v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_done:Z
 
-    .line 42
     return-void
 .end method
 
@@ -50,12 +46,10 @@
     .end annotation
 
     .prologue
-    .line 174
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     if-nez v0, :cond_0
 
-    .line 175
     new-instance v0, Lorg/xml/sax/SAXException;
 
     const-string v1, "HTM009 State error: character data found outside of root element."
@@ -64,7 +58,6 @@
 
     throw v0
 
-    .line 176
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -76,7 +69,6 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xerces/dom/ElementImpl;->appendChild(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Node;
 
-    .line 177
     return-void
 .end method
 
@@ -92,12 +84,10 @@
     .end annotation
 
     .prologue
-    .line 183
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     if-nez v0, :cond_0
 
-    .line 184
     new-instance v0, Lorg/xml/sax/SAXException;
 
     const-string v1, "HTM010 State error: character data found outside of root element."
@@ -106,7 +96,6 @@
 
     throw v0
 
-    .line 185
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -122,7 +111,6 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xerces/dom/ElementImpl;->appendChild(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Node;
 
-    .line 186
     return-void
 .end method
 
@@ -135,12 +123,10 @@
     .end annotation
 
     .prologue
-    .line 96
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
     if-nez v0, :cond_0
 
-    .line 97
     new-instance v0, Lorg/xml/sax/SAXException;
 
     const-string v1, "HTM002 State error: document never started or missing document element."
@@ -149,13 +135,11 @@
 
     throw v0
 
-    .line 98
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     if-eqz v0, :cond_1
 
-    .line 99
     new-instance v0, Lorg/xml/sax/SAXException;
 
     const-string v1, "HTM003 State error: document ended before end of document element."
@@ -164,18 +148,15 @@
 
     throw v0
 
-    .line 100
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
-    .line 101
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_done:Z
 
-    .line 102
     return-void
 .end method
 
@@ -189,12 +170,10 @@
     .end annotation
 
     .prologue
-    .line 157
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     if-nez v0, :cond_0
 
-    .line 158
     new-instance v0, Lorg/xml/sax/SAXException;
 
     const-string v1, "HTM007 State error: endElement called with no current node."
@@ -203,7 +182,6 @@
 
     throw v0
 
-    .line 159
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -217,7 +195,6 @@
 
     if-nez v0, :cond_1
 
-    .line 160
     new-instance v0, Lorg/xml/sax/SAXException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -248,7 +225,6 @@
 
     throw v0
 
-    .line 164
     :cond_1
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -264,16 +240,13 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 165
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
-    .line 168
     :goto_0
     return-void
 
-    .line 167
     :cond_2
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -292,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 218
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
     return-object v0
@@ -310,12 +282,10 @@
     .end annotation
 
     .prologue
-    .line 192
     iget-boolean v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_ignoreWhitespace:Z
 
     if-nez v0, :cond_0
 
-    .line 193
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     iget-object v1, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
@@ -330,7 +300,6 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xerces/dom/ElementImpl;->appendChild(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Node;
 
-    .line 194
     :cond_0
     return-void
 .end method
@@ -346,7 +315,6 @@
     .end annotation
 
     .prologue
-    .line 202
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     if-nez v0, :cond_1
@@ -355,19 +323,16 @@
 
     if-nez v0, :cond_1
 
-    .line 204
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_preRootNodes:Ljava/util/Vector;
 
     if-nez v0, :cond_0
 
-    .line 205
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_preRootNodes:Ljava/util/Vector;
 
-    .line 206
     :cond_0
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_preRootNodes:Ljava/util/Vector;
 
@@ -379,11 +344,9 @@
 
     invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 213
     :goto_0
     return-void
 
-    .line 209
     :cond_1
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -393,7 +356,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 210
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
     iget-object v1, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
@@ -406,7 +368,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_2
     iget-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
@@ -426,7 +387,6 @@
     .param p1, "locator"    # Lorg/xml/sax/Locator;
 
     .prologue
-    .line 225
     return-void
 .end method
 
@@ -439,12 +399,10 @@
     .end annotation
 
     .prologue
-    .line 86
     iget-boolean v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_done:Z
 
     if-nez v0, :cond_0
 
-    .line 87
     new-instance v0, Lorg/xml/sax/SAXException;
 
     const-string v1, "HTM001 State error: startDocument fired twice on one builder."
@@ -453,18 +411,15 @@
 
     throw v0
 
-    .line 88
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
-    .line 89
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_done:Z
 
-    .line 90
     return-void
 .end method
 
@@ -479,12 +434,10 @@
     .end annotation
 
     .prologue
-    .line 111
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 112
     :try_start_0
     new-instance v3, Lorg/xml/sax/SAXException;
 
@@ -496,7 +449,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 111
     :catchall_0
     move-exception v3
 
@@ -504,21 +456,18 @@
 
     throw v3
 
-    .line 116
     :cond_0
     :try_start_1
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
     if-nez v3, :cond_5
 
-    .line 119
     new-instance v3, Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
     invoke-direct {v3}, Lmf/org/apache/html/dom/HTMLDocumentImpl;-><init>()V
 
     iput-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
-    .line 120
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
     invoke-virtual {v3}, Lmf/org/apache/html/dom/HTMLDocumentImpl;->getDocumentElement()Lmf/org/w3c/dom/Element;
@@ -527,16 +476,13 @@
 
     check-cast v0, Lmf/org/apache/xerces/dom/ElementImpl;
 
-    .line 121
     .local v0, "elem":Lmf/org/apache/xerces/dom/ElementImpl;
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
-    .line 122
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     if-nez v3, :cond_1
 
-    .line 123
     new-instance v3, Lorg/xml/sax/SAXException;
 
     const-string v4, "HTM005 State error: Document.getDocumentElement returns null."
@@ -545,13 +491,11 @@
 
     throw v3
 
-    .line 126
     :cond_1
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_preRootNodes:Ljava/util/Vector;
 
     if-eqz v3, :cond_2
 
-    .line 128
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_preRootNodes:Ljava/util/Vector;
 
     invoke-virtual {v3}, Ljava/util/Vector;->size()I
@@ -570,18 +514,15 @@
     .restart local v1    # "i":I
     if-gtz v2, :cond_4
 
-    .line 130
     const/4 v3, 0x0
 
     iput-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_preRootNodes:Ljava/util/Vector;
 
-    .line 146
     .end local v1    # "i":I
     :cond_2
     :goto_1
     if-eqz p2, :cond_3
 
-    .line 148
     const/4 v1, 0x0
 
     .restart local v1    # "i":I
@@ -594,14 +535,12 @@
 
     if-lt v1, v3, :cond_7
 
-    .line 151
     .end local v1    # "i":I
     :cond_3
     monitor-exit p0
 
     return-void
 
-    .line 129
     .restart local v1    # "i":I
     :cond_4
     :try_start_2
@@ -623,7 +562,6 @@
     .restart local v2    # "i":I
     goto :goto_0
 
-    .line 138
     .end local v0    # "elem":Lmf/org/apache/xerces/dom/ElementImpl;
     .end local v2    # "i":I
     :cond_5
@@ -631,7 +569,6 @@
 
     if-nez v3, :cond_6
 
-    .line 139
     new-instance v3, Lorg/xml/sax/SAXException;
 
     const-string v4, "HTM006 State error: startElement called after end of document element."
@@ -640,7 +577,6 @@
 
     throw v3
 
-    .line 140
     :cond_6
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_document:Lmf/org/apache/html/dom/HTMLDocumentImpl;
 
@@ -650,18 +586,15 @@
 
     check-cast v0, Lmf/org/apache/xerces/dom/ElementImpl;
 
-    .line 141
     .restart local v0    # "elem":Lmf/org/apache/xerces/dom/ElementImpl;
     iget-object v3, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     invoke-virtual {v3, v0}, Lmf/org/apache/xerces/dom/ElementImpl;->appendChild(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Node;
 
-    .line 142
     iput-object v0, p0, Lmf/org/apache/html/dom/HTMLBuilder;->_current:Lmf/org/apache/xerces/dom/ElementImpl;
 
     goto :goto_1
 
-    .line 149
     .restart local v1    # "i":I
     :cond_7
     invoke-interface {p2, v1}, Lorg/xml/sax/AttributeList;->getName(I)Ljava/lang/String;
@@ -676,7 +609,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 148
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2

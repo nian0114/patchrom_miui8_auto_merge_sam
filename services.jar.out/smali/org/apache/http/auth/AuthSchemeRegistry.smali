@@ -13,7 +13,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -38,7 +37,6 @@
     .end annotation
 
     .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -73,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -101,7 +98,6 @@
     .param p2, "factory"    # Lorg/apache/http/auth/AuthSchemeFactory;
 
     .prologue
-    .line 6
     monitor-enter p0
 
     :try_start_0
@@ -137,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 10
     .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/apache/http/auth/AuthSchemeFactory;>;"
     monitor-enter p0
 
@@ -165,7 +160,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     monitor-enter p0
 
     :try_start_0

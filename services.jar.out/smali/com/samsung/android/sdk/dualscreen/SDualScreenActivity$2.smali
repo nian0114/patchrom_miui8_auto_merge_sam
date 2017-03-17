@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 418
     iput-object p1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$2;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "notifyReason"    # I
 
     .prologue
-    .line 420
     iget-object v0, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$2;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     # getter for: Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;->mSdkExpandRequestListener:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ExpandRequestListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 421
     iget-object v0, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$2;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     # getter for: Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;->mSdkExpandRequestListener:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ExpandRequestListener;
@@ -61,7 +58,6 @@
 
     invoke-interface {v0, p1}, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ExpandRequestListener;->onExpandRequested(I)V
 
-    .line 423
     :cond_0
     return-void
 .end method

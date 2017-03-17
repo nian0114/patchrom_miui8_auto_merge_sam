@@ -184,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 272
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -193,7 +192,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->RGBCMYArray:[I
 
-    .line 375
     const-string v0, "content://com.sec.android.emergencymode/whitelist"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -202,7 +200,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_WHITELIST:Landroid/net/Uri;
 
-    .line 382
     const-string v0, "content://com.sec.android.emergencymode/prefsettings"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -211,7 +208,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_PREFSETTINGS:Landroid/net/Uri;
 
-    .line 389
     const-string v0, "content://com.sec.android.emergencymode/disabledpkg"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -220,7 +216,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_DISABLEDPKG:Landroid/net/Uri;
 
-    .line 392
     const-string v0, "content://com.sec.android.emergencymode/alarm"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -229,7 +224,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_ALARM:Landroid/net/Uri;
 
-    .line 398
     const-string v0, "content://com.sec.android.emergencymode/ecclist"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -238,7 +232,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_ECCLIST:Landroid/net/Uri;
 
-    .line 405
     const-string v0, "content://com.sec.android.emergencymode/launcherdefault"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -247,7 +240,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_LAUNCHER_DEFAULT:Landroid/net/Uri;
 
-    .line 412
     const-string v0, "content://com.sec.android.emergencymode/launcheradd"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -256,7 +248,6 @@
 
     sput-object v0, Lcom/sec/android/emergencymode/EmergencyConstants;->URI_LAUNCHER_ADD:Landroid/net/Uri;
 
-    .line 415
     const-string v0, "content://com.sec.android.emergencymode/updatetable"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -267,7 +258,6 @@
 
     return-void
 
-    .line 272
     :array_0
     .array-data 4
         0x4cb3
@@ -286,9 +276,7 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method

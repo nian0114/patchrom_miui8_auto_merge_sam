@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 180
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver$1;->this$0:Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver$1;->this$0:Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;
 
     # getter for: Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastActiveEdgeArea:I
@@ -50,6 +48,5 @@
 
     invoke-static {v0}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils$CocktailBarSystemUtil;->updateWakeupArea(I)V
 
-    .line 184
     return-void
 .end method

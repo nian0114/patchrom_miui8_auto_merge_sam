@@ -26,7 +26,6 @@
     .locals 2
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -46,7 +45,6 @@
     .param p3, "criteria"    # [Ljava/lang/String;
 
     .prologue
-    .line 31
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -64,7 +62,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 30
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -79,7 +76,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 22
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -95,7 +91,6 @@
     .param p2, "alternate"    # Z
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -115,7 +110,6 @@
     .end annotation
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -130,7 +124,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -144,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 28
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -160,7 +152,6 @@
     .param p2, "value2"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -177,7 +168,6 @@
     .param p3, "alternate"    # Z
 
     .prologue
-    .line 27
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -192,7 +182,6 @@
     .param p1, "maxCodeLen"    # I
 
     .prologue
-    .line 29
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

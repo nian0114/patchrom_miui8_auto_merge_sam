@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 370
     iput-object p1, p0, Lcom/android/server/SEAMService$2;->this$0:Lcom/android/server/SEAMService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 373
     # getter for: Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
     invoke-static {}, Lcom/android/server/SEAMService;->access$100()Lcom/android/server/SKLogger;
 
@@ -51,14 +49,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 374
-    const-string/jumbo v0, "selinux.reload_policy"
+    const-string v0, "selinux.reload_policy"
 
     const-string v1, "1"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
     # getter for: Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
     invoke-static {}, Lcom/android/server/SEAMService;->access$100()Lcom/android/server/SKLogger;
 
@@ -66,11 +62,10 @@
 
     const-string v1, "SEAMService"
 
-    const-string/jumbo v2, "done with reload policy after spd update"
+    const-string v2, "done with reload policy after spd update"
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 376
     iget-object v0, p0, Lcom/android/server/SEAMService$2;->this$0:Lcom/android/server/SEAMService;
 
     # getter for: Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
@@ -80,6 +75,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerService;->reloadSBAPolicy()V
 
-    .line 377
     return-void
 .end method

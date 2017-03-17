@@ -20,20 +20,16 @@
     .locals 1
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     const v0, 0x186a0
 
     iput v0, p0, Lmf/org/apache/xerces/util/SecurityManager;->entityExpansionLimit:I
 
-    .line 66
     const/16 v0, 0xbb8
 
     iput v0, p0, Lmf/org/apache/xerces/util/SecurityManager;->maxOccurLimit:I
 
-    .line 67
     return-void
 .end method
 
@@ -43,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget v0, p0, Lmf/org/apache/xerces/util/SecurityManager;->entityExpansionLimit:I
 
     return v0
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Lmf/org/apache/xerces/util/SecurityManager;->maxOccurLimit:I
 
     return v0
@@ -64,10 +58,8 @@
     .param p1, "limit"    # I
 
     .prologue
-    .line 77
     iput p1, p0, Lmf/org/apache/xerces/util/SecurityManager;->entityExpansionLimit:I
 
-    .line 78
     return-void
 .end method
 
@@ -76,9 +68,7 @@
     .param p1, "limit"    # I
 
     .prologue
-    .line 101
     iput p1, p0, Lmf/org/apache/xerces/util/SecurityManager;->maxOccurLimit:I
 
-    .line 102
     return-void
 .end method

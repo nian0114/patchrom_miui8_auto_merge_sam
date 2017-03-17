@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 582
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$2;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     iput-object p2, p0, Lcom/android/internal/telephony/cat/CatBIPManager$2;->val$b:Lcom/android/internal/telephony/cat/CatBIPConnection;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 584
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$2;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatBIPManager$2;->val$b:Lcom/android/internal/telephony/cat/CatBIPConnection;
@@ -54,6 +52,5 @@
     # invokes: Lcom/android/internal/telephony/cat/CatBIPManager;->openChannelAsRemoteClient(Lcom/android/internal/telephony/cat/CatBIPClientConnection;)V
     invoke-static {v1, v0}, Lcom/android/internal/telephony/cat/CatBIPManager;->access$200(Lcom/android/internal/telephony/cat/CatBIPManager;Lcom/android/internal/telephony/cat/CatBIPClientConnection;)V
 
-    .line 585
     return-void
 .end method

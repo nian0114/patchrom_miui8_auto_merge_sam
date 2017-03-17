@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 165
     iput-object p1, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->this$0:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     iput-object p2, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
@@ -45,10 +44,8 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 168
     iget-object v4, p1, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
-    .line 170
     .local v4, "name":Ljava/lang/String;
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
@@ -60,30 +57,25 @@
 
     if-nez v5, :cond_1
 
-    .line 171
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/storage/EdmStorageHelper;->preTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
     invoke-static {v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->access$100(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 172
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/storage/EdmStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
     invoke-static {v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->access$200(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 173
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/storage/EdmStorageHelper;->postTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
     invoke-static {v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->access$300(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 191
     :cond_0
     :goto_0
     return-void
 
-    .line 175
     :cond_1
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -94,7 +86,6 @@
 
     if-nez v5, :cond_0
 
-    .line 176
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/storage/EdmStorageHelper;->getMissingColumns(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/android/server/enterprise/storage/Table;)Ljava/util/ArrayList;
@@ -102,7 +93,6 @@
 
     move-result-object v1
 
-    .line 178
     .local v1, "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -122,7 +112,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/storage/Column;
 
-    .line 179
     .local v0, "column":Lcom/android/server/enterprise/storage/Column;
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -154,14 +143,12 @@
 
     goto :goto_1
 
-    .line 188
     .end local v0    # "column":Lcom/android/server/enterprise/storage/Column;
     .end local v1    # "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
-    .line 189
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "EdmStorageHelper"
 
@@ -193,7 +180,6 @@
 
     goto :goto_0
 
-    .line 183
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -201,7 +187,7 @@
     :try_start_1
     const-string v5, "EdmStorageHelper"
 
-    const-string/jumbo v6, "onTableFound Altered Table %s with Columns %d"
+    const-string v6, "onTableFound Altered Table %s with Columns %d"
 
     const/4 v7, 0x2
 

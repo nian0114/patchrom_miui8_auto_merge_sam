@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1743
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,14 +45,11 @@
     .param p2, "v2"    # Lcom/android/server/pm/PackageManagerService$VerifierPackage;
 
     .prologue
-    .line 1745
     iget-wide v0, p1, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->firstInstallTime:J
 
-    .line 1746
     .local v0, "t1":J
     iget-wide v2, p2, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->firstInstallTime:J
 
-    .line 1747
     .local v2, "t2":J
     cmp-long v4, v0, v2
 
@@ -85,7 +81,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1743
     check-cast p1, Lcom/android/server/pm/PackageManagerService$VerifierPackage;
 
     .end local p1    # "x0":Ljava/lang/Object;

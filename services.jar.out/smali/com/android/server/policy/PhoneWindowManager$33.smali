@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 9862
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$33;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 9865
     const-string v0, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,10 +50,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 9866
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$33;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    const-string/jumbo v1, "level"
+    const-string v1, "level"
 
     const/16 v2, 0x64
 
@@ -66,7 +63,6 @@
     # setter for: Lcom/android/server/policy/PhoneWindowManager;->mBatteryLevel:I
     invoke-static {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->access$4002(Lcom/android/server/policy/PhoneWindowManager;I)I
 
-    .line 9868
     :cond_0
     return-void
 .end method

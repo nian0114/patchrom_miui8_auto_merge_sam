@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 283
     iput-object p1, p0, Lcom/android/server/QuickConnectService$2;->this$0:Lcom/android/server/QuickConnectService;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "newProfileId"    # I
 
     .prologue
-    .line 294
     iget-object v2, p0, Lcom/android/server/QuickConnectService$2;->this$0:Lcom/android/server/QuickConnectService;
 
     # getter for: Lcom/android/server/QuickConnectService;->mContext:Landroid/content/Context;
@@ -46,7 +44,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "user"
+    const-string v3, "user"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -54,17 +52,14 @@
 
     check-cast v1, Landroid/os/UserManager;
 
-    .line 295
     .local v1, "userManager":Landroid/os/UserManager;
     const/4 v0, 0x0
 
-    .line 296
     .local v0, "user":Landroid/content/pm/UserInfo;
     const/4 v2, -0x2
 
     if-ne p1, v2, :cond_0
 
-    .line 298
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -76,7 +71,6 @@
 
     move-result-object v0
 
-    .line 306
     :goto_0
     iget-object v3, p0, Lcom/android/server/QuickConnectService$2;->this$0:Lcom/android/server/QuickConnectService;
 
@@ -100,14 +94,13 @@
     # setter for: Lcom/android/server/QuickConnectService;->mManagedProfileFocused:Z
     invoke-static {v3, v2}, Lcom/android/server/QuickConnectService;->access$302(Lcom/android/server/QuickConnectService;Z)Z
 
-    .line 307
     const-string v2, "QuickConnectService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "profileChanged: mManagedProfileFocused: "
+    const-string v4, "profileChanged: mManagedProfileFocused: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,10 +123,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     return-void
 
-    .line 303
     :cond_0
     invoke-virtual {v1, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -141,13 +132,11 @@
 
     goto :goto_0
 
-    .line 306
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 299
     :catch_0
     move-exception v2
 
@@ -164,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 290
     return-void
 .end method
 
@@ -174,6 +162,5 @@
     .param p2, "reply"    # Landroid/os/IRemoteCallback;
 
     .prologue
-    .line 286
     return-void
 .end method

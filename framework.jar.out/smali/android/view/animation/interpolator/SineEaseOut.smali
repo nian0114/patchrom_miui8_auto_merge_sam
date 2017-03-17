@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 88
     return-void
 .end method
 
@@ -21,10 +19,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 97
     return-void
 .end method
 
@@ -33,7 +29,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 104
     float-to-double v0, p1
 
     const-wide v2, 0x3ff921fb54442d18L    # 1.5707963267948966
@@ -56,7 +51,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 100
     invoke-direct {p0, p1}, Landroid/view/animation/interpolator/SineEaseOut;->out(F)F
 
     move-result v0

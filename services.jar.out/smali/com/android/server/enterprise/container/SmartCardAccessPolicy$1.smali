@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 233
     iput-object p1, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy$1;->this$0:Lcom/android/server/enterprise/container/SmartCardAccessPolicy;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "succeeded"    # Z
 
     .prologue
-    .line 236
     # getter for: Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->access$000()Ljava/lang/String;
 
@@ -49,6 +47,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 237
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1787
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "x1"    # Lcom/android/server/BluetoothManagerService$1;
 
     .prologue
-    .line 1787
     invoke-direct {p0, p1}, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;-><init>(Lcom/android/server/BluetoothManagerService;)V
 
     return-void
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1796
     iget-boolean v0, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->mGetNameAddressOnly:Z
 
     return v0
@@ -66,7 +63,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1800
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -100,7 +96,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1801
     :cond_0
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -115,7 +110,6 @@
 
     move-result-object v0
 
-    .line 1803
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -129,16 +123,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 1804
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1812
     :goto_0
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1813
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # getter for: Lcom/android/server/BluetoothManagerService;->mHandler:Lcom/android/server/BluetoothManagerService$BluetoothHandler;
@@ -148,11 +139,9 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/BluetoothManagerService$BluetoothHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1814
     :goto_1
     return-void
 
-    .line 1806
     :cond_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -166,14 +155,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 1807
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
     goto :goto_0
 
-    .line 1809
     :cond_2
     const-string v1, "BluetoothManagerService"
 
@@ -209,7 +196,6 @@
     .param p1, "className"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1818
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -243,7 +229,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1820
     :cond_0
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -258,7 +243,6 @@
 
     move-result-object v0
 
-    .line 1821
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -272,12 +256,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1822
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1829
     :goto_0
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -288,11 +270,9 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/BluetoothManagerService$BluetoothHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1830
     :goto_1
     return-void
 
-    .line 1823
     :cond_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -306,14 +286,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 1824
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
     goto :goto_0
 
-    .line 1826
     :cond_2
     const-string v1, "BluetoothManagerService"
 
@@ -349,9 +327,7 @@
     .param p1, "getOnly"    # Z
 
     .prologue
-    .line 1792
     iput-boolean p1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->mGetNameAddressOnly:Z
 
-    .line 1793
     return-void
 .end method

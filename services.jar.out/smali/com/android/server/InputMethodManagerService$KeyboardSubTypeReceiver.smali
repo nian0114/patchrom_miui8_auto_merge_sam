@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1193
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$KeyboardSubTypeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1196
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -52,12 +50,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1197
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1198
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "SamsungIME.Subtype"
 
@@ -67,13 +63,11 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodSubtype;
 
-    .line 1199
     .local v1, "inputMethodSubtype":Landroid/view/inputmethod/InputMethodSubtype;
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$KeyboardSubTypeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/InputMethodManagerService;->setCurrentInputMethodSubtype(Landroid/view/inputmethod/InputMethodSubtype;)Z
 
-    .line 1201
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "inputMethodSubtype":Landroid/view/inputmethod/InputMethodSubtype;
     :cond_0

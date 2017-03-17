@@ -59,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,10 +69,8 @@
     .param p0, "event"    # I
 
     .prologue
-    .line 127
     packed-switch p0, :pswitch_data_0
 
-    .line 167
     const-string v0, "[EPDGCommands]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,127 +93,106 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 168
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 129
     :pswitch_0
     const-string v0, "START_HO_L2W"
 
     goto :goto_0
 
-    .line 131
     :pswitch_1
     const-string v0, "START_HO_W2L"
 
     goto :goto_0
 
-    .line 133
     :pswitch_2
     const-string v0, "APN_ATTACH_REQ"
 
     goto :goto_0
 
-    .line 135
     :pswitch_3
     const-string v0, "APN_DETACH_REQ"
 
     goto :goto_0
 
-    .line 137
     :pswitch_4
     const-string v0, "HANDOVER_RESULT"
 
     goto :goto_0
 
-    .line 139
     :pswitch_5
     const-string v0, "IPSEC_CONN_SUCCESS"
 
     goto :goto_0
 
-    .line 141
     :pswitch_6
     const-string v0, "IPSEC_CONN_FAIL"
 
     goto :goto_0
 
-    .line 143
     :pswitch_7
     const-string v0, "IPSEC_CONN_DISCONNECTED"
 
     goto :goto_0
 
-    .line 145
     :pswitch_8
     const-string v0, "IPSEC_CONN_RESET"
 
     goto :goto_0
 
-    .line 147
     :pswitch_9
     const-string v0, "INTERFACE_UP"
 
     goto :goto_0
 
-    .line 149
     :pswitch_a
     const-string v0, "WIFI_STATUS_CHANGED"
 
     goto :goto_0
 
-    .line 151
     :pswitch_b
     const-string v0, "SM_TIMEOUT"
 
     goto :goto_0
 
-    .line 153
     :pswitch_c
     const-string v0, "APN_ATTACH_DNS_RETRY_RESPONSE"
 
     goto :goto_0
 
-    .line 155
     :pswitch_d
     const-string v0, "DATA_RETRY_TIMER_EXPIRED"
 
     goto :goto_0
 
-    .line 157
     :pswitch_e
     const-string v0, "INTERFACE_DOWN"
 
     goto :goto_0
 
-    .line 159
     :pswitch_f
     const-string v0, "APN_FORCE_DETACH_REQ"
 
     goto :goto_0
 
-    .line 161
     :pswitch_10
     const-string v0, "PERIODIC_DPD_TIMER_EXPIRED"
 
     goto :goto_0
 
-    .line 163
     :pswitch_11
     const-string v0, "DELAYED_CHECK_HO_W2L"
 
     goto :goto_0
 
-    .line 165
     :pswitch_12
     const-string v0, "NATT_KEEPALIVE_TIMER_EXPIRED"
 
     goto :goto_0
 
-    .line 127
     nop
 
     :pswitch_data_0

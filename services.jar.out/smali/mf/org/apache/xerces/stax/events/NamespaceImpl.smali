@@ -20,7 +20,6 @@
     .param p3, "location"    # Lmf/javax/xml/stream/Location;
 
     .prologue
-    .line 42
     const/16 v1, 0xd
 
     invoke-static {p1}, Lmf/org/apache/xerces/stax/events/NamespaceImpl;->makeAttributeQName(Ljava/lang/String;)Lmf/javax/xml/namespace/QName;
@@ -39,7 +38,6 @@
 
     invoke-direct/range {v0 .. v6}, Lmf/org/apache/xerces/stax/events/AttributeImpl;-><init>(ILmf/javax/xml/namespace/QName;Ljava/lang/String;Ljava/lang/String;ZLmf/javax/xml/stream/Location;)V
 
-    .line 43
     if-nez p1, :cond_0
 
     const-string p1, ""
@@ -48,10 +46,8 @@
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/stax/events/NamespaceImpl;->fPrefix:Ljava/lang/String;
 
-    .line 44
     iput-object p2, p0, Lmf/org/apache/xerces/stax/events/NamespaceImpl;->fNamespaceURI:Ljava/lang/String;
 
-    .line 45
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .param p0, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     if-eqz p0, :cond_0
 
     const-string v0, ""
@@ -71,7 +66,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 53
     :cond_0
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
@@ -83,7 +77,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     :goto_0
     return-object v0
 
@@ -105,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/NamespaceImpl;->fNamespaceURI:Ljava/lang/String;
 
     return-object v0
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/NamespaceImpl;->fPrefix:Ljava/lang/String;
 
     return-object v0
@@ -125,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/NamespaceImpl;->fPrefix:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I

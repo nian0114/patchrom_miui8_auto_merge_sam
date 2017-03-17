@@ -68,35 +68,28 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2732
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 2733
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2700
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emID:I
 
-    .line 2701
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emPreviousID:I
 
-    .line 2713
     const-wide/32 v0, 0xea60
 
     iput-wide v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->TIMEOUT:J
 
-    .line 2715
     new-instance v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler$1;-><init>(Lcom/android/server/pm/PackageManagerService$EMPackageHandler;)V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emReceiverBroadcastNext:Landroid/content/IIntentReceiver;
 
-    .line 2734
     return-void
 .end method
 
@@ -117,18 +110,15 @@
 
     const/4 v15, 0x2
 
-    .line 2776
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 2923
     :goto_0
     return-void
 
-    .line 2778
     :pswitch_0
     const-string v2, "PackageManager"
 
@@ -136,7 +126,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2788
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/os/Message;->arg1:I
@@ -145,7 +134,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->initForPendingBroadcast(I)V
 
-    .line 2790
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -154,7 +142,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2791
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -169,21 +156,19 @@
 
     iput v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
 
-    .line 2792
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
 
     if-gtz v2, :cond_0
 
-    .line 2793
     const-string v2, "PackageManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "pending size ["
+    const-string v4, "pending size ["
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -209,12 +194,10 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2795
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emProgression:I
 
-    .line 2796
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -225,7 +208,6 @@
 
     goto :goto_0
 
-    .line 2799
     :cond_0
     move-object/from16 v0, p0
 
@@ -237,7 +219,6 @@
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emPackages:[Ljava/lang/String;
 
-    .line 2800
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
@@ -248,7 +229,6 @@
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emComponents:[Ljava/util/ArrayList;
 
-    .line 2801
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
@@ -259,7 +239,6 @@
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emUids:[I
 
-    .line 2802
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
@@ -270,7 +249,6 @@
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emDontKillFlags:[Z
 
-    .line 2803
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
@@ -281,12 +259,10 @@
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emNewState:[I
 
-    .line 2804
     sget-object v14, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v14
 
-    .line 2805
     :try_start_0
     move-object/from16 v0, p0
 
@@ -325,19 +301,16 @@
 
     iput v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emTotSize:I
 
-    .line 2806
     monitor-exit v14
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2807
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emTotSize:I
 
     if-lez v2, :cond_1
 
-    .line 2808
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -346,7 +319,6 @@
 
     invoke-virtual {v2, v15}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->sendEmptyMessage(I)Z
 
-    .line 2811
     :cond_1
     const-string v2, "PackageManager"
 
@@ -356,7 +328,6 @@
 
     goto/16 :goto_0
 
-    .line 2806
     :catchall_0
     move-exception v2
 
@@ -367,7 +338,6 @@
 
     throw v2
 
-    .line 2816
     :pswitch_1
     const-string v2, "PackageManager"
 
@@ -375,7 +345,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2817
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -388,7 +357,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 2818
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -397,7 +365,6 @@
 
     invoke-virtual {v2, v14}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->removeMessages(I)V
 
-    .line 2821
     :cond_2
     move-object/from16 v0, p0
 
@@ -409,12 +376,10 @@
 
     if-lt v2, v3, :cond_4
 
-    .line 2823
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emProgression:I
 
-    .line 2824
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emPreviousID:I
@@ -425,7 +390,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 2825
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -436,7 +400,6 @@
 
     goto/16 :goto_0
 
-    .line 2827
     :cond_3
     const-string v2, "PackageManager"
 
@@ -486,11 +449,9 @@
 
     goto/16 :goto_0
 
-    .line 2832
     :cond_4
     const/4 v13, 0x0
 
-    .line 2836
     .local v13, "ps":Lcom/android/server/pm/PackageSetting;
     const/4 v10, 0x0
 
@@ -510,20 +471,16 @@
 
     if-ge v2, v3, :cond_c
 
-    .line 2837
     const/4 v11, 0x0
 
-    .line 2838
     .local v11, "isAddReceiver":Z
     const/4 v9, -0x1
 
-    .line 2839
     .local v9, "cSet":I
     sget-object v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v3
 
-    .line 2840
     :try_start_2
     move-object/from16 v0, p0
 
@@ -553,10 +510,8 @@
 
     move-object v13, v0
 
-    .line 2841
     if-eqz v13, :cond_5
 
-    .line 2842
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emUserId:I
@@ -565,13 +520,11 @@
 
     move-result v9
 
-    .line 2844
     :cond_5
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 2845
     const/16 v2, 0x9
 
     if-eq v10, v2, :cond_6
@@ -588,11 +541,9 @@
 
     if-ne v2, v3, :cond_7
 
-    .line 2846
     :cond_6
     const/4 v11, 0x1
 
-    .line 2849
     :cond_7
     move-object/from16 v0, p0
 
@@ -606,7 +557,6 @@
 
     if-ne v9, v2, :cond_9
 
-    .line 2851
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emCurrentPosition:I
@@ -631,10 +581,8 @@
 
     iput v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emProgression:I
 
-    .line 2852
     if-eqz v11, :cond_8
 
-    .line 2853
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -645,7 +593,6 @@
 
     invoke-virtual {v2, v14, v4, v5}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 2854
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -701,7 +648,6 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->sendPackageChangedBroadcastWithReceiver(Ljava/lang/String;ZLjava/util/ArrayList;ILandroid/content/IIntentReceiver;I)V
     invoke-static/range {v2 .. v8}, Lcom/android/server/pm/PackageManagerService;->access$2500(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;ZLjava/util/ArrayList;ILandroid/content/IIntentReceiver;I)V
 
-    .line 2858
     :goto_2
     move-object/from16 v0, p0
 
@@ -713,13 +659,11 @@
 
     iput v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emCurrentPosition:I
 
-    .line 2836
     :goto_3
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_1
 
-    .line 2844
     :catchall_1
     move-exception v2
 
@@ -730,7 +674,6 @@
 
     throw v2
 
-    .line 2856
     :cond_8
     move-object/from16 v0, p0
 
@@ -787,7 +730,6 @@
 
     goto :goto_2
 
-    .line 2863
     :cond_9
     const-string v2, "PackageManager"
 
@@ -901,7 +843,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2866
     const/16 v2, 0x9
 
     if-eq v10, v2, :cond_a
@@ -918,7 +859,6 @@
 
     if-ne v2, v3, :cond_b
 
-    .line 2867
     :cond_a
     move-object/from16 v0, p0
 
@@ -928,7 +868,6 @@
 
     invoke-virtual {v2, v15}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->sendEmptyMessage(I)Z
 
-    .line 2869
     :cond_b
     move-object/from16 v0, p0
 
@@ -942,7 +881,6 @@
 
     goto/16 :goto_3
 
-    .line 2874
     .end local v9    # "cSet":I
     .end local v11    # "isAddReceiver":Z
     :cond_c
@@ -954,7 +892,6 @@
 
     goto/16 :goto_0
 
-    .line 2879
     .end local v10    # "i":I
     .end local v13    # "ps":Lcom/android/server/pm/PackageSetting;
     :pswitch_2
@@ -964,7 +901,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2880
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -975,7 +911,6 @@
 
     goto/16 :goto_0
 
-    .line 2885
     :pswitch_3
     const-string v2, "PackageManager"
 
@@ -983,20 +918,17 @@
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2886
     new-instance v12, Landroid/content/Intent;
 
     const-string v2, "com.samsung.intent.action.EMERGENCY_FINISHED_SENDING_PACKAGE_CHANGED"
 
     invoke-direct {v12, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2887
     .local v12, "it":Landroid/content/Intent;
     const/high16 v2, 0x10000000
 
     invoke-virtual {v12, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2888
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1005,14 +937,12 @@
 
     invoke-virtual {v2, v12}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2889
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
 
     goto/16 :goto_0
 
-    .line 2894
     .end local v12    # "it":Landroid/content/Intent;
     :pswitch_4
     move-object/from16 v0, p0
@@ -1023,7 +953,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->makeNewID()V
 
-    .line 2895
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1036,7 +965,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 2897
     const-string v2, "PackageManager"
 
     const-string v3, "cancelEMHandlerSendPendingBroadcast : Nothing to do"
@@ -1045,7 +973,6 @@
 
     goto/16 :goto_0
 
-    .line 2901
     :cond_d
     move-object/from16 v0, p0
 
@@ -1059,7 +986,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 2902
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1068,7 +994,6 @@
 
     invoke-virtual {v2, v15}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->removeMessages(I)V
 
-    .line 2904
     :cond_e
     move-object/from16 v0, p0
 
@@ -1082,7 +1007,6 @@
 
     if-eqz v2, :cond_f
 
-    .line 2905
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1091,7 +1015,6 @@
 
     invoke-virtual {v2, v14}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->removeMessages(I)V
 
-    .line 2907
     :cond_f
     move-object/from16 v0, p0
 
@@ -1105,7 +1028,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 2908
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1114,7 +1036,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->removeMessages(I)V
 
-    .line 2912
     :cond_10
     move-object/from16 v0, p0
 
@@ -1122,14 +1043,12 @@
 
     if-lez v2, :cond_11
 
-    .line 2914
     const-string v2, "PackageManager"
 
     const-string v3, "EM_CANCEL_SENDING_BROADCAST"
 
     invoke-static {v2, v3}, Lcom/sec/android/emergencymode/Elog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2915
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1140,7 +1059,6 @@
 
     goto/16 :goto_0
 
-    .line 2918
     :cond_11
     const-string v2, "PackageManager"
 
@@ -1150,7 +1068,6 @@
 
     goto/16 :goto_0
 
-    .line 2776
     nop
 
     :pswitch_data_0
@@ -1167,7 +1084,6 @@
     .locals 1
 
     .prologue
-    .line 2764
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emProgression:I
 
     return v0
@@ -1180,19 +1096,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2769
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->doHandleMessage(Landroid/os/Message;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2771
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 2773
     return-void
 
-    .line 2771
     :catchall_0
     move-exception v0
 
@@ -1210,45 +1122,32 @@
 
     const/4 v1, 0x0
 
-    .line 2737
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->makeNewID()V
 
-    .line 2738
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emID:I
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emPreviousID:I
 
-    .line 2739
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emPackages:[Ljava/lang/String;
 
-    .line 2740
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emComponents:[Ljava/util/ArrayList;
 
-    .line 2741
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emUids:[I
 
-    .line 2742
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emDontKillFlags:[Z
 
-    .line 2743
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emNewState:[I
 
-    .line 2744
     iput v2, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emSize:I
 
-    .line 2745
     iput v2, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emTotSize:I
 
-    .line 2746
     iput v2, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emCurrentPosition:I
 
-    .line 2747
     iput p1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emUserId:I
 
-    .line 2748
     iput v2, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emProgression:I
 
-    .line 2749
     return-void
 .end method
 
@@ -1256,17 +1155,14 @@
     .locals 2
 
     .prologue
-    .line 2757
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emPreviousID:I
 
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emID:I
 
     if-ne v0, v1, :cond_0
 
-    .line 2758
     const/4 v0, 0x0
 
-    .line 2760
     :goto_0
     return v0
 
@@ -1280,7 +1176,6 @@
     .locals 3
 
     .prologue
-    .line 2752
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emID:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1289,14 +1184,13 @@
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->emID:I
 
-    .line 2753
     const-string v0, "PackageManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "makeNewID ["
+    const-string v2, "makeNewID ["
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1320,6 +1214,5 @@
 
     invoke-static {v0, v1}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2754
     return-void
 .end method

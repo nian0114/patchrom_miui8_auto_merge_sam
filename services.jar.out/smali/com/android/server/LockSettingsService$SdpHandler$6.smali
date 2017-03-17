@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 3058
     iput-object p1, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
     iput p2, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->val$userId:I
@@ -52,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 3061
     iget-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
     iget v1, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->val$userId:I
@@ -80,7 +78,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3062
     iget-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
     iget v1, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->val$userId:I
@@ -104,7 +101,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/LockSettingsService$SdpHandler;->verifyInternal(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 3064
     :cond_0
     iget-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler$6;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
@@ -115,6 +111,5 @@
     # invokes: Lcom/android/server/LockSettingsService;->clear(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/LockSettingsService;->access$1700(Lcom/android/server/LockSettingsService;Ljava/lang/String;)V
 
-    .line 3065
     return-void
 .end method

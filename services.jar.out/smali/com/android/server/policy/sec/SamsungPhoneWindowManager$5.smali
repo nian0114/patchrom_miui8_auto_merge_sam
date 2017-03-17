@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 534
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$5;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 536
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 537
     .local v0, "action":Ljava/lang/String;
-    const-string/jumbo v3, "edm.intent.action.internal.kioskmode.REFRESH_HWKEY_CACHE"
+    const-string v3, "edm.intent.action.internal.kioskmode.REFRESH_HWKEY_CACHE"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -54,9 +51,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 539
     :try_start_0
-    const-string/jumbo v3, "kioskmode"
+    const-string v3, "kioskmode"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -66,11 +62,9 @@
 
     move-result-object v2
 
-    .line 541
     .local v2, "kioskService":Landroid/app/enterprise/kioskmode/IKioskMode;
     if-eqz v2, :cond_0
 
-    .line 542
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$5;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-interface {v2}, Landroid/app/enterprise/kioskmode/IKioskMode;->getBlockedHwKeysCache()Ljava/util/Map;
@@ -80,7 +74,6 @@
     # setter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mBlockedHwKeys:Ljava/util/Map;
     invoke-static {v3, v4}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$002(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;Ljava/util/Map;)Ljava/util/Map;
 
-    .line 543
     const-string v3, "SamsungWindowManager"
 
     const-string v4, "Blocked hw keys cache is being refreshed."
@@ -89,17 +82,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 549
     .end local v2    # "kioskService":Landroid/app/enterprise/kioskmode/IKioskMode;
     :cond_0
     :goto_0
     return-void
 
-    .line 545
     :catch_0
     move-exception v1
 
-    .line 546
     .local v1, "e":Landroid/os/RemoteException;
     const-string v3, "SamsungWindowManager"
 

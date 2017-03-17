@@ -34,30 +34,24 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Lmf/org/apache/xerces/xni/QName;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/xni/QName;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->name:Lmf/org/apache/xerces/xni/QName;
 
-    .line 58
     iput v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->scope:I
 
-    .line 61
     iput-short v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->type:S
 
-    .line 67
     new-instance v0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->simpleType:Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;
 
-    .line 29
     return-void
 .end method
 
@@ -69,28 +63,22 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 94
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->name:Lmf/org/apache/xerces/xni/QName;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/xni/QName;->clear()V
 
-    .line 95
     iput-short v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->type:S
 
-    .line 96
     iput v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->scope:I
 
-    .line 97
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->contentModelValidator:Lmf/org/apache/xerces/impl/dtd/models/ContentModelValidator;
 
-    .line 98
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->simpleType:Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->clear()V
 
-    .line 99
     return-void
 .end method
 
@@ -103,25 +91,19 @@
     .param p5, "simpleType"    # Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;
 
     .prologue
-    .line 83
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->name:Lmf/org/apache/xerces/xni/QName;
 
     invoke-virtual {v0, p1}, Lmf/org/apache/xerces/xni/QName;->setValues(Lmf/org/apache/xerces/xni/QName;)V
 
-    .line 84
     iput p2, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->scope:I
 
-    .line 85
     iput-short p3, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->type:S
 
-    .line 86
     iput-object p4, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->contentModelValidator:Lmf/org/apache/xerces/impl/dtd/models/ContentModelValidator;
 
-    .line 87
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLElementDecl;->simpleType:Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;
 
     invoke-virtual {v0, p5}, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->setValues(Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;)V
 
-    .line 88
     return-void
 .end method

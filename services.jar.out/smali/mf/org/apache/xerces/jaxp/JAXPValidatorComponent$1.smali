@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 550
     invoke-direct {p0}, Lmf/javax/xml/validation/TypeInfoProvider;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 555
     const/4 v0, 0x0
 
     return-object v0
@@ -44,7 +41,6 @@
     .param p1, "attributeQName"    # Ljava/lang/String;
 
     .prologue
-    .line 558
     const/4 v0, 0x0
 
     return-object v0
@@ -56,7 +52,6 @@
     .param p2, "attributeLocalName"    # Ljava/lang/String;
 
     .prologue
-    .line 561
     const/4 v0, 0x0
 
     return-object v0
@@ -66,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 552
     const/4 v0, 0x0
 
     return-object v0
@@ -77,7 +71,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 564
     const/4 v0, 0x0
 
     return v0
@@ -88,7 +81,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 567
     const/4 v0, 0x0
 
     return v0

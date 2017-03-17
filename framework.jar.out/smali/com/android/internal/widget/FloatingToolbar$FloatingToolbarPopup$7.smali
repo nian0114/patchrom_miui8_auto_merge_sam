@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 444
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$7;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 447
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$7;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;->mPopupWindow:Landroid/widget/PopupWindow;
@@ -48,7 +46,6 @@
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 448
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$7;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;->mContentContainer:Landroid/view/ViewGroup;
@@ -58,6 +55,5 @@
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 449
     return-void
 .end method

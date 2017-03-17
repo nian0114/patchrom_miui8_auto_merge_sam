@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 505
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +31,5 @@
     .param p1, "msgId"    # I
 
     .prologue
-    .line 507
     return-void
 .end method

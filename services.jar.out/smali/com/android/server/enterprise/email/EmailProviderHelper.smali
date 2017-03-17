@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 114
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,17 +61,13 @@
     .param p6, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     if-nez p0, :cond_0
 
-    .line 70
     const/4 v0, 0x0
 
-    .line 88
     :goto_0
     return-object v0
 
-    .line 71
     :cond_0
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -81,25 +75,20 @@
 
     move-result v9
 
-    .line 72
     .local v9, "userID":I
     iget v6, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 73
     .local v6, "containerId":I
     const/4 v7, 0x0
 
-    .line 74
     .local v7, "emails":Landroid/content/Context;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 76
     .local v10, "psToken":J
     if-eqz v9, :cond_1
 
-    .line 77
     :try_start_0
     invoke-static {v9}, Lcom/android/server/enterprise/email/SettingsUtils;->getEmailPackageName(I)Ljava/lang/String;
 
@@ -115,7 +104,6 @@
 
     move-result-object v7
 
-    .line 82
     :goto_1
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -138,41 +126,34 @@
 
     move-result-object v0
 
-    .line 86
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 80
     :cond_1
     move-object v7, p0
 
     goto :goto_1
 
-    .line 83
     :catch_0
     move-exception v8
 
-    .line 84
     .local v8, "ex":Ljava/lang/Exception;
     :try_start_1
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "createEmailContentProviderCursor() : Failed, Exception occurs. "
+    const-string v1, "createEmailContentProviderCursor() : Failed, Exception occurs. "
 
     invoke-static {v0, v1, v8}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 86
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 88
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 86
     .end local v8    # "ex":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
@@ -186,12 +167,10 @@
     .locals 4
 
     .prologue
-    .line 162
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 163
     .local v0, "accId":J
     const-wide/16 v2, 0x0
 
@@ -203,7 +182,6 @@
 
     mul-long/2addr v0, v2
 
-    .line 164
     :cond_0
     return-wide v0
 .end method
@@ -215,14 +193,11 @@
     .param p2, "accId"    # J
 
     .prologue
-    .line 455
     const/4 v9, 0x0
 
-    .line 456
     .local v9, "ret":Z
     const/4 v7, 0x0
 
-    .line 458
     .local v7, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getLDAPContentUri()Landroid/net/Uri;
@@ -231,7 +206,7 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "deleteLDAPAccount"
+    const-string v4, "deleteLDAPAccount"
 
     const/4 v0, 0x1
 
@@ -255,7 +230,6 @@
 
     move-result-object v7
 
-    .line 459
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -264,8 +238,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 460
-    const-string/jumbo v0, "deleteLDAPAccount"
+    const-string v0, "deleteLDAPAccount"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -279,14 +252,13 @@
 
     move-result v9
 
-    .line 461
     const-string v0, "EmailProviderHelperService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "deleteLDAPAccount() : ret = "
+    const-string v2, "deleteLDAPAccount() : ret = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -305,7 +277,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 471
     :goto_0
     if-eqz v7, :cond_0
 
@@ -317,47 +288,40 @@
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 473
     :cond_0
     :goto_1
     return v9
 
-    .line 464
     :cond_1
     :try_start_1
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "deleteLDAPAccount() : cannot get cursor from EmailProvider."
+    const-string v1, "deleteLDAPAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 465
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 467
     :catch_0
     move-exception v8
 
-    .line 468
     .local v8, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "deleteLDAPAccount() : Failed, Exception occurs. "
+    const-string v1, "deleteLDAPAccount() : Failed, Exception occurs. "
 
     invoke-static {v0, v1, v8}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 469
     const/4 v9, 0x0
 
-    .line 471
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->isClosed()Z
@@ -398,31 +362,25 @@
     .param p5, "isEAS"    # Z
 
     .prologue
-    .line 177
     const-wide/16 v14, -0x1
 
-    .line 178
     .local v14, "ret":J
     invoke-static/range {p2 .. p2}, Lcom/android/server/enterprise/email/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 179
     invoke-static/range {p3 .. p3}, Lcom/android/server/enterprise/email/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 180
     invoke-static/range {p4 .. p4}, Lcom/android/server/enterprise/email/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 181
     if-eqz p3, :cond_0
 
     if-nez p4, :cond_1
 
-    .line 182
     :cond_0
     const-string v18, "EmailProviderHelperService"
 
@@ -430,7 +388,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "getAccountId() : faild with Invalid input parameters. arg1 = "
+    const-string v20, "getAccountId() : faild with Invalid input parameters. arg1 = "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -480,47 +438,38 @@
 
     move-wide/from16 v16, v14
 
-    .line 224
     .end local v14    # "ret":J
     .local v16, "ret":J
     :goto_0
     return-wide v16
 
-    .line 186
     .end local v16    # "ret":J
     .restart local v14    # "ret":J
     :cond_1
     if-eqz p5, :cond_5
 
-    .line 187
     move-object/from16 v6, p2
 
-    .line 188
     .local v6, "easDomain":Ljava/lang/String;
     move-object/from16 v7, p3
 
-    .line 189
     .local v7, "easUser":Ljava/lang/String;
     if-nez v6, :cond_3
 
     move-object v2, v7
 
-    .line 190
     .local v2, "User":Ljava/lang/String;
     :goto_1
     move-object/from16 v4, p4
 
-    .line 191
     .local v4, "activeSyncHost":Ljava/lang/String;
     invoke-static/range {p0 .. p1}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getAllEnterpriseExchangeAccount(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)[Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
     move-result-object v3
 
-    .line 192
     .local v3, "acctList":[Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     if-eqz v3, :cond_2
 
-    .line 193
     move-object v5, v3
 
     .local v5, "arr$":[Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
@@ -535,7 +484,6 @@
 
     aget-object v11, v5, v8
 
-    .line 195
     .local v11, "mAccount":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     if-eqz v11, :cond_4
 
@@ -571,7 +519,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 196
     iget-wide v14, v11, Landroid/sec/enterprise/email/EnterpriseExchangeAccount;->mId:J
 
     .end local v2    # "User":Ljava/lang/String;
@@ -587,12 +534,10 @@
     :goto_3
     move-wide/from16 v16, v14
 
-    .line 224
     .end local v14    # "ret":J
     .restart local v16    # "ret":J
     goto :goto_0
 
-    .line 189
     .end local v16    # "ret":J
     .restart local v6    # "easDomain":Ljava/lang/String;
     .restart local v7    # "easUser":Ljava/lang/String;
@@ -626,7 +571,6 @@
 
     goto :goto_1
 
-    .line 193
     .restart local v2    # "User":Ljava/lang/String;
     .restart local v3    # "acctList":[Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .restart local v4    # "activeSyncHost":Ljava/lang/String;
@@ -639,7 +583,6 @@
 
     goto :goto_2
 
-    .line 203
     .end local v2    # "User":Ljava/lang/String;
     .end local v3    # "acctList":[Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .end local v4    # "activeSyncHost":Ljava/lang/String;
@@ -652,28 +595,22 @@
     :cond_5
     if-eqz p2, :cond_9
 
-    .line 204
     move-object/from16 v10, p2
 
-    .line 205
     .local v10, "login":Ljava/lang/String;
     move-object/from16 v13, p3
 
-    .line 206
     .local v13, "serverAddress":Ljava/lang/String;
     move-object/from16 v12, p4
 
-    .line 207
     .local v12, "protocol":Ljava/lang/String;
     invoke-static/range {p0 .. p1}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getAllEnterpriseEmailAccount(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     move-result-object v3
 
-    .line 208
     .local v3, "acctList":[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     if-eqz v3, :cond_2
 
-    .line 209
     move-object v5, v3
 
     .local v5, "arr$":[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
@@ -688,7 +625,6 @@
 
     aget-object v11, v5, v8
 
-    .line 211
     .local v11, "mAccount":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     if-eqz v11, :cond_8
 
@@ -777,20 +713,16 @@
 
     if-eqz v18, :cond_8
 
-    .line 214
     :cond_7
     iget-wide v14, v11, Landroid/sec/enterprise/email/EnterpriseEmailAccount;->mId:J
 
-    .line 215
     goto/16 :goto_3
 
-    .line 209
     :cond_8
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_4
 
-    .line 221
     .end local v3    # "acctList":[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .end local v5    # "arr$":[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .end local v8    # "i$":I
@@ -806,7 +738,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "getAccountId() : [EMAIL] faild with Invalid input parameters. arg1 = "
+    const-string v20, "getAccountId() : [EMAIL] faild with Invalid input parameters. arg1 = "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -863,14 +795,11 @@
     .param p1, "ctxInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 93
     const/4 v12, 0x0
 
-    .line 94
     .local v12, "ret":[J
     const/4 v8, 0x0
 
-    .line 96
     .local v8, "cursor":Landroid/database/Cursor;
     const/4 v0, 0x0
 
@@ -903,7 +832,6 @@
 
     move-result-object v8
 
-    .line 97
     if-eqz v8, :cond_0
 
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
@@ -912,22 +840,18 @@
 
     if-lez v0, :cond_0
 
-    .line 98
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
     move-result v7
 
-    .line 99
     .local v7, "count":I
     const/4 v10, 0x0
 
-    .line 100
     .local v10, "idx":I
     new-array v12, v7, [J
 
     move v11, v10
 
-    .line 101
     .end local v10    # "idx":I
     .local v11, "idx":I
     :goto_0
@@ -937,7 +861,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 102
     add-int/lit8 v10, v11, 0x1
 
     .end local v11    # "idx":I
@@ -965,7 +888,6 @@
     .restart local v11    # "idx":I
     goto :goto_0
 
-    .line 109
     .end local v7    # "count":I
     .end local v11    # "idx":I
     :cond_0
@@ -979,30 +901,25 @@
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 111
     :cond_1
     :goto_1
     return-object v12
 
-    .line 105
     :catch_0
     move-exception v9
 
-    .line 106
     .local v9, "ex":Ljava/lang/Exception;
     :try_start_1
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "getAllAccountIDS() : Failed, Exception occurs. "
+    const-string v1, "getAllAccountIDS() : Failed, Exception occurs. "
 
     invoke-static {v0, v1, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 107
     const/4 v12, 0x0
 
-    .line 109
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/database/Cursor;->isClosed()Z
@@ -1039,26 +956,21 @@
     .param p1, "ctxInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 290
     const/4 v10, 0x0
 
-    .line 291
     .local v10, "ret":[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 292
     .local v11, "templist":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/sec/enterprise/email/EnterpriseEmailAccount;>;"
     invoke-static {p0, p1}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getAllAccountIDS(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)[J
 
     move-result-object v2
 
-    .line 293
     .local v2, "accIds":[J
     if-eqz v2, :cond_1
 
-    .line 294
     move-object v4, v2
 
     .local v4, "arr$":[J
@@ -1073,26 +985,21 @@
 
     aget-wide v0, v4, v5
 
-    .line 295
     .local v0, "Id":J
     invoke-static {p0, p1, v0, v1}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getEnterpriseEmailAccount(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;J)Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     move-result-object v9
 
-    .line 296
     .local v9, "mAccount":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     if-eqz v9, :cond_0
 
-    .line 297
     invoke-virtual {v11, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 294
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 301
     .end local v0    # "Id":J
     .end local v4    # "arr$":[J
     .end local v5    # "i$":I
@@ -1105,17 +1012,14 @@
 
     if-lez v12, :cond_2
 
-    .line 302
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v12
 
     new-array v10, v12, [Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
-    .line 303
     const/4 v6, 0x0
 
-    .line 304
     .local v6, "idx":I
     invoke-virtual {v11}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1135,7 +1039,6 @@
 
     check-cast v3, Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
-    .line 305
     .local v3, "account":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     add-int/lit8 v7, v6, 0x1
 
@@ -1145,12 +1048,10 @@
 
     move v6, v7
 
-    .line 306
     .end local v7    # "idx":I
     .restart local v6    # "idx":I
     goto :goto_1
 
-    .line 308
     .end local v3    # "account":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "idx":I
@@ -1164,26 +1065,21 @@
     .param p1, "ctxInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 375
     const/4 v10, 0x0
 
-    .line 376
     .local v10, "ret":[Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 377
     .local v11, "templist":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/sec/enterprise/email/EnterpriseExchangeAccount;>;"
     invoke-static {p0, p1}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getAllAccountIDS(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)[J
 
     move-result-object v2
 
-    .line 378
     .local v2, "accIds":[J
     if-eqz v2, :cond_1
 
-    .line 379
     move-object v4, v2
 
     .local v4, "arr$":[J
@@ -1198,26 +1094,21 @@
 
     aget-wide v0, v4, v5
 
-    .line 380
     .local v0, "Id":J
     invoke-static {p0, p1, v0, v1}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getEnterpriseExchangeAccount(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;J)Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
     move-result-object v9
 
-    .line 381
     .local v9, "mAccount":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     if-eqz v9, :cond_0
 
-    .line 382
     invoke-virtual {v11, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 379
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 386
     .end local v0    # "Id":J
     .end local v4    # "arr$":[J
     .end local v5    # "i$":I
@@ -1230,17 +1121,14 @@
 
     if-lez v12, :cond_2
 
-    .line 387
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v12
 
     new-array v10, v12, [Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
-    .line 388
     const/4 v6, 0x0
 
-    .line 389
     .local v6, "idx":I
     invoke-virtual {v11}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1260,7 +1148,6 @@
 
     check-cast v3, Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
-    .line 390
     .local v3, "account":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     add-int/lit8 v7, v6, 0x1
 
@@ -1270,12 +1157,10 @@
 
     move v6, v7
 
-    .line 391
     .end local v7    # "idx":I
     .restart local v6    # "idx":I
     goto :goto_1
 
-    .line 393
     .end local v3    # "account":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "idx":I
@@ -1301,18 +1186,14 @@
     .end annotation
 
     .prologue
-    .line 426
     const/4 v10, 0x0
 
-    .line 427
     .local v10, "ret":Ljava/util/List;, "Ljava/util/List<Landroid/sec/enterprise/email/EnterpriseLDAPAccount;>;"
     const/4 v7, 0x0
 
-    .line 428
     .local v7, "bundle_ldap":Landroid/os/Bundle;
     const/4 v8, 0x0
 
-    .line 430
     .local v8, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getLDAPContentUri()Landroid/net/Uri;
@@ -1321,7 +1202,7 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "getAllLDAPAccounts"
+    const-string v4, "getAllLDAPAccounts"
 
     const/4 v5, 0x0
 
@@ -1335,28 +1216,22 @@
 
     move-result-object v8
 
-    .line 431
     if-eqz v8, :cond_3
 
-    .line 432
     invoke-interface {v8}, Landroid/database/Cursor;->getExtras()Landroid/os/Bundle;
 
     move-result-object v7
 
-    .line 433
     if-eqz v7, :cond_2
 
-    .line 434
-    const-string/jumbo v0, "email.ldap.all.account"
+    const-string v0, "email.ldap.all.account"
 
     invoke-virtual {v7, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v10
 
-    .line 435
     if-nez v10, :cond_0
 
-    .line 436
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
@@ -1368,7 +1243,6 @@
     .local v11, "ret":Ljava/util/List;, "Ljava/util/List<Landroid/sec/enterprise/email/EnterpriseLDAPAccount;>;"
     move-object v10, v11
 
-    .line 448
     .end local v11    # "ret":Ljava/util/List;, "Ljava/util/List<Landroid/sec/enterprise/email/EnterpriseLDAPAccount;>;"
     .restart local v10    # "ret":Ljava/util/List;, "Ljava/util/List<Landroid/sec/enterprise/email/EnterpriseLDAPAccount;>;"
     :cond_0
@@ -1383,17 +1257,15 @@
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 450
     :cond_1
     :goto_1
     return-object v10
 
-    .line 439
     :cond_2
     :try_start_1
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "getAllLDAPAccount() : Fail to get Data from Email. "
+    const-string v1, "getAllLDAPAccount() : Fail to get Data from Email. "
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -1402,25 +1274,21 @@
 
     goto :goto_0
 
-    .line 444
     :catch_0
     move-exception v9
 
-    .line 445
     .local v9, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "getAllLDAPAccount() : Failed, Exception occurs. "
+    const-string v1, "getAllLDAPAccount() : Failed, Exception occurs. "
 
     invoke-static {v0, v1, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 446
     const/4 v10, 0x0
 
-    .line 448
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/database/Cursor;->isClosed()Z
@@ -1433,13 +1301,12 @@
 
     goto :goto_1
 
-    .line 442
     .end local v9    # "ex":Ljava/lang/Exception;
     :cond_3
     :try_start_3
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "getAllLDAPAccount() : cannot get cursor from EmailProvider."
+    const-string v1, "getAllLDAPAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
@@ -1448,7 +1315,6 @@
 
     goto :goto_0
 
-    .line 448
     :catchall_0
     move-exception v0
 
@@ -1472,7 +1338,6 @@
     .param p1, "Id"    # J
 
     .prologue
-    .line 131
     sget-object v1, Lcom/android/server/enterprise/email/EmailProviderHelper;->mAccountObjectMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1497,7 +1362,6 @@
 
     move-result-object v0
 
-    .line 132
     .local v0, "result":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -1505,7 +1369,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 133
     sget-object v1, Lcom/android/server/enterprise/email/EmailProviderHelper;->mAccountObjectMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1528,24 +1391,20 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     check-cast v0, Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
-    .line 137
     .end local v0    # "result":Ljava/lang/Object;
     :goto_0
     return-object v0
 
-    .line 136
     .restart local v0    # "result":Ljava/lang/Object;
     :cond_0
     const-string v1, "EmailProviderHelperService"
 
-    const-string/jumbo v2, "getEmailAccountObject() : failed. "
+    const-string v2, "getEmailAccountObject() : failed. "
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1555,7 +1414,6 @@
     .locals 1
 
     .prologue
-    .line 168
     const-string v0, "content://com.samsung.android.email.mdm.provider"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -1572,14 +1430,11 @@
     .param p2, "accId"    # J
 
     .prologue
-    .line 231
     const/4 v13, 0x0
 
-    .line 232
     .local v13, "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     const/4 v10, 0x0
 
-    .line 233
     .local v10, "cursor":Landroid/database/Cursor;
     const-wide/16 v2, 0x0
 
@@ -1587,14 +1442,13 @@
 
     if-gtz v2, :cond_0
 
-    .line 234
     const-string v2, "EmailProviderHelperService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getEnterpriseEmailAccount() : Failed, invalid account Id = "
+    const-string v4, "getEnterpriseEmailAccount() : Failed, invalid account Id = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1614,13 +1468,11 @@
 
     move-object v14, v13
 
-    .line 263
     .end local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .local v14, "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     :goto_0
     return-object v14
 
-    .line 238
     .end local v14    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .restart local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     :cond_0
@@ -1631,7 +1483,7 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "getAccountInfo"
+    const-string v6, "getAccountInfo"
 
     const/4 v2, 0x1
 
@@ -1655,26 +1507,21 @@
 
     move-result-object v10
 
-    .line 239
     if-eqz v10, :cond_4
 
-    .line 240
     invoke-interface {v10}, Landroid/database/Cursor;->getExtras()Landroid/os/Bundle;
 
     move-result-object v9
 
-    .line 241
     .local v9, "bundle_email":Landroid/os/Bundle;
     if-eqz v9, :cond_3
 
-    .line 242
-    const-string/jumbo v2, "email.account"
+    const-string v2, "email.account"
 
     invoke-virtual {v9, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v12
 
-    .line 243
     .local v12, "parcel":Landroid/os/Parcelable;
     if-eqz v12, :cond_1
 
@@ -1682,7 +1529,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 244
     move-object v0, v12
 
     check-cast v0, Landroid/sec/enterprise/email/EnterpriseEmailAccount;
@@ -1692,7 +1538,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 256
     .end local v9    # "bundle_email":Landroid/os/Bundle;
     .end local v12    # "parcel":Landroid/os/Parcelable;
     :cond_1
@@ -1707,19 +1552,17 @@
 
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 258
     :cond_2
     :goto_2
     if-nez v13, :cond_6
 
-    .line 259
     const-string v2, "EmailProviderHelperService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getEnterpriseEmailAccount() : Failed, accId = "
+    const-string v4, "getEnterpriseEmailAccount() : Failed, accId = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1740,12 +1583,10 @@
     :goto_3
     move-object v14, v13
 
-    .line 263
     .end local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .restart local v14    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     goto :goto_0
 
-    .line 247
     .end local v14    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
     .restart local v9    # "bundle_email":Landroid/os/Bundle;
     .restart local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseEmailAccount;
@@ -1753,7 +1594,7 @@
     :try_start_1
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "getEnterpriseEmailAccount() : Fail to get Data from Email. "
+    const-string v3, "getEnterpriseEmailAccount() : Fail to get Data from Email. "
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -1762,26 +1603,22 @@
 
     goto :goto_1
 
-    .line 252
     .end local v9    # "bundle_email":Landroid/os/Bundle;
     :catch_0
     move-exception v11
 
-    .line 253
     .local v11, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "getEnterpriseEmailAccount() : Failed, Exception occurs. "
+    const-string v3, "getEnterpriseEmailAccount() : Failed, Exception occurs. "
 
     invoke-static {v2, v3, v11}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 254
     const/4 v13, 0x0
 
-    .line 256
     if-eqz v10, :cond_2
 
     invoke-interface {v10}, Landroid/database/Cursor;->isClosed()Z
@@ -1794,13 +1631,12 @@
 
     goto :goto_2
 
-    .line 250
     .end local v11    # "ex":Ljava/lang/Exception;
     :cond_4
     :try_start_3
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "getEnterpriseEmailAccount() : cannot get cursor from EmailProvider."
+    const-string v3, "getEnterpriseEmailAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
@@ -1809,7 +1645,6 @@
 
     goto :goto_1
 
-    .line 256
     :catchall_0
     move-exception v2
 
@@ -1826,7 +1661,6 @@
     :cond_5
     throw v2
 
-    .line 261
     :cond_6
     const-string v2, "EmailProviderHelperService"
 
@@ -1834,7 +1668,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getEnterpriseEmailAccount() : successfully get Data from Email, accId = "
+    const-string v4, "getEnterpriseEmailAccount() : successfully get Data from Email, accId = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1862,14 +1696,11 @@
     .param p2, "accId"    # J
 
     .prologue
-    .line 316
     const/4 v13, 0x0
 
-    .line 317
     .local v13, "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     const/4 v10, 0x0
 
-    .line 318
     .local v10, "cursor":Landroid/database/Cursor;
     const-wide/16 v2, 0x0
 
@@ -1877,14 +1708,13 @@
 
     if-gtz v2, :cond_0
 
-    .line 319
     const-string v2, "EmailProviderHelperService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getEnterpriseExchangeAccount() : Failed, invalid account Id = "
+    const-string v4, "getEnterpriseExchangeAccount() : Failed, invalid account Id = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1904,13 +1734,11 @@
 
     move-object v14, v13
 
-    .line 348
     .end local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .local v14, "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     :goto_0
     return-object v14
 
-    .line 323
     .end local v14    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .restart local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     :cond_0
@@ -1921,7 +1749,7 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "getAccountInfo"
+    const-string v6, "getAccountInfo"
 
     const/4 v2, 0x1
 
@@ -1945,26 +1773,21 @@
 
     move-result-object v10
 
-    .line 324
     if-eqz v10, :cond_4
 
-    .line 325
     invoke-interface {v10}, Landroid/database/Cursor;->getExtras()Landroid/os/Bundle;
 
     move-result-object v9
 
-    .line 326
     .local v9, "bundle_email":Landroid/os/Bundle;
     if-eqz v9, :cond_3
 
-    .line 327
-    const-string/jumbo v2, "eas.account"
+    const-string v2, "eas.account"
 
     invoke-virtual {v9, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v12
 
-    .line 328
     .local v12, "parcel":Landroid/os/Parcelable;
     if-eqz v12, :cond_1
 
@@ -1972,7 +1795,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 329
     move-object v0, v12
 
     check-cast v0, Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
@@ -1982,7 +1804,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 341
     .end local v9    # "bundle_email":Landroid/os/Bundle;
     .end local v12    # "parcel":Landroid/os/Parcelable;
     :cond_1
@@ -1997,19 +1818,17 @@
 
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 343
     :cond_2
     :goto_2
     if-nez v13, :cond_6
 
-    .line 344
     const-string v2, "EmailProviderHelperService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getEnterpriseExchangeAccount() : Failed, accId = "
+    const-string v4, "getEnterpriseExchangeAccount() : Failed, accId = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2030,12 +1849,10 @@
     :goto_3
     move-object v14, v13
 
-    .line 348
     .end local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .restart local v14    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     goto :goto_0
 
-    .line 332
     .end local v14    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
     .restart local v9    # "bundle_email":Landroid/os/Bundle;
     .restart local v13    # "ret":Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
@@ -2043,7 +1860,7 @@
     :try_start_1
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "getEnterpriseExchangeAccount() : Fail to get Data from Email. "
+    const-string v3, "getEnterpriseExchangeAccount() : Fail to get Data from Email. "
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -2052,26 +1869,22 @@
 
     goto :goto_1
 
-    .line 337
     .end local v9    # "bundle_email":Landroid/os/Bundle;
     :catch_0
     move-exception v11
 
-    .line 338
     .local v11, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "getEnterpriseExchangeAccount() : Failed, Exception occurs. "
+    const-string v3, "getEnterpriseExchangeAccount() : Failed, Exception occurs. "
 
     invoke-static {v2, v3, v11}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 339
     const/4 v13, 0x0
 
-    .line 341
     if-eqz v10, :cond_2
 
     invoke-interface {v10}, Landroid/database/Cursor;->isClosed()Z
@@ -2084,13 +1897,12 @@
 
     goto :goto_2
 
-    .line 335
     .end local v11    # "ex":Ljava/lang/Exception;
     :cond_4
     :try_start_3
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "getEnterpriseExchangeAccount() : cannot get cursor from EmailProvider."
+    const-string v3, "getEnterpriseExchangeAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
@@ -2099,7 +1911,6 @@
 
     goto :goto_1
 
-    .line 341
     :catchall_0
     move-exception v2
 
@@ -2116,7 +1927,6 @@
     :cond_5
     throw v2
 
-    .line 346
     :cond_6
     const-string v2, "EmailProviderHelperService"
 
@@ -2124,7 +1934,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getEnterpriseExchangeAccount() : successfully get Data from Email. accId = "
+    const-string v4, "getEnterpriseExchangeAccount() : successfully get Data from Email. accId = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2152,14 +1962,11 @@
     .param p2, "accId"    # J
 
     .prologue
-    .line 398
     const/4 v12, 0x0
 
-    .line 399
     .local v12, "ret":Landroid/sec/enterprise/email/EnterpriseLDAPAccount;
     const/4 v9, 0x0
 
-    .line 401
     .local v9, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getLDAPContentUri()Landroid/net/Uri;
@@ -2168,7 +1975,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "getLDAPAccount"
+    const-string v5, "getLDAPAccount"
 
     const/4 v1, 0x1
 
@@ -2192,26 +1999,21 @@
 
     move-result-object v9
 
-    .line 402
     if-eqz v9, :cond_3
 
-    .line 403
     invoke-interface {v9}, Landroid/database/Cursor;->getExtras()Landroid/os/Bundle;
 
     move-result-object v8
 
-    .line 404
     .local v8, "bundle_ldap":Landroid/os/Bundle;
     if-eqz v8, :cond_2
 
-    .line 405
-    const-string/jumbo v1, "email.ldap.account"
+    const-string v1, "email.ldap.account"
 
     invoke-virtual {v8, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v11
 
-    .line 406
     .local v11, "parcel":Landroid/os/Parcelable;
     if-eqz v11, :cond_0
 
@@ -2219,24 +2021,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 407
     move-object v0, v11
 
     check-cast v0, Landroid/sec/enterprise/email/EnterpriseLDAPAccount;
 
     move-object v12, v0
 
-    .line 408
     const-string v1, "EmailProviderHelperService"
 
-    const-string/jumbo v2, "getEnterpriseLDAPAccount() : successfully get Data from Email. "
+    const-string v2, "getEnterpriseLDAPAccount() : successfully get Data from Email. "
 
     invoke-static {v1, v2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 420
     .end local v8    # "bundle_ldap":Landroid/os/Bundle;
     .end local v11    # "parcel":Landroid/os/Parcelable;
     :cond_0
@@ -2251,18 +2050,16 @@
 
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 422
     :cond_1
     :goto_1
     return-object v12
 
-    .line 411
     .restart local v8    # "bundle_ldap":Landroid/os/Bundle;
     :cond_2
     :try_start_1
     const-string v1, "EmailProviderHelperService"
 
-    const-string/jumbo v2, "getEnterpriseLDAPAccount() : Fail to get Data from Email. "
+    const-string v2, "getEnterpriseLDAPAccount() : Fail to get Data from Email. "
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -2271,26 +2068,22 @@
 
     goto :goto_0
 
-    .line 416
     .end local v8    # "bundle_ldap":Landroid/os/Bundle;
     :catch_0
     move-exception v10
 
-    .line 417
     .local v10, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v1, "EmailProviderHelperService"
 
-    const-string/jumbo v2, "getEnterpriseExchangeAccount() : Failed, Exception occurs. "
+    const-string v2, "getEnterpriseExchangeAccount() : Failed, Exception occurs. "
 
     invoke-static {v1, v2, v10}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 418
     const/4 v12, 0x0
 
-    .line 420
     if-eqz v9, :cond_1
 
     invoke-interface {v9}, Landroid/database/Cursor;->isClosed()Z
@@ -2303,13 +2096,12 @@
 
     goto :goto_1
 
-    .line 414
     .end local v10    # "ex":Ljava/lang/Exception;
     :cond_3
     :try_start_3
     const-string v1, "EmailProviderHelperService"
 
-    const-string/jumbo v2, "getEnterpriseLDAPAccount() : cannot get cursor from EmailProvider."
+    const-string v2, "getEnterpriseLDAPAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
@@ -2318,7 +2110,6 @@
 
     goto :goto_0
 
-    .line 420
     :catchall_0
     move-exception v1
 
@@ -2342,7 +2133,6 @@
     .param p1, "Id"    # J
 
     .prologue
-    .line 122
     sget-object v1, Lcom/android/server/enterprise/email/EmailProviderHelper;->mAccountObjectMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2367,7 +2157,6 @@
 
     move-result-object v0
 
-    .line 123
     .local v0, "result":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -2375,7 +2164,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 124
     sget-object v1, Lcom/android/server/enterprise/email/EmailProviderHelper;->mAccountObjectMap:Ljava/util/Map;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2398,24 +2186,20 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     check-cast v0, Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
-    .line 128
     .end local v0    # "result":Ljava/lang/Object;
     :goto_0
     return-object v0
 
-    .line 127
     .restart local v0    # "result":Ljava/lang/Object;
     :cond_0
     const-string v1, "EmailProviderHelperService"
 
-    const-string/jumbo v2, "getExchangeAccountObject() : failed. "
+    const-string v2, "getExchangeAccountObject() : failed. "
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2425,7 +2209,6 @@
     .locals 1
 
     .prologue
-    .line 172
     const-string v0, "content://com.samsung.android.email.ldap.provider"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -2441,30 +2224,24 @@
     .param p1, "obj"    # Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     .prologue
-    .line 151
     if-nez p1, :cond_0
 
-    .line 152
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "setEnterpriseEmailAccountObject() : failed with invalid object. "
+    const-string v3, "setEnterpriseEmailAccountObject() : failed with invalid object. "
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     const-wide/16 v0, -0x1
 
-    .line 157
     :goto_0
     return-wide v0
 
-    .line 155
     :cond_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->createID()J
 
     move-result-wide v0
 
-    .line 156
     .local v0, "Id":J
     sget-object v2, Lcom/android/server/enterprise/email/EmailProviderHelper;->mAccountObjectMap:Ljava/util/Map;
 
@@ -2497,30 +2274,24 @@
     .param p1, "obj"    # Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
     .prologue
-    .line 141
     if-nez p1, :cond_0
 
-    .line 142
     const-string v2, "EmailProviderHelperService"
 
-    const-string/jumbo v3, "setEnterpriseExchangeAccountObject() : failed with invalid object. "
+    const-string v3, "setEnterpriseExchangeAccountObject() : failed with invalid object. "
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
     const-wide/16 v0, -0x1
 
-    .line 147
     :goto_0
     return-wide v0
 
-    .line 145
     :cond_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->createID()J
 
     move-result-wide v0
 
-    .line 146
     .local v0, "Id":J
     sget-object v2, Lcom/android/server/enterprise/email/EmailProviderHelper;->mAccountObjectMap:Ljava/util/Map;
 
@@ -2554,20 +2325,16 @@
     .param p2, "account"    # Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     .prologue
-    .line 268
     const/4 v9, 0x0
 
-    .line 269
     .local v9, "ret":Z
     invoke-static {p1, p2}, Lcom/android/server/enterprise/email/EmailProviderHelper;->setEnterpriseEmailAccountObject(Landroid/app/enterprise/ContextInfo;Landroid/sec/enterprise/email/EnterpriseEmailAccount;)J
 
     move-result-wide v10
 
-    .line 270
     .local v10, "keyId":J
     const/4 v7, 0x0
 
-    .line 272
     .local v7, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getEmailContentUri()Landroid/net/Uri;
@@ -2576,7 +2343,7 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "updateEmailAccount"
+    const-string v4, "updateEmailAccount"
 
     const/4 v0, 0x2
 
@@ -2606,7 +2373,6 @@
 
     move-result-object v7
 
-    .line 273
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -2615,8 +2381,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 274
-    const-string/jumbo v0, "updateEmailAccount"
+    const-string v0, "updateEmailAccount"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -2633,7 +2398,6 @@
 
     move-result v9
 
-    .line 282
     :goto_0
     if-eqz v7, :cond_0
 
@@ -2645,7 +2409,6 @@
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 284
     :cond_0
     :goto_1
     const-string v0, "EmailProviderHelperService"
@@ -2654,7 +2417,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateEnterpriseEmailAccount() : ret = "
+    const-string v2, "updateEnterpriseEmailAccount() : ret = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2670,15 +2433,13 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     return v9
 
-    .line 276
     :cond_1
     :try_start_1
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "updateEnterpriseEmailAccount() : cannot get cursor from EmailProvider."
+    const-string v1, "updateEnterpriseEmailAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -2687,25 +2448,21 @@
 
     goto :goto_0
 
-    .line 278
     :catch_0
     move-exception v8
 
-    .line 279
     .local v8, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "updateEnterpriseEmailAccount() : Failed, Exception occurs. "
+    const-string v1, "updateEnterpriseEmailAccount() : Failed, Exception occurs. "
 
     invoke-static {v0, v1, v8}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 280
     const/4 v9, 0x0
 
-    .line 282
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->isClosed()Z
@@ -2743,20 +2500,16 @@
     .param p2, "account"    # Landroid/sec/enterprise/email/EnterpriseExchangeAccount;
 
     .prologue
-    .line 353
     const/4 v9, 0x0
 
-    .line 354
     .local v9, "ret":Z
     invoke-static {p1, p2}, Lcom/android/server/enterprise/email/EmailProviderHelper;->setEnterpriseExchangeAccountObject(Landroid/app/enterprise/ContextInfo;Landroid/sec/enterprise/email/EnterpriseExchangeAccount;)J
 
     move-result-wide v10
 
-    .line 355
     .local v10, "keyId":J
     const/4 v7, 0x0
 
-    .line 357
     .local v7, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/email/EmailProviderHelper;->getEmailContentUri()Landroid/net/Uri;
@@ -2765,7 +2518,7 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "updateEmailAccount"
+    const-string v4, "updateEmailAccount"
 
     const/4 v0, 0x2
 
@@ -2781,7 +2534,7 @@
 
     const/4 v0, 0x1
 
-    const-string/jumbo v1, "eas"
+    const-string v1, "eas"
 
     aput-object v1, v5, v0
 
@@ -2795,7 +2548,6 @@
 
     move-result-object v7
 
-    .line 358
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -2804,8 +2556,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 359
-    const-string/jumbo v0, "updateEmailAccount"
+    const-string v0, "updateEmailAccount"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -2822,7 +2573,6 @@
 
     move-result v9
 
-    .line 367
     :goto_0
     if-eqz v7, :cond_0
 
@@ -2834,7 +2584,6 @@
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 369
     :cond_0
     :goto_1
     const-string v0, "EmailProviderHelperService"
@@ -2843,7 +2592,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateEnterpriseExchangeAccount() : ret = "
+    const-string v2, "updateEnterpriseExchangeAccount() : ret = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2859,15 +2608,13 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 370
     return v9
 
-    .line 361
     :cond_1
     :try_start_1
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "updateEnterpriseExchangeAccount() : cannot get cursor from EmailProvider."
+    const-string v1, "updateEnterpriseExchangeAccount() : cannot get cursor from EmailProvider."
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -2876,25 +2623,21 @@
 
     goto :goto_0
 
-    .line 363
     :catch_0
     move-exception v8
 
-    .line 364
     .local v8, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "EmailProviderHelperService"
 
-    const-string/jumbo v1, "updateEnterpriseExchangeAccount() : Failed, Exception occurs. "
+    const-string v1, "updateEnterpriseExchangeAccount() : Failed, Exception occurs. "
 
     invoke-static {v0, v1, v8}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 365
     const/4 v9, 0x0
 
-    .line 367
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->isClosed()Z

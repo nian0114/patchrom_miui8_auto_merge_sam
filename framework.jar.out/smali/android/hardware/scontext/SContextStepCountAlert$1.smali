@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 149
     new-instance v0, Landroid/hardware/scontext/SContextStepCountAlert;
 
     invoke-direct {v0, p1}, Landroid/hardware/scontext/SContextStepCountAlert;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 145
     invoke-virtual {p0, p1}, Landroid/hardware/scontext/SContextStepCountAlert$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/scontext/SContextStepCountAlert;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 154
     new-array v0, p1, [Landroid/hardware/scontext/SContextStepCountAlert;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 145
     invoke-virtual {p0, p1}, Landroid/hardware/scontext/SContextStepCountAlert$1;->newArray(I)[Landroid/hardware/scontext/SContextStepCountAlert;
 
     move-result-object v0

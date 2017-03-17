@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2902
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$1;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 2905
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0

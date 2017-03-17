@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 2211
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -47,7 +46,6 @@
     .param p2, "x1"    # Lcom/android/server/LpnetManagerService$1;
 
     .prologue
-    .line 2211
     invoke-direct {p0, p1}, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;-><init>(Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;)V
 
     return-void
@@ -62,7 +60,6 @@
     .prologue
     const/4 v14, 0x1
 
-    .line 2220
     :try_start_0
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -103,7 +100,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2222
     :cond_0
     move-object/from16 v0, p1
 
@@ -111,7 +107,6 @@
 
     if-nez v11, :cond_5
 
-    .line 2223
     new-instance v1, Landroid/os/Bundle;
 
     move-object/from16 v0, p1
@@ -122,13 +117,11 @@
 
     invoke-direct {v1, v11}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    .line 2224
     .local v1, "appForceStopBundle":Landroid/os/Bundle;
     invoke-virtual {v1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v9
 
-    .line 2225
     .local v9, "thePackageNameList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
@@ -143,7 +136,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2229
     :try_start_1
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -163,17 +155,14 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 2230
     .local v7, "packageName":Ljava/lang/String;
     invoke-virtual {v1, v7}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 2231
     .local v5, "isGCMNotifyEnabled":Z
     if-eqz v5, :cond_3
 
-    .line 2232
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     iget-object v11, v11, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->this$0:Lcom/android/server/LpnetManagerService;
@@ -185,7 +174,6 @@
 
     invoke-virtual {v11, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 2238
     :cond_1
     :goto_1
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
@@ -196,7 +184,6 @@
 
     goto :goto_0
 
-    .line 2240
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v5    # "isGCMNotifyEnabled":Z
     .end local v7    # "packageName":Ljava/lang/String;
@@ -212,13 +199,11 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 2256
     .end local v1    # "appForceStopBundle":Landroid/os/Bundle;
     .end local v9    # "thePackageNameList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :catch_0
     move-exception v3
 
-    .line 2258
     .local v3, "e":Ljava/lang/Exception;
     const-string v11, "LpnetManagerService"
 
@@ -226,16 +211,13 @@
 
     invoke-static {v11, v12, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2259
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2261
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_2
     return-void
 
-    .line 2234
     .restart local v1    # "appForceStopBundle":Landroid/os/Bundle;
     .restart local v4    # "i$":Ljava/util/Iterator;
     .restart local v5    # "isGCMNotifyEnabled":Z
@@ -258,7 +240,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 2235
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     iget-object v11, v11, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->this$0:Lcom/android/server/LpnetManagerService;
@@ -272,7 +253,6 @@
 
     goto :goto_1
 
-    .line 2240
     .end local v5    # "isGCMNotifyEnabled":Z
     .end local v7    # "packageName":Ljava/lang/String;
     :cond_4
@@ -282,7 +262,6 @@
 
     goto :goto_2
 
-    .line 2241
     .end local v1    # "appForceStopBundle":Landroid/os/Bundle;
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v9    # "thePackageNameList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -294,7 +273,6 @@
 
     if-ne v11, v14, :cond_7
 
-    .line 2242
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -307,11 +285,9 @@
 
     move-object v10, v0
 
-    .line 2243
     .local v10, "theUnFreezeList":[Ljava/lang/String;
     if-eqz v10, :cond_2
 
-    .line 2244
     move-object v2, v10
 
     .local v2, "arr$":[Ljava/lang/String;
@@ -326,11 +302,9 @@
 
     aget-object v8, v2, v4
 
-    .line 2245
     .local v8, "theApp":Ljava/lang/String;
     if-eqz v8, :cond_6
 
-    .line 2247
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     iget-object v11, v11, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->this$0:Lcom/android/server/LpnetManagerService;
@@ -338,13 +312,11 @@
     # invokes: Lcom/android/server/LpnetManagerService;->unFreeze(Ljava/lang/String;)V
     invoke-static {v11, v8}, Lcom/android/server/LpnetManagerService;->access$6000(Lcom/android/server/LpnetManagerService;Ljava/lang/String;)V
 
-    .line 2244
     :cond_6
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 2251
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v4    # "i$":I
     .end local v6    # "len$":I
@@ -359,7 +331,6 @@
 
     if-ne v11, v12, :cond_8
 
-    .line 2252
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     iget-object v11, v11, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->this$0:Lcom/android/server/LpnetManagerService;
@@ -371,7 +342,6 @@
 
     goto :goto_2
 
-    .line 2253
     :cond_8
     move-object/from16 v0, p1
 
@@ -381,7 +351,6 @@
 
     if-ne v11, v12, :cond_2
 
-    .line 2254
     iget-object v11, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     iget-object v11, v11, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->this$0:Lcom/android/server/LpnetManagerService;

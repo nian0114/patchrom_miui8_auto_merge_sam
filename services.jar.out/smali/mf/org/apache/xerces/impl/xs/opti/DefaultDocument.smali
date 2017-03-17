@@ -15,20 +15,16 @@
     .locals 1
 
     .prologue
-    .line 50
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;-><init>()V
 
-    .line 47
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultDocument;->fDocumentURI:Ljava/lang/String;
 
-    .line 51
     const/16 v0, 0x9
 
     iput-short v0, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultDocument;->nodeType:S
 
-    .line 52
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 268
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -66,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 131
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -89,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 146
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -111,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 121
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -128,7 +120,6 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return-object v0
@@ -138,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 107
     const/4 v0, 0x0
 
     return-object v0
@@ -154,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 102
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -177,7 +166,6 @@
     .end annotation
 
     .prologue
-    .line 141
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -199,7 +187,6 @@
     .end annotation
 
     .prologue
-    .line 136
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -222,7 +209,6 @@
     .end annotation
 
     .prologue
-    .line 126
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -239,7 +225,6 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 112
     const/4 v0, 0x0
 
     return-object v0
@@ -249,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     return-object v0
@@ -259,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     return-object v0
@@ -269,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultDocument;->fDocumentURI:Ljava/lang/String;
 
     return-object v0
@@ -279,7 +261,6 @@
     .locals 3
 
     .prologue
-    .line 282
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -296,7 +277,6 @@
     .param p1, "elementId"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return-object v0
@@ -307,7 +287,6 @@
     .param p1, "tagname"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
     return-object v0
@@ -319,7 +298,6 @@
     .param p2, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     const/4 v0, 0x0
 
     return-object v0
@@ -329,7 +307,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return-object v0
@@ -339,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/4 v0, 0x0
 
     return-object v0
@@ -349,7 +325,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const-string v0, "#document"
 
     return-object v0
@@ -359,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 229
     const/4 v0, 0x0
 
     return v0
@@ -369,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 162
     const/4 v0, 0x0
 
     return-object v0
@@ -379,7 +352,6 @@
     .locals 3
 
     .prologue
-    .line 182
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -395,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 204
     const/4 v0, 0x0
 
     return-object v0
@@ -412,7 +383,6 @@
     .end annotation
 
     .prologue
-    .line 97
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -428,7 +398,6 @@
     .locals 3
 
     .prologue
-    .line 273
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -452,7 +421,6 @@
     .end annotation
 
     .prologue
-    .line 287
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -469,10 +437,8 @@
     .param p1, "documentURI"    # Ljava/lang/String;
 
     .prologue
-    .line 263
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultDocument;->fDocumentURI:Ljava/lang/String;
 
-    .line 264
     return-void
 .end method
 
@@ -481,7 +447,6 @@
     .param p1, "strictErrorChecking"    # Z
 
     .prologue
-    .line 241
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -498,7 +463,6 @@
     .param p1, "standalone"    # Z
 
     .prologue
-    .line 191
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -520,7 +484,6 @@
     .end annotation
 
     .prologue
-    .line 216
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9

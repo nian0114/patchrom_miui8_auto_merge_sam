@@ -21,9 +21,7 @@
     .param p2, "event"    # Lcom/sec/knox/container/util/DaemonEvent;
 
     .prologue
-    .line 450
     invoke-direct {p0, p1, p2}, Lcom/sec/knox/container/util/DaemonConnectorException;-><init>(Ljava/lang/String;Lcom/sec/knox/container/util/DaemonEvent;)V
 
-    .line 451
     return-void
 .end method

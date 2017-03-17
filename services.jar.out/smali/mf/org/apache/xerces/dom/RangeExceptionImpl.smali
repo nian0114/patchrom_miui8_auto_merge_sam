@@ -14,9 +14,7 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Lmf/org/w3c/dom/ranges/RangeException;-><init>(SLjava/lang/String;)V
 
-    .line 34
     return-void
 .end method

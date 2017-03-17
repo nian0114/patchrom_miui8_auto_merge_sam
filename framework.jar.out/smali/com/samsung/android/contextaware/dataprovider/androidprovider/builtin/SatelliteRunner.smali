@@ -12,10 +12,8 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 49
     return-void
 .end method
 
@@ -25,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 165
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 166
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->disable()V
 
-    .line 167
     return-void
 .end method
 
@@ -39,13 +34,10 @@
     .locals 0
 
     .prologue
-    .line 152
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 153
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->enable()V
 
-    .line 154
     return-void
 .end method
 
@@ -53,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 59
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->ANDROID_RUNNER_RAW_SATELLITE:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -67,7 +58,6 @@
     .locals 3
 
     .prologue
-    .line 71
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -115,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 178
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/builtin/SatelliteRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -126,7 +115,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 179
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -138,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 140
     const/4 v0, 0x0
 
     return-object v0
@@ -148,7 +135,6 @@
     .locals 0
 
     .prologue
-    .line 116
     return-object p0
 .end method
 
@@ -156,7 +142,6 @@
     .locals 0
 
     .prologue
-    .line 128
     return-object p0
 .end method
 
@@ -164,7 +149,6 @@
     .locals 2
 
     .prologue
-    .line 83
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getGpsManager()Landroid/location/LocationManager;
 
     move-result-object v0
@@ -177,12 +161,10 @@
 
     if-nez v0, :cond_1
 
-    .line 89
     :cond_0
     :goto_0
     return-void
 
-    .line 87
     :cond_1
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getGpsManager()Landroid/location/LocationManager;
 
@@ -201,18 +183,15 @@
     .locals 2
 
     .prologue
-    .line 100
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getGpsManager()Landroid/location/LocationManager;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 106
     :goto_0
     return-void
 
-    .line 104
     :cond_0
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getGpsManager()Landroid/location/LocationManager;
 

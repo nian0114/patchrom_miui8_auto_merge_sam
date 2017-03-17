@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4473
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 4476
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -54,14 +52,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 4477
     const-string v1, "PersonaManagerService"
 
     const-string v2, "ACTION_BOOT_COMPLETED"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4478
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mContext:Landroid/content/Context;
@@ -84,7 +80,6 @@
 
     invoke-virtual {v1, v2, v3, v5, v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 4480
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaHandler:Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -98,7 +93,6 @@
 
     move-result-object v0
 
-    .line 4481
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -109,7 +103,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/PersonaManagerService$PersonaHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 4482
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaHandler:Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -123,7 +116,6 @@
 
     move-result-object v0
 
-    .line 4483
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaHandler:Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -133,7 +125,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/PersonaManagerService$PersonaHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 4484
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$BootReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     const/4 v2, 0x1
@@ -141,7 +132,6 @@
     # setter for: Lcom/android/server/pm/PersonaManagerService;->mBootCompleted:Z
     invoke-static {v1, v2}, Lcom/android/server/pm/PersonaManagerService;->access$902(Lcom/android/server/pm/PersonaManagerService;Z)Z
 
-    .line 4486
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void

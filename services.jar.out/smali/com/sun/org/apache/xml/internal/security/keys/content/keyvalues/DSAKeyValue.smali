@@ -250,7 +250,7 @@
 
     const-string v1, "Y"
 
-    const-string/jumbo v2, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v2, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {p0, v1, v2}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getBigIntegerFromChildElement(Ljava/lang/String;Ljava/lang/String;)Ljava/math/BigInteger;
 
@@ -258,7 +258,7 @@
 
     const-string v2, "P"
 
-    const-string/jumbo v3, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v3, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {p0, v2, v3}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getBigIntegerFromChildElement(Ljava/lang/String;Ljava/lang/String;)Ljava/math/BigInteger;
 
@@ -266,7 +266,7 @@
 
     const-string v3, "Q"
 
-    const-string/jumbo v4, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v4, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {p0, v3, v4}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getBigIntegerFromChildElement(Ljava/lang/String;Ljava/lang/String;)Ljava/math/BigInteger;
 
@@ -274,7 +274,7 @@
 
     const-string v4, "G"
 
-    const-string/jumbo v5, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v5, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {p0, v4, v5}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getBigIntegerFromChildElement(Ljava/lang/String;Ljava/lang/String;)Ljava/math/BigInteger;
 
@@ -302,7 +302,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -313,7 +313,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

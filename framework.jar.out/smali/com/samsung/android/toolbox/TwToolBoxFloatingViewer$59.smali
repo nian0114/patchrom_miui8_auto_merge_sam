@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2307
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$59;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iput-object p2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$59;->val$cm:Landroid/content/ComponentName;
@@ -44,24 +43,20 @@
     .locals 5
 
     .prologue
-    .line 2310
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2311
     .local v1, "intent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$59;->val$cm:Landroid/content/ComponentName;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2312
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2313
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$59;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     const/4 v3, 0x1
@@ -71,16 +66,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2317
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 2314
     :catch_0
     move-exception v0
 
-    .line 2315
     .local v0, "ex":Ljava/lang/Exception;
     const-string v2, "toolbox"
 
@@ -111,6 +103,5 @@
     .locals 0
 
     .prologue
-    .line 2321
     return-void
 .end method

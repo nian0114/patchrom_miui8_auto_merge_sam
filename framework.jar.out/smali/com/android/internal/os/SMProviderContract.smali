@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 29
     const-string v0, "content://com.sec.smartmanager.provider"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/internal/os/SMProviderContract;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 31
     const-string v0, "content://com.sec.smartmanager.provider/*"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/os/SMProviderContract;->CONTENT_URI_ALL:Landroid/net/Uri;
 
-    .line 33
     const-string v0, "content://com.sec.smartmanager.provider/Battery_delta"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/os/SMProviderContract;->CONTENT_URI_BATTEY_DELTA:Landroid/net/Uri;
 
-    .line 35
     const-string v0, "content://com.sec.smartmanager.provider/power_consuming_packages"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -87,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

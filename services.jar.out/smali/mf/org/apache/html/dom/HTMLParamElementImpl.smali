@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 91
     return-void
 .end method
 
@@ -30,8 +28,7 @@
     .locals 1
 
     .prologue
-    .line 37
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 49
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -58,8 +54,7 @@
     .locals 1
 
     .prologue
-    .line 61
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -72,8 +67,7 @@
     .locals 1
 
     .prologue
-    .line 73
-    const-string/jumbo v0, "valuetype"
+    const-string v0, "valuetype"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -91,12 +85,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 43
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -105,12 +97,10 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -119,12 +109,10 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -133,11 +121,9 @@
     .param p1, "valueType"    # Ljava/lang/String;
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "valuetype"
+    const-string v0, "valuetype"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLParamElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     return-void
 .end method

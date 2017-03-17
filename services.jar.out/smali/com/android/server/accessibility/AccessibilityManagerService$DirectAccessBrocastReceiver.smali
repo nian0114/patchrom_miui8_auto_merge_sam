@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 451
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lcom/android/server/accessibility/AccessibilityManagerService$1;
 
     .prologue
-    .line 451
     invoke-direct {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$DirectAccessBrocastReceiver;-><init>()V
 
     return-void
@@ -44,12 +42,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 454
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 455
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
@@ -67,7 +63,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 456
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -75,18 +70,15 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 457
     .local v1, "mDirecAccessiIntent":Landroid/content/Intent;
     const/high16 v2, 0x4000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 458
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 461
     .end local v1    # "mDirecAccessiIntent":Landroid/content/Intent;
     :cond_1
     return-void

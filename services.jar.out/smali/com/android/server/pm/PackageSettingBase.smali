@@ -102,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 121
     new-instance v0, Landroid/content/pm/PackageUserState;
 
     invoke-direct {v0}, Landroid/content/pm/PackageUserState;-><init>()V
@@ -119,137 +118,110 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 168
     invoke-direct {p0, p1}, Lcom/android/server/pm/SettingBase;-><init>(Lcom/android/server/pm/SettingBase;)V
 
-    .line 104
     iput v2, p0, Lcom/android/server/pm/PackageSettingBase;->dexMode:I
 
-    .line 115
     new-instance v1, Lcom/android/server/pm/PackageSignatures;
 
     invoke-direct {v1}, Lcom/android/server/pm/PackageSignatures;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 119
     new-instance v1, Lcom/android/server/pm/PackageKeySetData;
 
     invoke-direct {v1}, Lcom/android/server/pm/PackageKeySetData;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->keySetData:Lcom/android/server/pm/PackageKeySetData;
 
-    .line 125
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
-    .line 127
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
-    .line 134
     iput-boolean v2, p0, Lcom/android/server/pm/PackageSettingBase;->frozen:Z
 
-    .line 170
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->name:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->name:Ljava/lang/String;
 
-    .line 171
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->realName:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->realName:Ljava/lang/String;
 
-    .line 172
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->codePath:Ljava/io/File;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->codePath:Ljava/io/File;
 
-    .line 173
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->codePathString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->codePathString:Ljava/lang/String;
 
-    .line 174
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->resourcePath:Ljava/io/File;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->resourcePath:Ljava/io/File;
 
-    .line 175
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->resourcePathString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->resourcePathString:Ljava/lang/String;
 
-    .line 176
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->legacyNativeLibraryPathString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->legacyNativeLibraryPathString:Ljava/lang/String;
 
-    .line 177
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->primaryCpuAbiString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->primaryCpuAbiString:Ljava/lang/String;
 
-    .line 178
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->secondaryCpuAbiString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->secondaryCpuAbiString:Ljava/lang/String;
 
-    .line 179
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->cpuAbiOverrideString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->cpuAbiOverrideString:Ljava/lang/String;
 
-    .line 181
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryRootDir:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryRootDir:Ljava/lang/String;
 
-    .line 182
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryDir:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryDir:Ljava/lang/String;
 
-    .line 183
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->secondaryNativeLibraryDir:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->secondaryNativeLibraryDir:Ljava/lang/String;
 
-    .line 184
     iget-boolean v1, p1, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryRootRequiresIsa:Z
 
     iput-boolean v1, p0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryRootRequiresIsa:Z
 
-    .line 186
     iget-wide v2, p1, Lcom/android/server/pm/PackageSettingBase;->timeStamp:J
 
     iput-wide v2, p0, Lcom/android/server/pm/PackageSettingBase;->timeStamp:J
 
-    .line 187
     iget-wide v2, p1, Lcom/android/server/pm/PackageSettingBase;->firstInstallTime:J
 
     iput-wide v2, p0, Lcom/android/server/pm/PackageSettingBase;->firstInstallTime:J
 
-    .line 188
     iget-wide v2, p1, Lcom/android/server/pm/PackageSettingBase;->lastUpdateTime:J
 
     iput-wide v2, p0, Lcom/android/server/pm/PackageSettingBase;->lastUpdateTime:J
 
-    .line 189
     iget v1, p1, Lcom/android/server/pm/PackageSettingBase;->versionCode:I
 
     iput v1, p0, Lcom/android/server/pm/PackageSettingBase;->versionCode:I
 
-    .line 191
     iget-boolean v1, p1, Lcom/android/server/pm/PackageSettingBase;->uidError:Z
 
     iput-boolean v1, p0, Lcom/android/server/pm/PackageSettingBase;->uidError:Z
 
-    .line 193
     new-instance v1, Lcom/android/server/pm/PackageSignatures;
 
     iget-object v2, p1, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
@@ -258,17 +230,14 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 195
     iget-boolean v1, p1, Lcom/android/server/pm/PackageSettingBase;->installPermissionsFixed:Z
 
     iput-boolean v1, p0, Lcom/android/server/pm/PackageSettingBase;->installPermissionsFixed:Z
 
-    .line 196
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->clear()V
 
-    .line 197
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -281,7 +250,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 198
     iget-object v2, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
@@ -304,33 +272,27 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 197
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 201
     :cond_0
     iget v1, p1, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
     iput v1, p0, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
-    .line 203
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->origPackage:Lcom/android/server/pm/PackageSettingBase;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->origPackage:Lcom/android/server/pm/PackageSettingBase;
 
-    .line 205
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->installerPackageName:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->installerPackageName:Ljava/lang/String;
 
-    .line 206
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->volumeUuid:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->volumeUuid:Ljava/lang/String;
 
-    .line 208
     new-instance v1, Lcom/android/server/pm/PackageKeySetData;
 
     iget-object v2, p1, Lcom/android/server/pm/PackageSettingBase;->keySetData:Lcom/android/server/pm/PackageKeySetData;
@@ -339,7 +301,6 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->keySetData:Lcom/android/server/pm/PackageKeySetData;
 
-    .line 209
     return-void
 .end method
 
@@ -362,53 +323,44 @@
     .param p15, "pkgPrivateFlags"    # I
 
     .prologue
-    .line 152
     move/from16 v0, p14
 
     move/from16 v1, p15
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/pm/SettingBase;-><init>(II)V
 
-    .line 104
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/pm/PackageSettingBase;->dexMode:I
 
-    .line 115
     new-instance v2, Lcom/android/server/pm/PackageSignatures;
 
     invoke-direct {v2}, Lcom/android/server/pm/PackageSignatures;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 119
     new-instance v2, Lcom/android/server/pm/PackageKeySetData;
 
     invoke-direct {v2}, Lcom/android/server/pm/PackageKeySetData;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/pm/PackageSettingBase;->keySetData:Lcom/android/server/pm/PackageKeySetData;
 
-    .line 125
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
-    .line 127
     const/4 v2, 0x1
 
     iput v2, p0, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
-    .line 134
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/pm/PackageSettingBase;->frozen:Z
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/pm/PackageSettingBase;->name:Ljava/lang/String;
 
-    .line 154
     move-object/from16 v0, p2
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->realName:Ljava/lang/String;
@@ -437,10 +389,8 @@
 
     move/from16 v13, p13
 
-    .line 155
     invoke-virtual/range {v2 .. v13}, Lcom/android/server/pm/PackageSettingBase;->init(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V
 
-    .line 161
     return-void
 .end method
 
@@ -449,7 +399,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 289
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -458,23 +407,19 @@
 
     check-cast v0, Landroid/content/pm/PackageUserState;
 
-    .line 290
     .local v0, "state":Landroid/content/pm/PackageUserState;
     if-nez v0, :cond_0
 
-    .line 291
     new-instance v0, Landroid/content/pm/PackageUserState;
 
     .end local v0    # "state":Landroid/content/pm/PackageUserState;
     invoke-direct {v0}, Landroid/content/pm/PackageUserState;-><init>()V
 
-    .line 292
     .restart local v0    # "state":Landroid/content/pm/PackageUserState;
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 294
     :cond_0
     return-object v0
 .end method
@@ -487,7 +432,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 443
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -500,7 +444,6 @@
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 444
     return-void
 .end method
 
@@ -510,7 +453,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 447
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -523,7 +465,6 @@
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 448
     return-void
 .end method
 
@@ -532,7 +473,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 519
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -541,7 +481,6 @@
 
     iput v1, v0, Landroid/content/pm/PackageUserState;->domainVerificationStatus:I
 
-    .line 521
     return-void
 .end method
 
@@ -550,59 +489,48 @@
     .param p1, "base"    # Lcom/android/server/pm/PackageSettingBase;
 
     .prologue
-    .line 268
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->mPermissionsState:Lcom/android/server/pm/PermissionsState;
 
     iget-object v2, p1, Lcom/android/server/pm/PackageSettingBase;->mPermissionsState:Lcom/android/server/pm/PermissionsState;
 
     invoke-virtual {v1, v2}, Lcom/android/server/pm/PermissionsState;->copyFrom(Lcom/android/server/pm/PermissionsState;)V
 
-    .line 269
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->primaryCpuAbiString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->primaryCpuAbiString:Ljava/lang/String;
 
-    .line 270
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->secondaryCpuAbiString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->secondaryCpuAbiString:Ljava/lang/String;
 
-    .line 271
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->cpuAbiOverrideString:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->cpuAbiOverrideString:Ljava/lang/String;
 
-    .line 272
     iget-wide v2, p1, Lcom/android/server/pm/PackageSettingBase;->timeStamp:J
 
     iput-wide v2, p0, Lcom/android/server/pm/PackageSettingBase;->timeStamp:J
 
-    .line 273
     iget-wide v2, p1, Lcom/android/server/pm/PackageSettingBase;->firstInstallTime:J
 
     iput-wide v2, p0, Lcom/android/server/pm/PackageSettingBase;->firstInstallTime:J
 
-    .line 274
     iget-wide v2, p1, Lcom/android/server/pm/PackageSettingBase;->lastUpdateTime:J
 
     iput-wide v2, p0, Lcom/android/server/pm/PackageSettingBase;->lastUpdateTime:J
 
-    .line 275
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 276
     iget-boolean v1, p1, Lcom/android/server/pm/PackageSettingBase;->installPermissionsFixed:Z
 
     iput-boolean v1, p0, Lcom/android/server/pm/PackageSettingBase;->installPermissionsFixed:Z
 
-    .line 277
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->clear()V
 
-    .line 278
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -615,7 +543,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 279
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     iget-object v2, p1, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
@@ -632,38 +559,31 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 278
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 281
     :cond_0
     iget v1, p1, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
     iput v1, p0, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
-    .line 282
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->keySetData:Lcom/android/server/pm/PackageKeySetData;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->keySetData:Lcom/android/server/pm/PackageKeySetData;
 
-    .line 283
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->verificationInfo:Landroid/content/pm/IntentFilterVerificationInfo;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->verificationInfo:Landroid/content/pm/IntentFilterVerificationInfo;
 
-    .line 284
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->installerPackageName:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->installerPackageName:Ljava/lang/String;
 
-    .line 285
     iget-object v1, p1, Lcom/android/server/pm/PackageSettingBase;->volumeUuid:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->volumeUuid:Ljava/lang/String;
 
-    .line 286
     return-void
 .end method
 
@@ -675,14 +595,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 459
     const/4 v2, 0x1
 
     invoke-virtual {p0, p2, v2, v0}, Lcom/android/server/pm/PackageSettingBase;->modifyUserStateComponents(IZZ)Landroid/content/pm/PackageUserState;
 
     move-result-object v1
 
-    .line 460
     .local v1, "state":Landroid/content/pm/PackageUserState;
     iget-object v2, v1, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
 
@@ -694,7 +612,6 @@
 
     move-result v0
 
-    .line 462
     .local v0, "changed":Z
     :cond_0
     iget-object v2, v1, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
@@ -705,7 +622,6 @@
 
     or-int/2addr v0, v2
 
-    .line 463
     return v0
 .end method
 
@@ -717,14 +633,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 451
     const/4 v2, 0x1
 
     invoke-virtual {p0, p2, v0, v2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserStateComponents(IZZ)Landroid/content/pm/PackageUserState;
 
     move-result-object v1
 
-    .line 452
     .local v1, "state":Landroid/content/pm/PackageUserState;
     iget-object v2, v1, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
@@ -736,7 +650,6 @@
 
     move-result v0
 
-    .line 454
     .local v0, "changed":Z
     :cond_0
     iget-object v2, v1, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
@@ -747,7 +660,6 @@
 
     or-int/2addr v0, v2
 
-    .line 455
     return v0
 .end method
 
@@ -756,7 +668,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 379
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -772,12 +683,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 476
     invoke-virtual {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
-    .line 477
     .local v0, "state":Landroid/content/pm/PackageUserState;
     iget-object v1, v0, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
 
@@ -791,14 +700,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 478
     const/4 v1, 0x1
 
-    .line 483
     :goto_0
     return v1
 
-    .line 479
     :cond_0
     iget-object v1, v0, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
@@ -812,12 +718,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 481
     const/4 v1, 0x2
 
     goto :goto_0
 
-    .line 483
     :cond_1
     const/4 v1, 0x0
 
@@ -838,7 +742,6 @@
     .end annotation
 
     .prologue
-    .line 410
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -853,18 +756,15 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 504
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v2
 
-    .line 505
     .local v2, "state":Landroid/content/pm/PackageUserState;
     iget v3, v2, Landroid/content/pm/PackageUserState;->appLinkGeneration:I
 
     int-to-long v0, v3
 
-    .line 506
     .local v0, "result":J
     iget v3, v2, Landroid/content/pm/PackageUserState;->domainVerificationStatus:I
 
@@ -876,7 +776,6 @@
 
     or-long/2addr v0, v4
 
-    .line 507
     return-wide v0
 .end method
 
@@ -885,7 +784,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 312
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -909,7 +807,6 @@
     .end annotation
 
     .prologue
-    .line 406
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -924,7 +821,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 371
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -938,7 +834,6 @@
     .locals 1
 
     .prologue
-    .line 257
     iget v0, p0, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
     return v0
@@ -949,7 +844,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 324
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -963,7 +857,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->installerPackageName:Ljava/lang/String;
 
     return-object v0
@@ -973,7 +866,6 @@
     .locals 1
 
     .prologue
-    .line 492
     iget-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->verificationInfo:Landroid/content/pm/IntentFilterVerificationInfo;
 
     return-object v0
@@ -984,7 +876,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 316
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -999,7 +890,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 363
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -1014,7 +904,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 355
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
@@ -1028,7 +917,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->volumeUuid:Ljava/lang/String;
 
     return-object v0
@@ -1049,54 +937,40 @@
     .param p11, "pVersionCode"    # I
 
     .prologue
-    .line 218
     iput-object p1, p0, Lcom/android/server/pm/PackageSettingBase;->codePath:Ljava/io/File;
 
-    .line 219
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->codePathString:Ljava/lang/String;
 
-    .line 220
     iput-object p2, p0, Lcom/android/server/pm/PackageSettingBase;->resourcePath:Ljava/io/File;
 
-    .line 221
     invoke-virtual {p2}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->resourcePathString:Ljava/lang/String;
 
-    .line 222
     iput-object p3, p0, Lcom/android/server/pm/PackageSettingBase;->legacyNativeLibraryPathString:Ljava/lang/String;
 
-    .line 223
     iput-object p4, p0, Lcom/android/server/pm/PackageSettingBase;->primaryCpuAbiString:Ljava/lang/String;
 
-    .line 224
     iput-object p5, p0, Lcom/android/server/pm/PackageSettingBase;->secondaryCpuAbiString:Ljava/lang/String;
 
-    .line 225
     iput-object p6, p0, Lcom/android/server/pm/PackageSettingBase;->cpuAbiOverrideString:Ljava/lang/String;
 
-    .line 226
     iput p11, p0, Lcom/android/server/pm/PackageSettingBase;->versionCode:I
 
-    .line 228
     iput-object p7, p0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryRootDir:Ljava/lang/String;
 
-    .line 229
     iput-object p8, p0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryDir:Ljava/lang/String;
 
-    .line 230
     iput-object p9, p0, Lcom/android/server/pm/PackageSettingBase;->secondaryNativeLibraryDir:Ljava/lang/String;
 
-    .line 231
     iput-boolean p10, p0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryRootRequiresIsa:Z
 
-    .line 234
     return-void
 .end method
 
@@ -1105,7 +979,6 @@
     .param p1, "users"    # [I
 
     .prologue
-    .line 328
     move-object v0, p1
 
     .local v0, "arr$":[I
@@ -1120,7 +993,6 @@
 
     aget v3, v0, v1
 
-    .line 329
     .local v3, "user":I
     invoke-virtual {p0, v3}, Lcom/android/server/pm/PackageSettingBase;->readUserState(I)Landroid/content/pm/PackageUserState;
 
@@ -1130,22 +1002,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 330
     const/4 v4, 0x1
 
-    .line 333
     .end local v3    # "user":I
     :goto_1
     return v4
 
-    .line 328
     .restart local v3    # "user":I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 333
     .end local v3    # "user":I
     :cond_1
     const/4 v4, 0x0
@@ -1162,12 +1030,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 432
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
-    .line 433
     .local v0, "state":Landroid/content/pm/PackageUserState;
     if-eqz p2, :cond_0
 
@@ -1175,14 +1041,12 @@
 
     if-nez v1, :cond_0
 
-    .line 434
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(I)V
 
     iput-object v1, v0, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
-    .line 436
     :cond_0
     if-eqz p3, :cond_1
 
@@ -1190,14 +1054,12 @@
 
     if-nez v1, :cond_1
 
-    .line 437
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(I)V
 
     iput-object v1, v0, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
 
-    .line 439
     :cond_1
     return-object v0
 .end method
@@ -1208,10 +1070,8 @@
     .param p2, "installed"    # Z
 
     .prologue
-    .line 337
     const/4 v3, 0x0
 
-    .line 338
     .local v3, "num":I
     move-object v0, p1
 
@@ -1227,7 +1087,6 @@
 
     aget v5, v0, v1
 
-    .line 339
     .local v5, "user":I
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PackageSettingBase;->getInstalled(I)Z
 
@@ -1235,25 +1094,20 @@
 
     if-ne v6, p2, :cond_0
 
-    .line 340
     add-int/lit8 v3, v3, 0x1
 
-    .line 338
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 343
     .end local v5    # "user":I
     :cond_1
     new-array v4, v3, [I
 
-    .line 344
     .local v4, "res":[I
     const/4 v3, 0x0
 
-    .line 345
     move-object v0, p1
 
     array-length v2, v0
@@ -1265,7 +1119,6 @@
 
     aget v5, v0, v1
 
-    .line 346
     .restart local v5    # "user":I
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PackageSettingBase;->getInstalled(I)Z
 
@@ -1273,19 +1126,15 @@
 
     if-ne v6, p2, :cond_2
 
-    .line 347
     aput v5, v4, v3
 
-    .line 348
     add-int/lit8 v3, v3, 0x1
 
-    .line 345
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 351
     .end local v5    # "user":I
     :cond_3
     return-object v4
@@ -1296,7 +1145,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 298
     iget-object v1, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1305,11 +1153,9 @@
 
     check-cast v0, Landroid/content/pm/PackageUserState;
 
-    .line 299
     .local v0, "state":Landroid/content/pm/PackageUserState;
     if-eqz v0, :cond_0
 
-    .line 302
     .end local v0    # "state":Landroid/content/pm/PackageUserState;
     :goto_0
     return-object v0
@@ -1326,12 +1172,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 488
     iget-object v0, p0, Lcom/android/server/pm/PackageSettingBase;->userState:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 489
     return-void
 .end method
 
@@ -1345,12 +1189,10 @@
 
     const/4 v2, 0x0
 
-    .line 467
     invoke-virtual {p0, p2, v3, v3}, Lcom/android/server/pm/PackageSettingBase;->modifyUserStateComponents(IZZ)Landroid/content/pm/PackageUserState;
 
     move-result-object v1
 
-    .line 468
     .local v1, "state":Landroid/content/pm/PackageUserState;
     iget-object v3, v1, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
@@ -1362,7 +1204,6 @@
 
     move-result v0
 
-    .line 470
     .local v0, "changed":Z
     :goto_0
     iget-object v3, v1, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
@@ -1378,14 +1219,12 @@
     :cond_0
     or-int/2addr v0, v2
 
-    .line 472
     return v0
 
     .end local v0    # "changed":Z
     :cond_1
     move v0, v2
 
-    .line 468
     goto :goto_0
 .end method
 
@@ -1395,14 +1234,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 383
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
     iput-boolean p1, v0, Landroid/content/pm/PackageUserState;->blockUninstall:Z
 
-    .line 384
     return-void
 .end method
 
@@ -1420,7 +1257,6 @@
     .end annotation
 
     .prologue
-    .line 418
     .local p1, "components":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
@@ -1428,7 +1264,6 @@
 
     iput-object p1, v0, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
-    .line 419
     return-void
 .end method
 
@@ -1446,7 +1281,6 @@
     .end annotation
 
     .prologue
-    .line 427
     .local p1, "components":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
@@ -1461,10 +1295,8 @@
     :goto_0
     iput-object v0, v1, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
-    .line 429
     return-void
 
-    .line 427
     :cond_0
     const/4 v0, 0x0
 
@@ -1478,24 +1310,19 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 511
     invoke-direct {p0, p3}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
-    .line 512
     .local v0, "state":Landroid/content/pm/PackageUserState;
     iput p1, v0, Landroid/content/pm/PackageUserState;->domainVerificationStatus:I
 
-    .line 513
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_0
 
-    .line 514
     iput p2, v0, Landroid/content/pm/PackageUserState;->appLinkGeneration:I
 
-    .line 516
     :cond_0
     return-void
 .end method
@@ -1507,19 +1334,15 @@
     .param p3, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 306
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
-    .line 307
     .local v0, "st":Landroid/content/pm/PackageUserState;
     iput p1, v0, Landroid/content/pm/PackageUserState;->enabled:I
 
-    .line 308
     iput-object p3, v0, Landroid/content/pm/PackageUserState;->lastDisableAppCaller:Ljava/lang/String;
 
-    .line 309
     return-void
 .end method
 
@@ -1537,7 +1360,6 @@
     .end annotation
 
     .prologue
-    .line 414
     .local p1, "components":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
@@ -1545,7 +1367,6 @@
 
     iput-object p1, v0, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
 
-    .line 415
     return-void
 .end method
 
@@ -1563,7 +1384,6 @@
     .end annotation
 
     .prologue
-    .line 422
     .local p1, "components":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
@@ -1578,10 +1398,8 @@
     :goto_0
     iput-object v0, v1, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
 
-    .line 424
     return-void
 
-    .line 422
     :cond_0
     const/4 v0, 0x0
 
@@ -1594,14 +1412,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 375
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
     iput-boolean p1, v0, Landroid/content/pm/PackageUserState;->hidden:Z
 
-    .line 376
     return-void
 .end method
 
@@ -1610,10 +1426,8 @@
     .param p1, "newStatus"    # I
 
     .prologue
-    .line 253
     iput p1, p0, Lcom/android/server/pm/PackageSettingBase;->installStatus:I
 
-    .line 254
     return-void
 .end method
 
@@ -1623,14 +1437,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 320
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
     iput-boolean p1, v0, Landroid/content/pm/PackageUserState;->installed:Z
 
-    .line 321
     return-void
 .end method
 
@@ -1639,10 +1451,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/server/pm/PackageSettingBase;->installerPackageName:Ljava/lang/String;
 
-    .line 238
     return-void
 .end method
 
@@ -1651,10 +1461,8 @@
     .param p1, "info"    # Landroid/content/pm/IntentFilterVerificationInfo;
 
     .prologue
-    .line 496
     iput-object p1, p0, Lcom/android/server/pm/PackageSettingBase;->verificationInfo:Landroid/content/pm/IntentFilterVerificationInfo;
 
-    .line 497
     return-void
 .end method
 
@@ -1664,14 +1472,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 367
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
     iput-boolean p1, v0, Landroid/content/pm/PackageUserState;->notLaunched:Z
 
-    .line 368
     return-void
 .end method
 
@@ -1681,14 +1487,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 359
     invoke-direct {p0, p2}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
     iput-boolean p1, v0, Landroid/content/pm/PackageUserState;->stopped:Z
 
-    .line 360
     return-void
 .end method
 
@@ -1697,10 +1501,8 @@
     .param p1, "newStamp"    # J
 
     .prologue
-    .line 261
     iput-wide p1, p0, Lcom/android/server/pm/PackageSettingBase;->timeStamp:J
 
-    .line 262
     return-void
 .end method
 
@@ -1732,48 +1534,35 @@
     .end annotation
 
     .prologue
-    .line 391
     .local p8, "enabledComponents":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .local p9, "disabledComponents":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageSettingBase;->modifyUserState(I)Landroid/content/pm/PackageUserState;
 
     move-result-object v0
 
-    .line 392
     .local v0, "state":Landroid/content/pm/PackageUserState;
     iput p2, v0, Landroid/content/pm/PackageUserState;->enabled:I
 
-    .line 393
     iput-boolean p3, v0, Landroid/content/pm/PackageUserState;->installed:Z
 
-    .line 394
     iput-boolean p4, v0, Landroid/content/pm/PackageUserState;->stopped:Z
 
-    .line 395
     iput-boolean p5, v0, Landroid/content/pm/PackageUserState;->notLaunched:Z
 
-    .line 396
     iput-boolean p6, v0, Landroid/content/pm/PackageUserState;->hidden:Z
 
-    .line 397
     iput-object p7, v0, Landroid/content/pm/PackageUserState;->lastDisableAppCaller:Ljava/lang/String;
 
-    .line 398
     iput-object p8, v0, Landroid/content/pm/PackageUserState;->enabledComponents:Landroid/util/ArraySet;
 
-    .line 399
     iput-object p9, v0, Landroid/content/pm/PackageUserState;->disabledComponents:Landroid/util/ArraySet;
 
-    .line 400
     iput-boolean p10, v0, Landroid/content/pm/PackageUserState;->blockUninstall:Z
 
-    .line 401
     iput p11, v0, Landroid/content/pm/PackageUserState;->domainVerificationStatus:I
 
-    .line 402
     iput p12, v0, Landroid/content/pm/PackageUserState;->appLinkGeneration:I
 
-    .line 403
     return-void
 .end method
 
@@ -1782,9 +1571,7 @@
     .param p1, "volumeUuid"    # Ljava/lang/String;
 
     .prologue
-    .line 245
     iput-object p1, p0, Lcom/android/server/pm/PackageSettingBase;->volumeUuid:Ljava/lang/String;
 
-    .line 246
     return-void
 .end method

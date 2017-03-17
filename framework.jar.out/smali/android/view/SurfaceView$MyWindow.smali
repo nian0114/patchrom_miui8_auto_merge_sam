@@ -39,23 +39,18 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 792
     invoke-direct {p0}, Lcom/android/internal/view/BaseIWindow;-><init>()V
 
-    .line 845
     iput v0, p0, Landroid/view/SurfaceView$MyWindow;->mCurWidth:I
 
-    .line 846
     iput v0, p0, Landroid/view/SurfaceView$MyWindow;->mCurHeight:I
 
-    .line 793
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/view/SurfaceView$MyWindow;->mSurfaceView:Ljava/lang/ref/WeakReference;
 
-    .line 794
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 825
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .locals 4
 
     .prologue
-    .line 829
     iget-object v2, p0, Landroid/view/SurfaceView$MyWindow;->mSurfaceView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -83,11 +76,9 @@
 
     check-cast v1, Landroid/view/SurfaceView;
 
-    .line 830
     .local v1, "surfaceView":Landroid/view/SurfaceView;
     if-eqz v1, :cond_0
 
-    .line 831
     iget-object v2, v1, Landroid/view/SurfaceView;->mHandler:Landroid/os/Handler;
 
     const/4 v3, 0x2
@@ -96,13 +87,11 @@
 
     move-result-object v0
 
-    .line 832
     .local v0, "msg":Landroid/os/Message;
     iget-object v2, v1, Landroid/view/SurfaceView;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 834
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -115,7 +104,6 @@
     .param p3, "out"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 843
     return-void
 .end method
 
@@ -132,7 +120,6 @@
     .param p9, "cocktailBarFrame"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 800
     iget-object v1, p0, Landroid/view/SurfaceView$MyWindow;->mSurfaceView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -141,30 +128,24 @@
 
     check-cast v0, Landroid/view/SurfaceView;
 
-    .line 801
     .local v0, "surfaceView":Landroid/view/SurfaceView;
     if-eqz v0, :cond_1
 
-    .line 805
     iget-object v1, v0, Landroid/view/SurfaceView;->mSurfaceLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 807
     if-eqz p7, :cond_2
 
-    .line 808
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, v0, Landroid/view/SurfaceView;->mUpdateWindowNeeded:Z
 
-    .line 809
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/view/SurfaceView;->mReportDrawNeeded:Z
 
-    .line 810
     iget-object v1, v0, Landroid/view/SurfaceView;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -173,18 +154,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 817
     :cond_0
     :goto_0
     iget-object v1, v0, Landroid/view/SurfaceView;->mSurfaceLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 820
     :cond_1
     return-void
 
-    .line 811
     :cond_2
     :try_start_1
     iget-object v1, v0, Landroid/view/SurfaceView;->mWinFrame:Landroid/graphics/Rect;
@@ -211,13 +189,11 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 813
     :cond_3
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/view/SurfaceView;->mUpdateWindowNeeded:Z
 
-    .line 814
     iget-object v1, v0, Landroid/view/SurfaceView;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -228,7 +204,6 @@
 
     goto :goto_0
 
-    .line 817
     :catchall_0
     move-exception v1
 
@@ -246,7 +221,6 @@
     .param p3, "focusedAppChanged"    # Z
 
     .prologue
-    .line 838
     const-string v0, "SurfaceView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -279,6 +253,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 839
     return-void
 .end method

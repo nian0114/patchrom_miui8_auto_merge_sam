@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 299
     iput-object p1, p0, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView$1;->this$1:Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 302
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -76,7 +74,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 304
     :cond_0
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -91,11 +88,9 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;-><init>(Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 305
     .local v0, "tempStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-virtual {v0, v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setType(I)V
 
-    .line 306
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView$1;->this$1:Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;
 
     iget-object v1, v1, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/SubPhoneWindow;
@@ -116,12 +111,10 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setMultiWindowStyle(Landroid/os/IBinder;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 310
     .end local v0    # "tempStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :goto_0
     return-void
 
-    .line 308
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView$1;->this$1:Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;
 

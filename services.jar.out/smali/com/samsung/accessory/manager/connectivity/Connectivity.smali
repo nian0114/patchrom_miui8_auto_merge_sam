@@ -55,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const-class v0, Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -64,17 +63,14 @@
 
     sput-object v0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->TAG:Ljava/lang/String;
 
-    .line 20
     const/4 v0, 0x1
 
     sput v0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->NFC_MAX_CONNECTION:I
 
-    .line 21
     const/16 v0, 0x8
 
     sput v0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->BT_MAX_CONNECTION:I
 
-    .line 23
     const/4 v0, 0x3
 
     new-array v0, v0, [B
@@ -98,18 +94,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mEnabledInternal:Z
 
-    .line 71
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mContext:Landroid/content/Context;
 
-    .line 72
     return-void
 .end method
 
@@ -118,30 +110,24 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 52
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
 
-    .line 53
     sget v0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->NFC_MAX_CONNECTION:I
 
-    .line 57
     :goto_0
     return v0
 
-    .line 54
     :cond_0
     const/4 v0, 0x2
 
     if-ne p0, v0, :cond_1
 
-    .line 55
     sget v0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->BT_MAX_CONNECTION:I
 
     goto :goto_0
 
-    .line 57
     :cond_1
     const/4 v0, -0x1
 
@@ -177,7 +163,6 @@
     .end annotation
 
     .prologue
-    .line 62
     const/4 v0, 0x0
 
     return-object v0
@@ -192,7 +177,6 @@
     .end annotation
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     return-object v0
@@ -205,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-boolean v0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mEnabledInternal:Z
 
     return v0
@@ -240,9 +223,7 @@
     .param p1, "callback"    # Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mStateChangedCallback:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
-    .line 40
     return-void
 .end method

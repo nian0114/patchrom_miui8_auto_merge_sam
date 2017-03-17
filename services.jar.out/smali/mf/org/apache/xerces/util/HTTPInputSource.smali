@@ -17,22 +17,18 @@
     .param p3, "baseSystemId"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     invoke-direct {p0, p1, p2, p3}, Lmf/org/apache/xerces/xni/parser/XMLInputSource;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fFollowRedirects:Z
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
-    .line 74
     return-void
 .end method
 
@@ -45,22 +41,18 @@
     .param p5, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 104
     invoke-direct/range {p0 .. p5}, Lmf/org/apache/xerces/xni/parser/XMLInputSource;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fFollowRedirects:Z
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
-    .line 105
     return-void
 .end method
 
@@ -73,22 +65,18 @@
     .param p5, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     invoke-direct/range {p0 .. p5}, Lmf/org/apache/xerces/xni/parser/XMLInputSource;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/Reader;Ljava/lang/String;)V
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fFollowRedirects:Z
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
-    .line 126
     return-void
 .end method
 
@@ -97,22 +85,18 @@
     .param p1, "resourceIdentifier"    # Lmf/org/apache/xerces/xni/XMLResourceIdentifier;
 
     .prologue
-    .line 84
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/xni/parser/XMLInputSource;-><init>(Lmf/org/apache/xerces/xni/XMLResourceIdentifier;)V
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fFollowRedirects:Z
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
-    .line 85
     return-void
 .end method
 
@@ -122,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-boolean v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fFollowRedirects:Z
 
     return v0
@@ -132,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -151,7 +133,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 159
     iget-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -168,10 +149,8 @@
     .param p1, "followRedirects"    # Z
 
     .prologue
-    .line 146
     iput-boolean p1, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fFollowRedirects:Z
 
-    .line 147
     return-void
 .end method
 
@@ -181,19 +160,15 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 184
     if-eqz p2, :cond_0
 
-    .line 185
     iget-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     :goto_0
     return-void
 
-    .line 188
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/util/HTTPInputSource;->fHTTPRequestProperties:Ljava/util/Map;
 

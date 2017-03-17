@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 272
     invoke-static {}, Lcom/itsoninc/android/DeviceCall$CallState;->values()[Lcom/itsoninc/android/DeviceCall$CallState;
 
     move-result-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 298
     iput-object p1, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/DirEncryptServiceHelper$1;
 
     .prologue
-    .line 298
     invoke-direct {p0, p1}, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;-><init>(Lcom/android/server/DirEncryptServiceHelper;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "connected"    # Z
 
     .prologue
-    .line 301
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p3, "volNewState"    # I
 
     .prologue
-    .line 305
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result v5
@@ -76,7 +72,6 @@
 
     if-nez v5, :cond_2
 
-    .line 306
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -102,24 +97,20 @@
 
     invoke-static {v5}, Lcom/android/server/DirEncryptServiceHelper;->logD(Ljava/lang/String;)V
 
-    .line 343
     :cond_1
     :goto_0
     return-void
 
-    .line 309
     :cond_2
     invoke-static {p2}, Landroid/os/storage/VolumeInfo;->getEnvironmentForState(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 310
     .local v2, "oldState":Ljava/lang/String;
     invoke-static {p3}, Landroid/os/storage/VolumeInfo;->getEnvironmentForState(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 311
     .local v1, "newState":Ljava/lang/String;
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -127,12 +118,11 @@
 
     if-eqz v5, :cond_3
 
-    .line 312
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "newState is a same state with oldState:: newState: "
+    const-string v6, "newState is a same state with oldState:: newState: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -164,7 +154,6 @@
 
     invoke-static {v5}, Lcom/android/server/DirEncryptServiceHelper;->logD(Ljava/lang/String;)V
 
-    .line 314
     :cond_3
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
@@ -177,7 +166,6 @@
 
     invoke-virtual {v5, v6}, Landroid/dirEncryption/DirEncryptionWrapper;->setExternalSDvolId(Ljava/lang/String;)V
 
-    .line 315
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
     # getter for: Lcom/android/server/DirEncryptServiceHelper;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
@@ -189,7 +177,6 @@
 
     invoke-virtual {v5, v6}, Landroid/dirEncryption/DirEncryptionWrapper;->setExternalSDvolFsUuid(Ljava/lang/String;)V
 
-    .line 316
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
     # getter for: Lcom/android/server/DirEncryptServiceHelper;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
@@ -199,12 +186,10 @@
 
     invoke-virtual {v5, v1}, Landroid/dirEncryption/DirEncryptionWrapper;->setExternalSDvolState(Ljava/lang/String;)V
 
-    .line 318
     const/4 v3, 0x0
 
-    .line 319
     .local v3, "preventMetaCheckSDcard":Z
-    const-string/jumbo v5, "vold.decrypt"
+    const-string v5, "vold.decrypt"
 
     const-string v6, ""
 
@@ -212,9 +197,8 @@
 
     move-result-object v4
 
-    .line 320
     .local v4, "voldProperty":Ljava/lang/String;
-    const-string/jumbo v5, "trigger_default_encryption"
+    const-string v5, "trigger_default_encryption"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -222,7 +206,7 @@
 
     if-nez v5, :cond_4
 
-    const-string/jumbo v5, "trigger_restart_min_framework"
+    const-string v5, "trigger_restart_min_framework"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -230,11 +214,9 @@
 
     if-eqz v5, :cond_5
 
-    .line 321
     :cond_4
     const/4 v3, 0x1
 
-    .line 324
     :cond_5
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
@@ -249,7 +231,6 @@
 
     if-nez v5, :cond_7
 
-    .line 325
     if-eqz v2, :cond_7
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -258,12 +239,11 @@
 
     if-nez v5, :cond_7
 
-    .line 326
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "onVolumeStateChanged:: "
+    const-string v6, "onVolumeStateChanged:: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -313,7 +293,6 @@
 
     invoke-static {v5}, Lcom/android/server/DirEncryptServiceHelper;->logD(Ljava/lang/String;)V
 
-    .line 327
     if-nez v3, :cond_7
 
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
@@ -325,7 +304,7 @@
 
     if-nez v5, :cond_6
 
-    const-string/jumbo v5, "unmounted"
+    const-string v5, "unmounted"
 
     invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -333,7 +312,7 @@
 
     if-eqz v5, :cond_6
 
-    const-string/jumbo v5, "removed"
+    const-string v5, "removed"
 
     invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -341,7 +320,6 @@
 
     if-nez v5, :cond_7
 
-    .line 329
     :cond_6
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
@@ -358,9 +336,8 @@
 
     invoke-virtual {v5}, Landroid/os/Message;->sendToTarget()V
 
-    .line 333
     :cond_7
-    const-string/jumbo v5, "unmounted"
+    const-string v5, "unmounted"
 
     invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -381,12 +358,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 334
     const-string v5, "MEDIA_UNMOUNTED + mDew.getUserDiff = true"
 
     invoke-static {v5}, Lcom/android/server/DirEncryptServiceHelper;->logD(Ljava/lang/String;)V
 
-    .line 335
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
     # getter for: Lcom/android/server/DirEncryptServiceHelper;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
@@ -398,7 +373,6 @@
 
     invoke-virtual {v5, v6}, Landroid/dirEncryption/DirEncryptionWrapper;->setUserDiff(Z)V
 
-    .line 338
     :try_start_0
     iget-object v5, p0, Lcom/android/server/DirEncryptServiceHelper$SDStorageEventListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
@@ -413,11 +387,9 @@
 
     goto/16 :goto_0
 
-    .line 339
     :catch_0
     move-exception v0
 
-    .line 340
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

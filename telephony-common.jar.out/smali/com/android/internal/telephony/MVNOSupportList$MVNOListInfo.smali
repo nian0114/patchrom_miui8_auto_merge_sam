@@ -29,18 +29,14 @@
     .param p3, "mvnoName"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/android/internal/telephony/MVNOSupportList$MVNOListInfo;->this$0:Lcom/android/internal/telephony/MVNOSupportList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p2, p0, Lcom/android/internal/telephony/MVNOSupportList$MVNOListInfo;->simIMSI:Ljava/lang/String;
 
-    .line 34
     iput-object p3, p0, Lcom/android/internal/telephony/MVNOSupportList$MVNOListInfo;->mvnoName:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/internal/telephony/MVNOSupportList$MVNOListInfo;->mvnoName:Ljava/lang/String;
 
     return-object v0
@@ -60,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcom/android/internal/telephony/MVNOSupportList$MVNOListInfo;->simIMSI:Ljava/lang/String;
 
     return-object v0
@@ -70,7 +64,6 @@
     .locals 2
 
     .prologue
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

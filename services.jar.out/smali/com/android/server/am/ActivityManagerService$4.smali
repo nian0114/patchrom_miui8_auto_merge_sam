@@ -20,7 +20,6 @@
     .param p1, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 4610
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -35,21 +34,17 @@
     .prologue
     const-wide/16 v2, 0x40
 
-    .line 4612
-    const-string/jumbo v0, "killProcessGroup"
+    const-string v0, "killProcessGroup"
 
     invoke-static {v2, v3, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 4613
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     iget v1, p1, Landroid/os/Message;->arg2:I
 
     invoke-static {v0, v1}, Landroid/os/Process;->killProcessGroup(II)I
 
-    .line 4614
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 4615
     return-void
 .end method

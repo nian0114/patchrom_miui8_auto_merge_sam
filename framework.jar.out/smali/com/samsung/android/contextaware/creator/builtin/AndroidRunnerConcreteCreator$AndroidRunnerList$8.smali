@@ -20,7 +20,6 @@
     .param p3, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 259
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;-><init>(Ljava/lang/String;ILjava/lang/String;Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$1;)V
@@ -34,7 +33,6 @@
     .locals 7
 
     .prologue
-    .line 262
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$10100()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -50,7 +48,6 @@
 
     if-nez v0, :cond_0
 
-    .line 263
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$10600()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -86,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 268
     :cond_0
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$10700()Ljava/util/concurrent/ConcurrentHashMap;
@@ -111,21 +107,17 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 279
     array-length v0, p1
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 280
     const/4 v0, 0x0
 
-    .line 290
     :goto_0
     return-object v0
 
-    .line 283
     :cond_0
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$11100()Ljava/util/concurrent/ConcurrentHashMap;
@@ -142,7 +134,6 @@
 
     if-nez v0, :cond_1
 
-    .line 284
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$11600()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -188,7 +179,6 @@
 
     invoke-virtual {v6, v7, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 290
     :cond_1
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$11700()Ljava/util/concurrent/ConcurrentHashMap;
@@ -212,7 +202,6 @@
     .locals 5
 
     .prologue
-    .line 273
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/builtin/GyroscopeSensorRunner;
 
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getVersion()I
@@ -242,7 +231,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 296
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/builtin/GyroscopeSensorRunner;
 
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->getVersion()I

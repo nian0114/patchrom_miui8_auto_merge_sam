@@ -120,7 +120,6 @@
     .locals 3
 
     .prologue
-    .line 15
     const-string v0, "/data/system/container/databases/"
 
     const/16 v1, 0x2f
@@ -147,22 +146,18 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->AUTHORITY:Ljava/lang/String;
 
-    .line 16
     const-string v0, "containerwithassociatedpackages"
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_TABLE_NAME:Ljava/lang/String;
 
-    .line 17
     const-string v0, "containeractivestatus"
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_TABLE_ACTIVESTATUS_NAME:Ljava/lang/String;
 
-    .line 18
     const-string v0, "certificatemanager"
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CERTIFICATE_MANAGER_TABLE_NAME:Ljava/lang/String;
 
-    .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,7 +196,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_CONTENT_URI:Landroid/net/Uri;
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,7 +234,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_ACTIVE_STATUS_URI:Landroid/net/Uri;
 
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,7 +272,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CERTIFICATE_MANAGER_URI:Landroid/net/Uri;
 
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -326,7 +318,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "packages"
+    const-string v1, "packages"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -338,7 +330,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "original_signature"
+    const-string v1, "original_signature"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -350,7 +342,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "installation_source"
+    const-string v1, "installation_source"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -386,7 +378,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->createTableContainerAssociatedPackage:Ljava/lang/String;
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -457,7 +448,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "passwordstatus"
+    const-string v1, "passwordstatus"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -469,7 +460,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "email"
+    const-string v1, "email"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -481,7 +472,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "name"
+    const-string v1, "name"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -493,7 +484,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "securitytext"
+    const-string v1, "securitytext"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -505,7 +496,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "securityicon"
+    const-string v1, "securityicon"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -529,7 +520,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "passwordhasexpired"
+    const-string v1, "passwordhasexpired"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -541,7 +532,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "failedpasswordattempts"
+    const-string v1, "failedpasswordattempts"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -553,7 +544,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "locktype"
+    const-string v1, "locktype"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -601,7 +592,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "deviceFirmwareVersion"
+    const-string v1, "deviceFirmwareVersion"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -625,7 +616,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->createTableContainerActive:Ljava/lang/String;
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -672,7 +662,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActive:Ljava/lang/String;
 
-    .line 83
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -701,7 +690,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "passwordhasexpired"
+    const-string v1, "passwordhasexpired"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -719,7 +708,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActivePassExpired:Ljava/lang/String;
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -748,7 +736,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "failedpasswordattempts"
+    const-string v1, "failedpasswordattempts"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -766,7 +754,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActiveFailedPassAttemps:Ljava/lang/String;
 
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -813,7 +800,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActiveAdminUid:Ljava/lang/String;
 
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -842,7 +828,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "locktype"
+    const-string v1, "locktype"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -860,7 +846,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerLockType:Ljava/lang/String;
 
-    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -907,7 +892,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerType:Ljava/lang/String;
 
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -942,7 +926,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "orig_signature"
+    const-string v1, "orig_signature"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -954,7 +938,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "new_signature_creationtime"
+    const-string v1, "new_signature_creationtime"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -978,7 +962,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->createTableCertificateManager:Ljava/lang/String;
 
-    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1025,7 +1008,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableScreenlock:Ljava/lang/String;
 
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1054,7 +1036,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "deviceFirmwareVersion"
+    const-string v1, "deviceFirmwareVersion"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1079,7 +1061,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

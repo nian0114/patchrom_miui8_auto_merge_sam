@@ -24,10 +24,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 192
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 193
     return-void
 .end method
 
@@ -38,18 +36,15 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 203
     const/16 v0, 0x226
 
     if-ne p1, v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     # invokes: Lcom/android/server/MountService;->systemReady()V
     invoke-static {v0}, Lcom/android/server/MountService;->access$000(Lcom/android/server/MountService;)V
 
-    .line 206
     :cond_0
     return-void
 .end method
@@ -59,13 +54,11 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     # invokes: Lcom/android/server/MountService;->onCleanupUser(I)V
     invoke-static {v0, p1}, Lcom/android/server/MountService;->access$200(Lcom/android/server/MountService;I)V
 
-    .line 216
     return-void
 .end method
 
@@ -73,7 +66,6 @@
     .locals 2
 
     .prologue
-    .line 197
     new-instance v0, Lcom/android/server/MountService;
 
     invoke-virtual {p0}, Lcom/android/server/MountService$Lifecycle;->getContext()Landroid/content/Context;
@@ -84,14 +76,12 @@
 
     iput-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
-    .line 198
-    const-string/jumbo v0, "mount"
+    const-string v0, "mount"
 
     iget-object v1, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/MountService$Lifecycle;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 199
     return-void
 .end method
 
@@ -100,12 +90,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 210
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     # invokes: Lcom/android/server/MountService;->onStartUser(I)V
     invoke-static {v0, p1}, Lcom/android/server/MountService;->access$100(Lcom/android/server/MountService;I)V
 
-    .line 211
     return-void
 .end method

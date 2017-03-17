@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 1776
     sget-object v0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->TAG:Ljava/lang/String;
@@ -48,15 +47,12 @@
     .locals 1
 
     .prologue
-    .line 1775
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1785
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mNextRequestId:I
 
-    .line 1786
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -73,10 +69,8 @@
     .param p1, "requiresResult"    # Z
 
     .prologue
-    .line 1839
     iget v1, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mNextRequestId:I
 
-    .line 1840
     .local v1, "reqId":I
     iget v2, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mNextRequestId:I
 
@@ -84,24 +78,19 @@
 
     iput v2, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mNextRequestId:I
 
-    .line 1842
     if-eqz p1, :cond_0
 
-    .line 1843
     new-instance v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
 
     invoke-direct {v0}, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;-><init>()V
 
-    .line 1844
     .local v0, "item":Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
     iput v1, v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mRequestId:I
 
-    .line 1845
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mRequestMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 1846
     :try_start_0
     iget-object v2, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mRequestMap:Ljava/util/HashMap;
 
@@ -111,15 +100,12 @@
 
     invoke-virtual {v2, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1847
     monitor-exit v3
 
-    .line 1849
     .end local v0    # "item":Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
     :cond_0
     return v1
 
-    .line 1847
     .restart local v0    # "item":Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
     :catchall_0
     move-exception v2
@@ -136,16 +122,13 @@
     .param p1, "requestId"    # I
 
     .prologue
-    .line 1831
     const/4 v1, 0x0
 
-    .line 1832
     .local v1, "info":Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mRequestMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 1833
     :try_start_0
     iget-object v2, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mRequestMap:Ljava/util/HashMap;
 
@@ -163,13 +146,10 @@
 
     move-object v1, v0
 
-    .line 1834
     monitor-exit v3
 
-    .line 1835
     return-object v1
 
-    .line 1834
     :catchall_0
     move-exception v2
 
@@ -185,25 +165,22 @@
     .param p1, "resultData"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
     .prologue
-    .line 1817
     iget v1, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;->mRequestId:I
 
     invoke-virtual {p0, v1}, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->getRequestItem(I)Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
 
     move-result-object v0
 
-    .line 1818
     .local v0, "item":Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
     if-nez v0, :cond_0
 
-    .line 1819
     sget-object v1, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "notifyResult : Could not find request information. id="
+    const-string v3, "notifyResult : Could not find request information. id="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,31 +198,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1828
     :goto_0
     return-void
 
-    .line 1822
     :cond_0
     iget-object v2, v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mWaitObj:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1823
     :try_start_0
     iput-object p1, v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mResultData:Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
-    .line 1824
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mResponseArrived:Z
 
-    .line 1825
     iget-object v1, v0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mWaitObj:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 1826
     monitor-exit v2
 
     goto :goto_0
@@ -266,23 +237,20 @@
     .param p2, "timeout"    # I
 
     .prologue
-    .line 1789
     invoke-virtual {p0, p1}, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->getRequestItem(I)Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
 
     move-result-object v3
 
-    .line 1790
     .local v3, "item":Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;
     if-nez v3, :cond_0
 
-    .line 1791
     sget-object v6, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "waitResult : Could not find request info!! id = "
+    const-string v8, "waitResult : Could not find request info!! id = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -298,26 +266,21 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1792
     const/4 v6, 0x0
 
-    .line 1813
     :goto_0
     return-object v6
 
-    .line 1795
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 1797
     .local v4, "waitStartTime":J
     iget-object v7, v3, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mWaitObj:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 1798
     :try_start_0
     iget-boolean v6, v3, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mResponseArrived:Z
     :try_end_0
@@ -325,7 +288,6 @@
 
     if-nez v6, :cond_1
 
-    .line 1801
     :try_start_1
     iget-object v6, v3, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mWaitObj:Ljava/lang/Object;
 
@@ -336,7 +298,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1806
     :cond_1
     :goto_1
     :try_start_2
@@ -344,14 +305,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1808
     sget-object v6, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "waitResult : Unlocked. Id = "
+    const-string v8, "waitResult : Unlocked. Id = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -377,7 +337,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "ms"
+    const-string v8, "ms"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -389,12 +349,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1810
     iget-object v7, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mRequestMap:Ljava/util/HashMap;
 
     monitor-enter v7
 
-    .line 1811
     :try_start_3
     iget-object v6, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->mRequestMap:Ljava/util/HashMap;
 
@@ -412,21 +370,17 @@
 
     move-object v3, v0
 
-    .line 1812
     monitor-exit v7
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1813
     iget-object v6, v3, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mResultData:Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
     goto :goto_0
 
-    .line 1802
     :catch_0
     move-exception v2
 
-    .line 1803
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_4
     sget-object v6, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager;->TAG:Ljava/lang/String;
@@ -435,7 +389,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "waitResult : e="
+    const-string v9, "waitResult : e="
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -453,7 +407,6 @@
 
     goto :goto_1
 
-    .line 1806
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v6
@@ -464,7 +417,6 @@
 
     throw v6
 
-    .line 1812
     :catchall_1
     move-exception v6
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 851
     iput-object p1, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 860
     iget-object v0, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -47,23 +45,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 861
     const-string v0, "Powering off : stop FM"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 862
     iget-object v0, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     # invokes: Lcom/android/server/FMRadioService;->stopInternetStreaming()V
     invoke-static {v0}, Lcom/android/server/FMRadioService;->access$900(Lcom/android/server/FMRadioService;)V
 
-    .line 863
     iget-object v0, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v0}, Lcom/android/server/FMRadioService;->cancelSeek()V
 
-    .line 864
     iget-object v0, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     const/4 v1, 0x6
@@ -71,17 +65,14 @@
     # invokes: Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
     invoke-static {v0, v2, v1, v2}, Lcom/android/server/FMRadioService;->access$1000(Lcom/android/server/FMRadioService;ZIZ)Z
 
-    .line 869
     :goto_0
     return-void
 
-    .line 866
     :cond_0
     const-string v0, "Powering off : remove audiofocus: FM"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 867
     iget-object v0, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -109,12 +100,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 853
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 854
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -124,10 +113,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 855
     invoke-direct {p0}, Lcom/android/server/FMRadioService$11;->off()V
 
-    .line 857
     :cond_0
     return-void
 .end method

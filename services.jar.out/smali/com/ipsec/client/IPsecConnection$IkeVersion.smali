@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 3354
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
     const-string v1, "IKE_VERSION_1"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeVersion;->IKE_VERSION_1:Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
-    .line 3360
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
     const-string v1, "IKE_VERSION_2"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeVersion;->IKE_VERSION_2:Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
-    .line 3347
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IkeVersion;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 3347
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3347
     const-class v0, Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 3347
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IkeVersion;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IkeVersion;->clone()Ljava/lang/Object;

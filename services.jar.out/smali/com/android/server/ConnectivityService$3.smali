@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2497
     iput-object p1, p0, Lcom/android/server/ConnectivityService$3;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2500
     const-string v2, "caindicator"
 
     const/4 v3, 0x0
@@ -48,18 +46,16 @@
 
     move-result v0
 
-    .line 2501
     .local v0, "lteCaEnabled":Z
-    const-string/jumbo v3, "net.lte_ca_enabled"
+    const-string v3, "net.lte_ca_enabled"
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     :goto_0
     invoke-static {v3, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2503
     iget-object v2, p0, Lcom/android/server/ConnectivityService$3;->this$0:Lcom/android/server/ConnectivityService;
 
     # getter for: Lcom/android/server/ConnectivityService;->mActiveDefaultNetwork:I
@@ -69,7 +65,6 @@
 
     if-nez v2, :cond_0
 
-    .line 2504
     iget-object v2, p0, Lcom/android/server/ConnectivityService$3;->this$0:Lcom/android/server/ConnectivityService;
 
     # getter for: Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -88,30 +83,25 @@
 
     move-result-object v1
 
-    .line 2505
     .local v1, "thisNet":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v1, :cond_0
 
-    .line 2507
     iget-object v2, p0, Lcom/android/server/ConnectivityService$3;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->updateTcpBufferSizes(Lcom/android/server/connectivity/NetworkAgentInfo;)V
     invoke-static {v2, v1}, Lcom/android/server/ConnectivityService;->access$1300(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 2508
     iget-object v2, p0, Lcom/android/server/ConnectivityService$3;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->updateTcpDelayedAckSettings(Lcom/android/server/connectivity/NetworkAgentInfo;)V
     invoke-static {v2, v1}, Lcom/android/server/ConnectivityService;->access$1400(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 2511
     .end local v1    # "thisNet":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_0
     return-void
 
-    .line 2501
     :cond_1
-    const-string/jumbo v2, "false"
+    const-string v2, "false"
 
     goto :goto_0
 .end method

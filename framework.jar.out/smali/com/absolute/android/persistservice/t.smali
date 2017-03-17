@@ -20,21 +20,16 @@
     .locals 2
 
     .prologue
-    .line 121
     invoke-direct {p0}, Lcom/absolute/android/persistence/IABTLogIterator$Stub;-><init>()V
 
-    .line 36
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/absolute/android/persistservice/t;->e:Z
 
-    .line 123
     iput p1, p0, Lcom/absolute/android/persistservice/t;->b:I
 
-    .line 124
     iput-object p2, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
-    .line 126
     iget-object v0, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
     const/4 v1, 0x0
@@ -45,12 +40,10 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/t;->c:Ljava/io/File;
 
-    .line 127
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/absolute/android/persistservice/t;->d:J
 
-    .line 129
     return-void
 .end method
 
@@ -62,8 +55,6 @@
 
     const/4 v1, 0x1
 
-    .line 144
-    .line 149
     :try_start_0
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -77,36 +68,29 @@
 
     invoke-direct {v3, v2, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
-    .line 150
     iget-wide v4, p0, Lcom/absolute/android/persistservice/t;->d:J
 
     invoke-virtual {v3, v4, v5}, Ljava/io/BufferedReader;->skip(J)J
 
     move v2, v0
 
-    .line 158
     :goto_0
     if-ge v2, p2, :cond_0
 
-    .line 160
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 162
     if-nez v4, :cond_1
 
     move v0, v1
 
-    .line 176
     :cond_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
 
-    .line 185
     :goto_1
     return v0
 
-    .line 167
     :cond_1
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -114,7 +98,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 168
     iget-object v5, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
     iget v6, p0, Lcom/absolute/android/persistservice/t;->b:I
@@ -123,16 +106,12 @@
 
     move-result-object v5
 
-    .line 169
     if-eqz v5, :cond_2
 
-    .line 170
     invoke-virtual {p1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 171
     add-int/lit8 v2, v2, 0x1
 
-    .line 174
     :cond_2
     iget-wide v6, p0, Lcom/absolute/android/persistservice/t;->d:J
 
@@ -159,11 +138,9 @@
 
     goto :goto_0
 
-    .line 178
     :catch_0
     move-exception v0
 
-    .line 179
     iget-object v2, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -200,14 +177,11 @@
 
     move v0, v1
 
-    .line 184
     goto :goto_1
 
-    .line 181
     :catch_1
     move-exception v0
 
-    .line 182
     iget-object v2, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -244,7 +218,6 @@
 
     move v0, v1
 
-    .line 183
     goto :goto_1
 .end method
 
@@ -258,21 +231,17 @@
 
     const/4 v2, 0x1
 
-    .line 49
     const/4 v0, 0x0
 
-    .line 50
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 55
     :cond_0
     iget-boolean v1, p0, Lcom/absolute/android/persistservice/t;->e:Z
 
     if-nez v1, :cond_3
 
-    .line 59
     iget-object v1, p0, Lcom/absolute/android/persistservice/t;->c:Ljava/io/File;
 
     if-eqz v1, :cond_1
@@ -290,11 +259,9 @@
     :cond_1
     move v1, v2
 
-    .line 74
     :goto_0
     if-ne v1, v2, :cond_2
 
-    .line 78
     iget-object v1, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
     iget-object v4, p0, Lcom/absolute/android/persistservice/t;->c:Ljava/io/File;
@@ -303,13 +270,10 @@
 
     move-result-object v1
 
-    .line 79
     if-nez v1, :cond_7
 
-    .line 83
     iput-boolean v2, p0, Lcom/absolute/android/persistservice/t;->e:Z
 
-    .line 93
     :cond_2
     :goto_1
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -318,7 +282,6 @@
 
     if-lt v1, p1, :cond_0
 
-    .line 97
     :cond_3
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -326,7 +289,6 @@
 
     if-lez v1, :cond_4
 
-    .line 98
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -339,11 +301,9 @@
 
     check-cast v0, [Lcom/absolute/android/persistence/LogEntry;
 
-    .line 109
     :cond_4
     return-object v0
 
-    .line 64
     :cond_5
     iget-object v1, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
@@ -355,18 +315,15 @@
 
     if-eqz v1, :cond_6
 
-    .line 65
     iget-object v4, p0, Lcom/absolute/android/persistservice/t;->a:Lcom/absolute/android/persistservice/v;
 
     monitor-enter v4
 
-    .line 66
     :try_start_0
     invoke-direct {p0, v3, p1}, Lcom/absolute/android/persistservice/t;->a(Ljava/util/ArrayList;I)Z
 
     move-result v1
 
-    .line 67
     monitor-exit v4
 
     goto :goto_0
@@ -380,7 +337,6 @@
 
     throw v0
 
-    .line 70
     :cond_6
     invoke-direct {p0, v3, p1}, Lcom/absolute/android/persistservice/t;->a(Ljava/util/ArrayList;I)Z
 
@@ -388,11 +344,9 @@
 
     goto :goto_0
 
-    .line 86
     :cond_7
     iput-object v1, p0, Lcom/absolute/android/persistservice/t;->c:Ljava/io/File;
 
-    .line 90
     iput-wide v6, p0, Lcom/absolute/android/persistservice/t;->d:J
 
     goto :goto_1

@@ -32,28 +32,23 @@
     .param p4, "svEnable"    # Z
 
     .prologue
-    .line 41
     iput-object p1, p0, Landroid/os/DbqHelper$DbqInfo;->this$0:Landroid/os/DbqHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput p2, p0, Landroid/os/DbqHelper$DbqInfo;->bufferCount:I
 
-    .line 43
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/DbqHelper$DbqInfo;->isActEnabled:Ljava/lang/Boolean;
 
-    .line 44
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/DbqHelper$DbqInfo;->isSvEnabled:Ljava/lang/Boolean;
 
-    .line 45
     return-void
 .end method

@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const-string v0, "DB_BRIDGE_INIT_SYNC"
 
     sput-object v0, Lcom/android/server/bridge/util/BridgeConstants;->PREF_NAME:Ljava/lang/String;
@@ -62,7 +61,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

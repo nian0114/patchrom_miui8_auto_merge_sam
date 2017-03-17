@@ -37,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 2189
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -63,7 +62,6 @@
     .locals 4
 
     .prologue
-    .line 2257
     const/4 v0, 0x2
 
     const/4 v1, 0x1
@@ -80,26 +78,20 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 2247
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
-    .line 2248
     const v0, 0x3f19999a    # 0.6f
 
     iput v0, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mQuality:F
 
-    .line 2258
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->useFilterParams()V
 
-    .line 2259
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->useFilterData01()V
 
-    .line 2260
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->useFilterData02()V
 
-    .line 2261
     return-void
 .end method
 
@@ -109,7 +101,6 @@
     .locals 20
 
     .prologue
-    .line 2318
     move-object/from16 v0, p0
 
     iget v14, v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
@@ -120,17 +111,14 @@
 
     float-to-int v7, v14
 
-    .line 2319
     .local v7, "interFactor":I
     const/4 v11, 0x0
 
-    .line 2321
     .local v11, "power":F
     const/16 v14, 0x40
 
     if-le v7, v14, :cond_0
 
-    .line 2322
     move-object/from16 v0, p0
 
     iget v14, v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
@@ -139,10 +127,8 @@
 
     div-float v11, v14, v15
 
-    .line 2323
     const/16 v7, 0x40
 
-    .line 2331
     :goto_0
     move-object/from16 v0, p0
 
@@ -154,7 +140,6 @@
 
     if-gtz v14, :cond_2
 
-    .line 2332
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mData1:[F
@@ -165,7 +150,6 @@
 
     aput v16, v14, v15
 
-    .line 2333
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mData2:[F
@@ -176,39 +160,31 @@
 
     aput v16, v14, v15
 
-    .line 2377
     :goto_1
     return-void
 
-    .line 2324
     :cond_0
     const/4 v14, 0x1
 
     if-ge v7, v14, :cond_1
 
-    .line 2325
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 2326
     const/4 v7, 0x1
 
     goto :goto_0
 
-    .line 2328
     :cond_1
     const v11, 0x3fd6c12b
 
     goto :goto_0
 
-    .line 2337
     :cond_2
     const v5, 0x402df854    # (float)Math.E
 
-    .line 2338
     .local v5, "e":F
     const v10, 0x40490fdb    # (float)Math.PI
 
-    .line 2340
     .local v10, "pi":F
     const v14, 0x3e99999a    # 0.3f
 
@@ -222,7 +198,6 @@
 
     add-float v13, v14, v15
 
-    .line 2341
     .local v13, "sigma":F
     const-wide/high16 v14, 0x3ff0000000000000L    # 1.0
 
@@ -250,7 +225,6 @@
 
     double-to-float v2, v14
 
-    .line 2342
     .local v2, "coeff1":F
     const/high16 v14, -0x40800000    # -1.0f
 
@@ -262,17 +236,14 @@
 
     div-float v3, v14, v15
 
-    .line 2343
     .local v3, "coeff2":F
     const/4 v9, 0x0
 
-    .line 2344
     .local v9, "normalizeFactor":F
     const/16 v14, 0x80
 
     new-array v4, v14, [F
 
-    .line 2345
     .local v4, "data":[F
     move-object/from16 v0, p0
 
@@ -282,11 +253,9 @@
 
     div-float v8, v14, v15
 
-    .line 2346
     .local v8, "interpalationStep":F
     const/4 v12, 0x0
 
-    .line 2348
     .local v12, "r":F
     const/4 v6, 0x1
 
@@ -294,7 +263,6 @@
     :goto_2
     if-ge v6, v7, :cond_3
 
-    .line 2349
     float-to-double v14, v2
 
     float-to-double v0, v5
@@ -327,20 +295,16 @@
 
     aput v14, v4, v6
 
-    .line 2350
     aget v14, v4, v6
 
     add-float/2addr v9, v14
 
-    .line 2351
     add-float/2addr v12, v8
 
-    .line 2348
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 2354
     :cond_3
     const/4 v14, 0x0
 
@@ -348,47 +312,39 @@
 
     aput v15, v4, v14
 
-    .line 2355
     const/high16 v14, 0x40000000    # 2.0f
 
     mul-float/2addr v9, v14
 
-    .line 2356
     const/4 v14, 0x0
 
     aget v14, v4, v14
 
     add-float/2addr v9, v14
 
-    .line 2358
     const/4 v6, 0x0
 
     :goto_3
     if-ge v6, v7, :cond_4
 
-    .line 2359
     aget v14, v4, v6
 
     div-float/2addr v14, v9
 
     aput v14, v4, v6
 
-    .line 2358
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 2362
     :cond_4
     const/4 v12, 0x0
 
-    .line 2364
     const/4 v6, 0x0
 
     :goto_4
     if-ge v6, v7, :cond_5
 
-    .line 2365
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mData1:[F
@@ -397,22 +353,18 @@
 
     aput v15, v14, v6
 
-    .line 2366
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mData2:[F
 
     aput v12, v14, v6
 
-    .line 2367
     add-float/2addr v12, v8
 
-    .line 2364
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_4
 
-    .line 2370
     :cond_5
     const/4 v14, 0x0
 
@@ -424,7 +376,6 @@
 
     invoke-virtual {v0, v14, v15}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setParam(IF)V
 
-    .line 2371
     const/4 v14, 0x1
 
     const/high16 v15, 0x3f800000    # 1.0f
@@ -433,7 +384,6 @@
 
     invoke-virtual {v0, v14, v15}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setParam(IF)V
 
-    .line 2372
     const/4 v14, 0x2
 
     int-to-float v15, v7
@@ -442,10 +392,8 @@
 
     invoke-virtual {v0, v14, v15}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setParam(IF)V
 
-    .line 2374
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setFilterData01Changed()V
 
-    .line 2375
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setFilterData02Changed()V
 
     goto/16 :goto_1
@@ -460,38 +408,30 @@
 
     const/4 v1, 0x0
 
-    .line 2289
     iget v0, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 2290
     iget v0, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
     cmpl-float v0, v0, v2
 
     if-lez v0, :cond_1
 
-    .line 2291
     iput v2, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
-    .line 2300
     :goto_0
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setupDownSampling()V
 
-    .line 2301
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->computeGaussCoefs()V
 
-    .line 2302
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->notifyWorkerFilters()V
 
-    .line 2304
     :cond_0
     return-void
 
-    .line 2292
     :cond_1
     iget v0, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
@@ -499,12 +439,10 @@
 
     if-gez v0, :cond_2
 
-    .line 2293
     iput v1, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
     goto :goto_0
 
-    .line 2295
     :cond_2
     iput p1, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
@@ -516,7 +454,6 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 2273
     :try_start_0
     new-instance v1, Ljava/lang/Exception;
 
@@ -528,15 +465,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2274
     :catch_0
     move-exception v0
 
-    .line 2276
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2278
     return-void
 .end method
 
@@ -546,7 +480,6 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 2308
     iget v1, p0, Landroid/graphics/ImageFilter$GaussianBlurFilter;->mRadius:F
 
     float-to-double v2, v1
@@ -557,7 +490,6 @@
 
     double-to-float v0, v2
 
-    .line 2309
     .local v0, "downSampleRate":F
     cmpg-float v1, v0, v4
 
@@ -565,17 +497,14 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2312
     :cond_0
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v0, v4}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setSamplingRate(IFF)V
 
-    .line 2313
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1, v0, v0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;->setSamplingRate(IFF)V
 
-    .line 2314
     return-void
 .end method

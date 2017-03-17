@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2110
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimEuimidLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 2110
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimEuimidLoaded;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 2112
     const-string v0, "EF_CSIM_EUIMID"
 
     return-object v0
@@ -63,12 +60,10 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 2115
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimEuimidLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/RuimRecords;->onGetCSimEuimidDone(Landroid/os/AsyncResult;)V
     invoke-static {v0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords;->access$1900(Lcom/android/internal/telephony/uicc/RuimRecords;Landroid/os/AsyncResult;)V
 
-    .line 2116
     return-void
 .end method

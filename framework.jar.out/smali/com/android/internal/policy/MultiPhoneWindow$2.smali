@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 277
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$2;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 281
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$2;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow;->getState()I
@@ -63,17 +61,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 282
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$2;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow;->dismissGuide()V
 
-    .line 291
     :goto_0
     return-void
 
-    .line 284
     :cond_1
     sget-boolean v0, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG:Z
 
@@ -108,7 +103,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$2;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -119,14 +113,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 286
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$2;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow;->dismissGuide()V
 
     goto :goto_0
 
-    .line 288
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$2;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 

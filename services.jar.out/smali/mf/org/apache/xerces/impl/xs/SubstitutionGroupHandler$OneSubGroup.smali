@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 339
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,18 +39,13 @@
     .param p3, "bMethod"    # S
 
     .prologue
-    .line 340
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 341
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/SubstitutionGroupHandler$OneSubGroup;->sub:Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
-    .line 342
     iput-short p2, p0, Lmf/org/apache/xerces/impl/xs/SubstitutionGroupHandler$OneSubGroup;->dMethod:S
 
-    .line 343
     iput-short p3, p0, Lmf/org/apache/xerces/impl/xs/SubstitutionGroupHandler$OneSubGroup;->bMethod:S
 
-    .line 344
     return-void
 .end method

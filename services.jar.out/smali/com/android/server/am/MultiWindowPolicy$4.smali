@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2505
     iput-object p1, p0, Lcom/android/server/am/MultiWindowPolicy$4;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 2508
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object v3, p0, Lcom/android/server/am/MultiWindowPolicy$4;->this$0:Lcom/android/server/am/MultiWindowPolicy;
@@ -56,7 +54,6 @@
 
     invoke-direct {v0, v3, v4}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 2509
     .local v0, "context":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -68,7 +65,6 @@
 
     move-result-object v1
 
-    .line 2510
     .local v1, "msg":Ljava/lang/String;
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -80,7 +76,6 @@
 
     move-result-object v2
 
-    .line 2511
     .local v2, "mwMsg":Ljava/lang/String;
     new-array v3, v5, [Ljava/lang/Object;
 
@@ -98,6 +93,5 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 2512
     return-void
 .end method

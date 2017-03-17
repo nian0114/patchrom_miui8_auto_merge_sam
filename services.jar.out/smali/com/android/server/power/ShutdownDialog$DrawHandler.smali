@@ -27,15 +27,12 @@
     .locals 0
 
     .prologue
-    .line 591
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 592
     invoke-virtual {p0}, Lcom/android/server/power/ShutdownDialog$DrawHandler;->init()V
 
-    .line 593
     return-void
 .end method
 
@@ -48,32 +45,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 601
     const-string v0, "ShutdownDialog"
 
     const-string v1, "DrawHandler.handleMessage"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x64
 
     if-le v0, v1, :cond_0
 
-    .line 603
     iget v0, p1, Landroid/os/Message;->what:I
 
     add-int/lit8 v0, v0, -0x64
 
     iput v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->maxSleep:I
 
-    .line 629
     :goto_0
     return-void
 
-    .line 605
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -81,21 +73,18 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 606
     const-string v0, "ShutdownDialog"
 
-    const-string/jumbo v1, "frame load finish"
+    const-string v1, "frame load finish"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->finished:Z
 
     goto :goto_0
 
-    .line 612
     :cond_1
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -113,7 +102,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 613
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->mDrawHandler:Lcom/android/server/power/ShutdownDialog$DrawHandler;
@@ -127,7 +115,6 @@
 
     invoke-virtual {v0, v4, v2, v3}, Lcom/android/server/power/ShutdownDialog$DrawHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 614
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->mImageView:Landroid/widget/ImageView;
@@ -153,7 +140,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 615
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->drawBufferLock:Ljava/lang/Object;
@@ -163,7 +149,6 @@
 
     monitor-enter v1
 
-    .line 616
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -181,7 +166,6 @@
     # setter for: Lcom/android/server/power/ShutdownDialog;->bitmapQRear:I
     invoke-static {v0, v2}, Lcom/android/server/power/ShutdownDialog;->access$2602(Lcom/android/server/power/ShutdownDialog;I)I
 
-    .line 617
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->drawBufferLock:Ljava/lang/Object;
@@ -191,7 +175,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 618
     monitor-exit v1
 
     goto :goto_0
@@ -205,30 +188,26 @@
 
     throw v0
 
-    .line 621
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->finished:Z
 
     if-eqz v0, :cond_3
 
-    .line 622
     const-string v0, "ShutdownDialog"
 
-    const-string/jumbo v1, "image draw finish"
+    const-string v1, "image draw finish"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 625
     :cond_3
     const-string v0, "ShutdownDialog"
 
-    const-string/jumbo v1, "image buffer not ready"
+    const-string v1, "image buffer not ready"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->mDrawHandler:Lcom/android/server/power/ShutdownDialog$DrawHandler;
@@ -251,11 +230,9 @@
     .locals 1
 
     .prologue
-    .line 596
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$DrawHandler;->finished:Z
 
-    .line 597
     return-void
 .end method

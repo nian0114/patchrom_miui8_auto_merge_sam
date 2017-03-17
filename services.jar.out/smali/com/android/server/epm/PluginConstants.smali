@@ -359,7 +359,6 @@
 
     const/4 v4, 0x0
 
-    .line 195
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x21
@@ -562,14 +561,12 @@
 
     sput-object v0, Lcom/android/server/epm/PluginConstants;->changeableApps:Ljava/util/ArrayList;
 
-    .line 234
     new-instance v0, Lcom/android/server/epm/PluginConstants$1;
 
     invoke-direct {v0}, Lcom/android/server/epm/PluginConstants$1;-><init>()V
 
     sput-object v0, Lcom/android/server/epm/PluginConstants;->overlayTargetMap:Ljava/util/HashMap;
 
-    .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x9
@@ -628,7 +625,6 @@
 
     sput-object v0, Lcom/android/server/epm/PluginConstants;->immortalApps:Ljava/util/ArrayList;
 
-    .line 259
     new-instance v0, Ljava/util/ArrayList;
 
     new-array v1, v5, [Ljava/lang/String;

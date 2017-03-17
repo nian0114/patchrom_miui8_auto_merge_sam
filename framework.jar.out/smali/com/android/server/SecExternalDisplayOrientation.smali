@@ -52,16 +52,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 51
     sput-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsCameraOn:Z
 
-    .line 52
     sput-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsTabletConnected:Z
 
-    .line 54
     sput v0, Lcom/android/server/SecExternalDisplayOrientation;->newOrientation:I
 
-    .line 58
     sput-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     return-void
@@ -73,33 +69,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
-    .line 55
     iput v1, p0, Lcom/android/server/SecExternalDisplayOrientation;->setOrientation:I
 
-    .line 56
     iput v1, p0, Lcom/android/server/SecExternalDisplayOrientation;->mDockSurfaceParameter:I
 
-    .line 59
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncDisplayId:I
 
-    .line 272
     new-instance v0, Lcom/android/server/SecExternalDisplayOrientation$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/SecExternalDisplayOrientation$2;-><init>(Lcom/android/server/SecExternalDisplayOrientation;)V
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
-    .line 348
     new-instance v0, Lcom/android/server/SecExternalDisplayOrientation$3;
 
     new-instance v1, Landroid/os/Handler;
@@ -114,7 +103,6 @@
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncContentObserver:Landroid/database/ContentObserver;
 
-    .line 165
     return-void
 .end method
 
@@ -127,33 +115,26 @@
 
     const/4 v9, 0x0
 
-    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     const/4 v6, 0x0
 
     iput-object v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
-    .line 55
     iput v9, p0, Lcom/android/server/SecExternalDisplayOrientation;->setOrientation:I
 
-    .line 56
     iput v9, p0, Lcom/android/server/SecExternalDisplayOrientation;->mDockSurfaceParameter:I
 
-    .line 59
     const/4 v6, -0x1
 
     iput v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncDisplayId:I
 
-    .line 272
     new-instance v6, Lcom/android/server/SecExternalDisplayOrientation$2;
 
     invoke-direct {v6, p0}, Lcom/android/server/SecExternalDisplayOrientation$2;-><init>(Lcom/android/server/SecExternalDisplayOrientation;)V
 
     iput-object v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
-    .line 348
     new-instance v6, Lcom/android/server/SecExternalDisplayOrientation$3;
 
     new-instance v7, Landroid/os/Handler;
@@ -168,17 +149,14 @@
 
     iput-object v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncContentObserver:Landroid/database/ContentObserver;
 
-    .line 169
     iput-object p1, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
-    .line 170
     const-string v6, "SecExternalDisplayOrientation_Java"
 
     const-string v7, "SecExternalDisplayService constructor"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iget-object v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v6}, Lcom/android/server/SecExternalDisplayService;->getEDSContext()Landroid/content/Context;
@@ -187,8 +165,7 @@
 
     invoke-direct {p0, v6}, Lcom/android/server/SecExternalDisplayOrientation;->setOrientationListenerForCamera(Landroid/content/Context;)V
 
-    .line 172
-    const-string/jumbo v6, "persist.sys.SecEDS.Logs"
+    const-string v6, "persist.sys.SecEDS.Logs"
 
     invoke-static {v6, v9}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -196,7 +173,6 @@
 
     sput-boolean v6, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
-    .line 174
     iget-object v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v6}, Lcom/android/server/SecExternalDisplayService;->getEDSContext()Landroid/content/Context;
@@ -211,35 +187,29 @@
 
     check-cast v1, Landroid/hardware/display/DisplayManager;
 
-    .line 175
     .local v1, "displayManager":Landroid/hardware/display/DisplayManager;
     invoke-virtual {v1}, Landroid/hardware/display/DisplayManager;->getDisplays()[Landroid/view/Display;
 
     move-result-object v4
 
-    .line 176
     .local v4, "presentationDisplays":[Landroid/view/Display;
     aget-object v0, v4, v9
 
-    .line 177
     .local v0, "display":Landroid/view/Display;
     invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
 
     move-result v5
 
-    .line 178
     .local v5, "width":I
     invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
 
     move-result v2
 
-    .line 179
     .local v2, "height":I
     invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
 
     move-result v3
 
-    .line 181
     .local v3, "orientation":I
     if-le v5, v2, :cond_0
 
@@ -258,11 +228,9 @@
 
     if-ne v3, v6, :cond_2
 
-    .line 182
     :cond_1
     sput-boolean v10, Lcom/android/server/SecExternalDisplayOrientation;->bIsTabletConnected:Z
 
-    .line 185
     :goto_0
     iget-object v6, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -270,10 +238,8 @@
 
     invoke-virtual {v6, v7}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayType(Z)Z
 
-    .line 186
     return-void
 
-    .line 184
     :cond_2
     sput-boolean v9, Lcom/android/server/SecExternalDisplayOrientation;->bIsTabletConnected:Z
 
@@ -284,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 45
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsCameraOn:Z
 
     return v0
@@ -294,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 45
     sget v0, Lcom/android/server/SecExternalDisplayOrientation;->newOrientation:I
 
     return v0
@@ -305,7 +269,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 45
     sput p0, Lcom/android/server/SecExternalDisplayOrientation;->newOrientation:I
 
     return p0
@@ -316,7 +279,6 @@
     .param p0, "x0"    # Lcom/android/server/SecExternalDisplayOrientation;
 
     .prologue
-    .line 45
     iget v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncDisplayId:I
 
     return v0
@@ -328,7 +290,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncDisplayId:I
 
     return p1
@@ -339,7 +300,6 @@
     .param p0, "x0"    # Lcom/android/server/SecExternalDisplayOrientation;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lcom/android/server/SecExternalDisplayOrientation;->handleBlankDispDuringSidesync()V
 
     return-void
@@ -353,10 +313,8 @@
 
     const/4 v3, 0x0
 
-    .line 330
     const/4 v0, 0x0
 
-    .line 332
     .local v0, "blankDisp":Z
     :try_start_0
     iget-object v4, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
@@ -369,7 +327,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "sidesync_source_presentation"
+    const-string v5, "sidesync_source_presentation"
 
     const/4 v6, 0x0
 
@@ -383,11 +341,9 @@
 
     move v0, v2
 
-    .line 335
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 336
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -410,7 +366,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v3, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_OFF:Lcom/android/server/SecExternalDisplayService$EDSBlank;
@@ -421,17 +376,14 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayBlankDisplay(I)Z
 
-    .line 345
     :goto_1
     return-void
 
     :cond_0
     move v0, v3
 
-    .line 332
     goto :goto_0
 
-    .line 339
     :cond_1
     const-string v2, "SecExternalDisplayOrientation_Java"
 
@@ -455,7 +407,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v3, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_ON:Lcom/android/server/SecExternalDisplayService$EDSBlank;
@@ -470,11 +421,9 @@
 
     goto :goto_1
 
-    .line 342
     :catch_0
     move-exception v1
 
-    .line 343
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "SecExternalDisplayOrientation_Java"
 
@@ -514,22 +463,18 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 359
     if-ne p1, v4, :cond_1
 
-    .line 360
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 361
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     const-string v1, "Registering ContentObserver for sidesync_source_presentation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     :cond_0
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -541,7 +486,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "sidesync_source_presentation"
+    const-string v1, "sidesync_source_presentation"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -553,24 +498,20 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 369
     :goto_0
     return-void
 
-    .line 365
     :cond_1
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_2
 
-    .line 366
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     const-string v1, "Unregister ContentObserver for sidesync_source_presentation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     :cond_2
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -594,19 +535,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
     if-nez v0, :cond_0
 
-    .line 112
     new-instance v0, Lcom/android/server/SecExternalDisplayOrientation$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/SecExternalDisplayOrientation$1;-><init>(Lcom/android/server/SecExternalDisplayOrientation;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
-    .line 161
     :cond_0
     return-void
 .end method
@@ -618,31 +556,25 @@
     .param p1, "bMode"    # Z
 
     .prologue
-    .line 96
     if-eqz p1, :cond_1
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->enable()V
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 103
     :cond_1
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mOrientationListenerForCamera:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->disable()V
@@ -659,12 +591,10 @@
 
     const/4 v1, 0x1
 
-    .line 190
     sget-boolean v2, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v2, :cond_0
 
-    .line 191
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -687,7 +617,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_0
     invoke-static {p1}, Lcom/android/server/SecExternalDisplayOrientation$EDS_CameraStatus;->toStatus(I)Lcom/android/server/SecExternalDisplayOrientation$EDS_CameraStatus;
 
@@ -695,11 +624,9 @@
 
     if-nez v2, :cond_1
 
-    .line 268
     :goto_0
     return v0
 
-    .line 195
     :cond_1
     sget-object v2, Lcom/android/server/SecExternalDisplayOrientation$4;->$SwitchMap$com$android$server$SecExternalDisplayOrientation$EDS_CameraStatus:[I
 
@@ -719,10 +646,8 @@
     :goto_1
     move v0, v1
 
-    .line 268
     goto :goto_0
 
-    .line 200
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -734,19 +659,16 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 202
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_3
 
-    .line 203
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     const-string v2, "entered Camera Rear Case"
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     :cond_3
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -790,7 +712,6 @@
 
     if-nez v0, :cond_2
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v2, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_HDMI:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -819,19 +740,16 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 214
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_4
 
-    .line 215
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     const-string v2, "Destroy SmartDock Surface"
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     :cond_4
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -843,7 +761,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayBlankDisplay(I)Z
 
-    .line 219
     :cond_5
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -859,12 +776,10 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 220
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsCameraOn:Z
 
     if-eqz v0, :cond_9
 
-    .line 221
     sget v0, Lcom/android/server/SecExternalDisplayOrientation;->newOrientation:I
 
     add-int/lit16 v0, v0, 0xb4
@@ -873,12 +788,10 @@
 
     iput v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->setOrientation:I
 
-    .line 222
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_6
 
-    .line 223
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -903,7 +816,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     :cond_6
     iget v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->setOrientation:I
 
@@ -925,7 +837,6 @@
 
     if-ne v0, v2, :cond_8
 
-    .line 225
     :cond_7
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -933,12 +844,10 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetExternalUITransform(I)Z
 
-    .line 232
     :cond_8
     :goto_2
     sput-boolean v1, Lcom/android/server/SecExternalDisplayOrientation;->bIsCameraOn:Z
 
-    .line 234
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v2, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -953,12 +862,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 235
     invoke-virtual {p0, v1}, Lcom/android/server/SecExternalDisplayOrientation;->SecExternalDisplaySetOrientationMode(Z)V
 
     goto/16 :goto_1
 
-    .line 228
     :cond_9
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -968,7 +875,6 @@
 
     goto :goto_2
 
-    .line 241
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -980,19 +886,16 @@
 
     invoke-virtual {v2, v3, v0}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 243
     sget-boolean v2, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v2, :cond_a
 
-    .line 244
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     const-string v3, "Camera Stop Case"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     :cond_a
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1022,19 +925,16 @@
 
     if-ne v2, v1, :cond_c
 
-    .line 249
     sget-boolean v2, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v2, :cond_b
 
-    .line 250
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     const-string v3, "Create SmartDock Surface"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     :cond_b
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1042,7 +942,6 @@
 
     if-nez v2, :cond_c
 
-    .line 252
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v3, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_OFF:Lcom/android/server/SecExternalDisplayService$EDSBlank;
@@ -1053,11 +952,9 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayBlankDisplay(I)Z
 
-    .line 256
     :cond_c
     sput-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsCameraOn:Z
 
-    .line 257
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v3, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1072,15 +969,12 @@
 
     if-ne v2, v1, :cond_2
 
-    .line 258
     invoke-virtual {p0, v0}, Lcom/android/server/SecExternalDisplayOrientation;->SecExternalDisplaySetOrientationMode(Z)V
 
-    .line 259
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsTabletConnected:Z
 
     if-eqz v0, :cond_d
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v2, Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;->Landscape:Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;
@@ -1093,7 +987,6 @@
 
     goto/16 :goto_1
 
-    .line 262
     :cond_d
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1107,7 +1000,6 @@
 
     goto/16 :goto_1
 
-    .line 195
     nop
 
     :pswitch_data_0
@@ -1127,12 +1019,10 @@
 
     const-wide/high16 v4, 0x4008000000000000L    # 3.0
 
-    .line 431
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 432
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1155,11 +1045,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 435
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;->BufMirrorMode_Start:Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;
@@ -1170,7 +1058,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetExternalUITransform(I)Z
 
-    .line 436
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_KDDI_AUSHARELINK:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1181,7 +1068,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/SecExternalDisplayService;->getCameraAppVersionNumber()F
@@ -1194,7 +1080,6 @@
 
     if-gez v0, :cond_1
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1207,12 +1092,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 450
     :cond_1
     :goto_0
     return v3
 
-    .line 442
     :cond_2
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1224,7 +1107,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetExternalUITransform(I)Z
 
-    .line 443
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_KDDI_AUSHARELINK:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1235,7 +1117,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 445
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/SecExternalDisplayService;->getCameraAppVersionNumber()F
@@ -1248,7 +1129,6 @@
 
     if-gez v0, :cond_1
 
-    .line 446
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1269,7 +1149,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 461
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SIDESYNC:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1284,7 +1163,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 462
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SIDESYNC:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1295,7 +1173,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 464
     :cond_0
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1311,7 +1188,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 465
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_KDDI_AUSHARELINK:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1322,13 +1198,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 467
     :cond_1
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_2
 
-    .line 468
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1351,7 +1225,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     :cond_2
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1367,7 +1240,6 @@
 
     if-eq p1, v0, :cond_3
 
-    .line 470
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;->Potrait:Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;
@@ -1378,7 +1250,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetExternalUITransform(I)Z
 
-    .line 473
     :cond_3
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1390,7 +1261,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 474
     const/4 v0, 0x1
 
     return v0
@@ -1407,12 +1277,10 @@
 
     const/4 v3, 0x1
 
-    .line 381
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 382
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1435,11 +1303,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 384
     :cond_0
     if-eqz p1, :cond_5
 
-    .line 386
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;->BufMirrorMode_Start:Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;
@@ -1450,7 +1316,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetExternalUITransform(I)Z
 
-    .line 387
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SIDESYNC:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1461,7 +1326,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 388
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/SecExternalDisplayService;->getCameraAppVersionNumber()F
@@ -1474,7 +1338,6 @@
 
     if-gez v0, :cond_1
 
-    .line 390
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1485,7 +1348,6 @@
 
     invoke-virtual {v0, v1, v6}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 394
     :cond_1
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1497,19 +1359,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 395
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_2
 
-    .line 396
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     const-string v1, "Registering display listener for sidesync"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     :cond_2
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1521,16 +1380,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 399
     :cond_3
     invoke-direct {p0, v3}, Lcom/android/server/SecExternalDisplayOrientation;->registerSideSync_SettingObserver(Z)V
 
-    .line 420
     :cond_4
     :goto_0
     return v3
 
-    .line 403
     :cond_5
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1542,19 +1398,16 @@
 
     if-eqz v0, :cond_7
 
-    .line 404
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_6
 
-    .line 405
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     const-string v1, "Unregister display listener for sidesync"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
     :cond_6
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
@@ -1564,11 +1417,9 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
-    .line 408
     :cond_7
     invoke-direct {p0, v6}, Lcom/android/server/SecExternalDisplayOrientation;->registerSideSync_SettingObserver(Z)V
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_ON:Lcom/android/server/SecExternalDisplayService$EDSBlank;
@@ -1579,7 +1430,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayBlankDisplay(I)Z
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;->BufMirrorMode_Stop:Lcom/android/server/SecExternalDisplayOrientation$EDS_Transform;
@@ -1590,7 +1440,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetExternalUITransform(I)Z
 
-    .line 413
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SIDESYNC:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -1601,7 +1450,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplaySetStatus(IZ)Z
 
-    .line 414
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/SecExternalDisplayService;->getCameraAppVersionNumber()F
@@ -1614,7 +1462,6 @@
 
     if-gez v0, :cond_4
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;

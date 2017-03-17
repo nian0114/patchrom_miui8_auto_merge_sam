@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 3026
     new-instance v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
     const-string v1, "PRE_SHARED"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;->PRE_SHARED:Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
-    .line 3032
     new-instance v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
     const-string v1, "PUBLIC_KEY"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;->PUBLIC_KEY:Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
-    .line 3039
     new-instance v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
     const-string v1, "EAP"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;->EAP:Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
-    .line 3019
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$HostAuthentication;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 3019
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3019
     const-class v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 3019
     sget-object v0, Lcom/ipsec/client/IPsecConnection$HostAuthentication;->$VALUES:[Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$HostAuthentication;->clone()Ljava/lang/Object;

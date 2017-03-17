@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 737
     iput-object p1, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     iput-boolean p2, p0, Landroid/widget/NumberPicker$3;->val$hasKeyboard_12Key:Z
@@ -55,21 +54,17 @@
 
     const/4 v3, 0x0
 
-    .line 740
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 741
     .local v0, "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_1
 
-    .line 744
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodManager;->isAccessoryKeyboardState()I
 
     move-result v1
 
-    .line 745
     .local v1, "mKeyboard":I
     and-int/lit8 v4, v1, 0x1
 
@@ -81,7 +76,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 747
     :cond_0
     iget-object v4, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
@@ -91,7 +85,6 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 751
     .end local v1    # "mKeyboard":I
     :cond_1
     iget-boolean v4, p0, Landroid/widget/NumberPicker$3;->val$hasKeyboard_12Key:Z
@@ -104,10 +97,8 @@
 
     if-nez v4, :cond_2
 
-    .line 752
     if-eqz v0, :cond_2
 
-    .line 753
     iget-object v4, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     invoke-virtual {v4}, Landroid/widget/NumberPicker;->getWindowToken()Landroid/os/IBinder;
@@ -116,7 +107,6 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 756
     :cond_2
     iget-object v4, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
@@ -127,10 +117,8 @@
 
     invoke-virtual {v4}, Landroid/widget/EditText;->clearFocus()V
 
-    .line 758
     invoke-virtual {p1, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 760
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v4
@@ -141,7 +129,6 @@
 
     if-ne p2, v6, :cond_5
 
-    .line 761
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -151,17 +138,14 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 762
     iget-object v3, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v3, v2}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
-    .line 776
     :goto_0
     return v2
 
-    .line 765
     :cond_4
     iget-object v4, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
@@ -170,7 +154,6 @@
 
     goto :goto_0
 
-    .line 770
     :cond_5
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -178,23 +161,19 @@
 
     if-ne v4, v2, :cond_7
 
-    .line 771
     if-eq p2, v7, :cond_6
 
     if-ne p2, v6, :cond_7
 
-    .line 772
     :cond_6
     iget-object v2, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     invoke-virtual {v2, v3}, Landroid/widget/NumberPicker;->playSoundEffect(I)V
 
-    .line 775
     :cond_7
     invoke-virtual {p1, v3}, Landroid/view/View;->setPressed(Z)V
 
     move v2, v3
 
-    .line 776
     goto :goto_0
 .end method

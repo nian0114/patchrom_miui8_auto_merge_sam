@@ -200,7 +200,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -211,7 +211,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -279,7 +279,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -290,7 +290,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -301,7 +301,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -312,7 +312,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -323,7 +323,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -418,7 +418,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -523,7 +523,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "signature.Verification.Reference.NoInput"
+    const-string v2, "signature.Verification.Reference.NoInput"
 
     invoke-direct {v0, v2, v1}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -537,7 +537,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -574,7 +574,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -616,13 +616,13 @@
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v2, "http://www.w3.org/2000/09/xmldsig#"
 
     aput-object v2, v0, v1
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "signature.Verification.NoSignatureElement"
+    const-string v2, "signature.Verification.NoSignatureElement"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -680,7 +680,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v7, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -688,7 +688,7 @@
 
     if-nez v7, :cond_0
 
-    const-string/jumbo v7, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
+    const-string v7, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -700,7 +700,7 @@
     :goto_1
     if-eqz v1, :cond_1
 
-    const-string/jumbo v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     const-string v3, "InclusiveNamespaces"
 
@@ -722,7 +722,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     const-string v3, "InclusiveNamespaces"
 
@@ -769,7 +769,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -780,7 +780,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -791,7 +791,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -907,7 +907,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v6, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -915,7 +915,7 @@
 
     if-nez v6, :cond_0
 
-    const-string/jumbo v6, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
+    const-string v6, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -923,7 +923,7 @@
 
     if-nez v6, :cond_0
 
-    const-string/jumbo v6, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+    const-string v6, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -931,7 +931,7 @@
 
     if-nez v6, :cond_0
 
-    const-string/jumbo v6, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v6, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -976,7 +976,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -987,7 +987,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -998,7 +998,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1009,7 +1009,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1020,7 +1020,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1031,7 +1031,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1073,7 +1073,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1084,7 +1084,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1170,7 +1170,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1181,7 +1181,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1308,7 +1308,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/09/xmldsig#Manifest"
+    const-string v1, "http://www.w3.org/2000/09/xmldsig#Manifest"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1340,7 +1340,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/09/xmldsig#Object"
+    const-string v1, "http://www.w3.org/2000/09/xmldsig#Object"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

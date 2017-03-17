@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 690
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$3;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     iput-object p2, p0, Lcom/android/internal/telephony/cat/CatBIPManager$3;->val$bipcon:Lcom/android/internal/telephony/cat/CatBIPConnection;
@@ -52,7 +51,6 @@
     .locals 4
 
     .prologue
-    .line 692
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$3;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatBIPManager$3;->val$bipcon:Lcom/android/internal/telephony/cat/CatBIPConnection;
@@ -66,6 +64,5 @@
     # invokes: Lcom/android/internal/telephony/cat/CatBIPManager;->sendDataClientMode(Lcom/android/internal/telephony/cat/CatBIPClientConnection;[BZ)V
     invoke-static {v1, v0, v2, v3}, Lcom/android/internal/telephony/cat/CatBIPManager;->access$300(Lcom/android/internal/telephony/cat/CatBIPManager;Lcom/android/internal/telephony/cat/CatBIPClientConnection;[BZ)V
 
-    .line 693
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 267
     iput-object p1, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/IPSecDataConnSM$1;
 
     .prologue
-    .line 267
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;-><init>(Lcom/sec/epdg/IPSecDataConnSM;)V
 
     return-void
@@ -49,20 +47,17 @@
     .locals 2
 
     .prologue
-    .line 270
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM in inactive state : Entered InactiveState State"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->initConnectionParams()V
     invoke-static {v0}, Lcom/sec/epdg/IPSecDataConnSM;->access$900(Lcom/sec/epdg/IPSecDataConnSM;)V
 
-    .line 272
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -74,7 +69,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/IWlanApnContext;->setState(I)V
 
-    .line 273
     return-void
 .end method
 
@@ -82,14 +76,12 @@
     .locals 2
 
     .prologue
-    .line 277
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM in inactive state : Exiting InactiveState State"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 278
     return-void
 .end method
 
@@ -98,10 +90,8 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 282
     const/4 v2, 0x0
 
-    .line 283
     .local v2, "status":Z
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -148,12 +138,10 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 375
     :pswitch_0
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -183,11 +171,9 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 378
     :goto_0
     return v2
 
-    .line 287
     :pswitch_1
     iget v3, p1, Landroid/os/Message;->arg1:I
 
@@ -195,11 +181,9 @@
 
     move-result v0
 
-    .line 288
     .local v0, "cid":I
     if-gez v0, :cond_0
 
-    .line 289
     const-string v3, "[IPSECDATACONNSM]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -226,25 +210,21 @@
 
     goto :goto_0
 
-    .line 292
     :cond_0
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v3, v0}, Lcom/sec/epdg/IPSecDataConnSM;->setmRilCid(I)V
 
-    .line 293
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-static {v0, v3}, Lcom/sec/epdg/EpdgCommands;->triggerHandover(ILjava/lang/Boolean;)V
 
-    .line 294
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Lcom/sec/epdg/IPSecDataConnSM;->setIsHandOver(Z)V
 
-    .line 295
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -258,7 +238,6 @@
 
     goto :goto_0
 
-    .line 300
     .end local v0    # "cid":I
     :pswitch_2
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -266,7 +245,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->configureApnContext(Landroid/os/Message;)V
     invoke-static {v3, p1}, Lcom/sec/epdg/IPSecDataConnSM;->access$1300(Lcom/sec/epdg/IPSecDataConnSM;Landroid/os/Message;)V
 
-    .line 301
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->checkDnsRetryRequired()Z
@@ -276,7 +254,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 302
     const-string v3, "[IPSECDATACONNSM]"
 
     const-string v4, "DNS query posted to Epdg service"
@@ -285,7 +262,6 @@
 
     goto :goto_0
 
-    .line 304
     :cond_1
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -293,7 +269,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 305
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->handleConnectRequest()I
@@ -301,13 +276,11 @@
 
     goto :goto_0
 
-    .line 309
     :pswitch_3
     iget v3, p1, Landroid/os/Message;->arg1:I
 
     if-nez v3, :cond_4
 
-    .line 310
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -319,7 +292,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->updatePermanentFail(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/sec/epdg/IPSecDataConnSM;->access$1600(Lcom/sec/epdg/IPSecDataConnSM;Ljava/lang/String;)V
 
-    .line 311
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -331,7 +303,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->informHandoverFailureToRilAndFramework(I)V
     invoke-static {v3, v4}, Lcom/sec/epdg/IPSecDataConnSM;->access$1700(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 312
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -343,11 +314,9 @@
 
     move-result-object v1
 
-    .line 314
     .local v1, "curSetting":Lcom/sec/epdg/IWlanApnSetting;
     if-eqz v1, :cond_3
 
-    .line 315
     const-string v3, "[IPSECDATACONNSM]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -374,7 +343,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDataRetryEnabled()Ljava/lang/Boolean;
 
     move-result-object v3
@@ -385,7 +353,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 319
     invoke-static {}, Lcom/sec/epdg/throttle/ThrottleController;->getInstance()Lcom/sec/epdg/throttle/ThrottleController;
 
     move-result-object v3
@@ -410,7 +377,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/sec/epdg/throttle/ThrottleController;->updateThrottleState(Ljava/lang/String;Lcom/sec/epdg/IWlanError;)V
 
-    .line 323
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -424,7 +390,6 @@
 
     goto/16 :goto_0
 
-    .line 325
     :cond_2
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -439,17 +404,15 @@
 
     goto/16 :goto_0
 
-    .line 328
     :cond_3
     const-string v3, "[IPSECDATACONNSM]"
 
-    const-string/jumbo v4, "curSetting is null, critical error"
+    const-string v4, "curSetting is null, critical error"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 331
     .end local v1    # "curSetting":Lcom/sec/epdg/IWlanApnSetting;
     :cond_4
     const-string v3, "[IPSECDATACONNSM]"
@@ -458,7 +421,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->handleConnectRequest()I
@@ -466,7 +428,6 @@
 
     goto/16 :goto_0
 
-    .line 340
     :pswitch_4
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -474,7 +435,6 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/epdg/IPSecDataConnSM;->setmRilCid(I)V
 
-    .line 341
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->disconnectEpdgConnection()V
@@ -482,7 +442,6 @@
 
     goto/16 :goto_0
 
-    .line 345
     :pswitch_5
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -512,7 +471,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v3}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -523,7 +481,6 @@
 
     goto/16 :goto_0
 
-    .line 355
     :pswitch_6
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -555,7 +512,6 @@
 
     goto/16 :goto_0
 
-    .line 360
     :pswitch_7
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$InactiveState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -564,7 +520,6 @@
 
     goto/16 :goto_0
 
-    .line 363
     :pswitch_8
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -574,7 +529,6 @@
 
     goto/16 :goto_0
 
-    .line 367
     :pswitch_9
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -584,7 +538,6 @@
 
     goto/16 :goto_0
 
-    .line 371
     :pswitch_a
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -594,7 +547,6 @@
 
     goto/16 :goto_0
 
-    .line 285
     nop
 
     :pswitch_data_0

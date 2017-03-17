@@ -16,7 +16,6 @@
     .param p3, "responseFactory"    # Lorg/apache/http/HttpResponseFactory;
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -57,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -73,7 +70,6 @@
     .param p2, "response"    # Lorg/apache/http/HttpResponse;
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -95,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -110,7 +105,6 @@
     .param p1, "connStrategy"    # Lorg/apache/http/ConnectionReuseStrategy;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -125,7 +119,6 @@
     .param p1, "expectationVerifier"    # Lorg/apache/http/protocol/HttpExpectationVerifier;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -140,7 +133,6 @@
     .param p1, "handlerResolver"    # Lorg/apache/http/protocol/HttpRequestHandlerResolver;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -155,7 +147,6 @@
     .param p1, "processor"    # Lorg/apache/http/protocol/HttpProcessor;
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -170,7 +161,6 @@
     .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -185,7 +175,6 @@
     .param p1, "responseFactory"    # Lorg/apache/http/HttpResponseFactory;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

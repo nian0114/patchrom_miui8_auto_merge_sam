@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/android/server/enterprise/utils/ConstrainedState$2;->this$0:Lcom/android/server/enterprise/utils/ConstrainedState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,16 +39,13 @@
     .locals 6
 
     .prologue
-    .line 98
     const/4 v2, 0x0
 
-    .line 99
     .local v2, "noti":Z
     :goto_0
     if-nez v2, :cond_1
 
-    .line 100
-    const-string/jumbo v3, "notification"
+    const-string v3, "notification"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -59,14 +55,11 @@
 
     move-result-object v1
 
-    .line 102
     .local v1, "nm":Landroid/app/INotificationManager;
     if-eqz v1, :cond_0
 
-    .line 103
     const/4 v2, 0x1
 
-    .line 104
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState$2;->this$0:Lcom/android/server/enterprise/utils/ConstrainedState;
 
     const/4 v4, 0x1
@@ -76,7 +69,6 @@
 
     goto :goto_0
 
-    .line 108
     :cond_0
     const-wide/16 v4, 0x3e8
 
@@ -87,7 +79,6 @@
 
     goto :goto_0
 
-    .line 109
     :catch_0
     move-exception v0
 
@@ -96,7 +87,6 @@
 
     goto :goto_0
 
-    .line 112
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "nm":Landroid/app/INotificationManager;
     :cond_1

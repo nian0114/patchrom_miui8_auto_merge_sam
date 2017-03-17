@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/internal/view/FloatingActionMode$3;->this$0:Lcom/android/internal/view/FloatingActionMode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/internal/view/FloatingActionMode$3;->this$0:Lcom/android/internal/view/FloatingActionMode;
 
     # invokes: Lcom/android/internal/view/FloatingActionMode;->repositionToolbar()V
     invoke-static {v0}, Lcom/android/internal/view/FloatingActionMode;->access$100(Lcom/android/internal/view/FloatingActionMode;)V
 
-    .line 79
     return-void
 .end method

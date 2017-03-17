@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 985
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$13;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,8 +38,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 992
-    const-string/jumbo v4, "networkInfo"
+    const-string v4, "networkInfo"
 
     move-object/from16 v0, p2
 
@@ -50,7 +48,6 @@
 
     check-cast v17, Landroid/net/NetworkInfo;
 
-    .line 993
     .local v17, "netInfo":Landroid/net/NetworkInfo;
     invoke-virtual/range {v17 .. v17}, Landroid/net/NetworkInfo;->isConnected()Z
 
@@ -58,13 +55,11 @@
 
     if-nez v4, :cond_0
 
-    .line 1019
     :goto_0
     return-void
 
-    .line 995
     :cond_0
-    const-string/jumbo v4, "wifiInfo"
+    const-string v4, "wifiInfo"
 
     move-object/from16 v0, p2
 
@@ -74,13 +69,11 @@
 
     check-cast v16, Landroid/net/wifi/WifiInfo;
 
-    .line 996
     .local v16, "info":Landroid/net/wifi/WifiInfo;
     invoke-virtual/range {v16 .. v16}, Landroid/net/wifi/WifiInfo;->getMeteredHint()Z
 
     move-result v14
 
-    .line 998
     .local v14, "meteredHint":Z
     invoke-virtual/range {v16 .. v16}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
@@ -90,7 +83,6 @@
 
     move-result-object v3
 
-    .line 999
     .local v3, "template":Landroid/net/NetworkTemplate;
     move-object/from16 v0, p0
 
@@ -102,7 +94,6 @@
 
     monitor-enter v18
 
-    .line 1000
     :try_start_0
     move-object/from16 v0, p0
 
@@ -116,13 +107,11 @@
 
     check-cast v2, Landroid/net/NetworkPolicy;
 
-    .line 1001
     .local v2, "policy":Landroid/net/NetworkPolicy;
     if-nez v2, :cond_2
 
     if-eqz v14, :cond_2
 
-    .line 1004
     new-instance v2, Landroid/net/NetworkPolicy;
 
     .end local v2    # "policy":Landroid/net/NetworkPolicy;
@@ -142,7 +131,6 @@
 
     invoke-direct/range {v2 .. v15}, Landroid/net/NetworkPolicy;-><init>(Landroid/net/NetworkTemplate;ILjava/lang/String;JJJJZZ)V
 
-    .line 1007
     .restart local v2    # "policy":Landroid/net/NetworkPolicy;
     move-object/from16 v0, p0
 
@@ -150,7 +138,6 @@
 
     invoke-virtual {v4, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->addNetworkPolicyLocked(Landroid/net/NetworkPolicy;)V
 
-    .line 1018
     :cond_1
     :goto_1
     monitor-exit v18
@@ -167,7 +154,6 @@
 
     throw v4
 
-    .line 1009
     .restart local v2    # "policy":Landroid/net/NetworkPolicy;
     :cond_2
     if-eqz v2, :cond_1
@@ -177,10 +163,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 1012
     iput-boolean v14, v2, Landroid/net/NetworkPolicy;->metered:Z
 
-    .line 1016
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/net/NetworkPolicyManagerService$13;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;

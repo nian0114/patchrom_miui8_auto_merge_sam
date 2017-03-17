@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 223
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iput-object p2, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->val$ipAddr:Ljava/lang/String;
@@ -56,7 +55,6 @@
     .locals 5
 
     .prologue
-    .line 226
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -66,7 +64,6 @@
 
     if-nez v0, :cond_0
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     new-instance v1, Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -76,7 +73,6 @@
     # setter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
     invoke-static {v0, v1}, Lcom/android/server/display/IpRemoteDisplayController;->access$802(Lcom/android/server/display/IpRemoteDisplayController;Landroid/net/wifi/p2p/WifiP2pDevice;)Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 228
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -88,7 +84,6 @@
 
     iput-object v1, v0, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 229
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -96,11 +91,10 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "wfdservice"
+    const-string v1, "wfdservice"
 
     iput-object v1, v0, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
-    .line 231
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$3;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
@@ -115,6 +109,5 @@
     # invokes: Lcom/android/server/display/IpRemoteDisplayController;->enableWifiDisplay(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/server/display/IpRemoteDisplayController;->access$900(Lcom/android/server/display/IpRemoteDisplayController;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 232
     return-void
 .end method

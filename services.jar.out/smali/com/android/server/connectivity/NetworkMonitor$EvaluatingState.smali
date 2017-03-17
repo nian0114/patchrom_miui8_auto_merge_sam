@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 544
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 544
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -57,7 +55,6 @@
 
     const/4 v3, -0x1
 
-    .line 550
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v1, 0x82006
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0, v1, v2, v4}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(III)V
 
-    .line 551
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
@@ -81,7 +77,6 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 552
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
@@ -91,22 +86,18 @@
 
     invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsUid(I)V
 
-    .line 553
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
     invoke-static {v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->access$1602(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 555
     :cond_0
     const/16 v0, 0x3e8
 
     iput v0, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mReevaluateDelayMs:I
 
-    .line 556
     iput v4, p0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mAttempts:I
 
-    .line 557
     return-void
 .end method
 
@@ -114,10 +105,8 @@
     .locals 0
 
     .prologue
-    .line 704
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsUid()V
 
-    .line 705
     return-void
 .end method
 
@@ -126,7 +115,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 561
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -157,21 +145,18 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 562
     move-object/from16 v0, p1
 
     iget v4, v0, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 698
     :pswitch_0
     const/4 v4, 0x0
 
     :goto_0
     return v4
 
-    .line 564
     :pswitch_1
     move-object/from16 v0, p1
 
@@ -199,13 +184,11 @@
 
     if-eqz v4, :cond_1
 
-    .line 565
     :cond_0
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 583
     :cond_1
     move-object/from16 v0, p0
 
@@ -235,14 +218,12 @@
 
     if-nez v4, :cond_2
 
-    .line 585
     const-string v4, "NetworkMonitor"
 
     const-string v5, "CMD_REEVALUATE -> ValidatedState"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -259,12 +240,10 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$3200(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 587
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 589
     :cond_2
     move-object/from16 v0, p0
 
@@ -276,14 +255,12 @@
 
     iput v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mAttempts:I
 
-    .line 591
-    const-string/jumbo v4, "ro.csc.sales_code"
+    const-string v4, "ro.csc.sales_code"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 592
     .local v15, "salesCode":Ljava/lang/String;
     const-string v4, "CTC"
 
@@ -293,7 +270,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 593
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -368,7 +344,6 @@
 
     if-ne v4, v5, :cond_6
 
-    .line 597
     :cond_3
     move-object/from16 v0, p0
 
@@ -386,12 +361,10 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$3300(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 598
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 601
     :cond_4
     move-object/from16 v0, p0
 
@@ -429,7 +402,6 @@
 
     if-ne v4, v5, :cond_6
 
-    .line 603
     :cond_5
     move-object/from16 v0, p0
 
@@ -447,12 +419,10 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$3400(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 604
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 608
     :cond_6
     move-object/from16 v0, p0
 
@@ -473,7 +443,7 @@
 
     if-ne v4, v5, :cond_7
 
-    const-string/jumbo v4, "usb0"
+    const-string v4, "usb0"
 
     move-object/from16 v0, p0
 
@@ -496,7 +466,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 611
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -513,12 +482,10 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$3500(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 612
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 616
     :cond_7
     invoke-static {}, Landroid/net/wifi/WifiManager;->showWebBrowserAtCaptivePortal()Z
 
@@ -526,7 +493,6 @@
 
     if-nez v4, :cond_f
 
-    .line 618
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -546,7 +512,6 @@
 
     if-ne v4, v5, :cond_b
 
-    .line 619
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -560,7 +525,6 @@
 
     move-result-object v16
 
-    .line 620
     .local v16, "wifiInfo":Landroid/net/wifi/WifiInfo;
     invoke-virtual/range {v16 .. v16}, Landroid/net/wifi/WifiInfo;->isCaptivePortal()Z
 
@@ -595,7 +559,6 @@
 
     if-nez v4, :cond_a
 
-    .line 623
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -607,7 +570,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 624
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -624,7 +586,6 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$3700(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 687
     .end local v16    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_8
     :goto_1
@@ -632,7 +593,6 @@
 
     goto/16 :goto_0
 
-    .line 626
     .restart local v16    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_9
     move-object/from16 v0, p0
@@ -653,7 +613,6 @@
 
     goto :goto_1
 
-    .line 629
     :cond_a
     move-object/from16 v0, p0
 
@@ -673,7 +632,6 @@
 
     goto :goto_1
 
-    .line 638
     .end local v16    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_b
     move-object/from16 v0, p0
@@ -684,13 +642,11 @@
 
     move-result v12
 
-    .line 639
     .local v12, "httpResponseCode":I
     const/16 v4, 0xcc
 
     if-ne v12, v4, :cond_c
 
-    .line 640
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -709,7 +665,6 @@
 
     goto :goto_1
 
-    .line 641
     :cond_c
     const/16 v4, 0xc8
 
@@ -719,7 +674,6 @@
 
     if-gt v12, v4, :cond_d
 
-    .line 642
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -738,7 +692,6 @@
 
     goto :goto_1
 
-    .line 644
     :cond_d
     move-object/from16 v0, p0
 
@@ -761,7 +714,6 @@
 
     move-result-object v14
 
-    .line 645
     .local v14, "msg":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -775,7 +727,6 @@
 
     invoke-virtual {v4, v14, v8, v9}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 646
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -814,7 +765,6 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 649
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mAttempts:I
@@ -823,10 +773,8 @@
 
     if-lt v4, v5, :cond_e
 
-    .line 651
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsUid()V
 
-    .line 653
     :cond_e
     move-object/from16 v0, p0
 
@@ -838,7 +786,6 @@
 
     iput v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mReevaluateDelayMs:I
 
-    .line 654
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->mReevaluateDelayMs:I
@@ -847,7 +794,6 @@
 
     if-le v4, v5, :cond_8
 
-    .line 655
     const v4, 0x927c0
 
     move-object/from16 v0, p0
@@ -856,7 +802,6 @@
 
     goto/16 :goto_1
 
-    .line 660
     .end local v12    # "httpResponseCode":I
     .end local v14    # "msg":Landroid/os/Message;
     :cond_f
@@ -879,7 +824,6 @@
 
     if-ne v4, v5, :cond_8
 
-    .line 661
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->wifiOnly:Z
     invoke-static {}, Lcom/android/server/connectivity/NetworkMonitor;->access$4300()Z
 
@@ -887,7 +831,6 @@
 
     if-eqz v4, :cond_11
 
-    .line 662
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -896,15 +839,12 @@
 
     move-result v12
 
-    .line 663
     .restart local v12    # "httpResponseCode":I
-    const-string/jumbo v13, "http://www.google.com"
+    const-string v13, "http://www.google.com"
 
-    .line 664
     .local v13, "mUrl":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 666
     .local v10, "countryIso":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -919,7 +859,6 @@
 
     move-result-object v10
 
-    .line 671
     :goto_2
     const-string v4, "cn"
 
@@ -929,10 +868,8 @@
 
     if-eqz v4, :cond_10
 
-    .line 672
-    const-string/jumbo v13, "http://www.samsung.com"
+    const-string v13, "http://www.samsung.com"
 
-    .line 674
     :cond_10
     const/16 v4, 0xcc
 
@@ -946,7 +883,6 @@
 
     if-gt v12, v4, :cond_11
 
-    .line 675
     new-instance v6, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.VIEW"
@@ -957,13 +893,11 @@
 
     invoke-direct {v6, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 676
     .local v6, "intent":Landroid/content/Intent;
     const/high16 v4, 0x10400000
 
     invoke-virtual {v6, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 677
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -1022,7 +956,6 @@
 
     move-result-object v14
 
-    .line 680
     .restart local v14    # "msg":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -1035,7 +968,6 @@
 
     invoke-virtual {v4, v14}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 683
     .end local v6    # "intent":Landroid/content/Intent;
     .end local v10    # "countryIso":Ljava/lang/String;
     .end local v12    # "httpResponseCode":I
@@ -1058,19 +990,16 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$4400(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 684
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 667
     .restart local v10    # "countryIso":Ljava/lang/String;
     .restart local v12    # "httpResponseCode":I
     .restart local v13    # "mUrl":Ljava/lang/String;
     :catch_0
     move-exception v11
 
-    .line 668
     .local v11, "e":Ljava/lang/Exception;
     const-string v4, "NetworkMonitor"
 
@@ -1094,12 +1023,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 669
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 692
     .end local v10    # "countryIso":Ljava/lang/String;
     .end local v11    # "e":Ljava/lang/Exception;
     .end local v12    # "httpResponseCode":I
@@ -1114,14 +1041,12 @@
 
     if-ge v4, v5, :cond_12
 
-    .line 693
     const-string v4, "NetworkMonitor"
 
-    const-string/jumbo v5, "handled"
+    const-string v5, "handled"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 696
     :goto_3
     move-object/from16 v0, p0
 
@@ -1135,23 +1060,20 @@
 
     goto/16 :goto_0
 
-    .line 695
     :cond_12
     const-string v4, "NetworkMonitor"
 
-    const-string/jumbo v5, "not_handled"
+    const-string v5, "not_handled"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 696
     :cond_13
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 562
     nop
 
     :pswitch_data_0

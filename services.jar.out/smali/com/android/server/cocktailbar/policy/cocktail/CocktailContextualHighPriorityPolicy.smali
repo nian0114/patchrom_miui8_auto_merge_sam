@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const-class v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualHighPriorityPolicy;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -29,10 +28,8 @@
     .param p1, "listener"    # Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;
 
     .prologue
-    .line 16
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/AbsCocktailPolicy;-><init>(Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;)V
 
-    .line 17
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const/4 v0, 0x3
 
     return v0
@@ -55,10 +51,8 @@
     .param p3, "isUpdated"    # Z
 
     .prologue
-    .line 43
     if-eqz p3, :cond_0
 
-    .line 44
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualHighPriorityPolicy;->mListener:Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;
 
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
@@ -67,7 +61,6 @@
 
     invoke-interface {v0, v1, p2}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;->onDisableUpdatableCocktail(II)V
 
-    .line 46
     :cond_0
     const/4 v0, 0x1
 
@@ -81,13 +74,10 @@
     .param p3, "isUpdated"    # Z
 
     .prologue
-    .line 35
     if-eqz p3, :cond_0
 
-    .line 36
     const/4 v0, 0x1
 
-    .line 38
     :goto_0
     return v0
 
@@ -106,10 +96,8 @@
     .param p5, "isUpdated"    # Z
 
     .prologue
-    .line 27
     if-nez p5, :cond_0
 
-    .line 28
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualHighPriorityPolicy;->mListener:Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;
 
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
@@ -118,7 +106,6 @@
 
     invoke-interface {v0, v1, p4}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;->onEanbleUpdatableCocktail(II)V
 
-    .line 30
     :cond_0
     const/4 v0, 0x1
 
@@ -132,32 +119,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 51
     if-nez p1, :cond_1
 
-    .line 52
     sget-object v2, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualHighPriorityPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "isMatchedPolicy: cocktail is null"
+    const-string v3, "isMatchedPolicy: cocktail is null"
 
     invoke-static {v2, v3}, Landroid/util/secutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_0
     :goto_0
     return v1
 
-    .line 55
     :cond_1
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailInfo()Lcom/samsung/android/cocktailbar/CocktailInfo;
 
     move-result-object v0
 
-    .line 56
     .local v0, "cInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     if-eqz v0, :cond_0
 
-    .line 57
     invoke-virtual {v0}, Lcom/samsung/android/cocktailbar/CocktailInfo;->getCategory()I
 
     move-result v2
@@ -167,13 +148,11 @@
     :pswitch_0
     goto :goto_0
 
-    .line 61
     :pswitch_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 57
     :pswitch_data_0
     .packed-switch 0x10001
         :pswitch_1

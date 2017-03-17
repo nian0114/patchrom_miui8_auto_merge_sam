@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 860
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v3, 0x1
 
-    .line 863
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 864
     .local v6, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -63,7 +60,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mIntentReceiver ACTION :"
+    const-string v2, "mIntentReceiver ACTION :"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -79,7 +76,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     :cond_0
     const-string v0, "android.intent.action.SCREEN_ON"
 
@@ -89,13 +85,11 @@
 
     if-eqz v0, :cond_4
 
-    .line 866
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # setter for: Lcom/android/server/LpnetManagerService;->mScreenOn:Z
     invoke-static {v0, v3}, Lcom/android/server/LpnetManagerService;->access$202(Lcom/android/server/LpnetManagerService;Z)Z
 
-    .line 867
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mNetworkStatIntent:Landroid/app/PendingIntent;
@@ -121,7 +115,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 868
     :cond_1
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -148,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 869
     :cond_2
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -159,7 +151,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 870
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mLRUIntent:Landroid/app/PendingIntent;
@@ -185,12 +176,10 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 1087
     :cond_3
     :goto_0
     return-void
 
-    .line 872
     :cond_4
     const-string v0, "android.intent.action.SCREEN_OFF"
 
@@ -200,13 +189,11 @@
 
     if-eqz v0, :cond_5
 
-    .line 873
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # setter for: Lcom/android/server/LpnetManagerService;->mScreenOn:Z
     invoke-static {v0, v4}, Lcom/android/server/LpnetManagerService;->access$202(Lcom/android/server/LpnetManagerService;Z)Z
 
-    .line 874
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->nHandler:Landroid/os/Handler;
@@ -222,7 +209,6 @@
 
     goto :goto_0
 
-    .line 917
     :cond_5
     const-string v0, "NETWORK_STAT"
 
@@ -232,7 +218,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 918
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mScreenOn:Z
@@ -242,7 +227,6 @@
 
     if-nez v0, :cond_3
 
-    .line 919
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->nHandler:Landroid/os/Handler;
@@ -258,7 +242,6 @@
 
     goto :goto_0
 
-    .line 947
     :cond_6
     const-string v0, "NETWORK_STAT_LRU"
 
@@ -268,7 +251,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 948
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mScreenOn:Z
@@ -278,7 +260,6 @@
 
     if-nez v0, :cond_7
 
-    .line 949
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->nHandler:Landroid/os/Handler;
@@ -294,7 +275,6 @@
 
     goto :goto_0
 
-    .line 1008
     :cond_7
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -309,7 +289,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1009
     :cond_8
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -318,7 +297,6 @@
 
     goto :goto_0
 
-    .line 1011
     :cond_9
     const-string v0, "ACTION_TRIGGER_IDLE"
 
@@ -328,7 +306,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 1012
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mScreenOn:Z
@@ -338,7 +315,6 @@
 
     if-nez v0, :cond_a
 
-    .line 1013
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->nHandler:Landroid/os/Handler;
@@ -354,7 +330,6 @@
 
     goto/16 :goto_0
 
-    .line 1020
     :cond_a
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -371,7 +346,6 @@
 
     goto/16 :goto_0
 
-    .line 1028
     :cond_b
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
@@ -381,7 +355,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 1029
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->nHandler:Landroid/os/Handler;
@@ -397,7 +370,6 @@
 
     goto/16 :goto_0
 
-    .line 1055
     :cond_c
     const-string v0, "ACTION_TRIGGER_UNUSED_APP_LRU "
 
@@ -407,7 +379,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 1056
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mScreenOn:Z
@@ -417,7 +388,6 @@
 
     if-nez v0, :cond_d
 
-    .line 1057
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->nHandler:Landroid/os/Handler;
@@ -433,7 +403,6 @@
 
     goto/16 :goto_0
 
-    .line 1064
     :cond_d
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -448,7 +417,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1065
     :cond_e
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -457,7 +425,6 @@
 
     goto/16 :goto_0
 
-    .line 1067
     :cond_f
     const-string v0, "android.intent.action.ACTION_POWER_CONNECTED"
 
@@ -491,7 +458,6 @@
 
     if-eqz v0, :cond_12
 
-    .line 1069
     :cond_10
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -527,11 +493,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1070
     :cond_11
     const/4 v7, 0x0
 
-    .line 1071
     .local v7, "lruMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Long;>;"
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -540,13 +504,11 @@
 
     move-result-object v7
 
-    .line 1072
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     # invokes: Lcom/android/server/LpnetManagerService;->updateDBForLRU(Ljava/util/Map;)V
     invoke-static {v0, v7}, Lcom/android/server/LpnetManagerService;->access$5500(Lcom/android/server/LpnetManagerService;Ljava/util/Map;)V
 
-    .line 1073
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     const-string v1, "LAST_USED"
@@ -563,7 +525,6 @@
     # invokes: Lcom/android/server/LpnetManagerService;->setAlarm(Ljava/lang/String;JJ)V
     invoke-static/range {v0 .. v5}, Lcom/android/server/LpnetManagerService;->access$2900(Lcom/android/server/LpnetManagerService;Ljava/lang/String;JJ)V
 
-    .line 1074
     const-string v0, "android.intent.action.TIME_SET"
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -581,12 +542,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 1075
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    .line 1076
     .local v10, "newGlobalCurr":J
     # getter for: Lcom/android/server/LpnetManagerService;->timeShift:J
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$5300()J
@@ -609,13 +568,11 @@
     # setter for: Lcom/android/server/LpnetManagerService;->timeShift:J
     invoke-static {v0, v1}, Lcom/android/server/LpnetManagerService;->access$5302(J)J
 
-    .line 1077
     # setter for: Lcom/android/server/LpnetManagerService;->globalCurr:J
     invoke-static {v10, v11}, Lcom/android/server/LpnetManagerService;->access$5102(J)J
 
     goto/16 :goto_0
 
-    .line 1079
     .end local v7    # "lruMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Long;>;"
     .end local v10    # "newGlobalCurr":J
     :cond_12
@@ -627,25 +584,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 1080
-    const-string/jumbo v0, "master_control"
+    const-string v0, "master_control"
 
     invoke-virtual {p2, v0, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 1081
     .local v8, "masterControl":Z
     if-eqz v8, :cond_13
 
-    .line 1082
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 
     iput-boolean v3, v0, Lcom/android/server/LpnetManagerService;->mAppLockEnabled:Z
 
     goto/16 :goto_0
 
-    .line 1084
     :cond_13
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
 

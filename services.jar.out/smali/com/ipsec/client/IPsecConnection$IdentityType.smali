@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 2910
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     const-string v1, "IPV4_ADDR"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->IPV4_ADDR:Lcom/ipsec/client/IPsecConnection$IdentityType;
 
-    .line 2916
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     const-string v1, "IPV6_ADDR"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->IPV6_ADDR:Lcom/ipsec/client/IPsecConnection$IdentityType;
 
-    .line 2922
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     const-string v1, "FQDN"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->FQDN:Lcom/ipsec/client/IPsecConnection$IdentityType;
 
-    .line 2928
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     const-string v1, "USER_FQDN"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->USER_FQDN:Lcom/ipsec/client/IPsecConnection$IdentityType;
 
-    .line 2934
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     const-string v1, "DN"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->DN:Lcom/ipsec/client/IPsecConnection$IdentityType;
 
-    .line 2940
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     const-string v1, "KEY_ID"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->KEY_ID:Lcom/ipsec/client/IPsecConnection$IdentityType;
 
-    .line 2903
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IdentityType;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 2903
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2903
     const-class v0, Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 2903
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IdentityType;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IdentityType;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IdentityType;->clone()Ljava/lang/Object;

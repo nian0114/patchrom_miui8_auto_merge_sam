@@ -30,18 +30,13 @@
     .param p3, "selfChange"    # Z
 
     .prologue
-    .line 350
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 351
     iput-object p1, p0, Lcom/android/server/content/ContentService$ObserverCall;->mNode:Lcom/android/server/content/ContentService$ObserverNode;
 
-    .line 352
     iput-object p2, p0, Lcom/android/server/content/ContentService$ObserverCall;->mObserver:Landroid/database/IContentObserver;
 
-    .line 353
     iput-boolean p3, p0, Lcom/android/server/content/ContentService$ObserverCall;->mSelfChange:Z
 
-    .line 354
     return-void
 .end method

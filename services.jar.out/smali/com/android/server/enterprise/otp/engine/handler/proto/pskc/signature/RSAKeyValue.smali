@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RSAKeyValue;->mExponent:[B
 
     return-object v0
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 9
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RSAKeyValue;->mModulus:[B
 
     return-object v0
@@ -47,10 +44,8 @@
     .param p1, "mExponent"    # [B
 
     .prologue
-    .line 21
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RSAKeyValue;->mExponent:[B
 
-    .line 22
     return-void
 .end method
 
@@ -59,9 +54,7 @@
     .param p1, "mModulus"    # [B
 
     .prologue
-    .line 13
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RSAKeyValue;->mModulus:[B
 
-    .line 14
     return-void
 .end method

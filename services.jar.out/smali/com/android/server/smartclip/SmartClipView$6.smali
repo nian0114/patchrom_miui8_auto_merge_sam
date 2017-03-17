@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1023
     iput-object p1, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v5, 0x1
 
-    .line 1025
     iget-object v6, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget-object v7, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
@@ -60,7 +58,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "lock_screen_quick_note"
+    const-string v8, "lock_screen_quick_note"
 
     const/4 v9, -0x2
 
@@ -76,7 +74,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsEnableDoubleTapOnLockscreen:Z
     invoke-static {v6, v4}, Lcom/android/server/smartclip/SmartClipView;->access$1502(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 1026
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mIsKeyguardOn:Z
@@ -104,7 +101,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 1027
     :cond_1
     const-string v4, "SmartClipView"
 
@@ -152,12 +148,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1059
     :cond_2
     :goto_0
     return-void
 
-    .line 1032
     :cond_3
     :try_start_0
     const-string v4, "SmartClipView"
@@ -166,7 +160,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1034
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     new-instance v6, Landroid/content/Intent;
@@ -178,7 +171,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mPenMemoActionIntent:Landroid/content/Intent;
     invoke-static {v4, v6}, Lcom/android/server/smartclip/SmartClipView;->access$1802(Lcom/android/server/smartclip/SmartClipView;Landroid/content/Intent;)Landroid/content/Intent;
 
-    .line 1035
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-virtual {v4}, Lcom/android/server/smartclip/SmartClipView;->getContext()Landroid/content/Context;
@@ -194,7 +186,6 @@
 
     invoke-virtual {v4, v6}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1037
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -206,11 +197,9 @@
 
     move-result v0
 
-    .line 1038
     .local v0, "callState":I
     const/4 v1, 0x0
 
-    .line 1039
     .local v1, "callState2":I
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -221,7 +210,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 1040
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mTelephonyManager2:Landroid/telephony/TelephonyManager;
@@ -233,7 +221,6 @@
 
     move-result v1
 
-    .line 1041
     :cond_4
     if-eq v0, v5, :cond_5
 
@@ -243,7 +230,6 @@
 
     if-ne v1, v10, :cond_6
 
-    .line 1045
     :cond_5
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -263,19 +249,16 @@
 
     goto :goto_0
 
-    .line 1056
     .end local v0    # "callState":I
     .end local v1    # "callState2":I
     :catch_0
     move-exception v3
 
-    .line 1057
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1047
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v0    # "callState":I
     .restart local v1    # "callState2":I
@@ -287,7 +270,6 @@
 
     move-result-object v2
 
-    .line 1048
     .local v2, "context":Landroid/content/Context;
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -304,14 +286,12 @@
 
     if-nez v4, :cond_2
 
-    .line 1049
     const-string v4, "SmartClipView"
 
-    const-string/jumbo v5, "mPenDoubleTap : Snote action memo launch failed. Trying to launch diotek PenMemo..."
+    const-string v5, "mPenDoubleTap : Snote action memo launch failed. Trying to launch diotek PenMemo..."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1050
     iget-object v4, p0, Lcom/android/server/smartclip/SmartClipView$6;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mDoubleTapIntentDiotek:Landroid/content/Intent;
@@ -327,14 +307,12 @@
 
     if-nez v4, :cond_2
 
-    .line 1051
     const-string v4, "SmartClipView"
 
-    const-string/jumbo v5, "mPenDoubleTap : Diotek PenMemo launch failed. Sending legacy quick memo broadcasting"
+    const-string v5, "mPenDoubleTap : Diotek PenMemo launch failed. Sending legacy quick memo broadcasting"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1052
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.QUICKMEMO_LAUNCH"

@@ -86,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 372
     new-instance v0, Lcom/samsung/android/smartface/FaceInfo$1;
 
     invoke-direct {v0}, Lcom/samsung/android/smartface/FaceInfo$1;-><init>()V
@@ -100,15 +99,12 @@
     .locals 1
 
     .prologue
-    .line 233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
-    .line 233
     return-void
 .end method
 
@@ -117,15 +113,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
-    .line 239
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartface/FaceInfo;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -137,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 245
     const/4 v0, 0x0
 
     return v0
@@ -152,70 +144,60 @@
 
     const/4 v2, 0x1
 
-    .line 307
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->responseType:I
 
-    .line 308
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->numberOfPerson:I
 
-    .line 310
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->horizontalMovement:I
 
-    .line 311
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->verticalMovement:I
 
-    .line 312
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->processStatus:I
 
-    .line 313
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->needToRotate:I
 
-    .line 314
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->needToPause:I
 
-    .line 315
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->needToStay:I
 
-    .line 316
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->guideDir:I
 
-    .line 317
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -227,7 +209,6 @@
     :goto_0
     iput-boolean v1, p0, Lcom/samsung/android/smartface/FaceInfo;->bFaceDetected:Z
 
-    .line 318
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -237,21 +218,18 @@
     :goto_1
     iput-boolean v2, p0, Lcom/samsung/android/smartface/FaceInfo;->bLowLightBackLighting:Z
 
-    .line 319
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartface/FaceInfo;->faceDistance:I
 
-    .line 321
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->numberOfPerson:I
 
     new-array v1, v1, [Lcom/samsung/android/smartface/FaceInfo$Person;
 
     iput-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
-    .line 323
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -260,7 +238,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 325
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -271,7 +248,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Person;->face:Lcom/samsung/android/smartface/FaceInfo$Face;
 
-    .line 326
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -284,7 +260,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->rect:Landroid/graphics/Rect;
 
-    .line 327
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -299,7 +274,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 328
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -314,7 +288,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 329
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -329,7 +302,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 330
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -344,7 +316,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 332
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -357,7 +328,6 @@
 
     iput v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->score:I
 
-    .line 334
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -370,7 +340,6 @@
 
     iput v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->id:I
 
-    .line 336
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -383,7 +352,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->leftEye:Landroid/graphics/Point;
 
-    .line 337
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -398,7 +366,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->x:I
 
-    .line 338
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -413,7 +380,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->y:I
 
-    .line 340
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -426,7 +392,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->rightEye:Landroid/graphics/Point;
 
-    .line 341
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -441,7 +406,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->x:I
 
-    .line 342
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -456,7 +420,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->y:I
 
-    .line 344
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -469,7 +432,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->mouth:Landroid/graphics/Point;
 
-    .line 345
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -484,7 +446,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->x:I
 
-    .line 346
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -499,7 +460,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->y:I
 
-    .line 348
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -512,7 +472,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->nose:Landroid/graphics/Point;
 
-    .line 349
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -527,7 +486,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->x:I
 
-    .line 350
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -542,7 +500,6 @@
 
     iput v2, v1, Landroid/graphics/Point;->y:I
 
-    .line 352
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -555,7 +512,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->pose:Lcom/samsung/android/smartface/FaceInfo$FacePoseInfo;
 
-    .line 353
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -570,7 +526,6 @@
 
     iput v2, v1, Lcom/samsung/android/smartface/FaceInfo$FacePoseInfo;->pitch:I
 
-    .line 354
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -585,7 +540,6 @@
 
     iput v2, v1, Lcom/samsung/android/smartface/FaceInfo$FacePoseInfo;->roll:I
 
-    .line 355
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -600,7 +554,6 @@
 
     iput v2, v1, Lcom/samsung/android/smartface/FaceInfo$FacePoseInfo;->yaw:I
 
-    .line 357
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -613,7 +566,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Face;->expression:Lcom/samsung/android/smartface/FaceInfo$FaceExpression;
 
-    .line 358
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -628,7 +580,6 @@
 
     iput v2, v1, Lcom/samsung/android/smartface/FaceInfo$FaceExpression;->expression:I
 
-    .line 360
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -639,7 +590,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$Person;->personInfo:Lcom/samsung/android/smartface/FaceInfo$PersonInfo;
 
-    .line 361
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -652,7 +602,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$PersonInfo;->addressEMail:Ljava/lang/String;
 
-    .line 362
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -665,7 +614,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$PersonInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 363
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -678,7 +626,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$PersonInfo;->address:Ljava/lang/String;
 
-    .line 364
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -691,7 +638,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/smartface/FaceInfo$PersonInfo;->name:Ljava/lang/String;
 
-    .line 323
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_2
@@ -700,16 +646,13 @@
     :cond_0
     move v1, v3
 
-    .line 317
     goto/16 :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 318
     goto/16 :goto_1
 
-    .line 366
     .restart local v0    # "i":I
     :cond_2
     return-void
@@ -725,52 +668,42 @@
 
     const/4 v3, 0x0
 
-    .line 253
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->responseType:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 254
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->numberOfPerson:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 256
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->horizontalMovement:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 257
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->verticalMovement:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->processStatus:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 259
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->needToRotate:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 260
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->needToPause:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 261
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->needToStay:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 262
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->guideDir:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 263
     iget-boolean v1, p0, Lcom/samsung/android/smartface/FaceInfo;->bFaceDetected:Z
 
     if-eqz v1, :cond_0
@@ -782,7 +715,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 264
     iget-boolean v1, p0, Lcom/samsung/android/smartface/FaceInfo;->bLowLightBackLighting:Z
 
     if-eqz v1, :cond_1
@@ -792,12 +724,10 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 265
     iget v1, p0, Lcom/samsung/android/smartface/FaceInfo;->faceDistance:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 267
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -806,7 +736,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 269
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -819,7 +748,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 270
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -832,7 +760,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 271
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -845,7 +772,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 272
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -858,7 +784,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 274
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -869,7 +794,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 276
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -880,7 +804,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 278
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -893,7 +816,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 279
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -906,7 +828,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 280
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -919,7 +840,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 281
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -932,7 +852,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 282
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -945,7 +864,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 283
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -958,7 +876,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 284
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -971,7 +888,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 285
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -984,7 +900,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 287
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -997,7 +912,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 288
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1010,7 +924,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 289
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1023,7 +936,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 291
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1036,7 +948,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 293
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1047,7 +958,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 294
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1058,7 +968,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 295
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1069,7 +978,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 296
     iget-object v1, p0, Lcom/samsung/android/smartface/FaceInfo;->person:[Lcom/samsung/android/smartface/FaceInfo$Person;
 
     aget-object v1, v1, v0
@@ -1080,7 +988,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 267
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_2
@@ -1089,16 +996,13 @@
     :cond_0
     move v1, v3
 
-    .line 263
     goto/16 :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 264
     goto/16 :goto_1
 
-    .line 299
     .restart local v0    # "i":I
     :cond_2
     return-void

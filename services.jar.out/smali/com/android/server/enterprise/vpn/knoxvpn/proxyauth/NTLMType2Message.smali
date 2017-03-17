@@ -34,37 +34,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 16
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;-><init>(I)V
 
-    .line 10
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
-    .line 11
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->serverChallengeNonce:[B
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->contextData:[B
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->targetData:[B
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->flagsObtained:I
 
-    .line 17
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->processMessageString(Ljava/lang/String;)V
 
-    .line 18
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->getFlagsObtained()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->setFlags(I)V
 
-    .line 19
     return-void
 .end method
 
@@ -74,10 +67,8 @@
     .param p2, "end"    # I
 
     .prologue
-    .line 22
     const/4 v1, 0x0
 
-    .line 23
     .local v1, "returnValue":Z
     move v0, p1
 
@@ -85,21 +76,17 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 24
     iget-object v2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     aget-byte v2, v2, v0
 
     if-eqz v2, :cond_1
 
-    .line 25
     const/4 v1, 0x1
 
-    .line 28
     :cond_0
     return v1
 
-    .line 23
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -115,10 +102,8 @@
     .end annotation
 
     .prologue
-    .line 32
     const/4 v0, 0x0
 
-    .line 33
     .local v0, "i":I
     const/4 v0, 0x0
 
@@ -127,7 +112,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 34
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     aget-byte v1, v1, v0
@@ -138,7 +122,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 35
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Type2 Format Exception: Misplaced Header"
@@ -147,13 +130,11 @@
 
     throw v1
 
-    .line 33
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 37
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
@@ -163,7 +144,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 38
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Type2 Format Exception: Message Type Incorrect"
@@ -172,7 +152,6 @@
 
     throw v1
 
-    .line 40
     :cond_2
     return-void
 .end method
@@ -183,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 127
     const/4 v0, 0x0
 
     return-object v0
@@ -197,25 +175,20 @@
 
     const/16 v3, 0x8
 
-    .line 59
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v1, :cond_0
 
-    .line 60
     const/4 v1, 0x0
 
-    .line 67
     :goto_0
     return-object v1
 
-    .line 61
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->contextData:[B
 
     if-nez v1, :cond_1
 
-    .line 62
     const/16 v1, 0x28
 
     invoke-direct {p0, v4, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->checkForValidData(II)Z
@@ -224,10 +197,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 63
     new-array v0, v3, [B
 
-    .line 64
     .local v0, "context":[B
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
@@ -235,10 +206,8 @@
 
     invoke-static {v1, v4, v0, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 65
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->setContextData([B)V
 
-    .line 67
     .end local v0    # "context":[B
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->contextData:[B
@@ -250,25 +219,20 @@
     .locals 3
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v0, :cond_0
 
-    .line 92
     const/4 v0, 0x0
 
-    .line 96
     :goto_0
     return v0
 
-    .line 93
     :cond_0
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->flagsObtained:I
 
     if-gez v0, :cond_1
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     const/16 v1, 0x14
@@ -281,7 +245,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->setFlagsObtained(I)V
 
-    .line 96
     :cond_1
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->flagsObtained:I
 
@@ -296,25 +259,20 @@
 
     const/16 v3, 0x8
 
-    .line 43
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v1, :cond_0
 
-    .line 44
     const/4 v1, 0x0
 
-    .line 51
     :goto_0
     return-object v1
 
-    .line 45
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->serverChallengeNonce:[B
 
     if-nez v1, :cond_1
 
-    .line 46
     const/16 v1, 0x20
 
     invoke-direct {p0, v4, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->checkForValidData(II)Z
@@ -323,10 +281,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 47
     new-array v0, v3, [B
 
-    .line 48
     .local v0, "challenge":[B
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
@@ -334,10 +290,8 @@
 
     invoke-static {v1, v4, v0, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 49
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->setServerChallengeNonce([B)V
 
-    .line 51
     .end local v0    # "challenge":[B
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->serverChallengeNonce:[B
@@ -349,29 +303,23 @@
     .locals 3
 
     .prologue
-    .line 75
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v1, :cond_0
 
-    .line 76
     const/4 v1, 0x0
 
-    .line 83
     :goto_0
     return-object v1
 
-    .line 77
     :cond_0
     const/4 v0, 0x0
 
-    .line 78
     .local v0, "temp":[B
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->targetData:[B
 
     if-nez v1, :cond_1
 
-    .line 79
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     const/16 v2, 0x28
@@ -380,15 +328,12 @@
 
     move-result-object v0
 
-    .line 80
     array-length v1, v0
 
     if-lez v1, :cond_1
 
-    .line 81
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->setTargetData([B)V
 
-    .line 83
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->targetData:[B
 
@@ -399,25 +344,20 @@
     .locals 5
 
     .prologue
-    .line 104
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v3, :cond_0
 
-    .line 105
     const/4 v3, 0x0
 
-    .line 118
     :goto_0
     return-object v3
 
-    .line 106
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->targetName:Ljava/lang/String;
 
     if-nez v3, :cond_1
 
-    .line 107
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
     const/16 v4, 0xc
@@ -426,19 +366,16 @@
 
     move-result-object v2
 
-    .line 109
     .local v2, "temp":[B
     :try_start_0
     array-length v3, v2
 
     if-lez v3, :cond_1
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->getFlagsObtained()I
 
     move-result v1
 
-    .line 111
     .local v1, "flags":I
     new-instance v4, Ljava/lang/String;
 
@@ -455,7 +392,6 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
     .end local v1    # "flags":I
     .end local v2    # "temp":[B
     :cond_1
@@ -464,7 +400,6 @@
 
     goto :goto_0
 
-    .line 111
     .restart local v1    # "flags":I
     .restart local v2    # "temp":[B
     :cond_2
@@ -475,12 +410,10 @@
 
     goto :goto_1
 
-    .line 114
     .end local v1    # "flags":I
     :catch_0
     move-exception v0
 
-    .line 115
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
@@ -497,17 +430,14 @@
     .end annotation
 
     .prologue
-    .line 132
     invoke-static {p1}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMUtils;->decode(Ljava/lang/String;)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->type2MessageBytes:[B
 
-    .line 133
     invoke-direct {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->isValidNTLMType2String()V
 
-    .line 134
     return-void
 .end method
 
@@ -516,10 +446,8 @@
     .param p1, "contextData"    # [B
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->contextData:[B
 
-    .line 72
     return-void
 .end method
 
@@ -528,10 +456,8 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 100
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->flagsObtained:I
 
-    .line 101
     return-void
 .end method
 
@@ -540,10 +466,8 @@
     .param p1, "serverChallengeNonce"    # [B
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->serverChallengeNonce:[B
 
-    .line 56
     return-void
 .end method
 
@@ -552,10 +476,8 @@
     .param p1, "targetData"    # [B
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->targetData:[B
 
-    .line 88
     return-void
 .end method
 
@@ -564,9 +486,7 @@
     .param p1, "targetName"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMType2Message;->targetName:Ljava/lang/String;
 
-    .line 123
     return-void
 .end method

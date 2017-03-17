@@ -13,7 +13,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -32,7 +31,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -59,7 +57,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     monitor-enter p0
 
     :try_start_0
@@ -86,7 +83,6 @@
     .param p1, "host"    # Lorg/apache/http/HttpHost;
 
     .prologue
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -121,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 11
     monitor-enter p0
 
     :try_start_0
@@ -148,7 +143,6 @@
     .param p1, "sch"    # Lorg/apache/http/conn/scheme/Scheme;
 
     .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -184,7 +178,6 @@
     .end annotation
 
     .prologue
-    .line 12
     .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/apache/http/conn/scheme/Scheme;>;"
     monitor-enter p0
 
@@ -212,7 +205,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0

@@ -45,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 30
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0x14
@@ -54,7 +53,6 @@
 
     sput-object v0, Landroid/view/MagnificationSpec;->sPool:Landroid/util/Pools$SynchronizedPool;
 
-    .line 112
     new-instance v0, Landroid/view/MagnificationSpec$1;
 
     invoke-direct {v0}, Landroid/view/MagnificationSpec$1;-><init>()V
@@ -68,15 +66,12 @@
     .locals 1
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 39
     return-void
 .end method
 
@@ -86,7 +81,6 @@
     .param p1, "x1"    # Landroid/os/Parcel;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/view/MagnificationSpec;->initFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -97,28 +91,24 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 107
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 108
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 109
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 110
     return-void
 .end method
 
@@ -126,7 +116,6 @@
     .locals 2
 
     .prologue
-    .line 65
     sget-object v1, Landroid/view/MagnificationSpec;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -135,7 +124,6 @@
 
     check-cast v0, Landroid/view/MagnificationSpec;
 
-    .line 66
     .local v0, "spec":Landroid/view/MagnificationSpec;
     if-eqz v0, :cond_0
 
@@ -158,28 +146,23 @@
     .param p0, "other"    # Landroid/view/MagnificationSpec;
 
     .prologue
-    .line 57
     invoke-static {}, Landroid/view/MagnificationSpec;->obtain()Landroid/view/MagnificationSpec;
 
     move-result-object v0
 
-    .line 58
     .local v0, "info":Landroid/view/MagnificationSpec;
     iget v1, p0, Landroid/view/MagnificationSpec;->scale:F
 
     iput v1, v0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 59
     iget v1, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 60
     iget v1, p0, Landroid/view/MagnificationSpec;->offsetY:F
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 61
     return-object v0
 .end method
 
@@ -191,18 +174,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 75
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 76
     iput v1, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 77
     iput v1, p0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 78
     return-void
 .end method
 
@@ -210,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
     return v0
@@ -223,16 +201,12 @@
     .param p3, "offsetY"    # F
 
     .prologue
-    .line 47
     iput p1, p0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 48
     iput p2, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 49
     iput p3, p0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 50
     return-void
 .end method
 
@@ -242,7 +216,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 53
     iget v0, p0, Landroid/view/MagnificationSpec;->scale:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -278,15 +251,12 @@
     .locals 1
 
     .prologue
-    .line 70
     invoke-virtual {p0}, Landroid/view/MagnificationSpec;->clear()V
 
-    .line 71
     sget-object v0, Landroid/view/MagnificationSpec;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 72
     return-void
 .end method
 
@@ -294,48 +264,39 @@
     .locals 2
 
     .prologue
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 96
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "<scale:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     iget v1, p0, Landroid/view/MagnificationSpec;->scale:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 98
     const-string v1, ",offsetX:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 99
     iget v1, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 100
     const-string v1, ",offsetY:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 101
     iget v1, p0, Landroid/view/MagnificationSpec;->offsetY:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 102
     const-string v1, ">"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 103
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -349,24 +310,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 87
     iget v0, p0, Landroid/view/MagnificationSpec;->scale:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 88
     iget v0, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 89
     iget v0, p0, Landroid/view/MagnificationSpec;->offsetY:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 90
     invoke-virtual {p0}, Landroid/view/MagnificationSpec;->recycle()V
 
-    .line 91
     return-void
 .end method

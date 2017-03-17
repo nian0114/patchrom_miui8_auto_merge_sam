@@ -37,12 +37,10 @@
     .locals 1
 
     .prologue
-    .line 1866
     iput-object p1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
     invoke-direct {p0}, Lcom/android/server/enterprise/EdmCache;-><init>()V
 
-    .line 1867
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
@@ -56,7 +54,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/kioskmode/KioskModeService$1;
 
     .prologue
-    .line 1866
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;-><init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;)V
 
     return-void
@@ -67,7 +64,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     .prologue
-    .line 1866
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     return-object v0
@@ -79,19 +75,15 @@
     .locals 6
 
     .prologue
-    .line 1871
     const/4 v1, 0x0
 
-    .line 1872
     .local v1, "isBootCompleted":Z
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     if-eqz v4, :cond_0
 
-    .line 1873
     const/4 v1, 0x1
 
-    .line 1875
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
@@ -102,28 +94,23 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
-    .line 1876
     if-eqz v1, :cond_1
 
-    .line 1877
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v4, "edm.intent.action.internal.kioskmode.REFRESH_HWKEY_CACHE"
+    const-string v4, "edm.intent.action.internal.kioskmode.REFRESH_HWKEY_CACHE"
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1878
     .local v0, "intentNotification":Landroid/content/Intent;
     const/high16 v4, 0x4000000
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1879
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1880
     .local v2, "token":J
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
@@ -136,10 +123,8 @@
 
     invoke-virtual {v4, v0, v5}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1881
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1883
     .end local v0    # "intentNotification":Landroid/content/Intent;
     .end local v2    # "token":J
     :cond_1

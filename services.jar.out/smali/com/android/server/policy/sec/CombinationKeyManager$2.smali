@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 698
     iput-object p1, p0, Lcom/android/server/policy/sec/CombinationKeyManager$2;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 700
     iget-object v0, p0, Lcom/android/server/policy/sec/CombinationKeyManager$2;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
     iget-object v0, v0, Lcom/android/server/policy/sec/CombinationKeyManager;->mSPWM:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
@@ -49,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->takeScreenshot(I)V
 
-    .line 701
     return-void
 .end method

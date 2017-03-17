@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 236
     new-instance v0, Landroid/preference/VolumePreference$SavedState$1;
 
     invoke-direct {v0}, Landroid/preference/VolumePreference$SavedState$1;-><init>()V
@@ -51,17 +50,14 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 216
     invoke-direct {p0, p1}, Landroid/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 213
     new-instance v0, Landroid/preference/VolumePreference$VolumeStore;
 
     invoke-direct {v0}, Landroid/preference/VolumePreference$VolumeStore;-><init>()V
 
     iput-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
-    .line 217
     iget-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -70,7 +66,6 @@
 
     iput v1, v0, Landroid/preference/VolumePreference$VolumeStore;->volume:I
 
-    .line 218
     iget-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -79,7 +74,6 @@
 
     iput v1, v0, Landroid/preference/VolumePreference$VolumeStore;->originalVolume:I
 
-    .line 219
     return-void
 .end method
 
@@ -88,17 +82,14 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 233
     invoke-direct {p0, p1}, Landroid/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 213
     new-instance v0, Landroid/preference/VolumePreference$VolumeStore;
 
     invoke-direct {v0}, Landroid/preference/VolumePreference$VolumeStore;-><init>()V
 
     iput-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
-    .line 234
     return-void
 .end method
 
@@ -108,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
     return-object v0
@@ -120,23 +110,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 223
     invoke-super {p0, p1, p2}, Landroid/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 224
     iget-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
     iget v0, v0, Landroid/preference/VolumePreference$VolumeStore;->volume:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 225
     iget-object v0, p0, Landroid/preference/VolumePreference$SavedState;->mVolumeStore:Landroid/preference/VolumePreference$VolumeStore;
 
     iget v0, v0, Landroid/preference/VolumePreference$VolumeStore;->originalVolume:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 226
     return-void
 .end method

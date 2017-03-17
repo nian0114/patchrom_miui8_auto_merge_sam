@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1432
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IccCardProxy$iccCardProxyBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/IccCardProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/IccCardProxy$1;
 
     .prologue
-    .line 1432
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/IccCardProxy$iccCardProxyBroadcastReceiver;-><init>(Lcom/android/internal/telephony/uicc/IccCardProxy;)V
 
     return-void
@@ -55,12 +53,10 @@
 
     const/4 v5, 0x0
 
-    .line 1435
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1436
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.sec.android.app.secsetupwizard.SETUPWIZARD_COMPLETE"
 
@@ -70,7 +66,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1437
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v2
@@ -81,18 +76,15 @@
 
     if-le v2, v6, :cond_0
 
-    .line 1438
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccCardProxy$iccCardProxyBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/IccCardProxy;
 
     # invokes: Lcom/android/internal/telephony/uicc/IccCardProxy;->prepareStartSimManagement()V
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/IccCardProxy;->access$100(Lcom/android/internal/telephony/uicc/IccCardProxy;)V
 
-    .line 1457
     :cond_0
     :goto_0
     return-void
 
-    .line 1441
     :cond_1
     const-string v2, "com.samsung.intent.action.QCOMHOTSWAP"
 
@@ -102,7 +94,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1442
     const-string v2, "QCOM"
 
     const-string v3, "QCOM"
@@ -131,7 +122,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1444
     :cond_2
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -157,7 +147,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1446
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccCardProxy$iccCardProxyBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/IccCardProxy;
 
     const-string v3, "skip QCOMHOTSWAP intent CTC"
@@ -167,23 +156,19 @@
 
     goto :goto_0
 
-    .line 1449
     :cond_3
     # setter for: Lcom/android/internal/telephony/uicc/IccCardProxy;->sIsStartSimManagement:Z
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/IccCardProxy;->access$302(Z)Z
 
-    .line 1450
     const-string v2, "REASON"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 1451
     .local v1, "simreason":Z
     if-nez v1, :cond_0
 
-    .line 1452
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccCardProxy$iccCardProxyBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/IccCardProxy;
 
     const-string v3, "Receive QCOMHOTSWAP false intent so sIsStartSimManagement setted false for initial"
@@ -191,7 +176,6 @@
     # invokes: Lcom/android/internal/telephony/uicc/IccCardProxy;->log(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/uicc/IccCardProxy;->access$400(Lcom/android/internal/telephony/uicc/IccCardProxy;Ljava/lang/String;)V
 
-    .line 1453
     # setter for: Lcom/android/internal/telephony/uicc/IccCardProxy;->sIsCheckingCTCSim:Z
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/IccCardProxy;->access$502(Z)Z
 

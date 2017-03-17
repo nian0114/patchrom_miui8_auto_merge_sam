@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 699
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,25 +44,21 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 701
     const-string v1, "SmartClipDataRepositoryImpl"
 
     const-string v2, "SmartClipDataRepositoryImpl.createFromParcel called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 703
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;-><init>(Lcom/samsung/android/smartclip/SmartClipDataCropper;)V
 
-    .line 704
     .local v0, "data":Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
     invoke-virtual {v0, p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 705
     return-object v0
 .end method
 
@@ -72,7 +67,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 699
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     move-result-object v0
@@ -85,7 +79,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 709
     new-array v0, p1, [Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     return-object v0
@@ -96,7 +89,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 699
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl$1;->newArray(I)[Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     move-result-object v0

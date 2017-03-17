@@ -26,24 +26,20 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 62
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 66
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider$1;-><init>(Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mLocationListener:Landroid/location/LocationListener;
 
-    .line 179
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider$2;-><init>(Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsStatusListener:Landroid/location/GpsStatus$Listener;
 
-    .line 63
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -65,7 +60,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -78,7 +72,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -91,7 +84,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -104,7 +96,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -117,7 +108,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -130,7 +120,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -143,7 +132,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -156,7 +144,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -169,7 +156,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -182,7 +168,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -195,7 +180,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -208,7 +192,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -221,7 +204,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -234,7 +216,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -247,7 +228,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getGpsSatellites()Ljava/util/Iterator;
 
     move-result-object v0
@@ -260,7 +240,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -283,12 +262,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 331
     iget-object v1, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v1, :cond_0
 
-    .line 335
     :goto_0
     return-object v0
 
@@ -316,7 +293,6 @@
     .locals 4
 
     .prologue
-    .line 251
     new-instance v0, Landroid/os/Handler;
 
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getLooper()Landroid/os/Looper;
@@ -333,7 +309,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 257
     return-void
 .end method
 
@@ -341,7 +316,6 @@
     .locals 4
 
     .prologue
-    .line 236
     new-instance v0, Landroid/os/Handler;
 
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getLooper()Landroid/os/Looper;
@@ -358,7 +332,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 242
     return-void
 .end method
 
@@ -366,7 +339,6 @@
     .locals 1
 
     .prologue
-    .line 344
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
     return-object v0
@@ -376,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 353
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsStatusListener:Landroid/location/GpsStatus$Listener;
 
     return-object v0
@@ -389,24 +360,20 @@
     .locals 2
 
     .prologue
-    .line 302
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 303
     const-string v0, "mContext is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 312
     :cond_0
     :goto_0
     return-void
 
-    .line 306
     :cond_1
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
@@ -422,12 +389,10 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
-    .line 309
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 310
     const-string v0, "cannot create the GpsManager object"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
@@ -439,12 +404,10 @@
     .locals 7
 
     .prologue
-    .line 263
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->getLocationProvider()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 264
     .local v1, "provider":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
@@ -464,17 +427,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 266
     :cond_0
     const-string v0, "cannot register the gps listener"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 272
     :goto_0
     return-void
 
-    .line 270
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
@@ -497,7 +457,6 @@
     .locals 0
 
     .prologue
-    .line 323
     return-void
 .end method
 
@@ -505,21 +464,17 @@
     .locals 2
 
     .prologue
-    .line 278
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 279
     const-string v0, "cannot unregister the gps listener"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 284
     :goto_0
     return-void
 
-    .line 283
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/RawGpsProvider;->mGpsManager:Landroid/location/LocationManager;
 

@@ -25,22 +25,18 @@
     .locals 1
 
     .prologue
-    .line 866
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 867
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$RequestIdGenerator;->fraction:I
 
-    .line 868
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$RequestIdGenerator;->random:Ljava/util/Random;
 
-    .line 869
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 3
 
     .prologue
-    .line 872
     iget v0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$RequestIdGenerator;->fraction:I
 
     add-int/lit8 v0, v0, 0x1
@@ -61,12 +56,10 @@
 
     if-le v0, v1, :cond_0
 
-    .line 873
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$RequestIdGenerator;->fraction:I
 
-    .line 875
     :cond_0
     iget v0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$RequestIdGenerator;->fraction:I
 
@@ -89,7 +82,6 @@
     .param p2, "max"    # I
 
     .prologue
-    .line 881
     iget-object v1, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$RequestIdGenerator;->random:Ljava/util/Random;
 
     sub-int v2, p2, p1
@@ -102,7 +94,6 @@
 
     add-int v0, v1, p1
 
-    .line 882
     .local v0, "randomNum":I
     return v0
 .end method

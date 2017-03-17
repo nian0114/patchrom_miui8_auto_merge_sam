@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 800
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$2;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,37 +38,29 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 803
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 804
     .local v12, "action":Ljava/lang/String;
     if-nez v12, :cond_1
 
-    .line 906
     :cond_0
     :goto_0
     return-void
 
-    .line 808
     :cond_1
     const/16 v25, 0x0
 
-    .line 809
     .local v25, "queryRestart":Z
     const/16 v23, 0x0
 
-    .line 810
     .local v23, "queryRemove":Z
     const/16 v20, 0x0
 
-    .line 811
     .local v20, "packageChanged":Z
     const/4 v14, 0x1
 
-    .line 813
     .local v14, "cancelNotifications":Z
     const-string v2, "android.intent.action.PACKAGE_ADDED"
 
@@ -119,7 +110,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 819
     :cond_2
     const-string v2, "android.intent.extra.user_handle"
 
@@ -131,11 +121,9 @@
 
     move-result v15
 
-    .line 821
     .local v15, "changeUserId":I
     const/16 v21, 0x0
 
-    .line 822
     .local v21, "pkgList":[Ljava/lang/String;
     if-eqz v23, :cond_6
 
@@ -153,7 +141,6 @@
 
     const/16 v24, 0x1
 
-    .line 824
     .local v24, "queryReplace":Z
     :goto_1
     sget-boolean v2, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
@@ -194,7 +181,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     :cond_3
     const-string v2, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
@@ -204,7 +190,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 826
     const-string v2, "android.intent.extra.changed_package_list"
 
     move-object/from16 v0, p2
@@ -213,12 +198,10 @@
 
     move-result-object v21
 
-    .line 866
     .end local v15    # "changeUserId":I
     :goto_2
     const/4 v9, -0x1
 
-    .line 867
     .local v9, "userHandle":I
     const-string v2, "android.intent.action.PACKAGE_RESTARTED"
 
@@ -228,7 +211,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 868
     const-string v2, "android.intent.extra.user_handle"
 
     const/4 v3, -0x1
@@ -239,7 +221,6 @@
 
     move-result v9
 
-    .line 872
     :cond_4
     if-eqz v21, :cond_d
 
@@ -249,7 +230,6 @@
 
     if-lez v2, :cond_d
 
-    .line 873
     move-object/from16 v13, v21
 
     .local v13, "arr$":[Ljava/lang/String;
@@ -270,11 +250,9 @@
 
     aget-object v5, v13, v18
 
-    .line 874
     .local v5, "pkgName":Ljava/lang/String;
     if-eqz v14, :cond_5
 
-    .line 897
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$2;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -304,13 +282,11 @@
 
     invoke-virtual/range {v2 .. v11}, Lcom/android/server/notification/NotificationManagerService;->cancelAllNotificationsInt(IILjava/lang/String;IIZIILcom/android/server/notification/ManagedServices$ManagedServiceInfo;)Z
 
-    .line 873
     :cond_5
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_3
 
-    .line 822
     .end local v5    # "pkgName":Ljava/lang/String;
     .end local v9    # "userHandle":I
     .end local v13    # "arr$":[Ljava/lang/String;
@@ -323,12 +299,10 @@
 
     goto :goto_1
 
-    .line 827
     .restart local v24    # "queryReplace":Z
     :cond_7
     if-eqz v25, :cond_8
 
-    .line 828
     const-string v2, "android.intent.extra.PACKAGES"
 
     move-object/from16 v0, p2
@@ -339,35 +313,28 @@
 
     goto :goto_2
 
-    .line 830
     :cond_8
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v26
 
-    .line 831
     .local v26, "uri":Landroid/net/Uri;
     if-eqz v26, :cond_0
 
-    .line 834
     invoke-virtual/range {v26 .. v26}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 835
     .restart local v5    # "pkgName":Ljava/lang/String;
     if-eqz v5, :cond_0
 
-    .line 838
     if-eqz v20, :cond_a
 
-    .line 841
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v22
 
-    .line 842
     .local v22, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, -0x1
 
@@ -384,7 +351,6 @@
 
     move-result v17
 
-    .line 845
     .local v17, "enabled":I
     const/4 v2, 0x1
 
@@ -394,11 +360,9 @@
 
     if-nez v17, :cond_a
 
-    .line 847
     :cond_9
     const/4 v14, 0x0
 
-    .line 859
     .end local v17    # "enabled":I
     .end local v22    # "pm":Landroid/content/pm/IPackageManager;
     :cond_a
@@ -417,7 +381,6 @@
     .restart local v21    # "pkgList":[Ljava/lang/String;
     goto :goto_2
 
-    .line 842
     .restart local v15    # "changeUserId":I
     .restart local v22    # "pm":Landroid/content/pm/IPackageManager;
     :cond_b
@@ -425,19 +388,16 @@
 
     goto :goto_5
 
-    .line 849
     .end local v15    # "changeUserId":I
     .end local v22    # "pm":Landroid/content/pm/IPackageManager;
     :catch_0
     move-exception v16
 
-    .line 852
     .local v16, "e":Ljava/lang/IllegalArgumentException;
     sget-boolean v2, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
     if-eqz v2, :cond_a
 
-    .line 853
     const-string v2, "NotificationService"
 
     const-string v3, "Exception trying to look up app enabled setting"
@@ -448,7 +408,6 @@
 
     goto :goto_6
 
-    .line 897
     .end local v16    # "e":Ljava/lang/IllegalArgumentException;
     .end local v26    # "uri":Landroid/net/Uri;
     .restart local v9    # "userHandle":I
@@ -460,7 +419,6 @@
 
     goto :goto_4
 
-    .line 902
     .end local v5    # "pkgName":Ljava/lang/String;
     .end local v13    # "arr$":[Ljava/lang/String;
     .end local v18    # "i$":I
@@ -481,7 +439,6 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->onPackagesChanged(Z[Ljava/lang/String;)V
 
-    .line 903
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$2;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -497,7 +454,6 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/android/server/notification/ConditionProviders;->onPackagesChanged(Z[Ljava/lang/String;)V
 
-    .line 904
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$2;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -515,7 +471,6 @@
 
     goto/16 :goto_0
 
-    .line 855
     .end local v9    # "userHandle":I
     .restart local v5    # "pkgName":Ljava/lang/String;
     .restart local v26    # "uri":Landroid/net/Uri;

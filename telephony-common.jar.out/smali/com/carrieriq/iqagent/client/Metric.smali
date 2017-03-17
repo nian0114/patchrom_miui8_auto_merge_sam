@@ -19,10 +19,8 @@
     .param p1, "_metricID"    # I
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     return-void
 .end method
 
@@ -32,10 +30,8 @@
     .param p2, "_ts"    # J
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .param p0, "_id"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     const/4 v0, -0x1
 
     return v0
@@ -57,7 +52,6 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 18
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .param p0, "_id"    # I
 
     .prologue
-    .line 21
     const/4 v0, 0x0
 
     return-object v0
@@ -84,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 40
     const/4 v0, 0x0
 
     return v0
@@ -95,7 +87,6 @@
     .param p1, "_ts"    # J
 
     .prologue
-    .line 31
     return-void
 .end method
 
@@ -110,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 34
     return-void
 .end method
 
@@ -125,6 +115,5 @@
     .end annotation
 
     .prologue
-    .line 37
     return-void
 .end method

@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 6499
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$AccessControlEnableChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
-    .line 6500
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 6501
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 6504
     :try_start_0
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$AccessControlEnableChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -72,7 +68,6 @@
 
     const/4 v1, 0x1
 
-    .line 6507
     .local v1, "isAccessControlEnable":Z
     :goto_0
     const-string v2, "InputMethodManagerService"
@@ -119,29 +114,24 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6508
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$AccessControlEnableChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/InputMethodManagerService;->setAccessControlEnable(Z)V
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6512
     .end local v1    # "isAccessControlEnable":Z
     :goto_1
     return-void
 
-    .line 6504
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 6509
     :catch_0
     move-exception v0
 
-    .line 6510
     .local v0, "e":Landroid/provider/Settings$SettingNotFoundException;
     const-string v2, "InputMethodManagerService"
 

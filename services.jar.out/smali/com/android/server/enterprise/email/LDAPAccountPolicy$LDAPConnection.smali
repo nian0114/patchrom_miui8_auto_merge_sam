@@ -29,15 +29,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 177
     iput p2, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->mUserId:I
 
-    .line 178
     return-void
 .end method
 
@@ -49,23 +46,19 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 182
     invoke-static {p2}, Landroid/app/enterprise/ILDAPInterface$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/enterprise/ILDAPInterface;
 
     move-result-object v0
 
-    .line 183
     .local v0, "service":Landroid/app/enterprise/ILDAPInterface;
     if-nez v0, :cond_0
 
-    .line 184
     const-string v2, "LDAPAccountPolicyService"
 
     const-string v3, "LDAPConnection: onServiceConnected() : service is null"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 186
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
@@ -83,7 +76,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 187
     iget-object v2, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v2, v2, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;
@@ -100,11 +92,9 @@
 
     check-cast v1, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPServiceConnection;
 
-    .line 188
     .local v1, "serviceConnection":Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPServiceConnection;
     iput-object v0, v1, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPServiceConnection;->mService:Landroid/app/enterprise/ILDAPInterface;
 
-    .line 189
     iget-object v2, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v2, v2, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;
@@ -117,12 +107,10 @@
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     iget-object v2, v1, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPServiceConnection;->mBindComplete:Landroid/os/ConditionVariable;
 
     invoke-virtual {v2}, Landroid/os/ConditionVariable;->open()V
 
-    .line 191
     const-string v2, "LDAPAccountPolicyService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -147,12 +135,10 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
     .end local v1    # "serviceConnection":Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPServiceConnection;
     :goto_0
     return-void
 
-    .line 193
     :cond_1
     const-string v2, "LDAPAccountPolicyService"
 
@@ -186,7 +172,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 199
     iget-object v1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v1, v1, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;
@@ -203,7 +188,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 201
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
@@ -212,7 +196,6 @@
     # invokes: Lcom/android/server/enterprise/email/LDAPAccountPolicy;->unregisterReceiver(I)Z
     invoke-static {v1, v2}, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->access$200(Lcom/android/server/enterprise/email/LDAPAccountPolicy;I)Z
 
-    .line 202
     const-string v1, "LDAPAccountPolicyService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -240,7 +223,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 206
     iget-object v1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v1, v1, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;
@@ -253,15 +235,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     :goto_0
     return-void
 
-    .line 203
     :catch_0
     move-exception v0
 
-    .line 204
     .local v0, "ex":Ljava/lang/IllegalArgumentException;
     :try_start_1
     const-string v1, "LDAPAccountPolicyService"
@@ -272,7 +251,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 206
     iget-object v1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPConnection;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v1, v1, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;
@@ -305,7 +283,6 @@
 
     throw v1
 
-    .line 209
     :cond_0
     const-string v1, "LDAPAccountPolicyService"
 

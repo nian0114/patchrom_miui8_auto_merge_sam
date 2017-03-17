@@ -39,17 +39,14 @@
     .locals 1
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
-    .line 210
     return-void
 .end method
 
@@ -60,10 +57,8 @@
     .param p1, "typefaceFilename"    # Ljava/lang/String;
 
     .prologue
-    .line 376
     const/4 v1, 0x0
 
-    .line 381
     .local v1, "typeface":Lcom/android/server/enterprise/general/Typeface;
     const/4 v0, 0x0
 
@@ -77,7 +72,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 385
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -87,7 +81,6 @@
     .end local v1    # "typeface":Lcom/android/server/enterprise/general/Typeface;
     check-cast v1, Lcom/android/server/enterprise/general/Typeface;
 
-    .line 387
     .restart local v1    # "typeface":Lcom/android/server/enterprise/general/Typeface;
     invoke-virtual {v1}, Lcom/android/server/enterprise/general/Typeface;->getTypefaceFilename()Ljava/lang/String;
 
@@ -99,15 +92,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 397
     :cond_0
     return-object v1
 
-    .line 392
     :cond_1
     const/4 v1, 0x0
 
-    .line 381
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -118,10 +108,8 @@
     .param p1, "fontName"    # Ljava/lang/String;
 
     .prologue
-    .line 406
     const/4 v1, 0x0
 
-    .line 408
     .local v1, "typeface":Lcom/android/server/enterprise/general/Typeface;
     const-string v2, "TypefaceFinder"
 
@@ -129,7 +117,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "findMatchingTypefaceByName:"
+    const-string v4, "findMatchingTypefaceByName:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -145,7 +133,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -158,7 +145,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 415
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -168,7 +154,6 @@
     .end local v1    # "typeface":Lcom/android/server/enterprise/general/Typeface;
     check-cast v1, Lcom/android/server/enterprise/general/Typeface;
 
-    .line 416
     .restart local v1    # "typeface":Lcom/android/server/enterprise/general/Typeface;
     const-string v2, "TypefaceFinder"
 
@@ -176,7 +161,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "findMatchingTypeface:"
+    const-string v4, "findMatchingTypeface:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -196,7 +181,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 417
     invoke-virtual {v1}, Lcom/android/server/enterprise/general/Typeface;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -207,15 +191,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 427
     :cond_0
     return-object v1
 
-    .line 422
     :cond_1
     const/4 v1, 0x0
 
-    .line 411
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -227,13 +208,11 @@
     .param p2, "fontPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     const/4 v3, 0x0
 
-    .line 115
     .local v3, "xmlfiles":[Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v4, "xml"
+    const-string v4, "xml"
 
     invoke-virtual {p1, v4}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
     :try_end_0
@@ -241,23 +220,20 @@
 
     move-result-object v3
 
-    .line 129
     const/4 v1, 0x0
 
-    .line 131
     .local v1, "i":I
     :goto_0
     array-length v4, v3
 
     if-ge v1, v4, :cond_0
 
-    .line 135
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "xml/"
+    const-string v5, "xml/"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -277,7 +253,6 @@
 
     move-result-object v2
 
-    .line 137
     .local v2, "in":Ljava/io/InputStream;
     aget-object v4, v3, v1
 
@@ -285,23 +260,19 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 147
     .end local v2    # "in":Ljava/io/InputStream;
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 119
     .end local v1    # "i":I
     :catch_0
     move-exception v0
 
-    .line 121
     .local v0, "ex":Ljava/lang/Exception;
     const/4 v4, 0x0
 
-    .line 151
     .end local v0    # "ex":Ljava/lang/Exception;
     :goto_2
     return v4
@@ -312,7 +283,6 @@
 
     goto :goto_2
 
-    .line 141
     :catch_1
     move-exception v4
 
@@ -325,17 +295,14 @@
     .param p2, "entryValues"    # Ljava/util/Vector;
 
     .prologue
-    .line 334
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-virtual {p1, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 336
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-virtual {p2, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 340
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -348,7 +315,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 344
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -361,14 +327,11 @@
 
     move-result-object v1
 
-    .line 346
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 350
     invoke-virtual {p1, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 352
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -383,13 +346,11 @@
 
     invoke-virtual {p2, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 340
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 358
     .end local v1    # "s":Ljava/lang/String;
     :cond_1
     return-void
@@ -402,22 +363,18 @@
     .param p3, "fontPackageName"    # Ljava/util/Vector;
 
     .prologue
-    .line 239
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-virtual {p1, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 241
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-virtual {p2, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 243
     const-string v2, ""
 
     invoke-virtual {p3, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 250
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     new-instance v3, Lcom/android/server/enterprise/general/TypefaceFinder$TypefaceSortByName;
@@ -426,7 +383,6 @@
 
     invoke-static {v2, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 254
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -439,7 +395,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 258
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -452,14 +407,11 @@
 
     move-result-object v1
 
-    .line 260
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 264
     invoke-virtual {p1, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 266
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -474,7 +426,6 @@
 
     invoke-virtual {p2, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 268
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -489,13 +440,11 @@
 
     invoke-virtual {p3, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 254
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 274
     .end local v1    # "s":Ljava/lang/String;
     :cond_1
     return-void
@@ -507,17 +456,14 @@
     .param p2, "entryValues"    # Ljava/util/Vector;
 
     .prologue
-    .line 292
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-virtual {p1, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 294
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-virtual {p2, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 298
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -530,7 +476,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 302
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -543,14 +488,11 @@
 
     move-result-object v1
 
-    .line 304
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 308
     invoke-virtual {p1, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 310
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -565,13 +507,11 @@
 
     invoke-virtual {p2, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 298
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 316
     .end local v1    # "s":Ljava/lang/String;
     :cond_1
     return-void
@@ -584,61 +524,50 @@
     .param p3, "fontPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 167
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/SAXParserFactory;->newInstance()Ljavax/xml/parsers/SAXParserFactory;
 
     move-result-object v3
 
-    .line 169
     .local v3, "spf":Ljavax/xml/parsers/SAXParserFactory;
     invoke-virtual {v3}, Ljavax/xml/parsers/SAXParserFactory;->newSAXParser()Ljavax/xml/parsers/SAXParser;
 
     move-result-object v2
 
-    .line 171
     .local v2, "sp":Ljavax/xml/parsers/SAXParser;
     invoke-virtual {v2}, Ljavax/xml/parsers/SAXParser;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object v4
 
-    .line 175
     .local v4, "xr":Lorg/xml/sax/XMLReader;
     new-instance v0, Lcom/android/server/enterprise/general/TypefaceParser;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/general/TypefaceParser;-><init>()V
 
-    .line 177
     .local v0, "fontParser":Lcom/android/server/enterprise/general/TypefaceParser;
     invoke-interface {v4, v0}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 179
     new-instance v5, Lorg/xml/sax/InputSource;
 
     invoke-direct {v5, p2}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
 
     invoke-interface {v4, v5}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
-    .line 183
     invoke-virtual {v0}, Lcom/android/server/enterprise/general/TypefaceParser;->getParsedData()Lcom/android/server/enterprise/general/Typeface;
 
     move-result-object v1
 
-    .line 187
     .local v1, "newTypeface":Lcom/android/server/enterprise/general/Typeface;
     invoke-virtual {v1, p1}, Lcom/android/server/enterprise/general/Typeface;->setTypefaceFilename(Ljava/lang/String;)V
 
-    .line 189
     invoke-virtual {v1, p3}, Lcom/android/server/enterprise/general/Typeface;->setFontPackageName(Ljava/lang/String;)V
 
-    .line 192
     iget-object v5, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 204
     .end local v0    # "fontParser":Lcom/android/server/enterprise/general/TypefaceParser;
     .end local v1    # "newTypeface":Lcom/android/server/enterprise/general/Typeface;
     .end local v2    # "sp":Ljavax/xml/parsers/SAXParser;
@@ -647,7 +576,6 @@
     :goto_0
     return-void
 
-    .line 196
     :catch_0
     move-exception v5
 

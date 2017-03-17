@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,10 +27,8 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 12
     const/4 v0, 0x0
 
-    .line 13
     .local v0, "ret":I
     const-string v1, "SecureStorageService"
 
@@ -55,23 +52,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     const-string v1, "arm"
 
     if-ne p1, v1, :cond_0
 
-    .line 15
     const/16 v1, 0x20
 
     invoke-static {p0, v1, p2}, Lcom/android/server/pm/SecureStorageService;->nativeSignDexFile(Ljava/lang/String;II)I
 
     move-result v0
 
-    .line 19
     :goto_0
     return v0
 
-    .line 17
     :cond_0
     const/16 v1, 0x40
 

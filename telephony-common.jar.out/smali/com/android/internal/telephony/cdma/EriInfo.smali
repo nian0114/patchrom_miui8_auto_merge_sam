@@ -42,27 +42,19 @@
     .param p6, "alertId"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput p1, p0, Lcom/android/internal/telephony/cdma/EriInfo;->roamingIndicator:I
 
-    .line 42
     iput p2, p0, Lcom/android/internal/telephony/cdma/EriInfo;->iconIndex:I
 
-    .line 43
     iput p3, p0, Lcom/android/internal/telephony/cdma/EriInfo;->iconMode:I
 
-    .line 44
     iput-object p4, p0, Lcom/android/internal/telephony/cdma/EriInfo;->eriText:Ljava/lang/String;
 
-    .line 45
     iput p5, p0, Lcom/android/internal/telephony/cdma/EriInfo;->callPromptId:I
 
-    .line 46
     iput p6, p0, Lcom/android/internal/telephony/cdma/EriInfo;->alertId:I
 
-    .line 47
     return-void
 .end method

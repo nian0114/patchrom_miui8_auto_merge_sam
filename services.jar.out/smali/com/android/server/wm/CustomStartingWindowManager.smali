@@ -74,40 +74,36 @@
     .locals 3
 
     .prologue
-    .line 250
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system"
 
-    const-string/jumbo v2, "startingwindow"
+    const-string v2, "startingwindow"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowPath:Ljava/io/File;
 
-    .line 251
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system"
 
-    const-string/jumbo v2, "reversestartingwindow"
+    const-string v2, "reversestartingwindow"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowPath:Ljava/io/File;
 
-    .line 252
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system"
 
-    const-string/jumbo v2, "keyguardpreview"
+    const-string v2, "keyguardpreview"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewPath:Ljava/io/File;
 
-    .line 253
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/custom_image"
@@ -124,49 +120,40 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 259
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 240
-    const-string/jumbo v0, "resId"
+    const-string v0, "resId"
 
     iput-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->TAG_RESID:Ljava/lang/String;
 
-    .line 246
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
-    .line 247
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
 
-    .line 248
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
 
-    .line 260
     const-string v0, "CustomStartingWindowManager"
 
     const-string v1, "CustomStartingWindow Constructed"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     iput-object p1, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mContext:Landroid/content/Context;
 
-    .line 262
     invoke-direct {p0}, Lcom/android/server/wm/CustomStartingWindowManager;->restoreAllFromXml()V
 
-    .line 264
     sget-object v0, Lcom/android/server/wm/CustomStartingWindowManager;->mCustomImageSystemPath:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -175,19 +162,16 @@
 
     if-nez v0, :cond_0
 
-    .line 265
     const-string v0, "CustomStartingWindowManager"
 
     const-string v1, "CustomStartingWindow custom image dir created"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     sget-object v0, Lcom/android/server/wm/CustomStartingWindowManager;->mCustomImageSystemPath:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 268
     :cond_0
     return-void
 .end method
@@ -198,19 +182,15 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 373
     const/4 v0, 0x0
 
-    .line 374
     .local v0, "file":Ljava/io/File;
     packed-switch p2, :pswitch_data_0
 
-    .line 394
     :cond_0
     :goto_0
     return-void
 
-    .line 376
     :pswitch_0
     new-instance v0, Ljava/io/File;
 
@@ -237,7 +217,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 391
     .restart local v0    # "file":Ljava/io/File;
     :goto_1
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -246,12 +225,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 392
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 380
     :pswitch_1
     new-instance v0, Ljava/io/File;
 
@@ -278,11 +255,9 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 381
     .restart local v0    # "file":Ljava/io/File;
     goto :goto_1
 
-    .line 384
     :pswitch_2
     new-instance v0, Ljava/io/File;
 
@@ -309,11 +284,9 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 385
     .restart local v0    # "file":Ljava/io/File;
     goto :goto_1
 
-    .line 374
     nop
 
     :pswitch_data_0
@@ -328,7 +301,6 @@
     .locals 14
 
     .prologue
-    .line 465
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
@@ -337,12 +309,10 @@
 
     if-nez v11, :cond_0
 
-    .line 466
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->mkdir()Z
 
-    .line 469
     :cond_0
     iget-object v11, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mContext:Landroid/content/Context;
 
@@ -350,7 +320,6 @@
 
     move-result-object v7
 
-    .line 470
     .local v7, "pm":Landroid/content/pm/PackageManager;
     const-string v11, "CustomStartingWindowManager"
 
@@ -380,14 +349,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v10
 
-    .line 472
     .local v10, "tmpStartingWindowFiles":[Ljava/io/File;
     const-string v11, "CustomStartingWindowManager"
 
@@ -413,7 +380,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
     move-object v0, v10
 
     .local v0, "arr$":[Ljava/io/File;
@@ -428,7 +394,6 @@
 
     aget-object v2, v0, v4
 
-    .line 475
     .local v2, "file":Ljava/io/File;
     const-string v11, "CustomStartingWindowManager"
 
@@ -456,13 +421,11 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 478
     .local v3, "fileName":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -476,7 +439,6 @@
 
     move-result-object v6
 
-    .line 479
     .local v6, "packageName":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -484,12 +446,10 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 485
     const/4 v11, 0x1
 
     invoke-direct {p0, v2, v11}, Lcom/android/server/wm/CustomStartingWindowManager;->restoreFromXml(Ljava/io/File;I)V
 
-    .line 474
     .end local v3    # "fileName":Ljava/lang/String;
     .end local v6    # "packageName":Ljava/lang/String;
     :goto_1
@@ -497,11 +457,9 @@
 
     goto :goto_0
 
-    .line 480
     :catch_0
     move-exception v1
 
-    .line 481
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v11, "CustomStartingWindowManager"
 
@@ -509,12 +467,10 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 482
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_1
 
-    .line 488
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v2    # "file":Ljava/io/File;
     :cond_1
@@ -526,12 +482,10 @@
 
     if-nez v11, :cond_2
 
-    .line 489
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->mkdir()Z
 
-    .line 492
     :cond_2
     const-string v11, "CustomStartingWindowManager"
 
@@ -561,14 +515,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 493
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v9
 
-    .line 494
     .local v9, "tempReverseStartingWindowFiles":[Ljava/io/File;
     const-string v11, "CustomStartingWindowManager"
 
@@ -594,7 +546,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 495
     move-object v0, v9
 
     array-length v5, v0
@@ -606,7 +557,6 @@
 
     aget-object v2, v0, v4
 
-    .line 496
     .restart local v2    # "file":Ljava/io/File;
     const-string v11, "CustomStartingWindowManager"
 
@@ -634,13 +584,11 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     :try_start_1
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 499
     .restart local v3    # "fileName":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -654,7 +602,6 @@
 
     move-result-object v6
 
-    .line 500
     .restart local v6    # "packageName":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -662,12 +609,10 @@
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 506
     const/4 v11, 0x2
 
     invoke-direct {p0, v2, v11}, Lcom/android/server/wm/CustomStartingWindowManager;->restoreFromXml(Ljava/io/File;I)V
 
-    .line 495
     .end local v3    # "fileName":Ljava/lang/String;
     .end local v6    # "packageName":Ljava/lang/String;
     :goto_3
@@ -675,11 +620,9 @@
 
     goto :goto_2
 
-    .line 501
     :catch_1
     move-exception v1
 
-    .line 502
     .restart local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v11, "CustomStartingWindowManager"
 
@@ -687,12 +630,10 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_3
 
-    .line 509
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v2    # "file":Ljava/io/File;
     :cond_3
@@ -704,12 +645,10 @@
 
     if-nez v11, :cond_4
 
-    .line 510
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->mkdir()Z
 
-    .line 513
     :cond_4
     const-string v11, "CustomStartingWindowManager"
 
@@ -739,14 +678,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     sget-object v11, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewPath:Ljava/io/File;
 
     invoke-virtual {v11}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v8
 
-    .line 515
     .local v8, "tempKeyguardPreviewFiles":[Ljava/io/File;
     const-string v11, "CustomStartingWindowManager"
 
@@ -772,7 +709,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
     move-object v0, v8
 
     array-length v5, v0
@@ -784,7 +720,6 @@
 
     aget-object v2, v0, v4
 
-    .line 517
     .restart local v2    # "file":Ljava/io/File;
     const-string v11, "CustomStartingWindowManager"
 
@@ -812,13 +747,11 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
     :try_start_2
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 520
     .restart local v3    # "fileName":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -832,7 +765,6 @@
 
     move-result-object v6
 
-    .line 521
     .restart local v6    # "packageName":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -840,12 +772,10 @@
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 527
     const/4 v11, 0x3
 
     invoke-direct {p0, v2, v11}, Lcom/android/server/wm/CustomStartingWindowManager;->restoreFromXml(Ljava/io/File;I)V
 
-    .line 516
     .end local v3    # "fileName":Ljava/lang/String;
     .end local v6    # "packageName":Ljava/lang/String;
     :goto_5
@@ -853,11 +783,9 @@
 
     goto :goto_4
 
-    .line 522
     :catch_2
     move-exception v1
 
-    .line 523
     .restart local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v11, "CustomStartingWindowManager"
 
@@ -865,12 +793,10 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_5
 
-    .line 529
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v2    # "file":Ljava/io/File;
     :cond_5
@@ -883,20 +809,16 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 532
     const/4 v7, 0x0
 
-    .line 533
     .local v7, "reader":Ljava/io/BufferedReader;
     const/4 v0, 0x0
 
-    .line 534
     .local v0, "deleteFile":Z
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 535
     .local v3, "fileName":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -910,7 +832,6 @@
 
     move-result-object v6
 
-    .line 538
     .local v6, "packageName":Ljava/lang/String;
     :try_start_0
     new-instance v8, Ljava/io/BufferedReader;
@@ -924,7 +845,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 539
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .local v8, "reader":Ljava/io/BufferedReader;
     :try_start_1
@@ -932,11 +852,9 @@
 
     move-result-object v4
 
-    .line 540
     .local v4, "in":Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface {v4, v8}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 542
     :goto_0
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -951,19 +869,16 @@
 
     if-eq v2, v9, :cond_7
 
-    .line 543
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 544
     .local v5, "name":Ljava/lang/String;
     const/4 v9, 0x2
 
     if-ne v2, v9, :cond_0
 
-    .line 545
-    const-string/jumbo v9, "resId"
+    const-string v9, "resId"
 
     invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -971,17 +886,14 @@
 
     if-eqz v9, :cond_6
 
-    .line 546
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v2
 
-    .line 547
     const/4 v9, 0x4
 
     if-ne v2, v9, :cond_3
 
-    .line 548
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v9
@@ -996,7 +908,6 @@
 
     invoke-virtual {p0, v6, v9, p2}, Lcom/android/server/wm/CustomStartingWindowManager;->addCustomLayoutResId(Ljava/lang/String;II)V
 
-    .line 549
     const-string v9, "CustomStartingWindowManager"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1019,7 +930,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 557
     :cond_0
     :goto_1
     invoke-static {v4}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
@@ -1029,7 +939,6 @@
 
     goto :goto_0
 
-    .line 559
     .end local v2    # "event":I
     .end local v4    # "in":Lorg/xmlpull/v1/XmlPullParser;
     .end local v5    # "name":Ljava/lang/String;
@@ -1038,7 +947,6 @@
 
     move-object v7, v8
 
-    .line 560
     .end local v8    # "reader":Ljava/io/BufferedReader;
     .local v1, "e":Ljava/lang/Exception;
     .restart local v7    # "reader":Ljava/io/BufferedReader;
@@ -1068,33 +976,26 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 561
     const/4 v0, 0x1
 
-    .line 563
     if-eqz v7, :cond_1
 
-    .line 565
     :try_start_3
     invoke-virtual {v7}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 569
     :cond_1
     :goto_3
     if-eqz v0, :cond_2
 
-    .line 570
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 573
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_4
     return-void
 
-    .line 551
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "event":I
     .restart local v4    # "in":Lorg/xmlpull/v1/XmlPullParser;
@@ -1129,7 +1030,6 @@
 
     goto :goto_1
 
-    .line 563
     .end local v2    # "event":I
     .end local v4    # "in":Lorg/xmlpull/v1/XmlPullParser;
     .end local v5    # "name":Ljava/lang/String;
@@ -1143,24 +1043,20 @@
     :goto_5
     if-eqz v7, :cond_4
 
-    .line 565
     :try_start_5
     invoke-virtual {v7}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 569
     :cond_4
     :goto_6
     if-eqz v0, :cond_5
 
-    .line 570
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     :cond_5
     throw v9
 
-    .line 554
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "event":I
     .restart local v4    # "in":Lorg/xmlpull/v1/XmlPullParser;
@@ -1205,23 +1101,19 @@
 
     goto :goto_1
 
-    .line 563
     .end local v5    # "name":Ljava/lang/String;
     :cond_7
     if-eqz v8, :cond_8
 
-    .line 565
     :try_start_7
     invoke-virtual {v8}, Ljava/io/BufferedReader;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
 
-    .line 569
     :cond_8
     :goto_7
     if-eqz v0, :cond_9
 
-    .line 570
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-object v7, v8
@@ -1230,7 +1122,6 @@
     .restart local v7    # "reader":Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 566
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .restart local v8    # "reader":Ljava/io/BufferedReader;
     :catch_1
@@ -1254,13 +1145,11 @@
 
     goto :goto_6
 
-    .line 563
     :catchall_1
     move-exception v9
 
     goto :goto_5
 
-    .line 559
     :catch_4
     move-exception v1
 
@@ -1291,22 +1180,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 356
     new-instance v1, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v1}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 357
     .local v1, "xmlSerializer":Lorg/xmlpull/v1/XmlSerializer;
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 358
     .local v0, "stringWriter":Ljava/io/StringWriter;
     invoke-interface {v1, v0}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/Writer;)V
 
-    .line 360
     const/4 v2, 0x1
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1315,30 +1200,24 @@
 
     invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 362
-    const-string/jumbo v2, "resId"
+    const-string v2, "resId"
 
     invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 363
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v1, v2}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 364
-    const-string/jumbo v2, "resId"
+    const-string v2, "resId"
 
     invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 366
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 367
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
 
-    .line 369
     return-object v0
 .end method
 
@@ -1346,7 +1225,6 @@
     .locals 5
 
     .prologue
-    .line 451
     iget-object v4, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1371,7 +1249,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 452
     .local v3, "startingWindowPackageName":Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -1379,7 +1256,6 @@
 
     goto :goto_0
 
-    .line 455
     .end local v3    # "startingWindowPackageName":Ljava/lang/String;
     :cond_0
     iget-object v4, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
@@ -1405,7 +1281,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 456
     .local v2, "reverseStartingWindowPackageName":Ljava/lang/String;
     const/4 v4, 0x2
 
@@ -1413,7 +1288,6 @@
 
     goto :goto_1
 
-    .line 459
     .end local v2    # "reverseStartingWindowPackageName":Ljava/lang/String;
     :cond_1
     iget-object v4, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
@@ -1439,7 +1313,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 460
     .local v1, "keyguardPreviewPackageName":Ljava/lang/String;
     const/4 v4, 0x3
 
@@ -1447,7 +1320,6 @@
 
     goto :goto_2
 
-    .line 462
     .end local v1    # "keyguardPreviewPackageName":Ljava/lang/String;
     :cond_2
     return-void
@@ -1459,30 +1331,23 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 398
     const/4 v4, 0x0
 
-    .line 399
     .local v4, "pathFile":Ljava/io/File;
     const/4 v5, 0x0
 
-    .line 401
     .local v5, "resIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     packed-switch p2, :pswitch_data_0
 
-    .line 448
     :cond_0
     :goto_0
     return-void
 
-    .line 403
     :pswitch_0
     sget-object v4, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowPath:Ljava/io/File;
 
-    .line 404
     iget-object v5, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
-    .line 421
     :goto_1
     invoke-interface {v5, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1490,14 +1355,11 @@
 
     if-eqz v6, :cond_0
 
-    .line 422
     const/4 v3, 0x0
 
-    .line 423
     .local v3, "file":Ljava/io/FileOutputStream;
     const/4 v0, 0x0
 
-    .line 425
     .local v0, "atomicFile":Landroid/util/AtomicFile;
     :try_start_0
     new-instance v1, Landroid/util/AtomicFile;
@@ -1530,7 +1392,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 426
     .end local v0    # "atomicFile":Landroid/util/AtomicFile;
     .local v1, "atomicFile":Landroid/util/AtomicFile;
     :try_start_1
@@ -1538,7 +1399,6 @@
 
     move-result-object v3
 
-    .line 427
     invoke-interface {v5, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -1563,15 +1423,12 @@
 
     invoke-virtual {v3, v6}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 428
     const/16 v6, 0xa
 
     invoke-virtual {v3, v6}, Ljava/io/FileOutputStream;->write(I)V
 
-    .line 429
     invoke-virtual {v1, v3}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
-    .line 430
     const-string v6, "CustomStartingWindowManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1608,23 +1465,19 @@
 
     goto :goto_0
 
-    .line 431
     :catch_0
     move-exception v2
 
     move-object v0, v1
 
-    .line 432
     .end local v1    # "atomicFile":Landroid/util/AtomicFile;
     .restart local v0    # "atomicFile":Landroid/util/AtomicFile;
     .local v2, "e":Ljava/io/IOException;
     :goto_2
     if-eqz v3, :cond_1
 
-    .line 433
     invoke-virtual {v0, v3}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 435
     :cond_1
     const-string v6, "CustomStartingWindowManager"
 
@@ -1660,44 +1513,34 @@
 
     goto/16 :goto_0
 
-    .line 408
     .end local v0    # "atomicFile":Landroid/util/AtomicFile;
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "file":Ljava/io/FileOutputStream;
     :pswitch_1
     sget-object v4, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowPath:Ljava/io/File;
 
-    .line 409
     iget-object v5, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
 
-    .line 410
     goto/16 :goto_1
 
-    .line 413
     :pswitch_2
     sget-object v4, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewPath:Ljava/io/File;
 
-    .line 414
     iget-object v5, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
 
-    .line 415
     goto/16 :goto_1
 
-    .line 436
     .restart local v0    # "atomicFile":Landroid/util/AtomicFile;
     .restart local v3    # "file":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v2
 
-    .line 437
     .local v2, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :goto_3
     if-eqz v3, :cond_2
 
-    .line 438
     invoke-virtual {v0, v3}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 440
     :cond_2
     const-string v6, "CustomStartingWindowManager"
 
@@ -1733,20 +1576,16 @@
 
     goto/16 :goto_0
 
-    .line 441
     .end local v2    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v2
 
-    .line 442
     .local v2, "e":Ljava/lang/NullPointerException;
     :goto_4
     if-eqz v3, :cond_3
 
-    .line 443
     invoke-virtual {v0, v3}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 445
     :cond_3
     const-string v6, "CustomStartingWindowManager"
 
@@ -1782,7 +1621,6 @@
 
     goto/16 :goto_0
 
-    .line 441
     .end local v0    # "atomicFile":Landroid/util/AtomicFile;
     .end local v2    # "e":Ljava/lang/NullPointerException;
     .restart local v1    # "atomicFile":Landroid/util/AtomicFile;
@@ -1795,7 +1633,6 @@
     .restart local v0    # "atomicFile":Landroid/util/AtomicFile;
     goto :goto_4
 
-    .line 436
     .end local v0    # "atomicFile":Landroid/util/AtomicFile;
     .restart local v1    # "atomicFile":Landroid/util/AtomicFile;
     :catch_4
@@ -1807,13 +1644,11 @@
     .restart local v0    # "atomicFile":Landroid/util/AtomicFile;
     goto :goto_3
 
-    .line 431
     :catch_5
     move-exception v2
 
     goto/16 :goto_2
 
-    .line 401
     nop
 
     :pswitch_data_0
@@ -1833,14 +1668,11 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 271
     packed-switch p3, :pswitch_data_0
 
-    .line 288
     :goto_0
     return-void
 
-    .line 273
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
@@ -1850,13 +1682,11 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 287
     :goto_1
     invoke-direct {p0, p1, p3}, Lcom/android/server/wm/CustomStartingWindowManager;->writeXml(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 277
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
 
@@ -1868,7 +1698,6 @@
 
     goto :goto_1
 
-    .line 281
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
 
@@ -1880,7 +1709,6 @@
 
     goto :goto_1
 
-    .line 271
     nop
 
     :pswitch_data_0
@@ -1896,7 +1724,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 329
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1905,7 +1732,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 330
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1918,7 +1744,6 @@
 
     move-result v0
 
-    .line 332
     :goto_0
     return v0
 
@@ -1938,10 +1763,8 @@
 
     const/4 v3, 0x0
 
-    .line 291
     if-eqz p1, :cond_6
 
-    .line 292
     iget-object v2, p1, Lcom/android/server/wm/CustomStartingWindowData;->key:Ljava/lang/String;
 
     const-string v4, "/"
@@ -1952,11 +1775,9 @@
 
     aget-object v0, v2, v3
 
-    .line 293
     .local v0, "pkgName":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 295
     .local v1, "resId":I
     if-eq p2, v5, :cond_0
 
@@ -1964,20 +1785,17 @@
 
     if-ne p2, v2, :cond_1
 
-    .line 296
     :cond_0
     iget v2, p1, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfReverseLayout:I
 
     if-eqz v2, :cond_3
 
-    .line 297
     const-string v2, "CustomStartingWindowManager"
 
     const-string v4, "CustomStartingWindow reverse layout will show"
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     iget-object v2, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1986,7 +1804,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 299
     iget-object v2, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1999,19 +1816,16 @@
 
     move-result v1
 
-    .line 308
     :cond_1
     :goto_0
     if-lez v1, :cond_4
 
-    .line 325
     .end local v0    # "pkgName":Ljava/lang/String;
     .end local v1    # "resId":I
     :cond_2
     :goto_1
     return v1
 
-    .line 302
     .restart local v0    # "pkgName":Ljava/lang/String;
     .restart local v1    # "resId":I
     :cond_3
@@ -2023,19 +1837,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 303
     invoke-virtual {p0, v0, v5}, Lcom/android/server/wm/CustomStartingWindowManager;->removeCustomLayoutResId(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 312
     :cond_4
     iget v1, p1, Lcom/android/server/wm/CustomStartingWindowData;->resIdOfDefaultLayout:I
 
-    .line 313
     if-lez v1, :cond_5
 
-    .line 314
     iget-object v2, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -2044,7 +1854,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 315
     iget-object v2, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2059,7 +1868,6 @@
 
     goto :goto_1
 
-    .line 319
     :cond_5
     iget-object v2, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
@@ -2069,7 +1877,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 320
     const/4 v2, 0x1
 
     invoke-virtual {p0, v0, v2}, Lcom/android/server/wm/CustomStartingWindowManager;->removeCustomLayoutResId(Ljava/lang/String;I)V
@@ -2079,7 +1886,6 @@
     :cond_6
     move v1, v3
 
-    .line 325
     goto :goto_1
 .end method
 
@@ -2089,26 +1895,21 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 336
     packed-switch p2, :pswitch_data_0
 
-    .line 353
     :goto_0
     return-void
 
-    .line 338
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowResId:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 352
     :goto_1
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/CustomStartingWindowManager;->removeXml(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 342
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mReverseStartingWindowResId:Ljava/util/Map;
 
@@ -2116,7 +1917,6 @@
 
     goto :goto_1
 
-    .line 346
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/wm/CustomStartingWindowManager;->mKeyguardPreviewResId:Ljava/util/Map;
 
@@ -2124,7 +1924,6 @@
 
     goto :goto_1
 
-    .line 336
     nop
 
     :pswitch_data_0
@@ -2143,12 +1942,10 @@
     .param p4, "rotation"    # I
 
     .prologue
-    .line 576
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 578
     .local v2, "before":J
     const/high16 v16, 0x100000
 
@@ -2156,29 +1953,23 @@
 
     new-array v4, v0, [B
 
-    .line 579
     .local v4, "buf":[B
     const/4 v10, 0x0
 
-    .line 580
     .local v10, "fis":Ljava/io/FileInputStream;
     move-object/from16 v0, p1
 
     iget-object v14, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    .line 581
     .local v14, "metaData":Landroid/os/Bundle;
     const/4 v5, 0x0
 
-    .line 582
     .local v5, "customImage":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 583
     .local v6, "customImageQualifier":Ljava/lang/String;
     if-eqz v14, :cond_0
 
-    .line 584
     const-string v16, "com.samsung.android.startingwindow.IMAGE_PATH"
 
     const/16 v17, 0x0
@@ -2191,7 +1982,6 @@
 
     move-result-object v5
 
-    .line 585
     const-string v16, "com.samsung.android.startingwindow.IMAGE_PATH_QUALIFIER"
 
     const/16 v17, 0x0
@@ -2204,28 +1994,23 @@
 
     move-result-object v6
 
-    .line 588
     :cond_0
     if-nez v5, :cond_2
 
     if-nez v6, :cond_2
 
-    .line 589
     const-string v16, "CustomStartingWindowManager"
 
     const-string v17, "CustomStartingWindow custom image not support app"
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 590
     const/16 v16, 0x0
 
-    .line 645
     :cond_1
     :goto_0
     return v16
 
-    .line 594
     :cond_2
     sget-object v16, Lcom/android/server/wm/CustomStartingWindowManager;->mCustomImageSystemPath:Ljava/io/File;
 
@@ -2235,19 +2020,16 @@
 
     if-nez v16, :cond_3
 
-    .line 595
     const-string v16, "CustomStartingWindowManager"
 
     const-string v17, "CustomStartingWindow mkdir for getFD. but it\'s weird"
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 596
     sget-object v16, Lcom/android/server/wm/CustomStartingWindowManager;->mStartingWindowPath:Ljava/io/File;
 
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->mkdir()Z
 
-    .line 599
     :cond_3
     new-instance v8, Ljava/io/File;
 
@@ -2281,7 +2063,6 @@
 
     invoke-direct {v8, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 600
     .local v8, "file":Ljava/io/File;
     new-instance v9, Ljava/io/File;
 
@@ -2295,7 +2076,6 @@
 
     invoke-direct {v9, v8, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 601
     .end local v8    # "file":Ljava/io/File;
     .local v9, "file":Ljava/io/File;
     move/from16 v0, p4
@@ -2304,22 +2084,18 @@
 
     move-result-object v8
 
-    .line 603
     .end local v9    # "file":Ljava/io/File;
     .restart local v8    # "file":Ljava/io/File;
     if-nez p3, :cond_6
 
-    .line 604
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
     move-result v16
 
     if-eqz v16, :cond_5
 
-    .line 605
     invoke-virtual {v8}, Ljava/io/File;->delete()Z
 
-    .line 606
     sget-boolean v16, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z
 
     if-eqz v16, :cond_4
@@ -2330,14 +2106,12 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 610
     :cond_4
     :goto_1
     const/16 v16, 0x1
 
     goto :goto_0
 
-    .line 608
     :cond_5
     sget-boolean v16, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z
 
@@ -2351,11 +2125,9 @@
 
     goto :goto_1
 
-    .line 613
     :cond_6
     const/4 v12, 0x0
 
-    .line 615
     .local v12, "fos":Ljava/io/FileOutputStream;
     :try_start_0
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
@@ -2364,17 +2136,14 @@
 
     if-nez v16, :cond_7
 
-    .line 616
     invoke-virtual {v8}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v16
 
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->mkdirs()Z
 
-    .line 617
     invoke-virtual {v8}, Ljava/io/File;->createNewFile()Z
 
-    .line 619
     :cond_7
     new-instance v11, Ljava/io/FileInputStream;
 
@@ -2386,7 +2155,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 620
     .end local v10    # "fis":Ljava/io/FileInputStream;
     .local v11, "fis":Ljava/io/FileInputStream;
     :try_start_1
@@ -2394,7 +2162,6 @@
 
     move-result v15
 
-    .line 621
     .local v15, "size":I
     sget-boolean v16, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z
 
@@ -2432,7 +2199,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 622
     :cond_8
     new-instance v13, Ljava/io/FileOutputStream;
 
@@ -2442,7 +2208,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 623
     .end local v12    # "fos":Ljava/io/FileOutputStream;
     .local v13, "fos":Ljava/io/FileOutputStream;
     const/16 v16, 0x0
@@ -2456,13 +2221,11 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_7
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 632
     if-eqz v11, :cond_9
 
     :try_start_3
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 633
     :cond_9
     if-eqz v13, :cond_a
 
@@ -2470,13 +2233,11 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 640
     :cond_a
     sget-boolean v16, Lcom/android/server/wm/CustomStartingWindowData;->SAFE_DEBUG:Z
 
     if-eqz v16, :cond_f
 
-    .line 641
     const-string v16, "CustomStartingWindowManager"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -2505,7 +2266,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
     :goto_2
     const/16 v16, 0x1
 
@@ -2515,13 +2275,11 @@
     .restart local v10    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_0
 
-    .line 634
     .end local v10    # "fis":Ljava/io/FileInputStream;
     .restart local v11    # "fis":Ljava/io/FileInputStream;
     :catch_0
     move-exception v7
 
-    .line 635
     .local v7, "e":Ljava/lang/Exception;
     const-string v16, "CustomStartingWindowManager"
 
@@ -2547,7 +2305,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     const/16 v16, 0x0
 
     move-object v10, v11
@@ -2556,7 +2313,6 @@
     .restart local v10    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_0
 
-    .line 624
     .end local v7    # "e":Ljava/lang/Exception;
     .end local v13    # "fos":Ljava/io/FileOutputStream;
     .end local v15    # "size":I
@@ -2564,7 +2320,6 @@
     :catch_1
     move-exception v7
 
-    .line 625
     .local v7, "e":Ljava/io/FileNotFoundException;
     :goto_3
     :try_start_4
@@ -2594,16 +2349,13 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 626
     const/16 v16, 0x0
 
-    .line 632
     if-eqz v10, :cond_b
 
     :try_start_5
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
 
-    .line 633
     :cond_b
     if-eqz v12, :cond_1
 
@@ -2613,11 +2365,9 @@
 
     goto/16 :goto_0
 
-    .line 634
     :catch_2
     move-exception v7
 
-    .line 635
     .local v7, "e":Ljava/lang/Exception;
     const-string v16, "CustomStartingWindowManager"
 
@@ -2643,17 +2393,14 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     const/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 627
     .end local v7    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v7
 
-    .line 628
     .local v7, "e":Ljava/io/IOException;
     :goto_4
     :try_start_6
@@ -2683,16 +2430,13 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 629
     const/16 v16, 0x0
 
-    .line 632
     if-eqz v10, :cond_c
 
     :try_start_7
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
 
-    .line 633
     :cond_c
     if-eqz v12, :cond_1
 
@@ -2702,11 +2446,9 @@
 
     goto/16 :goto_0
 
-    .line 634
     :catch_4
     move-exception v7
 
-    .line 635
     .local v7, "e":Ljava/lang/Exception;
     const-string v16, "CustomStartingWindowManager"
 
@@ -2732,24 +2474,20 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     const/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 631
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v16
 
-    .line 632
     :goto_5
     if-eqz v10, :cond_d
 
     :try_start_8
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
 
-    .line 633
     :cond_d
     if-eqz v12, :cond_e
 
@@ -2757,15 +2495,12 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 636
     :cond_e
     throw v16
 
-    .line 634
     :catch_5
     move-exception v7
 
-    .line 635
     .restart local v7    # "e":Ljava/lang/Exception;
     const-string v16, "CustomStartingWindowManager"
 
@@ -2791,12 +2526,10 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     const/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 643
     .end local v7    # "e":Ljava/lang/Exception;
     .end local v10    # "fis":Ljava/io/FileInputStream;
     .end local v12    # "fos":Ljava/io/FileOutputStream;
@@ -2812,7 +2545,6 @@
 
     goto/16 :goto_2
 
-    .line 631
     .end local v13    # "fos":Ljava/io/FileOutputStream;
     .end local v15    # "size":I
     .restart local v12    # "fos":Ljava/io/FileOutputStream;
@@ -2843,7 +2575,6 @@
     .restart local v10    # "fis":Ljava/io/FileInputStream;
     goto :goto_5
 
-    .line 627
     .end local v10    # "fis":Ljava/io/FileInputStream;
     .end local v15    # "size":I
     .restart local v11    # "fis":Ljava/io/FileInputStream;
@@ -2874,7 +2605,6 @@
     .restart local v10    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_4
 
-    .line 624
     .end local v10    # "fis":Ljava/io/FileInputStream;
     .end local v15    # "size":I
     .restart local v11    # "fis":Ljava/io/FileInputStream;

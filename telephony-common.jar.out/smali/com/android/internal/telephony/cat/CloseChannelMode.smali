@@ -35,7 +35,6 @@
 
     const/4 v2, 0x0
 
-    .line 29
     new-instance v0, Lcom/android/internal/telephony/cat/CloseChannelMode;
 
     const-string v1, "CLOSE_TCP_AND_TCP_IN_CLOSED_STATE"
@@ -44,7 +43,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CloseChannelMode;->CLOSE_TCP_AND_TCP_IN_CLOSED_STATE:Lcom/android/internal/telephony/cat/CloseChannelMode;
 
-    .line 34
     new-instance v0, Lcom/android/internal/telephony/cat/CloseChannelMode;
 
     const-string v1, "CLOSE_TCP_AND_TCP_IN_LISTEN_STATE"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CloseChannelMode;->CLOSE_TCP_AND_TCP_IN_LISTEN_STATE:Lcom/android/internal/telephony/cat/CloseChannelMode;
 
-    .line 25
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/internal/telephony/cat/CloseChannelMode;
@@ -81,13 +78,10 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 39
     iput p3, p0, Lcom/android/internal/telephony/cat/CloseChannelMode;->mValue:I
 
-    .line 40
     return-void
 .end method
 
@@ -96,7 +90,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 47
     invoke-static {}, Lcom/android/internal/telephony/cat/CloseChannelMode;->values()[Lcom/android/internal/telephony/cat/CloseChannelMode;
 
     move-result-object v0
@@ -113,25 +106,21 @@
 
     aget-object v1, v0, v2
 
-    .line 48
     .local v1, "e":Lcom/android/internal/telephony/cat/CloseChannelMode;
     iget v4, v1, Lcom/android/internal/telephony/cat/CloseChannelMode;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 52
     .end local v1    # "e":Lcom/android/internal/telephony/cat/CloseChannelMode;
     :goto_1
     return-object v1
 
-    .line 47
     .restart local v1    # "e":Lcom/android/internal/telephony/cat/CloseChannelMode;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 52
     .end local v1    # "e":Lcom/android/internal/telephony/cat/CloseChannelMode;
     :cond_1
     const/4 v1, 0x0
@@ -144,7 +133,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     const-class v0, Lcom/android/internal/telephony/cat/CloseChannelMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -160,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/android/internal/telephony/cat/CloseChannelMode;->$VALUES:[Lcom/android/internal/telephony/cat/CloseChannelMode;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/cat/CloseChannelMode;->clone()Ljava/lang/Object;
@@ -178,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget v0, p0, Lcom/android/internal/telephony/cat/CloseChannelMode;->mValue:I
 
     return v0

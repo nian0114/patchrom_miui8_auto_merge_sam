@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 174
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 180
     const-string v1, "EnterpriseBillingAsyncHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "packageModificationReceiver - onreceive - start - "
+    const-string v3, "packageModificationReceiver - onreceive - start - "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,7 +64,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;->mHandler:Landroid/os/Handler;
@@ -80,7 +77,6 @@
 
     move-result-object v0
 
-    .line 182
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -91,6 +87,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 184
     return-void
 .end method

@@ -25,20 +25,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1009
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$VoLteSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    .line 1010
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1011
     invoke-virtual {p3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p1, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
 
-    .line 1012
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1025
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$VoLteSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v1, v1, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -72,7 +67,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1027
     .local v0, "isVoLteOn":Z
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$VoLteSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
@@ -97,15 +91,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->log(Ljava/lang/String;)V
 
-    .line 1028
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$VoLteSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->onVoLteOn(Z)V
 
-    .line 1029
     return-void
 
-    .line 1025
     .end local v0    # "isVoLteOn":Z
     :cond_0
     const/4 v0, 0x0
@@ -117,7 +108,6 @@
     .locals 3
 
     .prologue
-    .line 1015
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$VoLteSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
@@ -132,7 +122,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1017
     return-void
 .end method
 
@@ -140,13 +129,11 @@
     .locals 1
 
     .prologue
-    .line 1020
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$VoLteSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 1021
     return-void
 .end method

@@ -29,16 +29,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     iput-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$MatchInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 83
     iput-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$MatchInfo;->mAppPrefix:Ljava/lang/String;
 
-    .line 84
     iput-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$MatchInfo;->mParameter:Ljava/lang/String;
 
     return-void
@@ -49,7 +45,6 @@
     .param p1, "x0"    # Lcom/android/internal/telephony/AppDirectedSMS$1;
 
     .prologue
-    .line 80
     invoke-direct {p0}, Lcom/android/internal/telephony/AppDirectedSMS$MatchInfo;-><init>()V
 
     return-void

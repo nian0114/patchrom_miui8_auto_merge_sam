@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,19 +31,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 65
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->name:Ljava/lang/String;
 
-    .line 66
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->publicId:Ljava/lang/String;
 
-    .line 67
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->systemId:Ljava/lang/String;
 
-    .line 68
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->baseSystemId:Ljava/lang/String;
 
-    .line 69
     return-void
 .end method
 
@@ -56,18 +50,13 @@
     .param p4, "baseSystemId"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     iput-object p1, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->name:Ljava/lang/String;
 
-    .line 56
     iput-object p2, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->publicId:Ljava/lang/String;
 
-    .line 57
     iput-object p3, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->systemId:Ljava/lang/String;
 
-    .line 58
     iput-object p4, p0, Lmf/org/apache/xerces/impl/dtd/XMLNotationDecl;->baseSystemId:Ljava/lang/String;
 
-    .line 59
     return-void
 .end method

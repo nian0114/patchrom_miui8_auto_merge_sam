@@ -23,12 +23,10 @@
     .locals 0
 
     .prologue
-    .line 2686
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 2687
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2691
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -55,25 +52,21 @@
 
     if-eqz v0, :cond_2
 
-    .line 2692
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # setter for: Lcom/android/internal/policy/MultiPhoneWindow;->mDragMode:Z
     invoke-static {v0, v2}, Lcom/android/internal/policy/MultiPhoneWindow;->access$4502(Lcom/android/internal/policy/MultiPhoneWindow;Z)Z
 
-    .line 2693
     sget-boolean v0, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 2694
     const-string v0, "MultiPhoneWindow"
 
     const-string v1, "SmartClipService Stoped"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2695
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -84,14 +77,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 2696
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performStopDragMode()V
 
-    .line 2698
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -113,7 +104,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2699
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -130,7 +120,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setDragAndDropModeOfStack(Landroid/os/IBinder;Z)V
 
-    .line 2702
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -144,7 +133,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2703
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     const/4 v1, 0x1
@@ -152,7 +140,6 @@
     # setter for: Lcom/android/internal/policy/MultiPhoneWindow;->mDragMode:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/MultiPhoneWindow;->access$4502(Lcom/android/internal/policy/MultiPhoneWindow;Z)Z
 
-    .line 2705
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -163,7 +150,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 2706
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$DragModeBroadcastReceiver;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -180,7 +166,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->setDragAndDropMode(Z)V
 
-    .line 2708
     :cond_4
     return-void
 .end method

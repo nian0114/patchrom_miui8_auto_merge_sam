@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 272
     iput-object p1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 275
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -45,7 +43,6 @@
 
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->stopOlsrd()Z
 
-    .line 276
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -57,14 +54,12 @@
 
     if-nez v0, :cond_0
 
-    .line 277
     const-string v0, "OxygenStateMachine"
 
     const-string v1, "Failed to start OLSRD"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mController:Lcom/android/server/wifi/WifiStateMachine;
@@ -76,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(I)V
 
-    .line 279
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const/16 v1, 0x14
@@ -84,14 +78,12 @@
     # invokes: Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendErrorBroadcast(I)V
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$1200(Lcom/samsung/android/server/wifi/OxygenStateMachine;I)V
 
-    .line 280
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const v1, 0x2015f
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendMessage(I)V
 
-    .line 282
     :cond_0
     return-void
 .end method
@@ -101,10 +93,8 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 286
     const/4 v0, 0x1
 
-    .line 287
     .local v0, "retValue":Z
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$000()Z
@@ -147,21 +137,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     :cond_0
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 305
     const/4 v0, 0x0
 
-    .line 308
     :goto_0
     :sswitch_0
     return v0
 
-    .line 290
     :sswitch_1
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -177,7 +163,6 @@
 
     goto :goto_0
 
-    .line 295
     :sswitch_2
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -192,21 +177,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 296
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const v2, 0x20166
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendMessage(I)V
 
-    .line 297
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const v2, 0x20167
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendMessage(I)V
 
-    .line 298
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     iget-object v2, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
@@ -221,7 +203,6 @@
 
     goto :goto_0
 
-    .line 300
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -232,7 +213,6 @@
 
     invoke-virtual {v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdCommander;->quit()V
 
-    .line 301
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartingState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const v2, 0x20164
@@ -241,7 +221,6 @@
 
     goto :goto_0
 
-    .line 288
     :sswitch_data_0
     .sparse-switch
         0x2015e -> :sswitch_0

@@ -36,17 +36,14 @@
     .locals 1
 
     .prologue
-    .line 850
     iput-object p1, p0, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;->this$0:Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 851
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;->mPriority:I
 
-    .line 852
     return-void
 .end method
 
@@ -55,12 +52,10 @@
     .param p2, "priority"    # I
 
     .prologue
-    .line 854
     iput-object p1, p0, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;->this$0:Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 857
     const/16 v0, -0x14
 
     if-lt p2, v0, :cond_0
@@ -73,7 +68,6 @@
     :goto_0
     iput p2, p0, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;->mPriority:I
 
-    .line 859
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
 
@@ -83,7 +77,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPriority = "
+    const-string v2, "mPriority = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,10 +95,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 860
     return-void
 
-    .line 857
     .restart local p2    # "priority":I
     :cond_0
     const/4 p2, 0x0
@@ -119,7 +111,6 @@
     .param p3, "x2"    # Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$1;
 
     .prologue
-    .line 848
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;-><init>(Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;I)V
 
     return-void
@@ -132,7 +123,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 848
     check-cast p1, [[Ljava/lang/Integer;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -148,19 +138,16 @@
     .param p1, "params"    # [[Ljava/lang/Integer;
 
     .prologue
-    .line 864
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;->mPriority:I
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 865
     const/4 v1, 0x0
 
     aget-object v16, p1, v1
 
-    .line 866
     .local v16, "uidArray":[Ljava/lang/Integer;
     const/4 v1, 0x0
 
@@ -170,19 +157,16 @@
 
     move-result v15
 
-    .line 867
     .local v15, "uid":I
     invoke-static {v15}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v5
 
-    .line 868
     .local v5, "appId":I
     invoke-static {v15}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 869
     .local v3, "userId":I
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$000()Z
@@ -191,7 +175,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 870
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
 
@@ -219,7 +202,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 871
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
 
@@ -247,7 +229,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 872
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
 
@@ -275,7 +256,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     :cond_0
     const/4 v1, 0x2
 
@@ -293,7 +273,6 @@
 
     aput-object v6, v12, v1
 
-    .line 875
     .local v12, "sColumns":[Ljava/lang/String;
     const/4 v1, 0x2
 
@@ -315,7 +294,6 @@
 
     aput-object v6, v14, v1
 
-    .line 876
     .local v14, "sValues":[Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -323,11 +301,10 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v6, "protocol"
+    const-string v6, "protocol"
 
     aput-object v6, v13, v1
 
-    .line 877
     .local v13, "sReturnColumns":[Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -344,7 +321,6 @@
 
     move-result-object v7
 
-    .line 878
     .local v7, "contValues":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     const/4 v10, 0x0
 
@@ -356,20 +332,18 @@
 
     if-ge v10, v1, :cond_3
 
-    .line 879
     invoke-virtual {v7, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/content/ContentValues;
 
-    const-string/jumbo v6, "protocol"
+    const-string v6, "protocol"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 880
     .local v4, "protocol":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$000()Z
@@ -378,7 +352,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 881
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
 
@@ -442,11 +415,9 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     :cond_1
     const/4 v2, 0x0
 
-    .line 883
     .local v2, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/sec/enterprise/knox/certenroll/ICertEnrollmentService;>;"
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->mScepServiceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$700()Ljava/util/Map;
@@ -463,7 +434,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 884
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->mScepServiceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$700()Ljava/util/Map;
 
@@ -480,7 +450,6 @@
     .end local v2    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/sec/enterprise/knox/certenroll/ICertEnrollmentService;>;"
     check-cast v2, Ljava/util/HashMap;
 
-    .line 887
     .restart local v2    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/sec/enterprise/knox/certenroll/ICertEnrollmentService;>;"
     :cond_2
     :try_start_0
@@ -495,17 +464,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 878
     :goto_1
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 889
     :catch_0
     move-exception v9
 
-    .line 890
     .local v9, "e1":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
@@ -518,7 +484,6 @@
 
     goto :goto_1
 
-    .line 893
     .end local v2    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/sec/enterprise/knox/certenroll/ICertEnrollmentService;>;"
     .end local v4    # "protocol":Ljava/lang/String;
     .end local v9    # "e1":Ljava/lang/Exception;
@@ -529,19 +494,16 @@
 
     if-lez v1, :cond_4
 
-    .line 894
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 896
     .local v8, "cvWhere":Landroid/content/ContentValues;
     new-instance v8, Landroid/content/ContentValues;
 
     .end local v8    # "cvWhere":Landroid/content/ContentValues;
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 897
     .restart local v8    # "cvWhere":Landroid/content/ContentValues;
     const-string v1, "cepAgentUid"
 
@@ -551,7 +513,6 @@
 
     invoke-virtual {v8, v1, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 898
     const-string v1, "containerID"
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -560,7 +521,6 @@
 
     invoke-virtual {v8, v1, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 900
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy$AdminRemoveOperations;->this$0:Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;
@@ -576,7 +536,6 @@
 
     move-result v11
 
-    .line 903
     .local v11, "res":I
     # getter for: Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->access$100()Ljava/lang/String;
@@ -641,7 +600,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     .end local v8    # "cvWhere":Landroid/content/ContentValues;
     .end local v11    # "res":I
     :cond_4

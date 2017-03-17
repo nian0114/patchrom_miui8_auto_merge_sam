@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 2744
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .param p2, "two"    # Ljava/lang/String;
 
     .prologue
-    .line 2785
     if-eq p1, p2, :cond_1
 
     if-eqz p1, :cond_0
@@ -79,15 +77,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2756
     if-nez p1, :cond_1
 
-    .line 2763
     :cond_0
     :goto_0
     return v1
 
-    .line 2759
     :cond_1
     instance-of v2, p1, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
 
@@ -95,10 +90,8 @@
 
     move-object v0, p1
 
-    .line 2760
     check-cast v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
 
-    .line 2761
     .local v0, "other":Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
     iget-object v1, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->name:Ljava/lang/String;
 
@@ -118,7 +111,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2774
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
@@ -127,10 +119,8 @@
 
     move-object v0, p1
 
-    .line 2775
     check-cast v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
 
-    .line 2776
     .local v0, "other":Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->name:Ljava/lang/String;
 
@@ -142,7 +132,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2777
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->publicId:Ljava/lang/String;
 
     iget-object v3, v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->publicId:Ljava/lang/String;
@@ -153,7 +142,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2778
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->expandedSystemId:Ljava/lang/String;
 
     iget-object v3, v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->expandedSystemId:Ljava/lang/String;
@@ -164,7 +152,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2779
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->notation:Ljava/lang/String;
 
     iget-object v3, v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;->notation:Ljava/lang/String;
@@ -175,10 +162,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 2776
     const/4 v1, 0x1
 
-    .line 2781
     .end local v0    # "other":Lmf/org/apache/xerces/xinclude/XIncludeHandler$UnparsedEntity;
     :cond_0
     return v1

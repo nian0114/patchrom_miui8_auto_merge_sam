@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 208
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 210
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -56,8 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
-    const-string/jumbo v0, "isActive"
+    const-string v0, "isActive"
 
     invoke-virtual {p2, v0, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
@@ -65,7 +62,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 212
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/4 v1, 0x1
@@ -73,25 +69,21 @@
     # setter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataCallConnected:Z
     invoke-static {v0, v1}, Lcom/android/server/enterprise/device/DeviceInfo;->access$202(Lcom/android/server/enterprise/device/DeviceInfo;Z)Z
 
-    .line 219
     :cond_0
     :goto_0
     return-void
 
-    .line 214
     :cond_1
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # setter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataCallLogLastTime:J
     invoke-static {v0, v4, v5}, Lcom/android/server/enterprise/device/DeviceInfo;->access$302(Lcom/android/server/enterprise/device/DeviceInfo;J)J
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # setter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataCallLogLastValue:J
     invoke-static {v0, v4, v5}, Lcom/android/server/enterprise/device/DeviceInfo;->access$402(Lcom/android/server/enterprise/device/DeviceInfo;J)J
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # setter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataCallConnected:Z

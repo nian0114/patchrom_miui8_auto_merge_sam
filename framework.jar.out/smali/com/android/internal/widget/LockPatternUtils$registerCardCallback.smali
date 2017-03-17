@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 3301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3304
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$registerCardCallback$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils$registerCardCallback$1;-><init>(Lcom/android/internal/widget/LockPatternUtils$registerCardCallback;)V

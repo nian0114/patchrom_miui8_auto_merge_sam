@@ -257,14 +257,14 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;
 
-    const-string/jumbo v2, "utils.resolver.noClass"
+    const-string v2, "utils.resolver.noClass"
 
     invoke-direct {v0, v2, v1, p0, p1}, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Attr;Ljava/lang/String;)V
 
     throw v0
 
     :cond_3
-    const-string/jumbo v0, "null"
+    const-string v0, "null"
 
     goto :goto_1
 .end method

@@ -25,7 +25,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 9
     iput-object p1, p0, Lorg/apache/http/impl/conn/SingleClientConnManager$PoolEntry;->this$0:Lorg/apache/http/impl/conn/SingleClientConnManager;
 
     move-object v0, v1
@@ -56,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -75,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

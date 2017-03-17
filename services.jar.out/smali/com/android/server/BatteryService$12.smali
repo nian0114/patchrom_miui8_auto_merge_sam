@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1392
     iput-object p1, p0, Lcom/android/server/BatteryService$12;->this$0:Lcom/android/server/BatteryService;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$12;->val$batteryWaterInConnector:Z
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 1395
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -76,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1396
     iget-object v0, p0, Lcom/android/server/BatteryService$12;->val$intent:Landroid/content/Intent;
 
     const/4 v1, 0x0
@@ -85,6 +82,5 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/ActivityManagerNative;->broadcastStickyIntent(Landroid/content/Intent;Ljava/lang/String;I)V
 
-    .line 1397
     return-void
 .end method

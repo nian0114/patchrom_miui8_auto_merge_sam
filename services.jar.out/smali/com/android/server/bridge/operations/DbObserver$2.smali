@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/server/bridge/operations/DbObserver$2;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 83
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/operations/DbObserver;->access$200()Ljava/lang/String;
 
@@ -73,7 +71,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/bridge/operations/DbObserver$2;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->mRCPManager:Landroid/os/RCPManager;
@@ -92,6 +89,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/RCPManager;->doSyncForSyncer(Ljava/lang/String;I)V
 
-    .line 85
     return-void
 .end method

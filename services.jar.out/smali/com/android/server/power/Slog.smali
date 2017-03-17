@@ -43,13 +43,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 66
     sput v0, Lcom/android/server/power/Slog;->mCurrentLine:I
 
-    .line 67
     sput v0, Lcom/android/server/power/Slog;->mLogSwitch:I
 
-    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -63,10 +60,8 @@
     .locals 0
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 195
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -111,7 +105,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 196
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -127,7 +120,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 200
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -162,7 +154,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 201
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -177,7 +168,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -212,7 +202,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 233
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -228,7 +217,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 237
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -263,7 +251,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 238
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -278,7 +265,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 206
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -313,7 +299,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 207
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -329,7 +314,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 211
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -364,7 +348,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 212
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -382,7 +365,6 @@
 
     const/4 v8, 0x0
 
-    .line 85
     const-class v3, Lcom/android/server/power/Slog;
 
     monitor-enter v3
@@ -394,7 +376,6 @@
 
     sput-object v2, Lcom/android/server/power/Slog;->mCalendar:Ljava/util/Calendar;
 
-    .line 86
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v2
@@ -403,7 +384,6 @@
 
     move-result-object v1
 
-    .line 87
     .local v1, "tid":Ljava/lang/String;
     const-string v2, "%02d-%02d %02d:%02d:%02d.%03d "
 
@@ -525,30 +505,25 @@
 
     move-result-object v0
 
-    .line 91
     .local v0, "strNow":Ljava/lang/String;
     sget v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
     if-lt v2, v9, :cond_0
 
-    .line 92
     const-string v2, "PMS_SLog"
 
     const-string v4, "Approached max !!! "
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     const/16 v2, 0x1f4
 
     sput v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
-    .line 94
     const/4 v2, 0x1
 
     sput v2, Lcom/android/server/power/Slog;->mLogSwitch:I
 
-    .line 95
     sget-object v2, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
 
     sget v4, Lcom/android/server/power/Slog;->mCurrentLine:I
@@ -557,20 +532,17 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 96
     sget v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
     add-int/lit8 v2, v2, 0x1
 
     sput v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
-    .line 99
     :cond_0
     sget v2, Lcom/android/server/power/Slog;->mLogSwitch:I
 
     if-nez v2, :cond_2
 
-    .line 100
     sget-object v2, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -613,7 +585,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 101
     sget v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
     add-int/lit8 v2, v2, 0x1
@@ -622,21 +593,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 107
     :cond_1
     :goto_0
     monitor-exit v3
 
     return v8
 
-    .line 102
     :cond_2
     :try_start_1
     sget v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
     if-ge v2, v9, :cond_1
 
-    .line 103
     sget-object v2, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
 
     sget v4, Lcom/android/server/power/Slog;->mCurrentLine:I
@@ -681,7 +649,6 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
     sget v2, Lcom/android/server/power/Slog;->mCurrentLine:I
 
     add-int/lit8 v2, v2, 0x1
@@ -692,7 +659,6 @@
 
     goto :goto_0
 
-    .line 85
     .end local v0    # "strNow":Ljava/lang/String;
     .end local v1    # "tid":Ljava/lang/String;
     :catchall_0
@@ -710,7 +676,6 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 269
     const/4 v0, 0x3
 
     invoke-static {v0, p0, p1, p2}, Landroid/util/secutil/Log;->println_native(IILjava/lang/String;Ljava/lang/String;)I
@@ -727,7 +692,6 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 147
     const-class v6, Lcom/android/server/power/Slog;
 
     monitor-enter v6
@@ -737,28 +701,23 @@
 
     if-eqz v7, :cond_3
 
-    .line 148
     sget-object v7, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 150
     .local v4, "size":I
     if-eqz v4, :cond_2
 
-    .line 152
     if-eqz p0, :cond_0
 
-    .line 153
     new-instance v1, Ljava/io/File;
 
     const-string v5, "/data/log/Last.kpsn"
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 157
     .local v1, "file":Ljava/io/File;
     :goto_0
     sget-object v5, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
@@ -769,14 +728,12 @@
 
     move-result-object v3
 
-    .line 160
     .local v3, "iterator":Ljava/util/Iterator;
     :try_start_1
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 161
     .local v2, "fos":Ljava/io/FileOutputStream;
     :goto_1
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -788,7 +745,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 163
     :try_start_2
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -796,7 +752,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 164
     .local v0, "element":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
@@ -809,14 +764,12 @@
 
     goto :goto_1
 
-    .line 165
     .end local v0    # "element":Ljava/lang/String;
     :catch_0
     move-exception v5
 
     goto :goto_1
 
-    .line 155
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "fos":Ljava/io/FileOutputStream;
     .end local v3    # "iterator":Ljava/util/Iterator;
@@ -833,7 +786,6 @@
     .restart local v1    # "file":Ljava/io/File;
     goto :goto_0
 
-    .line 167
     .restart local v2    # "fos":Ljava/io/FileOutputStream;
     .restart local v3    # "iterator":Ljava/util/Iterator;
     :cond_1
@@ -843,7 +795,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 178
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "fos":Ljava/io/FileOutputStream;
     .end local v3    # "iterator":Ljava/util/Iterator;
@@ -853,7 +804,6 @@
 
     return v4
 
-    .line 173
     .restart local v4    # "size":I
     :cond_2
     :try_start_5
@@ -865,10 +815,8 @@
 
     move v4, v5
 
-    .line 174
     goto :goto_2
 
-    .line 177
     .end local v4    # "size":I
     :cond_3
     const-string v7, "PMS_SLog"
@@ -881,10 +829,8 @@
 
     move v4, v5
 
-    .line 178
     goto :goto_2
 
-    .line 147
     :catchall_0
     move-exception v5
 
@@ -892,7 +838,6 @@
 
     throw v5
 
-    .line 168
     .restart local v1    # "file":Ljava/io/File;
     .restart local v3    # "iterator":Ljava/util/Iterator;
     .restart local v4    # "size":I
@@ -909,7 +854,6 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 119
     const-class v4, Lcom/android/server/power/Slog;
 
     monitor-enter v4
@@ -919,25 +863,21 @@
 
     if-eqz v5, :cond_2
 
-    .line 120
     sget-object v5, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 122
     .local v2, "size":I
     if-eqz v2, :cond_0
 
-    .line 123
     sget-object v3, Lcom/android/server/power/Slog;->mLogList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 125
     .local v1, "iterator":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -946,14 +886,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 126
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 127
     .local v0, "element":Ljava/lang/String;
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
     :try_end_0
@@ -961,7 +899,6 @@
 
     goto :goto_0
 
-    .line 119
     .end local v0    # "element":Ljava/lang/String;
     .end local v1    # "iterator":Ljava/util/Iterator;
     .end local v2    # "size":I
@@ -972,7 +909,6 @@
 
     throw v3
 
-    .line 131
     .restart local v2    # "size":I
     :cond_0
     :try_start_1
@@ -986,7 +922,6 @@
 
     move v2, v3
 
-    .line 136
     .end local v2    # "size":I
     :cond_1
     :goto_1
@@ -994,7 +929,6 @@
 
     return v2
 
-    .line 135
     :cond_2
     :try_start_2
     const-string v5, "PMS_SLog"
@@ -1007,7 +941,6 @@
 
     move v2, v3
 
-    .line 136
     goto :goto_1
 .end method
 
@@ -1017,7 +950,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 185
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -1052,7 +984,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 186
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1068,7 +999,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 190
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -1103,7 +1033,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 191
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -1118,7 +1047,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 217
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -1153,7 +1081,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 218
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1169,7 +1096,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 222
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -1204,7 +1130,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->notePMSLogList(Ljava/lang/String;)I
 
-    .line 223
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -1219,7 +1144,6 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 228
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
@@ -1233,7 +1157,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 247
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -1248,7 +1171,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 265
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
@@ -1262,7 +1184,6 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 256
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0

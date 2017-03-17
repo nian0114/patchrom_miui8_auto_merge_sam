@@ -27,13 +27,10 @@
     .param p5, "f"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 746
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pNetworkFactory;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
-    .line 747
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/net/NetworkFactory;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkCapabilities;)V
 
-    .line 748
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 752
     return-void
 .end method
 
@@ -51,6 +47,5 @@
     .locals 0
 
     .prologue
-    .line 756
     return-void
 .end method

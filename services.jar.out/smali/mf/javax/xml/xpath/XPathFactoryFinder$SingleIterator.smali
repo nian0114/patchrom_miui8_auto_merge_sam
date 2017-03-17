@@ -26,15 +26,12 @@
     .locals 1
 
     .prologue
-    .line 455
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 456
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;->seen:Z
 
-    .line 455
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 455
     invoke-direct {p0}, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;-><init>()V
 
     return-void
@@ -54,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 459
     iget-boolean v0, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;->seen:Z
 
     if-eqz v0, :cond_0
@@ -74,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 461
     iget-boolean v0, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;->seen:Z
 
     if-eqz v0, :cond_0
@@ -85,13 +79,11 @@
 
     throw v0
 
-    .line 462
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;->seen:Z
 
-    .line 463
     invoke-virtual {p0}, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;->value()Ljava/lang/Object;
 
     move-result-object v0
@@ -103,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 458
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

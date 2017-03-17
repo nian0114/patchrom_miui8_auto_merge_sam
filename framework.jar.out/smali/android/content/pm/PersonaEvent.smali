@@ -66,7 +66,6 @@
     .locals 3
 
     .prologue
-    .line 31
     const/16 v0, 0x10
 
     new-array v0, v0, [Ljava/lang/String;
@@ -169,7 +168,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaEvent;->readableStrings:[Ljava/lang/String;
 
-    .line 104
     new-instance v0, Landroid/content/pm/PersonaEvent$1;
 
     invoke-direct {v0}, Landroid/content/pm/PersonaEvent$1;-><init>()V
@@ -184,13 +182,10 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput p1, p0, Landroid/content/pm/PersonaEvent;->event:I
 
-    .line 47
     return-void
 .end method
 
@@ -199,24 +194,20 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PersonaEvent;->event:I
 
-    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
-    .line 52
     return-void
 .end method
 
@@ -225,7 +216,6 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 41
     if-ltz p0, :cond_0
 
     sget-object v0, Landroid/content/pm/PersonaEvent;->readableStrings:[Ljava/lang/String;
@@ -237,7 +227,6 @@
     :cond_0
     const-string v0, "KNOX_EVENT_INVALID"
 
-    .line 42
     :goto_0
     return-object v0
 
@@ -255,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -279,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Landroid/content/pm/PersonaEvent;->event:I
 
     return v0
@@ -291,7 +278,6 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 88
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -316,7 +302,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -342,25 +327,21 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 75
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
-    .line 77
     :cond_0
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 79
     return-object p0
 .end method
 
@@ -370,25 +351,21 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 66
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
-    .line 68
     :cond_0
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     return-object p0
 .end method
 
@@ -397,10 +374,8 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 59
     iput p1, p0, Landroid/content/pm/PersonaEvent;->event:I
 
-    .line 60
     return-object p0
 .end method
 
@@ -410,16 +385,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 99
     iget v0, p0, Landroid/content/pm/PersonaEvent;->event:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 100
     iget-object v0, p0, Landroid/content/pm/PersonaEvent;->extras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 102
     return-void
 .end method

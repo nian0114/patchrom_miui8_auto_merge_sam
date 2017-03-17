@@ -14,7 +14,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string/jumbo v0, "error"
+    const-string v0, "error"
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 

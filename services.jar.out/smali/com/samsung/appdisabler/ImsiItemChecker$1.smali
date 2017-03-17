@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 698
     iput-object p1, p0, Lcom/samsung/appdisabler/ImsiItemChecker$1;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 702
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 703
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItemChecker$1;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     # getter for: Lcom/samsung/appdisabler/ImsiItemChecker;->mActionHandler:Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;
@@ -57,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->sendEmptyMessage(I)Z
 
-    .line 704
     return-void
 .end method

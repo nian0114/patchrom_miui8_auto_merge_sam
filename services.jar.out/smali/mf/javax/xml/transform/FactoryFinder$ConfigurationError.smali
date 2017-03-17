@@ -25,13 +25,10 @@
     .param p2, "x"    # Ljava/lang/Exception;
 
     .prologue
-    .line 389
     invoke-direct {p0, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
-    .line 390
     iput-object p2, p0, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->exception:Ljava/lang/Exception;
 
-    .line 391
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 401
     iget-object v0, p0, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->exception:Ljava/lang/Exception;
 
     return-object v0
@@ -51,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 394
     iget-object v0, p0, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->exception:Ljava/lang/Exception;
 
     return-object v0

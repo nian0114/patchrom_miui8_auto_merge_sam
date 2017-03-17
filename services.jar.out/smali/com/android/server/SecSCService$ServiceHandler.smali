@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 72
     iput-object p1, p0, Lcom/android/server/SecSCService$ServiceHandler;->this$0:Lcom/android/server/SecSCService;
 
-    .line 73
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 74
     return-void
 .end method
 
@@ -41,28 +38,23 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 81
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 119
     const-string v2, "SecSCService"
 
     const-string v3, "In default"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     :goto_0
     return-void
 
-    .line 84
     :pswitch_0
     # invokes: Lcom/android/server/SecSCService;->SecSC_bootComplete()V
     invoke-static {}, Lcom/android/server/SecSCService;->access$000()V
 
-    .line 86
     iget-object v2, p0, Lcom/android/server/SecSCService$ServiceHandler;->this$0:Lcom/android/server/SecSCService;
 
     invoke-virtual {v2}, Lcom/android/server/SecSCService;->getContentResolver()Landroid/content/ContentResolver;
@@ -77,7 +69,6 @@
 
     move-result v0
 
-    .line 87
     .local v0, "autoTimeUpdate":I
     const-string v2, "SecSCService"
 
@@ -101,12 +92,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
-    .line 90
     .local v1, "telephonymanager":Landroid/telephony/TelephonyManager;
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
 
@@ -118,84 +107,73 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "createTempFile start"
+    const-string v3, "createTempFile start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     # invokes: Lcom/android/server/SecSCService;->SecSC_createTempFile()V
     invoke-static {}, Lcom/android/server/SecSCService;->access$100()V
 
-    .line 95
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "createTempFile end"
+    const-string v3, "createTempFile end"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 99
     :cond_0
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "sim state not ready or auto update is off"
+    const-string v3, "sim state not ready or auto update is off"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 105
     .end local v0    # "autoTimeUpdate":I
     .end local v1    # "telephonymanager":Landroid/telephony/TelephonyManager;
     :pswitch_1
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "handle connectivity time updation start"
+    const-string v3, "handle connectivity time updation start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     iget-object v2, p0, Lcom/android/server/SecSCService$ServiceHandler;->this$0:Lcom/android/server/SecSCService;
 
     # invokes: Lcom/android/server/SecSCService;->SecSC_handleConnectivityStateChanged()V
     invoke-static {v2}, Lcom/android/server/SecSCService;->access$200(Lcom/android/server/SecSCService;)V
 
-    .line 107
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "handle connectivity time updation end"
+    const-string v3, "handle connectivity time updation end"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 112
     :pswitch_2
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "handle nitz time updation start"
+    const-string v3, "handle nitz time updation start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     iget-object v2, p0, Lcom/android/server/SecSCService$ServiceHandler;->this$0:Lcom/android/server/SecSCService;
 
     invoke-virtual {v2}, Lcom/android/server/SecSCService;->SecSC_handleNitzTimeUpdation()V
 
-    .line 114
     const-string v2, "SecSCService"
 
-    const-string/jumbo v3, "handle nitz time updation end"
+    const-string v3, "handle nitz time updation end"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 81
     nop
 
     :pswitch_data_0

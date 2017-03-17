@@ -20,7 +20,7 @@
 .method protected engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v0, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     return-object v0
 .end method
@@ -57,7 +57,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/sun/org/apache/xml/internal/security/transforms/TransformSpi;->_transformObject:Lcom/sun/org/apache/xml/internal/security/transforms/Transform;
 
-    const-string/jumbo v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     const-string v3, "InclusiveNamespaces"
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v1, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     const-string v2, "InclusiveNamespaces"
 
@@ -137,7 +137,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

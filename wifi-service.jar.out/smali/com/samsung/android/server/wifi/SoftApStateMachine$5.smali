@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 654
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iput-object p2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->val$config:Landroid/net/wifi/WifiConfiguration;
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 657
     :try_start_0
     const-string v2, "SoftApStateMachine"
 
@@ -52,7 +50,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 658
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mNwService:Landroid/os/INetworkManagementService;
@@ -73,7 +70,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 670
     :goto_0
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1200()Z
@@ -89,7 +85,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->log(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1300(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 671
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -97,15 +92,12 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->sendMessage(I)V
 
-    .line 672
     :goto_1
     return-void
 
-    .line 659
     :catch_0
     move-exception v0
 
-    .line 660
     .local v0, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -130,7 +122,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1000(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 662
     :try_start_1
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -148,7 +139,6 @@
 
     invoke-interface {v2, v3}, Landroid/os/INetworkManagementService;->stopAccessPoint(Ljava/lang/String;)V
 
-    .line 663
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mNwService:Landroid/os/INetworkManagementService;
@@ -171,11 +161,9 @@
 
     goto :goto_0
 
-    .line 664
     :catch_1
     move-exception v1
 
-    .line 665
     .local v1, "e1":Ljava/lang/Exception;
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -200,7 +188,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1100(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 666
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$5;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const v3, 0x20017

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 232
     invoke-static {}, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->values()[Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     move-result-object v0

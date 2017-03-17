@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     new-array v0, v0, [Lmf/org/apache/xerces/xni/grammars/Grammar;
@@ -38,13 +37,10 @@
     .param p1, "grammar"    # Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/AbstractXMLSchema;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/validation/SimpleXMLSchema;->fGrammar:Lmf/org/apache/xerces/xni/grammars/Grammar;
 
-    .line 42
     const/4 v0, 0x1
 
     new-array v0, v0, [Lmf/org/apache/xerces/xni/grammars/Grammar;
@@ -55,14 +51,12 @@
 
     iput-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/SimpleXMLSchema;->fGrammars:[Lmf/org/apache/xerces/xni/grammars/Grammar;
 
-    .line 43
     invoke-interface {p1}, Lmf/org/apache/xerces/xni/grammars/Grammar;->getGrammarDescription()Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     move-result-object v0
 
     iput-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/SimpleXMLSchema;->fGrammarDescription:Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
-    .line 44
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .param p2, "grammars"    # [Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     .prologue
-    .line 55
     return-void
 .end method
 
@@ -82,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -90,7 +82,6 @@
     .locals 0
 
     .prologue
-    .line 72
     return-object p0
 .end method
 
@@ -98,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x1
 
     return v0
@@ -108,7 +98,6 @@
     .locals 0
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -117,7 +106,6 @@
     .param p1, "desc"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/SimpleXMLSchema;->fGrammarDescription:Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -142,7 +130,6 @@
     .param p1, "grammarType"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     const-string v0, "http://www.w3.org/2001/XMLSchema"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -151,7 +138,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 52
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/SimpleXMLSchema;->fGrammars:[Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     invoke-virtual {v0}, [Lmf/org/apache/xerces/xni/grammars/Grammar;->clone()Ljava/lang/Object;
@@ -160,11 +146,9 @@
 
     check-cast v0, [Lmf/org/apache/xerces/xni/grammars/Grammar;
 
-    .line 51
     :goto_0
     return-object v0
 
-    .line 52
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/jaxp/validation/SimpleXMLSchema;->ZERO_LENGTH_GRAMMAR_ARRAY:[Lmf/org/apache/xerces/xni/grammars/Grammar;
 
@@ -175,6 +159,5 @@
     .locals 0
 
     .prologue
-    .line 63
     return-void
 .end method

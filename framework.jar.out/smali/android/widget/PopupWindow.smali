@@ -165,7 +165,6 @@
     .locals 3
 
     .prologue
-    .line 187
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -187,12 +186,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 306
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, v1, v1}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;II)V
 
-    .line 307
     return-void
 .end method
 
@@ -202,12 +199,10 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 333
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p2}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;II)V
 
-    .line 334
     return-void
 .end method
 
@@ -216,12 +211,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 221
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 222
     return-void
 .end method
 
@@ -231,12 +224,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 230
     const v0, 0x1010076
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 231
     return-void
 .end method
 
@@ -247,12 +238,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 239
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 240
     return-void
 .end method
 
@@ -264,157 +253,127 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 247
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
     const/4 v7, 0x2
 
     new-array v7, v7, [I
 
     iput-object v7, p0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
 
-    .line 115
     const/4 v7, 0x2
 
     new-array v7, v7, [I
 
     iput-object v7, p0, Landroid/widget/PopupWindow;->mScreenLocation:[I
 
-    .line 116
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v7, p0, Landroid/widget/PopupWindow;->mTempRect:Landroid/graphics/Rect;
 
-    .line 135
     const/4 v7, 0x0
 
     iput v7, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
-    .line 136
     const/4 v7, 0x1
 
     iput v7, p0, Landroid/widget/PopupWindow;->mSoftInputMode:I
 
-    .line 137
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mTouchable:Z
 
-    .line 138
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mOutsideTouchable:Z
 
-    .line 139
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mClippingEnabled:Z
 
-    .line 140
     const/4 v7, -0x1
 
     iput v7, p0, Landroid/widget/PopupWindow;->mSplitTouchEnabled:I
 
-    .line 143
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mAllowScrollingAnchorParent:Z
 
-    .line 144
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mLayoutInsetDecor:Z
 
-    .line 146
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mAttachedInDecor:Z
 
-    .line 147
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mAttachedInDecorSet:Z
 
-    .line 152
     const/4 v7, -0x2
 
     iput v7, p0, Landroid/widget/PopupWindow;->mWidth:I
 
-    .line 155
     const/4 v7, -0x2
 
     iput v7, p0, Landroid/widget/PopupWindow;->mHeight:I
 
-    .line 171
     const/16 v7, 0x3e8
 
     iput v7, p0, Landroid/widget/PopupWindow;->mWindowLayoutType:I
 
-    .line 174
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIgnoreCheekPress:Z
 
-    .line 175
     const/4 v7, 0x0
 
     iput v7, p0, Landroid/widget/PopupWindow;->mStatusBarHeight:I
 
-    .line 176
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIsWindowPopupOutsideBound:Z
 
-    .line 178
     const/4 v7, -0x1
 
     iput v7, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
-    .line 180
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mShowForAllUsers:Z
 
-    .line 181
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIgnoreMultiWindowLayout:Z
 
-    .line 184
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIsDeviceDefaultLight:Z
 
-    .line 185
     const/4 v7, 0x0
 
     iput v7, p0, Landroid/widget/PopupWindow;->mOldDisplayId:I
 
-    .line 193
     new-instance v7, Landroid/widget/PopupWindow$1;
 
     invoke-direct {v7, p0}, Landroid/widget/PopupWindow$1;-><init>(Landroid/widget/PopupWindow;)V
 
     iput-object v7, p0, Landroid/widget/PopupWindow;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
-    .line 2177
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mDimBehind:Z
 
-    .line 2178
     const/4 v7, 0x0
 
     iput v7, p0, Landroid/widget/PopupWindow;->mDimAmount:F
 
-    .line 248
     iput-object p1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
-    .line 249
-    const-string/jumbo v7, "window"
+    const-string v7, "window"
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -424,14 +383,12 @@
 
     iput-object v7, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 251
     sget-object v7, Lcom/android/internal/R$styleable;->PopupWindow:[I
 
     invoke-virtual {p1, p2, v7, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 253
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v7, 0x0
 
@@ -439,7 +396,6 @@
 
     move-result-object v2
 
-    .line 254
     .local v2, "bg":Landroid/graphics/drawable/Drawable;
     const/4 v7, 0x3
 
@@ -451,7 +407,6 @@
 
     iput v7, p0, Landroid/widget/PopupWindow;->mElevation:F
 
-    .line 255
     const/4 v7, 0x2
 
     const/4 v8, 0x0
@@ -462,7 +417,6 @@
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mOverlapAnchor:Z
 
-    .line 260
     const/4 v7, 0x1
 
     invoke-virtual {v0, v7}, Landroid/content/res/TypedArray;->hasValueOrEmpty(I)Z
@@ -471,7 +425,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 261
     const/4 v7, 0x1
 
     const/4 v8, 0x0
@@ -480,18 +433,15 @@
 
     move-result v1
 
-    .line 262
     .local v1, "animStyle":I
     const v7, 0x10302ec
 
     if-ne v1, v7, :cond_1
 
-    .line 263
     const/4 v7, -0x1
 
     iput v7, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
-    .line 271
     .end local v1    # "animStyle":I
     :goto_0
     const/4 v7, 0x4
@@ -506,7 +456,6 @@
 
     move-result-object v4
 
-    .line 274
     .local v4, "enterTransition":Landroid/transition/Transition;
     const/4 v7, 0x5
 
@@ -516,7 +465,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 275
     const/4 v7, 0x5
 
     const/4 v8, 0x0
@@ -529,32 +477,25 @@
 
     move-result-object v5
 
-    .line 281
     .local v5, "exitTransition":Landroid/transition/Transition;
     :goto_1
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 283
     invoke-virtual {p0, v4}, Landroid/widget/PopupWindow;->setEnterTransition(Landroid/transition/Transition;)V
 
-    .line 284
     invoke-virtual {p0, v5}, Landroid/widget/PopupWindow;->setExitTransition(Landroid/transition/Transition;)V
 
-    .line 285
     invoke-virtual {p0, v2}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 288
     new-instance v6, Landroid/util/TypedValue;
 
     invoke-direct {v6}, Landroid/util/TypedValue;-><init>()V
 
-    .line 289
     .local v6, "outValue":Landroid/util/TypedValue;
     new-instance v3, Landroid/util/TypedValue;
 
     invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
 
-    .line 290
     .local v3, "colorValue":Landroid/util/TypedValue;
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -566,7 +507,6 @@
 
     invoke-virtual {v7, v8, v6, v9}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 291
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v7
@@ -577,7 +517,6 @@
 
     invoke-virtual {v7, v8, v3, v9}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 292
     iget v7, v6, Landroid/util/TypedValue;->data:I
 
     if-eqz v7, :cond_0
@@ -586,16 +525,13 @@
 
     if-nez v7, :cond_0
 
-    .line 293
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIsDeviceDefaultLight:Z
 
-    .line 297
     :cond_0
     return-void
 
-    .line 265
     .end local v3    # "colorValue":Landroid/util/TypedValue;
     .end local v4    # "enterTransition":Landroid/transition/Transition;
     .end local v5    # "exitTransition":Landroid/transition/Transition;
@@ -606,7 +542,6 @@
 
     goto :goto_0
 
-    .line 268
     .end local v1    # "animStyle":I
     :cond_2
     const/4 v7, -0x1
@@ -615,7 +550,6 @@
 
     goto :goto_0
 
-    .line 278
     .restart local v4    # "enterTransition":Landroid/transition/Transition;
     :cond_3
     if-nez v4, :cond_4
@@ -642,10 +576,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 319
     invoke-direct {p0, p1, v0, v0}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;II)V
 
-    .line 320
     return-void
 .end method
 
@@ -656,12 +588,10 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 349
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;IIZ)V
 
-    .line 350
     return-void
 .end method
 
@@ -683,120 +613,89 @@
 
     const/4 v1, 0x0
 
-    .line 364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
     new-array v0, v5, [I
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
 
-    .line 115
     new-array v0, v5, [I
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mScreenLocation:[I
 
-    .line 116
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mTempRect:Landroid/graphics/Rect;
 
-    .line 135
     iput v1, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
-    .line 136
     iput v2, p0, Landroid/widget/PopupWindow;->mSoftInputMode:I
 
-    .line 137
     iput-boolean v2, p0, Landroid/widget/PopupWindow;->mTouchable:Z
 
-    .line 138
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mOutsideTouchable:Z
 
-    .line 139
     iput-boolean v2, p0, Landroid/widget/PopupWindow;->mClippingEnabled:Z
 
-    .line 140
     iput v4, p0, Landroid/widget/PopupWindow;->mSplitTouchEnabled:I
 
-    .line 143
     iput-boolean v2, p0, Landroid/widget/PopupWindow;->mAllowScrollingAnchorParent:Z
 
-    .line 144
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mLayoutInsetDecor:Z
 
-    .line 146
     iput-boolean v2, p0, Landroid/widget/PopupWindow;->mAttachedInDecor:Z
 
-    .line 147
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mAttachedInDecorSet:Z
 
-    .line 152
     iput v3, p0, Landroid/widget/PopupWindow;->mWidth:I
 
-    .line 155
     iput v3, p0, Landroid/widget/PopupWindow;->mHeight:I
 
-    .line 171
     const/16 v0, 0x3e8
 
     iput v0, p0, Landroid/widget/PopupWindow;->mWindowLayoutType:I
 
-    .line 174
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIgnoreCheekPress:Z
 
-    .line 175
     iput v1, p0, Landroid/widget/PopupWindow;->mStatusBarHeight:I
 
-    .line 176
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIsWindowPopupOutsideBound:Z
 
-    .line 178
     iput v4, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
-    .line 180
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mShowForAllUsers:Z
 
-    .line 181
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIgnoreMultiWindowLayout:Z
 
-    .line 184
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIsDeviceDefaultLight:Z
 
-    .line 185
     iput v1, p0, Landroid/widget/PopupWindow;->mOldDisplayId:I
 
-    .line 193
     new-instance v0, Landroid/widget/PopupWindow$1;
 
     invoke-direct {v0, p0}, Landroid/widget/PopupWindow$1;-><init>(Landroid/widget/PopupWindow;)V
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
-    .line 2177
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mDimBehind:Z
 
-    .line 2178
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/PopupWindow;->mDimAmount:F
 
-    .line 365
     if-eqz p1, :cond_0
 
-    .line 366
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
-    .line 367
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -806,20 +705,15 @@
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 370
     :cond_0
     invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
 
-    .line 371
     invoke-virtual {p0, p2}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 372
     invoke-virtual {p0, p3}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    .line 373
     invoke-virtual {p0, p4}, Landroid/widget/PopupWindow;->setFocusable(Z)V
 
-    .line 374
     return-void
 .end method
 
@@ -828,7 +722,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
     return-object v0
@@ -839,7 +732,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     return-object v0
@@ -850,7 +742,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAboveAnchor:Z
 
     return v0
@@ -860,7 +751,6 @@
     .locals 1
 
     .prologue
-    .line 78
     sget-object v0, Landroid/widget/PopupWindow;->ABOVE_ANCHOR_STATE_SET:[I
 
     return-object v0
@@ -871,7 +761,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/widget/PopupWindow;->mAnchorXoff:I
 
     return v0
@@ -882,7 +771,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/widget/PopupWindow;->mAnchorYoff:I
 
     return v0
@@ -893,7 +781,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/widget/PopupWindow;->mAnchoredGravity:I
 
     return v0
@@ -909,7 +796,6 @@
     .param p5, "x5"    # I
 
     .prologue
-    .line 78
     invoke-direct/range {p0 .. p5}, Landroid/widget/PopupWindow;->findDropDownPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;III)Z
 
     move-result v0
@@ -923,7 +809,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 78
     invoke-direct {p0, p1}, Landroid/widget/PopupWindow;->updateAboveAnchor(Z)V
 
     return-void
@@ -937,7 +822,6 @@
     .param p3, "x3"    # Landroid/view/View;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/PopupWindow;->dismissImmediate(Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/View;)V
 
     return-void
@@ -948,7 +832,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/widget/PopupWindow;->mTouchInterceptor:Landroid/view/View$OnTouchListener;
 
     return-object v0
@@ -959,7 +842,6 @@
     .param p0, "x0"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Landroid/widget/PopupWindow;->getRelativeAnchorBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -971,42 +853,35 @@
     .locals 2
 
     .prologue
-    .line 1443
     iget v0, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_2
 
-    .line 1444
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mIsDropdown:Z
 
     if-eqz v0, :cond_1
 
-    .line 1445
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAboveAnchor:Z
 
     if-eqz v0, :cond_0
 
     const v0, 0x10302e4
 
-    .line 1451
     :goto_0
     return v0
 
-    .line 1445
     :cond_0
     const v0, 0x10302e3
 
     goto :goto_0
 
-    .line 1449
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1451
     :cond_2
     iget v0, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
@@ -1020,71 +895,57 @@
     .prologue
     const/high16 v2, 0x20000
 
-    .line 1396
     const v0, -0x868219
 
     and-int/2addr p1, v0
 
-    .line 1404
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mIgnoreCheekPress:Z
 
     if-eqz v0, :cond_0
 
-    .line 1405
     const v0, 0x8000
 
     or-int/2addr p1, v0
 
-    .line 1407
     :cond_0
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mFocusable:Z
 
     if-nez v0, :cond_a
 
-    .line 1408
     or-int/lit8 p1, p1, 0x8
 
-    .line 1409
     iget v0, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 1410
     or-int/2addr p1, v2
 
-    .line 1415
     :cond_1
     :goto_0
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mTouchable:Z
 
     if-nez v0, :cond_2
 
-    .line 1416
     or-int/lit8 p1, p1, 0x10
 
-    .line 1418
     :cond_2
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mOutsideTouchable:Z
 
     if-eqz v0, :cond_3
 
-    .line 1419
     const/high16 v0, 0x40000
 
     or-int/2addr p1, v0
 
-    .line 1421
     :cond_3
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mClippingEnabled:Z
 
     if-nez v0, :cond_4
 
-    .line 1422
     or-int/lit16 p1, p1, 0x200
 
-    .line 1424
     :cond_4
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isSplitTouchEnabled()Z
 
@@ -1092,56 +953,45 @@
 
     if-eqz v0, :cond_5
 
-    .line 1425
     const/high16 v0, 0x800000
 
     or-int/2addr p1, v0
 
-    .line 1427
     :cond_5
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mLayoutInScreen:Z
 
     if-eqz v0, :cond_6
 
-    .line 1428
     or-int/lit16 p1, p1, 0x100
 
-    .line 1430
     :cond_6
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mLayoutInsetDecor:Z
 
     if-eqz v0, :cond_7
 
-    .line 1431
     const/high16 v0, 0x10000
 
     or-int/2addr p1, v0
 
-    .line 1433
     :cond_7
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mNotTouchModal:Z
 
     if-eqz v0, :cond_8
 
-    .line 1434
     or-int/lit8 p1, p1, 0x20
 
-    .line 1436
     :cond_8
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAttachedInDecor:Z
 
     if-eqz v0, :cond_9
 
-    .line 1437
     const/high16 v0, 0x40000000    # 2.0f
 
     or-int/2addr p1, v0
 
-    .line 1439
     :cond_9
     return p1
 
-    .line 1412
     :cond_a
     iget v0, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
@@ -1149,7 +999,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1413
     or-int/2addr p1, v2
 
     goto :goto_0
@@ -1160,14 +1009,12 @@
     .param p1, "contentView"    # Landroid/view/View;
 
     .prologue
-    .line 1259
     iget-object v4, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
-    .line 1261
     .local v2, "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     if-eqz v2, :cond_0
 
@@ -1177,10 +1024,8 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 1262
     const/4 v1, -0x2
 
-    .line 1267
     .local v1, "height":I
     :goto_0
     new-instance v0, Landroid/widget/PopupWindow$PopupBackgroundView;
@@ -1189,7 +1034,6 @@
 
     invoke-direct {v0, p0, v4}, Landroid/widget/PopupWindow$PopupBackgroundView;-><init>(Landroid/widget/PopupWindow;Landroid/content/Context;)V
 
-    .line 1268
     .local v0, "backgroundView":Landroid/widget/PopupWindow$PopupBackgroundView;
     new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -1197,14 +1041,11 @@
 
     invoke-direct {v3, v4, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 1270
     .local v3, "listParams":Landroid/widget/FrameLayout$LayoutParams;
     invoke-virtual {v0, p1, v3}, Landroid/widget/PopupWindow$PopupBackgroundView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1272
     return-object v0
 
-    .line 1264
     .end local v0    # "backgroundView":Landroid/widget/PopupWindow$PopupBackgroundView;
     .end local v1    # "height":I
     .end local v3    # "listParams":Landroid/widget/FrameLayout$LayoutParams;
@@ -1222,14 +1063,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1282
     iget-object v3, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
-    .line 1284
     .local v2, "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     if-eqz v2, :cond_0
 
@@ -1239,10 +1078,8 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 1285
     const/4 v1, -0x2
 
-    .line 1290
     .local v1, "height":I
     :goto_0
     new-instance v0, Landroid/widget/PopupWindow$PopupDecorView;
@@ -1251,22 +1088,17 @@
 
     invoke-direct {v0, p0, v3}, Landroid/widget/PopupWindow$PopupDecorView;-><init>(Landroid/widget/PopupWindow;Landroid/content/Context;)V
 
-    .line 1291
     .local v0, "decorView":Landroid/widget/PopupWindow$PopupDecorView;
     const/4 v3, -0x1
 
     invoke-virtual {v0, p1, v3, v1}, Landroid/widget/PopupWindow$PopupDecorView;->addView(Landroid/view/View;II)V
 
-    .line 1292
     invoke-virtual {v0, v5}, Landroid/widget/PopupWindow$PopupDecorView;->setClipChildren(Z)V
 
-    .line 1293
     invoke-virtual {v0, v5}, Landroid/widget/PopupWindow$PopupDecorView;->setClipToPadding(Z)V
 
-    .line 1294
     return-object v0
 
-    .line 1287
     .end local v0    # "decorView":Landroid/widget/PopupWindow$PopupDecorView;
     .end local v1    # "height":I
     :cond_0
@@ -1281,18 +1113,15 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1352
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 1358
     .local v0, "p":Landroid/view/WindowManager$LayoutParams;
     const v1, 0x800033
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1359
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     invoke-direct {p0, v1}, Landroid/widget/PopupWindow;->computeFlags(I)I
@@ -1301,32 +1130,26 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1360
     iget v1, p0, Landroid/widget/PopupWindow;->mWindowLayoutType:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 1361
     iput-object p1, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 1362
     iget v1, p0, Landroid/widget/PopupWindow;->mSoftInputMode:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 1363
     invoke-direct {p0}, Landroid/widget/PopupWindow;->computeAnimationResource()I
 
     move-result v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 1365
     iget-object v1, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 1366
     iget-object v1, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getOpacity()I
@@ -1335,20 +1158,17 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 1371
     :goto_0
     iget v1, p0, Landroid/widget/PopupWindow;->mHeightMode:I
 
     if-gez v1, :cond_2
 
-    .line 1372
     iget v1, p0, Landroid/widget/PopupWindow;->mHeightMode:I
 
     iput v1, p0, Landroid/widget/PopupWindow;->mLastHeight:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 1378
     :goto_1
     iget-boolean v1, p0, Landroid/widget/PopupWindow;->mDimBehind:Z
 
@@ -1362,32 +1182,27 @@
 
     if-lez v1, :cond_0
 
-    .line 1379
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit8 v1, v1, 0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1380
     iget v1, p0, Landroid/widget/PopupWindow;->mDimAmount:F
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 1383
     :cond_0
     iget v1, p0, Landroid/widget/PopupWindow;->mWidthMode:I
 
     if-gez v1, :cond_3
 
-    .line 1384
     iget v1, p0, Landroid/widget/PopupWindow;->mWidthMode:I
 
     iput v1, p0, Landroid/widget/PopupWindow;->mLastWidth:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 1390
     :goto_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1417,10 +1232,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 1392
     return-object v0
 
-    .line 1368
     :cond_1
     const/4 v1, -0x3
 
@@ -1428,7 +1241,6 @@
 
     goto :goto_0
 
-    .line 1374
     :cond_2
     iget v1, p0, Landroid/widget/PopupWindow;->mHeight:I
 
@@ -1438,7 +1250,6 @@
 
     goto :goto_1
 
-    .line 1386
     :cond_3
     iget v1, p0, Landroid/widget/PopupWindow;->mWidth:I
 
@@ -1458,38 +1269,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1876
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1877
     iget-object v0, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0, p1}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
-    .line 1880
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1881
     invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 1886
     :cond_1
     iput-object v1, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
-    .line 1887
     iput-object v1, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
-    .line 1888
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/PopupWindow;->mIsTransitioningToDismiss:Z
 
-    .line 1889
     return-void
 .end method
 
@@ -1502,18 +1305,15 @@
     .param p5, "gravity"    # I
 
     .prologue
-    .line 1472
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getHeight()I
 
     move-result v5
 
-    .line 1473
     .local v5, "anchorHeight":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getWidth()I
 
     move-result v6
 
-    .line 1474
     .local v6, "anchorWidth":I
     move-object/from16 v0, p0
 
@@ -1523,10 +1323,8 @@
 
     if-eqz v29, :cond_0
 
-    .line 1475
     sub-int p4, p4, v5
 
-    .line 1478
     :cond_0
     move-object/from16 v0, p0
 
@@ -1540,7 +1338,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 1479
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
@@ -1559,7 +1356,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1480
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
@@ -1580,7 +1376,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1482
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getLayoutDirection()I
 
     move-result v29
@@ -1595,7 +1390,6 @@
 
     and-int/lit8 v13, v29, 0x7
 
-    .line 1484
     .local v13, "hgrav":I
     const/16 v29, 0x5
 
@@ -1603,7 +1397,6 @@
 
     if-ne v13, v0, :cond_1
 
-    .line 1487
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -1626,11 +1419,9 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1490
     :cond_1
     const/4 v15, 0x0
 
-    .line 1492
     .local v15, "onTop":Z
     const/16 v29, 0x33
 
@@ -1640,7 +1431,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1494
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mScreenLocation:[I
@@ -1653,18 +1443,15 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1495
     new-instance v8, Landroid/graphics/Rect;
 
     invoke-direct {v8}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1496
     .local v8, "displayFrame":Landroid/graphics/Rect;
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 1498
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mScreenLocation:[I
@@ -1679,23 +1466,19 @@
 
     add-int v21, v29, p4
 
-    .line 1499
     .local v21, "screenY":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v19
 
-    .line 1503
     .local v19, "root":Landroid/view/View;
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v26
 
-    .line 1504
     .local v26, "vlp":Landroid/view/ViewGroup$LayoutParams;
     const/16 v27, 0x0
 
-    .line 1506
     .local v27, "wlp":Landroid/view/WindowManager$LayoutParams;
     move-object/from16 v0, v26
 
@@ -1707,16 +1490,13 @@
 
     move-object/from16 v27, v26
 
-    .line 1507
     check-cast v27, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1509
     :cond_2
     new-instance v25, Landroid/graphics/Rect;
 
     invoke-direct/range {v25 .. v25}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1510
     .local v25, "visibleDisplayFrame":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -1726,7 +1506,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/PopupWindow;->getVisibleDisplayRect(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 1512
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/widget/PopupWindow;->mIsWindowPopupOutsideBound:Z
@@ -1735,12 +1514,10 @@
 
     if-eqz v29, :cond_3
 
-    .line 1513
     move-object/from16 v0, v25
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1517
     :cond_3
     move-object/from16 v0, p0
 
@@ -1782,7 +1559,6 @@
 
     if-lez v29, :cond_9
 
-    .line 1519
     :cond_4
     move-object/from16 v0, p0
 
@@ -1826,7 +1602,6 @@
 
     const/4 v14, 0x1
 
-    .line 1525
     .local v14, "isOnlyOverScreenWidth":Z
     :goto_0
     move-object/from16 v0, p0
@@ -1837,18 +1612,15 @@
 
     if-eqz v29, :cond_5
 
-    .line 1526
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getScrollX()I
 
     move-result v22
 
-    .line 1527
     .local v22, "scrollX":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getScrollY()I
 
     move-result v23
 
-    .line 1528
     .local v23, "scrollY":I
     new-instance v17, Landroid/graphics/Rect;
 
@@ -1886,7 +1658,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1530
     .local v17, "r":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -1896,7 +1667,6 @@
 
     if-eqz v29, :cond_13
 
-    .line 1531
     const/16 v29, 0x0
 
     move-object/from16 v0, p1
@@ -1907,7 +1677,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/View;->requestRectangleOnScreen(Landroid/graphics/Rect;Z)Z
 
-    .line 1539
     .end local v17    # "r":Landroid/graphics/Rect;
     .end local v22    # "scrollX":I
     .end local v23    # "scrollY":I
@@ -1925,7 +1694,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 1540
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
@@ -1944,7 +1712,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1541
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
@@ -1965,14 +1732,12 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1544
     const/16 v29, 0x5
 
     move/from16 v0, v29
 
     if-ne v13, v0, :cond_6
 
-    .line 1545
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -1995,7 +1760,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1549
     :cond_6
     move-object/from16 v0, p0
 
@@ -2009,7 +1773,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1550
     iget v0, v8, Landroid/graphics/Rect;->bottom:I
 
     move/from16 v29, v0
@@ -2056,11 +1819,9 @@
 
     const/4 v15, 0x1
 
-    .line 1552
     :goto_2
     if-eqz v15, :cond_15
 
-    .line 1553
     const/16 v29, 0x53
 
     move/from16 v0, v29
@@ -2069,7 +1830,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1554
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getHeight()I
 
     move-result v29
@@ -2094,7 +1854,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1555
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->y:I
@@ -2111,7 +1870,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1557
     :cond_7
     move-object/from16 v0, p0
 
@@ -2123,7 +1881,6 @@
 
     if-eqz v14, :cond_8
 
-    .line 1558
     const/16 v29, 0x33
 
     move/from16 v0, v29
@@ -2132,7 +1889,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1559
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
@@ -2153,7 +1909,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1567
     :cond_8
     :goto_3
     move-object/from16 v0, p2
@@ -2178,7 +1933,6 @@
 
     if-lez v29, :cond_9
 
-    .line 1568
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -2199,7 +1953,6 @@
 
     sub-int v7, v29, v30
 
-    .line 1569
     .local v7, "diff":I
     move-object/from16 v0, p2
 
@@ -2215,7 +1968,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1570
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -2224,7 +1976,6 @@
 
     if-gtz v29, :cond_9
 
-    .line 1571
     const/16 v29, 0x0
 
     move/from16 v0, v29
@@ -2233,7 +1984,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1577
     .end local v7    # "diff":I
     .end local v14    # "isOnlyOverScreenWidth":Z
     :cond_9
@@ -2251,7 +2001,6 @@
 
     if-nez v29, :cond_f
 
-    .line 1578
     iget v0, v8, Landroid/graphics/Rect;->right:I
 
     move/from16 v29, v0
@@ -2262,7 +2011,6 @@
 
     sub-int v11, v29, v30
 
-    .line 1579
     .local v11, "displayFrameWidth":I
     move-object/from16 v0, p2
 
@@ -2278,15 +2026,12 @@
 
     add-int v18, v29, v30
 
-    .line 1581
     .local v18, "right":I
     iget v9, v8, Landroid/graphics/Rect;->left:I
 
-    .line 1582
     .local v9, "displayFrameLeft":I
     iget v10, v8, Landroid/graphics/Rect;->top:I
 
-    .line 1583
     .local v10, "displayFrameTop":I
     invoke-direct/range {p0 .. p0}, Landroid/widget/PopupWindow;->isMultiWindow()Z
 
@@ -2294,7 +2039,6 @@
 
     if-eqz v29, :cond_a
 
-    .line 1584
     const/16 v29, 0x2
 
     move/from16 v0, v29
@@ -2303,32 +2047,27 @@
 
     move-object/from16 v20, v0
 
-    .line 1585
     .local v20, "rootLocation":[I
     invoke-virtual/range {v19 .. v20}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1586
     const/16 v29, 0x0
 
     aget v29, v20, v29
 
     sub-int v9, v9, v29
 
-    .line 1587
     const/16 v29, 0x1
 
     aget v29, v20, v29
 
     sub-int v10, v10, v29
 
-    .line 1591
     .end local v20    # "rootLocation":[I
     :cond_a
     move/from16 v0, v18
 
     if-le v0, v11, :cond_b
 
-    .line 1592
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -2345,7 +2084,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1596
     :cond_b
     invoke-direct/range {p0 .. p0}, Landroid/widget/PopupWindow;->isMultiWindow()Z
 
@@ -2381,7 +2119,6 @@
 
     if-ge v0, v1, :cond_c
 
-    .line 1598
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/PopupWindow;->mPopupWidth:I
@@ -2394,7 +2131,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 1602
     :cond_c
     move-object/from16 v0, p2
 
@@ -2406,12 +2142,10 @@
 
     if-ge v0, v9, :cond_d
 
-    .line 1603
     move-object/from16 v0, p2
 
     iput v9, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1604
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->width:I
@@ -2430,11 +2164,9 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 1607
     :cond_d
     if-eqz v15, :cond_16
 
-    .line 1608
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mScreenLocation:[I
@@ -2455,13 +2187,11 @@
 
     sub-int v16, v29, v30
 
-    .line 1613
     .local v16, "popupTop":I
     const/16 v24, 0x0
 
-    .line 1614
     .local v24, "statusBarHeight":I
-    const-string/jumbo v29, "window"
+    const-string v29, "window"
 
     invoke-static/range {v29 .. v29}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2471,7 +2201,6 @@
 
     move-result-object v28
 
-    .line 1616
     .local v28, "wm":Landroid/view/IWindowManager;
     :try_start_0
     invoke-interface/range {v28 .. v28}, Landroid/view/IWindowManager;->isStatusBarVisible()Z
@@ -2480,7 +2209,6 @@
 
     if-eqz v29, :cond_e
 
-    .line 1617
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
@@ -2499,7 +2227,6 @@
 
     move-result v24
 
-    .line 1624
     :cond_e
     :goto_4
     move/from16 v0, v16
@@ -2508,7 +2235,6 @@
 
     if-ge v0, v1, :cond_f
 
-    .line 1625
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->y:I
@@ -2525,7 +2251,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1636
     .end local v9    # "displayFrameLeft":I
     .end local v10    # "displayFrameTop":I
     .end local v11    # "displayFrameWidth":I
@@ -2559,7 +2284,6 @@
 
     if-nez v15, :cond_10
 
-    .line 1638
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/PopupWindow;->mScreenLocation:[I
@@ -2580,7 +2304,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1640
     :cond_10
     invoke-direct/range {p0 .. p0}, Landroid/widget/PopupWindow;->isCascadeTypeMultiWindow()Z
 
@@ -2614,7 +2337,6 @@
 
     if-gez v29, :cond_11
 
-    .line 1646
     const/16 v29, 0x0
 
     move/from16 v0, v29
@@ -2623,7 +2345,6 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1651
     :cond_11
     move-object/from16 v0, p2
 
@@ -2641,16 +2362,13 @@
 
     iput v0, v1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1653
     return v15
 
-    .line 1519
     :cond_12
     const/4 v14, 0x0
 
     goto/16 :goto_0
 
-    .line 1533
     .restart local v14    # "isOnlyOverScreenWidth":Z
     .restart local v17    # "r":Landroid/graphics/Rect;
     .restart local v22    # "scrollX":I
@@ -2668,7 +2386,6 @@
 
     goto/16 :goto_1
 
-    .line 1550
     .end local v17    # "r":Landroid/graphics/Rect;
     .end local v22    # "scrollX":I
     .end local v23    # "scrollY":I
@@ -2677,7 +2394,6 @@
 
     goto/16 :goto_2
 
-    .line 1562
     :cond_15
     move-object/from16 v0, p0
 
@@ -2701,7 +2417,6 @@
 
     goto/16 :goto_3
 
-    .line 1619
     .end local v14    # "isOnlyOverScreenWidth":Z
     .restart local v9    # "displayFrameLeft":I
     .restart local v10    # "displayFrameTop":I
@@ -2713,7 +2428,6 @@
     :catch_0
     move-exception v12
 
-    .line 1620
     .local v12, "e":Landroid/os/RemoteException;
     const-string v29, "PopupWindow"
 
@@ -2725,7 +2439,6 @@
 
     goto/16 :goto_4
 
-    .line 1629
     .end local v12    # "e":Landroid/os/RemoteException;
     .end local v16    # "popupTop":I
     .end local v24    # "statusBarHeight":I
@@ -2762,7 +2475,6 @@
 
     const/4 v7, 0x0
 
-    .line 1853
     iget-object v5, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
     if-eqz v5, :cond_1
@@ -2777,12 +2489,10 @@
 
     move-object v0, v5
 
-    .line 1854
     .local v0, "anchor":Landroid/view/View;
     :goto_0
     iget-object v3, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
-    .line 1855
     .local v3, "decor":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -2791,7 +2501,6 @@
     :cond_0
     move-object v2, v6
 
-    .line 1865
     :goto_1
     return-object v2
 
@@ -2800,10 +2509,8 @@
     :cond_1
     move-object v0, v6
 
-    .line 1853
     goto :goto_0
 
-    .line 1859
     .restart local v0    # "anchor":Landroid/view/View;
     .restart local v3    # "decor":Landroid/view/View;
     :cond_2
@@ -2811,7 +2518,6 @@
 
     move-result-object v1
 
-    .line 1860
     .local v1, "anchorLocation":[I
     iget-object v5, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
@@ -2819,7 +2525,6 @@
 
     move-result-object v4
 
-    .line 1863
     .local v4, "popupLocation":[I
     new-instance v2, Landroid/graphics/Rect;
 
@@ -2833,7 +2538,6 @@
 
     invoke-direct {v2, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1864
     .local v2, "bounds":Landroid/graphics/Rect;
     aget v5, v1, v7
 
@@ -2857,31 +2561,26 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 385
     if-eqz p1, :cond_1
 
     const/high16 v3, 0x10f0000
 
     if-eq p1, v3, :cond_1
 
-    .line 386
     iget-object v3, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/transition/TransitionInflater;->from(Landroid/content/Context;)Landroid/transition/TransitionInflater;
 
     move-result-object v0
 
-    .line 387
     .local v0, "inflater":Landroid/transition/TransitionInflater;
     invoke-virtual {v0, p1}, Landroid/transition/TransitionInflater;->inflateTransition(I)Landroid/transition/Transition;
 
     move-result-object v2
 
-    .line 388
     .local v2, "transition":Landroid/transition/Transition;
     if-eqz v2, :cond_1
 
-    .line 389
     instance-of v3, v2, Landroid/transition/TransitionSet;
 
     if-eqz v3, :cond_0
@@ -2898,19 +2597,16 @@
 
     const/4 v1, 0x1
 
-    .line 391
     .local v1, "isEmpty":Z
     :goto_0
     if-nez v1, :cond_1
 
-    .line 396
     .end local v0    # "inflater":Landroid/transition/TransitionInflater;
     .end local v1    # "isEmpty":Z
     .end local v2    # "transition":Landroid/transition/Transition;
     :goto_1
     return-object v2
 
-    .line 389
     .restart local v0    # "inflater":Landroid/transition/TransitionInflater;
     .restart local v2    # "transition":Landroid/transition/Transition;
     :cond_0
@@ -2918,7 +2614,6 @@
 
     goto :goto_0
 
-    .line 396
     .end local v0    # "inflater":Landroid/transition/TransitionInflater;
     .end local v2    # "transition":Landroid/transition/Transition;
     :cond_1
@@ -2935,33 +2630,27 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1657
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1707
     :cond_0
     :goto_0
     return-void
 
-    .line 1661
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v2
 
-    .line 1663
     .local v2, "root":Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
-    .line 1664
     .local v5, "vlp":Landroid/view/ViewGroup$LayoutParams;
     const/4 v6, 0x0
 
-    .line 1666
     .local v6, "wlp":Landroid/view/WindowManager$LayoutParams;
     instance-of v7, v5, Landroid/view/WindowManager$LayoutParams;
 
@@ -2969,10 +2658,8 @@
 
     move-object v6, v5
 
-    .line 1667
     check-cast v6, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1669
     iget v7, v6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/lit16 v7, v7, 0x200
@@ -2984,22 +2671,18 @@
     :goto_1
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIsWindowPopupOutsideBound:Z
 
-    .line 1672
     :cond_2
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1673
     .local v4, "visibleDisplayFrame":Landroid/graphics/Rect;
     iput v8, p0, Landroid/widget/PopupWindow;->mStatusBarHeight:I
 
-    .line 1674
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1675
     .local v1, "dm":Landroid/util/DisplayMetrics;
     iget-object v7, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
@@ -3009,27 +2692,23 @@
 
     invoke-virtual {v7, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1677
     if-eqz v6, :cond_3
 
     iget-object v7, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     if-eqz v7, :cond_3
 
-    .line 1678
     iget v7, v6, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
 
     iget v9, v6, Landroid/view/WindowManager$LayoutParams;->subtreeSystemUiVisibility:I
 
     or-int v3, v7, v9
 
-    .line 1679
     .local v3, "systemUiVisibility":I
     and-int/lit16 v7, v3, 0x404
 
     if-nez v7, :cond_3
 
-    .line 1681
     iget-object v7, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -3044,14 +2723,12 @@
 
     iput v7, p0, Landroid/widget/PopupWindow;->mStatusBarHeight:I
 
-    .line 1685
     .end local v3    # "systemUiVisibility":I
     :cond_3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1687
     .local v0, "displayFrame":Landroid/graphics/Rect;
     invoke-direct {p0}, Landroid/widget/PopupWindow;->isCascadeTypeMultiWindow()Z
 
@@ -3059,16 +2736,12 @@
 
     if-eqz v7, :cond_6
 
-    .line 1690
     invoke-virtual {p1, v0}, Landroid/view/View;->getWindowVisibleContentFrame(Landroid/graphics/Rect;)V
 
-    .line 1692
     iput v8, v4, Landroid/graphics/Rect;->left:I
 
-    .line 1693
     iput v8, v4, Landroid/graphics/Rect;->top:I
 
-    .line 1694
     iget v7, v4, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -3079,7 +2752,6 @@
 
     iput v7, v4, Landroid/graphics/Rect;->right:I
 
-    .line 1695
     iget v7, v4, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -3090,22 +2762,18 @@
 
     iput v7, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 1703
     :goto_2
     iget-boolean v7, p0, Landroid/widget/PopupWindow;->mIsWindowPopupOutsideBound:Z
 
     if-eqz v7, :cond_4
 
-    .line 1704
     invoke-virtual {v0, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1706
     :cond_4
     invoke-virtual {p2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 1669
     .end local v0    # "displayFrame":Landroid/graphics/Rect;
     .end local v1    # "dm":Landroid/util/DisplayMetrics;
     .end local v4    # "visibleDisplayFrame":Landroid/graphics/Rect;
@@ -3114,27 +2782,22 @@
 
     goto :goto_1
 
-    .line 1697
     .restart local v0    # "displayFrame":Landroid/graphics/Rect;
     .restart local v1    # "dm":Landroid/util/DisplayMetrics;
     .restart local v4    # "visibleDisplayFrame":Landroid/graphics/Rect;
     :cond_6
     invoke-virtual {p1, v0}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 1698
     iput v8, v4, Landroid/graphics/Rect;->left:I
 
-    .line 1699
     iget v7, p0, Landroid/widget/PopupWindow;->mStatusBarHeight:I
 
     iput v7, v4, Landroid/graphics/Rect;->top:I
 
-    .line 1700
     iget v7, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v7, v4, Landroid/graphics/Rect;->right:I
 
-    .line 1701
     iget v7, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v7, v4, Landroid/graphics/Rect;->bottom:I
@@ -3147,12 +2810,10 @@
     .param p1, "p"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 1306
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 1307
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -3161,61 +2822,50 @@
 
     iput-object v1, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
-    .line 1310
     :cond_0
     iget-object v0, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
-    .line 1311
     .local v0, "decorView":Landroid/widget/PopupWindow$PopupDecorView;
     iget-boolean v1, p0, Landroid/widget/PopupWindow;->mLayoutInsetDecor:Z
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow$PopupDecorView;->setFitsSystemWindows(Z)V
 
-    .line 1314
     iget-boolean v1, p0, Landroid/widget/PopupWindow;->mShowForAllUsers:Z
 
     if-eqz v1, :cond_1
 
-    .line 1315
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit8 v1, v1, 0x10
 
     iput v1, p1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 1317
     :cond_1
     iget-boolean v1, p0, Landroid/widget/PopupWindow;->mIgnoreMultiWindowLayout:Z
 
     if-eqz v1, :cond_2
 
-    .line 1318
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     or-int/lit8 v1, v1, 0x8
 
     iput v1, p1, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
-    .line 1323
     :cond_2
     invoke-direct {p0}, Landroid/widget/PopupWindow;->setLayoutDirectionFromAnchor()V
 
-    .line 1329
     iget-object v1, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v1, v0, p1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1330
     iget-object v1, p0, Landroid/widget/PopupWindow;->mEnterTransition:Landroid/transition/Transition;
 
     if-eqz v1, :cond_3
 
-    .line 1331
     iget-object v1, p0, Landroid/widget/PopupWindow;->mEnterTransition:Landroid/transition/Transition;
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow$PopupDecorView;->requestEnterTransition(Landroid/transition/Transition;)V
 
-    .line 1333
     :cond_3
     return-void
 .end method
@@ -3224,19 +2874,16 @@
     .locals 2
 
     .prologue
-    .line 2197
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 2198
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getAppMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 2199
     .local v0, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v0, :cond_0
 
@@ -3246,10 +2893,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 2200
     const/4 v1, 0x1
 
-    .line 2202
     .end local v0    # "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :goto_0
     return v1
@@ -3264,14 +2909,12 @@
     .locals 2
 
     .prologue
-    .line 2189
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getAppMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 2190
     .local v0, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v0, :cond_0
 
@@ -3281,10 +2924,8 @@
 
     if-nez v1, :cond_0
 
-    .line 2191
     const/4 v1, 0x1
 
-    .line 2193
     :goto_0
     return v1
 
@@ -3298,19 +2939,16 @@
     .locals 2
 
     .prologue
-    .line 2206
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 2207
     iget-object v1, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getAppMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 2208
     .local v0, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v0, :cond_0
 
@@ -3320,10 +2958,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 2209
     const/4 v1, 0x1
 
-    .line 2211
     .end local v0    # "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :goto_0
     return v1
@@ -3343,7 +2979,6 @@
 
     const/4 v4, 0x0
 
-    .line 1202
     iget-object v5, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     if-eqz v5, :cond_0
@@ -3356,7 +2991,6 @@
 
     if-nez v5, :cond_1
 
-    .line 1203
     :cond_0
     new-instance v3, Ljava/lang/IllegalStateException;
 
@@ -3366,24 +3000,20 @@
 
     throw v3
 
-    .line 1209
     :cond_1
     iget-object v5, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     if-eqz v5, :cond_2
 
-    .line 1210
     iget-object v5, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-virtual {v5}, Landroid/widget/PopupWindow$PopupDecorView;->cancelTransitions()V
 
-    .line 1215
     :cond_2
     iget-object v5, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v5, :cond_4
 
-    .line 1216
     iget-object v5, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     invoke-direct {p0, v5}, Landroid/widget/PopupWindow;->createBackgroundView(Landroid/view/View;)Landroid/widget/PopupWindow$PopupBackgroundView;
@@ -3392,14 +3022,12 @@
 
     iput-object v5, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
-    .line 1217
     iget-object v5, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
     iget-object v6, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1222
     :goto_0
     iget-object v5, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
@@ -3409,14 +3037,12 @@
 
     iput-object v5, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
-    .line 1225
     iget-object v5, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
     iget v6, p0, Landroid/widget/PopupWindow;->mElevation:F
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setElevation(F)V
 
-    .line 1229
     iget-object v5, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getZ()F
@@ -3435,16 +3061,13 @@
 
     double-to-int v1, v6
 
-    .line 1230
     .local v1, "surfaceInset":I
     iget-object v5, p1, Landroid/view/WindowManager$LayoutParams;->surfaceInsets:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v1, v1, v1, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1231
     iput-boolean v3, p1, Landroid/view/WindowManager$LayoutParams;->hasManualSurfaceInsets:Z
 
-    .line 1233
     iget-object v5, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getRawLayoutDirection()I
@@ -3458,17 +3081,14 @@
     :goto_1
     iput-boolean v3, p0, Landroid/widget/PopupWindow;->mPopupViewInitialLayoutDirectionInherited:Z
 
-    .line 1235
     iget v3, p1, Landroid/view/WindowManager$LayoutParams;->width:I
 
     iput v3, p0, Landroid/widget/PopupWindow;->mPopupWidth:I
 
-    .line 1236
     iget v3, p1, Landroid/view/WindowManager$LayoutParams;->height:I
 
     iput v3, p0, Landroid/widget/PopupWindow;->mPopupHeight:I
 
-    .line 1240
     iget v3, p0, Landroid/widget/PopupWindow;->mPopupWidth:I
 
     if-nez v3, :cond_3
@@ -3481,31 +3101,26 @@
 
     if-eqz v3, :cond_3
 
-    .line 1241
     invoke-direct {p0}, Landroid/widget/PopupWindow;->isCascadeTypeMultiWindow()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 1242
     invoke-static {v4, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
 
-    .line 1243
     .local v2, "widthMeasureSpec":I
     invoke-static {v4, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
 
-    .line 1244
     .local v0, "heightMeasureSpec":I
     iget-object v3, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-virtual {v3, v2, v0}, Landroid/widget/PopupWindow$PopupDecorView;->measure(II)V
 
-    .line 1245
     iget-object v3, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-virtual {v3}, Landroid/widget/PopupWindow$PopupDecorView;->getMeasuredWidth()I
@@ -3514,13 +3129,11 @@
 
     iput v3, p0, Landroid/widget/PopupWindow;->mPopupWidth:I
 
-    .line 1250
     .end local v0    # "heightMeasureSpec":I
     .end local v2    # "widthMeasureSpec":I
     :cond_3
     return-void
 
-    .line 1219
     .end local v1    # "surfaceInset":I
     :cond_4
     iget-object v5, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
@@ -3533,7 +3146,6 @@
     :cond_5
     move v3, v4
 
-    .line 1233
     goto :goto_1
 .end method
 
@@ -3545,41 +3157,32 @@
     .param p4, "gravity"    # I
 
     .prologue
-    .line 2147
     invoke-direct {p0}, Landroid/widget/PopupWindow;->unregisterForScrollChanged()V
 
-    .line 2149
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v1, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
-    .line 2151
     invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 2152
     .local v0, "vto":Landroid/view/ViewTreeObserver;
     if-eqz v0, :cond_0
 
-    .line 2153
     iget-object v1, p0, Landroid/widget/PopupWindow;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    .line 2156
     :cond_0
     iput p2, p0, Landroid/widget/PopupWindow;->mAnchorXoff:I
 
-    .line 2157
     iput p3, p0, Landroid/widget/PopupWindow;->mAnchorYoff:I
 
-    .line 2158
     iput p4, p0, Landroid/widget/PopupWindow;->mAnchoredGravity:I
 
-    .line 2159
     return-void
 .end method
 
@@ -3587,12 +3190,10 @@
     .locals 3
 
     .prologue
-    .line 1336
     iget-object v1, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_0
 
-    .line 1337
     iget-object v1, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -3601,7 +3202,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1338
     .local v0, "anchor":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -3609,7 +3209,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1339
     iget-object v1, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
@@ -3618,7 +3217,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/PopupWindow$PopupDecorView;->setLayoutDirection(I)V
 
-    .line 1342
     .end local v0    # "anchor":Landroid/view/View;
     :cond_0
     return-void
@@ -3630,40 +3228,32 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2136
     iget-object v1, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
-    .line 2137
     .local v1, "anchorRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/view/View;>;"
     if-nez v1, :cond_1
 
     move-object v0, v4
 
-    .line 2138
     .local v0, "anchor":Landroid/view/View;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 2139
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v2
 
-    .line 2140
     .local v2, "vto":Landroid/view/ViewTreeObserver;
     iget-object v3, p0, Landroid/widget/PopupWindow;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
     invoke-virtual {v2, v3}, Landroid/view/ViewTreeObserver;->removeOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    .line 2143
     .end local v2    # "vto":Landroid/view/ViewTreeObserver;
     :cond_0
     iput-object v4, p0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
-    .line 2144
     return-void
 
-    .line 2137
     .end local v0    # "anchor":Landroid/view/View;
     :cond_1
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -3688,7 +3278,6 @@
     .param p7, "height"    # I
 
     .prologue
-    .line 2085
     invoke-virtual/range {p0 .. p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v4
@@ -3701,18 +3290,15 @@
 
     if-nez v4, :cond_1
 
-    .line 2123
     :cond_0
     :goto_0
     return-void
 
-    .line 2089
     :cond_1
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
 
-    .line 2090
     .local v14, "oldAnchor":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/view/View;>;"
     if-eqz p2, :cond_7
 
@@ -3735,7 +3321,6 @@
     :cond_2
     const/4 v13, 0x1
 
-    .line 2091
     .local v13, "needsUpdate":Z
     :goto_1
     if-eqz v14, :cond_3
@@ -3756,7 +3341,6 @@
 
     if-nez v4, :cond_8
 
-    .line 2092
     :cond_3
     move-object/from16 v0, p0
 
@@ -3772,26 +3356,22 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/widget/PopupWindow;->registerForScrollChanged(Landroid/view/View;III)V
 
-    .line 2099
     :cond_4
     :goto_2
     if-eqz p5, :cond_5
 
-    .line 2100
     const/4 v4, -0x1
 
     move/from16 v0, p6
 
     if-ne v0, v4, :cond_9
 
-    .line 2101
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/PopupWindow;->mPopupWidth:I
 
     move/from16 p6, v0
 
-    .line 2105
     :goto_3
     const/4 v4, -0x1
 
@@ -3799,14 +3379,12 @@
 
     if-ne v0, v4, :cond_a
 
-    .line 2106
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/PopupWindow;->mPopupHeight:I
 
     move/from16 p7, v0
 
-    .line 2112
     :cond_5
     :goto_4
     move-object/from16 v0, p0
@@ -3819,21 +3397,17 @@
 
     check-cast v6, Landroid/view/WindowManager$LayoutParams;
 
-    .line 2114
     .local v6, "p":Landroid/view/WindowManager$LayoutParams;
     iget v15, v6, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 2115
     .local v15, "x":I
     iget v0, v6, Landroid/view/WindowManager$LayoutParams;->y:I
 
     move/from16 v16, v0
 
-    .line 2116
     .local v16, "y":I
     if-eqz p2, :cond_b
 
-    .line 2117
     move-object/from16 v0, p0
 
     iget v9, v0, Landroid/widget/PopupWindow;->mAnchoredGravity:I
@@ -3854,7 +3428,6 @@
 
     invoke-direct {v0, v4}, Landroid/widget/PopupWindow;->updateAboveAnchor(Z)V
 
-    .line 2122
     :goto_5
     iget v8, v6, Landroid/view/WindowManager$LayoutParams;->x:I
 
@@ -3884,7 +3457,6 @@
 
     goto/16 :goto_0
 
-    .line 2090
     .end local v6    # "p":Landroid/view/WindowManager$LayoutParams;
     .end local v13    # "needsUpdate":Z
     .end local v15    # "x":I
@@ -3894,19 +3466,16 @@
 
     goto :goto_1
 
-    .line 2093
     .restart local v13    # "needsUpdate":Z
     :cond_8
     if-eqz v13, :cond_4
 
-    .line 2095
     move/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/widget/PopupWindow;->mAnchorXoff:I
 
-    .line 2096
     move/from16 v0, p4
 
     move-object/from16 v1, p0
@@ -3915,7 +3484,6 @@
 
     goto :goto_2
 
-    .line 2103
     :cond_9
     move/from16 v0, p6
 
@@ -3925,7 +3493,6 @@
 
     goto :goto_3
 
-    .line 2108
     :cond_a
     move/from16 v0, p7
 
@@ -3935,7 +3502,6 @@
 
     goto :goto_4
 
-    .line 2119
     .restart local v6    # "p":Landroid/view/WindowManager$LayoutParams;
     .restart local v15    # "x":I
     .restart local v16    # "y":I
@@ -3966,7 +3532,6 @@
 
     goto :goto_5
 
-    .line 2122
     :cond_c
     const/4 v12, 0x0
 
@@ -3978,15 +3543,12 @@
     .param p1, "aboveAnchor"    # Z
 
     .prologue
-    .line 1159
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAboveAnchor:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 1160
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mAboveAnchor:Z
 
-    .line 1162
     iget-object v0, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -3995,29 +3557,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 1166
     iget-object v0, p0, Landroid/widget/PopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_2
 
-    .line 1167
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAboveAnchor:Z
 
     if-eqz v0, :cond_1
 
-    .line 1168
     iget-object v0, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/PopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1177
     :cond_0
     :goto_0
     return-void
 
-    .line 1170
     :cond_1
     iget-object v0, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
@@ -4027,7 +3584,6 @@
 
     goto :goto_0
 
-    .line 1173
     :cond_2
     iget-object v0, p0, Landroid/widget/PopupWindow;->mBackgroundView:Landroid/view/View;
 
@@ -4042,7 +3598,6 @@
     .locals 8
 
     .prologue
-    .line 1798
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v7
@@ -4053,26 +3608,21 @@
 
     if-eqz v7, :cond_1
 
-    .line 1850
     :cond_0
     :goto_0
     return-void
 
-    .line 1802
     :cond_1
     iget-object v3, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
-    .line 1803
     .local v3, "decorView":Landroid/widget/PopupWindow$PopupDecorView;
     iget-object v2, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
-    .line 1806
     .local v2, "contentView":Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 1807
     .local v1, "contentParent":Landroid/view/ViewParent;
     instance-of v7, v1, Landroid/view/ViewGroup;
 
@@ -4080,28 +3630,22 @@
 
     move-object v0, v1
 
-    .line 1808
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 1814
     .local v0, "contentHolder":Landroid/view/ViewGroup;
     :goto_1
     invoke-virtual {v3}, Landroid/widget/PopupWindow$PopupDecorView;->cancelTransitions()V
 
-    .line 1816
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIsShowing:Z
 
-    .line 1817
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Landroid/widget/PopupWindow;->mIsTransitioningToDismiss:Z
 
-    .line 1819
     iget-object v5, p0, Landroid/widget/PopupWindow;->mExitTransition:Landroid/transition/Transition;
 
-    .line 1820
     .local v5, "exitTransition":Landroid/transition/Transition;
     if-eqz v5, :cond_3
 
@@ -4111,14 +3655,12 @@
 
     if-eqz v7, :cond_3
 
-    .line 1822
     invoke-virtual {v3}, Landroid/widget/PopupWindow$PopupDecorView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1823
     .local v6, "p":Landroid/view/WindowManager$LayoutParams;
     iget v7, v6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -4126,24 +3668,20 @@
 
     iput v7, v6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1824
     iget v7, v6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit8 v7, v7, 0x8
 
     iput v7, v6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1825
     iget-object v7, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v7, v3, v6}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1827
     invoke-direct {p0}, Landroid/widget/PopupWindow;->getRelativeAnchorBounds()Landroid/graphics/Rect;
 
     move-result-object v4
 
-    .line 1828
     .local v4, "epicenter":Landroid/graphics/Rect;
     new-instance v7, Landroid/widget/PopupWindow$2;
 
@@ -4151,32 +3689,27 @@
 
     invoke-virtual {v5, v7}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
 
-    .line 1834
     new-instance v7, Landroid/widget/PopupWindow$3;
 
     invoke-direct {v7, p0, v3, v0, v2}, Landroid/widget/PopupWindow$3;-><init>(Landroid/widget/PopupWindow;Landroid/widget/PopupWindow$PopupDecorView;Landroid/view/ViewGroup;Landroid/view/View;)V
 
     invoke-virtual {v3, v5, v7}, Landroid/widget/PopupWindow$PopupDecorView;->startExitTransition(Landroid/transition/Transition;Landroid/transition/Transition$TransitionListener;)V
 
-    .line 1845
     .end local v4    # "epicenter":Landroid/graphics/Rect;
     .end local v6    # "p":Landroid/view/WindowManager$LayoutParams;
     :goto_2
     invoke-direct {p0}, Landroid/widget/PopupWindow;->unregisterForScrollChanged()V
 
-    .line 1847
     iget-object v7, p0, Landroid/widget/PopupWindow;->mOnDismissListener:Landroid/widget/PopupWindow$OnDismissListener;
 
     if-eqz v7, :cond_0
 
-    .line 1848
     iget-object v7, p0, Landroid/widget/PopupWindow;->mOnDismissListener:Landroid/widget/PopupWindow$OnDismissListener;
 
     invoke-interface {v7}, Landroid/widget/PopupWindow$OnDismissListener;->onDismiss()V
 
     goto :goto_0
 
-    .line 1810
     .end local v0    # "contentHolder":Landroid/view/ViewGroup;
     .end local v5    # "exitTransition":Landroid/transition/Transition;
     :cond_2
@@ -4185,7 +3718,6 @@
     .restart local v0    # "contentHolder":Landroid/view/ViewGroup;
     goto :goto_1
 
-    .line 1841
     .restart local v5    # "exitTransition":Landroid/transition/Transition;
     :cond_3
     invoke-direct {p0, v3, v0, v2}, Landroid/widget/PopupWindow;->dismissImmediate(Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/View;)V
@@ -4197,7 +3729,6 @@
     .locals 1
 
     .prologue
-    .line 485
     iget v0, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
     return v0
@@ -4207,7 +3738,6 @@
     .locals 1
 
     .prologue
-    .line 407
     iget-object v0, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -4217,7 +3747,6 @@
     .locals 1
 
     .prologue
-    .line 529
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     return-object v0
@@ -4227,7 +3756,6 @@
     .locals 1
 
     .prologue
-    .line 465
     iget v0, p0, Landroid/widget/PopupWindow;->mElevation:F
 
     return v0
@@ -4237,7 +3765,6 @@
     .locals 1
 
     .prologue
-    .line 942
     iget v0, p0, Landroid/widget/PopupWindow;->mHeight:I
 
     return v0
@@ -4247,7 +3774,6 @@
     .locals 1
 
     .prologue
-    .line 617
     iget v0, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
     return v0
@@ -4258,7 +3784,6 @@
     .param p1, "anchor"    # Landroid/view/View;
 
     .prologue
-    .line 1720
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/PopupWindow;->getMaxAvailableHeight(Landroid/view/View;I)I
@@ -4274,7 +3799,6 @@
     .param p2, "yOffset"    # I
 
     .prologue
-    .line 1735
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/widget/PopupWindow;->getMaxAvailableHeight(Landroid/view/View;IZ)I
@@ -4293,22 +3817,17 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 1756
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1757
     .local v3, "displayFrame":Landroid/graphics/Rect;
     invoke-virtual {p1, v3}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 1758
     invoke-direct {p0, p1, v3}, Landroid/widget/PopupWindow;->getVisibleDisplayRect(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 1760
     iget-object v1, p0, Landroid/widget/PopupWindow;->mDrawingLocation:[I
 
-    .line 1761
     .local v1, "anchorPos":[I
     invoke-direct {p0}, Landroid/widget/PopupWindow;->isCascadeTypeMultiWindow()Z
 
@@ -4316,14 +3835,11 @@
 
     if-eqz v8, :cond_3
 
-    .line 1762
     invoke-virtual {p1, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 1767
     :goto_0
     iget v2, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 1768
     .local v2, "bottomEdge":I
     if-eqz p3, :cond_0
 
@@ -4333,7 +3849,6 @@
 
     if-nez v8, :cond_0
 
-    .line 1770
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v8
@@ -4342,7 +3857,6 @@
 
     move-result-object v6
 
-    .line 1771
     .local v6, "res":Landroid/content/res/Resources;
     invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -4350,23 +3864,19 @@
 
     iget v2, v8, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 1774
     .end local v6    # "res":Landroid/content/res/Resources;
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
-    .line 1775
     .local v0, "anchorHeight":I
     iget-boolean v8, p0, Landroid/widget/PopupWindow;->mOverlapAnchor:Z
 
     if-eqz v8, :cond_1
 
-    .line 1776
     const/4 v0, 0x0
 
-    .line 1777
     :cond_1
     aget v8, v1, v9
 
@@ -4376,7 +3886,6 @@
 
     sub-int v4, v8, p2
 
-    .line 1778
     .local v4, "distanceToBottom":I
     aget v8, v1, v9
 
@@ -4386,26 +3895,22 @@
 
     add-int v5, v8, p2
 
-    .line 1781
     .local v5, "distanceToTop":I
     invoke-static {v4, v5}, Ljava/lang/Math;->max(II)I
 
     move-result v7
 
-    .line 1782
     .local v7, "returnedHeight":I
     iget-object v8, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v8, :cond_2
 
-    .line 1783
     iget-object v8, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     iget-object v9, p0, Landroid/widget/PopupWindow;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v9}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 1784
     iget-object v8, p0, Landroid/widget/PopupWindow;->mTempRect:Landroid/graphics/Rect;
 
     iget v8, v8, Landroid/graphics/Rect;->top:I
@@ -4418,11 +3923,9 @@
 
     sub-int/2addr v7, v8
 
-    .line 1787
     :cond_2
     return v7
 
-    .line 1764
     .end local v0    # "anchorHeight":I
     .end local v2    # "bottomEdge":I
     .end local v4    # "distanceToBottom":I
@@ -4438,7 +3941,6 @@
     .locals 1
 
     .prologue
-    .line 1008
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mOverlapAnchor:Z
 
     return v0
@@ -4448,7 +3950,6 @@
     .locals 1
 
     .prologue
-    .line 658
     iget v0, p0, Landroid/widget/PopupWindow;->mSoftInputMode:I
 
     return v0
@@ -4458,7 +3959,6 @@
     .locals 1
 
     .prologue
-    .line 966
     iget v0, p0, Landroid/widget/PopupWindow;->mWidth:I
 
     return v0
@@ -4468,7 +3968,6 @@
     .locals 1
 
     .prologue
-    .line 893
     iget v0, p0, Landroid/widget/PopupWindow;->mWindowLayoutType:I
 
     return v0
@@ -4478,7 +3977,6 @@
     .locals 1
 
     .prologue
-    .line 1191
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAboveAnchor:Z
 
     return v0
@@ -4488,7 +3986,6 @@
     .locals 1
 
     .prologue
-    .line 838
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mAttachedInDecor:Z
 
     return v0
@@ -4498,7 +3995,6 @@
     .locals 1
 
     .prologue
-    .line 732
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mClippingEnabled:Z
 
     return v0
@@ -4508,7 +4004,6 @@
     .locals 1
 
     .prologue
-    .line 588
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mFocusable:Z
 
     return v0
@@ -4518,7 +4013,6 @@
     .locals 1
 
     .prologue
-    .line 813
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mLayoutInScreen:Z
 
     return v0
@@ -4528,7 +4022,6 @@
     .locals 1
 
     .prologue
-    .line 700
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mOutsideTouchable:Z
 
     return v0
@@ -4538,7 +4031,6 @@
     .locals 1
 
     .prologue
-    .line 1017
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mIsShowing:Z
 
     return v0
@@ -4552,7 +4044,6 @@
 
     const/4 v0, 0x1
 
-    .line 782
     iget v2, p0, Landroid/widget/PopupWindow;->mSplitTouchEnabled:I
 
     if-gez v2, :cond_2
@@ -4561,7 +4052,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 783
     iget-object v2, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -4574,7 +4064,6 @@
 
     if-lt v2, v3, :cond_1
 
-    .line 785
     :cond_0
     :goto_0
     return v0
@@ -4582,10 +4071,8 @@
     :cond_1
     move v0, v1
 
-    .line 783
     goto :goto_0
 
-    .line 785
     :cond_2
     iget v2, p0, Landroid/widget/PopupWindow;->mSplitTouchEnabled:I
 
@@ -4600,7 +4087,6 @@
     .locals 1
 
     .prologue
-    .line 669
     iget-boolean v0, p0, Landroid/widget/PopupWindow;->mTouchable:Z
 
     return v0
@@ -4611,10 +4097,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 771
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mAllowScrollingAnchorParent:Z
 
-    .line 772
     return-void
 .end method
 
@@ -4623,10 +4107,8 @@
     .param p1, "animationStyle"    # I
 
     .prologue
-    .line 518
     iput p1, p0, Landroid/widget/PopupWindow;->mAnimationStyle:I
 
-    .line 519
     return-void
 .end method
 
@@ -4635,15 +4117,12 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 854
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mAttachedInDecor:Z
 
-    .line 855
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/PopupWindow;->mAttachedInDecorSet:Z
 
-    .line 856
     return-void
 .end method
 
@@ -4656,22 +4135,18 @@
 
     const/4 v6, -0x1
 
-    .line 419
     iput-object p1, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 430
     iget-object v5, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     instance-of v5, v5, Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v5, :cond_1
 
-    .line 431
     iget-object v4, p0, Landroid/widget/PopupWindow;->mBackground:Landroid/graphics/drawable/Drawable;
 
     check-cast v4, Landroid/graphics/drawable/StateListDrawable;
 
-    .line 434
     .local v4, "stateList":Landroid/graphics/drawable/StateListDrawable;
     sget-object v5, Landroid/widget/PopupWindow;->ABOVE_ANCHOR_STATE_SET:[I
 
@@ -4679,17 +4154,14 @@
 
     move-result v0
 
-    .line 438
     .local v0, "aboveAnchorStateIndex":I
     invoke-virtual {v4}, Landroid/graphics/drawable/StateListDrawable;->getStateCount()I
 
     move-result v2
 
-    .line 439
     .local v2, "count":I
     const/4 v1, -0x1
 
-    .line 440
     .local v1, "belowAnchorStateIndex":I
     const/4 v3, 0x0
 
@@ -4697,33 +4169,27 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 441
     if-eq v3, v0, :cond_2
 
-    .line 442
     move v1, v3
 
-    .line 449
     :cond_0
     if-eq v0, v6, :cond_3
 
     if-eq v1, v6, :cond_3
 
-    .line 450
     invoke-virtual {v4, v0}, Landroid/graphics/drawable/StateListDrawable;->getStateDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
     iput-object v5, p0, Landroid/widget/PopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 451
     invoke-virtual {v4, v1}, Landroid/graphics/drawable/StateListDrawable;->getStateDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
     iput-object v5, p0, Landroid/widget/PopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 457
     .end local v0    # "aboveAnchorStateIndex":I
     .end local v1    # "belowAnchorStateIndex":I
     .end local v2    # "count":I
@@ -4733,7 +4199,6 @@
     :goto_1
     return-void
 
-    .line 440
     .restart local v0    # "aboveAnchorStateIndex":I
     .restart local v1    # "belowAnchorStateIndex":I
     .restart local v2    # "count":I
@@ -4744,11 +4209,9 @@
 
     goto :goto_0
 
-    .line 453
     :cond_3
     iput-object v7, p0, Landroid/widget/PopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 454
     iput-object v7, p0, Landroid/widget/PopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1
@@ -4759,10 +4222,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 760
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mClipToScreen:Z
 
-    .line 761
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -4770,10 +4231,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setClippingEnabled(Z)V
 
-    .line 762
     return-void
 
-    .line 761
     :cond_0
     const/4 v0, 0x0
 
@@ -4785,10 +4244,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 750
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mClippingEnabled:Z
 
-    .line 751
     return-void
 .end method
 
@@ -4797,23 +4254,19 @@
     .param p1, "contentView"    # Landroid/view/View;
 
     .prologue
-    .line 544
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 570
     :cond_0
     :goto_0
     return-void
 
-    .line 548
     :cond_1
     iput-object p1, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
-    .line 550
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_2
@@ -4822,7 +4275,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 551
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -4831,7 +4283,6 @@
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
-    .line 554
     :cond_2
     iget-object v0, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
@@ -4841,10 +4292,9 @@
 
     if-eqz v0, :cond_3
 
-    .line 555
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4854,7 +4304,6 @@
 
     iput-object v0, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 562
     :cond_3
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
@@ -4864,7 +4313,6 @@
 
     if-nez v0, :cond_0
 
-    .line 566
     iget-object v0, p0, Landroid/widget/PopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -4896,13 +4344,10 @@
     .param p2, "dimAmount"    # F
 
     .prologue
-    .line 2183
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mDimBehind:Z
 
-    .line 2184
     iput p2, p0, Landroid/widget/PopupWindow;->mDimAmount:F
 
-    .line 2185
     return-void
 .end method
 
@@ -4911,10 +4356,8 @@
     .param p1, "elevation"    # F
 
     .prologue
-    .line 476
     iput p1, p0, Landroid/widget/PopupWindow;->mElevation:F
 
-    .line 477
     return-void
 .end method
 
@@ -4923,10 +4366,8 @@
     .param p1, "enterTransition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 377
     iput-object p1, p0, Landroid/widget/PopupWindow;->mEnterTransition:Landroid/transition/Transition;
 
-    .line 378
     return-void
 .end method
 
@@ -4935,10 +4376,8 @@
     .param p1, "exitTransition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 381
     iput-object p1, p0, Landroid/widget/PopupWindow;->mExitTransition:Landroid/transition/Transition;
 
-    .line 382
     return-void
 .end method
 
@@ -4947,10 +4386,8 @@
     .param p1, "focusable"    # Z
 
     .prologue
-    .line 608
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mFocusable:Z
 
-    .line 609
     return-void
 .end method
 
@@ -4959,10 +4396,8 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 956
     iput p1, p0, Landroid/widget/PopupWindow;->mHeight:I
 
-    .line 957
     return-void
 .end method
 
@@ -4970,12 +4405,10 @@
     .locals 1
 
     .prologue
-    .line 500
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/PopupWindow;->mIgnoreCheekPress:Z
 
-    .line 501
     return-void
 .end method
 
@@ -4984,10 +4417,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 2173
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mIgnoreMultiWindowLayout:Z
 
-    .line 2174
     return-void
 .end method
 
@@ -4996,10 +4427,8 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 634
     iput p1, p0, Landroid/widget/PopupWindow;->mInputMethodMode:I
 
-    .line 635
     return-void
 .end method
 
@@ -5008,10 +4437,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 825
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mLayoutInScreen:Z
 
-    .line 826
     return-void
 .end method
 
@@ -5020,10 +4447,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 871
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mLayoutInsetDecor:Z
 
-    .line 872
     return-void
 .end method
 
@@ -5032,10 +4457,8 @@
     .param p1, "onDismissListener"    # Landroid/widget/PopupWindow$OnDismissListener;
 
     .prologue
-    .line 1897
     iput-object p1, p0, Landroid/widget/PopupWindow;->mOnDismissListener:Landroid/widget/PopupWindow$OnDismissListener;
 
-    .line 1898
     return-void
 .end method
 
@@ -5044,10 +4467,8 @@
     .param p1, "touchable"    # Z
 
     .prologue
-    .line 721
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mOutsideTouchable:Z
 
-    .line 722
     return-void
 .end method
 
@@ -5056,10 +4477,8 @@
     .param p1, "overlapAnchor"    # Z
 
     .prologue
-    .line 996
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mOverlapAnchor:Z
 
-    .line 997
     return-void
 .end method
 
@@ -5068,10 +4487,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 2166
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mShowForAllUsers:Z
 
-    .line 2167
     return-void
 .end method
 
@@ -5080,10 +4497,8 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 648
     iput p1, p0, Landroid/widget/PopupWindow;->mSoftInputMode:I
 
-    .line 649
     return-void
 .end method
 
@@ -5092,7 +4507,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 802
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -5100,10 +4514,8 @@
     :goto_0
     iput v0, p0, Landroid/widget/PopupWindow;->mSplitTouchEnabled:I
 
-    .line 803
     return-void
 
-    .line 802
     :cond_0
     const/4 v0, 0x0
 
@@ -5115,10 +4527,8 @@
     .param p1, "l"    # Landroid/view/View$OnTouchListener;
 
     .prologue
-    .line 577
     iput-object p1, p0, Landroid/widget/PopupWindow;->mTouchInterceptor:Landroid/view/View$OnTouchListener;
 
-    .line 578
     return-void
 .end method
 
@@ -5127,7 +4537,6 @@
     .param p1, "touchModal"    # Z
 
     .prologue
-    .line 902
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -5135,10 +4544,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/PopupWindow;->mNotTouchModal:Z
 
-    .line 903
     return-void
 
-    .line 902
     :cond_0
     const/4 v0, 0x0
 
@@ -5150,10 +4557,8 @@
     .param p1, "touchable"    # Z
 
     .prologue
-    .line 688
     iput-boolean p1, p0, Landroid/widget/PopupWindow;->mTouchable:Z
 
-    .line 689
     return-void
 .end method
 
@@ -5162,10 +4567,8 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 980
     iput p1, p0, Landroid/widget/PopupWindow;->mWidth:I
 
-    .line 981
     return-void
 .end method
 
@@ -5177,13 +4580,10 @@
     .end annotation
 
     .prologue
-    .line 931
     iput p1, p0, Landroid/widget/PopupWindow;->mWidthMode:I
 
-    .line 932
     iput p2, p0, Landroid/widget/PopupWindow;->mHeightMode:I
 
-    .line 933
     return-void
 .end method
 
@@ -5192,10 +4592,8 @@
     .param p1, "layoutType"    # I
 
     .prologue
-    .line 884
     iput p1, p0, Landroid/widget/PopupWindow;->mWindowLayoutType:I
 
-    .line 885
     return-void
 .end method
 
@@ -5206,10 +4604,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1093
     invoke-virtual {p0, p1, v0, v0}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
 
-    .line 1094
     return-void
 .end method
 
@@ -5220,12 +4616,10 @@
     .param p3, "yoff"    # I
 
     .prologue
-    .line 1114
     const v0, 0x800033
 
     invoke-virtual {p0, p1, p2, p3, v0}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
 
-    .line 1115
     return-void
 .end method
 
@@ -5239,7 +4633,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1138
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v0
@@ -5250,27 +4643,21 @@
 
     if-nez v0, :cond_1
 
-    .line 1156
     :cond_0
     :goto_0
     return-void
 
-    .line 1142
     :cond_1
     iget-object v0, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-static {v0}, Landroid/transition/TransitionManager;->endTransitions(Landroid/view/ViewGroup;)V
 
-    .line 1144
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->registerForScrollChanged(Landroid/view/View;III)V
 
-    .line 1146
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIsShowing:Z
 
-    .line 1147
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIsDropdown:Z
 
-    .line 1149
     invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v0
@@ -5279,7 +4666,6 @@
 
     move-result-object v2
 
-    .line 1150
     .local v2, "p":Landroid/view/WindowManager$LayoutParams;
     invoke-direct {p0, v2}, Landroid/widget/PopupWindow;->preparePopup(Landroid/view/WindowManager$LayoutParams;)V
 
@@ -5293,16 +4679,13 @@
 
     move v5, p4
 
-    .line 1152
     invoke-direct/range {v0 .. v5}, Landroid/widget/PopupWindow;->findDropDownPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;III)Z
 
     move-result v6
 
-    .line 1153
     .local v6, "aboveAnchor":Z
     invoke-direct {p0, v6}, Landroid/widget/PopupWindow;->updateAboveAnchor(Z)V
 
-    .line 1155
     invoke-direct {p0, v2}, Landroid/widget/PopupWindow;->invokePopup(Landroid/view/WindowManager$LayoutParams;)V
 
     goto :goto_0
@@ -5316,7 +4699,6 @@
     .param p4, "y"    # I
 
     .prologue
-    .line 1050
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v1
@@ -5327,60 +4709,47 @@
 
     if-nez v1, :cond_1
 
-    .line 1078
     :cond_0
     :goto_0
     return-void
 
-    .line 1054
     :cond_1
     iget-object v1, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-static {v1}, Landroid/transition/TransitionManager;->endTransitions(Landroid/view/ViewGroup;)V
 
-    .line 1056
     invoke-direct {p0}, Landroid/widget/PopupWindow;->unregisterForScrollChanged()V
 
-    .line 1058
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIsShowing:Z
 
-    .line 1059
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/widget/PopupWindow;->mIsDropdown:Z
 
-    .line 1061
     invoke-direct {p0, p1}, Landroid/widget/PopupWindow;->createPopupLayoutParams(Landroid/os/IBinder;)Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 1062
     .local v0, "p":Landroid/view/WindowManager$LayoutParams;
     invoke-direct {p0, v0}, Landroid/widget/PopupWindow;->preparePopup(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 1065
     if-eqz p2, :cond_2
 
-    .line 1066
     iput p2, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1069
     :cond_2
     iput p3, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1070
     iput p4, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1073
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     or-int/lit8 v1, v1, 0x20
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
-    .line 1077
     invoke-direct {p0, v0}, Landroid/widget/PopupWindow;->invokePopup(Landroid/view/WindowManager$LayoutParams;)V
 
     goto :goto_0
@@ -5394,14 +4763,12 @@
     .param p4, "y"    # I
 
     .prologue
-    .line 1035
     invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v0
 
     invoke-virtual {p0, v0, p2, p3, p4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/os/IBinder;III)V
 
-    .line 1036
     return-void
 .end method
 
@@ -5409,7 +4776,6 @@
     .locals 6
 
     .prologue
-    .line 1915
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v4
@@ -5420,12 +4786,10 @@
 
     if-nez v4, :cond_1
 
-    .line 1940
     :cond_0
     :goto_0
     return-void
 
-    .line 1919
     :cond_1
     iget-object v4, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
@@ -5435,29 +4799,23 @@
 
     check-cast v2, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1922
     .local v2, "p":Landroid/view/WindowManager$LayoutParams;
     const/4 v3, 0x0
 
-    .line 1924
     .local v3, "update":Z
     invoke-direct {p0}, Landroid/widget/PopupWindow;->computeAnimationResource()I
 
     move-result v0
 
-    .line 1925
     .local v0, "newAnim":I
     iget v4, v2, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     if-eq v0, v4, :cond_2
 
-    .line 1926
     iput v0, v2, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 1927
     const/4 v3, 0x1
 
-    .line 1930
     :cond_2
     iget v4, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -5465,26 +4823,20 @@
 
     move-result v1
 
-    .line 1931
     .local v1, "newFlags":I
     iget v4, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     if-eq v1, v4, :cond_3
 
-    .line 1932
     iput v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1933
     const/4 v3, 0x1
 
-    .line 1936
     :cond_3
     if-eqz v3, :cond_0
 
-    .line 1937
     invoke-direct {p0}, Landroid/widget/PopupWindow;->setLayoutDirectionFromAnchor()V
 
-    .line 1938
     iget-object v4, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v5, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
@@ -5500,7 +4852,6 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 1952
     iget-object v0, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow$PopupDecorView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -5509,7 +4860,6 @@
 
     check-cast v6, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1954
     .local v6, "p":Landroid/view/WindowManager$LayoutParams;
     iget v1, v6, Landroid/view/WindowManager$LayoutParams;->x:I
 
@@ -5525,7 +4875,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/PopupWindow;->update(IIIIZ)V
 
-    .line 1955
     return-void
 .end method
 
@@ -5537,7 +4886,6 @@
     .param p4, "height"    # I
 
     .prologue
-    .line 1970
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -5552,7 +4900,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/PopupWindow;->update(IIIIZ)V
 
-    .line 1971
     return-void
 .end method
 
@@ -5567,26 +4914,19 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 1989
     if-ltz p3, :cond_0
 
-    .line 1990
     iput p3, p0, Landroid/widget/PopupWindow;->mLastWidth:I
 
-    .line 1991
     invoke-virtual {p0, p3}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 1994
     :cond_0
     if-ltz p4, :cond_1
 
-    .line 1995
     iput p4, p0, Landroid/widget/PopupWindow;->mLastHeight:I
 
-    .line 1996
     invoke-virtual {p0, p4}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    .line 1999
     :cond_1
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
 
@@ -5598,12 +4938,10 @@
 
     if-nez v6, :cond_3
 
-    .line 2046
     :cond_2
     :goto_0
     return-void
 
-    .line 2003
     :cond_3
     iget-object v6, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
 
@@ -5613,11 +4951,9 @@
 
     check-cast v4, Landroid/view/WindowManager$LayoutParams;
 
-    .line 2006
     .local v4, "p":Landroid/view/WindowManager$LayoutParams;
     move v5, p5
 
-    .line 2008
     .local v5, "update":Z
     iget v6, p0, Landroid/widget/PopupWindow;->mWidthMode:I
 
@@ -5625,7 +4961,6 @@
 
     iget v1, p0, Landroid/widget/PopupWindow;->mWidthMode:I
 
-    .line 2009
     .local v1, "finalWidth":I
     :goto_1
     if-eq p3, v7, :cond_4
@@ -5634,15 +4969,12 @@
 
     if-eq v6, v1, :cond_4
 
-    .line 2010
     iput v1, p0, Landroid/widget/PopupWindow;->mLastWidth:I
 
     iput v1, v4, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 2011
     const/4 v5, 0x1
 
-    .line 2014
     :cond_4
     iget v6, p0, Landroid/widget/PopupWindow;->mHeightMode:I
 
@@ -5650,7 +4982,6 @@
 
     iget v0, p0, Landroid/widget/PopupWindow;->mHeightMode:I
 
-    .line 2015
     .local v0, "finalHeight":I
     :goto_2
     if-eq p4, v7, :cond_5
@@ -5659,57 +4990,44 @@
 
     if-eq v6, v0, :cond_5
 
-    .line 2016
     iput v0, p0, Landroid/widget/PopupWindow;->mLastHeight:I
 
     iput v0, v4, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 2017
     const/4 v5, 0x1
 
-    .line 2020
     :cond_5
     iget v6, v4, Landroid/view/WindowManager$LayoutParams;->x:I
 
     if-eq v6, p1, :cond_6
 
-    .line 2021
     iput p1, v4, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 2022
     const/4 v5, 0x1
 
-    .line 2025
     :cond_6
     iget v6, v4, Landroid/view/WindowManager$LayoutParams;->y:I
 
     if-eq v6, p2, :cond_7
 
-    .line 2026
     iput p2, v4, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 2027
     const/4 v5, 0x1
 
-    .line 2030
     :cond_7
     invoke-direct {p0}, Landroid/widget/PopupWindow;->computeAnimationResource()I
 
     move-result v2
 
-    .line 2031
     .local v2, "newAnim":I
     iget v6, v4, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     if-eq v2, v6, :cond_8
 
-    .line 2032
     iput v2, v4, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 2033
     const/4 v5, 0x1
 
-    .line 2036
     :cond_8
     iget v6, v4, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -5717,26 +5035,20 @@
 
     move-result v3
 
-    .line 2037
     .local v3, "newFlags":I
     iget v6, v4, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     if-eq v3, v6, :cond_9
 
-    .line 2038
     iput v3, v4, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 2039
     const/4 v5, 0x1
 
-    .line 2042
     :cond_9
     if-eqz v5, :cond_2
 
-    .line 2043
     invoke-direct {p0}, Landroid/widget/PopupWindow;->setLayoutDirectionFromAnchor()V
 
-    .line 2044
     iget-object v6, p0, Landroid/widget/PopupWindow;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v7, p0, Landroid/widget/PopupWindow;->mDecorView:Landroid/widget/PopupWindow$PopupDecorView;
@@ -5745,7 +5057,6 @@
 
     goto :goto_0
 
-    .line 2008
     .end local v0    # "finalHeight":I
     .end local v1    # "finalWidth":I
     .end local v2    # "newAnim":I
@@ -5755,7 +5066,6 @@
 
     goto :goto_1
 
-    .line 2014
     .restart local v1    # "finalWidth":I
     :cond_b
     iget v0, p0, Landroid/widget/PopupWindow;->mLastHeight:I
@@ -5772,7 +5082,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2059
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -5789,7 +5098,6 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/widget/PopupWindow;->update(Landroid/view/View;ZIIZII)V
 
-    .line 2060
     return-void
 .end method
 
@@ -5804,7 +5112,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2079
     move-object v0, p0
 
     move-object v1, p1
@@ -5821,6 +5128,5 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/widget/PopupWindow;->update(Landroid/view/View;ZIIZII)V
 
-    .line 2080
     return-void
 .end method

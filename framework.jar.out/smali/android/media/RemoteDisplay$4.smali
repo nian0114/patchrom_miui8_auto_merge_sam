@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 221
     iput-object p1, p0, Landroid/media/RemoteDisplay$4;->this$0:Landroid/media/RemoteDisplay;
 
     iput p2, p0, Landroid/media/RemoteDisplay$4;->val$msg:I
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 224
     # getter for: Landroid/media/RemoteDisplay;->mRemoteDisplayCallback:Landroid/media/RemoteDisplayCallback;
     invoke-static {}, Landroid/media/RemoteDisplay;->access$100()Landroid/media/RemoteDisplayCallback;
 
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/RemoteDisplayCallback;->onNoti(ILjava/lang/String;)V
 
-    .line 225
     return-void
 .end method

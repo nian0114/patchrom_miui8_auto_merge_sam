@@ -47,23 +47,18 @@
     .param p3, "version"    # I
 
     .prologue
-    .line 104
     iput-object p1, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->this$0:Lcom/android/server/LockSettingsStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     iput-object p2, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->hash:[B
 
-    .line 106
     iput p3, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->version:I
 
-    .line 107
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->isBaseZeroPattern:Z
 
-    .line 108
     return-void
 .end method
 
@@ -73,23 +68,18 @@
     .param p3, "isBaseZeroPattern"    # Z
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->this$0:Lcom/android/server/LockSettingsStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     iput-object p2, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->hash:[B
 
-    .line 112
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->version:I
 
-    .line 113
     iput-boolean p3, p0, Lcom/android/server/LockSettingsStorage$CredentialHash;->isBaseZeroPattern:Z
 
-    .line 114
     return-void
 .end method
 
@@ -99,12 +89,11 @@
     .locals 2
 
     .prologue
-    .line 121
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "version: "
+    const-string v1, "version: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

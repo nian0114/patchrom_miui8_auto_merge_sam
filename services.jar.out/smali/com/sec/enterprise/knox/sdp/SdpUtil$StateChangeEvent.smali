@@ -26,17 +26,13 @@
     .param p2, "arg"    # I
 
     .prologue
-    .line 215
     iput-object p1, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$StateChangeEvent;->this$0:Lcom/sec/enterprise/knox/sdp/SdpUtil;
 
-    .line 216
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpEvent;-><init>(Lcom/sec/enterprise/knox/sdp/SdpUtil;I)V
 
-    .line 217
     iput p2, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$StateChangeEvent;->state:I
 
-    .line 218
     return-void
 .end method

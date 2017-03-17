@@ -24,17 +24,14 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$RebindHandler;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
-    .line 126
     invoke-virtual {p2}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 127
     return-void
 .end method
 
@@ -45,11 +42,9 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$RebindHandler;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     invoke-virtual {v0}, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->bind()V
 
-    .line 134
     return-void
 .end method

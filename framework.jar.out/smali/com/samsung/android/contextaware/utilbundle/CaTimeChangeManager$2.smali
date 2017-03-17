@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,24 +39,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 145
     iget v3, p1, Landroid/os/Message;->what:I
 
     const/16 v4, 0x1011
 
     if-ne v3, v4, :cond_1
 
-    .line 146
     const-string v2, "context is null"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 168
     :cond_0
     :goto_0
     return-void
 
-    .line 147
     :cond_1
     iget v3, p1, Landroid/os/Message;->what:I
 
@@ -65,14 +60,12 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 148
     const-string v2, "intent is null"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 149
     :cond_2
     iget v3, p1, Landroid/os/Message;->what:I
 
@@ -80,10 +73,8 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 151
     const/4 v0, 0x0
 
-    .line 153
     .local v0, "autoCheck":Z
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;
@@ -109,7 +100,6 @@
 
     move v0, v2
 
-    .line 159
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -148,7 +138,6 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 161
     iget-object v3, p0, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;->mAutoCheck:Z
@@ -163,14 +152,12 @@
     :cond_3
     if-nez v0, :cond_5
 
-    .line 163
     :cond_4
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;->notifyObservers()V
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;->access$300(Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;)V
 
-    .line 166
     :cond_5
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;
 
@@ -179,23 +166,19 @@
 
     goto :goto_0
 
-    .line 153
     :cond_6
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 154
     :catch_0
     move-exception v1
 
-    .line 155
     .local v1, "e":Landroid/provider/Settings$SettingNotFoundException;
-    const-string/jumbo v3, "settings not found"
+    const-string v3, "settings not found"
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 156
     invoke-virtual {v1}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     goto :goto_1

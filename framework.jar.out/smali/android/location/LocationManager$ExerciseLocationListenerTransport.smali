@@ -30,15 +30,12 @@
     .param p2, "listener"    # Landroid/location/ExerciseLocationListener;
 
     .prologue
-    .line 1858
     iput-object p1, p0, Landroid/location/LocationManager$ExerciseLocationListenerTransport;->this$0:Landroid/location/LocationManager;
 
     invoke-direct {p0}, Landroid/location/IExerciseLocationListener$Stub;-><init>()V
 
-    .line 1859
     iput-object p2, p0, Landroid/location/LocationManager$ExerciseLocationListenerTransport;->mListener:Landroid/location/ExerciseLocationListener;
 
-    .line 1860
     return-void
 .end method
 
@@ -58,12 +55,10 @@
     .param p10, "numOfBatch"    # I
 
     .prologue
-    .line 1865
     iget-object v0, p0, Landroid/location/LocationManager$ExerciseLocationListenerTransport;->mListener:Landroid/location/ExerciseLocationListener;
 
     if-eqz v0, :cond_0
 
-    .line 1866
     iget-object v0, p0, Landroid/location/LocationManager$ExerciseLocationListenerTransport;->mListener:Landroid/location/ExerciseLocationListener;
 
     move-object v1, p1
@@ -88,7 +83,6 @@
 
     invoke-interface/range {v0 .. v10}, Landroid/location/ExerciseLocationListener;->onLocationChanged([J[D[D[F[F[F[D[D[JI)V
 
-    .line 1869
     :cond_0
     return-void
 .end method
@@ -98,17 +92,14 @@
     .param p1, "exercise_status"    # I
 
     .prologue
-    .line 1873
     iget-object v0, p0, Landroid/location/LocationManager$ExerciseLocationListenerTransport;->mListener:Landroid/location/ExerciseLocationListener;
 
     if-eqz v0, :cond_0
 
-    .line 1874
     iget-object v0, p0, Landroid/location/LocationManager$ExerciseLocationListenerTransport;->mListener:Landroid/location/ExerciseLocationListener;
 
     invoke-interface {v0, p1}, Landroid/location/ExerciseLocationListener;->onStatusChanged(I)V
 
-    .line 1876
     :cond_0
     return-void
 .end method

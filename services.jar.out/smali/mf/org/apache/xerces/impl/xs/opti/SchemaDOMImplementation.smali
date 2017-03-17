@@ -15,7 +15,6 @@
     .locals 1
 
     .prologue
-    .line 32
     new-instance v0, Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;-><init>()V
@@ -29,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;->singleton:Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;
 
     return-object v0
@@ -59,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 43
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -83,7 +79,6 @@
     .end annotation
 
     .prologue
-    .line 48
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -101,7 +96,6 @@
     .param p2, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     sget-object v0, Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;->singleton:Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;
 
     invoke-virtual {v0, p1, p2}, Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;->hasFeature(Ljava/lang/String;Ljava/lang/String;)Z
@@ -110,10 +104,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 53
     sget-object v0, Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;->singleton:Lmf/org/apache/xerces/impl/xs/opti/SchemaDOMImplementation;
 
-    .line 55
     :goto_0
     return-object v0
 
@@ -133,7 +125,6 @@
 
     const/4 v1, 0x0
 
-    .line 59
     if-eqz p2, :cond_3
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -144,7 +135,6 @@
 
     move v0, v1
 
-    .line 60
     .local v0, "anyVersion":Z
     :goto_0
     const-string v3, "Core"
@@ -163,7 +153,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 61
     :cond_0
     if-nez v0, :cond_1
 
@@ -194,7 +183,6 @@
     :cond_1
     move v1, v2
 
-    .line 60
     :cond_2
     return v1
 
@@ -202,6 +190,5 @@
     :cond_3
     move v0, v2
 
-    .line 59
     goto :goto_0
 .end method

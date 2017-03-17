@@ -36,17 +36,14 @@
     .locals 1
 
     .prologue
-    .line 2119
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2120
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->mFinishResolving:Z
 
-    .line 2121
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 2117
     check-cast p1, [Ljava/lang/String;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -77,17 +73,14 @@
 
     const/4 v3, 0x1
 
-    .line 2124
     const/4 v2, 0x0
 
     aget-object v1, p1, v2
 
-    .line 2125
     .local v1, "hostname":Ljava/lang/String;
     # setter for: Lcom/android/server/enterprise/firewall/FirewallPolicy;->allIpsInfo:[Ljava/net/InetAddress;
     invoke-static {v4}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->access$702([Ljava/net/InetAddress;)[Ljava/net/InetAddress;
 
-    .line 2127
     :try_start_0
     invoke-static {v1}, Ljava/net/InetAddress;->getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;
 
@@ -99,10 +92,8 @@
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2131
     iput-boolean v3, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->mFinishResolving:Z
 
-    .line 2133
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
@@ -113,7 +104,6 @@
 
     monitor-enter v3
 
-    .line 2134
     :try_start_1
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->this$0:Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
@@ -124,26 +114,21 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->notify()V
 
-    .line 2135
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2136
     return-object v4
 
-    .line 2128
     :catch_0
     move-exception v0
 
-    .line 2129
     .local v0, "e":Ljava/net/UnknownHostException;
     :try_start_2
     invoke-virtual {v0}, Ljava/net/UnknownHostException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2131
     iput-boolean v3, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->mFinishResolving:Z
 
     goto :goto_0
@@ -156,7 +141,6 @@
 
     throw v2
 
-    .line 2135
     :catchall_1
     move-exception v2
 
@@ -172,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 2139
     iget-boolean v0, p0, Lcom/android/server/enterprise/firewall/FirewallPolicy$HostnameResolver;->mFinishResolving:Z
 
     return v0

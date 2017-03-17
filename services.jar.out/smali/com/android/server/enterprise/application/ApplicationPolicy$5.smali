@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5663
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 5665
     const-string v9, "ApplicationPolicy"
 
     const-string v10, "User switched"
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5667
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mAppStartOnUserSwitch:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$2100()Ljava/util/Map;
 
@@ -65,12 +62,10 @@
 
     if-eqz v9, :cond_1
 
-    .line 5700
     :cond_0
     :goto_0
     return-void
 
-    .line 5670
     :cond_1
     const-string v9, "android.intent.extra.user_handle"
 
@@ -80,7 +75,6 @@
 
     move-result v8
 
-    .line 5671
     .local v8, "userId":I
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mAppStartOnUserSwitch:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$2100()Ljava/util/Map;
@@ -91,7 +85,6 @@
 
     move-result-object v2
 
-    .line 5673
     .local v2, "adminLuids":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Long;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -116,13 +109,11 @@
 
     move-result-wide v0
 
-    .line 5674
     .local v0, "adminLuid":J
     invoke-static {v0, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminUidFromLUID(J)I
 
     move-result v3
 
-    .line 5675
     .local v3, "adminUid":I
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -130,7 +121,6 @@
 
     if-ne v8, v9, :cond_2
 
-    .line 5677
     iget-object v9, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->getPersonaService()Landroid/os/PersonaManager;
@@ -142,7 +132,6 @@
 
     move-result-object v6
 
-    .line 5678
     .local v6, "persInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v6, :cond_5
 
@@ -165,7 +154,6 @@
 
     if-nez v9, :cond_5
 
-    .line 5680
     iget-object v9, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->getPersonaService()Landroid/os/PersonaManager;
@@ -204,10 +192,8 @@
 
     if-nez v9, :cond_4
 
-    .line 5683
     iget v7, v6, Landroid/content/pm/PersonaInfo;->id:I
 
-    .line 5684
     .local v7, "personaId":I
     iget-object v9, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -226,7 +212,6 @@
 
     if-nez v9, :cond_3
 
-    .line 5685
     new-instance v5, Lcom/android/server/enterprise/application/ApplicationPolicy$PersonaObserver;
 
     iget-object v9, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -239,7 +224,6 @@
 
     invoke-direct {v5, v9, v10, v7, v11}, Lcom/android/server/enterprise/application/ApplicationPolicy$PersonaObserver;-><init>(Lcom/android/server/enterprise/application/ApplicationPolicy;Landroid/content/Context;II)V
 
-    .line 5686
     .local v5, "observer":Lcom/android/server/enterprise/application/ApplicationPolicy$PersonaObserver;
     iget-object v9, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -254,7 +238,6 @@
 
     invoke-virtual {v9, v10, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5688
     .end local v5    # "observer":Lcom/android/server/enterprise/application/ApplicationPolicy$PersonaObserver;
     :cond_3
     const-string v9, "ApplicationPolicy"
@@ -265,7 +248,6 @@
 
     goto/16 :goto_0
 
-    .line 5691
     .end local v7    # "personaId":I
     :cond_4
     const-string v9, "ApplicationPolicy"
@@ -274,7 +256,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5692
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mAppStartOnUserSwitch:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$2100()Ljava/util/Map;
 
@@ -288,7 +269,6 @@
 
     goto/16 :goto_0
 
-    .line 5697
     :cond_5
     iget-object v9, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$5;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 

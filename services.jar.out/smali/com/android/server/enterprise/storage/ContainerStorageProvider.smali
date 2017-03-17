@@ -50,7 +50,6 @@
 
     const/4 v2, 0x0
 
-    .line 20
     const-class v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -64,16 +63,12 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->$assertionsDisabled:Z
 
-    .line 23
     sput-object v2, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
-    .line 25
     sput-object v2, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    .line 28
     sput-object v2, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSelfInstance:Lcom/android/server/enterprise/storage/ContainerStorageProvider;
 
-    .line 30
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v2, -0x1
@@ -82,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
-    .line 31
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
     sget-object v2, Lcom/android/server/enterprise/storage/ContainerDBConstants;->AUTHORITY:Ljava/lang/String;
@@ -91,14 +85,12 @@
 
     invoke-virtual {v0, v2, v3, v1}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    .line 33
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "_id"
@@ -107,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "containerid"
@@ -116,7 +107,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "admin_uid"
@@ -125,34 +115,30 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "packages"
+    const-string v1, "packages"
 
-    const-string/jumbo v2, "packages"
+    const-string v2, "packages"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "original_signature"
+    const-string v1, "original_signature"
 
-    const-string/jumbo v2, "original_signature"
+    const-string v2, "original_signature"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "installation_source"
+    const-string v1, "installation_source"
 
-    const-string/jumbo v2, "installation_source"
+    const-string v2, "installation_source"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "app_uid"
@@ -161,7 +147,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->AUTHORITY:Ljava/lang/String;
@@ -172,7 +157,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 48
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "activestatus"
@@ -181,61 +165,54 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "password"
+    const-string v1, "password"
 
-    const-string/jumbo v2, "password"
+    const-string v2, "password"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "passwordstatus"
+    const-string v1, "passwordstatus"
 
-    const-string/jumbo v2, "passwordstatus"
+    const-string v2, "passwordstatus"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "email"
+    const-string v1, "email"
 
-    const-string/jumbo v2, "email"
+    const-string v2, "email"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "name"
+    const-string v1, "name"
 
-    const-string/jumbo v2, "name"
+    const-string v2, "name"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "securitytext"
+    const-string v1, "securitytext"
 
-    const-string/jumbo v2, "securitytext"
+    const-string v2, "securitytext"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "securityicon"
+    const-string v1, "securityicon"
 
-    const-string/jumbo v2, "securityicon"
+    const-string v2, "securityicon"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 62
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "androidid"
@@ -244,25 +221,22 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "failedpasswordattempts"
+    const-string v1, "failedpasswordattempts"
 
-    const-string/jumbo v2, "failedpasswordattempts"
+    const-string v2, "failedpasswordattempts"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "locktype"
+    const-string v1, "locktype"
 
-    const-string/jumbo v2, "locktype"
+    const-string v2, "locktype"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "containertype"
@@ -271,7 +245,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "containerLockOnScreenLock"
@@ -280,7 +253,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     const-string v1, "containerPwdVerfyOnModeChange"
@@ -289,34 +261,30 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "deviceFirmwareVersion"
+    const-string v1, "deviceFirmwareVersion"
 
-    const-string/jumbo v2, "deviceFirmwareVersion"
+    const-string v2, "deviceFirmwareVersion"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "new_signature_creationtime"
+    const-string v1, "new_signature_creationtime"
 
-    const-string/jumbo v2, "new_signature_creationtime"
+    const-string v2, "new_signature_creationtime"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "orig_signature"
+    const-string v1, "orig_signature"
 
-    const-string/jumbo v2, "orig_signature"
+    const-string v2, "orig_signature"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->AUTHORITY:Ljava/lang/String;
@@ -327,10 +295,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 88
     return-void
 
-    .line 20
     :cond_0
     const/4 v0, 0x0
 
@@ -344,19 +310,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mDbHelper:Lcom/android/server/enterprise/storage/ContainerStorageHelper;
 
-    .line 26
     iput-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mContext:Landroid/content/Context;
 
-    .line 27
     iput-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 92
     new-instance v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider$ContainerDbErrorHandler;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/storage/ContainerStorageProvider$ContainerDbErrorHandler;-><init>()V
@@ -367,10 +328,8 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mDbHelper:Lcom/android/server/enterprise/storage/ContainerStorageHelper;
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mContext:Landroid/content/Context;
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mDbHelper:Lcom/android/server/enterprise/storage/ContainerStorageHelper;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -379,7 +338,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 95
     return-void
 .end method
 
@@ -392,14 +350,12 @@
 
     const/4 v2, 0x0
 
-    .line 228
     if-eqz p1, :cond_0
 
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
     if-nez v0, :cond_2
 
-    .line 229
     :cond_0
     const-string v3, "ContainerStorageProvider"
 
@@ -407,7 +363,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "uri is null? "
+    const-string v4, "uri is null? "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -453,14 +409,12 @@
 
     move v2, v1
 
-    .line 232
     :cond_2
     return v2
 
     :cond_3
     move v0, v2
 
-    .line 229
     goto :goto_0
 .end method
 
@@ -474,7 +428,6 @@
     .param p6, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 171
     iget-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
@@ -489,17 +442,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 172
     const/4 v9, 0x0
 
-    .line 174
     .local v9, "mCursorObj":Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 175
     iget-object v1, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
     const/4 v5, 0x0
@@ -520,12 +470,10 @@
 
     move-result-object v9
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
@@ -533,17 +481,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
     .end local v9    # "mCursorObj":Landroid/database/Cursor;
     :goto_0
     return-object v9
 
-    .line 179
     .restart local v9    # "mCursorObj":Landroid/database/Cursor;
     :catch_0
     move-exception v8
 
-    .line 180
     .local v8, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v0, "ContainerStorageProvider"
@@ -558,28 +503,25 @@
 
     goto :goto_0
 
-    .line 181
     .end local v8    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     throw v0
 
-    .line 187
     .end local v9    # "mCursorObj":Landroid/database/Cursor;
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSQLiteDataBaseObj:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_2
 
-    .line 188
     const-string v1, "ContainerStorageProvider"
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mSQLiteDataBaseObj is null? true  mSQLiteQueryBuilderObj is null? "
+    const-string v2, "mSQLiteDataBaseObj is null? true  mSQLiteQueryBuilderObj is null? "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -606,26 +548,22 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     :goto_2
     const-string v0, "ContainerStorageProvider"
 
-    const-string/jumbo v1, "returning null cursor"
+    const-string v1, "returning null cursor"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 188
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 190
     :cond_2
     const-string v1, "ContainerStorageProvider"
 
@@ -633,7 +571,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mSQLiteDataBaseObj is null false  mSQLiteQueryBuilderObj is null? "
+    const-string v2, "mSQLiteDataBaseObj is null false  mSQLiteQueryBuilderObj is null? "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -683,7 +621,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 98
     const-class v1, Lcom/android/server/enterprise/storage/ContainerStorageProvider;
 
     monitor-enter v1
@@ -693,14 +630,12 @@
 
     if-nez v0, :cond_0
 
-    .line 99
     new-instance v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSelfInstance:Lcom/android/server/enterprise/storage/ContainerStorageProvider;
 
-    .line 101
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mSelfInstance:Lcom/android/server/enterprise/storage/ContainerStorageProvider;
     :try_end_0
@@ -710,7 +645,6 @@
 
     return-object v0
 
-    .line 98
     :catchall_0
     move-exception v0
 
@@ -724,12 +658,10 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 198
     new-instance v0, Landroid/database/sqlite/SQLiteQueryBuilder;
 
     invoke-direct {v0}, Landroid/database/sqlite/SQLiteQueryBuilder;-><init>()V
 
-    .line 199
     .local v0, "mSQLiteQueryBuilderObj":Landroid/database/sqlite/SQLiteQueryBuilder;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->getTableNameForUri(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -737,7 +669,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->updateBuilderObj(Landroid/database/sqlite/SQLiteQueryBuilder;Ljava/lang/String;)V
 
-    .line 200
     return-object v0
 .end method
 
@@ -746,7 +677,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 212
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->sUriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -755,7 +685,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 223
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -780,7 +709,6 @@
 
     throw v0
 
-    .line 214
     :pswitch_0
     const-string v0, "ContainerStorageProvider"
 
@@ -788,14 +716,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_TABLE_NAME:Ljava/lang/String;
 
-    .line 221
     :goto_0
     return-object v0
 
-    .line 217
     :pswitch_1
     const-string v0, "ContainerStorageProvider"
 
@@ -803,12 +728,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_TABLE_ACTIVESTATUS_NAME:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 220
     :pswitch_2
     const-string v0, "ContainerStorageProvider"
 
@@ -816,12 +739,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CERTIFICATE_MANAGER_TABLE_NAME:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 212
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -839,7 +760,6 @@
     .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     monitor-enter p0
 
     :try_start_0
@@ -872,7 +792,6 @@
 
     throw v0
 
-    .line 158
     :cond_0
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->checkIfNullUriMatcher(Landroid/net/Uri;)Z
@@ -883,16 +802,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 159
     const/4 v7, 0x0
 
-    .line 165
     :goto_0
     monitor-exit p0
 
     return-object v7
 
-    .line 162
     :cond_1
     :try_start_2
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->getSQLiteQueryBuilderObj(Landroid/net/Uri;)Landroid/database/sqlite/SQLiteQueryBuilder;
@@ -912,14 +828,12 @@
 
     move-object v6, p1
 
-    .line 163
     invoke-direct/range {v0 .. v6}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->getCursorForQuery(Landroid/database/sqlite/SQLiteQueryBuilder;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Landroid/database/Cursor;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v7
 
-    .line 165
     .local v7, "mcursor":Landroid/database/Cursor;
     goto :goto_0
 .end method
@@ -933,17 +847,13 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 106
     const/4 v2, 0x0
 
-    .line 107
     .local v2, "projection":[Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 108
     move-object v2, p1
 
-    .line 113
     array-length v0, v2
 
     if-lez v0, :cond_1
@@ -956,16 +866,13 @@
 
     move-object v5, v4
 
-    .line 114
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
 
-    .line 118
     :goto_0
     return-object v4
 
-    .line 110
     :cond_0
     const-string v0, "ContainerStorageProvider"
 
@@ -975,11 +882,10 @@
 
     goto :goto_0
 
-    .line 117
     :cond_1
     const-string v0, "ContainerStorageProvider"
 
-    const-string/jumbo v1, "projection object is empty"
+    const-string v1, "projection object is empty"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -992,25 +898,20 @@
     .param p2, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 204
     if-eqz p1, :cond_0
 
-    .line 205
     const-string v0, "ContainerStorageProvider"
 
-    const-string/jumbo v1, "updatebuilderobj"
+    const-string v1, "updatebuilderobj"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
-    .line 207
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageProvider;->mQuotesPreferencesProjectionMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteQueryBuilder;->setProjectionMap(Ljava/util/Map;)V
 
-    .line 209
     :cond_0
     return-void
 .end method
@@ -1031,7 +932,6 @@
     .end annotation
 
     .prologue
-    .line 123
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1050,7 +950,6 @@
 
     move-result-object v4
 
-    .line 124
     .local v4, "where":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -1058,17 +957,15 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "packages"
+    const-string v6, "packages"
 
     aput-object v6, v2, v5
 
-    .line 128
     .local v2, "project":[Ljava/lang/String;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 129
     .local v1, "packageArray":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v5, Lcom/android/server/enterprise/storage/ContainerDBConstants;->CONTAINER_CONTENT_URI:Landroid/net/Uri;
 
@@ -1076,22 +973,18 @@
 
     move-result-object v0
 
-    .line 131
     .local v0, "cur":Landroid/database/Cursor;
     if-nez v0, :cond_0
 
-    .line 132
     const-string v5, "ContainerStorageProvider"
 
-    const-string/jumbo v6, "getPackageNamescall is null"
+    const-string v6, "getPackageNamescall is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     :goto_0
     return-object v1
 
-    .line 135
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
@@ -1099,18 +992,15 @@
 
     if-nez v5, :cond_1
 
-    .line 137
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 140
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 142
     :cond_2
-    const-string/jumbo v5, "packages"
+    const-string v5, "packages"
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -1120,19 +1010,15 @@
 
     move-result-object v3
 
-    .line 143
     .local v3, "str":Ljava/lang/String;
     if-eqz v3, :cond_3
 
-    .line 144
     const-string v5, "ContainerStorageProvider"
 
     invoke-static {v5, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 149
     :goto_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1140,16 +1026,14 @@
 
     if-nez v5, :cond_2
 
-    .line 151
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 147
     :cond_3
     const-string v5, "ContainerStorageProvider"
 
-    const-string/jumbo v6, "getPackageNames is not having any package in DB"
+    const-string v6, "getPackageNames is not having any package in DB"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

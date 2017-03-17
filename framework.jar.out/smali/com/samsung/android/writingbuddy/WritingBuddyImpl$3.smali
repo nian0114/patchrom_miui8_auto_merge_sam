@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1487
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,16 +45,13 @@
 
     const/4 v6, 0x0
 
-    .line 1491
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 1492
     .local v0, "action":I
     if-nez v0, :cond_4
 
-    .line 1493
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
@@ -78,7 +74,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1494
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
@@ -88,14 +83,11 @@
 
     invoke-virtual {v2, v4}, Lcom/samsung/android/writingbuddy/PopupCue;->switchCueButton(Z)V
 
-    .line 1497
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1498
     invoke-virtual {p1, v6}, Landroid/view/View;->playSoundEffect(I)V
 
-    .line 1501
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
@@ -108,12 +100,10 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1504
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v1
 
-    .line 1506
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v1, :cond_3
 
@@ -123,22 +113,18 @@
 
     if-eqz v2, :cond_3
 
-    .line 1507
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # invokes: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
     invoke-static {v2, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->access$200(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;Z)Z
 
-    .line 1508
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # setter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsWaitingHideSoftInput:Z
     invoke-static {v2, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->access$302(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;Z)Z
 
-    .line 1509
     invoke-virtual {v1}, Landroid/view/inputmethod/InputMethodManager;->forceHideSoftInput()Z
 
-    .line 1510
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
@@ -151,13 +137,11 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1529
     .end local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_2
     :goto_0
     return v6
 
-    .line 1518
     .restart local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_3
     const-string v2, "WritingBuddyImpl"
@@ -166,13 +150,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1519
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # invokes: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->showWritingBuddy()Z
     invoke-static {v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->access$400(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)Z
 
-    .line 1520
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
@@ -187,7 +169,6 @@
 
     goto :goto_0
 
-    .line 1526
     .end local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_4
     if-ne v0, v4, :cond_2
@@ -201,7 +182,6 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 1527
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # invokes: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z

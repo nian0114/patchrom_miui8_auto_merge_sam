@@ -412,7 +412,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -427,7 +427,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -540,7 +540,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -576,7 +576,7 @@
     :cond_9
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -639,7 +639,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.divisible.four"
+    const-string v1, "decoding.divisible.four"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -704,7 +704,7 @@
     :cond_2
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -771,7 +771,7 @@
     :cond_5
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -817,7 +817,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -855,7 +855,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -891,7 +891,7 @@
     :cond_b
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -1135,7 +1135,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.divisible.four"
+    const-string v1, "decoding.divisible.four"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -1183,7 +1183,7 @@
     :cond_3
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -1229,7 +1229,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -1303,7 +1303,7 @@
     :cond_7
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -1328,7 +1328,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -1370,7 +1370,7 @@
     :cond_a
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;
 
-    const-string/jumbo v1, "decoding.general"
+    const-string v1, "decoding.general"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/Base64DecodingException;-><init>(Ljava/lang/String;)V
 
@@ -2063,7 +2063,7 @@
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "utils.Base64.IllegalBitlength"
+    const-string v1, "utils.Base64.IllegalBitlength"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2226,7 +2226,7 @@
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "utils.Base64.IllegalBitlength"
+    const-string v1, "utils.Base64.IllegalBitlength"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 

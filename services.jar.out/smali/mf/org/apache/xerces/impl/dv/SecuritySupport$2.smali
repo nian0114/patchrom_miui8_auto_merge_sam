@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -35,10 +33,8 @@
     .locals 2
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
-    .line 58
     .local v0, "cl":Ljava/lang/ClassLoader;
     :try_start_0
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
@@ -47,11 +43,9 @@
 
     move-result-object v0
 
-    .line 60
     :goto_0
     return-object v0
 
-    .line 59
     :catch_0
     move-exception v1
 

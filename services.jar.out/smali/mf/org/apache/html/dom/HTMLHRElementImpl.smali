@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 91
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "align"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -48,8 +45,7 @@
     .locals 1
 
     .prologue
-    .line 49
-    const-string/jumbo v0, "noshade"
+    const-string v0, "noshade"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->getBinary(Ljava/lang/String;)Z
 
@@ -62,8 +58,7 @@
     .locals 1
 
     .prologue
-    .line 61
-    const-string/jumbo v0, "size"
+    const-string v0, "size"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -76,8 +71,7 @@
     .locals 1
 
     .prologue
-    .line 73
-    const-string/jumbo v0, "width"
+    const-string v0, "width"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -91,12 +85,10 @@
     .param p1, "align"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-string v0, "align"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -105,12 +97,10 @@
     .param p1, "noShade"    # Z
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "noshade"
+    const-string v0, "noshade"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 56
     return-void
 .end method
 
@@ -119,12 +109,10 @@
     .param p1, "size"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "size"
+    const-string v0, "size"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -133,11 +121,9 @@
     .param p1, "width"    # Ljava/lang/String;
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "width"
+    const-string v0, "width"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLHRElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     return-void
 .end method

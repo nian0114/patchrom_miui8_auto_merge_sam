@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 423
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$2;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 425
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$2;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     iget-object v1, v0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -59,10 +57,8 @@
     :goto_0
     invoke-interface {v1, v0}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->multiwindowSettingChanged(Z)V
 
-    .line 426
     return-void
 
-    .line 425
     :cond_0
     const/4 v0, 0x0
 

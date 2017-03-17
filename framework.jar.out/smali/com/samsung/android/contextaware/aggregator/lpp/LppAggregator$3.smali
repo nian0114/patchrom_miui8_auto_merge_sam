@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$3;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 446
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$3;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 447
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$3;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -60,7 +57,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->stopLpp()V
 
-    .line 449
     :cond_0
     return-void
 .end method

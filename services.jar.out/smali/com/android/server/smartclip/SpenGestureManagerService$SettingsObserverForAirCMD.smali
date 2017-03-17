@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1657
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
-    .line 1658
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1659
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1684
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1100()Landroid/content/Context;
 
@@ -72,7 +68,6 @@
     .locals 3
 
     .prologue
-    .line 1662
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1100()Landroid/content/Context;
 
@@ -82,7 +77,6 @@
 
     move-result-object v0
 
-    .line 1664
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -93,7 +87,6 @@
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCMDFloatingEnabled:Z
     invoke-static {v1, v2}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$3902(Lcom/android/server/smartclip/SpenGestureManagerService;Z)Z
 
-    .line 1665
     const-string v1, "air_cmd_use_minimized"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -104,7 +97,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1667
     return-void
 .end method
 
@@ -113,12 +105,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1671
     invoke-direct {p0}, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->isFloatingEnabled()Z
 
     move-result v1
 
-    .line 1673
     .local v1, "floatingEnabled":Z
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -129,13 +119,11 @@
 
     if-eq v2, v1, :cond_0
 
-    .line 1674
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCMDFloatingEnabled:Z
     invoke-static {v2, v1}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$3902(Lcom/android/server/smartclip/SpenGestureManagerService;Z)Z
 
-    .line 1675
     if-eqz v1, :cond_0
 
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -147,26 +135,22 @@
 
     if-nez v2, :cond_0
 
-    .line 1676
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1677
     .local v0, "extras":Landroid/os/Bundle;
-    const-string/jumbo v2, "floating_enabled"
+    const-string v2, "floating_enabled"
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1678
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForAirCMD;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # invokes: Lcom/android/server/smartclip/SpenGestureManagerService;->sendAirCommandStateChangeIntent(Landroid/os/Bundle;)V
     invoke-static {v2, v0}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1400(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/os/Bundle;)V
 
-    .line 1681
     .end local v0    # "extras":Landroid/os/Bundle;
     :cond_0
     return-void

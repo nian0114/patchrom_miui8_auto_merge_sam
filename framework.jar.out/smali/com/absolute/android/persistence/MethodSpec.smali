@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 136
     new-instance v0, Lcom/absolute/android/persistence/MethodSpec$1;
 
     invoke-direct {v0}, Lcom/absolute/android/persistence/MethodSpec$1;-><init>()V
@@ -50,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 170
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,31 +59,26 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 148
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_apkOrJarPath:Ljava/lang/String;
 
-    .line 149
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_className:Ljava/lang/String;
 
-    .line 150
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_methodName:Ljava/lang/String;
 
-    .line 151
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -96,10 +89,8 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
 
-    .line 152
     invoke-direct {p0}, Lcom/absolute/android/persistence/MethodSpec;->loadArgumentTypes()V
 
-    .line 153
     return-void
 .end method
 
@@ -109,7 +100,6 @@
     .param p2, "x1"    # Lcom/absolute/android/persistence/MethodSpec$1;
 
     .prologue
-    .line 17
     invoke-direct {p0, p1}, Lcom/absolute/android/persistence/MethodSpec;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -123,10 +113,8 @@
     .param p4, "argValues"    # [Ljava/lang/Object;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -137,7 +125,6 @@
 
     throw v0
 
-    .line 56
     :cond_0
     if-nez p2, :cond_1
 
@@ -149,35 +136,28 @@
 
     throw v0
 
-    .line 57
     :cond_1
     if-nez p3, :cond_2
 
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "method name is null"
+    const-string v1, "method name is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 59
     :cond_2
     iput-object p1, p0, Lcom/absolute/android/persistence/MethodSpec;->m_apkOrJarPath:Ljava/lang/String;
 
-    .line 60
     iput-object p2, p0, Lcom/absolute/android/persistence/MethodSpec;->m_className:Ljava/lang/String;
 
-    .line 61
     iput-object p3, p0, Lcom/absolute/android/persistence/MethodSpec;->m_methodName:Ljava/lang/String;
 
-    .line 62
     iput-object p4, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
 
-    .line 63
     invoke-direct {p0}, Lcom/absolute/android/persistence/MethodSpec;->loadArgumentTypes()V
 
-    .line 64
     return-void
 .end method
 
@@ -185,12 +165,10 @@
     .locals 3
 
     .prologue
-    .line 157
     iget-object v1, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
 
     if-eqz v1, :cond_0
 
-    .line 158
     iget-object v1, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
 
     array-length v1, v1
@@ -199,7 +177,6 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argTypes:[Ljava/lang/Class;
 
-    .line 159
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -210,7 +187,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 160
     iget-object v1, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argTypes:[Ljava/lang/Class;
 
     iget-object v2, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
@@ -223,19 +199,16 @@
 
     aput-object v2, v1, v0
 
-    .line 159
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 164
     .end local v0    # "i":I
     :cond_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argTypes:[Ljava/lang/Class;
 
-    .line 166
     :cond_1
     return-void
 .end method
@@ -246,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     return v0
@@ -256,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_apkOrJarPath:Ljava/lang/String;
 
     return-object v0
@@ -266,7 +237,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argTypes:[Ljava/lang/Class;
 
     return-object v0
@@ -276,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
 
     return-object v0
@@ -286,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_className:Ljava/lang/String;
 
     return-object v0
@@ -296,7 +264,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_methodName:Ljava/lang/String;
 
     return-object v0
@@ -308,26 +275,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_apkOrJarPath:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 128
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_className:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 129
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_methodName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 130
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodSpec;->m_argValues:[Ljava/lang/Object;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeArray([Ljava/lang/Object;)V
 
-    .line 131
     return-void
 .end method

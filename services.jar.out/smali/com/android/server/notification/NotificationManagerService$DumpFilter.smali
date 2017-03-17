@@ -33,15 +33,12 @@
     .locals 1
 
     .prologue
-    .line 4220
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4221
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
-    .line 4226
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->redact:Z
@@ -56,12 +53,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 4229
     new-instance v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;
 
     invoke-direct {v2}, Lcom/android/server/notification/NotificationManagerService$DumpFilter;-><init>()V
 
-    .line 4230
     .local v2, "filter":Lcom/android/server/notification/NotificationManagerService$DumpFilter;
     const/4 v1, 0x0
 
@@ -71,10 +66,8 @@
 
     if-ge v1, v3, :cond_9
 
-    .line 4231
     aget-object v0, p0, v1
 
-    .line 4232
     .local v0, "a":Ljava/lang/String;
     const-string v3, "--noredact"
 
@@ -92,22 +85,19 @@
 
     if-eqz v3, :cond_2
 
-    .line 4233
     :cond_0
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->redact:Z
 
-    .line 4230
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 4234
     :cond_2
-    const-string/jumbo v3, "p"
+    const-string v3, "p"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -115,7 +105,7 @@
 
     if-nez v3, :cond_3
 
-    const-string/jumbo v3, "pkg"
+    const-string v3, "pkg"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -131,7 +121,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 4235
     :cond_3
     array-length v3, p0
 
@@ -139,10 +128,8 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 4236
     add-int/lit8 v1, v1, 0x1
 
-    .line 4237
     aget-object v3, p0, v1
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -155,7 +142,6 @@
 
     iput-object v3, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->pkgFilter:Ljava/lang/String;
 
-    .line 4238
     iget-object v3, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->pkgFilter:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
@@ -164,20 +150,17 @@
 
     if-eqz v3, :cond_4
 
-    .line 4239
     const/4 v3, 0x0
 
     iput-object v3, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->pkgFilter:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 4241
     :cond_4
     iput-boolean v6, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     goto :goto_1
 
-    .line 4244
     :cond_5
     const-string v3, "--zen"
 
@@ -187,7 +170,7 @@
 
     if-nez v3, :cond_6
 
-    const-string/jumbo v3, "zen"
+    const-string v3, "zen"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -195,16 +178,13 @@
 
     if-eqz v3, :cond_7
 
-    .line 4245
     :cond_6
     iput-boolean v6, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
-    .line 4246
     iput-boolean v6, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->zen:Z
 
     goto :goto_1
 
-    .line 4247
     :cond_7
     const-string v3, "--stats"
 
@@ -214,20 +194,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 4248
     iput-boolean v6, v2, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->stats:Z
 
-    .line 4249
     array-length v3, p0
 
     add-int/lit8 v3, v3, -0x1
 
     if-ge v1, v3, :cond_8
 
-    .line 4250
     add-int/lit8 v1, v1, 0x1
 
-    .line 4251
     aget-object v3, p0, v1
 
     invoke-static {v3}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -242,7 +218,6 @@
 
     goto :goto_1
 
-    .line 4253
     :cond_8
     const-wide/16 v4, 0x0
 
@@ -250,7 +225,6 @@
 
     goto :goto_1
 
-    .line 4257
     .end local v0    # "a":Ljava/lang/String;
     :cond_9
     return-object v2
@@ -265,12 +239,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4267
     iget-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     if-nez v1, :cond_1
 
-    .line 4268
     :cond_0
     :goto_0
     return v0
@@ -305,12 +277,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4261
     iget-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     if-nez v1, :cond_1
 
-    .line 4262
     :cond_0
     :goto_0
     return v0
@@ -355,12 +325,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4272
     iget-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     if-nez v1, :cond_1
 
-    .line 4273
     :cond_0
     :goto_0
     return v0
@@ -396,12 +364,11 @@
     .prologue
     const/16 v2, 0x27
 
-    .line 4278
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->stats:Z
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "stats"
+    const-string v0, "stats"
 
     :goto_0
     return-object v0
@@ -411,7 +378,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v0, "zen"
+    const-string v0, "zen"
 
     goto :goto_0
 

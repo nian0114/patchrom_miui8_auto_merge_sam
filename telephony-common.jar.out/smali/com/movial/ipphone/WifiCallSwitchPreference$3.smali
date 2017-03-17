@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     iput-boolean p2, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->val$register:Z
@@ -41,13 +40,11 @@
     .locals 5
 
     .prologue
-    .line 158
     :try_start_0
     iget-boolean v1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->val$register:Z
 
     if-eqz v1, :cond_0
 
-    .line 159
     iget-object v1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     # getter for: Lcom/movial/ipphone/WifiCallSwitchPreference;->mIPManager:Lcom/movial/ipphone/IPManager;
@@ -68,11 +65,9 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/movial/ipphone/IPManager;->listen(ZLcom/movial/ipphone/IPStateListener;I)V
 
-    .line 165
     :goto_0
     return-void
 
-    .line 161
     :cond_0
     iget-object v1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
@@ -98,11 +93,9 @@
 
     goto :goto_0
 
-    .line 162
     :catch_0
     move-exception v0
 
-    .line 163
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WifiCallSwitchPreference"
 

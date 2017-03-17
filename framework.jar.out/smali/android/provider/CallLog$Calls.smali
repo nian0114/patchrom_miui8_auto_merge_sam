@@ -118,7 +118,6 @@
     .locals 3
 
     .prologue
-    .line 66
     const-string v0, "content://call_log/calls"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -127,7 +126,6 @@
 
     sput-object v0, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 72
     const-string v0, "content://call_log/calls/filter"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -136,7 +134,6 @@
 
     sput-object v0, Landroid/provider/CallLog$Calls;->CONTENT_FILTER_URI:Landroid/net/Uri;
 
-    .line 129
     sget-object v0, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -145,7 +142,7 @@
 
     const-string v1, "allow_voicemails"
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -164,7 +161,6 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -184,7 +180,6 @@
     .param p10, "dataUsage"    # Ljava/lang/Long;
 
     .prologue
-    .line 420
     const/4 v12, 0x0
 
     const/4 v13, 0x0
@@ -231,7 +226,6 @@
     .param p11, "addForAllUsers"    # Z
 
     .prologue
-    .line 452
     const/4 v13, 0x0
 
     move-object v1, p0
@@ -279,20 +273,16 @@
     .param p12, "is_read"    # Z
 
     .prologue
-    .line 485
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 486
     .local v2, "resolver":Landroid/content/ContentResolver;
     const/16 v19, 0x1
 
-    .line 488
     .local v19, "numberPresentation":I
     const/16 v22, 0x0
 
-    .line 490
     .local v22, "tm":Landroid/telecom/TelecomManager;
     :try_start_0
     invoke-static/range {p1 .. p1}, Landroid/telecom/TelecomManager;->from(Landroid/content/Context;)Landroid/telecom/TelecomManager;
@@ -301,17 +291,14 @@
 
     move-result-object v22
 
-    .line 493
     :goto_0
     const/4 v9, 0x0
 
-    .line 494
     .local v9, "accountAddress":Ljava/lang/String;
     if-eqz v22, :cond_0
 
     if-eqz p6, :cond_0
 
-    .line 495
     move-object/from16 v0, v22
 
     move-object/from16 v1, p6
@@ -320,25 +307,20 @@
 
     move-result-object v8
 
-    .line 496
     .local v8, "account":Landroid/telecom/PhoneAccount;
     if-eqz v8, :cond_0
 
-    .line 497
     invoke-virtual {v8}, Landroid/telecom/PhoneAccount;->getSubscriptionAddress()Landroid/net/Uri;
 
     move-result-object v12
 
-    .line 498
     .local v12, "address":Landroid/net/Uri;
     if-eqz v12, :cond_0
 
-    .line 499
     invoke-virtual {v12}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 509
     .end local v8    # "account":Landroid/telecom/PhoneAccount;
     .end local v12    # "address":Landroid/net/Uri;
     :cond_0
@@ -348,10 +330,8 @@
 
     if-ne v0, v3, :cond_9
 
-    .line 510
     const/16 v19, 0x2
 
-    .line 517
     :cond_1
     :goto_1
     const/4 v3, 0x1
@@ -360,32 +340,25 @@
 
     if-eq v0, v3, :cond_2
 
-    .line 518
     const-string p2, ""
 
-    .line 519
     if-eqz p0, :cond_2
 
-    .line 520
     const-string v3, ""
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Lcom/android/internal/telephony/CallerInfo;->name:Ljava/lang/String;
 
-    .line 525
     :cond_2
     const/4 v10, 0x0
 
-    .line 526
     .local v10, "accountComponentString":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 527
     .local v11, "accountId":Ljava/lang/String;
     if-eqz p6, :cond_3
 
-    .line 528
     invoke-virtual/range {p6 .. p6}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v3
@@ -394,12 +367,10 @@
 
     move-result-object v10
 
-    .line 529
     invoke-virtual/range {p6 .. p6}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 532
     :cond_3
     new-instance v28, Landroid/content/ContentValues;
 
@@ -409,9 +380,8 @@
 
     invoke-direct {v0, v3}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 534
     .local v28, "values":Landroid/content/ContentValues;
-    const-string/jumbo v3, "number"
+    const-string v3, "number"
 
     move-object/from16 v0, v28
 
@@ -419,8 +389,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 535
-    const-string/jumbo v3, "presentation"
+    const-string v3, "presentation"
 
     invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -430,8 +399,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 536
-    const-string/jumbo v3, "type"
+    const-string v3, "type"
 
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -441,7 +409,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 537
     const-string v3, "features"
 
     invoke-static/range {p5 .. p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -452,7 +419,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 538
     const-string v3, "date"
 
     invoke-static/range {p7 .. p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -463,7 +429,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 539
     const-string v3, "duration"
 
     move/from16 v0, p9
@@ -478,10 +443,8 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 540
     if-eqz p10, :cond_4
 
-    .line 541
     const-string v3, "data_usage"
 
     move-object/from16 v0, v28
@@ -490,30 +453,26 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 543
     :cond_4
-    const-string/jumbo v3, "subscription_component_name"
+    const-string v3, "subscription_component_name"
 
     move-object/from16 v0, v28
 
     invoke-virtual {v0, v3, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 544
-    const-string/jumbo v3, "subscription_id"
+    const-string v3, "subscription_id"
 
     move-object/from16 v0, v28
 
     invoke-virtual {v0, v3, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 545
-    const-string/jumbo v3, "phone_account_address"
+    const-string v3, "phone_account_address"
 
     move-object/from16 v0, v28
 
     invoke-virtual {v0, v3, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 546
-    const-string/jumbo v3, "new"
+    const-string v3, "new"
 
     const/4 v4, 0x1
 
@@ -525,15 +484,13 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 548
     const/4 v3, 0x3
 
     move/from16 v0, p4
 
     if-ne v0, v3, :cond_5
 
-    .line 549
-    const-string/jumbo v4, "is_read"
+    const-string v4, "is_read"
 
     if-eqz p12, :cond_c
 
@@ -548,7 +505,6 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 552
     :cond_5
     if-eqz p0, :cond_7
 
@@ -562,21 +518,18 @@
 
     if-lez v3, :cond_7
 
-    .line 561
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/telephony/CallerInfo;->normalizedNumber:Ljava/lang/String;
 
     if-eqz v3, :cond_d
 
-    .line 562
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/CallerInfo;->normalizedNumber:Ljava/lang/String;
 
     move-object/from16 v18, v0
 
-    .line 563
     .local v18, "normalizedPhoneNumber":Ljava/lang/String;
     sget-object v3, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
@@ -620,13 +573,11 @@
 
     move-result-object v15
 
-    .line 580
     .end local v18    # "normalizedPhoneNumber":Ljava/lang/String;
     .local v15, "cursor":Landroid/database/Cursor;
     :goto_3
     if-eqz v15, :cond_7
 
-    .line 582
     :try_start_1
     invoke-interface {v15}, Landroid/database/Cursor;->getCount()I
 
@@ -640,7 +591,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 583
     sget-object v3, Landroid/provider/ContactsContract$DataUsageFeedback;->FEEDBACK_URI:Landroid/net/Uri;
 
     invoke-virtual {v3}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -657,7 +607,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "type"
+    const-string v4, "type"
 
     const-string v5, "call"
 
@@ -669,7 +619,6 @@
 
     move-result-object v16
 
-    .line 588
     .local v16, "feedbackUri":Landroid/net/Uri;
     new-instance v3, Landroid/content/ContentValues;
 
@@ -685,22 +634,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 591
     .end local v16    # "feedbackUri":Landroid/net/Uri;
     :cond_6
     invoke-interface {v15}, Landroid/database/Cursor;->close()V
 
-    .line 596
     .end local v15    # "cursor":Landroid/database/Cursor;
     :cond_7
     const/16 v21, 0x0
 
-    .line 598
     .local v21, "result":Landroid/net/Uri;
     if-eqz p11, :cond_f
 
-    .line 601
-    const-string/jumbo v3, "user"
+    const-string v3, "user"
 
     move-object/from16 v0, p1
 
@@ -710,7 +655,6 @@
 
     check-cast v26, Landroid/os/UserManager;
 
-    .line 603
     .local v26, "userManager":Landroid/os/UserManager;
     const/4 v3, 0x1
 
@@ -720,19 +664,16 @@
 
     move-result-object v27
 
-    .line 604
     .local v27, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-virtual/range {v26 .. v26}, Landroid/os/UserManager;->getUserHandle()I
 
     move-result v14
 
-    .line 605
     .local v14, "currentUserId":I
     invoke-interface/range {v27 .. v27}, Ljava/util/List;->size()I
 
     move-result v13
 
-    .line 606
     .local v13, "count":I
     const/16 v17, 0x0
 
@@ -742,7 +683,6 @@
 
     if-ge v0, v13, :cond_10
 
-    .line 607
     move-object/from16 v0, v27
 
     move/from16 v1, v17
@@ -753,13 +693,11 @@
 
     check-cast v24, Landroid/content/pm/UserInfo;
 
-    .line 608
     .local v24, "user":Landroid/content/pm/UserInfo;
     invoke-virtual/range {v24 .. v24}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v25
 
-    .line 609
     .local v25, "userHandle":Landroid/os/UserHandle;
     move-object/from16 v0, v26
 
@@ -771,7 +709,7 @@
 
     if-eqz v3, :cond_8
 
-    const-string/jumbo v3, "no_outgoing_calls"
+    const-string v3, "no_outgoing_calls"
 
     move-object/from16 v0, v26
 
@@ -789,7 +727,6 @@
 
     if-nez v3, :cond_8
 
-    .line 613
     sget-object v3, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
 
     move-object/from16 v0, v24
@@ -808,7 +745,6 @@
 
     move-result-object v23
 
-    .line 615
     .local v23, "uri":Landroid/net/Uri;
     move-object/from16 v0, v24
 
@@ -816,17 +752,14 @@
 
     if-ne v3, v14, :cond_8
 
-    .line 616
     move-object/from16 v21, v23
 
-    .line 606
     .end local v23    # "uri":Landroid/net/Uri;
     :cond_8
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_4
 
-    .line 511
     .end local v10    # "accountComponentString":Ljava/lang/String;
     .end local v11    # "accountId":Ljava/lang/String;
     .end local v13    # "count":I
@@ -845,12 +778,10 @@
 
     if-ne v0, v3, :cond_a
 
-    .line 512
     const/16 v19, 0x4
 
     goto/16 :goto_1
 
-    .line 513
     :cond_a
     invoke-static/range {p2 .. p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -864,13 +795,11 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 515
     :cond_b
     const/16 v19, 0x3
 
     goto/16 :goto_1
 
-    .line 549
     .restart local v10    # "accountComponentString":Ljava/lang/String;
     .restart local v11    # "accountId":Ljava/lang/String;
     .restart local v28    # "values":Landroid/content/ContentValues;
@@ -879,7 +808,6 @@
 
     goto/16 :goto_2
 
-    .line 570
     :cond_d
     move-object/from16 v0, p0
 
@@ -893,7 +821,6 @@
 
     move-object/from16 v20, v0
 
-    .line 571
     .local v20, "phoneNumber":Ljava/lang/String;
     :goto_5
     sget-object v3, Landroid/provider/ContactsContract$CommonDataKinds$Callable;->CONTENT_FILTER_URI:Landroid/net/Uri;
@@ -950,10 +877,8 @@
     :cond_e
     move-object/from16 v20, p2
 
-    .line 570
     goto :goto_5
 
-    .line 591
     .restart local v15    # "cursor":Landroid/database/Cursor;
     :catchall_0
     move-exception v3
@@ -962,7 +887,6 @@
 
     throw v3
 
-    .line 621
     .end local v15    # "cursor":Landroid/database/Cursor;
     .restart local v21    # "result":Landroid/net/Uri;
     :cond_f
@@ -976,11 +900,9 @@
 
     move-result-object v21
 
-    .line 624
     :cond_10
     return-object v21
 
-    .line 491
     .end local v9    # "accountAddress":Ljava/lang/String;
     .end local v10    # "accountComponentString":Ljava/lang/String;
     .end local v11    # "accountId":Ljava/lang/String;
@@ -999,18 +921,15 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 654
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 655
     .local v0, "resolver":Landroid/content/ContentResolver;
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 656
     .local v1, "result":Landroid/net/Uri;
     const-string v2, "_id IN (SELECT _id FROM calls ORDER BY date DESC LIMIT -1 OFFSET 500)"
 
@@ -1018,7 +937,6 @@
 
     invoke-virtual {v0, p1, v2, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 659
     return-object v1
 .end method
 
@@ -1027,16 +945,13 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 634
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 635
     .local v0, "resolver":Landroid/content/ContentResolver;
     const/4 v6, 0x0
 
-    .line 637
     .local v6, "c":Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
@@ -1047,11 +962,11 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "number"
+    const-string v4, "number"
 
     aput-object v4, v2, v3
 
-    const-string/jumbo v3, "type = 2"
+    const-string v3, "type = 2"
 
     const/4 v4, 0x0
 
@@ -1061,7 +976,6 @@
 
     move-result-object v6
 
-    .line 643
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1070,13 +984,11 @@
 
     if-nez v1, :cond_2
 
-    .line 644
     :cond_0
     const-string v1, ""
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 648
     if-eqz v6, :cond_1
 
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
@@ -1085,7 +997,6 @@
     :goto_0
     return-object v1
 
-    .line 646
     :cond_2
     const/4 v1, 0x0
 
@@ -1096,7 +1007,6 @@
 
     move-result-object v1
 
-    .line 648
     if-eqz v6, :cond_1
 
     invoke-interface {v6}, Landroid/database/Cursor;->close()V

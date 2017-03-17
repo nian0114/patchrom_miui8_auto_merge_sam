@@ -90,13 +90,11 @@
     .locals 2
 
     .prologue
-    .line 50
     const-string v0, "DomainFilter"
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
-    .line 67
-    const-string/jumbo v0, "domainFilterCmd"
+    const-string v0, "domainFilterCmd"
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -122,41 +120,34 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
-    .line 78
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMapLock:Ljava/lang/Object;
 
-    .line 84
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/firewall/DomainFilter$1;-><init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mPackageFilterReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 101
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/firewall/DomainFilter$2;-><init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserFilterReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
-    .line 114
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
@@ -165,33 +156,27 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 119
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 120
     .local v3, "filterPkg":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 121
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 122
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 123
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mPackageFilterReceiver:Landroid/content/BroadcastReceiver;
@@ -202,23 +187,19 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 127
     new-instance v8, Landroid/content/IntentFilter;
 
     invoke-direct {v8}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 128
     .local v8, "filterUser":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 129
     const-string v0, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 130
     iget-object v5, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserFilterReceiver:Landroid/content/BroadcastReceiver;
@@ -231,7 +212,6 @@
 
     invoke-virtual/range {v5 .. v10}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 133
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilterDaemonConnector;
 
     invoke-static {}, Lcom/android/server/FgThread;->get()Lcom/android/server/FgThread;
@@ -250,16 +230,12 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mConnector:Lcom/android/server/enterprise/firewall/DomainFilterDaemonConnector;
 
-    .line 137
     invoke-direct {p0}, Lcom/android/server/enterprise/firewall/DomainFilter;->initUserIdMap()V
 
-    .line 138
     invoke-direct {p0}, Lcom/android/server/enterprise/firewall/DomainFilter;->initDaemonCache()V
 
-    .line 139
     invoke-direct {p0}, Lcom/android/server/enterprise/firewall/DomainFilter;->initReportCache()V
 
-    .line 140
     return-void
 .end method
 
@@ -267,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 48
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -279,7 +254,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->packageAdded(Landroid/content/Intent;)V
 
     return-void
@@ -294,7 +268,6 @@
     .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/enterprise/firewall/DomainFilter;->saveReportInDatabase(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -305,7 +278,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/firewall/DomainFilter;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/server/enterprise/firewall/DomainFilter;->initDaemonCache()V
 
     return-void
@@ -316,7 +288,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/firewall/DomainFilter;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     return-object v0
@@ -332,7 +303,6 @@
     .param p5, "x5"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     invoke-direct/range {p0 .. p5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -344,7 +314,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->packageRemoved(Landroid/content/Intent;)V
 
     return-void
@@ -356,7 +325,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->packageReplaced(Landroid/content/Intent;)V
 
     return-void
@@ -368,7 +336,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->onUserRemoved(Landroid/content/Intent;)V
 
     return-void
@@ -380,7 +347,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->onUserAdded(Landroid/content/Intent;)V
 
     return-void
@@ -392,7 +358,6 @@
     .param p1, "x1"    # Ljava/lang/Thread;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mThread:Ljava/lang/Thread;
 
     return-object p1
@@ -403,7 +368,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/firewall/DomainFilter;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -416,18 +380,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 975
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 976
     .local v1, "userId":I
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 977
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -439,18 +400,15 @@
 
     move-result-object v0
 
-    .line 979
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 988
     :goto_0
     return v2
 
-    .line 983
     :cond_0
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -464,12 +422,10 @@
 
     if-ne v2, p1, :cond_1
 
-    .line 985
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 988
     :cond_1
     const/4 v2, -0x1
 
@@ -481,14 +437,12 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1141
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1142
     .local v0, "filterByUserId":Landroid/content/ContentValues;
-    const-string/jumbo v1, "userId"
+    const-string v1, "userId"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -496,14 +450,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1143
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v2, "DomainFilterReportTable"
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->delete(Ljava/lang/String;Landroid/content/ContentValues;)I
 
-    .line 1144
     return-void
 .end method
 
@@ -526,7 +478,6 @@
     .end annotation
 
     .prologue
-    .line 910
     .local p1, "headerArgs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-object v8, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -536,21 +487,17 @@
 
     array-length v0, v8
 
-    .line 911
     .local v0, "argSize":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 912
     .local v2, "finalArgs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 913
     .local v3, "listValuesSize":I
     if-eqz p4, :cond_0
 
-    .line 914
     sget-object v8, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p4, v8}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -559,7 +506,6 @@
 
     array-length v3, v8
 
-    .line 916
     :cond_0
     if-eqz p4, :cond_1
 
@@ -571,24 +517,18 @@
 
     if-ge v8, v9, :cond_3
 
-    .line 917
     :cond_1
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 918
     invoke-virtual {v2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 919
     invoke-virtual {v2, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 920
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/firewall/DomainFilter;->executeCommand(Ljava/util/ArrayList;)V
 
-    .line 948
     :cond_2
     return-void
 
-    .line 922
     :cond_3
     const-string v8, ";"
 
@@ -600,11 +540,9 @@
 
     move-result-object v5
 
-    .line 923
     .local v5, "tempList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 924
     .local v1, "counter":I
     :goto_0
     invoke-interface {v5}, Ljava/util/List;->size()I
@@ -613,16 +551,13 @@
 
     if-ge v1, v8, :cond_2
 
-    .line 925
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 926
     .local v4, "newList":Ljava/lang/StringBuilder;
     add-int v6, p2, v0
 
-    .line 927
     .local v6, "totalTemp":I
     :goto_1
     invoke-interface {v5}, Ljava/util/List;->size()I
@@ -631,7 +566,6 @@
 
     if-ge v1, v8, :cond_5
 
-    .line 928
     invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -646,7 +580,6 @@
 
     array-length v7, v8
 
-    .line 929
     .local v7, "valueSize":I
     add-int v8, v6, v7
 
@@ -654,14 +587,12 @@
 
     if-ge v8, v9, :cond_5
 
-    .line 930
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
     move-result v8
 
     if-nez v8, :cond_4
 
-    .line 931
     invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -670,17 +601,13 @@
 
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 935
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
-    .line 936
     add-int/2addr v6, v7
 
-    .line 940
     goto :goto_1
 
-    .line 933
     :cond_4
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -710,25 +637,20 @@
 
     goto :goto_2
 
-    .line 941
     .end local v7    # "valueSize":I
     :cond_5
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 942
     invoke-virtual {v2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 943
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 944
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/firewall/DomainFilter;->executeCommand(Ljava/util/ArrayList;)V
 
-    .line 945
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_0
@@ -750,12 +672,10 @@
     .end annotation
 
     .prologue
-    .line 1033
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 1034
     .local v0, "listFromDBStr":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -763,7 +683,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1035
     const-string v1, ";"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -776,7 +695,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 1037
     :cond_0
     return-object v0
 .end method
@@ -799,7 +717,6 @@
     .end annotation
 
     .prologue
-    .line 1025
     .local p1, "domainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p2, "setFromDB":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
@@ -810,7 +727,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1026
     :cond_0
     const-string v0, ";"
 
@@ -818,15 +734,12 @@
 
     move-result-object v0
 
-    .line 1029
     :goto_0
     return-object v0
 
-    .line 1028
     :cond_1
     invoke-interface {p2, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 1029
     const-string v0, ";"
 
     invoke-static {v0, p2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
@@ -849,13 +762,11 @@
     .end annotation
 
     .prologue
-    .line 951
     .local p1, "args":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mThread:Ljava/lang/Thread;
 
     if-nez v2, :cond_0
 
-    .line 953
     :try_start_0
     new-instance v2, Ljava/lang/Thread;
 
@@ -865,14 +776,12 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mThread:Ljava/lang/Thread;
 
-    .line 954
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/IllegalThreadStateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 956
     const-wide/16 v2, 0x1f4
 
     :try_start_1
@@ -881,37 +790,32 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalThreadStateException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 967
     :cond_0
     :goto_0
     :try_start_2
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mConnector:Lcom/android/server/enterprise/firewall/DomainFilterDaemonConnector;
 
-    const-string/jumbo v3, "domainFilterCmd"
+    const-string v3, "domainFilterCmd"
 
     invoke-virtual {v2, v3, p1}, Lcom/android/server/enterprise/firewall/DomainFilterDaemonConnector;->execute(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 968
     const-wide/16 v2, 0x96
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 972
     :goto_1
     return-void
 
-    .line 957
     :catch_0
     move-exception v0
 
-    .line 958
     .local v0, "ex":Ljava/lang/InterruptedException;
     :try_start_3
     sget-object v2, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "failed to wait for socket creation"
+    const-string v3, "failed to wait for socket creation"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
@@ -919,12 +823,10 @@
 
     goto :goto_0
 
-    .line 960
     .end local v0    # "ex":Ljava/lang/InterruptedException;
     :catch_1
     move-exception v1
 
-    .line 961
     .local v1, "illex":Ljava/lang/IllegalThreadStateException;
     sget-object v2, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
@@ -934,16 +836,14 @@
 
     goto :goto_0
 
-    .line 969
     .end local v1    # "illex":Ljava/lang/IllegalThreadStateException;
     :catch_2
     move-exception v0
 
-    .line 970
     .local v0, "ex":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "failed to send command to daemon"
+    const-string v3, "failed to send command to daemon"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -956,16 +856,13 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 216
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 217
     .local v2, "token":J
     const/4 v1, 0x0
 
-    .line 219
     .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
@@ -983,10 +880,8 @@
 
     move-result-object v1
 
-    .line 224
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 227
     :goto_0
     if-eqz v1, :cond_0
 
@@ -994,19 +889,15 @@
 
     if-nez v4, :cond_1
 
-    .line 228
     :cond_0
     const/4 v4, -0x1
 
-    .line 229
     :goto_1
     return v4
 
-    .line 221
     :catch_0
     move-exception v0
 
-    .line 222
     .local v0, "ex":Ljava/lang/Exception;
     :try_start_1
     sget-object v4, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
@@ -1015,7 +906,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "exception getting package info "
+    const-string v6, "exception getting package info "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1033,7 +924,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 224
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1046,7 +936,6 @@
 
     throw v4
 
-    .line 229
     :cond_1
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1061,7 +950,6 @@
     .param p2, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 206
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v2, "DomainFilterTable"
@@ -1070,7 +958,6 @@
 
     move-result-object v0
 
-    .line 208
     .local v0, "listInDB":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1078,10 +965,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 209
     const-string v0, ""
 
-    .line 211
     :cond_0
     return-object v0
 .end method
@@ -1090,12 +975,10 @@
     .locals 18
 
     .prologue
-    .line 821
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 822
     .local v15, "selectionValues":Landroid/content/ContentValues;
     move-object/from16 v0, p0
 
@@ -1111,7 +994,6 @@
 
     move-result-object v9
 
-    .line 825
     .local v9, "admins":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v9, :cond_5
 
@@ -1121,12 +1003,10 @@
 
     if-nez v1, :cond_5
 
-    .line 826
     new-instance v8, Ljava/util/HashSet;
 
     invoke-direct {v8, v9}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 827
     .local v8, "adminSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-interface {v8}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1145,7 +1025,6 @@
 
     check-cast v7, Ljava/lang/Integer;
 
-    .line 828
     .local v7, "admin":Ljava/lang/Integer;
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
@@ -1155,7 +1034,6 @@
 
     move-result v17
 
-    .line 829
     .local v17, "userId":I
     move-object/from16 v0, p0
 
@@ -1171,26 +1049,23 @@
 
     check-cast v10, Ljava/util/Map;
 
-    .line 830
     .local v10, "appUidMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     const-string v1, "adminUid"
 
     invoke-virtual {v15, v1, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 831
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v2, "DomainFilterTable"
 
-    const-string/jumbo v3, "packageName"
+    const-string v3, "packageName"
 
     invoke-virtual {v1, v2, v3, v15}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getStringList(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object v14
 
-    .line 834
     .local v14, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1211,13 +1086,11 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 835
     .local v13, "packageName":Ljava/lang/String;
-    const-string/jumbo v1, "packageName"
+    const-string v1, "packageName"
 
     invoke-virtual {v15, v1, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 836
     const-string v1, "blacklist"
 
     move-object/from16 v0, p0
@@ -1226,9 +1099,8 @@
 
     move-result-object v5
 
-    .line 838
     .local v5, "blackListInDB":Ljava/lang/String;
-    const-string/jumbo v1, "whitelist"
+    const-string v1, "whitelist"
 
     move-object/from16 v0, p0
 
@@ -1236,11 +1108,9 @@
 
     move-result-object v6
 
-    .line 840
     .local v6, "whiteListInDB":Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 841
     .local v16, "uid":Ljava/lang/String;
     const-string v1, "*"
 
@@ -1250,7 +1120,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 842
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -1263,7 +1132,6 @@
 
     move-result-object v16
 
-    .line 846
     :cond_1
     :goto_2
     if-eqz v16, :cond_0
@@ -1272,7 +1140,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 847
     :cond_2
     const-string v2, "ADD"
 
@@ -1288,7 +1155,6 @@
 
     goto :goto_1
 
-    .line 843
     :cond_3
     invoke-interface {v10, v13}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -1296,7 +1162,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 844
     invoke-interface {v10, v13}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -1309,7 +1174,6 @@
 
     goto :goto_2
 
-    .line 851
     .end local v5    # "blackListInDB":Ljava/lang/String;
     .end local v6    # "whiteListInDB":Ljava/lang/String;
     .end local v13    # "packageName":Ljava/lang/String;
@@ -1319,7 +1183,6 @@
 
     goto/16 :goto_0
 
-    .line 854
     .end local v7    # "admin":Ljava/lang/Integer;
     .end local v8    # "adminSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     .end local v10    # "appUidMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
@@ -1338,21 +1201,18 @@
 
     const/4 v3, 0x0
 
-    .line 857
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
-    .line 858
     new-instance v9, Landroid/content/ContentValues;
 
     invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    .line 859
     .local v9, "reportEnabled":Landroid/content/ContentValues;
-    const-string/jumbo v0, "status"
+    const-string v0, "status"
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1360,7 +1220,6 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 860
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "DomainFilterReportStatus"
@@ -1369,7 +1228,6 @@
 
     move-result-object v7
 
-    .line 862
     .local v7, "admins":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v7, :cond_0
 
@@ -1379,20 +1237,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 863
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "initReportCache - No admin found in report status table"
+    const-string v1, "initReportCache - No admin found in report status table"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 872
     :cond_1
     :goto_0
     return-void
 
-    .line 866
     :cond_2
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1412,9 +1267,8 @@
 
     check-cast v6, Landroid/content/ContentValues;
 
-    .line 867
     .local v6, "admin":Landroid/content/ContentValues;
-    const-string/jumbo v0, "userId"
+    const-string v0, "userId"
 
     invoke-virtual {v6, v0}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -1424,7 +1278,6 @@
 
     move-result v10
 
-    .line 868
     .local v10, "userId":I
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
@@ -1436,7 +1289,6 @@
 
     goto :goto_1
 
-    .line 870
     .end local v6    # "admin":Landroid/content/ContentValues;
     .end local v10    # "userId":I
     :cond_3
@@ -1448,7 +1300,6 @@
 
     if-nez v0, :cond_1
 
-    .line 871
     const-string v1, "REPORT"
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1470,18 +1321,16 @@
     .locals 14
 
     .prologue
-    .line 143
     iget-object v10, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    .line 144
     .local v6, "pm":Landroid/content/pm/PackageManager;
     iget-object v10, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v11, "user"
+    const-string v11, "user"
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1489,25 +1338,20 @@
 
     check-cast v8, Landroid/os/UserManager;
 
-    .line 146
     .local v8, "userManager":Landroid/os/UserManager;
     if-eqz v8, :cond_2
 
-    .line 147
     invoke-virtual {v8}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v9
 
-    .line 148
     .local v9, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v9, :cond_2
 
-    .line 149
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMapLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 150
     :try_start_0
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1526,13 +1370,11 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 151
     .local v7, "user":Landroid/content/pm/UserInfo;
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 152
     .local v0, "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     const/16 v10, 0x80
 
@@ -1542,7 +1384,6 @@
 
     move-result-object v5
 
-    .line 154
     .local v5, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1562,11 +1403,9 @@
 
     check-cast v4, Landroid/content/pm/PackageInfo;
 
-    .line 155
     .local v4, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v1, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 156
     .local v1, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v10, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -1580,7 +1419,6 @@
 
     goto :goto_1
 
-    .line 160
     .end local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -1596,7 +1434,6 @@
 
     throw v10
 
-    .line 158
     .restart local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     .restart local v3    # "i$":Ljava/util/Iterator;
     .restart local v5    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -1615,7 +1452,6 @@
 
     goto :goto_0
 
-    .line 160
     .end local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v5    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -1625,7 +1461,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 163
     .end local v9    # "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :cond_2
     return-void
@@ -1636,14 +1471,12 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1077
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1078
     .local v0, "filterByUserId":Landroid/content/ContentValues;
-    const-string/jumbo v2, "userId"
+    const-string v2, "userId"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1651,18 +1484,16 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1079
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "DomainFilterReportStatus"
 
-    const-string/jumbo v4, "status"
+    const-string v4, "status"
 
     invoke-virtual {v2, v3, v4, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBooleanList(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 1082
     .local v1, "statusList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Boolean;>;"
     if-eqz v1, :cond_0
 
@@ -1672,11 +1503,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 1083
     :cond_0
     const/4 v2, 0x0
 
-    .line 1085
     :goto_0
     return v2
 
@@ -1701,23 +1530,19 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 169
     const-string v6, "android.intent.extra.user_handle"
 
     invoke-virtual {p1, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 170
     .local v5, "userId":I
     if-eq v5, v7, :cond_2
 
-    .line 171
     iget-object v7, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMapLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 172
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
@@ -1731,17 +1556,14 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 173
     .local v0, "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-nez v0, :cond_1
 
-    .line 174
     new-instance v0, Ljava/util/HashMap;
 
     .end local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 175
     .restart local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
 
@@ -1749,7 +1571,6 @@
 
     move-result-object v4
 
-    .line 176
     .local v4, "pm":Landroid/content/pm/PackageManager;
     const/16 v6, 0x80
 
@@ -1757,7 +1578,6 @@
 
     move-result-object v3
 
-    .line 178
     .local v3, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1777,7 +1597,6 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 179
     .local v2, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v6, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1795,7 +1614,6 @@
 
     goto :goto_0
 
-    .line 184
     .end local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "packageInfo":Landroid/content/pm/PackageInfo;
@@ -1810,7 +1628,6 @@
 
     throw v6
 
-    .line 182
     .restart local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v3    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -1825,7 +1642,6 @@
 
     invoke-interface {v6, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     .end local v4    # "pm":Landroid/content/pm/PackageManager;
@@ -1834,7 +1650,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 186
     .end local v0    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_2
     return-void
@@ -1847,35 +1662,29 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 192
     const-string v0, "android.intent.extra.user_handle"
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    .line 193
     .local v6, "userId":I
     if-eq v6, v1, :cond_1
 
-    .line 194
     iget-object v8, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMapLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 195
     :try_start_0
     new-instance v7, Ljava/lang/Integer;
 
     invoke-direct {v7, v6}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 196
     .local v7, "userIdObj":Ljava/lang/Integer;
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
     invoke-interface {v0, v7}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v0, v7}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1884,12 +1693,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v0, v7}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 199
     const-string v1, "CLEAR"
 
     invoke-static {v6}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1906,16 +1713,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
     :cond_0
     monitor-exit v8
 
-    .line 203
     .end local v7    # "userIdObj":Ljava/lang/Integer;
     :cond_1
     return-void
 
-    .line 201
     :catchall_0
     move-exception v0
 
@@ -1931,7 +1735,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 237
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
@@ -1940,7 +1743,6 @@
 
     move-result-object v14
 
-    .line 238
     .local v14, "pkgAdded":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -1952,7 +1754,6 @@
 
     move-result v19
 
-    .line 239
     .local v19, "userId":I
     const/4 v2, -0x1
 
@@ -1962,7 +1763,6 @@
 
     if-nez v14, :cond_2
 
-    .line 240
     :cond_0
     sget-object v2, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
@@ -1970,12 +1770,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     :cond_1
     :goto_0
     return-void
 
-    .line 244
     :cond_2
     move-object/from16 v0, p0
 
@@ -1985,7 +1783,6 @@
 
     move-result v18
 
-    .line 245
     .local v18, "uid":I
     const/4 v2, -0x1
 
@@ -1993,7 +1790,6 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 246
     sget-object v2, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
     const-string v3, "Failed to retrieve app info"
@@ -2002,7 +1798,6 @@
 
     goto :goto_0
 
-    .line 250
     :cond_3
     move-object/from16 v0, p0
 
@@ -2010,7 +1805,6 @@
 
     monitor-enter v3
 
-    .line 251
     :try_start_0
     new-instance v9, Ljava/lang/Integer;
 
@@ -2018,7 +1812,6 @@
 
     invoke-direct {v9, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 252
     .local v9, "objUserID":Ljava/lang/Integer;
     move-object/from16 v0, p0
 
@@ -2030,12 +1823,10 @@
 
     if-nez v2, :cond_6
 
-    .line 253
     new-instance v13, Ljava/util/HashMap;
 
     invoke-direct {v13}, Ljava/util/HashMap;-><init>()V
 
-    .line 254
     .local v13, "pair":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     new-instance v2, Ljava/lang/Integer;
 
@@ -2045,33 +1836,28 @@
 
     invoke-interface {v13, v14, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
     invoke-interface {v2, v9, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     .end local v13    # "pair":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     :goto_1
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 261
     const-string v6, ""
 
     .local v6, "blackListInDB":Ljava/lang/String;
     const-string v7, ""
 
-    .line 262
     .local v7, "whiteListInDB":Ljava/lang/String;
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 263
     .local v15, "selectionValues":Landroid/content/ContentValues;
     move-object/from16 v0, p0
 
@@ -2093,20 +1879,18 @@
 
     invoke-virtual {v15, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 265
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "DomainFilterTable"
 
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     invoke-virtual {v2, v3, v4, v15}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getStringList(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object v12
 
-    .line 268
     .local v12, "packageNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v12, :cond_1
 
@@ -2116,29 +1900,25 @@
 
     if-eqz v2, :cond_1
 
-    .line 269
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     invoke-virtual {v15, v2, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 270
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "DomainFilterTable"
 
-    const-string/jumbo v4, "signature"
+    const-string v4, "signature"
 
     invoke-virtual {v2, v3, v4, v15}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getString(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Ljava/lang/String;
 
     move-result-object v16
 
-    .line 272
     .local v16, "signature":Ljava/lang/String;
     const/16 v17, 0x0
 
-    .line 273
     .local v17, "signatureMatch":Z
     invoke-static/range {v16 .. v16}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2146,7 +1926,6 @@
 
     if-nez v2, :cond_4
 
-    .line 274
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mContext:Landroid/content/Context;
@@ -2161,13 +1940,11 @@
 
     move-result-object v8
 
-    .line 277
     .local v8, "ctx":Landroid/content/Context;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 279
     .local v10, "identity":J
     :try_start_1
     move-object/from16 v0, v16
@@ -2178,13 +1955,10 @@
 
     move-result v17
 
-    .line 282
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 284
     if-eqz v17, :cond_1
 
-    .line 288
     .end local v8    # "ctx":Landroid/content/Context;
     .end local v10    # "identity":J
     :cond_4
@@ -2196,8 +1970,7 @@
 
     move-result-object v6
 
-    .line 289
-    const-string/jumbo v2, "whitelist"
+    const-string v2, "whitelist"
 
     move-object/from16 v0, p0
 
@@ -2205,7 +1978,6 @@
 
     move-result-object v7
 
-    .line 290
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -2218,7 +1990,6 @@
 
     if-nez v2, :cond_1
 
-    .line 291
     :cond_5
     const-string v3, "ADD"
 
@@ -2234,7 +2005,6 @@
 
     goto/16 :goto_0
 
-    .line 257
     .end local v6    # "blackListInDB":Ljava/lang/String;
     .end local v7    # "whiteListInDB":Ljava/lang/String;
     .end local v12    # "packageNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -2263,7 +2033,6 @@
 
     goto/16 :goto_1
 
-    .line 259
     .end local v9    # "objUserID":Ljava/lang/Integer;
     :catchall_0
     move-exception v2
@@ -2274,7 +2043,6 @@
 
     throw v2
 
-    .line 282
     .restart local v6    # "blackListInDB":Ljava/lang/String;
     .restart local v7    # "whiteListInDB":Ljava/lang/String;
     .restart local v8    # "ctx":Landroid/content/Context;
@@ -2299,14 +2067,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 302
     const-string v0, "android.intent.extra.user_handle"
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v11
 
-    .line 303
     .local v11, "userId":I
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -2316,18 +2082,15 @@
 
     move-result-object v8
 
-    .line 304
     .local v8, "pkgRemoved":Ljava/lang/String;
     if-eq v11, v1, :cond_1
 
     if-eqz v8, :cond_1
 
-    .line 305
     iget-object v12, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMapLock:Ljava/lang/Object;
 
     monitor-enter v12
 
-    .line 306
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
@@ -2341,7 +2104,6 @@
 
     check-cast v6, Ljava/util/Map;
 
-    .line 307
     .local v6, "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz v6, :cond_0
 
@@ -2351,7 +2113,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 309
     invoke-interface {v6, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -2362,7 +2123,6 @@
 
     move-result-object v10
 
-    .line 310
     .local v10, "uid":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
@@ -2378,12 +2138,10 @@
 
     invoke-interface {v0, v8}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
     new-instance v9, Landroid/content/ContentValues;
 
     invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    .line 314
     .local v9, "selectionValues":Landroid/content/ContentValues;
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2399,18 +2157,16 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "DomainFilterTable"
 
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     invoke-virtual {v0, v1, v2, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getStringList(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object v7
 
-    .line 319
     .local v7, "packageNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v7, :cond_0
 
@@ -2420,7 +2176,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 320
     const-string v1, "REMOVE"
 
     invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2437,19 +2192,16 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 323
     .end local v7    # "packageNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v9    # "selectionValues":Landroid/content/ContentValues;
     .end local v10    # "uid":Ljava/lang/String;
     :cond_0
     monitor-exit v12
 
-    .line 325
     .end local v6    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_1
     return-void
 
-    .line 323
     :catchall_0
     move-exception v0
 
@@ -2469,14 +2221,12 @@
 
     const/4 v3, -0x1
 
-    .line 332
     const-string v0, "android.intent.extra.user_handle"
 
     invoke-virtual {p1, v0, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v10
 
-    .line 333
     .local v10, "userId":I
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -2486,13 +2236,11 @@
 
     move-result-object v9
 
-    .line 334
     .local v9, "pkgReplaced":Ljava/lang/String;
     if-eq v10, v3, :cond_0
 
     if-nez v9, :cond_2
 
-    .line 335
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
@@ -2500,18 +2248,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     :cond_1
     :goto_0
     return-void
 
-    .line 340
     :cond_2
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMapLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 341
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
@@ -2525,7 +2270,6 @@
 
     check-cast v6, Ljava/util/Map;
 
-    .line 342
     .local v6, "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz v6, :cond_3
 
@@ -2535,16 +2279,13 @@
 
     if-nez v0, :cond_4
 
-    .line 344
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->packageAdded(Landroid/content/Intent;)V
 
-    .line 345
     monitor-exit v1
 
     goto :goto_0
 
-    .line 356
     .end local v6    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     :catchall_0
     move-exception v0
@@ -2555,7 +2296,6 @@
 
     throw v0
 
-    .line 348
     .restart local v6    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_4
     :try_start_1
@@ -2569,29 +2309,24 @@
 
     move-result v8
 
-    .line 349
     .local v8, "oldUid":I
     invoke-direct {p0, v9, v10}, Lcom/android/server/enterprise/firewall/DomainFilter;->getApplicationUid(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 350
     .local v7, "newUid":I
     if-ne v7, v3, :cond_5
 
-    .line 351
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
     const-string v2, "Failed to retrieve app info"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     monitor-exit v1
 
     goto :goto_0
 
-    .line 355
     :cond_5
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
@@ -2611,15 +2346,12 @@
 
     invoke-interface {v0, v9, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 356
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 357
     if-eq v8, v7, :cond_1
 
-    .line 358
     const-string v1, "REPLACE"
 
     invoke-static {v8}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2647,10 +2379,8 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1117
     const/4 v2, -0x1
 
-    .line 1119
     .local v2, "userId":I
     :try_start_0
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -2663,7 +2393,6 @@
 
     move-result v2
 
-    .line 1123
     :goto_0
     const/4 v3, -0x1
 
@@ -2681,19 +2410,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 1125
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1126
     .local v0, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v3, "time"
+    const-string v3, "time"
 
     invoke-virtual {v0, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1127
-    const-string/jumbo v3, "userId"
+    const-string v3, "userId"
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2701,17 +2427,14 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1128
-    const-string/jumbo v3, "packageName"
+    const-string v3, "packageName"
 
     invoke-virtual {v0, v3, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1129
-    const-string/jumbo v3, "url"
+    const-string v3, "url"
 
     invoke-virtual {v0, v3, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1130
     iget-object v3, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "DomainFilterReportTable"
@@ -2726,23 +2449,19 @@
 
     if-nez v3, :cond_0
 
-    .line 1131
     sget-object v3, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "failed to save domain report in database"
+    const-string v4, "failed to save domain report in database"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1134
     .end local v0    # "cv":Landroid/content/ContentValues;
     :cond_0
     return-void
 
-    .line 1120
     :catch_0
     move-exception v1
 
-    .line 1121
     .local v1, "ex":Ljava/lang/NumberFormatException;
     sget-object v3, Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
 
@@ -2762,29 +2481,23 @@
     .param p5, "whiteListInDB"    # Ljava/lang/String;
 
     .prologue
-    .line 876
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 877
     .local v1, "headerArgs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 878
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 879
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 880
     invoke-virtual {v1, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 883
     :cond_0
     const-string v2, "REPORT"
 
@@ -2822,16 +2535,13 @@
 
     if-nez p5, :cond_3
 
-    .line 886
     :cond_1
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/firewall/DomainFilter;->executeCommand(Ljava/util/ArrayList;)V
 
-    .line 906
     :cond_2
     :goto_0
     return-void
 
-    .line 890
     :cond_3
     sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -2841,7 +2551,6 @@
 
     array-length v0, v2
 
-    .line 891
     .local v0, "cmdHeaderSize":I
     sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -2853,14 +2562,12 @@
 
     add-int/2addr v0, v2
 
-    .line 892
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 893
     sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -2871,7 +2578,6 @@
 
     add-int/2addr v0, v2
 
-    .line 896
     :cond_4
     const-string v2, "ADD"
 
@@ -2896,13 +2602,11 @@
 
     if-eqz v2, :cond_7
 
-    .line 898
     :cond_6
     const-string v2, "BLACKLIST"
 
     invoke-direct {p0, v1, v0, v2, p4}, Lcom/android/server/enterprise/firewall/DomainFilter;->concatenateListAndExecuteCommand(Ljava/util/ArrayList;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 901
     :cond_7
     const-string v2, "ADD"
 
@@ -2927,7 +2631,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 903
     :cond_9
     const-string v2, "WHITELIST"
 
@@ -2949,7 +2652,6 @@
     .end annotation
 
     .prologue
-    .line 1015
     .local p1, "domains":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -2961,14 +2663,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1016
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 1017
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2981,13 +2681,11 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1015
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1019
     :cond_0
     const-string v1, ""
 
@@ -2995,7 +2693,6 @@
 
     goto :goto_1
 
-    .line 1022
     :cond_1
     return-void
 .end method
@@ -3021,14 +2718,12 @@
     .local p2, "rules":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterRule;>;"
     const/4 v3, 0x0
 
-    .line 783
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v11
 
-    .line 784
     .local v11, "userId":I
     const-string v0, "CLEAR"
 
@@ -3038,7 +2733,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 785
     const-string v1, "CLEAR"
 
     invoke-static {v11}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -3053,11 +2747,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 818
     :cond_0
     return-void
 
-    .line 786
     :cond_1
     if-eqz p2, :cond_0
 
@@ -3077,7 +2769,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 787
     :cond_2
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mUserIdMap:Ljava/util/Map;
 
@@ -3091,7 +2782,6 @@
 
     check-cast v6, Ljava/util/Map;
 
-    .line 788
     .local v6, "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     const/4 v8, 0x0
 
@@ -3103,14 +2793,12 @@
 
     if-ge v8, v0, :cond_0
 
-    .line 789
     invoke-interface {p2, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Lcom/sec/enterprise/firewall/DomainFilterRule;
 
-    .line 790
     .local v10, "rule":Lcom/sec/enterprise/firewall/DomainFilterRule;
     invoke-virtual {v10}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -3120,11 +2808,9 @@
 
     move-result-object v9
 
-    .line 791
     .local v9, "pkg":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 792
     .local v2, "appId":Ljava/lang/String;
     const-string v0, "*"
 
@@ -3134,64 +2820,53 @@
 
     if-eqz v0, :cond_7
 
-    .line 793
     invoke-static {v11}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 797
     :cond_3
     :goto_1
     if-eqz v2, :cond_6
 
-    .line 799
     const/4 v4, 0x0
 
     .local v4, "blackList":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 800
     .local v5, "whiteList":Ljava/lang/String;
     invoke-virtual {v10}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getDenyDomains()Ljava/util/List;
 
     move-result-object v7
 
-    .line 801
     .local v7, "domainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v7, :cond_4
 
-    .line 802
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 803
     const-string v0, ";"
 
     invoke-static {v0, v7}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 807
     :cond_4
     :goto_2
     invoke-virtual {v10}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getAllowDomains()Ljava/util/List;
 
     move-result-object v7
 
-    .line 808
     if-eqz v7, :cond_5
 
-    .line 809
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    .line 810
     const-string v0, ";"
 
     invoke-static {v0, v7}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
@@ -3204,10 +2879,8 @@
 
     move-object v1, p3
 
-    .line 814
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 788
     .end local v4    # "blackList":Ljava/lang/String;
     .end local v5    # "whiteList":Ljava/lang/String;
     .end local v7    # "domainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -3216,7 +2889,6 @@
 
     goto :goto_0
 
-    .line 794
     :cond_7
     invoke-interface {v6, v9}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -3224,7 +2896,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 795
     invoke-interface {v6, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -3241,7 +2912,6 @@
 
     goto :goto_1
 
-    .line 805
     .restart local v4    # "blackList":Ljava/lang/String;
     .restart local v5    # "whiteList":Ljava/lang/String;
     .restart local v7    # "domainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -3250,7 +2920,6 @@
 
     goto :goto_2
 
-    .line 812
     :cond_9
     const-string v5, ""
 
@@ -3275,7 +2944,6 @@
     .end annotation
 
     .prologue
-    .line 365
     .local p2, "rules":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterRule;>;"
     monitor-enter p0
 
@@ -3288,7 +2956,6 @@
 
     if-eqz v35, :cond_1
 
-    .line 366
     :cond_0
     const/16 v35, 0x1
 
@@ -3298,7 +2965,6 @@
 
     move-object/from16 v22, v0
 
-    .line 367
     .local v22, "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     const/16 v35, 0x0
 
@@ -3318,7 +2984,6 @@
 
     move-object/from16 v23, v22
 
-    .line 547
     .end local v22    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     .local v23, "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :goto_0
@@ -3326,7 +2991,6 @@
 
     return-object v23
 
-    .line 374
     .end local v23    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :cond_1
     :try_start_1
@@ -3334,13 +2998,11 @@
 
     iget v5, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 375
     .local v5, "adminUid":I
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v28
 
-    .line 376
     .local v28, "userId":I
     move-object/from16 v0, p0
 
@@ -3348,7 +3010,6 @@
 
     move-result v4
 
-    .line 377
     .local v4, "adminDb":I
     const/16 v35, -0x1
 
@@ -3356,7 +3017,6 @@
 
     if-ne v4, v0, :cond_2
 
-    .line 378
     const/16 v35, 0x1
 
     move/from16 v0, v35
@@ -3365,7 +3025,6 @@
 
     move-object/from16 v22, v0
 
-    .line 379
     .restart local v22    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     const/16 v35, 0x0
 
@@ -3383,12 +3042,10 @@
 
     move-object/from16 v23, v22
 
-    .line 381
     .end local v22    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     .restart local v23    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     goto :goto_0
 
-    .line 384
     .end local v23    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :cond_2
     move-object/from16 v0, p0
@@ -3407,33 +3064,27 @@
 
     check-cast v6, Ljava/util/Map;
 
-    .line 385
     .local v6, "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     const/16 v27, 0x1
 
-    .line 386
     .local v27, "signatureMatch":Z
     const-string v20, ""
 
-    .line 387
     .local v20, "invalidDomain":Ljava/lang/String;
     new-instance v32, Landroid/content/ContentValues;
 
     invoke-direct/range {v32 .. v32}, Landroid/content/ContentValues;-><init>()V
 
-    .line 388
     .local v32, "values":Landroid/content/ContentValues;
     new-instance v25, Landroid/content/ContentValues;
 
     invoke-direct/range {v25 .. v25}, Landroid/content/ContentValues;-><init>()V
 
-    .line 389
     .local v25, "selectionValues":Landroid/content/ContentValues;
     new-instance v31, Ljava/util/ArrayList;
 
     invoke-direct/range {v31 .. v31}, Ljava/util/ArrayList;-><init>()V
 
-    .line 390
     .local v31, "validatedRules":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterRule;>;"
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
@@ -3445,7 +3096,6 @@
 
     move-object/from16 v22, v0
 
-    .line 392
     .restart local v22    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     const/16 v16, 0x0
 
@@ -3461,7 +3111,6 @@
 
     if-ge v0, v1, :cond_18
 
-    .line 393
     move-object/from16 v0, p2
 
     move/from16 v1, v16
@@ -3472,11 +3121,9 @@
 
     check-cast v24, Lcom/sec/enterprise/firewall/DomainFilterRule;
 
-    .line 394
     .local v24, "rule":Lcom/sec/enterprise/firewall/DomainFilterRule;
     if-nez v24, :cond_3
 
-    .line 395
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v36, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -3489,13 +3136,11 @@
 
     aput-object v35, v22, v16
 
-    .line 392
     :goto_2
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_1
 
-    .line 398
     :cond_3
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -3503,7 +3148,6 @@
 
     if-nez v35, :cond_4
 
-    .line 399
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v36, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -3520,7 +3164,6 @@
 
     goto :goto_2
 
-    .line 365
     .end local v4    # "adminDb":I
     .end local v5    # "adminUid":I
     .end local v6    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
@@ -3540,7 +3183,6 @@
 
     throw v35
 
-    .line 402
     .restart local v4    # "adminDb":I
     .restart local v5    # "adminUid":I
     .restart local v6    # "appIdMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
@@ -3587,7 +3229,6 @@
 
     if-eqz v35, :cond_6
 
-    .line 404
     :cond_5
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
@@ -3603,7 +3244,6 @@
 
     goto :goto_2
 
-    .line 408
     :cond_6
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -3613,7 +3253,6 @@
 
     move-result-object v21
 
-    .line 409
     .local v21, "packageName":Ljava/lang/String;
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -3623,7 +3262,6 @@
 
     move-result-object v26
 
-    .line 410
     .local v26, "signature":Ljava/lang/String;
     const-string v35, "*"
 
@@ -3639,7 +3277,6 @@
 
     if-eqz v26, :cond_7
 
-    .line 411
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v36, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -3654,7 +3291,6 @@
 
     goto :goto_2
 
-    .line 414
     :cond_7
     invoke-static/range {v21 .. v21}, Lcom/sec/enterprise/firewall/FirewallRuleValidator;->validatePackageName(Ljava/lang/String;)Z
 
@@ -3662,7 +3298,6 @@
 
     if-nez v35, :cond_8
 
-    .line 415
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v36, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -3697,7 +3332,6 @@
 
     goto/16 :goto_2
 
-    .line 424
     :cond_8
     if-eqz v6, :cond_9
 
@@ -3715,7 +3349,6 @@
 
     if-eqz v35, :cond_9
 
-    .line 426
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
@@ -3726,7 +3359,6 @@
 
     move-result v8
 
-    .line 427
     .local v8, "appUid":I
     const/16 v35, -0x1
 
@@ -3734,7 +3366,6 @@
 
     if-eq v8, v0, :cond_9
 
-    .line 428
     new-instance v29, Ljava/lang/Integer;
 
     move-object/from16 v0, v29
@@ -3743,7 +3374,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 429
     .local v29, "userIdObj":Ljava/lang/Integer;
     move-object/from16 v0, p0
 
@@ -3755,7 +3385,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 430
     :try_start_3
     move-object/from16 v0, p0
 
@@ -3787,7 +3416,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 431
     new-instance v35, Ljava/lang/Integer;
 
     move-object/from16 v0, v35
@@ -3800,12 +3428,10 @@
 
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 432
     monitor-exit v36
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 435
     .end local v8    # "appUid":I
     .end local v29    # "userIdObj":Ljava/lang/Integer;
     :cond_9
@@ -3832,7 +3458,6 @@
 
     move-result-object v11
 
-    .line 437
     .local v11, "ctx":Landroid/content/Context;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_4
@@ -3840,7 +3465,6 @@
 
     move-result-wide v18
 
-    .line 439
     .local v18, "identity":J
     if-eqz v26, :cond_a
 
@@ -3857,18 +3481,14 @@
 
     if-nez v35, :cond_a
 
-    .line 442
     const/16 v27, 0x0
 
-    .line 445
     :cond_a
     :try_start_6
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 447
     const/16 v30, 0x1
 
-    .line 448
     .local v30, "validDomain":Z
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getDenyDomains()Ljava/util/List;
 
@@ -3892,24 +3512,19 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 449
     .local v12, "domain":Ljava/lang/String;
     move-object/from16 v20, v12
 
-    .line 450
     invoke-static {v12}, Lcom/android/server/enterprise/firewall/FirewallUtils;->validateDomain(Ljava/lang/String;)Z
 
     move-result v30
 
-    .line 451
     if-nez v30, :cond_b
 
-    .line 454
     .end local v12    # "domain":Ljava/lang/String;
     :cond_c
     if-eqz v30, :cond_e
 
-    .line 455
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getAllowDomains()Ljava/util/List;
 
     move-result-object v35
@@ -3931,31 +3546,24 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 456
     .restart local v12    # "domain":Ljava/lang/String;
     move-object/from16 v20, v12
 
-    .line 457
     invoke-static {v12}, Lcom/android/server/enterprise/firewall/FirewallUtils;->validateDomain(Ljava/lang/String;)Z
 
     move-result v30
 
-    .line 458
     if-nez v30, :cond_d
 
-    .line 462
     .end local v12    # "domain":Ljava/lang/String;
     :cond_e
     if-eqz v30, :cond_17
 
-    .line 463
     const/4 v7, 0x0
 
-    .line 464
     .local v7, "appIsInstalled":Z
     if-nez v27, :cond_f
 
-    .line 466
     if-eqz v6, :cond_12
 
     move-object/from16 v0, v21
@@ -3966,17 +3574,14 @@
 
     if-eqz v35, :cond_12
 
-    .line 467
     const/4 v7, 0x1
 
-    .line 473
     :cond_f
     :goto_3
     if-nez v27, :cond_10
 
     if-nez v7, :cond_16
 
-    .line 476
     :cond_10
     const-string v35, "adminUid"
 
@@ -3992,8 +3597,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 477
-    const-string/jumbo v35, "packageName"
+    const-string v35, "packageName"
 
     move-object/from16 v0, v25
 
@@ -4003,7 +3607,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 478
     const-string v35, "blacklist"
 
     move-object/from16 v0, p0
@@ -4016,9 +3619,8 @@
 
     move-result-object v10
 
-    .line 480
     .local v10, "blackListInDB":Ljava/lang/String;
-    const-string/jumbo v35, "whitelist"
+    const-string v35, "whitelist"
 
     move-object/from16 v0, p0
 
@@ -4030,37 +3632,31 @@
 
     move-result-object v34
 
-    .line 485
     .local v34, "whiteListInDB":Ljava/lang/String;
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getDenyDomains()Ljava/util/List;
 
     move-result-object v13
 
-    .line 486
     .local v13, "domainListBlack":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual/range {v24 .. v24}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getAllowDomains()Ljava/util/List;
 
     move-result-object v14
 
-    .line 487
     .local v14, "domainListWhite":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/android/server/enterprise/firewall/DomainFilter;->trimDomainUrls(Ljava/util/List;)V
 
-    .line 488
     move-object/from16 v0, p0
 
     invoke-direct {v0, v14}, Lcom/android/server/enterprise/firewall/DomainFilter;->trimDomainUrls(Ljava/util/List;)V
 
-    .line 492
     move-object/from16 v0, p0
 
     invoke-direct {v0, v10}, Lcom/android/server/enterprise/firewall/DomainFilter;->createDomainSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v9
 
-    .line 493
     .local v9, "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -4070,7 +3666,6 @@
 
     move-result-object v33
 
-    .line 497
     .local v33, "whiteListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v9, v13}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
 
@@ -4089,19 +3684,16 @@
     :cond_11
     const/4 v15, 0x1
 
-    .line 499
     .local v15, "hasChangesToBeMade":Z
     :goto_4
     if-eqz v15, :cond_14
 
-    .line 502
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13, v9}, Lcom/android/server/enterprise/firewall/DomainFilter;->createDomainString(Ljava/util/List;Ljava/util/Set;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 506
     move-object/from16 v0, p0
 
     move-object/from16 v1, v33
@@ -4110,7 +3702,6 @@
 
     move-result-object v34
 
-    .line 515
     const-string v35, "blacklist"
 
     move-object/from16 v0, v32
@@ -4119,8 +3710,7 @@
 
     invoke-virtual {v0, v1, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 516
-    const-string/jumbo v35, "whitelist"
+    const-string v35, "whitelist"
 
     move-object/from16 v0, v32
 
@@ -4130,8 +3720,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
-    const-string/jumbo v35, "signature"
+    const-string v35, "signature"
 
     move-object/from16 v0, v32
 
@@ -4141,7 +3730,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 518
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4164,7 +3752,6 @@
 
     if-nez v35, :cond_15
 
-    .line 520
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v36, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -4177,18 +3764,15 @@
 
     aput-object v35, v22, v16
 
-    .line 529
     :goto_5
     invoke-virtual/range {v32 .. v32}, Landroid/content/ContentValues;->clear()V
 
-    .line 530
     invoke-virtual/range {v25 .. v25}, Landroid/content/ContentValues;->clear()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     goto/16 :goto_2
 
-    .line 432
     .end local v7    # "appIsInstalled":Z
     .end local v9    # "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v10    # "blackListInDB":Ljava/lang/String;
@@ -4214,7 +3798,6 @@
     :try_start_8
     throw v35
 
-    .line 445
     .end local v8    # "appUid":I
     .end local v29    # "userIdObj":Ljava/lang/Integer;
     .restart local v11    # "ctx":Landroid/content/Context;
@@ -4226,7 +3809,6 @@
 
     throw v35
 
-    .line 469
     .restart local v7    # "appIsInstalled":Z
     .restart local v17    # "i$":Ljava/util/Iterator;
     .restart local v30    # "validDomain":Z
@@ -4235,7 +3817,6 @@
 
     goto/16 :goto_3
 
-    .line 497
     .restart local v9    # "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .restart local v10    # "blackListInDB":Ljava/lang/String;
     .restart local v13    # "domainListBlack":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -4247,7 +3828,6 @@
 
     goto :goto_4
 
-    .line 509
     .restart local v15    # "hasChangesToBeMade":Z
     :cond_14
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
@@ -4264,7 +3844,6 @@
 
     goto/16 :goto_2
 
-    .line 524
     :cond_15
     move-object/from16 v0, v31
 
@@ -4272,7 +3851,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 525
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v36, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->SUCCESS:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -4287,7 +3865,6 @@
 
     goto :goto_5
 
-    .line 532
     .end local v9    # "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v10    # "blackListInDB":Ljava/lang/String;
     .end local v13    # "domainListBlack":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -4310,7 +3887,6 @@
 
     goto/16 :goto_2
 
-    .line 537
     .end local v7    # "appIsInstalled":Z
     :cond_17
     new-instance v35, Lcom/sec/enterprise/firewall/FirewallResponse;
@@ -4347,7 +3923,6 @@
 
     goto/16 :goto_2
 
-    .line 545
     .end local v11    # "ctx":Landroid/content/Context;
     .end local v17    # "i$":Ljava/util/Iterator;
     .end local v18    # "identity":J
@@ -4364,7 +3939,6 @@
 
     if-eqz v27, :cond_19
 
-    .line 546
     const-string v35, "ADD"
 
     move-object/from16 v0, p0
@@ -4382,7 +3956,6 @@
     :cond_19
     move-object/from16 v23, v22
 
-    .line 547
     .end local v22    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     .restart local v23    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     goto/16 :goto_0
@@ -4393,18 +3966,15 @@
     .param p1, "adminUid"    # I
 
     .prologue
-    .line 994
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 995
     .local v0, "userId":I
     new-instance v1, Ljava/lang/Integer;
 
     invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 996
     .local v1, "userIdObj":Ljava/lang/Integer;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->isDomainFilterReportEnabledAsUser(I)Z
 
@@ -4420,15 +3990,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 997
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v2, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 998
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->clearReportForUser(I)V
 
-    .line 1000
     :cond_0
     return-void
 .end method
@@ -4441,24 +4008,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1041
     iget v6, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1042
     .local v6, "adminUid":I
     invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v8
 
-    .line 1043
     .local v8, "userId":I
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1044
     .local v10, "values":Landroid/content/ContentValues;
-    const-string/jumbo v0, "status"
+    const-string v0, "status"
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -4466,8 +4029,7 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 1045
-    const-string/jumbo v0, "userId"
+    const-string v0, "userId"
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4475,12 +4037,10 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1046
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1047
     .local v7, "selection":Landroid/content/ContentValues;
     const-string v0, "adminUid"
 
@@ -4490,7 +4050,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1048
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "DomainFilterReportStatus"
@@ -4501,7 +4060,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1050
     new-instance v0, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v1, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -4512,17 +4070,14 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/enterprise/firewall/FirewallResponse;-><init>(Lcom/sec/enterprise/firewall/FirewallResponse$Result;Lcom/sec/enterprise/firewall/FirewallResponse$ErrorCode;Ljava/lang/String;)V
 
-    .line 1068
     :goto_0
     return-object v0
 
-    .line 1054
     :cond_0
     new-instance v9, Ljava/lang/Integer;
 
     invoke-direct {v9, v8}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 1055
     .local v9, "userIdObj":Ljava/lang/Integer;
     if-eqz p2, :cond_2
 
@@ -4534,12 +4089,10 @@
 
     if-nez v0, :cond_2
 
-    .line 1056
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1057
     const-string v1, "REPORT"
 
     const/4 v0, 0x1
@@ -4556,7 +4109,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1068
     :cond_1
     :goto_1
     new-instance v1, Lcom/sec/enterprise/firewall/FirewallResponse;
@@ -4576,7 +4128,6 @@
 
     goto :goto_0
 
-    .line 1058
     :cond_2
     if-nez p2, :cond_1
 
@@ -4586,7 +4137,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1059
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v0, v9}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -4595,15 +4145,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1060
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v0, v9}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 1061
     invoke-direct {p0, v8}, Lcom/android/server/enterprise/firewall/DomainFilter;->clearReportForUser(I)V
 
-    .line 1062
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -4612,7 +4159,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1063
     const-string v1, "REPORT"
 
     const/4 v0, 0x0
@@ -4631,7 +4177,6 @@
 
     goto :goto_1
 
-    .line 1068
     :cond_3
     const-string v0, "Domain Report successfully disabled."
 
@@ -4657,7 +4202,6 @@
     .end annotation
 
     .prologue
-    .line 1090
     .local p2, "packageNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -4665,13 +4209,11 @@
 
     move-result v6
 
-    .line 1091
     .local v6, "userId":I
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1092
     .local v4, "reportList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterReport;>;"
     iget-object v7, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mDomainReportCache:Ljava/util/Set;
 
@@ -4693,25 +4235,21 @@
 
     if-nez v7, :cond_1
 
-    .line 1108
     :cond_0
     return-object v4
 
-    .line 1095
     :cond_1
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1096
     .local v5, "storedReports":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1097
     .local v0, "filterByUserId":Landroid/content/ContentValues;
-    const-string/jumbo v7, "userId"
+    const-string v7, "userId"
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4719,7 +4257,6 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1098
     iget-object v7, p0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v8, "DomainFilterReportTable"
@@ -4730,7 +4267,6 @@
 
     move-result-object v5
 
-    .line 1100
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -4750,15 +4286,13 @@
 
     check-cast v3, Landroid/content/ContentValues;
 
-    .line 1101
     .local v3, "report":Landroid/content/ContentValues;
-    const-string/jumbo v7, "packageName"
+    const-string v7, "packageName"
 
     invoke-virtual {v3, v7}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1102
     .local v2, "packageName":Ljava/lang/String;
     if-eqz p2, :cond_3
 
@@ -4768,11 +4302,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 1103
     :cond_3
     new-instance v7, Lcom/sec/enterprise/firewall/DomainFilterReport;
 
-    const-string/jumbo v8, "time"
+    const-string v8, "time"
 
     invoke-virtual {v3, v8}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -4782,7 +4315,7 @@
 
     move-result-wide v8
 
-    const-string/jumbo v10, "url"
+    const-string v10, "url"
 
     invoke-virtual {v3, v10}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4814,37 +4347,31 @@
     .end annotation
 
     .prologue
-    .line 737
     .local p2, "packageNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 738
     .local v9, "domainRules":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterRule;>;"
     new-instance v13, Landroid/content/ContentValues;
 
     invoke-direct {v13}, Landroid/content/ContentValues;-><init>()V
 
-    .line 739
     .local v13, "selectionValues":Landroid/content/ContentValues;
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 741
     .local v3, "adminUid":I
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 742
     .local v5, "blackList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 744
     .local v15, "whiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v17, "adminUid"
 
@@ -4858,7 +4385,6 @@
 
     invoke-virtual {v13, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 745
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4879,7 +4405,6 @@
 
     move-result-object v8
 
-    .line 747
     .local v8, "cvList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4900,9 +4425,8 @@
 
     check-cast v7, Landroid/content/ContentValues;
 
-    .line 748
     .local v7, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v17, "packageName"
+    const-string v17, "packageName"
 
     move-object/from16 v0, v17
 
@@ -4910,9 +4434,8 @@
 
     move-result-object v11
 
-    .line 749
     .local v11, "packageName":Ljava/lang/String;
-    const-string/jumbo v17, "signature"
+    const-string v17, "signature"
 
     move-object/from16 v0, v17
 
@@ -4920,7 +4443,6 @@
 
     move-result-object v14
 
-    .line 750
     .local v14, "signature":Ljava/lang/String;
     if-eqz p2, :cond_1
 
@@ -4932,7 +4454,6 @@
 
     if-eqz v17, :cond_0
 
-    .line 751
     :cond_1
     const-string v17, "blacklist"
 
@@ -4942,9 +4463,8 @@
 
     move-result-object v6
 
-    .line 752
     .local v6, "blackListInDB":Ljava/lang/String;
-    const-string/jumbo v17, "whitelist"
+    const-string v17, "whitelist"
 
     move-object/from16 v0, v17
 
@@ -4952,7 +4472,6 @@
 
     move-result-object v16
 
-    .line 753
     .local v16, "whiteListInDB":Ljava/lang/String;
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -4960,7 +4479,6 @@
 
     if-nez v17, :cond_2
 
-    .line 754
     const-string v17, ";"
 
     move-object/from16 v0, v17
@@ -4973,7 +4491,6 @@
 
     move-result-object v5
 
-    .line 758
     :goto_1
     invoke-static/range {v16 .. v16}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -4981,7 +4498,6 @@
 
     if-nez v17, :cond_3
 
-    .line 759
     const-string v17, ";"
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -4992,25 +4508,21 @@
 
     move-result-object v15
 
-    .line 763
     :goto_2
     new-instance v4, Lcom/sec/enterprise/AppIdentity;
 
     invoke-direct {v4, v11, v14}, Lcom/sec/enterprise/AppIdentity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 764
     .local v4, "appIdentity":Lcom/sec/enterprise/AppIdentity;
     new-instance v12, Lcom/sec/enterprise/firewall/DomainFilterRule;
 
     invoke-direct {v12, v4, v5, v15}, Lcom/sec/enterprise/firewall/DomainFilterRule;-><init>(Lcom/sec/enterprise/AppIdentity;Ljava/util/List;Ljava/util/List;)V
 
-    .line 765
     .local v12, "rule":Lcom/sec/enterprise/firewall/DomainFilterRule;
     invoke-interface {v9, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 756
     .end local v4    # "appIdentity":Lcom/sec/enterprise/AppIdentity;
     .end local v12    # "rule":Lcom/sec/enterprise/firewall/DomainFilterRule;
     :cond_2
@@ -5022,7 +4534,6 @@
     .restart local v5    # "blackList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_1
 
-    .line 761
     :cond_3
     new-instance v15, Ljava/util/ArrayList;
 
@@ -5032,7 +4543,6 @@
     .restart local v15    # "whiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_2
 
-    .line 768
     .end local v6    # "blackListInDB":Ljava/lang/String;
     .end local v7    # "cv":Landroid/content/ContentValues;
     .end local v11    # "packageName":Ljava/lang/String;
@@ -5041,7 +4551,6 @@
     :cond_4
     invoke-virtual {v13}, Landroid/content/ContentValues;->clear()V
 
-    .line 769
     return-object v9
 .end method
 
@@ -5050,7 +4559,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1073
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -5071,7 +4579,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1003
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->checkAdminInDatabase(I)I
 
     move-result v0
@@ -5080,7 +4587,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1006
     const-string v1, "CLEAR"
 
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
@@ -5099,7 +4605,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/firewall/DomainFilter;->sendToCache(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1009
     :cond_0
     return-void
 .end method
@@ -5120,7 +4625,6 @@
     .end annotation
 
     .prologue
-    .line 555
     .local p2, "rules":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterRule;>;"
     monitor-enter p0
 
@@ -5133,14 +4637,12 @@
 
     if-eqz v22, :cond_0
 
-    .line 556
     const/16 v22, 0x1
 
     move/from16 v0, v22
 
     new-array v12, v0, [Lcom/sec/enterprise/firewall/FirewallResponse;
 
-    .line 557
     .local v12, "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     const/16 v22, 0x0
 
@@ -5160,7 +4662,6 @@
 
     move-object v13, v12
 
-    .line 733
     .end local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     .local v13, "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :goto_0
@@ -5168,7 +4669,6 @@
 
     return-object v13
 
-    .line 563
     .end local v13    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :cond_0
     :try_start_1
@@ -5176,7 +4676,6 @@
 
     iget v4, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 565
     .local v4, "adminUid":I
     move-object/from16 v0, p0
 
@@ -5186,14 +4685,12 @@
 
     if-nez v22, :cond_2
 
-    .line 566
     const/16 v22, 0x1
 
     move/from16 v0, v22
 
     new-array v12, v0, [Lcom/sec/enterprise/firewall/FirewallResponse;
 
-    .line 567
     .restart local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     const/16 v22, 0x0
 
@@ -5213,12 +4710,10 @@
     :goto_1
     move-object v13, v12
 
-    .line 733
     .end local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     .restart local v13    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     goto :goto_0
 
-    .line 570
     .end local v13    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :cond_2
     move-object/from16 v0, p0
@@ -5235,14 +4730,12 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 571
     const/16 v22, 0x1
 
     move/from16 v0, v22
 
     new-array v12, v0, [Lcom/sec/enterprise/firewall/FirewallResponse;
 
-    .line 572
     .restart local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     const/16 v22, 0x0
 
@@ -5262,7 +4755,6 @@
 
     goto :goto_1
 
-    .line 555
     .end local v4    # "adminUid":I
     .end local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     :catchall_0
@@ -5272,7 +4764,6 @@
 
     throw v22
 
-    .line 575
     .restart local v4    # "adminUid":I
     :cond_3
     :try_start_2
@@ -5284,20 +4775,17 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 577
     const/16 v22, 0x1
 
     move/from16 v0, v22
 
     new-array v12, v0, [Lcom/sec/enterprise/firewall/FirewallResponse;
 
-    .line 578
     .restart local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 579
     .local v15, "selectionValues":Landroid/content/ContentValues;
     const-string v22, "adminUid"
 
@@ -5311,7 +4799,6 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 580
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5330,7 +4817,6 @@
 
     if-gtz v22, :cond_4
 
-    .line 582
     const/16 v22, 0x0
 
     new-instance v23, Lcom/sec/enterprise/firewall/FirewallResponse;
@@ -5345,7 +4831,6 @@
 
     aput-object v23, v12, v22
 
-    .line 590
     :goto_2
     const/16 v22, 0x0
 
@@ -5363,7 +4848,6 @@
 
     goto :goto_1
 
-    .line 586
     :cond_4
     const/16 v22, 0x0
 
@@ -5399,7 +4883,6 @@
 
     goto :goto_2
 
-    .line 592
     .end local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     .end local v15    # "selectionValues":Landroid/content/ContentValues;
     :cond_5
@@ -5407,7 +4890,6 @@
 
     invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
 
-    .line 593
     .local v18, "validatedRules":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/firewall/DomainFilterRule;>;"
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
@@ -5417,19 +4899,16 @@
 
     new-array v12, v0, [Lcom/sec/enterprise/firewall/FirewallResponse;
 
-    .line 594
     .restart local v12    # "returnResponse":[Lcom/sec/enterprise/firewall/FirewallResponse;
     new-instance v19, Landroid/content/ContentValues;
 
     invoke-direct/range {v19 .. v19}, Landroid/content/ContentValues;-><init>()V
 
-    .line 595
     .local v19, "values":Landroid/content/ContentValues;
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 597
     .restart local v15    # "selectionValues":Landroid/content/ContentValues;
     const/4 v10, 0x0
 
@@ -5443,7 +4922,6 @@
 
     if-ge v10, v0, :cond_13
 
-    .line 598
     move-object/from16 v0, p2
 
     invoke-interface {v0, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -5452,7 +4930,6 @@
 
     check-cast v14, Lcom/sec/enterprise/firewall/DomainFilterRule;
 
-    .line 599
     .local v14, "rule":Lcom/sec/enterprise/firewall/DomainFilterRule;
     invoke-virtual {v14}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -5460,7 +4937,6 @@
 
     if-nez v22, :cond_6
 
-    .line 600
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5473,13 +4949,11 @@
 
     aput-object v22, v12, v10
 
-    .line 597
     :goto_4
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
-    .line 604
     :cond_6
     invoke-virtual {v14}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -5489,7 +4963,6 @@
 
     move-result-object v11
 
-    .line 605
     .local v11, "packageName":Ljava/lang/String;
     invoke-virtual {v14}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getApplication()Lcom/sec/enterprise/AppIdentity;
 
@@ -5499,7 +4972,6 @@
 
     move-result-object v16
 
-    .line 606
     .local v16, "signature":Ljava/lang/String;
     const-string v22, "*"
 
@@ -5513,7 +4985,6 @@
 
     if-eqz v16, :cond_7
 
-    .line 608
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5528,7 +4999,6 @@
 
     goto :goto_4
 
-    .line 611
     :cond_7
     invoke-static {v11}, Lcom/sec/enterprise/firewall/FirewallRuleValidator;->validatePackageName(Ljava/lang/String;)Z
 
@@ -5536,7 +5006,6 @@
 
     if-nez v22, :cond_8
 
-    .line 612
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5569,7 +5038,6 @@
 
     goto :goto_4
 
-    .line 619
     :cond_8
     const-string v22, "adminUid"
 
@@ -5583,14 +5051,12 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 620
-    const-string/jumbo v22, "packageName"
+    const-string v22, "packageName"
 
     move-object/from16 v0, v22
 
     invoke-virtual {v15, v0, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 621
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5599,7 +5065,7 @@
 
     const-string v23, "DomainFilterTable"
 
-    const-string/jumbo v24, "signature"
+    const-string v24, "signature"
 
     move-object/from16 v0, v22
 
@@ -5611,7 +5077,6 @@
 
     move-result-object v17
 
-    .line 625
     .local v17, "signatureInDB":Ljava/lang/String;
     if-eqz v16, :cond_9
 
@@ -5633,7 +5098,6 @@
 
     if-nez v22, :cond_c
 
-    .line 629
     :cond_b
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
@@ -5647,13 +5111,11 @@
 
     aput-object v22, v12, v10
 
-    .line 725
     :goto_5
     invoke-virtual {v15}, Landroid/content/ContentValues;->clear()V
 
     goto/16 :goto_4
 
-    .line 633
     :cond_c
     const-string v22, "blacklist"
 
@@ -5665,9 +5127,8 @@
 
     move-result-object v6
 
-    .line 635
     .local v6, "blackListInDB":Ljava/lang/String;
-    const-string/jumbo v22, "whitelist"
+    const-string v22, "whitelist"
 
     move-object/from16 v0, p0
 
@@ -5677,39 +5138,32 @@
 
     move-result-object v21
 
-    .line 640
     .local v21, "whiteListInDB":Ljava/lang/String;
     invoke-virtual {v14}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getDenyDomains()Ljava/util/List;
 
     move-result-object v7
 
-    .line 641
     .local v7, "domainListBlack":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {v14}, Lcom/sec/enterprise/firewall/DomainFilterRule;->getAllowDomains()Ljava/util/List;
 
     move-result-object v8
 
-    .line 644
     .local v8, "domainListWhite":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v9, 0x0
 
-    .line 648
     .local v9, "hasRulesToDelete":Z
     if-eqz v7, :cond_d
 
-    .line 649
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/firewall/DomainFilter;->trimDomainUrls(Ljava/util/List;)V
 
-    .line 650
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/android/server/enterprise/firewall/DomainFilter;->createDomainSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v5
 
-    .line 651
     .local v5, "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v5, v7}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
@@ -5717,17 +5171,14 @@
 
     or-int v9, v9, v22
 
-    .line 663
     .end local v9    # "hasRulesToDelete":Z
     :goto_6
     if-eqz v8, :cond_e
 
-    .line 664
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/android/server/enterprise/firewall/DomainFilter;->trimDomainUrls(Ljava/util/List;)V
 
-    .line 665
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
@@ -5736,7 +5187,6 @@
 
     move-result-object v20
 
-    .line 666
     .local v20, "whiteListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     move-object/from16 v0, v20
 
@@ -5746,12 +5196,10 @@
 
     or-int v9, v9, v22
 
-    .line 679
     .restart local v9    # "hasRulesToDelete":Z
     :goto_7
     if-eqz v9, :cond_f
 
-    .line 681
     const-string v22, ";"
 
     move-object/from16 v0, v22
@@ -5760,7 +5208,6 @@
 
     move-result-object v6
 
-    .line 683
     const-string v22, ";"
 
     move-object/from16 v0, v22
@@ -5771,7 +5218,6 @@
 
     move-result-object v21
 
-    .line 691
     const-string v22, ""
 
     move-object/from16 v0, v22
@@ -5794,7 +5240,6 @@
 
     if-eqz v22, :cond_11
 
-    .line 692
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5813,7 +5258,6 @@
 
     if-gtz v22, :cond_10
 
-    .line 695
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5828,7 +5272,6 @@
 
     goto/16 :goto_5
 
-    .line 656
     .end local v5    # "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v20    # "whiteListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_d
@@ -5836,28 +5279,24 @@
 
     invoke-direct {v5}, Ljava/util/HashSet;-><init>()V
 
-    .line 657
     .restart local v5    # "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     or-int/lit8 v9, v9, 0x1
 
     .local v9, "hasRulesToDelete":I
     goto :goto_6
 
-    .line 672
     .end local v9    # "hasRulesToDelete":I
     :cond_e
     new-instance v20, Ljava/util/HashSet;
 
     invoke-direct/range {v20 .. v20}, Ljava/util/HashSet;-><init>()V
 
-    .line 673
     .restart local v20    # "whiteListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     or-int/lit8 v9, v9, 0x1
 
     .local v9, "hasRulesToDelete":Z
     goto :goto_7
 
-    .line 685
     :cond_f
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
@@ -5873,13 +5312,11 @@
 
     goto/16 :goto_4
 
-    .line 700
     :cond_10
     move-object/from16 v0, v18
 
     invoke-interface {v0, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 701
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->SUCCESS:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5894,7 +5331,6 @@
 
     goto/16 :goto_5
 
-    .line 707
     :cond_11
     const-string v22, "blacklist"
 
@@ -5904,8 +5340,7 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 708
-    const-string/jumbo v22, "whitelist"
+    const-string v22, "whitelist"
 
     move-object/from16 v0, v19
 
@@ -5915,7 +5350,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 709
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5936,7 +5370,6 @@
 
     if-nez v22, :cond_12
 
-    .line 712
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->FAILED:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5949,19 +5382,16 @@
 
     aput-object v22, v12, v10
 
-    .line 722
     :goto_8
     invoke-virtual/range {v19 .. v19}, Landroid/content/ContentValues;->clear()V
 
     goto/16 :goto_5
 
-    .line 717
     :cond_12
     move-object/from16 v0, v18
 
     invoke-interface {v0, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 718
     new-instance v22, Lcom/sec/enterprise/firewall/FirewallResponse;
 
     sget-object v23, Lcom/sec/enterprise/firewall/FirewallResponse$Result;->SUCCESS:Lcom/sec/enterprise/firewall/FirewallResponse$Result;
@@ -5976,7 +5406,6 @@
 
     goto :goto_8
 
-    .line 729
     .end local v5    # "blackListFromDBSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v6    # "blackListInDB":Ljava/lang/String;
     .end local v7    # "domainListBlack":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -5995,7 +5424,6 @@
 
     if-nez v22, :cond_1
 
-    .line 730
     const-string v22, "REMOVE"
 
     move-object/from16 v0, p0

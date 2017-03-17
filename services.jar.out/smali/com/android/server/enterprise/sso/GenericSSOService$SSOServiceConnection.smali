@@ -29,13 +29,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 4273
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4274
     iput p1, p0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;->mUserId:I
 
-    .line 4275
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
 
     .prologue
-    .line 4269
     iget v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;->mUserId:I
 
     return v0
@@ -56,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 4299
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;->mService:Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     return-object v0
@@ -68,21 +63,18 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 4279
     const-string v0, "GenericSSOService"
 
-    const-string/jumbo v1, "onServiceConnected SSOServiceConnection"
+    const-string v1, "onServiceConnected SSOServiceConnection"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4280
     invoke-static {p2}, Landroid/app/enterprise/sso/GenericSSOSupportSolution$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;->mService:Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
-    .line 4281
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2100()Ljava/util/Map;
 
@@ -96,7 +88,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4282
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2100()Ljava/util/Map;
 
@@ -110,7 +101,6 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4283
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2200()Ljava/util/concurrent/CountDownLatch;
 
@@ -118,7 +108,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4284
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2200()Ljava/util/concurrent/CountDownLatch;
 
@@ -126,7 +115,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 4286
     :cond_0
     return-void
 .end method
@@ -136,19 +124,16 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 4290
     const-string v0, "GenericSSOService"
 
-    const-string/jumbo v1, "onServiceDisConnected SSOServiceConnection"
+    const-string v1, "onServiceDisConnected SSOServiceConnection"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4291
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;->mService:Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
-    .line 4292
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2100()Ljava/util/Map;
 
@@ -162,7 +147,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4293
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2200()Ljava/util/concurrent/CountDownLatch;
 
@@ -170,7 +154,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4294
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2200()Ljava/util/concurrent/CountDownLatch;
 
@@ -178,7 +161,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 4296
     :cond_0
     return-void
 .end method

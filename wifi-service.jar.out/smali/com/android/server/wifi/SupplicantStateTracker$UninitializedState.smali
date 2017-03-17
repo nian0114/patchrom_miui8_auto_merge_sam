@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 333
     iput-object p1, p0, Lcom/android/server/wifi/SupplicantStateTracker$UninitializedState;->this$0:Lcom/android/server/wifi/SupplicantStateTracker;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 336
     # getter for: Lcom/android/server/wifi/SupplicantStateTracker;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/SupplicantStateTracker;->access$000()Z
 
@@ -71,7 +69,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/SupplicantStateTracker$UninitializedState;->this$0:Lcom/android/server/wifi/SupplicantStateTracker;
 
@@ -80,6 +77,5 @@
     # setter for: Lcom/android/server/wifi/SupplicantStateTracker;->mAuthenticationFailuresCount:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/SupplicantStateTracker;->access$102(Lcom/android/server/wifi/SupplicantStateTracker;I)I
 
-    .line 338
     return-void
 .end method

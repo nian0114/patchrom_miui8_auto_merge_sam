@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +49,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 23
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -64,19 +61,16 @@
 
     move-result-object v7
 
-    .line 24
     .local v7, "callerPackage":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 25
     .local v8, "callerUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 26
     .local v10, "psToken":J
     const/4 v0, 0x5
 
@@ -134,9 +128,7 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 35
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 36
     return-void
 .end method

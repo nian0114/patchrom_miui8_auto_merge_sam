@@ -29,13 +29,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1544
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1545
     iput p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;->mUserId:I
 
-    .line 1546
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 1570
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;->mService:Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     return-object v0
@@ -57,21 +53,18 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1550
     const-string v0, "EnterpriseIdentity"
 
-    const-string/jumbo v1, "onServiceConnected EnterpriseIdServiceConnection"
+    const-string v1, "onServiceConnected EnterpriseIdServiceConnection"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1551
     invoke-static {p2}, Landroid/app/enterprise/sso/GenericSSOSupportSolution$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;->mService:Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
-    .line 1552
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$1200()Ljava/util/Map;
 
@@ -85,7 +78,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1553
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$1200()Ljava/util/Map;
 
@@ -99,7 +91,6 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1554
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$2000()Ljava/util/concurrent/CountDownLatch;
 
@@ -107,7 +98,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1555
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$2000()Ljava/util/concurrent/CountDownLatch;
 
@@ -115,7 +105,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1557
     :cond_0
     return-void
 .end method
@@ -125,19 +114,16 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1561
     const-string v0, "EnterpriseIdentity"
 
-    const-string/jumbo v1, "onServiceDisConnected EnterpriseIdServiceConnection"
+    const-string v1, "onServiceDisConnected EnterpriseIdServiceConnection"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1562
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;->mService:Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
-    .line 1563
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$1200()Ljava/util/Map;
 
@@ -151,7 +137,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1564
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$2000()Ljava/util/concurrent/CountDownLatch;
 
@@ -159,7 +144,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1565
     # getter for: Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->access$2000()Ljava/util/concurrent/CountDownLatch;
 
@@ -167,7 +151,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1567
     :cond_0
     return-void
 .end method

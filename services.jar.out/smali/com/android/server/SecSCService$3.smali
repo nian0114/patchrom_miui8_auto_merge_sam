@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/server/SecSCService$3;->this$0:Lcom/android/server/SecSCService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,26 +38,21 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 246
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 247
     .local v0, "action":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 260
     :cond_0
     :goto_0
     return-void
 
-    .line 250
     :cond_1
     # invokes: Lcom/android/server/SecSCService;->SecSC_deleteFile()V
     invoke-static {}, Lcom/android/server/SecSCService;->access$400()V
 
-    .line 251
     iget-object v2, p0, Lcom/android/server/SecSCService$3;->this$0:Lcom/android/server/SecSCService;
 
     # getter for: Lcom/android/server/SecSCService;->mServiceHandler:Lcom/android/server/SecSCService$ServiceHandler;
@@ -70,7 +64,6 @@
 
     move-result-object v1
 
-    .line 252
     .local v1, "msg":Landroid/os/Message;
     const-string v2, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -80,12 +73,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 253
     const/4 v2, 0x2
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 259
     :goto_1
     iget-object v2, p0, Lcom/android/server/SecSCService$3;->this$0:Lcom/android/server/SecSCService;
 
@@ -98,7 +89,6 @@
 
     goto :goto_0
 
-    .line 254
     :cond_2
     const-string v2, "android.intent.action.TIME_SET"
 

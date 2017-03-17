@@ -14,7 +14,6 @@
     .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/params/HttpParams;
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 7
     .local p1, "patterns":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -61,7 +59,6 @@
     .param p1, "singleHeader"    # Z
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

@@ -33,21 +33,15 @@
     .param p4, "fixedFacets"    # S
 
     .prologue
-    .line 269
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 270
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractTraverser$FacetInfo;->facetdata:Lmf/org/apache/xerces/impl/dv/XSFacets;
 
-    .line 271
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractTraverser$FacetInfo;->nodeAfterFacets:Lmf/org/w3c/dom/Element;
 
-    .line 272
     iput-short p3, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractTraverser$FacetInfo;->fPresentFacets:S
 
-    .line 273
     iput-short p4, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractTraverser$FacetInfo;->fFixedFacets:S
 
-    .line 274
     return-void
 .end method

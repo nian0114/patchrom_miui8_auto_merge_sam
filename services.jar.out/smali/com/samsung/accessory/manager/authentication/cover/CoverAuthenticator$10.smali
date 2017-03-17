@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 810
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$10;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 813
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$10;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     iget-object v1, v1, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mResult:Ljava/util/concurrent/atomic/AtomicReference;
@@ -51,7 +49,6 @@
 
     check-cast v0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
-    .line 814
     .local v0, "reault":Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
     if-eqz v0, :cond_1
 
@@ -89,7 +86,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 817
     :cond_0
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$10;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
@@ -102,11 +98,9 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthHandler;->sendEmptyMessage(I)Z
 
-    .line 822
     :goto_0
     return-void
 
-    .line 820
     :cond_1
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$10;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 

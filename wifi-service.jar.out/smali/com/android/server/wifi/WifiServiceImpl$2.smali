@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 715
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 718
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     const/4 v4, 0x1
@@ -49,14 +47,12 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->isBootCompleted:Z
     invoke-static {v3, v4}, Lcom/android/server/wifi/WifiServiceImpl;->access$1102(Lcom/android/server/wifi/WifiServiceImpl;Z)Z
 
-    .line 719
     const-string v3, "WifiService"
 
     const-string v4, "android.intent.action.BOOT_COMPLETED"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 720
     const-string v3, "SPRINT"
 
     sget-object v4, Lcom/android/server/wifi/WifiServiceImpl;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
@@ -67,7 +63,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 722
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -91,7 +86,6 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mTetheredData:I
     invoke-static {v3, v4}, Lcom/android/server/wifi/WifiServiceImpl;->access$1202(Lcom/android/server/wifi/WifiServiceImpl;I)I
 
-    .line 723
     const-string v3, "WifiService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -123,16 +117,13 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 742
     :cond_0
     :goto_0
     return-void
 
-    .line 724
     :catch_0
     move-exception v1
 
-    .line 725
     .local v1, "e1":Landroid/provider/Settings$SettingNotFoundException;
     const-string v3, "WifiService"
 
@@ -140,14 +131,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-virtual {v3}, Lcom/android/server/wifi/WifiServiceImpl;->getWifiApEnabledState()I
 
     move-result v2
 
-    .line 727
     .local v2, "wifiApState":I
     const/16 v3, 0xc
 
@@ -157,7 +146,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 728
     :cond_1
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -170,7 +158,6 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mTetheredData:I
     invoke-static {v3, v4}, Lcom/android/server/wifi/WifiServiceImpl;->access$1202(Lcom/android/server/wifi/WifiServiceImpl;I)I
 
-    .line 729
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mContext:Landroid/content/Context;
@@ -195,7 +182,6 @@
 
     goto :goto_0
 
-    .line 731
     :cond_2
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -205,7 +191,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/wifi/WifiServiceImpl;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
 
-    .line 733
     const-wide/16 v4, 0x258
 
     :try_start_1
@@ -213,7 +198,6 @@
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 737
     :goto_1
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -226,7 +210,6 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mTetheredData:I
     invoke-static {v3, v4}, Lcom/android/server/wifi/WifiServiceImpl;->access$1202(Lcom/android/server/wifi/WifiServiceImpl;I)I
 
-    .line 738
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mContext:Landroid/content/Context;
@@ -251,11 +234,9 @@
 
     goto :goto_0
 
-    .line 734
     :catch_1
     move-exception v0
 
-    .line 735
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 

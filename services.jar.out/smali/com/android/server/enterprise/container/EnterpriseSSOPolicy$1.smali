@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$1;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,18 +40,15 @@
     .prologue
     const/4 v10, -0x1
 
-    .line 165
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 166
     .local v0, "action":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 168
     .local v4, "result":I
-    const-string/jumbo v7, "enterprise.container.setup.success"
+    const-string v7, "enterprise.container.setup.success"
 
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -60,14 +56,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 169
     const-string v7, "containerid"
 
     invoke-virtual {p2, v7, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 170
     .local v2, "containerId":I
     # getter for: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
     invoke-static {}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$000()Z
@@ -98,11 +92,9 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     :cond_0
     if-lez v2, :cond_1
 
-    .line 172
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$1;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     # invokes: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->isSSOServiceInstalled(I)Z
@@ -112,7 +104,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 173
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$1;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     # invokes: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfaces(I)I
@@ -120,7 +111,6 @@
 
     move-result v4
 
-    .line 174
     # getter for: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
     invoke-static {}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$000()Z
 
@@ -150,13 +140,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     .end local v2    # "containerId":I
     :cond_1
     :goto_0
     return-void
 
-    .line 177
     :cond_2
     const-string v7, "android.intent.action.PACKAGE_REPLACED"
 
@@ -174,19 +162,17 @@
 
     if-eqz v7, :cond_1
 
-    .line 179
     :cond_3
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 180
     .local v1, "bundle":Landroid/os/Bundle;
     invoke-virtual {p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
     move-result-object v7
 
-    const-string/jumbo v8, "package:"
+    const-string v8, "package:"
 
     const-string v9, ""
 
@@ -194,11 +180,10 @@
 
     move-result-object v3
 
-    .line 181
     .local v3, "pkg":Ljava/lang/String;
     const-string v7, "2.0"
 
-    const-string/jumbo v8, "version"
+    const-string v8, "version"
 
     invoke-virtual {v1, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -210,7 +195,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 182
     const-string v7, "com.centrify.sso.samsung"
 
     invoke-virtual {v3, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -227,7 +211,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 183
     :cond_4
     const-string v7, "android.intent.extra.user_handle"
 
@@ -235,7 +218,6 @@
 
     move-result v6
 
-    .line 184
     .local v6, "userHandle":I
     const-string v7, "android.intent.extra.UID"
 
@@ -243,7 +225,6 @@
 
     move-result v5
 
-    .line 187
     .local v5, "uID":I
     # getter for: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
     invoke-static {}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$000()Z
@@ -256,7 +237,6 @@
 
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     :cond_5
     # getter for: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
     invoke-static {}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$000()Z
@@ -299,7 +279,6 @@
 
     goto :goto_0
 
-    .line 192
     .end local v5    # "uID":I
     .end local v6    # "userHandle":I
     :cond_6
@@ -311,7 +290,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 193
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$1;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     const/4 v8, 0x1
@@ -321,7 +299,6 @@
 
     move-result v4
 
-    .line 194
     # getter for: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
     invoke-static {}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$000()Z
 

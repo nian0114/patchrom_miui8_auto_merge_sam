@@ -151,56 +151,46 @@
     .param p2, "service"    # Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     .prologue
-    .line 474
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 448
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarSize:I
 
-    .line 450
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mStateListnerDelegatesLock:Ljava/lang/Object;
 
-    .line 452
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mFeedsListnerDelegatesLock:Ljava/lang/Object;
 
-    .line 454
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 456
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarFeedsListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 475
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
-    .line 476
     invoke-virtual {p1}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mPackageName:Ljava/lang/String;
 
-    .line 477
     iput-object p2, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
-    .line 478
     return-void
 .end method
 
@@ -209,7 +199,6 @@
     .param p0, "x0"    # Lcom/samsung/android/cocktailbar/CocktailBarManager;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -220,7 +209,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 464
     const-string v0, "CocktailBarService"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -236,19 +224,16 @@
     .locals 2
 
     .prologue
-    .line 505
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     if-nez v1, :cond_0
 
-    .line 506
     const-string v1, "CocktailBarService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 507
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/cocktailbar/ICocktailBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -256,7 +241,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
-    .line 509
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -270,18 +254,15 @@
     .locals 3
 
     .prologue
-    .line 1317
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1325
     :goto_0
     return-void
 
-    .line 1321
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -292,11 +273,9 @@
 
     goto :goto_0
 
-    .line 1322
     :catch_0
     move-exception v0
 
-    .line 1323
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -315,18 +294,15 @@
     .param p4, "connection"    # Landroid/os/IBinder;
 
     .prologue
-    .line 942
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 950
     :goto_0
     return-void
 
-    .line 946
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -337,11 +313,9 @@
 
     goto :goto_0
 
-    .line 947
     :catch_0
     move-exception v0
 
-    .line 948
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -358,18 +332,15 @@
     .param p2, "catetory"    # I
 
     .prologue
-    .line 685
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 693
     :goto_0
     return-void
 
-    .line 689
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -382,11 +353,9 @@
 
     goto :goto_0
 
-    .line 690
     :catch_0
     move-exception v0
 
-    .line 691
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -401,18 +370,15 @@
     .locals 3
 
     .prologue
-    .line 1242
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1250
     :goto_0
     return-void
 
-    .line 1246
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -425,11 +391,9 @@
 
     goto :goto_0
 
-    .line 1247
     :catch_0
     move-exception v0
 
-    .line 1248
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -444,18 +408,15 @@
     .locals 3
 
     .prologue
-    .line 1227
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1235
     :goto_0
     return-void
 
-    .line 1231
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -468,11 +429,9 @@
 
     goto :goto_0
 
-    .line 1232
     :catch_0
     move-exception v0
 
-    .line 1233
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -487,18 +446,15 @@
     .locals 3
 
     .prologue
-    .line 1332
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1340
     :goto_0
     return-void
 
-    .line 1336
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -509,11 +465,9 @@
 
     goto :goto_0
 
-    .line 1337
     :catch_0
     move-exception v0
 
-    .line 1338
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -529,18 +483,15 @@
     .param p1, "provider"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 764
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 772
     :goto_0
     return-void
 
-    .line 768
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -553,11 +504,9 @@
 
     goto :goto_0
 
-    .line 769
     :catch_0
     move-exception v0
 
-    .line 770
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -572,17 +521,14 @@
     .locals 3
 
     .prologue
-    .line 779
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 780
     const/4 v1, 0x0
 
-    .line 783
     :goto_0
     return-object v1
 
@@ -598,11 +544,9 @@
 
     goto :goto_0
 
-    .line 784
     :catch_0
     move-exception v0
 
-    .line 785
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -617,17 +561,14 @@
     .locals 3
 
     .prologue
-    .line 1139
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1140
     const/4 v1, 0x0
 
-    .line 1143
     :goto_0
     return v1
 
@@ -643,11 +584,9 @@
 
     goto :goto_0
 
-    .line 1144
     :catch_0
     move-exception v0
 
-    .line 1145
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -663,17 +602,14 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 794
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 795
     const/4 v1, 0x0
 
-    .line 798
     :goto_0
     return-object v1
 
@@ -689,11 +625,9 @@
 
     goto :goto_0
 
-    .line 799
     :catch_0
     move-exception v0
 
-    .line 800
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -708,12 +642,10 @@
     .locals 2
 
     .prologue
-    .line 973
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarSize:I
 
     if-gez v0, :cond_0
 
-    .line 974
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -728,7 +660,6 @@
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarSize:I
 
-    .line 976
     :cond_0
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarSize:I
 
@@ -739,17 +670,14 @@
     .locals 3
 
     .prologue
-    .line 1257
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1258
     const/4 v1, 0x2
 
-    .line 1261
     :goto_0
     return v1
 
@@ -765,11 +693,9 @@
 
     goto :goto_0
 
-    .line 1262
     :catch_0
     move-exception v0
 
-    .line 1263
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -784,17 +710,14 @@
     .locals 3
 
     .prologue
-    .line 1272
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1273
     const/4 v1, 0x0
 
-    .line 1276
     :goto_0
     return v1
 
@@ -812,11 +735,9 @@
 
     goto :goto_0
 
-    .line 1277
     :catch_0
     move-exception v0
 
-    .line 1278
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -834,7 +755,6 @@
     .end annotation
 
     .prologue
-    .line 494
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
@@ -843,11 +763,9 @@
 
     if-nez p1, :cond_1
 
-    .line 495
     :cond_0
     const/4 v1, 0x0
 
-    .line 498
     :goto_0
     return v1
 
@@ -865,11 +783,9 @@
 
     goto :goto_0
 
-    .line 499
     :catch_0
     move-exception v0
 
-    .line 500
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -887,7 +803,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 517
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v2
@@ -896,17 +811,14 @@
 
     if-nez p1, :cond_1
 
-    .line 518
     :cond_0
     const/4 v2, 0x1
 
     new-array v0, v2, [I
 
-    .line 519
     .local v0, "cocktailIds":[I
     aput v3, v0, v3
 
-    .line 523
     .end local v0    # "cocktailIds":[I
     :goto_0
     return-object v0
@@ -925,11 +837,9 @@
 
     goto :goto_0
 
-    .line 524
     :catch_0
     move-exception v1
 
-    .line 525
     .local v1, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -944,7 +854,6 @@
     .locals 1
 
     .prologue
-    .line 485
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -954,17 +863,14 @@
     .locals 3
 
     .prologue
-    .line 749
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 750
     const/4 v1, 0x0
 
-    .line 753
     :goto_0
     return-object v1
 
@@ -980,11 +886,9 @@
 
     goto :goto_0
 
-    .line 754
     :catch_0
     move-exception v0
 
-    .line 755
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -999,17 +903,14 @@
     .locals 3
 
     .prologue
-    .line 921
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 922
     const/4 v1, 0x0
 
-    .line 925
     :goto_0
     return v1
 
@@ -1025,11 +926,9 @@
 
     goto :goto_0
 
-    .line 926
     :catch_0
     move-exception v0
 
-    .line 927
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1046,7 +945,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 533
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
@@ -1055,11 +953,9 @@
 
     if-nez p1, :cond_1
 
-    .line 534
     :cond_0
     const/4 v1, 0x0
 
-    .line 537
     :goto_0
     return v1
 
@@ -1075,11 +971,9 @@
 
     goto :goto_0
 
-    .line 538
     :catch_0
     move-exception v0
 
-    .line 539
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1096,7 +990,6 @@
     .end annotation
 
     .prologue
-    .line 1155
     const/4 v0, 0x0
 
     return v0
@@ -1107,7 +1000,6 @@
     .param p1, "provider"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 548
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
@@ -1116,11 +1008,9 @@
 
     if-nez p1, :cond_1
 
-    .line 549
     :cond_0
     const/4 v1, 0x0
 
-    .line 552
     :goto_0
     return v1
 
@@ -1138,11 +1028,9 @@
 
     goto :goto_0
 
-    .line 553
     :catch_0
     move-exception v0
 
-    .line 554
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1159,19 +1047,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1163
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v3
 
     if-nez v3, :cond_1
 
-    .line 1174
     :cond_0
     :goto_0
     return v2
 
-    .line 1167
     :cond_1
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1182,23 +1067,19 @@
 
     move-result v1
 
-    .line 1168
     .local v1, "windowType":I
     const/4 v3, 0x2
 
     if-ne v1, v3, :cond_0
 
-    .line 1169
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 1171
     .end local v1    # "windowType":I
     :catch_0
     move-exception v0
 
-    .line 1172
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1215,18 +1096,15 @@
     .param p2, "viewId"    # I
 
     .prologue
-    .line 704
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 712
     :goto_0
     return-void
 
-    .line 708
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1239,11 +1117,9 @@
 
     goto :goto_0
 
-    .line 709
     :catch_0
     move-exception v0
 
-    .line 710
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1260,24 +1136,20 @@
     .param p2, "visibility"    # I
 
     .prologue
-    .line 893
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 904
     :goto_0
     return-void
 
-    .line 896
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 898
     .local v2, "identityToken":J
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1287,16 +1159,13 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 902
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 899
     :catch_0
     move-exception v0
 
-    .line 900
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_1
     new-instance v1, Ljava/lang/RuntimeException;
@@ -1309,7 +1178,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 902
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -1324,18 +1192,15 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 871
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 879
     :goto_0
     return-void
 
-    .line 875
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1346,11 +1211,9 @@
 
     goto :goto_0
 
-    .line 876
     :catch_0
     move-exception v0
 
-    .line 877
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1367,18 +1230,15 @@
     .param p2, "contentView"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 638
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 646
     :goto_0
     return-void
 
-    .line 642
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1391,11 +1251,9 @@
 
     goto :goto_0
 
-    .line 643
     :catch_0
     move-exception v0
 
-    .line 644
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1412,18 +1270,15 @@
     .param p2, "helpViews"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 655
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 663
     :goto_0
     return-void
 
-    .line 659
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1436,11 +1291,9 @@
 
     goto :goto_0
 
-    .line 660
     :catch_0
     move-exception v0
 
-    .line 661
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1457,34 +1310,29 @@
     .param p2, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1752
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1764
     :goto_0
     return-void
 
-    .line 1755
     :cond_0
     if-eqz p2, :cond_1
 
     if-nez p1, :cond_2
 
-    .line 1756
     :cond_1
     const-string v1, "CocktailBarManager"
 
-    const-string/jumbo v2, "registerClient : name or client is null"
+    const-string v2, "registerClient : name or client is null"
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1760
     :cond_2
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1495,11 +1343,9 @@
 
     goto :goto_0
 
-    .line 1761
     :catch_0
     move-exception v0
 
-    .line 1762
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1511,40 +1357,33 @@
     .param p1, "listener"    # Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListener;
 
     .prologue
-    .line 1424
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v6
 
     if-nez v6, :cond_0
 
-    .line 1455
     :goto_0
     return-void
 
-    .line 1427
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1428
     const-string v6, "CocktailBarManager"
 
-    const-string/jumbo v7, "registerListener : listener is null"
+    const-string v7, "registerListener : listener is null"
 
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1431
     :cond_1
     iget-object v7, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mStateListnerDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 1432
     const/4 v3, 0x0
 
-    .line 1433
     .local v3, "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     :try_start_0
     iget-object v6, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -1553,7 +1392,6 @@
 
     move-result-object v2
 
-    .line 1434
     .local v2, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;>;"
     :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1562,14 +1400,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 1435
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
 
-    .line 1436
     .local v5, "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     invoke-virtual {v5}, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;->getListener()Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListener;
 
@@ -1583,19 +1419,16 @@
 
     if-eqz v6, :cond_2
 
-    .line 1437
     move-object v3, v5
 
     move-object v4, v3
 
-    .line 1441
     .end local v3    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     .end local v5    # "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     .local v4, "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     :goto_1
     if-nez v4, :cond_4
 
-    .line 1442
     :try_start_1
     new-instance v3, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
 
@@ -1605,7 +1438,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1443
     .end local v4    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     .restart local v3    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     :try_start_2
@@ -1613,7 +1445,6 @@
 
     invoke-virtual {v6, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1445
     :goto_2
     new-instance v0, Landroid/content/ComponentName;
 
@@ -1635,13 +1466,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1447
     .local v0, "cm":Landroid/content/ComponentName;
     if-eqz v3, :cond_3
 
     if-eqz v0, :cond_3
 
-    .line 1449
     :try_start_3
     iget-object v6, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -1650,7 +1479,6 @@
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1454
     :cond_3
     :goto_3
     :try_start_4
@@ -1670,18 +1498,16 @@
 
     throw v6
 
-    .line 1450
     .restart local v0    # "cm":Landroid/content/ComponentName;
     .restart local v2    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;>;"
     :catch_0
     move-exception v1
 
-    .line 1451
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_5
     const-string v6, "CocktailBarManager"
 
-    const-string/jumbo v8, "registerListener : RemoteException : "
+    const-string v8, "registerListener : RemoteException : "
 
     invoke-static {v6, v8, v1}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_5
@@ -1689,7 +1515,6 @@
 
     goto :goto_3
 
-    .line 1454
     .end local v0    # "cm":Landroid/content/ComponentName;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v3    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
@@ -1725,40 +1550,33 @@
     .param p1, "listener"    # Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
     .prologue
-    .line 1611
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v6
 
     if-nez v6, :cond_0
 
-    .line 1642
     :goto_0
     return-void
 
-    .line 1614
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1615
     const-string v6, "CocktailBarManager"
 
-    const-string/jumbo v7, "registerOnFeedsUpdatedListener : listener is null"
+    const-string v7, "registerOnFeedsUpdatedListener : listener is null"
 
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1618
     :cond_1
     iget-object v7, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mFeedsListnerDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 1619
     const/4 v3, 0x0
 
-    .line 1620
     .local v3, "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     :try_start_0
     iget-object v6, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarFeedsListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -1767,7 +1585,6 @@
 
     move-result-object v2
 
-    .line 1621
     .local v2, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;>;"
     :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1776,14 +1593,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 1622
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
-    .line 1623
     .local v5, "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     invoke-virtual {v5}, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->getListener()Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
@@ -1797,19 +1612,16 @@
 
     if-eqz v6, :cond_2
 
-    .line 1624
     move-object v3, v5
 
     move-object v4, v3
 
-    .line 1628
     .end local v3    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     .end local v5    # "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     .local v4, "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     :goto_1
     if-nez v4, :cond_4
 
-    .line 1629
     :try_start_1
     new-instance v3, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
@@ -1819,7 +1631,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1630
     .end local v4    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     .restart local v3    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     :try_start_2
@@ -1827,7 +1638,6 @@
 
     invoke-virtual {v6, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1632
     :goto_2
     new-instance v0, Landroid/content/ComponentName;
 
@@ -1849,13 +1659,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1634
     .local v0, "cm":Landroid/content/ComponentName;
     if-eqz v3, :cond_3
 
     if-eqz v0, :cond_3
 
-    .line 1636
     :try_start_3
     iget-object v6, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -1864,7 +1672,6 @@
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1641
     :cond_3
     :goto_3
     :try_start_4
@@ -1884,18 +1691,16 @@
 
     throw v6
 
-    .line 1637
     .restart local v0    # "cm":Landroid/content/ComponentName;
     .restart local v2    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;>;"
     :catch_0
     move-exception v1
 
-    .line 1638
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_5
     const-string v6, "CocktailBarManager"
 
-    const-string/jumbo v8, "registerOnFeedsUpdatedListener : RemoteException : "
+    const-string v8, "registerOnFeedsUpdatedListener : RemoteException : "
 
     invoke-static {v6, v8, v1}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_5
@@ -1903,7 +1708,6 @@
 
     goto :goto_3
 
-    .line 1641
     .end local v0    # "cm":Landroid/content/ComponentName;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v3    # "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
@@ -1938,18 +1742,15 @@
     .locals 3
 
     .prologue
-    .line 1212
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1220
     :goto_0
     return-void
 
-    .line 1216
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -1960,11 +1761,9 @@
 
     goto :goto_0
 
-    .line 1217
     :catch_0
     move-exception v0
 
-    .line 1218
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1980,17 +1779,14 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 824
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 825
     const/4 v1, 0x0
 
-    .line 828
     :goto_0
     return v1
 
@@ -2006,11 +1802,9 @@
 
     goto :goto_0
 
-    .line 829
     :catch_0
     move-exception v0
 
-    .line 830
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2026,17 +1820,14 @@
     .param p1, "category"    # I
 
     .prologue
-    .line 854
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 855
     const/4 v1, 0x0
 
-    .line 858
     :goto_0
     return v1
 
@@ -2052,11 +1843,9 @@
 
     goto :goto_0
 
-    .line 859
     :catch_0
     move-exception v0
 
-    .line 860
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2072,17 +1861,14 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 809
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 810
     const/4 v1, 0x0
 
-    .line 813
     :goto_0
     return v1
 
@@ -2098,11 +1884,9 @@
 
     goto :goto_0
 
-    .line 814
     :catch_0
     move-exception v0
 
-    .line 815
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2118,17 +1902,14 @@
     .param p1, "category"    # I
 
     .prologue
-    .line 839
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 840
     const/4 v1, 0x0
 
-    .line 843
     :goto_0
     return v1
 
@@ -2144,11 +1925,9 @@
 
     goto :goto_0
 
-    .line 844
     :catch_0
     move-exception v0
 
-    .line 845
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2165,24 +1944,20 @@
     .param p2, "event"    # Landroid/view/DragEvent;
 
     .prologue
-    .line 907
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 918
     :goto_0
     return-void
 
-    .line 910
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 912
     .local v2, "identityToken":J
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2192,16 +1967,13 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 916
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 913
     :catch_0
     move-exception v0
 
-    .line 914
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_1
     new-instance v1, Ljava/lang/RuntimeException;
@@ -2214,7 +1986,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 916
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -2229,18 +2000,15 @@
     .param p1, "extraData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1197
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1205
     :goto_0
     return-void
 
-    .line 1201
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2251,11 +2019,9 @@
 
     goto :goto_0
 
-    .line 1202
     :catch_0
     move-exception v0
 
-    .line 1203
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2272,18 +2038,15 @@
     .param p2, "transparent"    # Z
 
     .prologue
-    .line 1377
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1385
     :goto_0
     return-void
 
-    .line 1381
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2294,11 +2057,9 @@
 
     goto :goto_0
 
-    .line 1382
     :catch_0
     move-exception v0
 
-    .line 1383
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2314,18 +2075,15 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1122
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1130
     :goto_0
     return-void
 
-    .line 1126
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2336,11 +2094,9 @@
 
     goto :goto_0
 
-    .line 1127
     :catch_0
     move-exception v0
 
-    .line 1128
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2356,18 +2112,15 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 882
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 890
     :goto_0
     return-void
 
-    .line 886
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2378,11 +2131,9 @@
 
     goto :goto_0
 
-    .line 887
     :catch_0
     move-exception v0
 
-    .line 888
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2398,18 +2149,15 @@
     .param p1, "cocktailIds"    # [I
 
     .prologue
-    .line 734
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 742
     :goto_0
     return-void
 
-    .line 738
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2420,11 +2168,9 @@
 
     goto :goto_0
 
-    .line 739
     :catch_0
     move-exception v0
 
-    .line 740
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2439,18 +2185,15 @@
     .locals 3
 
     .prologue
-    .line 1287
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1295
     :goto_0
     return-void
 
-    .line 1291
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2461,11 +2204,9 @@
 
     goto :goto_0
 
-    .line 1292
     :catch_0
     move-exception v0
 
-    .line 1293
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2481,18 +2222,15 @@
     .param p1, "cocktailId"    # I
 
     .prologue
-    .line 670
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 678
     :goto_0
     return-void
 
-    .line 674
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2505,11 +2243,9 @@
 
     goto :goto_0
 
-    .line 675
     :catch_0
     move-exception v0
 
-    .line 676
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2524,18 +2260,15 @@
     .locals 3
 
     .prologue
-    .line 1182
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1190
     :goto_0
     return-void
 
-    .line 1186
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2546,11 +2279,9 @@
 
     goto :goto_0
 
-    .line 1187
     :catch_0
     move-exception v0
 
-    .line 1188
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2568,18 +2299,15 @@
     .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 962
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 970
     :goto_0
     return-void
 
-    .line 966
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2590,11 +2318,9 @@
 
     goto :goto_0
 
-    .line 967
     :catch_0
     move-exception v0
 
-    .line 968
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2610,18 +2336,15 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 1302
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1310
     :goto_0
     return-void
 
-    .line 1306
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2632,11 +2355,9 @@
 
     goto :goto_0
 
-    .line 1307
     :catch_0
     move-exception v0
 
-    .line 1308
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2652,31 +2373,26 @@
     .param p1, "client"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1774
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1786
     :goto_0
     return-void
 
-    .line 1777
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1778
     const-string v1, "CocktailBarManager"
 
-    const-string/jumbo v2, "unregisterClient : client is null"
+    const-string v2, "unregisterClient : client is null"
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1782
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -2687,11 +2403,9 @@
 
     goto :goto_0
 
-    .line 1783
     :catch_0
     move-exception v0
 
-    .line 1784
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2703,40 +2417,33 @@
     .param p1, "listener"    # Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListener;
 
     .prologue
-    .line 1464
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v4
 
     if-nez v4, :cond_0
 
-    .line 1491
     :goto_0
     return-void
 
-    .line 1467
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1468
     const-string v4, "CocktailBarManager"
 
-    const-string/jumbo v5, "unregisterListener : listener is null"
+    const-string v5, "unregisterListener : listener is null"
 
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1471
     :cond_1
     iget-object v5, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mStateListnerDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 1472
     const/4 v2, 0x0
 
-    .line 1473
     .local v2, "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -2753,14 +2460,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 1474
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
 
-    .line 1475
     .local v3, "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     invoke-virtual {v3}, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;->getListener()Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListener;
 
@@ -2772,27 +2477,22 @@
 
     if-eqz v4, :cond_2
 
-    .line 1476
     move-object v2, v3
 
-    .line 1480
     .end local v3    # "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;
     :cond_3
     if-nez v2, :cond_4
 
-    .line 1481
     const-string v4, "CocktailBarManager"
 
-    const-string/jumbo v6, "unregisterListener : cannot find the listener"
+    const-string v6, "unregisterListener : cannot find the listener"
 
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1482
     monitor-exit v5
 
     goto :goto_0
 
-    .line 1490
     .end local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;>;"
     :catchall_0
     move-exception v4
@@ -2803,7 +2503,6 @@
 
     throw v4
 
-    .line 1485
     .restart local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarStateListenerDelegate;>;"
     :cond_4
     :try_start_1
@@ -2811,7 +2510,6 @@
 
     invoke-interface {v4, v2}, Lcom/samsung/android/cocktailbar/ICocktailBarService;->unregisterCocktailBarStateListenerCallback(Landroid/os/IBinder;)V
 
-    .line 1486
     iget-object v4, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -2819,22 +2517,19 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1490
     :goto_1
     :try_start_2
     monitor-exit v5
 
     goto :goto_0
 
-    .line 1487
     :catch_0
     move-exception v0
 
-    .line 1488
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "CocktailBarManager"
 
-    const-string/jumbo v6, "unregisterListener : RemoteException : "
+    const-string v6, "unregisterListener : RemoteException : "
 
     invoke-static {v4, v6, v0}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -2848,40 +2543,33 @@
     .param p1, "listener"    # Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
     .prologue
-    .line 1651
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v4
 
     if-nez v4, :cond_0
 
-    .line 1678
     :goto_0
     return-void
 
-    .line 1654
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1655
     const-string v4, "CocktailBarManager"
 
-    const-string/jumbo v5, "unregisterOnFeedsUpdatedListener : listener is null"
+    const-string v5, "unregisterOnFeedsUpdatedListener : listener is null"
 
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1658
     :cond_1
     iget-object v5, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mFeedsListnerDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 1659
     const/4 v2, 0x0
 
-    .line 1660
     .local v2, "listenerDelegate":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarFeedsListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -2898,14 +2586,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 1661
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
-    .line 1662
     .local v3, "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     invoke-virtual {v3}, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->getListener()Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
@@ -2917,27 +2603,22 @@
 
     if-eqz v4, :cond_2
 
-    .line 1663
     move-object v2, v3
 
-    .line 1667
     .end local v3    # "temp":Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
     :cond_3
     if-nez v2, :cond_4
 
-    .line 1668
     const-string v4, "CocktailBarManager"
 
-    const-string/jumbo v6, "unregisterOnFeedsUpdatedListener : cannot find the listener"
+    const-string v6, "unregisterOnFeedsUpdatedListener : cannot find the listener"
 
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1669
     monitor-exit v5
 
     goto :goto_0
 
-    .line 1677
     .end local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;>;"
     :catchall_0
     move-exception v4
@@ -2948,7 +2629,6 @@
 
     throw v4
 
-    .line 1672
     .restart local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;>;"
     :cond_4
     :try_start_1
@@ -2956,7 +2636,6 @@
 
     invoke-interface {v4, v2}, Lcom/samsung/android/cocktailbar/ICocktailBarService;->unregisterCocktailBarFeedsListenerCallback(Landroid/os/IBinder;)V
 
-    .line 1673
     iget-object v4, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mCocktailBarFeedsListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -2964,22 +2643,19 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1677
     :goto_1
     :try_start_2
     monitor-exit v5
 
     goto :goto_0
 
-    .line 1674
     :catch_0
     move-exception v0
 
-    .line 1675
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "CocktailBarManager"
 
-    const-string/jumbo v6, "unregisterOnFeedsUpdatedListener : RemoteException : "
+    const-string v6, "unregisterOnFeedsUpdatedListener : RemoteException : "
 
     invoke-static {v4, v6, v0}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -2997,18 +2673,15 @@
     .param p5, "contentInfo"    # Landroid/os/Bundle;
 
     .prologue
-    .line 564
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 580
     :goto_0
     return-void
 
-    .line 567
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
@@ -3020,7 +2693,6 @@
 
     move-result-object v1
 
-    .line 569
     .local v1, "configuration":Landroid/content/res/Configuration;
     :try_start_0
     new-instance v3, Lcom/samsung/android/cocktailbar/CocktailInfo$Builder;
@@ -3055,7 +2727,6 @@
 
     move-result-object v0
 
-    .line 576
     .local v0, "cocktailInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -3067,12 +2738,10 @@
 
     goto :goto_0
 
-    .line 577
     .end local v0    # "cocktailInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     :catch_0
     move-exception v2
 
-    .line 578
     .local v2, "e":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -3093,18 +2762,15 @@
     .param p6, "contentInfo"    # Landroid/os/Bundle;
 
     .prologue
-    .line 588
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 605
     :goto_0
     return-void
 
-    .line 591
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
@@ -3116,7 +2782,6 @@
 
     move-result-object v1
 
-    .line 593
     .local v1, "configuration":Landroid/content/res/Configuration;
     :try_start_0
     new-instance v3, Lcom/samsung/android/cocktailbar/CocktailInfo$Builder;
@@ -3155,7 +2820,6 @@
 
     move-result-object v0
 
-    .line 601
     .local v0, "cocktailInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -3167,12 +2831,10 @@
 
     goto :goto_0
 
-    .line 602
     .end local v0    # "cocktailInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     :catch_0
     move-exception v2
 
-    .line 603
     .local v2, "e":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -3194,18 +2856,15 @@
     .param p7, "classInfo"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 613
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 631
     :goto_0
     return-void
 
-    .line 616
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
 
@@ -3217,7 +2876,6 @@
 
     move-result-object v1
 
-    .line 618
     .local v1, "configuration":Landroid/content/res/Configuration;
     :try_start_0
     new-instance v3, Lcom/samsung/android/cocktailbar/CocktailInfo$Builder;
@@ -3260,7 +2918,6 @@
 
     move-result-object v0
 
-    .line 627
     .local v0, "cocktailInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     iget-object v3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -3272,12 +2929,10 @@
 
     goto :goto_0
 
-    .line 628
     .end local v0    # "cocktailInfo":Lcom/samsung/android/cocktailbar/CocktailInfo;
     :catch_0
     move-exception v2
 
-    .line 629
     .local v2, "e":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -3293,18 +2948,15 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1392
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1400
     :goto_0
     return-void
 
-    .line 1396
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3315,11 +2967,9 @@
 
     goto :goto_0
 
-    .line 1397
     :catch_0
     move-exception v0
 
-    .line 1398
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3335,18 +2985,15 @@
     .param p1, "windowType"    # I
 
     .prologue
-    .line 1362
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1370
     :goto_0
     return-void
 
-    .line 1366
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3357,11 +3004,9 @@
 
     goto :goto_0
 
-    .line 1367
     :catch_0
     move-exception v0
 
-    .line 1368
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3377,18 +3022,15 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 1347
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1355
     :goto_0
     return-void
 
-    .line 1351
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3399,11 +3041,9 @@
 
     goto :goto_0
 
-    .line 1352
     :catch_0
     move-exception v0
 
-    .line 1353
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3419,18 +3059,15 @@
     .param p1, "windowType"    # I
 
     .prologue
-    .line 1407
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1415
     :goto_0
     return-void
 
-    .line 1411
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3447,11 +3084,9 @@
 
     goto :goto_0
 
-    .line 1412
     :catch_0
     move-exception v0
 
-    .line 1413
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3476,7 +3111,6 @@
     .end annotation
 
     .prologue
-    .line 715
     .local p2, "feedsInfoList":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/cocktailbar/FeedsInfo;>;"
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -3484,24 +3118,20 @@
 
     if-nez v1, :cond_0
 
-    .line 727
     :goto_0
     return-void
 
-    .line 718
     :cond_0
     if-nez p2, :cond_1
 
-    .line 719
     const-string v1, "CocktailBarManager"
 
-    const-string/jumbo v2, "updateFeeds : feedsInfoList is null"
+    const-string v2, "updateFeeds : feedsInfoList is null"
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 723
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3514,11 +3144,9 @@
 
     goto :goto_0
 
-    .line 724
     :catch_0
     move-exception v0
 
-    .line 725
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3534,18 +3162,15 @@
     .param p1, "bEnable"    # Z
 
     .prologue
-    .line 1035
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1043
     :goto_0
     return-void
 
-    .line 1039
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3556,11 +3181,9 @@
 
     goto :goto_0
 
-    .line 1040
     :catch_0
     move-exception v0
 
-    .line 1041
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3576,18 +3199,15 @@
     .param p1, "barLength"    # I
 
     .prologue
-    .line 1070
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1078
     :goto_0
     return-void
 
-    .line 1074
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3598,11 +3218,9 @@
 
     goto :goto_0
 
-    .line 1075
     :catch_0
     move-exception v0
 
-    .line 1076
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3618,18 +3236,15 @@
     .param p1, "deadzone"    # I
 
     .prologue
-    .line 1052
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1060
     :goto_0
     return-void
 
-    .line 1056
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3640,11 +3255,9 @@
 
     goto :goto_0
 
-    .line 1057
     :catch_0
     move-exception v0
 
-    .line 1058
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3660,18 +3273,15 @@
     .param p1, "bDisable"    # Z
 
     .prologue
-    .line 1087
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1095
     :goto_0
     return-void
 
-    .line 1091
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3682,11 +3292,9 @@
 
     goto :goto_0
 
-    .line 1092
     :catch_0
     move-exception v0
 
-    .line 1093
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3702,18 +3310,15 @@
     .param p1, "area"    # I
 
     .prologue
-    .line 1018
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1026
     :goto_0
     return-void
 
-    .line 1022
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3724,11 +3329,9 @@
 
     goto :goto_0
 
-    .line 1023
     :catch_0
     move-exception v0
 
-    .line 1024
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3745,18 +3348,15 @@
     .param p2, "bEnable"    # Z
 
     .prologue
-    .line 1001
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1009
     :goto_0
     return-void
 
-    .line 1005
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3767,11 +3367,9 @@
 
     goto :goto_0
 
-    .line 1006
     :catch_0
     move-exception v0
 
-    .line 1007
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3789,18 +3387,15 @@
     .param p3, "reason"    # I
 
     .prologue
-    .line 1105
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->getService()Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 1113
     :goto_0
     return-void
 
-    .line 1109
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager;->mService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
@@ -3811,11 +3406,9 @@
 
     goto :goto_0
 
-    .line 1110
     :catch_0
     move-exception v0
 
-    .line 1111
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 

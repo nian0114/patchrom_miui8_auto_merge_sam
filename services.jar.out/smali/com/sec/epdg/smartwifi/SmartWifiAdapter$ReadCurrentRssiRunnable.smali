@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1337
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ReadCurrentRssiRunnable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 5
 
     .prologue
-    .line 1340
     const-string v1, "[SMARTWIFI]"
 
     const-string v2, "Read current RSSI"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1341
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ReadCurrentRssiRunnable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mPollCaptive:Z
@@ -66,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1343
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ReadCurrentRssiRunnable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -86,7 +82,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1347
     :goto_0
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ReadCurrentRssiRunnable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -110,15 +105,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1350
     :cond_0
     return-void
 
-    .line 1344
     :catch_0
     move-exception v0
 
-    .line 1345
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v1, "[SMARTWIFI]"
 

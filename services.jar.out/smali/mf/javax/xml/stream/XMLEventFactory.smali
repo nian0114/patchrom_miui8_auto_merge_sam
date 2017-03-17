@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,13 +28,10 @@
     .end annotation
 
     .prologue
-    .line 109
-    const-string/jumbo v0, "mf.javax.xml.stream.XMLEventFactory"
+    const-string v0, "mf.javax.xml.stream.XMLEventFactory"
 
-    .line 110
     const-string v1, "com.sun.xml.internal.stream.events.XMLEventFactoryImpl"
 
-    .line 108
     invoke-static {v0, v1}, Lmf/javax/xml/stream/FactoryFinder;->find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -56,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 160
     const/4 v1, 0x0
 
     :try_start_0
@@ -70,11 +65,9 @@
 
     return-object v1
 
-    .line 161
     :catch_0
     move-exception v0
 
-    .line 162
     .local v0, "e":Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/stream/FactoryConfigurationError;
 
@@ -82,12 +75,10 @@
 
     move-result-object v2
 
-    .line 163
     invoke-virtual {v0}, Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 162
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/stream/FactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1
@@ -102,13 +93,10 @@
     .end annotation
 
     .prologue
-    .line 76
-    const-string/jumbo v0, "mf.javax.xml.stream.XMLEventFactory"
+    const-string v0, "mf.javax.xml.stream.XMLEventFactory"
 
-    .line 77
     const-string v1, "com.sun.xml.internal.stream.events.XMLEventFactoryImpl"
 
-    .line 75
     invoke-static {v0, v1}, Lmf/javax/xml/stream/FactoryFinder;->find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -129,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 133
     const/4 v1, 0x0
 
     :try_start_0
@@ -143,11 +130,9 @@
 
     return-object v1
 
-    .line 134
     :catch_0
     move-exception v0
 
-    .line 135
     .local v0, "e":Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/stream/FactoryConfigurationError;
 
@@ -155,12 +140,10 @@
 
     move-result-object v2
 
-    .line 136
     invoke-virtual {v0}, Lmf/javax/xml/stream/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 135
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/stream/FactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1

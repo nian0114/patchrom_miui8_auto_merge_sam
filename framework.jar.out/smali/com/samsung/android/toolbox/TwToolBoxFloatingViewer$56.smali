@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2204
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$56;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 2207
     :try_start_0
     const-string v2, "quickconnect"
 
@@ -52,22 +50,18 @@
 
     move-result-object v1
 
-    .line 2208
     .local v1, "qm":Lcom/samsung/android/quickconnect/IQuickConnectManager;
     invoke-interface {v1}, Lcom/samsung/android/quickconnect/IQuickConnectManager;->selectedItemCallback()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2212
     .end local v1    # "qm":Lcom/samsung/android/quickconnect/IQuickConnectManager;
     :goto_0
     return-void
 
-    .line 2209
     :catch_0
     move-exception v0
 
-    .line 2210
     .local v0, "ex":Ljava/lang/Exception;
     const-string v2, "toolbox"
 
@@ -98,6 +92,5 @@
     .locals 0
 
     .prologue
-    .line 2216
     return-void
 .end method

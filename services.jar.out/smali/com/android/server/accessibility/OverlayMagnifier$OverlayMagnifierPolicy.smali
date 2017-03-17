@@ -37,31 +37,26 @@
     .locals 1
 
     .prologue
-    .line 244
     iput-object p1, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->this$0:Lcom/android/server/accessibility/OverlayMagnifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mIsMagnifying:Z
 
-    .line 221
     invoke-static {}, Landroid/view/MagnificationSpec;->obtain()Landroid/view/MagnificationSpec;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
-    .line 223
     new-instance v0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy$1;-><init>(Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mHandler:Landroid/os/Handler;
 
-    .line 245
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 215
     iput-boolean p1, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mIsMagnifying:Z
 
     return p1
@@ -82,7 +76,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     return-object v0
@@ -93,7 +86,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mLatestMotionEvent:Landroid/view/MotionEvent;
 
     return-object v0
@@ -105,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     return-object v0
@@ -115,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-boolean v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mIsMagnifying:Z
 
     return v0
@@ -126,21 +116,17 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 256
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 257
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 272
     :goto_0
     :pswitch_0
     return-void
 
-    .line 260
     :pswitch_1
     # getter for: Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/OverlayMagnifier;->access$100()Ljava/lang/String;
@@ -151,10 +137,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     iput-object p1, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mLatestMotionEvent:Landroid/view/MotionEvent;
 
-    .line 262
     iget-object v2, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mHandler:Landroid/os/Handler;
 
     const/4 v3, 0x1
@@ -163,7 +147,6 @@
 
     move-result-object v1
 
-    .line 263
     .local v1, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mHandler:Landroid/os/Handler;
 
@@ -173,14 +156,12 @@
 
     goto :goto_0
 
-    .line 266
     .end local v1    # "msg":Landroid/os/Message;
     :pswitch_2
     iput-object p1, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mLatestMotionEvent:Landroid/view/MotionEvent;
 
     goto :goto_0
 
-    .line 269
     :pswitch_3
     # getter for: Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/OverlayMagnifier;->access$100()Ljava/lang/String;
@@ -193,7 +174,6 @@
 
     goto :goto_0
 
-    .line 257
     nop
 
     :pswitch_data_0
@@ -211,12 +191,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 275
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mIsMagnifying:Z
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
@@ -225,12 +203,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 277
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 279
     :cond_0
     return-void
 .end method

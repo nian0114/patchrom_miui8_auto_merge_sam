@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1343
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$5;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,16 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1346
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1347
     .local v0, "action":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1348
     const-string v2, "android.intent.extra.user_handle"
 
     const/4 v3, 0x0
@@ -57,7 +53,6 @@
 
     move-result v1
 
-    .line 1349
     .local v1, "userId":I
     const-string v2, "android.intent.action.USER_SWITCHED"
 
@@ -67,19 +62,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 1350
     iget-object v2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$5;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # invokes: Lcom/android/server/enterprise/certificate/CertificatePolicy;->onUserSwitched(I)V
     invoke-static {v2, v1}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->access$800(Lcom/android/server/enterprise/certificate/CertificatePolicy;I)V
 
-    .line 1364
     .end local v1    # "userId":I
     :cond_0
     :goto_0
     return-void
 
-    .line 1351
     .restart local v1    # "userId":I
     :cond_1
     const-string v2, "android.intent.action.USER_REMOVED"
@@ -90,10 +82,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 1352
     if-eqz v1, :cond_0
 
-    .line 1353
     iget-object v2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$5;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # invokes: Lcom/android/server/enterprise/certificate/CertificatePolicy;->onUserRemoved(I)V
@@ -101,7 +91,6 @@
 
     goto :goto_0
 
-    .line 1355
     :cond_2
     const-string v2, "android.intent.action.USER_ADDED"
 
@@ -111,21 +100,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 1358
     invoke-static {v1}, Landroid/os/PersonaManager;->isKnoxId(I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 1359
     const-string v2, "CertificatePolicy"
 
     const-string v3, "Reloading cache for new user"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1360
     iget-object v2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$5;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # invokes: Lcom/android/server/enterprise/certificate/CertificatePolicy;->loadCache()V

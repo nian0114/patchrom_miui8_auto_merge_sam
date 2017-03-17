@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 92
     iput-object p1, p0, Landroid/net/wifi/PppoeStateMachine$1;->this$0:Landroid/net/wifi/PppoeStateMachine;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -39,14 +38,13 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 100
     const-string v0, "PppoeStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "interfaceLinkStateChanged, iface="
+    const-string v2, "interfaceLinkStateChanged, iface="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,14 +70,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     const-string v0, "PppoeStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "interfaceLinkStateChanged, status="
+    const-string v2, "interfaceLinkStateChanged, status="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -104,8 +101,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
-    const-string/jumbo v0, "ppp3"
+    const-string v0, "ppp3"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -128,14 +124,12 @@
 
     if-nez p2, :cond_0
 
-    .line 103
     iget-object v0, p0, Landroid/net/wifi/PppoeStateMachine$1;->this$0:Landroid/net/wifi/PppoeStateMachine;
 
     const v1, 0x70004
 
     invoke-virtual {v0, v1}, Landroid/net/wifi/PppoeStateMachine;->sendMessage(I)V
 
-    .line 105
     :cond_0
     return-void
 .end method
@@ -146,14 +140,13 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 95
     const-string v0, "PppoeStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "interfaceStatusChanged, iface="
+    const-string v2, "interfaceStatusChanged, iface="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -179,6 +172,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     return-void
 .end method

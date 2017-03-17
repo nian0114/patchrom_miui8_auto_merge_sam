@@ -33,13 +33,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 228
     invoke-direct {p0}, Lcom/samsung/android/quickconnect/IQuickConnectCallback$Stub;-><init>()V
 
-    .line 229
     iput-object p1, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
-    .line 230
     new-instance v0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate$ListenerHandler;
 
     iget-object v1, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
@@ -48,7 +45,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 231
     return-void
 .end method
 
@@ -58,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
     return-object v0
@@ -73,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 245
     iget-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -92,13 +86,11 @@
     .end annotation
 
     .prologue
-    .line 240
     iget-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 241
     return-void
 .end method

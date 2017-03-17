@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 746
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu$1;->this$1:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iput-object p2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu$1;->val$this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -50,7 +49,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 748
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu$1;->val$packageName:Ljava/lang/String;
 
     const-string v6, "/"
@@ -59,16 +57,13 @@
 
     move-result-object v2
 
-    .line 749
     .local v2, "data":[Ljava/lang/String;
     if-nez v2, :cond_1
 
-    .line 773
     :cond_0
     :goto_0
     return-void
 
-    .line 750
     :cond_1
     array-length v5, v2
 
@@ -78,7 +73,6 @@
 
     aget-object v4, v2, v5
 
-    .line 751
     .local v4, "pkgName":Ljava/lang/String;
     :goto_1
     array-length v5, v2
@@ -87,7 +81,6 @@
 
     aget-object v0, v2, v7
 
-    .line 752
     .local v0, "activityName":Ljava/lang/String;
     :goto_2
     new-instance v3, Landroid/content/Intent;
@@ -96,21 +89,17 @@
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 753
     .local v3, "intent":Landroid/content/Intent;
     const-string v5, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v3, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 754
     const/high16 v5, 0x10200000
 
     invoke-virtual {v3, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 755
     if-eqz v3, :cond_0
 
-    .line 756
     const-string v5, "00"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -119,10 +108,8 @@
 
     if-eqz v5, :cond_4
 
-    .line 757
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 771
     :goto_3
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu$1;->this$1:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
@@ -133,7 +120,6 @@
 
     goto :goto_0
 
-    .line 750
     .end local v0    # "activityName":Ljava/lang/String;
     .end local v3    # "intent":Landroid/content/Intent;
     .end local v4    # "pkgName":Ljava/lang/String;
@@ -142,14 +128,12 @@
 
     goto :goto_1
 
-    .line 751
     .restart local v4    # "pkgName":Ljava/lang/String;
     :cond_3
     const-string v0, "00"
 
     goto :goto_2
 
-    .line 760
     .restart local v0    # "activityName":Ljava/lang/String;
     .restart local v3    # "intent":Landroid/content/Intent;
     :cond_4
@@ -158,7 +142,6 @@
 
     invoke-direct {v1, v4, v0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 761
     .local v1, "cm":Landroid/content/ComponentName;
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
     :try_end_0
@@ -166,7 +149,6 @@
 
     goto :goto_3
 
-    .line 762
     .end local v1    # "cm":Landroid/content/ComponentName;
     :catch_0
     move-exception v5
@@ -178,6 +160,5 @@
     .locals 0
 
     .prologue
-    .line 777
     return-void
 .end method

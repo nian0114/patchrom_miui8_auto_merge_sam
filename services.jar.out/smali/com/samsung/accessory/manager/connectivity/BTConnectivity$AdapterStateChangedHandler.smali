@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/accessory/manager/connectivity/BTConnectivity$1;
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;-><init>(Lcom/samsung/accessory/manager/connectivity/BTConnectivity;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 42
     const-string v1, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v2, -0x80000000
@@ -63,16 +60,13 @@
 
     move-result v0
 
-    .line 44
     .local v0, "state":I
     packed-switch v0, :pswitch_data_0
 
-    .line 57
     :goto_0
     :pswitch_0
     return-void
 
-    .line 49
     :pswitch_1
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
 
@@ -84,7 +78,6 @@
 
     goto :goto_0
 
-    .line 52
     :pswitch_2
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
 
@@ -96,7 +89,6 @@
 
     goto :goto_0
 
-    .line 44
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_2

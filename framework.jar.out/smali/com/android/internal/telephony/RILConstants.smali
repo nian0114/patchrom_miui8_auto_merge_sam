@@ -818,8 +818,7 @@
     .locals 2
 
     .prologue
-    .line 136
-    const-string/jumbo v0, "ro.telephony.default_network"
+    const-string v0, "ro.telephony.default_network"
 
     const/4 v1, 0x0
 

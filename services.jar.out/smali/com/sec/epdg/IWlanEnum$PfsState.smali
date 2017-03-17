@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 133
     new-instance v0, Lcom/sec/epdg/IWlanEnum$PfsState;
 
     const-string v1, "ENABLED"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$PfsState;->ENABLED:Lcom/sec/epdg/IWlanEnum$PfsState;
 
-    .line 134
     new-instance v0, Lcom/sec/epdg/IWlanEnum$PfsState;
 
     const-string v1, "DISABLED"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$PfsState;->DISABLED:Lcom/sec/epdg/IWlanEnum$PfsState;
 
-    .line 132
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/sec/epdg/IWlanEnum$PfsState;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 132
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     const-class v0, Lcom/sec/epdg/IWlanEnum$PfsState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 132
     sget-object v0, Lcom/sec/epdg/IWlanEnum$PfsState;->$VALUES:[Lcom/sec/epdg/IWlanEnum$PfsState;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/IWlanEnum$PfsState;->clone()Ljava/lang/Object;

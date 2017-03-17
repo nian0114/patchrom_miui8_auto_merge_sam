@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 2270
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$20;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -45,10 +44,8 @@
 
     const/4 v2, 0x0
 
-    .line 2273
     const/4 v0, 0x0
 
-    .line 2275
     .local v0, "bHS20Enabled":Z
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$20;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -71,7 +68,6 @@
 
     move v0, v1
 
-    .line 2277
     :goto_0
     if-eqz v0, :cond_0
 
@@ -81,14 +77,12 @@
 
     if-ne v3, v1, :cond_0
 
-    .line 2279
     const-string v1, "WifiStateMachine"
 
     const-string v3, "HS20 option is enabled. Find hs20 ap now."
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2280
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$20;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -97,13 +91,11 @@
 
     invoke-virtual {v1, v3, v2, v5, v5}, Lcom/android/server/wifi/WifiStateMachine;->startScan(IILandroid/net/wifi/ScanSettings;Landroid/os/WorkSource;)V
 
-    .line 2282
     :cond_0
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 2275
     goto :goto_0
 .end method

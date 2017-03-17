@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 5870
     iput-object p1, p0, Landroid/app/Activity$1;->this$0:Landroid/app/Activity;
 
     iput-object p2, p0, Landroid/app/Activity$1;->val$taskDesc:Landroid/app/ActivityManager$TaskDescription;
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 5873
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -60,11 +58,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5876
     :goto_0
     return-void
 
-    .line 5874
     :catch_0
     move-exception v0
 

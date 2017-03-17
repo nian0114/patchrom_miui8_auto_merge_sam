@@ -14,21 +14,18 @@
     .locals 3
 
     .prologue
-    .line 478
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
-    .line 481
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
-    .line 490
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "BIG5"
@@ -37,7 +34,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 491
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSBIG5"
@@ -46,7 +42,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 492
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP037"
@@ -55,7 +50,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 493
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM037"
@@ -64,7 +58,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 494
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM037"
@@ -73,7 +66,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 495
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-US"
@@ -82,7 +74,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 496
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-CA"
@@ -91,7 +82,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 497
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-NL"
@@ -100,7 +90,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 498
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-WT"
@@ -109,7 +98,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 499
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM273"
@@ -118,7 +106,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 500
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP273"
@@ -127,7 +114,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 501
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM273"
@@ -136,7 +122,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 502
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM277"
@@ -145,7 +130,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 503
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP277"
@@ -154,7 +138,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 504
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM277"
@@ -163,7 +146,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 505
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-DK"
@@ -172,7 +154,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 506
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-NO"
@@ -181,7 +162,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 507
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM278"
@@ -190,7 +170,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 508
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP278"
@@ -199,7 +178,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 509
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM278"
@@ -208,7 +186,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 510
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-FI"
@@ -217,7 +194,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 511
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-SE"
@@ -226,7 +202,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 512
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM280"
@@ -235,7 +210,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 513
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP280"
@@ -244,7 +218,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 514
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM280"
@@ -253,7 +226,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 515
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-IT"
@@ -262,7 +234,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 516
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM284"
@@ -271,7 +242,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 517
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP284"
@@ -280,7 +250,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 518
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM284"
@@ -289,7 +258,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 519
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-ES"
@@ -298,7 +266,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 520
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-GB"
@@ -307,7 +274,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 521
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM285"
@@ -316,7 +282,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 522
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP285"
@@ -325,7 +290,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 523
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM285"
@@ -334,7 +298,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 524
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-JP-KANA"
@@ -343,7 +306,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 525
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM290"
@@ -352,7 +314,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 526
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP290"
@@ -361,7 +322,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 527
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM290"
@@ -370,7 +330,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 528
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-FR"
@@ -379,7 +338,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 529
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM297"
@@ -388,7 +346,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 530
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP297"
@@ -397,7 +354,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 531
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM297"
@@ -406,7 +362,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 532
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-AR1"
@@ -415,7 +370,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 533
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM420"
@@ -424,7 +378,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 534
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP420"
@@ -433,7 +386,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 535
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM420"
@@ -442,7 +394,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 536
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-HE"
@@ -451,7 +402,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 537
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM424"
@@ -460,7 +410,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 538
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP424"
@@ -469,7 +418,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 539
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM424"
@@ -478,7 +426,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 540
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM437"
@@ -487,7 +434,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 541
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "437"
@@ -496,7 +442,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 542
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP437"
@@ -505,7 +450,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 543
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSPC8CODEPAGE437"
@@ -514,7 +458,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 544
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-CH"
@@ -523,7 +466,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 545
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM500"
@@ -532,7 +474,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 546
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP500"
@@ -541,7 +482,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 547
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM500"
@@ -550,7 +490,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 548
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-CH"
@@ -559,7 +498,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 549
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-BE"
@@ -568,7 +506,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 550
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM775"
@@ -577,7 +514,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 551
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP775"
@@ -586,7 +522,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 552
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSPC775BALTIC"
@@ -595,7 +530,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 553
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM850"
@@ -604,7 +538,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 554
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "850"
@@ -613,7 +546,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 555
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP850"
@@ -622,7 +554,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 556
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSPC850MULTILINGUAL"
@@ -631,7 +562,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 557
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM852"
@@ -640,7 +570,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 558
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "852"
@@ -649,7 +578,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 559
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP852"
@@ -658,7 +586,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 560
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSPCP852"
@@ -667,7 +594,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 561
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM855"
@@ -676,7 +602,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 562
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "855"
@@ -685,7 +610,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 563
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP855"
@@ -694,7 +618,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 564
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM855"
@@ -703,7 +626,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 565
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM857"
@@ -712,7 +634,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 566
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "857"
@@ -721,7 +642,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 567
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP857"
@@ -730,7 +650,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 568
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM857"
@@ -739,7 +658,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 569
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM00858"
@@ -748,7 +666,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 570
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP00858"
@@ -757,7 +674,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 571
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID00858"
@@ -766,7 +682,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 572
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM860"
@@ -775,7 +690,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 573
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "860"
@@ -784,7 +698,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 574
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP860"
@@ -793,7 +706,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 575
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM860"
@@ -802,7 +714,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 576
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM861"
@@ -811,7 +722,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 577
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "861"
@@ -820,7 +730,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 578
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP861"
@@ -829,7 +738,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 579
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP-IS"
@@ -838,7 +746,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 580
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM861"
@@ -847,7 +754,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 581
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM862"
@@ -856,7 +762,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 582
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "862"
@@ -865,7 +770,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 583
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP862"
@@ -874,7 +778,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 584
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSPC862LATINHEBREW"
@@ -883,7 +786,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 585
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM863"
@@ -892,7 +794,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 586
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "863"
@@ -901,7 +802,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 587
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP863"
@@ -910,7 +810,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 588
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM863"
@@ -919,7 +818,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 589
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM864"
@@ -928,7 +826,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 590
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP864"
@@ -937,7 +834,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 591
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM864"
@@ -946,7 +842,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 592
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM865"
@@ -955,7 +850,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 593
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "865"
@@ -964,7 +858,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 594
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP865"
@@ -973,7 +866,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 595
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM865"
@@ -982,7 +874,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 596
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM866"
@@ -991,7 +882,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 597
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "866"
@@ -1000,7 +890,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 598
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP866"
@@ -1009,7 +898,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 599
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM866"
@@ -1018,7 +906,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 600
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM868"
@@ -1027,7 +914,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 601
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP868"
@@ -1036,7 +922,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 602
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM868"
@@ -1045,7 +930,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 603
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP-AR"
@@ -1054,7 +938,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 604
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM869"
@@ -1063,7 +946,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 605
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP869"
@@ -1072,7 +954,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 606
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM869"
@@ -1081,7 +962,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 607
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP-GR"
@@ -1090,7 +970,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 608
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM870"
@@ -1099,7 +978,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 609
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP870"
@@ -1108,7 +986,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 610
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM870"
@@ -1117,7 +994,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 611
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-ROECE"
@@ -1126,7 +1002,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 612
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-YU"
@@ -1135,7 +1010,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 613
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM871"
@@ -1144,7 +1018,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 614
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP871"
@@ -1153,7 +1026,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 615
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM871"
@@ -1162,7 +1034,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 616
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-IS"
@@ -1171,7 +1042,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 617
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM918"
@@ -1180,7 +1050,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 618
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP918"
@@ -1189,7 +1058,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 619
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM918"
@@ -1198,7 +1066,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 620
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-CP-AR2"
@@ -1207,7 +1074,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 621
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM00924"
@@ -1216,7 +1082,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 622
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP00924"
@@ -1225,7 +1090,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 623
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID00924"
@@ -1234,7 +1098,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 625
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EBCDIC-LATIN9--EURO"
@@ -1243,7 +1106,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 626
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM1026"
@@ -1252,7 +1114,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 627
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1026"
@@ -1261,7 +1122,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 628
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSIBM1026"
@@ -1270,7 +1130,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 629
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01140"
@@ -1279,7 +1138,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 630
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01140"
@@ -1288,7 +1146,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 631
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01140"
@@ -1297,7 +1154,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 632
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01141"
@@ -1306,7 +1162,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 633
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01141"
@@ -1315,7 +1170,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 634
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01141"
@@ -1324,7 +1178,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 635
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01142"
@@ -1333,7 +1186,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 636
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01142"
@@ -1342,7 +1194,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 637
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01142"
@@ -1351,7 +1202,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 638
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01143"
@@ -1360,7 +1210,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 639
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01143"
@@ -1369,7 +1218,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 640
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01143"
@@ -1378,7 +1226,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 641
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01144"
@@ -1387,7 +1234,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 642
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01144"
@@ -1396,7 +1242,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 643
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01144"
@@ -1405,7 +1250,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 644
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01145"
@@ -1414,7 +1258,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 645
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01145"
@@ -1423,7 +1266,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 646
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01145"
@@ -1432,7 +1274,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 647
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01146"
@@ -1441,7 +1282,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 648
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01146"
@@ -1450,7 +1290,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 649
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01146"
@@ -1459,7 +1298,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 650
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01147"
@@ -1468,7 +1306,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 651
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01147"
@@ -1477,7 +1314,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 652
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01147"
@@ -1486,7 +1322,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 653
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01148"
@@ -1495,7 +1330,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 654
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01148"
@@ -1504,7 +1338,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 655
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01148"
@@ -1513,7 +1346,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 656
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM01149"
@@ -1522,7 +1354,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 657
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP01149"
@@ -1531,7 +1362,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 658
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CCSID01149"
@@ -1540,7 +1370,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 659
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EUC-JP"
@@ -1549,7 +1378,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 660
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSEUCPKDFMTJAPANESE"
@@ -1558,7 +1386,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 661
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EXTENDED_UNIX_CODE_PACKED_FORMAT_FOR_JAPANESE"
@@ -1567,7 +1394,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 662
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "EUC-KR"
@@ -1576,7 +1402,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 663
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSEUCKR"
@@ -1585,7 +1410,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 664
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "KS_C_5601-1987"
@@ -1594,7 +1418,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 665
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-149"
@@ -1603,7 +1426,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 666
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "KS_C_5601-1989"
@@ -1612,7 +1434,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 667
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "KSC_5601"
@@ -1621,7 +1442,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 668
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "KOREAN"
@@ -1630,7 +1450,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 669
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSKSC56011987"
@@ -1639,7 +1458,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 670
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "GB2312"
@@ -1648,7 +1466,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 671
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSGB2312"
@@ -1657,7 +1474,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 672
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-2022-JP"
@@ -1666,7 +1482,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 673
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISO2022JP"
@@ -1675,7 +1490,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 674
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-2022-KR"
@@ -1684,7 +1498,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 675
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISO2022KR"
@@ -1693,7 +1506,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 676
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-2022-CN"
@@ -1702,7 +1514,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 678
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "X0201"
@@ -1711,7 +1522,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 679
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISO13JISC6220JP"
@@ -1720,7 +1530,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 680
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "X0208"
@@ -1729,7 +1538,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 681
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-87"
@@ -1738,7 +1546,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 682
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "X0208dbiJIS_X0208-1983"
@@ -1747,7 +1554,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 683
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISO87JISX0208"
@@ -1756,7 +1562,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 684
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "X0212"
@@ -1765,7 +1570,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 685
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-159"
@@ -1774,7 +1578,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 686
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISO159JISX02121990"
@@ -1783,7 +1586,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 687
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "GB18030"
@@ -1792,7 +1594,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 688
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "GBK"
@@ -1801,7 +1602,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 689
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP936"
@@ -1810,7 +1610,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 690
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "MS936"
@@ -1819,7 +1618,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 691
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-936"
@@ -1828,7 +1626,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 692
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "SHIFT_JIS"
@@ -1837,7 +1634,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 693
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSSHIFTJIS"
@@ -1846,7 +1642,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 694
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "MS_KANJI"
@@ -1855,7 +1650,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 695
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-31J"
@@ -1864,7 +1658,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 696
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSWINDOWS31J"
@@ -1873,7 +1666,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 699
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1250"
@@ -1882,7 +1674,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 700
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1251"
@@ -1891,7 +1682,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 701
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1252"
@@ -1900,7 +1690,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 702
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1253"
@@ -1909,7 +1698,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 703
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1254"
@@ -1918,7 +1706,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 704
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1255"
@@ -1927,7 +1714,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 705
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1256"
@@ -1936,7 +1722,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 706
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1257"
@@ -1945,7 +1730,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 707
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "WINDOWS-1258"
@@ -1954,7 +1738,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 708
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "TIS-620"
@@ -1963,7 +1746,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 710
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-1"
@@ -1972,7 +1754,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 711
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-100"
@@ -1981,7 +1762,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 712
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-1"
@@ -1990,7 +1770,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 713
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "LATIN1"
@@ -1999,7 +1778,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 714
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATIN1"
@@ -2008,7 +1786,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 715
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "L1"
@@ -2017,7 +1794,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 716
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM819"
@@ -2026,7 +1802,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 717
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP819"
@@ -2035,7 +1810,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 719
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-2"
@@ -2044,7 +1818,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 720
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-101"
@@ -2053,7 +1826,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 721
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-2"
@@ -2062,7 +1834,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 722
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "LATIN2"
@@ -2071,7 +1842,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 723
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATIN2"
@@ -2080,7 +1850,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 724
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "L2"
@@ -2089,7 +1858,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 726
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-3"
@@ -2098,7 +1866,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 727
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-109"
@@ -2107,7 +1874,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 728
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-3"
@@ -2116,7 +1882,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 729
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "LATIN3"
@@ -2125,7 +1890,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 730
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATIN3"
@@ -2134,7 +1898,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 731
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "L3"
@@ -2143,7 +1906,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 733
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-4"
@@ -2152,7 +1914,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 734
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-110"
@@ -2161,7 +1922,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 735
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-4"
@@ -2170,7 +1930,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 736
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "LATIN4"
@@ -2179,7 +1938,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 737
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATIN4"
@@ -2188,7 +1946,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 738
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "L4"
@@ -2197,7 +1954,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 740
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-5"
@@ -2206,7 +1962,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 741
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-144"
@@ -2215,7 +1970,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 742
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-5"
@@ -2224,7 +1978,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 743
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CYRILLIC"
@@ -2233,7 +1986,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 744
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATINCYRILLIC"
@@ -2242,7 +1994,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 746
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-6"
@@ -2251,7 +2002,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 747
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-127"
@@ -2260,7 +2010,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 748
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-6"
@@ -2269,7 +2018,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 749
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ECMA-114"
@@ -2278,7 +2026,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 750
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ASMO-708"
@@ -2287,7 +2034,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 751
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ARABIC"
@@ -2296,7 +2042,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 752
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATINARABIC"
@@ -2305,7 +2050,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 754
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-7"
@@ -2314,7 +2058,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 755
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-126"
@@ -2323,7 +2066,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 756
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-7"
@@ -2332,7 +2074,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 757
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ELOT_928"
@@ -2341,7 +2082,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 758
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ECMA-118"
@@ -2350,7 +2090,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 759
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "GREEK"
@@ -2359,7 +2098,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 760
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATINGREEK"
@@ -2368,7 +2106,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 761
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "GREEK8"
@@ -2377,7 +2114,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 763
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-8"
@@ -2386,7 +2122,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 764
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-8-I"
@@ -2395,7 +2130,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 765
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-138"
@@ -2404,7 +2138,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 766
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-8"
@@ -2413,7 +2146,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 767
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "HEBREW"
@@ -2422,7 +2154,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 768
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATINHEBREW"
@@ -2431,7 +2162,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 770
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-9"
@@ -2440,7 +2170,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 771
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-148"
@@ -2449,7 +2178,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 772
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-9"
@@ -2458,7 +2186,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 773
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "LATIN5"
@@ -2467,7 +2194,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 774
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSISOLATIN5"
@@ -2476,7 +2202,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 775
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "L5"
@@ -2485,7 +2210,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 777
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-13"
@@ -2494,7 +2218,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 779
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-8859-15"
@@ -2503,7 +2226,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 780
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_8859-15"
@@ -2512,7 +2234,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 781
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "LATIN-9"
@@ -2521,7 +2242,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 783
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "KOI8-R"
@@ -2530,7 +2250,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 784
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSKOI8R"
@@ -2539,7 +2258,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 785
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "US-ASCII"
@@ -2548,7 +2266,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 786
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO-IR-6"
@@ -2557,7 +2274,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 787
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ANSI_X3.4-1968"
@@ -2566,7 +2282,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 788
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ANSI_X3.4-1986"
@@ -2575,7 +2290,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 789
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO_646.IRV:1991"
@@ -2584,7 +2298,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 790
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ASCII"
@@ -2593,7 +2306,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 791
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CSASCII"
@@ -2602,7 +2314,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 792
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO646-US"
@@ -2611,7 +2322,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 793
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "US"
@@ -2620,7 +2330,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 794
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM367"
@@ -2629,7 +2338,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 795
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP367"
@@ -2638,7 +2346,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 796
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "UTF-8"
@@ -2647,7 +2354,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 797
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "UTF-16"
@@ -2656,7 +2362,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 798
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "UTF-16BE"
@@ -2665,7 +2370,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 799
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "UTF-16LE"
@@ -2674,7 +2378,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 804
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1047"
@@ -2683,7 +2386,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 805
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM1047"
@@ -2692,7 +2394,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 806
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1047"
@@ -2701,7 +2402,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 810
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-37"
@@ -2710,7 +2410,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 811
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-273"
@@ -2719,7 +2418,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 812
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-277"
@@ -2728,7 +2426,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 813
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-278"
@@ -2737,7 +2434,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 814
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-280"
@@ -2746,7 +2442,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 815
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-284"
@@ -2755,7 +2450,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 816
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-285"
@@ -2764,7 +2458,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 817
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-290"
@@ -2773,7 +2466,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 818
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-297"
@@ -2782,7 +2474,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 819
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-420"
@@ -2791,7 +2482,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 820
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-424"
@@ -2800,7 +2490,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 821
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-437"
@@ -2809,7 +2498,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 822
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-500"
@@ -2818,7 +2506,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 823
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-775"
@@ -2827,7 +2514,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 824
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-850"
@@ -2836,7 +2522,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 825
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-852"
@@ -2845,7 +2530,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 826
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-855"
@@ -2854,7 +2538,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 827
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-857"
@@ -2863,7 +2546,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 828
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-858"
@@ -2872,7 +2554,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 829
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-860"
@@ -2881,7 +2562,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 830
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-861"
@@ -2890,7 +2570,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 831
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-862"
@@ -2899,7 +2578,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 832
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-863"
@@ -2908,7 +2586,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 833
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-864"
@@ -2917,7 +2594,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 834
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-865"
@@ -2926,7 +2602,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 835
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-866"
@@ -2935,7 +2610,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 836
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-868"
@@ -2944,7 +2618,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 837
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-869"
@@ -2953,7 +2626,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 838
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-870"
@@ -2962,7 +2634,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 839
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-871"
@@ -2971,7 +2642,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 840
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-918"
@@ -2980,7 +2650,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 841
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-924"
@@ -2989,7 +2658,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 842
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1026"
@@ -2998,7 +2666,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 843
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1140"
@@ -3007,7 +2674,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 844
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1141"
@@ -3016,7 +2682,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 845
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1142"
@@ -3025,7 +2690,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 846
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1143"
@@ -3034,7 +2698,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 847
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1144"
@@ -3043,7 +2706,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 848
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1145"
@@ -3052,7 +2714,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 849
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1146"
@@ -3061,7 +2722,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 850
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1147"
@@ -3070,7 +2730,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 851
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1148"
@@ -3079,7 +2738,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 852
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-1149"
@@ -3088,7 +2746,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 853
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-819"
@@ -3097,7 +2754,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 854
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     const-string v1, "IBM-367"
@@ -3106,7 +2762,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 862
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_1"
@@ -3115,7 +2770,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 863
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_2"
@@ -3124,7 +2778,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 864
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_3"
@@ -3133,7 +2786,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 865
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_4"
@@ -3142,7 +2794,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 866
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_5"
@@ -3151,7 +2802,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 867
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_6"
@@ -3160,7 +2810,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 868
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_7"
@@ -3169,7 +2818,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 869
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_8"
@@ -3178,7 +2826,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 870
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_9"
@@ -3187,7 +2834,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 871
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_13"
@@ -3196,7 +2842,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 872
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_15"
@@ -3205,7 +2850,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 873
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO8859_15_FDIS"
@@ -3214,7 +2858,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 874
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "Big5"
@@ -3223,7 +2866,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 875
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP037"
@@ -3232,7 +2874,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 876
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP273"
@@ -3241,7 +2882,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 877
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP277"
@@ -3250,7 +2890,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 878
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP278"
@@ -3259,7 +2898,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 879
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP280"
@@ -3268,7 +2906,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 880
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP284"
@@ -3277,7 +2914,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 881
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP285"
@@ -3286,7 +2922,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 882
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP290"
@@ -3295,7 +2930,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 883
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP297"
@@ -3304,7 +2938,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 884
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP420"
@@ -3313,7 +2946,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 885
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP424"
@@ -3322,7 +2954,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 886
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP437"
@@ -3331,7 +2962,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 887
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP500"
@@ -3340,7 +2970,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 888
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP775"
@@ -3349,7 +2978,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 889
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP850"
@@ -3358,7 +2986,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 890
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP852"
@@ -3367,7 +2994,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 891
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP855"
@@ -3376,7 +3002,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 892
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP857"
@@ -3385,7 +3010,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 893
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP858"
@@ -3394,7 +3018,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 894
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP860"
@@ -3403,7 +3026,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 895
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP861"
@@ -3412,7 +3034,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 896
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP862"
@@ -3421,7 +3042,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 897
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP863"
@@ -3430,7 +3050,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 898
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP864"
@@ -3439,7 +3058,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 899
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP865"
@@ -3448,7 +3066,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 900
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP866"
@@ -3457,7 +3074,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 901
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP868"
@@ -3466,7 +3082,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 902
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP869"
@@ -3475,7 +3090,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 903
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP870"
@@ -3484,7 +3098,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 904
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP871"
@@ -3493,7 +3106,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 905
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP918"
@@ -3502,7 +3114,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 906
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP924"
@@ -3511,7 +3122,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 907
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1026"
@@ -3520,7 +3130,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 908
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1140"
@@ -3529,7 +3138,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 909
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1141"
@@ -3538,7 +3146,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 910
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1142"
@@ -3547,7 +3154,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 911
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1143"
@@ -3556,7 +3162,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 912
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1144"
@@ -3565,7 +3170,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 913
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1145"
@@ -3574,7 +3178,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 914
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1146"
@@ -3583,7 +3186,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 915
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1147"
@@ -3592,7 +3194,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 916
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1148"
@@ -3601,7 +3202,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 917
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1149"
@@ -3610,7 +3210,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 918
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "EUCJIS"
@@ -3619,7 +3218,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 919
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "KS_C_5601-1987"
@@ -3628,7 +3226,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 920
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "GB2312"
@@ -3637,7 +3234,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 921
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO2022KR"
@@ -3646,7 +3242,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 922
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "ISO2022CN"
@@ -3655,7 +3250,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 923
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "JIS"
@@ -3664,7 +3258,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 924
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "KOI8_R"
@@ -3673,7 +3266,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 925
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "KSC5601"
@@ -3682,7 +3274,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 926
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "GB18030"
@@ -3691,7 +3282,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 927
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "GBK"
@@ -3700,7 +3290,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 928
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "SJIS"
@@ -3709,7 +3298,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 929
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "MS932"
@@ -3718,7 +3306,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 930
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "UTF8"
@@ -3727,7 +3314,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 931
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "Unicode"
@@ -3736,7 +3322,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 932
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "UnicodeBig"
@@ -3745,7 +3330,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 933
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "UnicodeLittle"
@@ -3754,7 +3338,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 934
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "JIS0201"
@@ -3763,7 +3346,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 935
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "JIS0208"
@@ -3772,7 +3354,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 936
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "JIS0212"
@@ -3781,7 +3362,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 939
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     const-string v1, "CP1047"
@@ -3790,7 +3370,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 941
     return-void
 .end method
 
@@ -3798,7 +3377,6 @@
     .locals 0
 
     .prologue
-    .line 948
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -3809,7 +3387,6 @@
     .param p0, "ianaEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 975
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3826,7 +3403,6 @@
     .param p0, "javaEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 1012
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3844,12 +3420,10 @@
     .param p1, "javaEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 966
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 967
     return-void
 .end method
 
@@ -3859,12 +3433,10 @@
     .param p1, "ianaEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 1003
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1004
     return-void
 .end method
 
@@ -3873,7 +3445,6 @@
     .param p0, "ianaEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 988
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fIANA2JavaMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3890,7 +3461,6 @@
     .param p0, "javaEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 1025
     sget-object v0, Lmf/org/apache/xerces/util/EncodingMap;->fJava2IANAMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;

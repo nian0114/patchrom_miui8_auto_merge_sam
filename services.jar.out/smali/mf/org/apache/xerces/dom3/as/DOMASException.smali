@@ -24,12 +24,9 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 25
     iput-short p1, p0, Lmf/org/apache/xerces/dom3/as/DOMASException;->code:S
 
-    .line 26
     return-void
 .end method

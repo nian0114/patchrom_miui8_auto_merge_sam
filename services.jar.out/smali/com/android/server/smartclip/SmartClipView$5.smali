@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 935
     iput-object p1, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 938
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mPointers:Ljava/util/ArrayList;
@@ -54,7 +52,6 @@
 
     move-result v2
 
-    .line 941
     .local v2, "totalPointerSize":I
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -65,18 +62,15 @@
 
     if-nez v3, :cond_0
 
-    .line 942
     const-string v3, "SmartClipView"
 
     const-string v4, "MDM: Screen Capture Disabled"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1005
     :goto_0
     return-void
 
-    .line 956
     :cond_0
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -87,7 +81,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 957
     const-string v3, "SmartClipView"
 
     const-string v4, " Verizon Setup Wizard is running ignore this event"
@@ -96,7 +89,6 @@
 
     goto :goto_0
 
-    .line 961
     :cond_1
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -104,16 +96,14 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 962
     const-string v3, "SmartClipView"
 
-    const-string/jumbo v4, "flashannotate couldn\'t by MDM"
+    const-string v4, "flashannotate couldn\'t by MDM"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 966
     :cond_2
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -123,7 +113,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 967
     const-string v3, "SmartClipView"
 
     const-string v4, "Now keyguard is on!!!"
@@ -132,7 +121,6 @@
 
     goto :goto_0
 
-    .line 971
     :cond_3
     const-string v3, "SmartClipView"
 
@@ -140,7 +128,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 973
     :try_start_0
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -153,10 +140,9 @@
 
     if-eqz v3, :cond_4
 
-    .line 974
     const-string v3, "SmartClipView"
 
-    const-string/jumbo v4, "flashannotate is live!!!"
+    const-string v4, "flashannotate is live!!!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -164,17 +150,14 @@
 
     goto :goto_0
 
-    .line 1002
     :catch_0
     move-exception v0
 
-    .line 1003
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 977
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_4
     :try_start_1
@@ -185,7 +168,6 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsClosedCurve:Z
     invoke-static {v3, v4}, Lcom/android/server/smartclip/SmartClipView;->access$702(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 978
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     const/4 v4, 0x0
@@ -193,17 +175,14 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mDisplayRoateChanged:Z
     invoke-static {v3, v4}, Lcom/android/server/smartclip/SmartClipView;->access$1102(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 979
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-virtual {v3, v2}, Lcom/android/server/smartclip/SmartClipView;->resetVariable(I)V
 
-    .line 980
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-virtual {v3}, Lcom/android/server/smartclip/SmartClipView;->postInvalidate()V
 
-    .line 982
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     const/4 v4, 0x1
@@ -211,14 +190,12 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsLiveScreencapture:Z
     invoke-static {v3, v4}, Lcom/android/server/smartclip/SmartClipView;->access$1202(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 984
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     iget v3, v3, Lcom/android/server/smartclip/SmartClipView;->mFocusedWindow:I
 
     if-eqz v3, :cond_5
 
-    .line 988
     const-string v3, "SmartClipView"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -245,7 +222,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 991
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mLongPressIntent:Landroid/content/Intent;
@@ -261,7 +237,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 998
     :cond_5
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -280,14 +255,12 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1000
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "com.sec.android.app.videoplayer.VIDEOPLAYER_PLAY"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1001
     .local v1, "intentForVideoPlay":Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/server/smartclip/SmartClipView$5;->this$0:Lcom/android/server/smartclip/SmartClipView;
 

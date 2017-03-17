@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 4575
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer$3;->this$1:Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,12 +38,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 4578
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer$3;->this$1:Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->update()V
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;->access$8000(Lcom/android/server/notification/NotificationManagerService$OverTurnPlayer;)V
 
-    .line 4579
     return-void
 .end method

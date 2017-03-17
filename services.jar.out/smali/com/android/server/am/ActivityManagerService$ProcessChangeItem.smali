@@ -39,10 +39,8 @@
     .locals 1
 
     .prologue
-    .line 1785
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1796
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/am/ActivityManagerService$ProcessChangeItem;->finished:Z

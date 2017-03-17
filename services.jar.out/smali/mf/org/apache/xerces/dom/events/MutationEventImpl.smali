@@ -41,22 +41,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 30
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/events/EventImpl;-><init>()V
 
-    .line 34
     iput-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->relatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 35
     iput-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->prevValue:Ljava/lang/String;
 
-    .line 36
     iput-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->newValue:Ljava/lang/String;
 
-    .line 37
     iput-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->attrName:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-short v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->attrChange:S
 
     return v0
@@ -76,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->attrName:Ljava/lang/String;
 
     return-object v0
@@ -86,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->newValue:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->prevValue:Ljava/lang/String;
 
     return-object v0
@@ -106,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->relatedNode:Lmf/org/w3c/dom/Node;
 
     return-object v0
@@ -124,24 +113,17 @@
     .param p8, "attrChangeArg"    # S
 
     .prologue
-    .line 105
     iput-object p4, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->relatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 106
     iput-object p5, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->prevValue:Ljava/lang/String;
 
-    .line 107
     iput-object p6, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->newValue:Ljava/lang/String;
 
-    .line 108
     iput-object p7, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->attrName:Ljava/lang/String;
 
-    .line 109
     iput-short p8, p0, Lmf/org/apache/xerces/dom/events/MutationEventImpl;->attrChange:S
 
-    .line 110
     invoke-super {p0, p1, p2, p3}, Lmf/org/apache/xerces/dom/events/EventImpl;->initEvent(Ljava/lang/String;ZZ)V
 
-    .line 111
     return-void
 .end method

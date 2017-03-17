@@ -82,7 +82,7 @@
 
     const/4 v5, -0x1
 
-    const-string/jumbo v0, "file:/"
+    const-string v0, "file:/"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -258,7 +258,7 @@
     invoke-virtual {v2, v3, v4}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
     :cond_2
-    const-string/jumbo v2, "file:"
+    const-string v2, "file:"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -266,7 +266,7 @@
 
     if-nez v2, :cond_3
 
-    const-string/jumbo v2, "file:"
+    const-string v2, "file:"
 
     invoke-virtual {p2, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -401,7 +401,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0, p1, p2}, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;Lorg/w3c/dom/Attr;Ljava/lang/String;)V
 

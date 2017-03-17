@@ -37,29 +37,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3274
     iput-object p1, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->this$0:Lcom/android/server/wifi/WifiNative;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3275
     iget-object v0, p2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 3276
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->SSID:Ljava/lang/String;
 
-    .line 3277
     iput v1, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->flags:I
 
-    .line 3281
     :goto_0
     iput p3, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->rssi_threshold:I
 
-    .line 3282
     iget-object v0, p2, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
@@ -68,14 +62,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3283
     iget v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->auth:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->auth:I
 
-    .line 3293
     :goto_1
     iget v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->flags:I
 
@@ -83,17 +75,14 @@
 
     iput v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->flags:I
 
-    .line 3294
     invoke-virtual {p2}, Landroid/net/wifi/WifiConfiguration;->configKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->configKey:Ljava/lang/String;
 
-    .line 3295
     return-void
 
-    .line 3279
     :cond_0
     iget-object v0, p2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
@@ -101,7 +90,6 @@
 
     goto :goto_0
 
-    .line 3284
     :cond_1
     iget-object v0, p2, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -123,7 +111,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 3286
     :cond_2
     iget v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->auth:I
 
@@ -133,7 +120,6 @@
 
     goto :goto_1
 
-    .line 3287
     :cond_3
     iget-object v0, p2, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
 
@@ -143,7 +129,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 3288
     iget v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->auth:I
 
     or-int/lit8 v0, v0, 0x1
@@ -152,7 +137,6 @@
 
     goto :goto_1
 
-    .line 3290
     :cond_4
     iget v0, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->auth:I
 
@@ -169,18 +153,15 @@
     .locals 3
 
     .prologue
-    .line 3299
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3300
     .local v0, "sbuf":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/android/server/wifi/WifiNative$WifiPnoNetwork;->SSID:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3301
     const-string v1, " flags="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -191,7 +172,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3302
     const-string v1, " rssi="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -202,7 +182,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3303
     const-string v1, " auth="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -213,7 +192,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3304
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

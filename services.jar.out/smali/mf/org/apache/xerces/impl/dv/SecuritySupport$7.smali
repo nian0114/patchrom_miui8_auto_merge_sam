@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/impl/dv/SecuritySupport$7;->val$f:Ljava/io/File;
 
-    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/SecuritySupport$7;->val$f:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z

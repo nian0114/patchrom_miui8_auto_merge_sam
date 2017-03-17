@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$1;->this$0:Lmf/javax/xml/xpath/XPathFactoryFinder;
 
-    .line 499
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;-><init>(Lmf/javax/xml/xpath/XPathFactoryFinder$SingleIterator;)V
@@ -40,14 +38,12 @@
     .locals 3
 
     .prologue
-    .line 501
     const-class v1, Lmf/javax/xml/xpath/XPathFactoryFinder;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 502
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     # getter for: Lmf/javax/xml/xpath/XPathFactoryFinder;->ss:Lmf/javax/xml/xpath/SecuritySupport;
     invoke-static {}, Lmf/javax/xml/xpath/XPathFactoryFinder;->access$0()Lmf/javax/xml/xpath/SecuritySupport;

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 23309
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$30;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/pm/PackageManagerService$30;->val$reportStatus:Z
@@ -57,14 +56,13 @@
     .end annotation
 
     .prologue
-    .line 23318
     const-string v0, "PackageManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "do force gc after sending broadcast : "
+    const-string v2, "do force gc after sending broadcast : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -80,14 +78,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23319
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->gc()V
 
-    .line 23320
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$30;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-boolean v0, p0, Lcom/android/server/pm/PackageManagerService$30;->val$reportStatus:Z
@@ -104,10 +100,8 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->updateMediaStatus(IILjava/util/Set;)V
     invoke-static {v1, v0, v2, v3}, Lcom/android/server/pm/PackageManagerService;->access$6900(Lcom/android/server/pm/PackageManagerService;IILjava/util/Set;)V
 
-    .line 23321
     return-void
 
-    .line 23320
     :cond_0
     const/4 v0, 0x0
 

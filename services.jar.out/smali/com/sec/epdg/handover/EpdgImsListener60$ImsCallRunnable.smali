@@ -29,15 +29,12 @@
     .param p2, "callInfo"    # Lcom/sec/ims/volte2/data/ImsCallInfo;
 
     .prologue
-    .line 354
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$ImsCallRunnable;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 355
     iput-object p2, p0, Lcom/sec/epdg/handover/EpdgImsListener60$ImsCallRunnable;->mCallInfo:Lcom/sec/ims/volte2/data/ImsCallInfo;
 
-    .line 356
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsListener60$ImsCallRunnable;->mCallInfo:Lcom/sec/ims/volte2/data/ImsCallInfo;
 
     return-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,12 +37,10 @@
     .locals 3
 
     .prologue
-    .line 40
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 41
     .local v0, "sb":Ljava/lang/StringBuffer;
     iget v1, p0, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
@@ -138,14 +135,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 49
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 41
     :cond_0
     const-string v1, " active "
 

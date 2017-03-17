@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mExpiryDate:Ljava/lang/String;
 
     return-object v0
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mKeyUsageMode:Ljava/util/ArrayList;
 
     return-object v0
@@ -70,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mNoOfTransactions:I
 
     return v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mPinPolicy:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;
 
     return-object v0
@@ -90,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mStartDate:Ljava/lang/String;
 
     return-object v0
@@ -101,10 +95,8 @@
     .param p1, "expiryDate"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mExpiryDate:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -113,23 +105,19 @@
     .param p1, "mUsageMode"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mKeyUsageMode:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 53
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mKeyUsageMode:Ljava/util/ArrayList;
 
-    .line 55
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mKeyUsageMode:Ljava/util/ArrayList;
 
     invoke-static {p1}, Lcom/android/server/enterprise/otp/engine/common/OTPEnums;->strToKeyUsage(Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/common/OTPEnums$KeyUsage;
@@ -138,7 +126,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 58
     :cond_1
     return-void
 .end method
@@ -148,17 +135,14 @@
     .param p1, "noOfTransactions"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     if-eqz p1, :cond_0
 
-    .line 43
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mNoOfTransactions:I
 
-    .line 45
     :cond_0
     return-void
 .end method
@@ -168,10 +152,8 @@
     .param p1, "pinPolicy"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;
 
     .prologue
-    .line 65
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mPinPolicy:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;
 
-    .line 66
     return-void
 .end method
 
@@ -180,9 +162,7 @@
     .param p1, "startDate"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->mStartDate:Ljava/lang/String;
 
-    .line 27
     return-void
 .end method

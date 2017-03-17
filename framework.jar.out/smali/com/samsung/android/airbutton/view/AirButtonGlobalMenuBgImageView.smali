@@ -9,10 +9,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 22
     return-void
 .end method
 
@@ -23,10 +21,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 26
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 27
     return-void
 .end method
 
@@ -35,7 +31,6 @@
     .param p1, "animationArc"    # F
 
     .prologue
-    .line 36
     return-void
 .end method
 
@@ -45,7 +40,6 @@
     .param p2, "mFinishListener"    # Landroid/animation/Animator$AnimatorListener;
 
     .prologue
-    .line 33
     return-void
 .end method
 
@@ -53,6 +47,5 @@
     .locals 0
 
     .prologue
-    .line 30
     return-void
 .end method

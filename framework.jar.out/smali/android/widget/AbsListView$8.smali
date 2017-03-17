@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 9861
     iput-object p1, p0, Landroid/widget/AbsListView$8;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 9864
     :try_start_0
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -53,7 +51,6 @@
 
     move-result v0
 
-    .line 9865
     .local v0, "value":I
     iget-object v1, p0, Landroid/widget/AbsListView$8;->this$0:Landroid/widget/AbsListView;
 
@@ -64,19 +61,16 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 9866
     iget-object v1, p0, Landroid/widget/AbsListView$8;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v1}, Landroid/widget/AbsListView;->invalidate()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9869
     .end local v0    # "value":I
     :goto_0
     return-void
 
-    .line 9867
     :catch_0
     move-exception v1
 

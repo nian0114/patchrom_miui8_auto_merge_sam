@@ -96,32 +96,25 @@
 
     const/4 v2, 0x0
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mLock:Ljava/lang/Object;
 
-    .line 82
     iput-boolean v2, p0, Lcom/android/server/cover/StateNotifier;->mAttached:Z
 
-    .line 83
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/cover/StateNotifier;->mCoverType:I
 
-    .line 84
     iput-boolean v2, p0, Lcom/android/server/cover/StateNotifier;->mCoverOpen:Z
 
-    .line 89
     iput-object p2, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
-    .line 90
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -131,31 +124,27 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 92
     new-instance v0, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;-><init>(Lcom/android/server/cover/StateNotifier;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mHandler:Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
-    .line 94
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
-    .line 96
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
-    const-string/jumbo v1, "update sviewcover"
+    const-string v1, "update sviewcover"
 
     invoke-virtual {v0, v3, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
@@ -163,15 +152,13 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mUpdateSViewCoverWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mUpdateSViewCoverWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
-    const-string/jumbo v1, "send coverstate"
+    const-string v1, "send coverstate"
 
     invoke-virtual {v0, v3, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
@@ -179,15 +166,13 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
-    const-string/jumbo v1, "send coverswitchstate"
+    const-string v1, "send coverswitchstate"
 
     invoke-virtual {v0, v3, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
@@ -195,15 +180,13 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverSwitchStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverSwitchStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
-    const-string/jumbo v1, "send coverattachstate"
+    const-string v1, "send coverattachstate"
 
     invoke-virtual {v0, v3, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
@@ -211,12 +194,10 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverVerifyAndAttachStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverVerifyAndAttachStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 115
     return-void
 .end method
 
@@ -227,7 +208,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2}, Lcom/android/server/cover/StateNotifier;->handleSendCoverSwitchState(Lcom/samsung/android/cover/CoverState;Z)V
 
     return-void
@@ -239,7 +219,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 49
     invoke-direct {p0, p1}, Lcom/android/server/cover/StateNotifier;->handleSendCoverAttachState(Z)V
 
     return-void
@@ -251,7 +230,6 @@
     .param p1, "x1"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1}, Lcom/android/server/cover/StateNotifier;->handleUpdateSViewCoverService(Lcom/samsung/android/cover/CoverState;)V
 
     return-void
@@ -262,7 +240,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/StateNotifier;
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -273,7 +250,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/StateNotifier;
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mUpdateSViewCoverWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -284,7 +260,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/StateNotifier;
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -295,7 +270,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/StateNotifier;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Lcom/android/server/cover/StateNotifier;->enableLcdOffByCoverIfPossibleLocked()V
 
     return-void
@@ -305,17 +279,14 @@
     .locals 2
 
     .prologue
-    .line 445
     iget-boolean v0, p0, Lcom/android/server/cover/StateNotifier;->mAttached:Z
 
     if-nez v0, :cond_1
 
-    .line 453
     :cond_0
     :goto_0
     return-void
 
-    .line 449
     :cond_1
     new-instance v0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
@@ -325,12 +296,10 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
-    .line 450
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 451
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     invoke-virtual {v0}, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->onBindSViewCoverService()V
@@ -342,7 +311,6 @@
     .locals 4
 
     .prologue
-    .line 664
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -351,12 +319,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 665
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisabledByApp:Z
 
-    .line 666
     iget-boolean v0, p0, Lcom/android/server/cover/StateNotifier;->mCoverOpen:Z
 
     if-nez v0, :cond_0
@@ -365,7 +331,6 @@
 
     if-nez v0, :cond_0
 
-    .line 667
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -374,7 +339,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->goToSleep(J)V
 
-    .line 670
     :cond_0
     return-void
 .end method
@@ -384,12 +348,10 @@
     .param p1, "attached"    # Z
 
     .prologue
-    .line 388
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 389
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -411,13 +373,11 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
-    .line 390
     .local v1, "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     invoke-virtual {v1, p1}, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->onCoverAttachStateChanged(Z)V
 
     goto :goto_0
 
-    .line 392
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :catchall_0
@@ -436,7 +396,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 393
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverVerifyAndAttachStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -445,12 +404,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 394
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverVerifyAndAttachStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 396
     :cond_1
     return-void
 .end method
@@ -461,12 +418,10 @@
     .param p2, "switchState"    # Z
 
     .prologue
-    .line 365
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 366
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -488,16 +443,13 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
-    .line 367
     .local v1, "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     invoke-virtual {v1, p1}, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->onCoverSwitchStateChanged(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 368
     invoke-virtual {v1, p2}, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->onCoverSwitchStateChanged(Z)V
 
     goto :goto_0
 
-    .line 370
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :catchall_0
@@ -516,7 +468,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 371
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverSwitchStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -525,12 +476,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 372
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverSwitchStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 374
     :cond_1
     return-void
 .end method
@@ -540,44 +489,36 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 409
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     if-nez v0, :cond_0
 
-    .line 410
     invoke-direct {p0}, Lcom/android/server/cover/StateNotifier;->createCoverServiceConnectionLocked()V
 
-    .line 413
     :cond_0
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     if-eqz v0, :cond_1
 
-    .line 414
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->updateCoverState(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 417
     :cond_1
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mRunnableForSviewCoverWakeLock:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_2
 
-    .line 418
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mHandler:Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mRunnableForSviewCoverWakeLock:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 419
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mRunnableForSviewCoverWakeLock:Ljava/lang/Runnable;
 
-    .line 421
     :cond_2
     new-instance v0, Lcom/android/server/cover/StateNotifier$1;
 
@@ -585,7 +526,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mRunnableForSviewCoverWakeLock:Ljava/lang/Runnable;
 
-    .line 428
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mHandler:Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mRunnableForSviewCoverWakeLock:Ljava/lang/Runnable;
@@ -594,7 +534,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 429
     return-void
 .end method
 
@@ -605,14 +544,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 377
     const-string v2, "CoverManager.StateNotifier"
 
-    const-string/jumbo v3, "sendCoverAttachStateLocked"
+    const-string v3, "sendCoverAttachStateLocked"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverVerifyAndAttachStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -621,36 +558,29 @@
 
     if-nez v2, :cond_0
 
-    .line 379
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverVerifyAndAttachStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 381
     :cond_0
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 382
     .local v0, "msg":Landroid/os/Message;
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 383
     if-eqz p1, :cond_1
 
     :goto_0
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 384
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mHandler:Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 385
     return-void
 
-    .line 383
     :cond_1
     const/4 v1, 0x0
 
@@ -665,14 +595,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 353
     const-string v2, "CoverManager.StateNotifier"
 
-    const-string/jumbo v3, "sendCoverSwitchStateLocked"
+    const-string v3, "sendCoverSwitchStateLocked"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverSwitchStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -681,25 +609,20 @@
 
     if-nez v2, :cond_0
 
-    .line 355
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSendCoverSwitchStateWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 357
     :cond_0
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 358
     .local v0, "msg":Landroid/os/Message;
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 359
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 360
     if-eqz p2, :cond_1
 
     const/4 v1, 0x1
@@ -707,12 +630,10 @@
     :cond_1
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 361
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mHandler:Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 362
     return-void
 .end method
 
@@ -721,12 +642,10 @@
     .param p1, "attached"    # Z
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     if-nez v0, :cond_0
 
-    .line 433
     new-instance v0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
@@ -735,26 +654,21 @@
 
     iput-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
-    .line 435
     :cond_0
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     if-eqz v0, :cond_1
 
-    .line 436
     if-eqz p1, :cond_2
 
-    .line 437
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     invoke-virtual {v0}, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->onBindSViewCoverService()V
 
-    .line 442
     :cond_1
     :goto_0
     return-void
 
-    .line 439
     :cond_2
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
@@ -768,7 +682,6 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 399
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mUpdateSViewCoverWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -777,32 +690,26 @@
 
     if-nez v1, :cond_0
 
-    .line 400
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mUpdateSViewCoverWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 402
     :cond_0
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 403
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 404
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 405
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mHandler:Lcom/android/server/cover/StateNotifier$StateNotifierHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/cover/StateNotifier$StateNotifierHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 406
     return-void
 .end method
 
@@ -815,14 +722,11 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 552
     if-nez p1, :cond_0
 
-    .line 575
     :goto_0
     return v0
 
-    .line 556
     :cond_0
     const-string v1, "CoverManager.StateNotifier"
 
@@ -848,14 +752,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     iget v1, p1, Lcom/samsung/android/cover/CoverState;->type:I
 
     sparse-switch v1, :sswitch_data_0
 
     goto :goto_0
 
-    .line 568
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -869,7 +771,6 @@
 
     goto :goto_0
 
-    .line 564
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -883,7 +784,6 @@
 
     goto :goto_0
 
-    .line 566
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -897,7 +797,6 @@
 
     goto :goto_0
 
-    .line 570
     :sswitch_3
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -911,7 +810,6 @@
 
     goto :goto_0
 
-    .line 558
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -940,19 +838,16 @@
 
     const/4 v1, 0x0
 
-    .line 610
     const-string v2, "CoverManager.StateNotifier"
 
-    const-string/jumbo v3, "disableLcdOffByCover"
+    const-string v3, "disableLcdOffByCover"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     iget-object v8, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     monitor-enter v8
 
-    .line 612
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
@@ -974,11 +869,9 @@
 
     check-cast v0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
 
-    .line 613
     .local v0, "listener":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     if-eqz v0, :cond_0
 
-    .line 614
     iget-object v2, v0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->token:Landroid/os/IBinder;
 
     invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -987,26 +880,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 615
     const-string v2, "CoverManager.StateNotifier"
 
-    const-string/jumbo v3, "disableLcdOffByCover : LCD off already called by app"
+    const-string v3, "disableLcdOffByCover : LCD off already called by app"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     monitor-exit v8
 
-    .line 627
     :goto_0
     return v1
 
-    .line 621
     .end local v0    # "listener":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     :cond_1
     const/4 v0, 0x0
 
-    .line 622
     .restart local v0    # "listener":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     new-instance v0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
 
@@ -1027,30 +915,25 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;-><init>(Lcom/android/server/cover/StateNotifier;Landroid/os/IBinder;Landroid/content/ComponentName;II)V
 
-    .line 624
     .restart local v0    # "listener":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     const/4 v1, 0x0
 
     invoke-interface {p1, v0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 625
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 626
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisabledByApp:Z
 
-    .line 627
     monitor-exit v8
 
     move v1, v7
 
     goto :goto_0
 
-    .line 628
     .end local v0    # "listener":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     .end local v6    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -1070,17 +953,14 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 673
     const-string v2, " Current StateNotifier state:"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 675
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 676
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1114,7 +994,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 677
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1136,11 +1015,9 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
-    .line 678
     .local v1, "info":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     if-eqz v1, :cond_0
 
-    .line 679
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1195,7 +1072,6 @@
 
     goto :goto_0
 
-    .line 684
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "info":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :catchall_0
@@ -1207,7 +1083,6 @@
 
     throw v2
 
-    .line 683
     .restart local v0    # "i$":Ljava/util/Iterator;
     :cond_1
     :try_start_1
@@ -1215,17 +1090,14 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 684
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 685
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 686
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1249,7 +1121,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 687
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1282,7 +1153,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 688
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1303,11 +1173,9 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
 
-    .line 689
     .local v1, "info":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     if-eqz v1, :cond_2
 
-    .line 690
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1362,7 +1230,6 @@
 
     goto :goto_1
 
-    .line 695
     .end local v1    # "info":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     :catchall_1
     move-exception v2
@@ -1373,19 +1240,16 @@
 
     throw v2
 
-    .line 694
     :cond_3
     :try_start_3
     const-string v2, "  "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 695
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 696
     return-void
 .end method
 
@@ -1402,22 +1266,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 633
     const-string v4, "CoverManager.StateNotifier"
 
-    const-string/jumbo v5, "enableLcdOffByCover"
+    const-string v5, "enableLcdOffByCover"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     iget-object v4, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 635
     const/4 v2, 0x0
 
-    .line 636
     .local v2, "listener":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     :try_start_0
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
@@ -1440,11 +1300,9 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
 
-    .line 637
     .local v1, "l":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     if-eqz v1, :cond_0
 
-    .line 638
     iget-object v5, v1, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->token:Landroid/os/IBinder;
 
     invoke-virtual {p1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1453,50 +1311,40 @@
 
     if-eqz v5, :cond_0
 
-    .line 639
     move-object v2, v1
 
-    .line 645
     .end local v1    # "l":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     :cond_1
     if-nez v2, :cond_2
 
-    .line 646
     const-string v5, "CoverManager.StateNotifier"
 
-    const-string/jumbo v6, "enableLcdOffByCover: matching listener does not exist (must use the same listener for disable and enable)"
+    const-string v6, "enableLcdOffByCover: matching listener does not exist (must use the same listener for disable and enable)"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 648
     monitor-exit v4
 
-    .line 655
     :goto_0
     return v3
 
-    .line 651
     :cond_2
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 653
     const/4 v3, 0x0
 
     invoke-interface {p1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 654
     invoke-direct {p0}, Lcom/android/server/cover/StateNotifier;->enableLcdOffByCoverIfPossibleLocked()V
 
-    .line 655
     const/4 v3, 0x1
 
     monitor-exit v4
 
     goto :goto_0
 
-    .line 656
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -1513,36 +1361,30 @@
     .param p1, "covered"    # Z
 
     .prologue
-    .line 537
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     if-eqz v2, :cond_0
 
-    .line 538
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mSViewCoverBaseServiceDelegate:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     invoke-virtual {v2, p1}, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->onCoverAppCovered(Z)I
 
     move-result v2
 
-    .line 548
     :goto_0
     return v2
 
-    .line 541
     :cond_0
     const-string v2, "CoverManager.StateNotifier"
 
-    const-string/jumbo v3, "onCoverAppCovered, called listener.onCoverAppCovered()"
+    const-string v3, "onCoverAppCovered, called listener.onCoverAppCovered()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 543
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -1564,13 +1406,11 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
-    .line 544
     .local v1, "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     invoke-virtual {v1, p1}, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->onCoverAppCovered(Z)V
 
     goto :goto_1
 
-    .line 546
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :catchall_0
@@ -1589,7 +1429,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 548
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1607,14 +1446,13 @@
     .end annotation
 
     .prologue
-    .line 243
     const-string v1, "CoverManager.StateNotifier"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "registerListenerCallback : binder = "
+    const-string v3, "registerListenerCallback : binder = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1668,12 +1506,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     iget-object v8, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v8
 
-    .line 249
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -1695,11 +1531,9 @@
 
     check-cast v0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
-    .line 250
     .local v0, "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     if-eqz v0, :cond_0
 
-    .line 251
     iget-object v1, v0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1708,26 +1542,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 252
     const-string v1, "CoverManager.StateNotifier"
 
-    const-string/jumbo v2, "registerCallback : duplicated listener handle"
+    const-string v2, "registerCallback : duplicated listener handle"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     monitor-exit v8
 
-    .line 264
     :goto_0
     return-void
 
-    .line 258
     .end local v0    # "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :cond_1
     const/4 v0, 0x0
 
-    .line 259
     .restart local v0    # "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     new-instance v0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
@@ -1750,18 +1579,15 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;-><init>(Lcom/android/server/cover/StateNotifier;Landroid/os/IBinder;Landroid/content/ComponentName;III)V
 
-    .line 261
     .restart local v0    # "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     const/4 v1, 0x0
 
     invoke-interface {p1, v0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 262
     iget-object v1, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 263
     monitor-exit v8
 
     goto :goto_0
@@ -1790,14 +1616,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 268
     const-string v4, "CoverManager.StateNotifier"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "unregisterCallback : binder = "
+    const-string v6, "unregisterCallback : binder = "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1841,15 +1666,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     iget-object v4, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 273
     const/4 v2, 0x0
 
-    .line 274
     .local v2, "listener":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :try_start_0
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
@@ -1872,11 +1694,9 @@
 
     check-cast v1, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
 
-    .line 275
     .local v1, "l":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     if-eqz v1, :cond_0
 
-    .line 276
     iget-object v5, v1, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     invoke-virtual {p1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1885,29 +1705,23 @@
 
     if-eqz v5, :cond_0
 
-    .line 277
     move-object v2, v1
 
-    .line 283
     .end local v1    # "l":Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;
     :cond_1
     if-nez v2, :cond_2
 
-    .line 284
     const-string v5, "CoverManager.StateNotifier"
 
-    const-string/jumbo v6, "unregisterCallback : matching listener is NOT EXIST"
+    const-string v6, "unregisterCallback : matching listener is NOT EXIST"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     monitor-exit v4
 
-    .line 296
     :goto_0
     return v3
 
-    .line 288
     :cond_2
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -1917,35 +1731,28 @@
 
     if-nez v3, :cond_3
 
-    .line 289
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 291
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 292
     const/4 v3, 0x0
 
     invoke-interface {p1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 294
     :cond_4
     iget-object v3, p0, Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/lang/Object;->notify()V
 
-    .line 295
     monitor-exit v4
 
-    .line 296
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 295
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -1966,27 +1773,23 @@
     .prologue
     const/16 v5, 0xff
 
-    .line 313
     iput-boolean p1, p0, Lcom/android/server/cover/StateNotifier;->mAttached:Z
 
-    .line 314
     iget v2, p2, Lcom/samsung/android/cover/CoverState;->type:I
 
     iput v2, p0, Lcom/android/server/cover/StateNotifier;->mCoverType:I
 
-    .line 315
     iget-boolean v2, p2, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     iput-boolean v2, p0, Lcom/android/server/cover/StateNotifier;->mCoverOpen:Z
 
-    .line 318
     const-string v2, "CoverManager.StateNotifier"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateCoverVerfiedState : attached = "
+    const-string v4, "updateCoverVerfiedState : attached = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2002,25 +1805,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     invoke-virtual {p0, p2}, Lcom/android/server/cover/StateNotifier;->checkSystemFeatureForCoverType(Lcom/samsung/android/cover/CoverState;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 321
     invoke-direct {p0, p1}, Lcom/android/server/cover/StateNotifier;->sendCoverAttachStateLocked(Z)V
 
-    .line 323
     :cond_0
     const/4 v0, 0x0
 
-    .line 324
     .local v0, "isNFCSmartCoverType":Z
     const/4 v1, 0x0
 
-    .line 325
     .local v1, "serialNumber":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -2034,10 +1832,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 329
     if-eqz p2, :cond_1
 
-    .line 330
     invoke-virtual {p2}, Lcom/samsung/android/cover/CoverState;->getType()I
 
     move-result v2
@@ -2046,13 +1842,11 @@
 
     const/4 v0, 0x1
 
-    .line 331
     :goto_0
     invoke-virtual {p2}, Lcom/samsung/android/cover/CoverState;->getSerialNumber()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 334
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/cover/StateNotifier;->checkSystemFeatureForCoverType(Lcom/samsung/android/cover/CoverState;)Z
 
@@ -2068,10 +1862,8 @@
 
     if-eq v2, v5, :cond_2
 
-    .line 337
     invoke-direct {p0, p1}, Lcom/android/server/cover/StateNotifier;->updateSViewCoverServiceConnectionLocked(Z)V
 
-    .line 341
     :cond_2
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -2085,25 +1877,20 @@
 
     if-eqz v2, :cond_3
 
-    .line 342
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
     invoke-static {v2, p1, p3}, Lcom/android/server/cover/CoverManagerUtils;->showRuggedizedPopup(Landroid/content/Context;ZZ)V
 
-    .line 345
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 346
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v1, p3}, Lcom/android/server/cover/CoverManagerUtils;->sendCoverInformationToAgent(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 348
     :cond_4
     return-void
 
-    .line 330
     :cond_5
     const/4 v0, 0x0
 
@@ -2116,14 +1903,13 @@
     .param p2, "isBoot"    # Z
 
     .prologue
-    .line 301
     const-string v0, "CoverManager.StateNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateCoverSwitchState : switchState = "
+    const-string v2, "updateCoverSwitchState : switchState = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2189,20 +1975,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     iget-boolean v0, p1, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     iput-boolean v0, p0, Lcom/android/server/cover/StateNotifier;->mCoverOpen:Z
 
-    .line 307
     invoke-direct {p0, p1}, Lcom/android/server/cover/StateNotifier;->updateSViewCoverServiceLocked(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 309
     iget-boolean v0, p1, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/cover/StateNotifier;->sendCoverSwitchStateLocked(Lcom/samsung/android/cover/CoverState;Z)V
 
-    .line 310
     return-void
 .end method
 
@@ -2215,18 +1997,15 @@
 
     const/4 v6, 0x0
 
-    .line 456
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
     move-result v1
 
-    .line 457
     .local v1, "isOpen":Z
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getType()I
 
     move-result v4
 
-    .line 459
     .local v4, "type":I
     const-string v5, "CoverManager.StateNotifier"
 
@@ -2234,7 +2013,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "updatePowerStateLocked : isOpen="
+    const-string v8, "updatePowerStateLocked : isOpen="
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2260,7 +2039,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     iget-object v7, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     if-nez v1, :cond_1
@@ -2270,10 +2048,8 @@
     :goto_0
     invoke-virtual {v7, v5}, Landroid/os/PowerManager;->updateCoverState(Z)V
 
-    .line 463
     sparse-switch v4, :sswitch_data_0
 
-    .line 534
     :cond_0
     :goto_1
     return-void
@@ -2281,10 +2057,8 @@
     :cond_1
     move v5, v6
 
-    .line 461
     goto :goto_0
 
-    .line 467
     :sswitch_0
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -2298,7 +2072,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 468
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {v5}, Landroid/os/PowerManager;->isInteractive()Z
@@ -2307,7 +2080,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 469
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2318,7 +2090,6 @@
 
     goto :goto_1
 
-    .line 474
     :sswitch_1
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -2332,7 +2103,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 475
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {v5}, Landroid/os/PowerManager;->isInteractive()Z
@@ -2341,7 +2111,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 476
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2352,7 +2121,6 @@
 
     goto :goto_1
 
-    .line 482
     :sswitch_2
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -2366,7 +2134,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 483
     invoke-static {}, Landroid/os/FactoryTest;->isFactoryMode()Z
 
     move-result v5
@@ -2387,21 +2154,18 @@
 
     if-eqz v5, :cond_3
 
-    .line 485
     :cond_2
     const-string v5, "CoverManager.StateNotifier"
 
-    const-string/jumbo v6, "updateSViewCoverServiceLocked"
+    const-string v6, "updateSViewCoverServiceLocked"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 488
     :cond_3
     if-eqz v1, :cond_5
 
-    .line 489
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {v5}, Landroid/os/PowerManager;->isInteractive()Z
@@ -2410,7 +2174,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 490
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2421,7 +2184,6 @@
 
     goto :goto_1
 
-    .line 492
     :cond_4
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
@@ -2433,18 +2195,15 @@
 
     goto/16 :goto_1
 
-    .line 494
     :cond_5
     iget-boolean v5, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisabledByApp:Z
 
     if-eqz v5, :cond_8
 
-    .line 497
     iget-object v6, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     monitor-enter v6
 
-    .line 498
     :try_start_0
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
@@ -2454,7 +2213,6 @@
 
     if-nez v5, :cond_6
 
-    .line 499
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2475,7 +2233,6 @@
 
     check-cast v2, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
 
-    .line 500
     .local v2, "l":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2509,7 +2266,6 @@
 
     move-result-object v3
 
-    .line 503
     .local v3, "logMSG":Ljava/lang/String;
     const-string v5, "CoverManager.StateNotifier"
 
@@ -2541,7 +2297,6 @@
 
     goto :goto_2
 
-    .line 512
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v2    # "l":Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;
     .end local v3    # "logMSG":Ljava/lang/String;
@@ -2554,14 +2309,12 @@
 
     throw v5
 
-    .line 509
     :cond_6
     const/4 v5, 0x0
 
     :try_start_1
     iput-boolean v5, p0, Lcom/android/server/cover/StateNotifier;->mLcdOffDisabledByApp:Z
 
-    .line 510
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2570,7 +2323,6 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/os/PowerManager;->goToSleep(J)V
 
-    .line 512
     :cond_7
     monitor-exit v6
     :try_end_1
@@ -2578,7 +2330,6 @@
 
     goto/16 :goto_1
 
-    .line 514
     :cond_8
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
@@ -2590,7 +2341,6 @@
 
     goto/16 :goto_1
 
-    .line 519
     :sswitch_3
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mContext:Landroid/content/Context;
 
@@ -2604,10 +2354,8 @@
 
     if-eqz v5, :cond_0
 
-    .line 520
     if-eqz v1, :cond_0
 
-    .line 521
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {v5}, Landroid/os/PowerManager;->isInteractive()Z
@@ -2616,7 +2364,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 522
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2627,7 +2374,6 @@
 
     goto/16 :goto_1
 
-    .line 524
     :cond_9
     iget-object v5, p0, Lcom/android/server/cover/StateNotifier;->mPowerManager:Landroid/os/PowerManager;
 
@@ -2639,7 +2385,6 @@
 
     goto/16 :goto_1
 
-    .line 463
     nop
 
     :sswitch_data_0

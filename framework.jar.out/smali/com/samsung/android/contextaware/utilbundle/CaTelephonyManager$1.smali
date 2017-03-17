@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 338
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,15 +40,13 @@
     .prologue
     const/16 v1, -0x27
 
-    .line 340
     packed-switch p1, :pswitch_data_0
 
-    .line 358
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "state is unknown (state : "
+    const-string v1, "state is unknown (state : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,17 +72,14 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 362
     :goto_0
     return-void
 
-    .line 342
     :pswitch_0
     const-string v0, "CALL_STATE_IDLE"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 344
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     const/16 v1, -0x28
@@ -95,13 +89,11 @@
 
     goto :goto_0
 
-    .line 347
     :pswitch_1
     const-string v0, "CALL_STATE_RINGING"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 349
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->sendCallStatusToSensorHub(I)V
@@ -109,13 +101,11 @@
 
     goto :goto_0
 
-    .line 353
     :pswitch_2
     const-string v0, "CALL_STATE_OFFHOOK"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 355
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->sendCallStatusToSensorHub(I)V
@@ -123,7 +113,6 @@
 
     goto :goto_0
 
-    .line 340
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -137,7 +126,6 @@
     .param p1, "signalStrength"    # Landroid/telephony/SignalStrength;
 
     .prologue
-    .line 401
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -149,7 +137,6 @@
 
     move-result-object v0
 
-    .line 403
     .local v0, "cellLocation":Landroid/telephony/CellLocation;
     if-eqz v0, :cond_0
 
@@ -164,19 +151,16 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 404
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     # setter for: Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
     invoke-static {v1, v0}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->access$1002(Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;Landroid/telephony/CellLocation;)Landroid/telephony/CellLocation;
 
-    .line 405
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->sendCellInfoToSensorHub()V
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->access$1100(Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;)V
 
-    .line 407
     :cond_0
     return-void
 .end method

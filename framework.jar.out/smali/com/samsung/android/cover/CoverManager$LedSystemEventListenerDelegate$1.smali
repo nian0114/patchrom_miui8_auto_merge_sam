@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1078
     iput-object p1, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate$1;->val$this$0:Lcom/samsung/android/cover/CoverManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1081
     iget-object v1, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;
 
     # getter for: Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$LedSystemEventListener;
@@ -53,23 +51,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 1082
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1090
     :cond_0
     :goto_0
     return-void
 
-    .line 1084
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 1085
     .local v0, "args":Landroid/os/Bundle;
     iget-object v1, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;
 
@@ -84,7 +78,6 @@
 
     goto :goto_0
 
-    .line 1082
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

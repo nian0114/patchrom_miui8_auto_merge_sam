@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 2699
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p2, "two"    # Ljava/lang/String;
 
     .prologue
-    .line 2738
     if-eq p1, p2, :cond_1
 
     if-eqz p1, :cond_0
@@ -77,15 +75,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2710
     if-nez p1, :cond_1
 
-    .line 2717
     :cond_0
     :goto_0
     return v1
 
-    .line 2713
     :cond_1
     instance-of v2, p1, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
 
@@ -93,10 +88,8 @@
 
     move-object v0, p1
 
-    .line 2714
     check-cast v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
 
-    .line 2715
     .local v0, "other":Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
     iget-object v1, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;->name:Ljava/lang/String;
 
@@ -116,7 +109,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2728
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
@@ -125,10 +117,8 @@
 
     move-object v0, p1
 
-    .line 2729
     check-cast v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
 
-    .line 2730
     .local v0, "other":Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;->name:Ljava/lang/String;
 
@@ -140,7 +130,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2731
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;->publicId:Ljava/lang/String;
 
     iget-object v3, v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;->publicId:Ljava/lang/String;
@@ -151,7 +140,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2732
     iget-object v2, p0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;->expandedSystemId:Ljava/lang/String;
 
     iget-object v3, v0, Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;->expandedSystemId:Ljava/lang/String;
@@ -162,10 +150,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 2730
     const/4 v1, 0x1
 
-    .line 2734
     .end local v0    # "other":Lmf/org/apache/xerces/xinclude/XIncludeHandler$Notation;
     :cond_0
     return v1

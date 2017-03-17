@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 702
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$2;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 705
     const-string v1, "started"
 
     const/4 v2, 0x0
@@ -52,14 +50,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 708
     const-string v1, "WifiP2pService"
 
     const-string v2, "OnReceive - com.android.settings.wifi.p2p.SETTINGS_STRATED"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$2;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mContext:Landroid/content/Context;
@@ -77,11 +73,9 @@
 
     move-result-object v0
 
-    .line 711
     .local v0, "ssid":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 712
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$2;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mContext:Landroid/content/Context;
@@ -99,7 +93,6 @@
 
     move-result-object v0
 
-    .line 714
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$2;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
@@ -111,7 +104,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->setAndPersistDeviceName(Ljava/lang/String;)Z
     invoke-static {v1, v0}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$400(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Ljava/lang/String;)Z
 
-    .line 716
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$2;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mP2pStateMachine:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -126,14 +118,12 @@
 
     if-nez v1, :cond_1
 
-    .line 717
     const-string v1, "WifiP2pService"
 
     const-string v2, "onReceive - Failed to set my phone number info into probe response"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
     .end local v0    # "ssid":Ljava/lang/String;
     :cond_1
     return-void

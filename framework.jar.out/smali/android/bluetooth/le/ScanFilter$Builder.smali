@@ -41,10 +41,8 @@
     .locals 1
 
     .prologue
-    .line 456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 468
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerId:I
@@ -58,7 +56,6 @@
     .locals 12
 
     .prologue
-    .line 627
     new-instance v0, Landroid/bluetooth/le/ScanFilter;
 
     iget-object v1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mDeviceName:Ljava/lang/String;
@@ -93,7 +90,6 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 489
     if-eqz p1, :cond_0
 
     invoke-static {p1}, Landroid/bluetooth/BluetoothAdapter;->checkBluetoothAddress(Ljava/lang/String;)Z
@@ -102,14 +98,13 @@
 
     if-nez v0, :cond_0
 
-    .line 490
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "invalid device address "
+    const-string v2, "invalid device address "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,11 +122,9 @@
 
     throw v0
 
-    .line 492
     :cond_0
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mDeviceAddress:Ljava/lang/String;
 
-    .line 493
     return-object p0
 .end method
 
@@ -140,10 +133,8 @@
     .param p1, "deviceName"    # Ljava/lang/String;
 
     .prologue
-    .line 476
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mDeviceName:Ljava/lang/String;
 
-    .line 477
     return-object p0
 .end method
 
@@ -153,33 +144,27 @@
     .param p2, "manufacturerData"    # [B
 
     .prologue
-    .line 578
     if-eqz p2, :cond_0
 
     if-gez p1, :cond_0
 
-    .line 579
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "invalid manufacture id"
+    const-string v1, "invalid manufacture id"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 581
     :cond_0
     iput p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerId:I
 
-    .line 582
     iput-object p2, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerData:[B
 
-    .line 583
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerDataMask:[B
 
-    .line 584
     return-object p0
 .end method
 
@@ -190,41 +175,35 @@
     .param p3, "manufacturerDataMask"    # [B
 
     .prologue
-    .line 600
     if-eqz p2, :cond_0
 
     if-gez p1, :cond_0
 
-    .line 601
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "invalid manufacture id"
+    const-string v1, "invalid manufacture id"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 603
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerDataMask:[B
 
     if-eqz v0, :cond_2
 
-    .line 604
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerData:[B
 
     if-nez v0, :cond_1
 
-    .line 605
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "manufacturerData is null while manufacturerDataMask is not null"
+    const-string v1, "manufacturerData is null while manufacturerDataMask is not null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 610
     :cond_1
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerData:[B
 
@@ -236,26 +215,21 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 611
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "size mismatch for manufacturerData and manufacturerDataMask"
+    const-string v1, "size mismatch for manufacturerData and manufacturerDataMask"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 615
     :cond_2
     iput p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerId:I
 
-    .line 616
     iput-object p2, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerData:[B
 
-    .line 617
     iput-object p3, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mManufacturerDataMask:[B
 
-    .line 618
     return-object p0
 .end method
 
@@ -265,31 +239,25 @@
     .param p2, "serviceData"    # [B
 
     .prologue
-    .line 528
     if-nez p1, :cond_0
 
-    .line 529
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "serviceDataUuid is null"
+    const-string v1, "serviceDataUuid is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 531
     :cond_0
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
-    .line 532
     iput-object p2, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceData:[B
 
-    .line 533
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceDataMask:[B
 
-    .line 534
     return-object p0
 .end method
 
@@ -300,39 +268,33 @@
     .param p3, "serviceDataMask"    # [B
 
     .prologue
-    .line 549
     if-nez p1, :cond_0
 
-    .line 550
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "serviceDataUuid is null"
+    const-string v1, "serviceDataUuid is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 552
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceDataMask:[B
 
     if-eqz v0, :cond_2
 
-    .line 553
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceData:[B
 
     if-nez v0, :cond_1
 
-    .line 554
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "serviceData is null while serviceDataMask is not null"
+    const-string v1, "serviceData is null while serviceDataMask is not null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 559
     :cond_1
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceData:[B
 
@@ -344,26 +306,21 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 560
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "size mismatch for service data and service data mask"
+    const-string v1, "size mismatch for service data and service data mask"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 564
     :cond_2
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
-    .line 565
     iput-object p2, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceData:[B
 
-    .line 566
     iput-object p3, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceDataMask:[B
 
-    .line 567
     return-object p0
 .end method
 
@@ -372,15 +329,12 @@
     .param p1, "serviceUuid"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 500
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceUuid:Landroid/os/ParcelUuid;
 
-    .line 501
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mUuidMask:Landroid/os/ParcelUuid;
 
-    .line 502
     return-object p0
 .end method
 
@@ -390,7 +344,6 @@
     .param p2, "uuidMask"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 514
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mUuidMask:Landroid/os/ParcelUuid;
 
     if-eqz v0, :cond_0
@@ -399,22 +352,18 @@
 
     if-nez v0, :cond_0
 
-    .line 515
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "uuid is null while uuidMask is not null!"
+    const-string v1, "uuid is null while uuidMask is not null!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 517
     :cond_0
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mServiceUuid:Landroid/os/ParcelUuid;
 
-    .line 518
     iput-object p2, p0, Landroid/bluetooth/le/ScanFilter$Builder;->mUuidMask:Landroid/os/ParcelUuid;
 
-    .line 519
     return-object p0
 .end method

@@ -43,41 +43,31 @@
     .param p6, "displayId"    # I
 
     .prologue
-    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 179
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->initialMatrix:Landroid/graphics/Matrix;
 
-    .line 180
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->finalMatrix:Landroid/graphics/Matrix;
 
-    .line 163
     iput-object p1, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->surface:Landroid/view/SurfaceControl;
 
-    .line 164
     iput p2, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->layer:I
 
-    .line 165
     iput-object p3, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->win:Lcom/android/server/wm/WindowState;
 
-    .line 166
     iput p4, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->width:I
 
-    .line 167
     iput p5, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->height:I
 
-    .line 168
     iput p6, p0, Lcom/android/server/wm/DualScreenTransition$TransitTargetInfo;->displayId:I
 
-    .line 169
     return-void
 .end method

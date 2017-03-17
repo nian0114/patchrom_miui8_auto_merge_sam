@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2022
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$3;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2025
     const-string v1, "wifi_state"
 
     const/16 v2, 0xe
@@ -48,7 +46,6 @@
 
     move-result v0
 
-    .line 2026
     .local v0, "apState":I
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$3;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -59,6 +56,5 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 2033
     return-void
 .end method

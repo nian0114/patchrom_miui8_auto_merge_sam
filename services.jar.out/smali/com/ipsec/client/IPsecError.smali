@@ -141,7 +141,6 @@
 
     const/4 v3, 0x0
 
-    .line 20
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_OK"
@@ -150,7 +149,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_OK:Lcom/ipsec/client/IPsecError;
 
-    .line 26
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_FAILED"
@@ -159,7 +157,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_FAILED:Lcom/ipsec/client/IPsecError;
 
-    .line 32
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_PARAMETER"
@@ -168,7 +165,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_PARAMETER:Lcom/ipsec/client/IPsecError;
 
-    .line 39
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_REMOTE_ERROR"
@@ -177,7 +173,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_REMOTE_ERROR:Lcom/ipsec/client/IPsecError;
 
-    .line 45
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_ALREADY_CONNECTED"
@@ -186,7 +181,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_ALREADY_CONNECTED:Lcom/ipsec/client/IPsecError;
 
-    .line 51
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_NOT_CONNECTED"
@@ -197,7 +191,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_NOT_CONNECTED:Lcom/ipsec/client/IPsecError;
 
-    .line 57
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_RECEIVED_EVENT"
@@ -208,7 +201,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_RECEIVED_EVENT:Lcom/ipsec/client/IPsecError;
 
-    .line 64
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_REMOTE_SERVICE_CANNOT_CONNECT"
@@ -219,7 +211,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_REMOTE_SERVICE_CANNOT_CONNECT:Lcom/ipsec/client/IPsecError;
 
-    .line 70
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_REMOTE_SERVICE_NOT_CONNECTED"
@@ -230,7 +221,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_REMOTE_SERVICE_NOT_CONNECTED:Lcom/ipsec/client/IPsecError;
 
-    .line 76
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_DAEMON_NOT_CONNECTED"
@@ -241,7 +231,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_DAEMON_NOT_CONNECTED:Lcom/ipsec/client/IPsecError;
 
-    .line 83
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IKE_DH_GROUP"
@@ -252,7 +241,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IKE_DH_GROUP:Lcom/ipsec/client/IPsecError;
 
-    .line 89
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IKE_ENCRYPTION"
@@ -263,7 +251,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IKE_ENCRYPTION:Lcom/ipsec/client/IPsecError;
 
-    .line 95
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IKE_INTEGRITY"
@@ -274,7 +261,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IKE_INTEGRITY:Lcom/ipsec/client/IPsecError;
 
-    .line 101
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IKE_VERSION"
@@ -285,7 +271,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IKE_VERSION:Lcom/ipsec/client/IPsecError;
 
-    .line 107
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IKE_WINDOW_SIZE"
@@ -296,7 +281,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IKE_WINDOW_SIZE:Lcom/ipsec/client/IPsecError;
 
-    .line 113
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IKE_LIFETIME"
@@ -307,7 +291,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IKE_LIFETIME:Lcom/ipsec/client/IPsecError;
 
-    .line 119
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IPSEC_LIFETIME"
@@ -318,7 +301,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IPSEC_LIFETIME:Lcom/ipsec/client/IPsecError;
 
-    .line 125
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IPSEC_ENCRYPTION"
@@ -329,7 +311,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IPSEC_ENCRYPTION:Lcom/ipsec/client/IPsecError;
 
-    .line 131
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IPSEC_INTEGRITY"
@@ -340,7 +321,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IPSEC_INTEGRITY:Lcom/ipsec/client/IPsecError;
 
-    .line 138
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IPSEC_ALGORITHM_COMBINATION"
@@ -351,7 +331,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IPSEC_ALGORITHM_COMBINATION:Lcom/ipsec/client/IPsecError;
 
-    .line 144
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_PFS_DH_GROUP"
@@ -362,7 +341,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_PFS_DH_GROUP:Lcom/ipsec/client/IPsecError;
 
-    .line 150
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_TUNNEL_MODE"
@@ -373,7 +351,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_TUNNEL_MODE:Lcom/ipsec/client/IPsecError;
 
-    .line 156
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_GW_ADDRESS"
@@ -384,7 +361,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_GW_ADDRESS:Lcom/ipsec/client/IPsecError;
 
-    .line 162
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_INTERNAL_SUBNET"
@@ -395,7 +371,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_INTERNAL_SUBNET:Lcom/ipsec/client/IPsecError;
 
-    .line 168
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_INTERFACE"
@@ -406,7 +381,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_INTERFACE:Lcom/ipsec/client/IPsecError;
 
-    .line 174
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_OWN_IDENTITY"
@@ -417,7 +391,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_OWN_IDENTITY:Lcom/ipsec/client/IPsecError;
 
-    .line 180
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_REMOTE_IDENTITY"
@@ -428,7 +401,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_REMOTE_IDENTITY:Lcom/ipsec/client/IPsecError;
 
-    .line 186
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_HOST_AUTHENTICATION"
@@ -439,7 +411,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_HOST_AUTHENTICATION:Lcom/ipsec/client/IPsecError;
 
-    .line 192
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_EAP_METHOD"
@@ -450,7 +421,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_EAP_METHOD:Lcom/ipsec/client/IPsecError;
 
-    .line 198
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_PRESHARED_KEY"
@@ -461,7 +431,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_PRESHARED_KEY:Lcom/ipsec/client/IPsecError;
 
-    .line 204
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_CA_CERTIFICATE"
@@ -472,7 +441,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_CA_CERTIFICATE:Lcom/ipsec/client/IPsecError;
 
-    .line 210
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IM_CERTIFICATE"
@@ -483,7 +451,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IM_CERTIFICATE:Lcom/ipsec/client/IPsecError;
 
-    .line 216
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_CERTIFICATE"
@@ -494,7 +461,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_CERTIFICATE:Lcom/ipsec/client/IPsecError;
 
-    .line 222
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_PRIVATE_KEY"
@@ -505,7 +471,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_PRIVATE_KEY:Lcom/ipsec/client/IPsecError;
 
-    .line 228
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_USERNAME"
@@ -516,7 +481,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_USERNAME:Lcom/ipsec/client/IPsecError;
 
-    .line 234
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_PASSWORD"
@@ -527,7 +491,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_PASSWORD:Lcom/ipsec/client/IPsecError;
 
-    .line 240
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_VIRTUAL_ADAPTER_NAME"
@@ -538,7 +501,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_VIRTUAL_ADAPTER_NAME:Lcom/ipsec/client/IPsecError;
 
-    .line 246
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_VIRTUAL_ADAPTER_CONFIGURATION"
@@ -549,7 +511,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_VIRTUAL_ADAPTER_CONFIGURATION:Lcom/ipsec/client/IPsecError;
 
-    .line 252
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_RAC_ATTRIBUTE"
@@ -560,7 +521,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_RAC_ATTRIBUTE:Lcom/ipsec/client/IPsecError;
 
-    .line 258
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_NATT_KEEPALIVE_TIMEOUT"
@@ -571,7 +531,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_NATT_KEEPALIVE_TIMEOUT:Lcom/ipsec/client/IPsecError;
 
-    .line 264
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_DPD_TIMEOUT"
@@ -582,7 +541,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_DPD_TIMEOUT:Lcom/ipsec/client/IPsecError;
 
-    .line 271
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_SYSTEM_VPN_ALREADY_EXISTS"
@@ -593,7 +551,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_SYSTEM_VPN_ALREADY_EXISTS:Lcom/ipsec/client/IPsecError;
 
-    .line 277
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_CANNOT_CONFIGURE_GLOBAL_DNS"
@@ -604,7 +561,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_CANNOT_CONFIGURE_GLOBAL_DNS:Lcom/ipsec/client/IPsecError;
 
-    .line 283
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_IKE_NEGOTIATION_FAILED"
@@ -615,7 +571,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_IKE_NEGOTIATION_FAILED:Lcom/ipsec/client/IPsecError;
 
-    .line 289
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_TIMEOUT"
@@ -626,7 +581,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_TIMEOUT:Lcom/ipsec/client/IPsecError;
 
-    .line 295
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_CERTIFICATE_VALIDATION_FAILED"
@@ -637,7 +591,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_CERTIFICATE_VALIDATION_FAILED:Lcom/ipsec/client/IPsecError;
 
-    .line 301
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_UNKNOWN_ERROR"
@@ -648,7 +601,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_UNKNOWN_ERROR:Lcom/ipsec/client/IPsecError;
 
-    .line 307
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_SECURITY_MODULE_NOT_AVAILABLE"
@@ -659,7 +611,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_SECURITY_MODULE_NOT_AVAILABLE:Lcom/ipsec/client/IPsecError;
 
-    .line 313
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_CONNECTION_LOST_DPD_TIMEOUT"
@@ -670,7 +621,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_CONNECTION_LOST_DPD_TIMEOUT:Lcom/ipsec/client/IPsecError;
 
-    .line 319
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_CONNECTION_LOST"
@@ -681,7 +631,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_CONNECTION_LOST:Lcom/ipsec/client/IPsecError;
 
-    .line 325
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_IPSEC_BOUNDARY"
@@ -692,7 +641,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_IPSEC_BOUNDARY:Lcom/ipsec/client/IPsecError;
 
-    .line 331
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_MESSAGE_DECODE_FAILED"
@@ -703,7 +651,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_MESSAGE_DECODE_FAILED:Lcom/ipsec/client/IPsecError;
 
-    .line 337
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_OPERATION_FAILED"
@@ -714,7 +661,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_OPERATION_FAILED:Lcom/ipsec/client/IPsecError;
 
-    .line 343
     new-instance v0, Lcom/ipsec/client/IPsecError;
 
     const-string v1, "IPSEC_INVALID_EAP_REAUTH_DATA"
@@ -725,7 +671,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecError;->IPSEC_INVALID_EAP_REAUTH_DATA:Lcom/ipsec/client/IPsecError;
 
-    .line 13
     const/16 v0, 0x36
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecError;
@@ -1058,7 +1003,6 @@
     .end annotation
 
     .prologue
-    .line 13
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1069,7 +1013,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     const-class v0, Lcom/ipsec/client/IPsecError;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1085,7 +1028,6 @@
     .locals 1
 
     .prologue
-    .line 13
     sget-object v0, Lcom/ipsec/client/IPsecError;->$VALUES:[Lcom/ipsec/client/IPsecError;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecError;->clone()Ljava/lang/Object;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3448
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$3$1;->this$3:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 10
 
     .prologue
-    .line 3450
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 3451
     .local v2, "nowRtc":J
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$3$1;->this$3:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$3;
 
@@ -58,7 +55,6 @@
 
     monitor-enter v5
 
-    .line 3452
     :try_start_0
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$3$1;->this$3:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$3;
 
@@ -73,7 +69,6 @@
 
     move-result-object v1
 
-    .line 3453
     .local v1, "itWatch":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;>;"
     :cond_0
     :goto_0
@@ -83,14 +78,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 3454
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;
 
-    .line 3455
     .local v0, "ar":Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;
     iget-boolean v4, v0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;->isMonitorON:Z
 
@@ -106,14 +99,12 @@
 
     if-gez v4, :cond_0
 
-    .line 3457
     const/4 v4, 0x1
 
     iput-boolean v4, v0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;->isScnON:Z
 
     goto :goto_0
 
-    .line 3460
     .end local v0    # "ar":Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;
     .end local v1    # "itWatch":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$AlarmRecord;>;"
     :catchall_0
@@ -132,6 +123,5 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3461
     return-void
 .end method

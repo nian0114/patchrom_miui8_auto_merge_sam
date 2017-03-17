@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 636
     iput-object p1, p0, Lcom/android/server/enterprise/security/PasswordPolicy$1;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,30 +38,25 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 641
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 642
     .local v2, "action":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/security/PasswordPolicy$1;->getSendingUserId()I
 
     move-result v9
 
-    .line 644
     .local v9, "sendingUserId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 645
     .local v10, "token":J
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v4
 
-    .line 647
     .local v4, "currentUserId":I
     const-string v12, "com.android.server.enterprise.PWD_CHANGE_TIMEOUT"
 
@@ -72,7 +66,6 @@
 
     if-eqz v12, :cond_1
 
-    .line 649
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/enterprise/security/PasswordPolicy$1;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
@@ -80,16 +73,13 @@
     # invokes: Lcom/android/server/enterprise/security/PasswordPolicy;->enforcePwdChangeIfNeededOnTimeout(I)V
     invoke-static {v12, v9}, Lcom/android/server/enterprise/security/PasswordPolicy;->access$000(Lcom/android/server/enterprise/security/PasswordPolicy;I)V
 
-    .line 695
     :cond_0
     :goto_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 696
     :goto_1
     return-void
 
-    .line 651
     :cond_1
     const-string v12, "android.intent.action.USER_STARTED"
 
@@ -99,7 +89,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 652
     const-string v12, "android.intent.extra.user_handle"
 
     const/4 v13, -0x1
@@ -110,11 +99,9 @@
 
     move-result v8
 
-    .line 653
     .local v8, "newCurrentUser":I
     if-ltz v8, :cond_0
 
-    .line 654
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/enterprise/security/PasswordPolicy$1;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
@@ -124,7 +111,6 @@
 
     goto :goto_0
 
-    .line 657
     .end local v8    # "newCurrentUser":I
     :cond_2
     const-string v12, "android.intent.action.USER_SWITCHED"
@@ -135,7 +121,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 658
     const-string v12, "android.intent.extra.user_handle"
 
     const/4 v13, -0x1
@@ -146,11 +131,9 @@
 
     move-result v8
 
-    .line 659
     .restart local v8    # "newCurrentUser":I
     if-ltz v8, :cond_0
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/enterprise/security/PasswordPolicy$1;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
@@ -160,7 +143,6 @@
 
     goto :goto_0
 
-    .line 663
     .end local v8    # "newCurrentUser":I
     :cond_3
     const-string v12, "android.intent.action.PHONE_STATE"
@@ -171,7 +153,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 664
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/enterprise/security/PasswordPolicy$1;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
@@ -187,7 +168,6 @@
 
     if-nez v12, :cond_0
 
-    .line 665
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/enterprise/security/PasswordPolicy$1;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
@@ -197,9 +177,8 @@
 
     goto :goto_0
 
-    .line 668
     :cond_4
-    const-string/jumbo v12, "edm.intent.action.internal.NOTIFICATION_PASSWORD_EXPIRED"
+    const-string v12, "edm.intent.action.internal.NOTIFICATION_PASSWORD_EXPIRED"
 
     invoke-virtual {v12, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -207,14 +186,12 @@
 
     if-eqz v12, :cond_0
 
-    .line 669
     const-string v12, "PasswordPolicy"
 
     const-string v13, "Received MDM_PASSWORD_EXPIRING_NOTIFICATION intent"
 
     invoke-static {v12, v13}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 671
     const/4 v12, 0x1
 
     move-object/from16 v0, p0
@@ -230,8 +207,7 @@
 
     if-ne v12, v13, :cond_0
 
-    .line 672
-    const-string/jumbo v12, "expiration"
+    const-string v12, "expiration"
 
     const-wide/16 v14, -0x1
 
@@ -241,7 +217,6 @@
 
     move-result-wide v6
 
-    .line 673
     .local v6, "expiration":J
     const-wide/16 v12, -0x1
 
@@ -257,7 +232,6 @@
 
     if-lez v12, :cond_6
 
-    .line 674
     :cond_5
     const-string v12, "PasswordPolicy"
 
@@ -283,7 +257,6 @@
 
     goto/16 :goto_1
 
-    .line 677
     :cond_6
     const-string v12, "PasswordPolicy"
 
@@ -291,18 +264,15 @@
 
     invoke-static {v12, v13}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 680
     const/16 v12, 0x64
 
     if-ge v9, v12, :cond_7
 
-    .line 683
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v3
 
-    .line 684
     .local v3, "am":Landroid/app/IActivityManager;
     const-string v12, "com.android.settings"
 
@@ -310,7 +280,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 690
     .end local v3    # "am":Landroid/app/IActivityManager;
     :cond_7
     :goto_2
@@ -325,15 +294,13 @@
 
     goto/16 :goto_0
 
-    .line 685
     :catch_0
     move-exception v5
 
-    .line 686
     .local v5, "e":Landroid/os/RemoteException;
     const-string v12, "PasswordPolicy"
 
-    const-string/jumbo v13, "forceStopPackage failed"
+    const-string v13, "forceStopPackage failed"
 
     invoke-static {v12, v13}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 

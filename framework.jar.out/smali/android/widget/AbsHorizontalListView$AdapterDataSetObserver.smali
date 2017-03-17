@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 7468
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-direct {p0, p1}, Landroid/widget/AdapterView$AdapterDataSetObserver;-><init>(Landroid/widget/AdapterView;)V
@@ -46,10 +45,8 @@
     .locals 1
 
     .prologue
-    .line 7471
     invoke-super {p0}, Landroid/widget/AdapterView$AdapterDataSetObserver;->onChanged()V
 
-    .line 7472
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mFastScroller:Landroid/widget/HorizontalFastScroller;
@@ -59,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7473
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mFastScroller:Landroid/widget/HorizontalFastScroller;
@@ -69,7 +65,6 @@
 
     invoke-virtual {v0}, Landroid/widget/HorizontalFastScroller;->onSectionsChanged()V
 
-    .line 7475
     :cond_0
     return-void
 .end method
@@ -78,10 +73,8 @@
     .locals 1
 
     .prologue
-    .line 7479
     invoke-super {p0}, Landroid/widget/AdapterView$AdapterDataSetObserver;->onInvalidated()V
 
-    .line 7480
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mFastScroller:Landroid/widget/HorizontalFastScroller;
@@ -91,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7481
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$AdapterDataSetObserver;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mFastScroller:Landroid/widget/HorizontalFastScroller;
@@ -101,7 +93,6 @@
 
     invoke-virtual {v0}, Landroid/widget/HorizontalFastScroller;->onSectionsChanged()V
 
-    .line 7483
     :cond_0
     return-void
 .end method

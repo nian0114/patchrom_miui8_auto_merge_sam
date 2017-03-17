@@ -28,7 +28,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 909
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
     move-object v0, p0
@@ -54,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 1026
     invoke-super {p0}, Lcom/android/server/policy/GlobalActions$ToggleAction;->isEnabled()Z
 
     move-result v0
@@ -68,25 +66,23 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 912
     sget-boolean v1, Lcom/android/server/policy/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 913
     const-string v1, "GlobalActions"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "in onPress of DataModeToggle ro.config.donot_nosim = "
+    const-string v3, "in onPress of DataModeToggle ro.config.donot_nosim = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string/jumbo v3, "ro.config.donot_nosim"
+    const-string v3, "ro.config.donot_nosim"
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -102,7 +98,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 916
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -111,7 +106,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "enterprise_policy"
+    const-string v2, "enterprise_policy"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -119,7 +114,6 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 918
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_2
 
@@ -135,24 +129,20 @@
 
     if-nez v1, :cond_2
 
-    .line 919
     sget-boolean v1, Lcom/android/server/policy/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 920
     const-string v1, "GlobalActions"
 
-    const-string/jumbo v2, "restricted by MDM "
+    const-string v2, "restricted by MDM "
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 934
     :cond_1
     :goto_0
     return-void
 
-    .line 926
     :cond_2
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -163,7 +153,7 @@
 
     if-nez v1, :cond_3
 
-    const-string/jumbo v1, "ro.config.donot_nosim"
+    const-string v1, "ro.config.donot_nosim"
 
     invoke-static {v1, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -171,7 +161,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 927
     :cond_3
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
@@ -180,7 +169,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 928
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->onToggleDatamode()V
@@ -188,7 +176,6 @@
 
     goto :goto_0
 
-    .line 930
     :cond_4
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -209,7 +196,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 937
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -217,7 +203,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "enterprise_policy"
+    const-string v3, "enterprise_policy"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -225,11 +211,9 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 939
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_2
 
-    .line 940
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPhoneRestrictionPolicy()Landroid/app/enterprise/PhoneRestrictionPolicy;
 
     move-result-object v2
@@ -252,38 +236,33 @@
 
     if-nez v2, :cond_2
 
-    .line 942
     :cond_0
     sget-boolean v2, Lcom/android/server/policy/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 943
     const-string v2, "GlobalActions"
 
     const-string v3, "Mobile data is restricted by MDM "
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 962
     :cond_1
     :goto_0
     return-void
 
-    .line 948
     :cond_2
     sget-boolean v2, Lcom/android/server/policy/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v2, :cond_3
 
-    .line 949
     const-string v2, "GlobalActions"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "in onToggle of DataModeToggle on = "
+    const-string v4, "in onToggle of DataModeToggle on = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -299,7 +278,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 957
     :cond_3
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -310,20 +288,17 @@
 
     invoke-virtual {v2, p1}, Landroid/net/ConnectivityManager;->setMobileDataEnabled(Z)V
 
-    .line 959
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.NETWORK_MODE_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 960
     .local v1, "intent":Landroid/content/Intent;
-    const-string/jumbo v2, "state"
+    const-string v2, "state"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 961
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -340,7 +315,6 @@
     .locals 1
 
     .prologue
-    .line 967
     const/4 v0, 0x0
 
     return v0
@@ -350,7 +324,6 @@
     .locals 1
 
     .prologue
-    .line 970
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$2;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->isDataToggleSupport:Z
@@ -360,10 +333,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 972
     const/4 v0, 0x1
 
-    .line 1005
     :goto_0
     return v0
 
@@ -377,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 964
     const/4 v0, 0x1
 
     return v0

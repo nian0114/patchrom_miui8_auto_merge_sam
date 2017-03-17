@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2104
     iput-object p1, p0, Lcom/android/server/enterprise/general/MiscPolicy$1;->this$0:Lcom/android/server/enterprise/general/MiscPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2107
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -64,7 +62,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2108
     :cond_0
     const-string v1, "MiscPolicy"
 
@@ -72,14 +69,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2110
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/general/MiscPolicy$1;->this$0:Lcom/android/server/enterprise/general/MiscPolicy;
 
     # invokes: Lcom/android/server/enterprise/general/MiscPolicy;->getConnectivityManagerService()Landroid/net/IConnectivityManager;
     invoke-static {v1}, Lcom/android/server/enterprise/general/MiscPolicy;->access$700(Lcom/android/server/enterprise/general/MiscPolicy;)Landroid/net/IConnectivityManager;
 
-    .line 2111
     iget-object v1, p0, Lcom/android/server/enterprise/general/MiscPolicy$1;->this$0:Lcom/android/server/enterprise/general/MiscPolicy;
 
     # invokes: Lcom/android/server/enterprise/general/MiscPolicy;->setGlobalProxyOnBoot()V
@@ -87,16 +82,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2116
     :cond_1
     :goto_0
     return-void
 
-    .line 2112
     :catch_0
     move-exception v0
 
-    .line 2113
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MiscPolicy"
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2232
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iput-object p2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 2235
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
@@ -62,7 +60,6 @@
     :goto_0
     iput-boolean v1, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->toggleStatus:Z
 
-    .line 2236
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->toggleTorch()V
@@ -70,21 +67,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2240
     :goto_1
     return-void
 
-    .line 2235
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2237
     :catch_0
     move-exception v0
 
-    .line 2238
     .local v0, "ex":Ljava/lang/Exception;
     const-string v1, "toolbox"
 
@@ -117,7 +110,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2247
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -142,7 +134,6 @@
     :cond_0
     iput-boolean v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isEnabled:Z
 
-    .line 2248
     return-void
 .end method
 
@@ -150,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 2243
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -162,6 +152,5 @@
 
     iput-boolean v1, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->toggleStatus:Z
 
-    .line 2244
     return-void
 .end method

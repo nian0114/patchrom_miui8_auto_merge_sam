@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 41
     new-instance v0, Lcom/android/internal/telephony/cat/BearerCSD$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/cat/BearerCSD$1;-><init>()V
@@ -46,10 +45,8 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     return-void
 .end method
 
@@ -58,31 +55,26 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->dataRate:I
 
-    .line 25
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->bearerService:I
 
-    .line 26
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->connectionElement:I
 
-    .line 27
     return-void
 .end method
 
@@ -92,7 +84,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/cat/BearerCSD$1;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/BearerCSD;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -104,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 30
     const/4 v0, 0x0
 
     return v0
@@ -115,22 +105,18 @@
     .param p1, "buf"    # Ljava/io/ByteArrayOutputStream;
 
     .prologue
-    .line 52
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->dataRate:I
 
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 53
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->bearerService:I
 
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 54
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->connectionElement:I
 
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 55
     return-void
 .end method
 
@@ -140,21 +126,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 36
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->dataRate:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 37
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->bearerService:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 38
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerCSD;->connectionElement:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 39
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1564
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;
 
     .prologue
-    .line 1564
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;)V
 
     return-void
@@ -53,14 +51,11 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 1569
     if-nez p1, :cond_0
 
-    .line 1576
     :goto_0
     return-void
 
-    .line 1573
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
@@ -90,7 +85,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->sendStatus(Ljava/lang/String;)V
 
-    .line 1574
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -112,7 +106,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->sendMessage(ILjava/lang/Object;)V
 
-    .line 1575
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -138,7 +131,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 1581
     return-void
 .end method
 
@@ -147,7 +139,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 1586
     return-void
 .end method
 
@@ -158,6 +149,5 @@
     .param p3, "arg2"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1591
     return-void
 .end method

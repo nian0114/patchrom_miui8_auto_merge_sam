@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3531
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
     iput-object p2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->val$uri:Landroid/net/Uri;
@@ -46,23 +45,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3534
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->val$uri:Landroid/net/Uri;
 
     if-eqz v4, :cond_2
 
-    .line 3535
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->val$uri:Landroid/net/Uri;
 
     invoke-virtual {v4}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 3536
     .local v3, "pkgName":Ljava/lang/String;
     if-eqz v3, :cond_2
 
-    .line 3538
     :try_start_0
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
@@ -76,11 +71,9 @@
 
     move-result-object v0
 
-    .line 3539
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_2
 
-    .line 3540
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
     iget-object v4, v4, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
@@ -93,11 +86,9 @@
 
     move-result-object v2
 
-    .line 3541
     .local v2, "packageInfo":Landroid/content/pm/PackageInfo;
     if-eqz v2, :cond_2
 
-    .line 3542
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
     iget-object v4, v4, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
@@ -139,7 +130,6 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 3544
     .local v1, "blackListedPkg":Z
     :cond_1
     iget v4, v0, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -160,7 +150,6 @@
 
     if-nez v4, :cond_2
 
-    .line 3546
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
     iget-object v4, v4, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
@@ -174,7 +163,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3547
     :try_start_1
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
@@ -190,12 +178,10 @@
 
     invoke-interface {v4, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3548
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3549
     :try_start_2
     const-string v4, "AlarmManagerEXT"
 
@@ -233,7 +219,6 @@
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 3557
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "blackListedPkg":Z
     .end local v2    # "packageInfo":Landroid/content/pm/PackageInfo;
@@ -242,7 +227,6 @@
     :goto_0
     return-void
 
-    .line 3548
     .restart local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v1    # "blackListedPkg":Z
     .restart local v2    # "packageInfo":Landroid/content/pm/PackageInfo;
@@ -260,7 +244,6 @@
     :try_end_4
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 3553
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "blackListedPkg":Z
     .end local v2    # "packageInfo":Landroid/content/pm/PackageInfo;

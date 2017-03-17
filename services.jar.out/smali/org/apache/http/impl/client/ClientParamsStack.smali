@@ -24,7 +24,6 @@
     .param p1, "stack"    # Lorg/apache/http/impl/client/ClientParamsStack;
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/http/params/AbstractHttpParams;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -45,7 +44,6 @@
     .param p5, "oparams"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Lorg/apache/http/params/AbstractHttpParams;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -65,7 +63,6 @@
     .param p4, "oparams"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/params/AbstractHttpParams;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -83,7 +80,6 @@
     .locals 2
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -97,7 +93,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -111,7 +106,6 @@
     .locals 2
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -125,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -140,7 +133,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -154,7 +146,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -169,7 +160,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -190,7 +180,6 @@
     .end annotation
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

@@ -100,35 +100,26 @@
 
     const/4 v3, 0x0
 
-    .line 181
     invoke-direct {p0}, Lcom/android/internal/telephony/Connection;-><init>()V
 
-    .line 74
     const-string v0, "IPConnection"
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->TAG:Ljava/lang/String;
 
-    .line 75
     iput-boolean v4, p0, Lcom/movial/ipphone/IPConnection;->DBG:Z
 
-    .line 112
     iput v3, p0, Lcom/movial/ipphone/IPConnection;->cause:I
 
-    .line 113
     sget-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->NOT_STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
-    .line 114
     iput v4, p0, Lcom/movial/ipphone/IPConnection;->numberPresentation:I
 
-    .line 115
     iput v4, p0, Lcom/movial/ipphone/IPConnection;->cnapNamePresentation:I
 
-    .line 116
     iput v3, p0, Lcom/movial/ipphone/IPConnection;->mPreciseCause:I
 
-    .line 182
     const-string v0, "IPConnection"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -153,16 +144,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     invoke-direct {p0, p1}, Lcom/movial/ipphone/IPConnection;->createWakeLock(Landroid/content/Context;)V
 
-    .line 185
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->acquireWakeLock()V
 
-    .line 187
     iput-object p2, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
-    .line 188
     new-instance v0, Lcom/movial/ipphone/IPConnection$MyHandler;
 
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
@@ -175,43 +162,34 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
-    .line 190
     iget-object v0, p3, Lcom/movial/ipphone/SessionCall;->number:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->address:Ljava/lang/String;
 
-    .line 191
     iget-object v0, p3, Lcom/movial/ipphone/SessionCall;->name:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->cnapName:Ljava/lang/String;
 
-    .line 193
     iput-boolean v4, p0, Lcom/movial/ipphone/IPConnection;->isIncoming:Z
 
-    .line 194
     iput-boolean v3, p0, Lcom/movial/ipphone/IPConnection;->disconnected:Z
 
-    .line 195
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/movial/ipphone/IPConnection;->createTime:J
 
-    .line 197
     iget v0, p3, Lcom/movial/ipphone/SessionCall;->index:I
 
     iput v0, p0, Lcom/movial/ipphone/IPConnection;->index:I
 
-    .line 198
     iput-boolean v3, p0, Lcom/movial/ipphone/IPConnection;->inConf:Z
 
-    .line 200
     iget v0, p3, Lcom/movial/ipphone/SessionCall;->numberPresentation:I
 
     iput v0, p0, Lcom/movial/ipphone/IPConnection;->numberPresentation:I
 
-    .line 202
     iget-object v0, p3, Lcom/movial/ipphone/SessionCall;->state:Lcom/movial/ipphone/SessionCall$State;
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->parentFromSessionState(Lcom/movial/ipphone/SessionCall$State;)Lcom/movial/ipphone/IPCall;
@@ -220,7 +198,6 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
-    .line 203
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     iget-object v1, p3, Lcom/movial/ipphone/SessionCall;->state:Lcom/movial/ipphone/SessionCall$State;
@@ -231,7 +208,6 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/movial/ipphone/IPCall;->attach(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/Call$State;)V
 
-    .line 204
     return-void
 .end method
 
@@ -247,44 +223,32 @@
 
     const/4 v2, 0x0
 
-    .line 157
     invoke-direct {p0}, Lcom/android/internal/telephony/Connection;-><init>()V
 
-    .line 74
     const-string v0, "IPConnection"
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->TAG:Ljava/lang/String;
 
-    .line 75
     iput-boolean v1, p0, Lcom/movial/ipphone/IPConnection;->DBG:Z
 
-    .line 112
     iput v2, p0, Lcom/movial/ipphone/IPConnection;->cause:I
 
-    .line 113
     sget-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->NOT_STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
-    .line 114
     iput v1, p0, Lcom/movial/ipphone/IPConnection;->numberPresentation:I
 
-    .line 115
     iput v1, p0, Lcom/movial/ipphone/IPConnection;->cnapNamePresentation:I
 
-    .line 116
     iput v2, p0, Lcom/movial/ipphone/IPConnection;->mPreciseCause:I
 
-    .line 158
     invoke-direct {p0, p1}, Lcom/movial/ipphone/IPConnection;->createWakeLock(Landroid/content/Context;)V
 
-    .line 159
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->acquireWakeLock()V
 
-    .line 161
     iput-object p3, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
-    .line 162
     new-instance v0, Lcom/movial/ipphone/IPConnection$MyHandler;
 
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
@@ -297,53 +261,42 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
-    .line 164
     iput-object p2, p0, Lcom/movial/ipphone/IPConnection;->dialString:Ljava/lang/String;
 
-    .line 165
     invoke-static {p2}, Landroid/telephony/PhoneNumberUtils;->extractNetworkPortion(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->address:Ljava/lang/String;
 
-    .line 166
     invoke-static {p2}, Landroid/telephony/PhoneNumberUtils;->extractPostDialPortion(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->postDialString:Ljava/lang/String;
 
-    .line 168
     iput-boolean v2, p0, Lcom/movial/ipphone/IPConnection;->isIncoming:Z
 
-    .line 169
     iput-boolean v2, p0, Lcom/movial/ipphone/IPConnection;->disconnected:Z
 
-    .line 170
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/movial/ipphone/IPConnection;->createTime:J
 
-    .line 173
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/movial/ipphone/IPConnection;->index:I
 
-    .line 174
     iput-boolean v2, p0, Lcom/movial/ipphone/IPConnection;->inConf:Z
 
-    .line 176
     iput-object p4, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
-    .line 177
     sget-object v0, Lcom/android/internal/telephony/Call$State;->DIALING:Lcom/android/internal/telephony/Call$State;
 
     invoke-virtual {p4, p0, v0}, Lcom/movial/ipphone/IPCall;->attach(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/Call$State;)V
 
-    .line 178
     return-void
 .end method
 
@@ -352,7 +305,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/IPConnection;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->processNextPostDialChar()V
 
     return-void
@@ -363,7 +315,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/IPConnection;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->releaseWakeLock()V
 
     return-void
@@ -373,19 +324,16 @@
     .locals 4
 
     .prologue
-    .line 609
     const-string v0, "acquireWakeLock"
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 610
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const-wide/16 v2, 0x7530
 
     invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 611
     return-void
 .end method
 
@@ -394,7 +342,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 604
     const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -403,7 +350,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 605
     .local v0, "pm":Landroid/os/PowerManager;
     const/4 v1, 0x1
 
@@ -415,7 +361,6 @@
 
     iput-object v1, p0, Lcom/movial/ipphone/IPConnection;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 606
     return-void
 .end method
 
@@ -423,7 +368,6 @@
     .locals 2
 
     .prologue
-    .line 268
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     if-eqz v0, :cond_0
@@ -469,12 +413,10 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 623
     const-string v0, "IPConnection"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 624
     return-void
 .end method
 
@@ -482,26 +424,22 @@
     .locals 4
 
     .prologue
-    .line 290
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/movial/ipphone/IPConnection;->connectTime:J
 
-    .line 291
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/movial/ipphone/IPConnection;->connectTimeReal:J
 
-    .line 292
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/movial/ipphone/IPConnection;->duration:J
 
-    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -524,19 +462,15 @@
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 296
     iget-boolean v0, p0, Lcom/movial/ipphone/IPConnection;->isIncoming:Z
 
     if-nez v0, :cond_0
 
-    .line 298
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->processNextPostDialChar()V
 
-    .line 300
     :cond_0
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->releaseWakeLock()V
 
-    .line 301
     return-void
 .end method
 
@@ -544,14 +478,12 @@
     .locals 2
 
     .prologue
-    .line 304
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/movial/ipphone/IPConnection;->holdingStartTime:J
 
-    .line 305
     return-void
 .end method
 
@@ -560,7 +492,6 @@
     .param p1, "state"    # Lcom/movial/ipphone/SessionCall$State;
 
     .prologue
-    .line 274
     sget-object v0, Lcom/movial/ipphone/IPConnection$1;->$SwitchMap$com$movial$ipphone$SessionCall$State:[I
 
     invoke-virtual {p1}, Lcom/movial/ipphone/SessionCall$State;->ordinal()I
@@ -571,7 +502,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 285
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -596,17 +526,14 @@
 
     throw v0
 
-    .line 278
     :pswitch_0
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
     iget-object v0, v0, Lcom/movial/ipphone/IPCallTracker;->foregroundCall:Lcom/movial/ipphone/IPCall;
 
-    .line 283
     :goto_0
     return-object v0
 
-    .line 280
     :pswitch_1
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
@@ -614,7 +541,6 @@
 
     goto :goto_0
 
-    .line 283
     :pswitch_2
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
@@ -622,7 +548,6 @@
 
     goto :goto_0
 
-    .line 274
     nop
 
     :pswitch_data_0
@@ -640,10 +565,8 @@
     .locals 9
 
     .prologue
-    .line 510
     const/4 v1, 0x0
 
-    .line 513
     .local v1, "c":C
     iget-object v6, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
@@ -651,17 +574,14 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 514
     const-string v6, "processNextPostDialChar: postDialState == CANCELLED"
 
     invoke-direct {p0, v6}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 556
     :cond_0
     :goto_0
     return-void
 
-    .line 518
     :cond_1
     iget-object v6, p0, Lcom/movial/ipphone/IPConnection;->postDialString:Ljava/lang/String;
 
@@ -677,16 +597,13 @@
 
     if-gt v6, v7, :cond_4
 
-    .line 519
     :cond_2
     sget-object v6, Lcom/android/internal/telephony/Connection$PostDialState;->COMPLETE:Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-direct {p0, v6}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
-    .line 520
     const/4 v1, 0x0
 
-    .line 538
     :cond_3
     iget-object v6, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
@@ -694,7 +611,6 @@
 
     iget-object v4, v6, Lcom/movial/ipphone/IPPhone;->mPostDialHandler:Landroid/os/Registrant;
 
-    .line 542
     .local v4, "postDialHandler":Landroid/os/Registrant;
     if-eqz v4, :cond_0
 
@@ -705,31 +621,24 @@
     .local v3, "notifyMessage":Landroid/os/Message;
     if-eqz v3, :cond_0
 
-    .line 545
     iget-object v5, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
-    .line 546
     .local v5, "state":Lcom/android/internal/telephony/Connection$PostDialState;
     invoke-static {v3}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;)Landroid/os/AsyncResult;
 
     move-result-object v0
 
-    .line 547
     .local v0, "ar":Landroid/os/AsyncResult;
     iput-object p0, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    .line 548
     iput-object v5, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    .line 551
     iput v1, v3, Landroid/os/Message;->arg1:I
 
-    .line 553
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 524
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v3    # "notifyMessage":Landroid/os/Message;
     .end local v4    # "postDialHandler":Landroid/os/Registrant;
@@ -739,7 +648,6 @@
 
     invoke-direct {p0, v6}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
-    .line 526
     iget-object v6, p0, Lcom/movial/ipphone/IPConnection;->postDialString:Ljava/lang/String;
 
     iget v7, p0, Lcom/movial/ipphone/IPConnection;->nextPostDialChar:I
@@ -752,16 +660,13 @@
 
     move-result v1
 
-    .line 528
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPConnection;->processPostDialChar(C)Z
 
     move-result v2
 
-    .line 530
     .local v2, "isValid":Z
     if-nez v2, :cond_3
 
-    .line 532
     iget-object v6, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
     const/4 v7, 0x3
@@ -772,7 +677,6 @@
 
     invoke-virtual {v6}, Landroid/os/Message;->sendToTarget()V
 
-    .line 533
     const-string v6, "IPConnection"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -813,43 +717,36 @@
 
     const/4 v0, 0x1
 
-    .line 559
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->is12Key(C)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 560
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
     iget v2, p0, Lcom/movial/ipphone/IPConnection;->index:I
 
     invoke-virtual {v1, v2, p1}, Lcom/movial/ipphone/IPCallTracker;->sendDtmf(IC)V
 
-    .line 561
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
     const-wide/16 v2, 0x190
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 587
     :goto_0
     return v0
 
-    .line 562
     :cond_0
     const/16 v1, 0x2c
 
     if-ne p1, v1, :cond_2
 
-    .line 569
     iget v1, p0, Lcom/movial/ipphone/IPConnection;->nextPostDialChar:I
 
     if-ne v1, v0, :cond_1
 
-    .line 572
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
@@ -864,7 +761,6 @@
 
     goto :goto_0
 
-    .line 578
     :cond_1
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
@@ -880,33 +776,28 @@
 
     goto :goto_0
 
-    .line 580
     :cond_2
     const/16 v1, 0x3b
 
     if-ne p1, v1, :cond_3
 
-    .line 581
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->WAIT:Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
     goto :goto_0
 
-    .line 582
     :cond_3
     const/16 v1, 0x4e
 
     if-ne p1, v1, :cond_4
 
-    .line 583
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->WILD:Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
     goto :goto_0
 
-    .line 585
     :cond_4
     const/4 v0, 0x0
 
@@ -917,12 +808,10 @@
     .locals 2
 
     .prologue
-    .line 614
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     monitor-enter v1
 
-    .line 615
     :try_start_0
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -932,24 +821,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 616
     const-string v0, "releaseWakeLock"
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 617
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 619
     :cond_0
     monitor-exit v1
 
-    .line 620
     return-void
 
-    .line 619
     :catchall_0
     move-exception v0
 
@@ -967,7 +851,6 @@
     .prologue
     const/4 v3, 0x4
 
-    .line 496
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     sget-object v2, Lcom/android/internal/telephony/Connection$PostDialState;->STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
@@ -978,17 +861,14 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 498
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->acquireWakeLock()V
 
-    .line 499
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 500
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
@@ -996,16 +876,13 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 506
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     :goto_0
     iput-object p1, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
-    .line 507
     return-void
 
-    .line 501
     :cond_1
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
@@ -1017,12 +894,10 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 503
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->h:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 504
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->releaseWakeLock()V
 
     goto :goto_0
@@ -1034,12 +909,10 @@
     .locals 1
 
     .prologue
-    .line 401
     sget-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->CANCELLED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
-    .line 402
     return-void
 .end method
 
@@ -1047,17 +920,14 @@
     .locals 2
 
     .prologue
-    .line 591
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     if-eqz v0, :cond_0
 
-    .line 592
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPCall;->detach(Lcom/movial/ipphone/IPConnection;)V
 
-    .line 594
     :cond_0
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
@@ -1065,17 +935,14 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
-    .line 595
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     sget-object v1, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
     invoke-virtual {v0, p0, v1}, Lcom/movial/ipphone/IPCall;->attach(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/Call$State;)V
 
-    .line 597
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->onStartedHolding()V
 
-    .line 598
     return-void
 .end method
 
@@ -1088,7 +955,6 @@
     .end annotation
 
     .prologue
-    .line 633
     return-void
 .end method
 
@@ -1096,7 +962,6 @@
     .locals 2
 
     .prologue
-    .line 209
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1105,18 +970,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 210
     const-string v0, "IPConnection"
 
     const-string v1, "[IPConn] UNEXPECTED; mPartialWakeLock is held when finalizing."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     :cond_0
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->releaseWakeLock()V
 
-    .line 213
     return-void
 .end method
 
@@ -1124,7 +986,6 @@
     .locals 1
 
     .prologue
-    .line 410
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->address:Ljava/lang/String;
 
     return-object v0
@@ -1134,7 +995,6 @@
     .locals 1
 
     .prologue
-    .line 422
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     return-object v0
@@ -1144,7 +1004,6 @@
     .locals 1
 
     .prologue
-    .line 628
     const/4 v0, 0x0
 
     return v0
@@ -1154,7 +1013,6 @@
     .locals 1
 
     .prologue
-    .line 414
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->cnapName:Ljava/lang/String;
 
     return-object v0
@@ -1164,7 +1022,6 @@
     .locals 1
 
     .prologue
-    .line 418
     iget v0, p0, Lcom/movial/ipphone/IPConnection;->cnapNamePresentation:I
 
     return v0
@@ -1174,7 +1031,6 @@
     .locals 2
 
     .prologue
-    .line 430
     iget-wide v0, p0, Lcom/movial/ipphone/IPConnection;->connectTime:J
 
     return-wide v0
@@ -1184,7 +1040,6 @@
     .locals 2
 
     .prologue
-    .line 426
     iget-wide v0, p0, Lcom/movial/ipphone/IPConnection;->createTime:J
 
     return-wide v0
@@ -1194,7 +1049,6 @@
     .locals 1
 
     .prologue
-    .line 406
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->dialString:Ljava/lang/String;
 
     return-object v0
@@ -1204,7 +1058,6 @@
     .locals 1
 
     .prologue
-    .line 456
     iget v0, p0, Lcom/movial/ipphone/IPConnection;->cause:I
 
     return v0
@@ -1214,7 +1067,6 @@
     .locals 2
 
     .prologue
-    .line 434
     iget-wide v0, p0, Lcom/movial/ipphone/IPConnection;->disconnectTime:J
 
     return-wide v0
@@ -1226,18 +1078,15 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 438
     iget-wide v2, p0, Lcom/movial/ipphone/IPConnection;->connectTimeReal:J
 
     cmp-long v2, v2, v0
 
     if-nez v2, :cond_0
 
-    .line 443
     :goto_0
     return-wide v0
 
-    .line 440
     :cond_0
     iget-wide v2, p0, Lcom/movial/ipphone/IPConnection;->duration:J
 
@@ -1245,7 +1094,6 @@
 
     if-nez v0, :cond_1
 
-    .line 441
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -1256,7 +1104,6 @@
 
     goto :goto_0
 
-    .line 443
     :cond_1
     iget-wide v0, p0, Lcom/movial/ipphone/IPConnection;->duration:J
 
@@ -1267,7 +1114,6 @@
     .locals 4
 
     .prologue
-    .line 448
     invoke-virtual {p0}, Lcom/movial/ipphone/IPConnection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v0
@@ -1276,10 +1122,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 449
     const-wide/16 v0, 0x0
 
-    .line 451
     :goto_0
     return-wide v0
 
@@ -1299,7 +1143,6 @@
     .locals 1
 
     .prologue
-    .line 481
     iget v0, p0, Lcom/movial/ipphone/IPConnection;->index:I
 
     return v0
@@ -1309,7 +1152,6 @@
     .locals 1
 
     .prologue
-    .line 461
     iget v0, p0, Lcom/movial/ipphone/IPConnection;->numberPresentation:I
 
     return v0
@@ -1319,7 +1161,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     return-object v0
@@ -1329,7 +1170,6 @@
     .locals 1
 
     .prologue
-    .line 637
     iget v0, p0, Lcom/movial/ipphone/IPConnection;->mPreciseCause:I
 
     return v0
@@ -1339,7 +1179,6 @@
     .locals 2
 
     .prologue
-    .line 363
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->CANCELLED:Lcom/android/internal/telephony/Connection$PostDialState;
@@ -1366,11 +1205,9 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 368
     :cond_0
     const-string v0, ""
 
-    .line 370
     :goto_0
     return-object v0
 
@@ -1390,15 +1227,12 @@
     .locals 1
 
     .prologue
-    .line 465
     iget-boolean v0, p0, Lcom/movial/ipphone/IPConnection;->disconnected:Z
 
     if-eqz v0, :cond_0
 
-    .line 466
     sget-object v0, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
-    .line 468
     :goto_0
     return-object v0
 
@@ -1414,7 +1248,6 @@
     .locals 1
 
     .prologue
-    .line 487
     const/4 v0, 0x0
 
     return-object v0
@@ -1424,7 +1257,6 @@
     .locals 1
 
     .prologue
-    .line 642
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->mVendorCause:Ljava/lang/String;
 
     return-object v0
@@ -1439,20 +1271,16 @@
     .end annotation
 
     .prologue
-    .line 347
     iget-boolean v0, p0, Lcom/movial/ipphone/IPConnection;->disconnected:Z
 
     if-nez v0, :cond_0
 
-    .line 348
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPCallTracker;->hangup(Lcom/movial/ipphone/IPConnection;)V
 
-    .line 352
     return-void
 
-    .line 350
     :cond_0
     new-instance v0, Lcom/android/internal/telephony/CallStateException;
 
@@ -1467,7 +1295,6 @@
     .locals 1
 
     .prologue
-    .line 473
     iget-boolean v0, p0, Lcom/movial/ipphone/IPConnection;->isIncoming:Z
 
     return v0
@@ -1477,7 +1304,6 @@
     .locals 1
 
     .prologue
-    .line 492
     const/4 v0, 0x0
 
     return v0
@@ -1488,26 +1314,21 @@
     .param p1, "cause"    # I
 
     .prologue
-    .line 326
     iput p1, p0, Lcom/movial/ipphone/IPConnection;->cause:I
 
-    .line 328
     const/4 v0, 0x0
 
-    .line 329
     .local v0, "result":Z
     iget-boolean v1, p0, Lcom/movial/ipphone/IPConnection;->disconnected:Z
 
     if-nez v1, :cond_0
 
-    .line 330
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/movial/ipphone/IPConnection;->disconnectTime:J
 
-    .line 331
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -1518,12 +1339,10 @@
 
     iput-wide v2, p0, Lcom/movial/ipphone/IPConnection;->duration:J
 
-    .line 332
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/movial/ipphone/IPConnection;->disconnected:Z
 
-    .line 334
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1544,30 +1363,25 @@
 
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 336
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->owner:Lcom/movial/ipphone/IPCallTracker;
 
     iget-object v1, v1, Lcom/movial/ipphone/IPCallTracker;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v1, p0}, Lcom/movial/ipphone/IPPhone;->notifyDisconnect(Lcom/android/internal/telephony/Connection;)V
 
-    .line 338
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     if-eqz v1, :cond_0
 
-    .line 339
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     invoke-virtual {v1, p0}, Lcom/movial/ipphone/IPCall;->connectionDisconnected(Lcom/movial/ipphone/IPConnection;)Z
 
     move-result v0
 
-    .line 342
     :cond_0
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->releaseWakeLock()V
 
-    .line 343
     return v0
 .end method
 
@@ -1575,22 +1389,18 @@
     .locals 1
 
     .prologue
-    .line 320
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/movial/ipphone/IPConnection;->cause:I
 
-    .line 321
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/movial/ipphone/IPConnection;->mPreciseCause:I
 
-    .line 322
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/movial/ipphone/IPConnection;->mVendorCause:Ljava/lang/String;
 
-    .line 323
     return-void
 .end method
 
@@ -1599,7 +1409,6 @@
     .param p1, "state"    # Lcom/movial/ipphone/SessionCall$State;
 
     .prologue
-    .line 308
     sget-object v0, Lcom/movial/ipphone/IPConnection$1;->$SwitchMap$com$movial$ipphone$SessionCall$State:[I
 
     invoke-virtual {p1}, Lcom/movial/ipphone/SessionCall$State;->ordinal()I
@@ -1610,7 +1419,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 315
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1635,45 +1443,37 @@
 
     throw v0
 
-    .line 309
     :pswitch_0
     sget-object v0, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
 
-    .line 314
     :goto_0
     return-object v0
 
-    .line 310
     :pswitch_1
     sget-object v0, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 311
     :pswitch_2
     sget-object v0, Lcom/android/internal/telephony/Call$State;->DIALING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 312
     :pswitch_3
     sget-object v0, Lcom/android/internal/telephony/Call$State;->ALERTING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 313
     :pswitch_4
     sget-object v0, Lcom/android/internal/telephony/Call$State;->INCOMING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 314
     :pswitch_5
     sget-object v0, Lcom/android/internal/telephony/Call$State;->WAITING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 308
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1689,14 +1489,12 @@
     .locals 2
 
     .prologue
-    .line 392
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->WAIT:Lcom/android/internal/telephony/Connection$PostDialState;
 
     if-eq v0, v1, :cond_0
 
-    .line 393
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1719,17 +1517,14 @@
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 398
     :goto_0
     return-void
 
-    .line 396
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
-    .line 397
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->processNextPostDialChar()V
 
     goto :goto_0
@@ -1740,14 +1535,12 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 374
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->postDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     sget-object v2, Lcom/android/internal/telephony/Connection$PostDialState;->WILD:Lcom/android/internal/telephony/Connection$PostDialState;
 
     if-eq v1, v2, :cond_0
 
-    .line 375
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1770,22 +1563,18 @@
 
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 389
     :goto_0
     return-void
 
-    .line 379
     :cond_0
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
 
-    .line 383
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 384
     .local v0, "buf":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/movial/ipphone/IPConnection;->postDialString:Ljava/lang/String;
 
@@ -1797,19 +1586,16 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 385
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/movial/ipphone/IPConnection;->postDialString:Ljava/lang/String;
 
-    .line 386
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/movial/ipphone/IPConnection;->nextPostDialChar:I
 
-    .line 387
     const-string v1, "IPConnection"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1834,7 +1620,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->processNextPostDialChar()V
 
     goto :goto_0
@@ -1849,7 +1634,6 @@
     .end annotation
 
     .prologue
-    .line 356
     return-void
 .end method
 
@@ -1858,10 +1642,8 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 477
     iput p1, p0, Lcom/movial/ipphone/IPConnection;->index:I
 
-    .line 478
     return-void
 .end method
 
@@ -1874,7 +1656,6 @@
 
     const/4 v7, 0x0
 
-    .line 216
     invoke-virtual {p0}, Lcom/movial/ipphone/IPConnection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v8
@@ -1887,21 +1668,17 @@
 
     if-eq p1, v8, :cond_0
 
-    .line 219
     :try_start_0
     invoke-virtual {p0}, Lcom/movial/ipphone/IPConnection;->hangup()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 260
     :goto_0
     return v7
 
-    .line 220
     :catch_0
     move-exception v1
 
-    .line 221
     .local v1, "e":Ljava/lang/Exception;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1929,18 +1706,15 @@
 
     goto :goto_0
 
-    .line 228
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v0, 0x0
 
-    .line 229
     .local v0, "changed":Z
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->isConnectingInOrOut()Z
 
     move-result v4
 
-    .line 230
     .local v4, "wasConnectingInOrOut":Z
     invoke-virtual {p0}, Lcom/movial/ipphone/IPConnection;->getState()Lcom/android/internal/telephony/Call$State;
 
@@ -1952,24 +1726,20 @@
 
     move v5, v6
 
-    .line 232
     .local v5, "wasHolding":Z
     :goto_1
     iget-object v3, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
-    .line 233
     .local v3, "oldParent":Lcom/movial/ipphone/IPCall;
     invoke-direct {p0, p1}, Lcom/movial/ipphone/IPConnection;->parentFromSessionState(Lcom/movial/ipphone/SessionCall$State;)Lcom/movial/ipphone/IPCall;
 
     move-result-object v2
 
-    .line 235
     .local v2, "newParent":Lcom/movial/ipphone/IPCall;
     iget-object v8, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     if-eq v2, v8, :cond_5
 
-    .line 236
     iget-object v8, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     if-eqz v8, :cond_1
@@ -1978,7 +1748,6 @@
 
     invoke-virtual {v8, p0}, Lcom/movial/ipphone/IPCall;->detach(Lcom/movial/ipphone/IPConnection;)V
 
-    .line 237
     :cond_1
     invoke-virtual {p0, p1}, Lcom/movial/ipphone/IPConnection;->parseSessionState(Lcom/movial/ipphone/SessionCall$State;)Lcom/android/internal/telephony/Call$State;
 
@@ -1986,13 +1755,10 @@
 
     invoke-virtual {v2, p0, v8}, Lcom/movial/ipphone/IPCall;->attach(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/Call$State;)V
 
-    .line 238
     iput-object v2, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
-    .line 239
     const/4 v0, 0x1
 
-    .line 244
     :goto_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2081,7 +1847,6 @@
 
     invoke-direct {p0, v6}, Lcom/movial/ipphone/IPConnection;->log(Ljava/lang/String;)V
 
-    .line 252
     if-eqz v4, :cond_2
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->isConnectingInOrOut()Z
@@ -2090,10 +1855,8 @@
 
     if-nez v6, :cond_2
 
-    .line 253
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->onConnectedInOrOut()V
 
-    .line 256
     :cond_2
     if-eqz v0, :cond_3
 
@@ -2107,13 +1870,11 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 257
     invoke-direct {p0}, Lcom/movial/ipphone/IPConnection;->onStartedHolding()V
 
     :cond_3
     move v7, v0
 
-    .line 260
     goto/16 :goto_0
 
     .end local v2    # "newParent":Lcom/movial/ipphone/IPCall;
@@ -2122,10 +1883,8 @@
     :cond_4
     move v5, v7
 
-    .line 230
     goto/16 :goto_1
 
-    .line 241
     .restart local v2    # "newParent":Lcom/movial/ipphone/IPCall;
     .restart local v3    # "oldParent":Lcom/movial/ipphone/IPCall;
     .restart local v5    # "wasHolding":Z
@@ -2145,7 +1904,6 @@
     :cond_6
     move v6, v7
 
-    .line 244
     goto :goto_3
 .end method
 
@@ -2153,7 +1911,6 @@
     .locals 2
 
     .prologue
-    .line 264
     iget-object v0, p0, Lcom/movial/ipphone/IPConnection;->parent:Lcom/movial/ipphone/IPCall;
 
     sget-object v1, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;

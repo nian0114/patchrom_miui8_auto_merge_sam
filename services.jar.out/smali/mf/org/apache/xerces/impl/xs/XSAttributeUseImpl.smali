@@ -27,25 +27,18 @@
 
     const/4 v0, 0x0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fAttrDecl:Lmf/org/apache/xerces/impl/xs/XSAttributeDecl;
 
-    .line 45
     iput-short v1, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fUse:S
 
-    .line 47
     iput-short v1, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fConstraintType:S
 
-    .line 49
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
-    .line 51
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 40
     return-void
 .end method
 
@@ -55,21 +48,17 @@
     .locals 1
 
     .prologue
-    .line 128
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->getConstraintType()S
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 129
     const/4 v0, 0x0
 
-    .line 128
     :goto_0
     return-object v0
 
-    .line 130
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
@@ -82,21 +71,17 @@
     .locals 1
 
     .prologue
-    .line 134
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->getConstraintType()S
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 135
     const/16 v0, 0x2d
 
-    .line 134
     :goto_0
     return v0
 
-    .line 136
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
@@ -109,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     if-eqz v0, :cond_0
@@ -129,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fAttrDecl:Lmf/org/apache/xerces/impl/xs/XSAttributeDecl;
 
     return-object v0
@@ -139,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fConstraintType:S
 
     return v0
@@ -149,21 +131,17 @@
     .locals 1
 
     .prologue
-    .line 115
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->getConstraintType()S
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 116
     const/4 v0, 0x0
 
-    .line 115
     :goto_0
     return-object v0
 
-    .line 117
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
@@ -178,21 +156,17 @@
     .locals 1
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->getConstraintType()S
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 141
     const/4 v0, 0x0
 
-    .line 140
     :goto_0
     return-object v0
 
-    .line 142
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
@@ -205,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     return-object v0
@@ -215,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
     return-object v0
@@ -225,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 124
     const/4 v0, 0x0
 
     return-object v0
@@ -237,7 +208,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 91
     iget-short v1, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fUse:S
 
     if-ne v1, v0, :cond_0
@@ -255,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 65
     const/4 v0, 0x4
 
     return v0
@@ -265,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     return-object v0
@@ -279,21 +247,15 @@
 
     const/4 v0, 0x0
 
-    .line 54
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fDefault:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
-    .line 55
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fAttrDecl:Lmf/org/apache/xerces/impl/xs/XSAttributeDecl;
 
-    .line 56
     iput-short v1, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fUse:S
 
-    .line 57
     iput-short v1, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fConstraintType:S
 
-    .line 58
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeUseImpl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 59
     return-void
 .end method

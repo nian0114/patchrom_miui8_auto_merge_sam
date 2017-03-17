@@ -39,12 +39,10 @@
     .locals 3
 
     .prologue
-    .line 1359
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1361
     :try_start_0
     const-string v1, "8.8.8.8"
 
@@ -54,22 +52,18 @@
 
     iput-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;->mPingAddr:Ljava/net/InetAddress;
 
-    .line 1362
     const/16 v1, 0x35
 
     iput v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;->mPort:I
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1367
     :goto_0
     return-void
 
-    .line 1363
     :catch_0
     move-exception v0
 
-    .line 1364
     .local v0, "e":Ljava/net/UnknownHostException;
     const-string v1, "[SMARTWIFI]"
 
@@ -77,7 +71,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1365
     invoke-virtual {v0}, Ljava/net/UnknownHostException;->printStackTrace()V
 
     goto :goto_0
@@ -88,20 +81,16 @@
     .param p2, "addr"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 1369
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1370
     iput-object p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;->mPingAddr:Ljava/net/InetAddress;
 
-    .line 1371
     const/16 v0, 0x50
 
     iput v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;->mPort:I
 
-    .line 1372
     return-void
 .end method
 
@@ -120,12 +109,10 @@
     .end annotation
 
     .prologue
-    .line 1375
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    .line 1376
     .local v0, "executorService":Ljava/util/concurrent/ExecutorService;
     new-instance v2, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread$PingCallable;
 
@@ -139,10 +126,8 @@
 
     move-result-object v1
 
-    .line 1378
     .local v1, "ret":Ljava/util/concurrent/Future;, "Ljava/util/concurrent/Future<Ljava/lang/Boolean;>;"
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 1379
     return-object v1
 .end method

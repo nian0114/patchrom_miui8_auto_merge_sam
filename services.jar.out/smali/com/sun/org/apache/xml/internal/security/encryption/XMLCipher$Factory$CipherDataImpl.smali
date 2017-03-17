@@ -97,7 +97,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     new-instance v2, Ljava/lang/UnsupportedOperationException;
 
@@ -131,7 +131,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     new-instance v2, Ljava/lang/UnsupportedOperationException;
 
@@ -162,7 +162,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v1, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v2, "CipherData"
 

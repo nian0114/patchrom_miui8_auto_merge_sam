@@ -32,22 +32,18 @@
     .param p2, "packageNameAndServiceName"    # Ljava/lang/String;
 
     .prologue
-    .line 2224
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2221
     const-string v1, "<NONE>"
 
     iput-object v1, p0, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 2222
     const-string v1, "<NONE>"
 
     iput-object v1, p0, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->serviceName:Ljava/lang/String;
 
-    .line 2225
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -73,7 +69,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2226
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -84,20 +79,17 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2241
     :cond_0
     :goto_0
     return-void
 
-    .line 2230
     :cond_1
-    const-string/jumbo v1, "|"
+    const-string v1, "|"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 2231
     .local v0, "index":I
     const/4 v1, 0x1
 
@@ -111,7 +103,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 2232
     :cond_2
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -124,7 +115,6 @@
 
     goto :goto_0
 
-    .line 2237
     :cond_3
     const/4 v1, 0x0
 
@@ -134,7 +124,6 @@
 
     iput-object v1, p0, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 2238
     add-int/lit8 v1, v0, 0x1
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I

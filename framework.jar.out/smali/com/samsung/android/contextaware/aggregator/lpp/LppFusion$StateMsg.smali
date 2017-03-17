@@ -60,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 60
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "START"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->START:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 61
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_REQUEST"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_REQUEST:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 62
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_FOUND"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_FOUND:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 63
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_BATCH_LIST_FOUND"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_BATCH_LIST_FOUND:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 64
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_BATCH_FOUND"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_BATCH_FOUND:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 65
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_PASS_FOUND"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_PASS_FOUND:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 66
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_PASS_IN_BATCH_FOUND"
@@ -127,7 +120,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_PASS_IN_BATCH_FOUND:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 67
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "LOCATION_NOT_FOUND"
@@ -138,7 +130,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->LOCATION_NOT_FOUND:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 68
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     const-string v1, "STOP"
@@ -149,7 +140,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->STOP:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
-    .line 59
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
@@ -212,7 +202,6 @@
     .end annotation
 
     .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -223,7 +212,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const-class v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -239,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 59
     sget-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->$VALUES:[Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;->clone()Ljava/lang/Object;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 256
     iput-object p1, p0, Lcom/android/server/policy/sec/MultitapKeyManager$1;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 259
     iget-object v0, p0, Lcom/android/server/policy/sec/MultitapKeyManager$1;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     # getter for: Lcom/android/server/policy/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/policy/sec/MultitapKeyManager$1;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     const/4 v1, 0x0
@@ -58,14 +55,12 @@
     # setter for: Lcom/android/server/policy/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
     invoke-static {v0, v1}, Lcom/android/server/policy/sec/MultitapKeyManager;->access$002(Lcom/android/server/policy/sec/MultitapKeyManager;Z)Z
 
-    .line 261
     iget-object v0, p0, Lcom/android/server/policy/sec/MultitapKeyManager$1;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     iget-object v0, v0, Lcom/android/server/policy/sec/MultitapKeyManager;->mPWM:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->launchHome()V
 
-    .line 263
     :cond_0
     return-void
 .end method

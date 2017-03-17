@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 996
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 3
 
     .prologue
-    .line 999
     # getter for: Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Lcom/android/server/power/ShutdownThread;
 
@@ -51,7 +49,6 @@
 
     move-result-object v0
 
-    .line 1001
     .local v0, "msg":Ljava/lang/CharSequence;
     # getter for: Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Lcom/android/server/power/ShutdownThread;
@@ -70,6 +67,5 @@
     # invokes: Lcom/android/server/power/ShutdownThread;->textToSpeech(Landroid/content/Context;Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/power/ShutdownThread;->access$1300(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 1002
     return-void
 .end method

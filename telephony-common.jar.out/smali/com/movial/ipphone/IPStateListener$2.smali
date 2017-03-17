@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcom/movial/ipphone/IPStateListener$2;->this$0:Lcom/movial/ipphone/IPStateListener;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,16 +39,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 67
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 75
     :goto_0
     return-void
 
-    .line 69
     :pswitch_0
     iget-object v1, p0, Lcom/movial/ipphone/IPStateListener$2;->this$0:Lcom/movial/ipphone/IPStateListener;
 
@@ -69,7 +65,6 @@
 
     goto :goto_1
 
-    .line 72
     :pswitch_1
     iget-object v1, p0, Lcom/movial/ipphone/IPStateListener$2;->this$0:Lcom/movial/ipphone/IPStateListener;
 
@@ -83,7 +78,6 @@
 
     goto :goto_0
 
-    .line 67
     nop
 
     :pswitch_data_0

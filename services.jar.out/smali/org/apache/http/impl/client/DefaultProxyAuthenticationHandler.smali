@@ -13,7 +13,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/impl/client/AbstractAuthenticationHandler;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -68,7 +66,6 @@
     .param p2, "context"    # Lorg/apache/http/protocol/HttpContext;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

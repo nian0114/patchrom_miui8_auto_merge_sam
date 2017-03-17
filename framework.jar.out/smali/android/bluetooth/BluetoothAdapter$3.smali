@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3085
     iput-object p1, p0, Landroid/bluetooth/BluetoothAdapter$3;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothDisableBleCallback$Stub;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 3087
     const-string v0, "BluetoothAdapter"
 
-    const-string/jumbo v1, "ondisableBLE"
+    const-string v1, "ondisableBLE"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3088
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sShouldAllowUseOfLeApi:Z
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$900()Z
 
@@ -52,14 +49,12 @@
 
     if-nez v0, :cond_2
 
-    .line 3089
     const-string v0, "BluetoothAdapter"
 
     const-string v1, "There are no active google scan apps, stop scan"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3090
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sBluetoothLeScanner:Landroid/bluetooth/le/BluetoothLeScanner;
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$800()Landroid/bluetooth/le/BluetoothLeScanner;
 
@@ -74,7 +69,6 @@
 
     invoke-virtual {v0}, Landroid/bluetooth/le/BluetoothLeScanner;->stopAllScan()V
 
-    .line 3091
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothAdapter$3;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
@@ -94,7 +88,6 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 3092
     :cond_1
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sBluetoothLeScanner:Landroid/bluetooth/le/BluetoothLeScanner;
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$800()Landroid/bluetooth/le/BluetoothLeScanner;
@@ -110,7 +103,6 @@
 
     invoke-virtual {v0}, Landroid/bluetooth/le/BluetoothLeScanner;->cleanup()V
 
-    .line 3094
     :cond_2
     return-void
 .end method

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 6566
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$5;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PersonaManagerService$5;->val$userHandle:I
@@ -43,7 +42,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 6569
     const-string v0, "PersonaManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -68,13 +66,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6572
     new-instance v0, Lcom/android/server/pm/PersonaManagerService$5$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/PersonaManagerService$5$1;-><init>(Lcom/android/server/pm/PersonaManagerService$5;)V
 
     invoke-virtual {v0}, Lcom/android/server/pm/PersonaManagerService$5$1;->start()V
 
-    .line 6581
     return-void
 .end method

@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const-string v0, "FeaturePathClassLoader"
 
     sput-object v0, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
@@ -28,10 +27,8 @@
     .param p2, "parent"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 19
     return-void
 .end method
 
@@ -42,10 +39,8 @@
     .param p3, "parent"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 24
     invoke-direct {p0, p1, p2, p3}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 26
     sget-object v0, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -88,7 +83,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     return-void
 .end method
 
@@ -114,12 +108,10 @@
     .end annotation
 
     .prologue
-    .line 36
     invoke-super/range {p0 .. p1}, Ldalvik/system/PathClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
 
-    .line 38
     .local v3, "classCreated":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v18, ".R$"
 
@@ -133,7 +125,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 39
     const-string v18, "\\.R\\$"
 
     move-object/from16 v0, p1
@@ -144,13 +135,11 @@
 
     move-result-object v11
 
-    .line 40
     .local v11, "names":[Ljava/lang/String;
     const/16 v18, 0x0
 
     aget-object v13, v11, v18
 
-    .line 43
     .local v13, "packageName":Ljava/lang/String;
     sget-object v18, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
@@ -158,7 +147,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "packageName = "
+    const-string v20, "packageName = "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -176,10 +165,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     const/4 v4, 0x0
 
-    .line 46
     .local v4, "classResPath":Ljava/lang/String;
     const/16 v18, 0x0
 
@@ -187,10 +174,8 @@
 
     move-result-object v4
 
-    .line 47
     const/4 v12, 0x0
 
-    .line 49
     .local v12, "offset":I
     if-eqz v4, :cond_2
 
@@ -204,7 +189,6 @@
 
     if-nez v18, :cond_2
 
-    .line 50
     const-string v18, "#"
 
     move-object/from16 v0, v18
@@ -213,24 +197,20 @@
 
     move-result-object v14
 
-    .line 51
     .local v14, "paths":[Ljava/lang/String;
     const/16 v18, 0x0
 
     aget-object v17, v14, v18
 
-    .line 53
     .local v17, "zip":Ljava/lang/String;
     if-eqz v17, :cond_0
 
-    .line 54
     const-string v18, ":"
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v15
 
-    .line 55
     .local v15, "resPaths":[Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -244,14 +224,13 @@
 
     if-ge v7, v0, :cond_0
 
-    .line 57
     sget-object v18, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "resPaths[featureCnt] :"
+    const-string v20, "resPaths[featureCnt] :"
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -269,7 +248,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     aget-object v18, v15, v7
 
     move-object/from16 v0, v18
@@ -280,10 +258,8 @@
 
     if-eqz v18, :cond_1
 
-    .line 59
     move v12, v7
 
-    .line 66
     .end local v7    # "featureCnt":I
     .end local v15    # "resPaths":[Ljava/lang/String;
     :cond_0
@@ -293,12 +269,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     invoke-virtual {v3}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v6
 
-    .line 70
     .local v6, "f":[Ljava/lang/reflect/Field;
     sget-object v18, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
@@ -326,10 +300,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     const/16 v16, 0x0
 
-    .line 73
     .local v16, "val":I
     move-object v2, v6
 
@@ -345,7 +317,6 @@
 
     aget-object v8, v2, v9
 
-    .line 75
     .local v8, "field":Ljava/lang/reflect/Field;
     sget-object v18, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
@@ -371,27 +342,24 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     const/16 v18, 0x1
 
     move/from16 v0, v18
 
     invoke-virtual {v8, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 78
     :try_start_0
     invoke-virtual {v8, v3}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v16
 
-    .line 80
     sget-object v18, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "val "
+    const-string v20, "val "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -414,7 +382,6 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 88
     :goto_2
     sget-object v18, Landroid/app/im/FeaturePathClassLoader;->TAG:Ljava/lang/String;
 
@@ -422,7 +389,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "offset = "
+    const-string v20, "offset = "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -454,7 +421,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     shl-int/lit8 v18, v12, 0x18
 
     sub-int v18, v16, v18
@@ -467,13 +433,11 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 73
     :goto_3
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 55
     .end local v2    # "arr$":[Ljava/lang/reflect/Field;
     .end local v6    # "f":[Ljava/lang/reflect/Field;
     .end local v8    # "field":Ljava/lang/reflect/Field;
@@ -487,7 +451,6 @@
 
     goto/16 :goto_0
 
-    .line 81
     .end local v7    # "featureCnt":I
     .end local v15    # "resPaths":[Ljava/lang/String;
     .restart local v2    # "arr$":[Ljava/lang/reflect/Field;
@@ -499,46 +462,38 @@
     :catch_0
     move-exception v5
 
-    .line 82
     .local v5, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v5}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 83
     .end local v5    # "e":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v5
 
-    .line 84
     .local v5, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v5}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 91
     .end local v5    # "e":Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v5
 
-    .line 92
     .local v5, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v5}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 93
     .end local v5    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v5
 
-    .line 94
     .local v5, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v5}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 99
     .end local v2    # "arr$":[Ljava/lang/reflect/Field;
     .end local v4    # "classResPath":Ljava/lang/String;
     .end local v5    # "e":Ljava/lang/IllegalArgumentException;

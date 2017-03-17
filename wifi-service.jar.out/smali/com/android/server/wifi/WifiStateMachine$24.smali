@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 18230
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$24;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "group"    # Landroid/net/wifi/p2p/WifiP2pGroup;
 
     .prologue
-    .line 18233
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -71,16 +69,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18234
     :cond_0
     if-nez p1, :cond_2
 
-    .line 18248
     :cond_1
     :goto_0
     return-void
 
-    .line 18236
     :cond_2
     invoke-virtual {p1}, Landroid/net/wifi/p2p/WifiP2pGroup;->isGroupOwner()Z
 
@@ -88,24 +83,20 @@
 
     if-nez v3, :cond_1
 
-    .line 18237
     const-string v3, "WifiStateMachine"
 
     const-string v4, "startShareProfileServer - onGroupInfoAvailable - send PING to GO"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18238
     const-string v1, "192.168.49.1"
 
-    .line 18241
     .local v1, "ip":Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v2
 
-    .line 18242
     .local v2, "ipAddress":Ljava/net/InetAddress;
     const/4 v3, 0x5
 
@@ -115,12 +106,10 @@
 
     goto :goto_0
 
-    .line 18243
     .end local v2    # "ipAddress":Ljava/net/InetAddress;
     :catch_0
     move-exception v0
 
-    .line 18244
     .local v0, "e":Ljava/io/IOException;
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
@@ -151,7 +140,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18245
     :cond_3
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 

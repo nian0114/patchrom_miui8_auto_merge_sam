@@ -165,7 +165,7 @@
 
     sput-object v0, Lcom/sun/org/apache/xml/internal/security/utils/Constants;->log:Ljava/util/logging/Logger;
 
-    const-string/jumbo v0, "data/websig.conf"
+    const-string v0, "data/websig.conf"
 
     sput-object v0, Lcom/sun/org/apache/xml/internal/security/utils/Constants;->configurationFile:Ljava/lang/String;
 
@@ -214,7 +214,7 @@
 .method public static getSignatureSpecNSprefix()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getDefaultPrefix(Ljava/lang/String;)Ljava/lang/String;
 
@@ -231,7 +231,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-static {v0, p0}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->setDefaultPrefix(Ljava/lang/String;Ljava/lang/String;)V
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1599
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/content/IRCPGlobalContactsDir$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/bridge/BridgeProxy$1;
 
     .prologue
-    .line 1599
     invoke-direct {p0, p1}, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;-><init>(Lcom/android/server/bridge/BridgeProxy;)V
 
     return-void
@@ -50,15 +48,13 @@
     .param p1, "contactRefUriAsString"    # Ljava/lang/String;
 
     .prologue
-    .line 1603
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
-    const-string/jumbo v2, "getCallerInfo"
+    const-string v2, "getCallerInfo"
 
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1604
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -68,7 +64,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "getCallerInfo call received for the contactRefUriAsString: "
+    const-string v3, "getCallerInfo call received for the contactRefUriAsString: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -84,7 +80,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1607
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -97,26 +92,22 @@
 
     if-nez v1, :cond_1
 
-    .line 1608
     :cond_0
     const/4 v0, 0x0
 
-    .line 1615
     :goto_0
     return-object v0
 
-    .line 1611
     :cond_1
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "getCallerInfo() - get all Caller info details:"
+    const-string v2, "getCallerInfo() - get all Caller info details:"
 
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1612
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mbridge:Landroid/os/RCPManager;
@@ -128,7 +119,6 @@
 
     move-result-object v0
 
-    .line 1613
     .local v0, "result":Landroid/content/CustomCursor;
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -139,7 +129,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "getCallerInfo(): result="
+    const-string v3, "getCallerInfo(): result="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 747
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,10 +38,8 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 749
     packed-switch p1, :pswitch_data_0
 
-    .line 756
     const-string v0, "NetworkMonitor"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -71,7 +68,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 757
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const/4 v1, 0x0
@@ -79,11 +75,9 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mSmartDetectionAvailable:Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$4602(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 760
     :goto_0
     return-void
 
-    .line 751
     :pswitch_0
     const-string v0, "NetworkMonitor"
 
@@ -91,7 +85,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 752
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const/4 v1, 0x1
@@ -101,7 +94,6 @@
 
     goto :goto_0
 
-    .line 749
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

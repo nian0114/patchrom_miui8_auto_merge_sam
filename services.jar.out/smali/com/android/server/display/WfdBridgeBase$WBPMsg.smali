@@ -60,21 +60,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 247
     iput-object p1, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->this$0:Lcom/android/server/display/WfdBridgeBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 248
     iput p2, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsgType:I
 
-    .line 249
     iput-object v0, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mPeer:Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
-    .line 250
     iput-object v0, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsg:Ljava/lang/String;
 
-    .line 251
     return-void
 .end method
 
@@ -84,23 +79,18 @@
     .param p3, "to"    # Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
     .prologue
-    .line 253
     iput-object p1, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->this$0:Lcom/android/server/display/WfdBridgeBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 254
     iput p2, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsgType:I
 
-    .line 255
     iput-object p3, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mPeer:Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
-    .line 256
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsg:Ljava/lang/String;
 
-    .line 257
     return-void
 .end method
 
@@ -111,21 +101,16 @@
     .param p4, "to"    # Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
     .prologue
-    .line 259
     iput-object p1, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->this$0:Lcom/android/server/display/WfdBridgeBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
     iput p2, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsgType:I
 
-    .line 261
     iput-object p4, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mPeer:Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
-    .line 262
     iput-object p3, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsg:Ljava/lang/String;
 
-    .line 263
     return-void
 .end method
 
@@ -138,27 +123,20 @@
     .param p6, "type"    # I
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->this$0:Lcom/android/server/display/WfdBridgeBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 272
     iput p2, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsgType:I
 
-    .line 273
     iput-object p4, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mPeer:Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
-    .line 274
     iput-object p3, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsg:Ljava/lang/String;
 
-    .line 275
     iput p5, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mDev:I
 
-    .line 276
     iput p6, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mType:I
 
-    .line 277
     return-void
 .end method
 
@@ -168,23 +146,18 @@
     .param p3, "from"    # Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
     .prologue
-    .line 265
     iput-object p1, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->this$0:Lcom/android/server/display/WfdBridgeBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsgType:I
 
-    .line 267
     iput-object p2, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mMsg:Ljava/lang/String;
 
-    .line 268
     iput-object p3, p0, Lcom/android/server/display/WfdBridgeBase$WBPMsg;->mPeer:Lcom/android/server/display/WfdBridgeBase$BridgePeer;
 
-    .line 269
     return-void
 .end method
 
@@ -194,12 +167,11 @@
     .locals 2
 
     .prologue
-    .line 281
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "type:"
+    const-string v1, "type:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2760
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 2805
     return-void
 .end method
 
@@ -48,14 +46,12 @@
     .locals 1
 
     .prologue
-    .line 2808
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mOrientationListener:Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;->onTouchStart()V
 
-    .line 2809
     return-void
 .end method
 
@@ -64,14 +60,12 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 2797
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
     if-eqz v0, :cond_0
 
-    .line 2798
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
@@ -80,7 +74,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/PowerManagerInternal;->powerHint(II)V
 
-    .line 2801
     :cond_0
     return-void
 .end method
@@ -91,7 +84,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 2841
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
@@ -114,7 +106,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2843
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -125,7 +116,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/cocktail/CocktailPhoneWindowManager;->requestTransientCocktailBar()V
 
-    .line 2846
     :cond_1
     return-void
 .end method
@@ -134,7 +124,6 @@
     .locals 2
 
     .prologue
-    .line 2781
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mNavigationBar:Landroid/view/WindowManagerPolicy$WindowState;
@@ -147,7 +136,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2782
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -157,7 +145,6 @@
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->requestTransientBars(Landroid/view/WindowManagerPolicy$WindowState;)V
     invoke-static {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->access$3100(Lcom/android/server/policy/PhoneWindowManager;Landroid/view/WindowManagerPolicy$WindowState;)V
 
-    .line 2785
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -181,7 +168,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2786
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -190,7 +176,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2788
     :cond_1
     return-void
 .end method
@@ -199,7 +184,6 @@
     .locals 2
 
     .prologue
-    .line 2791
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mNavigationBar:Landroid/view/WindowManagerPolicy$WindowState;
@@ -212,7 +196,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2792
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -222,7 +205,6 @@
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->requestTransientBars(Landroid/view/WindowManagerPolicy$WindowState;)V
     invoke-static {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->access$3100(Lcom/android/server/policy/PhoneWindowManager;Landroid/view/WindowManagerPolicy$WindowState;)V
 
-    .line 2794
     :cond_0
     return-void
 .end method
@@ -231,14 +213,12 @@
     .locals 2
 
     .prologue
-    .line 2763
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v0, :cond_0
 
-    .line 2766
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mMultiPhoneWindowManager:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
@@ -252,12 +232,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2778
     :cond_0
     :goto_0
     return-void
 
-    .line 2773
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -268,7 +246,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2774
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -286,7 +263,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2850
     return-void
 .end method
 
@@ -296,7 +272,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2818
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mEasyOneHandEnabled:I
@@ -306,7 +281,6 @@
 
     if-lez v1, :cond_0
 
-    .line 2819
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -321,18 +295,15 @@
 
     move-result-object v0
 
-    .line 2820
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0, v4}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    .line 2821
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2824
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -342,7 +313,6 @@
     .locals 4
 
     .prologue
-    .line 2828
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mEasyOneHandEnabled:I
@@ -352,7 +322,6 @@
 
     if-lez v1, :cond_0
 
-    .line 2829
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -369,20 +338,17 @@
 
     move-result-object v0
 
-    .line 2830
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    .line 2831
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2834
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -392,13 +358,11 @@
     .locals 1
 
     .prologue
-    .line 2812
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mOrientationListener:Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;->onTouchEnd()V
 
-    .line 2813
     return-void
 .end method

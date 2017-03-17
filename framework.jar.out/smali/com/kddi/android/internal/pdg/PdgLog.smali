@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const/4 v0, 0x0
 
     sput v0, Lcom/kddi/android/internal/pdg/PdgLog;->mLevel:I
@@ -38,10 +37,8 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     return-void
 .end method
 
@@ -50,23 +47,19 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     sget v0, Lcom/kddi/android/internal/pdg/PdgLog;->mLevel:I
 
     const/4 v1, 0x4
 
     if-ge v0, v1, :cond_1
 
-    .line 83
     :cond_0
     :goto_0
     return-void
 
-    .line 80
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 81
     const-string v0, "PDG"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -80,10 +73,8 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 86
     if-eqz p0, :cond_0
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,7 +97,6 @@
 
     invoke-static {v0}, Lcom/kddi/android/internal/pdg/PdgLog;->d(Ljava/lang/String;)V
 
-    .line 89
     :cond_0
     return-void
 .end method
@@ -116,23 +106,19 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     sget v0, Lcom/kddi/android/internal/pdg/PdgLog;->mLevel:I
 
     const/4 v1, 0x1
 
     if-ge v0, v1, :cond_1
 
-    .line 35
     :cond_0
     :goto_0
     return-void
 
-    .line 32
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 33
     const-string v0, "PDG"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
@@ -146,10 +132,8 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 38
     if-eqz p0, :cond_0
 
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +156,6 @@
 
     invoke-static {v0}, Lcom/kddi/android/internal/pdg/PdgLog;->e(Ljava/lang/String;)V
 
-    .line 41
     :cond_0
     return-void
 .end method
@@ -182,7 +165,6 @@
     .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 108
     invoke-static {p0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
@@ -195,23 +177,19 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     sget v0, Lcom/kddi/android/internal/pdg/PdgLog;->mLevel:I
 
     const/4 v1, 0x3
 
     if-ge v0, v1, :cond_1
 
-    .line 67
     :cond_0
     :goto_0
     return-void
 
-    .line 64
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 65
     const-string v0, "PDG"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
@@ -225,10 +203,8 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 70
     if-eqz p0, :cond_0
 
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,7 +227,6 @@
 
     invoke-static {v0}, Lcom/kddi/android/internal/pdg/PdgLog;->i(Ljava/lang/String;)V
 
-    .line 73
     :cond_0
     return-void
 .end method
@@ -261,23 +236,19 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     sget v0, Lcom/kddi/android/internal/pdg/PdgLog;->mLevel:I
 
     const/4 v1, 0x5
 
     if-ge v0, v1, :cond_1
 
-    .line 99
     :cond_0
     :goto_0
     return-void
 
-    .line 96
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 97
     const-string v0, "PDG"
 
     invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
@@ -291,10 +262,8 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 102
     if-eqz p0, :cond_0
 
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,7 +286,6 @@
 
     invoke-static {v0}, Lcom/kddi/android/internal/pdg/PdgLog;->v(Ljava/lang/String;)V
 
-    .line 105
     :cond_0
     return-void
 .end method
@@ -327,23 +295,19 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     sget v0, Lcom/kddi/android/internal/pdg/PdgLog;->mLevel:I
 
     const/4 v1, 0x2
 
     if-ge v0, v1, :cond_1
 
-    .line 51
     :cond_0
     :goto_0
     return-void
 
-    .line 48
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 49
     const-string v0, "PDG"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
@@ -357,10 +321,8 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 54
     if-eqz p0, :cond_0
 
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,7 +345,6 @@
 
     invoke-static {v0}, Lcom/kddi/android/internal/pdg/PdgLog;->w(Ljava/lang/String;)V
 
-    .line 57
     :cond_0
     return-void
 .end method

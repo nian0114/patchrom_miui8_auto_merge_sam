@@ -16,10 +16,8 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 50
     return-void
 .end method
 
@@ -29,10 +27,8 @@
     .locals 0
 
     .prologue
-    .line 126
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->unregisterContentObserver()V
 
-    .line 127
     return-void
 .end method
 
@@ -40,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 116
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->registerContentObserver()V
 
-    .line 117
     return-void
 .end method
 
@@ -54,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 175
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -64,7 +57,6 @@
     .locals 3
 
     .prologue
-    .line 106
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -85,23 +77,19 @@
     .locals 1
 
     .prologue
-    .line 61
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 62
     const-string v0, "mContext is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 67
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
@@ -120,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 94
     const/4 v0, 0x1
 
     return v0
@@ -130,7 +117,6 @@
     .locals 4
 
     .prologue
-    .line 140
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -149,12 +135,10 @@
 
     if-nez v0, :cond_1
 
-    .line 146
     :cond_0
     :goto_0
     return-void
 
-    .line 144
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -179,12 +163,10 @@
     .locals 1
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 79
     return-void
 .end method
 
@@ -192,7 +174,6 @@
     .locals 2
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->mContentResolver:Landroid/content/ContentResolver;
 
     if-eqz v0, :cond_0
@@ -203,12 +184,10 @@
 
     if-nez v0, :cond_1
 
-    .line 156
     :cond_0
     :goto_0
     return-void
 
-    .line 155
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -226,7 +205,6 @@
     .param p1, "action"    # I
 
     .prologue
-    .line 165
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v0
@@ -241,9 +219,7 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 166
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/ContentObserverProvider;->notifyObserver()V
 
-    .line 167
     return-void
 .end method

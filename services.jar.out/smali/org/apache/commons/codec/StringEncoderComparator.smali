@@ -16,7 +16,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -33,7 +32,6 @@
     .param p1, "stringEncoder"    # Lorg/apache/commons/codec/StringEncoder;
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -53,7 +51,6 @@
     .param p2, "o2"    # Ljava/lang/Object;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

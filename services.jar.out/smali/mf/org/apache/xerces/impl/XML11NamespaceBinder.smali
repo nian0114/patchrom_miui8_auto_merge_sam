@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/XMLNamespaceBinder;-><init>()V
 
-    .line 48
     return-void
 .end method
 
@@ -23,7 +21,6 @@
     .param p2, "localpart"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     return v0

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 23735
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$34;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$34;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
@@ -58,12 +57,10 @@
     .end annotation
 
     .prologue
-    .line 23747
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$34;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 23751
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$34;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$34;->val$packageName:Ljava/lang/String;
@@ -71,16 +68,13 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->unfreezePackage(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/pm/PackageManagerService;->access$7600(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;)V
 
-    .line 23753
     invoke-static {p2}, Landroid/content/pm/PackageManager;->installStatusToPublicStatus(I)I
 
     move-result v0
 
-    .line 23754
     .local v0, "status":I
     sparse-switch v0, :sswitch_data_0
 
-    .line 23764
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$34;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # getter for: Lcom/android/server/pm/PackageManagerService;->mMoveCallbacks:Lcom/android/server/pm/PackageManagerService$MoveCallbacks;
@@ -95,11 +89,9 @@
     # invokes: Lcom/android/server/pm/PackageManagerService$MoveCallbacks;->notifyStatusChanged(II)V
     invoke-static {v1, v2, v3}, Lcom/android/server/pm/PackageManagerService$MoveCallbacks;->access$7400(Lcom/android/server/pm/PackageManagerService$MoveCallbacks;II)V
 
-    .line 23768
     :goto_0
     return-void
 
-    .line 23756
     :sswitch_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$34;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -117,7 +109,6 @@
 
     goto :goto_0
 
-    .line 23760
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$34;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -135,7 +126,6 @@
 
     goto :goto_0
 
-    .line 23754
     nop
 
     :sswitch_data_0
@@ -155,7 +145,6 @@
     .end annotation
 
     .prologue
-    .line 23738
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V

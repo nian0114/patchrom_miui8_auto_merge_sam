@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/VRManagerService$DeviceEventHandler;->this$0:Lcom/android/server/VRManagerService;
 
-    .line 88
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 89
     return-void
 .end method
 
@@ -41,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 92
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 94
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/VRManagerService$DeviceEventHandler;->this$0:Lcom/android/server/VRManagerService;
 
@@ -61,7 +55,6 @@
 
     monitor-enter v2
 
-    .line 96
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VRManagerService$DeviceEventHandler;->this$0:Lcom/android/server/VRManagerService;
 
@@ -83,7 +76,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
     :goto_1
     :try_start_1
     monitor-exit v2
@@ -99,11 +91,9 @@
 
     throw v1
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 98
     .local v0, "e":Ljava/lang/SecurityException;
     :try_start_2
     const-string v1, "VRManagerService"
@@ -164,7 +154,6 @@
 
     goto :goto_1
 
-    .line 92
     nop
 
     :pswitch_data_0

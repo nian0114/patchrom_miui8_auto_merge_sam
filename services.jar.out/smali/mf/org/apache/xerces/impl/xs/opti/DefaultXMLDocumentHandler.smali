@@ -21,10 +21,8 @@
     .locals 0
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 713
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 542
     return-void
 .end method
 
@@ -76,7 +72,6 @@
     .end annotation
 
     .prologue
-    .line 260
     return-void
 .end method
 
@@ -91,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -108,7 +102,6 @@
     .end annotation
 
     .prologue
-    .line 112
     return-void
 .end method
 
@@ -123,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 772
     return-void
 .end method
 
@@ -139,7 +131,6 @@
     .end annotation
 
     .prologue
-    .line 496
     return-void
 .end method
 
@@ -153,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 727
     return-void
 .end method
 
@@ -169,7 +159,6 @@
     .end annotation
 
     .prologue
-    .line 189
     return-void
 .end method
 
@@ -183,7 +172,6 @@
     .end annotation
 
     .prologue
-    .line 553
     return-void
 .end method
 
@@ -197,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 324
     return-void
 .end method
 
@@ -211,7 +198,6 @@
     .end annotation
 
     .prologue
-    .line 668
     return-void
 .end method
 
@@ -225,7 +211,6 @@
     .end annotation
 
     .prologue
-    .line 830
     return-void
 .end method
 
@@ -239,7 +224,6 @@
     .end annotation
 
     .prologue
-    .line 679
     return-void
 .end method
 
@@ -253,7 +237,6 @@
     .end annotation
 
     .prologue
-    .line 335
     return-void
 .end method
 
@@ -268,7 +251,6 @@
     .end annotation
 
     .prologue
-    .line 289
     return-void
 .end method
 
@@ -282,7 +264,6 @@
     .end annotation
 
     .prologue
-    .line 440
     return-void
 .end method
 
@@ -297,7 +278,6 @@
     .end annotation
 
     .prologue
-    .line 248
     return-void
 .end method
 
@@ -311,7 +291,6 @@
     .end annotation
 
     .prologue
-    .line 819
     return-void
 .end method
 
@@ -326,7 +305,6 @@
     .end annotation
 
     .prologue
-    .line 413
     return-void
 .end method
 
@@ -341,7 +319,6 @@
     .end annotation
 
     .prologue
-    .line 302
     return-void
 .end method
 
@@ -357,7 +334,6 @@
     .end annotation
 
     .prologue
-    .line 594
     return-void
 .end method
 
@@ -365,7 +341,6 @@
     .locals 1
 
     .prologue
-    .line 865
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultXMLDocumentHandler;->fCMSource:Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
     return-object v0
@@ -375,7 +350,6 @@
     .locals 1
 
     .prologue
-    .line 853
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultXMLDocumentHandler;->fDTDSource:Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
     return-object v0
@@ -385,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 841
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultXMLDocumentHandler;->fDocumentSource:Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
     return-object v0
@@ -402,7 +375,6 @@
     .end annotation
 
     .prologue
-    .line 277
     return-void
 .end method
 
@@ -417,7 +389,6 @@
     .end annotation
 
     .prologue
-    .line 657
     return-void
 .end method
 
@@ -434,7 +405,6 @@
     .end annotation
 
     .prologue
-    .line 575
     return-void
 .end method
 
@@ -450,7 +420,6 @@
     .end annotation
 
     .prologue
-    .line 627
     return-void
 .end method
 
@@ -465,7 +434,6 @@
     .end annotation
 
     .prologue
-    .line 808
     return-void
 .end method
 
@@ -479,7 +447,6 @@
     .end annotation
 
     .prologue
-    .line 759
     return-void
 .end method
 
@@ -495,7 +462,6 @@
     .end annotation
 
     .prologue
-    .line 146
     return-void
 .end method
 
@@ -510,7 +476,6 @@
     .end annotation
 
     .prologue
-    .line 789
     return-void
 .end method
 
@@ -519,10 +484,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
     .prologue
-    .line 860
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultXMLDocumentHandler;->fCMSource:Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
-    .line 861
     return-void
 .end method
 
@@ -531,10 +494,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
     .prologue
-    .line 848
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultXMLDocumentHandler;->fDTDSource:Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
-    .line 849
     return-void
 .end method
 
@@ -543,10 +504,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
     .prologue
-    .line 836
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/opti/DefaultXMLDocumentHandler;->fDocumentSource:Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
-    .line 837
     return-void
 .end method
 
@@ -561,7 +520,6 @@
     .end annotation
 
     .prologue
-    .line 510
     return-void
 .end method
 
@@ -575,7 +533,6 @@
     .end annotation
 
     .prologue
-    .line 313
     return-void
 .end method
 
@@ -590,7 +547,6 @@
     .end annotation
 
     .prologue
-    .line 644
     return-void
 .end method
 
@@ -605,7 +561,6 @@
     .end annotation
 
     .prologue
-    .line 699
     return-void
 .end method
 
@@ -620,7 +575,6 @@
     .end annotation
 
     .prologue
-    .line 358
     return-void
 .end method
 
@@ -637,7 +591,6 @@
     .end annotation
 
     .prologue
-    .line 76
     return-void
 .end method
 
@@ -653,7 +606,6 @@
     .end annotation
 
     .prologue
-    .line 175
     return-void
 .end method
 
@@ -668,7 +620,6 @@
     .end annotation
 
     .prologue
-    .line 428
     return-void
 .end method
 
@@ -685,7 +636,6 @@
     .end annotation
 
     .prologue
-    .line 212
     return-void
 .end method
 
@@ -699,7 +649,6 @@
     .end annotation
 
     .prologue
-    .line 744
     return-void
 .end method
 
@@ -716,7 +665,6 @@
     .end annotation
 
     .prologue
-    .line 379
     return-void
 .end method
 
@@ -732,7 +680,6 @@
     .end annotation
 
     .prologue
-    .line 161
     return-void
 .end method
 
@@ -748,7 +695,6 @@
     .end annotation
 
     .prologue
-    .line 233
     return-void
 .end method
 
@@ -765,7 +711,6 @@
     .end annotation
 
     .prologue
-    .line 612
     return-void
 .end method
 
@@ -782,6 +727,5 @@
     .end annotation
 
     .prologue
-    .line 94
     return-void
 .end method

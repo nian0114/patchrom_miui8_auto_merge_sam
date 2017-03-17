@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 28841
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$40;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,31 +41,26 @@
     .param p2, "o2"    # Ljava/lang/Object;
 
     .prologue
-    .line 28845
     instance-of v2, p1, Landroid/content/pm/ResolveInfo;
 
     if-eqz v2, :cond_0
 
-    .line 28846
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     .end local p1    # "o1":Ljava/lang/Object;
     iget v0, p1, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 28850
     .local v0, "q1":I
     :goto_0
     instance-of v2, p2, Landroid/content/pm/ResolveInfo;
 
     if-eqz v2, :cond_1
 
-    .line 28851
     check-cast p2, Landroid/content/pm/ResolveInfo;
 
     .end local p2    # "o2":Ljava/lang/Object;
     iget v1, p2, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 28855
     .local v1, "q2":I
     :goto_1
     if-le v0, v1, :cond_2
@@ -76,7 +70,6 @@
     :goto_2
     return v2
 
-    .line 28848
     .end local v0    # "q1":I
     .end local v1    # "q2":I
     .restart local p1    # "o1":Ljava/lang/Object;
@@ -92,7 +85,6 @@
     .restart local v0    # "q1":I
     goto :goto_0
 
-    .line 28853
     :cond_1
     check-cast p2, Landroid/content/IntentFilter;
 
@@ -104,7 +96,6 @@
     .restart local v1    # "q2":I
     goto :goto_1
 
-    .line 28855
     :cond_2
     if-ge v0, v1, :cond_3
 

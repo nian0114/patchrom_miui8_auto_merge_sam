@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -27,12 +26,10 @@
     .end annotation
 
     .prologue
-    .line 49
     move-object v0, p1
 
     check-cast v0, Ljava/lang/String;
 
-    .line 50
     .local v0, "content":Ljava/lang/String;
     invoke-interface {p2, v0}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->isIdDeclared(Ljava/lang/String;)Z
 
@@ -40,7 +37,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 51
     new-instance v1, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v2, "cvc-id.2"
@@ -57,11 +53,9 @@
 
     throw v1
 
-    .line 52
     :cond_0
     invoke-interface {p2, v0}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->addId(Ljava/lang/String;)V
 
-    .line 53
     return-void
 .end method
 
@@ -76,14 +70,12 @@
     .end annotation
 
     .prologue
-    .line 42
     invoke-static {p1}, Lmf/org/apache/xerces/util/XMLChar;->isValidNCName(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 43
     new-instance v0, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v1, "cvc-datatype-valid.1.2.1"
@@ -106,7 +98,6 @@
 
     throw v0
 
-    .line 45
     :cond_0
     return-object p1
 .end method
@@ -115,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const/16 v0, 0x81f
 
     return v0

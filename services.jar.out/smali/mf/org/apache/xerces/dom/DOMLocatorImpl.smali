@@ -29,28 +29,20 @@
 
     const/4 v0, -0x1
 
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 51
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 60
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 66
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 73
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 80
     return-void
 .end method
 
@@ -66,40 +58,28 @@
 
     const/4 v0, -0x1
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 51
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 60
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 66
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 73
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 89
     iput p1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 90
     iput p2, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 91
     iput-object p4, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 92
     iput p3, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 93
     return-void
 .end method
 
@@ -116,43 +96,30 @@
 
     const/4 v0, -0x1
 
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 51
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 60
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 66
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 73
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 96
     iput p1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 97
     iput p2, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 98
     iput p3, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 99
     iput-object p4, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 100
     iput-object p5, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 101
     return-void
 .end method
 
@@ -170,46 +137,32 @@
 
     const/4 v0, -0x1
 
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 51
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 60
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 66
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 73
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 104
     iput p1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 105
     iput p2, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 106
     iput p3, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 107
     iput-object p4, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 108
     iput-object p5, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 109
     iput p6, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 110
     return-void
 .end method
 
@@ -224,37 +177,26 @@
 
     const/4 v0, -0x1
 
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 51
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
-    .line 60
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 66
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
-    .line 73
     iput v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
-    .line 83
     iput p1, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
-    .line 84
     iput p2, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
-    .line 85
     iput-object p3, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
-    .line 86
     return-void
 .end method
 
@@ -264,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fByteOffset:I
 
     return v0
@@ -274,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fColumnNumber:I
 
     return v0
@@ -284,7 +224,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fLineNumber:I
 
     return v0
@@ -294,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fRelatedNode:Lmf/org/w3c/dom/Node;
 
     return-object v0
@@ -304,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUri:Ljava/lang/String;
 
     return-object v0
@@ -314,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 157
     iget v0, p0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;->fUtf16Offset:I
 
     return v0

@@ -40,24 +40,18 @@
     .param p4, "nopat"    # Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     .prologue
-    .line 1340
     const/16 v0, 0x1a
 
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/impl/xpath/regex/Token;-><init>(I)V
 
-    .line 1341
     iput p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->refNumber:I
 
-    .line 1342
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->condition:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 1343
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->yes:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 1344
     iput-object p4, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->no:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 1345
     return-void
 .end method
 
@@ -68,12 +62,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1350
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->yes:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 1351
     :goto_0
     return-object v0
 
@@ -86,7 +78,6 @@
 
     goto :goto_0
 
-    .line 1352
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -113,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 1347
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->no:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     if-nez v0, :cond_0
@@ -134,12 +124,10 @@
     .param p1, "options"    # I
 
     .prologue
-    .line 1357
     iget v1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->refNumber:I
 
     if-lez v1, :cond_0
 
-    .line 1358
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "(?("
@@ -162,14 +150,12 @@
 
     move-result-object v0
 
-    .line 1365
     .local v0, "ret":Ljava/lang/String;
     :goto_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->no:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     if-nez v1, :cond_2
 
-    .line 1366
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -194,11 +180,9 @@
 
     move-result-object v0
 
-    .line 1370
     :goto_1
     return-object v0
 
-    .line 1359
     .end local v0    # "ret":Ljava/lang/String;
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$ConditionToken;->condition:Lmf/org/apache/xerces/impl/xpath/regex/Token;
@@ -209,7 +193,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1360
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "(?("
@@ -232,11 +215,9 @@
 
     move-result-object v0
 
-    .line 1361
     .restart local v0    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1362
     .end local v0    # "ret":Ljava/lang/String;
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -258,7 +239,6 @@
     .restart local v0    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1368
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 

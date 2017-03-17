@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2817
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$1;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 2819
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$1;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -57,13 +55,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->updatePreferenceThroughSystemProcess(Ljava/lang/String;I)V
 
-    .line 2821
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$1;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 2822
     return-void
 .end method

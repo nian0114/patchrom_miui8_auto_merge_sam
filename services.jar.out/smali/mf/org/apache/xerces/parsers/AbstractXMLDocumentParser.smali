@@ -24,19 +24,14 @@
     .param p1, "config"    # Lmf/org/apache/xerces/xni/parser/XMLParserConfiguration;
 
     .prologue
-    .line 79
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/parsers/XMLParser;-><init>(Lmf/org/apache/xerces/xni/parser/XMLParserConfiguration;)V
 
-    .line 82
     invoke-interface {p1, p0}, Lmf/org/apache/xerces/xni/parser/XMLParserConfiguration;->setDocumentHandler(Lmf/org/apache/xerces/xni/XMLDocumentHandler;)V
 
-    .line 83
     invoke-interface {p1, p0}, Lmf/org/apache/xerces/xni/parser/XMLParserConfiguration;->setDTDHandler(Lmf/org/apache/xerces/xni/XMLDTDHandler;)V
 
-    .line 84
     invoke-interface {p1, p0}, Lmf/org/apache/xerces/xni/parser/XMLParserConfiguration;->setDTDContentModelHandler(Lmf/org/apache/xerces/xni/XMLDTDContentModelHandler;)V
 
-    .line 86
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 672
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 510
     return-void
 .end method
 
@@ -88,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 194
     return-void
 .end method
 
@@ -103,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 321
     return-void
 .end method
 
@@ -120,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 151
     return-void
 .end method
 
@@ -135,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 730
     return-void
 .end method
 
@@ -151,7 +140,6 @@
     .end annotation
 
     .prologue
-    .line 465
     return-void
 .end method
 
@@ -165,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 686
     return-void
 .end method
 
@@ -181,13 +168,10 @@
     .end annotation
 
     .prologue
-    .line 180
     invoke-virtual {p0, p1, p2, p3}, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->startElement(Lmf/org/apache/xerces/xni/QName;Lmf/org/apache/xerces/xni/XMLAttributes;Lmf/org/apache/xerces/xni/Augmentations;)V
 
-    .line 181
     invoke-virtual {p0, p1, p3}, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->endElement(Lmf/org/apache/xerces/xni/QName;Lmf/org/apache/xerces/xni/Augmentations;)V
 
-    .line 183
     return-void
 .end method
 
@@ -201,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 521
     return-void
 .end method
 
@@ -215,7 +198,6 @@
     .end annotation
 
     .prologue
-    .line 239
     return-void
 .end method
 
@@ -229,7 +211,6 @@
     .end annotation
 
     .prologue
-    .line 618
     return-void
 .end method
 
@@ -243,7 +224,6 @@
     .end annotation
 
     .prologue
-    .line 786
     return-void
 .end method
 
@@ -257,12 +237,10 @@
     .end annotation
 
     .prologue
-    .line 629
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fInDTD:Z
 
-    .line 630
     return-void
 .end method
 
@@ -276,7 +254,6 @@
     .end annotation
 
     .prologue
-    .line 248
     return-void
 .end method
 
@@ -291,7 +268,6 @@
     .end annotation
 
     .prologue
-    .line 221
     return-void
 .end method
 
@@ -305,7 +281,6 @@
     .end annotation
 
     .prologue
-    .line 400
     return-void
 .end method
 
@@ -320,7 +295,6 @@
     .end annotation
 
     .prologue
-    .line 309
     return-void
 .end method
 
@@ -334,7 +308,6 @@
     .end annotation
 
     .prologue
-    .line 775
     return-void
 .end method
 
@@ -349,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 439
     return-void
 .end method
 
@@ -365,7 +337,6 @@
     .end annotation
 
     .prologue
-    .line 559
     return-void
 .end method
 
@@ -373,7 +344,6 @@
     .locals 1
 
     .prologue
-    .line 795
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fDTDContentModelSource:Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
     return-object v0
@@ -383,7 +353,6 @@
     .locals 1
 
     .prologue
-    .line 639
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fDTDSource:Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
     return-object v0
@@ -393,7 +362,6 @@
     .locals 1
 
     .prologue
-    .line 353
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fDocumentSource:Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
     return-object v0
@@ -410,7 +378,6 @@
     .end annotation
 
     .prologue
-    .line 210
     return-void
 .end method
 
@@ -425,7 +392,6 @@
     .end annotation
 
     .prologue
-    .line 451
     return-void
 .end method
 
@@ -442,7 +408,6 @@
     .end annotation
 
     .prologue
-    .line 542
     return-void
 .end method
 
@@ -458,7 +423,6 @@
     .end annotation
 
     .prologue
-    .line 591
     return-void
 .end method
 
@@ -473,7 +437,6 @@
     .end annotation
 
     .prologue
-    .line 764
     return-void
 .end method
 
@@ -487,7 +450,6 @@
     .end annotation
 
     .prologue
-    .line 718
     return-void
 .end method
 
@@ -503,7 +465,6 @@
     .end annotation
 
     .prologue
-    .line 343
     return-void
 .end method
 
@@ -516,15 +477,12 @@
     .end annotation
 
     .prologue
-    .line 806
     invoke-super {p0}, Lmf/org/apache/xerces/parsers/XMLParser;->reset()V
 
-    .line 807
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fInDTD:Z
 
-    .line 808
     return-void
 .end method
 
@@ -539,7 +497,6 @@
     .end annotation
 
     .prologue
-    .line 746
     return-void
 .end method
 
@@ -548,10 +505,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
     .prologue
-    .line 790
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fDTDContentModelSource:Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
-    .line 791
     return-void
 .end method
 
@@ -560,10 +515,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
     .prologue
-    .line 634
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fDTDSource:Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
-    .line 635
     return-void
 .end method
 
@@ -572,10 +525,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
     .prologue
-    .line 348
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fDocumentSource:Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
-    .line 349
     return-void
 .end method
 
@@ -590,7 +541,6 @@
     .end annotation
 
     .prologue
-    .line 478
     return-void
 .end method
 
@@ -604,7 +554,6 @@
     .end annotation
 
     .prologue
-    .line 230
     return-void
 .end method
 
@@ -619,7 +568,6 @@
     .end annotation
 
     .prologue
-    .line 607
     return-void
 .end method
 
@@ -634,7 +582,6 @@
     .end annotation
 
     .prologue
-    .line 658
     return-void
 .end method
 
@@ -649,12 +596,10 @@
     .end annotation
 
     .prologue
-    .line 374
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/parsers/AbstractXMLDocumentParser;->fInDTD:Z
 
-    .line 375
     return-void
 .end method
 
@@ -671,7 +616,6 @@
     .end annotation
 
     .prologue
-    .line 118
     return-void
 .end method
 
@@ -687,7 +631,6 @@
     .end annotation
 
     .prologue
-    .line 166
     return-void
 .end method
 
@@ -702,7 +645,6 @@
     .end annotation
 
     .prologue
-    .line 388
     return-void
 .end method
 
@@ -719,7 +661,6 @@
     .end annotation
 
     .prologue
-    .line 272
     return-void
 .end method
 
@@ -733,7 +674,6 @@
     .end annotation
 
     .prologue
-    .line 703
     return-void
 .end method
 
@@ -750,7 +690,6 @@
     .end annotation
 
     .prologue
-    .line 423
     return-void
 .end method
 
@@ -766,7 +705,6 @@
     .end annotation
 
     .prologue
-    .line 293
     return-void
 .end method
 
@@ -783,7 +721,6 @@
     .end annotation
 
     .prologue
-    .line 575
     return-void
 .end method
 
@@ -800,6 +737,5 @@
     .end annotation
 
     .prologue
-    .line 135
     return-void
 .end method

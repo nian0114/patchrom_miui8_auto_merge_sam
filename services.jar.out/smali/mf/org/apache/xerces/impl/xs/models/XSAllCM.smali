@@ -31,28 +31,22 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fNumElements:I
 
-    .line 63
     iput-boolean p1, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fHasOptionalContent:Z
 
-    .line 64
     new-array v0, p2, [Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
-    .line 65
     new-array v0, p2, [Z
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fIsOptionalElement:[Z
 
-    .line 66
     return-void
 .end method
 
@@ -64,28 +58,24 @@
     .param p2, "isOptional"    # Z
 
     .prologue
-    .line 69
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fNumElements:I
 
     aput-object p1, v0, v1
 
-    .line 70
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fIsOptionalElement:[Z
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fNumElements:I
 
     aput-boolean p2, v0, v1
 
-    .line 71
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fNumElements:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fNumElements:I
 
-    .line 72
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 184
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -110,10 +99,8 @@
 
     if-lt v0, v2, :cond_0
 
-    .line 194
     return v6
 
-    .line 185
     :cond_0
     add-int/lit8 v1, v0, 0x1
 
@@ -123,12 +110,10 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 184
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 186
     :cond_1
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
@@ -144,7 +129,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 188
     new-instance v2, Lmf/org/apache/xerces/impl/xs/XMLSchemaException;
 
     const-string v3, "cos-nonambig"
@@ -165,7 +149,6 @@
 
     const/4 v5, 0x1
 
-    .line 189
     iget-object v6, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
     aget-object v6, v6, v1
@@ -176,12 +159,10 @@
 
     aput-object v6, v4, v5
 
-    .line 188
     invoke-direct {v2, v3, v4}, Lmf/org/apache/xerces/impl/xs/XMLSchemaException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
     throw v2
 
-    .line 185
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -197,10 +178,8 @@
 
     const/4 v3, 0x0
 
-    .line 155
     aget v1, p1, v3
 
-    .line 157
     .local v1, "state":I
     const/4 v4, -0x1
 
@@ -213,12 +192,10 @@
     :cond_0
     move v2, v3
 
-    .line 173
     :cond_1
     :goto_0
     return v2
 
-    .line 163
     :cond_2
     iget-boolean v4, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fHasOptionalContent:Z
 
@@ -226,7 +203,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 167
     :cond_3
     const/4 v0, 0x0
 
@@ -236,7 +212,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 169
     iget-object v4, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fIsOptionalElement:[Z
 
     aget-boolean v4, v4, v0
@@ -251,10 +226,8 @@
 
     move v2, v3
 
-    .line 170
     goto :goto_0
 
-    .line 167
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
@@ -267,10 +240,8 @@
     .param p2, "subGroupHandler"    # Lmf/org/apache/xerces/impl/xs/SubstitutionGroupHandler;
 
     .prologue
-    .line 99
     const/4 v1, 0x0
 
-    .line 100
     .local v1, "matchingDecl":Ljava/lang/Object;
     const/4 v0, 0x0
 
@@ -281,11 +252,9 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 105
     :cond_0
     return-object v1
 
-    .line 101
     :cond_1
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
@@ -295,11 +264,9 @@
 
     move-result-object v1
 
-    .line 102
     .local v1, "matchingDecl":Lmf/org/apache/xerces/impl/xs/XSElementDecl;
     if-nez v1, :cond_0
 
-    .line 100
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -310,7 +277,6 @@
     .param p1, "termId"    # I
 
     .prologue
-    .line 222
     const/4 v0, 0x0
 
     return-object v0
@@ -320,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 226
     const/4 v0, 0x0
 
     return v0
@@ -331,7 +296,6 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 218
     const/4 v0, 0x0
 
     return-object v0
@@ -348,33 +312,26 @@
 
     const/4 v3, 0x0
 
-    .line 118
     aget v2, p2, v3
 
     if-gez v2, :cond_0
 
-    .line 119
     const/4 v2, -0x2
 
     aput v2, p2, v3
 
-    .line 120
     invoke-virtual {p0, p1, p3}, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->findMatchingDecl(Lmf/org/apache/xerces/xni/QName;Lmf/org/apache/xerces/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 143
     :goto_0
     return-object v1
 
-    .line 124
     :cond_0
     aput v4, p2, v3
 
-    .line 126
     const/4 v1, 0x0
 
-    .line 128
     .local v1, "matchingDecl":Ljava/lang/Object;
     const/4 v0, 0x0
 
@@ -385,19 +342,16 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 142
     const/4 v2, -0x1
 
     aput v2, p2, v3
 
-    .line 143
     invoke-virtual {p0, p1, p3}, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->findMatchingDecl(Lmf/org/apache/xerces/xni/QName;Lmf/org/apache/xerces/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 131
     :cond_1
     add-int/lit8 v2, v0, 0x1
 
@@ -405,13 +359,11 @@
 
     if-eqz v2, :cond_3
 
-    .line 128
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 133
     :cond_3
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
@@ -421,11 +373,9 @@
 
     move-result-object v1
 
-    .line 134
     .local v1, "matchingDecl":Lmf/org/apache/xerces/impl/xs/XSElementDecl;
     if-eqz v1, :cond_2
 
-    .line 136
     add-int/lit8 v2, v0, 0x1
 
     aput v4, p2, v2
@@ -437,14 +387,12 @@
     .locals 3
 
     .prologue
-    .line 88
     iget v2, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fNumElements:I
 
     add-int/lit8 v2, v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 90
     .local v1, "state":[I
     const/4 v0, 0x0
 
@@ -454,16 +402,13 @@
 
     if-le v0, v2, :cond_0
 
-    .line 93
     return-object v1
 
-    .line 91
     :cond_0
     const/4 v2, 0x0
 
     aput v2, v1, v0
 
-    .line 90
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -474,12 +419,10 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 207
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
-    .line 208
     .local v1, "ret":Ljava/util/Vector;
     const/4 v0, 0x0
 
@@ -489,10 +432,8 @@
 
     if-lt v0, v2, :cond_0
 
-    .line 214
     return-object v1
 
-    .line 211
     :cond_0
     add-int/lit8 v2, v0, 0x1
 
@@ -500,14 +441,12 @@
 
     if-nez v2, :cond_1
 
-    .line 212
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/models/XSAllCM;->fAllElements:[Lmf/org/apache/xerces/impl/xs/XSElementDecl;
 
     aget-object v2, v2, v0
 
     invoke-virtual {v1, v2}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 208
     :cond_1
     add-int/lit8 v0, v0, 0x1
 

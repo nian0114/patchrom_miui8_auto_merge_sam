@@ -11,10 +11,8 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ExtLibTypeProvider;-><init>(ILandroid/content/Context;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 40
     return-void
 .end method
 
@@ -24,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ExtLibTypeProvider;->enable()V
 
     return-void
@@ -34,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 62
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_PEDOMETER:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -48,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, 0x3
 
     return v0
@@ -58,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ExtLibTypeProvider;->occurTimeOut()V
 
     return-void

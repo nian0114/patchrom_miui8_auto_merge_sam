@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/android/server/execute/ExecuteManagerService$MyPackageMonitor;->this$0:Lcom/android/server/execute/ExecuteManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -38,13 +37,11 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     iget-object v0, p0, Lcom/android/server/execute/ExecuteManagerService$MyPackageMonitor;->this$0:Lcom/android/server/execute/ExecuteManagerService;
 
     # invokes: Lcom/android/server/execute/ExecuteManagerService;->updateExecutableInfo()V
     invoke-static {v0}, Lcom/android/server/execute/ExecuteManagerService;->access$300(Lcom/android/server/execute/ExecuteManagerService;)V
 
-    .line 133
     return-void
 .end method
 
@@ -52,12 +49,10 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Lcom/android/server/execute/ExecuteManagerService$MyPackageMonitor;->this$0:Lcom/android/server/execute/ExecuteManagerService;
 
     # invokes: Lcom/android/server/execute/ExecuteManagerService;->updateExecutableInfo()V
     invoke-static {v0}, Lcom/android/server/execute/ExecuteManagerService;->access$300(Lcom/android/server/execute/ExecuteManagerService;)V
 
-    .line 127
     return-void
 .end method

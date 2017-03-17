@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 474
     iput-object p1, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
-    .line 475
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 476
     return-void
 .end method
 
@@ -41,12 +38,10 @@
     .param p1, "SelfChange"    # Z
 
     .prologue
-    .line 480
     iget-object v0, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
     # invokes: Lcom/android/server/VibratorService;->updateInputDeviceVibrators()V
     invoke-static {v0}, Lcom/android/server/VibratorService;->access$500(Lcom/android/server/VibratorService;)V
 
-    .line 481
     return-void
 .end method

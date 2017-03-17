@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1080
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
-    .line 1081
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1082
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1085
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;->access$1000()Ljava/lang/String;
 
@@ -53,7 +49,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "handleMessage: entry what = "
+    const-string v3, "handleMessage: entry what = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,16 +67,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1086
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1096
     :goto_0
     return-void
 
-    .line 1088
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -99,7 +92,6 @@
 
     goto :goto_1
 
-    .line 1091
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -112,7 +104,6 @@
 
     goto :goto_0
 
-    .line 1086
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

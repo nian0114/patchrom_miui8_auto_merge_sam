@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 764
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$1;
 
     .prologue
-    .line 764
     invoke-direct {p0, p1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;-><init>(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;)V
 
     return-void
@@ -57,12 +55,10 @@
 
     const/4 v3, 0x0
 
-    .line 767
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 768
     .local v6, "action":Ljava/lang/String;
     const-string v0, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -72,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 769
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "wifi_state"
@@ -86,12 +81,10 @@
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mWifiState:I
     invoke-static {v0, v2}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$602(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;I)I
 
-    .line 847
     :cond_0
     :goto_0
     return-void
 
-    .line 771
     :cond_1
     const-string v0, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
@@ -101,7 +94,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 772
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "wifi_state"
@@ -117,7 +109,6 @@
 
     goto :goto_0
 
-    .line 775
     :cond_2
     const-string v0, "edm.intent.action.internal.RESTRICTION_DISABLE_WFD"
 
@@ -127,14 +118,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 776
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy4"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 777
     .local v1, "uri":Landroid/net/Uri;
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
@@ -157,15 +146,12 @@
 
     move-result-object v7
 
-    .line 779
     .local v7, "cr":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
-    .line 781
     :try_start_0
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 782
     const-string v0, "isWifiDirectAllowed"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -184,7 +170,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 783
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mP2pStateMachine:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -198,7 +183,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 786
     :cond_3
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
@@ -211,7 +195,6 @@
 
     throw v0
 
-    .line 791
     .end local v1    # "uri":Landroid/net/Uri;
     .end local v7    # "cr":Landroid/database/Cursor;
     :cond_4
@@ -223,14 +206,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 792
     const-string v0, "WifiP2pService"
 
     const-string v2, "ACTION_P2P_STOPFIND_TIMER_EXPIRED"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 793
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mP2pStateMachine:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -244,7 +225,6 @@
 
     goto :goto_0
 
-    .line 796
     :cond_5
     const-string v0, "com.samsung.android.net.wifi.p2p.LO_TIMER_EXPIRED"
 
@@ -254,14 +234,12 @@
 
     if-eqz v0, :cond_7
 
-    .line 798
     const-string v0, "WifiP2pService"
 
     const-string v2, "ACTION_P2P_LO_TIMER_EXPIRED"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 799
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mLOCount:I
@@ -273,7 +251,6 @@
 
     if-ge v0, v2, :cond_6
 
-    .line 800
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mP2pStateMachine:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -289,7 +266,6 @@
 
     goto/16 :goto_0
 
-    .line 802
     :cond_6
     const-string v0, "WifiP2pService"
 
@@ -297,13 +273,11 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 803
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mLOCount:I
     invoke-static {v0, v3}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$802(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;I)I
 
-    .line 804
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mListenOffloading:Z
@@ -311,7 +285,6 @@
 
     goto/16 :goto_0
 
-    .line 828
     :cond_7
     const-string v0, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
@@ -321,14 +294,12 @@
 
     if-eqz v0, :cond_9
 
-    .line 829
     const-string v0, "reason"
 
     invoke-virtual {p2, v0, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v9
 
-    .line 830
     .local v9, "reason":I
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
@@ -345,7 +316,6 @@
 
     check-cast v8, Landroid/net/wifi/p2p/WifiP2pManager;
 
-    .line 831
     .local v8, "mWifiP2pManager":Landroid/net/wifi/p2p/WifiP2pManager;
     invoke-virtual {v8}, Landroid/net/wifi/p2p/WifiP2pManager;->isWifiP2pConnected()Z
 
@@ -361,7 +331,6 @@
 
     if-ne v9, v0, :cond_0
 
-    .line 832
     :cond_8
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
@@ -374,7 +343,6 @@
 
     goto/16 :goto_0
 
-    .line 834
     .end local v8    # "mWifiP2pManager":Landroid/net/wifi/p2p/WifiP2pManager;
     .end local v9    # "reason":I
     :cond_9
@@ -386,7 +354,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 835
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "sscon"
@@ -396,7 +363,6 @@
 
     goto/16 :goto_0
 
-    .line 836
     :cond_a
     const-string v0, "com.sec.android.sidesync.source.SERVICE_DESTROY"
 
@@ -406,7 +372,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 837
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "ssdis"
@@ -416,7 +381,6 @@
 
     goto/16 :goto_0
 
-    .line 838
     :cond_b
     const-string v0, "com.sec.android.sidesync.sink.SIDESYNC_CONNECTED"
 
@@ -426,7 +390,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 839
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "sicon"
@@ -436,7 +399,6 @@
 
     goto/16 :goto_0
 
-    .line 840
     :cond_c
     const-string v0, "com.sec.android.sidesync.sink.SERVICE_DESTROY"
 
@@ -446,7 +408,6 @@
 
     if-eqz v0, :cond_d
 
-    .line 841
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "sidis"
@@ -456,7 +417,6 @@
 
     goto/16 :goto_0
 
-    .line 842
     :cond_d
     const-string v0, "android.intent.action.SCREEN_ON"
 
@@ -466,7 +426,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 843
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "lcdon"
@@ -476,7 +435,6 @@
 
     goto/16 :goto_0
 
-    .line 844
     :cond_e
     const-string v0, "android.intent.action.SCREEN_OFF"
 
@@ -486,7 +444,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 845
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiStateReceiver;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const-string v2, "lcdoff"

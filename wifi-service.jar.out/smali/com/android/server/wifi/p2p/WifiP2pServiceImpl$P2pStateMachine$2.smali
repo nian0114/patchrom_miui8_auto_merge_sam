@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4586
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$2;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4588
     const/4 v0, 0x1
 
     return v0
@@ -49,7 +47,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4592
     const/4 v0, 0x1
 
     return v0
@@ -60,7 +57,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4596
     const/4 v0, 0x1
 
     return v0
@@ -71,7 +67,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4600
     return-void
 .end method
 
@@ -80,6 +75,5 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4603
     return-void
 .end method

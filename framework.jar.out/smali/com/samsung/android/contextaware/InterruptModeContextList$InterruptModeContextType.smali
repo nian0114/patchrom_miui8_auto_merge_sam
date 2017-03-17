@@ -44,7 +44,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 42
     new-instance v0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType$1;
 
     const-string v1, "SENSORHUB_RUNNER_ACTIVITY_TRACKER_INTERRUPT"
@@ -59,7 +58,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;->SENSORHUB_RUNNER_ACTIVITY_TRACKER_INTERRUPT:Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;
 
-    .line 36
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;
@@ -85,13 +83,10 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 61
     iput-object p3, p0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;->code:Ljava/lang/String;
 
-    .line 62
     return-void
 .end method
 
@@ -103,7 +98,6 @@
     .param p4, "x3"    # Lcom/samsung/android/contextaware/InterruptModeContextList$1;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -114,7 +108,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;->code:Ljava/lang/String;
 
     return-object v0
@@ -125,7 +118,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     const-class v0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -141,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;->$VALUES:[Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;->clone()Ljava/lang/Object;
@@ -159,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/samsung/android/contextaware/InterruptModeContextList$InterruptModeContextType;->code:Ljava/lang/String;
 
     return-object v0
@@ -169,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     return-object v0

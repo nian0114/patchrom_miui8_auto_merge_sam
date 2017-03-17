@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     const/4 v0, 0x0
 
     return v0
@@ -32,7 +30,6 @@
     .param p1, "b"    # [B
 
     .prologue
-    .line 6
     const/4 v0, 0x0
 
     return v0
@@ -47,7 +44,6 @@
     .param p6, "payloadLen"    # I
 
     .prologue
-    .line 18
     const/4 v0, -0x1
 
     return v0
@@ -58,7 +54,6 @@
     .param p1, "metric"    # Lcom/carrieriq/iqagent/client/Metric;
 
     .prologue
-    .line 14
     const/4 v0, -0x1
 
     return v0

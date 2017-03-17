@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 515
     iput-object p1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;
 
     .prologue
-    .line 515
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;-><init>(Lcom/android/server/enterprise/keystore/TimaKeystoreService;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 537
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 517
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 521
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -94,10 +89,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
     iget-object v0, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
-    const-string/jumbo v1, "defaultpackage"
+    const-string v1, "defaultpackage"
 
     # invokes: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->deletePackageRecord(ILjava/lang/String;)Z
     invoke-static {v0, p1, v1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$600(Lcom/android/server/enterprise/keystore/TimaKeystoreService;ILjava/lang/String;)Z
@@ -106,7 +100,6 @@
 
     if-nez v0, :cond_0
 
-    .line 523
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -116,7 +109,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     :cond_0
     return-void
 .end method
@@ -126,7 +118,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 529
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -152,10 +143,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 530
     iget-object v0, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
-    const-string/jumbo v1, "defaultpackage"
+    const-string v1, "defaultpackage"
 
     # invokes: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->deletePackageRecord(ILjava/lang/String;)Z
     invoke-static {v0, p1, v1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$600(Lcom/android/server/enterprise/keystore/TimaKeystoreService;ILjava/lang/String;)Z
@@ -164,7 +154,6 @@
 
     if-nez v0, :cond_0
 
-    .line 531
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -174,7 +163,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 533
     :cond_0
     return-void
 .end method
@@ -186,6 +174,5 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 541
     return-void
 .end method

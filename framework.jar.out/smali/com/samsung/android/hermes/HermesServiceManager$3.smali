@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 847
     invoke-static {}, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->values()[Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
     move-result-object v0

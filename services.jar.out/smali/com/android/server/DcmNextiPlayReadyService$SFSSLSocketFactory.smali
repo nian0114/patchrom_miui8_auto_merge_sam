@@ -36,12 +36,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 380
     iput-object p1, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->this$0:Lcom/android/server/DcmNextiPlayReadyService;
 
     invoke-direct {p0}, Ljavax/net/ssl/SSLSocketFactory;-><init>()V
 
-    .line 378
     const-string v1, "TLS"
 
     invoke-static {v1}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
@@ -50,12 +48,10 @@
 
     iput-object v1, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
-    .line 383
     new-instance v0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory$1;-><init>(Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;Lcom/android/server/DcmNextiPlayReadyService;)V
 
-    .line 397
     .local v0, "tm":Ljavax/net/ssl/TrustManager;
     iget-object v1, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
@@ -69,7 +65,6 @@
 
     invoke-virtual {v1, v4, v2, v4}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
-    .line 399
     return-void
 .end method
 
@@ -84,7 +79,6 @@
     .end annotation
 
     .prologue
-    .line 428
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -110,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 423
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -138,7 +131,6 @@
     .end annotation
 
     .prologue
-    .line 413
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -164,7 +156,6 @@
     .end annotation
 
     .prologue
-    .line 418
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -192,7 +183,6 @@
     .end annotation
 
     .prologue
-    .line 408
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -220,7 +210,6 @@
     .end annotation
 
     .prologue
-    .line 403
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -238,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 438
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -256,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 433
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;

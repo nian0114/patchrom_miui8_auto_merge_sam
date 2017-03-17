@@ -28,7 +28,6 @@
     .param p16, "pkgPrivateFlags"    # I
 
     .prologue
-    .line 32
     move-object/from16 v2, p0
 
     move-object/from16 v3, p1
@@ -63,13 +62,11 @@
 
     invoke-direct/range {v2 .. v17}, Lcom/android/server/pm/PackageSettingBase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZIII)V
 
-    .line 38
     move/from16 v0, p13
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/server/pm/PendingPackage;->sharedId:I
 
-    .line 39
     return-void
 .end method

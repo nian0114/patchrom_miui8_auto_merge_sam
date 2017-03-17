@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .end annotation
 
     .prologue
-    .line 135
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -52,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 172
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -73,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return-object v0
@@ -83,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 101
     const/4 v0, 0x0
 
     return v0
@@ -93,7 +88,6 @@
     .locals 3
 
     .prologue
-    .line 230
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -116,7 +110,6 @@
     .end annotation
 
     .prologue
-    .line 151
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -132,7 +125,6 @@
     .locals 3
 
     .prologue
-    .line 226
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -156,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 198
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -178,7 +169,6 @@
     .end annotation
 
     .prologue
-    .line 234
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -200,7 +190,6 @@
     .end annotation
 
     .prologue
-    .line 92
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -222,7 +211,6 @@
     .end annotation
 
     .prologue
-    .line 221
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -245,7 +233,6 @@
     .end annotation
 
     .prologue
-    .line 122
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9

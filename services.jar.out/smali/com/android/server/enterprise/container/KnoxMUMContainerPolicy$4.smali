@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1291
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$4;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1306
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1294
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1298
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1302
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 1310
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->access$100()Ljava/lang/String;
 
@@ -122,7 +116,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1312
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$4;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mHandler:Landroid/os/Handler;
@@ -136,6 +129,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1384
     return-void
 .end method

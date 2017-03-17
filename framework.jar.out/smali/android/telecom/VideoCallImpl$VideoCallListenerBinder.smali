@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 57
     iput-object p1, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     invoke-direct {p0}, Lcom/android/internal/telecom/IVideoCallback$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/telecom/VideoCallImpl$1;
 
     .prologue
-    .line 57
     invoke-direct {p0, p1}, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;-><init>(Landroid/telecom/VideoCallImpl;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "dataUsage"    # J
 
     .prologue
-    .line 97
     iget-object v0, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -70,7 +67,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 99
     return-void
 .end method
 
@@ -79,7 +75,6 @@
     .param p1, "cameraCapabilities"    # Landroid/telecom/VideoProfile$CameraCapabilities;
 
     .prologue
-    .line 103
     iget-object v0, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -95,7 +90,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 105
     return-void
 .end method
 
@@ -105,12 +99,10 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 83
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 84
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -118,14 +110,12 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 85
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 86
     iget-object v1, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -141,7 +131,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 87
     return-void
 .end method
 
@@ -150,7 +139,6 @@
     .param p1, "videoQuality"    # I
 
     .prologue
-    .line 91
     iget-object v0, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -168,7 +156,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 93
     return-void
 .end method
 
@@ -177,7 +164,6 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -197,7 +183,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 79
     return-void
 .end method
 
@@ -206,7 +191,6 @@
     .param p1, "videoProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -222,7 +206,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 62
     return-void
 .end method
 
@@ -233,12 +216,10 @@
     .param p3, "responseProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 67
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 68
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -246,13 +227,10 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 69
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 70
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 71
     iget-object v1, p0, Landroid/telecom/VideoCallImpl$VideoCallListenerBinder;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mHandler:Landroid/os/Handler;
@@ -268,6 +246,5 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 73
     return-void
 .end method

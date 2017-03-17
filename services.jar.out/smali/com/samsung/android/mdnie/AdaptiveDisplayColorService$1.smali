@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 446
     iget-object v2, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mActivityManager:Landroid/app/ActivityManager;
@@ -68,16 +66,13 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 447
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v2, p1, :cond_0
 
-    .line 448
     iget-object v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    .line 451
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return-object v2
@@ -93,7 +88,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 455
     iget-object v2, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mActivityManager:Landroid/app/ActivityManager;
@@ -123,7 +117,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 456
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz p1, :cond_0
 
@@ -135,10 +128,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 457
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
-    .line 460
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return v2
@@ -154,7 +145,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 464
     iget-object v2, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mActivityManager:Landroid/app/ActivityManager;
@@ -184,7 +174,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 465
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz p1, :cond_0
 
@@ -196,10 +185,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 466
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
 
-    .line 469
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return v2
@@ -221,7 +208,6 @@
 
     const/4 v10, 0x1
 
-    .line 474
     iget-object v7, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mHandler:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;
@@ -231,42 +217,33 @@
 
     if-nez v7, :cond_1
 
-    .line 508
     :cond_0
     :goto_0
     return-void
 
-    .line 478
     :cond_1
     const/4 v1, 0x0
 
-    .line 479
     .local v1, "packageName":Ljava/lang/String;
     move v2, p1
 
-    .line 480
     .local v2, "pid":I
     move v6, p2
 
-    .line 481
     .local v6, "uid":I
     const/4 v7, -0x1
 
     if-eq v2, v7, :cond_3
 
-    .line 482
     if-eqz p3, :cond_2
 
-    .line 483
     invoke-virtual {p0, v2}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->getPackageNameFromPid(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 500
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 501
     iget-object v7, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mHandler:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;
@@ -278,20 +255,15 @@
 
     move-result-object v0
 
-    .line 502
     .local v0, "msg":Landroid/os/Message;
     iput v8, v0, Landroid/os/Message;->what:I
 
-    .line 503
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 504
     iput v2, v0, Landroid/os/Message;->arg1:I
 
-    .line 505
     iput v6, v0, Landroid/os/Message;->arg2:I
 
-    .line 506
     iget-object v7, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mHandler:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;
@@ -303,14 +275,12 @@
 
     goto :goto_0
 
-    .line 485
     .end local v0    # "msg":Landroid/os/Message;
     :cond_2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 486
     .local v4, "time":J
     iget-object v7, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -321,7 +291,6 @@
 
     invoke-virtual {v7, v10}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->removeMessages(I)V
 
-    .line 487
     iget-object v7, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mHandler:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;
@@ -337,7 +306,6 @@
 
     goto :goto_0
 
-    .line 491
     .end local v4    # "time":J
     :cond_3
     iget-object v7, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
@@ -351,7 +319,6 @@
 
     move-result-object v3
 
-    .line 492
     .local v3, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -359,7 +326,6 @@
 
     if-lez v7, :cond_0
 
-    .line 495
     invoke-interface {v3, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -372,12 +338,10 @@
 
     move-result-object v1
 
-    .line 496
     invoke-virtual {p0, v1}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->getPidFromPackageName(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 497
     invoke-virtual {p0, v1}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;->getUidFromPackageName(Ljava/lang/String;)I
 
     move-result v6
@@ -391,7 +355,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 512
     return-void
 .end method
 
@@ -407,6 +370,5 @@
     .end annotation
 
     .prologue
-    .line 516
     return-void
 .end method

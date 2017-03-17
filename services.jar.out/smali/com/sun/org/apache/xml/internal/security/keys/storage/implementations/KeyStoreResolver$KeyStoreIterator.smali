@@ -63,7 +63,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/storage/StorageResolverException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/storage/StorageResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 73
     iput-object p1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,16 +41,13 @@
 
     const/4 v4, 0x0
 
-    .line 76
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 97
     :goto_0
     return-void
 
-    .line 78
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
@@ -66,7 +62,6 @@
 
     move-result-object v0
 
-    .line 79
     .local v0, "text":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 82
     .end local v0    # "text":Ljava/lang/String;
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
@@ -95,7 +89,6 @@
 
     move-result-object v0
 
-    .line 83
     .restart local v0    # "text":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
@@ -108,7 +101,6 @@
 
     goto :goto_0
 
-    .line 86
     .end local v0    # "text":Ljava/lang/String;
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
@@ -125,7 +117,6 @@
     # invokes: Lcom/android/server/policy/EnableAccessibilityController;->turnOffTalkBackExclusiveOptions(Landroid/content/Context;I)V
     invoke-static {v1, v2, v3}, Lcom/android/server/policy/EnableAccessibilityController;->access$200(Lcom/android/server/policy/EnableAccessibilityController;Landroid/content/Context;I)V
 
-    .line 87
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
     # getter for: Lcom/android/server/policy/EnableAccessibilityController;->mContext:Landroid/content/Context;
@@ -142,7 +133,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
     iget-object v2, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
@@ -157,7 +147,6 @@
     # invokes: Lcom/android/server/policy/EnableAccessibilityController;->turnOnTalkback(Landroid/content/Context;Ljava/lang/String;)V
     invoke-static {v1, v2, v3}, Lcom/android/server/policy/EnableAccessibilityController;->access$400(Lcom/android/server/policy/EnableAccessibilityController;Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 92
     :goto_1
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
@@ -168,7 +157,6 @@
 
     invoke-virtual {v1}, Landroid/media/Ringtone;->play()V
 
-    .line 93
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
     # getter for: Lcom/android/server/policy/EnableAccessibilityController;->mTts:Landroid/speech/tts/TextToSpeech;
@@ -193,7 +181,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController$1;->this$0:Lcom/android/server/policy/EnableAccessibilityController;
 
@@ -211,7 +198,6 @@
 
     goto :goto_1
 
-    .line 76
     nop
 
     :pswitch_data_0

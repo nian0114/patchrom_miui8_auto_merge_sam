@@ -35,12 +35,10 @@
     .locals 2
 
     .prologue
-    .line 2893
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2894
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mDataRate2:I
@@ -57,7 +55,6 @@
 
     iput-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mTime:J
 
-    .line 2895
     return-void
 .end method
 
@@ -65,7 +62,6 @@
     .locals 6
 
     .prologue
-    .line 2968
     const-string v2, "%dbytes, %ddBm, %ddBm, %dMbps, %dMbps"
 
     const/4 v3, 0x5
@@ -126,7 +122,6 @@
 
     move-result-object v1
 
-    .line 2970
     .local v1, "resultStr":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
@@ -155,7 +150,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2971
     new-instance v0, Landroid/app/Notification;
 
     const v2, 0x108008a
@@ -166,7 +160,6 @@
 
     invoke-direct {v0, v2, v1, v4, v5}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
-    .line 2974
     .local v0, "notification":Landroid/app/Notification;
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
@@ -183,21 +176,18 @@
 
     invoke-virtual {v0, v2, v3, v1, v4}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 2975
     iget v2, v0, Landroid/app/Notification;->flags:I
 
     or-int/lit8 v2, v2, 0x10
 
     iput v2, v0, Landroid/app/Notification;->flags:I
 
-    .line 2976
     iget v2, v0, Landroid/app/Notification;->defaults:I
 
     or-int/lit8 v2, v2, 0x1
 
     iput v2, v0, Landroid/app/Notification;->defaults:I
 
-    .line 2978
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
     iget-object v2, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -209,7 +199,6 @@
 
     if-nez v2, :cond_0
 
-    .line 2979
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
     iget-object v3, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -234,7 +223,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mNotiManager:Landroid/app/NotificationManager;
     invoke-static {v3, v2}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$15502(Lcom/android/server/wifi/WifiWatchdogStateMachine;Landroid/app/NotificationManager;)Landroid/app/NotificationManager;
 
-    .line 2981
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
@@ -249,7 +237,6 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 2982
     return-void
 .end method
 
@@ -259,7 +246,6 @@
     .locals 2
 
     .prologue
-    .line 2898
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mDataRate2:I
@@ -276,7 +262,6 @@
 
     iput-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mTime:J
 
-    .line 2899
     return-void
 .end method
 
@@ -285,10 +270,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 2927
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mDataRate1:I
 
-    .line 2928
     return-void
 .end method
 
@@ -297,10 +280,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 2931
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mDataRate2:I
 
-    .line 2932
     return-void
 .end method
 
@@ -309,10 +290,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 2915
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mQuality:I
 
-    .line 2916
     return-void
 .end method
 
@@ -321,10 +300,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 2919
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mRSSI1:I
 
-    .line 2920
     return-void
 .end method
 
@@ -333,10 +310,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 2923
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mRSSI2:I
 
-    .line 2924
     return-void
 .end method
 
@@ -345,10 +320,8 @@
     .param p1, "val"    # J
 
     .prologue
-    .line 2911
     iput-wide p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mTime:J
 
-    .line 2912
     return-void
 .end method
 
@@ -362,25 +335,18 @@
     .param p7, "r6"    # I
 
     .prologue
-    .line 2902
     iput-wide p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mTime:J
 
-    .line 2903
     iput p3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mQuality:I
 
-    .line 2904
     iput p4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mRSSI1:I
 
-    .line 2905
     iput p5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mRSSI2:I
 
-    .line 2906
     iput p6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mDataRate1:I
 
-    .line 2907
     iput p7, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mDataRate2:I
 
-    .line 2908
     return-void
 .end method
 
@@ -388,17 +354,14 @@
     .locals 12
 
     .prologue
-    .line 2935
     iget v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->mQuality:I
 
     if-nez v6, :cond_1
 
-    .line 2965
     :cond_0
     :goto_0
     return-void
 
-    .line 2937
     :cond_1
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->this$1:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
 
@@ -419,7 +382,6 @@
 
     move-result-object v3
 
-    .line 2938
     .local v3, "logName":Ljava/lang/String;
     const-string v6, "stop"
 
@@ -429,7 +391,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 2939
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -450,7 +411,6 @@
 
     goto :goto_0
 
-    .line 2943
     :cond_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -487,7 +447,6 @@
 
     move-result-object v2
 
-    .line 2944
     .local v2, "logFile":Ljava/lang/String;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -523,11 +482,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2945
     :cond_3
     const/4 v4, 0x0
 
-    .line 2947
     .local v4, "resultWriter":Ljava/io/FileWriter;
     :try_start_0
     new-instance v5, Ljava/io/FileWriter;
@@ -539,7 +496,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2948
     .end local v4    # "resultWriter":Ljava/io/FileWriter;
     .local v5, "resultWriter":Ljava/io/FileWriter;
     :try_start_1
@@ -660,13 +616,11 @@
 
     invoke-virtual {v5, v6}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 2955
     invoke-direct {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler$QualityResults;->displayNotification()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2960
     if-eqz v5, :cond_4
 
     :try_start_2
@@ -677,18 +631,15 @@
     :cond_4
     move-object v4, v5
 
-    .line 2963
     .end local v5    # "resultWriter":Ljava/io/FileWriter;
     .restart local v4    # "resultWriter":Ljava/io/FileWriter;
     goto/16 :goto_0
 
-    .line 2961
     .end local v4    # "resultWriter":Ljava/io/FileWriter;
     .restart local v5    # "resultWriter":Ljava/io/FileWriter;
     :catch_0
     move-exception v1
 
-    .line 2962
     .local v1, "e2":Ljava/io/IOException;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -711,17 +662,14 @@
     :cond_5
     move-object v4, v5
 
-    .line 2964
     .end local v5    # "resultWriter":Ljava/io/FileWriter;
     .restart local v4    # "resultWriter":Ljava/io/FileWriter;
     goto/16 :goto_0
 
-    .line 2956
     .end local v1    # "e2":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 2957
     .local v0, "e1":Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -761,7 +709,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2960
     :cond_6
     if-eqz v4, :cond_0
 
@@ -772,11 +719,9 @@
 
     goto/16 :goto_0
 
-    .line 2961
     :catch_2
     move-exception v1
 
-    .line 2962
     .restart local v1    # "e2":Ljava/io/IOException;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -798,13 +743,11 @@
 
     goto/16 :goto_0
 
-    .line 2959
     .end local v0    # "e1":Ljava/io/IOException;
     .end local v1    # "e2":Ljava/io/IOException;
     :catchall_0
     move-exception v6
 
-    .line 2960
     :goto_2
     if-eqz v4, :cond_7
 
@@ -813,16 +756,13 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 2963
     :cond_7
     :goto_3
     throw v6
 
-    .line 2961
     :catch_3
     move-exception v1
 
-    .line 2962
     .restart local v1    # "e2":Ljava/io/IOException;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -844,7 +784,6 @@
 
     goto :goto_3
 
-    .line 2959
     .end local v1    # "e2":Ljava/io/IOException;
     .end local v4    # "resultWriter":Ljava/io/FileWriter;
     .restart local v5    # "resultWriter":Ljava/io/FileWriter;
@@ -857,7 +796,6 @@
     .restart local v4    # "resultWriter":Ljava/io/FileWriter;
     goto :goto_2
 
-    .line 2956
     .end local v4    # "resultWriter":Ljava/io/FileWriter;
     .restart local v5    # "resultWriter":Ljava/io/FileWriter;
     :catch_4

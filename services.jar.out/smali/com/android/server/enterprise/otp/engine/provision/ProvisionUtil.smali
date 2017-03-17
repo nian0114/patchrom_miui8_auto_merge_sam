@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,23 +24,18 @@
     .param p0, "input"    # [B
 
     .prologue
-    .line 150
     if-nez p0, :cond_0
 
-    .line 151
     const/4 v3, 0x0
 
-    .line 161
     :goto_0
     return-object v3
 
-    .line 153
     :cond_0
     new-instance v2, Ljava/util/Formatter;
 
     invoke-direct {v2}, Ljava/util/Formatter;-><init>()V
 
-    .line 154
     .local v2, "formatter":Ljava/util/Formatter;
     move-object v0, p0
 
@@ -57,7 +51,6 @@
 
     aget-byte v1, v0, v4
 
-    .line 155
     .local v1, "b":B
     const-string v6, "%02x"
 
@@ -75,23 +68,19 @@
 
     invoke-virtual {v2, v6, v7}, Ljava/util/Formatter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
 
-    .line 154
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 157
     .end local v1    # "b":B
     :cond_1
     invoke-virtual {v2}, Ljava/util/Formatter;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 158
     .local v3, "hex":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/util/Formatter;->close()V
 
-    .line 160
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,12 +120,10 @@
 
     const/16 v0, 0x401
 
-    .line 46
     const-string v1, "ProvisionUtil::checkSecureStorageData Enter"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 47
     const-string v1, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -163,19 +150,15 @@
 
     if-eq v1, v6, :cond_0
 
-    .line 50
     const-string v0, "ProvisionUtil::checkSecureStorageData Exit with error unsupported algo"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 51
     const/16 v0, 0x404
 
-    .line 133
     :goto_0
     return v0
 
-    .line 55
     :cond_0
     if-eqz p1, :cond_1
 
@@ -187,14 +170,12 @@
 
     if-nez v1, :cond_1
 
-    .line 56
     const-string v1, "ProvisionUtil::checkSecureStorageData - invalid token id"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 61
     :cond_1
     if-eqz p1, :cond_2
 
@@ -206,18 +187,15 @@
 
     if-nez v1, :cond_2
 
-    .line 62
     const-string v1, "ProvisionUtil::checkSecureStorageData - invalid shared secret"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 66
     :cond_2
     if-eqz p1, :cond_5
 
-    .line 68
     const-string v1, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -236,7 +214,6 @@
 
     if-gez v1, :cond_3
 
-    .line 70
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +248,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_3
     const-string v1, "OTP_OATH_PROTOCOL"
 
@@ -295,14 +271,12 @@
 
     if-ge v1, v7, :cond_4
 
-    .line 77
     const-string v1, "ProvisionUtil::checkSecureStorageData - invalid OCRA suite"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 82
     :cond_4
     const-string v1, "OTP_LENGTH"
 
@@ -320,14 +294,12 @@
 
     if-eq v1, v6, :cond_8
 
-    .line 84
     const-string v1, "ProvisionUtil::checkSecureStorageData - invalid otp length"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 89
     :cond_5
     const-string v1, "OTP_OATH_PROTOCOL"
 
@@ -359,7 +331,6 @@
 
     if-gez v1, :cond_6
 
-    .line 92
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -394,7 +365,6 @@
 
     goto/16 :goto_0
 
-    .line 97
     :cond_6
     const-string v1, "OTP_OATH_PROTOCOL"
 
@@ -426,14 +396,12 @@
 
     if-ge v1, v7, :cond_7
 
-    .line 100
     const-string v1, "ProvisionUtil::checkSecureStorageData - invalid OCRA suite"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 105
     :cond_7
     const-string v1, "OTP_LENGTH"
 
@@ -459,14 +427,12 @@
 
     if-eq v1, v6, :cond_8
 
-    .line 107
     const-string v1, "ProvisionUtil::checkSecureStorageData - invalid otp length"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 113
     :cond_8
     if-nez p1, :cond_9
 
@@ -478,7 +444,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 114
     const-string v1, "OTP_PARAM"
 
     const-string v2, "OTP_PARAM"
@@ -489,7 +454,6 @@
 
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 118
     :cond_9
     const-string v1, "SECRET_ENCRYPTION_ALGO"
 
@@ -517,14 +481,12 @@
 
     if-nez v1, :cond_a
 
-    .line 121
     const-string v1, "ProvisionUtil::checkSecureStorageData - secret decryption key/password missing"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 126
     :cond_a
     if-eqz p1, :cond_b
 
@@ -536,14 +498,12 @@
 
     if-nez v0, :cond_b
 
-    .line 127
     const-string v0, "OTP_ENCODING"
 
     const/16 v1, 0x141
 
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 130
     :cond_b
     if-eqz p1, :cond_c
 
@@ -555,14 +515,12 @@
 
     if-nez v0, :cond_c
 
-    .line 131
     const-string v0, "OTP_HASH_ALGO"
 
     const/16 v1, 0x170
 
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 133
     :cond_c
     const/4 v0, 0x0
 
@@ -573,7 +531,6 @@
     .locals 6
 
     .prologue
-    .line 41
     new-instance v0, Ljava/lang/Double;
 
     invoke-static {}, Ljava/lang/Math;->random()D
@@ -586,7 +543,6 @@
 
     invoke-direct {v0, v2, v3}, Ljava/lang/Double;-><init>(D)V
 
-    .line 42
     .local v0, "temp":Ljava/lang/Double;
     invoke-virtual {v0}, Ljava/lang/Double;->longValue()J
 
@@ -604,7 +560,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 35
     new-instance v0, Ljava/lang/Double;
 
     invoke-static {}, Ljava/lang/Math;->random()D
@@ -617,7 +572,6 @@
 
     invoke-direct {v0, v2, v3}, Ljava/lang/Double;-><init>(D)V
 
-    .line 36
     .local v0, "temp":Ljava/lang/Double;
     invoke-virtual {v0}, Ljava/lang/Double;->intValue()I
 
@@ -627,7 +581,6 @@
 
     move-result-object v1
 
-    .line 37
     .local v1, "tokenId":Ljava/lang/String;
     return-object v1
 .end method
@@ -639,32 +592,26 @@
     .prologue
     const/16 v6, 0x10
 
-    .line 137
     const/4 v0, 0x0
 
-    .line 138
     .local v0, "data":[B
     if-eqz p0, :cond_0
 
-    .line 139
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 140
     .local v2, "len":I
     div-int/lit8 v3, v2, 0x2
 
     new-array v0, v3, [B
 
-    .line 141
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 142
     div-int/lit8 v3, v1, 0x2
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -693,12 +640,10 @@
 
     aput-byte v4, v0, v3
 
-    .line 141
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
-    .line 146
     .end local v1    # "i":I
     .end local v2    # "len":I
     :cond_0
@@ -710,14 +655,11 @@
     .param p0, "in"    # Ljava/io/InputStream;
 
     .prologue
-    .line 288
     const/4 v3, 0x0
 
-    .line 290
     .local v3, "result":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
-    .line 291
     .local v2, "line":Ljava/lang/String;
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -726,7 +668,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 292
     .end local v3    # "result":Ljava/lang/StringBuilder;
     .local v4, "result":Ljava/lang/StringBuilder;
     :try_start_1
@@ -738,7 +679,6 @@
 
     invoke-direct {v0, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 293
     .local v0, "br":Ljava/io/BufferedReader;
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -747,28 +687,24 @@
 
     if-eqz v2, :cond_0
 
-    .line 294
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 296
     .end local v0    # "br":Ljava/io/BufferedReader;
     :catch_0
     move-exception v1
 
     move-object v3, v4
 
-    .line 297
     .end local v4    # "result":Ljava/lang/StringBuilder;
     .local v1, "e":Ljava/io/IOException;
     .restart local v3    # "result":Ljava/lang/StringBuilder;
     :goto_1
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 299
     .end local v1    # "e":Ljava/io/IOException;
     :goto_2
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -783,12 +719,10 @@
     :cond_0
     move-object v3, v4
 
-    .line 298
     .end local v4    # "result":Ljava/lang/StringBuilder;
     .restart local v3    # "result":Ljava/lang/StringBuilder;
     goto :goto_2
 
-    .line 296
     .end local v0    # "br":Ljava/io/BufferedReader;
     :catch_1
     move-exception v1
@@ -806,28 +740,22 @@
     .prologue
     const/16 v8, 0x401
 
-    .line 168
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/otp/CallerVerification;->fetchSignature(Landroid/content/Context;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 170
     .local v0, "callerSignInfo":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 171
     const-string v9, "ProvisionUtil::setWhitelistAndSignerInfo - ERROR in fetching callers signature"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 172
     const/4 p3, 0x0
 
-    .line 224
     :goto_0
     return v8
 
-    .line 177
     :cond_0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -847,7 +775,6 @@
 
     move-result-object v7
 
-    .line 178
     .local v7, "strSignList":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -867,7 +794,6 @@
 
     move-result-object v6
 
-    .line 181
     .local v6, "strPkglist":Ljava/lang/String;
     const-string v9, "WHITELISTED_PACKAGES"
 
@@ -875,7 +801,6 @@
 
     move-result-object v3
 
-    .line 182
     .local v3, "pkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v9, "WHITELISTED_PKG_SIGNER_INFO"
 
@@ -883,13 +808,11 @@
 
     move-result-object v5
 
-    .line 184
     .local v5, "signList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v3, :cond_4
 
     if-eqz v5, :cond_4
 
-    .line 187
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v9
@@ -900,18 +823,14 @@
 
     if-eq v9, v10, :cond_1
 
-    .line 188
     const-string v9, "ProvisionUtil::setWhitelistAndSignerInfo - Lists size Mismatch"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 189
     const/4 p3, 0x0
 
-    .line 190
     goto :goto_0
 
-    .line 193
     :cond_1
     invoke-interface {v3, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -919,7 +838,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 194
     invoke-interface {v3, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v8
@@ -931,14 +849,11 @@
     .end local v0    # "callerSignInfo":Ljava/lang/String;
     check-cast v0, Ljava/lang/String;
 
-    .line 195
     .restart local v0    # "callerSignInfo":Ljava/lang/String;
     invoke-interface {v3, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 196
     invoke-interface {v5, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 197
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -957,7 +872,6 @@
 
     move-result-object v7
 
-    .line 199
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -977,7 +891,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 200
     .local v2, "p":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1003,7 +916,6 @@
 
     goto :goto_1
 
-    .line 201
     .end local v2    # "p":Ljava/lang/String;
     :cond_3
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1023,7 +935,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 202
     .local v4, "s":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1049,7 +960,6 @@
 
     goto :goto_2
 
-    .line 204
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "s":Ljava/lang/String;
     :cond_4
@@ -1057,17 +967,14 @@
 
     if-nez v5, :cond_6
 
-    .line 208
     invoke-interface {v3, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-eqz v8, :cond_5
 
-    .line 209
     invoke-interface {v3, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 211
     :cond_5
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1087,7 +994,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 212
     .restart local v2    # "p":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1111,7 +1017,6 @@
 
     move-result-object v6
 
-    .line 213
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1130,10 +1035,8 @@
 
     move-result-object v7
 
-    .line 214
     goto :goto_3
 
-    .line 219
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "p":Ljava/lang/String;
     :cond_6
@@ -1141,22 +1044,18 @@
 
     invoke-virtual {p3, v8}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 220
     const-string v8, "WHITELISTED_PKG_SIGNER_INFO"
 
     invoke-virtual {p3, v8}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 221
     const-string v8, "WHITELISTED_PACKAGES"
 
     invoke-virtual {p3, v8, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     const-string v8, "WHITELISTED_PKG_SIGNER_INFO"
 
     invoke-virtual {p3, v8, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
     const/4 v8, 0x0
 
     goto/16 :goto_0
@@ -1168,19 +1067,15 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 230
     const-string v8, "ProvisionUtil::validateCertificateHash | Enter"
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 232
     const/4 v6, 0x0
 
-    .line 233
     .local v6, "ret":I
     const/4 v4, 0x0
 
-    .line 236
     .local v4, "otpCert":[B
     const-string v8, "ENCRYPTION_CERTIFICATE_HASH"
 
@@ -1188,23 +1083,18 @@
 
     move-result-object v7
 
-    .line 238
     .local v7, "vendorCertHash":[B
     if-nez v7, :cond_0
 
-    .line 239
     const-string v8, "ProvisionUtil::validateCertificateHash - Vendor\'s ENCRYPTION_CERTIFICATE_HASH is null"
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 240
     const/16 v6, 0x401
 
-    .line 243
     :cond_0
     if-nez v6, :cond_1
 
-    .line 245
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v8
@@ -1213,22 +1103,17 @@
 
     move-result-object v4
 
-    .line 247
     if-nez v4, :cond_1
 
-    .line 248
     const-string v8, "ProvisionUtil::validateCertificateHash - OTP Certificate not found. OTP_CERT_NOT_SUPPORTED"
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 249
     const/16 v6, 0x40e
 
-    .line 253
     :cond_1
     if-nez v6, :cond_2
 
-    .line 256
     :try_start_0
     const-string v8, "SHA-256"
 
@@ -1236,13 +1121,11 @@
 
     move-result-object v3
 
-    .line 257
     .local v3, "md":Ljava/security/MessageDigest;
     invoke-virtual {v3, v4}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object v5
 
-    .line 260
     .local v5, "otpCertHash":[B
     invoke-static {v5, v7}, Ljava/security/MessageDigest;->isEqual([B[B)Z
 
@@ -1250,53 +1133,43 @@
 
     if-nez v8, :cond_2
 
-    .line 261
     const-string v8, "ProvisionUtil::validateCertificateHash - Invalid ENCRYPTION_CERTIFICATE_HASH"
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 262
     const/16 v6, 0x411
 
-    .line 271
     .end local v3    # "md":Ljava/security/MessageDigest;
     .end local v5    # "otpCertHash":[B
     :cond_2
     :goto_0
     if-nez v6, :cond_3
 
-    .line 272
     const-string v8, "ProvisionUtil::validateCertificateHash - SUCCESSFUL"
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 273
     const-string v8, "ProvisionUtil::validateCertificateHash | End"
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 282
     :goto_1
     return v6
 
-    .line 265
     :catch_0
     move-exception v2
 
-    .line 266
     .local v2, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v8, "ProvisionUtil::validateCertificateHash - OTP Certificate digest calulation failed."
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 267
     invoke-virtual {v2}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 275
     .end local v2    # "e":Ljava/security/NoSuchAlgorithmException;
     :cond_3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1311,7 +1184,6 @@
 
     move-result-object v0
 
-    .line 277
     .local v0, "callerPackage":Ljava/lang/String;
     new-instance v8, Landroid/app/enterprise/ContextInfo;
 
@@ -1323,7 +1195,6 @@
 
     iget v1, v8, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 278
     .local v1, "containerId":I
     const-string v8, "OTP_TOKEN_ID"
 
@@ -1333,7 +1204,6 @@
 
     invoke-static {p0, v8, v0, v1, v6}, Lcom/android/server/enterprise/otp/OtpCallback;->otpStatusCallbackInThread(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 280
     const-string v8, "ProvisionUtil::validateCertificateHash - Hash vertification Failed."
 
     invoke-static {v8}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V

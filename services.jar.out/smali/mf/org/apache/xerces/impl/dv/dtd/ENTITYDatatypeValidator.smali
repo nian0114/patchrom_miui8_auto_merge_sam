@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     return-void
 .end method
 
@@ -31,14 +29,12 @@
     .end annotation
 
     .prologue
-    .line 63
     invoke-interface {p2, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->isEntityUnparsed(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 64
     new-instance v0, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v1, "ENTITYNotUnparsed"
@@ -55,7 +51,6 @@
 
     throw v0
 
-    .line 66
     :cond_0
     return-void
 .end method

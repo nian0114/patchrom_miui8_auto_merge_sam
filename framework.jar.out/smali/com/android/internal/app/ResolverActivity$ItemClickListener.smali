@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 2368
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,7 +57,6 @@
 
     const/4 v3, 0x1
 
-    .line 2372
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mSupportGridResolver:Z
@@ -68,7 +66,6 @@
 
     if-nez v5, :cond_2
 
-    .line 2373
     instance-of v5, p1, Landroid/widget/ListView;
 
     if-eqz v5, :cond_1
@@ -78,35 +75,29 @@
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     move-object v2, p1
 
-    .line 2374
     .local v2, "listView":Landroid/widget/ListView;
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 2375
     invoke-virtual {v2}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
     move-result v5
 
     sub-int/2addr p3, v5
 
-    .line 2377
     :cond_0
     if-gez p3, :cond_2
 
-    .line 2394
     .end local v2    # "listView":Landroid/widget/ListView;
     :goto_1
     return-void
 
-    .line 2373
     .restart local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2382
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :cond_2
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -120,7 +111,6 @@
 
     move-result v0
 
-    .line 2383
     .local v0, "checkedPos":I
     const/4 v5, -0x1
 
@@ -128,7 +118,6 @@
 
     move v1, v3
 
-    .line 2384
     .local v1, "hasValidSelection":Z
     :goto_2
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -161,13 +150,11 @@
 
     if-nez v5, :cond_6
 
-    .line 2385
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # invokes: Lcom/android/internal/app/ResolverActivity;->setAlwaysButtonEnabled(ZIZ)V
     invoke-static {v4, v1, v0, v3}, Lcom/android/internal/app/ResolverActivity;->access$1900(Lcom/android/internal/app/ResolverActivity;ZIZ)V
 
-    .line 2386
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mOnceButton:Landroid/widget/Button;
@@ -177,10 +164,8 @@
 
     invoke-virtual {v3, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 2387
     if-eqz v1, :cond_4
 
-    .line 2388
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapterView:Landroid/widget/AbsListView;
@@ -190,7 +175,6 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/AbsListView;->smoothScrollToPosition(I)V
 
-    .line 2390
     :cond_4
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -203,10 +187,8 @@
     :cond_5
     move v1, v4
 
-    .line 2383
     goto :goto_2
 
-    .line 2392
     .restart local v1    # "hasValidSelection":Z
     :cond_6
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -256,7 +238,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v2, 0x1
 
-    .line 2398
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mSupportGridResolver:Z
@@ -266,7 +247,6 @@
 
     if-nez v3, :cond_2
 
-    .line 2399
     instance-of v3, p1, Landroid/widget/ListView;
 
     if-eqz v3, :cond_1
@@ -276,38 +256,31 @@
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     move-object v0, p1
 
-    .line 2400
     .local v0, "listView":Landroid/widget/ListView;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 2401
     invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
     move-result v3
 
     sub-int/2addr p3, v3
 
-    .line 2403
     :cond_0
     if-gez p3, :cond_2
 
-    .line 2405
     const/4 v2, 0x0
 
-    .line 2410
     .end local v0    # "listView":Landroid/widget/ListView;
     :goto_1
     return v2
 
-    .line 2399
     .restart local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2408
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :cond_2
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -321,7 +294,6 @@
 
     move-result-object v1
 
-    .line 2409
     .local v1, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 

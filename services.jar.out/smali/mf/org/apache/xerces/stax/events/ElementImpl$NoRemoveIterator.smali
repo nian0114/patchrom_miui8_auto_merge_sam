@@ -27,13 +27,10 @@
     .param p1, "wrapped"    # Ljava/util/Iterator;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     iput-object p1, p0, Lmf/org/apache/xerces/stax/events/ElementImpl$NoRemoveIterator;->fWrapped:Ljava/util/Iterator;
 
-    .line 94
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/ElementImpl$NoRemoveIterator;->fWrapped:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/ElementImpl$NoRemoveIterator;->fWrapped:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -71,7 +66,6 @@
     .locals 2
 
     .prologue
-    .line 114
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Attributes iterator is read-only."

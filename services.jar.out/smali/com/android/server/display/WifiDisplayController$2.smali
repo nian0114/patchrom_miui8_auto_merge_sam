@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$2;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput-object p3, p0, Lcom/android/server/display/WifiDisplayController$2;->val$resolver:Landroid/content/ContentResolver;
@@ -48,14 +47,13 @@
 
     const/4 v6, 0x0
 
-    .line 367
     const-string v3, "WifiDisplayController"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onChange PowerSavingMode="
+    const-string v5, "onChange PowerSavingMode="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -81,16 +79,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$2;->val$resolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v4, "low_power"
+    const-string v4, "low_power"
 
     invoke-static {v3, v4, v6}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 369
     .local v1, "powerSaving":I
     if-nez v1, :cond_0
 
@@ -103,19 +99,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 370
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$2;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # setter for: Lcom/android/server/display/WifiDisplayController;->mWaitForAction:Z
     invoke-static {v3, v6}, Lcom/android/server/display/WifiDisplayController;->access$102(Lcom/android/server/display/WifiDisplayController;Z)Z
 
-    .line 371
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$2;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # invokes: Lcom/android/server/display/WifiDisplayController;->updateSettings()V
     invoke-static {v3}, Lcom/android/server/display/WifiDisplayController;->access$000(Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 374
     :cond_0
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$2;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -129,7 +122,7 @@
     # getter for: Lcom/android/server/display/WifiDisplayController;->mContext:Landroid/content/Context;
     invoke-static {v4}, Lcom/android/server/display/WifiDisplayController;->access$200(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
 
-    const-string/jumbo v4, "display"
+    const-string v4, "display"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -137,13 +130,11 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 375
     .local v0, "displayManager":Landroid/hardware/display/DisplayManager;
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
 
     move-result-object v2
 
-    .line 376
     .local v2, "wifiDisplayStatus":Landroid/hardware/display/WifiDisplayStatus;
     invoke-virtual {v2}, Landroid/hardware/display/WifiDisplayStatus;->getActiveDisplayState()I
 
@@ -164,7 +155,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "low_power"
+    const-string v4, "low_power"
 
     invoke-static {v3, v4, v7}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -172,7 +163,6 @@
 
     if-ne v3, v7, :cond_1
 
-    .line 377
     iget-object v3, p0, Lcom/android/server/display/WifiDisplayController$2;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const v4, 0x22084
@@ -180,7 +170,6 @@
     # invokes: Lcom/android/server/display/WifiDisplayController;->requestPopup(I)V
     invoke-static {v3, v4}, Lcom/android/server/display/WifiDisplayController;->access$300(Lcom/android/server/display/WifiDisplayController;I)V
 
-    .line 380
     :cond_1
     return-void
 .end method

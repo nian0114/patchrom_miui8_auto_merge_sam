@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallCheckBoxPreference$2;->this$0:Lcom/movial/ipphone/WifiCallCheckBoxPreference;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 97
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 104
     :goto_0
     return-void
 
-    .line 99
     :pswitch_0
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallCheckBoxPreference$2;->this$0:Lcom/movial/ipphone/WifiCallCheckBoxPreference;
 
@@ -55,14 +51,12 @@
 
     invoke-virtual {v0, v1}, Lcom/movial/ipphone/WifiCallCheckBoxPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 100
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallCheckBoxPreference$2;->this$0:Lcom/movial/ipphone/WifiCallCheckBoxPreference;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/movial/ipphone/WifiCallCheckBoxPreference;->setEnabled(Z)V
 
-    .line 101
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallCheckBoxPreference$2;->this$0:Lcom/movial/ipphone/WifiCallCheckBoxPreference;
 
     # getter for: Lcom/movial/ipphone/WifiCallCheckBoxPreference;->mPreference:Landroid/preference/Preference;
@@ -76,7 +70,6 @@
 
     goto :goto_0
 
-    .line 97
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

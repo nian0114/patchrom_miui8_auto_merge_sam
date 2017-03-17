@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
 
-    .line 362
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 363
     return-void
 .end method
 
@@ -41,31 +38,26 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 367
     move-object/from16 v0, p1
 
     iget v1, v0, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 428
     :cond_0
     :goto_0
     return-void
 
-    .line 370
     :sswitch_0
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/os/Message;->arg1:I
 
-    .line 371
     .local v3, "nMethodType":I
     move-object/from16 v0, p1
 
     iget v4, v0, Landroid/os/Message;->arg2:I
 
-    .line 373
     .local v4, "credential_type":I
     const-string v1, "HS20SubscriptionManager"
 
@@ -121,7 +113,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
@@ -129,7 +120,6 @@
     # setter for: Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;->credentialType:I
     invoke-static {v1, v4}, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;->access$1502(Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;I)I
 
-    .line 376
     move-object/from16 v0, p1
 
     iget-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -144,7 +134,6 @@
 
     move-result-object v9
 
-    .line 377
     .local v9, "args":[Ljava/lang/String;
     const-string v1, "HS20SubscriptionManager"
 
@@ -174,7 +163,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     const/4 v11, 0x0
 
     .local v11, "i":I
@@ -183,7 +171,6 @@
 
     if-ge v11, v1, :cond_1
 
-    .line 379
     const-string v1, "HS20SubscriptionManager"
 
     aget-object v17, v9, v11
@@ -192,12 +179,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 385
     :cond_1
     array-length v1, v9
 
@@ -217,24 +202,20 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 386
     const/4 v1, 0x0
 
     aget-object v16, v9, v1
 
-    .line 387
     .local v16, "strRemediation":Ljava/lang/String;
     const/4 v1, 0x1
 
     aget-object v2, v9, v1
 
-    .line 388
     .local v2, "strOSU":Ljava/lang/String;
     const/4 v1, 0x2
 
     aget-object v6, v9, v1
 
-    .line 389
     .local v6, "requestReason":Ljava/lang/String;
     const/4 v1, 0x3
 
@@ -248,13 +229,11 @@
 
     move-result v7
 
-    .line 390
     .local v7, "credential_id":I
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 391
     .local v5, "nRemediation":I
     const-string v1, "HS20SubscriptionManager"
 
@@ -312,7 +291,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
@@ -321,7 +299,6 @@
 
     goto/16 :goto_0
 
-    .line 398
     .end local v2    # "strOSU":Ljava/lang/String;
     .end local v3    # "nMethodType":I
     .end local v4    # "credential_type":I
@@ -362,12 +339,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 399
     move-object/from16 v0, p1
 
     iget v13, v0, Landroid/os/Message;->arg1:I
 
-    .line 400
     .local v13, "nFlag":I
     move-object/from16 v0, p0
 
@@ -377,7 +352,6 @@
 
     goto/16 :goto_0
 
-    .line 403
     .end local v13    # "nFlag":I
     :sswitch_2
     const-string v1, "HS20SubscriptionManager"
@@ -410,7 +384,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 404
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
@@ -427,19 +400,16 @@
 
     goto/16 :goto_0
 
-    .line 407
     :sswitch_3
     move-object/from16 v0, p1
 
     iget v14, v0, Landroid/os/Message;->arg1:I
 
-    .line 408
     .local v14, "nType":I
     move-object/from16 v0, p1
 
     iget v8, v0, Landroid/os/Message;->arg2:I
 
-    .line 409
     .local v8, "Status":I
     move-object/from16 v0, p1
 
@@ -447,7 +417,6 @@
 
     check-cast v15, Ljava/lang/String;
 
-    .line 410
     .local v15, "strReason":Ljava/lang/String;
     const-string v1, "HS20SubscriptionManager"
 
@@ -457,7 +426,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 411
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
@@ -466,7 +434,6 @@
 
     goto/16 :goto_0
 
-    .line 414
     .end local v8    # "Status":I
     .end local v14    # "nType":I
     .end local v15    # "strReason":Ljava/lang/String;
@@ -479,7 +446,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
@@ -501,19 +467,16 @@
 
     goto/16 :goto_0
 
-    .line 420
     :sswitch_5
     move-object/from16 v0, p1
 
     iget v12, v0, Landroid/os/Message;->arg1:I
 
-    .line 421
     .local v12, "nCommand":I
     move-object/from16 v0, p1
 
     iget v10, v0, Landroid/os/Message;->arg2:I
 
-    .line 422
     .local v10, "flag":I
     const-string v1, "HS20SubscriptionManager"
 
@@ -541,7 +504,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager$SubscriptionManagerHandler;->this$0:Lcom/android/server/wifi/hs20/WifiHs20SubscriptionManager;
@@ -550,7 +512,6 @@
 
     goto/16 :goto_0
 
-    .line 367
     nop
 
     :sswitch_data_0

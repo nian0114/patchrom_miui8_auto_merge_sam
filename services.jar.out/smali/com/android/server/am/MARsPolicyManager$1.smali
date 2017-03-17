@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 494
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0}, Landroid/service/notification/NotificationListenerService;-><init>()V
@@ -37,19 +36,16 @@
     .locals 2
 
     .prologue
-    .line 497
     sget-boolean v0, Lcom/android/server/am/MARsPolicyManager;->DEBUG_MARs:Z
 
     if-eqz v0, :cond_0
 
-    .line 498
     const-string v0, "MARsPolicyManager"
 
     const-string v1, "NotificationListenerService onListenerConnected"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     :cond_0
     return-void
 .end method
@@ -59,21 +55,17 @@
     .param p1, "sbn"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 503
     if-nez p1, :cond_1
 
-    .line 538
     :cond_0
     :goto_0
     return-void
 
-    .line 507
     :cond_1
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 509
     .local v0, "packageName":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -85,12 +77,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 510
     sget-boolean v2, Lcom/android/server/am/MARsPolicyManager;->DEBUG_MARs:Z
 
     if-eqz v2, :cond_2
 
-    .line 511
     const-string v2, "MARsPolicyManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -113,7 +103,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     :cond_2
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -128,7 +117,6 @@
 
     if-nez v2, :cond_3
 
-    .line 514
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mOngoingNotificationList:Ljava/util/ArrayList;
@@ -140,7 +128,6 @@
 
     goto :goto_0
 
-    .line 517
     :cond_3
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -162,7 +149,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 518
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mScreenOn:Z
@@ -172,7 +158,6 @@
 
     if-nez v2, :cond_0
 
-    .line 519
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mNotiUpdateWhileScreenOffMap:Ljava/util/Map;
@@ -186,7 +171,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 520
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mNotiUpdateWhileScreenOffMap:Ljava/util/Map;
@@ -204,7 +188,6 @@
 
     move-result v1
 
-    .line 521
     .local v1, "updateCount":I
     const-string v2, "MARsPolicyManager"
 
@@ -212,7 +195,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onNotificationPosted--- "
+    const-string v4, "onNotificationPosted--- "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -238,15 +221,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
     const/16 v2, 0x2710
 
     if-le v1, v2, :cond_4
 
-    .line 523
     const/4 v1, 0x0
 
-    .line 527
     :goto_1
     const-string v2, "MARsPolicyManager"
 
@@ -254,7 +234,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onNotificationPosted--- "
+    const-string v4, "onNotificationPosted--- "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -280,7 +260,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mNotiUpdateWhileScreenOffMap:Ljava/util/Map;
@@ -296,13 +275,11 @@
 
     goto/16 :goto_0
 
-    .line 525
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 531
     .end local v1    # "updateCount":I
     :cond_5
     const-string v2, "MARsPolicyManager"
@@ -311,7 +288,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onNotificationPosted--- "
+    const-string v4, "onNotificationPosted--- "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -333,7 +310,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mNotiUpdateWhileScreenOffMap:Ljava/util/Map;
@@ -357,12 +333,10 @@
     .param p1, "sbn"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 542
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 544
     .local v0, "packageName":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -377,12 +351,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 545
     sget-boolean v1, Lcom/android/server/am/MARsPolicyManager;->DEBUG_MARs:Z
 
     if-eqz v1, :cond_0
 
-    .line 546
     const-string v1, "MARsPolicyManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -405,7 +377,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -416,7 +387,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 549
     :cond_1
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 507
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 510
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 512
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.LOCALE_CHANGED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 513
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mKeyboardLayoutNotificationShown:Z
@@ -64,7 +60,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 514
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mCurrentMissingKeyboardLayoutDevice:Landroid/view/InputDevice;
@@ -72,26 +67,22 @@
 
     move-result-object v1
 
-    .line 515
     .local v1, "tempMissingKeyboardLayoutDevice":Landroid/view/InputDevice;
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->hideMissingKeyboardLayoutNotification()V
     invoke-static {v3}, Lcom/android/server/input/InputManagerService;->access$200(Lcom/android/server/input/InputManagerService;)V
 
-    .line 516
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->showMissingKeyboardLayoutNotification(Landroid/view/InputDevice;)V
     invoke-static {v3, v1}, Lcom/android/server/input/InputManagerService;->access$300(Lcom/android/server/input/InputManagerService;Landroid/view/InputDevice;)V
 
-    .line 528
     .end local v1    # "tempMissingKeyboardLayoutDevice":Landroid/view/InputDevice;
     :cond_0
     :goto_0
     return-void
 
-    .line 520
     :cond_1
     const-string v3, "com.samsung.android.theme.themecenter.THEME_APPLY"
 
@@ -101,7 +92,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 522
     iget-object v3, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mContext:Landroid/content/Context;
@@ -119,13 +109,11 @@
 
     move-result v2
 
-    .line 524
     .local v2, "uspLevel":I
     const/16 v3, 0xa
 
     if-lt v2, v3, :cond_0
 
-    .line 525
     const/4 v3, 0x1
 
     sput-boolean v3, Landroid/view/PointerIcon;->mThemeApplied:Z

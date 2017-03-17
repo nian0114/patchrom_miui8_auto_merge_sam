@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 379
     new-instance v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     const-string v1, "ROAMING_CHANGED"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->ROAMING_CHANGED:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
-    .line 380
     new-instance v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     const-string v1, "PREFERRED_MODE_CHANGED"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->PREFERRED_MODE_CHANGED:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
-    .line 381
     new-instance v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     const-string v1, "VOWIFI_SETTING_CHANGED"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->VOWIFI_SETTING_CHANGED:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
-    .line 382
     new-instance v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     const-string v1, "BOOTUP_CHECKING"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->BOOTUP_CHECKING:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
-    .line 383
     new-instance v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     const-string v1, "VOLTE_SETTING_CHANGED"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->VOLTE_SETTING_CHANGED:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
-    .line 378
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 378
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 378
     const-class v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 378
     sget-object v0, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->$VALUES:[Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->clone()Ljava/lang/Object;

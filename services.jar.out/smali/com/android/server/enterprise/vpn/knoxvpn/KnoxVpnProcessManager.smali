@@ -36,7 +36,6 @@
 
     const/4 v0, 0x1
 
-    .line 25
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -48,10 +47,8 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
-    .line 32
     sput-object v2, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->instance:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;
 
-    .line 34
     sput-object v2, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mActivityManagerNative:Landroid/app/IActivityManager;
 
     return-void
@@ -63,32 +60,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mContext:Landroid/content/Context;
 
-    .line 28
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mVpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
-    .line 29
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
-    .line 30
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
-    .line 31
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mFirewallHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;
 
-    .line 36
     new-instance v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager$1;-><init>(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mProcessObserver:Landroid/app/IProcessObserver$Stub;
 
-    .line 57
     return-void
 .end method
 
@@ -99,49 +88,38 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mContext:Landroid/content/Context;
 
-    .line 28
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mVpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
-    .line 29
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
-    .line 30
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
-    .line 31
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mFirewallHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;
 
-    .line 36
     new-instance v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager$1;-><init>(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mProcessObserver:Landroid/app/IProcessObserver$Stub;
 
-    .line 61
     invoke-virtual {p1}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mContext:Landroid/content/Context;
 
-    .line 63
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
-    .line 64
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;->getInstance()Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mVpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
-    .line 65
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -150,37 +128,32 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
-    .line 66
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->getInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mFirewallHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;
 
-    .line 68
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v1
 
     sput-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mActivityManagerNative:Landroid/app/IActivityManager;
 
-    .line 69
     sget-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mActivityManagerNative:Landroid/app/IActivityManager;
 
     if-eqz v1, :cond_1
 
-    .line 70
     sget-boolean v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
     if-eqz v1, :cond_0
 
     const-string v1, "KnoxVpnProcessManager"
 
-    const-string/jumbo v2, "mActivityManagerNative not null!"
+    const-string v2, "mActivityManagerNative not null!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     :cond_0
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mActivityManagerNative:Landroid/app/IActivityManager;
@@ -193,16 +166,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 78
     :cond_1
     :goto_0
     return-void
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "KnoxVpnProcessManager"
 
@@ -210,7 +180,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "error "
+    const-string v3, "error "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -236,7 +206,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->onApplicationStart(II)V
 
     return-void
@@ -249,7 +218,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->onApplicationStop(II)V
 
     return-void
@@ -260,37 +228,31 @@
     .param p0, "engine"    # Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     .prologue
-    .line 82
     const-class v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;
 
     monitor-enter v1
 
     if-nez p0, :cond_0
 
-    .line 83
     const/4 v0, 0x0
 
-    .line 91
     :goto_0
     monitor-exit v1
 
     return-object v0
 
-    .line 87
     :cond_0
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->instance:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;
 
     if-nez v0, :cond_1
 
-    .line 88
     new-instance v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;-><init>(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;)V
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->instance:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;
 
-    .line 91
     :cond_1
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->instance:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;
     :try_end_0
@@ -298,7 +260,6 @@
 
     goto :goto_0
 
-    .line 82
     :catchall_0
     move-exception v0
 
@@ -313,7 +274,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 103
     monitor-enter p0
 
     :try_start_0
@@ -331,14 +291,12 @@
 
     if-nez v4, :cond_1
 
-    .line 119
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 107
     :cond_1
     :try_start_1
     iget-object v4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mVpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
@@ -347,7 +305,6 @@
 
     move-result-object v2
 
-    .line 108
     .local v2, "profileName":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
@@ -355,7 +312,6 @@
 
     move-result-object v1
 
-    .line 109
     .local v1, "packageName":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -363,7 +319,6 @@
 
     move-result v3
 
-    .line 111
     .local v3, "type":I
     if-eqz v2, :cond_0
 
@@ -373,7 +328,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 114
     sget-boolean v4, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
     if-eqz v4, :cond_2
@@ -384,7 +338,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "onApplicationStart : "
+    const-string v6, "onApplicationStart : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -400,7 +354,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     :cond_2
     sget-boolean v4, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
@@ -412,7 +365,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "onApplicationStart : profileName : "
+    const-string v6, "onApplicationStart : profileName : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -448,7 +401,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :cond_3
     iget-object v4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -466,7 +418,6 @@
 
     move-result v0
 
-    .line 118
     .local v0, "iResult":I
     sget-boolean v4, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
@@ -478,7 +429,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "onApplicationStart : start a vpn : "
+    const-string v6, "onApplicationStart : start a vpn : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -498,7 +449,6 @@
 
     goto/16 :goto_0
 
-    .line 103
     .end local v0    # "iResult":I
     .end local v1    # "packageName":Ljava/lang/String;
     .end local v2    # "profileName":Ljava/lang/String;
@@ -517,7 +467,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 124
     monitor-enter p0
 
     :try_start_0
@@ -535,14 +484,12 @@
 
     if-nez v8, :cond_1
 
-    .line 176
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 128
     :cond_1
     :try_start_1
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mVpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
@@ -551,7 +498,6 @@
 
     move-result-object v5
 
-    .line 129
     .local v5, "profileName":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
@@ -559,7 +505,6 @@
 
     move-result-object v3
 
-    .line 130
     .local v3, "packageName":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -567,7 +512,6 @@
 
     move-result v6
 
-    .line 132
     .local v6, "type":I
     if-eqz v5, :cond_0
 
@@ -577,21 +521,18 @@
 
     if-ne v6, v8, :cond_0
 
-    .line 136
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mVpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
     invoke-virtual {v8, v5}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;->getProfileEntry(Ljava/lang/String;)Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
 
     move-result-object v4
 
-    .line 137
     .local v4, "profileEntry":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v4, :cond_2
 
-    .line 138
     const-string v8, "KnoxVpnProcessManager"
 
-    const-string/jumbo v9, "profileEntry is null!"
+    const-string v9, "profileEntry is null!"
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
@@ -599,7 +540,6 @@
 
     goto :goto_0
 
-    .line 124
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "profileEntry":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v5    # "profileName":Ljava/lang/String;
@@ -611,7 +551,6 @@
 
     throw v8
 
-    .line 142
     .restart local v3    # "packageName":Ljava/lang/String;
     .restart local v4    # "profileEntry":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .restart local v5    # "profileName":Ljava/lang/String;
@@ -628,7 +567,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onApplicationStop : "
+    const-string v10, "onApplicationStop : "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -644,7 +583,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     :cond_3
     sget-boolean v8, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
@@ -656,7 +594,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onApplicationStop : profileName : "
+    const-string v10, "onApplicationStop : profileName : "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -692,13 +630,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     :cond_4
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->processRunCheck(Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;)Z
 
     move-result v2
 
-    .line 147
     .local v2, "isExistRunningApps":Z
     sget-boolean v8, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
@@ -710,7 +646,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onApplicationStop : isExistRunningApps : "
+    const-string v10, "onApplicationStop : isExistRunningApps : "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -728,11 +664,9 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 149
     :cond_5
     if-nez v2, :cond_0
 
-    .line 151
     :try_start_3
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -740,18 +674,16 @@
 
     move-result-object v7
 
-    .line 152
     .local v7, "vpnInterface":Lcom/sec/enterprise/mdm/services/vpn/knoxvpn/IKnoxVpnService;
     if-nez v7, :cond_6
 
-    .line 153
     sget-boolean v8, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
     if-eqz v8, :cond_0
 
     const-string v8, "KnoxVpnProcessManager"
 
-    const-string/jumbo v9, "onApplicationStop : stopping vpn connection : Service is not started"
+    const-string v9, "onApplicationStop : stopping vpn connection : Service is not started"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
@@ -760,12 +692,10 @@
 
     goto/16 :goto_0
 
-    .line 172
     .end local v7    # "vpnInterface":Lcom/sec/enterprise/mdm/services/vpn/knoxvpn/IKnoxVpnService;
     :catch_0
     move-exception v1
 
-    .line 173
     .local v1, "e":Ljava/lang/Exception;
     :try_start_4
     const-string v8, "KnoxVpnProcessManager"
@@ -774,7 +704,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "stopping vpn connection : Failure at "
+    const-string v10, "stopping vpn connection : Failure at "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -798,7 +728,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v7    # "vpnInterface":Lcom/sec/enterprise/mdm/services/vpn/knoxvpn/IKnoxVpnService;
     :cond_6
@@ -807,7 +736,6 @@
 
     move-result v0
 
-    .line 157
     .local v0, "currentState":I
     sget-boolean v8, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
@@ -835,24 +763,20 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     :cond_7
     packed-switch v0, :pswitch_data_0
 
     goto/16 :goto_0
 
-    .line 163
     :pswitch_0
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     invoke-virtual {v8, v5}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->updateBlockingRules(Ljava/lang/String;)V
 
-    .line 164
     invoke-interface {v7, v5}, Lcom/sec/enterprise/mdm/services/vpn/knoxvpn/IKnoxVpnService;->stopConnection(Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 167
     :pswitch_1
     invoke-interface {v7, v5}, Lcom/sec/enterprise/mdm/services/vpn/knoxvpn/IKnoxVpnService;->stopConnection(Ljava/lang/String;)I
     :try_end_5
@@ -861,7 +785,6 @@
 
     goto/16 :goto_0
 
-    .line 158
     nop
 
     :pswitch_data_0
@@ -880,7 +803,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mProcessObserver:Landroid/app/IProcessObserver$Stub;
 
     return-object v0
@@ -891,12 +813,10 @@
     .param p1, "profileEntry"    # Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
 
     .prologue
-    .line 181
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 183
     .local v8, "token":J
     :try_start_0
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->mContext:Landroid/content/Context;
@@ -909,25 +829,21 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 184
     .local v0, "activityManager":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v5
 
-    .line 185
     .local v5, "runningApplicationProcess":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     new-instance v6, Ljava/util/HashSet;
 
     invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
 
-    .line 186
     .local v6, "runningUID":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 188
     .local v4, "profilePackages":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
@@ -939,7 +855,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 189
     invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -954,12 +869,10 @@
 
     invoke-interface {v6, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 188
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 192
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getPackageList()Ljava/util/Collection;
 
@@ -983,7 +896,6 @@
 
     check-cast v3, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
 
-    .line 193
     .local v3, "pkgInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     invoke-virtual {v3}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;->getUid()I
 
@@ -1000,7 +912,6 @@
 
     goto :goto_1
 
-    .line 202
     .end local v0    # "activityManager":Landroid/app/ActivityManager;
     .end local v1    # "i":I
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -1011,17 +922,14 @@
     :catch_0
     move-exception v7
 
-    .line 204
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 207
     :goto_2
     const/4 v7, 0x0
 
     :goto_3
     return v7
 
-    .line 196
     .restart local v0    # "activityManager":Landroid/app/ActivityManager;
     .restart local v1    # "i":I
     .restart local v2    # "i$":Ljava/util/Iterator;
@@ -1032,14 +940,12 @@
     :try_start_1
     invoke-interface {v6, v4}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
 
-    .line 198
     invoke-interface {v6}, Ljava/util/Set;->size()I
 
     move-result v7
 
     if-lez v7, :cond_3
 
-    .line 199
     sget-boolean v7, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnProcessManager;->DBG:Z
 
     if-eqz v7, :cond_2
@@ -1050,7 +956,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "processRunCheck / runningUID.size() : "
+    const-string v11, "processRunCheck / runningUID.size() : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1073,11 +979,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 200
     :cond_2
     const/4 v7, 0x1
 
-    .line 204
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_3

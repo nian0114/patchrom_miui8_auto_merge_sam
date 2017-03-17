@@ -17,7 +17,6 @@
     .param p3, "requestFeeder"    # Landroid/net/http/RequestFeeder;
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -35,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 5
     monitor-enter p0
 
     :try_start_0

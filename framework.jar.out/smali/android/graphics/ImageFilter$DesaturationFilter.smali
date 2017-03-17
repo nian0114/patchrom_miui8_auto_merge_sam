@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 1726
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform float filterParams[16];\nvoid main(void) {\n\t vec4 texColor = texture2D(baseSampler, outTexCoords);\n\t float lum = dot(vec3(0.2126,0.7152,0.0722), texColor.rgb);\n\t vec4 grayColor = vec4(lum, lum, lum, texColor.a);\n\t gl_FragColor = mix(grayColor, texColor, filterParams[0]);\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$DesaturationFilter;->mFragmentShaderCode:Ljava/lang/String;
@@ -43,24 +42,20 @@
     .locals 2
 
     .prologue
-    .line 1746
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     sget-object v1, Landroid/graphics/ImageFilter$DesaturationFilter;->mFragmentShaderCode:Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1741
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 
-    .line 1747
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$DesaturationFilter;->setSaturation(F)V
 
-    .line 1748
     return-void
 .end method
 
@@ -75,24 +70,20 @@
 
     const/4 v1, 0x0
 
-    .line 1758
     iget v0, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 1759
     iget v0, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 
     cmpl-float v0, v0, v2
 
     if-lez v0, :cond_1
 
-    .line 1760
     iput v2, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 
-    .line 1766
     :goto_0
     const/4 v0, 0x0
 
@@ -100,14 +91,11 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$DesaturationFilter;->setParam(IF)V
 
-    .line 1767
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DesaturationFilter;->notifyWorkerFilters()V
 
-    .line 1769
     :cond_0
     return-void
 
-    .line 1761
     :cond_1
     iget v0, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 
@@ -115,12 +103,10 @@
 
     if-gez v0, :cond_2
 
-    .line 1762
     iput v1, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 
     goto :goto_0
 
-    .line 1764
     :cond_2
     iput p1, p0, Landroid/graphics/ImageFilter$DesaturationFilter;->mDesaturation:F
 

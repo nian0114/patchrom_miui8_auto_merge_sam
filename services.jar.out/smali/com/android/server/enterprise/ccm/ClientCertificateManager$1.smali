@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3500
     iput-object p1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v9, 0x0
 
-    .line 3503
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3504
     .local v1, "action":Ljava/lang/String;
     const-string v6, "android.intent.extra.user_handle"
 
@@ -56,7 +53,6 @@
 
     move-result v5
 
-    .line 3505
     .local v5, "userId":I
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
@@ -65,7 +61,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 3506
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -101,7 +96,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3508
     :cond_0
     const-string v6, "android.intent.action.MANAGED_PROFILE_ADDED"
 
@@ -111,7 +105,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 3509
     const-string v6, "android.intent.extra.USER"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -120,11 +113,9 @@
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 3512
     .local v2, "managedProfileUserHandle":Landroid/os/UserHandle;
     if-nez v2, :cond_2
 
-    .line 3513
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
 
@@ -132,30 +123,26 @@
 
     if-eqz v6, :cond_1
 
-    .line 3514
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
     move-result-object v6
 
-    const-string/jumbo v7, "managedProfileUserHandle is null"
+    const-string v7, "managedProfileUserHandle is null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3558
     .end local v2    # "managedProfileUserHandle":Landroid/os/UserHandle;
     :cond_1
     :goto_0
     return-void
 
-    .line 3518
     .restart local v2    # "managedProfileUserHandle":Landroid/os/UserHandle;
     :cond_2
     invoke-virtual {v2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v3
 
-    .line 3520
     .local v3, "managedProfileUserId":I
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
@@ -164,7 +151,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 3521
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -174,7 +160,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "managedProfileUserId: "
+    const-string v8, "managedProfileUserId: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -190,17 +176,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3523
     :cond_3
     if-lt v3, v10, :cond_4
 
-    .line 3524
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->registerPersonaObserver(I)V
     invoke-static {v6, v3}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$300(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)V
 
-    .line 3527
     :cond_4
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
@@ -209,7 +192,6 @@
 
     goto :goto_0
 
-    .line 3529
     .end local v2    # "managedProfileUserHandle":Landroid/os/UserHandle;
     .end local v3    # "managedProfileUserId":I
     :cond_5
@@ -221,14 +203,12 @@
 
     if-eqz v6, :cond_7
 
-    .line 3531
     if-lt v5, v10, :cond_6
 
     const/16 v6, 0xc8
 
     if-gt v5, v6, :cond_6
 
-    .line 3532
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->unregisterPersonaObserver(I)V
@@ -236,7 +216,6 @@
 
     goto :goto_0
 
-    .line 3534
     :cond_6
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
@@ -245,19 +224,16 @@
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCSRProfileUsingAdminId(II)Z
     invoke-static {v6, v7, v5}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$600(Lcom/android/server/enterprise/ccm/ClientCertificateManager;II)Z
 
-    .line 3535
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCertificateProfile(I)Z
     invoke-static {v6, v5}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$700(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3536
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCCMProfile(I)Z
     invoke-static {v6, v5}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$800(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3537
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCCMDefaultPolicyRecord(I)Z
@@ -265,7 +241,6 @@
 
     goto :goto_0
 
-    .line 3540
     :cond_7
     const-string v6, "android.intent.action.SCREEN_ON"
 
@@ -275,7 +250,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 3541
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->updateLockStatus(IZZZ)Z
@@ -283,7 +257,6 @@
 
     goto :goto_0
 
-    .line 3542
     :cond_8
     const-string v6, "android.intent.action.SCREEN_OFF"
 
@@ -293,7 +266,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 3543
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->updateLockStatus(IZZZ)Z
@@ -301,7 +273,6 @@
 
     goto :goto_0
 
-    .line 3544
     :cond_9
     const-string v6, "android.intent.action.USER_PRESENT"
 
@@ -311,7 +282,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 3545
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->updateLockStatus(IZZZ)Z
@@ -319,7 +289,6 @@
 
     goto/16 :goto_0
 
-    .line 3546
     :cond_a
     const-string v6, "android.app.action.DEVICE_OWNER_CHANGED"
 
@@ -329,14 +298,11 @@
 
     if-eqz v6, :cond_1
 
-    .line 3547
     sget-object v4, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
-    .line 3548
     .local v4, "userHandle":Landroid/os/UserHandle;
     if-nez v4, :cond_b
 
-    .line 3549
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
 
@@ -344,25 +310,22 @@
 
     if-eqz v6, :cond_1
 
-    .line 3550
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
     move-result-object v6
 
-    const-string/jumbo v7, "onReceive ACTION_DEVICE_OWNER_CHANGED userHandle is null"
+    const-string v7, "onReceive ACTION_DEVICE_OWNER_CHANGED userHandle is null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3554
     :cond_b
     invoke-virtual {v4}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v0
 
-    .line 3556
     .local v0, "DOUserId":I
     iget-object v6, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 

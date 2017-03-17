@@ -15,15 +15,12 @@
     .locals 1
 
     .prologue
-    .line 36
     new-instance v0, Lmf/org/apache/xerces/stax/EmptyLocation;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/stax/EmptyLocation;-><init>()V
 
-    .line 35
     sput-object v0, Lmf/org/apache/xerces/stax/EmptyLocation;->EMPTY_LOCATION_INSTANCE:Lmf/org/apache/xerces/stax/EmptyLocation;
 
-    .line 36
     return-void
 .end method
 
@@ -31,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lmf/org/apache/xerces/stax/EmptyLocation;->EMPTY_LOCATION_INSTANCE:Lmf/org/apache/xerces/stax/EmptyLocation;
 
     return-object v0
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, -0x1
 
     return v0
@@ -63,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, -0x1
 
     return v0
@@ -73,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 51
     const/4 v0, -0x1
 
     return v0
@@ -83,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     return-object v0
@@ -93,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 88
     const/4 v0, 0x0
 
     return-object v0

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/cover/CoverDisabler$DisableRecord;->this$0:Lcom/android/server/cover/CoverDisabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .param p2, "x1"    # Lcom/android/server/cover/CoverDisabler$1;
 
     .prologue
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/server/cover/CoverDisabler$DisableRecord;-><init>(Lcom/android/server/cover/CoverDisabler;)V
 
     return-void
@@ -60,7 +58,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 93
     const-string v0, "CoverManager.CoverDisabler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -85,14 +82,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/cover/CoverDisabler$DisableRecord;->this$0:Lcom/android/server/cover/CoverDisabler;
 
     iget-object v1, v0, Lcom/android/server/cover/CoverDisabler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 95
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cover/CoverDisabler$DisableRecord;->this$0:Lcom/android/server/cover/CoverDisabler;
 
@@ -105,20 +100,16 @@
     # invokes: Lcom/android/server/cover/CoverDisabler;->disableCoverManagerLocked(ZLandroid/os/IBinder;Ljava/lang/String;)Z
     invoke-static {v0, v2, v3, v4}, Lcom/android/server/cover/CoverDisabler;->access$100(Lcom/android/server/cover/CoverDisabler;ZLandroid/os/IBinder;Ljava/lang/String;)Z
 
-    .line 96
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/cover/CoverDisabler$DisableRecord;->token:Landroid/os/IBinder;
 
     invoke-interface {v0, p0, v5}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 98
     return-void
 
-    .line 96
     :catchall_0
     move-exception v0
 

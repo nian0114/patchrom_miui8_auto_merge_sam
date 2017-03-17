@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3437
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$HeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/MultiPhoneWindow$1;
 
     .prologue
-    .line 3437
     invoke-direct {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$HeaderGestureDetectorListener;-><init>(Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3440
     const/4 v0, 0x0
 
     return v0
@@ -67,7 +64,6 @@
     .param p4, "velocityY"    # F
 
     .prologue
-    .line 3466
     const/4 v0, 0x0
 
     return v0
@@ -78,7 +74,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3460
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$HeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -98,7 +93,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 3461
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$HeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -116,7 +110,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/MultiPhoneWindow;->showGuide(Landroid/graphics/Rect;I)V
 
-    .line 3462
     return-void
 .end method
 
@@ -128,7 +121,6 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 3455
     const/4 v0, 0x0
 
     return v0
@@ -139,7 +131,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3445
     return-void
 .end method
 
@@ -148,7 +139,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3449
     const/4 v0, 0x0
 
     return v0

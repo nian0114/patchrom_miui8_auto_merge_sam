@@ -112,7 +112,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v6, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -314,7 +314,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "xml.WrongContent"
+    const-string v2, "xml.WrongContent"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -970,7 +970,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "itemUnknownElement not implemented:"
+    const-string v3, "itemUnknownElement not implemented:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -995,7 +995,7 @@
 .method public lengthCRL()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "X509CRL"
 
@@ -1009,7 +1009,7 @@
 .method public lengthCertificate()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "X509Certificate"
 
@@ -1023,7 +1023,7 @@
 .method public lengthIssuerSerial()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "X509IssuerSerial"
 
@@ -1037,7 +1037,7 @@
 .method public lengthSKI()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "X509SKI"
 
@@ -1051,7 +1051,7 @@
 .method public lengthSubjectName()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "X509SubjectName"
 
@@ -1094,7 +1094,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v3, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 138
     new-instance v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     const-string v1, "NONE"
@@ -73,7 +72,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->AIR_COMMAND:Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
-    .line 137
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
@@ -105,13 +103,10 @@
     .end annotation
 
     .prologue
-    .line 140
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 141
     iput p3, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->option:I
 
-    .line 142
     return-void
 .end method
 
@@ -120,7 +115,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     const-class v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -136,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 137
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->$VALUES:[Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->clone()Ljava/lang/Object;
@@ -155,7 +148,6 @@
     .param p1, "option"    # I
 
     .prologue
-    .line 145
     iget v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->option:I
 
     if-ne v0, p1, :cond_0

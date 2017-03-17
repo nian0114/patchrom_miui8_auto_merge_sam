@@ -18,7 +18,6 @@
     .param p2, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/RequestLine;
@@ -41,7 +40,6 @@
     .param p3, "ver"    # Lorg/apache/http/ProtocolVersion;
 
     .prologue
-    .line 8
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/RequestLine;
@@ -62,7 +60,6 @@
     .param p1, "requestline"    # Lorg/apache/http/RequestLine;
 
     .prologue
-    .line 9
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/RequestLine;
@@ -84,7 +81,6 @@
     .locals 2
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -98,7 +94,6 @@
     .locals 2
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -113,7 +108,6 @@
     .param p1, "entity"    # Lorg/apache/http/HttpEntity;
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

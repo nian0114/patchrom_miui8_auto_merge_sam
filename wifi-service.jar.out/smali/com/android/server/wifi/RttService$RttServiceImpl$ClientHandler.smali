@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
-    .line 49
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 50
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .prologue
     const/4 v12, 0x2
 
-    .line 55
     const-string v9, "RttService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -66,12 +62,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 86
     :pswitch_0
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
@@ -88,11 +82,9 @@
 
     check-cast v4, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
 
-    .line 87
     .local v4, "ci":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     if-nez v4, :cond_3
 
-    .line 88
     const-string v9, "RttService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -117,7 +109,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     const/4 v10, -0x3
@@ -126,24 +117,20 @@
 
     invoke-virtual {v9, p1, v10, v11}, Lcom/android/server/wifi/RttService$RttServiceImpl;->replyFailed(Landroid/os/Message;ILjava/lang/String;)V
 
-    .line 106
     .end local v4    # "ci":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 60
     :pswitch_1
     iget v9, p1, Landroid/os/Message;->arg1:I
 
     if-nez v9, :cond_1
 
-    .line 61
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/util/AsyncChannel;
 
-    .line 62
     .local v2, "c":Lcom/android/internal/util/AsyncChannel;
     const-string v9, "RttService"
 
@@ -169,7 +156,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     new-instance v3, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
 
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
@@ -178,7 +164,6 @@
 
     invoke-direct {v3, v9, v2, v10}, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;-><init>(Lcom/android/server/wifi/RttService$RttServiceImpl;Lcom/android/internal/util/AsyncChannel;Landroid/os/Messenger;)V
 
-    .line 65
     .local v3, "cInfo":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
@@ -193,7 +178,6 @@
 
     goto :goto_0
 
-    .line 67
     .end local v2    # "c":Lcom/android/internal/util/AsyncChannel;
     .end local v3    # "cInfo":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     :cond_1
@@ -223,20 +207,17 @@
 
     goto :goto_0
 
-    .line 71
     :pswitch_2
     iget v9, p1, Landroid/os/Message;->arg1:I
 
     if-ne v9, v12, :cond_2
 
-    .line 72
     const-string v9, "RttService"
 
     const-string v10, "Send failed, client connection lost"
 
     invoke-static {v9, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :goto_1
     const-string v9, "RttService"
 
@@ -262,7 +243,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     # getter for: Lcom/android/server/wifi/RttService$RttServiceImpl;->mClients:Ljava/util/HashMap;
@@ -278,7 +258,6 @@
 
     check-cast v4, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
 
-    .line 78
     .restart local v4    # "ci":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     if-eqz v4, :cond_0
 
@@ -286,7 +265,6 @@
 
     goto/16 :goto_0
 
-    .line 74
     .end local v4    # "ci":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     :cond_2
     const-string v9, "RttService"
@@ -315,13 +293,11 @@
 
     goto :goto_1
 
-    .line 81
     :pswitch_3
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
-    .line 82
     .local v0, "ac":Lcom/android/internal/util/AsyncChannel;
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
@@ -336,7 +312,6 @@
 
     goto/16 :goto_0
 
-    .line 93
     .end local v0    # "ac":Lcom/android/internal/util/AsyncChannel;
     .restart local v4    # "ci":Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
     :cond_3
@@ -344,7 +319,6 @@
 
     fill-array-data v8, :array_0
 
-    .line 98
     .local v8, "validCommands":[I
     move-object v1, v8
 
@@ -360,13 +334,11 @@
 
     aget v5, v1, v6
 
-    .line 99
     .local v5, "cmd":I
     iget v9, p1, Landroid/os/Message;->what:I
 
     if-ne v5, v9, :cond_4
 
-    .line 100
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     # getter for: Lcom/android/server/wifi/RttService$RttServiceImpl;->mStateMachine:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
@@ -382,13 +354,11 @@
 
     goto/16 :goto_0
 
-    .line 98
     :cond_4
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 105
     .end local v5    # "cmd":I
     :cond_5
     iget-object v9, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientHandler;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
@@ -401,7 +371,6 @@
 
     goto/16 :goto_0
 
-    .line 57
     :pswitch_data_0
     .packed-switch 0x11000
         :pswitch_1
@@ -411,7 +380,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 93
     :array_0
     .array-data 4
         0x27200

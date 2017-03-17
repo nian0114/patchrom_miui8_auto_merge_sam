@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 297
     iput-object p1, p0, Lcom/samsung/android/fingerprint/FingerprintManager$1;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 3
 
     .prologue
-    .line 300
     new-instance v1, Lcom/samsung/android/fingerprint/FingerprintEvent;
 
     const v2, 0x186a0
 
     invoke-direct {v1, v2}, Lcom/samsung/android/fingerprint/FingerprintEvent;-><init>(I)V
 
-    .line 302
     .local v1, "evt":Lcom/samsung/android/fingerprint/FingerprintEvent;
     :try_start_0
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
@@ -57,7 +54,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 303
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$000()Lcom/samsung/android/fingerprint/IFingerprintClient;
 
@@ -68,27 +64,22 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 310
     :cond_0
     :goto_0
     return-void
 
-    .line 305
     :catch_0
     move-exception v0
 
-    .line 306
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 307
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 308
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

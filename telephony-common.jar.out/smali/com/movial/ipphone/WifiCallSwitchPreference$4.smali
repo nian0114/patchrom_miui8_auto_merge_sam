@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 170
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$4;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 173
     const-string v0, "WifiCallSwitchPreference"
 
     const-string v1, "ContentObserver onChange"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$4;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     # getter for: Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
@@ -68,18 +65,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$4;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setChecked(Z)V
 
-    .line 179
     :goto_0
     return-void
 
-    .line 177
     :cond_0
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$4;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 

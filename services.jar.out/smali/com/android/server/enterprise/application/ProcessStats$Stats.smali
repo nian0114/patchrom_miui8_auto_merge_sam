@@ -92,16 +92,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 207
     iput p1, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->pid:I
 
-    .line 209
     if-gez p2, :cond_1
 
-    .line 210
     new-instance v0, Ljava/io/File;
 
     const-string v2, "/proc"
@@ -114,11 +110,10 @@
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 211
     .local v0, "procDir":Ljava/io/File;
     new-instance v2, Ljava/io/File;
 
-    const-string/jumbo v3, "stat"
+    const-string v3, "stat"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -128,7 +123,6 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->statFile:Ljava/lang/String;
 
-    .line 212
     new-instance v2, Ljava/io/File;
 
     const-string v3, "cmdline"
@@ -141,10 +135,9 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->cmdlineFile:Ljava/lang/String;
 
-    .line 213
     new-instance v2, Ljava/io/File;
 
-    const-string/jumbo v3, "task"
+    const-string v3, "task"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -154,37 +147,30 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadsDir:Ljava/lang/String;
 
-    .line 215
     if-eqz p3, :cond_0
 
-    .line 216
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadStats:Ljava/util/ArrayList;
 
-    .line 217
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->workingThreads:Ljava/util/ArrayList;
 
-    .line 233
     :goto_0
     return-void
 
-    .line 219
     :cond_0
     iput-object v4, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadStats:Ljava/util/ArrayList;
 
-    .line 220
     iput-object v4, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->workingThreads:Ljava/util/ArrayList;
 
     goto :goto_0
 
-    .line 223
     .end local v0    # "procDir":Ljava/io/File;
     :cond_1
     new-instance v0, Ljava/io/File;
@@ -197,13 +183,12 @@
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 225
     .restart local v0    # "procDir":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/io/File;
 
-    const-string/jumbo v3, "task"
+    const-string v3, "task"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -215,11 +200,10 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 227
     .local v1, "taskDir":Ljava/io/File;
     new-instance v2, Ljava/io/File;
 
-    const-string/jumbo v3, "stat"
+    const-string v3, "stat"
 
     invoke-direct {v2, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -229,16 +213,12 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->statFile:Ljava/lang/String;
 
-    .line 228
     iput-object v4, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->cmdlineFile:Ljava/lang/String;
 
-    .line 229
     iput-object v4, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadsDir:Ljava/lang/String;
 
-    .line 230
     iput-object v4, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadStats:Ljava/util/ArrayList;
 
-    .line 231
     iput-object v4, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->workingThreads:Ljava/util/ArrayList;
 
     goto :goto_0

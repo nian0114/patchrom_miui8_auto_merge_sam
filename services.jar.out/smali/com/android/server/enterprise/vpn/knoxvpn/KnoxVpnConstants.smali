@@ -354,20 +354,16 @@
 
     const/4 v2, 0x0
 
-    .line 41
-    const-string/jumbo v0, "knoxvpn"
+    const-string v0, "knoxvpn"
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->KNOX_VPN:Ljava/lang/String;
 
-    .line 79
     sput-boolean v2, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->VPN_RETURN_BOOL_ERROR:Z
 
-    .line 81
     const-string v0, "block_traffic"
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLOCK_APP_TRAFFIC:Ljava/lang/String;
 
-    .line 308
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "com.android.providers.downloads"
@@ -376,7 +372,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLACK_LISTED_APPLICATION:[Ljava/lang/String;
 
-    .line 309
     new-array v0, v4, [Ljava/lang/Integer;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -395,7 +390,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLACK_LISTED_UID:[Ljava/lang/Integer;
 
-    .line 310
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "com.android.providers.downloads"
@@ -404,16 +398,12 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->WHITE_LISTED_APPLICATION_TO_SEND_FD:[Ljava/lang/String;
 
-    .line 338
     sput-object v5, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->DEFAULT_PROXY_SERVER:Ljava/lang/String;
 
-    .line 340
     sput-object v5, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->DEFAULT_PROXY_CREDENTIALS:Ljava/lang/String;
 
-    .line 341
     sput-object v5, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->DEFAULT_PAC_URL:Ljava/lang/String;
 
-    .line 354
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "com.android.chrome"
@@ -426,7 +416,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->APPS_TO_RESTART_PROXY:[Ljava/lang/String;
 
-    .line 368
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -464,9 +453,7 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     return-void
 .end method

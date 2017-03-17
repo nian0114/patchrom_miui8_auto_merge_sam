@@ -64,16 +64,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3834
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3839
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceAddress:Ljava/lang/String;
 
-    .line 3840
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mDefaultInterface:Ljava/lang/String;
 
-    .line 3841
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceV6Address:Ljava/lang/String;
 
     return-void
@@ -85,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 3877
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mDefaultInterface:Ljava/lang/String;
 
     return-object v0
@@ -104,7 +99,6 @@
     .end annotation
 
     .prologue
-    .line 3859
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mDnsList:Ljava/util/List;
 
     return-object v0
@@ -114,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 3871
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceAddress:Ljava/lang/String;
 
     return-object v0
@@ -124,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 3844
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceName:Ljava/lang/String;
 
     return-object v0
@@ -143,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 3865
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mSearchDomainList:Ljava/util/List;
 
     return-object v0
@@ -153,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 3883
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceV6Address:Ljava/lang/String;
 
     return-object v0
@@ -172,7 +162,6 @@
     .end annotation
 
     .prologue
-    .line 3850
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mVpnStateList:Ljava/util/ArrayList;
 
     return-object v0
@@ -183,10 +172,8 @@
     .param p1, "defaultInterface"    # Ljava/lang/String;
 
     .prologue
-    .line 3874
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mDefaultInterface:Ljava/lang/String;
 
-    .line 3875
     return-void
 .end method
 
@@ -203,11 +190,9 @@
     .end annotation
 
     .prologue
-    .line 3856
     .local p1, "dnsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mDnsList:Ljava/util/List;
 
-    .line 3857
     return-void
 .end method
 
@@ -216,10 +201,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 3868
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceAddress:Ljava/lang/String;
 
-    .line 3869
     return-void
 .end method
 
@@ -228,10 +211,8 @@
     .param p1, "interfaceName"    # Ljava/lang/String;
 
     .prologue
-    .line 3847
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceName:Ljava/lang/String;
 
-    .line 3848
     return-void
 .end method
 
@@ -248,11 +229,9 @@
     .end annotation
 
     .prologue
-    .line 3862
     .local p1, "searchDomainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mSearchDomainList:Ljava/util/List;
 
-    .line 3863
     return-void
 .end method
 
@@ -261,10 +240,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 3880
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mInterfaceV6Address:Ljava/lang/String;
 
-    .line 3881
     return-void
 .end method
 
@@ -281,10 +258,8 @@
     .end annotation
 
     .prologue
-    .line 3853
     .local p1, "vpnStateList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->mVpnStateList:Ljava/util/ArrayList;
 
-    .line 3854
     return-void
 .end method

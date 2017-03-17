@@ -24,10 +24,8 @@
     .param p1, "phys"    # Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     .prologue
-    .line 667
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 668
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->width:I
 
     iget v1, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->height:I
@@ -40,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
-    .line 669
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .param p1, "info"    # Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     .prologue
-    .line 679
     iget-object v2, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
     invoke-virtual {v2}, Landroid/view/Display$Mode;->getRefreshRate()F
@@ -62,7 +58,6 @@
 
     move-result v1
 
-    .line 680
     .local v1, "modeRefreshRate":I
     iget v2, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->refreshRate:F
 
@@ -70,7 +65,6 @@
 
     move-result v0
 
-    .line 681
     .local v0, "displayInfoRefreshRate":I
     iget-object v2, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
@@ -109,7 +103,6 @@
     .locals 2
 
     .prologue
-    .line 687
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +119,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

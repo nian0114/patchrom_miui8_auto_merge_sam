@@ -20,7 +20,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -55,7 +54,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -87,7 +85,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -107,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -122,7 +118,6 @@
     .param p1, "charSet"    # Ljava/lang/String;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

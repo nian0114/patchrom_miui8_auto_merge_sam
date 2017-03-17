@@ -41,10 +41,8 @@
     .locals 0
 
     .prologue
-    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 297
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p1, "x0"    # Lcom/sec/epdg/IWlanApnSetting$1;
 
     .prologue
-    .line 275
     invoke-direct {p0}, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;-><init>()V
 
     return-void
@@ -74,7 +71,6 @@
     .param p10, "x10"    # I
 
     .prologue
-    .line 275
     invoke-direct/range {p0 .. p10}, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->updateIkeValues(Lcom/sec/epdg/IWlanEnum$Ikeversion;Lcom/sec/epdg/IWlanEnum$IkeEncryption;Lcom/sec/epdg/IWlanEnum$IkeIntegrity;Lcom/sec/epdg/IWlanEnum$IkeDhGroup;IIIILcom/sec/epdg/IWlanEnum$IkeEapType;I)V
 
     return-void
@@ -94,37 +90,26 @@
     .param p10, "ikenatval"    # I
 
     .prologue
-    .line 302
     iput-object p1, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeversion:Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
-    .line 303
     iput-object p3, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeIntergrity:Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
-    .line 304
     iput-object p2, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeEncryptType:Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
-    .line 305
     iput-object p4, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeDhGroup:Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
-    .line 306
     iput-object p9, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeEapType:Lcom/sec/epdg/IWlanEnum$IkeEapType;
 
-    .line 307
     iput p5, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeLife:I
 
-    .line 308
     iput p6, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeWindowSize:I
 
-    .line 309
     iput p8, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeDpdTimeOut:I
 
-    .line 310
     iput p7, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeConnectionTimeOut:I
 
-    .line 311
     iput p10, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeNatValue:I
 
-    .line 312
     return-void
 .end method
 
@@ -134,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 343
     iget v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeConnectionTimeOut:I
 
     return v0
@@ -144,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 351
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeDhGroup:Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
     return-object v0
@@ -154,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 339
     iget v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeDpdTimeOut:I
 
     return v0
@@ -164,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 327
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeEapType:Lcom/sec/epdg/IWlanEnum$IkeEapType;
 
     return-object v0
@@ -174,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 323
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeEncryptType:Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
     return-object v0
@@ -184,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 319
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeIntergrity:Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
     return-object v0
@@ -194,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 331
     iget v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeLife:I
 
     return v0
@@ -204,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 347
     iget v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeNatValue:I
 
     return v0
@@ -214,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 335
     iget v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeWindowSize:I
 
     return v0
@@ -224,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 315
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IKeSetting;->mIkeversion:Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
     return-object v0

@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lmf/org/apache/xerces/util/XMLResourceIdentifierImpl;-><init>()V
 
     return-void
@@ -58,12 +57,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 190
     instance-of v2, p1, Lmf/org/apache/xerces/xni/grammars/XMLSchemaDescription;
 
     if-nez v2, :cond_1
 
-    .line 195
     :cond_0
     :goto_0
     return v1
@@ -71,16 +68,13 @@
     :cond_1
     move-object v0, p1
 
-    .line 191
     check-cast v0, Lmf/org/apache/xerces/xni/grammars/XMLSchemaDescription;
 
-    .line 192
     .local v0, "desc":Lmf/org/apache/xerces/xni/grammars/XMLSchemaDescription;
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
-    .line 193
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/grammars/XMLSchemaDescription;->getTargetNamespace()Ljava/lang/String;
@@ -93,7 +87,6 @@
 
     goto :goto_0
 
-    .line 195
     :cond_2
     invoke-interface {v0}, Lmf/org/apache/xerces/xni/grammars/XMLSchemaDescription;->getTargetNamespace()Ljava/lang/String;
 
@@ -110,35 +103,30 @@
     .locals 2
 
     .prologue
-    .line 176
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
     const/4 v1, 0x6
 
     if-eq v0, v1, :cond_0
 
-    .line 177
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
     const/4 v1, 0x5
 
     if-eq v0, v1, :cond_0
 
-    .line 178
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
     const/4 v1, 0x4
 
     if-eq v0, v1, :cond_0
 
-    .line 179
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
     const/4 v1, 0x7
 
     if-eq v0, v1, :cond_0
 
-    .line 176
     const/4 v0, 0x0
 
     :goto_0
@@ -154,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fAttributes:Lmf/org/apache/xerces/xni/XMLAttributes;
 
     return-object v0
@@ -164,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
     return v0
@@ -174,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fEnclosedElementName:Lmf/org/apache/xerces/xni/QName;
 
     return-object v0
@@ -184,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 108
     const-string v0, "http://www.w3.org/2001/XMLSchema"
 
     return-object v0
@@ -194,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLocationHints:[Ljava/lang/String;
 
     return-object v0
@@ -204,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
     return-object v0
@@ -214,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fTriggeringComponent:Lmf/org/apache/xerces/xni/QName;
 
     return-object v0
@@ -224,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -248,63 +228,51 @@
     .locals 2
 
     .prologue
-    .line 247
     new-instance v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/xs/XSDDescription;-><init>()V
 
-    .line 248
     .local v0, "desc":Lmf/org/apache/xerces/impl/xs/XSDDescription;
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fAttributes:Lmf/org/apache/xerces/xni/XMLAttributes;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fAttributes:Lmf/org/apache/xerces/xni/XMLAttributes;
 
-    .line 249
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fBaseSystemId:Ljava/lang/String;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fBaseSystemId:Ljava/lang/String;
 
-    .line 250
     iget-short v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
     iput-short v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
-    .line 251
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fEnclosedElementName:Lmf/org/apache/xerces/xni/QName;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fEnclosedElementName:Lmf/org/apache/xerces/xni/QName;
 
-    .line 252
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fExpandedSystemId:Ljava/lang/String;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fExpandedSystemId:Ljava/lang/String;
 
-    .line 253
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLiteralSystemId:Ljava/lang/String;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLiteralSystemId:Ljava/lang/String;
 
-    .line 254
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLocationHints:[Ljava/lang/String;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLocationHints:[Ljava/lang/String;
 
-    .line 255
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fPublicId:Ljava/lang/String;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fPublicId:Ljava/lang/String;
 
-    .line 256
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
-    .line 257
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fTriggeringComponent:Lmf/org/apache/xerces/xni/QName;
 
     iput-object v1, v0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fTriggeringComponent:Lmf/org/apache/xerces/xni/QName;
 
-    .line 258
     return-object v0
 .end method
 
@@ -314,27 +282,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 238
     invoke-super {p0}, Lmf/org/apache/xerces/util/XMLResourceIdentifierImpl;->clear()V
 
-    .line 239
     const/4 v0, -0x1
 
     iput-short v0, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
-    .line 240
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLocationHints:[Ljava/lang/String;
 
-    .line 241
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fTriggeringComponent:Lmf/org/apache/xerces/xni/QName;
 
-    .line 242
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fEnclosedElementName:Lmf/org/apache/xerces/xni/QName;
 
-    .line 243
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fAttributes:Lmf/org/apache/xerces/xni/XMLAttributes;
 
-    .line 244
     return-void
 .end method
 
@@ -343,10 +304,8 @@
     .param p1, "attributes"    # Lmf/org/apache/xerces/xni/XMLAttributes;
 
     .prologue
-    .line 231
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fAttributes:Lmf/org/apache/xerces/xni/XMLAttributes;
 
-    .line 232
     return-void
 .end method
 
@@ -355,10 +314,8 @@
     .param p1, "contextType"    # S
 
     .prologue
-    .line 208
     iput-short p1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fContextType:S
 
-    .line 209
     return-void
 .end method
 
@@ -367,10 +324,8 @@
     .param p1, "enclosedElementName"    # Lmf/org/apache/xerces/xni/QName;
 
     .prologue
-    .line 227
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fEnclosedElementName:Lmf/org/apache/xerces/xni/QName;
 
-    .line 228
     return-void
 .end method
 
@@ -381,21 +336,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 216
     array-length v0, p1
 
-    .line 217
     .local v0, "length":I
     new-array v1, v0, [Ljava/lang/String;
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLocationHints:[Ljava/lang/String;
 
-    .line 218
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fLocationHints:[Ljava/lang/String;
 
     invoke-static {p1, v2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 220
     return-void
 .end method
 
@@ -404,10 +355,8 @@
     .param p1, "targetNamespace"    # Ljava/lang/String;
 
     .prologue
-    .line 212
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fNamespace:Ljava/lang/String;
 
-    .line 213
     return-void
 .end method
 
@@ -416,9 +365,7 @@
     .param p1, "triggeringComponent"    # Lmf/org/apache/xerces/xni/QName;
 
     .prologue
-    .line 223
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XSDDescription;->fTriggeringComponent:Lmf/org/apache/xerces/xni/QName;
 
-    .line 224
     return-void
 .end method

@@ -52,7 +52,6 @@
 
     const/4 v3, 0x0
 
-    .line 117
     new-instance v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     const-string v1, "MAIN"
@@ -65,7 +64,6 @@
 
     sput-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->MAIN:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
-    .line 118
     new-instance v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     const-string v1, "SUB"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->SUB:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
-    .line 119
     new-instance v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     const-string v1, "FULL"
@@ -91,7 +88,6 @@
 
     sput-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->FULL:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
-    .line 120
     new-instance v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     const-string v1, "UNKNOWN"
@@ -104,7 +100,6 @@
 
     sput-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->UNKNOWN:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
-    .line 115
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
@@ -140,10 +135,8 @@
     .end annotation
 
     .prologue
-    .line 124
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 125
     # getter for: Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;->access$000()Ljava/lang/String;
 
@@ -183,10 +176,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     iput p3, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->displayId:I
 
-    .line 127
     return-void
 .end method
 
@@ -195,7 +186,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     const-class v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -211,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 115
     sget-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->$VALUES:[Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     invoke-virtual {v0}, [Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->clone()Ljava/lang/Object;
@@ -229,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget v0, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->displayId:I
 
     return v0

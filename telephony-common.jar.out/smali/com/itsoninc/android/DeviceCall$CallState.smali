@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 5
     new-instance v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     const-string v1, "ACTIVE"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->ACTIVE:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 6
     new-instance v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     const-string v1, "ALERTING"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->ALERTING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 7
     new-instance v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     const-string v1, "HOLDING"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->HOLDING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 8
     new-instance v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     const-string v1, "DIALING"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->DIALING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 9
     new-instance v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     const-string v1, "INCOMING"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->INCOMING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 10
     new-instance v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     const-string v1, "WAITING"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->WAITING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 4
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/itsoninc/android/DeviceCall$CallState;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 4
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 4
     const-class v0, Lcom/itsoninc/android/DeviceCall$CallState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 4
     sget-object v0, Lcom/itsoninc/android/DeviceCall$CallState;->$VALUES:[Lcom/itsoninc/android/DeviceCall$CallState;
 
     invoke-virtual {v0}, [Lcom/itsoninc/android/DeviceCall$CallState;->clone()Ljava/lang/Object;

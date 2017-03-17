@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4504
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$7;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 4507
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4508
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.MEDIA_MOUNTED"
 
@@ -54,29 +51,24 @@
 
     if-eqz v4, :cond_0
 
-    .line 4509
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 4510
     .local v3, "uri":Landroid/net/Uri;
     invoke-virtual {v3}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4511
     .local v1, "path":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 4526
     .end local v1    # "path":Ljava/lang/String;
     .end local v3    # "uri":Landroid/net/Uri;
     :cond_0
     :goto_0
     return-void
 
-    .line 4513
     .restart local v1    # "path":Ljava/lang/String;
     .restart local v3    # "uri":Landroid/net/Uri;
     :cond_1
@@ -87,7 +79,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4517
     :goto_1
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$7;->this$0:Lcom/android/server/DeviceManager3LMService;
 
@@ -99,7 +90,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 4518
     new-instance v2, Landroid/content/Intent;
 
     const-string v4, "com.threelm.action.RUN_KITTING"
@@ -108,7 +98,6 @@
 
     invoke-direct {v2, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 4519
     .local v2, "startIntent":Landroid/content/Intent;
     new-instance v4, Landroid/content/ComponentName;
 
@@ -120,19 +109,16 @@
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 4521
-    const-string/jumbo v4, "sd_path"
+    const-string v4, "sd_path"
 
     invoke-virtual {v2, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4522
     sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {p1, v2, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    .line 4514
     .end local v2    # "startIntent":Landroid/content/Intent;
     :catch_0
     move-exception v4

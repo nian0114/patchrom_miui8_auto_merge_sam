@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 56
-    const-string/jumbo v0, "libandroid_runtime"
+    const-string v0, "libandroid_runtime"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 57
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

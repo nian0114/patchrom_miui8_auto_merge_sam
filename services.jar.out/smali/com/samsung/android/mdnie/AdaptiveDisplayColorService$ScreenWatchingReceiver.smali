@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 387
     iput-object p1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$1;
 
     .prologue
-    .line 387
     invoke-direct {p0, p1}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;-><init>(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;)V
 
     return-void
@@ -55,12 +53,10 @@
 
     const/4 v5, 0x1
 
-    .line 390
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 392
     .local v0, "action":Ljava/lang/String;
     const-string v6, "android.intent.action.BOOT_COMPLETED"
 
@@ -70,8 +66,7 @@
 
     if-eqz v6, :cond_1
 
-    .line 393
-    const-string/jumbo v4, "keyguard"
+    const-string v4, "keyguard"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -79,7 +74,6 @@
 
     check-cast v1, Landroid/app/KeyguardManager;
 
-    .line 394
     .local v1, "keyGuardManager":Landroid/app/KeyguardManager;
     if-eqz v1, :cond_0
 
@@ -89,19 +83,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 395
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->isLockScreenOn:Z
     invoke-static {v4, v5}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$102(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;Z)Z
 
-    .line 425
     .end local v1    # "keyGuardManager":Landroid/app/KeyguardManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 398
     :cond_1
     const-string v6, "android.intent.action.SCREEN_ON"
 
@@ -111,8 +102,7 @@
 
     if-eqz v6, :cond_3
 
-    .line 399
-    const-string/jumbo v4, "keyguard"
+    const-string v4, "keyguard"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -120,7 +110,6 @@
 
     check-cast v1, Landroid/app/KeyguardManager;
 
-    .line 400
     .restart local v1    # "keyGuardManager":Landroid/app/KeyguardManager;
     if-eqz v1, :cond_2
 
@@ -130,13 +119,11 @@
 
     if-eqz v4, :cond_2
 
-    .line 401
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->isLockScreenOn:Z
     invoke-static {v4, v5}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$102(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;Z)Z
 
-    .line 402
     :cond_2
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -145,7 +132,6 @@
 
     goto :goto_0
 
-    .line 405
     .end local v1    # "keyGuardManager":Landroid/app/KeyguardManager;
     :cond_3
     const-string v6, "android.intent.action.SCREEN_OFF"
@@ -156,7 +142,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 406
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->receive_screen_off_intent()V
@@ -164,7 +149,6 @@
 
     goto :goto_0
 
-    .line 409
     :cond_4
     const-string v6, "android.intent.action.USER_PRESENT"
 
@@ -174,7 +158,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 410
     iget-object v5, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->isLockScreenOn:Z
@@ -182,7 +165,6 @@
 
     goto :goto_0
 
-    .line 413
     :cond_5
     const-string v6, "com.sec.android.action.NOTIFY_MULTIWINDOW_STATUS"
 
@@ -192,7 +174,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 414
     iget-object v5, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     const-string v6, "com.sec.android.extra.MULTIWINDOW_RUNNING"
@@ -204,7 +185,6 @@
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mMultiWindowOn:Z
     invoke-static {v5, v4}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$402(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;Z)Z
 
-    .line 415
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->receive_multi_window_on_intent()V
@@ -212,7 +192,6 @@
 
     goto :goto_0
 
-    .line 418
     :cond_6
     const-string v6, "com.sec.android.intent.action.SSRM_MDNIE_CHANGED"
 
@@ -222,14 +201,13 @@
 
     if-eqz v6, :cond_0
 
-    .line 419
     iget-object v6, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v7
 
-    const-string/jumbo v8, "value"
+    const-string v8, "value"
 
     invoke-virtual {v7, v8}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -245,12 +223,10 @@
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mEBookScenarioIntented:Z
     invoke-static {v6, v4}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$602(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;Z)Z
 
-    .line 420
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 421
     .local v2, "time":J
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -261,7 +237,6 @@
 
     invoke-virtual {v4, v5}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->removeMessages(I)V
 
-    .line 422
     iget-object v4, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mHandler:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;

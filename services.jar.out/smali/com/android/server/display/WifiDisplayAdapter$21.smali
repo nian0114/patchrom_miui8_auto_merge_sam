@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 1769
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$21;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     iput p2, p0, Lcom/android/server/display/WifiDisplayAdapter$21;->val$deviceType:I
@@ -68,7 +67,6 @@
     .locals 8
 
     .prologue
-    .line 1772
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$21;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mIpRemoteDisplayController:Lcom/android/server/display/IpRemoteDisplayController;
@@ -78,21 +76,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 1775
     iget v0, p0, Lcom/android/server/display/WifiDisplayAdapter$21;->val$deviceType:I
 
     const/16 v1, 0xa
 
     if-ne v0, v1, :cond_0
 
-    .line 1776
     const-string v0, "WifiDisplayAdapter"
 
-    const-string/jumbo v1, "requestEnableLocked CONN_STATE_SCREEN_SHARING_AP call requestStopScan."
+    const-string v1, "requestEnableLocked CONN_STATE_SCREEN_SHARING_AP call requestStopScan."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1777
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$21;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
@@ -102,7 +97,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayController;->requestStopScan()V
 
-    .line 1779
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$21;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
@@ -127,7 +121,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/display/IpRemoteDisplayController;->requestEnableWifiDisplay(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1781
     :cond_1
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1518
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$13;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1521
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -56,32 +54,27 @@
 
     const/4 v9, 0x2
 
-    .line 1526
     move-object v2, p1
 
     check-cast v2, Landroid/content/Intent;
 
-    .line 1528
     .local v2, "intent":Landroid/content/Intent;
-    const-string/jumbo v6, "oem_request"
+    const-string v6, "oem_request"
 
     invoke-virtual {v2, v6}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 1529
     .local v1, "data":[B
     const/4 v6, 0x4
 
     aget-byte v3, v1, v6
 
-    .line 1530
     .local v3, "prefMode":B
     const/4 v6, 0x5
 
     aget-byte v5, v1, v6
 
-    .line 1531
     .local v5, "status":B
     const-string v6, "[EPDGService]"
 
@@ -109,29 +102,25 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1532
     if-ne v5, v9, :cond_1
 
-    .line 1533
     sget-object v4, Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;->LTE:Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
 
-    .line 1541
     .local v4, "preferOrder":Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
     :goto_0
     if-eqz v4, :cond_0
 
-    .line 1542
     new-array v0, v10, [Ljava/lang/String;
 
     const/4 v6, 0x0
 
-    const-string/jumbo v7, "ims"
+    const-string v7, "ims"
 
     aput-object v7, v0, v6
 
     const/4 v6, 0x1
 
-    const-string/jumbo v7, "mms"
+    const-string v7, "mms"
 
     aput-object v7, v0, v6
 
@@ -139,7 +128,6 @@
 
     aput-object v6, v0, v9
 
-    .line 1543
     .local v0, "apnList":[Ljava/lang/String;
     const-string v6, "[EPDGService]"
 
@@ -147,7 +135,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "prefered Order for "
+    const-string v8, "prefered Order for "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -181,7 +169,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1544
     invoke-static {}, Lcom/sec/epdg/mapcon/PolicyManager;->getInstance()Lcom/sec/epdg/mapcon/PolicyManager;
 
     move-result-object v6
@@ -193,34 +180,28 @@
 
     invoke-virtual {v6, v7, v0, v4}, Lcom/sec/epdg/mapcon/PolicyManager;->updateMapconTable(Landroid/content/Context;[Ljava/lang/String;Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;)V
 
-    .line 1546
     .end local v0    # "apnList":[Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 1534
     .end local v4    # "preferOrder":Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
     :cond_1
     if-ne v3, v9, :cond_2
 
-    .line 1535
     sget-object v4, Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;->LTE_IWLAN:Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
 
     .restart local v4    # "preferOrder":Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
     goto :goto_0
 
-    .line 1536
     .end local v4    # "preferOrder":Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
     :cond_2
     if-ne v3, v10, :cond_3
 
-    .line 1537
     sget-object v4, Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;->IWLAN:Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
 
     .restart local v4    # "preferOrder":Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
     goto :goto_0
 
-    .line 1539
     .end local v4    # "preferOrder":Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;
     :cond_3
     sget-object v4, Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;->IWLAN_LTE:Lcom/sec/epdg/mapcon/MapconConstants$MapconMode;

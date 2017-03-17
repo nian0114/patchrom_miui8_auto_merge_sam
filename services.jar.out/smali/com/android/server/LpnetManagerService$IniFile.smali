@@ -46,10 +46,8 @@
     .end annotation
 
     .prologue
-    .line 2457
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2453
     const-string v0, "\\s*\\[([^]]*)\\]\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -58,7 +56,6 @@
 
     iput-object v0, p0, Lcom/android/server/LpnetManagerService$IniFile;->_section:Ljava/util/regex/Pattern;
 
-    .line 2454
     const-string v0, "\\s*([^=]*)=(.*)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -67,17 +64,14 @@
 
     iput-object v0, p0, Lcom/android/server/LpnetManagerService$IniFile;->_keyValue:Ljava/util/regex/Pattern;
 
-    .line 2455
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
-    .line 2458
     invoke-virtual {p0, p1}, Lcom/android/server/LpnetManagerService$IniFile;->load(Ljava/lang/String;)V
 
-    .line 2459
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .param p3, "defaultvalue"    # Z
 
     .prologue
-    .line 2530
     iget-object v3, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -99,23 +92,19 @@
 
     check-cast v2, Ljava/util/Map;
 
-    .line 2531
     .local v2, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     move v0, p3
 
-    .line 2532
     .local v0, "booleanVal":Z
     if-nez v2, :cond_0
 
     move v1, v0
 
-    .line 2538
     .end local v0    # "booleanVal":Z
     .local v1, "booleanVal":Z
     :goto_0
     return v1
 
-    .line 2535
     .end local v1    # "booleanVal":Z
     .restart local v0    # "booleanVal":Z
     :cond_0
@@ -129,7 +118,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2536
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
@@ -147,7 +135,6 @@
     :cond_1
     move v1, v0
 
-    .line 2538
     .end local v0    # "booleanVal":Z
     .restart local v1    # "booleanVal":Z
     goto :goto_0
@@ -160,7 +147,6 @@
     .param p3, "defaultvalue"    # I
 
     .prologue
-    .line 2495
     iget-object v3, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -169,23 +155,19 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 2496
     .local v0, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     move v1, p3
 
-    .line 2497
     .local v1, "retVal":I
     if-nez v0, :cond_0
 
     move v2, v1
 
-    .line 2507
     .end local v1    # "retVal":I
     .local v2, "retVal":I
     :goto_0
     return v2
 
-    .line 2501
     .end local v2    # "retVal":I
     .restart local v1    # "retVal":I
     :cond_0
@@ -196,7 +178,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2502
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
@@ -217,12 +198,10 @@
     :goto_1
     move v2, v1
 
-    .line 2507
     .end local v1    # "retVal":I
     .restart local v2    # "retVal":I
     goto :goto_0
 
-    .line 2505
     .end local v2    # "retVal":I
     .restart local v1    # "retVal":I
     :catch_0
@@ -238,7 +217,6 @@
     .param p3, "defaultvalue"    # J
 
     .prologue
-    .line 2511
     iget-object v6, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v6, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -247,23 +225,19 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 2512
     .local v0, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     move-wide v2, p3
 
-    .line 2513
     .local v2, "retVal":J
     if-nez v0, :cond_0
 
     move-wide v4, v2
 
-    .line 2526
     .end local v2    # "retVal":J
     .local v4, "retVal":J
     :goto_0
     return-wide v4
 
-    .line 2517
     .end local v4    # "retVal":J
     .restart local v2    # "retVal":J
     :cond_0
@@ -278,7 +252,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2518
     .local v1, "strKey":Ljava/lang/String;
     if-eqz v1, :cond_1
 
@@ -288,14 +261,12 @@
 
     if-lez v6, :cond_1
 
-    .line 2519
     new-instance v6, Ljava/lang/Long;
 
     invoke-direct {v6, v1}, Ljava/lang/Long;-><init>(Ljava/lang/String;)V
 
     if-eqz v6, :cond_1
 
-    .line 2520
     new-instance v6, Ljava/lang/Long;
 
     invoke-direct {v6, v1}, Ljava/lang/Long;-><init>(Ljava/lang/String;)V
@@ -311,12 +282,10 @@
     :goto_1
     move-wide v4, v2
 
-    .line 2526
     .end local v2    # "retVal":J
     .restart local v4    # "retVal":J
     goto :goto_0
 
-    .line 2524
     .end local v4    # "retVal":J
     .restart local v2    # "retVal":J
     :catch_0
@@ -332,7 +301,6 @@
     .param p3, "defaultvalue"    # Ljava/lang/String;
 
     .prologue
-    .line 2487
     iget-object v1, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -341,11 +309,9 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 2488
     .local v0, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
-    .line 2491
     .end local p3    # "defaultvalue":Ljava/lang/String;
     :goto_0
     return-object p3
@@ -377,7 +343,6 @@
     .end annotation
 
     .prologue
-    .line 2463
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -389,14 +354,11 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2462
     .local v0, "br":Ljava/io/BufferedReader;
     const/4 v9, 0x0
 
-    .line 2465
     const/4 v5, 0x0
 
-    .line 2466
     .local v5, "section":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -408,14 +370,12 @@
     .local v3, "line":Ljava/lang/String;
     if-eqz v3, :cond_5
 
-    .line 2467
     iget-object v8, p0, Lcom/android/server/LpnetManagerService$IniFile;->_section:Ljava/util/regex/Pattern;
 
     invoke-virtual {v8, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v4
 
-    .line 2468
     .local v4, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v4}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -423,7 +383,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 2469
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -436,18 +395,15 @@
 
     goto :goto_0
 
-    .line 2470
     :cond_1
     if-eqz v5, :cond_0
 
-    .line 2471
     iget-object v8, p0, Lcom/android/server/LpnetManagerService$IniFile;->_keyValue:Ljava/util/regex/Pattern;
 
     invoke-virtual {v8, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v4
 
-    .line 2472
     const-string v8, "APPFREEZER_INIT"
 
     invoke-virtual {v8, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -462,7 +418,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 2473
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -473,7 +428,6 @@
 
     move-result-object v1
 
-    .line 2474
     .local v1, "key":Ljava/lang/String;
     const/4 v8, 0x2
 
@@ -485,7 +439,6 @@
 
     move-result-object v6
 
-    .line 2475
     .local v6, "value":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
@@ -495,11 +448,9 @@
 
     check-cast v2, Ljava/util/Map;
 
-    .line 2476
     .local v2, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v2, :cond_2
 
-    .line 2477
     iget-object v8, p0, Lcom/android/server/LpnetManagerService$IniFile;->sections:Ljava/util/Map;
 
     new-instance v2, Ljava/util/HashMap;
@@ -510,7 +461,6 @@
     .restart local v2    # "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v8, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2479
     :cond_2
     invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -523,7 +473,6 @@
 
     goto :goto_0
 
-    .line 2462
     .end local v1    # "key":Ljava/lang/String;
     .end local v2    # "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3    # "line":Ljava/lang/String;
@@ -537,7 +486,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2483
     :catchall_0
     move-exception v9
 
@@ -570,12 +518,10 @@
     :catch_1
     move-exception v8
 
-    .line 2485
     :cond_4
     :goto_3
     return-void
 
-    .line 2483
     .restart local v0    # "br":Ljava/io/BufferedReader;
     .restart local v3    # "line":Ljava/lang/String;
     .restart local v5    # "section":Ljava/lang/String;

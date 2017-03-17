@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 7344
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 8
 
     .prologue
-    .line 7346
     const/4 v2, 0x0
 
-    .line 7349
     .local v2, "process":Ljava/lang/Process;
     :try_start_0
     new-instance v0, Ljava/io/File;
@@ -52,7 +49,6 @@
 
     invoke-direct {v0, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7350
     .local v0, "dataLogDirectory":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -60,10 +56,8 @@
 
     if-nez v5, :cond_0
 
-    .line 7351
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 7354
     :cond_0
     const/4 v5, 0x3
 
@@ -83,11 +77,10 @@
 
     const/4 v5, 0x2
 
-    const-string/jumbo v6, "logcat -v threadtime -d -b events -b system -b main > /data/log/dumpState_LastAutoPowerOff.log"
+    const-string v6, "logcat -v threadtime -d -b events -b system -b main > /data/log/dumpState_LastAutoPowerOff.log"
 
     aput-object v6, v4, v5
 
-    .line 7356
     .local v4, "shellCommandForLogcat":[Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -97,10 +90,8 @@
 
     move-result-object v2
 
-    .line 7357
     invoke-virtual {v2}, Ljava/lang/Process;->waitFor()I
 
-    .line 7359
     const/4 v5, 0x3
 
     new-array v3, v5, [Ljava/lang/String;
@@ -119,11 +110,10 @@
 
     const/4 v5, 0x2
 
-    const-string/jumbo v6, "dumpsys power >> /data/log/dumpState_LastAutoPowerOff.log"
+    const-string v6, "dumpsys power >> /data/log/dumpState_LastAutoPowerOff.log"
 
     aput-object v6, v3, v5
 
-    .line 7360
     .local v3, "shellCommandForDumpsys":[Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -133,32 +123,27 @@
 
     move-result-object v2
 
-    .line 7361
     invoke-virtual {v2}, Ljava/lang/Process;->waitFor()I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 7370
     .end local v0    # "dataLogDirectory":Ljava/io/File;
     .end local v3    # "shellCommandForDumpsys":[Ljava/lang/String;
     .end local v4    # "shellCommandForLogcat":[Ljava/lang/String;
     :goto_0
     const-string v5, "PowerManagerService"
 
-    const-string/jumbo v6, "dumpDebugLog -"
+    const-string v6, "dumpDebugLog -"
 
     invoke-static {v5, v6}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7371
     return-void
 
-    .line 7362
     :catch_0
     move-exception v1
 
-    .line 7363
     .local v1, "exception":Ljava/io/IOException;
     const-string v5, "PowerManagerService"
 
@@ -166,7 +151,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "dumpDebugLog : "
+    const-string v7, "dumpDebugLog : "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -184,12 +169,10 @@
 
     goto :goto_0
 
-    .line 7364
     .end local v1    # "exception":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 7365
     .local v1, "exception":Ljava/lang/SecurityException;
     const-string v5, "PowerManagerService"
 
@@ -197,7 +180,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "dumpDebugLog : "
+    const-string v7, "dumpDebugLog : "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -215,12 +198,10 @@
 
     goto :goto_0
 
-    .line 7366
     .end local v1    # "exception":Ljava/lang/SecurityException;
     :catch_2
     move-exception v1
 
-    .line 7367
     .local v1, "exception":Ljava/lang/InterruptedException;
     const-string v5, "PowerManagerService"
 
@@ -228,7 +209,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "dumpDebugLog : "
+    const-string v7, "dumpDebugLog : "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

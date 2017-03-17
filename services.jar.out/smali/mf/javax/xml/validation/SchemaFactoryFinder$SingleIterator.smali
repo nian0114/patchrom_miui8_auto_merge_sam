@@ -26,15 +26,12 @@
     .locals 1
 
     .prologue
-    .line 388
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 389
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;->seen:Z
 
-    .line 388
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 388
     invoke-direct {p0}, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;-><init>()V
 
     return-void
@@ -54,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 392
     iget-boolean v0, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;->seen:Z
 
     if-eqz v0, :cond_0
@@ -74,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 394
     iget-boolean v0, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;->seen:Z
 
     if-eqz v0, :cond_0
@@ -85,13 +79,11 @@
 
     throw v0
 
-    .line 395
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;->seen:Z
 
-    .line 396
     invoke-virtual {p0}, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;->value()Ljava/lang/Object;
 
     move-result-object v0
@@ -103,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 391
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

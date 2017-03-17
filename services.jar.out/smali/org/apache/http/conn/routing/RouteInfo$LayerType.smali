@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 12
     new-instance v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
     const-string v1, "LAYERED"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;->LAYERED:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
-    .line 13
     new-instance v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
     const-string v1, "PLAIN"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;->PLAIN:Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
-    .line 10
     const/4 v0, 0x2
 
     new-array v0, v0, [Lorg/apache/http/conn/routing/RouteInfo$LayerType;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     const-class v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 10
     sget-object v0, Lorg/apache/http/conn/routing/RouteInfo$LayerType;->$VALUES:[Lorg/apache/http/conn/routing/RouteInfo$LayerType;
 
     invoke-virtual {v0}, [Lorg/apache/http/conn/routing/RouteInfo$LayerType;->clone()Ljava/lang/Object;

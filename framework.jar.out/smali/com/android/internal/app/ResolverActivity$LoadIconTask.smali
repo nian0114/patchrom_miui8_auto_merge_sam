@@ -39,22 +39,18 @@
     .param p2, "dri"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 2419
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2420
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->mDisplayResolveInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 2421
     invoke-virtual {p2}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 2422
     return-void
 .end method
 
@@ -65,12 +61,10 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 2426
     const/4 v0, -0x4
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 2427
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->mResolveInfo:Landroid/content/pm/ResolveInfo;
@@ -87,7 +81,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 2415
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -103,12 +96,10 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 2432
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->mDisplayResolveInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->setDisplayIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2433
     return-void
 .end method
 
@@ -117,7 +108,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 2415
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     .end local p1    # "x0":Ljava/lang/Object;

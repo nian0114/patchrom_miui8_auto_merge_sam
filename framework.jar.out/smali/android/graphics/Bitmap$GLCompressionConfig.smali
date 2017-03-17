@@ -60,7 +60,6 @@
 
     const/4 v4, 0x0
 
-    .line 543
     new-instance v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     const-string v1, "PVRTC2_2"
@@ -71,7 +70,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->PVRTC2_2:Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 544
     new-instance v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     const-string v1, "ETC1_ALPHA"
@@ -82,7 +80,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->ETC1_ALPHA:Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 545
     new-instance v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     const-string v1, "ETC1"
@@ -93,7 +90,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->ETC1:Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 546
     new-instance v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     const-string v1, "ETC2_ALPHA"
@@ -104,7 +100,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->ETC2_ALPHA:Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 547
     new-instance v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     const-string v1, "ETC2"
@@ -117,7 +112,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->ETC2:Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 548
     new-instance v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     const-string v1, "ASTC"
@@ -130,7 +124,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->ASTC:Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 541
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/graphics/Bitmap$GLCompressionConfig;
@@ -165,7 +158,6 @@
 
     sput-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->$VALUES:[Landroid/graphics/Bitmap$GLCompressionConfig;
 
-    .line 558
     const/16 v0, 0xe
 
     new-array v0, v0, [Landroid/graphics/Bitmap$GLCompressionConfig;
@@ -245,13 +237,10 @@
     .end annotation
 
     .prologue
-    .line 553
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 554
     iput p3, p0, Landroid/graphics/Bitmap$GLCompressionConfig;->nativeInt:I
 
-    .line 555
     return-void
 .end method
 
@@ -260,7 +249,6 @@
     .param p0, "nativeConfig"    # I
 
     .prologue
-    .line 563
     sget-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->compressedConfigLookup:[Landroid/graphics/Bitmap$GLCompressionConfig;
 
     aget-object v0, v0, p0
@@ -273,7 +261,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 541
     const-class v0, Landroid/graphics/Bitmap$GLCompressionConfig;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -289,7 +276,6 @@
     .locals 1
 
     .prologue
-    .line 541
     sget-object v0, Landroid/graphics/Bitmap$GLCompressionConfig;->$VALUES:[Landroid/graphics/Bitmap$GLCompressionConfig;
 
     invoke-virtual {v0}, [Landroid/graphics/Bitmap$GLCompressionConfig;->clone()Ljava/lang/Object;

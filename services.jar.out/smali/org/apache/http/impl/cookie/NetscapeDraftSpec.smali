@@ -17,7 +17,6 @@
     .locals 2
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/http/impl/cookie/CookieSpecBase;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -34,7 +33,6 @@
     .param p1, "datepatterns"    # [Ljava/lang/String;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/impl/cookie/CookieSpecBase;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -65,7 +63,6 @@
     .end annotation
 
     .prologue
-    .line 9
     .local p1, "cookies":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -80,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -94,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -128,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

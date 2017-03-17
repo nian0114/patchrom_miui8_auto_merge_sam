@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1949
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v5, 0x1
 
-    .line 1952
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -56,13 +54,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 1953
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->checkAudioMode()V
     invoke-static {v3}, Lcom/android/server/wifi/WifiStateMachine;->access$400(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 1987
     :cond_0
     :goto_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -77,7 +73,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 1988
     const-string v3, "networkInfo"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -86,18 +81,15 @@
 
     check-cast v2, Landroid/net/NetworkInfo;
 
-    .line 1989
     .local v2, "networkInfo":Landroid/net/NetworkInfo;
     if-nez v2, :cond_9
 
-    .line 1990
     const-string v3, "WifiStateMachine"
 
     const-string v4, "WIFI P2P networkInfo is null."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2009
     .end local v2    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_1
     :goto_1
@@ -111,7 +103,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 2010
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -124,7 +115,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 2011
     const-string v3, "networkInfo"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -133,7 +123,6 @@
 
     check-cast v2, Landroid/net/NetworkInfo;
 
-    .line 2012
     .restart local v2    # "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v2, :cond_2
 
@@ -145,7 +134,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 2013
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -157,12 +145,10 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/wifi/WifiNative;->callSECApiVoid(I)I
 
-    .line 2017
     .end local v2    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_2
     return-void
 
-    .line 1954
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -176,7 +162,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 1956
     const-string v3, "netId"
 
     const/4 v4, -0x1
@@ -185,7 +170,6 @@
 
     move-result v1
 
-    .line 1957
     .local v1, "netId":I
     const-string v3, "enableOthers"
 
@@ -193,7 +177,6 @@
 
     move-result v0
 
-    .line 1958
     .local v0, "enableOthers":Z
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -208,7 +191,6 @@
 
     goto :goto_0
 
-    .line 1959
     .end local v0    # "enableOthers":Z
     .end local v1    # "netId":I
     :cond_4
@@ -224,7 +206,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1961
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const-string v4, "wifi_p2p_state"
@@ -238,7 +219,6 @@
 
     goto/16 :goto_0
 
-    .line 1962
     :cond_5
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -252,7 +232,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 1977
     :cond_6
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -307,7 +286,6 @@
 
     if-eq v3, v4, :cond_8
 
-    .line 1981
     :cond_7
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -316,7 +294,6 @@
 
     goto/16 :goto_0
 
-    .line 1982
     :cond_8
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -330,7 +307,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1983
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->updatePoorNetworkParameters()V
@@ -338,7 +314,6 @@
 
     goto/16 :goto_0
 
-    .line 1991
     .restart local v2    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_9
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -358,20 +333,17 @@
 
     if-ne v3, v4, :cond_a
 
-    .line 1993
     const-string v3, "WifiStateMachine"
 
     const-string v4, "WIFI_P2P_CONNECTION_CHANGED_ACTION - Connected. startShareProfileServer"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1994
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->wifiP2pConnected:Z
     invoke-static {v3, v5}, Lcom/android/server/wifi/WifiStateMachine;->access$1102(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 1995
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->shareServerEnabled:Z
@@ -388,7 +360,6 @@
 
     goto/16 :goto_1
 
-    .line 1996
     :cond_a
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -407,26 +378,22 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 1998
     const-string v3, "WifiStateMachine"
 
     const-string v4, "WIFI_P2P_CONNECTION_CHANGED_ACTION - Disonnected. closeShareProfileServer / closeShareProfileClient"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1999
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->wifiP2pConnected:Z
     invoke-static {v3, v6}, Lcom/android/server/wifi/WifiStateMachine;->access$1102(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 2000
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->closeShareProfileServer()V
     invoke-static {v3}, Lcom/android/server/wifi/WifiStateMachine;->access$1400(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 2001
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->closeShareProfileClient()V
@@ -434,7 +401,6 @@
 
     goto/16 :goto_1
 
-    .line 2003
     .end local v2    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_b
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -461,7 +427,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2005
     :cond_c
     const-string v3, "WifiStateMachine"
 
@@ -489,7 +454,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2006
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$2;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const v4, 0x20139

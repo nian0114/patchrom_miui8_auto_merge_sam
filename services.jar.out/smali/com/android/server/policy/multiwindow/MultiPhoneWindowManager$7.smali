@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1240
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$7;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1243
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
     iget-object v4, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$7;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
@@ -53,7 +51,6 @@
 
     invoke-direct {v1, v4, v5}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 1244
     .local v1, "context":Landroid/content/Context;
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -65,7 +62,6 @@
 
     move-result-object v2
 
-    .line 1245
     .local v2, "msg":Ljava/lang/String;
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -77,7 +73,6 @@
 
     move-result-object v0
 
-    .line 1246
     .local v0, "app":Ljava/lang/String;
     new-array v4, v6, [Ljava/lang/Object;
 
@@ -93,13 +88,10 @@
 
     move-result-object v3
 
-    .line 1247
     .local v3, "toast":Landroid/widget/Toast;
     invoke-virtual {v3}, Landroid/widget/Toast;->setShowForAllUsers()V
 
-    .line 1248
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 1249
     return-void
 .end method

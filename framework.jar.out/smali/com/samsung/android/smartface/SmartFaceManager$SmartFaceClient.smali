@@ -23,19 +23,16 @@
     .locals 2
 
     .prologue
-    .line 552
     iput-object p1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     invoke-direct {p0}, Lcom/samsung/android/smartface/ISmartFaceClient$Stub;-><init>()V
 
-    .line 553
     const-string v0, "SmartFaceManager"
 
     const-string v1, "New SmartFaceClient"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 558
     iget-object v1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->mInternalEventHandler:Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;
@@ -60,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 559
     iget-object v1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->mInternalEventHandler:Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;
@@ -72,7 +67,6 @@
 
     move-result-object v0
 
-    .line 560
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
@@ -83,12 +77,10 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 569
     .end local v0    # "m":Landroid/os/Message;
     :goto_0
     return-void
 
-    .line 561
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
@@ -99,7 +91,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 562
     iget-object v1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->mEventHandler:Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;
@@ -111,7 +102,6 @@
 
     move-result-object v0
 
-    .line 563
     .restart local v0    # "m":Landroid/os/Message;
     iget-object v1, p0, Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceClient;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
@@ -124,7 +114,6 @@
 
     goto :goto_0
 
-    .line 567
     .end local v0    # "m":Landroid/os/Message;
     :cond_1
     const-string v1, "SmartFaceManager"

@@ -26,14 +26,11 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 10140
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 10141
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 10137
-    const-string/jumbo v0, "user_setup_complete"
+    const-string v0, "user_setup_complete"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
-    .line 10142
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 10150
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     invoke-virtual {v0, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -62,12 +57,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 10151
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateUserSetupComplete()V
 
-    .line 10153
     :cond_0
     return-void
 .end method
@@ -77,7 +70,6 @@
     .param p1, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 10145
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     const/4 v1, 0x0
@@ -86,6 +78,5 @@
 
     invoke-virtual {p1, v0, v1, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 10146
     return-void
 .end method

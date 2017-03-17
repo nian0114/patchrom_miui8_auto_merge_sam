@@ -28,19 +28,15 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/android/server/DLPManagerService$DLPHandler;->this$0:Lcom/android/server/DLPManagerService;
 
-    .line 96
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 97
     const-string v0, "DLPHandler"
 
     # invokes: Lcom/android/server/DLPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0}, Lcom/android/server/DLPManagerService;->access$000(Ljava/lang/String;)I
 
-    .line 98
     return-void
 .end method
 
@@ -51,31 +47,27 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 101
     const-string v11, "DLPHandler"
 
     # invokes: Lcom/android/server/DLPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v11}, Lcom/android/server/DLPManagerService;->access$000(Ljava/lang/String;)I
 
-    .line 104
     :try_start_0
     iget v11, p1, Landroid/os/Message;->what:I
 
     packed-switch v11, :pswitch_data_0
 
-    .line 139
     :cond_0
     :goto_0
     return-void
 
-    .line 106
     :pswitch_0
     # getter for: Lcom/android/server/DLPManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/DLPManagerService;->access$100()Landroid/content/Context;
 
     move-result-object v11
 
-    const-string/jumbo v12, "persona"
+    const-string v12, "persona"
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -83,20 +75,16 @@
 
     check-cast v7, Landroid/os/PersonaManager;
 
-    .line 108
     .local v7, "mPersonaManager":Landroid/os/PersonaManager;
     if-eqz v7, :cond_0
 
-    .line 112
     invoke-virtual {v7}, Landroid/os/PersonaManager;->getPersonaIds()[I
 
     move-result-object v10
 
-    .line 113
     .local v10, "personaIds":[I
     if-eqz v10, :cond_0
 
-    .line 114
     move-object v0, v10
 
     .local v0, "arr$":[I
@@ -111,7 +99,6 @@
 
     aget v9, v0, v4
 
-    .line 115
     .local v9, "personaId":I
     invoke-static {}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getInstance()Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
@@ -126,29 +113,23 @@
 
     move-result-object v8
 
-    .line 117
     .local v8, "mcm":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     if-eqz v8, :cond_1
 
-    .line 118
     invoke-virtual {v8}, Lcom/sec/enterprise/knox/container/KnoxContainerManager;->getDLPManagerPolicy()Lcom/sec/enterprise/knox/dlp/DLPManagerPolicy;
 
     move-result-object v2
 
-    .line 119
     .local v2, "dlpService":Lcom/sec/enterprise/knox/dlp/DLPManagerPolicy;
     if-eqz v2, :cond_1
 
-    .line 120
     invoke-virtual {v2}, Lcom/sec/enterprise/knox/dlp/DLPManagerPolicy;->getDLPConfig()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 122
     .local v1, "config":Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    .line 123
     const-string v11, "Lock"
 
     const/4 v12, 0x0
@@ -161,7 +142,6 @@
 
     move-result-object v5
 
-    .line 124
     .local v5, "isLocked":Ljava/lang/Boolean;
     invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -169,12 +149,10 @@
 
     if-eqz v11, :cond_2
 
-    .line 125
     iget-object v11, p0, Lcom/android/server/DLPManagerService$DLPHandler;->this$0:Lcom/android/server/DLPManagerService;
 
     invoke-virtual {v11, v9}, Lcom/android/server/DLPManagerService;->lockDLP(I)Z
 
-    .line 114
     .end local v1    # "config":Landroid/os/Bundle;
     .end local v2    # "dlpService":Lcom/sec/enterprise/knox/dlp/DLPManagerPolicy;
     .end local v5    # "isLocked":Ljava/lang/Boolean;
@@ -184,7 +162,6 @@
 
     goto :goto_1
 
-    .line 127
     .restart local v1    # "config":Landroid/os/Bundle;
     .restart local v2    # "dlpService":Lcom/sec/enterprise/knox/dlp/DLPManagerPolicy;
     .restart local v5    # "isLocked":Ljava/lang/Boolean;
@@ -197,7 +174,6 @@
 
     goto :goto_2
 
-    .line 136
     .end local v0    # "arr$":[I
     .end local v1    # "config":Landroid/os/Bundle;
     .end local v2    # "dlpService":Lcom/sec/enterprise/knox/dlp/DLPManagerPolicy;
@@ -211,13 +187,11 @@
     :catch_0
     move-exception v3
 
-    .line 137
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 104
     nop
 
     :pswitch_data_0

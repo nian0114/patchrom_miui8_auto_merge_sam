@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 164
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$2;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 167
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 168
     .local v0, "action":Ljava/lang/String;
     const-string v2, "FingerprintService"
 
@@ -52,7 +49,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onReceive: "
+    const-string v4, "onReceive: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -68,7 +65,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     const-string v2, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,7 +73,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 170
     const-string v2, "android.intent.extra.user_handle"
 
     const/16 v3, -0x2710
@@ -86,7 +81,6 @@
 
     move-result v1
 
-    .line 171
     .local v1, "userId":I
     # getter for: Lcom/android/server/fingerprint/FingerprintService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/fingerprint/FingerprintService;->access$000()Z
@@ -117,7 +111,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     :cond_0
     iget-object v2, p0, Lcom/android/server/fingerprint/FingerprintService$2;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -133,13 +126,11 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 186
     .end local v1    # "userId":I
     :cond_1
     :goto_0
     return-void
 
-    .line 173
     :cond_2
     const-string v2, "android.intent.action.SCREEN_OFF"
 
@@ -149,7 +140,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 174
     iget-object v2, p0, Lcom/android/server/fingerprint/FingerprintService$2;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v2, v2, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -162,7 +152,6 @@
 
     goto :goto_0
 
-    .line 183
     :cond_3
     const-string v2, "com.android.server.fingerprint.ACTION_LOCKOUT_RESET"
 
@@ -176,7 +165,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 184
     iget-object v2, p0, Lcom/android/server/fingerprint/FingerprintService$2;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     # invokes: Lcom/android/server/fingerprint/FingerprintService;->resetFailedAttempts()V

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1103
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/UiccCard$1;
 
     .prologue
-    .line 1103
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;-><init>(Lcom/android/internal/telephony/uicc/UiccCard;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1106
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1107
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -66,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1108
     const-string v1, "ss"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -81,13 +76,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1109
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # invokes: Lcom/android/internal/telephony/uicc/UiccCard;->InitUiccCarrierPrivilegeRules()V
     invoke-static {v1}, Lcom/android/internal/telephony/uicc/UiccCard;->access$1000(Lcom/android/internal/telephony/uicc/UiccCard;)V
 
-    .line 1112
     :cond_0
     return-void
 .end method

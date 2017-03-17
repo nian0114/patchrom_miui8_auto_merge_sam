@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 377
     iput-object p1, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$2;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 380
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 381
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -55,7 +52,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "inside mPkgReciever onReceive : "
+    const-string v6, "inside mPkgReciever onReceive : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,7 +68,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 382
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,7 +76,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 383
     iget-object v4, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$2;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->mUCSMHandler:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;
@@ -94,7 +89,6 @@
 
     move-result-object v2
 
-    .line 384
     .local v2, "msg":Landroid/os/Message;
     const-string v4, "android.intent.extra.UID"
 
@@ -104,7 +98,6 @@
 
     move-result v3
 
-    .line 385
     .local v3, "uid":I
     const/4 v4, 0x1
 
@@ -114,11 +107,9 @@
 
     aput v3, v1, v4
 
-    .line 386
     .local v1, "appUid":[I
     iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 387
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -128,7 +119,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     iget-object v4, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$2;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->mUCSMHandler:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;
@@ -138,7 +128,6 @@
 
     invoke-virtual {v4, v2}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 390
     .end local v1    # "appUid":[I
     .end local v2    # "msg":Landroid/os/Message;
     .end local v3    # "uid":I

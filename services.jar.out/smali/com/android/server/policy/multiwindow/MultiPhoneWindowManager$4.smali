@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 870
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$4;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     iput-boolean p2, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$4;->val$forceClose:Z
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 873
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$4;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
@@ -59,20 +57,17 @@
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 874
     .local v0, "closeIntent":Landroid/content/Intent;
     const-string v2, "com.sec.android.multiwindow.close.traybar"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 875
     const-string v2, "com.sec.android.multiwindow.extra.forceclose"
 
     iget-boolean v3, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$4;->val$forceClose:Z
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 877
     iget-object v2, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$4;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -81,16 +76,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 881
     .end local v0    # "closeIntent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 878
     :catch_0
     move-exception v1
 
-    .line 879
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

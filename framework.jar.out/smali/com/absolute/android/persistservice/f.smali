@@ -26,33 +26,24 @@
     .locals 0
 
     .prologue
-    .line 3597
     iput-object p1, p0, Lcom/absolute/android/persistservice/f;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3598
     iput-object p2, p0, Lcom/absolute/android/persistservice/f;->b:Ljava/lang/String;
 
-    .line 3599
     iput-object p3, p0, Lcom/absolute/android/persistservice/f;->c:Ljava/lang/String;
 
-    .line 3600
     iput-object p4, p0, Lcom/absolute/android/persistservice/f;->d:Ljava/lang/String;
 
-    .line 3601
     iput-object p5, p0, Lcom/absolute/android/persistservice/f;->e:Ljava/lang/String;
 
-    .line 3602
     iput-object p6, p0, Lcom/absolute/android/persistservice/f;->f:Ljava/lang/String;
 
-    .line 3603
     iput-object p7, p0, Lcom/absolute/android/persistservice/f;->g:Lcom/absolute/android/persistence/IABTGetAppInfoReceiver;
 
-    .line 3604
     iput-boolean p8, p0, Lcom/absolute/android/persistservice/f;->h:Z
 
-    .line 3605
     return-void
 .end method
 
@@ -60,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-object v0, p0, Lcom/absolute/android/persistservice/f;->b:Ljava/lang/String;
 
     return-object v0
@@ -70,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-object v0, p0, Lcom/absolute/android/persistservice/f;->d:Ljava/lang/String;
 
     return-object v0
@@ -80,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-object v0, p0, Lcom/absolute/android/persistservice/f;->c:Ljava/lang/String;
 
     return-object v0
@@ -90,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-object v0, p0, Lcom/absolute/android/persistservice/f;->e:Ljava/lang/String;
 
     return-object v0
@@ -100,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-object v0, p0, Lcom/absolute/android/persistservice/f;->f:Ljava/lang/String;
 
     return-object v0
@@ -110,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-object v0, p0, Lcom/absolute/android/persistservice/f;->g:Lcom/absolute/android/persistence/IABTGetAppInfoReceiver;
 
     return-object v0
@@ -120,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 3564
     iget-boolean v0, p0, Lcom/absolute/android/persistservice/f;->h:Z
 
     return v0

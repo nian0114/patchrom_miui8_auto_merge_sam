@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 45
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     invoke-static {v0}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils$CocktailBarWhiteList;->isCategoryOfWhiteList(I)Z
@@ -40,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 46
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -51,7 +48,6 @@
 
     move-result v0
 
-    .line 48
     :goto_0
     return v0
 
@@ -66,22 +62,18 @@
     .param p0, "category"    # I
 
     .prologue
-    .line 52
     sparse-switch p0, :sswitch_data_0
 
-    .line 57
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 55
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 52
     nop
 
     :sswitch_data_0
@@ -99,12 +91,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 61
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 63
     .local v1, "packageManager":Landroid/content/pm/IPackageManager;
     const/16 v4, 0x40
 
@@ -113,7 +103,6 @@
 
     move-result-object v2
 
-    .line 65
     .local v2, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v2, :cond_0
 
@@ -127,20 +116,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 67
     const/4 v3, 0x1
 
-    .line 73
     .end local v2    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
     return v3
 
-    .line 71
     :catch_0
     move-exception v0
 
-    .line 72
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

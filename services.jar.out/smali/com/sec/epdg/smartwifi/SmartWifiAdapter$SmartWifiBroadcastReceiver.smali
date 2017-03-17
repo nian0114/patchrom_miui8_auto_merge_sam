@@ -32,15 +32,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1193
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiBroadcastReceiver;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1194
     iput-object p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiBroadcastReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 1195
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1203
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiBroadcastReceiver;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiBroadcastReceiver$EpdgBroadcastRunnable;
@@ -65,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1205
     return-void
 .end method
 

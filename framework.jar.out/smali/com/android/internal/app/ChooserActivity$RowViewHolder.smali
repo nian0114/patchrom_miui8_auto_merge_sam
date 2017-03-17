@@ -31,23 +31,18 @@
     .param p2, "cellCount"    # I
 
     .prologue
-    .line 1304
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1305
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$RowViewHolder;->row:Landroid/view/ViewGroup;
 
-    .line 1306
     new-array v0, p2, [Landroid/view/View;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowViewHolder;->cells:[Landroid/view/View;
 
-    .line 1307
     new-array v0, p2, [I
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowViewHolder;->itemIndices:[I
 
-    .line 1308
     return-void
 .end method
 
@@ -59,18 +54,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1311
     invoke-static {v1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
 
-    .line 1312
     .local v0, "spec":I
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$RowViewHolder;->row:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0, v0}, Landroid/view/ViewGroup;->measure(II)V
 
-    .line 1313
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$RowViewHolder;->row:Landroid/view/ViewGroup;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -79,6 +71,5 @@
 
     iput v1, p0, Lcom/android/internal/app/ChooserActivity$RowViewHolder;->measuredRowHeight:I
 
-    .line 1314
     return-void
 .end method

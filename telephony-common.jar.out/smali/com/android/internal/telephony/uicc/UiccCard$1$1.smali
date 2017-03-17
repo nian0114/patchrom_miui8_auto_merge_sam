@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 535
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1$1;->this$1:Lcom/android/internal/telephony/uicc/UiccCard$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 537
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1$1;->this$1:Lcom/android/internal/telephony/uicc/UiccCard$1;
 
     iget-object v1, v1, Lcom/android/internal/telephony/uicc/UiccCard$1;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
@@ -58,12 +56,10 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 539
     .local v0, "pm":Landroid/os/PowerManager;
     const-string v1, "SIM is removed/added."
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
 
-    .line 540
     return-void
 .end method

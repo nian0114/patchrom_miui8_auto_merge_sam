@@ -318,7 +318,6 @@
 
     const/4 v3, 0x0
 
-    .line 38
     const-string v0, "http://www.w3.org/2001/XMLSchema"
 
     invoke-virtual {v0}, Ljava/lang/String;->intern()Ljava/lang/String;
@@ -327,7 +326,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/Constants;->NS_XMLSCHEMA:Ljava/lang/String;
 
-    .line 39
     const-string v0, "http://www.w3.org/TR/REC-xml"
 
     invoke-virtual {v0}, Ljava/lang/String;->intern()Ljava/lang/String;
@@ -336,440 +334,368 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/Constants;->NS_DTD:Ljava/lang/String;
 
-    .line 479
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 480
     const-string v1, "namespaces"
 
     aput-object v1, v0, v3
 
-    .line 481
     const-string v1, "namespace-prefixes"
 
     aput-object v1, v0, v4
 
-    .line 482
     const-string v1, "string-interning"
 
     aput-object v1, v0, v5
 
-    .line 483
     const-string v1, "validation"
 
     aput-object v1, v0, v6
 
-    .line 484
     const-string v1, "external-general-entities"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    .line 485
     const-string v2, "external-parameter-entities"
 
     aput-object v2, v0, v1
 
-    .line 479
     sput-object v0, Lmf/org/apache/xerces/impl/Constants;->fgSAXFeatures:[Ljava/lang/String;
 
-    .line 489
     new-array v0, v7, [Ljava/lang/String;
 
-    .line 490
     const-string v1, "declaration-handler"
 
     aput-object v1, v0, v3
 
-    .line 491
     const-string v1, "lexical-handler"
 
     aput-object v1, v0, v4
 
-    .line 492
     const-string v1, "dom-node"
 
     aput-object v1, v0, v5
 
-    .line 493
     const-string v1, "xml-string"
 
     aput-object v1, v0, v6
 
-    .line 489
     sput-object v0, Lmf/org/apache/xerces/impl/Constants;->fgSAXProperties:[Ljava/lang/String;
 
-    .line 497
     const/16 v0, 0x20
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 498
     const-string v1, "validation/schema"
 
     aput-object v1, v0, v3
 
-    .line 499
     const-string v1, "validation/schema-full-checking"
 
     aput-object v1, v0, v4
 
-    .line 500
     const-string v1, "validation/dynamic"
 
     aput-object v1, v0, v5
 
-    .line 501
     const-string v1, "validation/warn-on-duplicate-attdef"
 
     aput-object v1, v0, v6
 
-    .line 502
     const-string v1, "validation/warn-on-undeclared-elemdef"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    .line 503
     const-string v2, "allow-java-encodings"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    .line 504
     const-string v2, "continue-after-fatal-error"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    .line 505
     const-string v2, "nonvalidating/load-dtd-grammar"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    .line 506
     const-string v2, "nonvalidating/load-external-dtd"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    .line 508
     const-string v2, "dom/create-entity-ref-nodes"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    .line 509
     const-string v2, "dom/include-ignorable-whitespace"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    .line 511
     const-string v2, "validation/default-attribute-values"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    .line 512
     const-string v2, "validation/validate-content-models"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    .line 513
     const-string v2, "validation/validate-datatypes"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    .line 514
     const-string v2, "validation/balance-syntax-trees"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xf
 
-    .line 515
     const-string v2, "scanner/notify-char-refs"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x10
 
-    .line 516
     const-string v2, "scanner/notify-builtin-refs"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    .line 517
     const-string v2, "disallow-doctype-decl"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
 
-    .line 518
     const-string v2, "standard-uri-conformant"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x13
 
-    .line 519
     const-string v2, "generate-synthetic-annotations"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x14
 
-    .line 520
     const-string v2, "validate-annotations"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x15
 
-    .line 521
     const-string v2, "honour-all-schemaLocations"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x16
 
-    .line 522
     const-string v2, "xinclude"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x17
 
-    .line 523
     const-string v2, "xinclude/fixup-base-uris"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x18
 
-    .line 524
     const-string v2, "xinclude/fixup-language"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x19
 
-    .line 525
     const-string v2, "validation/schema/ignore-xsi-type-until-elemdecl"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1a
 
-    .line 526
     const-string v2, "validation/id-idref-checking"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1b
 
-    .line 527
     const-string v2, "validation/identity-constraint-checking"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1c
 
-    .line 528
     const-string v2, "validation/unparsed-entity-checking"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1d
 
-    .line 529
     const-string v2, "namespace-growth"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1e
 
-    .line 530
     const-string v2, "internal/tolerate-duplicates"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1f
 
-    .line 531
     const-string v2, "internal/strings-interned"
 
     aput-object v2, v0, v1
 
-    .line 497
     sput-object v0, Lmf/org/apache/xerces/impl/Constants;->fgXercesFeatures:[Ljava/lang/String;
 
-    .line 535
     const/16 v0, 0x15
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 536
     const-string v1, "dom/current-element-node"
 
     aput-object v1, v0, v3
 
-    .line 537
     const-string v1, "dom/document-class-name"
 
     aput-object v1, v0, v4
 
-    .line 538
     const-string v1, "internal/symbol-table"
 
     aput-object v1, v0, v5
 
-    .line 539
     const-string v1, "internal/error-handler"
 
     aput-object v1, v0, v6
 
-    .line 540
     const-string v1, "internal/error-reporter"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    .line 541
     const-string v2, "internal/entity-manager"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    .line 542
     const-string v2, "internal/entity-resolver"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    .line 543
     const-string v2, "internal/grammar-pool"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    .line 544
     const-string v2, "internal/datatype-validator-factory"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    .line 545
     const-string v2, "internal/document-scanner"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    .line 546
     const-string v2, "internal/dtd-scanner"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    .line 547
     const-string v2, "internal/validator"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    .line 548
     const-string v2, "schema/external-schemaLocation"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    .line 549
     const-string v2, "schema/external-noNamespaceSchemaLocation"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    .line 550
     const-string v2, "internal/validation-manager"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xf
 
-    .line 551
     const-string v2, "input-buffer-size"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x10
 
-    .line 552
     const-string v2, "security-manager"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    .line 553
     const-string v2, "locale"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
 
-    .line 554
     const-string v2, "validation/schema/root-type-definition"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x13
 
-    .line 555
     const-string v2, "validation/schema/root-element-declaration"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x14
 
-    .line 556
     const-string v2, "internal/validation/schema/dv-factory"
 
     aput-object v2, v0, v1
 
-    .line 535
     sput-object v0, Lmf/org/apache/xerces/impl/Constants;->fgXercesProperties:[Ljava/lang/String;
 
-    .line 560
     new-instance v0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -785,7 +711,6 @@
     .locals 0
 
     .prologue
-    .line 567
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -795,25 +720,21 @@
     .locals 2
 
     .prologue
-    .line 577
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgSAXFeatures:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    .line 578
     new-instance v0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;
 
     sget-object v1, Lmf/org/apache/xerces/impl/Constants;->fgSAXFeatures:[Ljava/lang/String;
 
     invoke-direct {v0, v1}, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;-><init>([Ljava/lang/Object;)V
 
-    .line 577
     :goto_0
     return-object v0
 
-    .line 578
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgEmptyEnumeration:Ljava/util/Enumeration;
 
@@ -824,25 +745,21 @@
     .locals 2
 
     .prologue
-    .line 583
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgSAXProperties:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    .line 584
     new-instance v0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;
 
     sget-object v1, Lmf/org/apache/xerces/impl/Constants;->fgSAXProperties:[Ljava/lang/String;
 
     invoke-direct {v0, v1}, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;-><init>([Ljava/lang/Object;)V
 
-    .line 583
     :goto_0
     return-object v0
 
-    .line 584
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgEmptyEnumeration:Ljava/util/Enumeration;
 
@@ -853,25 +770,21 @@
     .locals 2
 
     .prologue
-    .line 591
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgXercesFeatures:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    .line 592
     new-instance v0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;
 
     sget-object v1, Lmf/org/apache/xerces/impl/Constants;->fgXercesFeatures:[Ljava/lang/String;
 
     invoke-direct {v0, v1}, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;-><init>([Ljava/lang/Object;)V
 
-    .line 591
     :goto_0
     return-object v0
 
-    .line 592
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgEmptyEnumeration:Ljava/util/Enumeration;
 
@@ -882,25 +795,21 @@
     .locals 2
 
     .prologue
-    .line 597
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgXercesProperties:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    .line 598
     new-instance v0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;
 
     sget-object v1, Lmf/org/apache/xerces/impl/Constants;->fgXercesProperties:[Ljava/lang/String;
 
     invoke-direct {v0, v1}, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;-><init>([Ljava/lang/Object;)V
 
-    .line 597
     :goto_0
     return-object v0
 
-    .line 598
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/Constants;->fgEmptyEnumeration:Ljava/util/Enumeration;
 
@@ -912,7 +821,6 @@
     .param p0, "argv"    # [Ljava/lang/String;
 
     .prologue
-    .line 670
     const-string v0, "SAX features:"
 
     const-string v1, "http://xml.org/sax/features/"
@@ -921,7 +829,6 @@
 
     invoke-static {v0, v1, v2}, Lmf/org/apache/xerces/impl/Constants;->print(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 671
     const-string v0, "SAX properties:"
 
     const-string v1, "http://xml.org/sax/properties/"
@@ -930,7 +837,6 @@
 
     invoke-static {v0, v1, v2}, Lmf/org/apache/xerces/impl/Constants;->print(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 672
     const-string v0, "Xerces features:"
 
     const-string v1, "http://apache.org/xml/features/"
@@ -939,7 +845,6 @@
 
     invoke-static {v0, v1, v2}, Lmf/org/apache/xerces/impl/Constants;->print(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 673
     const-string v0, "Xerces properties:"
 
     const-string v1, "http://apache.org/xml/properties/"
@@ -948,7 +853,6 @@
 
     invoke-static {v0, v1, v2}, Lmf/org/apache/xerces/impl/Constants;->print(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 675
     return-void
 .end method
 
@@ -959,22 +863,18 @@
     .param p2, "array"    # [Ljava/lang/Object;
 
     .prologue
-    .line 679
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v1, p0}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    .line 680
     array-length v1, p2
 
     if-lez v1, :cond_1
 
-    .line 681
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v1}, Ljava/io/PrintStream;->println()V
 
-    .line 682
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -983,12 +883,10 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 691
     .end local v0    # "i":I
     :goto_1
     return-void
 
-    .line 683
     .restart local v0    # "i":I
     :cond_0
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -997,24 +895,20 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    .line 684
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v1, p1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    .line 685
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     aget-object v2, p2, v0
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/Object;)V
 
-    .line 682
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 689
     .end local v0    # "i":I
     :cond_1
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;

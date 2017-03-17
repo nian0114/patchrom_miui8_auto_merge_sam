@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 65
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/NodeImpl;-><init>()V
 
     return-void
@@ -29,10 +28,8 @@
     .param p1, "ownerDocument"    # Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/dom/NodeImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;)V
 
-    .line 62
     return-void
 .end method
 
@@ -45,26 +42,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 96
     invoke-super {p0, p1}, Lmf/org/apache/xerces/dom/NodeImpl;->cloneNode(Z)Lmf/org/w3c/dom/Node;
 
     move-result-object v0
 
     check-cast v0, Lmf/org/apache/xerces/dom/ChildNode;
 
-    .line 99
     .local v0, "newnode":Lmf/org/apache/xerces/dom/ChildNode;
     iput-object v1, v0, Lmf/org/apache/xerces/dom/ChildNode;->previousSibling:Lmf/org/apache/xerces/dom/ChildNode;
 
-    .line 100
     iput-object v1, v0, Lmf/org/apache/xerces/dom/ChildNode;->nextSibling:Lmf/org/apache/xerces/dom/ChildNode;
 
-    .line 101
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xerces/dom/ChildNode;->isFirstChild(Z)V
 
-    .line 103
     return-object v0
 .end method
 
@@ -72,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget-object v0, p0, Lmf/org/apache/xerces/dom/ChildNode;->nextSibling:Lmf/org/apache/xerces/dom/ChildNode;
 
     return-object v0
@@ -82,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 113
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ChildNode;->isOwned()Z
 
     move-result v0
@@ -104,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 134
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ChildNode;->isFirstChild()Z
 
     move-result v0
@@ -126,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 122
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ChildNode;->isOwned()Z
 
     move-result v0
@@ -148,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 143
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ChildNode;->isFirstChild()Z
 
     move-result v0

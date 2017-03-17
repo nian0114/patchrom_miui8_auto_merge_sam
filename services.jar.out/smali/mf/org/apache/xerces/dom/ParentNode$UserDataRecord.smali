@@ -36,17 +36,13 @@
     .param p3, "handler"    # Lmf/org/w3c/dom/UserDataHandler;
 
     .prologue
-    .line 1026
     iput-object p1, p0, Lmf/org/apache/xerces/dom/ParentNode$UserDataRecord;->this$0:Lmf/org/apache/xerces/dom/ParentNode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1027
     iput-object p2, p0, Lmf/org/apache/xerces/dom/ParentNode$UserDataRecord;->fData:Ljava/lang/Object;
 
-    .line 1028
     iput-object p3, p0, Lmf/org/apache/xerces/dom/ParentNode$UserDataRecord;->fHandler:Lmf/org/w3c/dom/UserDataHandler;
 
-    .line 1029
     return-void
 .end method

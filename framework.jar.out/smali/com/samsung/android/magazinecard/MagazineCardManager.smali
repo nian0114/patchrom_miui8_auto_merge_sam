@@ -22,17 +22,14 @@
     .locals 1
 
     .prologue
-    .line 55
     const-string v0, "MagazineCardManager"
 
     sput-object v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
-    .line 56
-    const-string/jumbo v0, "sec_container_"
+    const-string v0, "sec_container_"
 
     sput-object v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->KNOX_APP_PACKAGE_NAME_PREFIX:Ljava/lang/String;
 
-    .line 58
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mContext:Landroid/content/Context;
@@ -45,25 +42,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mService:Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
-    .line 68
     sget-object v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     const-string v1, "MagazineCardManager"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     sput-object p1, Lcom/samsung/android/magazinecard/MagazineCardManager;->mContext:Landroid/content/Context;
 
-    .line 71
     sget-object v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getUserId()I
@@ -72,10 +64,8 @@
 
     sput v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
-    .line 72
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
-    .line 73
     return-void
 .end method
 
@@ -84,17 +74,14 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     if-nez p1, :cond_0
 
-    .line 106
     sget-object v1, Lcom/samsung/android/magazinecard/MagazineCardManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 109
     :cond_0
     const-string v1, "\\."
 
@@ -102,20 +89,17 @@
 
     move-result-object v0
 
-    .line 110
     .local v0, "split":[Ljava/lang/String;
     array-length v1, v0
 
     if-lez v1, :cond_1
 
-    .line 111
     array-length v1, v0
 
     add-int/lit8 v1, v1, -0x1
 
     aget-object v1, v0, v1
 
-    .line 113
     :goto_0
     return-object v1
 
@@ -130,14 +114,11 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
-    .line 95
     .local v0, "component":Landroid/content/ComponentName;
     if-eqz p1, :cond_0
 
-    .line 96
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "component":Landroid/content/ComponentName;
@@ -145,12 +126,10 @@
 
     invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     .restart local v0    # "component":Landroid/content/ComponentName;
     :goto_0
     return-object v0
 
-    .line 98
     :cond_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -169,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 76
     monitor-enter p0
 
     :try_start_0
@@ -177,8 +155,7 @@
 
     if-nez v0, :cond_0
 
-    .line 77
-    const-string/jumbo v0, "magazinecardservice"
+    const-string v0, "magazinecardservice"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -190,19 +167,16 @@
 
     iput-object v0, p0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mService:Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
-    .line 78
     iget-object v0, p0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mService:Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     if-nez v0, :cond_0
 
-    .line 79
     sget-object v0, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     const-string v1, "getService : Could not get the service!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/magazinecard/MagazineCardManager;->mService:Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :try_end_0
@@ -212,7 +186,6 @@
 
     return-object v0
 
-    .line 76
     :catchall_0
     move-exception v0
 
@@ -227,14 +200,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 122
     sget-object v2, Lcom/samsung/android/magazinecard/MagazineCardManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 123
     .local v0, "packageName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -246,7 +217,6 @@
 
     if-ne v2, v1, :cond_0
 
-    .line 126
     :goto_0
     return v1
 
@@ -261,7 +231,6 @@
     .param p1, "card"    # Lcom/samsung/android/magazinecard/MagazineCardInfo;
 
     .prologue
-    .line 87
     iget-wide v0, p1, Lcom/samsung/android/magazinecard/MagazineCardInfo;->mTimeStamp:J
 
     const-wide/16 v2, 0x0
@@ -270,14 +239,12 @@
 
     if-nez v0, :cond_0
 
-    .line 88
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p1, Lcom/samsung/android/magazinecard/MagazineCardInfo;->mTimeStamp:J
 
-    .line 90
     :cond_0
     return-void
 .end method
@@ -293,7 +260,6 @@
 
     const/4 v3, 0x1
 
-    .line 132
     sget-object v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -344,56 +310,46 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isKnoxApp()Z
 
     move-result v4
 
     if-ne v4, v3, :cond_1
 
-    .line 136
     sget-object v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     const-string v4, "addCard : KNOX application cannot use magazine card service"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     const/4 v3, 0x0
 
-    .line 154
     :cond_0
     :goto_0
     return v3
 
-    .line 141
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v2
 
-    .line 142
     .local v2, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v2, :cond_0
 
-    .line 143
     invoke-direct {p0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->setTimeStamp(Lcom/samsung/android/magazinecard/MagazineCardInfo;)V
 
-    .line 145
     const/4 v4, 0x0
 
     invoke-direct {p0, v4}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 147
     .local v0, "component":Landroid/content/ComponentName;
     sget v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
     iput v4, p1, Lcom/samsung/android/magazinecard/MagazineCardInfo;->mUserId:I
 
-    .line 148
     sget v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
     invoke-interface {v2, v4, v0, p1}, Lcom/samsung/android/magazinecard/IMagazineCardManager;->addCard(ILandroid/content/ComponentName;Lcom/samsung/android/magazinecard/MagazineCardInfo;)V
@@ -402,13 +358,11 @@
 
     goto :goto_0
 
-    .line 150
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v2    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v1
 
-    .line 152
     .local v1, "ex":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -424,7 +378,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 299
     :try_start_0
     sget-object v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
@@ -464,32 +417,26 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v1
 
-    .line 301
     .local v1, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v1, :cond_0
 
-    .line 302
     invoke-interface {v1, p1}, Lcom/samsung/android/magazinecard/IMagazineCardManager;->getCard(I)Lcom/samsung/android/magazinecard/MagazineCardRecord;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 308
     :cond_0
     return-object v2
 
-    .line 304
     .end local v1    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v0
 
-    .line 306
     .local v0, "ex":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -506,7 +453,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 281
     sget-object v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -565,33 +511,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v1
 
-    .line 284
     .local v1, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v1, :cond_0
 
-    .line 285
     invoke-interface {v1, p1, p2}, Lcom/samsung/android/magazinecard/IMagazineCardManager;->getCardRecordIdList(IZ)[I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 291
     :cond_0
     return-object v2
 
-    .line 287
     .end local v1    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v0
 
-    .line 289
     .local v0, "ex":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -605,7 +545,6 @@
     .param p1, "cardId"    # I
 
     .prologue
-    .line 248
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isCardExist(Ljava/lang/String;I)Z
@@ -623,7 +562,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 252
     sget-object v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -672,7 +610,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isKnoxApp()Z
 
     move-result v4
@@ -681,35 +618,29 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 256
     sget-object v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     const-string v5, "isCardExist : KNOX application cannot use magazine card service"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     :cond_0
     :goto_0
     return v3
 
-    .line 262
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v2
 
-    .line 263
     .local v2, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v2, :cond_0
 
-    .line 264
     invoke-direct {p0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 265
     .local v0, "component":Landroid/content/ComponentName;
     sget v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
@@ -721,13 +652,11 @@
 
     goto :goto_0
 
-    .line 267
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v2    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v1
 
-    .line 269
     .local v1, "ex":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -740,7 +669,6 @@
     .locals 1
 
     .prologue
-    .line 118
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isKnoxApp()Z
 
     move-result v0
@@ -768,7 +696,6 @@
     .locals 1
 
     .prologue
-    .line 215
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->removeAllCard(Ljava/lang/String;)Z
@@ -785,14 +712,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 219
     sget-object v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "removeAllCard : "
+    const-string v6, "removeAllCard : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -824,47 +750,38 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isKnoxApp()Z
 
     move-result v4
 
     if-ne v4, v3, :cond_1
 
-    .line 223
     sget-object v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "removeAllCard : KNOX application cannot use magazine card service"
+    const-string v4, "removeAllCard : KNOX application cannot use magazine card service"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     const/4 v3, 0x0
 
-    .line 244
     :cond_0
     :goto_0
     return v3
 
-    .line 228
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v2
 
-    .line 229
     .local v2, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v2, :cond_0
 
-    .line 230
     const/4 v0, 0x0
 
-    .line 232
     .local v0, "component":Landroid/content/ComponentName;
     if-eqz p1, :cond_2
 
-    .line 233
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "component":Landroid/content/ComponentName;
@@ -872,7 +789,6 @@
 
     invoke-direct {v0, p1, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 237
     .restart local v0    # "component":Landroid/content/ComponentName;
     :goto_1
     sget v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
@@ -883,13 +799,11 @@
 
     goto :goto_0
 
-    .line 239
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v2    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v1
 
-    .line 241
     .local v1, "ex":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -897,7 +811,6 @@
 
     throw v3
 
-    .line 235
     .end local v1    # "ex":Landroid/os/RemoteException;
     .restart local v0    # "component":Landroid/content/ComponentName;
     .restart local v2    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
@@ -923,7 +836,6 @@
     .param p1, "cardId"    # I
 
     .prologue
-    .line 188
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->removeCard(Ljava/lang/String;I)Z
@@ -941,14 +853,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 192
     sget-object v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "removeCard : "
+    const-string v6, "removeCard : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -990,45 +901,37 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isKnoxApp()Z
 
     move-result v4
 
     if-ne v4, v3, :cond_1
 
-    .line 196
     sget-object v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "removeCard : KNOX application cannot use magazine card service"
+    const-string v4, "removeCard : KNOX application cannot use magazine card service"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     const/4 v3, 0x0
 
-    .line 211
     :cond_0
     :goto_0
     return v3
 
-    .line 201
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v2
 
-    .line 202
     .local v2, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v2, :cond_0
 
-    .line 203
     invoke-direct {p0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 204
     .local v0, "component":Landroid/content/ComponentName;
     sget v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
@@ -1038,13 +941,11 @@
 
     goto :goto_0
 
-    .line 206
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v2    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v1
 
-    .line 208
     .local v1, "ex":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -1058,7 +959,6 @@
     .param p1, "card"    # Lcom/samsung/android/magazinecard/MagazineCardInfo;
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->updateCard(Ljava/lang/String;Lcom/samsung/android/magazinecard/MagazineCardInfo;)Z
@@ -1076,14 +976,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 163
     sget-object v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "updateCard : "
+    const-string v6, "updateCard : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1127,51 +1026,42 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->isKnoxApp()Z
 
     move-result v4
 
     if-ne v4, v3, :cond_1
 
-    .line 167
     sget-object v3, Lcom/samsung/android/magazinecard/MagazineCardManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "updateCard : KNOX application cannot use magazine card service"
+    const-string v4, "updateCard : KNOX application cannot use magazine card service"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     const/4 v3, 0x0
 
-    .line 184
     :cond_0
     :goto_0
     return v3
 
-    .line 173
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getService()Lcom/samsung/android/magazinecard/IMagazineCardManager;
 
     move-result-object v2
 
-    .line 174
     .local v2, "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     if-eqz v2, :cond_0
 
-    .line 175
     invoke-direct {p0, p1}, Lcom/samsung/android/magazinecard/MagazineCardManager;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 177
     .local v0, "component":Landroid/content/ComponentName;
     sget v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
     iput v4, p2, Lcom/samsung/android/magazinecard/MagazineCardInfo;->mUserId:I
 
-    .line 178
     sget v4, Lcom/samsung/android/magazinecard/MagazineCardManager;->mCurrentUserID:I
 
     invoke-interface {v2, v4, v0, p2}, Lcom/samsung/android/magazinecard/IMagazineCardManager;->updateCard(ILandroid/content/ComponentName;Lcom/samsung/android/magazinecard/MagazineCardInfo;)V
@@ -1180,13 +1070,11 @@
 
     goto :goto_0
 
-    .line 180
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v2    # "svc":Lcom/samsung/android/magazinecard/IMagazineCardManager;
     :catch_0
     move-exception v1
 
-    .line 182
     .local v1, "ex":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 

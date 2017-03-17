@@ -53,41 +53,32 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6133
     iput-object p1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6134
     iput-object p2, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 6135
     iput-object p3, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 6136
     iput-object v0, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->messenger:Landroid/os/Messenger;
 
-    .line 6137
     iput-object v0, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mBinder:Landroid/os/IBinder;
 
-    .line 6138
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPid:I
 
-    .line 6139
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mUid:I
 
-    .line 6140
     iput-boolean p4, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
-    .line 6141
     return-void
 .end method
 
@@ -99,44 +90,34 @@
     .param p5, "isRequest"    # Z
 
     .prologue
-    .line 6143
     iput-object p1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->this$0:Lcom/android/server/ConnectivityService;
 
-    .line 6144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6145
     iput-object p2, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->messenger:Landroid/os/Messenger;
 
-    .line 6146
     iput-object p3, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 6147
     iput-object p4, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mBinder:Landroid/os/IBinder;
 
-    .line 6148
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPid:I
 
-    .line 6149
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mUid:I
 
-    .line 6150
     iput-boolean p5, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
-    .line 6151
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 6154
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mBinder:Landroid/os/IBinder;
 
@@ -146,15 +127,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6158
     :goto_0
     return-void
 
-    .line 6155
     :catch_0
     move-exception v0
 
-    .line 6156
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->binderDied()V
 
@@ -167,7 +145,6 @@
     .locals 2
 
     .prologue
-    .line 6171
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,14 +186,12 @@
     # invokes: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$500(Ljava/lang/String;)V
 
-    .line 6173
     iget-object v0, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->this$0:Lcom/android/server/ConnectivityService;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService;->releaseNetworkRequest(Landroid/net/NetworkRequest;)V
 
-    .line 6174
     return-void
 .end method
 
@@ -224,7 +199,6 @@
     .locals 3
 
     .prologue
-    .line 6177
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -326,12 +300,10 @@
     .locals 3
 
     .prologue
-    .line 6161
     iget-object v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mBinder:Landroid/os/IBinder;
 
     if-eqz v1, :cond_0
 
-    .line 6163
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mBinder:Landroid/os/IBinder;
 
@@ -341,16 +313,13 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6168
     :cond_0
     :goto_0
     return-void
 
-    .line 6164
     :catch_0
     move-exception v0
 
-    .line 6165
     .local v0, "e":Ljava/util/NoSuchElementException;
     const-string v1, "Unable to unlink deathRecipient"
 

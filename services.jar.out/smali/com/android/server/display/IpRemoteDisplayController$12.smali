@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 811
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$12;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iput p2, p0, Lcom/android/server/display/IpRemoteDisplayController$12;->val$param:I
@@ -48,7 +47,6 @@
     .locals 5
 
     .prologue
-    .line 814
     iget-object v1, p0, Lcom/android/server/display/IpRemoteDisplayController$12;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mHandler:Landroid/os/Handler;
@@ -66,7 +64,6 @@
 
     move-result-object v0
 
-    .line 815
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/display/IpRemoteDisplayController$12;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
@@ -77,6 +74,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 816
     return-void
 .end method

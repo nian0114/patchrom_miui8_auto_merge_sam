@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/impl/XMLErrorReporter$1;->this$0:Lmf/org/apache/xerces/impl/XMLErrorReporter;
 
-    .line 607
     invoke-direct {p0}, Lmf/org/apache/xerces/util/ErrorHandlerProxy;-><init>()V
 
     return-void
@@ -38,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 609
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLErrorReporter$1;->this$0:Lmf/org/apache/xerces/impl/XMLErrorReporter;
 
     iget-object v0, v0, Lmf/org/apache/xerces/impl/XMLErrorReporter;->fErrorHandler:Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;

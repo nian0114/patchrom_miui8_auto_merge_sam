@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 711
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 714
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
@@ -52,7 +50,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 715
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -62,14 +59,12 @@
     # setter for: Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnableTime:J
     invoke-static {v2, v4, v5}, Lcom/android/server/display/AutomaticBrightnessController;->access$402(Lcom/android/server/display/AutomaticBrightnessController;J)J
 
-    .line 716
     const-string v2, "AutomaticBrightnessController"
 
     const-string v3, "[DAB] setLightSensorEnabled : registerListenerRunnable"
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mIsSupportedSensorHubAutoBrightness:Z
@@ -79,10 +74,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 718
     const/4 v1, 0x0
 
-    .line 719
     .local v1, "mode":I
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -93,16 +86,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 720
     const/4 v1, 0x1
 
-    .line 722
     :cond_0
     new-instance v0, Landroid/hardware/scontext/SContextAutoBrightnessAttribute;
 
     invoke-direct {v0, v1}, Landroid/hardware/scontext/SContextAutoBrightnessAttribute;-><init>(I)V
 
-    .line 723
     .local v0, "attribute":Landroid/hardware/scontext/SContextAttribute;
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -126,7 +116,6 @@
 
     invoke-virtual {v2, v3, v4, v0, v5}, Landroid/hardware/scontext/SContextManager;->registerListener(Landroid/hardware/scontext/SContextListener;ILandroid/hardware/scontext/SContextAttribute;Landroid/os/Looper;)Z
 
-    .line 725
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
@@ -138,13 +127,11 @@
 
     invoke-virtual {v2, v3, v8, v9}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 733
     .end local v0    # "attribute":Landroid/hardware/scontext/SContextAttribute;
     .end local v1    # "mode":I
     :goto_0
     return-void
 
-    .line 727
     :cond_1
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -185,7 +172,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Handler;)Z
 
-    .line 729
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
@@ -225,7 +211,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Handler;)Z
 
-    .line 731
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
@@ -233,7 +218,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "setLightSensorEnabled::registerListener done"
+    const-string v3, "setLightSensorEnabled::registerListener done"
 
     invoke-virtual {v2, v3, v8, v9}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3084
     iput-object p1, p0, Lcom/android/server/SdpManagerService$ActionReceiver;->this$0:Lcom/android/server/SdpManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/SdpManagerService$1;
 
     .prologue
-    .line 3084
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$ActionReceiver;-><init>(Lcom/android/server/SdpManagerService;)V
 
     return-void
@@ -53,10 +51,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3087
     const/4 v0, 0x0
 
-    .line 3088
     .local v0, "packageName":Ljava/lang/String;
     const-string v4, "SdpManagerService"
 
@@ -80,7 +76,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3089
     const-string v4, "android.intent.action.USER_ADDED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -93,7 +88,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 3090
     const-string v4, "SdpManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -134,7 +128,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3091
     const-string v4, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -147,7 +140,6 @@
 
     move-result v3
 
-    .line 3092
     .local v3, "userId":I
     const-string v4, "SdpManagerService"
 
@@ -199,19 +191,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3093
     iget-object v4, p0, Lcom/android/server/SdpManagerService$ActionReceiver;->this$0:Lcom/android/server/SdpManagerService;
 
     # invokes: Lcom/android/server/SdpManagerService;->handleUserAdded(I)V
     invoke-static {v4, v3}, Lcom/android/server/SdpManagerService;->access$2200(Lcom/android/server/SdpManagerService;I)V
 
-    .line 3118
     .end local v3    # "userId":I
     :cond_0
     :goto_0
     return-void
 
-    .line 3094
     :cond_1
     const-string v4, "android.intent.action.USER_REMOVED"
 
@@ -225,7 +214,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 3095
     const-string v4, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -238,7 +226,6 @@
 
     move-result v3
 
-    .line 3096
     .restart local v3    # "userId":I
     const-string v4, "SdpManagerService"
 
@@ -290,7 +277,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3097
     iget-object v4, p0, Lcom/android/server/SdpManagerService$ActionReceiver;->this$0:Lcom/android/server/SdpManagerService;
 
     # invokes: Lcom/android/server/SdpManagerService;->handleUserRemoved(I)V
@@ -298,7 +284,6 @@
 
     goto :goto_0
 
-    .line 3098
     .end local v3    # "userId":I
     :cond_2
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
@@ -313,7 +298,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 3101
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
@@ -322,7 +306,6 @@
 
     move-result v3
 
-    .line 3102
     .restart local v3    # "userId":I
     const-string v4, "SdpManagerService"
 
@@ -384,7 +367,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3103
     const-string v4, "android.intent.extra.REPLACING"
 
     invoke-virtual {p2, v4, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -403,12 +385,10 @@
 
     const/4 v2, 0x1
 
-    .line 3107
     .local v2, "skip":Z
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 3108
     const-string v4, "SdpManagerService"
 
     const-string v5, "ACTION_PACKAGE_REMOVED :: Package Replacement case... Skip it!"
@@ -417,22 +397,18 @@
 
     goto/16 :goto_0
 
-    .line 3110
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 3111
     .local v1, "pkgUri":Landroid/net/Uri;
     if-eqz v1, :cond_0
 
-    .line 3112
     invoke-virtual {v1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3113
     const-string v4, "SdpManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -455,7 +431,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3114
     iget-object v4, p0, Lcom/android/server/SdpManagerService$ActionReceiver;->this$0:Lcom/android/server/SdpManagerService;
 
     # invokes: Lcom/android/server/SdpManagerService;->handlePkgRemoved(ILjava/lang/String;)V

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$3;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,19 +40,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 639
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 649
     :goto_0
     const/4 v1, 0x1
 
     :goto_1
     return v1
 
-    .line 641
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -65,13 +61,11 @@
 
     if-nez v1, :cond_1
 
-    .line 643
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 645
     :cond_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -81,7 +75,6 @@
 
     move-result v0
 
-    .line 646
     .local v0, "enable":Z
     iget-object v1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$3;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -90,7 +83,6 @@
 
     goto :goto_0
 
-    .line 639
     nop
 
     :pswitch_data_0

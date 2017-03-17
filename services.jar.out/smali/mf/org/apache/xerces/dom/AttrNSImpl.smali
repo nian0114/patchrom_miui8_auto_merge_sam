@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 65
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/AttrImpl;-><init>()V
 
     return-void
@@ -34,10 +33,8 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/dom/AttrImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 133
     return-void
 .end method
 
@@ -48,13 +45,10 @@
     .param p3, "qualifiedName"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     invoke-direct {p0, p1, p3}, Lmf/org/apache/xerces/dom/AttrImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 75
     invoke-direct {p0, p2, p3}, Lmf/org/apache/xerces/dom/AttrNSImpl;->setName(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     return-void
 .end method
 
@@ -66,16 +60,12 @@
     .param p4, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     invoke-direct {p0, p1, p3}, Lmf/org/apache/xerces/dom/AttrImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 125
     iput-object p4, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 
-    .line 126
     iput-object p2, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
 
-    .line 127
     return-void
 .end method
 
@@ -89,19 +79,15 @@
 
     const/4 v6, 0x0
 
-    .line 79
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v3
 
-    .line 82
     .local v3, "ownerDocument":Lmf/org/apache/xerces/dom/CoreDocumentImpl;
     iput-object p1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
 
-    .line 83
     if-eqz p1, :cond_0
 
-    .line 84
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -113,40 +99,32 @@
     :goto_0
     iput-object v5, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
 
-    .line 88
     :cond_0
     invoke-virtual {p2, v7}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
 
-    .line 89
     .local v0, "colon1":I
     invoke-virtual {p2, v7}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v1
 
-    .line 90
     .local v1, "colon2":I
     invoke-virtual {v3, p2, v0, v1}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->checkNamespaceWF(Ljava/lang/String;II)V
 
-    .line 91
     if-gez v0, :cond_4
 
-    .line 93
     iput-object p2, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 
-    .line 94
     iget-boolean v5, v3, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->errorChecking:Z
 
     if-eqz v5, :cond_5
 
-    .line 95
     iget-object v5, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v5}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->checkQName(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
-    const-string/jumbo v5, "xmlns"
+    const-string v5, "xmlns"
 
     invoke-virtual {p2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -156,7 +134,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 98
     sget-object v5, Lmf/org/apache/xerces/xni/NamespaceContext;->XMLNS_URI:Ljava/lang/String;
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -165,7 +142,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 99
     :cond_1
     if-eqz p1, :cond_5
 
@@ -177,8 +153,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 100
-    const-string/jumbo v5, "xmlns"
+    const-string v5, "xmlns"
 
     invoke-virtual {p2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -186,19 +161,15 @@
 
     if-nez v5, :cond_5
 
-    .line 103
     :cond_2
-    const-string/jumbo v5, "http://www.w3.org/dom/DOMTR"
+    const-string v5, "http://www.w3.org/dom/DOMTR"
 
-    .line 104
     const-string v7, "NAMESPACE_ERR"
 
-    .line 102
     invoke-static {v5, v7, v6}, Lmf/org/apache/xerces/dom/DOMMessageFormatter;->formatMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 106
     .local v2, "msg":Ljava/lang/String;
     new-instance v5, Lmf/org/w3c/dom/DOMException;
 
@@ -214,10 +185,8 @@
     :cond_3
     move-object v5, p1
 
-    .line 85
     goto :goto_0
 
-    .line 111
     .restart local v0    # "colon1":I
     .restart local v1    # "colon2":I
     :cond_4
@@ -227,7 +196,6 @@
 
     move-result-object v4
 
-    .line 112
     .local v4, "prefix":Ljava/lang/String;
     add-int/lit8 v5, v1, 0x1
 
@@ -237,15 +205,12 @@
 
     iput-object v5, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 
-    .line 113
     iget-object v5, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v5}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->checkQName(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual {v3, v4, p1}, Lmf/org/apache/xerces/dom/CoreDocumentImpl;->checkDOMNSErr(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     .end local v4    # "prefix":Ljava/lang/String;
     :cond_5
     return-void
@@ -257,17 +222,14 @@
     .locals 1
 
     .prologue
-    .line 265
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 266
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->synchronizeData()V
 
-    .line 268
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 
@@ -278,17 +240,14 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->synchronizeData()V
 
-    .line 172
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
 
@@ -299,17 +258,14 @@
     .locals 3
 
     .prologue
-    .line 187
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->needsSyncData()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 188
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->synchronizeData()V
 
-    .line 190
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->name:Ljava/lang/String;
 
@@ -319,7 +275,6 @@
 
     move-result v0
 
-    .line 191
     .local v0, "index":I
     if-gez v0, :cond_1
 
@@ -344,19 +299,16 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    .line 277
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     instance-of v0, v0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
     if-eqz v0, :cond_0
 
-    .line 278
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     check-cast v0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
@@ -365,11 +317,9 @@
 
     move-result-object v0
 
-    .line 282
     :goto_0
     return-object v0
 
-    .line 280
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
@@ -377,7 +327,6 @@
 
     goto :goto_0
 
-    .line 282
     :cond_1
     const/4 v0, 0x0
 
@@ -388,19 +337,16 @@
     .locals 1
 
     .prologue
-    .line 316
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    .line 317
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     instance-of v0, v0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
     if-eqz v0, :cond_0
 
-    .line 318
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     check-cast v0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
@@ -409,17 +355,14 @@
 
     move-result-object v0
 
-    .line 322
     :goto_0
     return-object v0
 
-    .line 320
     :cond_0
-    const-string/jumbo v0, "http://www.w3.org/TR/REC-xml"
+    const-string v0, "http://www.w3.org/TR/REC-xml"
 
     goto :goto_0
 
-    .line 322
     :cond_1
     const/4 v0, 0x0
 
@@ -433,19 +376,16 @@
     .param p3, "derivationMethod"    # I
 
     .prologue
-    .line 303
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 304
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     instance-of v0, v0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
     if-eqz v0, :cond_0
 
-    .line 305
     iget-object v0, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->type:Ljava/lang/Object;
 
     check-cast v0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
@@ -454,7 +394,6 @@
 
     move-result v0
 
-    .line 309
     :goto_0
     return v0
 
@@ -470,24 +409,19 @@
     .param p2, "qualifiedName"    # Ljava/lang/String;
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 141
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->synchronizeData()V
 
-    .line 143
     :cond_0
     iput-object p2, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->name:Ljava/lang/String;
 
-    .line 144
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/dom/AttrNSImpl;->setName(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     return-void
 .end method
 
@@ -505,17 +439,14 @@
 
     const/4 v3, 0x0
 
-    .line 212
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->needsSyncData()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 213
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->synchronizeData()V
 
-    .line 215
     :cond_0
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
@@ -525,15 +456,13 @@
 
     if-eqz v1, :cond_7
 
-    .line 216
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->isReadOnly()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 217
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NO_MODIFICATION_ALLOWED_ERR"
 
@@ -541,7 +470,6 @@
 
     move-result-object v0
 
-    .line 218
     .local v0, "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -551,7 +479,6 @@
 
     throw v1
 
-    .line 220
     .end local v0    # "msg":Ljava/lang/String;
     :cond_1
     if-eqz p1, :cond_7
@@ -562,7 +489,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 222
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/AttrNSImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v1
@@ -577,8 +503,7 @@
 
     if-nez v1, :cond_2
 
-    .line 223
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "INVALID_CHARACTER_ERR"
 
@@ -586,7 +511,6 @@
 
     move-result-object v0
 
-    .line 224
     .restart local v0    # "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -596,7 +520,6 @@
 
     throw v1
 
-    .line 226
     .end local v0    # "msg":Ljava/lang/String;
     :cond_2
     iget-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
@@ -611,9 +534,8 @@
 
     if-ltz v1, :cond_4
 
-    .line 227
     :cond_3
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NAMESPACE_ERR"
 
@@ -621,7 +543,6 @@
 
     move-result-object v0
 
-    .line 228
     .restart local v0    # "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -629,10 +550,9 @@
 
     throw v1
 
-    .line 231
     .end local v0    # "msg":Ljava/lang/String;
     :cond_4
-    const-string/jumbo v1, "xmlns"
+    const-string v1, "xmlns"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -640,10 +560,9 @@
 
     if-eqz v1, :cond_5
 
-    .line 232
     iget-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
 
-    const-string/jumbo v2, "http://www.w3.org/2000/xmlns/"
+    const-string v2, "http://www.w3.org/2000/xmlns/"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -651,8 +570,7 @@
 
     if-nez v1, :cond_7
 
-    .line 233
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NAMESPACE_ERR"
 
@@ -660,7 +578,6 @@
 
     move-result-object v0
 
-    .line 234
     .restart local v0    # "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -668,10 +585,9 @@
 
     throw v1
 
-    .line 236
     .end local v0    # "msg":Ljava/lang/String;
     :cond_5
-    const-string/jumbo v1, "xml"
+    const-string v1, "xml"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -679,10 +595,9 @@
 
     if-eqz v1, :cond_6
 
-    .line 237
     iget-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->namespaceURI:Ljava/lang/String;
 
-    const-string/jumbo v2, "http://www.w3.org/XML/1998/namespace"
+    const-string v2, "http://www.w3.org/XML/1998/namespace"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -690,8 +605,7 @@
 
     if-nez v1, :cond_7
 
-    .line 238
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NAMESPACE_ERR"
 
@@ -699,7 +613,6 @@
 
     move-result-object v0
 
-    .line 239
     .restart local v0    # "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -707,12 +620,11 @@
 
     throw v1
 
-    .line 241
     .end local v0    # "msg":Ljava/lang/String;
     :cond_6
     iget-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->name:Ljava/lang/String;
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -720,8 +632,7 @@
 
     if-eqz v1, :cond_7
 
-    .line 242
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NAMESPACE_ERR"
 
@@ -729,7 +640,6 @@
 
     move-result-object v0
 
-    .line 243
     .restart local v0    # "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 
@@ -737,7 +647,6 @@
 
     throw v1
 
-    .line 249
     .end local v0    # "msg":Ljava/lang/String;
     :cond_7
     if-eqz p1, :cond_8
@@ -748,7 +657,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 250
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -775,11 +683,9 @@
 
     iput-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->name:Ljava/lang/String;
 
-    .line 255
     :goto_0
     return-void
 
-    .line 253
     :cond_8
     iget-object v1, p0, Lmf/org/apache/xerces/dom/AttrNSImpl;->localName:Ljava/lang/String;
 

@@ -32,24 +32,20 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2369
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2370
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
-    .line 2371
     iget-object v7, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    .line 2374
     .local v6, "resources":Landroid/content/res/Resources;
     const-string v7, "1"
 
-    const-string/jumbo v8, "ro.3lm.production"
+    const-string v8, "ro.3lm.production"
 
     invoke-static {v8}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -61,14 +57,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 2375
     const v7, 0x1040a70
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2376
     .local v0, "cert":Ljava/lang/String;
     const v7, 0x104073d
 
@@ -76,7 +70,6 @@
 
     move-result-object v1
 
-    .line 2381
     .local v1, "certAF":Ljava/lang/String;
     :goto_0
     invoke-static {v0, v9}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
@@ -87,7 +80,6 @@
 
     move-result-object v3
 
-    .line 2382
     .local v3, "key":Ljava/security/PublicKey;
     invoke-interface {v3}, Ljava/security/PublicKey;->getEncoded()[B
 
@@ -95,7 +87,6 @@
 
     iput-object v7, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->m3LMPublicKey:[B
 
-    .line 2383
     invoke-static {v1, v9}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v7
@@ -104,7 +95,6 @@
 
     move-result-object v4
 
-    .line 2384
     .local v4, "keyAF":Ljava/security/PublicKey;
     invoke-interface {v4}, Ljava/security/PublicKey;->getEncoded()[B
 
@@ -112,14 +102,12 @@
 
     iput-object v7, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mAFPublicKey:[B
 
-    .line 2387
     const v7, 0x1040748
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2388
     .local v2, "certDCM":Ljava/lang/String;
     invoke-static {v2, v9}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
@@ -129,7 +117,6 @@
 
     move-result-object v5
 
-    .line 2389
     .local v5, "keyDCM":Ljava/security/PublicKey;
     invoke-interface {v5}, Ljava/security/PublicKey;->getEncoded()[B
 
@@ -137,10 +124,8 @@
 
     iput-object v7, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mDCMPublicKey:[B
 
-    .line 2391
     return-void
 
-    .line 2378
     .end local v0    # "cert":Ljava/lang/String;
     .end local v1    # "certAF":Ljava/lang/String;
     .end local v2    # "certDCM":Ljava/lang/String;
@@ -154,7 +139,6 @@
 
     move-result-object v0
 
-    .line 2379
     .restart local v0    # "cert":Ljava/lang/String;
     const v7, 0x104073e
 
@@ -171,7 +155,6 @@
     .param p1, "blob"    # [B
 
     .prologue
-    .line 2395
     const/4 v0, 0x0
 
     return-object v0
@@ -185,7 +168,6 @@
     .param p2, "allowDcm"    # Z
 
     .prologue
-    .line 2414
     const/4 v0, 0x0
 
     return v0

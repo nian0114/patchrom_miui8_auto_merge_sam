@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 454
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v4, 0x1
 
-    .line 456
     iget-object v5, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
@@ -58,7 +56,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "lock_screen_quick_note"
+    const-string v7, "lock_screen_quick_note"
 
     const/4 v8, -0x2
 
@@ -74,7 +72,6 @@
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mIsEnableLockScreenQuickNote:Z
     invoke-static {v5, v3}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1602(Lcom/android/server/smartclip/SpenGestureManagerService;Z)Z
 
-    .line 457
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/smartclip/SpenGestureManagerService;->keyguardOn()Z
@@ -92,7 +89,6 @@
 
     if-nez v3, :cond_1
 
-    .line 458
     sget-object v3, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -122,11 +118,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 493
     :goto_0
     return-void
 
-    .line 462
     :cond_1
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -137,7 +131,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 463
     sget-object v3, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     const-string v4, "Double tap is disabled : Screen pinning mode enabled"
@@ -146,7 +139,6 @@
 
     goto :goto_0
 
-    .line 468
     :cond_2
     :try_start_0
     sget-object v3, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
@@ -155,7 +147,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # invokes: Lcom/android/server/smartclip/SpenGestureManagerService;->isHapticFeedbackEnabled()Z
@@ -165,7 +156,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 475
     :cond_3
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -178,7 +168,6 @@
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mPenMemoActionIntent:Landroid/content/Intent;
     invoke-static {v3, v5}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1902(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/content/Intent;)Landroid/content/Intent;
 
-    .line 476
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1100()Landroid/content/Context;
 
@@ -195,7 +184,6 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 478
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -207,11 +195,9 @@
 
     move-result v0
 
-    .line 479
     .local v0, "callState":I
     const/4 v1, 0x0
 
-    .line 480
     .local v1, "callState2":I
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -222,7 +208,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 481
     iget-object v3, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mTelephonyManager2:Landroid/telephony/TelephonyManager;
@@ -234,7 +219,6 @@
 
     move-result v1
 
-    .line 482
     :cond_4
     if-eq v0, v4, :cond_5
 
@@ -244,7 +228,6 @@
 
     if-ne v1, v9, :cond_6
 
-    .line 486
     :cond_5
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1100()Landroid/content/Context;
@@ -263,19 +246,16 @@
 
     goto :goto_0
 
-    .line 490
     .end local v0    # "callState":I
     .end local v1    # "callState2":I
     :catch_0
     move-exception v2
 
-    .line 491
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 488
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "callState":I
     .restart local v1    # "callState2":I

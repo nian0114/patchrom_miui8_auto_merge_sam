@@ -48,12 +48,10 @@
     .end annotation
 
     .prologue
-    .line 1264
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1259
     const-string v0, "\\s*\\[([^]]*)\\]\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -62,7 +60,6 @@
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->_section:Ljava/util/regex/Pattern;
 
-    .line 1260
     const-string v0, "\\s*([^=]*)=(.*)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -71,17 +68,14 @@
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->_keyValue:Ljava/util/regex/Pattern;
 
-    .line 1262
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
-    .line 1265
     invoke-virtual {p0, p2}, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->load(Ljava/lang/String;)V
 
-    .line 1266
     return-void
 .end method
 
@@ -94,7 +88,6 @@
     .param p3, "defaultvalue"    # Z
 
     .prologue
-    .line 1349
     iget-object v3, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -103,23 +96,19 @@
 
     check-cast v2, Ljava/util/Map;
 
-    .line 1350
     .local v2, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     move v0, p3
 
-    .line 1351
     .local v0, "booleanVal":Z
     if-nez v2, :cond_0
 
     move v1, v0
 
-    .line 1357
     .end local v0    # "booleanVal":Z
     .local v1, "booleanVal":Z
     :goto_0
     return v1
 
-    .line 1354
     .end local v1    # "booleanVal":Z
     .restart local v0    # "booleanVal":Z
     :cond_0
@@ -133,7 +122,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1355
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
@@ -151,7 +139,6 @@
     :cond_1
     move v1, v0
 
-    .line 1357
     .end local v0    # "booleanVal":Z
     .restart local v1    # "booleanVal":Z
     goto :goto_0
@@ -164,7 +151,6 @@
     .param p3, "defaultvalue"    # I
 
     .prologue
-    .line 1314
     iget-object v3, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -173,23 +159,19 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 1315
     .local v0, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     move v1, p3
 
-    .line 1316
     .local v1, "retVal":I
     if-nez v0, :cond_0
 
     move v2, v1
 
-    .line 1326
     .end local v1    # "retVal":I
     .local v2, "retVal":I
     :goto_0
     return v2
 
-    .line 1320
     .end local v2    # "retVal":I
     .restart local v1    # "retVal":I
     :cond_0
@@ -200,7 +182,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1321
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
@@ -217,19 +198,16 @@
 
     move-result v1
 
-    .line 1322
     mul-int/lit16 v1, v1, 0x3e8
 
     :cond_1
     :goto_1
     move v2, v1
 
-    .line 1326
     .end local v1    # "retVal":I
     .restart local v2    # "retVal":I
     goto :goto_0
 
-    .line 1324
     .end local v2    # "retVal":I
     .restart local v1    # "retVal":I
     :catch_0
@@ -245,7 +223,6 @@
     .param p3, "defaultvalue"    # J
 
     .prologue
-    .line 1330
     iget-object v6, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v6, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -254,23 +231,19 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 1331
     .local v0, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     move-wide v2, p3
 
-    .line 1332
     .local v2, "retVal":J
     if-nez v0, :cond_0
 
     move-wide v4, v2
 
-    .line 1345
     .end local v2    # "retVal":J
     .local v4, "retVal":J
     :goto_0
     return-wide v4
 
-    .line 1336
     .end local v4    # "retVal":J
     .restart local v2    # "retVal":J
     :cond_0
@@ -285,7 +258,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1337
     .local v1, "strKey":Ljava/lang/String;
     if-eqz v1, :cond_1
 
@@ -295,14 +267,12 @@
 
     if-lez v6, :cond_1
 
-    .line 1338
     new-instance v6, Ljava/lang/Long;
 
     invoke-direct {v6, v1}, Ljava/lang/Long;-><init>(Ljava/lang/String;)V
 
     if-eqz v6, :cond_1
 
-    .line 1339
     new-instance v6, Ljava/lang/Long;
 
     invoke-direct {v6, v1}, Ljava/lang/Long;-><init>(Ljava/lang/String;)V
@@ -318,12 +288,10 @@
     :goto_1
     move-wide v4, v2
 
-    .line 1345
     .end local v2    # "retVal":J
     .restart local v4    # "retVal":J
     goto :goto_0
 
-    .line 1343
     .end local v4    # "retVal":J
     .restart local v2    # "retVal":J
     :catch_0
@@ -339,7 +307,6 @@
     .param p3, "defaultvalue"    # Ljava/lang/String;
 
     .prologue
-    .line 1306
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -348,11 +315,9 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 1307
     .local v0, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
-    .line 1310
     .end local p3    # "defaultvalue":Ljava/lang/String;
     :goto_0
     return-object p3
@@ -384,14 +349,11 @@
     .end annotation
 
     .prologue
-    .line 1270
     const/4 v0, 0x0
 
-    .line 1273
     .local v0, "br":Ljava/io/BufferedReader;
     const/4 v6, 0x0
 
-    .line 1275
     .local v6, "section":Ljava/lang/String;
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
@@ -406,7 +368,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1276
     .end local v0    # "br":Ljava/io/BufferedReader;
     .local v1, "br":Ljava/io/BufferedReader;
     :cond_0
@@ -419,14 +380,12 @@
     .local v4, "line":Ljava/lang/String;
     if-eqz v4, :cond_4
 
-    .line 1277
     iget-object v8, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->_section:Ljava/util/regex/Pattern;
 
     invoke-virtual {v8, v4}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v5
 
-    .line 1278
     .local v5, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v5}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -434,7 +393,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 1279
     const/4 v8, 0x1
 
     invoke-virtual {v5, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -447,18 +405,15 @@
 
     goto :goto_0
 
-    .line 1280
     :cond_1
     if-eqz v6, :cond_0
 
-    .line 1281
     iget-object v8, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->_keyValue:Ljava/util/regex/Pattern;
 
     invoke-virtual {v8, v4}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v5
 
-    .line 1282
     const-string v8, "APPSYNC_INIT"
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -473,7 +428,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 1283
     const/4 v8, 0x1
 
     invoke-virtual {v5, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -484,7 +438,6 @@
 
     move-result-object v2
 
-    .line 1284
     .local v2, "key":Ljava/lang/String;
     const/4 v8, 0x2
 
@@ -496,7 +449,6 @@
 
     move-result-object v7
 
-    .line 1285
     .local v7, "value":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
@@ -506,11 +458,9 @@
 
     check-cast v3, Ljava/util/Map;
 
-    .line 1286
     .local v3, "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v3, :cond_2
 
-    .line 1287
     iget-object v8, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$IniFile;->sections:Ljava/util/Map;
 
     new-instance v3, Ljava/util/HashMap;
@@ -521,7 +471,6 @@
     .restart local v3    # "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v8, v6, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1289
     :cond_2
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -535,7 +484,6 @@
 
     goto :goto_0
 
-    .line 1293
     .end local v2    # "key":Ljava/lang/String;
     .end local v3    # "kv":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v4    # "line":Ljava/lang/String;
@@ -546,31 +494,26 @@
 
     move-object v0, v1
 
-    .line 1297
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     :goto_1
     if-eqz v0, :cond_3
 
-    .line 1299
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
 
-    .line 1304
     :cond_3
     :goto_2
     return-void
 
-    .line 1297
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     .restart local v4    # "line":Ljava/lang/String;
     :cond_4
     if-eqz v1, :cond_6
 
-    .line 1299
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -578,12 +521,10 @@
 
     move-object v0, v1
 
-    .line 1301
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 1300
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :catch_1
@@ -591,21 +532,17 @@
 
     move-object v0, v1
 
-    .line 1301
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 1294
     .end local v4    # "line":Ljava/lang/String;
     :catch_2
     move-exception v8
 
-    .line 1297
     :goto_3
     if-eqz v0, :cond_3
 
-    .line 1299
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -613,31 +550,26 @@
 
     goto :goto_2
 
-    .line 1300
     :catch_3
     move-exception v8
 
     goto :goto_2
 
-    .line 1297
     :catchall_0
     move-exception v8
 
     :goto_4
     if-eqz v0, :cond_5
 
-    .line 1299
     :try_start_5
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 1301
     :cond_5
     :goto_5
     throw v8
 
-    .line 1300
     :catch_4
     move-exception v8
 
@@ -648,7 +580,6 @@
 
     goto :goto_5
 
-    .line 1297
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :catchall_1
@@ -660,7 +591,6 @@
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 1294
     .end local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :catch_6
@@ -672,7 +602,6 @@
     .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 1293
     :catch_7
     move-exception v8
 

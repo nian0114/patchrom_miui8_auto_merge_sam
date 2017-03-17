@@ -53,46 +53,32 @@
 
     const-wide/16 v0, -0x1
 
-    .line 532
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 533
     iput-boolean v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isVisible:Z
 
-    .line 534
     iput-boolean v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isExpanded:Z
 
-    .line 536
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeElapsedMs:J
 
-    .line 538
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstClickMs:J
 
-    .line 540
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToDismissMs:J
 
-    .line 542
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeCount:J
 
-    .line 544
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstAirtimeMs:J
 
-    .line 549
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
 
-    .line 551
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeMs:J
 
-    .line 556
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstVisibleExpansionMs:J
 
-    .line 561
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
 
-    .line 563
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeExpandedMs:J
 
-    .line 565
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->userExpansionCount:J
 
     return-void
@@ -104,12 +90,10 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 652
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 653
     .local v0, "elapsedNowMs":J
     iget-boolean v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isExpanded:Z
 
@@ -119,17 +103,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 655
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
 
     cmp-long v2, v2, v4
 
     if-gez v2, :cond_0
 
-    .line 656
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
 
-    .line 658
     :cond_0
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstVisibleExpansionMs:J
 
@@ -137,19 +118,16 @@
 
     if-gez v2, :cond_1
 
-    .line 659
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeElapsedMs:J
 
     sub-long v2, v0, v2
 
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstVisibleExpansionMs:J
 
-    .line 668
     :cond_1
     :goto_0
     return-void
 
-    .line 663
     :cond_2
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
 
@@ -157,7 +135,6 @@
 
     if-ltz v2, :cond_1
 
-    .line 664
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeExpandedMs:J
 
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
@@ -168,7 +145,6 @@
 
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeExpandedMs:J
 
-    .line 665
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
@@ -182,12 +158,10 @@
     .locals 1
 
     .prologue
-    .line 672
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->onVisibilityChanged(Z)V
 
-    .line 673
     return-void
 .end method
 
@@ -195,10 +169,8 @@
     .locals 6
 
     .prologue
-    .line 584
     iget-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeExpandedMs:J
 
-    .line 586
     .local v0, "result":J
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeExpandedStartElapsedMs:J
 
@@ -208,7 +180,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 587
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -219,7 +190,6 @@
 
     add-long/2addr v0, v2
 
-    .line 589
     :cond_0
     return-wide v0
 .end method
@@ -228,10 +198,8 @@
     .locals 6
 
     .prologue
-    .line 575
     iget-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeMs:J
 
-    .line 577
     .local v0, "result":J
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
 
@@ -241,7 +209,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 578
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -252,7 +219,6 @@
 
     add-long/2addr v0, v2
 
-    .line 580
     :cond_0
     return-wide v0
 .end method
@@ -263,14 +229,12 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 568
     iget-wide v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeElapsedMs:J
 
     cmp-long v2, v2, v0
 
     if-gez v2, :cond_0
 
-    .line 571
     :goto_0
     return-wide v0
 
@@ -290,10 +254,8 @@
     .locals 0
 
     .prologue
-    .line 612
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->finish()V
 
-    .line 613
     return-void
 .end method
 
@@ -301,7 +263,6 @@
     .locals 4
 
     .prologue
-    .line 596
     iget-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstClickMs:J
 
     const-wide/16 v2, 0x0
@@ -310,7 +271,6 @@
 
     if-gez v0, :cond_0
 
-    .line 597
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -321,7 +281,6 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstClickMs:J
 
-    .line 599
     :cond_0
     return-void
 .end method
@@ -330,7 +289,6 @@
     .locals 4
 
     .prologue
-    .line 605
     iget-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToDismissMs:J
 
     const-wide/16 v2, 0x0
@@ -339,7 +297,6 @@
 
     if-gez v0, :cond_0
 
-    .line 606
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -350,11 +307,9 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToDismissMs:J
 
-    .line 608
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->finish()V
 
-    .line 609
     return-void
 .end method
 
@@ -364,17 +319,14 @@
     .param p2, "expanded"    # Z
 
     .prologue
-    .line 644
     iput-boolean p2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isExpanded:Z
 
-    .line 645
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isExpanded:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 646
     iget-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->userExpansionCount:J
 
     const-wide/16 v2, 0x1
@@ -383,11 +335,9 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->userExpansionCount:J
 
-    .line 648
     :cond_0
     invoke-direct {p0}, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->updateVisiblyExpandedStats()V
 
-    .line 649
     return-void
 .end method
 
@@ -395,10 +345,8 @@
     .locals 0
 
     .prologue
-    .line 616
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->finish()V
 
-    .line 617
     return-void
 .end method
 
@@ -409,30 +357,24 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 620
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 621
     .local v0, "elapsedNowMs":J
     iget-boolean v2, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isVisible:Z
 
-    .line 622
     .local v2, "wasVisible":Z
     iput-boolean p1, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isVisible:Z
 
-    .line 623
     if-eqz p1, :cond_3
 
-    .line 624
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
 
     cmp-long v3, v4, v8
 
     if-gez v3, :cond_0
 
-    .line 625
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeCount:J
 
     const-wide/16 v6, 0x1
@@ -441,10 +383,8 @@
 
     iput-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeCount:J
 
-    .line 626
     iput-wide v0, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
 
-    .line 628
     :cond_0
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstAirtimeMs:J
 
@@ -452,28 +392,23 @@
 
     if-gez v3, :cond_1
 
-    .line 629
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeElapsedMs:J
 
     sub-long v4, v0, v4
 
     iput-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->posttimeToFirstAirtimeMs:J
 
-    .line 638
     :cond_1
     :goto_0
     iget-boolean v3, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->isVisible:Z
 
     if-eq v2, v3, :cond_2
 
-    .line 639
     invoke-direct {p0}, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->updateVisiblyExpandedStats()V
 
-    .line 641
     :cond_2
     return-void
 
-    .line 632
     :cond_3
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
 
@@ -481,7 +416,6 @@
 
     if-ltz v3, :cond_1
 
-    .line 633
     iget-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeMs:J
 
     iget-wide v6, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
@@ -492,7 +426,6 @@
 
     iput-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->airtimeMs:J
 
-    .line 634
     const-wide/16 v4, -0x1
 
     iput-wide v4, p0, Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;->currentAirtimeStartElapsedMs:J
@@ -504,7 +437,6 @@
     .locals 4
 
     .prologue
-    .line 677
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

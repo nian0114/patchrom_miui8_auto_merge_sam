@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4657
     iput-object p1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,25 +38,22 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 4659
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4660
     .local v0, "action":Ljava/lang/String;
     const-string v1, "MountService"
 
-    const-string/jumbo v2, "mPolicyReceiver :: "
+    const-string v2, "mPolicyReceiver :: "
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4661
     iget-object v1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iget-object v2, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
-    const-string/jumbo v3, "storage_itpolicy"
+    const-string v3, "storage_itpolicy"
 
     # invokes: Lcom/android/server/MountService;->hasDeviceRestriction(Ljava/lang/String;)Z
     invoke-static {v2, v3}, Lcom/android/server/MountService;->access$3600(Lcom/android/server/MountService;Ljava/lang/String;)Z
@@ -67,6 +63,5 @@
     # invokes: Lcom/android/server/MountService;->ApplyCurrentSdCardPolicy(Z)V
     invoke-static {v1, v2}, Lcom/android/server/MountService;->access$3700(Lcom/android/server/MountService;Z)V
 
-    .line 4662
     return-void
 .end method

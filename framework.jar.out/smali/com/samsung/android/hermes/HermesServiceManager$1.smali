@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 265
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     iput-object p2, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->val$svc:Lcom/samsung/android/hermes/IKerykeion;
@@ -68,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 268
     .local p1, "results":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/hermes/KerykeionResult;>;"
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
@@ -84,7 +82,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 269
     :cond_0
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
@@ -94,18 +91,15 @@
 
     invoke-interface {v7, v8}, Lcom/samsung/android/hermes/HermesServiceManager$IHermesCallBack;->onCompleted(Ljava/lang/Object;)V
 
-    .line 270
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->val$svc:Lcom/samsung/android/hermes/IKerykeion;
 
     iget-object v8, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->val$key:Ljava/lang/String;
 
     invoke-interface {v7, v8}, Lcom/samsung/android/hermes/IKerykeion;->stop(Ljava/lang/String;)V
 
-    .line 317
     :goto_0
     return-void
 
-    .line 274
     :cond_1
     new-instance v4, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;
 
@@ -113,7 +107,6 @@
 
     invoke-direct {v4, v7}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;-><init>(Lcom/samsung/android/hermes/HermesServiceManager;)V
 
-    .line 275
     .local v4, "lResult":Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->val$uniqueId:Ljava/lang/Object;
 
@@ -133,7 +126,6 @@
     # invokes: Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setId(I)V
     invoke-static {v4, v7}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->access$000(Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;I)V
 
-    .line 277
     iget v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->val$type:I
 
     and-int/lit8 v7, v7, 0x1
@@ -146,17 +138,14 @@
 
     if-eqz v7, :cond_6
 
-    .line 279
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 280
     .local v0, "destResults":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/hermes/KerykeionResult;>;"
     const-string v5, ""
 
-    .line 282
     .local v5, "original":Ljava/lang/String;
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -176,7 +165,6 @@
 
     check-cast v3, Lcom/samsung/android/hermes/KerykeionResult;
 
-    .line 283
     .local v3, "kR":Lcom/samsung/android/hermes/KerykeionResult;
     sget-object v7, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->Original:Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
@@ -190,18 +178,15 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 284
     invoke-virtual {v3}, Lcom/samsung/android/hermes/KerykeionResult;->getSrc()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 286
     :cond_3
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 275
     .end local v0    # "destResults":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/hermes/KerykeionResult;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "kR":Lcom/samsung/android/hermes/KerykeionResult;
@@ -211,7 +196,6 @@
 
     goto :goto_1
 
-    .line 288
     .restart local v0    # "destResults":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/hermes/KerykeionResult;>;"
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v5    # "original":Ljava/lang/String;
@@ -219,7 +203,6 @@
     # invokes: Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setData(Ljava/lang/Object;)V
     invoke-static {v4, v0}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->access$100(Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;Ljava/lang/Object;)V
 
-    .line 291
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     const/4 v8, 0x1
@@ -231,12 +214,10 @@
 
     check-cast v1, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 293
     .local v1, "event":Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
     # invokes: Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setEvent(Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;)V
     invoke-static {v4, v1}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->access$300(Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;)V
 
-    .line 296
     .end local v0    # "destResults":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/hermes/KerykeionResult;>;"
     .end local v1    # "event":Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -248,12 +229,10 @@
 
     if-eqz v7, :cond_a
 
-    .line 297
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 299
     .local v6, "sb":Ljava/lang/StringBuilder;
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -274,7 +253,6 @@
 
     check-cast v3, Lcom/samsung/android/hermes/KerykeionResult;
 
-    .line 300
     .restart local v3    # "kR":Lcom/samsung/android/hermes/KerykeionResult;
     invoke-virtual {v3}, Lcom/samsung/android/hermes/KerykeionResult;->getResult()Ljava/lang/Object;
 
@@ -284,7 +262,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 301
     invoke-virtual {v3}, Lcom/samsung/android/hermes/KerykeionResult;->getResult()Ljava/lang/Object;
 
     move-result-object v7
@@ -293,14 +270,12 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 302
     const-string v7, ","
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 
-    .line 303
     :cond_8
     invoke-virtual {v3}, Lcom/samsung/android/hermes/KerykeionResult;->getResult()Ljava/lang/Object;
 
@@ -310,7 +285,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 304
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,14 +309,12 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 305
     const-string v7, ","
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 
-    .line 308
     .end local v3    # "kR":Lcom/samsung/android/hermes/KerykeionResult;
     :cond_9
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -352,7 +324,6 @@
     # invokes: Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setData(Ljava/lang/Object;)V
     invoke-static {v4, v7}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->access$100(Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;Ljava/lang/Object;)V
 
-    .line 311
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v6    # "sb":Ljava/lang/StringBuilder;
     :cond_a
@@ -362,7 +333,6 @@
 
     if-eqz v7, :cond_b
 
-    .line 312
     # getter for: Lcom/samsung/android/hermes/HermesServiceManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/hermes/HermesServiceManager;->access$400()Ljava/lang/String;
 
@@ -372,14 +342,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     iget-object v7, v7, Lcom/samsung/android/hermes/HermesServiceManager;->mIHermesCallBack:Lcom/samsung/android/hermes/HermesServiceManager$IHermesCallBack;
 
     invoke-interface {v7, v4}, Lcom/samsung/android/hermes/HermesServiceManager$IHermesCallBack;->onCompleted(Ljava/lang/Object;)V
 
-    .line 316
     :cond_b
     iget-object v7, p0, Lcom/samsung/android/hermes/HermesServiceManager$1;->val$svc:Lcom/samsung/android/hermes/IKerykeion;
 

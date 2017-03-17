@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3736
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy$1;->this$1:Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 3739
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy$1;->this$1:Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy;
 
@@ -52,11 +50,9 @@
 
     move-result-object v1
 
-    .line 3741
     .local v1, "topActivity":Landroid/content/ComponentName;
     if-eqz v1, :cond_0
 
-    .line 3742
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy$1;->this$1:Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy;
 
     # getter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy;->mSFinderIntent:Landroid/content/Intent;
@@ -72,14 +68,13 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3744
     const-string v2, "SFinderLaunchPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mStartSFinder: top="
+    const-string v4, "mStartSFinder: top="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -99,7 +94,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3746
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy$1;->this$1:Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$SFinderLaunchPolicy;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
@@ -117,17 +111,15 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 3753
     .end local v1    # "topActivity":Landroid/content/ComponentName;
     :goto_0
     return-void
 
-    .line 3748
     .restart local v1    # "topActivity":Landroid/content/ComponentName;
     :cond_0
     const-string v2, "SFinderLaunchPolicy"
 
-    const-string/jumbo v3, "mStartSFinder: Unknown top activity!"
+    const-string v3, "mStartSFinder: Unknown top activity!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -135,12 +127,10 @@
 
     goto :goto_0
 
-    .line 3750
     .end local v1    # "topActivity":Landroid/content/ComponentName;
     :catch_0
     move-exception v0
 
-    .line 3751
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "SFinderLaunchPolicy"
 
@@ -148,7 +138,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mStartSFinder: Cannot launch activity : "
+    const-string v4, "mStartSFinder: Cannot launch activity : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -26,12 +26,10 @@
     .locals 0
 
     .prologue
-    .line 971
     iput-object p1, p0, Landroid/widget/TimePickerSpinnerDelegate$TwKeyListener;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 973
     return-void
 .end method
 
@@ -48,7 +46,6 @@
 
     const/4 v1, 0x0
 
-    .line 976
     iget-object v3, p0, Landroid/widget/TimePickerSpinnerDelegate$TwKeyListener;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # getter for: Landroid/widget/TimePickerSpinnerDelegate;->TW_DEBUG:Z
@@ -66,7 +63,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 977
     :cond_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -74,18 +70,15 @@
 
     if-eq v3, v2, :cond_2
 
-    .line 990
     :cond_1
     :goto_0
     return v1
 
-    .line 979
     :cond_2
     sparse-switch p2, :sswitch_data_0
 
     goto :goto_0
 
-    .line 981
     :sswitch_0
     iget-object v3, p0, Landroid/widget/TimePickerSpinnerDelegate$TwKeyListener;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
@@ -99,7 +92,6 @@
 
     move-result-object v0
 
-    .line 982
     .local v0, "config":Landroid/content/res/Configuration;
     iget v3, v0, Landroid/content/res/Configuration;->keyboard:I
 
@@ -111,10 +103,8 @@
     :sswitch_1
     move v1, v2
 
-    .line 988
     goto :goto_0
 
-    .line 979
     nop
 
     :sswitch_data_0

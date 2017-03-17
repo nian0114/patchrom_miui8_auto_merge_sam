@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     return-void
 .end method
 
@@ -24,17 +22,14 @@
     .locals 3
 
     .prologue
-    .line 334
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 335
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This parser does not support specification \""
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 336
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -51,14 +46,12 @@
 
     move-result-object v1
 
-    .line 337
     const-string v2, "\" version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 338
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -75,19 +68,16 @@
 
     move-result-object v1
 
-    .line 339
     const-string v2, "\""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 335
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 334
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -103,17 +93,14 @@
     .locals 3
 
     .prologue
-    .line 360
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 361
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This parser does not support specification \""
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 362
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -130,14 +117,12 @@
 
     move-result-object v1
 
-    .line 363
     const-string v2, "\" version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 364
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -154,19 +139,16 @@
 
     move-result-object v1
 
-    .line 365
     const-string v2, "\""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 361
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 360
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -186,10 +168,8 @@
     .end annotation
 
     .prologue
-    .line 217
     if-nez p1, :cond_0
 
-    .line 218
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "File cannot be null"
@@ -198,7 +178,6 @@
 
     throw v1
 
-    .line 224
     :cond_0
     new-instance v0, Lorg/xml/sax/InputSource;
 
@@ -212,7 +191,6 @@
 
     invoke-direct {v0, v1}, Lorg/xml/sax/InputSource;-><init>(Ljava/lang/String;)V
 
-    .line 225
     .local v0, "in":Lorg/xml/sax/InputSource;
     invoke-virtual {p0, v0}, Lmf/javax/xml/parsers/DocumentBuilder;->parse(Lorg/xml/sax/InputSource;)Lmf/org/w3c/dom/Document;
 
@@ -232,10 +210,8 @@
     .end annotation
 
     .prologue
-    .line 136
     if-nez p1, :cond_0
 
-    .line 137
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "InputStream cannot be null"
@@ -244,13 +220,11 @@
 
     throw v1
 
-    .line 140
     :cond_0
     new-instance v0, Lorg/xml/sax/InputSource;
 
     invoke-direct {v0, p1}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
 
-    .line 141
     .local v0, "in":Lorg/xml/sax/InputSource;
     invoke-virtual {p0, v0}, Lmf/javax/xml/parsers/DocumentBuilder;->parse(Lorg/xml/sax/InputSource;)Lmf/org/w3c/dom/Document;
 
@@ -271,10 +245,8 @@
     .end annotation
 
     .prologue
-    .line 164
     if-nez p1, :cond_0
 
-    .line 165
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "InputStream cannot be null"
@@ -283,17 +255,14 @@
 
     throw v1
 
-    .line 168
     :cond_0
     new-instance v0, Lorg/xml/sax/InputSource;
 
     invoke-direct {v0, p1}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
 
-    .line 169
     .local v0, "in":Lorg/xml/sax/InputSource;
     invoke-virtual {v0, p2}, Lorg/xml/sax/InputSource;->setSystemId(Ljava/lang/String;)V
 
-    .line 170
     invoke-virtual {p0, v0}, Lmf/javax/xml/parsers/DocumentBuilder;->parse(Lorg/xml/sax/InputSource;)Lmf/org/w3c/dom/Document;
 
     move-result-object v1
@@ -312,10 +281,8 @@
     .end annotation
 
     .prologue
-    .line 192
     if-nez p1, :cond_0
 
-    .line 193
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "URI cannot be null"
@@ -324,13 +291,11 @@
 
     throw v1
 
-    .line 196
     :cond_0
     new-instance v0, Lorg/xml/sax/InputSource;
 
     invoke-direct {v0, p1}, Lorg/xml/sax/InputSource;-><init>(Ljava/lang/String;)V
 
-    .line 197
     .local v0, "in":Lorg/xml/sax/InputSource;
     invoke-virtual {p0, v0}, Lmf/javax/xml/parsers/DocumentBuilder;->parse(Lorg/xml/sax/InputSource;)Lmf/org/w3c/dom/Document;
 
@@ -352,10 +317,8 @@
     .locals 3
 
     .prologue
-    .line 109
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 110
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This DocumentBuilder, \""
@@ -380,7 +343,6 @@
 
     move-result-object v1
 
-    .line 111
     const-string v2, "  Specification \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -409,7 +371,6 @@
 
     move-result-object v1
 
-    .line 112
     const-string v2, " version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -438,12 +399,10 @@
 
     move-result-object v1
 
-    .line 110
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 109
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0

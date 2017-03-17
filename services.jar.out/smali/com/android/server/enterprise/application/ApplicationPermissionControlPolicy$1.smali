@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy$1;->this$0:Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,18 +39,15 @@
     .locals 2
 
     .prologue
-    .line 110
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v1, "systemReady..."
+    const-string v1, "systemReady..."
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy$1;->this$0:Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->loadApplicationPermissionControlList()V
 
-    .line 112
     return-void
 .end method

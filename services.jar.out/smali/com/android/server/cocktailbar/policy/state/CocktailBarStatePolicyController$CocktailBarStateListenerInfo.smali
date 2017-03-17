@@ -38,24 +38,18 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 298
     iput-object p1, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 299
     iput-object p2, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 300
     iput-object p3, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 301
     iput p4, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->pid:I
 
-    .line 302
     iput p5, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->uid:I
 
-    .line 303
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .locals 4
 
     .prologue
-    .line 307
     # getter for: Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->access$000()Ljava/lang/String;
 
@@ -93,7 +86,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;
 
     # getter for: Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->mStateListeners:Ljava/util/ArrayList;
@@ -103,7 +95,6 @@
 
     monitor-enter v1
 
-    .line 309
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;
 
@@ -133,7 +124,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 310
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;
 
     const/4 v2, 0x0
@@ -141,7 +131,6 @@
     # setter for: Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->mPackageName:Ljava/lang/String;
     invoke-static {v0, v2}, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->access$202(Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 311
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;
 
     # getter for: Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->mPolicy:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicy;
@@ -155,7 +144,6 @@
 
     invoke-interface {v0, v2, v3}, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicy;->updateCocktailBarWindowType(ILjava/lang/String;)V
 
-    .line 313
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;
 
@@ -166,22 +154,18 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 314
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 316
     return-void
 
-    .line 314
     :catchall_0
     move-exception v0
 
@@ -197,7 +181,6 @@
     .locals 3
 
     .prologue
-    .line 334
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,7 +235,6 @@
 
     move-result-object v0
 
-    .line 335
     .local v0, "dumpResult":Ljava/lang/String;
     return-object v0
 .end method
@@ -262,27 +244,23 @@
     .param p1, "stateInfo"    # Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     .prologue
-    .line 319
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v2, :cond_1
 
-    .line 320
     # getter for: Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->access$000()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "onCocktailBarStateChanged : token is null"
+    const-string v3, "onCocktailBarStateChanged : token is null"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     :cond_0
     :goto_0
     return-void
 
-    .line 324
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController$CocktailBarStateListenerInfo;->token:Landroid/os/IBinder;
@@ -291,30 +269,26 @@
 
     move-result-object v0
 
-    .line 325
     .local v0, "callback":Lcom/samsung/android/cocktailbar/ICocktailBarStateCallback;
     if-eqz v0, :cond_0
 
-    .line 326
     invoke-interface {v0, p1}, Lcom/samsung/android/cocktailbar/ICocktailBarStateCallback;->onCocktailBarStateChanged(Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 328
     .end local v0    # "callback":Lcom/samsung/android/cocktailbar/ICocktailBarStateCallback;
     :catch_0
     move-exception v1
 
-    .line 329
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/policy/state/CocktailBarStatePolicyController;->access$000()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "onCocktailBarStateChanged : RemoteException : "
+    const-string v3, "onCocktailBarStateChanged : RemoteException : "
 
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

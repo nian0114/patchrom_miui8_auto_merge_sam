@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1116
     iput-object p1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$TimaISLCallback;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     invoke-direct {p0}, Landroid/service/tima/ITimaISLCallback$Stub;-><init>()V
 
-    .line 1118
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$TimaISLCallback;->subscriber:Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;
@@ -45,7 +43,6 @@
     .param p1, "violation"    # Ljava/lang/String;
 
     .prologue
-    .line 1121
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$1000()Ljava/util/List;
 
@@ -57,7 +54,6 @@
 
     if-lez v3, :cond_1
 
-    .line 1122
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -73,7 +69,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1123
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$1000()Ljava/util/List;
 
@@ -89,7 +84,6 @@
 
     move-result v0
 
-    .line 1124
     .local v0, "adminId":I
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$TimaISLCallback;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
@@ -102,7 +96,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1126
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$TimaISLCallback;->subscriber:Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;
 
@@ -110,18 +103,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1122
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1127
     :catch_0
     move-exception v1
 
-    .line 1128
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$100()Ljava/lang/String;
@@ -136,7 +126,6 @@
 
     goto :goto_1
 
-    .line 1133
     .end local v0    # "adminId":I
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "i":I

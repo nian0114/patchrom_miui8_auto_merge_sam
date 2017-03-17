@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,14 +32,12 @@
     .prologue
     const/16 v4, 0x9
 
-    .line 940
     new-instance v1, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v3, p2, 0x2
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 942
     .local v1, "ret":Ljava/lang/StringBuilder;
     move v0, p1
 
@@ -50,23 +47,19 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 945
     aget-byte v3, p0, v0
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 946
     .local v2, "v":I
     if-le v2, v4, :cond_0
 
-    .line 947
     add-int/lit8 v3, v2, 0x57
 
     int-to-char v3, v3
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 952
     :goto_1
     aget-byte v3, p0, v0
 
@@ -74,23 +67,19 @@
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 954
     if-le v2, v4, :cond_1
 
-    .line 955
     add-int/lit8 v3, v2, 0x57
 
     int-to-char v3, v3
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 942
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 949
     :cond_0
     add-int/lit8 v3, v2, 0x30
 
@@ -100,7 +89,6 @@
 
     goto :goto_1
 
-    .line 957
     :cond_1
     add-int/lit8 v3, v2, 0x30
 
@@ -110,7 +98,6 @@
 
     goto :goto_2
 
-    .line 961
     .end local v2    # "v":I
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -127,10 +114,8 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 701
     const/4 v0, 0x0
 
-    .line 703
     .local v0, "MCC":I
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -140,7 +125,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 705
     .local v1, "ret":Ljava/lang/StringBuilder;
     const/4 v2, 0x1
 
@@ -150,7 +134,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 706
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
@@ -159,7 +142,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 707
     const/4 v2, 0x3
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
@@ -168,7 +150,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 709
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -181,21 +162,17 @@
 
     if-nez v2, :cond_0
 
-    .line 710
     const-string v2, "IccUtils"
 
     const-string v3, "[MccMncConvert] MCC Value is invalid(\'fff\')!"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 711
     const/4 v2, 0x0
 
-    .line 743
     :goto_0
     return-object v2
 
-    .line 714
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -209,7 +186,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 715
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -218,7 +194,6 @@
 
     move-result v0
 
-    .line 719
     :cond_1
     const/4 v2, 0x5
 
@@ -228,7 +203,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 720
     const/4 v2, 0x4
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
@@ -237,7 +211,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 722
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -254,7 +227,6 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 729
     :cond_2
     const/16 v2, 0x136
 
@@ -264,12 +236,10 @@
 
     if-gt v0, v2, :cond_3
 
-    .line 731
     const-string v2, "0"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 741
     :cond_3
     :goto_1
     const-string v2, "IccUtils"
@@ -298,14 +268,12 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 743
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 738
     :cond_4
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
@@ -333,20 +301,17 @@
 
     const/4 v5, 0x1
 
-    .line 593
     new-instance v1, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v4, p2, 0x2
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 595
     .local v1, "ret":Ljava/lang/StringBuilder;
     aget-byte v4, p0, p1
 
     and-int/lit16 v2, v4, 0xff
 
-    .line 597
     .local v2, "ton":I
     add-int/lit8 v0, p1, 0x1
 
@@ -356,21 +321,17 @@
 
     if-ge v0, v4, :cond_4
 
-    .line 600
     aget-byte v4, p0, v0
 
     and-int/lit8 v3, v4, 0xf
 
-    .line 601
     .local v3, "v":I
     if-ne v3, v7, :cond_2
 
-    .line 602
     const/16 v4, 0x2a
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 603
     const/16 v4, 0x91
 
     if-ne v2, v4, :cond_0
@@ -381,15 +342,12 @@
 
     if-le v4, v5, :cond_0
 
-    .line 604
     const/4 v2, 0x0
 
-    .line 605
     const/16 v4, 0x2b
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 614
     :cond_0
     :goto_1
     aget-byte v4, p0, v0
@@ -398,15 +356,12 @@
 
     and-int/lit8 v3, v4, 0xf
 
-    .line 615
     if-ne v3, v7, :cond_6
 
-    .line 616
     const/16 v4, 0x2a
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 617
     const/16 v4, 0x91
 
     if-ne v2, v4, :cond_1
@@ -417,35 +372,28 @@
 
     if-le v4, v5, :cond_1
 
-    .line 618
     const/4 v2, 0x0
 
-    .line 619
     const/16 v4, 0x2b
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 597
     :cond_1
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 607
     :cond_2
     if-ne v3, v8, :cond_3
 
-    .line 608
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 610
     :cond_3
     if-le v3, v6, :cond_5
 
-    .line 630
     .end local v3    # "v":I
     :cond_4
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -454,7 +402,6 @@
 
     return-object v4
 
-    .line 611
     .restart local v3    # "v":I
     :cond_5
     add-int/lit8 v4, v3, 0x30
@@ -465,20 +412,16 @@
 
     goto :goto_1
 
-    .line 621
     :cond_6
     if-ne v3, v8, :cond_7
 
-    .line 622
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 624
     :cond_7
     if-gt v3, v6, :cond_4
 
-    .line 625
     add-int/lit8 v4, v3, 0x30
 
     int-to-char v4, v4
@@ -505,20 +448,17 @@
 
     const/16 v5, 0x9
 
-    .line 556
     new-instance v1, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v4, p2, 0x2
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 558
     .local v1, "ret":Ljava/lang/StringBuilder;
     aget-byte v4, p0, p1
 
     and-int/lit16 v2, v4, 0xff
 
-    .line 559
     .local v2, "ton":I
     const/16 v4, 0x91
 
@@ -528,7 +468,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 561
     :cond_0
     add-int/lit8 v0, p1, 0x1
 
@@ -538,21 +477,17 @@
 
     if-ge v0, v4, :cond_4
 
-    .line 564
     aget-byte v4, p0, v0
 
     and-int/lit8 v3, v4, 0xf
 
-    .line 565
     .local v3, "v":I
     if-ne v3, v6, :cond_1
 
-    .line 566
     const/16 v4, 0x2a
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 576
     :goto_1
     aget-byte v4, p0, v0
 
@@ -560,45 +495,36 @@
 
     and-int/lit8 v3, v4, 0xf
 
-    .line 577
     if-ne v3, v6, :cond_6
 
-    .line 578
     const/16 v4, 0x2a
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 561
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 567
     :cond_1
     if-ne v3, v7, :cond_2
 
-    .line 568
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 569
     :cond_2
     if-ne v3, v8, :cond_3
 
-    .line 570
     const/16 v4, 0x2c
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 572
     :cond_3
     if-le v3, v5, :cond_5
 
-    .line 588
     .end local v3    # "v":I
     :cond_4
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -607,7 +533,6 @@
 
     return-object v4
 
-    .line 573
     .restart local v3    # "v":I
     :cond_5
     add-int/lit8 v4, v3, 0x30
@@ -618,31 +543,25 @@
 
     goto :goto_1
 
-    .line 579
     :cond_6
     if-ne v3, v7, :cond_7
 
-    .line 580
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 581
     :cond_7
     if-ne v3, v8, :cond_8
 
-    .line 582
     const/16 v4, 0x2c
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 584
     :cond_8
     if-gt v3, v5, :cond_4
 
-    .line 585
     add-int/lit8 v4, v3, 0x30
 
     int-to-char v4, v4
@@ -669,14 +588,12 @@
 
     const/16 v4, 0xa
 
-    .line 907
     new-instance v1, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v3, p2, 0x2
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 909
     .local v1, "ret":Ljava/lang/StringBuilder;
     add-int/lit8 v0, p1, 0x1
 
@@ -686,19 +603,15 @@
 
     if-ge v0, v3, :cond_7
 
-    .line 912
     aget-byte v3, p0, v0
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 913
     .local v2, "v":I
     if-ne v2, v4, :cond_0
 
-    .line 914
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 923
     :goto_1
     aget-byte v3, p0, v0
 
@@ -706,39 +619,31 @@
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 924
     if-ne v2, v4, :cond_3
 
-    .line 925
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 909
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 915
     :cond_0
     if-ne v2, v5, :cond_1
 
-    .line 916
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 917
     :cond_1
     if-ne v2, v6, :cond_2
 
-    .line 918
     const/16 v3, 0x50
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 920
     :cond_2
     add-int/lit8 v3, v2, 0x30
 
@@ -748,40 +653,33 @@
 
     goto :goto_1
 
-    .line 926
     :cond_3
     if-ne v2, v5, :cond_4
 
-    .line 927
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 928
     :cond_4
     if-ne v2, v6, :cond_5
 
-    .line 929
     const/16 v3, 0x50
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 930
     :cond_5
     const/16 v3, 0xf
 
     if-ne v2, v3, :cond_6
 
-    .line 931
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 933
     :cond_6
     add-int/lit8 v3, v2, 0x30
 
@@ -791,7 +689,6 @@
 
     goto :goto_2
 
-    .line 936
     .end local v2    # "v":I
     :cond_7
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -818,14 +715,12 @@
 
     const/16 v4, 0x9
 
-    .line 866
     new-instance v1, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v3, p2, 0x2
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 868
     .local v1, "ret":Ljava/lang/StringBuilder;
     add-int/lit8 v0, p1, 0x1
 
@@ -835,21 +730,17 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 871
     aget-byte v3, p0, v0
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 872
     .local v2, "v":I
     if-ne v2, v5, :cond_0
 
-    .line 873
     const/16 v3, 0x30
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 883
     :goto_1
     aget-byte v3, p0, v0
 
@@ -857,45 +748,36 @@
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 884
     if-ne v2, v5, :cond_5
 
-    .line 885
     const/16 v3, 0x30
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 868
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 874
     :cond_0
     if-ne v2, v6, :cond_1
 
-    .line 875
     const/16 v3, 0x2a
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 876
     :cond_1
     if-ne v2, v7, :cond_2
 
-    .line 877
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 879
     :cond_2
     if-le v2, v4, :cond_4
 
-    .line 897
     .end local v2    # "v":I
     :cond_3
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -908,7 +790,6 @@
 
     if-le v3, p2, :cond_8
 
-    .line 898
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -919,11 +800,9 @@
 
     move-result-object v3
 
-    .line 900
     :goto_3
     return-object v3
 
-    .line 880
     .restart local v2    # "v":I
     :cond_4
     add-int/lit8 v3, v2, 0x30
@@ -934,31 +813,25 @@
 
     goto :goto_1
 
-    .line 886
     :cond_5
     if-ne v2, v6, :cond_6
 
-    .line 887
     const/16 v3, 0x2a
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 888
     :cond_6
     if-ne v2, v7, :cond_7
 
-    .line 889
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 891
     :cond_7
     if-gt v2, v4, :cond_3
 
-    .line 892
     add-int/lit8 v3, v2, 0x30
 
     int-to-char v3, v3
@@ -967,7 +840,6 @@
 
     goto :goto_2
 
-    .line 900
     .end local v2    # "v":I
     :cond_8
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -984,39 +856,31 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 182
     if-nez p2, :cond_0
 
-    .line 183
     const-string v10, ""
 
-    .line 268
     :goto_0
     return-object v10
 
-    .line 185
     :cond_0
     const/4 v10, 0x1
 
     if-lt p2, v10, :cond_2
 
-    .line 186
     aget-byte v10, p0, p1
 
     const/16 v11, -0x80
 
     if-ne v10, v11, :cond_2
 
-    .line 187
     add-int/lit8 v10, p2, -0x1
 
     div-int/lit8 v9, v10, 0x2
 
-    .line 188
     .local v9, "ucslen":I
     const/4 v7, 0x0
 
-    .line 191
     .local v7, "ret":Ljava/lang/String;
     :try_start_0
     new-instance v8, Ljava/lang/String;
@@ -1035,18 +899,15 @@
     .local v8, "ret":Ljava/lang/String;
     move-object v7, v8
 
-    .line 197
     .end local v8    # "ret":Ljava/lang/String;
     .restart local v7    # "ret":Ljava/lang/String;
     :goto_1
     if-eqz v7, :cond_2
 
-    .line 200
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v9
 
-    .line 201
     :goto_2
     if-lez v9, :cond_1
 
@@ -1060,16 +921,13 @@
 
     if-ne v10, v11, :cond_1
 
-    .line 202
     add-int/lit8 v9, v9, -0x1
 
     goto :goto_2
 
-    .line 192
     :catch_0
     move-exception v3
 
-    .line 193
     .local v3, "ex":Ljava/io/UnsupportedEncodingException;
     const-string v10, "IccUtils"
 
@@ -1079,7 +937,6 @@
 
     goto :goto_1
 
-    .line 204
     .end local v3    # "ex":Ljava/io/UnsupportedEncodingException;
     :cond_1
     const/4 v10, 0x0
@@ -1090,21 +947,17 @@
 
     goto :goto_0
 
-    .line 209
     .end local v7    # "ret":Ljava/lang/String;
     .end local v9    # "ucslen":I
     :cond_2
     const/4 v4, 0x0
 
-    .line 210
     .local v4, "isucs2":Z
     const/4 v0, 0x0
 
-    .line 211
     .local v0, "base":C
     const/4 v5, 0x0
 
-    .line 213
     .local v5, "len":I
     const/4 v10, 0x3
 
@@ -1116,22 +969,18 @@
 
     if-ne v10, v11, :cond_6
 
-    .line 214
     add-int/lit8 v10, p1, 0x1
 
     aget-byte v10, p0, v10
 
     and-int/lit16 v5, v10, 0xff
 
-    .line 215
     add-int/lit8 v10, p2, -0x3
 
     if-le v5, v10, :cond_3
 
-    .line 216
     add-int/lit8 v5, p2, -0x3
 
-    .line 218
     :cond_3
     add-int/lit8 v10, p1, 0x2
 
@@ -1143,33 +992,26 @@
 
     int-to-char v0, v10
 
-    .line 219
     add-int/lit8 p1, p1, 0x3
 
-    .line 220
     const/4 v4, 0x1
 
-    .line 232
     :cond_4
     :goto_3
     if-eqz v4, :cond_a
 
-    .line 233
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 235
     .local v7, "ret":Ljava/lang/StringBuilder;
     :goto_4
     if-lez v5, :cond_9
 
-    .line 238
     aget-byte v10, p0, p1
 
     if-gez v10, :cond_5
 
-    .line 239
     aget-byte v10, p0, p1
 
     and-int/lit8 v10, v10, 0x7f
@@ -1180,17 +1022,13 @@
 
     invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 240
     add-int/lit8 p1, p1, 0x1
 
-    .line 241
     add-int/lit8 v5, v5, -0x1
 
-    .line 246
     :cond_5
     const/4 v1, 0x0
 
-    .line 247
     .local v1, "count":I
     :goto_5
     if-ge v1, v5, :cond_8
@@ -1201,12 +1039,10 @@
 
     if-ltz v10, :cond_8
 
-    .line 248
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_5
 
-    .line 221
     .end local v1    # "count":I
     .end local v7    # "ret":Ljava/lang/StringBuilder;
     :cond_6
@@ -1220,22 +1056,18 @@
 
     if-ne v10, v11, :cond_4
 
-    .line 222
     add-int/lit8 v10, p1, 0x1
 
     aget-byte v10, p0, v10
 
     and-int/lit16 v5, v10, 0xff
 
-    .line 223
     add-int/lit8 v10, p2, -0x4
 
     if-le v5, v10, :cond_7
 
-    .line 224
     add-int/lit8 v5, p2, -0x4
 
-    .line 226
     :cond_7
     add-int/lit8 v10, p1, 0x2
 
@@ -1255,15 +1087,12 @@
 
     int-to-char v0, v10
 
-    .line 228
     add-int/lit8 p1, p1, 0x4
 
-    .line 229
     const/4 v4, 0x1
 
     goto :goto_3
 
-    .line 250
     .restart local v1    # "count":I
     .restart local v7    # "ret":Ljava/lang/StringBuilder;
     :cond_8
@@ -1273,16 +1102,12 @@
 
     invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 253
     add-int/2addr p1, v1
 
-    .line 254
     sub-int/2addr v5, v1
 
-    .line 255
     goto :goto_4
 
-    .line 257
     .end local v1    # "count":I
     :cond_9
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1291,18 +1116,15 @@
 
     goto/16 :goto_0
 
-    .line 260
     .end local v7    # "ret":Ljava/lang/StringBuilder;
     :cond_a
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    .line 261
     .local v6, "resource":Landroid/content/res/Resources;
     const-string v2, ""
 
-    .line 263
     .local v2, "defaultCharset":Ljava/lang/String;
     const v10, 0x1040033
 
@@ -1313,7 +1135,6 @@
 
     move-result-object v2
 
-    .line 268
     :goto_6
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1325,7 +1146,6 @@
 
     goto/16 :goto_0
 
-    .line 265
     :catch_1
     move-exception v10
 
@@ -1341,14 +1161,12 @@
     .prologue
     const/16 v4, 0x9
 
-    .line 49
     new-instance v1, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v3, p2, 0x2
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 51
     .local v1, "ret":Ljava/lang/StringBuilder;
     move v0, p1
 
@@ -1358,16 +1176,13 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 55
     aget-byte v3, p0, v0
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 56
     .local v2, "v":I
     if-le v2, v4, :cond_1
 
-    .line 66
     .end local v2    # "v":I
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1376,7 +1191,6 @@
 
     return-object v3
 
-    .line 57
     .restart local v2    # "v":I
     :cond_1
     add-int/lit8 v3, v2, 0x30
@@ -1385,29 +1199,24 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 59
     aget-byte v3, p0, v0
 
     shr-int/lit8 v3, v3, 0x4
 
     and-int/lit8 v2, v3, 0xf
 
-    .line 61
     const/16 v3, 0xf
 
     if-ne v2, v3, :cond_2
 
-    .line 51
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 62
     :cond_2
     if-gt v2, v4, :cond_0
 
-    .line 63
     add-int/lit8 v3, v2, 0x30
 
     int-to-char v3, v3
@@ -1422,15 +1231,12 @@
     .param p0, "bit"    # I
 
     .prologue
-    .line 440
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
 
-    .line 441
     const/4 v0, -0x1
 
-    .line 443
     :goto_0
     return v0
 
@@ -1445,12 +1251,10 @@
     .param p0, "b"    # [B
 
     .prologue
-    .line 349
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 350
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -1460,7 +1264,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 351
     aget-byte v2, p0, v0
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/IccUtils;->byteToBinaryString(B)Ljava/lang/String;
@@ -1469,12 +1272,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 350
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 353
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1488,14 +1289,12 @@
     .param p0, "n"    # B
 
     .prologue
-    .line 339
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "00000000"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 340
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -1505,27 +1304,23 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 341
     shr-int v2, p0, v0
 
     and-int/lit8 v2, v2, 0x1
 
     if-lez v2, :cond_0
 
-    .line 342
     rsub-int/lit8 v2, v0, 0x7
 
     const/16 v3, 0x31
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 340
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 345
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1539,20 +1334,17 @@
     .param p0, "a"    # B
 
     .prologue
-    .line 671
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/4 v2, 0x2
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 676
     .local v1, "ret":Ljava/lang/StringBuilder;
     shr-int/lit8 v2, p0, 0x4
 
     and-int/lit8 v0, v2, 0xf
 
-    .line 678
     .local v0, "b":I
     const-string v2, "0123456789abcdef"
 
@@ -1562,10 +1354,8 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 680
     and-int/lit8 v0, p0, 0xf
 
-    .line 682
     const-string v2, "0123456789abcdef"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->charAt(I)C
@@ -1574,7 +1364,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 685
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1587,16 +1376,13 @@
     .param p0, "bytes"    # [B
 
     .prologue
-    .line 318
     if-nez p0, :cond_0
 
     const/4 v3, 0x0
 
-    .line 334
     :goto_0
     return-object v3
 
-    .line 320
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1606,7 +1392,6 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 322
     .local v2, "ret":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -1616,14 +1401,12 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 325
     aget-byte v3, p0, v1
 
     shr-int/lit8 v3, v3, 0x4
 
     and-int/lit8 v0, v3, 0xf
 
-    .line 327
     .local v0, "b":I
     const-string v3, "0123456789abcdef"
 
@@ -1633,12 +1416,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 329
     aget-byte v3, p0, v1
 
     and-int/lit8 v0, v3, 0xf
 
-    .line 331
     const-string v3, "0123456789abcdef"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->charAt(I)C
@@ -1647,12 +1428,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 322
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 334
     .end local v0    # "b":I
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1667,10 +1446,8 @@
     .param p0, "b"    # B
 
     .prologue
-    .line 131
     const/4 v0, 0x0
 
-    .line 134
     .local v0, "ret":I
     and-int/lit16 v1, p0, 0xf0
 
@@ -1678,14 +1455,12 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 135
     shr-int/lit8 v1, p0, 0x4
 
     and-int/lit8 v1, v1, 0xf
 
     mul-int/lit8 v0, v1, 0xa
 
-    .line 138
     :cond_0
     and-int/lit8 v1, p0, 0xf
 
@@ -1693,12 +1468,10 @@
 
     if-gt v1, v2, :cond_1
 
-    .line 139
     and-int/lit8 v1, p0, 0xf
 
     add-int/2addr v0, v1
 
-    .line 142
     :cond_1
     return v0
 .end method
@@ -1712,16 +1485,13 @@
     .prologue
     const/16 v5, 0x9
 
-    .line 74
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, p2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 76
     .local v2, "ret":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .line 77
     .local v0, "count":I
     move v1, p1
 
@@ -1729,18 +1499,15 @@
     :goto_0
     if-ge v0, p2, :cond_1
 
-    .line 79
     aget-byte v4, p0, v1
 
     and-int/lit8 v3, v4, 0xf
 
-    .line 80
     .local v3, "v":I
     if-le v3, v5, :cond_0
 
     const/4 v3, 0x0
 
-    .line 81
     :cond_0
     add-int/lit8 v4, v3, 0x30
 
@@ -1748,12 +1515,10 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 83
     add-int/lit8 v0, v0, 0x1
 
     if-ne v0, p2, :cond_2
 
-    .line 90
     .end local v3    # "v":I
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1762,7 +1527,6 @@
 
     return-object v4
 
-    .line 85
     .restart local v3    # "v":I
     :cond_2
     aget-byte v4, p0, v1
@@ -1771,12 +1535,10 @@
 
     and-int/lit8 v3, v4, 0xf
 
-    .line 86
     if-le v3, v5, :cond_3
 
     const/4 v3, 0x0
 
-    .line 87
     :cond_3
     add-int/lit8 v4, v3, 0x30
 
@@ -1784,10 +1546,8 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 88
     add-int/lit8 v0, v0, 0x1
 
-    .line 77
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -1798,10 +1558,8 @@
     .param p0, "b"    # B
 
     .prologue
-    .line 635
     const/4 v0, 0x0
 
-    .line 638
     .local v0, "ret":I
     and-int/lit16 v1, p0, 0xf0
 
@@ -1809,14 +1567,12 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 639
     shr-int/lit8 v1, p0, 0x4
 
     and-int/lit8 v1, v1, 0xf
 
     mul-int/lit8 v0, v1, 0x10
 
-    .line 642
     :cond_0
     and-int/lit8 v1, p0, 0xf
 
@@ -1824,12 +1580,10 @@
 
     if-gt v1, v2, :cond_1
 
-    .line 643
     and-int/lit8 v1, p0, 0xf
 
     add-int/2addr v0, v1
 
-    .line 646
     :cond_1
     return v0
 .end method
@@ -1839,10 +1593,8 @@
     .param p0, "i"    # I
 
     .prologue
-    .line 651
     const/4 v0, 0x0
 
-    .line 652
     .local v0, "ret":B
     div-int/lit8 v1, p0, 0xa
 
@@ -1854,14 +1606,12 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 653
     div-int/lit8 v1, p0, 0xa
 
     shl-int/lit8 v1, v1, 0x4
 
     int-to-byte v0, v1
 
-    .line 656
     :cond_0
     rem-int/lit8 v1, p0, 0xa
 
@@ -1873,14 +1623,12 @@
 
     if-gt v1, v2, :cond_1
 
-    .line 657
     rem-int/lit8 v1, p0, 0xa
 
     add-int/2addr v1, v0
 
     int-to-byte v0, v1
 
-    .line 660
     :cond_1
     return v0
 .end method
@@ -1892,14 +1640,12 @@
     .prologue
     const/16 v12, 0x8
 
-    .line 829
     const-string v8, "IccUtils"
 
     const-string v9, "Enter extractIMSI"
 
     invoke-static {v8, v9}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 836
     const/4 v8, 0x5
 
     aget-byte v8, p0, v8
@@ -1934,7 +1680,6 @@
 
     or-long v2, v8, v10
 
-    .line 837
     .local v2, "min1":J
     const/4 v8, 0x2
 
@@ -1956,7 +1701,6 @@
 
     or-long v4, v8, v10
 
-    .line 838
     .local v4, "min2":J
     const/4 v8, 0x6
 
@@ -1966,7 +1710,6 @@
 
     move-result-wide v6
 
-    .line 839
     .local v6, "mnc":J
     const/16 v8, 0x9
 
@@ -1986,7 +1729,6 @@
 
     or-long v0, v8, v10
 
-    .line 841
     .local v0, "mcc":J
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2038,39 +1780,30 @@
     .param p2, "number"    # I
 
     .prologue
-    .line 535
     if-nez p0, :cond_1
 
-    .line 536
     const/4 v4, 0x0
 
-    .line 550
     :cond_0
     return-object v4
 
-    .line 539
     :cond_1
     new-array v4, p2, [I
 
-    .line 540
     .local v4, "result":[I
     mul-int/lit8 v7, p2, 0x3
 
     add-int v3, p1, v7
 
-    .line 541
     .local v3, "endIndex":I
     move v5, p1
 
-    .line 542
     .local v5, "valueIndex":I
     const/4 v1, 0x0
 
-    .line 543
     .local v1, "colorIndex":I
     const/high16 v0, -0x1000000
 
-    .line 545
     .local v0, "alpha":I
     :goto_0
     add-int/lit8 v2, v1, 0x1
@@ -2113,7 +1846,6 @@
 
     aput v7, v4, v1
 
-    .line 549
     if-ge v6, v3, :cond_0
 
     move v1, v2
@@ -2142,20 +1874,17 @@
 
     const-wide/16 v6, 0xa
 
-    .line 753
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/4 v1, 0x3
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 755
     .local v0, "strMCC":Ljava/lang/StringBuilder;
     const-wide/16 v2, 0x3e8
 
     rem-long/2addr p0, v2
 
-    .line 756
     div-long v2, p0, v12
 
     cmp-long v1, v2, v8
@@ -2171,10 +1900,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 757
     rem-long/2addr p0, v12
 
-    .line 758
     div-long v2, p0, v6
 
     cmp-long v1, v2, v8
@@ -2190,7 +1917,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 759
     rem-long v2, p0, v6
 
     cmp-long v1, v2, v8
@@ -2204,14 +1930,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 761
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 756
     :cond_0
     div-long v2, p0, v12
 
@@ -2219,7 +1943,6 @@
 
     goto :goto_0
 
-    .line 758
     :cond_1
     div-long v2, p0, v6
 
@@ -2227,7 +1950,6 @@
 
     goto :goto_1
 
-    .line 759
     :cond_2
     rem-long v2, p0, v6
 
@@ -2241,14 +1963,12 @@
     .param p0, "min1"    # J
 
     .prologue
-    .line 778
     new-instance v2, Ljava/lang/StringBuilder;
 
     const/4 v3, 0x7
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 781
     .local v2, "strMIN1":Ljava/lang/StringBuilder;
     const-wide/16 v4, 0x0
 
@@ -2256,7 +1976,6 @@
 
     if-nez v3, :cond_0
 
-    .line 782
     const-wide/16 v0, 0x0
 
     .local v0, "i":J
@@ -2267,32 +1986,27 @@
 
     if-gez v3, :cond_1
 
-    .line 783
     const/16 v3, 0x30
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 782
     const-wide/16 v4, 0x1
 
     add-long/2addr v0, v4
 
     goto :goto_0
 
-    .line 788
     .end local v0    # "i":J
     :cond_0
     const/16 v3, 0xe
 
     shr-long v0, p0, v3
 
-    .line 789
     .restart local v0    # "i":J
     const-wide/16 v4, 0x3e8
 
     rem-long/2addr v0, v4
 
-    .line 790
     const-wide/16 v4, 0x64
 
     div-long v4, v0, v4
@@ -2312,12 +2026,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 791
     const-wide/16 v4, 0x64
 
     rem-long/2addr v0, v4
 
-    .line 792
     const-wide/16 v4, 0xa
 
     div-long v4, v0, v4
@@ -2337,7 +2049,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 793
     const-wide/16 v4, 0xa
 
     rem-long v4, v0, v4
@@ -2357,12 +2068,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 795
     const-wide/16 v4, 0x3fff
 
     and-long/2addr p0, v4
 
-    .line 797
     const/16 v3, 0xa
 
     shr-long v4, p0, v3
@@ -2371,7 +2080,6 @@
 
     and-long v0, v4, v6
 
-    .line 798
     const-wide/16 v4, 0xa
 
     cmp-long v3, v0, v4
@@ -2387,17 +2095,14 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 800
     const-wide/16 v4, 0x3ff
 
     and-long v0, p0, v4
 
-    .line 801
     const-wide/16 v4, 0x3e8
 
     rem-long/2addr v0, v4
 
-    .line 802
     const-wide/16 v4, 0x64
 
     div-long v4, v0, v4
@@ -2417,12 +2122,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 803
     const-wide/16 v4, 0x64
 
     rem-long/2addr v0, v4
 
-    .line 807
     const-wide/16 v4, 0xa
 
     div-long v4, v0, v4
@@ -2442,7 +2145,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 808
     const-wide/16 v4, 0xa
 
     rem-long v4, v0, v4
@@ -2462,7 +2164,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 811
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2470,7 +2171,6 @@
 
     return-object v3
 
-    .line 790
     :cond_2
     const-wide/16 v4, 0x64
 
@@ -2482,7 +2182,6 @@
 
     goto/16 :goto_1
 
-    .line 792
     :cond_3
     const-wide/16 v4, 0xa
 
@@ -2494,7 +2193,6 @@
 
     goto :goto_2
 
-    .line 793
     :cond_4
     const-wide/16 v4, 0xa
 
@@ -2506,7 +2204,6 @@
 
     goto :goto_3
 
-    .line 798
     :cond_5
     const-wide/16 v4, 0x30
 
@@ -2514,7 +2211,6 @@
 
     goto :goto_4
 
-    .line 802
     :cond_6
     const-wide/16 v4, 0x64
 
@@ -2526,7 +2222,6 @@
 
     goto :goto_5
 
-    .line 807
     :cond_7
     const-wide/16 v4, 0xa
 
@@ -2538,7 +2233,6 @@
 
     goto :goto_6
 
-    .line 808
     :cond_8
     const-wide/16 v4, 0xa
 
@@ -2566,20 +2260,17 @@
 
     const-wide/16 v6, 0xa
 
-    .line 816
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/4 v1, 0x3
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 818
     .local v0, "strMIN2":Ljava/lang/StringBuilder;
     const-wide/16 v2, 0x3e8
 
     rem-long/2addr p0, v2
 
-    .line 819
     div-long v2, p0, v12
 
     cmp-long v1, v2, v8
@@ -2595,10 +2286,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 820
     rem-long/2addr p0, v12
 
-    .line 821
     div-long v2, p0, v6
 
     cmp-long v1, v2, v8
@@ -2614,7 +2303,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 822
     rem-long v2, p0, v6
 
     cmp-long v1, v2, v8
@@ -2628,14 +2316,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 824
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 819
     :cond_0
     div-long v2, p0, v12
 
@@ -2643,7 +2329,6 @@
 
     goto :goto_0
 
-    .line 821
     :cond_1
     div-long v2, p0, v6
 
@@ -2651,7 +2336,6 @@
 
     goto :goto_1
 
-    .line 822
     :cond_2
     rem-long v2, p0, v6
 
@@ -2673,20 +2357,17 @@
 
     const-wide/16 v6, 0xa
 
-    .line 766
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 768
     .local v0, "strMNC":Ljava/lang/StringBuilder;
     const-wide/16 v2, 0x64
 
     rem-long/2addr p0, v2
 
-    .line 770
     div-long v2, p0, v6
 
     cmp-long v1, v2, v8
@@ -2702,7 +2383,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 771
     rem-long v2, p0, v6
 
     cmp-long v1, v2, v8
@@ -2716,14 +2396,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 773
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 770
     :cond_0
     div-long v2, p0, v6
 
@@ -2731,7 +2409,6 @@
 
     goto :goto_0
 
-    .line 771
     :cond_1
     rem-long v2, p0, v6
 
@@ -2745,10 +2422,8 @@
     .param p0, "b"    # B
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
-    .line 112
     .local v0, "ret":I
     and-int/lit16 v1, p0, 0xf0
 
@@ -2756,12 +2431,10 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 113
     shr-int/lit8 v1, p0, 0x4
 
     and-int/lit8 v0, v1, 0xf
 
-    .line 116
     :cond_0
     and-int/lit8 v1, p0, 0xf
 
@@ -2769,14 +2442,12 @@
 
     if-gt v1, v2, :cond_1
 
-    .line 117
     and-int/lit8 v1, p0, 0xf
 
     mul-int/lit8 v1, v1, 0xa
 
     add-int/2addr v0, v1
 
-    .line 120
     :cond_1
     return v0
 .end method
@@ -2786,7 +2457,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 273
     const/16 v0, 0x30
 
     if-lt p0, v0, :cond_0
@@ -2797,11 +2467,9 @@
 
     add-int/lit8 v0, p0, -0x30
 
-    .line 275
     :goto_0
     return v0
 
-    .line 274
     :cond_0
     const/16 v0, 0x41
 
@@ -2817,7 +2485,6 @@
 
     goto :goto_0
 
-    .line 275
     :cond_1
     const/16 v0, 0x61
 
@@ -2833,7 +2500,6 @@
 
     goto :goto_0
 
-    .line 277
     :cond_2
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2871,28 +2537,23 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     if-nez p0, :cond_1
 
     const/4 v1, 0x0
 
-    .line 305
     :cond_0
     return-object v1
 
-    .line 296
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 298
     .local v2, "sz":I
     div-int/lit8 v3, v2, 0x2
 
     new-array v1, v3, [B
 
-    .line 300
     .local v1, "ret":[B
     const/4 v0, 0x0
 
@@ -2900,7 +2561,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 301
     div-int/lit8 v3, v0, 0x2
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
@@ -2929,7 +2589,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 300
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
@@ -2947,10 +2606,8 @@
 
     const/4 v4, 0x1
 
-    .line 968
     const/4 v0, 0x0
 
-    .line 969
     .local v0, "All_FF":Z
     const/4 v3, 0x0
 
@@ -2958,7 +2615,6 @@
     :goto_0
     if-ge v3, p1, :cond_1
 
-    .line 970
     aget-byte v5, p0, v3
 
     and-int/lit8 v5, v5, 0xf
@@ -2973,43 +2629,34 @@
 
     if-ne v5, v7, :cond_0
 
-    .line 971
     const/4 v0, 0x1
 
-    .line 969
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 973
     :cond_0
     const/4 v0, 0x0
 
-    .line 977
     :cond_1
     if-ne v0, v4, :cond_3
 
-    .line 978
     const/16 v4, 0xff
 
-    .line 990
     :cond_2
     :goto_1
     return v4
 
-    .line 980
     :cond_3
     const/4 v3, 0x0
 
     :goto_2
     if-ge v3, p1, :cond_5
 
-    .line 983
     aget-byte v5, p0, v3
 
     and-int/lit8 v1, v5, 0xf
 
-    .line 984
     .local v1, "a":I
     aget-byte v5, p0, v3
 
@@ -3017,7 +2664,6 @@
 
     and-int/lit8 v2, v5, 0xf
 
-    .line 985
     .local v2, "b":I
     if-gt v1, v6, :cond_2
 
@@ -3027,13 +2673,11 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 980
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 990
     .end local v1    # "a":I
     .end local v2    # "b":I
     :cond_5
@@ -3053,65 +2697,53 @@
     .prologue
     const/16 v10, 0x8
 
-    .line 485
     rem-int v9, v10, p4
 
     if-eqz v9, :cond_0
 
-    .line 486
     const-string v9, "IccUtils"
 
     const-string v10, "not event number of color"
 
     invoke-static {v9, v10}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/uicc/IccUtils;->mapToNon2OrderBitColor([BII[II)[I
 
     move-result-object v2
 
-    .line 518
     :goto_0
     return-object v2
 
-    .line 491
     :cond_0
     const/4 v0, 0x1
 
-    .line 492
     .local v0, "mask":I
     packed-switch p4, :pswitch_data_0
 
-    .line 507
     :goto_1
     :pswitch_0
     new-array v2, p2, [I
 
-    .line 508
     .local v2, "resultArray":[I
     const/4 v3, 0x0
 
-    .line 509
     .local v3, "resultIndex":I
     div-int v5, v10, p4
 
     .local v5, "run":I
     move v8, p1
 
-    .line 510
     .end local p1    # "valueIndex":I
     .local v8, "valueIndex":I
     :goto_2
     if-ge v3, p2, :cond_2
 
-    .line 511
     add-int/lit8 p1, v8, 0x1
 
     .end local v8    # "valueIndex":I
     .restart local p1    # "valueIndex":I
     aget-byte v7, p0, v8
 
-    .line 512
     .local v7, "tempByte":B
     const/4 v6, 0x0
 
@@ -3123,12 +2755,10 @@
     :goto_3
     if-ge v6, v5, :cond_1
 
-    .line 513
     sub-int v9, v5, v6
 
     add-int/lit8 v1, v9, -0x1
 
-    .line 514
     .local v1, "offset":I
     add-int/lit8 v3, v4, 0x1
 
@@ -3144,7 +2774,6 @@
 
     aput v9, v2, v4
 
-    .line 512
     add-int/lit8 v6, v6, 0x1
 
     move v4, v3
@@ -3153,7 +2782,6 @@
     .restart local v4    # "resultIndex":I
     goto :goto_3
 
-    .line 494
     .end local v1    # "offset":I
     .end local v2    # "resultArray":[I
     .end local v4    # "resultIndex":I
@@ -3163,24 +2791,18 @@
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 495
     goto :goto_1
 
-    .line 497
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 498
     goto :goto_1
 
-    .line 500
     :pswitch_3
     const/16 v0, 0xf
 
-    .line 501
     goto :goto_1
 
-    .line 503
     :pswitch_4
     const/16 v0, 0xff
 
@@ -3198,7 +2820,6 @@
     .restart local v3    # "resultIndex":I
     move v8, p1
 
-    .line 517
     .end local p1    # "valueIndex":I
     .restart local v8    # "valueIndex":I
     goto :goto_2
@@ -3208,12 +2829,10 @@
     :cond_2
     move p1, v8
 
-    .line 518
     .end local v8    # "valueIndex":I
     .restart local p1    # "valueIndex":I
     goto :goto_0
 
-    .line 492
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -3236,34 +2855,28 @@
     .param p4, "bits"    # I
 
     .prologue
-    .line 523
     const/16 v1, 0x8
 
     rem-int/2addr v1, p4
 
     if-nez v1, :cond_0
 
-    .line 524
     const-string v1, "IccUtils"
 
     const-string v2, "not odd number of color"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/uicc/IccUtils;->mapTo2OrderBitColor([BII[II)[I
 
     move-result-object v0
 
-    .line 531
     :goto_0
     return-object v0
 
-    .line 529
     :cond_0
     new-array v0, p2, [I
 
-    .line 531
     .local v0, "resultArray":[I
     goto :goto_0
 .end method
@@ -3275,7 +2888,6 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 366
     aget-byte v4, p0, p1
 
     and-int/lit16 v4, v4, 0x80
@@ -3288,16 +2900,13 @@
 
     if-ge p2, v4, :cond_2
 
-    .line 367
     :cond_0
     const-string v2, ""
 
-    .line 404
     :cond_1
     :goto_0
     return-object v2
 
-    .line 370
     :cond_2
     aget-byte v4, p0, p1
 
@@ -3307,10 +2916,8 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 391
     const-string v2, ""
 
-    .line 399
     .local v2, "ret":Ljava/lang/String;
     :goto_1
     aget-byte v4, p0, p1
@@ -3321,14 +2928,12 @@
 
     goto :goto_0
 
-    .line 374
     .end local v2    # "ret":Ljava/lang/String;
     :pswitch_0
     aget-byte v4, p0, p1
 
     and-int/lit8 v3, v4, 0x7
 
-    .line 375
     .local v3, "unusedBits":I
     add-int/lit8 v4, p2, -0x1
 
@@ -3338,7 +2943,6 @@
 
     div-int/lit8 v0, v4, 0x7
 
-    .line 376
     .local v0, "countSeptets":I
     add-int/lit8 v4, p1, 0x1
 
@@ -3346,11 +2950,9 @@
 
     move-result-object v2
 
-    .line 377
     .restart local v2    # "ret":Ljava/lang/String;
     goto :goto_1
 
-    .line 381
     .end local v0    # "countSeptets":I
     .end local v2    # "ret":Ljava/lang/String;
     .end local v3    # "unusedBits":I
@@ -3371,16 +2973,13 @@
     .restart local v2    # "ret":Ljava/lang/String;
     goto :goto_1
 
-    .line 383
     .end local v2    # "ret":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 384
     .local v1, "ex":Ljava/io/UnsupportedEncodingException;
     const-string v2, ""
 
-    .line 385
     .restart local v2    # "ret":Ljava/lang/String;
     const-string v4, "IccUtils"
 
@@ -3390,7 +2989,6 @@
 
     goto :goto_1
 
-    .line 370
     nop
 
     :pswitch_data_0
@@ -3406,10 +3004,8 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 414
     const/4 v8, 0x0
 
-    .line 415
     .local v8, "valueIndex":I
     add-int/lit8 v9, v8, 0x1
 
@@ -3419,7 +3015,6 @@
 
     and-int/lit16 v10, v11, 0xff
 
-    .line 416
     .local v10, "width":I
     add-int/lit8 v8, v9, 0x1
 
@@ -3429,23 +3024,18 @@
 
     and-int/lit16 v3, v11, 0xff
 
-    .line 417
     .local v3, "height":I
     mul-int v4, v10, v3
 
-    .line 419
     .local v4, "numOfPixels":I
     new-array v7, v4, [I
 
-    .line 421
     .local v7, "pixels":[I
     const/4 v5, 0x0
 
-    .line 422
     .local v5, "pixelIndex":I
     const/4 v0, 0x7
 
-    .line 423
     .local v0, "bitIndex":I
     const/4 v2, 0x0
 
@@ -3456,28 +3046,23 @@
     .local v6, "pixelIndex":I
     move v9, v8
 
-    .line 424
     .end local v8    # "valueIndex":I
     .restart local v9    # "valueIndex":I
     :goto_0
     if-ge v6, v4, :cond_0
 
-    .line 426
     rem-int/lit8 v11, v6, 0x8
 
     if-nez v11, :cond_2
 
-    .line 427
     add-int/lit8 v8, v9, 0x1
 
     .end local v9    # "valueIndex":I
     .restart local v8    # "valueIndex":I
     aget-byte v2, p0, v9
 
-    .line 428
     const/4 v0, 0x7
 
-    .line 430
     :goto_1
     add-int/lit8 v5, v6, 0x1
 
@@ -3511,18 +3096,15 @@
     .restart local v9    # "valueIndex":I
     goto :goto_0
 
-    .line 433
     :cond_0
     if-eq v6, v4, :cond_1
 
-    .line 434
     const-string v11, "IccUtils"
 
     const-string v12, "parse end and size error"
 
     invoke-static {v11, v12}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     :cond_1
     sget-object v11, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -3547,10 +3129,8 @@
     .param p2, "transparency"    # Z
 
     .prologue
-    .line 457
     const/4 v6, 0x0
 
-    .line 458
     .local v6, "valueIndex":I
     add-int/lit8 v7, v6, 0x1
 
@@ -3560,7 +3140,6 @@
 
     and-int/lit16 v8, v9, 0xff
 
-    .line 459
     .local v8, "width":I
     add-int/lit8 v6, v7, 0x1
 
@@ -3570,7 +3149,6 @@
 
     and-int/lit16 v4, v9, 0xff
 
-    .line 460
     .local v4, "height":I
     add-int/lit8 v7, v6, 0x1
 
@@ -3580,7 +3158,6 @@
 
     and-int/lit16 v0, v9, 0xff
 
-    .line 461
     .local v0, "bits":I
     add-int/lit8 v6, v7, 0x1
 
@@ -3590,7 +3167,6 @@
 
     and-int/lit16 v3, v9, 0xff
 
-    .line 462
     .local v3, "colorNumber":I
     add-int/lit8 v7, v6, 0x1
 
@@ -3612,30 +3188,25 @@
 
     or-int v1, v9, v10
 
-    .line 465
     .local v1, "clutOffset":I
     invoke-static {p0, v1, v3}, Lcom/android/internal/telephony/uicc/IccUtils;->getCLUT([BII)[I
 
     move-result-object v2
 
-    .line 466
     .local v2, "colorIndexArray":[I
     const/4 v9, 0x1
 
     if-ne v9, p2, :cond_0
 
-    .line 467
     add-int/lit8 v9, v3, -0x1
 
     const/4 v10, 0x0
 
     aput v10, v2, v9
 
-    .line 470
     :cond_0
     const/4 v5, 0x0
 
-    .line 471
     .local v5, "resultArray":[I
     const/16 v9, 0x8
 
@@ -3643,14 +3214,12 @@
 
     if-nez v9, :cond_1
 
-    .line 472
     mul-int v9, v8, v4
 
     invoke-static {p0, v6, v9, v2, v0}, Lcom/android/internal/telephony/uicc/IccUtils;->mapTo2OrderBitColor([BII[II)[I
 
     move-result-object v5
 
-    .line 479
     :goto_0
     sget-object v9, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
@@ -3660,7 +3229,6 @@
 
     return-object v9
 
-    .line 475
     :cond_1
     mul-int v9, v8, v4
 
@@ -3678,38 +3246,31 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 846
     const-string v4, "IccUtils"
 
     const-string v5, "Enter unicode2String"
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 848
     .local v3, "ret":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
-    .line 849
     .local v2, "len":I
     :goto_0
     if-ge v2, p2, :cond_0
 
-    .line 850
     aget-byte v4, p0, p1
 
     const/4 v5, -0x1
 
     if-eq v4, v5, :cond_0
 
-    .line 851
     const-wide/16 v0, 0x0
 
-    .line 852
     .local v0, "ch":J
     aget-byte v4, p0, p1
 
@@ -3729,23 +3290,18 @@
 
     or-long v0, v4, v6
 
-    .line 853
     long-to-int v4, v0
 
     int-to-char v4, v4
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 854
     add-int/lit8 p1, p1, 0x2
 
-    .line 855
     add-int/lit8 v2, v2, 0x2
 
-    .line 856
     goto :goto_0
 
-    .line 860
     .end local v0    # "ch":J
     :cond_0
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -3760,7 +3316,6 @@
     .param p0, "n"    # B
 
     .prologue
-    .line 749
     int-to-long v0, p0
 
     const-wide/16 v2, 0xff
@@ -3775,7 +3330,6 @@
     .param p0, "n"    # I
 
     .prologue
-    .line 747
     int-to-long v0, p0
 
     const-wide v2, 0xffffffffL
@@ -3790,7 +3344,6 @@
     .param p0, "n"    # S
 
     .prologue
-    .line 748
     int-to-long v0, p0
 
     const-wide/32 v2, 0xffff

@@ -32,7 +32,7 @@
 .method public engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+    const-string v0, "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
 
     return-object v0
 .end method

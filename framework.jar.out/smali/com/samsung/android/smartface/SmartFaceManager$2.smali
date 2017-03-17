@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 466
     iput-object p1, p0, Lcom/samsung/android/smartface/SmartFaceManager$2;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service_type"    # I
 
     .prologue
-    .line 471
     const-string v0, "SmartFaceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -81,12 +79,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 472
     and-int/lit8 v0, p2, 0x8
 
     if-eqz v0, :cond_0
 
-    .line 474
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$2;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->lock:Ljava/util/concurrent/locks/Lock;
@@ -96,7 +92,6 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 475
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$2;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     iget v1, p1, Lcom/samsung/android/smartface/FaceInfo;->needToRotate:I
@@ -104,7 +99,6 @@
     # setter for: Lcom/samsung/android/smartface/SmartFaceManager;->mCallbackData:I
     invoke-static {v0, v1}, Lcom/samsung/android/smartface/SmartFaceManager;->access$102(Lcom/samsung/android/smartface/SmartFaceManager;I)I
 
-    .line 476
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$2;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->complete:Ljava/util/concurrent/locks/Condition;
@@ -114,7 +108,6 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signal()V
 
-    .line 477
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$2;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->lock:Ljava/util/concurrent/locks/Lock;
@@ -124,7 +117,6 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 479
     :cond_0
     return-void
 .end method

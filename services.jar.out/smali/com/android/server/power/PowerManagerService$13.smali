@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 7456
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$13;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
 
     const/4 v5, 0x0
 
-    .line 7459
     iget-object v1, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 7460
     .local v1, "scontext":Landroid/hardware/scontext/SContext;
     invoke-virtual {v1}, Landroid/hardware/scontext/SContext;->getType()I
 
@@ -56,29 +53,24 @@
 
     if-ne v3, v6, :cond_0
 
-    .line 7461
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getWirelessChargingDetectionContext()Landroid/hardware/scontext/SContextWirelessChargingDetection;
 
     move-result-object v2
 
-    .line 7462
     .local v2, "wirelessChargingDetection":Landroid/hardware/scontext/SContextWirelessChargingDetection;
     invoke-virtual {v2}, Landroid/hardware/scontext/SContextWirelessChargingDetection;->getAction()I
 
     move-result v0
 
-    .line 7463
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 7481
     .end local v0    # "action":I
     .end local v2    # "wirelessChargingDetection":Landroid/hardware/scontext/SContextWirelessChargingDetection;
     :cond_0
     :goto_0
     return-void
 
-    .line 7465
     .restart local v0    # "action":I
     .restart local v2    # "wirelessChargingDetection":Landroid/hardware/scontext/SContextWirelessChargingDetection;
     :pswitch_0
@@ -88,14 +80,12 @@
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7466
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$13;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean v5, v3, Lcom/android/server/power/PowerManagerService;->mIsDeviceMoving:Z
 
     goto :goto_0
 
-    .line 7469
     :pswitch_1
     const-string v3, "PowerManagerService"
 
@@ -103,14 +93,12 @@
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7470
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$13;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v4, 0x1
 
     iput-boolean v4, v3, Lcom/android/server/power/PowerManagerService;->mIsDeviceMoving:Z
 
-    .line 7471
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$13;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iget-boolean v3, v3, Lcom/android/server/power/PowerManagerService;->mIsWirelessChargerSContextRegistered:Z
@@ -132,14 +120,12 @@
 
     if-nez v3, :cond_0
 
-    .line 7472
     const-string v3, "PowerManagerService"
 
     const-string v4, "SContextListener : Unregister SContextListener"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7473
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$13;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iget-object v3, v3, Lcom/android/server/power/PowerManagerService;->mWirelessChargerSContextManager:Landroid/hardware/scontext/SContextManager;
@@ -153,14 +139,12 @@
 
     invoke-virtual {v3, v4, v6}, Landroid/hardware/scontext/SContextManager;->unregisterListener(Landroid/hardware/scontext/SContextListener;I)V
 
-    .line 7474
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$13;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean v5, v3, Lcom/android/server/power/PowerManagerService;->mIsWirelessChargerSContextRegistered:Z
 
     goto :goto_0
 
-    .line 7463
     nop
 
     :pswitch_data_0

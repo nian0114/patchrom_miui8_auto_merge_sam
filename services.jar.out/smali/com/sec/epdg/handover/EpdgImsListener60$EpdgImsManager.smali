@@ -57,23 +57,18 @@
 
     const/4 v0, 0x0
 
-    .line 496
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mEpdgImsManager:Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
-    .line 497
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingChangeObserver:Lcom/sec/epdg/handover/EpdgImsListener60$SettingChangeObserver;
 
-    .line 498
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 501
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingStorageMap:Ljava/util/Map;
 
-    .line 505
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,7 +79,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "omadm/./3GPP_IMS/VOLTE_ENABLED"
+    const-string v1, "omadm/./3GPP_IMS/VOLTE_ENABLED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,7 +91,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->IMS_SETTING_VOLTE_PROVISIONED:Ljava/lang/String;
 
-    .line 507
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,7 +101,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "omadm/./3GPP_IMS/VWF_ENABLED"
+    const-string v1, "omadm/./3GPP_IMS/VWF_ENABLED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -119,7 +113,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->IMS_SETTING_VWF_PROVISIONED:Ljava/lang/String;
 
-    .line 511
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingStorageMap:Ljava/util/Map;
 
     const-string v1, "content://com.sec.ims.settings/imsswitch/mmtel"
@@ -130,7 +123,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 512
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingStorageMap:Ljava/util/Map;
 
     const-string v1, "content://com.sec.ims.settings/imsswitch/mmtel-video"
@@ -141,7 +133,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 513
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingStorageMap:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->IMS_SETTING_VOLTE_PROVISIONED:Ljava/lang/String;
@@ -152,7 +143,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 514
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingStorageMap:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->IMS_SETTING_VWF_PROVISIONED:Ljava/lang/String;
@@ -163,7 +153,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 515
     return-void
 .end method
 
@@ -171,10 +160,8 @@
     .locals 3
 
     .prologue
-    .line 518
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 519
     new-instance v0, Landroid/os/HandlerThread;
 
     const-class v1, Lcom/sec/ims/ImsManager;
@@ -187,12 +174,10 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 520
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 521
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsListener60$SettingChangeObserver;
 
     new-instance v1, Landroid/os/Handler;
@@ -209,7 +194,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingChangeObserver:Lcom/sec/epdg/handover/EpdgImsListener60$SettingChangeObserver;
 
-    .line 522
     return-void
 .end method
 
@@ -219,7 +203,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 495
     invoke-direct {p0, p1}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->readSettingValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -231,19 +214,16 @@
     .locals 1
 
     .prologue
-    .line 525
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mEpdgImsManager:Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
     if-nez v0, :cond_0
 
-    .line 526
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
     invoke-direct {v0}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mEpdgImsManager:Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
-    .line 528
     :cond_0
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mEpdgImsManager:Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
@@ -257,7 +237,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 552
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$1200()Landroid/content/Context;
 
@@ -281,7 +260,6 @@
 
     move-result-object v6
 
-    .line 553
     .local v6, "c":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -291,39 +269,32 @@
 
     if-nez v0, :cond_2
 
-    .line 554
     :cond_0
     const-string v0, "[EpdgImsListener]"
 
-    const-string/jumbo v1, "readDMSettingValue: not found"
+    const-string v1, "readDMSettingValue: not found"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 555
     if-eqz v6, :cond_1
 
-    .line 556
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_1
     move-object v7, v2
 
-    .line 564
     :goto_0
     return-object v7
 
-    .line 560
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 561
     const/4 v0, 0x1
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 563
     .local v7, "val":Ljava/lang/String;
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
@@ -337,7 +308,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 568
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$1200()Landroid/content/Context;
 
@@ -361,7 +331,6 @@
 
     move-result-object v6
 
-    .line 572
     .local v6, "c":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -371,33 +340,27 @@
 
     if-nez v0, :cond_2
 
-    .line 573
     :cond_0
     const-string v0, "[EpdgImsListener]"
 
-    const-string/jumbo v1, "readServiceSwitchSetting: not found"
+    const-string v1, "readServiceSwitchSetting: not found"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 574
     if-eqz v6, :cond_1
 
-    .line 575
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_1
     move-object v7, v3
 
-    .line 584
     :goto_0
     return-object v7
 
-    .line 580
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 581
-    const-string/jumbo v0, "enabled"
+    const-string v0, "enabled"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -407,7 +370,6 @@
 
     move-result-object v7
 
-    .line 583
     .local v7, "val":Ljava/lang/String;
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
@@ -419,7 +381,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 588
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->mSettingStorageMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -434,13 +395,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 594
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 590
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->readServiceSwitchSetting(Ljava/lang/String;)Ljava/lang/String;
 
@@ -448,7 +407,6 @@
 
     goto :goto_0
 
-    .line 592
     :pswitch_1
     invoke-direct {p0, p1}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->readDMSettingValue(Ljava/lang/String;)Ljava/lang/String;
 
@@ -456,7 +414,6 @@
 
     goto :goto_0
 
-    .line 588
     nop
 
     :pswitch_data_0
@@ -486,13 +443,11 @@
     .end annotation
 
     .prologue
-    .line 540
     .local p1, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 541
     .local v2, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -513,22 +468,18 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 543
     .local v1, "key":Ljava/lang/String;
     invoke-direct {p0, v1}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->readSettingValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 544
     .local v3, "val":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 545
     invoke-virtual {v2, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 548
     .end local v1    # "key":Ljava/lang/String;
     .end local v3    # "val":Ljava/lang/String;
     :cond_1
@@ -548,7 +499,6 @@
     .end annotation
 
     .prologue
-    .line 532
     .local p1, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -568,7 +518,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 533
     .local v1, "key":Ljava/lang/String;
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$1200()Landroid/content/Context;
@@ -591,7 +540,6 @@
 
     goto :goto_0
 
-    .line 537
     .end local v1    # "key":Ljava/lang/String;
     :cond_0
     return-void

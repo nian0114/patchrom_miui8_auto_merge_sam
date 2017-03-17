@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 535
     invoke-static {}, Landroid/media/WFDUibcManager$UIBC_Mode;->values()[Landroid/media/WFDUibcManager$UIBC_Mode;
 
     move-result-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 281
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsSettingStateListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,15 +42,12 @@
     .param p3, "parameter"    # Lcom/samsung/commonimsinterface/imscommon/IMSParameter;
 
     .prologue
-    .line 284
     packed-switch p2, :pswitch_data_0
 
-    .line 297
     :cond_0
     :goto_0
     return-void
 
-    .line 286
     :pswitch_0
     const-string v1, "[EpdgImsListener]"
 
@@ -59,18 +55,15 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
-    const-string/jumbo v1, "settingsvalue"
+    const-string v1, "settingsvalue"
 
     invoke-virtual {p3, v1}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getSparseStringArray(Ljava/lang/String;)Landroid/util/SparseArray;
 
     move-result-object v0
 
-    .line 288
     .local v0, "sp":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     if-eqz v0, :cond_0
 
-    .line 291
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsSettingStateListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener50;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
@@ -82,7 +75,6 @@
 
     goto :goto_0
 
-    .line 284
     :pswitch_data_0
     .packed-switch 0x3f1
         :pswitch_0

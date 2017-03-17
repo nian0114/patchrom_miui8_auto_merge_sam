@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/Firewall$1$1;->this$1:Lcom/android/server/enterprise/firewall/Firewall$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 109
     # getter for: Lcom/android/server/enterprise/firewall/Firewall;->mIsDatabaseReady:Z
     invoke-static {}, Lcom/android/server/enterprise/firewall/Firewall;->access$000()Z
 
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall$1$1;->this$1:Lcom/android/server/enterprise/firewall/Firewall$1;
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->setRulesStatusAfterReboot()V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall$1$1;->this$1:Lcom/android/server/enterprise/firewall/Firewall$1;
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
@@ -70,11 +66,9 @@
     # invokes: Lcom/android/server/enterprise/firewall/Firewall;->createChains()V
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/Firewall;->access$200(Lcom/android/server/enterprise/firewall/Firewall;)V
 
-    .line 112
     # setter for: Lcom/android/server/enterprise/firewall/Firewall;->mIsDatabaseReady:Z
     invoke-static {v2}, Lcom/android/server/enterprise/firewall/Firewall;->access$002(Z)Z
 
-    .line 115
     :cond_0
     # getter for: Lcom/android/server/enterprise/firewall/Firewall;->mAreRulesReloaded:Z
     invoke-static {}, Lcom/android/server/enterprise/firewall/Firewall;->access$300()Z
@@ -83,7 +77,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall$1$1;->this$1:Lcom/android/server/enterprise/firewall/Firewall$1;
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
@@ -91,11 +84,9 @@
     # invokes: Lcom/android/server/enterprise/firewall/Firewall;->reloadIptablesRules()V
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/Firewall;->access$400(Lcom/android/server/enterprise/firewall/Firewall;)V
 
-    .line 117
     # setter for: Lcom/android/server/enterprise/firewall/Firewall;->mAreRulesReloaded:Z
     invoke-static {v2}, Lcom/android/server/enterprise/firewall/Firewall;->access$302(Z)Z
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall$1$1;->this$1:Lcom/android/server/enterprise/firewall/Firewall$1;
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
@@ -105,7 +96,6 @@
     # invokes: Lcom/android/server/enterprise/firewall/Firewall;->blockOrUnblockAll(ZI)V
     invoke-static {v0, v2, v1}, Lcom/android/server/enterprise/firewall/Firewall;->access$500(Lcom/android/server/enterprise/firewall/Firewall;ZI)V
 
-    .line 124
     :cond_1
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall$1$1;->this$1:Lcom/android/server/enterprise/firewall/Firewall$1;
 
@@ -114,6 +104,5 @@
     # invokes: Lcom/android/server/enterprise/firewall/Firewall;->checkMigrationAndHostnames()V
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/Firewall;->access$600(Lcom/android/server/enterprise/firewall/Firewall;)V
 
-    .line 125
     return-void
 .end method

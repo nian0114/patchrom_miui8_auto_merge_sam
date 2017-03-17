@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     return-void
 .end method
 
@@ -24,7 +22,6 @@
     .param p0, "cal"    # Ljava/util/Calendar;
 
     .prologue
-    .line 1006
     invoke-virtual {p0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v0
@@ -41,7 +38,6 @@
     .param p1, "bd"    # Ljava/math/BigDecimal;
 
     .prologue
-    .line 967
     invoke-virtual {p1}, Ljava/math/BigDecimal;->unscaledValue()Ljava/math/BigInteger;
 
     move-result-object v5
@@ -50,22 +46,18 @@
 
     move-result-object v3
 
-    .line 968
     .local v3, "intString":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
 
     move-result v4
 
-    .line 970
     .local v4, "scale":I
     if-nez v4, :cond_0
 
-    .line 990
     .end local v3    # "intString":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 976
     .restart local v3    # "intString":Ljava/lang/String;
     :cond_0
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -74,11 +66,9 @@
 
     sub-int v2, v5, v4
 
-    .line 977
     .local v2, "insertionPoint":I
     if-nez v2, :cond_1
 
-    .line 978
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "0."
@@ -95,22 +85,18 @@
 
     goto :goto_0
 
-    .line 979
     :cond_1
     if-lez v2, :cond_2
 
-    .line 980
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 981
     .local v0, "buf":Ljava/lang/StringBuffer;
     const/16 v5, 0x2e
 
     invoke-virtual {v0, v2, v5}, Ljava/lang/StringBuffer;->insert(IC)Ljava/lang/StringBuffer;
 
-    .line 990
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -118,7 +104,6 @@
 
     goto :goto_0
 
-    .line 983
     .end local v0    # "buf":Ljava/lang/StringBuffer;
     :cond_2
     new-instance v0, Ljava/lang/StringBuffer;
@@ -133,13 +118,11 @@
 
     invoke-direct {v0, v5}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 984
     .restart local v0    # "buf":Ljava/lang/StringBuffer;
     const-string v5, "0."
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 985
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -148,18 +131,15 @@
 
     if-lt v1, v5, :cond_3
 
-    .line 988
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
 
-    .line 986
     :cond_3
     const/16 v5, 0x30
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 985
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -178,20 +158,16 @@
     .param p1, "date"    # Ljava/util/Date;
 
     .prologue
-    .line 579
     if-nez p1, :cond_0
 
-    .line 580
     new-instance v1, Ljava/lang/NullPointerException;
 
-    .line 581
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Cannot call "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 582
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -204,44 +180,36 @@
 
     move-result-object v2
 
-    .line 583
     const-string v3, "#addTo(Date date) with date == null."
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 581
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 580
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 587
     :cond_0
     new-instance v0, Ljava/util/GregorianCalendar;
 
     invoke-direct {v0}, Ljava/util/GregorianCalendar;-><init>()V
 
-    .line 588
     .local v0, "cal":Ljava/util/Calendar;
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 589
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->addTo(Ljava/util/Calendar;)V
 
-    .line 590
     invoke-static {v0}, Lmf/javax/xml/datatype/Duration;->getCalendarTimeInMillis(Ljava/util/Calendar;)J
 
     move-result-wide v2
 
     invoke-virtual {p1, v2, v3}, Ljava/util/Date;->setTime(J)V
 
-    .line 591
     return-void
 .end method
 
@@ -255,14 +223,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 885
     if-eqz p1, :cond_0
 
     instance-of v1, p1, Lmf/javax/xml/datatype/Duration;
 
     if-nez v1, :cond_1
 
-    .line 889
     .end local p1    # "duration":Ljava/lang/Object;
     :cond_0
     :goto_0
@@ -288,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 299
     sget-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DAYS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -309,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 313
     sget-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->HOURS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -327,7 +291,6 @@
     .locals 1
 
     .prologue
-    .line 327
     sget-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->MINUTES:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -345,7 +308,6 @@
     .locals 1
 
     .prologue
-    .line 286
     sget-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->MONTHS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -363,7 +325,6 @@
     .locals 1
 
     .prologue
-    .line 342
     sget-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->SECONDS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -385,28 +346,23 @@
     .param p1, "startInstant"    # Ljava/util/Calendar;
 
     .prologue
-    .line 376
     invoke-virtual {p1}, Ljava/util/Calendar;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Calendar;
 
-    .line 377
     .local v0, "cal":Ljava/util/Calendar;
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->addTo(Ljava/util/Calendar;)V
 
-    .line 378
     invoke-static {v0}, Lmf/javax/xml/datatype/Duration;->getCalendarTimeInMillis(Ljava/util/Calendar;)J
 
     move-result-wide v2
 
-    .line 379
     invoke-static {p1}, Lmf/javax/xml/datatype/Duration;->getCalendarTimeInMillis(Ljava/util/Calendar;)J
 
     move-result-wide v4
 
-    .line 378
     sub-long/2addr v2, v4
 
     return-wide v2
@@ -417,19 +373,15 @@
     .param p1, "startInstant"    # Ljava/util/Date;
 
     .prologue
-    .line 414
     new-instance v0, Ljava/util/GregorianCalendar;
 
     invoke-direct {v0}, Ljava/util/GregorianCalendar;-><init>()V
 
-    .line 415
     .local v0, "cal":Ljava/util/Calendar;
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 416
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->addTo(Ljava/util/Calendar;)V
 
-    .line 417
     invoke-static {v0}, Lmf/javax/xml/datatype/Duration;->getCalendarTimeInMillis(Ljava/util/Calendar;)J
 
     move-result-wide v2
@@ -447,14 +399,12 @@
     .locals 9
 
     .prologue
-    .line 201
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->YEARS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v6}, Lmf/javax/xml/datatype/Duration;->isSet(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Z
 
     move-result v5
 
-    .line 202
     .local v5, "yearSet":Z
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->MONTHS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -462,7 +412,6 @@
 
     move-result v3
 
-    .line 203
     .local v3, "monthSet":Z
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->DAYS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -470,7 +419,6 @@
 
     move-result v0
 
-    .line 204
     .local v0, "daySet":Z
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->HOURS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -478,7 +426,6 @@
 
     move-result v1
 
-    .line 205
     .local v1, "hourSet":Z
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->MINUTES:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -486,7 +433,6 @@
 
     move-result v2
 
-    .line 206
     .local v2, "minuteSet":Z
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->SECONDS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -494,97 +440,71 @@
 
     move-result v4
 
-    .line 209
     .local v4, "secondSet":Z
     if-eqz v5, :cond_0
 
-    .line 210
     if-eqz v3, :cond_0
 
-    .line 211
     if-eqz v0, :cond_0
 
-    .line 212
     if-eqz v1, :cond_0
 
-    .line 213
     if-eqz v2, :cond_0
 
-    .line 214
     if-eqz v4, :cond_0
 
-    .line 215
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->DURATION:Lmf/javax/xml/namespace/QName;
 
-    .line 235
     :goto_0
     return-object v6
 
-    .line 219
     :cond_0
     if-nez v5, :cond_1
 
-    .line 220
     if-nez v3, :cond_1
 
-    .line 221
     if-eqz v0, :cond_1
 
-    .line 222
     if-eqz v1, :cond_1
 
-    .line 223
     if-eqz v2, :cond_1
 
-    .line 224
     if-eqz v4, :cond_1
 
-    .line 225
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->DURATION_DAYTIME:Lmf/javax/xml/namespace/QName;
 
     goto :goto_0
 
-    .line 229
     :cond_1
     if-eqz v5, :cond_2
 
-    .line 230
     if-eqz v3, :cond_2
 
-    .line 231
     if-nez v0, :cond_2
 
-    .line 232
     if-nez v1, :cond_2
 
-    .line 233
     if-nez v2, :cond_2
 
-    .line 234
     if-nez v4, :cond_2
 
-    .line 235
     sget-object v6, Lmf/javax/xml/datatype/DatatypeConstants;->DURATION_YEARMONTH:Lmf/javax/xml/namespace/QName;
 
     goto :goto_0
 
-    .line 239
     :cond_2
     new-instance v6, Ljava/lang/IllegalStateException;
 
-    .line 240
     new-instance v7, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v8, "javax.xml.datatype.Duration#getXMLSchemaType(): this Duration does not match one of the XML Schema date/time datatypes: year set = "
+    const-string v8, "javax.xml.datatype.Duration#getXMLSchemaType(): this Duration does not match one of the XML Schema date/time datatypes: year set = "
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 243
     const-string v8, " month set = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -595,7 +515,6 @@
 
     move-result-object v7
 
-    .line 244
     const-string v8, " day set = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -606,7 +525,6 @@
 
     move-result-object v7
 
-    .line 245
     const-string v8, " hour set = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -617,7 +535,6 @@
 
     move-result-object v7
 
-    .line 246
     const-string v8, " minute set = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -628,7 +545,6 @@
 
     move-result-object v7
 
-    .line 247
     const-string v8, " second set = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -639,12 +555,10 @@
 
     move-result-object v7
 
-    .line 240
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 239
     invoke-direct {v6, v7}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v6
@@ -654,7 +568,6 @@
     .locals 1
 
     .prologue
-    .line 273
     sget-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->YEARS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -678,7 +591,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 820
     invoke-virtual {p0, p1}, Lmf/javax/xml/datatype/Duration;->compare(Lmf/javax/xml/datatype/Duration;)I
 
     move-result v1
@@ -702,7 +614,6 @@
     .param p1, "duration"    # Lmf/javax/xml/datatype/Duration;
 
     .prologue
-    .line 842
     invoke-virtual {p0, p1}, Lmf/javax/xml/datatype/Duration;->compare(Lmf/javax/xml/datatype/Duration;)I
 
     move-result v0
@@ -727,7 +638,6 @@
     .param p1, "factor"    # I
 
     .prologue
-    .line 663
     new-instance v0, Ljava/math/BigDecimal;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -757,7 +667,6 @@
     .param p1, "rhs"    # Lmf/javax/xml/datatype/Duration;
 
     .prologue
-    .line 643
     invoke-virtual {p1}, Lmf/javax/xml/datatype/Duration;->negate()Lmf/javax/xml/datatype/Duration;
 
     move-result-object v0
@@ -773,12 +682,10 @@
     .locals 9
 
     .prologue
-    .line 915
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 917
     .local v0, "buf":Ljava/lang/StringBuffer;
     invoke-virtual {p0}, Lmf/javax/xml/datatype/Duration;->getSign()I
 
@@ -786,18 +693,15 @@
 
     if-gez v7, :cond_0
 
-    .line 918
     const/16 v7, 0x2d
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 920
     :cond_0
     const/16 v7, 0x50
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 922
     sget-object v7, Lmf/javax/xml/datatype/DatatypeConstants;->YEARS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     invoke-virtual {p0, v7}, Lmf/javax/xml/datatype/Duration;->getField(Lmf/javax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;
@@ -806,11 +710,9 @@
 
     check-cast v6, Ljava/math/BigInteger;
 
-    .line 923
     .local v6, "years":Ljava/math/BigInteger;
     if-eqz v6, :cond_1
 
-    .line 924
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -831,7 +733,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 927
     :cond_1
     sget-object v7, Lmf/javax/xml/datatype/DatatypeConstants;->MONTHS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -841,11 +742,9 @@
 
     check-cast v4, Ljava/math/BigInteger;
 
-    .line 928
     .local v4, "months":Ljava/math/BigInteger;
     if-eqz v4, :cond_2
 
-    .line 929
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -866,7 +765,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 932
     :cond_2
     sget-object v7, Lmf/javax/xml/datatype/DatatypeConstants;->DAYS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -876,11 +774,9 @@
 
     check-cast v1, Ljava/math/BigInteger;
 
-    .line 933
     .local v1, "days":Ljava/math/BigInteger;
     if-eqz v1, :cond_3
 
-    .line 934
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -901,7 +797,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 937
     :cond_3
     sget-object v7, Lmf/javax/xml/datatype/DatatypeConstants;->HOURS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -911,7 +806,6 @@
 
     check-cast v2, Ljava/math/BigInteger;
 
-    .line 938
     .local v2, "hours":Ljava/math/BigInteger;
     sget-object v7, Lmf/javax/xml/datatype/DatatypeConstants;->MINUTES:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -921,7 +815,6 @@
 
     check-cast v3, Ljava/math/BigInteger;
 
-    .line 939
     .local v3, "minutes":Ljava/math/BigInteger;
     sget-object v7, Lmf/javax/xml/datatype/DatatypeConstants;->SECONDS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
@@ -931,7 +824,6 @@
 
     check-cast v5, Ljava/math/BigDecimal;
 
-    .line 940
     .local v5, "seconds":Ljava/math/BigDecimal;
     if-nez v2, :cond_4
 
@@ -939,16 +831,13 @@
 
     if-eqz v5, :cond_7
 
-    .line 941
     :cond_4
     const/16 v7, 0x54
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 942
     if-eqz v2, :cond_5
 
-    .line 943
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -969,11 +858,9 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 945
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 946
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -994,11 +881,9 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 948
     :cond_6
     if-eqz v5, :cond_7
 
-    .line 949
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v5}, Lmf/javax/xml/datatype/Duration;->toString(Ljava/math/BigDecimal;)Ljava/lang/String;
@@ -1023,7 +908,6 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 953
     :cond_7
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

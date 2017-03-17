@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .param p0, "addr"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 15
     invoke-virtual {p0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v0
@@ -42,10 +40,8 @@
     .param p2, "intfName"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     if-eqz p0, :cond_4
 
-    .line 22
     :try_start_0
     invoke-static/range {p0 .. p0}, Lcom/sec/epdg/smartwifi/EpdgInetAddress;->isIpv6(Ljava/net/InetAddress;)Z
 
@@ -53,9 +49,8 @@
 
     if-eqz v12, :cond_1
 
-    const-string/jumbo v1, "ping6 -i 0.2 "
+    const-string v1, "ping6 -i 0.2 "
 
-    .line 23
     .local v1, "cmd":Ljava/lang/String;
     :goto_0
     new-instance v12, Ljava/lang/StringBuilder;
@@ -88,10 +83,8 @@
 
     move-result-object v1
 
-    .line 24
     if-eqz p2, :cond_0
 
-    .line 25
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,7 +115,6 @@
 
     move-result-object v1
 
-    .line 27
     :cond_0
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -144,7 +136,6 @@
 
     move-result-object v1
 
-    .line 28
     const/4 v12, 0x0
 
     const-string v13, "[SMARTWIFI]"
@@ -169,7 +160,6 @@
 
     invoke-static {v12, v13, v14}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 29
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v12
@@ -178,7 +168,6 @@
 
     move-result-object v5
 
-    .line 30
     .local v5, "p":Ljava/lang/Process;
     new-instance v11, Ljava/io/BufferedReader;
 
@@ -192,11 +181,9 @@
 
     invoke-direct {v11, v12}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 33
     .local v11, "stdInput":Ljava/io/BufferedReader;
     const-string v7, ""
 
-    .line 34
     .local v7, "res":Ljava/lang/String;
     :goto_1
     invoke-virtual {v11}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -206,7 +193,6 @@
     .local v8, "s":Ljava/lang/String;
     if-eqz v8, :cond_2
 
-    .line 35
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,18 +217,16 @@
 
     goto :goto_1
 
-    .line 22
     .end local v1    # "cmd":Ljava/lang/String;
     .end local v5    # "p":Ljava/lang/Process;
     .end local v7    # "res":Ljava/lang/String;
     .end local v8    # "s":Ljava/lang/String;
     .end local v11    # "stdInput":Ljava/io/BufferedReader;
     :cond_1
-    const-string/jumbo v1, "ping -i 0.2 "
+    const-string v1, "ping -i 0.2 "
 
     goto/16 :goto_0
 
-    .line 37
     .restart local v1    # "cmd":Ljava/lang/String;
     .restart local v5    # "p":Ljava/lang/Process;
     .restart local v7    # "res":Ljava/lang/String;
@@ -271,14 +255,11 @@
 
     invoke-static {v12, v13}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
-    const-string/jumbo v10, "received, "
+    const-string v10, "received, "
 
-    .line 39
     .local v10, "startStr":Ljava/lang/String;
     const-string v4, "% packet loss"
 
-    .line 40
     .local v4, "endStr":Ljava/lang/String;
     invoke-virtual {v7, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -286,7 +267,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 41
     invoke-virtual {v7, v10}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v12
@@ -297,19 +277,16 @@
 
     add-int v9, v12, v13
 
-    .line 42
     .local v9, "start":I
     invoke-virtual {v7, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 43
     .local v3, "end":I
     invoke-virtual {v7, v9, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 44
     .local v6, "percentStr":Ljava/lang/String;
     new-instance v12, Lcom/sec/epdg/smartwifi/PingStats;
 
@@ -323,7 +300,6 @@
 
     invoke-direct {v12, v13}, Lcom/sec/epdg/smartwifi/PingStats;-><init>(Ljava/lang/Integer;)V
 
-    .line 57
     .end local v1    # "cmd":Ljava/lang/String;
     .end local v3    # "end":I
     .end local v4    # "endStr":Ljava/lang/String;
@@ -337,7 +313,6 @@
     :goto_2
     return-object v12
 
-    .line 46
     .restart local v1    # "cmd":Ljava/lang/String;
     .restart local v4    # "endStr":Ljava/lang/String;
     .restart local v5    # "p":Ljava/lang/Process;
@@ -352,15 +327,12 @@
 
     invoke-static {v12, v13}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 48
     invoke-virtual {v11}, Ljava/io/BufferedReader;->close()V
 
-    .line 49
     invoke-virtual {v5}, Ljava/lang/Process;->destroy()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     .end local v1    # "cmd":Ljava/lang/String;
     .end local v4    # "endStr":Ljava/lang/String;
     .end local v5    # "p":Ljava/lang/Process;
@@ -381,11 +353,9 @@
 
     goto :goto_2
 
-    .line 50
     :catch_0
     move-exception v2
 
-    .line 51
     .local v2, "e":Ljava/lang/Exception;
     const-string v12, "[SMARTWIFI]"
 
@@ -409,7 +379,6 @@
 
     invoke-static {v12, v13}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     new-instance v12, Lcom/sec/epdg/smartwifi/PingStats;
 
     const/16 v13, 0x64
@@ -422,7 +391,6 @@
 
     goto :goto_2
 
-    .line 55
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     const-string v12, "[SMARTWIFI]"

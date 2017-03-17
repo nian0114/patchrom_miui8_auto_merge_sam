@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 160
     new-instance v0, Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     invoke-direct {v0, p1}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 158
     invoke-virtual {p0, p1}, Landroid/dirEncryption/SDCardEncryptionPolicies$1;->createFromParcel(Landroid/os/Parcel;)Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 164
     new-array v0, p1, [Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 158
     invoke-virtual {p0, p1}, Landroid/dirEncryption/SDCardEncryptionPolicies$1;->newArray(I)[Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v0

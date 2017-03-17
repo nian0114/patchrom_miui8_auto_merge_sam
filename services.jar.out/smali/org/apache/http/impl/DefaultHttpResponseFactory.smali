@@ -20,7 +20,6 @@
     .locals 2
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -37,7 +36,6 @@
     .param p1, "catalog"    # Lorg/apache/http/ReasonPhraseCatalog;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -56,7 +54,6 @@
     .param p1, "context"    # Lorg/apache/http/protocol/HttpContext;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -73,7 +70,6 @@
     .param p3, "context"    # Lorg/apache/http/protocol/HttpContext;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -89,7 +85,6 @@
     .param p2, "context"    # Lorg/apache/http/protocol/HttpContext;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

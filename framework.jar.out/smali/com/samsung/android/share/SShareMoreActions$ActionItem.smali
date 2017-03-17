@@ -32,20 +32,15 @@
     .param p4, "pName"    # Ljava/lang/String;
 
     .prologue
-    .line 289
     iput-object p1, p0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;->this$0:Lcom/samsung/android/share/SShareMoreActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 290
     iput p2, p0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;->id:I
 
-    .line 291
     iput p3, p0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;->icon:I
 
-    .line 292
     iput-object p4, p0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;->name:Ljava/lang/String;
 
-    .line 293
     return-void
 .end method

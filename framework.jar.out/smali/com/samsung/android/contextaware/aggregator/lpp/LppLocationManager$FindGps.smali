@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1783
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$FindGps;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;
 
     .prologue
-    .line 1783
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$FindGps;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;)V
 
     return-void
@@ -53,21 +51,17 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 1788
     const-string v0, "LppLocationManager"
 
     const-string v1, "FindGps- onLocationChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1789
     if-nez p1, :cond_0
 
-    .line 1793
     :goto_0
     return-void
 
-    .line 1792
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$FindGps;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
@@ -96,7 +90,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 1798
     return-void
 .end method
 
@@ -105,7 +98,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 1803
     return-void
 .end method
 
@@ -116,6 +108,5 @@
     .param p3, "arg2"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1808
     return-void
 .end method

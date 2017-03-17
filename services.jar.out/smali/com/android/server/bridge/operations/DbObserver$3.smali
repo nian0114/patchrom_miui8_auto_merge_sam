@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/android/server/bridge/operations/DbObserver$3;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,12 +38,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/bridge/operations/DbObserver$3;->onChange(ZLandroid/net/Uri;)V
 
-    .line 96
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 104
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/operations/DbObserver;->access$200()Ljava/lang/String;
 
@@ -64,7 +60,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onChange Conatcts UserID : "
+    const-string v2, "onChange Conatcts UserID : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,14 +83,12 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/bridge/operations/DbObserver$3;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     iget-object v1, v0, Lcom/android/server/bridge/operations/DbObserver;->mContactRunnable:Ljava/lang/Runnable;
 
     monitor-enter v1
 
-    .line 106
     :try_start_0
     iget-object v0, p0, Lcom/android/server/bridge/operations/DbObserver$3;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
@@ -109,7 +103,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/bridge/operations/DbObserver$3;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->mHandler:Landroid/os/Handler;
@@ -125,13 +118,10 @@
 
     invoke-virtual {v0, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 108
     monitor-exit v1
 
-    .line 109
     return-void
 
-    .line 108
     :catchall_0
     move-exception v0
 

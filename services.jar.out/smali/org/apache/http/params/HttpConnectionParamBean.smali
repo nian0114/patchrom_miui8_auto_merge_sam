@@ -14,7 +14,6 @@
     .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     const/4 v0, 0x0
 
     check-cast v0, Lorg/apache/http/params/HttpParams;
@@ -37,7 +36,6 @@
     .param p1, "connectionTimeout"    # I
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -52,7 +50,6 @@
     .param p1, "linger"    # I
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -67,7 +64,6 @@
     .param p1, "soTimeout"    # I
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -82,7 +78,6 @@
     .param p1, "socketBufferSize"    # I
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -97,7 +92,6 @@
     .param p1, "staleCheckingEnabled"    # Z
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -112,7 +106,6 @@
     .param p1, "tcpNoDelay"    # Z
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

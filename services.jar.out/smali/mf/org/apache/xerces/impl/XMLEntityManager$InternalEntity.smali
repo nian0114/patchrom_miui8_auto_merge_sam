@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 2482
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;-><init>()V
 
-    .line 2483
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;->clear()V
 
-    .line 2484
     return-void
 .end method
 
@@ -40,13 +37,10 @@
     .param p3, "inExternalSubset"    # Z
 
     .prologue
-    .line 2488
     invoke-direct {p0, p1, p3}, Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;-><init>(Ljava/lang/String;Z)V
 
-    .line 2489
     iput-object p2, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;->text:Ljava/lang/String;
 
-    .line 2490
     return-void
 .end method
 
@@ -56,15 +50,12 @@
     .locals 1
 
     .prologue
-    .line 2508
     invoke-super {p0}, Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;->clear()V
 
-    .line 2509
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;->text:Ljava/lang/String;
 
-    .line 2510
     return-void
 .end method
 
@@ -72,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 2498
     const/4 v0, 0x0
 
     return v0
@@ -82,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 2503
     const/4 v0, 0x0
 
     return v0
@@ -93,15 +82,12 @@
     .param p1, "entity"    # Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;
 
     .prologue
-    .line 2514
     invoke-super {p0, p1}, Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;->setValues(Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;)V
 
-    .line 2515
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;->text:Ljava/lang/String;
 
-    .line 2516
     return-void
 .end method
 
@@ -110,14 +96,11 @@
     .param p1, "entity"    # Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;
 
     .prologue
-    .line 2520
     invoke-super {p0, p1}, Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;->setValues(Lmf/org/apache/xerces/impl/XMLEntityManager$Entity;)V
 
-    .line 2521
     iget-object v0, p1, Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;->text:Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$InternalEntity;->text:Ljava/lang/String;
 
-    .line 2522
     return-void
 .end method

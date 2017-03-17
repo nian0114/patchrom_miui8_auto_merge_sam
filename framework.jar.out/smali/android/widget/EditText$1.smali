@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 215
     iput-object p1, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 218
     # getter for: Landroid/widget/EditText;->sKnownAppList:Ljava/util/HashSet;
     invoke-static {}, Landroid/widget/EditText;->access$000()Ljava/util/HashSet;
 
@@ -62,12 +60,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 219
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v2, :cond_2
 
-    .line 220
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     iget-object v1, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
@@ -79,13 +75,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 221
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     # setter for: Landroid/widget/EditText;->mFocused:Z
     invoke-static {v0, v2}, Landroid/widget/EditText;->access$202(Landroid/widget/EditText;Z)Z
 
-    .line 226
     :cond_0
     :goto_0
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
@@ -93,11 +87,9 @@
     # invokes: Landroid/widget/EditText;->updateSipFocusStatus()V
     invoke-static {v0}, Landroid/widget/EditText;->access$300(Landroid/widget/EditText;)V
 
-    .line 228
     :cond_1
     return-void
 
-    .line 222
     :cond_2
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -105,7 +97,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 223
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     iget-object v1, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
@@ -117,7 +108,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 224
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     const/4 v1, 0x0

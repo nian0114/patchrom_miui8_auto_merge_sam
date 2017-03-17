@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 446
     iput-object p1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$EnterpriseDLPpolicyReciever;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v6, -0x1
 
-    .line 456
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v5
@@ -62,7 +60,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 457
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
@@ -71,7 +68,6 @@
 
     move-result-object v2
 
-    .line 458
     .local v2, "pckgName":Ljava/lang/String;
     const-string v5, "android.intent.extra.user_handle"
 
@@ -79,7 +75,6 @@
 
     move-result v4
 
-    .line 460
     .local v4, "userHandle":I
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -105,11 +100,9 @@
 
     if-eqz v5, :cond_1
 
-    .line 461
     :cond_0
     const/4 v3, 0x0
 
-    .line 462
     .local v3, "pkgMetaData":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$EnterpriseDLPpolicyReciever;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
@@ -118,21 +111,17 @@
 
     move-result-object v1
 
-    .line 463
     .local v1, "metaData":Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    .line 464
     const-string v5, "component_type"
 
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 469
     if-nez v3, :cond_2
 
-    .line 481
     .end local v1    # "metaData":Landroid/os/Bundle;
     .end local v2    # "pckgName":Ljava/lang/String;
     .end local v3    # "pkgMetaData":Ljava/lang/String;
@@ -141,13 +130,12 @@
     :goto_0
     return-void
 
-    .line 472
     .restart local v1    # "metaData":Landroid/os/Bundle;
     .restart local v2    # "pckgName":Ljava/lang/String;
     .restart local v3    # "pkgMetaData":Ljava/lang/String;
     .restart local v4    # "userHandle":I
     :cond_2
-    const-string/jumbo v5, "dlp_agent"
+    const-string v5, "dlp_agent"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -155,7 +143,6 @@
 
     if-nez v5, :cond_3
 
-    .line 473
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$200()Z
 
@@ -163,7 +150,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 474
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
@@ -175,7 +161,6 @@
 
     goto :goto_0
 
-    .line 477
     :cond_3
     new-instance v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
 
@@ -183,7 +168,6 @@
 
     invoke-direct {v0, v5, v7}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;-><init>(Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;I)V
 
-    .line 478
     .local v0, "bindSyncTask":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
     const/4 v5, 0x1
 

@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 105
     invoke-static {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;->isDigit(C)Z
 
     move-result v0
@@ -52,7 +50,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 99
     const/16 v0, 0x30
 
     if-lt p0, v0, :cond_0
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 52
     return-void
 .end method
 
@@ -95,7 +91,6 @@
     .param p2, "value2"    # Ljava/lang/Object;
 
     .prologue
-    .line 76
     const/4 v0, -0x1
 
     return v0
@@ -117,7 +112,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 82
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -144,7 +138,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 94
     const/4 v0, -0x1
 
     return v0
@@ -155,7 +148,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 88
     const/4 v0, -0x1
 
     return v0
@@ -167,7 +159,6 @@
     .param p2, "value2"    # Ljava/lang/Object;
 
     .prologue
-    .line 70
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 556
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 625
     .local p0, "digests":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Integer;>;"
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -47,14 +45,11 @@
 
     if-eqz v4, :cond_1
 
-    .line 626
     sget-object v3, Llibcore/util/EmptyArray;->STRING:[Ljava/lang/String;
 
-    .line 634
     :cond_0
     return-object v3
 
-    .line 628
     :cond_1
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
@@ -62,11 +57,9 @@
 
     new-array v3, v4, [Ljava/lang/String;
 
-    .line 629
     .local v3, "result":[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 630
     .local v2, "offset":I
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -90,7 +83,6 @@
 
     move-result v0
 
-    .line 631
     .local v0, "digest":I
     invoke-static {v0}, Landroid/security/keystore/KeyProperties$Digest;->fromKeymaster(I)Ljava/lang/String;
 
@@ -98,10 +90,8 @@
 
     aput-object v4, v3, v2
 
-    .line 632
     add-int/lit8 v2, v2, 0x1
 
-    .line 633
     goto :goto_0
 .end method
 
@@ -110,32 +100,26 @@
     .param p0, "digests"    # [Ljava/lang/String;
 
     .prologue
-    .line 639
     if-eqz p0, :cond_0
 
     array-length v6, p0
 
     if-nez v6, :cond_2
 
-    .line 640
     :cond_0
     sget-object v5, Llibcore/util/EmptyArray;->INT:[I
 
-    .line 648
     :cond_1
     return-object v5
 
-    .line 642
     :cond_2
     array-length v6, p0
 
     new-array v5, v6, [I
 
-    .line 643
     .local v5, "result":[I
     const/4 v4, 0x0
 
-    .line 644
     .local v4, "offset":I
     move-object v0, p0
 
@@ -151,7 +135,6 @@
 
     aget-object v1, v0, v2
 
-    .line 645
     .local v1, "digest":Ljava/lang/String;
     invoke-static {v1}, Landroid/security/keystore/KeyProperties$Digest;->toKeymaster(Ljava/lang/String;)I
 
@@ -159,10 +142,8 @@
 
     aput v6, v5, v4
 
-    .line 646
     add-int/lit8 v4, v4, 0x1
 
-    .line 644
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -173,10 +154,8 @@
     .param p0, "digest"    # I
 
     .prologue
-    .line 581
     packed-switch p0, :pswitch_data_0
 
-    .line 597
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -201,51 +180,42 @@
 
     throw v0
 
-    .line 583
     :pswitch_0
     const-string v0, "NONE"
 
-    .line 595
     :goto_0
     return-object v0
 
-    .line 585
     :pswitch_1
     const-string v0, "MD5"
 
     goto :goto_0
 
-    .line 587
     :pswitch_2
     const-string v0, "SHA-1"
 
     goto :goto_0
 
-    .line 589
     :pswitch_3
     const-string v0, "SHA-224"
 
     goto :goto_0
 
-    .line 591
     :pswitch_4
     const-string v0, "SHA-256"
 
     goto :goto_0
 
-    .line 593
     :pswitch_5
     const-string v0, "SHA-384"
 
     goto :goto_0
 
-    .line 595
     :pswitch_6
     const-string v0, "SHA-512"
 
     goto :goto_0
 
-    .line 581
     nop
 
     :pswitch_data_0
@@ -265,10 +235,8 @@
     .param p0, "digest"    # I
 
     .prologue
-    .line 603
     packed-switch p0, :pswitch_data_0
 
-    .line 619
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -293,51 +261,42 @@
 
     throw v0
 
-    .line 605
     :pswitch_0
     const-string v0, "NONE"
 
-    .line 617
     :goto_0
     return-object v0
 
-    .line 607
     :pswitch_1
     const-string v0, "MD5"
 
     goto :goto_0
 
-    .line 609
     :pswitch_2
     const-string v0, "SHA1"
 
     goto :goto_0
 
-    .line 611
     :pswitch_3
     const-string v0, "SHA224"
 
     goto :goto_0
 
-    .line 613
     :pswitch_4
     const-string v0, "SHA256"
 
     goto :goto_0
 
-    .line 615
     :pswitch_5
     const-string v0, "SHA384"
 
     goto :goto_0
 
-    .line 617
     :pswitch_6
     const-string v0, "SHA512"
 
     goto :goto_0
 
-    .line 603
     nop
 
     :pswitch_data_0
@@ -367,7 +326,6 @@
 
     const/4 v3, 0x0
 
-    .line 559
     sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -386,7 +344,6 @@
     :goto_0
     packed-switch v5, :pswitch_data_0
 
-    .line 575
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -411,7 +368,6 @@
 
     throw v0
 
-    .line 559
     :sswitch_0
     const-string v7, "SHA-1"
 
@@ -506,7 +462,6 @@
     :pswitch_0
     move v0, v1
 
-    .line 573
     :goto_1
     :pswitch_1
     return v0
@@ -514,16 +469,13 @@
     :pswitch_2
     move v0, v2
 
-    .line 565
     goto :goto_1
 
-    .line 567
     :pswitch_3
     const/4 v0, 0x5
 
     goto :goto_1
 
-    .line 569
     :pswitch_4
     const/4 v0, 0x6
 
@@ -532,16 +484,13 @@
     :pswitch_5
     move v0, v3
 
-    .line 571
     goto :goto_1
 
     :pswitch_6
     move v0, v4
 
-    .line 573
     goto :goto_1
 
-    .line 559
     nop
 
     :sswitch_data_0

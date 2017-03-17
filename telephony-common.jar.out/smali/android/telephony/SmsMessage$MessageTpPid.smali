@@ -52,7 +52,6 @@
 
     const/4 v3, 0x0
 
-    .line 181
     new-instance v0, Landroid/telephony/SmsMessage$MessageTpPid;
 
     const-string v1, "MSG_PID_DEFAULT"
@@ -61,7 +60,6 @@
 
     sput-object v0, Landroid/telephony/SmsMessage$MessageTpPid;->MSG_PID_DEFAULT:Landroid/telephony/SmsMessage$MessageTpPid;
 
-    .line 182
     new-instance v0, Landroid/telephony/SmsMessage$MessageTpPid;
 
     const-string v1, "MSG_PID_SMS_HANDLED"
@@ -72,7 +70,6 @@
 
     sput-object v0, Landroid/telephony/SmsMessage$MessageTpPid;->MSG_PID_SMS_HANDLED:Landroid/telephony/SmsMessage$MessageTpPid;
 
-    .line 183
     new-instance v0, Landroid/telephony/SmsMessage$MessageTpPid;
 
     const-string v1, "MSG_PID_LBS_PORT"
@@ -83,7 +80,6 @@
 
     sput-object v0, Landroid/telephony/SmsMessage$MessageTpPid;->MSG_PID_LBS_PORT:Landroid/telephony/SmsMessage$MessageTpPid;
 
-    .line 184
     new-instance v0, Landroid/telephony/SmsMessage$MessageTpPid;
 
     const-string v1, "MSG_PID_APPLICATION_PORT"
@@ -94,7 +90,6 @@
 
     sput-object v0, Landroid/telephony/SmsMessage$MessageTpPid;->MSG_PID_APPLICATION_PORT:Landroid/telephony/SmsMessage$MessageTpPid;
 
-    .line 180
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/telephony/SmsMessage$MessageTpPid;
@@ -130,13 +125,10 @@
     .end annotation
 
     .prologue
-    .line 188
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 189
     iput p3, p0, Landroid/telephony/SmsMessage$MessageTpPid;->mValue:I
 
-    .line 190
     return-void
 .end method
 
@@ -145,7 +137,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 196
     invoke-static {}, Landroid/telephony/SmsMessage$MessageTpPid;->values()[Landroid/telephony/SmsMessage$MessageTpPid;
 
     move-result-object v0
@@ -162,25 +153,21 @@
 
     aget-object v1, v0, v2
 
-    .line 197
     .local v1, "e":Landroid/telephony/SmsMessage$MessageTpPid;
     iget v4, v1, Landroid/telephony/SmsMessage$MessageTpPid;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 201
     .end local v1    # "e":Landroid/telephony/SmsMessage$MessageTpPid;
     :goto_1
     return-object v1
 
-    .line 196
     .restart local v1    # "e":Landroid/telephony/SmsMessage$MessageTpPid;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 201
     .end local v1    # "e":Landroid/telephony/SmsMessage$MessageTpPid;
     :cond_1
     const/4 v1, 0x0
@@ -193,7 +180,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 180
     const-class v0, Landroid/telephony/SmsMessage$MessageTpPid;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 180
     sget-object v0, Landroid/telephony/SmsMessage$MessageTpPid;->$VALUES:[Landroid/telephony/SmsMessage$MessageTpPid;
 
     invoke-virtual {v0}, [Landroid/telephony/SmsMessage$MessageTpPid;->clone()Ljava/lang/Object;
@@ -227,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Landroid/telephony/SmsMessage$MessageTpPid;->mValue:I
 
     return v0

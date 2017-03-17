@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2092
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$2;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 2095
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$2;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mPocketQueryLock:Ljava/lang/Object;
@@ -51,17 +49,14 @@
 
     monitor-enter v3
 
-    .line 2096
     :try_start_0
     iget-object v1, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 2097
     .local v1, "scontext":Landroid/hardware/scontext/SContext;
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getPhoneStatusMonitorContext()Landroid/hardware/scontext/SContextPhoneStatusMonitor;
 
     move-result-object v0
 
-    .line 2099
     .local v0, "phoneStatusMonitor":Landroid/hardware/scontext/SContextPhoneStatusMonitor;
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$2;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -72,7 +67,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mIsInPocket:Z
     invoke-static {v2, v4}, Lcom/android/server/power/PowerManagerService;->access$1402(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 2100
     const-string v2, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -102,7 +96,6 @@
 
     invoke-static {v2, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2102
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$2;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v4, 0x1
@@ -110,7 +103,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mPocketQueryDone:Z
     invoke-static {v2, v4}, Lcom/android/server/power/PowerManagerService;->access$1502(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 2103
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$2;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mPocketQueryLock:Ljava/lang/Object;
@@ -120,13 +112,10 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
 
-    .line 2104
     monitor-exit v3
 
-    .line 2105
     return-void
 
-    .line 2104
     .end local v0    # "phoneStatusMonitor":Landroid/hardware/scontext/SContextPhoneStatusMonitor;
     .end local v1    # "scontext":Landroid/hardware/scontext/SContext;
     :catchall_0

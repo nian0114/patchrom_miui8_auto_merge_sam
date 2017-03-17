@@ -13,13 +13,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput p1, p0, Lmf/org/apache/xerces/impl/xs/util/XInt;->fValue:I
 
-    .line 33
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .param p1, "compareVal"    # Lmf/org/apache/xerces/impl/xs/util/XInt;
 
     .prologue
-    .line 44
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XInt;->fValue:I
 
     iget v1, p1, Lmf/org/apache/xerces/impl/xs/util/XInt;->fValue:I
@@ -52,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XInt;->fValue:I
 
     return v0
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XInt;->fValue:I
 
     int-to-short v0, v0
@@ -74,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XInt;->fValue:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

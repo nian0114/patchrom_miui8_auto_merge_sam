@@ -40,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 51
     const-string v0, "IPPhoneSettings"
 
     sput-object v0, Lcom/movial/ipphone/IPPhoneSettings;->TAG:Ljava/lang/String;
 
-    .line 53
     const-string v0, "content://ipprovider/ipphonesettings"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -61,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,16 +75,13 @@
 
     const/4 v2, -0x1
 
-    .line 125
     invoke-static {p0, p1, v2}, Lcom/movial/ipphone/IPPhoneSettings;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 126
     .local v0, "i":I
     if-ne v0, v2, :cond_0
 
-    .line 127
     .end local p2    # "value":Z
     :goto_0
     return p2
@@ -114,18 +108,15 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 113
     const/4 v1, 0x0
 
     invoke-static {p0, p1, v1}, Lcom/movial/ipphone/IPPhoneSettings;->getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 114
     .local v0, "s":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 117
     .end local p2    # "value":I
     :goto_0
     return p2
@@ -146,14 +137,11 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     const/4 v6, 0x0
 
-    .line 88
     .local v6, "bFound":Z
     const/4 v7, 0x0
 
-    .line 90
     .local v7, "c":Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Lcom/movial/ipphone/IPPhoneSettings;->CONTENT_URI:Landroid/net/Uri;
@@ -186,7 +174,6 @@
 
     move-result-object v7
 
-    .line 91
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -195,17 +182,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     const/4 v0, 0x0
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 94
     const/4 v6, 0x1
 
-    .line 95
     sget-object v0, Lcom/movial/ipphone/IPPhoneSettings;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -247,18 +231,15 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
     :cond_0
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 102
     :cond_1
     :goto_0
     if-nez v6, :cond_2
 
-    .line 103
     sget-object v0, Lcom/movial/ipphone/IPPhoneSettings;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -297,15 +278,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :cond_2
     return-object p2
 
-    .line 97
     :catch_0
     move-exception v8
 
-    .line 98
     .local v8, "e":Ljava/lang/Exception;
     :try_start_1
     sget-object v0, Lcom/movial/ipphone/IPPhoneSettings;->TAG:Ljava/lang/String;
@@ -318,7 +296,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 100
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
@@ -344,7 +321,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 121
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -369,7 +345,6 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 109
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -388,7 +363,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     sget-object v2, Lcom/movial/ipphone/IPPhoneSettings;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -427,43 +401,35 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :try_start_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 75
     .local v1, "values":Landroid/content/ContentValues;
     const-string v2, "name"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     const-string v2, "value"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
     sget-object v2, Lcom/movial/ipphone/IPPhoneSettings;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v2, v1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 79
     const/4 v2, 0x1
 
-    .line 82
     .end local v1    # "values":Landroid/content/ContentValues;
     :goto_0
     return v2
 
-    .line 80
     :catch_0
     move-exception v0
 
-    .line 81
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/movial/ipphone/IPPhoneSettings;->TAG:Ljava/lang/String;
 
@@ -473,7 +439,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     const/4 v2, 0x0
 
     goto :goto_0

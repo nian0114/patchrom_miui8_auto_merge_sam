@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 414
     iput-object p1, p0, Lcom/android/server/usb/UsbHostManager$2;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 417
     iget-object v0, p0, Lcom/android/server/usb/UsbHostManager$2;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     # invokes: Lcom/android/server/usb/UsbHostManager;->dealWithDevicesOnBootComplete()V
     invoke-static {v0}, Lcom/android/server/usb/UsbHostManager;->access$100(Lcom/android/server/usb/UsbHostManager;)V
 
-    .line 418
     return-void
 .end method

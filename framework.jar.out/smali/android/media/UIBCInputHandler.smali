@@ -16,19 +16,16 @@
     .locals 2
 
     .prologue
-    .line 20
     const-string v0, "UIBCInputHandler_JNI.java"
 
-    const-string/jumbo v1, "try to load libuibc.so"
+    const-string v1, "try to load libuibc.so"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
-    const-string/jumbo v0, "uibc"
+    const-string v0, "uibc"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
@@ -37,25 +34,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/UIBCInputHandler;->mContext:Landroid/content/Context;
 
-    .line 47
     iput-object p1, p0, Landroid/media/UIBCInputHandler;->mContext:Landroid/content/Context;
 
-    .line 48
     const-string v0, "UIBCInputHandler_JNI.java"
 
     const-string v1, "UIBCInputHandler construct"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     return-void
 .end method
 
@@ -95,17 +87,14 @@
     .locals 5
 
     .prologue
-    .line 52
     const/4 v1, 0x0
 
-    .line 54
     .local v1, "isActive":Z
     :try_start_0
     invoke-static {}, Landroid/media/UIBCInputHandler;->isActiveUIBC()Z
 
     move-result v1
 
-    .line 55
     const-string v2, "UIBCInputHandler_JNI.java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -130,15 +119,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 59
     :goto_0
     return v1
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Ljava/lang/NoSuchMethodError;
     const-string v2, "UIBCInputHandler_JNI.java"
 

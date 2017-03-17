@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 170
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$1;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 173
     const-string v2, "availableArray"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 175
     .local v1, "available":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v2, "activeArray"
 
@@ -54,7 +51,6 @@
 
     move-result-object v0
 
-    .line 177
     .local v0, "active":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$1;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -68,6 +64,5 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 178
     return-void
 .end method

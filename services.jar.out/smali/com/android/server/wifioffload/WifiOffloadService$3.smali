@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 761
     iput-object p1, p0, Lcom/android/server/wifioffload/WifiOffloadService$3;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -43,7 +42,6 @@
 
     const/4 v1, 0x1
 
-    .line 765
     :try_start_0
     iget-object v4, p0, Lcom/android/server/wifioffload/WifiOffloadService$3;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
@@ -72,7 +70,6 @@
     # setter for: Lcom/android/server/wifioffload/WifiOffloadService;->mAirPlaneModeEnabled:Z
     invoke-static {v4, v3}, Lcom/android/server/wifioffload/WifiOffloadService;->access$702(Lcom/android/server/wifioffload/WifiOffloadService;Z)Z
 
-    .line 768
     iget-object v3, p0, Lcom/android/server/wifioffload/WifiOffloadService$3;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
 
     iget-object v4, p0, Lcom/android/server/wifioffload/WifiOffloadService$3;->this$0:Lcom/android/server/wifioffload/WifiOffloadService;
@@ -86,7 +83,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "wifi_offload_network_notify"
+    const-string v5, "wifi_offload_network_notify"
 
     invoke-static {v4, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
@@ -100,31 +97,25 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 775
     :goto_2
     return-void
 
     :cond_0
     move v3, v2
 
-    .line 765
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 768
     goto :goto_1
 
-    .line 771
     :catch_0
     move-exception v0
 
-    .line 772
     .local v0, "e":Landroid/provider/Settings$SettingNotFoundException;
     invoke-virtual {v0}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
-    .line 773
     const-string v1, "WifiOffloadService"
 
     new-instance v2, Ljava/lang/StringBuilder;

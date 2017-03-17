@@ -47,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mAuthenticationData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     return-object v0
@@ -69,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mDeviceInfo:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
     return-object v0
@@ -79,12 +76,10 @@
     .locals 2
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mKeyID:[B
 
     if-eqz v0, :cond_0
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mKeyID:[B
 
     const/4 v1, 0x0
@@ -93,7 +88,6 @@
 
     move-result-object v0
 
-    .line 63
     :goto_0
     return-object v0
 
@@ -107,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixDSKPP:Ljava/lang/String;
 
     return-object v0
@@ -117,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixPKCS5:Ljava/lang/String;
 
     return-object v0
@@ -127,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixPSKC:Ljava/lang/String;
 
     return-object v0
@@ -137,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixXENC:Ljava/lang/String;
 
     return-object v0
@@ -147,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mProtocolVariant:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
     return-object v0
@@ -157,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedEncryptionAlgorithms:Ljava/lang/String;
 
     return-object v0
@@ -167,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedKeyPackageFormat:Ljava/lang/String;
 
     return-object v0
@@ -186,7 +173,6 @@
     .end annotation
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedKeyTypes:Ljava/util/ArrayList;
 
     return-object v0
@@ -196,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedMacAlgorithms:Ljava/lang/String;
 
     return-object v0
@@ -206,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mVersion:Ljava/lang/String;
 
     return-object v0
@@ -216,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixDS:Ljava/lang/String;
 
     return-object v0
@@ -227,10 +210,8 @@
     .param p1, "mAuthenticationData"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mAuthenticationData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
-    .line 57
     return-void
 .end method
 
@@ -239,10 +220,8 @@
     .param p1, "mDeviceInfo"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mDeviceInfo:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
-    .line 125
     return-void
 .end method
 
@@ -251,7 +230,6 @@
     .param p1, "mKeyID"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const-string v1, "UTF-8"
 
     invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -262,7 +240,6 @@
 
     move-result-object v0
 
-    .line 68
     .local v0, "keyID":[B
     const/4 v1, 0x0
 
@@ -272,7 +249,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mKeyID:[B
 
-    .line 69
     return-void
 .end method
 
@@ -281,10 +257,8 @@
     .param p1, "mPrefixDS"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixDS:Ljava/lang/String;
 
-    .line 117
     return-void
 .end method
 
@@ -293,10 +267,8 @@
     .param p1, "mPrefixDSKPP"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixDSKPP:Ljava/lang/String;
 
-    .line 133
     return-void
 .end method
 
@@ -305,10 +277,8 @@
     .param p1, "mPrefixPKCS5"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixPKCS5:Ljava/lang/String;
 
-    .line 33
     return-void
 .end method
 
@@ -317,10 +287,8 @@
     .param p1, "mPrefixPSKC"    # Ljava/lang/String;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixPSKC:Ljava/lang/String;
 
-    .line 141
     return-void
 .end method
 
@@ -329,10 +297,8 @@
     .param p1, "mPrefixXENC"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mPrefixXENC:Ljava/lang/String;
 
-    .line 109
     return-void
 .end method
 
@@ -341,10 +307,8 @@
     .param p1, "mProtocolVariant"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mProtocolVariant:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
-    .line 41
     return-void
 .end method
 
@@ -353,10 +317,8 @@
     .param p1, "mSupportedEncryptionAlgorithms"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedEncryptionAlgorithms:Ljava/lang/String;
 
-    .line 93
     return-void
 .end method
 
@@ -365,10 +327,8 @@
     .param p1, "mSupportedKeyPackageFormat"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedKeyPackageFormat:Ljava/lang/String;
 
-    .line 77
     return-void
 .end method
 
@@ -385,11 +345,9 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p1, "mSupportedKeyTypes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedKeyTypes:Ljava/util/ArrayList;
 
-    .line 101
     return-void
 .end method
 
@@ -398,10 +356,8 @@
     .param p1, "mSupportedMacAlgorithms"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mSupportedMacAlgorithms:Ljava/lang/String;
 
-    .line 85
     return-void
 .end method
 
@@ -410,9 +366,7 @@
     .param p1, "mVersion"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->mVersion:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method

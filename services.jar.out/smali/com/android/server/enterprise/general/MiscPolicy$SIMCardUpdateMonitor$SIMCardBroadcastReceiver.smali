@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 663
     iput-object p1, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/general/MiscPolicy$1;
 
     .prologue
-    .line 663
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;-><init>(Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;)V
 
     return-void
@@ -51,13 +49,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 670
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 671
     .local v0, "action":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -86,7 +82,6 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 673
     const-string v8, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -95,14 +90,12 @@
 
     if-eqz v8, :cond_0
 
-    .line 674
-    const-string/jumbo v8, "ss"
+    const-string v8, "ss"
 
     invoke-virtual {p2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 675
     .local v7, "stateExtra":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -131,7 +124,6 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 677
     const-string v8, "ABSENT"
 
     invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -140,7 +132,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 678
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # getter for: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->TAG:Ljava/lang/String;
@@ -174,7 +165,6 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 680
     const-string v8, "SimChangeTime"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -203,7 +193,6 @@
 
     invoke-static {v8, v9, v10}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 682
     const-string v8, "SimChangeOperation"
 
     const-string v9, "1"
@@ -212,14 +201,12 @@
 
     invoke-static {v8, v9, v10}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 686
     new-instance v5, Ljava/io/File;
 
     const-string v8, "/data/system/SimCard.dat"
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 687
     .local v5, "lFile":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -233,16 +220,14 @@
 
     invoke-static {v8, v9, v10, v11}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 689
     new-instance v3, Landroid/content/Intent;
 
     const-string v8, "com.samsung.edm.intent.action.SIM_CARD_CHANGED"
 
     invoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 690
     .local v3, "i":Landroid/content/Intent;
-    const-string/jumbo v8, "simChangeInfo"
+    const-string v8, "simChangeInfo"
 
     iget-object v9, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -262,7 +247,6 @@
 
     invoke-virtual {v3, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 692
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # getter for: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->mCtxt:Landroid/content/Context;
@@ -272,16 +256,14 @@
 
     invoke-virtual {v8, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 695
     new-instance v4, Landroid/content/Intent;
 
     const-string v8, "android.intent.action.sec.SIM_CARD_CHANGED"
 
     invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 696
     .local v4, "i_backward":Landroid/content/Intent;
-    const-string/jumbo v8, "simChangeInfo"
+    const-string v8, "simChangeInfo"
 
     iget-object v9, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -301,7 +283,6 @@
 
     invoke-virtual {v4, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 698
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # getter for: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->mCtxt:Landroid/content/Context;
@@ -311,7 +292,6 @@
 
     invoke-virtual {v8, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 737
     .end local v0    # "action":Ljava/lang/String;
     .end local v3    # "i":Landroid/content/Intent;
     .end local v4    # "i_backward":Landroid/content/Intent;
@@ -321,7 +301,6 @@
     :goto_0
     return-void
 
-    .line 700
     .restart local v0    # "action":Ljava/lang/String;
     .restart local v7    # "stateExtra":Ljava/lang/String;
     :cond_1
@@ -333,7 +312,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 701
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # getter for: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->TAG:Ljava/lang/String;
@@ -345,13 +323,11 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 703
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # invokes: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->saveSimState()V
     invoke-static {v8}, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->access$300(Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;)V
 
-    .line 705
     const-string v8, "SimChangeTime"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -380,7 +356,6 @@
 
     invoke-static {v8, v9, v10}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 708
     const-string v8, "PreviousSimSerialNumber"
 
     const-string v9, "/data/system/SimCard.dat"
@@ -389,7 +364,6 @@
 
     move-result-object v6
 
-    .line 709
     .local v6, "previousSN":Ljava/lang/String;
     const-string v8, "CurrentSimSerialNumber"
 
@@ -399,7 +373,6 @@
 
     move-result-object v1
 
-    .line 711
     .local v1, "currentSN":Ljava/lang/String;
     if-eqz v6, :cond_2
 
@@ -409,7 +382,6 @@
 
     if-nez v8, :cond_2
 
-    .line 712
     const-string v8, "SimChangeOperation"
 
     const-string v9, "2"
@@ -418,7 +390,6 @@
 
     invoke-static {v8, v9, v10}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 720
     :goto_1
     new-instance v3, Landroid/content/Intent;
 
@@ -426,9 +397,8 @@
 
     invoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 721
     .restart local v3    # "i":Landroid/content/Intent;
-    const-string/jumbo v8, "simChangeInfo"
+    const-string v8, "simChangeInfo"
 
     iget-object v9, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -448,7 +418,6 @@
 
     invoke-virtual {v3, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 723
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # getter for: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->mCtxt:Landroid/content/Context;
@@ -458,16 +427,14 @@
 
     invoke-virtual {v8, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 726
     new-instance v4, Landroid/content/Intent;
 
     const-string v8, "android.intent.action.sec.SIM_CARD_CHANGED"
 
     invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 727
     .restart local v4    # "i_backward":Landroid/content/Intent;
-    const-string/jumbo v8, "simChangeInfo"
+    const-string v8, "simChangeInfo"
 
     iget-object v9, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -487,7 +454,6 @@
 
     invoke-virtual {v4, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 729
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
     # getter for: Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;->mCtxt:Landroid/content/Context;
@@ -501,7 +467,6 @@
 
     goto/16 :goto_0
 
-    .line 733
     .end local v0    # "action":Ljava/lang/String;
     .end local v1    # "currentSN":Ljava/lang/String;
     .end local v3    # "i":Landroid/content/Intent;
@@ -511,7 +476,6 @@
     :catch_0
     move-exception v2
 
-    .line 734
     .local v2, "e":Ljava/lang/Exception;
     iget-object v8, p0, Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor$SIMCardBroadcastReceiver;->this$1:Lcom/android/server/enterprise/general/MiscPolicy$SIMCardUpdateMonitor;
 
@@ -542,7 +506,6 @@
 
     goto/16 :goto_0
 
-    .line 716
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "action":Ljava/lang/String;
     .restart local v1    # "currentSN":Ljava/lang/String;

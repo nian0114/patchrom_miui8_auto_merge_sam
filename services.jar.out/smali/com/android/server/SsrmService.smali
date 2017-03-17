@@ -24,7 +24,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 40
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -37,10 +36,8 @@
 
     sput-boolean v0, Lcom/android/server/SsrmService;->COMMON_GESTURE_WITH_FINGERHOVER:Z
 
-    .line 46
     sput-boolean v2, Lcom/android/server/SsrmService;->GMS_BUNDLING:Z
 
-    .line 49
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -59,7 +56,6 @@
 
     if-nez v0, :cond_0
 
-    .line 50
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -72,11 +68,9 @@
 
     sput-boolean v0, Lcom/android/server/SsrmService;->GMS_BUNDLING:Z
 
-    .line 54
     :goto_0
     return-void
 
-    .line 52
     :cond_0
     sput-boolean v2, Lcom/android/server/SsrmService;->GMS_BUNDLING:Z
 
@@ -87,7 +81,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

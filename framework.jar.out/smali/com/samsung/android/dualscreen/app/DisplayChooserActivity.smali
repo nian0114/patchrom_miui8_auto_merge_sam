@@ -48,10 +48,8 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-direct {p0}, Lcom/android/internal/app/AlertActivity;-><init>()V
 
-    .line 272
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .param p0, "x0"    # Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;
 
     .prologue
-    .line 67
     iget v0, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mIconSize:I
 
     return v0
@@ -70,7 +67,6 @@
     .locals 3
 
     .prologue
-    .line 88
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->getIntent()Landroid/content/Intent;
@@ -79,7 +75,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 94
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0}, Landroid/content/Intent;->getFlags()I
 
@@ -91,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 95
     return-object v0
 .end method
 
@@ -103,7 +97,6 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 179
     :try_start_0
     iget v2, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mIconDpi:I
 
@@ -113,17 +106,14 @@
 
     move-result-object v1
 
-    .line 184
     .local v1, "result":Landroid/graphics/drawable/Drawable;
     :goto_0
     return-object v1
 
-    .line 180
     .end local v1    # "result":Landroid/graphics/drawable/Drawable;
     :catch_0
     move-exception v0
 
-    .line 181
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     const/4 v1, 0x0
 
@@ -136,24 +126,19 @@
     .param p1, "ri"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 190
     :try_start_0
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 191
     .local v0, "ci":Landroid/content/pm/ComponentInfo;
     if-nez v0, :cond_1
 
-    .line 192
     const/4 v1, 0x0
 
-    .line 215
     .end local v0    # "ci":Landroid/content/pm/ComponentInfo;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 194
     .restart local v0    # "ci":Landroid/content/pm/ComponentInfo;
     :cond_1
     iget-object v5, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mPm:Landroid/content/pm/PackageManager;
@@ -169,11 +154,9 @@
 
     move-result-object v1
 
-    .line 195
     .local v1, "dr":Landroid/graphics/drawable/Drawable;
     if-nez v1, :cond_0
 
-    .line 199
     iget-object v4, p1, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
     if-eqz v4, :cond_2
@@ -182,7 +165,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 200
     iget-object v4, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v5, p1, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
@@ -197,20 +179,16 @@
 
     move-result-object v1
 
-    .line 201
     if-nez v1, :cond_0
 
-    .line 205
     :cond_2
     invoke-virtual {p1}, Landroid/content/pm/ResolveInfo;->getIconResource()I
 
     move-result v3
 
-    .line 206
     .local v3, "iconRes":I
     if-eqz v3, :cond_3
 
-    .line 207
     iget-object v4, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v5, v0, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
@@ -225,10 +203,8 @@
 
     move-result-object v1
 
-    .line 208
     if-nez v1, :cond_0
 
-    .line 215
     .end local v0    # "ci":Landroid/content/pm/ComponentInfo;
     .end local v1    # "dr":Landroid/graphics/drawable/Drawable;
     .end local v3    # "iconRes":I
@@ -242,7 +218,6 @@
 
     goto :goto_0
 
-    .line 194
     .restart local v0    # "ci":Landroid/content/pm/ComponentInfo;
     :cond_4
     :try_start_1
@@ -252,12 +227,10 @@
 
     goto :goto_1
 
-    .line 212
     .end local v0    # "ci":Landroid/content/pm/ComponentInfo;
     :catch_0
     move-exception v2
 
-    .line 213
     .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "DisplayChooserActivity"
 
@@ -275,7 +248,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 100
     invoke-direct {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->makeMyIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -300,7 +272,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->onCreate(Landroid/os/Bundle;Landroid/content/Intent;Ljava/lang/CharSequence;[Landroid/content/Intent;Ljava/util/List;Z)V
 
-    .line 103
     return-void
 .end method
 
@@ -327,16 +298,13 @@
     .end annotation
 
     .prologue
-    .line 107
     .local p5, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const v1, 0x10302d2
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->setTheme(I)V
 
-    .line 108
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 110
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -354,7 +322,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 116
     :goto_0
     const/4 v1, 0x0
 
@@ -362,8 +329,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 118
-    const-string/jumbo v1, "theme"
+    const-string v1, "theme"
 
     const/4 v2, 0x0
 
@@ -373,21 +339,17 @@
 
     move-result v13
 
-    .line 120
     .local v13, "theme":I
     packed-switch v13, :pswitch_data_0
 
-    .line 132
     :goto_1
     iget-object v9, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
-    .line 134
     .local v9, "ap":Lcom/android/internal/app/AlertController$AlertParams;
     move-object/from16 v0, p3
 
     iput-object v0, v9, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
-    .line 136
     const-string v1, "activity"
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -396,7 +358,6 @@
 
     check-cast v8, Landroid/app/ActivityManager;
 
-    .line 137
     .local v8, "am":Landroid/app/ActivityManager;
     invoke-virtual {v8}, Landroid/app/ActivityManager;->getLauncherLargeIconDensity()I
 
@@ -404,21 +365,18 @@
 
     iput v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mIconDpi:I
 
-    .line 138
     invoke-virtual {v8}, Landroid/app/ActivityManager;->getLauncherLargeIconSize()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mIconSize:I
 
-    .line 140
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 142
     const-string v1, "android.intent.extra.DUAL_SCREEN_ORIGINAL_TARGET_ACTIVITY"
 
     move-object/from16 v0, p2
@@ -429,23 +387,19 @@
 
     check-cast v10, Landroid/content/ComponentName;
 
-    .line 144
     .local v10, "cn":Landroid/content/ComponentName;
     if-eqz v10, :cond_0
 
-    .line 145
     const-string v1, "android.intent.extra.DUAL_SCREEN_ORIGINAL_TARGET_ACTIVITY"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
-    .line 146
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v10}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 148
     :cond_0
     const-string v1, "android.intent.extra.EXTRA_DUAL_SCREEN_CALLER_ACTIVITY_DISPLAY_ID"
 
@@ -457,7 +411,6 @@
 
     move-result v7
 
-    .line 150
     .local v7, "callerDisplayId":I
     const-string v1, "android.intent.extra.EXTRA_DUAL_SCREEN_CALLER_ACTIVITY_DISPLAY_ID"
 
@@ -465,7 +418,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getLaunchParams()Lcom/samsung/android/dualscreen/DualScreenLaunchParams;
 
     move-result-object v1
@@ -474,10 +426,8 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->setFromDisplayChooser(Z)V
 
-    .line 154
     const/4 v5, 0x0
 
-    .line 155
     .local v5, "rInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mPm:Landroid/content/pm/PackageManager;
 
@@ -489,11 +439,9 @@
 
     move-result-object v12
 
-    .line 158
     .local v12, "resolvedList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v12, :cond_1
 
-    .line 159
     const/4 v1, 0x0
 
     invoke-interface {v12, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -503,7 +451,6 @@
     .end local v5    # "rInfo":Landroid/content/pm/ResolveInfo;
     check-cast v5, Landroid/content/pm/ResolveInfo;
 
-    .line 162
     .restart local v5    # "rInfo":Landroid/content/pm/ResolveInfo;
     :cond_1
     const-string v1, "DisplayChooserActivity"
@@ -512,7 +459,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onCreate() : rInfo="
+    const-string v3, "onCreate() : rInfo="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -528,14 +475,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     const-string v1, "DisplayChooserActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onCreate() : callerDisplayId="
+    const-string v3, "onCreate() : callerDisplayId="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -551,7 +497,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     new-instance v1, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayListAdapter;
 
     iget v6, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mLaunchedFromUid:I
@@ -566,7 +511,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mAdapter:Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayListAdapter;
 
-    .line 167
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
@@ -581,7 +525,6 @@
 
     iput-object v1, v9, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
-    .line 168
     iget-object v1, v9, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     const v2, 0x102039b
@@ -594,32 +537,26 @@
 
     iput-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mGrid:Landroid/widget/GridView;
 
-    .line 169
     iget-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mGrid:Landroid/widget/GridView;
 
     iget-object v2, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mAdapter:Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayListAdapter;
 
     invoke-virtual {v1, v2}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 170
     iget-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mGrid:Landroid/widget/GridView;
 
     invoke-virtual {v1, p0}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 171
     iget-object v1, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mGrid:Landroid/widget/GridView;
 
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 173
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->setupAlert()V
 
-    .line 174
     return-void
 
-    .line 112
     .end local v5    # "rInfo":Landroid/content/pm/ResolveInfo;
     .end local v7    # "callerDisplayId":I
     .end local v8    # "am":Landroid/app/ActivityManager;
@@ -630,7 +567,6 @@
     :catch_0
     move-exception v11
 
-    .line 113
     .local v11, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -638,7 +574,6 @@
 
     goto/16 :goto_0
 
-    .line 122
     .end local v11    # "e":Landroid/os/RemoteException;
     .restart local v13    # "theme":I
     :pswitch_0
@@ -648,7 +583,6 @@
 
     goto/16 :goto_1
 
-    .line 125
     :pswitch_1
     const v1, 0x10302d1
 
@@ -656,7 +590,6 @@
 
     goto/16 :goto_1
 
-    .line 128
     :pswitch_2
     const v1, 0x10302d2
 
@@ -664,7 +597,6 @@
 
     goto/16 :goto_1
 
-    .line 120
     nop
 
     :pswitch_data_0
@@ -681,25 +613,20 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 250
     if-eqz p2, :cond_0
 
-    .line 252
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 257
     :cond_0
     :goto_0
     return-void
 
-    .line 253
     :catch_0
     move-exception v0
 
-    .line 254
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v1, "DisplayChooserActivity"
 
@@ -726,7 +653,6 @@
     .end annotation
 
     .prologue
-    .line 237
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v2, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mGrid:Landroid/widget/GridView;
 
@@ -734,7 +660,6 @@
 
     move-result v0
 
-    .line 238
     .local v0, "checkedPos":I
     const/4 v2, -0x1
 
@@ -742,15 +667,12 @@
 
     const/4 v1, 0x1
 
-    .line 239
     .local v1, "hasValidSelection":Z
     :goto_0
     invoke-virtual {p0, p3}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->startSelected(I)V
 
-    .line 240
     return-void
 
-    .line 238
     .end local v1    # "hasValidSelection":Z
     :cond_0
     const/4 v1, 0x0
@@ -762,10 +684,8 @@
     .locals 2
 
     .prologue
-    .line 220
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStop()V
 
-    .line 221
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -780,17 +700,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 229
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->isChangingConfigurations()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 230
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->finish()V
 
-    .line 233
     :cond_0
     return-void
 .end method
@@ -800,14 +717,12 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 243
     iget-object v2, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mAdapter:Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayListAdapter;
 
     invoke-virtual {v2, p1}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayListAdapter;->resolveInfoForPosition(I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
 
-    .line 244
     .local v1, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v2, p0, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->mAdapter:Lcom/samsung/android/dualscreen/app/DisplayChooserActivity$DisplayListAdapter;
 
@@ -815,13 +730,10 @@
 
     move-result-object v0
 
-    .line 245
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v1, v0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->onIntentSelected(Landroid/content/pm/ResolveInfo;Landroid/content/Intent;)V
 
-    .line 246
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/app/DisplayChooserActivity;->finish()V
 
-    .line 247
     return-void
 .end method

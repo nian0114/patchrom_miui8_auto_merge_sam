@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 153
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 99
     const-string v0, "charset"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 111
-    const-string/jumbo v0, "defer"
+    const-string v0, "defer"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getBinary(Ljava/lang/String;)Z
 
@@ -58,8 +54,7 @@
     .locals 1
 
     .prologue
-    .line 88
-    const-string/jumbo v0, "event"
+    const-string v0, "event"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -72,8 +67,7 @@
     .locals 1
 
     .prologue
-    .line 76
-    const-string/jumbo v0, "for"
+    const-string v0, "for"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -86,8 +80,7 @@
     .locals 1
 
     .prologue
-    .line 123
-    const-string/jumbo v0, "src"
+    const-string v0, "src"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -100,30 +93,25 @@
     .locals 3
 
     .prologue
-    .line 40
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 44
     .local v1, "text":Ljava/lang/StringBuffer;
     invoke-virtual {p0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getFirstChild()Lmf/org/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 45
     .local v0, "child":Lmf/org/w3c/dom/Node;
     :goto_0
     if-nez v0, :cond_0
 
-    .line 52
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 47
     :cond_0
     instance-of v2, v0, Lmf/org/w3c/dom/Text;
 
@@ -131,7 +119,6 @@
 
     move-object v2, v0
 
-    .line 48
     check-cast v2, Lmf/org/w3c/dom/Text;
 
     invoke-interface {v2}, Lmf/org/w3c/dom/Text;->getData()Ljava/lang/String;
@@ -140,7 +127,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 50
     :cond_1
     invoke-interface {v0}, Lmf/org/w3c/dom/Node;->getNextSibling()Lmf/org/w3c/dom/Node;
 
@@ -153,8 +139,7 @@
     .locals 1
 
     .prologue
-    .line 135
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -168,12 +153,10 @@
     .param p1, "charset"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     const-string v0, "charset"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     return-void
 .end method
 
@@ -182,12 +165,10 @@
     .param p1, "defer"    # Z
 
     .prologue
-    .line 117
-    const-string/jumbo v0, "defer"
+    const-string v0, "defer"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 118
     return-void
 .end method
 
@@ -196,12 +177,10 @@
     .param p1, "event"    # Ljava/lang/String;
 
     .prologue
-    .line 94
-    const-string/jumbo v0, "event"
+    const-string v0, "event"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 95
     return-void
 .end method
 
@@ -210,12 +189,10 @@
     .param p1, "htmlFor"    # Ljava/lang/String;
 
     .prologue
-    .line 82
-    const-string/jumbo v0, "for"
+    const-string v0, "for"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     return-void
 .end method
 
@@ -224,12 +201,10 @@
     .param p1, "src"    # Ljava/lang/String;
 
     .prologue
-    .line 129
-    const-string/jumbo v0, "src"
+    const-string v0, "src"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     return-void
 .end method
 
@@ -238,17 +213,14 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     invoke-virtual {p0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getFirstChild()Lmf/org/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 64
     .local v0, "child":Lmf/org/w3c/dom/Node;
     :goto_0
     if-nez v0, :cond_0
 
-    .line 70
     invoke-virtual {p0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->getOwnerDocument()Lmf/org/w3c/dom/Document;
 
     move-result-object v2
@@ -263,20 +235,16 @@
 
     invoke-virtual {p0, v2, v3}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->insertBefore(Lmf/org/w3c/dom/Node;Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Node;
 
-    .line 71
     return-void
 
-    .line 66
     :cond_0
     invoke-interface {v0}, Lmf/org/w3c/dom/Node;->getNextSibling()Lmf/org/w3c/dom/Node;
 
     move-result-object v1
 
-    .line 67
     .local v1, "next":Lmf/org/w3c/dom/Node;
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->removeChild(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Node;
 
-    .line 68
     move-object v0, v1
 
     goto :goto_0
@@ -287,11 +255,9 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 141
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLScriptElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
     return-void
 .end method

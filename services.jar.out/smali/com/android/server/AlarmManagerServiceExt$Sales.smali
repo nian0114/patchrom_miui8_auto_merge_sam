@@ -47,8 +47,7 @@
 
     const/4 v1, 0x0
 
-    .line 3584
-    const-string/jumbo v0, "ro.csc.sales_code"
+    const-string v0, "ro.csc.sales_code"
 
     const-string v3, "NONE"
 
@@ -66,7 +65,6 @@
 
     sput-object v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
 
-    .line 3586
     const-string v0, "VZW"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -77,7 +75,6 @@
 
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->VZW:Z
 
-    .line 3588
     const-string v0, "ATT"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -114,7 +111,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->ATT:Z
 
-    .line 3590
     const-string v0, "TMB"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -125,7 +121,6 @@
 
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->TMO:Z
 
-    .line 3592
     const-string v0, "TMK"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -136,7 +131,6 @@
 
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->MPCS:Z
 
-    .line 3594
     const-string v0, "SPR"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -183,7 +177,6 @@
     :goto_1
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->SPR:Z
 
-    .line 3597
     const-string v0, "USC"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -220,7 +213,6 @@
     :goto_2
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->USCC:Z
 
-    .line 3599
     const-string v0, "RWC"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -417,7 +409,6 @@
     :goto_3
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->CANADA:Z
 
-    .line 3605
     const-string v0, "CHN"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -474,7 +465,6 @@
     :goto_4
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->CHINA:Z
 
-    .line 3608
     const-string v0, "DCM"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt$Sales;->SALES_CODE:Ljava/lang/String;
@@ -485,7 +475,6 @@
 
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->JAPAN:Z
 
-    .line 3610
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->VZW:Z
 
     if-nez v0, :cond_5
@@ -577,30 +566,25 @@
     :cond_7
     move v0, v1
 
-    .line 3588
     goto/16 :goto_0
 
     :cond_8
     move v0, v1
 
-    .line 3594
     goto/16 :goto_1
 
     :cond_9
     move v0, v1
 
-    .line 3597
     goto/16 :goto_2
 
     :cond_a
     move v0, v1
 
-    .line 3599
     goto/16 :goto_3
 
     :cond_b
     move v0, v1
 
-    .line 3605
     goto :goto_4
 .end method

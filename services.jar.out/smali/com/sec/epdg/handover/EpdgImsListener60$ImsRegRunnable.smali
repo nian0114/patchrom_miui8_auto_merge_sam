@@ -29,14 +29,11 @@
     .param p2, "reg"    # Lcom/sec/ims/ImsRegistration;
 
     .prologue
-    .line 390
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$ImsRegRunnable;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 391
     iput-object p2, p0, Lcom/sec/epdg/handover/EpdgImsListener60$ImsRegRunnable;->mReg:Lcom/sec/ims/ImsRegistration;
 
-    .line 392
     return-void
 .end method

@@ -99,7 +99,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityRuntimeException;
 
-    const-string/jumbo v3, "signature.Transform.node"
+    const-string v3, "signature.Transform.node"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityRuntimeException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -126,7 +126,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityRuntimeException;
 
-    const-string/jumbo v3, "signature.Transform.nodeAndType"
+    const-string v3, "signature.Transform.nodeAndType"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityRuntimeException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 

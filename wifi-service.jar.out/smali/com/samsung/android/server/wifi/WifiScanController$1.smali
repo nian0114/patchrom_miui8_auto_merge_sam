@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 552
     iput-object p1, p0, Lcom/samsung/android/server/wifi/WifiScanController$1;->this$0:Lcom/samsung/android/server/wifi/WifiScanController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 555
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiScanController$1;->this$0:Lcom/samsung/android/server/wifi/WifiScanController;
 
     # getter for: Lcom/samsung/android/server/wifi/WifiScanController;->mIsRegisteredSMDListener:Z
@@ -49,7 +47,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 556
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiScanController$1;->this$0:Lcom/samsung/android/server/wifi/WifiScanController;
 
     # invokes: Lcom/samsung/android/server/wifi/WifiScanController;->isLocationEnabled()Z
@@ -59,17 +56,14 @@
 
     if-nez v0, :cond_1
 
-    .line 557
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiScanController$1;->this$0:Lcom/samsung/android/server/wifi/WifiScanController;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/wifi/WifiScanController;->unregisterSensorMonitor()V
 
-    .line 562
     :cond_0
     :goto_0
     return-void
 
-    .line 558
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiScanController$1;->this$0:Lcom/samsung/android/server/wifi/WifiScanController;
 
@@ -80,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 559
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiScanController$1;->this$0:Lcom/samsung/android/server/wifi/WifiScanController;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/wifi/WifiScanController;->unregisterSensorMonitor()V

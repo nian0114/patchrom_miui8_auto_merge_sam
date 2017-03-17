@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1767
     iput-object p1, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 8
 
     .prologue
-    .line 1770
     const-wide/16 v0, 0x0
 
-    .line 1771
     .local v0, "maxCurrent":J
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
@@ -54,7 +51,6 @@
 
     monitor-enter v3
 
-    .line 1772
     :try_start_0
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
@@ -63,12 +59,10 @@
 
     move-result-wide v0
 
-    .line 1773
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1774
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLockBatteryInfoBackUp:Ljava/lang/Object;
@@ -78,7 +72,6 @@
 
     monitor-enter v3
 
-    .line 1775
     :try_start_1
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
@@ -93,7 +86,6 @@
 
     if-gez v2, :cond_0
 
-    .line 1776
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
     iget-object v4, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
@@ -106,7 +98,6 @@
     # setter for: Lcom/android/server/BatteryService;->mSavedBatteryMaxCurrent:J
     invoke-static {v2, v4, v5}, Lcom/android/server/BatteryService;->access$3302(Lcom/android/server/BatteryService;J)J
 
-    .line 1778
     :cond_0
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
@@ -119,13 +110,11 @@
 
     if-gez v2, :cond_1
 
-    .line 1779
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
     # setter for: Lcom/android/server/BatteryService;->mSavedBatteryMaxCurrent:J
     invoke-static {v2, v0, v1}, Lcom/android/server/BatteryService;->access$3302(Lcom/android/server/BatteryService;J)J
 
-    .line 1780
     iget-object v2, p0, Lcom/android/server/BatteryService$19;->this$0:Lcom/android/server/BatteryService;
 
     const-string v4, "/efs/FactoryApp/max_current"
@@ -140,16 +129,13 @@
     # invokes: Lcom/android/server/BatteryService;->saveBatteryInfo(Ljava/lang/String;J)I
     invoke-static {v2, v4, v6, v7}, Lcom/android/server/BatteryService;->access$3200(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 1782
     :cond_1
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1783
     return-void
 
-    .line 1773
     :catchall_0
     move-exception v2
 
@@ -160,7 +146,6 @@
 
     throw v2
 
-    .line 1782
     :catchall_1
     move-exception v2
 

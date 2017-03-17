@@ -15,17 +15,14 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lmf/javax/xml/validation/Schema;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/AbstractXMLSchema;->fFeatures:Ljava/util/HashMap;
 
-    .line 43
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .param p1, "featureId"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/AbstractXMLSchema;->fFeatures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -52,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 53
     new-instance v0, Lmf/org/apache/xerces/jaxp/validation/ValidatorImpl;
 
     invoke-direct {v0, p0}, Lmf/org/apache/xerces/jaxp/validation/ValidatorImpl;-><init>(Lmf/org/apache/xerces/jaxp/validation/XSGrammarPoolContainer;)V
@@ -64,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 60
     new-instance v0, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl;
 
     invoke-direct {v0, p0}, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl;-><init>(Lmf/org/apache/xerces/jaxp/validation/XSGrammarPoolContainer;)V
@@ -78,7 +72,6 @@
     .param p2, "state"    # Z
 
     .prologue
-    .line 81
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/validation/AbstractXMLSchema;->fFeatures:Ljava/util/HashMap;
 
     if-eqz p2, :cond_0
@@ -88,10 +81,8 @@
     :goto_0
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
     return-void
 
-    .line 81
     :cond_0
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 

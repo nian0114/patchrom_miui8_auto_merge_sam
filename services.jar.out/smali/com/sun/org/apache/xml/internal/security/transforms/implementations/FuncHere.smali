@@ -82,7 +82,7 @@
 
     new-instance v0, Ljavax/xml/transform/TransformerException;
 
-    const-string/jumbo v1, "xpath.funcHere.documentsDiffer"
+    const-string v1, "xpath.funcHere.documentsDiffer"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 

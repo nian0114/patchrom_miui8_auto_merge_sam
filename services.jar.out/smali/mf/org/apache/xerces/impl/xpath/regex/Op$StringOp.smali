@@ -25,13 +25,10 @@
     .param p2, "literal"    # Ljava/lang/String;
 
     .prologue
-    .line 231
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op;-><init>(I)V
 
-    .line 232
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$StringOp;->string:Ljava/lang/String;
 
-    .line 233
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$StringOp;->string:Ljava/lang/String;
 
     return-object v0

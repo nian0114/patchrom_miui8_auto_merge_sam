@@ -74,7 +74,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -284,7 +284,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

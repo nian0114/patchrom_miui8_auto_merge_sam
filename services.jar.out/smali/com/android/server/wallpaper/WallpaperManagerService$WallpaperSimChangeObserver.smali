@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2257
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,14 +42,13 @@
 
     const/4 v3, 0x1
 
-    .line 2260
     const-string v0, "WallpaperManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onReceive:"
+    const-string v2, "onReceive:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -70,12 +68,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2263
-    const-string/jumbo v6, "ril.ICC_TYPE"
+    const-string v6, "ril.ICC_TYPE"
 
-    .line 2264
     .local v6, "SP_KEY_SIM_STATE_SIM":Ljava/lang/String;
-    const-string/jumbo v0, "ril.ICC_TYPE"
+    const-string v0, "ril.ICC_TYPE"
 
     const-string v1, "0"
 
@@ -83,7 +79,6 @@
 
     move-result-object v10
 
-    .line 2265
     .local v10, "simStateString":Ljava/lang/String;
     const-string v0, ","
 
@@ -91,11 +86,9 @@
 
     move-result-object v9
 
-    .line 2266
     .local v9, "simState":[Ljava/lang/String;
     const-string v7, "0"
 
-    .line 2268
     .local v7, "SP_VALUE_SIM_STATE_ABSENT":Ljava/lang/String;
     if-eqz v9, :cond_0
 
@@ -107,7 +100,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2269
     :cond_0
     const-string v0, "WallpaperManagerService"
 
@@ -115,11 +107,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2300
     :goto_0
     return-void
 
-    .line 2273
     :cond_1
     const-string v0, "0"
 
@@ -141,16 +131,14 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 2275
     const-string v0, "WallpaperManagerService"
 
-    const-string/jumbo v1, "simState is ABSENT"
+    const-string v1, "simState is ABSENT"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2279
     :cond_2
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -160,16 +148,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 2280
     const-string v0, "WallpaperManagerService"
 
-    const-string/jumbo v1, "multiSIM_skip ACTION_DEFAULT_CS_SIM_CHANGED"
+    const-string v1, "multiSIM_skip ACTION_DEFAULT_CS_SIM_CHANGED"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2284
     :cond_3
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -177,13 +163,11 @@
 
     monitor-enter v11
 
-    .line 2285
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 2286
     .local v8, "action":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -195,7 +179,6 @@
 
     move-result-object v4
 
-    .line 2288
     .local v4, "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -213,7 +196,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 2289
     :cond_4
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -227,14 +209,13 @@
     # setter for: Lcom/android/server/wallpaper/WallpaperManagerService;->mCurrSimId:I
     invoke-static {v0, v1}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$602(Lcom/android/server/wallpaper/WallpaperManagerService;I)I
 
-    .line 2291
     const-string v0, "WallpaperManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPrevSimId : "
+    const-string v2, "mPrevSimId : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -274,7 +255,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2292
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     # getter for: Lcom/android/server/wallpaper/WallpaperManagerService;->mPrevSimId:I
@@ -291,7 +271,6 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 2293
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
@@ -304,7 +283,6 @@
     # setter for: Lcom/android/server/wallpaper/WallpaperManagerService;->mPrevSimId:I
     invoke-static {v0, v1}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$802(Lcom/android/server/wallpaper/WallpaperManagerService;I)I
 
-    .line 2294
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
@@ -316,7 +294,6 @@
 
     iput v1, v0, Lcom/android/server/wallpaper/WallpaperManagerService;->whichSimSetWallpaper:I
 
-    .line 2295
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     sget-object v1, Lcom/android/server/wallpaper/WallpaperManagerService;->IMAGE_WALLPAPER:Landroid/content/ComponentName;
@@ -329,13 +306,11 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wallpaper/WallpaperManagerService;->bindWallpaperComponentLocked(Landroid/content/ComponentName;ZZLcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;Landroid/os/IRemoteCallback;)Z
 
-    .line 2296
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperSimChangeObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     # invokes: Lcom/android/server/wallpaper/WallpaperManagerService;->saveSettingsLocked(Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;)V
     invoke-static {v0, v4}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$200(Lcom/android/server/wallpaper/WallpaperManagerService;Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;)V
 
-    .line 2299
     :cond_5
     monitor-exit v11
 

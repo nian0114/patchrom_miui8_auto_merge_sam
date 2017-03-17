@@ -38,30 +38,22 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 85
     iput p2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->priority:I
 
-    .line 86
     iput-object p3, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->requestLog:Landroid/util/LocalLog;
 
-    .line 87
     iput v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->executedPhoneId:I
 
-    .line 88
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->executed:Z
 
-    .line 89
     iput v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->enabledSlot:I
 
-    .line 90
     return-void
 .end method
 
@@ -71,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->requestLog:Landroid/util/LocalLog;
 
     return-object v0
@@ -82,12 +73,10 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->requestLog:Landroid/util/LocalLog;
 
     invoke-virtual {v0, p1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 94
     return-void
 .end method
 
@@ -95,7 +84,6 @@
     .locals 2
 
     .prologue
-    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

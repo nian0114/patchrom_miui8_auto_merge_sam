@@ -38,24 +38,18 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 104
     iput-object p1, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->this$0:Lcom/android/server/cocktailbar/client/CocktailBarClientManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     iput-object p2, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->token:Landroid/os/IBinder;
 
-    .line 106
     iput-object p3, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->component:Landroid/content/ComponentName;
 
-    .line 107
     iput p4, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->pid:I
 
-    .line 108
     iput p5, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->uid:I
 
-    .line 109
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .param p2, "className"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     # getter for: Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->access$000()Ljava/lang/String;
 
@@ -75,7 +68,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "startService : pkgName = "
+    const-string v4, "startService : pkgName = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,14 +94,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.android.edge.intent.action.SETTING_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 124
     .local v1, "i":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -116,7 +107,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 126
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->this$0:Lcom/android/server/cocktailbar/client/CocktailBarClientManager;
 
@@ -129,25 +119,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 131
     :goto_0
     return-void
 
-    .line 127
     :catch_0
     move-exception v0
 
-    .line 128
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 129
     # getter for: Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->access$000()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "error"
+    const-string v3, "error"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -160,7 +146,6 @@
     .locals 3
 
     .prologue
-    .line 113
     # getter for: Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->access$000()Ljava/lang/String;
 
@@ -188,7 +173,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->this$0:Lcom/android/server/cocktailbar/client/CocktailBarClientManager;
 
     # getter for: Lcom/android/server/cocktailbar/client/CocktailBarClientManager;->mClientInfos:Ljava/util/ArrayList;
@@ -198,7 +182,6 @@
 
     monitor-enter v1
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->this$0:Lcom/android/server/cocktailbar/client/CocktailBarClientManager;
 
@@ -209,19 +192,16 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 116
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -236,10 +216,8 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/cocktailbar/client/CocktailBarClientManager$ClientInfo;->startService(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 119
     return-void
 
-    .line 116
     :catchall_0
     move-exception v0
 
@@ -255,7 +233,6 @@
     .locals 3
 
     .prologue
-    .line 134
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +287,6 @@
 
     move-result-object v0
 
-    .line 135
     .local v0, "dumpResult":Ljava/lang/String;
     return-object v0
 .end method

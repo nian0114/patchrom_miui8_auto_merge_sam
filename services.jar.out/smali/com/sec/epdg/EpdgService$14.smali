@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1549
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$14;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1552
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -54,22 +52,19 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1557
     move-object v0, p1
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 1558
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v3, "wifi_call_enable"
+    const-string v3, "wifi_call_enable"
 
     invoke-virtual {v0, v3, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 1559
     .local v1, "wificallenable":I
-    const-string/jumbo v3, "wifi_call_preferred"
+    const-string v3, "wifi_call_preferred"
 
     const/4 v4, -0x1
 
@@ -77,7 +72,6 @@
 
     move-result v2
 
-    .line 1560
     .local v2, "wificallpreferred":I
     const-string v3, "[EPDGService]"
 
@@ -101,7 +95,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1561
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1400()Landroid/os/Handler;
 
@@ -115,6 +108,5 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1562
     return-void
 .end method

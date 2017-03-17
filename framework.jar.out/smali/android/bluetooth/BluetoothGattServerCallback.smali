@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p4, "characteristic"    # Landroid/bluetooth/BluetoothGattCharacteristic;
 
     .prologue
-    .line 62
     return-void
 .end method
 
@@ -39,7 +37,6 @@
     .param p7, "value"    # [B
 
     .prologue
-    .line 83
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .param p3, "status"    # I
 
     .prologue
-    .line 163
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 37
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .param p4, "descriptor"    # Landroid/bluetooth/BluetoothGattDescriptor;
 
     .prologue
-    .line 98
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .param p7, "value"    # [B
 
     .prologue
-    .line 119
     return-void
 .end method
 
@@ -99,7 +92,6 @@
     .param p3, "execute"    # Z
 
     .prologue
-    .line 133
     return-void
 .end method
 
@@ -109,7 +101,6 @@
     .param p2, "mtu"    # I
 
     .prologue
-    .line 159
     return-void
 .end method
 
@@ -119,7 +110,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 147
     return-void
 .end method
 
@@ -129,6 +119,5 @@
     .param p2, "service"    # Landroid/bluetooth/BluetoothGattService;
 
     .prologue
-    .line 47
     return-void
 .end method

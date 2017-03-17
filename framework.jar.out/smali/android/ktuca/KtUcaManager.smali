@@ -13,13 +13,10 @@
     .param p1, "service"    # Landroid/ktuca/IKtUcaIF;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput-object p1, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
-    .line 10
     return-void
 .end method
 
@@ -37,7 +34,6 @@
     .end annotation
 
     .prologue
-    .line 62
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/ktuca/IKtUcaIF;->KUCA_CHInit(B[B[I)J
@@ -58,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2}, Landroid/ktuca/IKtUcaIF;->KUCA_Close([BB)J
@@ -79,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 80
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2}, Landroid/ktuca/IKtUcaIF;->KUCA_CloseT([BB)J
@@ -99,7 +93,6 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1}, Landroid/ktuca/IKtUcaIF;->KUCA_KUH_Establish(B)J
@@ -119,7 +112,6 @@
     .end annotation
 
     .prologue
-    .line 71
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1}, Landroid/ktuca/IKtUcaIF;->KUCA_KUH_Release(B)J
@@ -143,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move v1, p1
@@ -175,7 +166,6 @@
     .end annotation
 
     .prologue
-    .line 46
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/ktuca/IKtUcaIF;->KUCA_Open([B[B[I)J
@@ -197,7 +187,6 @@
     .end annotation
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/ktuca/IKtUcaIF;->KUCA_OpenT([B[B[I)J
@@ -221,7 +210,6 @@
     .end annotation
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -253,7 +241,6 @@
     .end annotation
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/ktuca/IKtUcaIF;->KUCA_UCAVersion([B[B[I)J
@@ -277,7 +264,6 @@
     .end annotation
 
     .prologue
-    .line 13
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -311,7 +297,6 @@
     .end annotation
 
     .prologue
-    .line 22
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -345,7 +330,6 @@
     .end annotation
 
     .prologue
-    .line 19
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -379,7 +363,6 @@
     .end annotation
 
     .prologue
-    .line 28
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -413,7 +396,6 @@
     .end annotation
 
     .prologue
-    .line 31
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -447,7 +429,6 @@
     .end annotation
 
     .prologue
-    .line 16
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -481,7 +462,6 @@
     .end annotation
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -514,7 +494,6 @@
     .end annotation
 
     .prologue
-    .line 40
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/ktuca/IKtUcaIF;->KUCA_getPinStatus([BI[B[I)J
@@ -536,7 +515,6 @@
     .end annotation
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/ktuca/IKtUcaIF;->KUCA_getSIMInfo([B[B[I)J
@@ -557,7 +535,6 @@
     .end annotation
 
     .prologue
-    .line 56
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1, p2}, Landroid/ktuca/IKtUcaIF;->KUCA_getSimStatus([B[B)J
@@ -577,7 +554,6 @@
     .end annotation
 
     .prologue
-    .line 65
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0, p1}, Landroid/ktuca/IKtUcaIF;->KUCA_printCHInfo(B)J
@@ -601,7 +577,6 @@
     .end annotation
 
     .prologue
-    .line 37
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -635,7 +610,6 @@
     .end annotation
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     move-object v1, p1
@@ -664,7 +638,6 @@
     .end annotation
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0}, Landroid/ktuca/IKtUcaIF;->getResource()I
@@ -683,7 +656,6 @@
     .end annotation
 
     .prologue
-    .line 88
     iget-object v0, p0, Landroid/ktuca/KtUcaManager;->mService:Landroid/ktuca/IKtUcaIF;
 
     invoke-interface {v0}, Landroid/ktuca/IKtUcaIF;->releaseResource()I

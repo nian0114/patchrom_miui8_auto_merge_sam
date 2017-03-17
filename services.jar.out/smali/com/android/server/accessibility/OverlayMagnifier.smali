@@ -63,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const-class v0, Lcom/android/server/accessibility/OverlayMagnifier;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -72,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
 
-    .line 86
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -94,32 +92,24 @@
 
     const/4 v7, 0x0
 
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     iput v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnifierScale:I
 
-    .line 99
     iput v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnifierSize:I
 
-    .line 100
     iput v7, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mWidth:I
 
-    .line 101
     iput v7, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mHeight:I
 
-    .line 104
     iput-boolean v5, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverState:Z
 
-    .line 282
     new-instance v4, Lcom/android/server/accessibility/OverlayMagnifier$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/accessibility/OverlayMagnifier$1;-><init>(Lcom/android/server/accessibility/OverlayMagnifier;)V
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mScreenStateReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 332
     new-instance v4, Lcom/android/server/accessibility/OverlayMagnifier$2;
 
     new-instance v5, Landroid/os/Handler;
@@ -130,18 +120,15 @@
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnificationSettingsObserver:Landroid/database/ContentObserver;
 
-    .line 339
     new-instance v4, Lcom/android/server/accessibility/OverlayMagnifier$3;
 
     invoke-direct {v4, p0}, Lcom/android/server/accessibility/OverlayMagnifier$3;-><init>(Lcom/android/server/accessibility/OverlayMagnifier;)V
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverStateListener:Lcom/samsung/android/cover/CoverManager$StateListener;
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
-    .line 108
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -153,8 +140,7 @@
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mWindowManager:Landroid/view/IWindowManager;
 
-    .line 109
-    const-string/jumbo v4, "display"
+    const-string v4, "display"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -166,17 +152,14 @@
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
-    .line 110
     new-instance v4, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
     invoke-direct {v4, p0}, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;-><init>(Lcom/android/server/accessibility/OverlayMagnifier;)V
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mPolicy:Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
-    .line 111
     iput-object p2, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 113
     :try_start_0
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -184,7 +167,6 @@
 
     invoke-interface {v4, v5}, Landroid/hardware/display/IDisplayManager;->enableOverlayMagnifier(Z)V
 
-    .line 115
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -197,7 +179,6 @@
 
     move-result v3
 
-    .line 116
     .local v3, "width":I
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
@@ -211,7 +192,6 @@
 
     move-result v2
 
-    .line 117
     .local v2, "height":I
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -221,7 +201,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 122
     .end local v2    # "height":I
     .end local v3    # "width":I
     :goto_0
@@ -231,7 +210,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "hover_zoom_magnifier_size"
+    const-string v5, "hover_zoom_magnifier_size"
 
     invoke-static {v5}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -241,14 +220,13 @@
 
     invoke-virtual {v4, v5, v7, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 124
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    const-string/jumbo v5, "hover_zoom_value"
+    const-string v5, "hover_zoom_value"
 
     invoke-static {v5}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -258,28 +236,23 @@
 
     invoke-virtual {v4, v5, v7, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 126
     invoke-direct {p0}, Lcom/android/server/accessibility/OverlayMagnifier;->setMagnificationSettings()V
 
-    .line 127
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 128
     .local v1, "filter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 129
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mScreenStateReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v4, v5, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 130
     new-instance v4, Lcom/samsung/android/cover/CoverManager;
 
     iget-object v5, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
@@ -288,22 +261,18 @@
 
     iput-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
-    .line 131
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     iget-object v5, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverStateListener:Lcom/samsung/android/cover/CoverManager$StateListener;
 
     invoke-virtual {v4, v5}, Lcom/samsung/android/cover/CoverManager;->registerListener(Lcom/samsung/android/cover/CoverManager$StateListener;)V
 
-    .line 132
     return-void
 
-    .line 118
     .end local v1    # "filter":Landroid/content/IntentFilter;
     :catch_0
     move-exception v0
 
-    .line 119
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -314,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 82
     sget-object v0, Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
 
     return-object v0
@@ -325,7 +293,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/OverlayMagnifier;
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
     return-object v0
@@ -336,7 +303,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/OverlayMagnifier;
 
     .prologue
-    .line 82
     invoke-direct {p0}, Lcom/android/server/accessibility/OverlayMagnifier;->hideMagnifier()V
 
     return-void
@@ -347,7 +313,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/OverlayMagnifier;
 
     .prologue
-    .line 82
     invoke-direct {p0}, Lcom/android/server/accessibility/OverlayMagnifier;->setMagnificationSettings()V
 
     return-void
@@ -358,7 +323,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/OverlayMagnifier;
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverState:Z
 
     return v0
@@ -370,7 +334,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 82
     iput-boolean p1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverState:Z
 
     return p1
@@ -380,19 +343,16 @@
     .locals 3
 
     .prologue
-    .line 206
     sget-object v1, Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "hideMagnifier()"
+    const-string v2, "hideMagnifier()"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     iget-object v1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mPolicy:Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
     invoke-virtual {v1}, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->stopMagnifier()V
 
-    .line 209
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -402,15 +362,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 213
     :goto_0
     return-void
 
-    .line 210
     :catch_0
     move-exception v0
 
-    .line 211
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -423,10 +380,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 292
     const/4 v0, 0x0
 
-    .line 294
     .local v0, "changed":Z
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
@@ -434,13 +389,12 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "hover_zoom_magnifier_size"
+    const-string v5, "hover_zoom_magnifier_size"
 
     invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 295
     .local v3, "size":I
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
@@ -448,7 +402,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "hover_zoom_value"
+    const-string v5, "hover_zoom_value"
 
     invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -456,7 +410,6 @@
 
     add-int/lit8 v2, v4, 0x1
 
-    .line 297
     .local v2, "scale":I
     sget-object v4, Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
 
@@ -464,7 +417,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "setMagnificationSettings: size="
+    const-string v6, "setMagnificationSettings: size="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -490,38 +443,29 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 299
     iget v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnifierScale:I
 
     if-eq v4, v2, :cond_0
 
-    .line 300
     const/4 v0, 0x1
 
-    .line 301
     iput v2, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnifierScale:I
 
-    .line 304
     :cond_0
     iget v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnifierSize:I
 
     if-eq v4, v3, :cond_1
 
-    .line 305
     const/4 v0, 0x1
 
-    .line 306
     iput v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mMagnifierSize:I
 
-    .line 307
     packed-switch v3, :pswitch_data_0
 
-    .line 323
     :cond_1
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 325
     :try_start_0
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -537,12 +481,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 330
     :cond_2
     :goto_1
     return-void
 
-    .line 309
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
@@ -558,7 +500,6 @@
 
     iput v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mWidth:I
 
-    .line 310
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -575,7 +516,6 @@
 
     goto :goto_0
 
-    .line 313
     :pswitch_1
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
@@ -591,7 +531,6 @@
 
     iput v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mWidth:I
 
-    .line 314
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -608,7 +547,6 @@
 
     goto :goto_0
 
-    .line 317
     :pswitch_2
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
@@ -624,7 +562,6 @@
 
     iput v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mWidth:I
 
-    .line 318
     iget-object v4, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -641,17 +578,14 @@
 
     goto :goto_0
 
-    .line 326
     :catch_0
     move-exception v1
 
-    .line 327
     .local v1, "e":Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 307
     nop
 
     :pswitch_data_0
@@ -668,17 +602,14 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     if-eqz v0, :cond_0
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     invoke-interface {v0}, Lcom/android/server/accessibility/EventStreamTransformation;->clear()V
 
-    .line 189
     :cond_0
     return-void
 .end method
@@ -688,17 +619,14 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     if-eqz v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     invoke-interface {v0, p1}, Lcom/android/server/accessibility/EventStreamTransformation;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 177
     :cond_0
     return-void
 .end method
@@ -707,24 +635,20 @@
     .locals 3
 
     .prologue
-    .line 193
     invoke-direct {p0}, Lcom/android/server/accessibility/OverlayMagnifier;->hideMagnifier()V
 
-    .line 194
     iget-object v1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mScreenStateReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 195
     iget-object v1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     iget-object v2, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverStateListener:Lcom/samsung/android/cover/CoverManager$StateListener;
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/cover/CoverManager;->unregisterListener(Lcom/samsung/android/cover/CoverManager$StateListener;)V
 
-    .line 196
     iget-object v1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -735,7 +659,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 199
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -745,15 +668,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 203
     :goto_0
     return-void
 
-    .line 200
     :catch_0
     move-exception v0
 
-    .line 201
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -767,26 +687,21 @@
     .param p3, "policyFlags"    # I
 
     .prologue
-    .line 136
     iget-boolean v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mCoverState:Z
 
     if-eqz v3, :cond_0
 
-    .line 137
     iget-object v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mPolicy:Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->onMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 138
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 139
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 166
     .end local v0    # "action":I
     :cond_0
     :goto_0
@@ -807,27 +722,23 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 168
     iget-object v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     invoke-interface {v3, p1, p2, p3}, Lcom/android/server/accessibility/EventStreamTransformation;->onMotionEvent(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 170
     :cond_1
     return-void
 
-    .line 141
     .restart local v0    # "action":I
     :pswitch_1
     sget-object v3, Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "onMotionEvent: HoverEnter"
+    const-string v4, "onMotionEvent: HoverEnter"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 145
     :pswitch_2
     iget-object v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mPolicy:Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
@@ -837,20 +748,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 146
     iget-object v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mPolicy:Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;
 
     invoke-virtual {v3}, Lcom/android/server/accessibility/OverlayMagnifier$OverlayMagnifierPolicy;->getMagnificationSpec()Landroid/view/MagnificationSpec;
 
     move-result-object v2
 
-    .line 147
     .local v2, "spec":Landroid/view/MagnificationSpec;
     const/high16 v3, 0x40000000    # 2.0f
 
     iput v3, v2, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 148
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v3
@@ -861,7 +769,6 @@
 
     iput v3, v2, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 149
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v3
@@ -872,7 +779,6 @@
 
     iput v3, v2, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 152
     :try_start_0
     iget-object v3, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -882,32 +788,27 @@
 
     goto :goto_0
 
-    .line 153
     :catch_0
     move-exception v1
 
-    .line 154
     .local v1, "e":Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 160
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "spec":Landroid/view/MagnificationSpec;
     :pswitch_3
     sget-object v3, Lcom/android/server/accessibility/OverlayMagnifier;->LOG_TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "onMotionEvent: spec is null"
+    const-string v4, "onMotionEvent: spec is null"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     invoke-direct {p0}, Lcom/android/server/accessibility/OverlayMagnifier;->hideMagnifier()V
 
     goto :goto_0
 
-    .line 139
     nop
 
     :pswitch_data_0
@@ -924,9 +825,7 @@
     .param p1, "next"    # Lcom/android/server/accessibility/EventStreamTransformation;
 
     .prologue
-    .line 181
     iput-object p1, p0, Lcom/android/server/accessibility/OverlayMagnifier;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
-    .line 182
     return-void
 .end method

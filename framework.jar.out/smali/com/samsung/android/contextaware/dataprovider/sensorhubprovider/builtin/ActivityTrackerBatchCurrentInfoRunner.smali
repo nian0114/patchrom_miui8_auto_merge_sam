@@ -11,10 +11,8 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 55
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ActivityTrackerBatchProviderForExtLib;-><init>(ILandroid/content/Context;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 56
     return-void
 .end method
 
@@ -24,13 +22,10 @@
     .locals 0
 
     .prologue
-    .line 206
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 207
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ActivityTrackerBatchProviderForExtLib;->clear()V
 
-    .line 208
     return-void
 .end method
 
@@ -40,10 +35,8 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 140
     if-nez p2, :cond_0
 
-    .line 141
     sget-object v0, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_BUNDLE_NULL_EXCEPTION:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getCode()I
@@ -56,20 +49,17 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 146
     :cond_0
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->setContextCollectionResultNotifyCompletion(Z)V
 
-    .line 147
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchCurrentInfoRunner;->getContextTypeOfFaultDetection()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0, p2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchCurrentInfoRunner;->notifyCmdProcessResultObserver(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 149
     return-void
 .end method
 
@@ -77,13 +67,10 @@
     .locals 0
 
     .prologue
-    .line 182
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 183
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ActivityTrackerBatchProviderForExtLib;->enable()V
 
-    .line 184
     return-void
 .end method
 
@@ -91,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 66
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->REQUEST_SENSORHUB_ACTIVITY_TRACKER_BATCH_CURRENT_INFO:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -105,7 +91,6 @@
     .locals 3
 
     .prologue
-    .line 126
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -127,19 +112,15 @@
 
     const/4 v2, 0x0
 
-    .line 78
     new-array v0, v1, [B
 
-    .line 79
     .local v0, "packet":[B
     aput-byte v1, v0, v2
 
-    .line 80
     const/4 v1, 0x1
 
     aput-byte v2, v0, v1
 
-    .line 82
     return-object v0
 .end method
 
@@ -147,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 218
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchCurrentInfoRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -158,7 +138,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 219
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ActivityTrackerBatchProviderForExtLib;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -170,7 +149,6 @@
     .locals 0
 
     .prologue
-    .line 159
     return-object p0
 .end method
 
@@ -178,7 +156,6 @@
     .locals 0
 
     .prologue
-    .line 171
     return-object p0
 .end method
 
@@ -186,7 +163,6 @@
     .locals 0
 
     .prologue
-    .line 195
     return-object p0
 .end method
 
@@ -198,12 +174,11 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 94
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "parse:"
+    const-string v4, "parse:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,7 +194,6 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 96
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     move-result-object v3
@@ -228,11 +202,9 @@
 
     move-result-object v0
 
-    .line 98
     .local v0, "libParser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-nez v0, :cond_0
 
-    .line 99
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PARSER_NOT_EXIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -245,11 +217,9 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 115
     :goto_0
     return v2
 
-    .line 105
     :cond_0
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;->LIBRARY_DATATYPE_ACTIVITY_TRACKER:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;
 
@@ -261,11 +231,9 @@
 
     move-result-object v1
 
-    .line 108
     .local v1, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
     if-nez v1, :cond_1
 
-    .line 109
     sget-object v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PARSER_NOT_EXIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -280,7 +248,6 @@
 
     goto :goto_0
 
-    .line 115
     :cond_1
     invoke-interface {v1, p2, p1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;->parse([BI)I
 

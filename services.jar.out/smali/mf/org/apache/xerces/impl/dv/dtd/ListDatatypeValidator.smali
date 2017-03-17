@@ -16,13 +16,10 @@
     .param p1, "itemDV"    # Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object p1, p0, Lmf/org/apache/xerces/impl/dv/dtd/ListDatatypeValidator;->fItemValidator:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 44
     return-void
 .end method
 
@@ -39,24 +36,20 @@
     .end annotation
 
     .prologue
-    .line 58
     new-instance v1, Ljava/util/StringTokenizer;
 
     const-string v2, " "
 
     invoke-direct {v1, p1, v2}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
     .local v1, "parsedList":Ljava/util/StringTokenizer;
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v0
 
-    .line 60
     .local v0, "numberOfTokens":I
     if-nez v0, :cond_1
 
-    .line 61
     new-instance v2, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v3, "EmptyList"
@@ -67,7 +60,6 @@
 
     throw v2
 
-    .line 65
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/impl/dv/dtd/ListDatatypeValidator;->fItemValidator:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
@@ -77,7 +69,6 @@
 
     invoke-interface {v2, v3, p2}, Lmf/org/apache/xerces/impl/dv/DatatypeValidator;->validate(Ljava/lang/String;Lmf/org/apache/xerces/impl/dv/ValidationContext;)V
 
-    .line 64
     :cond_1
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -85,6 +76,5 @@
 
     if-nez v2, :cond_0
 
-    .line 67
     return-void
 .end method

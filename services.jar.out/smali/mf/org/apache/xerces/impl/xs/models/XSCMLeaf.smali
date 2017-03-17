@@ -22,25 +22,18 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 59
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/dtd/models/CMNode;-><init>(I)V
 
-    .line 44
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fParticleId:I
 
-    .line 51
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
-    .line 62
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fLeaf:Ljava/lang/Object;
 
-    .line 63
     iput p3, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fParticleId:I
 
-    .line 64
     iput p4, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
-    .line 65
     return-void
 .end method
 
@@ -51,21 +44,17 @@
     .param p1, "toSet"    # Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;
 
     .prologue
-    .line 112
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 113
     invoke-virtual {p1}, Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;->zeroBits()V
 
-    .line 118
     :goto_0
     return-void
 
-    .line 117
     :cond_0
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
@@ -79,21 +68,17 @@
     .param p1, "toSet"    # Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;
 
     .prologue
-    .line 122
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 123
     invoke-virtual {p1}, Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;->zeroBits()V
 
-    .line 128
     :goto_0
     return-void
 
-    .line 127
     :cond_0
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
@@ -106,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fLeaf:Ljava/lang/Object;
 
     return-object v0
@@ -116,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fParticleId:I
 
     return v0
@@ -126,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
     return v0
@@ -136,7 +118,6 @@
     .locals 2
 
     .prologue
-    .line 95
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
     const/4 v1, -0x1
@@ -159,10 +140,8 @@
     .param p1, "newPosition"    # I
 
     .prologue
-    .line 84
     iput p1, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
-    .line 85
     return-void
 .end method
 
@@ -170,7 +149,6 @@
     .locals 3
 
     .prologue
-    .line 99
     new-instance v0, Ljava/lang/StringBuffer;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fLeaf:Ljava/lang/Object;
@@ -181,20 +159,17 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 100
     .local v0, "strRet":Ljava/lang/StringBuffer;
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
     if-ltz v1, :cond_0
 
-    .line 101
     const-string v1, " (Pos:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v1
 
-    .line 102
     iget v2, p0, Lmf/org/apache/xerces/impl/xs/models/XSCMLeaf;->fPosition:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -205,12 +180,10 @@
 
     move-result-object v1
 
-    .line 103
     const/16 v2, 0x29
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 105
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

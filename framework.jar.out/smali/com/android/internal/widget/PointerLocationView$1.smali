@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/internal/widget/PointerLocationView$1;->this$0:Lcom/android/internal/widget/PointerLocationView;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -47,7 +46,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 133
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -57,15 +55,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
     :goto_0
     return-object v1
 
-    .line 134
     :catch_0
     move-exception v0
 
-    .line 135
     .local v0, "ex":Ljava/lang/Exception;
     const-string v1, "Pointer"
 
@@ -99,10 +94,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 137
     invoke-virtual {p0}, Lcom/android/internal/widget/PointerLocationView$1;->size()I
 
     move-result v1
@@ -132,7 +125,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 130
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/PointerLocationView$1;->get(I)Lcom/android/internal/widget/PointerLocationView$PointerState;
 
     move-result-object v0

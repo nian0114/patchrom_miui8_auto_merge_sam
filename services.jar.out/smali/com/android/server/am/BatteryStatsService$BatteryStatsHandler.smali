@@ -37,25 +37,20 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
-    .line 95
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 91
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUpdateFlags:I
 
-    .line 92
     new-instance v0, Landroid/util/IntArray;
 
     invoke-direct {v0}, Landroid/util/IntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUidsToRemove:Landroid/util/IntArray;
 
-    .line 96
     return-void
 .end method
 
@@ -65,12 +60,10 @@
     .param p2, "updateFlags"    # I
 
     .prologue
-    .line 156
     iget v0, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUpdateFlags:I
 
     if-nez v0, :cond_0
 
-    .line 157
     const/4 v0, 0x1
 
     invoke-static {p0, v0, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
@@ -79,7 +72,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 159
     :cond_0
     iget v0, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUpdateFlags:I
 
@@ -87,7 +79,6 @@
 
     iput v0, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUpdateFlags:I
 
-    .line 160
     return-void
 .end method
 
@@ -98,40 +89,32 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 100
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 131
     :goto_0
     return-void
 
-    .line 103
     :pswitch_0
     monitor-enter p0
 
-    .line 104
     const/4 v3, 0x1
 
     :try_start_0
     invoke-virtual {p0, v3}, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->removeMessages(I)V
 
-    .line 105
     iget v2, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUpdateFlags:I
 
-    .line 106
     .local v2, "updateFlags":I
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUpdateFlags:I
 
-    .line 107
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 108
     iget-object v4, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -140,20 +123,17 @@
 
     invoke-virtual {v4, v3, v2}, Lcom/android/server/am/BatteryStatsService;->updateExternalStats(Ljava/lang/String;I)V
 
-    .line 113
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object v4, v3, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
     monitor-enter v4
 
-    .line 114
     :try_start_1
     monitor-enter p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 115
     :try_start_2
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUidsToRemove:Landroid/util/IntArray;
 
@@ -161,7 +141,6 @@
 
     move-result v1
 
-    .line 116
     .local v1, "numUidsToRemove":I
     const/4 v0, 0x0
 
@@ -169,7 +148,6 @@
     :goto_1
     if-ge v0, v1, :cond_0
 
-    .line 117
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object v3, v3, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
@@ -184,12 +162,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 116
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 107
     .end local v0    # "i":I
     .end local v1    # "numUidsToRemove":I
     .end local v2    # "updateFlags":I
@@ -203,7 +179,6 @@
 
     throw v3
 
-    .line 119
     .restart local v0    # "i":I
     .restart local v1    # "numUidsToRemove":I
     .restart local v2    # "updateFlags":I
@@ -213,13 +188,11 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 120
     :try_start_5
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUidsToRemove:Landroid/util/IntArray;
 
     invoke-virtual {v3}, Landroid/util/IntArray;->clear()V
 
-    .line 121
     monitor-exit v4
 
     goto :goto_0
@@ -235,7 +208,6 @@
 
     throw v3
 
-    .line 119
     :catchall_2
     move-exception v3
 
@@ -249,25 +221,22 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 125
     .end local v2    # "updateFlags":I
     :pswitch_1
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
-    const-string/jumbo v4, "write"
+    const-string v4, "write"
 
     const/16 v5, 0xf
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/am/BatteryStatsService;->updateExternalStats(Ljava/lang/String;I)V
 
-    .line 126
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object v4, v3, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
     monitor-enter v4
 
-    .line 127
     :try_start_8
     iget-object v3, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->this$0:Lcom/android/server/am/BatteryStatsService;
 
@@ -275,7 +244,6 @@
 
     invoke-virtual {v3}, Lcom/android/internal/os/BatteryStatsImpl;->writeAsyncLocked()V
 
-    .line 128
     monitor-exit v4
 
     goto :goto_0
@@ -289,7 +257,6 @@
 
     throw v3
 
-    .line 100
     nop
 
     :pswitch_data_0
@@ -304,29 +271,23 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 149
     monitor-enter p0
 
-    .line 150
     :try_start_0
-    const-string/jumbo v0, "remove-uid"
+    const-string v0, "remove-uid"
 
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->scheduleSyncLocked(Ljava/lang/String;I)V
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->mUidsToRemove:Landroid/util/IntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/IntArray;->add(I)V
 
-    .line 152
     monitor-exit p0
 
-    .line 153
     return-void
 
-    .line 152
     :catchall_0
     move-exception v0
 
@@ -342,22 +303,17 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     monitor-enter p0
 
-    .line 136
     const/16 v0, 0xf
 
     :try_start_0
     invoke-direct {p0, p1, v0}, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->scheduleSyncLocked(Ljava/lang/String;I)V
 
-    .line 137
     monitor-exit p0
 
-    .line 138
     return-void
 
-    .line 137
     :catchall_0
     move-exception v0
 
@@ -373,22 +329,17 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 142
     monitor-enter p0
 
-    .line 143
     const/4 v0, 0x2
 
     :try_start_0
     invoke-direct {p0, p1, v0}, Lcom/android/server/am/BatteryStatsService$BatteryStatsHandler;->scheduleSyncLocked(Ljava/lang/String;I)V
 
-    .line 144
     monitor-exit p0
 
-    .line 145
     return-void
 
-    .line 144
     :catchall_0
     move-exception v0
 

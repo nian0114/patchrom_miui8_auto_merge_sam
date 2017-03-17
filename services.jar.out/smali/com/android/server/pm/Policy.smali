@@ -62,45 +62,34 @@
 
     const/4 v1, 0x0
 
-    .line 2790
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2791
     iput-object v1, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
-    .line 2792
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
-    .line 2793
     iput v2, p0, Lcom/android/server/pm/Policy;->category:I
 
-    .line 2794
     iput v2, p0, Lcom/android/server/pm/Policy;->bbccategory:I
 
-    .line 2795
     iput-object v1, p0, Lcom/android/server/pm/Policy;->allowCategory:Ljava/lang/String;
 
-    .line 2796
     iput-object v1, p0, Lcom/android/server/pm/Policy;->bbcallowCategory:Ljava/lang/String;
 
-    .line 2797
     iput-boolean v3, p0, Lcom/android/server/pm/Policy;->isContainerApp:Z
 
-    .line 2798
     iput-boolean v3, p0, Lcom/android/server/pm/Policy;->mDefaultStanza:Z
 
-    .line 2799
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
-    .line 2800
     return-void
 .end method
 
@@ -109,10 +98,8 @@
     .param p1, "builder"    # Lcom/android/server/pm/Policy$PolicyBuilder;
 
     .prologue
-    .line 2804
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2805
     # getter for: Lcom/android/server/pm/Policy$PolicyBuilder;->mSeinfo:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->access$000(Lcom/android/server/pm/Policy$PolicyBuilder;)Ljava/lang/String;
 
@@ -120,7 +107,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
-    .line 2806
     # getter for: Lcom/android/server/pm/Policy$PolicyBuilder;->mDefaultStanza:Z
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->access$100(Lcom/android/server/pm/Policy$PolicyBuilder;)Z
 
@@ -128,7 +114,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/pm/Policy;->mDefaultStanza:Z
 
-    .line 2807
     # getter for: Lcom/android/server/pm/Policy$PolicyBuilder;->mCerts:Ljava/util/Set;
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->access$200(Lcom/android/server/pm/Policy$PolicyBuilder;)Ljava/util/Set;
 
@@ -140,7 +125,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
-    .line 2808
     # getter for: Lcom/android/server/pm/Policy$PolicyBuilder;->mPkgMap:Ljava/util/Map;
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->access$300(Lcom/android/server/pm/Policy$PolicyBuilder;)Ljava/util/Map;
 
@@ -152,7 +136,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
-    .line 2809
     return-void
 .end method
 
@@ -162,7 +145,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/Policy$1;
 
     .prologue
-    .line 2778
     invoke-direct {p0, p1}, Lcom/android/server/pm/Policy;-><init>(Lcom/android/server/pm/Policy$PolicyBuilder;)V
 
     return-void
@@ -173,7 +155,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/Policy;
 
     .prologue
-    .line 2778
     iget-boolean v0, p0, Lcom/android/server/pm/Policy;->mDefaultStanza:Z
 
     return v0
@@ -184,7 +165,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/Policy;
 
     .prologue
-    .line 2778
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     return-object v0
@@ -197,7 +177,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 2831
     iget-object v1, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -206,11 +185,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2832
     .local v0, "seinfoValue":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 2836
     .end local v0    # "seinfoValue":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -236,7 +213,6 @@
     .end annotation
 
     .prologue
-    .line 2874
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     return-object v0
@@ -247,12 +223,10 @@
     .param p1, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 2941
     iget-boolean v2, p0, Lcom/android/server/pm/Policy;->mDefaultStanza:Z
 
     if-nez v2, :cond_2
 
-    .line 2943
     iget-object v2, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     const/4 v3, 0x0
@@ -265,7 +239,6 @@
 
     check-cast v0, [Landroid/content/pm/Signature;
 
-    .line 2944
     .local v0, "certs":[Landroid/content/pm/Signature;
     iget-object v2, p1, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
 
@@ -275,16 +248,13 @@
 
     if-nez v2, :cond_1
 
-    .line 2945
     const/4 v1, 0x0
 
-    .line 2957
     .end local v0    # "certs":[Landroid/content/pm/Signature;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 2950
     .restart local v0    # "certs":[Landroid/content/pm/Signature;
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
@@ -297,11 +267,9 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2951
     .local v1, "seinfoValue":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 2957
     .end local v0    # "certs":[Landroid/content/pm/Signature;
     .end local v1    # "seinfoValue":Ljava/lang/String;
     :cond_2
@@ -314,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 2816
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     return-object v0
@@ -333,7 +300,6 @@
     .end annotation
 
     .prologue
-    .line 2846
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     return-object v0
@@ -343,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 2883
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -363,7 +328,6 @@
     .locals 1
 
     .prologue
-    .line 2864
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -387,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 2855
     iget-boolean v0, p0, Lcom/android/server/pm/Policy;->mDefaultStanza:Z
 
     return v0
@@ -397,7 +360,6 @@
     .locals 1
 
     .prologue
-    .line 2826
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -428,12 +390,10 @@
     .param p2, "seinfoValue"    # Ljava/lang/String;
 
     .prologue
-    .line 2820
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2821
     return-void
 .end method
 
@@ -442,10 +402,8 @@
     .param p1, "seinfoValue"    # Ljava/lang/String;
 
     .prologue
-    .line 2812
     iput-object p1, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
-    .line 2813
     return-void
 .end method
 
@@ -453,23 +411,19 @@
     .locals 8
 
     .prologue
-    .line 2888
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2889
     .local v3, "sb":Ljava/lang/StringBuilder;
     iget-boolean v4, p0, Lcom/android/server/pm/Policy;->mDefaultStanza:Z
 
     if-eqz v4, :cond_0
 
-    .line 2890
-    const-string/jumbo v4, "defaultStanza=true "
+    const-string v4, "defaultStanza=true "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2893
     :cond_0
     iget-object v4, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
@@ -491,7 +445,6 @@
 
     check-cast v0, Landroid/content/pm/Signature;
 
-    .line 2894
     .local v0, "cert":Landroid/content/pm/Signature;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -533,19 +486,17 @@
 
     goto :goto_0
 
-    .line 2897
     .end local v0    # "cert":Landroid/content/pm/Signature;
     :cond_1
     iget-object v4, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     if-eqz v4, :cond_2
 
-    .line 2898
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "seinfo="
+    const-string v5, "seinfo="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -563,7 +514,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2901
     :cond_2
     iget-object v4, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
@@ -588,7 +538,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2902
     .local v2, "name":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -630,7 +579,6 @@
 
     goto :goto_1
 
-    .line 2905
     .end local v2    # "name":Ljava/lang/String;
     :cond_3
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

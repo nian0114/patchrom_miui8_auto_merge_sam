@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 1293
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$12;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownThread$12;->val$mWifiManager:Landroid/net/wifi/WifiManager;
@@ -53,33 +52,28 @@
     .locals 26
 
     .prologue
-    .line 1295
     const-string v22, "ShutdownThread"
 
     const-string v23, "!@Start shutdown radios"
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->onview(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1296
-    const-string/jumbo v22, "sys.deviceOffReq"
+    const-string v22, "sys.deviceOffReq"
 
     const-string v23, "1"
 
     invoke-static/range {v22 .. v23}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1298
-    const-string/jumbo v22, "sys.radio.shutdown"
+    const-string v22, "sys.radio.shutdown"
 
-    const-string/jumbo v23, "true"
+    const-string v23, "true"
 
     invoke-static/range {v22 .. v23}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1304
     const/4 v12, 0x0
 
-    .line 1306
     .local v12, "modemOff":Z
-    const-string/jumbo v22, "nfc"
+    const-string v22, "nfc"
 
     invoke-static/range {v22 .. v22}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -89,9 +83,8 @@
 
     move-result-object v14
 
-    .line 1308
     .local v14, "nfc":Landroid/nfc/INfcAdapter;
-    const-string/jumbo v22, "phone"
+    const-string v22, "phone"
 
     invoke-static/range {v22 .. v22}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -101,7 +94,6 @@
 
     move-result-object v16
 
-    .line 1310
     .local v16, "phone":Lcom/android/internal/telephony/ITelephony;
     const-string v22, "bluetooth_manager"
 
@@ -113,7 +105,6 @@
 
     move-result-object v5
 
-    .line 1314
     .local v5, "bluetooth":Landroid/bluetooth/IBluetoothManager;
     move-object/from16 v0, p0
 
@@ -162,24 +153,20 @@
     :cond_0
     const/4 v4, 0x1
 
-    .line 1317
     .local v4, "WiFiOff":Z
     :goto_0
     if-nez v4, :cond_1
 
-    .line 1318
     const-string v22, "ShutdownThread"
 
     const-string v23, "Disabling WiFi..."
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1319
     new-instance v13, Landroid/os/Message;
 
     invoke-direct {v13}, Landroid/os/Message;-><init>()V
 
-    .line 1320
     .local v13, "msg":Landroid/os/Message;
     const/16 v22, 0xe6
 
@@ -187,7 +174,6 @@
 
     iput v0, v13, Landroid/os/Message;->what:I
 
-    .line 1322
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread$12;->val$mWifiManager:Landroid/net/wifi/WifiManager;
@@ -198,7 +184,6 @@
 
     invoke-virtual {v0, v13}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
-    .line 1324
     .end local v13    # "msg":Landroid/os/Message;
     :cond_1
     const-string v22, "ShutdownThread"
@@ -207,7 +192,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1340
     if-eqz v14, :cond_2
 
     :try_start_0
@@ -226,19 +210,16 @@
     :cond_2
     const/4 v15, 0x1
 
-    .line 1342
     .local v15, "nfcOff":Z
     :goto_1
     if-nez v15, :cond_3
 
-    .line 1343
     const-string v22, "ShutdownThread"
 
     const-string v23, "Turning off NFC..."
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1344
     const/16 v22, 0x0
 
     move/from16 v0, v22
@@ -247,23 +228,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1356
     :cond_3
     :goto_2
     if-eqz v5, :cond_4
 
-    .line 1357
     :try_start_1
     invoke-interface {v5}, Landroid/bluetooth/IBluetoothManager;->dumpInFile()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1377
     :cond_4
     :goto_3
     const/4 v6, 0x1
 
-    .line 1381
     .local v6, "bluetoothOff":Z
     if-eqz v16, :cond_5
 
@@ -277,24 +254,20 @@
     :cond_5
     const/16 v17, 0x1
 
-    .line 1382
     .local v17, "radioOff":Z
     :goto_4
     if-nez v17, :cond_6
 
-    .line 1383
     const-string v22, "ShutdownThread"
 
     const-string v23, "Turning off cellular radios..."
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1384
     invoke-interface/range {v16 .. v16}, Lcom/android/internal/telephony/ITelephony;->shutdownMobileRadios()V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 1391
     :cond_6
     :goto_5
     const-string v22, "ShutdownThread"
@@ -303,7 +276,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1393
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/power/ShutdownThread$12;->val$endTime:J
@@ -316,7 +288,6 @@
 
     sub-long v8, v22, v24
 
-    .line 1394
     .local v8, "delay":J
     :goto_6
     const-wide/16 v22, 0x0
@@ -325,7 +296,6 @@
 
     if-lez v22, :cond_c
 
-    .line 1395
     # getter for: Lcom/android/server/power/ShutdownThread;->mRebootUpdate:Z
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1600()Z
 
@@ -333,7 +303,6 @@
 
     if-eqz v22, :cond_7
 
-    .line 1396
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/power/ShutdownThread$12;->val$timeout:I
@@ -382,11 +351,9 @@
 
     move/from16 v21, v0
 
-    .line 1398
     .local v21, "status":I
     add-int/lit8 v21, v21, 0x6
 
-    .line 1399
     # getter for: Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Lcom/android/server/power/ShutdownThread;
 
@@ -403,7 +370,6 @@
     # invokes: Lcom/android/server/power/ShutdownThread;->setRebootProgress(ILjava/lang/CharSequence;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/power/ShutdownThread;->access$1700(Lcom/android/server/power/ShutdownThread;ILjava/lang/CharSequence;)V
 
-    .line 1402
     .end local v21    # "status":I
     :cond_7
     const-string v22, "ShutdownThread"
@@ -412,10 +378,8 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
     if-nez v17, :cond_8
 
-    .line 1419
     :try_start_3
     invoke-interface/range {v16 .. v16}, Lcom/android/internal/telephony/ITelephony;->needMobileRadioShutdown()Z
     :try_end_3
@@ -427,18 +391,15 @@
 
     const/16 v17, 0x1
 
-    .line 1424
     :goto_7
     if-eqz v17, :cond_8
 
-    .line 1425
     const-string v22, "ShutdownThread"
 
     const-string v23, "!@Radio turned off."
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1438
     :cond_8
     const-string v22, "ShutdownThread"
 
@@ -446,11 +407,9 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1439
     const/4 v12, 0x1
 
-    .line 1442
-    const-string/jumbo v22, "ril.modem.board"
+    const-string v22, "ril.modem.board"
 
     const-string v23, ""
 
@@ -458,7 +417,6 @@
 
     move-result-object v7
 
-    .line 1443
     .local v7, "board":Ljava/lang/String;
     const-string v22, "XMM"
 
@@ -470,8 +428,7 @@
 
     if-eqz v22, :cond_9
 
-    .line 1444
-    const-string/jumbo v22, "ril.deviceOffRes"
+    const-string v22, "ril.deviceOffRes"
 
     const-string v23, "0"
 
@@ -479,7 +436,6 @@
 
     move-result-object v18
 
-    .line 1445
     .local v18, "repPhone1Off":Ljava/lang/String;
     const-string v22, "1"
 
@@ -493,17 +449,14 @@
 
     if-eqz v22, :cond_9
 
-    .line 1446
     const-string v22, "ShutdownThread"
 
     const-string v23, "!@PhoneOff req resp"
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->onview(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1447
     const/16 v17, 0x1
 
-    .line 1451
     .end local v18    # "repPhone1Off":Ljava/lang/String;
     :cond_9
     const-string v22, "DCGS"
@@ -516,8 +469,7 @@
 
     if-eqz v22, :cond_a
 
-    .line 1452
-    const-string/jumbo v22, "ril.deviceOffRes"
+    const-string v22, "ril.deviceOffRes"
 
     const-string v23, "0"
 
@@ -525,9 +477,8 @@
 
     move-result-object v19
 
-    .line 1453
     .local v19, "repPhoneOff":Ljava/lang/String;
-    const-string/jumbo v22, "ril.deviceOffRes2"
+    const-string v22, "ril.deviceOffRes2"
 
     const-string v23, "0"
 
@@ -535,7 +486,6 @@
 
     move-result-object v20
 
-    .line 1454
     .local v20, "repPhoneOff2":Ljava/lang/String;
     const-string v22, "1"
 
@@ -561,23 +511,19 @@
 
     if-eqz v22, :cond_a
 
-    .line 1456
     const-string v22, "ShutdownThread"
 
     const-string v23, "!@PhoneOff req resp"
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->onview(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1457
     const/16 v17, 0x1
 
-    .line 1463
     .end local v19    # "repPhoneOff":Ljava/lang/String;
     .end local v20    # "repPhoneOff2":Ljava/lang/String;
     :cond_a
     if-nez v15, :cond_b
 
-    .line 1465
     :try_start_4
     invoke-interface {v14}, Landroid/nfc/INfcAdapter;->getState()I
     :try_end_4
@@ -595,18 +541,15 @@
 
     const/4 v15, 0x1
 
-    .line 1470
     :goto_8
     if-eqz v15, :cond_b
 
-    .line 1471
     const-string v22, "ShutdownThread"
 
     const-string v23, "!@NFC turned off."
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1487
     :cond_b
     if-eqz v17, :cond_12
 
@@ -616,14 +559,12 @@
 
     if-eqz v12, :cond_12
 
-    .line 1488
     const-string v22, "ShutdownThread"
 
     const-string v23, "NFC, Radio and Bluetooth shutdown complete."
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1489
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread$12;->val$done:[Z
@@ -636,12 +577,10 @@
 
     aput-boolean v24, v22, v23
 
-    .line 1519
     .end local v7    # "board":Ljava/lang/String;
     :cond_c
     return-void
 
-    .line 1314
     .end local v4    # "WiFiOff":Z
     .end local v6    # "bluetoothOff":Z
     .end local v8    # "delay":J
@@ -652,18 +591,15 @@
 
     goto/16 :goto_0
 
-    .line 1340
     .restart local v4    # "WiFiOff":Z
     :cond_e
     const/4 v15, 0x0
 
     goto/16 :goto_1
 
-    .line 1346
     :catch_0
     move-exception v11
 
-    .line 1347
     .local v11, "ex":Landroid/os/RemoteException;
     const-string v22, "ShutdownThread"
 
@@ -675,18 +611,15 @@
 
     invoke-static {v0, v1, v11}, Lcom/android/server/power/ShutdownThread$Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)I
 
-    .line 1348
     const/4 v15, 0x1
 
     .restart local v15    # "nfcOff":Z
     goto/16 :goto_2
 
-    .line 1359
     .end local v11    # "ex":Landroid/os/RemoteException;
     :catch_1
     move-exception v11
 
-    .line 1360
     .restart local v11    # "ex":Landroid/os/RemoteException;
     const-string v22, "ShutdownThread"
 
@@ -700,7 +633,6 @@
 
     goto/16 :goto_3
 
-    .line 1381
     .end local v11    # "ex":Landroid/os/RemoteException;
     .restart local v6    # "bluetoothOff":Z
     :cond_f
@@ -708,11 +640,9 @@
 
     goto/16 :goto_4
 
-    .line 1386
     :catch_2
     move-exception v11
 
-    .line 1387
     .restart local v11    # "ex":Landroid/os/RemoteException;
     const-string v22, "ShutdownThread"
 
@@ -724,13 +654,11 @@
 
     invoke-static {v0, v1, v11}, Lcom/android/server/power/ShutdownThread$Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)I
 
-    .line 1388
     const/16 v17, 0x1
 
     .restart local v17    # "radioOff":Z
     goto/16 :goto_5
 
-    .line 1419
     .end local v11    # "ex":Landroid/os/RemoteException;
     .restart local v8    # "delay":J
     :cond_10
@@ -738,11 +666,9 @@
 
     goto/16 :goto_7
 
-    .line 1420
     :catch_3
     move-exception v11
 
-    .line 1421
     .restart local v11    # "ex":Landroid/os/RemoteException;
     const-string v22, "ShutdownThread"
 
@@ -754,12 +680,10 @@
 
     invoke-static {v0, v1, v11}, Lcom/android/server/power/ShutdownThread$Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)I
 
-    .line 1422
     const/16 v17, 0x1
 
     goto/16 :goto_7
 
-    .line 1465
     .end local v11    # "ex":Landroid/os/RemoteException;
     .restart local v7    # "board":Ljava/lang/String;
     :cond_11
@@ -767,11 +691,9 @@
 
     goto :goto_8
 
-    .line 1466
     :catch_4
     move-exception v11
 
-    .line 1467
     .restart local v11    # "ex":Landroid/os/RemoteException;
     const-string v22, "ShutdownThread"
 
@@ -783,12 +705,10 @@
 
     invoke-static {v0, v1, v11}, Lcom/android/server/power/ShutdownThread$Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)I
 
-    .line 1468
     const/4 v15, 0x1
 
     goto :goto_8
 
-    .line 1495
     .end local v11    # "ex":Landroid/os/RemoteException;
     :cond_12
     const-string v22, "ShutdownThread"
@@ -797,7 +717,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1497
     const-wide/16 v22, 0x1f4
 
     :try_start_5
@@ -805,7 +724,6 @@
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 1501
     :goto_9
     const-string v22, "ShutdownThread"
 
@@ -813,7 +731,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1510
     const-string v22, "ShutdownThread"
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -918,7 +835,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/power/ShutdownThread$Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1517
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/power/ShutdownThread$12;->val$endTime:J
@@ -931,14 +847,11 @@
 
     sub-long v8, v22, v24
 
-    .line 1518
     goto/16 :goto_6
 
-    .line 1498
     :catch_5
     move-exception v10
 
-    .line 1499
     .local v10, "e":Ljava/lang/InterruptedException;
     const-string v22, "ShutdownThread"
 

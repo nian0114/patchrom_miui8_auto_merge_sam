@@ -96,28 +96,24 @@
     .locals 1
 
     .prologue
-    .line 95
     new-instance v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$1;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$1;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->SYSTEM_SETTINGS_DEFAULT:Ljava/util/Map;
 
-    .line 107
     new-instance v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$2;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$2;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->SECURE_SETTINGS_DEFAULT:Ljava/util/Map;
 
-    .line 121
     new-instance v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$3;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$3;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->GLOBAL_SETTINGS_DEFAULT:Ljava/util/Map;
 
-    .line 152
     new-instance v0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$4;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$4;-><init>()V
@@ -132,13 +128,10 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
-    .line 184
     return-void
 .end method
 
@@ -148,10 +141,8 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 405
     const/4 v8, 0x0
 
-    .line 407
     .local v8, "showUpdates":I
     :try_start_0
     const-string v10, "SurfaceFlinger"
@@ -160,72 +151,59 @@
 
     move-result-object v4
 
-    .line 408
     .local v4, "flinger":Landroid/os/IBinder;
     if-eqz v4, :cond_0
 
-    .line 409
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 410
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v5
 
-    .line 411
     .local v5, "reply":Landroid/os/Parcel;
     const-string v10, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v10}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 412
     const/16 v10, 0x3f2
 
     const/4 v11, 0x0
 
     invoke-interface {v4, v10, v0, v5, v11}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 414
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 416
     .local v7, "showCpu":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 417
     .local v2, "enableGL":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 419
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 421
     .local v6, "showBackground":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 422
     .local v1, "disableOverlays":I
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 423
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 428
     .end local v0    # "data":Landroid/os/Parcel;
     .end local v1    # "disableOverlays":I
     .end local v2    # "enableGL":I
@@ -242,11 +220,9 @@
     :cond_1
     return v9
 
-    .line 425
     :catch_0
     move-exception v3
 
-    .line 426
     .local v3, "ex":Landroid/os/RemoteException;
     const-string v10, "DeveloperModeSettings"
 
@@ -254,7 +230,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "updateFlingerOptions: RemoteException ex -> "
+    const-string v12, "updateFlingerOptions: RemoteException ex -> "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -281,7 +257,6 @@
     .locals 4
 
     .prologue
-    .line 479
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -293,17 +268,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 484
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 480
     :catch_0
     move-exception v0
 
-    .line 481
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DeveloperModeSettings"
 
@@ -311,7 +283,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "resetAppProcessLimitOptions: RemoteException ex -> "
+    const-string v3, "resetAppProcessLimitOptions: RemoteException ex -> "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -331,7 +303,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 482
     const/4 v1, 0x0
 
     goto :goto_0
@@ -343,7 +314,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 291
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -354,16 +324,13 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 293
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 294
     .local v0, "adapter":Landroid/bluetooth/BluetoothAdapter;
     invoke-virtual {v0, v3}, Landroid/bluetooth/BluetoothAdapter;->configHciSnoopLog(Z)Z
 
-    .line 295
     return-void
 .end method
 
@@ -371,20 +338,18 @@
     .locals 4
 
     .prologue
-    .line 468
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "show_processes"
+    const-string v2, "show_processes"
 
     const/4 v3, 0x0
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 469
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -397,13 +362,11 @@
 
     move-result-object v0
 
-    .line 471
     .local v0, "service":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
-    .line 472
     return-void
 .end method
 
@@ -415,7 +378,6 @@
 
     const/4 v2, 0x0
 
-    .line 333
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -431,18 +393,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 338
     :goto_0
     return v1
 
-    .line 335
     :catch_0
     move-exception v0
 
     .local v0, "ex":Landroid/os/RemoteException;
     move v1, v2
 
-    .line 336
     goto :goto_0
 .end method
 
@@ -452,7 +411,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 379
     :try_start_0
     const-string v4, "SurfaceFlinger"
 
@@ -460,34 +418,28 @@
 
     move-result-object v2
 
-    .line 380
     .local v2, "flinger":Landroid/os/IBinder;
     if-eqz v2, :cond_1
 
-    .line 381
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 382
     .local v0, "data":Landroid/os/Parcel;
     const-string v4, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 383
     const/4 v4, 0x0
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 387
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->isShowingScreenUpdateAndReloadSurface()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 388
     const/16 v4, 0x3ea
 
     const/4 v5, 0x0
@@ -496,7 +448,6 @@
 
     invoke-interface {v2, v4, v0, v5, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 393
     :cond_0
     const/16 v4, 0x3f0
 
@@ -506,15 +457,12 @@
 
     invoke-interface {v2, v4, v0, v5, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 394
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 395
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->isShowingScreenUpdateAndReloadSurface()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 401
     .end local v0    # "data":Landroid/os/Parcel;
     :cond_1
     const/4 v3, 0x1
@@ -523,11 +471,9 @@
     :goto_0
     return v3
 
-    .line 397
     :catch_0
     move-exception v1
 
-    .line 398
     .local v1, "ex":Landroid/os/RemoteException;
     const-string v4, "DeveloperModeSettings"
 
@@ -535,7 +481,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "resetShowUpdatesOption: RemoteException ex -> "
+    const-string v6, "resetShowUpdatesOption: RemoteException ex -> "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -562,10 +508,8 @@
     .locals 6
 
     .prologue
-    .line 519
     const/4 v2, 0x1
 
-    .line 520
     .local v2, "ret":Z
     sget-object v3, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->GLOBAL_SETTINGS_DEFAULT:Ljava/util/Map;
 
@@ -577,7 +521,6 @@
 
     move-result-object v0
 
-    .line 521
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -586,14 +529,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 522
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 523
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
@@ -619,10 +560,8 @@
 
     and-int/2addr v2, v3
 
-    .line 525
     goto :goto_0
 
-    .line 526
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return v2
@@ -634,7 +573,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 492
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -646,17 +584,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 498
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 493
     :catch_0
     move-exception v0
 
-    .line 494
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v2, "DeveloperModeSettings"
 
@@ -664,7 +599,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "resetImmediatelyDestroyActivitiesOptions: RemoteException ex -> "
+    const-string v4, "resetImmediatelyDestroyActivitiesOptions: RemoteException ex -> "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -691,27 +626,24 @@
     .locals 3
 
     .prologue
-    .line 435
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "debug.force_rtl"
+    const-string v1, "debug.force_rtl"
 
     const/4 v2, 0x0
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 437
-    const-string/jumbo v0, "debug.force_rtl"
+    const-string v0, "debug.force_rtl"
 
     const-string v1, "0"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -726,7 +658,6 @@
 
     invoke-static {v0}, Lcom/android/internal/app/LocalePicker;->updateLocale(Ljava/util/Locale;)V
 
-    .line 439
     return-void
 .end method
 
@@ -734,10 +665,8 @@
     .locals 6
 
     .prologue
-    .line 533
     const/4 v2, 0x1
 
-    .line 534
     .local v2, "ret":Z
     sget-object v3, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->SECURE_SETTINGS_DEFAULT:Ljava/util/Map;
 
@@ -749,7 +678,6 @@
 
     move-result-object v0
 
-    .line 535
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -758,14 +686,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 536
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 537
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
@@ -791,10 +717,8 @@
 
     and-int/2addr v2, v3
 
-    .line 539
     goto :goto_0
 
-    .line 540
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return v2
@@ -804,10 +728,9 @@
     .locals 3
 
     .prologue
-    .line 356
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "usb"
+    const-string v2, "usb"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -815,18 +738,15 @@
 
     check-cast v0, Landroid/hardware/usb/UsbManager;
 
-    .line 357
     .local v0, "manager":Landroid/hardware/usb/UsbManager;
-    const-string/jumbo v1, "none"
+    const-string v1, "none"
 
     invoke-virtual {v0, v1}, Landroid/hardware/usb/UsbManager;->setCurrentFunction(Ljava/lang/String;)V
 
-    .line 358
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/hardware/usb/UsbManager;->setUsbDataUnlocked(Z)V
 
-    .line 359
     return-void
 .end method
 
@@ -834,7 +754,6 @@
     .locals 4
 
     .prologue
-    .line 547
     sget-object v2, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->SYSTEM_PROPERTIES_DEFAULT:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -845,7 +764,6 @@
 
     move-result-object v0
 
-    .line 548
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -854,14 +772,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 549
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 550
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -879,7 +795,6 @@
 
     goto :goto_0
 
-    .line 552
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
@@ -889,10 +804,8 @@
     .locals 6
 
     .prologue
-    .line 505
     const/4 v2, 0x1
 
-    .line 506
     .local v2, "ret":Z
     sget-object v3, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->SYSTEM_SETTINGS_DEFAULT:Ljava/util/Map;
 
@@ -904,7 +817,6 @@
 
     move-result-object v0
 
-    .line 507
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -913,14 +825,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 508
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 509
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
@@ -946,10 +856,8 @@
 
     and-int/2addr v2, v3
 
-    .line 511
     goto :goto_0
 
-    .line 512
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return v2
@@ -961,23 +869,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 362
     :try_start_0
-    const-string/jumbo v6, "usb"
+    const-string v6, "usb"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 363
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/hardware/usb/IUsbManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/usb/IUsbManager;
 
     move-result-object v4
 
-    .line 365
     .local v4, "service":Landroid/hardware/usb/IUsbManager;
-    const-string/jumbo v6, "ro.adb.secure"
+    const-string v6, "ro.adb.secure"
 
     const/4 v7, 0x0
 
@@ -985,11 +890,10 @@
 
     move-result v3
 
-    .line 366
     .local v3, "secureAdbEnabled":Z
-    const-string/jumbo v6, "trigger_restart_min_framework"
+    const-string v6, "trigger_restart_min_framework"
 
-    const-string/jumbo v7, "vold.decrypt"
+    const-string v7, "vold.decrypt"
 
     invoke-static {v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -999,18 +903,15 @@
 
     move-result v1
 
-    .line 367
     .local v1, "dataEncrypted":Z
     if-eqz v3, :cond_0
 
     if-nez v1, :cond_0
 
-    .line 368
     invoke-interface {v4}, Landroid/hardware/usb/IUsbManager;->clearUsbDebuggingKeys()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 374
     :cond_0
     const/4 v5, 0x1
 
@@ -1021,11 +922,9 @@
     :goto_0
     return v5
 
-    .line 370
     :catch_0
     move-exception v2
 
-    .line 371
     .local v2, "e":Landroid/os/RemoteException;
     const-string v6, "DeveloperModeSettings"
 
@@ -1042,10 +941,9 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 346
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "wifi"
+    const-string v2, "wifi"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1053,17 +951,13 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 347
     .local v0, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v0, v3}, Landroid/net/wifi/WifiManager;->enableVerboseLogging(I)V
 
-    .line 348
     invoke-virtual {v0, v3}, Landroid/net/wifi/WifiManager;->enableAggressiveHandover(I)V
 
-    .line 349
     invoke-virtual {v0, v3}, Landroid/net/wifi/WifiManager;->setAllowScansWithTraffic(I)V
 
-    .line 350
     return-void
 .end method
 
@@ -1075,9 +969,8 @@
 
     const/4 v3, 0x0
 
-    .line 447
     :try_start_0
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1087,7 +980,6 @@
 
     move-result-object v1
 
-    .line 450
     .local v1, "windowManager":Landroid/view/IWindowManager;
     const/4 v4, 0x0
 
@@ -1095,37 +987,31 @@
 
     invoke-interface {v1, v4, v5}, Landroid/view/IWindowManager;->setAnimationScale(IF)V
 
-    .line 452
     const/4 v4, 0x1
 
     const/high16 v5, 0x3f800000    # 1.0f
 
     invoke-interface {v1, v4, v5}, Landroid/view/IWindowManager;->setAnimationScale(IF)V
 
-    .line 454
     const/4 v4, 0x2
 
     const/high16 v5, 0x3f800000    # 1.0f
 
     invoke-interface {v1, v4, v5}, Landroid/view/IWindowManager;->setAnimationScale(IF)V
 
-    .line 456
     const-string v4, ""
 
     invoke-interface {v1, v4}, Landroid/view/IWindowManager;->setStrictModeVisualIndicatorPreference(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 461
     .end local v1    # "windowManager":Landroid/view/IWindowManager;
     :goto_0
     return v2
 
-    .line 457
     :catch_0
     move-exception v0
 
-    .line 458
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "DeveloperModeSettings"
 
@@ -1133,7 +1019,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "resetWindowManagerOptions: RemoteException ex -> "
+    const-string v5, "resetWindowManagerOptions: RemoteException ex -> "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1155,7 +1041,6 @@
 
     move v2, v3
 
-    .line 459
     goto :goto_0
 .end method
 
@@ -1165,103 +1050,85 @@
     .locals 7
 
     .prologue
-    .line 192
     const/4 v1, 0x1
 
-    .line 193
     .local v1, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 199
     .local v2, "token":J
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetBluetoothHCILog()V
 
-    .line 202
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetMockLocationApps()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 205
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetDebugApps()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 211
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetWifiManagerSettings()V
 
-    .line 218
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetUsbAuth()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 222
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetDrawingOptions()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 225
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetRtlOptions()V
 
-    .line 231
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetWindowManagerOptions()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 234
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetCpuUsageOptions()V
 
-    .line 237
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetAppProcessLimitOptions()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 240
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetImmediatelyDestroyActivitiesOptions()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 244
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetSystemSettings()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 257
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetGlobalSettings()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 261
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetSecureSettings()Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 269
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->resetSystemProperties()V
 
-    .line 272
     new-instance v4, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$SystemPropPoker;
 
     invoke-direct {v4}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$SystemPropPoker;-><init>()V
@@ -1274,7 +1141,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 275
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1293,25 +1159,20 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 280
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 282
     const-string v4, "DeveloperModeSettings"
 
     const-string v5, "allowDeveloperMode: false"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     return v1
 
-    .line 276
     :catch_0
     move-exception v0
 
-    .line 277
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "DeveloperModeSettings"
@@ -1320,7 +1181,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "killSettings: RemoteException ex -> "
+    const-string v6, "killSettings: RemoteException ex -> "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1344,7 +1205,6 @@
 
     goto :goto_0
 
-    .line 280
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v4
@@ -1366,12 +1226,10 @@
 
     const/4 v9, 0x0
 
-    .line 301
     new-array v4, v10, [I
 
     aput v8, v4, v9
 
-    .line 304
     .local v4, "mockLocationApps":[I
     iget-object v8, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
 
@@ -1383,17 +1241,14 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    .line 308
     .local v1, "appOpsManager":Landroid/app/AppOpsManager;
     invoke-virtual {v1, v4}, Landroid/app/AppOpsManager;->getPackagesForOps([I)Ljava/util/List;
 
     move-result-object v7
 
-    .line 309
     .local v7, "packageOps":Ljava/util/List;, "Ljava/util/List<Landroid/app/AppOpsManager$PackageOps;>;"
     if-eqz v7, :cond_1
 
-    .line 311
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1413,7 +1268,6 @@
 
     check-cast v6, Landroid/app/AppOpsManager$PackageOps;
 
-    .line 312
     .local v6, "packageOp":Landroid/app/AppOpsManager$PackageOps;
     invoke-virtual {v6}, Landroid/app/AppOpsManager$PackageOps;->getOps()Ljava/util/List;
 
@@ -1431,12 +1285,10 @@
 
     if-eq v8, v13, :cond_0
 
-    .line 313
     invoke-virtual {v6}, Landroid/app/AppOpsManager$PackageOps;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 315
     .local v5, "oldMockLocationApp":Ljava/lang/String;
     :try_start_0
     iget-object v8, p0, Lcom/android/server/enterprise/restriction/DeveloperModeSettings;->mContext:Landroid/content/Context;
@@ -1451,7 +1303,6 @@
 
     move-result-object v0
 
-    .line 317
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     const/16 v8, 0x3a
 
@@ -1465,7 +1316,6 @@
 
     goto :goto_0
 
-    .line 319
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v2
@@ -1473,7 +1323,6 @@
     .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move v8, v9
 
-    .line 325
     .end local v2    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v5    # "oldMockLocationApp":Ljava/lang/String;

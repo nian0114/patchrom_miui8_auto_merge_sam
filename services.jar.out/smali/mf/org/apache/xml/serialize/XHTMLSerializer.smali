@@ -8,7 +8,6 @@
     .locals 5
 
     .prologue
-    .line 51
     const/4 v0, 0x1
 
     new-instance v1, Lmf/org/apache/xml/serialize/OutputFormat;
@@ -23,7 +22,6 @@
 
     invoke-direct {p0, v0, v1}, Lmf/org/apache/xml/serialize/HTMLSerializer;-><init>(ZLmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 52
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p2, "format"    # Lmf/org/apache/xml/serialize/OutputFormat;
 
     .prologue
-    .line 91
     const/4 v0, 0x1
 
     if-eqz p2, :cond_0
@@ -42,13 +39,10 @@
     :goto_0
     invoke-direct {p0, v0, p2}, Lmf/org/apache/xml/serialize/HTMLSerializer;-><init>(ZLmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 92
     invoke-virtual {p0, p1}, Lmf/org/apache/xml/serialize/XHTMLSerializer;->setOutputByteStream(Ljava/io/OutputStream;)V
 
-    .line 93
     return-void
 
-    .line 91
     .restart local p2    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :cond_0
     new-instance p2, Lmf/org/apache/xml/serialize/OutputFormat;
@@ -71,7 +65,6 @@
     .param p2, "format"    # Lmf/org/apache/xml/serialize/OutputFormat;
 
     .prologue
-    .line 76
     const/4 v0, 0x1
 
     if-eqz p2, :cond_0
@@ -80,13 +73,10 @@
     :goto_0
     invoke-direct {p0, v0, p2}, Lmf/org/apache/xml/serialize/HTMLSerializer;-><init>(ZLmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 77
     invoke-virtual {p0, p1}, Lmf/org/apache/xml/serialize/XHTMLSerializer;->setOutputCharStream(Ljava/io/Writer;)V
 
-    .line 78
     return-void
 
-    .line 76
     .restart local p2    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :cond_0
     new-instance p2, Lmf/org/apache/xml/serialize/OutputFormat;
@@ -108,7 +98,6 @@
     .param p1, "format"    # Lmf/org/apache/xml/serialize/OutputFormat;
 
     .prologue
-    .line 62
     const/4 v0, 0x1
 
     if-eqz p1, :cond_0
@@ -117,10 +106,8 @@
     :goto_0
     invoke-direct {p0, v0, p1}, Lmf/org/apache/xml/serialize/HTMLSerializer;-><init>(ZLmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 63
     return-void
 
-    .line 62
     .restart local p1    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :cond_0
     new-instance p1, Lmf/org/apache/xml/serialize/OutputFormat;
@@ -144,17 +131,14 @@
     .param p1, "format"    # Lmf/org/apache/xml/serialize/OutputFormat;
 
     .prologue
-    .line 98
     if-eqz p1, :cond_0
 
     .end local p1    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :goto_0
     invoke-super {p0, p1}, Lmf/org/apache/xml/serialize/HTMLSerializer;->setOutputFormat(Lmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 99
     return-void
 
-    .line 98
     .restart local p1    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :cond_0
     new-instance p1, Lmf/org/apache/xml/serialize/OutputFormat;

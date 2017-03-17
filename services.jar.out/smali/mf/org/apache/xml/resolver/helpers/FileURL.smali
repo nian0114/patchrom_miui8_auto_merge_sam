@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .end annotation
 
     .prologue
-    .line 72
     const-string v1, "/"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -33,7 +31,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 73
     new-instance v1, Ljava/net/URL;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -52,11 +49,9 @@
 
     invoke-direct {v1, v2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 82
     :goto_0
     return-object v1
 
-    .line 76
     :cond_0
     const-string v1, "user.dir"
 
@@ -64,7 +59,6 @@
 
     move-result-object v0
 
-    .line 77
     .local v0, "userdir":Ljava/lang/String;
     const/16 v1, 0x5c
 
@@ -74,7 +68,6 @@
 
     move-result-object v0
 
-    .line 79
     const-string v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -83,7 +76,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 80
     new-instance v1, Ljava/net/URL;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -108,7 +100,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_1
     new-instance v1, Ljava/net/URL;
 

@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3362
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$12;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$12;->val$pkg:Ljava/lang/String;
@@ -56,7 +55,6 @@
     .locals 5
 
     .prologue
-    .line 3365
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$12;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mListeners:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
@@ -74,6 +72,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->removeEdgeNotification(Ljava/lang/String;ILandroid/os/Bundle;I)V
 
-    .line 3366
     return-void
 .end method

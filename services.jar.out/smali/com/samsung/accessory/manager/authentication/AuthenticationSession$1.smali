@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 126
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 127
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
@@ -58,18 +55,15 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->sendEmptyMessage(I)Z
 
-    .line 131
     :cond_0
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 129
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
@@ -91,12 +85,10 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 115
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 116
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
@@ -106,18 +98,15 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->sendEmptyMessage(I)Z
 
-    .line 122
     :cond_0
     :goto_0
     return-void
 
-    .line 117
     :cond_1
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_2
 
-    .line 118
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
@@ -131,11 +120,9 @@
 
     goto :goto_0
 
-    .line 119
     :cond_2
     if-ne p1, v1, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->this$0:Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;

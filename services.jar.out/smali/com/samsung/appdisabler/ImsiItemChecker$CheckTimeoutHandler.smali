@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/samsung/appdisabler/ImsiItemChecker$1;
 
     .prologue
-    .line 361
     invoke-direct {p0, p1}, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;-><init>(Lcom/samsung/appdisabler/ImsiItemChecker;)V
 
     return-void
@@ -50,13 +48,11 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 365
     :try_start_0
     iget v3, p1, Landroid/os/Message;->what:I
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 387
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,23 +73,19 @@
 
     invoke-static {v3}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;)V
 
-    .line 395
     :goto_0
     return-void
 
-    .line 367
     :sswitch_0
     const-string v3, "Network numeric is null - time elapsed"
 
     invoke-static {v3}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;)V
 
-    .line 368
     iget-object v3, p0, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     # invokes: Lcom/samsung/appdisabler/ImsiItemChecker;->hideAppAfterTimeout()V
     invoke-static {v3}, Lcom/samsung/appdisabler/ImsiItemChecker;->access$200(Lcom/samsung/appdisabler/ImsiItemChecker;)V
 
-    .line 370
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v3
@@ -104,11 +96,9 @@
 
     goto :goto_0
 
-    .line 391
     :catch_0
     move-exception v2
 
-    .line 392
     .local v2, "e":Ljava/lang/Exception;
     iget-object v3, p0, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
@@ -119,14 +109,12 @@
 
     invoke-interface {v3}, Lcom/samsung/appdisabler/ImsiItemChecker$ImsiItemCheckerFinish;->checkingEnded()V
 
-    .line 393
     const-string v3, "CheckTimeoutHandler exception"
 
     invoke-static {v3, v2}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 373
     .end local v2    # "e":Ljava/lang/Exception;
     :sswitch_1
     :try_start_1
@@ -134,7 +122,6 @@
 
     invoke-static {v3}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 375
     iget-object v3, p0, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     # getter for: Lcom/samsung/appdisabler/ImsiItemChecker;->mActionHandler:Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;
@@ -146,7 +133,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->removeMessages(I)V
 
-    .line 376
     iget-object v3, p0, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     # getter for: Lcom/samsung/appdisabler/ImsiItemChecker;->mActionHandler:Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;
@@ -158,7 +144,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->removeMessages(I)V
 
-    .line 378
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v3
@@ -167,22 +152,18 @@
 
     goto :goto_0
 
-    .line 381
     :sswitch_2
     const-string v3, "Show dialog msg"
 
     invoke-static {v3}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 382
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 383
     .local v0, "dialogText":Ljava/lang/String;
     const-string v1, "App Disabler Error"
 
-    .line 384
     .local v1, "dialogTitle":Ljava/lang/String;
     iget-object v3, p0, Lcom/samsung/appdisabler/ImsiItemChecker$CheckTimeoutHandler;->this$0:Lcom/samsung/appdisabler/ImsiItemChecker;
 
@@ -193,7 +174,6 @@
 
     goto :goto_0
 
-    .line 365
     :sswitch_data_0
     .sparse-switch
         0x6f -> :sswitch_0

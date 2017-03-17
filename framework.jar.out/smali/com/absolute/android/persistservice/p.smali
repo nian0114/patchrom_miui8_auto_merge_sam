@@ -14,28 +14,22 @@
     .locals 5
 
     .prologue
-    .line 797
     iput-object p1, p0, Lcom/absolute/android/persistservice/p;->a:Lcom/absolute/android/persistservice/l;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 799
     iput-object p2, p0, Lcom/absolute/android/persistservice/p;->b:Ljava/lang/String;
 
-    .line 801
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 802
     const-string v0, "android.intent.action.PACKAGE_RESTARTED"
 
     invoke-virtual {v1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 803
     if-eqz p3, :cond_2
 
-    .line 804
     array-length v2, p3
 
     const/4 v0, 0x0
@@ -45,7 +39,6 @@
 
     aget-object v3, p3, v0
 
-    .line 805
     const-string v4, "android.intent.action.PACKAGE_RESTARTED"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -54,14 +47,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 804
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 808
     :cond_1
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -69,12 +60,10 @@
 
     if-lez v4, :cond_0
 
-    .line 809
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 813
     :cond_2
     invoke-static {p1}, Lcom/absolute/android/persistservice/l;->a(Lcom/absolute/android/persistservice/l;)Landroid/content/Context;
 
@@ -82,7 +71,6 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 814
     return-void
 .end method
 
@@ -90,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 820
     iget-object v0, p0, Lcom/absolute/android/persistservice/p;->a:Lcom/absolute/android/persistservice/l;
 
     invoke-static {v0}, Lcom/absolute/android/persistservice/l;->a(Lcom/absolute/android/persistservice/l;)Landroid/content/Context;
@@ -99,7 +86,6 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 821
     return-void
 .end method
 
@@ -107,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 782
     invoke-direct {p0}, Lcom/absolute/android/persistservice/p;->a()V
 
     return-void
@@ -119,10 +104,8 @@
     .locals 3
 
     .prologue
-    .line 829
     const/4 v0, 0x1
 
-    .line 831
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -135,12 +118,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 832
     invoke-virtual {p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 835
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -157,15 +138,12 @@
 
     if-nez v0, :cond_0
 
-    .line 851
     :goto_0
     return-void
 
-    .line 842
     :cond_0
     const/4 v0, 0x0
 
-    .line 850
     :cond_1
     iget-object v1, p0, Lcom/absolute/android/persistservice/p;->a:Lcom/absolute/android/persistservice/l;
 

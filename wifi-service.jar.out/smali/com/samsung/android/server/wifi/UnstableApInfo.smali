@@ -47,34 +47,27 @@
     .param p3, "rssi"    # I
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
-    .line 41
     if-eqz p2, :cond_0
 
-    .line 42
     new-instance v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;-><init>(Lcom/samsung/android/server/wifi/UnstableApInfo;)V
 
-    .line 43
     .local v0, "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iput p3, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->level:I
 
-    .line 44
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     .end local v0    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_0
     iget-object v1, p1, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
@@ -85,7 +78,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mSsid:Ljava/lang/String;
 
-    .line 47
     iget-object v1, p1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     invoke-virtual {v1}, Ljava/util/BitSet;->clone()Ljava/lang/Object;
@@ -96,12 +88,10 @@
 
     iput-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
-    .line 48
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/wifi/UnstableApInfo;->reset(Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method
 
@@ -114,7 +104,6 @@
 
     const/4 v0, 0x1
 
-    .line 123
     iget-object v2, p1, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
     if-eqz v2, :cond_8
@@ -129,7 +118,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 124
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
     const/16 v3, 0x8
@@ -150,12 +138,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 142
     :cond_0
     :goto_0
     return v0
 
-    .line 126
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -175,7 +161,6 @@
 
     if-nez v2, :cond_0
 
-    .line 128
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -197,7 +182,6 @@
 
     if-nez v2, :cond_0
 
-    .line 130
     :cond_3
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -219,7 +203,6 @@
 
     if-nez v2, :cond_0
 
-    .line 132
     :cond_4
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -241,7 +224,6 @@
 
     if-nez v2, :cond_0
 
-    .line 134
     :cond_5
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -263,7 +245,6 @@
 
     if-nez v2, :cond_0
 
-    .line 136
     :cond_6
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -285,7 +266,6 @@
 
     if-nez v2, :cond_0
 
-    .line 138
     :cond_7
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mAllowKeyMgmt:Ljava/util/BitSet;
 
@@ -298,7 +278,6 @@
     :cond_8
     move v0, v1
 
-    .line 142
     goto :goto_0
 .end method
 
@@ -311,12 +290,10 @@
 
     const/4 v2, 0x1
 
-    .line 146
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 147
     .local v0, "length":I
     if-le v0, v2, :cond_0
 
@@ -336,14 +313,12 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 149
     add-int/lit8 v1, v0, -0x1
 
     invoke-virtual {p0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 151
     .end local p0    # "string":Ljava/lang/String;
     :cond_0
     return-object p0
@@ -357,13 +332,10 @@
     .param p2, "rssi"    # I
 
     .prologue
-    .line 155
     if-eqz p1, :cond_0
 
-    .line 156
     const/4 v0, 0x0
 
-    .line 157
     .local v0, "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -373,7 +345,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 158
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -383,21 +354,17 @@
     .end local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 159
     .restart local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iput p2, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->level:I
 
-    .line 160
     iget-boolean v1, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->isMobileHotspot:Z
 
     if-eqz v1, :cond_1
 
-    .line 161
     const/4 v1, 0x0
 
     iput v1, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
-    .line 172
     .end local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_0
     :goto_0
@@ -407,7 +374,6 @@
 
     return v1
 
-    .line 163
     .restart local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_1
     iget v1, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
@@ -418,23 +384,19 @@
 
     goto :goto_0
 
-    .line 166
     :cond_2
     new-instance v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
     .end local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     invoke-direct {v0, p0}, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;-><init>(Lcom/samsung/android/server/wifi/UnstableApInfo;)V
 
-    .line 167
     .restart local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iput p2, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->level:I
 
-    .line 168
     const/4 v1, 0x1
 
     iput v1, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
-    .line 169
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -447,7 +409,6 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 176
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
@@ -458,7 +419,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 177
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -467,7 +427,6 @@
 
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 178
     .local v0, "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -483,10 +442,8 @@
 
     if-gez v1, :cond_0
 
-    .line 179
     const/4 v1, 0x1
 
-    .line 182
     .end local v0    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :goto_0
     return v1
@@ -503,19 +460,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 68
     invoke-virtual {p0}, Lcom/samsung/android/server/wifi/UnstableApInfo;->isRoamAp()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 76
     :cond_0
     :goto_0
     return v2
 
-    .line 71
     :cond_1
     iget-object v3, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -541,7 +495,6 @@
 
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 72
     .local v0, "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -557,7 +510,6 @@
 
     if-gez v3, :cond_2
 
-    .line 73
     const/4 v2, 0x0
 
     goto :goto_0
@@ -583,15 +535,12 @@
 
     const/4 v7, 0x1
 
-    .line 80
     if-nez p1, :cond_1
 
-    .line 119
     :cond_0
     :goto_0
     return v6
 
-    .line 84
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -611,20 +560,16 @@
 
     check-cast v3, Lcom/android/server/wifi/ScanDetail;
 
-    .line 85
     .local v3, "item":Lcom/android/server/wifi/ScanDetail;
     invoke-virtual {v3}, Lcom/android/server/wifi/ScanDetail;->getScanResult()Landroid/net/wifi/ScanResult;
 
     move-result-object v5
 
-    .line 86
     .local v5, "scanItem":Landroid/net/wifi/ScanResult;
     if-eqz v5, :cond_2
 
-    .line 87
     iget-object v1, v5, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    .line 88
     .local v1, "bssid":Ljava/lang/String;
     iget-object v8, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -634,7 +579,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 89
     iget-object v8, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v8, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -643,7 +587,6 @@
 
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 91
     .local v0, "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iget-object v8, v5, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -655,39 +598,30 @@
 
     if-eqz v8, :cond_3
 
-    .line 92
     iput-boolean v7, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->isMobileHotspot:Z
 
-    .line 93
     iput v6, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
     move v6, v7
 
-    .line 94
     goto :goto_0
 
-    .line 96
     :cond_3
     iput-boolean v6, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->isMobileHotspot:Z
 
-    .line 99
     iget v4, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->level:I
 
-    .line 100
     .local v4, "rssi":I
     if-ge v4, v10, :cond_2
 
-    .line 101
     iget v8, v5, Landroid/net/wifi/ScanResult;->level:I
 
     if-lt v8, v10, :cond_2
 
     move v6, v7
 
-    .line 102
     goto :goto_0
 
-    .line 107
     .end local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     .end local v4    # "rssi":I
     :cond_4
@@ -697,12 +631,10 @@
 
     if-eqz v8, :cond_2
 
-    .line 109
     new-instance v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;-><init>(Lcom/samsung/android/server/wifi/UnstableApInfo;)V
 
-    .line 110
     .restart local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iget-object v6, v5, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -714,16 +646,13 @@
 
     if-eqz v6, :cond_5
 
-    .line 111
     iput-boolean v7, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->isMobileHotspot:Z
 
-    .line 113
     :cond_5
     iget v6, v5, Landroid/net/wifi/ScanResult;->level:I
 
     iput v6, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->level:I
 
-    .line 114
     iget-object v6, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     iget-object v8, v5, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
@@ -732,7 +661,6 @@
 
     move v6, v7
 
-    .line 115
     goto :goto_0
 .end method
 
@@ -749,10 +677,8 @@
     .end annotation
 
     .prologue
-    .line 186
     const/4 v0, 0x0
 
-    .line 187
     .local v0, "blackList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -764,13 +690,11 @@
 
     if-lt v4, v5, :cond_1
 
-    .line 188
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0    # "blackList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 189
     .restart local v0    # "blackList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -797,7 +721,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 190
     .local v1, "bssid":Ljava/lang/String;
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -807,7 +730,6 @@
 
     check-cast v3, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 191
     .local v3, "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     if-eqz v3, :cond_0
 
@@ -817,19 +739,16 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 192
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 196
     .end local v1    # "bssid":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 197
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -848,7 +767,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 198
     .restart local v1    # "bssid":Ljava/lang/String;
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -858,7 +776,6 @@
 
     check-cast v3, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 199
     .restart local v3    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iget v4, v3, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
@@ -868,7 +785,6 @@
 
     goto :goto_1
 
-    .line 202
     .end local v1    # "bssid":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
@@ -880,7 +796,6 @@
     .locals 2
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -908,19 +823,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 52
     invoke-virtual {p0}, Lcom/samsung/android/server/wifi/UnstableApInfo;->isRoamAp()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 60
     :cond_0
     :goto_0
     return v2
 
-    .line 55
     :cond_1
     iget-object v3, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
@@ -946,7 +858,6 @@
 
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 56
     .local v0, "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iget v3, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
@@ -954,7 +865,6 @@
 
     if-lt v3, v4, :cond_2
 
-    .line 57
     const/4 v2, 0x1
 
     goto :goto_0
@@ -967,10 +877,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 213
     if-nez p1, :cond_0
 
-    .line 214
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -995,11 +903,9 @@
 
     check-cast v1, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 215
     .local v1, "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iput v4, v1, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
-    .line 216
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -1008,7 +914,6 @@
 
     goto :goto_0
 
-    .line 218
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_0
@@ -1020,7 +925,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 219
     iget-object v2, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1029,18 +933,15 @@
 
     check-cast v1, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 220
     .restart local v1    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     iput v4, v1, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
-    .line 221
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, v1, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->time:J
 
-    .line 223
     .end local v1    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_1
     return-void
@@ -1050,18 +951,15 @@
     .locals 5
 
     .prologue
-    .line 227
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 229
     .local v3, "sb":Ljava/lang/StringBuffer;
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mSsid:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 231
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1086,13 +984,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 232
     .local v2, "key":Ljava/lang/String;
     const-string v4, "["
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 233
     iget-object v4, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v4, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1101,7 +997,6 @@
 
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 234
     .local v0, "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -1117,37 +1012,30 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 235
     const-string v4, ","
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 236
     iget v4, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->counter:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 237
     const-string v4, ","
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 238
     iget v4, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->level:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 239
     iget-boolean v4, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->isMobileHotspot:Z
 
     if-eqz v4, :cond_0
 
-    .line 240
     const-string v4, ",SEC80"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 242
     :cond_0
     const-string v4, "]"
 
@@ -1155,7 +1043,6 @@
 
     goto :goto_0
 
-    .line 244
     .end local v0    # "apInfo":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     .end local v2    # "key":Ljava/lang/String;
     :cond_1
@@ -1171,7 +1058,6 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 206
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
@@ -1182,7 +1068,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 207
     iget-object v1, p0, Lcom/samsung/android/server/wifi/UnstableApInfo;->mBssids:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1191,7 +1076,6 @@
 
     check-cast v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
 
-    .line 208
     .local v0, "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1199,7 +1083,6 @@
 
     iput-wide v2, v0, Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;->time:J
 
-    .line 210
     .end local v0    # "info":Lcom/samsung/android/server/wifi/UnstableApInfo$ApInfo;
     :cond_0
     return-void

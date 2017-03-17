@@ -27,22 +27,16 @@
     .param p6, "location"    # Lmf/javax/xml/stream/Location;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p6}, Lmf/org/apache/xerces/stax/events/XMLEventImpl;-><init>(ILmf/javax/xml/stream/Location;)V
 
-    .line 51
     iput-object p2, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fName:Lmf/javax/xml/namespace/QName;
 
-    .line 52
     iput-object p3, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fValue:Ljava/lang/String;
 
-    .line 53
     iput-object p4, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fDtdType:Ljava/lang/String;
 
-    .line 54
     iput-boolean p5, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fIsSpecified:Z
 
-    .line 55
     return-void
 .end method
 
@@ -55,7 +49,6 @@
     .param p5, "location"    # Lmf/javax/xml/stream/Location;
 
     .prologue
-    .line 46
     const/16 v1, 0xa
 
     move-object v0, p0
@@ -72,7 +65,6 @@
 
     invoke-direct/range {v0 .. v6}, Lmf/org/apache/xerces/stax/events/AttributeImpl;-><init>(ILmf/javax/xml/namespace/QName;Ljava/lang/String;Ljava/lang/String;ZLmf/javax/xml/stream/Location;)V
 
-    .line 47
     return-void
 .end method
 
@@ -82,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fDtdType:Ljava/lang/String;
 
     return-object v0
@@ -92,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fName:Lmf/javax/xml/namespace/QName;
 
     return-object v0
@@ -102,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fValue:Ljava/lang/String;
 
     return-object v0
@@ -112,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fIsSpecified:Z
 
     return v0
@@ -128,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 88
     :try_start_0
     iget-object v2, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fName:Lmf/javax/xml/namespace/QName;
 
@@ -136,7 +123,6 @@
 
     move-result-object v1
 
-    .line 89
     .local v1, "prefix":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -146,15 +132,12 @@
 
     if-lez v2, :cond_0
 
-    .line 90
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 91
     const/16 v2, 0x3a
 
     invoke-virtual {p1, v2}, Ljava/io/Writer;->write(I)V
 
-    .line 93
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fName:Lmf/javax/xml/namespace/QName;
 
@@ -164,32 +147,26 @@
 
     invoke-virtual {p1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 95
     const-string v2, "=\""
 
     invoke-virtual {p1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 96
     iget-object v2, p0, Lmf/org/apache/xerces/stax/events/AttributeImpl;->fValue:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 97
     const/16 v2, 0x22
 
     invoke-virtual {p1, v2}, Ljava/io/Writer;->write(I)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
     return-void
 
-    .line 99
     .end local v1    # "prefix":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 100
     .local v0, "ioe":Ljava/io/IOException;
     new-instance v2, Lmf/javax/xml/stream/XMLStreamException;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2800
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$25$1;->this$1:Lcom/android/server/policy/GlobalActions$25;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,18 +41,15 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 2805
     invoke-static {}, Landroid/app/ActivityManager;->isUserAMonkey()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2820
     :goto_0
     return-void
 
-    .line 2811
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$25$1;->this$1:Lcom/android/server/policy/GlobalActions$25;
 

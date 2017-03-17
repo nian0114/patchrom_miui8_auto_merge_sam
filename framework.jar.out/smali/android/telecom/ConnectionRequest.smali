@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x3
 
     invoke-static {v0}, Landroid/telecom/Log;->isLoggable(I)Z
@@ -45,7 +44,6 @@
 
     sput-boolean v0, Landroid/telecom/ConnectionRequest;->PII_DEBUG:Z
 
-    .line 117
     new-instance v0, Landroid/telecom/ConnectionRequest$1;
 
     invoke-direct {v0}, Landroid/telecom/ConnectionRequest$1;-><init>()V
@@ -60,10 +58,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -80,7 +76,6 @@
 
     iput-object v0, p0, Landroid/telecom/ConnectionRequest;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 70
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -97,7 +92,6 @@
 
     iput-object v0, p0, Landroid/telecom/ConnectionRequest;->mAddress:Landroid/net/Uri;
 
-    .line 71
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -114,14 +108,12 @@
 
     iput-object v0, p0, Landroid/telecom/ConnectionRequest;->mExtras:Landroid/os/Bundle;
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telecom/ConnectionRequest;->mVideoState:I
 
-    .line 73
     return-void
 .end method
 
@@ -131,7 +123,6 @@
     .param p2, "x1"    # Landroid/telecom/ConnectionRequest$1;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/telecom/ConnectionRequest;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -144,12 +135,10 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/telecom/ConnectionRequest;-><init>(Landroid/telecom/PhoneAccountHandle;Landroid/net/Uri;Landroid/os/Bundle;I)V
 
-    .line 49
     return-void
 .end method
 
@@ -161,22 +150,16 @@
     .param p4, "videoState"    # I
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object p1, p0, Landroid/telecom/ConnectionRequest;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 63
     iput-object p2, p0, Landroid/telecom/ConnectionRequest;->mAddress:Landroid/net/Uri;
 
-    .line 64
     iput-object p3, p0, Landroid/telecom/ConnectionRequest;->mExtras:Landroid/os/Bundle;
 
-    .line 65
     iput p4, p0, Landroid/telecom/ConnectionRequest;->mVideoState:I
 
-    .line 66
     return-void
 .end method
 
@@ -186,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 134
     const/4 v0, 0x0
 
     return v0
@@ -196,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/telecom/ConnectionRequest;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -206,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/telecom/ConnectionRequest;->mAddress:Landroid/net/Uri;
 
     return-object v0
@@ -216,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/telecom/ConnectionRequest;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -226,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget v0, p0, Landroid/telecom/ConnectionRequest;->mVideoState:I
 
     return v0
@@ -236,7 +214,6 @@
     .locals 4
 
     .prologue
-    .line 107
     const-string v1, "ConnectionRequest %s %s"
 
     const/4 v0, 0x2
@@ -303,26 +280,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 139
     iget-object v0, p0, Landroid/telecom/ConnectionRequest;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 140
     iget-object v0, p0, Landroid/telecom/ConnectionRequest;->mAddress:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 141
     iget-object v0, p0, Landroid/telecom/ConnectionRequest;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 142
     iget v0, p0, Landroid/telecom/ConnectionRequest;->mVideoState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 143
     return-void
 .end method

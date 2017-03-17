@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 233
     :try_start_0
     new-instance v0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;
 
@@ -122,25 +120,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 241
     :goto_1
     return-object v0
 
-    .line 233
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 239
     :catch_0
     move-exception v16
 
-    .line 240
     .local v16, "e":Ljava/lang/Exception;
     invoke-virtual/range {v16 .. v16}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 241
     const/4 v0, 0x0
 
     goto :goto_1
@@ -151,7 +144,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 229
     invoke-virtual {p0, p1}, Landroid/net/wifi/hs20/WifiHs20SubscribedSp$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/hs20/WifiHs20SubscribedSp;
 
     move-result-object v0
@@ -164,7 +156,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 247
     new-array v0, p1, [Landroid/net/wifi/hs20/WifiHs20SubscribedSp;
 
     return-object v0
@@ -175,7 +166,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 229
     invoke-virtual {p0, p1}, Landroid/net/wifi/hs20/WifiHs20SubscribedSp$1;->newArray(I)[Landroid/net/wifi/hs20/WifiHs20SubscribedSp;
 
     move-result-object v0

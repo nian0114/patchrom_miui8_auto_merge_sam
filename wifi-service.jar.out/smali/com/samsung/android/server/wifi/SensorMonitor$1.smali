@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 148
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,12 +46,10 @@
 
     const/4 v6, 0x0
 
-    .line 151
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 152
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.net.wifi.STATE_CHANGE"
 
@@ -62,7 +59,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 153
     const-string v4, "networkInfo"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -71,7 +67,6 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 154
     .local v1, "info":Landroid/net/NetworkInfo;
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
 
@@ -79,18 +74,15 @@
 
     if-eqz v4, :cond_1
 
-    .line 155
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     invoke-virtual {v4, v6, v7}, Lcom/samsung/android/server/wifi/SensorMonitor;->updateConnection(IZ)V
 
-    .line 183
     .end local v1    # "info":Landroid/net/NetworkInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 157
     .restart local v1    # "info":Landroid/net/NetworkInfo;
     :cond_1
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
@@ -99,7 +91,6 @@
 
     goto :goto_0
 
-    .line 159
     .end local v1    # "info":Landroid/net/NetworkInfo;
     :cond_2
     const-string v4, "com.samsung.android.net.wifi.NETWORK_OXYGEN_STATE_CHANGE"
@@ -110,7 +101,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 160
     const-string v4, "networkInfo"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -119,7 +109,6 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 161
     .restart local v1    # "info":Landroid/net/NetworkInfo;
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
 
@@ -127,14 +116,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 162
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     invoke-virtual {v4, v5, v7}, Lcom/samsung/android/server/wifi/SensorMonitor;->updateConnection(IZ)V
 
     goto :goto_0
 
-    .line 164
     :cond_3
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
@@ -142,7 +129,6 @@
 
     goto :goto_0
 
-    .line 166
     .end local v1    # "info":Landroid/net/NetworkInfo;
     :cond_4
     const-string v4, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
@@ -153,7 +139,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 167
     const-string v4, "networkInfo"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -162,7 +147,6 @@
 
     check-cast v2, Landroid/net/NetworkInfo;
 
-    .line 168
     .local v2, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v2, :cond_5
 
@@ -174,14 +158,12 @@
 
     if-ne v4, v5, :cond_5
 
-    .line 170
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     invoke-virtual {v4, v7, v7}, Lcom/samsung/android/server/wifi/SensorMonitor;->updateConnection(IZ)V
 
     goto :goto_0
 
-    .line 172
     :cond_5
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
@@ -189,7 +171,6 @@
 
     goto :goto_0
 
-    .line 174
     .end local v2    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_6
     const-string v4, "android.net.wifi.WIFI_AP_STATE_CHANGED"
@@ -200,7 +181,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 175
     const-string v4, "wifi_state"
 
     const/16 v5, 0xe
@@ -209,20 +189,17 @@
 
     move-result v3
 
-    .line 177
     .local v3, "wifiApState":I
     const/16 v4, 0xd
 
     if-ne v3, v4, :cond_7
 
-    .line 178
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     invoke-virtual {v4, v8, v7}, Lcom/samsung/android/server/wifi/SensorMonitor;->updateConnection(IZ)V
 
     goto :goto_0
 
-    .line 180
     :cond_7
     iget-object v4, p0, Lcom/samsung/android/server/wifi/SensorMonitor$1;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .param p1, "x0"    # Lcom/android/server/wifi/hs20/WifiHs20StateMachine$1;
 
     .prologue
-    .line 459
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$PendingRemedialtion;-><init>()V
 
     return-void

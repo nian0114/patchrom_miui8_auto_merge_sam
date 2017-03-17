@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 559
     iput-object p1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 586
     return-void
 .end method
 
@@ -53,14 +51,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 562
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v1, v1, v2
 
     float-to-int v0, v1
 
-    .line 564
     .local v0, "lux":I
     const-string v1, "LightsService"
 
@@ -84,7 +80,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     iget-object v1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mSvcLEDThread:Landroid/os/HandlerThread;
@@ -94,7 +89,6 @@
 
     monitor-enter v2
 
-    .line 568
     :try_start_0
     iget-object v1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -107,7 +101,6 @@
 
     invoke-virtual {v1, v3}, Lcom/android/server/lights/LightsService$SvcLEDHandler;->removeMessages(I)V
 
-    .line 570
     iget-object v1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v3, 0x0
@@ -115,18 +108,15 @@
     # invokes: Lcom/android/server/lights/LightsService;->enableSvcLEDLightSensorLocked(Z)V
     invoke-static {v1, v3}, Lcom/android/server/lights/LightsService;->access$700(Lcom/android/server/lights/LightsService;Z)V
 
-    .line 571
     iget-object v1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
     # invokes: Lcom/android/server/lights/LightsService;->setSvcLedLightLocked(I)V
     invoke-static {v1, v0}, Lcom/android/server/lights/LightsService;->access$2800(Lcom/android/server/lights/LightsService;I)V
 
-    .line 572
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 575
     iget-object v1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mAlarmManagerForSvcLED:Landroid/app/AlarmManager;
@@ -143,7 +133,6 @@
 
     invoke-virtual {v1, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 576
     # getter for: Lcom/android/server/lights/LightsService;->mSvcLedState:I
     invoke-static {}, Lcom/android/server/lights/LightsService;->access$1200()I
 
@@ -151,7 +140,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 577
     iget-object v1, p0, Lcom/android/server/lights/LightsService$5;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mAlarmManagerForSvcLED:Landroid/app/AlarmManager;
@@ -185,11 +173,9 @@
 
     invoke-virtual {v1, v2, v4, v5, v3}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 580
     :cond_0
     return-void
 
-    .line 572
     :catchall_0
     move-exception v1
 

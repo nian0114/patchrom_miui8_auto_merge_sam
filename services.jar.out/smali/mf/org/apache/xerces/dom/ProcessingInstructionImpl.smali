@@ -22,13 +22,10 @@
     .param p3, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     invoke-direct {p0, p1, p3}, Lmf/org/apache/xerces/dom/CharacterDataImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 60
     iput-object p2, p0, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->target:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -38,17 +35,14 @@
     .locals 1
 
     .prologue
-    .line 118
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 119
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->synchronizeData()V
 
-    .line 121
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->ownerNode:Lmf/org/apache/xerces/dom/NodeImpl;
 
@@ -63,17 +57,14 @@
     .locals 1
 
     .prologue
-    .line 79
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 80
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->synchronizeData()V
 
-    .line 82
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->target:Ljava/lang/String;
 
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x7
 
     return v0
@@ -94,17 +84,14 @@
     .locals 1
 
     .prologue
-    .line 101
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 102
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->synchronizeData()V
 
-    .line 104
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/ProcessingInstructionImpl;->target:Ljava/lang/String;
 

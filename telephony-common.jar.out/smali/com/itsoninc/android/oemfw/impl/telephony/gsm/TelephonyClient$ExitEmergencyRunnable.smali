@@ -32,18 +32,14 @@
     .param p3, "subId"    # I
 
     .prologue
-    .line 262
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient$ExitEmergencyRunnable;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
     iput p2, p0, Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient$ExitEmergencyRunnable;->phoneId:I
 
-    .line 264
     iput p3, p0, Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient$ExitEmergencyRunnable;->subId:I
 
-    .line 265
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 4
 
     .prologue
-    .line 268
     monitor-enter p0
 
     :try_start_0
@@ -93,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient$ExitEmergencyRunnable;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;
 
     const/4 v1, 0x0
@@ -101,7 +95,6 @@
     # setter for: Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;->inEmergencyMode:Z
     invoke-static {v0, v1}, Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;->access$002(Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;Z)Z
 
-    .line 271
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient$ExitEmergencyRunnable;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;
 
     # getter for: Lcom/itsoninc/android/oemfw/impl/telephony/gsm/TelephonyClient;->mConnector:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
@@ -124,12 +117,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 272
     monitor-exit p0
 
     return-void
 
-    .line 268
     :catchall_0
     move-exception v0
 

@@ -42,18 +42,14 @@
     .param p3, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 2208
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2209
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
-    .line 2210
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
 
-    .line 2211
     const-string v0, "ro.build.scafe.cream"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -68,7 +64,6 @@
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mThemeType:Z
 
-    .line 2212
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     .prologue
-    .line 2197
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mPositiveButton:Landroid/widget/Button;
 
     return-object v0
@@ -88,7 +82,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     .prologue
-    .line 2197
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mNegativeButton:Landroid/widget/Button;
 
     return-object v0
@@ -99,7 +92,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     .prologue
-    .line 2197
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
 
     return-object v0
@@ -112,14 +104,12 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 2254
     const-string v0, "SMSDispatcher"
 
     const-string v1, "dialog dismissed: don\'t send SMS"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2255
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -134,7 +124,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/SMSDispatcher;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2256
     return-void
 .end method
 
@@ -146,7 +135,6 @@
     .prologue
     const-wide/16 v4, 0xc8
 
-    .line 2260
     const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -169,10 +157,8 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2261
     iput-boolean p2, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberChoice:Z
 
-    .line 2264
     iget-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mThemeType:Z
 
     if-eqz v0, :cond_0
@@ -181,18 +167,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 2265
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
 
     const v1, -0x777778
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 2267
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 2268
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -203,11 +186,9 @@
 
     invoke-virtual {v0, v1, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2291
     :goto_0
     return-void
 
-    .line 2280
     :cond_1
     new-instance v0, Landroid/os/Handler;
 
@@ -230,21 +211,17 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 2226
     const/4 v0, 0x1
 
-    .line 2228
     .local v0, "newSmsPermission":I
     if-ne p2, v1, :cond_2
 
-    .line 2229
     const-string v2, "SMSDispatcher"
 
     const-string v3, "CONFIRM sending SMS"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2231
     const v2, 0xc3d0
 
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -258,7 +235,6 @@
     :goto_0
     invoke-static {v2, v1}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 2234
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v2, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -273,15 +249,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/SMSDispatcher;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2235
     iget-boolean v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberChoice:Z
 
     if-eqz v1, :cond_0
 
-    .line 2236
     const/4 v0, 0x3
 
-    .line 2249
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -294,10 +267,8 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/internal/telephony/SMSDispatcher;->setPremiumSmsPermission(Ljava/lang/String;I)V
 
-    .line 2250
     return-void
 
-    .line 2231
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
@@ -309,20 +280,17 @@
 
     goto :goto_0
 
-    .line 2238
     :cond_2
     const/4 v2, -0x2
 
     if-ne p2, v2, :cond_0
 
-    .line 2239
     const-string v2, "SMSDispatcher"
 
     const-string v3, "DENY sending SMS"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2241
     const v2, 0xc3cd
 
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -336,7 +304,6 @@
     :goto_2
     invoke-static {v2, v1}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 2244
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v2, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -351,17 +318,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/SMSDispatcher;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2245
     iget-boolean v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberChoice:Z
 
     if-eqz v1, :cond_0
 
-    .line 2246
     const/4 v0, 0x2
 
     goto :goto_1
 
-    .line 2241
     :cond_3
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
@@ -379,10 +343,8 @@
     .param p1, "button"    # Landroid/widget/Button;
 
     .prologue
-    .line 2219
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mNegativeButton:Landroid/widget/Button;
 
-    .line 2220
     return-void
 .end method
 
@@ -391,9 +353,7 @@
     .param p1, "button"    # Landroid/widget/Button;
 
     .prologue
-    .line 2215
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mPositiveButton:Landroid/widget/Button;
 
-    .line 2216
     return-void
 .end method

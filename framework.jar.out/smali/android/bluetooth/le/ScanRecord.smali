@@ -109,38 +109,28 @@
     .end annotation
 
     .prologue
-    .line 156
     .local p1, "serviceUuids":Ljava/util/List;, "Ljava/util/List<Landroid/os/ParcelUuid;>;"
     .local p2, "manufacturerData":Landroid/util/SparseArray;, "Landroid/util/SparseArray<[B>;"
     .local p3, "serviceData":Ljava/util/Map;, "Ljava/util/Map<Landroid/os/ParcelUuid;[B>;"
     .local p8, "manuDatalist":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     iput-object p1, p0, Landroid/bluetooth/le/ScanRecord;->mServiceUuids:Ljava/util/List;
 
-    .line 158
     iput-object p2, p0, Landroid/bluetooth/le/ScanRecord;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
-    .line 159
     iput-object p3, p0, Landroid/bluetooth/le/ScanRecord;->mServiceData:Ljava/util/Map;
 
-    .line 160
     iput-object p6, p0, Landroid/bluetooth/le/ScanRecord;->mDeviceName:Ljava/lang/String;
 
-    .line 161
     iput p4, p0, Landroid/bluetooth/le/ScanRecord;->mAdvertiseFlags:I
 
-    .line 162
     iput p5, p0, Landroid/bluetooth/le/ScanRecord;->mTxPowerLevel:I
 
-    .line 163
     iput-object p7, p0, Landroid/bluetooth/le/ScanRecord;->mBytes:[B
 
-    .line 164
     iput-object p8, p0, Landroid/bluetooth/le/ScanRecord;->mManuDatalist:Ljava/util/ArrayList;
 
-    .line 165
     return-void
 .end method
 
@@ -151,16 +141,13 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 309
     new-array v0, p2, [B
 
-    .line 310
     .local v0, "bytes":[B
     const/4 v1, 0x0
 
     invoke-static {p0, p1, v0, v1, p2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 311
     return-object v0
 .end method
 
@@ -169,58 +156,46 @@
     .param p0, "scanRecord"    # [B
 
     .prologue
-    .line 179
     if-nez p0, :cond_0
 
-    .line 180
     const/4 v3, 0x0
 
-    .line 282
     :goto_0
     return-object v3
 
-    .line 182
     :cond_0
     const-string v3, "ScanRecord"
 
-    const-string/jumbo v10, "parseFromBytes"
+    const-string v10, "parseFromBytes"
 
     invoke-static {v3, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     const/16 v21, 0x0
 
-    .line 184
     .local v21, "currentPos":I
     const/4 v7, -0x1
 
-    .line 185
     .local v7, "advertiseFlag":I
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 186
     .local v4, "serviceUuids":Ljava/util/List;, "Ljava/util/List<Landroid/os/ParcelUuid;>;"
     const/4 v9, 0x0
 
-    .line 187
     .local v9, "localName":Ljava/lang/String;
     const/high16 v8, -0x80000000
 
-    .line 188
     .local v8, "txPowerLevel":I
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 190
     .local v11, "manuDatalist":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     new-instance v5, Landroid/util/SparseArray;
 
     invoke-direct {v5}, Landroid/util/SparseArray;-><init>()V
 
-    .line 191
     .local v5, "manufacturerData":Landroid/util/SparseArray;, "Landroid/util/SparseArray<[B>;"
     new-instance v6, Landroid/util/ArrayMap;
 
@@ -229,7 +204,6 @@
     .local v6, "serviceData":Ljava/util/Map;, "Ljava/util/Map<Landroid/os/ParcelUuid;[B>;"
     move/from16 v22, v21
 
-    .line 194
     .end local v21    # "currentPos":I
     .local v22, "currentPos":I
     :goto_1
@@ -244,7 +218,6 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 196
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "currentPos":I
@@ -256,11 +229,9 @@
 
     move/from16 v27, v0
 
-    .line 197
     .local v27, "length":I
     if-nez v27, :cond_2
 
-    .line 273
     .end local v27    # "length":I
     :goto_2
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
@@ -269,10 +240,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 274
     const/4 v4, 0x0
 
-    .line 276
     :cond_1
     new-instance v3, Landroid/bluetooth/le/ScanRecord;
 
@@ -284,11 +253,9 @@
 
     goto :goto_0
 
-    .line 278
     :catch_0
     move-exception v24
 
-    .line 279
     .end local v9    # "localName":Ljava/lang/String;
     .local v24, "e":Ljava/lang/Exception;
     :goto_3
@@ -298,7 +265,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "unable to parse scan record: "
+    const-string v12, "unable to parse scan record: "
 
     invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -318,7 +285,6 @@
 
     invoke-static {v3, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     new-instance v12, Landroid/bluetooth/le/ScanRecord;
 
     const/4 v13, 0x0
@@ -343,14 +309,12 @@
 
     goto :goto_0
 
-    .line 201
     .end local v24    # "e":Ljava/lang/Exception;
     .restart local v9    # "localName":Ljava/lang/String;
     .restart local v27    # "length":I
     :cond_2
     add-int/lit8 v23, v27, -0x1
 
-    .line 203
     .local v23, "dataLength":I
     add-int/lit8 v22, v21, 0x1
 
@@ -363,11 +327,9 @@
 
     move/from16 v25, v0
 
-    .line 204
     .local v25, "fieldType":I
     sparse-switch v25, :sswitch_data_0
 
-    .line 270
     :goto_4
     add-int v21, v22, v23
 
@@ -375,21 +337,17 @@
     .restart local v21    # "currentPos":I
     move/from16 v22, v21
 
-    .line 271
     .end local v21    # "currentPos":I
     .restart local v22    # "currentPos":I
     goto :goto_1
 
-    .line 206
     :sswitch_0
     aget-byte v3, p0, v22
 
     and-int/lit16 v7, v3, 0xff
 
-    .line 207
     goto :goto_4
 
-    .line 210
     :sswitch_1
     const/4 v3, 0x2
 
@@ -403,7 +361,6 @@
 
     goto :goto_4
 
-    .line 278
     .end local v9    # "localName":Ljava/lang/String;
     .end local v23    # "dataLength":I
     .end local v25    # "fieldType":I
@@ -417,7 +374,6 @@
     .restart local v21    # "currentPos":I
     goto :goto_3
 
-    .line 215
     .end local v21    # "currentPos":I
     .restart local v9    # "localName":Ljava/lang/String;
     .restart local v22    # "currentPos":I
@@ -437,7 +393,6 @@
 
     goto :goto_4
 
-    .line 220
     :sswitch_3
     const/16 v3, 0x10
 
@@ -451,7 +406,6 @@
 
     goto :goto_4
 
-    .line 225
     :sswitch_4
     new-instance v9, Ljava/lang/String;
 
@@ -468,22 +422,17 @@
 
     invoke-direct {v9, v3}, Ljava/lang/String;-><init>([B)V
 
-    .line 227
     .restart local v9    # "localName":Ljava/lang/String;
     goto :goto_4
 
-    .line 229
     :sswitch_5
     aget-byte v8, p0, v22
 
-    .line 230
     goto :goto_4
 
-    .line 234
     :sswitch_6
     const/16 v34, 0x2
 
-    .line 235
     .local v34, "serviceUuidLength":I
     move-object/from16 v0, p0
 
@@ -495,13 +444,11 @@
 
     move-result-object v33
 
-    .line 237
     .local v33, "serviceDataUuidBytes":[B
     invoke-static/range {v33 .. v33}, Landroid/bluetooth/BluetoothUuid;->parseUuidFrom([B)Landroid/os/ParcelUuid;
 
     move-result-object v32
 
-    .line 239
     .local v32, "serviceDataUuid":Landroid/os/ParcelUuid;
     add-int v3, v22, v34
 
@@ -513,7 +460,6 @@
 
     move-result-object v31
 
-    .line 241
     .local v31, "serviceDataArray":[B
     move-object/from16 v0, v32
 
@@ -523,7 +469,6 @@
 
     goto :goto_4
 
-    .line 246
     .end local v31    # "serviceDataArray":[B
     .end local v32    # "serviceDataUuid":Landroid/os/ParcelUuid;
     .end local v33    # "serviceDataUuidBytes":[B
@@ -543,7 +488,6 @@
 
     add-int v29, v3, v10
 
-    .line 248
     .local v29, "manufacturerId":I
     add-int/lit8 v3, v22, 0x2
 
@@ -555,11 +499,9 @@
 
     move-result-object v28
 
-    .line 250
     .local v28, "manufacturerDataBytes":[B
     const/16 v30, 0x0
 
-    .line 251
     .local v30, "previousManuDataBytes":[B
     move/from16 v0, v29
 
@@ -570,28 +512,23 @@
     .end local v30    # "previousManuDataBytes":[B
     check-cast v30, [B
 
-    .line 253
     .restart local v30    # "previousManuDataBytes":[B
     if-eqz v30, :cond_3
 
-    .line 254
     const-string v3, "ScanRecord"
 
-    const-string/jumbo v10, "same manuId data exists, combine both data and store"
+    const-string v10, "same manuId data exists, combine both data and store"
 
     invoke-static {v3, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     move-object/from16 v0, v30
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 256
     move-object/from16 v0, v28
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 257
     move-object/from16 v0, v28
 
     array-length v3, v0
@@ -606,7 +543,6 @@
 
     move-object/from16 v26, v0
 
-    .line 258
     .local v26, "fullManufacturerDataBytes":[B
     const/4 v3, 0x0
 
@@ -622,7 +558,6 @@
 
     invoke-static {v0, v3, v1, v10, v12}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 259
     const/4 v3, 0x0
 
     move-object/from16 v0, v30
@@ -639,7 +574,6 @@
 
     invoke-static {v0, v3, v1, v10, v12}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 260
     move/from16 v0, v29
 
     move-object/from16 v1, v26
@@ -648,7 +582,6 @@
 
     goto/16 :goto_4
 
-    .line 262
     .end local v26    # "fullManufacturerDataBytes":[B
     :cond_3
     const-string v3, "ScanRecord"
@@ -657,7 +590,6 @@
 
     invoke-static {v3, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     move/from16 v0, v29
 
     move-object/from16 v1, v28
@@ -681,7 +613,6 @@
     .restart local v21    # "currentPos":I
     goto/16 :goto_2
 
-    .line 204
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -716,17 +647,14 @@
     .end annotation
 
     .prologue
-    .line 297
     .local p4, "serviceUuids":Ljava/util/List;, "Ljava/util/List<Landroid/os/ParcelUuid;>;"
     :goto_0
     if-lez p2, :cond_0
 
-    .line 298
     invoke-static {p0, p1, p3}, Landroid/bluetooth/le/ScanRecord;->extractBytes([BII)[B
 
     move-result-object v0
 
-    .line 300
     .local v0, "uuidBytes":[B
     invoke-static {v0}, Landroid/bluetooth/BluetoothUuid;->parseUuidFrom([B)Landroid/os/ParcelUuid;
 
@@ -734,16 +662,12 @@
 
     invoke-interface {p4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 301
     sub-int/2addr p2, p3
 
-    .line 302
     add-int/2addr p1, p3
 
-    .line 303
     goto :goto_0
 
-    .line 304
     .end local v0    # "uuidBytes":[B
     :cond_0
     return p1
@@ -755,7 +679,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Landroid/bluetooth/le/ScanRecord;->mAdvertiseFlags:I
 
     return v0
@@ -765,7 +688,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mBytes:[B
 
     return-object v0
@@ -775,7 +697,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mDeviceName:Ljava/lang/String;
 
     return-object v0
@@ -792,7 +713,6 @@
     .end annotation
 
     .prologue
-    .line 333
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mManuDatalist:Ljava/util/ArrayList;
 
     return-object v0
@@ -809,7 +729,6 @@
     .end annotation
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
     return-object v0
@@ -820,7 +739,6 @@
     .param p1, "manufacturerId"    # I
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mManufacturerSpecificData:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -845,7 +763,6 @@
     .end annotation
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mServiceData:Ljava/util/Map;
 
     return-object v0
@@ -856,13 +773,10 @@
     .param p1, "serviceDataUuid"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 120
     if-nez p1, :cond_0
 
-    .line 121
     const/4 v0, 0x0
 
-    .line 123
     :goto_0
     return-object v0
 
@@ -891,7 +805,6 @@
     .end annotation
 
     .prologue
-    .line 87
     iget-object v0, p0, Landroid/bluetooth/le/ScanRecord;->mServiceUuids:Ljava/util/List;
 
     return-object v0
@@ -901,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget v0, p0, Landroid/bluetooth/le/ScanRecord;->mTxPowerLevel:I
 
     return v0
@@ -911,32 +823,26 @@
     .locals 3
 
     .prologue
-    .line 318
     iget-object v1, p0, Landroid/bluetooth/le/ScanRecord;->mManuDatalist:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 319
     .local v0, "listSize":I
     if-lez v0, :cond_0
 
-    .line 320
     const-string v1, "ScanRecord"
 
     const-string v2, "It\'s a Multi Manu data"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     const/4 v1, 0x1
 
-    .line 325
     :goto_0
     return v1
 
-    .line 324
     :cond_0
     const-string v1, "ScanRecord"
 
@@ -944,7 +850,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     const/4 v1, 0x0
 
     goto :goto_0
@@ -954,7 +859,6 @@
     .locals 2
 
     .prologue
-    .line 288
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

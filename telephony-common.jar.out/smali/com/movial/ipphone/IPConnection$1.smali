@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 274
     invoke-static {}, Lcom/movial/ipphone/SessionCall$State;->values()[Lcom/movial/ipphone/SessionCall$State;
 
     move-result-object v0

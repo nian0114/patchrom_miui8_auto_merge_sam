@@ -65,7 +65,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 50
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -77,12 +76,10 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/wifi/WWSMPatcher;->DBG:Z
 
-    .line 68
     sget v0, Lcom/android/server/wifi/WifiWatchdogStateMachine;->SNS_VERSION:I
 
     sput v0, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_SNS_VERSION:I
 
-    .line 69
     sget v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->MHD_VERSION:I
 
     sput v0, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_MHD_VERSION:I
@@ -99,28 +96,22 @@
     .prologue
     const/16 v2, 0x1e
 
-    .line 85
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 77
     iput v2, p0, Lcom/android/server/wifi/WWSMPatcher;->MAX_DUMPLOG_LINE:I
 
-    .line 86
     iput-object p2, p0, Lcom/android/server/wifi/WWSMPatcher;->mContext:Landroid/content/Context;
 
-    .line 87
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v0, p2, p0, p3}, Lcom/android/internal/util/AsyncChannel;->connectSync(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Messenger;)I
 
-    .line 89
     new-instance v0, Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;
 
     iget-object v1, p0, Lcom/android/server/wifi/WWSMPatcher;->mContext:Landroid/content/Context;
@@ -129,20 +120,16 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mSCPManager:Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;
 
-    .line 90
     new-array v0, v2, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsg:[Ljava/lang/String;
 
-    .line 91
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsgIndex:I
 
-    .line 92
     invoke-direct {p0}, Lcom/android/server/wifi/WWSMPatcher;->setupBroadcastReceiver()V
 
-    .line 93
     return-void
 .end method
 
@@ -150,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 48
     sget-boolean v0, Lcom/android/server/wifi/WWSMPatcher;->DBG:Z
 
     return v0
@@ -162,7 +148,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
     return-void
@@ -173,14 +158,12 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 635
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsg:[Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsgIndex:I
 
     aput-object p1, v0, v1
 
-    .line 636
     iget v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsgIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -191,12 +174,10 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 637
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsgIndex:I
 
-    .line 639
     :cond_0
     return-void
 .end method
@@ -215,7 +196,6 @@
     .end annotation
 
     .prologue
-    .line 280
     .local p1, "mhdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
@@ -223,12 +203,10 @@
 
     if-nez v0, :cond_1
 
-    .line 284
     :cond_0
     :goto_0
     return-void
 
-    .line 283
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -258,7 +236,6 @@
 
     const/4 v12, 0x1
 
-    .line 294
     if-eqz p1, :cond_0
 
     iget-object v10, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
@@ -269,12 +246,10 @@
 
     if-nez v10, :cond_1
 
-    .line 354
     :cond_0
     :goto_0
     return-void
 
-    .line 298
     :cond_1
     const-string v10, "sns_ver"
 
@@ -290,12 +265,10 @@
 
     sput v10, Lcom/android/server/wifi/WifiWatchdogStateMachine;->SNS_VERSION:I
 
-    .line 299
     sget v10, Lcom/android/server/wifi/WifiWatchdogStateMachine;->SNS_VERSION:I
 
     sput v10, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_SNS_VERSION:I
 
-    .line 301
     const-string v10, "sns_disabled"
 
     invoke-virtual {p1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -310,7 +283,6 @@
 
     move-result v7
 
-    .line 303
     .local v7, "snsDisabled":I
     if-ne v7, v12, :cond_4
 
@@ -320,24 +292,20 @@
 
     if-nez v10, :cond_4
 
-    .line 305
     sget v10, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_SNS_VERSION:I
 
     invoke-direct {p0, v12, v10}, Lcom/android/server/wifi/WWSMPatcher;->setValue(II)V
 
-    .line 316
     const-string v10, "WWSMPatcher"
 
     const-string v11, "apply SNSD"
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     const-string v10, "[SD]"
 
     invoke-direct {p0, v10}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 328
     :cond_2
     :goto_1
     :try_start_0
@@ -349,13 +317,11 @@
 
     move-result-object v4
 
-    .line 329
     .local v4, "it":Ljava/util/Iterator;
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 330
     .local v6, "qcUrlMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;[Ljava/lang/String;>;"
     :cond_3
     :goto_2
@@ -365,14 +331,12 @@
 
     if-eqz v10, :cond_6
 
-    .line 331
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 332
     .local v2, "entry":Ljava/util/Map$Entry;
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -380,7 +344,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 333
     .local v5, "key":Ljava/lang/String;
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -388,7 +351,6 @@
 
     check-cast v9, Ljava/lang/String;
 
-    .line 334
     .local v9, "value":Ljava/lang/String;
     if-eqz v5, :cond_3
 
@@ -402,14 +364,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 335
     const/16 v10, 0x8
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 336
     .local v0, "country":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -417,7 +377,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 339
     const-string v10, "+"
 
     invoke-static {v10}, Ljava/util/regex/Pattern;->quote(Ljava/lang/String;)Ljava/lang/String;
@@ -428,7 +387,6 @@
 
     move-result-object v8
 
-    .line 340
     .local v8, "urls":[Ljava/lang/String;
     if-eqz v8, :cond_3
 
@@ -436,7 +394,6 @@
 
     if-lez v10, :cond_3
 
-    .line 341
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -445,7 +402,6 @@
 
     if-ge v3, v10, :cond_5
 
-    .line 342
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -470,12 +426,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 341
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    .line 320
     .end local v0    # "country":Ljava/lang/String;
     .end local v2    # "entry":Ljava/util/Map$Entry;
     .end local v3    # "i":I
@@ -493,24 +447,20 @@
 
     if-eqz v10, :cond_2
 
-    .line 322
     invoke-direct {p0, v12, v13}, Lcom/android/server/wifi/WWSMPatcher;->setValue(II)V
 
-    .line 323
     const-string v10, "WWSMPatcher"
 
     const-string v11, "apply SNSE"
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     const-string v10, "[SE]"
 
     invoke-direct {p0, v10}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 344
     .restart local v0    # "country":Ljava/lang/String;
     .restart local v2    # "entry":Ljava/util/Map$Entry;
     .restart local v3    # "i":I
@@ -527,7 +477,6 @@
 
     goto :goto_2
 
-    .line 351
     .end local v0    # "country":Ljava/lang/String;
     .end local v2    # "entry":Ljava/util/Map$Entry;
     .end local v3    # "i":I
@@ -539,7 +488,6 @@
     :catch_0
     move-exception v1
 
-    .line 352
     .local v1, "e":Ljava/lang/Exception;
     const-string v10, "WWSMPatcher"
 
@@ -565,14 +513,12 @@
 
     goto/16 :goto_0
 
-    .line 348
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v4    # "it":Ljava/util/Iterator;
     .restart local v6    # "qcUrlMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;[Ljava/lang/String;>;"
     :cond_6
     if-eqz v6, :cond_0
 
-    .line 349
     :try_start_2
     iget-object v10, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -590,19 +536,16 @@
     .param p1, "smartCM"    # Ljava/lang/String;
 
     .prologue
-    .line 287
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
 
     if-nez v0, :cond_1
 
-    .line 291
     :cond_0
     :goto_0
     return-void
 
-    .line 290
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mWwsmChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -617,7 +560,6 @@
     .locals 30
 
     .prologue
-    .line 154
     :try_start_0
     move-object/from16 v0, p0
 
@@ -635,12 +577,10 @@
 
     if-nez v24, :cond_1
 
-    .line 277
     :cond_0
     :goto_0
     return-void
 
-    .line 157
     :cond_1
     move-object/from16 v0, p0
 
@@ -652,7 +592,6 @@
 
     move-result-object v10
 
-    .line 158
     .local v10, "fileMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -664,20 +603,17 @@
 
     move-result-object v7
 
-    .line 160
     .local v7, "dbMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v10, :cond_2
 
     if-nez v7, :cond_2
 
-    .line 161
     const-string v24, "WWSMPatcher"
 
     const-string v25, "fndn"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     const-string v24, "[F]1"
 
     move-object/from16 v0, p0
@@ -690,13 +626,11 @@
 
     goto :goto_0
 
-    .line 274
     .end local v7    # "dbMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v10    # "fileMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_0
     move-exception v8
 
-    .line 275
     .local v8, "e":Ljava/lang/Exception;
     const-string v24, "WWSMPatcher"
 
@@ -724,7 +658,6 @@
 
     goto :goto_0
 
-    .line 164
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v7    # "dbMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     .restart local v10    # "fileMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
@@ -733,7 +666,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 165
     :try_start_1
     const-string v24, "WWSMPatcher"
 
@@ -741,7 +673,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     const-string v24, "[F]2"
 
     move-object/from16 v0, p0
@@ -750,7 +681,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 167
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WWSMPatcher;->mSCPManager:Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;
@@ -769,7 +699,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 170
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WWSMPatcher;->mSCPManager:Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;
@@ -780,10 +709,8 @@
 
     move-result-object v10
 
-    .line 171
     if-nez v10, :cond_5
 
-    .line 172
     const-string v24, "WWSMPatcher"
 
     const-string v25, "fn"
@@ -792,13 +719,11 @@
 
     goto :goto_0
 
-    .line 175
     :cond_3
     if-eqz v10, :cond_7
 
     if-eqz v7, :cond_7
 
-    .line 176
     const-string v25, "WWSMPatcher"
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -891,7 +816,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     const-string v24, "policyVersion"
 
     move-object/from16 v0, v24
@@ -936,7 +860,6 @@
 
     if-gez v24, :cond_4
 
-    .line 179
     const-string v24, "[F]3"
 
     move-object/from16 v0, p0
@@ -945,7 +868,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 180
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WWSMPatcher;->mSCPManager:Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;
@@ -964,7 +886,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 183
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WWSMPatcher;->mSCPManager:Lcom/android/server/wifi/WWSMPatcher$SamsungCommonPolicyManager;
@@ -975,10 +896,8 @@
 
     move-result-object v10
 
-    .line 184
     if-nez v10, :cond_5
 
-    .line 185
     const-string v24, "WWSMPatcher"
 
     const-string v25, "fn"
@@ -987,7 +906,6 @@
 
     goto/16 :goto_0
 
-    .line 189
     :cond_4
     const-string v24, "[F]4"
 
@@ -997,7 +915,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 196
     :cond_5
     :goto_1
     invoke-virtual {v10}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -1008,23 +925,19 @@
 
     move-result-object v12
 
-    .line 197
     .local v12, "it":Ljava/util/Iterator;
     new-instance v16, Ljava/util/HashMap;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/HashMap;-><init>()V
 
-    .line 198
     .local v16, "mhdMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v22, Ljava/util/HashMap;
 
     invoke-direct/range {v22 .. v22}, Ljava/util/HashMap;-><init>()V
 
-    .line 199
     .local v22, "snsMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v19, ""
 
-    .line 200
     .local v19, "smartCM":Ljava/lang/String;
     :cond_6
     :goto_2
@@ -1034,14 +947,12 @@
 
     if-eqz v24, :cond_a
 
-    .line 201
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 202
     .local v9, "entry":Ljava/util/Map$Entry;
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1049,7 +960,6 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 203
     .local v13, "key":Ljava/lang/String;
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1057,13 +967,11 @@
 
     check-cast v23, Ljava/lang/String;
 
-    .line 204
     .local v23, "value":Ljava/lang/String;
     if-eqz v13, :cond_6
 
     if-eqz v23, :cond_6
 
-    .line 205
     const-string v24, "mhd_"
 
     move-object/from16 v0, v24
@@ -1074,7 +982,6 @@
 
     if-eqz v24, :cond_8
 
-    .line 206
     move-object/from16 v0, v16
 
     move-object/from16 v1, v23
@@ -1083,7 +990,6 @@
 
     goto :goto_2
 
-    .line 192
     .end local v9    # "entry":Ljava/util/Map$Entry;
     .end local v12    # "it":Ljava/util/Iterator;
     .end local v13    # "key":Ljava/lang/String;
@@ -1100,7 +1006,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 193
     const-string v24, "WWSMPatcher"
 
     const-string v25, "fnndn"
@@ -1109,7 +1014,6 @@
 
     goto :goto_1
 
-    .line 207
     .restart local v9    # "entry":Ljava/util/Map$Entry;
     .restart local v12    # "it":Ljava/util/Iterator;
     .restart local v13    # "key":Ljava/lang/String;
@@ -1128,7 +1032,6 @@
 
     if-eqz v24, :cond_9
 
-    .line 208
     move-object/from16 v0, v22
 
     move-object/from16 v1, v23
@@ -1137,7 +1040,6 @@
 
     goto :goto_2
 
-    .line 210
     :cond_9
     new-instance v24, Ljava/lang/StringBuilder;
 
@@ -1183,7 +1085,6 @@
 
     goto :goto_2
 
-    .line 215
     .end local v9    # "entry":Ljava/util/Map$Entry;
     .end local v13    # "key":Ljava/lang/String;
     .end local v23    # "value":Ljava/lang/String;
@@ -1214,7 +1115,6 @@
 
     move-result-object v6
 
-    .line 216
     .local v6, "WWSMPATCHER_TEST_PATH":Ljava/lang/String;
     new-instance v24, Ljava/lang/StringBuilder;
 
@@ -1242,7 +1142,6 @@
 
     move-result-object v4
 
-    .line 217
     .local v4, "SCPM_TEST_PATH":Ljava/lang/String;
     new-instance v24, Ljava/lang/StringBuilder;
 
@@ -1270,7 +1169,6 @@
 
     move-result-object v5
 
-    .line 219
     .local v5, "SCPM_TEST_PATH2":Ljava/lang/String;
     new-instance v24, Ljava/io/File;
 
@@ -1348,12 +1246,10 @@
     :cond_c
     const/4 v11, 0x1
 
-    .line 221
     .local v11, "isValid":Z
     :goto_3
     if-eqz v11, :cond_10
 
-    .line 222
     const-string v24, "[V]"
 
     move-object/from16 v0, p0
@@ -1362,21 +1258,17 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 226
     :goto_4
     if-eqz v11, :cond_0
 
-    .line 227
     sget v24, Lcom/android/server/wifi/WifiWatchdogStateMachine;->SNS_VERSION:I
 
     sput v24, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_SNS_VERSION:I
 
-    .line 228
     sget v24, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->MHD_VERSION:I
 
     sput v24, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_MHD_VERSION:I
 
-    .line 230
     const-string v24, "mhd_fw_ver"
 
     move-object/from16 v0, v24
@@ -1393,7 +1285,6 @@
 
     move-result v14
 
-    .line 231
     .local v14, "mhdFileFwVersion":I
     const-string v24, "mhd_ver"
 
@@ -1411,7 +1302,6 @@
 
     move-result v15
 
-    .line 232
     .local v15, "mhdFileVersion":I
     const-string v24, "sns_fw_ver"
 
@@ -1429,7 +1319,6 @@
 
     move-result v20
 
-    .line 233
     .local v20, "snsFileFwVersion":I
     const-string v24, "sns_ver"
 
@@ -1447,7 +1336,6 @@
 
     move-result v21
 
-    .line 234
     .local v21, "snsFileVersion":I
     const-string v24, "scm_fw_ver"
 
@@ -1465,7 +1353,6 @@
 
     move-result v17
 
-    .line 235
     .local v17, "scmFileFwVersion":I
     const-string v24, "scm_ver"
 
@@ -1483,7 +1370,6 @@
 
     move-result v18
 
-    .line 236
     .local v18, "scmFileVersion":I
     const-string v24, "WWSMPatcher"
 
@@ -1521,7 +1407,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     const-string v24, "WWSMPatcher"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -1562,7 +1447,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
@@ -1699,7 +1583,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 245
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -1712,14 +1595,12 @@
 
     if-ge v0, v15, :cond_d
 
-    .line 247
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->applyMHDParameters(Ljava/util/HashMap;)V
 
-    .line 250
     :cond_d
     const/16 v24, 0x1
 
@@ -1737,14 +1618,12 @@
 
     if-ge v0, v1, :cond_11
 
-    .line 252
     move-object/from16 v0, p0
 
     move-object/from16 v1, v22
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->applyQCParameters(Ljava/util/HashMap;)V
 
-    .line 269
     :cond_e
     :goto_5
     const/16 v24, 0x1
@@ -1763,7 +1642,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 271
     move-object/from16 v0, p0
 
     move-object/from16 v1, v19
@@ -1772,7 +1650,6 @@
 
     goto/16 :goto_0
 
-    .line 219
     .end local v11    # "isValid":Z
     .end local v14    # "mhdFileFwVersion":I
     .end local v15    # "mhdFileVersion":I
@@ -1785,7 +1662,6 @@
 
     goto/16 :goto_3
 
-    .line 224
     .restart local v11    # "isValid":Z
     :cond_10
     const-string v24, "[NV]"
@@ -1798,7 +1674,6 @@
 
     goto/16 :goto_4
 
-    .line 253
     .restart local v14    # "mhdFileFwVersion":I
     .restart local v15    # "mhdFileVersion":I
     .restart local v17    # "scmFileFwVersion":I
@@ -1814,7 +1689,6 @@
 
     if-ge v0, v1, :cond_e
 
-    .line 254
     const/16 v24, 0x1
 
     sget v25, Lcom/android/server/wifi/WWSMPatcher;->WWSM_PATCH_SNS_VERSION:I
@@ -1827,7 +1701,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/wifi/WWSMPatcher;->setValue(II)V
 
-    .line 265
     const-string v24, "[LFV]"
 
     move-object/from16 v0, p0
@@ -1836,7 +1709,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 266
     const-string v24, "WWSMPatcher"
 
     const-string v25, "apply LSNSFV"
@@ -1854,32 +1726,24 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 601
     const/4 v0, 0x0
 
-    .line 602
     .local v0, "field":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 610
     :goto_0
     if-nez v0, :cond_0
 
-    .line 611
     const/4 v1, -0x1
 
-    .line 613
     :goto_1
     return v1
 
-    .line 604
     :pswitch_0
     const-string v0, "wifi_wwsm_patch_remove_sns_menu_from_settings"
 
-    .line 605
     goto :goto_0
 
-    .line 613
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/WWSMPatcher;->mContext:Landroid/content/Context;
 
@@ -1893,7 +1757,6 @@
 
     goto :goto_1
 
-    .line 602
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1908,7 +1771,6 @@
 
     const/4 v2, 0x1
 
-    .line 143
     invoke-direct {p0, v2, v3}, Lcom/android/server/wifi/WWSMPatcher;->getValue(II)I
 
     move-result v0
@@ -1925,7 +1787,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 145
     :cond_0
     sget-boolean v0, Lcom/android/server/wifi/WWSMPatcher;->DBG:Z
 
@@ -1937,16 +1798,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     :cond_1
     const-string v0, "[IDB]"
 
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WWSMPatcher;->addDumpMsg(Ljava/lang/String;)V
 
-    .line 148
     invoke-direct {p0, v2, v3}, Lcom/android/server/wifi/WWSMPatcher;->setValue(II)V
 
-    .line 150
     :cond_2
     return-void
 .end method
@@ -1957,37 +1815,31 @@
     .param p2, "titleType"    # I
 
     .prologue
-    .line 587
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.android.net.wifi.SHOW_NOTI_MESSAGE"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 588
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x4000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 589
     const-string v2, "info_type"
 
     const/16 v3, 0x12
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 590
     const-string v2, "visible"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 591
     const-string v2, "titleType"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 592
     sget-boolean v2, Lcom/android/server/wifi/WWSMPatcher;->DBG:Z
 
     if-eqz v2, :cond_0
@@ -1998,7 +1850,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 594
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wifi/WWSMPatcher;->mContext:Landroid/content/Context;
@@ -2009,15 +1860,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 598
     :goto_0
     return-void
 
-    .line 595
     :catch_0
     move-exception v0
 
-    .line 596
     .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v2, "WWSMPatcher"
 
@@ -2034,29 +1882,22 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 617
     const/4 v0, 0x0
 
-    .line 618
     .local v0, "field":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 626
     :goto_0
     if-nez v0, :cond_0
 
-    .line 632
     :goto_1
     return-void
 
-    .line 620
     :pswitch_0
     const-string v0, "wifi_wwsm_patch_remove_sns_menu_from_settings"
 
-    .line 621
     goto :goto_0
 
-    .line 630
     :cond_0
     sget-boolean v1, Lcom/android/server/wifi/WWSMPatcher;->DBG:Z
 
@@ -2094,7 +1935,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 631
     :cond_1
     iget-object v1, p0, Lcom/android/server/wifi/WWSMPatcher;->mContext:Landroid/content/Context;
 
@@ -2106,7 +1946,6 @@
 
     goto :goto_1
 
-    .line 618
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2117,37 +1956,31 @@
     .locals 3
 
     .prologue
-    .line 96
     new-instance v1, Lcom/android/server/wifi/WWSMPatcher$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/wifi/WWSMPatcher$1;-><init>(Lcom/android/server/wifi/WWSMPatcher;)V
 
     iput-object v1, p0, Lcom/android/server/wifi/WWSMPatcher;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 118
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 119
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 120
     const-string v1, "sec.app.policy.UPDATE.wwsmpatcher"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 121
     iget-object v1, p0, Lcom/android/server/wifi/WWSMPatcher;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/wifi/WWSMPatcher;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 122
     return-void
 .end method
 
@@ -2157,10 +1990,8 @@
     .locals 8
 
     .prologue
-    .line 642
     const-string v1, ""
 
-    .line 643
     .local v1, "dumpmsg":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/wifi/WWSMPatcher;->mDumpMsg:[Ljava/lang/String;
 
@@ -2176,11 +2007,9 @@
 
     aget-object v4, v0, v2
 
-    .line 644
     .local v4, "str":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 645
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2203,13 +2032,11 @@
 
     move-result-object v1
 
-    .line 643
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 648
     .end local v4    # "str":Ljava/lang/String;
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2242,7 +2069,6 @@
 
     move-result-object v1
 
-    .line 649
     return-object v1
 .end method
 
@@ -2251,10 +2077,8 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 126
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 127
     .local v0, "what":I
     sget-boolean v1, Lcom/android/server/wifi/WWSMPatcher;->DBG:Z
 
@@ -2282,11 +2106,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     :cond_0
     packed-switch v0, :pswitch_data_0
 
-    .line 137
     const-string v1, "WWSMPatcher"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2311,21 +2133,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     :goto_0
     return-void
 
-    .line 130
     :pswitch_0
     invoke-direct {p0}, Lcom/android/server/wifi/WWSMPatcher;->initSettingsDB()V
 
-    .line 133
     :pswitch_1
     invoke-direct {p0}, Lcom/android/server/wifi/WWSMPatcher;->checkSCPMParameters()V
 
     goto :goto_0
 
-    .line 128
     nop
 
     :pswitch_data_0

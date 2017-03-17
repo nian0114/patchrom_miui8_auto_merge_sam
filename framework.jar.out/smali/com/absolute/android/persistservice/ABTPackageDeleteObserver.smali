@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 28
     iget-boolean v0, p0, Lcom/absolute/android/persistservice/ABTPackageDeleteObserver;->finished:Z
 
     return v0
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget v0, p0, Lcom/absolute/android/persistservice/ABTPackageDeleteObserver;->result:I
 
     return v0
@@ -48,7 +45,6 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 19
     const-string v0, "Absolute"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -81,28 +77,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     monitor-enter p0
 
-    .line 21
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/absolute/android/persistservice/ABTPackageDeleteObserver;->finished:Z
 
-    .line 22
     iput p2, p0, Lcom/absolute/android/persistservice/ABTPackageDeleteObserver;->result:I
 
-    .line 23
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 24
     monitor-exit p0
 
-    .line 25
     return-void
 
-    .line 24
     :catchall_0
     move-exception v0
 

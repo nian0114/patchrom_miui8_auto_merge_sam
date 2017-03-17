@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/ipsec/client/IPsecEventData;->mConnection:Lcom/ipsec/client/IPsecConnection;
 
     return-object v0
@@ -40,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/ipsec/client/IPsecEventData;->mError:Ljava/lang/String;
 
     return-object v0
@@ -50,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/ipsec/client/IPsecEventData;->mEvent:Lcom/ipsec/client/IPsecEvent;
 
     return-object v0
@@ -60,23 +56,18 @@
     .locals 3
 
     .prologue
-    .line 91
     sget-object v1, Lcom/ipsec/client/IPsecError;->IPSEC_FAILED:Lcom/ipsec/client/IPsecError;
 
-    .line 93
     .local v1, "error":Lcom/ipsec/client/IPsecError;
     iget-object v2, p0, Lcom/ipsec/client/IPsecEventData;->mError:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 94
     sget-object v2, Lcom/ipsec/client/IPsecError;->IPSEC_OK:Lcom/ipsec/client/IPsecError;
 
-    .line 105
     :goto_0
     return-object v2
 
-    .line 98
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/ipsec/client/IPsecEventData;->mError:Ljava/lang/String;
@@ -90,14 +81,11 @@
     :goto_1
     move-object v2, v1
 
-    .line 105
     goto :goto_0
 
-    .line 100
     :catch_0
     move-exception v0
 
-    .line 102
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     sget-object v1, Lcom/ipsec/client/IPsecError;->IPSEC_FAILED:Lcom/ipsec/client/IPsecError;
 
@@ -108,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget v0, p0, Lcom/ipsec/client/IPsecEventData;->mIkeErrorValue:I
 
     return v0
@@ -119,10 +106,8 @@
     .param p1, "connection"    # Lcom/ipsec/client/IPsecConnection;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/ipsec/client/IPsecEventData;->mConnection:Lcom/ipsec/client/IPsecConnection;
 
-    .line 42
     return-void
 .end method
 
@@ -131,10 +116,8 @@
     .param p1, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcom/ipsec/client/IPsecEventData;->mError:Ljava/lang/String;
 
-    .line 31
     return-void
 .end method
 
@@ -143,10 +126,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 52
     iput p1, p0, Lcom/ipsec/client/IPsecEventData;->mIkeErrorValue:I
 
-    .line 53
     return-void
 .end method
 
@@ -154,7 +135,6 @@
     .locals 2
 
     .prologue
-    .line 137
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,7 +181,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

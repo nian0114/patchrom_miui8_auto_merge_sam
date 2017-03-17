@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog$1;->this$0:Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;
 
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/IFingerprintClient$Stub;-><init>()V
@@ -43,10 +42,8 @@
     .end annotation
 
     .prologue
-    .line 55
     move-object v0, p1
 
-    .line 56
     .local v0, "event":Lcom/samsung/android/fingerprint/FingerprintEvent;
     if-eqz v0, :cond_0
 
@@ -59,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 57
     iget-object v1, p0, Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog$1;->this$0:Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;
 
     # getter for: Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;->mHandler:Landroid/os/Handler;
@@ -82,7 +78,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 59
     :cond_0
     return-void
 .end method

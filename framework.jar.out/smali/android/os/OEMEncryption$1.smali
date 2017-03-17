@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 46
     iput-object p1, p0, Landroid/os/OEMEncryption$1;->this$0:Landroid/os/OEMEncryption;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,14 +39,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 48
     const-string v0, "OEMEncryption"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage called for: "
+    const-string v2, "handleMessage called for: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -65,16 +63,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 65
     :goto_0
     return-void
 
-    .line 51
     :pswitch_0
     const-string v0, "OEMEncryption"
 
@@ -82,7 +77,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage ACTION_NOTIFY. Pid : "
+    const-string v2, "handleMessage ACTION_NOTIFY. Pid : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,7 +125,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     iget-object v0, p0, Landroid/os/OEMEncryption$1;->this$0:Landroid/os/OEMEncryption;
 
     # getter for: Landroid/os/OEMEncryption;->mNotificationManager:Landroid/app/NotificationManager;
@@ -149,7 +143,6 @@
 
     goto :goto_0
 
-    .line 59
     :pswitch_1
     const-string v0, "OEMEncryption"
 
@@ -157,7 +150,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage ACTION_CANCEL. Pid : "
+    const-string v2, "handleMessage ACTION_CANCEL. Pid : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -205,7 +198,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     iget-object v0, p0, Landroid/os/OEMEncryption$1;->this$0:Landroid/os/OEMEncryption;
 
     # getter for: Landroid/os/OEMEncryption;->mNotificationManager:Landroid/app/NotificationManager;
@@ -217,7 +209,6 @@
 
     goto/16 :goto_0
 
-    .line 49
     nop
 
     :pswitch_data_0

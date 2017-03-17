@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 499
     iput-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->this$1:Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice;
 
     iput p2, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$oldState:I
@@ -57,12 +56,11 @@
     .prologue
     const-wide/32 v2, 0x20000
 
-    .line 555
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setDisplayBrightness(id="
+    const-string v1, "setDisplayBrightness(id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,7 +94,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 558
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->this$1:Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice;
 
@@ -109,13 +106,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 560
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 562
     return-void
 
-    .line 560
     :catchall_0
     move-exception v0
 
@@ -131,12 +125,11 @@
     .prologue
     const-wide/32 v4, 0x20000
 
-    .line 538
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setDisplayState(id="
+    const-string v2, "setDisplayState(id="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -174,13 +167,11 @@
 
     invoke-static {v4, v5, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 542
     :try_start_0
     invoke-static {p1}, Lcom/android/server/display/LocalDisplayAdapter;->getPowerModeForState(I)I
 
     move-result v0
 
-    .line 543
     .local v0, "mode":I
     iget-object v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$token:Landroid/os/IBinder;
 
@@ -188,13 +179,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 545
     invoke-static {v4, v5}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 547
     return-void
 
-    .line 545
     .end local v0    # "mode":I
     :catchall_0
     move-exception v1
@@ -212,10 +200,8 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 503
     iget v0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$oldState:I
 
-    .line 504
     .local v0, "currentState":I
     iget v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$oldState:I
 
@@ -229,7 +215,6 @@
 
     if-nez v1, :cond_1
 
-    .line 506
     :cond_0
     iget v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
 
@@ -239,31 +224,25 @@
 
     if-nez v1, :cond_3
 
-    .line 507
     iget v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
 
     invoke-direct {p0, v1}, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->setDisplayState(I)V
 
-    .line 508
     iget v0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
 
-    .line 526
     :cond_1
     :goto_0
     iget v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
 
     if-eq v1, v0, :cond_2
 
-    .line 527
     iget v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
 
     invoke-direct {p0, v1}, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->setDisplayState(I)V
 
-    .line 529
     :cond_2
     return-void
 
-    .line 509
     :cond_3
     iget v1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->val$state:I
 
@@ -273,13 +252,11 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 511
     :cond_4
     const/4 v1, 0x3
 
     invoke-direct {p0, v1}, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice$1;->setDisplayState(I)V
 
-    .line 512
     const/4 v0, 0x3
 
     goto :goto_0

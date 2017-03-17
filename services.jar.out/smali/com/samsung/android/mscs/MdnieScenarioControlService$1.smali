@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 427
     iput-object p1, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 430
     iget-object v2, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mActivityManager:Landroid/app/ActivityManager;
@@ -68,16 +66,13 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 431
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v2, p1, :cond_0
 
-    .line 432
     iget-object v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    .line 435
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return-object v2
@@ -93,7 +88,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 439
     iget-object v2, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mActivityManager:Landroid/app/ActivityManager;
@@ -123,7 +117,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 440
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz p1, :cond_0
 
@@ -135,10 +128,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 441
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
-    .line 444
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return v2
@@ -154,7 +145,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 448
     iget-object v2, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mActivityManager:Landroid/app/ActivityManager;
@@ -184,7 +174,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 449
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz p1, :cond_0
 
@@ -196,10 +185,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 450
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
 
-    .line 453
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return v2
@@ -217,7 +204,6 @@
     .param p3, "foregroundActivities"    # Z
 
     .prologue
-    .line 458
     iget-object v8, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mHandler:Lcom/samsung/android/mscs/MdnieScenarioControlService$ScrControlHandler;
@@ -227,39 +213,31 @@
 
     if-nez v8, :cond_1
 
-    .line 493
     :cond_0
     :goto_0
     return-void
 
-    .line 462
     :cond_1
     const/4 v2, 0x0
 
-    .line 463
     .local v2, "packageName":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 465
     .local v0, "className":Ljava/lang/String;
     move v3, p1
 
-    .line 466
     .local v3, "pid":I
     move v5, p2
 
-    .line 468
     .local v5, "uid":I
     const/4 v8, -0x1
 
     if-eq v3, v8, :cond_2
 
-    .line 469
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
-    .line 470
     .local v6, "time":J
     iget-object v8, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
@@ -272,7 +250,6 @@
 
     invoke-virtual {v8, v9}, Lcom/samsung/android/mscs/MdnieScenarioControlService$ScrControlHandler;->removeMessages(I)V
 
-    .line 471
     iget-object v8, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mHandler:Lcom/samsung/android/mscs/MdnieScenarioControlService$ScrControlHandler;
@@ -297,7 +274,6 @@
 
     goto :goto_0
 
-    .line 474
     .end local v6    # "time":J
     :cond_2
     iget-object v8, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
@@ -313,7 +289,6 @@
 
     move-result-object v4
 
-    .line 475
     .local v4, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -321,7 +296,6 @@
 
     if-lez v8, :cond_0
 
-    .line 478
     const/4 v8, 0x0
 
     invoke-interface {v4, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -336,7 +310,6 @@
 
     move-result-object v2
 
-    .line 479
     const/4 v8, 0x0
 
     invoke-interface {v4, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -351,17 +324,14 @@
 
     move-result-object v0
 
-    .line 480
     invoke-virtual {p0, v2}, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->getPidFromPackageName(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 481
     invoke-virtual {p0, v2}, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->getUidFromPackageName(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 482
     const-string v8, "MdnieScenarioControlService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -394,12 +364,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
     if-eqz v2, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 486
     iget-object v8, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mHandler:Lcom/samsung/android/mscs/MdnieScenarioControlService$ScrControlHandler;
@@ -411,13 +379,11 @@
 
     move-result-object v1
 
-    .line 487
     .local v1, "msg":Landroid/os/Message;
     const/4 v8, 0x0
 
     iput v8, v1, Landroid/os/Message;->what:I
 
-    .line 488
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -436,13 +402,10 @@
 
     iput-object v8, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 489
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 490
     iput v5, v1, Landroid/os/Message;->arg2:I
 
-    .line 491
     iget-object v8, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$1;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # getter for: Lcom/samsung/android/mscs/MdnieScenarioControlService;->mHandler:Lcom/samsung/android/mscs/MdnieScenarioControlService$ScrControlHandler;
@@ -461,7 +424,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 497
     return-void
 .end method
 
@@ -477,6 +439,5 @@
     .end annotation
 
     .prologue
-    .line 501
     return-void
 .end method

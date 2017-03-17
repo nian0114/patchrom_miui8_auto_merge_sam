@@ -30,12 +30,10 @@
     .locals 1
 
     .prologue
-    .line 8
     const-string v0, "brnne_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 9
     return-void
 .end method
 
@@ -43,15 +41,12 @@
     .locals 2
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
 
-    .line 21
     return-void
 .end method
 
@@ -70,14 +65,12 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 107
     if-ltz p2, :cond_0
 
     array-length v0, p1
 
     if-le p2, v0, :cond_1
 
-    .line 108
     :cond_0
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -115,7 +108,6 @@
 
     throw v0
 
-    .line 110
     :cond_1
     return-void
 .end method
@@ -136,7 +128,6 @@
     .param p4, "dstSize"    # I
 
     .prologue
-    .line 51
     monitor-enter p0
 
     :try_start_0
@@ -150,24 +141,19 @@
 
     if-nez v0, :cond_0
 
-    .line 52
     const/16 v0, -0x16
 
-    .line 56
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 54
     :cond_0
     :try_start_1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/brnne/MemComp;->checkOffsetOfBuffer([BI)V
 
-    .line 55
     invoke-direct {p0, p3, p4}, Lcom/samsung/android/brnne/MemComp;->checkOffsetOfBuffer([BI)V
 
-    .line 56
     iget-wide v6, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
 
     move-object v1, p0
@@ -188,7 +174,6 @@
 
     goto :goto_0
 
-    .line 51
     :catchall_0
     move-exception v0
 
@@ -205,7 +190,6 @@
     .param p4, "dstSize"    # I
 
     .prologue
-    .line 70
     monitor-enter p0
 
     :try_start_0
@@ -219,24 +203,19 @@
 
     if-nez v0, :cond_0
 
-    .line 71
     const/16 v0, -0x16
 
-    .line 75
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 73
     :cond_0
     :try_start_1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/brnne/MemComp;->checkOffsetOfBuffer([BI)V
 
-    .line 74
     invoke-direct {p0, p3, p4}, Lcom/samsung/android/brnne/MemComp;->checkOffsetOfBuffer([BI)V
 
-    .line 75
     iget-wide v6, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
 
     move-object v1, p0
@@ -257,7 +236,6 @@
 
     goto :goto_0
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -272,7 +250,6 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 95
     monitor-enter p0
 
     :try_start_0
@@ -282,25 +259,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
     iget-wide v0, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
 
     invoke-direct {p0, v0, v1}, Lcom/samsung/android/brnne/MemComp;->endImpl(J)V
 
-    .line 97
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 99
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 95
     :catchall_0
     move-exception v0
 
@@ -318,13 +291,10 @@
     .end annotation
 
     .prologue
-    .line 102
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 103
     invoke-virtual {p0}, Lcom/samsung/android/brnne/MemComp;->exitStream()V
 
-    .line 104
     return-void
 .end method
 
@@ -333,7 +303,6 @@
     .param p1, "srcBuffer"    # [B
 
     .prologue
-    .line 86
     monitor-enter p0
 
     :try_start_0
@@ -359,7 +328,6 @@
     .locals 4
 
     .prologue
-    .line 30
     monitor-enter p0
 
     :try_start_0
@@ -373,16 +341,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
     const/16 v0, -0x15
 
-    .line 37
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 33
     :cond_0
     :try_start_1
     invoke-direct {p0}, Lcom/samsung/android/brnne/MemComp;->createBrnnStream()J
@@ -391,7 +356,6 @@
 
     iput-wide v0, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
 
-    .line 34
     iget-wide v0, p0, Lcom/samsung/android/brnne/MemComp;->streamHandle:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -402,18 +366,15 @@
 
     if-gez v0, :cond_1
 
-    .line 35
     const/16 v0, -0xd
 
     goto :goto_0
 
-    .line 37
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 30
     :catchall_0
     move-exception v0
 

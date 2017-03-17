@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 7
     invoke-virtual {p0}, Lcom/android/server/enterprise/EdmCache;->updateCache()Z
 
     move-result v0
@@ -32,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 11
     invoke-virtual {p0}, Lcom/android/server/enterprise/EdmCache;->updateCache()Z
 
     move-result v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/internal/view/menu/ActionMenuItemView$1;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 240
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView$1;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
     # getter for: Lcom/android/internal/view/menu/ActionMenuItemView;->mActivity:Landroid/app/Activity;
@@ -63,12 +61,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 247
     :cond_0
     :goto_0
     return-void
 
-    .line 244
     :cond_1
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView$1;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
@@ -79,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView$1;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
     # getter for: Lcom/android/internal/view/menu/ActionMenuItemView;->mItemInvoker:Lcom/android/internal/view/menu/MenuBuilder$ItemInvoker;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 850
     iput-object p1, p0, Lcom/android/server/policy/sec/CombinationKeyManager$6;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 852
     # getter for: Lcom/android/server/policy/sec/CombinationKeyManager;->SAFE_DEBUG:Z
     invoke-static {}, Lcom/android/server/policy/sec/CombinationKeyManager;->access$000()Z
 
@@ -50,11 +48,10 @@
 
     const-string v1, "CombinationKeyManager"
 
-    const-string/jumbo v2, "startService Camera QuickShot"
+    const-string v2, "startService Camera QuickShot"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 853
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -62,7 +59,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 854
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "QuickShot"
 
@@ -70,13 +66,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 855
     iget-object v1, p0, Lcom/android/server/policy/sec/CombinationKeyManager$6;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
     iget-object v1, v1, Lcom/android/server/policy/sec/CombinationKeyManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 856
     return-void
 .end method

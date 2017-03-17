@@ -142,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 12
     const/16 v0, 0x8
 
     sput v0, Lcom/sec/epdg/IWlanEnum;->IWLAN_MAX_SETTING:I
@@ -154,10 +153,8 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 302
     return-void
 .end method
 
@@ -166,58 +163,48 @@
     .param p0, "event"    # I
 
     .prologue
-    .line 47
     packed-switch p0, :pswitch_data_0
 
-    .line 63
     const-string v0, "UNKNOWN/IDLE"
 
     :goto_0
     return-object v0
 
-    .line 49
     :pswitch_0
     const-string v0, "CONNECTED"
 
     goto :goto_0
 
-    .line 51
     :pswitch_1
     const-string v0, "Disconn/IDLE"
 
     goto :goto_0
 
-    .line 53
     :pswitch_2
     const-string v0, "PeerDel/IDLE"
 
     goto :goto_0
 
-    .line 55
     :pswitch_3
     const-string v0, "TimeOut/IDLE"
 
     goto :goto_0
 
-    .line 57
     :pswitch_4
     const-string v0, "Reset/IDLE"
 
     goto :goto_0
 
-    .line 59
     :pswitch_5
     const-string v0, "Error/IDLE"
 
     goto :goto_0
 
-    .line 61
     :pswitch_6
     const-string v0, "ConnInit/IDLE"
 
     goto :goto_0
 
-    .line 47
     nop
 
     :pswitch_data_0

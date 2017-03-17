@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/SecuritySupport$3;->val$cl:Ljava/lang/ClassLoader;
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,10 +39,8 @@
     .locals 2
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
-    .line 71
     .local v0, "parent":Ljava/lang/ClassLoader;
     :try_start_0
     iget-object v1, p0, Lmf/org/apache/xerces/parsers/SecuritySupport$3;->val$cl:Ljava/lang/ClassLoader;
@@ -55,7 +51,6 @@
 
     move-result-object v0
 
-    .line 76
     :goto_0
     iget-object v1, p0, Lmf/org/apache/xerces/parsers/SecuritySupport$3;->val$cl:Ljava/lang/ClassLoader;
 
@@ -67,7 +62,6 @@
     :cond_0
     return-object v0
 
-    .line 72
     .restart local v0    # "parent":Ljava/lang/ClassLoader;
     :catch_0
     move-exception v1

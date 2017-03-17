@@ -16,18 +16,15 @@
     .param p2, "delayTime"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p2}, Lcom/samsung/android/contextaware/utilbundle/autotest/CmdProcessStressTest;-><init>(I)V
 
-    .line 50
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest$1;-><init>(Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorListener:Landroid/hardware/SensorEventListener;
 
-    .line 45
-    const-string/jumbo v0, "sensor"
+    const-string v0, "sensor"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -37,7 +34,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 47
     return-void
 .end method
 
@@ -45,7 +41,6 @@
     .locals 2
 
     .prologue
-    .line 164
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -67,16 +62,13 @@
     .locals 2
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_0
 
-    .line 120
     :goto_0
     return-void
 
-    .line 119
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -91,7 +83,6 @@
     .locals 4
 
     .prologue
-    .line 132
     new-instance v2, Ljava/util/Random;
 
     invoke-direct {v2}, Ljava/util/Random;-><init>()V
@@ -102,54 +93,40 @@
 
     move-result v0
 
-    .line 133
     .local v0, "random":I
     const/4 v1, 0x0
 
-    .line 135
     .local v1, "type":I
     packed-switch v0, :pswitch_data_0
 
-    .line 155
     :goto_0
     return v1
 
-    .line 137
     :pswitch_0
     const/4 v1, 0x1
 
-    .line 138
     goto :goto_0
 
-    .line 140
     :pswitch_1
     const/4 v1, 0x3
 
-    .line 141
     goto :goto_0
 
-    .line 143
     :pswitch_2
     const/4 v1, 0x2
 
-    .line 144
     goto :goto_0
 
-    .line 146
     :pswitch_3
     const/4 v1, 0x4
 
-    .line 147
     goto :goto_0
 
-    .line 149
     :pswitch_4
     const/16 v1, 0x8
 
-    .line 150
     goto :goto_0
 
-    .line 135
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -164,16 +141,13 @@
     .locals 4
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_0
 
-    .line 89
     :goto_0
     return-void
 
-    .line 87
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -202,16 +176,13 @@
     .locals 4
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 103
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;->mSensorManager:Landroid/hardware/SensorManager;
 

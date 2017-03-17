@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     return-void
 .end method
 
@@ -35,10 +33,8 @@
     .param p1, "f"    # Ljava/io/File;
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 119
     invoke-virtual {p1}, Ljava/io/File;->toURI()Ljava/net/URI;
 
     move-result-object v0
@@ -49,7 +45,6 @@
 
     invoke-virtual {p0, v0}, Lmf/javax/xml/transform/stream/StreamResult;->setSystemId(Ljava/lang/String;)V
 
-    .line 120
     return-void
 .end method
 
@@ -58,13 +53,10 @@
     .param p1, "outputStream"    # Ljava/io/OutputStream;
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     invoke-virtual {p0, p1}, Lmf/javax/xml/transform/stream/StreamResult;->setOutputStream(Ljava/io/OutputStream;)V
 
-    .line 85
     return-void
 .end method
 
@@ -73,13 +65,10 @@
     .param p1, "writer"    # Ljava/io/Writer;
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     invoke-virtual {p0, p1}, Lmf/javax/xml/transform/stream/StreamResult;->setWriter(Ljava/io/Writer;)V
 
-    .line 99
     return-void
 .end method
 
@@ -88,13 +77,10 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
     iput-object p1, p0, Lmf/javax/xml/transform/stream/StreamResult;->systemId:Ljava/lang/String;
 
-    .line 108
     return-void
 .end method
 
@@ -104,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lmf/javax/xml/transform/stream/StreamResult;->outputStream:Ljava/io/OutputStream;
 
     return-object v0
@@ -114,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Lmf/javax/xml/transform/stream/StreamResult;->systemId:Ljava/lang/String;
 
     return-object v0
@@ -124,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-object v0, p0, Lmf/javax/xml/transform/stream/StreamResult;->writer:Ljava/io/Writer;
 
     return-object v0
@@ -135,10 +118,8 @@
     .param p1, "outputStream"    # Ljava/io/OutputStream;
 
     .prologue
-    .line 131
     iput-object p1, p0, Lmf/javax/xml/transform/stream/StreamResult;->outputStream:Ljava/io/OutputStream;
 
-    .line 132
     return-void
 .end method
 
@@ -147,7 +128,6 @@
     .param p1, "f"    # Ljava/io/File;
 
     .prologue
-    .line 189
     invoke-virtual {p1}, Ljava/io/File;->toURI()Ljava/net/URI;
 
     move-result-object v0
@@ -158,7 +138,6 @@
 
     iput-object v0, p0, Lmf/javax/xml/transform/stream/StreamResult;->systemId:Ljava/lang/String;
 
-    .line 190
     return-void
 .end method
 
@@ -167,10 +146,8 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 176
     iput-object p1, p0, Lmf/javax/xml/transform/stream/StreamResult;->systemId:Ljava/lang/String;
 
-    .line 177
     return-void
 .end method
 
@@ -179,9 +156,7 @@
     .param p1, "writer"    # Ljava/io/Writer;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lmf/javax/xml/transform/stream/StreamResult;->writer:Ljava/io/Writer;
 
-    .line 156
     return-void
 .end method

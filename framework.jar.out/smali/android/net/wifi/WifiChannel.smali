@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 108
     new-instance v0, Landroid/net/wifi/WifiChannel$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiChannel$1;-><init>()V
@@ -60,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 91
     const/4 v0, 0x0
 
     return v0
@@ -86,7 +83,6 @@
 
     const/4 v1, 0x0
 
-    .line 83
     iget v2, p0, Landroid/net/wifi/WifiChannel;->freqMHz:I
 
     const/16 v3, 0x96c
@@ -102,12 +98,10 @@
     :cond_0
     move v0, v1
 
-    .line 85
     :cond_1
     :goto_0
     return v0
 
-    .line 84
     :cond_2
     iget v2, p0, Landroid/net/wifi/WifiChannel;->channelNum:I
 
@@ -135,17 +129,14 @@
 
     const/4 v2, 0x0
 
-    .line 97
     iget v0, p0, Landroid/net/wifi/WifiChannel;->freqMHz:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
     iget v0, p0, Landroid/net/wifi/WifiChannel;->channelNum:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 99
     iget-boolean v0, p0, Landroid/net/wifi/WifiChannel;->isDFS:Z
 
     if-eqz v0, :cond_0
@@ -155,17 +146,14 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 102
     iget v0, p0, Landroid/net/wifi/WifiChannel;->frequency:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget v0, p0, Landroid/net/wifi/WifiChannel;->channel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 104
     iget-boolean v0, p0, Landroid/net/wifi/WifiChannel;->isNoIbss:Z
 
     if-eqz v0, :cond_1
@@ -173,18 +161,15 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 99
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 104
     goto :goto_1
 .end method

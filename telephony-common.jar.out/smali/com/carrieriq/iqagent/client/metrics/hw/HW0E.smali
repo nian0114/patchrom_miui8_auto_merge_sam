@@ -16,7 +16,6 @@
     .locals 1
 
     .prologue
-    .line 9
     const-string v0, "HW0E"
 
     invoke-static {v0}, Lcom/carrieriq/iqagent/client/metrics/hw/HW0E;->idFromString(Ljava/lang/String;)I
@@ -32,12 +31,10 @@
     .locals 1
 
     .prologue
-    .line 14
     sget v0, Lcom/carrieriq/iqagent/client/metrics/hw/HW0E;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 15
     return-void
 .end method
 
@@ -46,12 +43,10 @@
     .param p1, "event"    # B
 
     .prologue
-    .line 18
     sget v0, Lcom/carrieriq/iqagent/client/metrics/hw/HW0E;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 19
     return-void
 .end method
 
@@ -67,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 22
     const/4 v0, -0x1
 
     return v0

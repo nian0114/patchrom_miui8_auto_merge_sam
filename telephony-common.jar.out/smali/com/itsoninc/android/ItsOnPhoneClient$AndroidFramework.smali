@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->this$0:Lcom/itsoninc/android/ItsOnPhoneClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/itsoninc/android/ItsOnPhoneClient$1;
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;-><init>(Lcom/itsoninc/android/ItsOnPhoneClient;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p2, "subId"    # I
 
     .prologue
-    .line 34
     # getter for: Lcom/itsoninc/android/ItsOnPhoneClient;->mRilTable:Landroid/util/SparseArray;
     invoke-static {}, Lcom/itsoninc/android/ItsOnPhoneClient;->access$000()Landroid/util/SparseArray;
 
@@ -66,11 +63,9 @@
 
     check-cast v0, Lcom/android/internal/telephony/RIL;
 
-    .line 35
     .local v0, "ril":Lcom/android/internal/telephony/RIL;
     if-nez v0, :cond_0
 
-    .line 36
     const-string v1, "IOPC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -99,11 +94,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     :goto_0
     return-void
 
-    .line 38
     :cond_0
     iget-object v1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->this$0:Lcom/itsoninc/android/ItsOnPhoneClient;
 
@@ -127,7 +120,6 @@
     .param p2, "subId"    # I
 
     .prologue
-    .line 43
     # getter for: Lcom/itsoninc/android/ItsOnPhoneClient;->mRilTable:Landroid/util/SparseArray;
     invoke-static {}, Lcom/itsoninc/android/ItsOnPhoneClient;->access$000()Landroid/util/SparseArray;
 
@@ -139,11 +131,9 @@
 
     check-cast v0, Lcom/android/internal/telephony/RIL;
 
-    .line 44
     .local v0, "ril":Lcom/android/internal/telephony/RIL;
     if-nez v0, :cond_0
 
-    .line 45
     const-string v1, "IOPC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -172,11 +162,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     :goto_0
     return-void
 
-    .line 47
     :cond_0
     iget-object v1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->this$0:Lcom/itsoninc/android/ItsOnPhoneClient;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2412
     iput-object p1, p0, Lcom/android/server/RCPManagerService$PersonaObserver$3;->this$1:Lcom/android/server/RCPManagerService$PersonaObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 2414
     iget-object v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver$3;->this$1:Lcom/android/server/RCPManagerService$PersonaObserver;
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PersonaObserver;->this$0:Lcom/android/server/RCPManagerService;
@@ -55,6 +53,5 @@
     # invokes: Lcom/android/server/RCPManagerService;->updateQuickSwitcher(I)V
     invoke-static {v0, v1}, Lcom/android/server/RCPManagerService;->access$2400(Lcom/android/server/RCPManagerService;I)V
 
-    .line 2415
     return-void
 .end method

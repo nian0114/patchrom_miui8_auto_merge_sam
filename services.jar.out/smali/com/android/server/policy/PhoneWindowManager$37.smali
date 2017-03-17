@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10615
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$37;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 10619
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$37;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->dismiss()V
 
-    .line 10620
     return-void
 .end method

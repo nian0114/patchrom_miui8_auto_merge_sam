@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3632
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$4;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3635
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3649
     :goto_0
     return-void
 
-    .line 3637
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$4;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 3641
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$4;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 3645
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$4;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -78,7 +72,6 @@
 
     goto :goto_0
 
-    .line 3635
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

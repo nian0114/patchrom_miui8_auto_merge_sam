@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 51
     const-class v1, Lcom/android/server/enterprise/auditlog/InformFailure;
 
     monitor-enter v1
@@ -37,14 +34,12 @@
 
     if-nez v0, :cond_0
 
-    .line 52
     new-instance v0, Lcom/android/server/enterprise/auditlog/InformFailure;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/auditlog/InformFailure;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/auditlog/InformFailure;->mInformFailure:Lcom/android/server/enterprise/auditlog/InformFailure;
 
-    .line 54
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/auditlog/InformFailure;->mInformFailure:Lcom/android/server/enterprise/auditlog/InformFailure;
     :try_end_0
@@ -54,7 +49,6 @@
 
     return-object v0
 
-    .line 51
     :catchall_0
     move-exception v0
 
@@ -71,17 +65,15 @@
     .param p2, "pack"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     monitor-enter p0
 
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "mdm.intent.action.audit.log.exception"
+    const-string v1, "mdm.intent.action.audit.log.exception"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 62
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "AUDIT_LOG_EXCEPTION"
 
@@ -91,24 +83,19 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 63
     if-eqz p2, :cond_0
 
-    .line 64
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 66
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/InformFailure;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_1
 
-    .line 67
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 68
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/InformFailure;->mContext:Landroid/content/Context;
 
@@ -116,19 +103,16 @@
 
     invoke-virtual {v1, v0, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 69
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 71
     .end local v2    # "token":J
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 61
     .end local v0    # "intent":Landroid/content/Intent;
     :catchall_0
     move-exception v1
@@ -144,40 +128,33 @@
     .param p2, "pack"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     monitor-enter p0
 
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "mdm.intent.action.audit.log.exception"
+    const-string v1, "mdm.intent.action.audit.log.exception"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 75
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "AUDIT_LOG_EXCEPTION"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 76
     if-eqz p2, :cond_0
 
-    .line 77
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 79
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/InformFailure;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_1
 
-    .line 80
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 81
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/InformFailure;->mContext:Landroid/content/Context;
 
@@ -185,19 +162,16 @@
 
     invoke-virtual {v1, v0, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 82
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
     .end local v2    # "token":J
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 74
     .end local v0    # "intent":Landroid/content/Intent;
     :catchall_0
     move-exception v1
@@ -212,7 +186,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 87
     monitor-enter p0
 
     :try_start_0
@@ -220,12 +193,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
     monitor-exit p0
 
     return-void
 
-    .line 87
     :catchall_0
     move-exception v0
 

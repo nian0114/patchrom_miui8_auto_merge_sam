@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +19,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 42
-    const-string/jumbo v2, "sys.enterprise.otp.version"
+    const-string v2, "sys.enterprise.otp.version"
 
     const/4 v3, 0x0
 
@@ -29,7 +27,6 @@
 
     move-result-object v1
 
-    .line 43
     .local v1, "otpVersion":Ljava/lang/String;
     const-string v2, "2.6.0"
 
@@ -39,16 +36,13 @@
 
     if-gez v2, :cond_0
 
-    .line 44
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    .line 50
     :goto_0
     return-object v2
 
-    .line 46
     :cond_0
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
@@ -58,18 +52,15 @@
 
     move-result-object v0
 
-    .line 47
     .local v0, "otpCert":[B
     if-nez v0, :cond_1
 
-    .line 48
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 50
     :cond_1
     const/4 v2, 0x1
 
@@ -87,7 +78,6 @@
     .param p2, "triggerData"    # Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvTrigger;
 
     .prologue
-    .line 38
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -103,7 +93,6 @@
     .param p1, "otpCertSupport"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 15
     const/4 v0, 0x0
 
     return v0
@@ -115,7 +104,6 @@
     .param p1, "otpCertSupport"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 11
     const/4 v0, 0x0
 
     return-object v0
@@ -127,7 +115,6 @@
     .param p1, "otpCertSupport"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 24
     const/4 v0, 0x0
 
     return-object v0
@@ -139,7 +126,6 @@
     .param p1, "otpCertSupport"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 19
     const/4 v0, 0x0
 
     return-object v0
@@ -151,7 +137,6 @@
     .param p1, "otpCertSupport"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     return-object v0
@@ -163,7 +148,6 @@
     .param p1, "otpCertSupport"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 28
     const/4 v0, 0x0
 
     return-object v0

@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;->mCipherAlgo:Ljava/lang/String;
 
     return-object v0
@@ -38,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;->mCipherData:Ljava/lang/String;
 
     return-object v0
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;->mShaAlgo:Ljava/lang/String;
 
     return-object v0
@@ -59,10 +55,8 @@
     .param p1, "cipherAlgo"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;->mCipherAlgo:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -71,10 +65,8 @@
     .param p1, "cipherData"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;->mCipherData:Ljava/lang/String;
 
-    .line 43
     return-void
 .end method
 
@@ -83,9 +75,7 @@
     .param p1, "shaAlgor"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;->mShaAlgo:Ljava/lang/String;
 
-    .line 27
     return-void
 .end method

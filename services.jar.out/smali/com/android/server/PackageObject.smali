@@ -16,25 +16,19 @@
     .param p2, "seinfo"    # Ljava/lang/String;
 
     .prologue
-    .line 744
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 741
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/PackageObject;->packageName:Ljava/lang/String;
 
-    .line 742
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/PackageObject;->seinfo:Ljava/lang/String;
 
-    .line 745
     iput-object p1, p0, Lcom/android/server/PackageObject;->packageName:Ljava/lang/String;
 
-    .line 746
     iput-object p2, p0, Lcom/android/server/PackageObject;->seinfo:Ljava/lang/String;
 
-    .line 747
     return-void
 .end method

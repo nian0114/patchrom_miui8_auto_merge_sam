@@ -16,7 +16,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -35,7 +34,6 @@
     .param p1, "cookie"    # Lorg/apache/http/cookie/Cookie;
 
     .prologue
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -62,7 +60,6 @@
     .param p1, "cookies"    # [Lorg/apache/http/cookie/Cookie;
 
     .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -88,7 +85,6 @@
     .locals 2
 
     .prologue
-    .line 12
     monitor-enter p0
 
     :try_start_0
@@ -115,7 +111,6 @@
     .param p1, "date"    # Ljava/util/Date;
 
     .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -150,7 +145,6 @@
     .end annotation
 
     .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -176,7 +170,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

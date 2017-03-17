@@ -15,7 +15,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     new-array v0, v0, [Lmf/org/apache/xerces/xni/grammars/Grammar;
@@ -29,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/AbstractXMLSchema;-><init>()V
 
     return-void
@@ -43,7 +41,6 @@
     .param p2, "grammars"    # [Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     .prologue
-    .line 46
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 63
     return-object p0
 .end method
 
@@ -67,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x1
 
     return v0
@@ -77,7 +71,6 @@
     .locals 0
 
     .prologue
-    .line 52
     return-void
 .end method
 
@@ -86,7 +79,6 @@
     .param p1, "desc"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     return-object v0
@@ -97,7 +89,6 @@
     .param p1, "grammarType"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     sget-object v0, Lmf/org/apache/xerces/jaxp/validation/EmptyXMLSchema;->ZERO_LENGTH_GRAMMAR_ARRAY:[Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     return-object v0
@@ -107,6 +98,5 @@
     .locals 0
 
     .prologue
-    .line 54
     return-void
 .end method

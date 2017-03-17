@@ -30,7 +30,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 1208
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$4;->this$0:Lcom/android/server/policy/GlobalActions;
 
     move-object v0, p0
@@ -47,7 +46,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/policy/GlobalActions$ToggleAction;-><init>(IIIII)V
 
-    .line 1210
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -55,7 +53,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "power"
+    const-string v1, "power"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -75,7 +73,6 @@
     .param p1, "buttonOn"    # Z
 
     .prologue
-    .line 1231
     if-eqz p1, :cond_0
 
     sget-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->On:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
@@ -83,7 +80,6 @@
     :goto_0
     iput-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->mState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1232
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +102,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1233
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$4;->mState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
@@ -114,10 +109,8 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mSubScreenState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
     invoke-static {v0, v1}, Lcom/android/server/policy/GlobalActions;->access$3002(Lcom/android/server/policy/GlobalActions;Lcom/android/server/policy/GlobalActions$ToggleAction$State;)Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1234
     return-void
 
-    .line 1231
     :cond_0
     sget-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->Off:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
@@ -128,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 1254
     invoke-super {p0}, Lcom/android/server/policy/GlobalActions$ToggleAction;->isEnabled()Z
 
     move-result v0
@@ -142,14 +134,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1214
     const-string v0, "GlobalActions"
 
-    const-string/jumbo v1, "in onPress of mSubScreenOn"
+    const-string v1, "in onPress of mSubScreenOn"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1215
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v1, "com.android.service.GlobalAction"
@@ -160,7 +150,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/policy/GlobalActions;->insertLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1217
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->pm:Landroid/os/PowerManager;
 
     invoke-virtual {v0}, Landroid/os/PowerManager;->getMultipleScreenState()I
@@ -179,7 +168,6 @@
 
     if-ne v0, v4, :cond_1
 
-    .line 1219
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->pm:Landroid/os/PowerManager;
 
@@ -187,11 +175,9 @@
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->setSubScreenState(Z)V
 
-    .line 1223
     :goto_0
     return-void
 
-    .line 1221
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$4;->pm:Landroid/os/PowerManager;
 
@@ -205,14 +191,13 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 1226
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "in onToggle of SubScreen on = "
+    const-string v2, "in onToggle of SubScreen on = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -228,7 +213,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1227
     return-void
 .end method
 
@@ -236,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 1241
     const/4 v0, 0x0
 
     return v0
@@ -246,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 1249
     const/4 v0, 0x0
 
     return v0
@@ -256,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 1237
     const/4 v0, 0x1
 
     return v0

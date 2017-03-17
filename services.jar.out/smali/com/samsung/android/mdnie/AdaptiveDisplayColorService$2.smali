@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 632
     iput-object p1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 658
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .prologue
     const/4 v7, 0x2
 
-    .line 635
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorDelay:I
@@ -63,13 +60,11 @@
 
     if-nez v0, :cond_1
 
-    .line 636
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->getRgbFromLightSensor()V
     invoke-static {v0}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1200(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;)V
 
-    .line 637
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mSensorValueValid:Z
@@ -79,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 638
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorR:I
@@ -87,7 +81,6 @@
 
     move-result v1
 
-    .line 639
     .local v1, "r":I
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -96,7 +89,6 @@
 
     move-result v2
 
-    .line 640
     .local v2, "g":I
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -105,7 +97,6 @@
 
     move-result v3
 
-    .line 641
     .local v3, "b":I
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -115,7 +106,6 @@
 
     float-to-int v4, v0
 
-    .line 642
     .local v4, "lux":I
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -125,14 +115,12 @@
 
     float-to-int v5, v0
 
-    .line 644
     .local v5, "cct":I
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->handleRgbSensorEvent(IIIII)V
     invoke-static/range {v0 .. v5}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1700(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;IIIII)V
 
-    .line 646
     .end local v1    # "r":I
     .end local v2    # "g":I
     .end local v3    # "b":I
@@ -144,11 +132,9 @@
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorDelay:I
     invoke-static {v0, v7}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1102(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;I)I
 
-    .line 654
     :goto_0
     return-void
 
-    .line 648
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -168,7 +154,6 @@
 
     if-lez v0, :cond_2
 
-    .line 649
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # operator-- for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorDelay:I
@@ -176,7 +161,6 @@
 
     goto :goto_0
 
-    .line 652
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 

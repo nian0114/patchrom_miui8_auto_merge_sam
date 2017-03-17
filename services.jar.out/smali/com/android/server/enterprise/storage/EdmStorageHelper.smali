@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/storage/EdmStorageHelper;->mInstance:Lcom/android/server/enterprise/storage/EdmStorageHelper;
@@ -37,8 +36,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 92
-    const-string/jumbo v0, "enterprise.db"
+    const-string v0, "enterprise.db"
 
     const/4 v1, 0x0
 
@@ -46,10 +44,8 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper;->mContext:Landroid/content/Context;
 
-    .line 94
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->isTableExists(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
 
     move-result v0
@@ -73,7 +68,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->preTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
     return-void
@@ -85,7 +79,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
     return-void
@@ -97,7 +90,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->postTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
     return-void
@@ -109,7 +101,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->preTableUpdate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)Z
 
     move-result v0
@@ -124,7 +115,6 @@
     .param p2, "x2"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 60
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->getMissingColumns(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/android/server/enterprise/storage/Table;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -140,10 +130,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 539
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 541
     :try_start_0
     iget-object v4, p1, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
@@ -151,7 +139,6 @@
 
     move-result-object v0
 
-    .line 542
     .local v0, "cv":Landroid/content/ContentValues;
     if-eqz v0, :cond_0
 
@@ -163,7 +150,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 543
     const-string v4, "EdmStorageHelper"
 
     const-string v5, "Generic Table is already updated."
@@ -173,15 +159,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 563
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 566
     .end local v0    # "cv":Landroid/content/ContentValues;
     :goto_0
     return v3
 
-    .line 547
     .restart local v0    # "cv":Landroid/content/ContentValues;
     :cond_0
     :try_start_1
@@ -215,7 +198,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 548
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -236,7 +218,6 @@
 
     move-result-object v2
 
-    .line 549
     .local v2, "temp":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -276,7 +257,6 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 551
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -299,10 +279,8 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 552
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 554
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,7 +343,6 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 558
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -386,16 +363,13 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 559
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 563
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 566
     .end local v0    # "cv":Landroid/content/ContentValues;
     .end local v2    # "temp":Ljava/lang/String;
     :goto_1
@@ -403,11 +377,9 @@
 
     goto/16 :goto_0
 
-    .line 560
     :catch_0
     move-exception v1
 
-    .line 561
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v3, "EdmStorageHelper"
@@ -440,7 +412,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 563
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     goto :goto_1
@@ -460,10 +431,8 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 570
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 572
     :try_start_0
     iget-object v3, p1, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
@@ -471,11 +440,10 @@
 
     move-result-object v0
 
-    .line 573
     .local v0, "cv":Landroid/content/ContentValues;
     if-eqz v0, :cond_0
 
-    const-string/jumbo v3, "isaPackageName"
+    const-string v3, "isaPackageName"
 
     invoke-virtual {v0, v3}, Landroid/content/ContentValues;->containsKey(Ljava/lang/String;)Z
 
@@ -483,7 +451,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 574
     const-string v3, "EdmStorageHelper"
 
     const-string v4, "ISL Table is already updated."
@@ -493,18 +460,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 575
     const/4 v3, 0x0
 
-    .line 595
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 598
     .end local v0    # "cv":Landroid/content/ContentValues;
     :goto_0
     return v3
 
-    .line 578
     .restart local v0    # "cv":Landroid/content/ContentValues;
     :cond_0
     :try_start_1
@@ -538,7 +501,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 579
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -559,7 +521,6 @@
 
     move-result-object v2
 
-    .line 580
     .local v2, "temp":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -599,7 +560,6 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 582
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -622,10 +582,8 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 583
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 585
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -660,7 +618,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpBaseLined"
+    const-string v4, "fpBaseLined"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -672,7 +630,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -684,7 +642,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpCurrent"
+    const-string v4, "fpCurrent"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -696,7 +654,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpDirty"
+    const-string v4, "fpDirty"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -708,7 +666,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpNewRow"
+    const-string v4, "fpNewRow"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -732,7 +690,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpBaseLined"
+    const-string v4, "fpBaseLined"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -744,7 +702,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -756,7 +714,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpCurrent"
+    const-string v4, "fpCurrent"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -768,7 +726,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpDirty"
+    const-string v4, "fpDirty"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -780,7 +738,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "fpNewRow"
+    const-string v4, "fpNewRow"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -808,7 +766,6 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 590
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -829,16 +786,13 @@
 
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 591
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 595
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 598
     .end local v0    # "cv":Landroid/content/ContentValues;
     .end local v2    # "temp":Ljava/lang/String;
     :goto_1
@@ -846,11 +800,9 @@
 
     goto/16 :goto_0
 
-    .line 592
     :catch_0
     move-exception v1
 
-    .line 593
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v3, "EdmStorageHelper"
@@ -883,7 +835,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 595
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     goto :goto_1
@@ -909,7 +860,6 @@
 
     const/4 v6, 0x0
 
-    .line 131
     const-string v2, "CREATE TABLE %s (%s"
 
     new-array v3, v8, [Ljava/lang/Object;
@@ -928,17 +878,14 @@
 
     move-result-object v0
 
-    .line 135
     .local v0, "command":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/android/server/enterprise/storage/Table;->buildPrimaryKeys()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 136
     .local v1, "primarykeys":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 137
     const-string v2, "%s, PRIMARY KEY (%s)"
 
     new-array v3, v8, [Ljava/lang/Object;
@@ -951,7 +898,6 @@
 
     move-result-object v0
 
-    .line 141
     :cond_0
     iget-object v2, p1, Lcom/android/server/enterprise/storage/Table;->mForeignReferTable:Ljava/lang/String;
 
@@ -965,7 +911,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 143
     const-string v2, "%s FOREIGN KEY (%s) REFERENCES %s(%s) ON DELETE CASCADE ON UPDATE CASCADE"
 
     const/4 v3, 0x4
@@ -992,7 +937,6 @@
 
     move-result-object v0
 
-    .line 148
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1014,10 +958,9 @@
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 150
     const-string v2, "EdmStorageHelper"
 
-    const-string/jumbo v3, "onTableFound Created Table %s with Columns %d"
+    const-string v3, "onTableFound Created Table %s with Columns %d"
 
     new-array v4, v8, [Ljava/lang/Object;
 
@@ -1043,7 +986,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->s(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     return-void
 .end method
 
@@ -1054,14 +996,11 @@
     .param p2, "whereCond"    # Ljava/lang/String;
 
     .prologue
-    .line 634
     const/4 v1, 0x0
 
-    .line 635
     .local v1, "cursor":Landroid/database/Cursor;
     const/4 v0, 0x0
 
-    .line 638
     .local v0, "cnt":I
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1082,11 +1021,9 @@
 
     move-result-object v3
 
-    .line 639
     .local v3, "sql":Ljava/lang/String;
     if-eqz p2, :cond_0
 
-    .line 640
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1109,7 +1046,6 @@
 
     move-result-object v3
 
-    .line 643
     :cond_0
     const/4 v4, 0x0
 
@@ -1117,24 +1053,21 @@
 
     move-result-object v1
 
-    .line 644
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 645
     const/4 v4, 0x0
 
     invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 646
     const-string v4, "EdmStorageHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "getCount("
+    const-string v6, "getCount("
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1173,49 +1106,40 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 650
     if-eqz v1, :cond_1
 
-    .line 651
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 655
     .end local v3    # "sql":Ljava/lang/String;
     :cond_1
     :goto_0
     return v0
 
-    .line 647
     :catch_0
     move-exception v2
 
-    .line 648
     .local v2, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v4, "EdmStorageHelper"
 
-    const-string/jumbo v5, "getCount() failed"
+    const-string v5, "getCount() failed"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 650
     if-eqz v1, :cond_1
 
-    .line 651
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 650
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
     if-eqz v1, :cond_2
 
-    .line 651
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -1227,7 +1151,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 82
     const-class v1, Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     monitor-enter v1
@@ -1237,14 +1160,12 @@
 
     if-nez v0, :cond_0
 
-    .line 83
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/storage/EdmStorageHelper;->mInstance:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
-    .line 85
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/storage/EdmStorageHelper;->mInstance:Lcom/android/server/enterprise/storage/EdmStorageHelper;
     :try_end_0
@@ -1254,7 +1175,6 @@
 
     return-object v0
 
-    .line 82
     :catchall_0
     move-exception v0
 
@@ -1283,7 +1203,6 @@
     .end annotation
 
     .prologue
-    .line 320
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1314,7 +1233,6 @@
 
     move-result-object v0
 
-    .line 322
     .local v0, "c":Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
 
@@ -1328,11 +1246,9 @@
 
     move-result-object v1
 
-    .line 324
     .local v1, "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 326
     return-object v1
 .end method
 
@@ -1344,7 +1260,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 603
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1369,15 +1284,12 @@
 
     move-result-object v5
 
-    .line 604
     .local v5, "sql":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 605
     .local v1, "cv":Landroid/content/ContentValues;
     const/4 v0, 0x0
 
-    .line 608
     .local v0, "cursor":Landroid/database/Cursor;
     const/4 v7, 0x0
 
@@ -1386,7 +1298,6 @@
 
     move-result-object v0
 
-    .line 609
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
@@ -1395,7 +1306,6 @@
 
     if-nez v7, :cond_2
 
-    .line 610
     :cond_0
     const-string v7, "EdmStorageHelper"
 
@@ -1422,18 +1332,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 624
     if-eqz v0, :cond_1
 
-    .line 625
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 629
     :cond_1
     :goto_0
     return-object v6
 
-    .line 614
     :cond_2
     :try_start_1
     new-instance v2, Landroid/content/ContentValues;
@@ -1443,12 +1349,10 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 615
     .end local v1    # "cv":Landroid/content/ContentValues;
     .local v2, "cv":Landroid/content/ContentValues;
     const/4 v4, 0x0
 
-    .line 617
     .local v4, "i":I
     :goto_1
     :try_start_2
@@ -1464,7 +1368,6 @@
 
     if-ge v4, v6, :cond_4
 
-    .line 618
     const/4 v6, 0x1
 
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -1484,13 +1387,11 @@
 
     goto :goto_1
 
-    .line 621
     :catch_0
     move-exception v3
 
     move-object v1, v2
 
-    .line 622
     .end local v2    # "cv":Landroid/content/ContentValues;
     .end local v4    # "i":I
     .restart local v1    # "cv":Landroid/content/ContentValues;
@@ -1507,7 +1408,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "does not exists"
+    const-string v8, "does not exists"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1521,10 +1422,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 624
     if-eqz v0, :cond_3
 
-    .line 625
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     .end local v3    # "e":Ljava/lang/Exception;
@@ -1532,17 +1431,14 @@
     :goto_3
     move-object v6, v1
 
-    .line 629
     goto :goto_0
 
-    .line 624
     .end local v1    # "cv":Landroid/content/ContentValues;
     .restart local v2    # "cv":Landroid/content/ContentValues;
     .restart local v4    # "i":I
     :cond_4
     if-eqz v0, :cond_6
 
-    .line 625
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     move-object v1, v2
@@ -1551,7 +1447,6 @@
     .restart local v1    # "cv":Landroid/content/ContentValues;
     goto :goto_3
 
-    .line 624
     .end local v4    # "i":I
     :catchall_0
     move-exception v6
@@ -1559,13 +1454,11 @@
     :goto_4
     if-eqz v0, :cond_5
 
-    .line 625
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_5
     throw v6
 
-    .line 624
     .end local v1    # "cv":Landroid/content/ContentValues;
     .restart local v2    # "cv":Landroid/content/ContentValues;
     .restart local v4    # "i":I
@@ -1578,7 +1471,6 @@
     .restart local v1    # "cv":Landroid/content/ContentValues;
     goto :goto_4
 
-    .line 621
     .end local v4    # "i":I
     :catch_1
     move-exception v3
@@ -1602,10 +1494,8 @@
     .param p1, "table"    # Ljava/lang/String;
 
     .prologue
-    .line 306
     const/4 v1, 0x0
 
-    .line 307
     .local v1, "exists":Z
     if-eqz p0, :cond_0
 
@@ -1621,7 +1511,6 @@
 
     if-lez v2, :cond_0
 
-    .line 309
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1651,19 +1540,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 310
     const/4 v1, 0x1
 
-    .line 315
     :cond_0
     :goto_0
     return v1
 
-    .line 311
     :catch_0
     move-exception v0
 
-    .line 312
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -1675,18 +1560,15 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 398
     :try_start_0
     const-string v2, "INSERT INTO ADMIN_INFO VALUES (0, \'SYSTEM-LEVEL-ADMIN\', 0);"
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 401
     const-string v2, "INSERT INTO ADMIN_INFO VALUES (1000, \'KNOX-CUSTOM\', 0);"
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 404
     const-string v2, "ADMIN"
 
     invoke-static {p0, v2}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->isTableExists(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
@@ -1695,10 +1577,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 406
     const-string v0, "adminUid!=1000"
 
-    .line 408
     .local v0, "condition":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1726,19 +1606,16 @@
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 419
     const-string v2, "EdmStorageHelper"
 
     const-string v3, "In postAdminInfoTableCreate - Start adding KnoxCustomManagerService.DB_UID to ADMIN table..."
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 420
     const-string v2, "INSERT INTO ADMIN VALUES (1000,1000,0);"
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 424
     const-string v2, "EdmStorageHelper"
 
     const-string v3, "In postAdminInfoTableCreate - Finished adding KnoxCustomManagerService.DB_UID to ADMIN table"
@@ -1747,17 +1624,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 431
     .end local v0    # "condition":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 427
     :catch_0
     move-exception v1
 
-    .line 428
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "EdmStorageHelper"
 
@@ -1789,16 +1663,13 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 451
     :try_start_0
     const-string v2, "CREATE TRIGGER ADMIN_INFO_ONINSERT  AFTER INSERT  ON ADMIN_INFO BEGIN INSERT INTO ADMIN VALUES (NEW.adminUid,NEW.adminUid,0, NEW.adminUid/100000); END;"
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 458
     const-string v0, "adminUid!=0"
 
-    .line 459
     .local v0, "condition":Ljava/lang/String;
     const-string v2, "ADMIN_INFO"
 
@@ -1808,7 +1679,6 @@
 
     if-lez v2, :cond_0
 
-    .line 460
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1837,7 +1707,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 471
     :cond_0
     :try_start_1
     const-string v2, "EdmStorageHelper"
@@ -1846,12 +1715,10 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 472
     const-string v2, "INSERT INTO ADMIN VALUES (1000,1000,0);"
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 476
     const-string v2, "EdmStorageHelper"
 
     const-string v3, "Finished adding KnoxCustomManagerService.DB_UID to ADMIN table"
@@ -1860,17 +1727,14 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 484
     .end local v0    # "condition":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 477
     .restart local v0    # "condition":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 478
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "EdmStorageHelper"
@@ -1883,13 +1747,11 @@
 
     goto :goto_0
 
-    .line 481
     .end local v0    # "condition":Ljava/lang/String;
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 482
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v2, "EdmStorageHelper"
 
@@ -1921,7 +1783,6 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 437
     :try_start_0
     const-string v1, "INSERT INTO CONTAINER(containerID,adminUid) VALUES (0,0);"
 
@@ -1929,15 +1790,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 446
     :goto_0
     return-void
 
-    .line 441
     :catch_0
     move-exception v0
 
-    .line 442
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "EdmStorageHelper"
 
@@ -1969,14 +1827,12 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 489
     const-string v1, "EdmStorageHelper"
 
-    const-string/jumbo v2, "postKnoxCustomTableCreate()"
+    const-string v2, "postKnoxCustomTableCreate()"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 492
     :try_start_0
     const-string v1, "EdmStorageHelper"
 
@@ -1984,12 +1840,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     const-string v1, "INSERT INTO KNOX_CUSTOM (adminUid) VALUES (1000);"
 
     invoke-virtual {p0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 496
     const-string v1, "EdmStorageHelper"
 
     const-string v2, "Finished initialising KNOX_CUSTOM table"
@@ -1998,15 +1852,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 500
     :goto_0
     return-void
 
-    .line 497
     :catch_0
     move-exception v0
 
-    .line 498
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "EdmStorageHelper"
 
@@ -2039,10 +1890,8 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 343
     iget-object v0, p1, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
-    .line 344
     .local v0, "sTableName":Ljava/lang/String;
     const-string v1, "ADMIN_INFO"
 
@@ -2052,15 +1901,12 @@
 
     if-nez v1, :cond_1
 
-    .line 345
     invoke-static {p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->postAdminInfoTableCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 366
     :cond_0
     :goto_0
     return-void
 
-    .line 349
     :cond_1
     const-string v1, "CONTAINER"
 
@@ -2070,12 +1916,10 @@
 
     if-nez v1, :cond_2
 
-    .line 350
     invoke-static {p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->postContainerTableCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
     goto :goto_0
 
-    .line 354
     :cond_2
     const-string v1, "ADMIN"
 
@@ -2085,12 +1929,10 @@
 
     if-nez v1, :cond_3
 
-    .line 355
     invoke-static {p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->postAdminTableCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
     goto :goto_0
 
-    .line 360
     :cond_3
     const-string v1, "KNOX_CUSTOM"
 
@@ -2100,14 +1942,12 @@
 
     if-nez v1, :cond_0
 
-    .line 361
     const-string v1, "EdmStorageHelper"
 
     const-string v2, "Calling postKnoxCustomTableCreate"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 362
     invoke-static {p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->postKnoxCustomTableCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
     goto :goto_0
@@ -2119,7 +1959,6 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 335
     return-void
 .end method
 
@@ -2129,10 +1968,8 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 374
     iget-object v0, p1, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
-    .line 375
     .local v0, "sTableName":Ljava/lang/String;
     const-string v1, "ADMIN"
 
@@ -2142,21 +1979,17 @@
 
     if-nez v1, :cond_0
 
-    .line 376
     invoke-static {p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->updateAdminInfoTrigger(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 377
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->upgradeAdminTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)Z
 
     move-result v1
 
-    .line 392
     :goto_0
     return v1
 
-    .line 380
     :cond_0
-    const-string/jumbo v1, "generic"
+    const-string v1, "generic"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
@@ -2164,14 +1997,12 @@
 
     if-nez v1, :cond_1
 
-    .line 381
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->addContainerIdColumn(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 384
     :cond_1
     const-string v1, "WebFilterLogTable"
 
@@ -2181,14 +2012,12 @@
 
     if-nez v1, :cond_2
 
-    .line 385
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->addContainerIdColumn(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 388
     :cond_2
     const-string v1, "EnterpriseIslFpTable"
 
@@ -2198,21 +2027,18 @@
 
     if-nez v1, :cond_3
 
-    .line 389
     const-string v1, "EdmStorageHelper"
 
     const-string v2, "Coming inside ISL Pretable update"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 390
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->addISAPackageNameColumn(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 392
     :cond_3
     const/4 v1, 0x0
 
@@ -2224,28 +2050,23 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 505
     :try_start_0
     const-string v1, "DROP TRIGGER ADMIN_INFO_ONINSERT"
 
     invoke-virtual {p0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 506
     const-string v1, "CREATE TRIGGER ADMIN_INFO_ONINSERT  AFTER INSERT  ON ADMIN_INFO BEGIN INSERT INTO ADMIN VALUES (NEW.adminUid,NEW.adminUid,0, NEW.adminUid/100000); END;"
 
     invoke-virtual {p0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 515
     :goto_0
     return-void
 
-    .line 512
     :catch_0
     move-exception v0
 
-    .line 513
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "EdmStorageHelper"
 
@@ -2282,7 +2103,6 @@
 
     const/4 v3, 0x1
 
-    .line 519
     :try_start_0
     const-string v4, "ADMIN"
 
@@ -2290,7 +2110,6 @@
 
     move-result-object v0
 
-    .line 520
     .local v0, "cv":Landroid/content/ContentValues;
     if-eqz v0, :cond_0
 
@@ -2302,7 +2121,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 521
     const-string v4, "EdmStorageHelper"
 
     const-string v5, "Admin Table is already updated."
@@ -2312,15 +2130,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 532
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->setForeignKeyConstraintsEnabled(Z)V
 
-    .line 535
     .end local v0    # "cv":Landroid/content/ContentValues;
     :goto_0
     return v2
 
-    .line 525
     .restart local v0    # "cv":Landroid/content/ContentValues;
     :cond_0
     const/4 v2, 0x0
@@ -2328,35 +2143,28 @@
     :try_start_1
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->setForeignKeyConstraintsEnabled(Z)V
 
-    .line 526
     const-string v2, "DROP TABLE ADMIN"
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 527
     invoke-static {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 528
     invoke-static {p0}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->postAdminTableCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 532
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->setForeignKeyConstraintsEnabled(Z)V
 
     .end local v0    # "cv":Landroid/content/ContentValues;
     :goto_1
     move v2, v3
 
-    .line 535
     goto :goto_0
 
-    .line 529
     :catch_0
     move-exception v1
 
-    .line 530
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "EdmStorageHelper"
@@ -2383,7 +2191,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 532
     invoke-virtual {p0, v3}, Landroid/database/sqlite/SQLiteDatabase;->setForeignKeyConstraintsEnabled(Z)V
 
     goto :goto_1
@@ -2406,7 +2213,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 210
     :try_start_0
     const-string v1, "CREATE TRIGGER IF NOT EXISTS webFilterLoggingPolicy_TbSize  AFTER INSERT  ON WebFilterLogTable WHEN (SELECT COUNT(*) FROM WebFilterLogTable) > 1000  BEGIN  DELETE FROM WebFilterLogTable WHERE id = (SELECT id FROM WebFilterLogTable ORDER BY id LIMIT 1); END;  END;"
 
@@ -2414,7 +2220,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 224
     :goto_0
     :try_start_1
     const-string v1, "CREATE TRIGGER IF NOT EXISTS bluetoothLoggingPolicy_TbSize  AFTER INSERT  ON BluetoothLogTable WHEN (SELECT COUNT(*) FROM BluetoothLogTable) > 1000  BEGIN  DELETE FROM BluetoothLogTable WHERE id = (SELECT id FROM BluetoothLogTable ORDER BY id LIMIT 1); END;  END;"
@@ -2423,63 +2228,54 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 238
     :goto_1
     :try_start_2
     const-string v1, "INSERT INTO EnumLSOItemTypes(Item_Type, Item_Description) VALUES (1, \'SpaceView\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 239
     const-string v1, "INSERT INTO EnumLSOItemTypes(Item_Type, Item_Description) VALUES (2, \'TextView\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 240
     const-string v1, "INSERT INTO EnumLSOItemTypes(Item_Type, Item_Description) VALUES (3, \'ImageView\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 241
     const-string v1, "INSERT INTO EnumLSOItemTypes(Item_Type, Item_Description) VALUES (4, \'ContainerView\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 242
     const-string v1, "INSERT INTO EnumLSOItemTypes(Item_Type, Item_Description) VALUES (5, \'CustomWidget\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_6
 
-    .line 248
     :goto_2
     :try_start_3
     const-string v1, "INSERT INTO EnumLSOOrientation(Id, Description ) VALUES (0, \'VERTICAL\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 249
     const-string v1, "INSERT INTO EnumLSOOrientation(Id, Description ) VALUES (1, \'HORIZONTAL\');"
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
 
-    .line 255
     :goto_3
     :try_start_4
-    const-string/jumbo v1, "ro.build.fingerprint"
+    const-string v1, "ro.build.fingerprint"
 
-    const-string/jumbo v2, "unknown"
+    const-string v2, "unknown"
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 256
     .local v13, "value":Ljava/lang/String;
-    const-string/jumbo v1, "unknown"
+    const-string v1, "unknown"
 
     invoke-virtual {v13, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -2489,7 +2285,6 @@
 
     move-object v13, v0
 
-    .line 257
     :cond_0
     const-string v0, "INSERT INTO generic VALUES (\'PlatformSoftwareVersion\', \'%s\', %d);"
 
@@ -2519,7 +2314,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 265
     .end local v13    # "value":Ljava/lang/String;
     :goto_4
     :try_start_5
@@ -2531,7 +2325,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 266
     const-string v1, "APPLICATION_SIGNATURE"
 
     const/4 v2, 0x0
@@ -2552,7 +2345,6 @@
 
     move-result-object v9
 
-    .line 268
     .local v9, "cursor":Landroid/database/Cursor;
     const-string v0, "EdmStorageHelper"
 
@@ -2580,7 +2372,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 269
     :goto_5
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2588,7 +2379,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 270
     const-string v0, "adminUid"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2599,9 +2389,8 @@
 
     move-result v8
 
-    .line 271
     .local v8, "adminUid":I
-    const-string/jumbo v0, "signature"
+    const-string v0, "signature"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -2611,19 +2400,16 @@
 
     move-result-object v12
 
-    .line 274
     .local v12, "sig":Ljava/lang/String;
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 275
     .local v10, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v0, "signature"
+    const-string v0, "signature"
 
     invoke-virtual {v10, v0, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
     const-string v0, "adminUid"
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2632,7 +2418,6 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 277
     const-string v0, "controlState"
 
     const/4 v1, 0x1
@@ -2643,7 +2428,6 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 278
     const-string v0, "APPLICATION_SIGNATURE2"
 
     const/4 v1, 0x0
@@ -2654,7 +2438,6 @@
 
     goto :goto_5
 
-    .line 283
     .end local v8    # "adminUid":I
     .end local v9    # "cursor":Landroid/database/Cursor;
     .end local v10    # "cv":Landroid/content/ContentValues;
@@ -2662,7 +2445,6 @@
     :catch_0
     move-exception v0
 
-    .line 289
     :cond_1
     :goto_6
     :try_start_6
@@ -2672,47 +2454,40 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 303
     :goto_7
     return-void
 
-    .line 219
     :catch_1
     move-exception v11
 
-    .line 220
     .local v11, "e":Ljava/lang/Exception;
     const-string v1, "EdmStorageHelper"
 
-    const-string/jumbo v2, "doCreationOrUpdatePostCommands EX1:"
+    const-string v2, "doCreationOrUpdatePostCommands EX1:"
 
     invoke-static {v1, v2, v11}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 233
     .end local v11    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v11
 
-    .line 234
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v1, "EdmStorageHelper"
 
-    const-string/jumbo v2, "doCreationOrUpdatePostCommands EX2:"
+    const-string v2, "doCreationOrUpdatePostCommands EX2:"
 
     invoke-static {v1, v2, v11}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_1
 
-    .line 280
     .end local v11    # "e":Ljava/lang/Exception;
     .restart local v9    # "cursor":Landroid/database/Cursor;
     :cond_2
     :try_start_7
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 281
     const-string v0, "DROP TABLE APPLICATION_SIGNATURE;"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
@@ -2721,35 +2496,30 @@
 
     goto :goto_6
 
-    .line 300
     .end local v9    # "cursor":Landroid/database/Cursor;
     :catch_3
     move-exception v11
 
-    .line 301
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v0, "EdmStorageHelper"
 
-    const-string/jumbo v1, "doCreationOrUpdatePostCommands EX1:"
+    const-string v1, "doCreationOrUpdatePostCommands EX1:"
 
     invoke-static {v0, v1, v11}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_7
 
-    .line 260
     .end local v11    # "e":Ljava/lang/Exception;
     :catch_4
     move-exception v0
 
     goto/16 :goto_4
 
-    .line 250
     :catch_5
     move-exception v1
 
     goto/16 :goto_3
 
-    .line 243
     :catch_6
     move-exception v1
 
@@ -2761,14 +2531,13 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 155
     const-string v4, "EdmStorageHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "doTableCreationOrUpdate Starting + "
+    const-string v6, "doTableCreationOrUpdate Starting + "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2788,10 +2557,8 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->s(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 156
     const/4 v3, 0x0
 
-    .line 160
     .local v3, "parser":Landroid/content/res/XmlResourceParser;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/storage/EdmStorageHelper;->mContext:Landroid/content/Context;
@@ -2806,34 +2573,27 @@
 
     move-result-object v3
 
-    .line 165
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper$1;-><init>(Lcom/android/server/enterprise/storage/EdmStorageHelper;Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 194
     .local v0, "callback":Lcom/android/server/enterprise/storage/TableCallback;
     new-instance v2, Lcom/android/server/enterprise/storage/EnterpriseXmlParser;
 
     invoke-direct {v2, v3, v0}, Lcom/android/server/enterprise/storage/EnterpriseXmlParser;-><init>(Landroid/content/res/XmlResourceParser;Lcom/android/server/enterprise/storage/TableCallback;)V
 
-    .line 195
     .local v2, "enterpriseParser":Lcom/android/server/enterprise/storage/EnterpriseXmlParser;
     invoke-virtual {v2}, Lcom/android/server/enterprise/storage/EnterpriseXmlParser;->parseXML()V
 
-    .line 196
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->doCreationOrUpdatePostCommands(Landroid/database/sqlite/SQLiteDatabase;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 200
     if-eqz v3, :cond_0
 
-    .line 201
     invoke-interface {v3}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 204
     .end local v0    # "callback":Lcom/android/server/enterprise/storage/TableCallback;
     .end local v2    # "enterpriseParser":Lcom/android/server/enterprise/storage/EnterpriseXmlParser;
     :cond_0
@@ -2844,7 +2604,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "doTableCreationOrUpdate Done + "
+    const-string v6, "doTableCreationOrUpdate Done + "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2864,40 +2624,33 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->s(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 205
     return-void
 
-    .line 197
     :catch_0
     move-exception v1
 
-    .line 198
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v4, "EdmStorageHelper"
 
-    const-string/jumbo v5, "doTableCreationOrUpdate EX:"
+    const-string v5, "doTableCreationOrUpdate EX:"
 
     invoke-static {v4, v5, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 200
     if-eqz v3, :cond_0
 
-    .line 201
     invoke-interface {v3}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_0
 
-    .line 200
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
     if-eqz v3, :cond_1
 
-    .line 201
     invoke-interface {v3}, Landroid/content/res/XmlResourceParser;->close()V
 
     :cond_1
@@ -2909,10 +2662,8 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 98
     invoke-super {p0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->onConfigure(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 100
     const/4 v1, 0x1
 
     :try_start_0
@@ -2920,15 +2671,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 104
     :goto_0
     return-void
 
-    .line 101
     :catch_0
     move-exception v0
 
-    .line 102
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "EdmStorageHelper"
 
@@ -2944,10 +2692,8 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 108
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageHelper;->doTablesCreationOrUpdate(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 109
     return-void
 .end method
 
@@ -2958,14 +2704,12 @@
     .param p3, "newVersion"    # I
 
     .prologue
-    .line 113
     const-string v0, "EdmStorageHelper"
 
     const-string v1, "Downgrading not supported"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 114
     return-void
 .end method
 
@@ -2976,6 +2720,5 @@
     .param p3, "newVersion"    # I
 
     .prologue
-    .line 128
     return-void
 .end method

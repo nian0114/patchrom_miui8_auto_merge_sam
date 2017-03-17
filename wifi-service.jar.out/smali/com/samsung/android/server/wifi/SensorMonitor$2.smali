@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 186
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SensorMonitor$2;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 202
     return-void
 .end method
 
@@ -53,14 +51,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 188
     if-eqz p1, :cond_1
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     if-eqz v0, :cond_1
 
-    .line 189
     # getter for: Lcom/samsung/android/server/wifi/SensorMonitor;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SensorMonitor;->access$000()Z
 
@@ -94,7 +90,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     :cond_0
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -106,14 +101,12 @@
 
     if-nez v0, :cond_2
 
-    .line 191
     const-string v0, "Wifi-SensorMonitor"
 
     const-string v1, "enable powerbackoff"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SensorMonitor$2;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     const/4 v1, 0x1
@@ -121,12 +114,10 @@
     # invokes: Lcom/samsung/android/server/wifi/SensorMonitor;->enablePowerBackoff(Z)V
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/SensorMonitor;->access$100(Lcom/samsung/android/server/wifi/SensorMonitor;Z)V
 
-    .line 198
     :cond_1
     :goto_0
     return-void
 
-    .line 193
     :cond_2
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -138,14 +129,12 @@
 
     if-nez v0, :cond_1
 
-    .line 194
     const-string v0, "Wifi-SensorMonitor"
 
     const-string v1, "disable powerbackoff"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SensorMonitor$2;->this$0:Lcom/samsung/android/server/wifi/SensorMonitor;
 
     # invokes: Lcom/samsung/android/server/wifi/SensorMonitor;->enablePowerBackoff(Z)V

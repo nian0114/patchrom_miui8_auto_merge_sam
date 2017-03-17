@@ -9,10 +9,8 @@
     .param p1, "in"    # Ljava/io/Reader;
 
     .prologue
-    .line 23
     invoke-direct {p0, p1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 24
     return-void
 .end method
 
@@ -22,9 +20,7 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
-    .line 29
     return-void
 .end method

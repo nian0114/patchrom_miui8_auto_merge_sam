@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-super {p0, p1}, Lcom/android/internal/content/PackageMonitor;->isPackageDisappearing(Ljava/lang/String;)I
 
     move-result v0
@@ -51,7 +49,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-super {p0, p1}, Lcom/android/internal/content/PackageMonitor;->isPackageModified(Ljava/lang/String;)Z
 
     move-result v0
@@ -65,7 +62,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 69
     return-void
 .end method
 
@@ -75,7 +71,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -85,7 +80,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -93,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -102,13 +95,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/analytics/data/collection/adapterlayer/PackageManagerAdapter$MyPackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Z)V
 
-    .line 77
     return-void
 .end method

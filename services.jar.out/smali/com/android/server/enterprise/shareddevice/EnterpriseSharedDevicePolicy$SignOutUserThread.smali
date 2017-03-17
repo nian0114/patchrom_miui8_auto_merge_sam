@@ -36,12 +36,10 @@
     .param p4, "userSwitch"    # Z
 
     .prologue
-    .line 1292
     iput-object p1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 1286
     const-class v0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -50,25 +48,20 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->CLASS_NAME:Ljava/lang/String;
 
-    .line 1287
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->successful:Z
 
-    .line 1293
     invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->context:Landroid/content/Context;
 
-    .line 1294
     iput-object p3, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 1295
     iput-boolean p4, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->userSwitch:Z
 
-    .line 1296
     return-void
 .end method
 
@@ -78,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 1318
     iget-boolean v0, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->successful:Z
 
     return v0
@@ -90,7 +82,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1301
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->CLASS_NAME:Ljava/lang/String;
 
@@ -98,7 +89,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1302
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->context:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
@@ -113,14 +103,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1303
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->CLASS_NAME:Ljava/lang/String;
 
     const-string v2, "Successful!"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1304
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->successful:Z
@@ -128,30 +116,24 @@
     .catch Lcom/android/server/enterprise/shareddevice/SharedDeviceException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1309
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v1, :cond_1
 
-    .line 1310
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1311
     iput-object v3, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 1314
     :cond_1
     :goto_0
     return-void
 
-    .line 1306
     :catch_0
     move-exception v0
 
-    .line 1307
     .local v0, "e":Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->CLASS_NAME:Ljava/lang/String;
@@ -164,22 +146,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1309
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v1, :cond_1
 
-    .line 1310
     iget-object v1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1311
     iput-object v3, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     goto :goto_0
 
-    .line 1309
     .end local v0    # "e":Lcom/android/server/enterprise/shareddevice/SharedDeviceException;
     :catchall_0
     move-exception v1
@@ -188,12 +166,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 1310
     iget-object v2, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1311
     iput-object v3, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SignOutUserThread;->latch:Ljava/util/concurrent/CountDownLatch;
 
     :cond_2

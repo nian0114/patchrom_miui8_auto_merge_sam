@@ -45,7 +45,6 @@
 
     const/4 v2, 0x1
 
-    .line 171
     new-instance v0, Lcom/android/internal/telephony/cat/CallStatus;
 
     const-string v1, "CALL_STATUS_OUTGOING"
@@ -54,7 +53,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallStatus;->CALL_STATUS_OUTGOING:Lcom/android/internal/telephony/cat/CallStatus;
 
-    .line 172
     new-instance v0, Lcom/android/internal/telephony/cat/CallStatus;
 
     const-string v1, "CALL_STATUS_INCOMING"
@@ -63,7 +61,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallStatus;->CALL_STATUS_INCOMING:Lcom/android/internal/telephony/cat/CallStatus;
 
-    .line 173
     new-instance v0, Lcom/android/internal/telephony/cat/CallStatus;
 
     const-string v1, "CALL_STATUS_CONNECTED"
@@ -72,7 +69,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallStatus;->CALL_STATUS_CONNECTED:Lcom/android/internal/telephony/cat/CallStatus;
 
-    .line 174
     new-instance v0, Lcom/android/internal/telephony/cat/CallStatus;
 
     const-string v1, "CALL_STATUS_RELEASED"
@@ -81,7 +77,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallStatus;->CALL_STATUS_RELEASED:Lcom/android/internal/telephony/cat/CallStatus;
 
-    .line 170
     new-array v0, v6, [Lcom/android/internal/telephony/cat/CallStatus;
 
     sget-object v1, Lcom/android/internal/telephony/cat/CallStatus;->CALL_STATUS_OUTGOING:Lcom/android/internal/telephony/cat/CallStatus;
@@ -115,13 +110,10 @@
     .end annotation
 
     .prologue
-    .line 178
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 179
     iput p3, p0, Lcom/android/internal/telephony/cat/CallStatus;->mValue:I
 
-    .line 180
     return-void
 .end method
 
@@ -130,7 +122,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 192
     invoke-static {}, Lcom/android/internal/telephony/cat/CallStatus;->values()[Lcom/android/internal/telephony/cat/CallStatus;
 
     move-result-object v0
@@ -147,25 +138,21 @@
 
     aget-object v1, v0, v2
 
-    .line 193
     .local v1, "e":Lcom/android/internal/telephony/cat/CallStatus;
     iget v4, v1, Lcom/android/internal/telephony/cat/CallStatus;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 197
     .end local v1    # "e":Lcom/android/internal/telephony/cat/CallStatus;
     :goto_1
     return-object v1
 
-    .line 192
     .restart local v1    # "e":Lcom/android/internal/telephony/cat/CallStatus;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 197
     .end local v1    # "e":Lcom/android/internal/telephony/cat/CallStatus;
     :cond_1
     const/4 v1, 0x0
@@ -178,7 +165,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     const-class v0, Lcom/android/internal/telephony/cat/CallStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -194,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 170
     sget-object v0, Lcom/android/internal/telephony/cat/CallStatus;->$VALUES:[Lcom/android/internal/telephony/cat/CallStatus;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/cat/CallStatus;->clone()Ljava/lang/Object;
@@ -212,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget v0, p0, Lcom/android/internal/telephony/cat/CallStatus;->mValue:I
 
     return v0

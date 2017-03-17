@@ -281,7 +281,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "java.security.PrivateKey"
+    const-string v0, "java.security.PrivateKey"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/algorithms/implementations/SignatureBaseRSA;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -336,7 +336,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -367,7 +367,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "java.security.PrivateKey"
+    const-string v0, "java.security.PrivateKey"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/algorithms/implementations/SignatureBaseRSA;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -422,7 +422,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -470,7 +470,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "java.security.PublicKey"
+    const-string v0, "java.security.PublicKey"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/algorithms/implementations/SignatureBaseRSA;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -525,7 +525,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -571,7 +571,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -602,7 +602,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -631,7 +631,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -660,7 +660,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -689,7 +689,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -720,7 +720,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

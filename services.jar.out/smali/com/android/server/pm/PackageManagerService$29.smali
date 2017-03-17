@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 22916
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$29;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/pm/PackageManagerService$29;->val$mediaStatus:Z
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 22918
     const-string v0, "PackageManager"
 
     const-string v1, "MSG"
@@ -61,7 +59,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22919
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$29;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-boolean v1, p0, Lcom/android/server/pm/PackageManagerService$29;->val$mediaStatus:Z
@@ -73,6 +70,5 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->updateExternalMediaStatusInner(ZZZ)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->access$6800(Lcom/android/server/pm/PackageManagerService;ZZZ)V
 
-    .line 22920
     return-void
 .end method

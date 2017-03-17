@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 782
     iput-object p1, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,16 +39,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 784
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 800
     :goto_0
     return-void
 
-    .line 786
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 789
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -69,7 +64,6 @@
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 790
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mLoadingAniImgView:Landroid/widget/ImageView;
@@ -81,7 +75,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 791
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mLoadingAniImgView:Landroid/widget/ImageView;
@@ -93,18 +86,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 793
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-virtual {v0}, Lcom/android/server/smartclip/SmartClipView;->closeView()V
 
-    .line 794
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsLiveCropThread:Z
     invoke-static {v0, v2}, Lcom/android/server/smartclip/SmartClipView;->access$602(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 795
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$4;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsClosedCurve:Z
@@ -112,7 +102,6 @@
 
     goto :goto_0
 
-    .line 784
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

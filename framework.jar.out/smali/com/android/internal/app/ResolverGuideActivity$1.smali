@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/internal/app/ResolverGuideActivity$1;->this$0:Lcom/android/internal/app/ResolverGuideActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 112
     sget-object v1, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_4_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
     invoke-static {v1}, Landroid/os/PersonaManager;->isKnoxVersionSupported(Landroid/os/PersonaManager$KnoxContainerVersion;)Z
@@ -51,7 +49,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 113
     iget-object v1, p0, Lcom/android/internal/app/ResolverGuideActivity$1;->this$0:Lcom/android/internal/app/ResolverGuideActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/ResolverGuideActivity;->handlePendingIntent()Z
@@ -60,11 +57,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 125
     :goto_0
     return-void
 
-    .line 120
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverGuideActivity$1;->this$0:Lcom/android/internal/app/ResolverGuideActivity;
 
@@ -73,16 +68,13 @@
 
     move-result-object v0
 
-    .line 121
     .local v0, "intent":Landroid/content/Intent;
     if-eqz v0, :cond_1
 
-    .line 122
     iget-object v1, p0, Lcom/android/internal/app/ResolverGuideActivity$1;->this$0:Lcom/android/internal/app/ResolverGuideActivity;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/app/ResolverGuideActivity;->safelyStartActivity(Landroid/content/Intent;)V
 
-    .line 124
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/ResolverGuideActivity$1;->this$0:Lcom/android/internal/app/ResolverGuideActivity;
 

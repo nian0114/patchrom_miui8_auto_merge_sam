@@ -14,10 +14,8 @@
     .param p2, "childNode"    # Lmf/org/apache/xerces/impl/dtd/models/CMNode;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/dtd/models/CMNode;-><init>(I)V
 
-    .line 39
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->type()I
 
     move-result v0
@@ -26,7 +24,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 40
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->type()I
 
     move-result v0
@@ -35,7 +32,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 41
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->type()I
 
     move-result v0
@@ -44,7 +40,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 43
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "ImplementationMessages.VAL_UST"
@@ -53,11 +48,9 @@
 
     throw v0
 
-    .line 47
     :cond_0
     iput-object p2, p0, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->fChild:Lmf/org/apache/xerces/impl/dtd/models/CMNode;
 
-    .line 48
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .param p1, "toSet"    # Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;
 
     .prologue
-    .line 82
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->fChild:Lmf/org/apache/xerces/impl/dtd/models/CMNode;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dtd/models/CMNode;->firstPos()Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;
@@ -77,7 +69,6 @@
 
     invoke-virtual {p1, v0}, Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;->setTo(Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;)V
 
-    .line 83
     return-void
 .end method
 
@@ -86,7 +77,6 @@
     .param p1, "toSet"    # Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;
 
     .prologue
-    .line 88
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->fChild:Lmf/org/apache/xerces/impl/dtd/models/CMNode;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dtd/models/CMNode;->lastPos()Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;
@@ -95,7 +85,6 @@
 
     invoke-virtual {p1, v0}, Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;->setTo(Lmf/org/apache/xerces/impl/dtd/models/CMStateSet;)V
 
-    .line 89
     return-void
 .end method
 
@@ -103,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->fChild:Lmf/org/apache/xerces/impl/dtd/models/CMNode;
 
     return-object v0
@@ -113,7 +101,6 @@
     .locals 2
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->type()I
 
     move-result v0
@@ -122,14 +109,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 70
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/models/CMUniOp;->fChild:Lmf/org/apache/xerces/impl/dtd/models/CMNode;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dtd/models/CMNode;->isNullable()Z
 
     move-result v0
 
-    .line 72
     :goto_0
     return v0
 

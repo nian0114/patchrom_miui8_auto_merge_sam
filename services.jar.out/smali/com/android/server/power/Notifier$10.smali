@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 848
     iput-object p1, p0, Lcom/android/server/power/Notifier$10;->this$0:Lcom/android/server/power/Notifier;
 
     iput p2, p0, Lcom/android/server/power/Notifier$10;->val$state:I
@@ -48,14 +47,13 @@
     .locals 3
 
     .prologue
-    .line 851
     const-string v0, "PowerManagerNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onMultipleScreenStateChanging : state="
+    const-string v2, "onMultipleScreenStateChanging : state="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,7 +83,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 852
     iget-object v0, p0, Lcom/android/server/power/Notifier$10;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -99,6 +96,5 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManagerPolicy;->onMultipleScreenStateChanged(II)V
 
-    .line 853
     return-void
 .end method

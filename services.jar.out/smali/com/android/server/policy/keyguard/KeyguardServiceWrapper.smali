@@ -21,25 +21,20 @@
     .param p2, "service"    # Lcom/android/internal/policy/IKeyguardService;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const-string v0, "KeyguardServiceWrapper"
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
-    .line 46
     iput-object p2, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
-    .line 47
     new-instance v0, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;-><init>(Landroid/content/Context;Lcom/android/internal/policy/IKeyguardService;)V
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
-    .line 48
     return-void
 .end method
 
@@ -50,7 +45,6 @@
     .param p1, "callback"    # Lcom/android/internal/policy/IKeyguardStateCallback;
 
     .prologue
-    .line 80
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -58,15 +52,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :goto_0
     return-void
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -81,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
     invoke-interface {v0}, Lcom/android/internal/policy/IKeyguardService;->asBinder()Landroid/os/IBinder;
@@ -96,7 +86,6 @@
     .param p1, "lidOpen"    # Z
 
     .prologue
-    .line 321
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -104,15 +93,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 325
     :goto_0
     return-void
 
-    .line 322
     :catch_0
     move-exception v0
 
-    .line 323
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -127,7 +113,6 @@
     .locals 3
 
     .prologue
-    .line 89
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -135,15 +120,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 93
     :goto_0
     return-void
 
-    .line 90
     :catch_0
     move-exception v0
 
-    .line 91
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -159,7 +141,6 @@
     .param p1, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 188
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -167,15 +148,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 192
     :goto_0
     return-void
 
-    .line 189
     :catch_0
     move-exception v0
 
-    .line 190
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -192,12 +170,10 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 249
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 250
     return-void
 .end method
 
@@ -206,10 +182,8 @@
     .param p1, "isOccluded"    # Z
 
     .prologue
-    .line 332
     const/4 v1, -0x1
 
-    .line 334
     .local v1, "orientation":I
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
@@ -220,15 +194,12 @@
 
     move-result v1
 
-    .line 338
     :goto_0
     return v1
 
-    .line 335
     :catch_0
     move-exception v0
 
-    .line 336
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -243,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;->isInputRestricted()Z
@@ -257,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;->isSecure()Z
@@ -271,7 +240,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;->isShowing()Z
@@ -285,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 315
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;->isSimLocked()Z
@@ -301,7 +268,6 @@
     .param p2, "wakeup"    # Z
 
     .prologue
-    .line 62
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -309,15 +275,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 66
     :goto_0
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -332,7 +295,6 @@
     .locals 3
 
     .prologue
-    .line 225
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -340,15 +302,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
     :goto_0
     return-void
 
-    .line 226
     :catch_0
     move-exception v0
 
-    .line 227
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -363,7 +322,6 @@
     .locals 3
 
     .prologue
-    .line 207
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -371,15 +329,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 211
     :goto_0
     return-void
 
-    .line 208
     :catch_0
     move-exception v0
 
-    .line 209
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -394,7 +349,6 @@
     .locals 3
 
     .prologue
-    .line 98
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -402,15 +356,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
     :goto_0
     return-void
 
-    .line 99
     :catch_0
     move-exception v0
 
-    .line 100
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -425,7 +376,6 @@
     .locals 3
 
     .prologue
-    .line 107
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -433,15 +383,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
     :goto_0
     return-void
 
-    .line 108
     :catch_0
     move-exception v0
 
-    .line 109
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -457,7 +404,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 125
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -465,15 +411,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
     :goto_0
     return-void
 
-    .line 126
     :catch_0
     move-exception v0
 
-    .line 127
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -488,7 +431,6 @@
     .locals 3
 
     .prologue
-    .line 161
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -496,15 +438,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
     :goto_0
     return-void
 
-    .line 162
     :catch_0
     move-exception v0
 
-    .line 163
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -519,7 +458,6 @@
     .locals 3
 
     .prologue
-    .line 152
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -527,15 +465,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 156
     :goto_0
     return-void
 
-    .line 153
     :catch_0
     move-exception v0
 
-    .line 154
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -551,7 +486,6 @@
     .param p1, "callback"    # Lcom/android/internal/policy/IKeyguardDrawnCallback;
 
     .prologue
-    .line 143
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -559,15 +493,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
     :goto_0
     return-void
 
-    .line 144
     :catch_0
     move-exception v0
 
-    .line 145
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -583,7 +514,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 116
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -591,15 +521,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
     :goto_0
     return-void
 
-    .line 117
     :catch_0
     move-exception v0
 
-    .line 118
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -614,7 +541,6 @@
     .locals 3
 
     .prologue
-    .line 134
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -622,15 +548,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 138
     :goto_0
     return-void
 
-    .line 135
     :catch_0
     move-exception v0
 
-    .line 136
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -645,7 +568,6 @@
     .locals 3
 
     .prologue
-    .line 179
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -653,15 +575,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 183
     :goto_0
     return-void
 
-    .line 180
     :catch_0
     move-exception v0
 
-    .line 181
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -677,7 +596,6 @@
     .param p1, "requestClass"    # Ljava/lang/String;
 
     .prologue
-    .line 281
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -685,15 +603,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 285
     :goto_0
     return-void
 
-    .line 282
     :catch_0
     move-exception v0
 
-    .line 283
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -711,7 +626,6 @@
     .param p3, "bigView"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 257
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -719,15 +633,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 261
     :goto_0
     return-void
 
-    .line 258
     :catch_0
     move-exception v0
 
-    .line 259
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -744,7 +655,6 @@
     .param p2, "fillInIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 293
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -752,15 +662,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 297
     :goto_0
     return-void
 
-    .line 294
     :catch_0
     move-exception v0
 
-    .line 295
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -777,7 +684,6 @@
     .param p2, "fillInIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 305
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -785,15 +691,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 309
     :goto_0
     return-void
 
-    .line 306
     :catch_0
     move-exception v0
 
-    .line 307
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -809,12 +712,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 196
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mKeyguardStateMonitor:Lcom/android/server/policy/keyguard/KeyguardStateMonitor;
 
     invoke-virtual {v1, p1}, Lcom/android/server/policy/keyguard/KeyguardStateMonitor;->setCurrentUser(I)V
 
-    .line 198
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -822,15 +723,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     :goto_0
     return-void
 
-    .line 199
     :catch_0
     move-exception v0
 
-    .line 200
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -846,7 +744,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 170
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -854,15 +751,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 174
     :goto_0
     return-void
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -879,7 +773,6 @@
     .param p2, "displayId"    # I
 
     .prologue
-    .line 71
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -887,15 +780,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     :goto_0
     return-void
 
-    .line 72
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -912,7 +802,6 @@
     .param p3, "fadeoutDuration"    # J
 
     .prologue
-    .line 216
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -920,15 +809,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 220
     :goto_0
     return-void
 
-    .line 217
     :catch_0
     move-exception v0
 
-    .line 218
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -946,7 +832,6 @@
     .param p3, "bigView"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 269
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -954,15 +839,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 273
     :goto_0
     return-void
 
-    .line 270
     :catch_0
     move-exception v0
 
-    .line 271
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 
@@ -978,7 +860,6 @@
     .param p1, "callback"    # Lcom/android/internal/policy/IKeyguardExitCallback;
 
     .prologue
-    .line 53
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->mService:Lcom/android/internal/policy/IKeyguardService;
 
@@ -986,15 +867,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     :goto_0
     return-void
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->TAG:Ljava/lang/String;
 

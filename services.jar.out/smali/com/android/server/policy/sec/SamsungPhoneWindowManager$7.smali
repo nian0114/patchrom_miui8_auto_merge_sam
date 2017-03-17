@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 714
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$7;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 717
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$7;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iput-boolean p1, v0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mLowPowerMode:Z
 
-    .line 718
     const-string v0, "SamsungWindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,6 +66,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
     return-void
 .end method

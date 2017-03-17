@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 151
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const-string v0, "charset"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 37
-    const-string/jumbo v0, "disabled"
+    const-string v0, "disabled"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getBinary(Ljava/lang/String;)Z
 
@@ -58,8 +54,7 @@
     .locals 1
 
     .prologue
-    .line 61
-    const-string/jumbo v0, "href"
+    const-string v0, "href"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -72,8 +67,7 @@
     .locals 1
 
     .prologue
-    .line 73
-    const-string/jumbo v0, "hreflang"
+    const-string v0, "hreflang"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -86,8 +80,7 @@
     .locals 1
 
     .prologue
-    .line 85
-    const-string/jumbo v0, "media"
+    const-string v0, "media"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -100,8 +93,7 @@
     .locals 1
 
     .prologue
-    .line 97
-    const-string/jumbo v0, "rel"
+    const-string v0, "rel"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -114,8 +106,7 @@
     .locals 1
 
     .prologue
-    .line 109
-    const-string/jumbo v0, "rev"
+    const-string v0, "rev"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -128,8 +119,7 @@
     .locals 1
 
     .prologue
-    .line 121
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -142,8 +132,7 @@
     .locals 1
 
     .prologue
-    .line 133
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -157,12 +146,10 @@
     .param p1, "charset"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     const-string v0, "charset"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -171,12 +158,10 @@
     .param p1, "disabled"    # Z
 
     .prologue
-    .line 43
-    const-string/jumbo v0, "disabled"
+    const-string v0, "disabled"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 44
     return-void
 .end method
 
@@ -185,12 +170,10 @@
     .param p1, "href"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "href"
+    const-string v0, "href"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -199,12 +182,10 @@
     .param p1, "hreflang"    # Ljava/lang/String;
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "hreflang"
+    const-string v0, "hreflang"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     return-void
 .end method
 
@@ -213,12 +194,10 @@
     .param p1, "media"    # Ljava/lang/String;
 
     .prologue
-    .line 91
-    const-string/jumbo v0, "media"
+    const-string v0, "media"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     return-void
 .end method
 
@@ -227,12 +206,10 @@
     .param p1, "rel"    # Ljava/lang/String;
 
     .prologue
-    .line 103
-    const-string/jumbo v0, "rel"
+    const-string v0, "rel"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 104
     return-void
 .end method
 
@@ -241,12 +218,10 @@
     .param p1, "rev"    # Ljava/lang/String;
 
     .prologue
-    .line 115
-    const-string/jumbo v0, "rev"
+    const-string v0, "rev"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     return-void
 .end method
 
@@ -255,12 +230,10 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 127
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     return-void
 .end method
 
@@ -269,11 +242,9 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 139
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLLinkElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 140
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 396
     iput-object p1, p0, Lcom/android/server/wifi/WifiNotificationController$4;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 399
     const-string v1, "IMS_LOWSIGNAL_STATUS"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 401
     .local v0, "lowSignal":Z
     if-nez v0, :cond_0
 
@@ -70,7 +67,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 402
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$4;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     const-wide/16 v2, 0x0
@@ -78,14 +74,12 @@
     # setter for: Lcom/android/server/wifi/WifiNotificationController;->mNotificationRepeatTime:J
     invoke-static {v1, v2, v3}, Lcom/android/server/wifi/WifiNotificationController;->access$3002(Lcom/android/server/wifi/WifiNotificationController;J)J
 
-    .line 403
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$4;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     # setter for: Lcom/android/server/wifi/WifiNotificationController;->mLowSignal:Z
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiNotificationController;->access$2802(Lcom/android/server/wifi/WifiNotificationController;Z)Z
 
-    .line 404
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$4;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     # getter for: Lcom/android/server/wifi/WifiNotificationController;->mNotificationShown:Z
@@ -107,7 +101,6 @@
     # invokes: Lcom/android/server/wifi/WifiNotificationController;->setNotificationVisible(ZIZI)V
     invoke-static {v1, v4, v2, v4, v4}, Lcom/android/server/wifi/WifiNotificationController;->access$3200(Lcom/android/server/wifi/WifiNotificationController;ZIZI)V
 
-    .line 405
     :cond_1
     return-void
 .end method

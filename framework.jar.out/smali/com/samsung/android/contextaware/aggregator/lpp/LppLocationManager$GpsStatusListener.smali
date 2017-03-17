@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1620
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;
 
     .prologue
-    .line 1620
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$GpsStatusListener;-><init>()V
 
     return-void
@@ -46,15 +44,12 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 1625
     packed-switch p1, :pswitch_data_0
 
-    .line 1649
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1629
     :pswitch_1
     const-string v0, "LppLocationManager"
 
@@ -64,7 +59,6 @@
 
     goto :goto_0
 
-    .line 1634
     :pswitch_2
     const-string v0, "LppLocationManager"
 
@@ -74,7 +68,6 @@
 
     goto :goto_0
 
-    .line 1639
     :pswitch_3
     const-string v0, "LppLocationManager"
 
@@ -84,7 +77,6 @@
 
     goto :goto_0
 
-    .line 1625
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

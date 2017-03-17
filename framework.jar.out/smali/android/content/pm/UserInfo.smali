@@ -70,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 196
     new-instance v0, Landroid/content/pm/UserInfo$1;
 
     invoke-direct {v0}, Landroid/content/pm/UserInfo$1;-><init>()V
@@ -84,10 +83,8 @@
     .locals 0
 
     .prologue
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     return-void
 .end method
 
@@ -98,12 +95,10 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 101
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Landroid/content/pm/UserInfo;-><init>(ILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 102
     return-void
 .end method
 
@@ -115,27 +110,20 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     iput p1, p0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 106
     iput-object p2, p0, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
-    .line 107
     iput p4, p0, Landroid/content/pm/UserInfo;->flags:I
 
-    .line 108
     iput-object p3, p0, Landroid/content/pm/UserInfo;->iconPath:Ljava/lang/String;
 
-    .line 109
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 110
     return-void
 .end method
 
@@ -144,65 +132,52 @@
     .param p1, "orig"    # Landroid/content/pm/UserInfo;
 
     .prologue
-    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 156
     iget-object v0, p1, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
-    .line 157
     iget-object v0, p1, Landroid/content/pm/UserInfo;->iconPath:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/UserInfo;->iconPath:Ljava/lang/String;
 
-    .line 158
     iget v0, p1, Landroid/content/pm/UserInfo;->id:I
 
     iput v0, p0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 159
     iget v0, p1, Landroid/content/pm/UserInfo;->flags:I
 
     iput v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
-    .line 160
     iget v0, p1, Landroid/content/pm/UserInfo;->serialNumber:I
 
     iput v0, p0, Landroid/content/pm/UserInfo;->serialNumber:I
 
-    .line 161
     iget-wide v0, p1, Landroid/content/pm/UserInfo;->creationTime:J
 
     iput-wide v0, p0, Landroid/content/pm/UserInfo;->creationTime:J
 
-    .line 162
     iget-wide v0, p1, Landroid/content/pm/UserInfo;->lastLoggedInTime:J
 
     iput-wide v0, p0, Landroid/content/pm/UserInfo;->lastLoggedInTime:J
 
-    .line 163
     iget-boolean v0, p1, Landroid/content/pm/UserInfo;->partial:Z
 
     iput-boolean v0, p0, Landroid/content/pm/UserInfo;->partial:Z
 
-    .line 164
     iget v0, p1, Landroid/content/pm/UserInfo;->profileGroupId:I
 
     iput v0, p0, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 165
     iget-boolean v0, p1, Landroid/content/pm/UserInfo;->guestToRemove:Z
 
     iput-boolean v0, p0, Landroid/content/pm/UserInfo;->guestToRemove:Z
 
-    .line 166
     iget-boolean v0, p1, Landroid/content/pm/UserInfo;->hasCCMBeenProvisioned:Z
 
     iput-boolean v0, p0, Landroid/content/pm/UserInfo;->hasCCMBeenProvisioned:Z
 
-    .line 167
     return-void
 .end method
 
@@ -215,59 +190,50 @@
 
     const/4 v2, 0x0
 
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 207
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 208
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
-    .line 209
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/UserInfo;->iconPath:Ljava/lang/String;
 
-    .line 210
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
-    .line 211
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/UserInfo;->serialNumber:I
 
-    .line 212
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/content/pm/UserInfo;->creationTime:J
 
-    .line 213
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/content/pm/UserInfo;->lastLoggedInTime:J
 
-    .line 214
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -279,14 +245,12 @@
     :goto_0
     iput-boolean v0, p0, Landroid/content/pm/UserInfo;->partial:Z
 
-    .line 215
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 216
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -298,7 +262,6 @@
     :goto_1
     iput-boolean v0, p0, Landroid/content/pm/UserInfo;->guestToRemove:Z
 
-    .line 217
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -308,25 +271,21 @@
     :goto_2
     iput-boolean v1, p0, Landroid/content/pm/UserInfo;->hasCCMBeenProvisioned:Z
 
-    .line 218
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 214
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 216
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 217
     goto :goto_2
 .end method
 
@@ -336,7 +295,6 @@
     .param p2, "x1"    # Landroid/content/pm/UserInfo$1;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/content/pm/UserInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -348,7 +306,6 @@
     .locals 1
 
     .prologue
-    .line 179
     const/4 v0, 0x0
 
     return v0
@@ -358,7 +315,6 @@
     .locals 2
 
     .prologue
-    .line 170
     new-instance v0, Landroid/os/UserHandle;
 
     iget v1, p0, Landroid/content/pm/UserInfo;->id:I
@@ -372,7 +328,6 @@
     .locals 2
 
     .prologue
-    .line 117
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -398,7 +353,6 @@
     .prologue
     const/high16 v1, 0x10000
 
-    .line 141
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/2addr v0, v1
@@ -420,7 +374,6 @@
     .locals 2
 
     .prologue
-    .line 133
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x40
@@ -444,7 +397,6 @@
     .locals 2
 
     .prologue
-    .line 121
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x4
@@ -468,7 +420,6 @@
     .locals 2
 
     .prologue
-    .line 137
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit16 v0, v0, 0x80
@@ -492,7 +443,6 @@
     .locals 2
 
     .prologue
-    .line 129
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x20
@@ -518,7 +468,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 113
     iget v1, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit8 v1, v1, 0x1
@@ -538,7 +487,6 @@
     .locals 2
 
     .prologue
-    .line 125
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x8
@@ -564,7 +512,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 149
     invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
     move-result v1
@@ -590,7 +537,6 @@
     .locals 2
 
     .prologue
-    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -635,7 +581,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -658,42 +604,34 @@
 
     const/4 v2, 0x0
 
-    .line 183
     iget v0, p0, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 184
     iget-object v0, p0, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 185
     iget-object v0, p0, Landroid/content/pm/UserInfo;->iconPath:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 186
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 187
     iget v0, p0, Landroid/content/pm/UserInfo;->serialNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 188
     iget-wide v4, p0, Landroid/content/pm/UserInfo;->creationTime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 189
     iget-wide v4, p0, Landroid/content/pm/UserInfo;->lastLoggedInTime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 190
     iget-boolean v0, p0, Landroid/content/pm/UserInfo;->partial:Z
 
     if-eqz v0, :cond_0
@@ -703,12 +641,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 191
     iget v0, p0, Landroid/content/pm/UserInfo;->profileGroupId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 192
     iget-boolean v0, p0, Landroid/content/pm/UserInfo;->guestToRemove:Z
 
     if-eqz v0, :cond_1
@@ -718,7 +654,6 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 193
     iget-boolean v0, p0, Landroid/content/pm/UserInfo;->hasCCMBeenProvisioned:Z
 
     if-eqz v0, :cond_2
@@ -726,24 +661,20 @@
     :goto_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 194
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 190
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 192
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 193
     goto :goto_2
 .end method

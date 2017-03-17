@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2400
     iput-object p1, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 2400
     invoke-direct {p0, p1}, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->setStep(Z)V
 
     return-void
@@ -53,10 +51,8 @@
     .param p1, "increment"    # Z
 
     .prologue
-    .line 2404
     iput-boolean p1, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->mIncrement:Z
 
-    .line 2405
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2410
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
     # getter for: Landroid/widget/NumberPicker;->mIsParentThemeDeviceDefault:Z
@@ -78,7 +73,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2411
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
     iget-boolean v1, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->mIncrement:Z
@@ -86,7 +80,6 @@
     # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v0, v1}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
-    .line 2412
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
     iget-object v1, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
@@ -98,11 +91,9 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/widget/NumberPicker;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2422
     :goto_0
     return-void
 
-    .line 2414
     :cond_0
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
@@ -139,7 +130,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2415
     :cond_1
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
@@ -148,7 +138,6 @@
     # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v0, v1}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
-    .line 2416
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 
     iget-object v1, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
@@ -162,7 +151,6 @@
 
     goto :goto_0
 
-    .line 2418
     :cond_2
     iget-object v0, p0, Landroid/widget/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Landroid/widget/NumberPicker;
 

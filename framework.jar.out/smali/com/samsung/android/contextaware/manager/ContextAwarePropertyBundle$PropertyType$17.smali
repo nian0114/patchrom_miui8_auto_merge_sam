@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 415
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$PropertyType;-><init>(Ljava/lang/String;ILcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$1;)V
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 425
     # getter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->stringArrayListVal:Ljava/util/ArrayList;
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$1700()Ljava/util/ArrayList;
 
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 419
     .local p1, "value":Ljava/lang/Object;, "TT;"
     check-cast p1, Ljava/util/ArrayList;
 
@@ -68,6 +65,5 @@
     # setter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->stringArrayListVal:Ljava/util/ArrayList;
     invoke-static {p1}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$1702(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 420
     return-void
 .end method

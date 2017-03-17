@@ -23,7 +23,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 39
     new-instance v0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;
 
     new-array v1, v2, [S
@@ -41,16 +40,12 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fArray:[S
 
-    .line 54
     iput p2, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fLength:I
 
-    .line 55
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .param p1, "item"    # S
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -70,13 +64,11 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 79
     const/4 v1, 0x0
 
     :goto_1
     return v1
 
-    .line 75
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fArray:[S
 
@@ -84,12 +76,10 @@
 
     if-ne v1, p1, :cond_1
 
-    .line 76
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 74
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -103,14 +93,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 90
     if-eqz p1, :cond_0
 
     instance-of v3, p1, Lmf/org/apache/xerces/xs/ShortList;
 
     if-nez v3, :cond_1
 
-    .line 103
     :cond_0
     :goto_0
     return v2
@@ -118,10 +106,8 @@
     :cond_1
     move-object v1, p1
 
-    .line 93
     check-cast v1, Lmf/org/apache/xerces/xs/ShortList;
 
-    .line 95
     .local v1, "rhs":Lmf/org/apache/xerces/xs/ShortList;
     iget v3, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fLength:I
 
@@ -131,7 +117,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 98
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -140,12 +125,10 @@
 
     if-lt v0, v3, :cond_2
 
-    .line 103
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 99
     :cond_2
     iget-object v3, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fArray:[S
 
@@ -157,7 +140,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 98
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -168,14 +150,12 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 111
     if-ltz p1, :cond_0
 
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fLength:I
 
     if-ge p1, v0, :cond_0
 
-    .line 112
     new-instance v0, Ljava/lang/Short;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fArray:[S
@@ -186,7 +166,6 @@
 
     return-object v0
 
-    .line 114
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -213,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fLength:I
 
     return v0
@@ -229,14 +207,12 @@
     .end annotation
 
     .prologue
-    .line 83
     if-ltz p1, :cond_0
 
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fLength:I
 
     if-lt p1, v0, :cond_1
 
-    .line 84
     :cond_0
     new-instance v0, Lmf/org/apache/xerces/xs/XSException;
 
@@ -248,7 +224,6 @@
 
     throw v0
 
-    .line 86
     :cond_1
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->fArray:[S
 
@@ -261,7 +236,6 @@
     .locals 1
 
     .prologue
-    .line 118
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/util/ShortListImpl;->getLength()I
 
     move-result v0

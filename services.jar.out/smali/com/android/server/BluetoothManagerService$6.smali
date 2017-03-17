@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2957
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$6;->this$0:Lcom/android/server/BluetoothManagerService;
 
     iput-object p2, p0, Lcom/android/server/BluetoothManagerService$6;->val$keyguardManager:Landroid/app/KeyguardManager;
@@ -47,7 +46,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 2960
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v2
@@ -68,42 +66,34 @@
 
     if-nez v2, :cond_1
 
-    .line 2961
     iget-object v2, p0, Lcom/android/server/BluetoothManagerService$6;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # invokes: Lcom/android/server/BluetoothManagerService;->cancelChinaPopupState()V
     invoke-static {v2}, Lcom/android/server/BluetoothManagerService;->access$5700(Lcom/android/server/BluetoothManagerService;)V
 
-    .line 2963
     if-eqz p1, :cond_0
 
-    .line 2964
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 2967
     :cond_0
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2968
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "android.intent.action.MAIN"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2969
     const-string v2, "android.intent.category.HOME"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2970
     const/high16 v2, 0x13a00000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2975
     iget-object v2, p0, Lcom/android/server/BluetoothManagerService$6;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # getter for: Lcom/android/server/BluetoothManagerService;->mContext:Landroid/content/Context;
@@ -115,7 +105,6 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2980
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_1
     :goto_0
@@ -123,11 +112,9 @@
 
     return v2
 
-    .line 2976
     :catch_0
     move-exception v0
 
-    .line 2977
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 

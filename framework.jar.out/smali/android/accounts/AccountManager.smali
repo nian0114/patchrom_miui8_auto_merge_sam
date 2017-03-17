@@ -115,30 +115,24 @@
     .param p2, "service"    # Landroid/accounts/IAccountManager;
 
     .prologue
-    .line 265
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2484
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
-    .line 2492
     new-instance v0, Landroid/accounts/AccountManager$19;
 
     invoke-direct {v0, p0}, Landroid/accounts/AccountManager$19;-><init>(Landroid/accounts/AccountManager;)V
 
     iput-object v0, p0, Landroid/accounts/AccountManager;->mAccountsChangedBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 266
     iput-object p1, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
-    .line 267
     iput-object p2, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
-    .line 268
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
@@ -151,7 +145,6 @@
 
     iput-object v0, p0, Landroid/accounts/AccountManager;->mMainHandler:Landroid/os/Handler;
 
-    .line 269
     return-void
 .end method
 
@@ -162,33 +155,26 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 274
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2484
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
-    .line 2492
     new-instance v0, Landroid/accounts/AccountManager$19;
 
     invoke-direct {v0, p0}, Landroid/accounts/AccountManager$19;-><init>(Landroid/accounts/AccountManager;)V
 
     iput-object v0, p0, Landroid/accounts/AccountManager;->mAccountsChangedBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 275
     iput-object p1, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
-    .line 276
     iput-object p2, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
-    .line 277
     iput-object p3, p0, Landroid/accounts/AccountManager;->mMainHandler:Landroid/os/Handler;
 
-    .line 278
     return-void
 .end method
 
@@ -197,7 +183,6 @@
     .param p0, "x0"    # Landroid/accounts/AccountManager;
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
     return-object v0
@@ -208,7 +193,6 @@
     .param p0, "x0"    # Landroid/accounts/AccountManager;
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -219,7 +203,6 @@
     .param p0, "x0"    # Landroid/accounts/AccountManager;
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
     return-object v0
@@ -233,7 +216,6 @@
     .param p3, "x3"    # [Landroid/accounts/Account;
 
     .prologue
-    .line 149
     invoke-direct {p0, p1, p2, p3}, Landroid/accounts/AccountManager;->postToHandler(Landroid/os/Handler;Landroid/accounts/OnAccountsUpdateListener;[Landroid/accounts/Account;)V
 
     return-void
@@ -244,7 +226,6 @@
     .param p0, "x0"    # Landroid/accounts/AccountManager;
 
     .prologue
-    .line 149
     invoke-direct {p0}, Landroid/accounts/AccountManager;->ensureNotOnMainThread()V
 
     return-void
@@ -258,7 +239,6 @@
     .param p3, "x3"    # Landroid/accounts/AccountManagerFuture;
 
     .prologue
-    .line 149
     invoke-direct {p0, p1, p2, p3}, Landroid/accounts/AccountManager;->postToHandler(Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/AccountManagerFuture;)V
 
     return-void
@@ -271,7 +251,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 149
     invoke-direct {p0, p1, p2}, Landroid/accounts/AccountManager;->convertErrorToException(ILjava/lang/String;)Ljava/lang/Exception;
 
     move-result-object v0
@@ -284,7 +263,6 @@
     .param p0, "x0"    # Landroid/accounts/AccountManager;
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/accounts/AccountManager;->mMainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -296,60 +274,50 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2137
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_0
 
-    .line 2138
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 2153
     :goto_0
     return-object v0
 
-    .line 2141
     :cond_0
     const/4 v0, 0x6
 
     if-ne p1, v0, :cond_1
 
-    .line 2142
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2145
     :cond_1
     const/4 v0, 0x5
 
     if-ne p1, v0, :cond_2
 
-    .line 2146
     new-instance v0, Landroid/accounts/AuthenticatorException;
 
     invoke-direct {v0, p2}, Landroid/accounts/AuthenticatorException;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2149
     :cond_2
     const/4 v0, 0x7
 
     if-ne p1, v0, :cond_3
 
-    .line 2150
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2153
     :cond_3
     new-instance v0, Landroid/accounts/AuthenticatorException;
 
@@ -362,12 +330,10 @@
     .locals 4
 
     .prologue
-    .line 1832
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    .line 1833
     .local v1, "looper":Landroid/os/Looper;
     if-eqz v1, :cond_0
 
@@ -379,14 +345,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1834
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "calling this from your main thread can lead to deadlock"
 
     invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 1836
     .local v0, "exception":Ljava/lang/IllegalStateException;
     const-string v2, "AccountManager"
 
@@ -394,7 +358,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1838
     iget-object v2, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -407,10 +370,8 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 1839
     throw v0
 
-    .line 1842
     .end local v0    # "exception":Ljava/lang/IllegalStateException;
     :cond_0
     return-void
@@ -421,7 +382,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 310
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -432,7 +392,6 @@
 
     throw v0
 
-    .line 311
     :cond_0
     const-string v0, "account"
 
@@ -478,7 +437,6 @@
     .end annotation
 
     .prologue
-    .line 2413
     .local p1, "allowableAccounts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/accounts/Account;>;"
     move-object v0, p0
 
@@ -529,13 +487,11 @@
     .end annotation
 
     .prologue
-    .line 2462
     .local p1, "allowableAccounts":Ljava/util/List;, "Ljava/util/List<Landroid/accounts/Account;>;"
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2463
     .local v1, "intent":Landroid/content/Intent;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -551,7 +507,6 @@
 
     move-result-object v0
 
-    .line 2465
     .local v0, "componentName":Landroid/content/ComponentName;
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -563,7 +518,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2467
     const-string v3, "allowableAccounts"
 
     if-nez p1, :cond_0
@@ -573,40 +527,32 @@
     :goto_0
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 2469
     const-string v2, "allowableAccountTypes"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2471
     const-string v2, "addAccountOptions"
 
     invoke-virtual {v1, v2, p6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 2473
-    const-string/jumbo v2, "selectedAccount"
+    const-string v2, "selectedAccount"
 
     invoke-virtual {v1, v2, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 2474
     const-string v2, "descriptionTextOverride"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2476
     const-string v2, "authTokenType"
 
     invoke-virtual {v1, v2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2478
     const-string v2, "addAccountRequiredFeatures"
 
     invoke-virtual {v1, v2, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2481
     return-object v1
 
-    .line 2467
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -634,14 +580,12 @@
     .end annotation
 
     .prologue
-    .line 1846
     .local p2, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     .local p3, "future":Landroid/accounts/AccountManagerFuture;, "Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
     iget-object p1, p0, Landroid/accounts/AccountManager;->mMainHandler:Landroid/os/Handler;
 
-    .line 1847
     :cond_0
     new-instance v0, Landroid/accounts/AccountManager$17;
 
@@ -649,7 +593,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1852
     return-void
 .end method
 
@@ -662,23 +605,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1856
     array-length v1, p3
 
     new-array v0, v1, [Landroid/accounts/Account;
 
-    .line 1859
     .local v0, "accountsCopy":[Landroid/accounts/Account;
     array-length v1, v0
 
     invoke-static {p3, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1860
     if-nez p1, :cond_0
 
     iget-object p1, p0, Landroid/accounts/AccountManager;->mMainHandler:Landroid/os/Handler;
 
-    .line 1861
     :cond_0
     new-instance v1, Landroid/accounts/AccountManager$18;
 
@@ -686,7 +625,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1872
     return-void
 .end method
 
@@ -695,10 +633,8 @@
     .param p0, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 284
     if-eqz p0, :cond_0
 
-    .line 285
     const-string v1, "authtoken"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -719,12 +655,10 @@
 
     if-nez v1, :cond_0
 
-    .line 287
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0, p0}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    .line 288
     .local v0, "newResult":Landroid/os/Bundle;
     const-string v1, "authtoken"
 
@@ -732,7 +666,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 292
     .end local v0    # "newResult":Landroid/os/Bundle;
     :goto_0
     return-object v0
@@ -776,7 +709,6 @@
     .end annotation
 
     .prologue
-    .line 1504
     .local p6, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -788,20 +720,16 @@
 
     throw v0
 
-    .line 1505
     :cond_0
     new-instance v9, Landroid/os/Bundle;
 
     invoke-direct {v9}, Landroid/os/Bundle;-><init>()V
 
-    .line 1506
     .local v9, "optionsIn":Landroid/os/Bundle;
     if-eqz p4, :cond_1
 
-    .line 1507
     invoke-virtual {v9, p4}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 1509
     :cond_1
     const-string v0, "androidPackageName"
 
@@ -813,7 +741,6 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1511
     new-instance v0, Landroid/accounts/AccountManager$11;
 
     move-object v1, p0
@@ -874,7 +801,6 @@
     .end annotation
 
     .prologue
-    .line 1527
     .local p6, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -886,32 +812,27 @@
 
     throw v0
 
-    .line 1528
     :cond_0
     if-nez p8, :cond_1
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "userHandle is null"
+    const-string v1, "userHandle is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1529
     :cond_1
     new-instance v9, Landroid/os/Bundle;
 
     invoke-direct {v9}, Landroid/os/Bundle;-><init>()V
 
-    .line 1530
     .local v9, "optionsIn":Landroid/os/Bundle;
     if-eqz p4, :cond_2
 
-    .line 1531
     invoke-virtual {v9, p4}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 1533
     :cond_2
     const-string v0, "androidPackageName"
 
@@ -923,7 +844,6 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1535
     new-instance v0, Landroid/accounts/AccountManager$12;
 
     move-object v1, p0
@@ -960,7 +880,6 @@
     .param p3, "userdata"    # Landroid/os/Bundle;
 
     .prologue
-    .line 714
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -971,7 +890,6 @@
 
     throw v1
 
-    .line 716
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -984,11 +902,9 @@
 
     return v1
 
-    .line 717
     :catch_0
     move-exception v0
 
-    .line 719
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1004,25 +920,21 @@
     .param p3, "updateImmediately"    # Z
 
     .prologue
-    .line 2535
     if-nez p1, :cond_0
 
-    .line 2536
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "the listener is null"
+    const-string v3, "the listener is null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 2538
     :cond_0
     iget-object v3, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 2539
     :try_start_0
     iget-object v2, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
@@ -1032,16 +944,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 2540
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v4, "this listener is already added"
+    const-string v4, "this listener is already added"
 
     invoke-direct {v2, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 2554
     :catchall_0
     move-exception v2
 
@@ -1051,7 +961,6 @@
 
     throw v2
 
-    .line 2542
     :cond_1
     :try_start_1
     iget-object v2, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
@@ -1060,56 +969,46 @@
 
     move-result v1
 
-    .line 2544
     .local v1, "wasEmpty":Z
     iget-object v2, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2546
     if-eqz v1, :cond_2
 
-    .line 2548
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 2549
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v2, "android.accounts.LOGIN_ACCOUNTS_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2551
     const-string v2, "android.intent.action.DEVICE_STORAGE_OK"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2552
     iget-object v2, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Landroid/accounts/AccountManager;->mAccountsChangedBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v4, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 2554
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_2
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2556
     if-eqz p3, :cond_3
 
-    .line 2557
     invoke-virtual {p0}, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;
 
     move-result-object v2
 
     invoke-direct {p0, p2, p1, v2}, Landroid/accounts/AccountManager;->postToHandler(Landroid/os/Handler;Landroid/accounts/OnAccountsUpdateListener;[Landroid/accounts/Account;)V
 
-    .line 2559
     :cond_3
     return-void
 .end method
@@ -1120,7 +1019,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1555
     :try_start_0
     iget-object v2, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -1134,16 +1032,13 @@
 
     move-result v1
 
-    .line 1556
     .local v1, "val":Z
     return v1
 
-    .line 1557
     .end local v1    # "val":Z
     :catch_0
     move-exception v0
 
-    .line 1559
     .local v0, "re":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1168,7 +1063,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1192
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -1179,7 +1073,6 @@
 
     throw v0
 
-    .line 1193
     :cond_0
     if-nez p2, :cond_1
 
@@ -1202,7 +1095,6 @@
 
     move-object v5, v4
 
-    .line 1194
     invoke-virtual/range {v0 .. v5}, Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
@@ -1213,11 +1105,9 @@
 
     check-cast v6, Landroid/os/Bundle;
 
-    .line 1196
     .local v6, "bundle":Landroid/os/Bundle;
     if-nez v6, :cond_2
 
-    .line 1201
     const-string v0, "AccountManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1250,7 +1140,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1205
     :goto_0
     return-object v4
 
@@ -1269,7 +1158,6 @@
     .param p1, "account"    # Landroid/accounts/Account;
 
     .prologue
-    .line 1097
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -1280,7 +1168,6 @@
 
     throw v1
 
-    .line 1099
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -1289,14 +1176,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1104
     return-void
 
-    .line 1100
     :catch_0
     move-exception v0
 
-    .line 1102
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1331,7 +1215,6 @@
     .end annotation
 
     .prologue
-    .line 1693
     .local p4, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
@@ -1384,7 +1267,6 @@
     .end annotation
 
     .prologue
-    .line 1707
     .local p4, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -1396,13 +1278,11 @@
 
     throw v0
 
-    .line 1708
     :cond_0
     invoke-virtual {p6}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v8
 
-    .line 1709
     .local v8, "userId":I
     new-instance v0, Landroid/accounts/AccountManager$14;
 
@@ -1453,7 +1333,6 @@
     .end annotation
 
     .prologue
-    .line 1578
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Ljava/lang/Boolean;>;"
     if-nez p1, :cond_0
 
@@ -1465,19 +1344,17 @@
 
     throw v0
 
-    .line 1579
     :cond_0
     if-nez p2, :cond_1
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "user is null"
+    const-string v1, "user is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1581
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$13;
 
@@ -1524,7 +1401,6 @@
     .end annotation
 
     .prologue
-    .line 1823
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -1536,7 +1412,6 @@
 
     throw v0
 
-    .line 1824
     :cond_0
     new-instance v0, Landroid/accounts/AccountManager$16;
 
@@ -1565,7 +1440,6 @@
     .locals 4
 
     .prologue
-    .line 433
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -1585,11 +1459,9 @@
 
     return-object v1
 
-    .line 434
     :catch_0
     move-exception v0
 
-    .line 436
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1603,7 +1475,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 458
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -1623,11 +1494,9 @@
 
     return-object v1
 
-    .line 459
     :catch_0
     move-exception v0
 
-    .line 461
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1641,7 +1510,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 524
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -1678,19 +1546,17 @@
     .end annotation
 
     .prologue
-    .line 668
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<[Landroid/accounts/Account;>;"
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "type is null"
+    const-string v1, "type is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 669
     :cond_0
     new-instance v0, Landroid/accounts/AccountManager$3;
 
@@ -1719,7 +1585,6 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 530
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -1741,11 +1606,9 @@
 
     return-object v1
 
-    .line 532
     :catch_0
     move-exception v0
 
-    .line 534
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1760,7 +1623,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 492
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -1778,11 +1640,9 @@
 
     return-object v1
 
-    .line 494
     :catch_0
     move-exception v0
 
-    .line 496
     .local v0, "re":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1797,7 +1657,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 475
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -1815,11 +1674,9 @@
 
     return-object v1
 
-    .line 476
     :catch_0
     move-exception v0
 
-    .line 478
     .local v0, "re":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1856,7 +1713,6 @@
     .end annotation
 
     .prologue
-    .line 1267
     .local p5, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -1868,7 +1724,6 @@
 
     throw v0
 
-    .line 1268
     :cond_0
     if-nez p2, :cond_1
 
@@ -1880,20 +1735,16 @@
 
     throw v0
 
-    .line 1269
     :cond_1
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 1270
     .local v7, "optionsIn":Landroid/os/Bundle;
     if-eqz p3, :cond_2
 
-    .line 1271
     invoke-virtual {v7, p3}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 1273
     :cond_2
     const-string v0, "androidPackageName"
 
@@ -1905,7 +1756,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1274
     new-instance v0, Landroid/accounts/AccountManager$9;
 
     move-object v1, p0
@@ -1957,7 +1807,6 @@
     .end annotation
 
     .prologue
-    .line 1435
     .local p5, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -1969,7 +1818,6 @@
 
     throw v0
 
-    .line 1436
     :cond_0
     if-nez p2, :cond_1
 
@@ -1981,20 +1829,16 @@
 
     throw v0
 
-    .line 1437
     :cond_1
     new-instance v8, Landroid/os/Bundle;
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    .line 1438
     .local v8, "optionsIn":Landroid/os/Bundle;
     if-eqz p3, :cond_2
 
-    .line 1439
     invoke-virtual {v8, p3}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 1441
     :cond_2
     const-string v0, "androidPackageName"
 
@@ -2006,7 +1850,6 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1442
     new-instance v0, Landroid/accounts/AccountManager$10;
 
     const/4 v2, 0x0
@@ -2061,7 +1904,6 @@
     .end annotation
 
     .prologue
-    .line 1355
     .local p4, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     const/4 v3, 0x0
 
@@ -2117,7 +1959,6 @@
     .end annotation
 
     .prologue
-    .line 2359
     .local p7, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -2129,7 +1970,6 @@
 
     throw v1
 
-    .line 2360
     :cond_0
     if-nez p2, :cond_1
 
@@ -2141,7 +1981,6 @@
 
     throw v1
 
-    .line 2361
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;
 
@@ -2165,11 +2004,9 @@
 
     invoke-direct/range {v0 .. v9}, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;-><init>(Landroid/accounts/AccountManager;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)V
 
-    .line 2364
     .local v0, "task":Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;
     invoke-virtual {v0}, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->start()Landroid/accounts/AccountManagerFuture;
 
-    .line 2365
     return-object v0
 .end method
 
@@ -2197,7 +2034,6 @@
     .end annotation
 
     .prologue
-    .line 570
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
@@ -2209,7 +2045,6 @@
 
     throw v0
 
-    .line 571
     :cond_0
     if-nez p2, :cond_1
 
@@ -2221,7 +2056,6 @@
 
     throw v0
 
-    .line 572
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$1;
 
@@ -2248,7 +2082,6 @@
     .locals 4
 
     .prologue
-    .line 383
     :try_start_0
     iget-object v2, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -2260,7 +2093,6 @@
 
     move-result-object v1
 
-    .line 384
     .local v1, "items":[Landroid/accounts/AuthenticatorDescription;
     sget-boolean v2, Landroid/os/Build;->IS_SYSTEM_SECURE:Z
 
@@ -2268,7 +2100,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 385
     iget-object v2, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2281,16 +2112,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 387
     :cond_0
     return-object v1
 
-    .line 388
     .end local v1    # "items":[Landroid/accounts/AuthenticatorDescription;
     :catch_0
     move-exception v0
 
-    .line 390
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -2304,7 +2132,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 409
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -2316,11 +2143,9 @@
 
     return-object v1
 
-    .line 410
     :catch_0
     move-exception v0
 
-    .line 412
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2334,7 +2159,6 @@
     .param p1, "account"    # Landroid/accounts/Account;
 
     .prologue
-    .line 332
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2345,7 +2169,6 @@
 
     throw v1
 
-    .line 334
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -2358,11 +2181,9 @@
 
     return-object v1
 
-    .line 335
     :catch_0
     move-exception v0
 
-    .line 337
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2376,7 +2197,6 @@
     .param p1, "account"    # Landroid/accounts/Account;
 
     .prologue
-    .line 808
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2387,7 +2207,6 @@
 
     throw v1
 
-    .line 810
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -2400,11 +2219,9 @@
 
     return-object v1
 
-    .line 811
     :catch_0
     move-exception v0
 
-    .line 813
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2418,7 +2235,6 @@
     .param p1, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1621
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -2434,11 +2250,9 @@
 
     return-object v1
 
-    .line 1622
     :catch_0
     move-exception v0
 
-    .line 1624
     .local v0, "re":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2453,7 +2267,6 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 360
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2464,19 +2277,17 @@
 
     throw v1
 
-    .line 361
     :cond_0
     if-nez p2, :cond_1
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "key is null"
+    const-string v2, "key is null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 363
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -2489,11 +2300,9 @@
 
     return-object v1
 
-    .line 364
     :catch_0
     move-exception v0
 
-    .line 366
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2527,7 +2336,6 @@
     .end annotation
 
     .prologue
-    .line 615
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Ljava/lang/Boolean;>;"
     if-nez p1, :cond_0
 
@@ -2539,7 +2347,6 @@
 
     throw v0
 
-    .line 616
     :cond_0
     if-nez p2, :cond_1
 
@@ -2551,7 +2358,6 @@
 
     throw v0
 
-    .line 617
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$2;
 
@@ -2580,7 +2386,6 @@
     .param p2, "authToken"    # Ljava/lang/String;
 
     .prologue
-    .line 1005
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2591,11 +2396,9 @@
 
     throw v1
 
-    .line 1007
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1008
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -2603,15 +2406,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1014
     :cond_1
     return-void
 
-    .line 1010
     :catch_0
     move-exception v0
 
-    .line 1012
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2625,10 +2425,8 @@
     .param p1, "account"    # Landroid/accounts/Account;
 
     .prologue
-    .line 739
     if-nez p1, :cond_0
 
-    .line 740
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "account is null"
@@ -2637,7 +2435,6 @@
 
     throw v1
 
-    .line 742
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -2650,11 +2447,9 @@
 
     return v1
 
-    .line 743
     :catch_0
     move-exception v0
 
-    .line 744
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2669,7 +2464,6 @@
     .param p2, "authTokenType"    # Ljava/lang/String;
 
     .prologue
-    .line 1038
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2680,7 +2474,6 @@
 
     throw v1
 
-    .line 1039
     :cond_0
     if-nez p2, :cond_1
 
@@ -2692,7 +2485,6 @@
 
     throw v1
 
-    .line 1041
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -2705,11 +2497,9 @@
 
     return-object v1
 
-    .line 1042
     :catch_0
     move-exception v0
 
-    .line 1044
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2743,7 +2533,6 @@
     .end annotation
 
     .prologue
-    .line 844
     .local p2, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Ljava/lang/Boolean;>;"
     if-nez p1, :cond_0
 
@@ -2755,7 +2544,6 @@
 
     throw v0
 
-    .line 845
     :cond_0
     new-instance v0, Landroid/accounts/AccountManager$5;
 
@@ -2792,7 +2580,6 @@
     .end annotation
 
     .prologue
-    .line 903
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -2804,7 +2591,6 @@
 
     throw v0
 
-    .line 904
     :cond_0
     new-instance v0, Landroid/accounts/AccountManager$6;
 
@@ -2856,7 +2642,6 @@
     .end annotation
 
     .prologue
-    .line 923
     .local p2, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Ljava/lang/Boolean;>;"
     if-nez p1, :cond_0
 
@@ -2868,19 +2653,17 @@
 
     throw v0
 
-    .line 924
     :cond_0
     if-nez p4, :cond_1
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "userHandle is null"
+    const-string v1, "userHandle is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 925
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$7;
 
@@ -2929,11 +2712,9 @@
     .end annotation
 
     .prologue
-    .line 947
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
-    .line 948
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "account is null"
@@ -2942,20 +2723,17 @@
 
     throw v0
 
-    .line 949
     :cond_0
     if-nez p5, :cond_1
 
-    .line 950
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "userHandle is null"
+    const-string v1, "userHandle is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 951
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$8;
 
@@ -2987,7 +2765,6 @@
     .param p1, "account"    # Landroid/accounts/Account;
 
     .prologue
-    .line 979
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2998,7 +2775,6 @@
 
     throw v1
 
-    .line 981
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -3011,11 +2787,9 @@
 
     return v1
 
-    .line 982
     :catch_0
     move-exception v0
 
-    .line 984
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3029,24 +2803,21 @@
     .param p1, "listener"    # Landroid/accounts/OnAccountsUpdateListener;
 
     .prologue
-    .line 2575
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "listener is null"
+    const-string v1, "listener is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 2576
     :cond_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 2577
     :try_start_0
     iget-object v0, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
@@ -3056,27 +2827,22 @@
 
     if-nez v0, :cond_1
 
-    .line 2578
     const-string v0, "AccountManager"
 
     const-string v2, "Listener was not previously added"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2579
     monitor-exit v1
 
-    .line 2586
     :goto_0
     return-void
 
-    .line 2581
     :cond_1
     iget-object v0, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2582
     iget-object v0, p0, Landroid/accounts/AccountManager;->mAccountsUpdatedListeners:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
@@ -3085,14 +2851,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 2583
     iget-object v0, p0, Landroid/accounts/AccountManager;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/accounts/AccountManager;->mAccountsChangedBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 2585
     :cond_2
     monitor-exit v1
 
@@ -3114,7 +2878,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1606
     :try_start_0
     iget-object v2, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -3128,16 +2891,13 @@
 
     move-result v1
 
-    .line 1607
     .local v1, "val":Z
     return v1
 
-    .line 1608
     .end local v1    # "val":Z
     :catch_0
     move-exception v0
 
-    .line 1610
     .local v0, "re":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -3170,7 +2930,6 @@
     .end annotation
 
     .prologue
-    .line 777
     .local p3, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/accounts/Account;>;"
     if-nez p1, :cond_0
 
@@ -3182,7 +2941,6 @@
 
     throw v0
 
-    .line 778
     :cond_0
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -3190,16 +2948,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 779
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "newName is empty or null."
+    const-string v1, "newName is empty or null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 781
     :cond_1
     new-instance v0, Landroid/accounts/AccountManager$4;
 
@@ -3229,7 +2985,6 @@
     .param p3, "authToken"    # Ljava/lang/String;
 
     .prologue
-    .line 1155
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -3240,7 +2995,6 @@
 
     throw v1
 
-    .line 1156
     :cond_0
     if-nez p2, :cond_1
 
@@ -3252,7 +3006,6 @@
 
     throw v1
 
-    .line 1158
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -3261,14 +3014,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1163
     return-void
 
-    .line 1159
     :catch_0
     move-exception v0
 
-    .line 1161
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3283,7 +3033,6 @@
     .param p2, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 1068
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -3294,7 +3043,6 @@
 
     throw v1
 
-    .line 1070
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -3303,14 +3051,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1075
     return-void
 
-    .line 1071
     :catch_0
     move-exception v0
 
-    .line 1073
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3326,7 +3071,6 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1125
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -3337,19 +3081,17 @@
 
     throw v1
 
-    .line 1126
     :cond_0
     if-nez p2, :cond_1
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "key is null"
+    const-string v2, "key is null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 1128
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -3358,14 +3100,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1133
     return-void
 
-    .line 1129
     :catch_0
     move-exception v0
 
-    .line 1131
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3382,7 +3121,6 @@
     .param p4, "value"    # Z
 
     .prologue
-    .line 551
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
 
@@ -3390,14 +3128,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 556
     return-void
 
-    .line 552
     :catch_0
     move-exception v0
 
-    .line 554
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3434,7 +3169,6 @@
     .end annotation
 
     .prologue
-    .line 1770
     .local p5, "callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     if-nez p1, :cond_0
 
@@ -3446,7 +3180,6 @@
 
     throw v0
 
-    .line 1771
     :cond_0
     new-instance v0, Landroid/accounts/AccountManager$15;
 

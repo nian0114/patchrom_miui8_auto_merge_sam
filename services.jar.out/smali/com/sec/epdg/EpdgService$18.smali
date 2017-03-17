@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1667
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$18;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1670
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,12 +50,10 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1675
     move-object v0, p1
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 1676
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -71,8 +67,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 1677
-    const-string/jumbo v2, "wifi_state"
+    const-string v2, "wifi_state"
 
     const/4 v3, 0x4
 
@@ -80,7 +75,6 @@
 
     move-result v1
 
-    .line 1678
     .local v1, "state":I
     const-string v2, "[EPDGService]"
 
@@ -104,14 +98,12 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1679
     if-eqz v1, :cond_0
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 1680
     :cond_0
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
@@ -126,7 +118,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1681
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -136,7 +127,6 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/epdg/EpdgTimers;->stopTimer(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)V
 
-    .line 1685
     .end local v1    # "state":I
     :cond_1
     return-void

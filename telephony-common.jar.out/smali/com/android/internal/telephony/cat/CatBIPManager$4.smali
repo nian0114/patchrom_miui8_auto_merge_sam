@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 884
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$4;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 886
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatBIPManager$4;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
 
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatBIPManager$4;->this$0:Lcom/android/internal/telephony/cat/CatBIPManager;
@@ -53,6 +51,5 @@
     # invokes: Lcom/android/internal/telephony/cat/CatBIPManager;->continueProcessingOpenChannel(Landroid/net/NetworkInfo;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/cat/CatBIPManager;->access$500(Lcom/android/internal/telephony/cat/CatBIPManager;Landroid/net/NetworkInfo;)V
 
-    .line 887
     return-void
 .end method

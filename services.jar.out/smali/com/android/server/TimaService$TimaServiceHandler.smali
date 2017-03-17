@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 211
     iput-object p1, p0, Lcom/android/server/TimaService$TimaServiceHandler;->this$0:Lcom/android/server/TimaService;
 
-    .line 212
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 213
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 217
     const-string v6, "TimaService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -66,23 +62,19 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 262
     :goto_0
     :pswitch_0
     return-void
 
-    .line 225
     :pswitch_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 226
     .local v0, "b":Landroid/os/Bundle;
     iget-object v6, p0, Lcom/android/server/TimaService$TimaServiceHandler;->this$0:Lcom/android/server/TimaService;
 
@@ -95,7 +87,6 @@
 
     if-nez v0, :cond_1
 
-    .line 227
     :cond_0
     const-string v6, "TimaService"
 
@@ -105,7 +96,6 @@
 
     goto :goto_0
 
-    .line 231
     :cond_1
     const-string v6, "MSG="
 
@@ -113,7 +103,6 @@
 
     move-result-object v5
 
-    .line 232
     .local v5, "text":Ljava/lang/String;
     if-eqz v5, :cond_2
 
@@ -123,7 +112,6 @@
 
     if-nez v6, :cond_3
 
-    .line 233
     :cond_2
     const-string v6, "TimaService"
 
@@ -133,13 +121,11 @@
 
     goto :goto_0
 
-    .line 237
     :cond_3
     sget-boolean v6, Lcom/android/server/TimaService;->iBootCompleted:Z
 
     if-nez v6, :cond_4
 
-    .line 238
     const-string v6, "TimaService"
 
     const-string v7, "TimaServiceHandler(): iBootCompleted==false"
@@ -148,30 +134,25 @@
 
     goto :goto_0
 
-    .line 243
     :cond_4
     :try_start_0
     new-instance v3, Landroid/app/Notification;
 
     invoke-direct {v3}, Landroid/app/Notification;-><init>()V
 
-    .line 244
     .local v3, "notification":Landroid/app/Notification;
     const-wide/16 v6, 0x0
 
     iput-wide v6, v3, Landroid/app/Notification;->when:J
 
-    .line 245
     const/16 v6, 0x10
 
     iput v6, v3, Landroid/app/Notification;->flags:I
 
-    .line 246
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 247
     .local v2, "intent":Landroid/content/Intent;
     iget-object v6, p0, Lcom/android/server/TimaService$TimaServiceHandler;->this$0:Lcom/android/server/TimaService;
 
@@ -188,13 +169,11 @@
 
     move-result-object v4
 
-    .line 248
     .local v4, "pi":Landroid/app/PendingIntent;
     const v6, 0x1080027
 
     iput v6, v3, Landroid/app/Notification;->icon:I
 
-    .line 249
     iget-object v6, p0, Lcom/android/server/TimaService$TimaServiceHandler;->this$0:Lcom/android/server/TimaService;
 
     # getter for: Lcom/android/server/TimaService;->mContext:Landroid/content/Context;
@@ -206,7 +185,6 @@
 
     invoke-virtual {v3, v6, v7, v5, v4}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 250
     iget-object v6, p0, Lcom/android/server/TimaService$TimaServiceHandler;->this$0:Lcom/android/server/TimaService;
 
     # getter for: Lcom/android/server/TimaService;->mNotifMgr:Landroid/app/NotificationManager;
@@ -222,14 +200,12 @@
 
     goto :goto_0
 
-    .line 253
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v3    # "notification":Landroid/app/Notification;
     .end local v4    # "pi":Landroid/app/PendingIntent;
     :catch_0
     move-exception v1
 
-    .line 255
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "TimaService"
 
@@ -239,7 +215,6 @@
 
     goto :goto_0
 
-    .line 218
     nop
 
     :pswitch_data_0

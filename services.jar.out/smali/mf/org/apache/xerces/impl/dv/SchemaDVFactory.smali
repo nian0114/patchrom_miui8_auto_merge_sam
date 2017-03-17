@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .end annotation
 
     .prologue
-    .line 55
     const-string v0, "mf.org.apache.xerces.impl.dv.xs.SchemaDVFactoryImpl"
 
     invoke-static {v0}, Lmf/org/apache/xerces/impl/dv/SchemaDVFactory;->getInstance(Ljava/lang/String;)Lmf/org/apache/xerces/impl/dv/SchemaDVFactory;
@@ -47,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 73
     :try_start_0
     new-instance v1, Lmf/org/apache/xerces/impl/dv/xs/SchemaDVFactoryImpl;
 
@@ -57,11 +54,9 @@
 
     return-object v1
 
-    .line 75
     :catch_0
     move-exception v0
 
-    .line 76
     .local v0, "e4":Ljava/lang/ClassCastException;
     new-instance v1, Lmf/org/apache/xerces/impl/dv/DVFactoryException;
 

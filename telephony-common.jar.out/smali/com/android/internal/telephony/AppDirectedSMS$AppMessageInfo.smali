@@ -37,21 +37,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppDirSmsStatus:I
 
-    .line 43
     iput-object v1, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mComponentname:Landroid/content/ComponentName;
 
-    .line 44
     iput-object v1, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mParameter:Ljava/lang/String;
 
-    .line 45
     iput-object v1, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppPrefix:Ljava/lang/String;
 
     return-void
@@ -63,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mComponentname:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
@@ -83,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppPrefix:Ljava/lang/String;
 
     return-object v0
@@ -93,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mParameter:Ljava/lang/String;
 
     return-object v0
@@ -105,7 +97,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 49
     iget v1, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppDirSmsStatus:I
 
     if-eq v1, v0, :cond_0
@@ -130,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mComponentname:Landroid/content/ComponentName;
 
     return-object v0
@@ -140,12 +130,10 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppDirSmsStatus:I
 
-    .line 61
     return-void
 .end method
 
@@ -156,20 +144,15 @@
     .param p3, "appPrefix"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mComponentname:Landroid/content/ComponentName;
 
-    .line 54
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppDirSmsStatus:I
 
-    .line 55
     iput-object p2, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mParameter:Ljava/lang/String;
 
-    .line 56
     iput-object p3, p0, Lcom/android/internal/telephony/AppDirectedSMS$AppMessageInfo;->mAppPrefix:Ljava/lang/String;
 
-    .line 57
     return-void
 .end method

@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 78
     new-instance v0, Landroid/content/pm/SdpUserInfo$1;
 
     invoke-direct {v0}, Landroid/content/pm/SdpUserInfo$1;-><init>()V
@@ -60,37 +59,26 @@
 
     const/4 v0, 0x0
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput v0, p0, Landroid/content/pm/SdpUserInfo;->flags:I
 
-    .line 35
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->version:I
 
-    .line 36
     iput v0, p0, Landroid/content/pm/SdpUserInfo;->prevStatus:I
 
-    .line 37
     iput v0, p0, Landroid/content/pm/SdpUserInfo;->status:I
 
-    .line 38
     iput-boolean v0, p0, Landroid/content/pm/SdpUserInfo;->isMigrating:Z
 
-    .line 42
     iput p1, p0, Landroid/content/pm/SdpUserInfo;->id:I
 
-    .line 43
     iput p2, p0, Landroid/content/pm/SdpUserInfo;->flags:I
 
-    .line 44
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->prevStatus:I
 
-    .line 45
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->status:I
 
-    .line 46
     return-void
 .end method
 
@@ -101,62 +89,50 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput v0, p0, Landroid/content/pm/SdpUserInfo;->flags:I
 
-    .line 35
     const/4 v1, -0x1
 
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->version:I
 
-    .line 36
     iput v0, p0, Landroid/content/pm/SdpUserInfo;->prevStatus:I
 
-    .line 37
     iput v0, p0, Landroid/content/pm/SdpUserInfo;->status:I
 
-    .line 38
     iput-boolean v0, p0, Landroid/content/pm/SdpUserInfo;->isMigrating:Z
 
-    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->id:I
 
-    .line 91
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->flags:I
 
-    .line 92
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->version:I
 
-    .line 93
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->prevStatus:I
 
-    .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/SdpUserInfo;->status:I
 
-    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -168,7 +144,6 @@
     :cond_0
     iput-boolean v0, p0, Landroid/content/pm/SdpUserInfo;->isMigrating:Z
 
-    .line 96
     return-void
 .end method
 
@@ -178,7 +153,6 @@
     .param p2, "x1"    # Landroid/content/pm/SdpUserInfo$1;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1}, Landroid/content/pm/SdpUserInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -190,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     return v0
@@ -200,7 +173,6 @@
     .locals 3
 
     .prologue
-    .line 68
     const-string v0, "SdpUserInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -273,14 +245,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     const-string v0, "SdpUserInfo"
 
     const-string v1, "\n"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     return-void
 .end method
 
@@ -290,32 +260,26 @@
     .param p2, "parcelableFlags"    # I
 
     .prologue
-    .line 58
     iget v0, p0, Landroid/content/pm/SdpUserInfo;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 59
     iget v0, p0, Landroid/content/pm/SdpUserInfo;->flags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 60
     iget v0, p0, Landroid/content/pm/SdpUserInfo;->version:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 61
     iget v0, p0, Landroid/content/pm/SdpUserInfo;->prevStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 62
     iget v0, p0, Landroid/content/pm/SdpUserInfo;->status:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 63
     iget-boolean v0, p0, Landroid/content/pm/SdpUserInfo;->isMigrating:Z
 
     if-eqz v0, :cond_0
@@ -325,10 +289,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 64
     return-void
 
-    .line 63
     :cond_0
     const/4 v0, 0x0
 

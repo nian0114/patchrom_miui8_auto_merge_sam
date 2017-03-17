@@ -14,7 +14,6 @@
     .locals 3
 
     .prologue
-    .line 5
     const/16 v0, 0x100
 
     new-array v0, v0, [B
@@ -23,7 +22,6 @@
 
     sput-object v0, Lcom/samsung/ucm/ucmservice/scp/ErcomCustom;->MODULUS:[B
 
-    .line 30
     const/4 v0, 0x1
 
     new-array v0, v0, [B
@@ -38,7 +36,6 @@
 
     return-void
 
-    .line 5
     nop
 
     :array_0
@@ -306,7 +303,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

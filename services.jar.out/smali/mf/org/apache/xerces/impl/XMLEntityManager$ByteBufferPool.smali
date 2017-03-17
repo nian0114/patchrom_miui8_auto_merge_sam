@@ -34,12 +34,10 @@
     .param p1, "bufferSize"    # I
 
     .prologue
-    .line 2928
     const/4 v0, 0x3
 
     invoke-direct {p0, v0, p1}, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;-><init>(II)V
 
-    .line 2929
     return-void
 .end method
 
@@ -49,28 +47,22 @@
     .param p2, "bufferSize"    # I
 
     .prologue
-    .line 2931
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2932
     iput p1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fPoolSize:I
 
-    .line 2933
     iput p2, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fBufferSize:I
 
-    .line 2934
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fPoolSize:I
 
     new-array v0, v0, [[B
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fByteBufferPool:[[B
 
-    .line 2935
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fDepth:I
 
-    .line 2936
     return-void
 .end method
 
@@ -80,7 +72,6 @@
     .locals 2
 
     .prologue
-    .line 2940
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fDepth:I
 
     if-lez v0, :cond_0
@@ -111,7 +102,6 @@
     .param p1, "buffer"    # [B
 
     .prologue
-    .line 2945
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fDepth:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fByteBufferPool:[[B
@@ -120,7 +110,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2946
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fByteBufferPool:[[B
 
     iget v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fDepth:I
@@ -131,7 +120,6 @@
 
     aput-object p1, v0, v1
 
-    .line 2948
     :cond_0
     return-void
 .end method
@@ -141,21 +129,17 @@
     .param p1, "bufferSize"    # I
 
     .prologue
-    .line 2952
     iput p1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fBufferSize:I
 
-    .line 2953
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fPoolSize:I
 
     new-array v0, v0, [[B
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fByteBufferPool:[[B
 
-    .line 2954
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$ByteBufferPool;->fDepth:I
 
-    .line 2955
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 19690
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$28;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 19692
     const-string v0, ".conf"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -75,11 +73,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 19694
     :cond_0
     const/4 v0, 0x1
 
-    .line 19697
     :goto_0
     return v0
 

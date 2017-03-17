@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 45
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
@@ -38,17 +37,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput v0, p0, Lmf/org/apache/xerces/dom/LCount;->captures:I
 
     iput v0, p0, Lmf/org/apache/xerces/dom/LCount;->bubbles:I
 
     iput v0, p0, Lmf/org/apache/xerces/dom/LCount;->total:I
 
-    .line 43
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .param p0, "evtName"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     sget-object v1, Lmf/org/apache/xerces/dom/LCount;->lCounts:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -66,11 +61,9 @@
 
     check-cast v0, Lmf/org/apache/xerces/dom/LCount;
 
-    .line 51
     .local v0, "lc":Lmf/org/apache/xerces/dom/LCount;
     if-nez v0, :cond_0
 
-    .line 52
     sget-object v1, Lmf/org/apache/xerces/dom/LCount;->lCounts:Ljava/util/Hashtable;
 
     new-instance v0, Lmf/org/apache/xerces/dom/LCount;
@@ -81,7 +74,6 @@
     .restart local v0    # "lc":Lmf/org/apache/xerces/dom/LCount;
     invoke-virtual {v1, p0, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     :cond_0
     return-object v0
 .end method

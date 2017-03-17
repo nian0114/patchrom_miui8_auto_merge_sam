@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "session"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     # getter for: Lcom/samsung/accessory/manager/SAccessoryManager;->mSessions:Ljava/util/HashMap;
@@ -51,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 102
     :try_start_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
@@ -66,14 +63,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
     invoke-virtual {p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->getSessionState()I
 
     move-result v0
 
     monitor-exit v1
 
-    .line 105
     :goto_0
     return v0
 
@@ -84,7 +79,6 @@
 
     goto :goto_0
 
-    .line 106
     :catchall_0
     move-exception v0
 
@@ -101,14 +95,12 @@
     .param p2, "isInternal"    # Z
 
     .prologue
-    .line 83
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v1, v1, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     if-eqz v1, :cond_0
 
-    .line 84
     iget-object v1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     # getter for: Lcom/samsung/accessory/manager/SAccessoryManager;->mAuthHandler:Landroid/os/Handler;
@@ -126,11 +118,9 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 92
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     iget-object v1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
@@ -148,20 +138,17 @@
 
     move-result-object v0
 
-    .line 88
     .local v0, "message":Landroid/os/Message;
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 90
     iget-object v1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     # getter for: Lcom/samsung/accessory/manager/SAccessoryManager;->mAuthHandler:Landroid/os/Handler;
@@ -173,7 +160,6 @@
 
     goto :goto_0
 
-    .line 86
     .end local v0    # "message":Landroid/os/Message;
     :cond_1
     const/4 v1, 0x1
@@ -186,7 +172,6 @@
     .param p1, "session"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$1;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     # getter for: Lcom/samsung/accessory/manager/SAccessoryManager;->mAuthHandler:Landroid/os/Handler;
@@ -202,6 +187,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 97
     return-void
 .end method

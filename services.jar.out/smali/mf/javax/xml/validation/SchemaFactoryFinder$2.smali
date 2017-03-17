@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$2;->this$0:Lmf/javax/xml/validation/SchemaFactoryFinder;
 
     iput-object p2, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$2;->val$e:Ljava/util/Enumeration;
 
-    .line 538
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 544
     iget-object v0, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$2;->val$e:Ljava/util/Enumeration;
 
     invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -59,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 548
     iget-object v0, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$2;->val$e:Ljava/util/Enumeration;
 
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 540
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

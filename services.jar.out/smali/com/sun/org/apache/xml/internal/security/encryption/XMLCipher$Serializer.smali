@@ -126,7 +126,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v9, "xmlns:"
+    const-string v9, "xmlns:"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -138,7 +138,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v9, "xmlns"
+    const-string v9, "xmlns"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -266,7 +266,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "fragment"
+    const-string v1, "fragment"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -297,7 +297,7 @@
 
     invoke-virtual {v1, v2}, Ljavax/xml/parsers/DocumentBuilderFactory;->setNamespaceAware(Z)V
 
-    const-string/jumbo v2, "http://xml.org/sax/features/namespaces"
+    const-string v2, "http://xml.org/sax/features/namespaces"
 
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
@@ -373,7 +373,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -384,7 +384,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -395,7 +395,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

@@ -51,7 +51,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 16
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -63,7 +62,6 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
-    .line 18
     const-string v0, "ro.build.description"
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
@@ -80,25 +78,20 @@
     .param p1, "wifiNative"    # Lcom/android/server/wifi/WifiNative;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mNetworkMap:Ljava/util/HashMap;
 
-    .line 27
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/wifi/WifiNetworkLists;->mWifiNative:Lcom/android/server/wifi/WifiNative;
 
-    .line 29
     return-void
 .end method
 
@@ -108,7 +101,6 @@
     .param p2, "b"    # B
 
     .prologue
-    .line 302
     const-string v0, "0123456789ABCDEF"
 
     shr-int/lit8 v1, p2, 0x4
@@ -133,7 +125,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 303
     return-void
 .end method
 
@@ -144,10 +135,8 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 85
     const/4 v4, 0x0
 
-    .line 87
     .local v4, "networkListSize":I
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
@@ -155,7 +144,6 @@
 
     if-nez p1, :cond_1
 
-    .line 88
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v5, :cond_0
@@ -182,12 +170,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     :cond_0
     :goto_0
     return-void
 
-    .line 92
     :cond_1
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
@@ -197,7 +183,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 93
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v5, :cond_0
@@ -226,7 +211,6 @@
 
     goto :goto_0
 
-    .line 97
     :cond_2
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -248,7 +232,6 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 98
     .local v3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -256,10 +239,8 @@
 
     add-int/2addr v4, v5
 
-    .line 99
     goto :goto_1
 
-    .line 100
     .end local v3    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_3
     const/16 v5, 0x64
@@ -268,7 +249,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiNetworkLists;->removeOldestBssid()V
 
-    .line 102
     :cond_4
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
@@ -308,7 +288,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_5
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
@@ -336,7 +315,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_6
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
@@ -346,7 +324,6 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/wifi/WifiNetworkLists;->printNetworkContains(Ljava/lang/String;)V
 
-    .line 105
     :cond_7
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -368,7 +345,6 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 106
     .restart local v3    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -388,7 +364,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 107
     .local v0, "element":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
@@ -398,22 +373,18 @@
 
     if-eqz v5, :cond_9
 
-    .line 108
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 109
     iput-object p1, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 115
     .end local v0    # "element":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_a
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiNetworkLists;->addNewNetworkList(Ljava/lang/String;)V
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
     goto/16 :goto_0
@@ -424,18 +395,14 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     const/4 v4, 0x0
 
-    .line 123
     .local v4, "networkListSize":I
     const/4 v0, 0x0
 
-    .line 126
     .local v0, "count":I
     if-nez p1, :cond_1
 
-    .line 127
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v5, :cond_0
@@ -462,12 +429,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     :cond_0
     :goto_0
     return-void
 
-    .line 131
     :cond_1
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
@@ -481,7 +446,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 132
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v5, :cond_0
@@ -510,7 +474,6 @@
 
     goto :goto_0
 
-    .line 136
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiNetworkLists;->findNetwork(Ljava/lang/String;)Z
 
@@ -520,7 +483,6 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 137
     const-string v5, "WifiNetworkLists"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -549,12 +511,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 141
     :cond_3
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -576,7 +536,6 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 142
     .local v2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -584,10 +543,8 @@
 
     add-int/2addr v4, v5
 
-    .line 143
     goto :goto_1
 
-    .line 144
     .end local v2    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_4
     const/16 v5, 0x64
@@ -596,22 +553,18 @@
 
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiNetworkLists;->removeOldestBssid()V
 
-    .line 146
     :cond_5
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 147
     .local v3, "network":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 148
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 149
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v5, :cond_6
@@ -644,7 +597,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     :cond_6
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -666,11 +618,9 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 151
     .restart local v2    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     add-int/lit8 v0, v0, 0x1
 
-    .line 152
     sget-boolean v5, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v5, :cond_7
@@ -709,7 +659,6 @@
 
     goto :goto_2
 
-    .line 154
     .end local v2    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_8
     iput-object p1, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLastBssid:Ljava/lang/String;
@@ -721,17 +670,14 @@
     .locals 1
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 49
     :cond_0
     return-void
 .end method
@@ -747,14 +693,12 @@
     .end annotation
 
     .prologue
-    .line 273
     new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v3, "AES"
 
     invoke-direct {v2, p1, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 274
     .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
     const-string v3, "AES"
 
@@ -762,18 +706,15 @@
 
     move-result-object v0
 
-    .line 275
     .local v0, "cipher":Ljavax/crypto/Cipher;
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 276
     invoke-virtual {v0, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object v1
 
-    .line 277
     .local v1, "encrypted":[B
     return-object v1
 .end method
@@ -783,12 +724,10 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 251
     if-nez p1, :cond_0
 
     const-string p1, "00:00:00:00:00:00"
 
-    .line 252
     :cond_0
     const-string v3, ":"
 
@@ -796,21 +735,17 @@
 
     invoke-virtual {p1, v3, v4}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    .line 253
     const/4 v3, 0x6
 
     new-array v0, v3, [B
 
-    .line 254
     .local v0, "address":[B
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
-    .line 255
     const/4 v2, 0x0
 
-    .line 257
     .local v2, "encrypted":[B
     :try_start_0
     sget-object v3, Lcom/android/server/wifi/WifiNetworkLists;->CRYPTO_SEED_PASSWORD:Ljava/lang/String;
@@ -829,7 +764,6 @@
 
     move-result-object v2
 
-    .line 261
     :goto_0
     invoke-virtual {p0, v2}, Lcom/android/server/wifi/WifiNetworkLists;->toHex([B)Ljava/lang/String;
 
@@ -837,11 +771,9 @@
 
     return-object v3
 
-    .line 258
     :catch_0
     move-exception v1
 
-    .line 259
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -855,7 +787,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 184
     sget-boolean v6, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v6, :cond_0
@@ -882,11 +813,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_0
     const/4 v0, 0x0
 
-    .line 186
     .local v0, "count":I
     iget-object v6, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -908,7 +837,6 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 187
     .local v4, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -929,7 +857,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 188
     .local v1, "element":Ljava/lang/String;
     invoke-virtual {v1, p1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
@@ -937,12 +864,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 189
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 192
     .end local v1    # "element":Ljava/lang/String;
     :cond_3
     sget-boolean v6, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
@@ -983,13 +908,11 @@
 
     goto :goto_0
 
-    .line 194
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_4
     if-le v0, v5, :cond_5
 
-    .line 197
     :goto_2
     return v5
 
@@ -1009,29 +932,24 @@
 
     const/4 v3, 0x0
 
-    .line 73
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiNetworkLists;->findNetwork(Ljava/lang/String;)Z
 
     move-result v5
 
     if-ne v5, v4, :cond_0
 
-    .line 74
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiNetworkLists;->getNetwork(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 75
     .local v2, "network":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v2, :cond_1
 
-    .line 81
     .end local v2    # "network":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     return v3
 
-    .line 76
     .restart local v2    # "network":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_1
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1052,7 +970,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 77
     .local v0, "element":Ljava/lang/String;
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1062,7 +979,6 @@
 
     move v3, v4
 
-    .line 78
     goto :goto_0
 .end method
 
@@ -1071,7 +987,6 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 162
     iget-object v4, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1091,7 +1006,6 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 163
     .local v3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1111,7 +1025,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 164
     .local v0, "element":Ljava/lang/String;
     invoke-virtual {v0, p1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
@@ -1119,10 +1032,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 165
     const/4 v4, 0x1
 
-    .line 169
     .end local v0    # "element":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -1152,7 +1063,6 @@
     .end annotation
 
     .prologue
-    .line 265
     .local p1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1162,7 +1072,6 @@
 
     invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 266
     .local v1, "encryptedNetwork":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1182,7 +1091,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 267
     .local v0, "element":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/server/wifi/WifiNetworkLists;->encryptedBssid(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1192,7 +1100,6 @@
 
     goto :goto_0
 
-    .line 269
     .end local v0    # "element":Ljava/lang/String;
     :cond_0
     return-object v1
@@ -1214,7 +1121,6 @@
     .end annotation
 
     .prologue
-    .line 173
     iget-object v4, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1234,7 +1140,6 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 174
     .local v3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1254,7 +1159,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 175
     .local v0, "element":Ljava/lang/String;
     invoke-virtual {v0, p1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
@@ -1262,7 +1166,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 180
     .end local v0    # "element":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -1285,14 +1188,12 @@
     .end annotation
 
     .prologue
-    .line 281
     const-string v4, "AES"
 
     invoke-static {v4}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
 
     move-result-object v0
 
-    .line 282
     .local v0, "kgen":Ljavax/crypto/KeyGenerator;
     const-string v4, "SHA1PRNG"
 
@@ -1300,27 +1201,22 @@
 
     move-result-object v3
 
-    .line 283
     .local v3, "sr":Ljava/security/SecureRandom;
     invoke-virtual {v3, p1}, Ljava/security/SecureRandom;->setSeed([B)V
 
-    .line 284
     const/16 v4, 0x80
 
     invoke-virtual {v0, v4, v3}, Ljavax/crypto/KeyGenerator;->init(ILjava/security/SecureRandom;)V
 
-    .line 285
     invoke-virtual {v0}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
 
     move-result-object v2
 
-    .line 286
     .local v2, "skey":Ljavax/crypto/SecretKey;
     invoke-interface {v2}, Ljavax/crypto/SecretKey;->getEncoded()[B
 
     move-result-object v1
 
-    .line 287
     .local v1, "raw":[B
     return-object v1
 .end method
@@ -1330,7 +1226,6 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 213
     sget-boolean v8, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v8, :cond_0
@@ -1357,21 +1252,17 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     :cond_0
     const/4 v0, 0x0
 
-    .line 215
     .local v0, "duplicatedNetwork":I
     const/4 v2, 0x0
 
-    .line 216
     .local v2, "found":Z
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 217
     .local v7, "mergedNetwork":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v8, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -1388,14 +1279,12 @@
 
     if-eqz v8, :cond_5
 
-    .line 218
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 219
     .local v6, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-boolean v8, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
@@ -1423,7 +1312,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     :cond_2
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1443,7 +1331,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 221
     .local v1, "element":Ljava/lang/String;
     invoke-virtual {v1, p1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
@@ -1451,10 +1338,8 @@
 
     if-eqz v8, :cond_3
 
-    .line 222
     add-int/lit8 v0, v0, 0x1
 
-    .line 223
     invoke-virtual {v6}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
 
     move-result-object v8
@@ -1463,21 +1348,16 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 224
     const/4 v2, 0x1
 
-    .line 229
     .end local v1    # "element":Ljava/lang/String;
     :cond_4
     if-eqz v2, :cond_1
 
-    .line 230
     invoke-interface {v5}, Ljava/util/Iterator;->remove()V
 
-    .line 231
     const/4 v2, 0x0
 
-    .line 232
     sget-boolean v8, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v8, :cond_1
@@ -1506,7 +1386,6 @@
 
     goto :goto_0
 
-    .line 236
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_5
@@ -1522,14 +1401,12 @@
 
     if-eqz v8, :cond_8
 
-    .line 237
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 238
     .restart local v1    # "element":Ljava/lang/String;
     invoke-virtual {v1, p1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
@@ -1537,26 +1414,21 @@
 
     if-eqz v8, :cond_7
 
-    .line 239
     invoke-interface {v4}, Ljava/util/Iterator;->remove()V
 
-    .line 240
     add-int/lit8 v0, v0, -0x1
 
-    .line 243
     :cond_7
     const/4 v8, 0x1
 
     if-ne v0, v8, :cond_6
 
-    .line 246
     .end local v1    # "element":Ljava/lang/String;
     :cond_8
     iget-object v8, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 247
     sget-boolean v8, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v8, :cond_9
@@ -1583,7 +1455,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     :cond_9
     return-void
 .end method
@@ -1593,7 +1464,6 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     const-string v0, "WifiNetworkLists"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1620,7 +1490,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     return-void
 .end method
 
@@ -1629,7 +1498,6 @@
     .param p1, "networkId"    # I
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mNetworkMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1642,7 +1510,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 33
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mNetworkMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1657,7 +1524,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
-    .line 37
     :goto_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mNetworkMap:Ljava/util/HashMap;
 
@@ -1669,7 +1535,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     sget-boolean v0, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1696,11 +1561,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     return-void
 
-    .line 35
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1716,7 +1579,6 @@
     .param p1, "networkId"    # I
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkLists;->mNetworkMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1725,7 +1587,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     sget-boolean v0, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1752,7 +1613,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     :cond_0
     return-void
 .end method
@@ -1763,7 +1623,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 52
     iget-object v3, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1780,17 +1639,14 @@
 
     if-gt v3, v4, :cond_1
 
-    .line 53
     iget-object v3, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 70
     :cond_0
     :goto_0
     return-void
 
-    .line 55
     :cond_1
     iget-object v3, p0, Lcom/android/server/wifi/WifiNetworkLists;->mLists:Ljava/util/ArrayList;
 
@@ -1813,11 +1669,9 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 57
     .local v2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v2, :cond_5
 
-    .line 58
     :try_start_0
     sget-boolean v3, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
@@ -1853,7 +1707,6 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     :cond_3
     const/4 v3, 0x0
 
@@ -1861,7 +1714,6 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
     .end local v2    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_4
     sget-boolean v3, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
@@ -1876,7 +1728,6 @@
 
     goto :goto_0
 
-    .line 62
     .restart local v2    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_5
     :try_start_1
@@ -1894,11 +1745,9 @@
 
     goto :goto_1
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     sget-boolean v3, Lcom/android/server/wifi/WifiNetworkLists;->DBG:Z
 
@@ -1918,20 +1767,16 @@
     .param p1, "bssid"    # Ljava/lang/String;
 
     .prologue
-    .line 201
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiNetworkLists;->getNetwork(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 202
     .local v2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v2, :cond_0
 
-    .line 209
     :goto_0
     return-void
 
-    .line 203
     :cond_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -1941,7 +1786,6 @@
 
     move-result-object v3
 
-    .line 204
     .local v3, "strList":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1961,7 +1805,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 205
     .local v0, "element":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1985,17 +1828,14 @@
 
     move-result-object v3
 
-    .line 206
     goto :goto_1
 
-    .line 207
     .end local v0    # "element":Ljava/lang/String;
     :cond_1
     const-string v4, "WifiNetworkLists"
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     iget-object v4, p0, Lcom/android/server/wifi/WifiNetworkLists;->mWifiNative:Lcom/android/server/wifi/WifiNative;
 
     const/16 v5, 0xdc
@@ -2010,17 +1850,13 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 291
     if-nez p1, :cond_0
 
-    .line 292
     const-string v2, ""
 
-    .line 297
     :goto_0
     return-object v2
 
-    .line 293
     :cond_0
     new-instance v1, Ljava/lang/StringBuffer;
 
@@ -2030,7 +1866,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 294
     .local v1, "result":Ljava/lang/StringBuffer;
     const/4 v0, 0x0
 
@@ -2040,17 +1875,14 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 295
     aget-byte v2, p1, v0
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/wifi/WifiNetworkLists;->appendHex(Ljava/lang/StringBuffer;B)V
 
-    .line 294
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 297
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

@@ -43,24 +43,20 @@
     .locals 4
 
     .prologue
-    .line 3231
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
-    .line 3232
     invoke-direct {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;-><init>(Lcom/android/internal/policy/MultiPhoneWindow;)V
 
-    .line 3228
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
-    .line 3233
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/MultiPhoneWindow;->access$4400(Lcom/android/internal/policy/MultiPhoneWindow;)Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -70,7 +66,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 3234
     new-instance v0, Landroid/view/GestureDetector;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -88,7 +83,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->setHeaderGestureDetector(Landroid/view/GestureDetector;)V
 
-    .line 3235
     return-void
 .end method
 
@@ -98,7 +92,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 3223
     invoke-direct {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->showMenu(Z)V
 
     return-void
@@ -109,7 +102,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     .prologue
-    .line 3223
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     return-object v0
@@ -120,7 +112,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     .prologue
-    .line 3223
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     return-object v0
@@ -132,37 +123,29 @@
     .prologue
     const/4 v2, -0x2
 
-    .line 3423
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 3424
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const-string v1, "MultiWindow Controller"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 3425
     const v1, 0x800033
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 3426
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 3427
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 3428
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 3429
     const/16 v1, 0x3ee
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 3430
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/MultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -175,19 +158,16 @@
 
     iput-object v1, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 3431
     const/16 v1, 0x208
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 3433
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     or-int/lit8 v1, v1, 0x8
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
-    .line 3434
     return-object v0
 .end method
 
@@ -195,12 +175,10 @@
     .locals 1
 
     .prologue
-    .line 3471
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->showMenu(Z)V
 
-    .line 3472
     return-void
 .end method
 
@@ -213,12 +191,10 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 3475
     iget-boolean v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
     if-eqz v0, :cond_0
 
-    .line 3478
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenu:Landroid/view/View;
@@ -230,7 +206,6 @@
 
     move-result v7
 
-    .line 3480
     .local v7, "measureWidth":I
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -259,7 +234,6 @@
 
     div-int/lit8 v8, v0, 0x2
 
-    .line 3481
     .local v8, "x":I
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
@@ -269,7 +243,6 @@
 
     invoke-virtual {v0, v8, v1, p1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->show(IIZ)V
 
-    .line 3483
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
@@ -278,7 +251,6 @@
 
     invoke-virtual {v0, v8, v1, p1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->show(IIZ)V
 
-    .line 3484
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -292,7 +264,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3485
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mSoundPool:Landroid/media/SoundPool;
@@ -313,7 +284,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 3486
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mSoundPool:Landroid/media/SoundPool;
@@ -336,14 +306,12 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/SoundPool;->play(IFFIIF)I
 
-    .line 3494
     .end local v7    # "measureWidth":I
     .end local v8    # "x":I
     :cond_0
     :goto_0
     return-void
 
-    .line 3489
     .restart local v7    # "measureWidth":I
     .restart local v8    # "x":I
     :cond_1
@@ -356,7 +324,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3490
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mAudioManager:Landroid/media/AudioManager;
@@ -381,7 +348,6 @@
 
     const/4 v5, 0x0
 
-    .line 3239
     new-instance v3, Landroid/widget/FrameLayout;
 
     iget-object v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -395,26 +361,22 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
-    .line 3240
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setClickable(Z)V
 
-    .line 3241
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 3242
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     check-cast v3, Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v5}, Landroid/widget/FrameLayout;->setForegroundTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 3244
     new-instance v3, Landroid/widget/ImageView;
 
     iget-object v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -428,30 +390,25 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
-    .line 3245
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 3246
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     const v4, 0x10805c3
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 3247
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v2, v6, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 3248
     .local v2, "lp":Landroid/widget/FrameLayout$LayoutParams;
     const/16 v3, 0x11
 
     iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 3249
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     check-cast v3, Landroid/widget/FrameLayout;
@@ -460,17 +417,14 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3250
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     const/4 v4, 0x4
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 3252
     invoke-virtual {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->performUpdateBackground()V
 
-    .line 3254
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -484,7 +438,6 @@
 
     invoke-direct {v0, v3, v4}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 3255
     .local v0, "context":Landroid/content/Context;
     new-instance v3, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
@@ -494,7 +447,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mMenuContainer:Landroid/view/View;
 
-    .line 3257
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -512,18 +464,15 @@
 
     move-result-object v1
 
-    .line 3258
     .local v1, "drw":Landroid/graphics/drawable/Drawable;
     if-eqz v1, :cond_0
 
-    .line 3259
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v3
 
     iput v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mControllerHeight:I
 
-    .line 3261
     :cond_0
     return-void
 .end method
@@ -534,15 +483,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3392
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performStartDragMode()V
 
-    .line 3393
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->dismiss(Z)V
 
-    .line 3394
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContentLayoutGenerated:Z
@@ -552,7 +498,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3395
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
@@ -561,13 +506,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3397
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 3398
     return-void
 .end method
 
@@ -575,17 +518,14 @@
     .locals 2
 
     .prologue
-    .line 3402
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performStopDragMode()V
 
-    .line 3403
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 3404
     return-void
 .end method
 
@@ -593,14 +533,12 @@
     .locals 2
 
     .prologue
-    .line 3387
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     const v1, 0x1080598
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 3388
     return-void
 .end method
 
@@ -609,20 +547,15 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 3408
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performUpdateMenuVisibility(Z)V
 
-    .line 3409
     if-eqz p1, :cond_0
 
-    .line 3410
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->showMenu()V
 
-    .line 3420
     :goto_0
     return-void
 
-    .line 3412
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -642,7 +575,6 @@
 
     if-nez v0, :cond_3
 
-    .line 3413
     :cond_1
     sget-boolean v0, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG:Z
 
@@ -654,7 +586,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "performUpdateMenuVisibility, mActivity="
+    const-string v2, "performUpdateMenuVisibility, mActivity="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -721,7 +653,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3415
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
@@ -731,7 +662,6 @@
 
     goto :goto_0
 
-    .line 3417
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
@@ -749,13 +679,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3283
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow;->updateIsFullScreen()V
     invoke-static {v1}, Lcom/android/internal/policy/MultiPhoneWindow;->access$5500(Lcom/android/internal/policy/MultiPhoneWindow;)V
 
-    .line 3285
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mIsFullScreen:Z
@@ -765,14 +693,13 @@
 
     if-nez v1, :cond_1
 
-    .line 3286
     const-string v1, "MultiPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "performUpdateVisibility, not full screen ignore visible ["
+    const-string v3, "performUpdateVisibility, not full screen ignore visible ["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -794,27 +721,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3287
     iget-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
     if-eqz v1, :cond_0
 
-    .line 3289
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-interface {v1, v2}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
-    .line 3290
     iput-boolean v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
-    .line 3369
     :cond_0
     :goto_0
     return-void
 
-    .line 3295
     :cond_1
     iget-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsShowing:Z
 
@@ -824,14 +746,13 @@
 
     if-nez v1, :cond_2
 
-    .line 3296
     const-string v1, "MultiPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "performUpdateVisibility, same visibility "
+    const-string v3, "performUpdateVisibility, same visibility "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -849,7 +770,6 @@
 
     goto :goto_0
 
-    .line 3300
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -870,20 +790,18 @@
 
     if-nez v1, :cond_3
 
-    .line 3301
     sget-boolean v1, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG_TAB:Z
 
     if-eqz v1, :cond_0
 
     const-string v1, "TAG"
 
-    const-string/jumbo v2, "token is null"
+    const-string v2, "token is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3305
     :cond_3
     if-eqz p1, :cond_4
 
@@ -899,33 +817,27 @@
 
     if-eqz v1, :cond_4
 
-    .line 3306
     const-string v1, "MultiPhoneWindow"
 
-    const-string/jumbo v2, "performUpdateVisibility(), Skip add mPenWindowHeader, DecorView is not visible"
+    const-string v2, "performUpdateVisibility(), Skip add mPenWindowHeader, DecorView is not visible"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3310
     :cond_4
     iput-boolean p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsShowing:Z
 
-    .line 3311
     iput-boolean v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mNeedInvalidate:Z
 
-    .line 3313
     if-eqz p1, :cond_9
 
-    .line 3314
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->generateLayoutParam()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 3316
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -959,7 +871,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 3318
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
@@ -972,7 +883,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 3320
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -987,17 +897,14 @@
 
     if-eqz v1, :cond_8
 
-    .line 3321
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3322
     iget-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
     if-nez v1, :cond_7
 
-    .line 3324
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowManager:Landroid/view/WindowManager;
 
@@ -1007,12 +914,10 @@
 
     invoke-interface {v1, v2, v3}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3325
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
-    .line 3326
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getVisibility()I
@@ -1041,14 +946,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 3327
     const-string v1, "MultiPhoneWindow"
 
     const-string v2, "mDragAndDropView visible"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3328
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mDragAndDropView:Landroid/widget/ImageView;
 
     const/4 v2, 0x0
@@ -1057,7 +960,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3342
     :cond_5
     :goto_1
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1073,7 +975,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3343
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mIsSupportSimplificationUI:Z
@@ -1083,14 +984,12 @@
 
     if-eqz v1, :cond_6
 
-    .line 3345
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v1, v1, Lcom/android/internal/policy/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->removeResizeVisualCue()V
 
-    .line 3346
     new-instance v1, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1106,17 +1005,14 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
-    .line 3347
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;->addWindow()V
 
-    .line 3348
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;->setAnimation()V
 
-    .line 3351
     :cond_6
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -1132,11 +1028,9 @@
 
     goto/16 :goto_0
 
-    .line 3330
     :catch_0
     move-exception v0
 
-    .line 3332
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
@@ -1146,7 +1040,6 @@
 
     goto/16 :goto_0
 
-    .line 3336
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_7
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowManager:Landroid/view/WindowManager;
@@ -1159,7 +1052,6 @@
 
     goto :goto_1
 
-    .line 3339
     :cond_8
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
@@ -1169,25 +1061,21 @@
 
     goto :goto_1
 
-    .line 3363
     :cond_9
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     invoke-virtual {v1, v4}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->dismiss(Z)V
 
-    .line 3364
     iget-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
     if-eqz v1, :cond_0
 
-    .line 3365
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-interface {v1, v2}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
-    .line 3366
     iput-boolean v4, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mIsAttached:Z
 
     goto/16 :goto_0
@@ -1197,39 +1085,33 @@
     .locals 2
 
     .prologue
-    .line 3272
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     if-eqz v0, :cond_1
 
-    .line 3273
     sget-boolean v0, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG_RESIZE_VISUAL_CUE:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "MultiPhoneWindow"
 
-    const-string/jumbo v1, "removeWindow ResizeVisualCue"
+    const-string v1, "removeWindow ResizeVisualCue"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3274
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;->removeWindow()V
 
-    .line 3275
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;->hide()V
 
-    .line 3276
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mResizeVisualCue:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$ResizeVisualCue;
 
-    .line 3278
     :cond_1
     return-void
 .end method
@@ -1238,17 +1120,14 @@
     .locals 1
 
     .prologue
-    .line 3265
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     if-eqz v0, :cond_0
 
-    .line 3266
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mLocalMenuContainer:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->checkAvailableButtonsForAnim()V
 
-    .line 3268
     :cond_0
     return-void
 .end method
@@ -1257,19 +1136,16 @@
     .locals 4
 
     .prologue
-    .line 3373
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mPenWindowHeader:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 3374
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->generateLayoutParam()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 3375
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1303,7 +1179,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 3376
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
@@ -1316,7 +1191,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 3378
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->mWindowManager:Landroid/view/WindowManager;
 
@@ -1328,16 +1202,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3383
     :cond_0
     :goto_0
     return-void
 
-    .line 3379
     :catch_0
     move-exception v0
 
-    .line 3380
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MultiPhoneWindow"
 

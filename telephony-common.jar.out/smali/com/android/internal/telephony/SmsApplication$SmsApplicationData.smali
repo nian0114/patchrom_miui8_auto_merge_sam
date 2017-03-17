@@ -38,19 +38,14 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     iput-object p1, p0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mApplicationName:Ljava/lang/String;
 
-    .line 146
     iput-object p2, p0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
 
-    .line 147
     iput p3, p0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mUid:I
 
-    .line 148
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mSmsReceiverClass:Ljava/lang/String;
 
     if-eqz v0, :cond_0

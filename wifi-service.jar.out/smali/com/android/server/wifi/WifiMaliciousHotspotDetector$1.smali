@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 179
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 180
     .local v0, "action":Ljava/lang/String;
     const-string v6, "android.net.wifi.SCAN_RESULTS"
 
@@ -56,7 +53,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 181
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     iget-object v7, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -73,7 +69,6 @@
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mScanResults:Ljava/util/List;
     invoke-static {v6, v7}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$002(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/util/List;)Ljava/util/List;
 
-    .line 182
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -83,7 +78,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 183
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -93,12 +87,10 @@
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;->checkKarmaApInScanResult()V
 
-    .line 275
     :cond_0
     :goto_0
     return-void
 
-    .line 185
     :cond_1
     const-string v6, "android.net.wifi.RSSI_CHANGED"
 
@@ -108,18 +100,15 @@
 
     if-eqz v6, :cond_7
 
-    .line 186
     const-string v6, "DhcpSession"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 187
     .local v3, "mDhcpSessionState":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 190
     const-string v6, "complete"
 
     invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -128,7 +117,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 191
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->roamingStarted:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$300()Z
 
@@ -136,7 +124,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 192
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
 
@@ -150,7 +137,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_2
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -161,17 +147,14 @@
 
     if-nez v6, :cond_3
 
-    .line 194
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->startArpSpoofingDetection()V
 
-    .line 195
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->startSslStripDetection()V
 
-    .line 197
     :cond_3
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -182,7 +165,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 198
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -192,14 +174,12 @@
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;->sendDelayedPartialScan()V
 
-    .line 201
     :cond_4
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->roamingStarted:Z
     invoke-static {v9}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$302(Z)Z
 
     goto :goto_0
 
-    .line 202
     :cond_5
     const-string v6, "start"
 
@@ -209,7 +189,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 203
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
 
@@ -223,18 +202,15 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_6
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->stopArpSpoofingDetection()V
 
-    .line 205
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->stopSslStripDetection()V
 
-    .line 206
     const/4 v6, 0x1
 
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->roamingStarted:Z
@@ -242,7 +218,6 @@
 
     goto :goto_0
 
-    .line 210
     .end local v3    # "mDhcpSessionState":Ljava/lang/String;
     :cond_7
     const-string v6, "android.net.wifi.STATE_CHANGE"
@@ -253,7 +228,6 @@
 
     if-eqz v6, :cond_c
 
-    .line 211
     const-string v6, "networkInfo"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -262,7 +236,6 @@
 
     check-cast v4, Landroid/net/NetworkInfo;
 
-    .line 214
     .local v4, "networkInfo":Landroid/net/NetworkInfo;
     iget-object v7, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -277,7 +250,6 @@
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mWifiInfo:Landroid/net/wifi/WifiInfo;
     invoke-static {v7, v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$602(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Landroid/net/wifi/WifiInfo;)Landroid/net/wifi/WifiInfo;
 
-    .line 215
     iget-object v7, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const-string v6, "linkProperties"
@@ -291,7 +263,6 @@
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mLinkProperties:Landroid/net/LinkProperties;
     invoke-static {v7, v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$702(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
-    .line 218
     if-eqz v4, :cond_0
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -303,7 +274,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 219
     sget-object v6, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$2;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
     invoke-virtual {v4}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
@@ -320,7 +290,6 @@
 
     goto/16 :goto_0
 
-    .line 221
     :pswitch_0
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -331,7 +300,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 222
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mWifiInfo:Landroid/net/wifi/WifiInfo;
@@ -343,7 +311,6 @@
 
     move-result-object v1
 
-    .line 224
     .local v1, "bssid":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -410,7 +377,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 228
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -433,7 +399,6 @@
 
     move-result-object v2
 
-    .line 229
     .local v2, "config":Landroid/net/wifi/WifiConfiguration;
     iget-object v6, v2, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -443,7 +408,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 230
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const-string v7, "MHDK"
@@ -453,7 +417,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->sendGsimData(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v6, v7, v8}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1100(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 234
     :goto_1
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -466,7 +429,6 @@
 
     invoke-virtual {v6, v1, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     .end local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_8
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -477,14 +439,12 @@
 
     if-eqz v6, :cond_a
 
-    .line 237
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6, v1, v9, v9}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->handleMaliciousHotspotDetection(Ljava/lang/String;II)V
 
     goto/16 :goto_0
 
-    .line 232
     .restart local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_9
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -498,7 +458,6 @@
 
     goto :goto_1
 
-    .line 242
     .end local v1    # "bssid":Ljava/lang/String;
     .end local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_a
@@ -511,7 +470,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 243
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -521,7 +479,6 @@
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;->sendDelayedPartialScan()V
 
-    .line 245
     :cond_b
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -532,19 +489,16 @@
 
     if-nez v6, :cond_0
 
-    .line 246
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->startSslStripDetection()V
 
-    .line 247
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->startArpSpoofingDetection()V
 
     goto/16 :goto_0
 
-    .line 252
     :pswitch_1
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -552,17 +506,14 @@
 
     invoke-virtual {v6, v7}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->removeMessages(I)V
 
-    .line 253
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->stopSslStripDetection()V
 
-    .line 254
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->stopArpSpoofingDetection()V
 
-    .line 255
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const/4 v7, 0x0
@@ -571,7 +522,6 @@
 
     goto/16 :goto_0
 
-    .line 260
     .end local v4    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_c
     const-string v6, "android.net.wifi.WIFI_STATE_CHANGED"
@@ -582,7 +532,6 @@
 
     if-eqz v6, :cond_d
 
-    .line 261
     const-string v6, "wifi_state"
 
     const/4 v7, -0x1
@@ -591,13 +540,11 @@
 
     move-result v5
 
-    .line 262
     .local v5, "state":I
     const/4 v6, 0x3
 
     if-ne v5, v6, :cond_0
 
-    .line 263
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const/16 v7, 0x64
@@ -607,13 +554,11 @@
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mMaliciousApList:[Ljava/lang/String;
     invoke-static {v6, v7}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1202(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 264
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # setter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mMaliciousApListIndex:I
     invoke-static {v6, v9}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1302(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;I)I
 
-    .line 265
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -623,7 +568,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 266
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -635,7 +579,6 @@
 
     invoke-interface {v6}, Ljava/util/List;->clear()V
 
-    .line 267
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->mKarmaApDetector:Lcom/android/server/wifi/WifiMaliciousHotspotDetector$KarmaApDetector;
@@ -647,7 +590,6 @@
 
     goto/16 :goto_0
 
-    .line 271
     .end local v5    # "state":I
     :cond_d
     const-string v6, "android.intent.action.SERVICE_STATE"
@@ -667,7 +609,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 273
     iget-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     iget-object v7, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$1;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -685,7 +626,6 @@
 
     goto/16 :goto_0
 
-    .line 219
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

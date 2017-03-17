@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 490
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$2;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 492
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 493
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
@@ -56,19 +53,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 494
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$2;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iput-boolean v2, v3, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mBootCompleted:Z
 
-    .line 496
     invoke-static {p1}, Lcom/android/server/policy/sec/SamsungPolicyProperties;->hasSPenFeature(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 497
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$2;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -77,7 +71,6 @@
 
     move-result v1
 
-    .line 498
     .local v1, "penState":I
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$2;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
@@ -85,7 +78,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 499
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$2;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     const-wide/16 v4, 0x0
@@ -95,12 +87,10 @@
     :goto_0
     invoke-virtual {v3, v4, v5, v2}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->notifyPenSwitchChanged(JZ)V
 
-    .line 503
     .end local v1    # "penState":I
     :cond_0
     return-void
 
-    .line 499
     .restart local v1    # "penState":I
     :cond_1
     const/4 v2, 0x0

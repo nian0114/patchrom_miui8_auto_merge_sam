@@ -41,50 +41,36 @@
 
     const/4 v1, 0x0
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSElementDeclaration;
 
-    .line 53
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fTypeDecl:Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
-    .line 58
     iput-boolean v2, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fNil:Z
 
-    .line 62
     iput-boolean v2, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSpecified:Z
 
-    .line 65
     new-instance v0, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
-    .line 68
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fNotation:Lmf/org/apache/xerces/xs/XSNotationDeclaration;
 
-    .line 71
     iput-short v2, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidationAttempted:S
 
-    .line 74
     iput-short v2, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidity:S
 
-    .line 77
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fErrors:[Ljava/lang/String;
 
-    .line 80
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidationContext:Ljava/lang/String;
 
-    .line 83
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fGrammars:[Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
 
-    .line 86
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSchemaInformation:Lmf/org/apache/xerces/xs/XSModel;
 
-    .line 47
     return-void
 .end method
 
@@ -95,17 +81,14 @@
     .param p1, "target"    # Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;
 
     .prologue
-    .line 282
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fGrammars:[Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
 
     iput-object v0, p1, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fGrammars:[Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
 
-    .line 283
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSchemaInformation:Lmf/org/apache/xerces/xs/XSModel;
 
     iput-object v0, p1, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSchemaInformation:Lmf/org/apache/xerces/xs/XSModel;
 
-    .line 284
     return-void
 .end method
 
@@ -113,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getActualValue()Ljava/lang/Object;
@@ -127,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getActualValueType()S
@@ -141,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 221
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSElementDeclaration;
 
     return-object v0
@@ -151,7 +131,6 @@
     .locals 3
 
     .prologue
-    .line 150
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fErrors:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -162,11 +141,9 @@
 
     if-nez v0, :cond_1
 
-    .line 151
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/xs/util/StringListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/StringListImpl;
 
-    .line 153
     :goto_0
     return-object v0
 
@@ -186,7 +163,6 @@
     .locals 3
 
     .prologue
-    .line 163
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fErrors:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -197,11 +173,9 @@
 
     if-nez v0, :cond_1
 
-    .line 164
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/xs/util/StringListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/StringListImpl;
 
-    .line 166
     :goto_0
     return-object v0
 
@@ -221,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-boolean v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSpecified:Z
 
     return v0
@@ -231,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getListValueTypes()Lmf/org/apache/xerces/xs/ShortList;
@@ -245,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getMemberTypeDefinition()Lmf/org/apache/xerces/xs/XSSimpleTypeDefinition;
@@ -259,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget-boolean v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fNil:Z
 
     return v0
@@ -269,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fNotation:Lmf/org/apache/xerces/xs/XSNotationDeclaration;
 
     return-object v0
@@ -279,7 +248,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSElementDeclaration;
 
     if-nez v0, :cond_0
@@ -303,7 +271,6 @@
     .locals 2
 
     .prologue
-    .line 231
     monitor-enter p0
 
     :try_start_0
@@ -315,7 +282,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 232
     new-instance v0, Lmf/org/apache/xerces/impl/xs/XSModelImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fGrammars:[Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
@@ -324,7 +290,6 @@
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSchemaInformation:Lmf/org/apache/xerces/xs/XSModel;
 
-    .line 234
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSchemaInformation:Lmf/org/apache/xerces/xs/XSModel;
     :try_end_0
@@ -334,7 +299,6 @@
 
     return-object v0
 
-    .line 231
     :catchall_0
     move-exception v0
 
@@ -347,7 +311,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getNormalizedValue()Ljava/lang/String;
@@ -361,7 +324,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     return-object v0
@@ -371,7 +333,6 @@
     .locals 1
 
     .prologue
-    .line 198
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fTypeDecl:Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
     return-object v0
@@ -381,7 +342,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidationAttempted:S
 
     return v0
@@ -391,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidationContext:Ljava/lang/String;
 
     return-object v0
@@ -401,7 +360,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidity:S
 
     return v0
@@ -415,38 +373,27 @@
 
     const/4 v0, 0x0
 
-    .line 269
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSElementDeclaration;
 
-    .line 270
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fTypeDecl:Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
-    .line 271
     iput-boolean v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fNil:Z
 
-    .line 272
     iput-boolean v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fSpecified:Z
 
-    .line 273
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fNotation:Lmf/org/apache/xerces/xs/XSNotationDeclaration;
 
-    .line 274
     iput-short v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidationAttempted:S
 
-    .line 275
     iput-short v1, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidity:S
 
-    .line 276
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fErrors:[Ljava/lang/String;
 
-    .line 277
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValidationContext:Ljava/lang/String;
 
-    .line 278
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/ElementPSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->reset()V
 
-    .line 279
     return-void
 .end method

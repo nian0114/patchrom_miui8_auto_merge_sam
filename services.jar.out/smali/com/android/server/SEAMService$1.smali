@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 347
     iput-object p1, p0, Lcom/android/server/SEAMService$1;->this$0:Lcom/android/server/SEAMService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 350
     const/4 v0, 0x1
 
     # setter for: Lcom/android/server/SEAMService;->bootCompleted:Z
     invoke-static {v0}, Lcom/android/server/SEAMService;->access$002(Z)Z
 
-    .line 351
     return-void
 .end method

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1927
     iput-object p1, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
-    .line 1928
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1929
     return-void
 .end method
 
@@ -41,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1933
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1955
     :goto_0
     return-void
 
-    .line 1935
     :pswitch_0
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
@@ -63,7 +57,6 @@
 
     goto :goto_0
 
-    .line 1938
     :pswitch_1
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
@@ -76,7 +69,6 @@
 
     goto :goto_0
 
-    .line 1941
     :pswitch_2
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
@@ -91,7 +83,6 @@
 
     goto :goto_0
 
-    .line 1944
     :pswitch_3
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
@@ -102,7 +93,6 @@
 
     goto :goto_0
 
-    .line 1947
     :pswitch_4
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 1950
     :pswitch_5
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapter$IpSecAdapterHandler;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
@@ -126,7 +115,6 @@
 
     goto :goto_0
 
-    .line 1933
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

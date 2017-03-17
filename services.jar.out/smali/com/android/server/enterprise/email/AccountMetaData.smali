@@ -196,15 +196,12 @@
     .locals 1
 
     .prologue
-    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mId:I
 
-    .line 292
     return-void
 .end method
 
@@ -223,204 +220,158 @@
     .param p11, "outGoingServerPassword"    # Ljava/lang/String;
 
     .prologue
-    .line 297
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mId:I
 
-    .line 298
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
-    .line 299
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mFlags:I
 
-    .line 300
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mCompatibilityUuid:Ljava/lang/String;
 
-    .line 301
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRingtoneUri:Ljava/lang/String;
 
-    .line 302
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEasDomain:Ljava/lang/String;
 
-    .line 303
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mHostAuthKeyRecv:J
 
-    .line 304
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mHostAuthKeySend:J
 
-    .line 305
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
-    .line 306
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
-    .line 307
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSyncLookback:I
 
-    .line 308
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSyncInterval:I
 
-    .line 309
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsDefault:Z
 
-    .line 310
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mProtocolVersion:Ljava/lang/String;
 
-    .line 311
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSenderName:Ljava/lang/String;
 
-    .line 312
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSignature:Ljava/lang/String;
 
-    .line 313
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailNotificationVibrateAlways:Z
 
-    .line 314
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailNotificationVibrateWhenSilent:Z
 
-    .line 315
     iput-object p2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingProtocol:Ljava/lang/String;
 
-    .line 316
     iput-object p3, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
-    .line 317
     iput p4, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPort:I
 
-    .line 318
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerUseSSL:Z
 
-    .line 319
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerUseTLS:Z
 
-    .line 320
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerAcceptAllCertificates:Z
 
-    .line 321
     iput-object p5, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerLogin:Ljava/lang/String;
 
-    .line 322
     iput-object p6, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
-    .line 323
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
-    .line 324
     iput-object p7, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingProtocol:Ljava/lang/String;
 
-    .line 325
     iput-object p8, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerAddress:Ljava/lang/String;
 
-    .line 326
     iput p9, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPort:I
 
-    .line 327
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerUseSSL:Z
 
-    .line 328
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerUseTLS:Z
 
-    .line 329
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerAcceptAllCertificates:Z
 
-    .line 330
     iput-object p10, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerLogin:Ljava/lang/String;
 
-    .line 331
     iput-object p11, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
-    .line 332
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPathPrefix:Ljava/lang/String;
 
-    .line 333
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakDays:I
 
-    .line 334
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakStartMinute:I
 
-    .line 335
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakEndMinute:I
 
-    .line 336
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakSyncSchedule:I
 
-    .line 337
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOffPeakSyncSchedule:I
 
-    .line 338
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRoamingSyncSchedule:I
 
-    .line 339
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRetrivalSize:I
 
-    .line 340
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mNotify:Z
 
-    .line 341
     return-void
 .end method
 
@@ -444,54 +395,42 @@
     .param p16, "isDefault"    # Z
 
     .prologue
-    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mId:I
 
-    .line 348
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
-    .line 349
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mFlags:I
 
-    .line 350
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mCompatibilityUuid:Ljava/lang/String;
 
-    .line 351
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRingtoneUri:Ljava/lang/String;
 
-    .line 352
     iput-object p4, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEasDomain:Ljava/lang/String;
 
-    .line 353
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mHostAuthKeyRecv:J
 
-    .line 354
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mHostAuthKeySend:J
 
-    .line 355
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
-    .line 356
     iput-object p2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
-    .line 357
     const/4 v2, 0x1
 
     if-gt v2, p5, :cond_0
@@ -507,154 +446,120 @@
     :cond_1
     iput p5, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSyncLookback:I
 
-    .line 364
     iput p6, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSyncInterval:I
 
-    .line 366
     move/from16 v0, p16
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsDefault:Z
 
-    .line 367
     iput-object p8, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mProtocolVersion:Ljava/lang/String;
 
-    .line 368
     iput-object p7, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSenderName:Ljava/lang/String;
 
-    .line 369
     iput-object p9, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSignature:Ljava/lang/String;
 
-    .line 370
     iput-boolean p10, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailNotificationVibrateAlways:Z
 
-    .line 371
     iput-boolean p11, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailNotificationVibrateWhenSilent:Z
 
-    .line 372
-    const-string/jumbo v2, "eas"
+    const-string v2, "eas"
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingProtocol:Ljava/lang/String;
 
-    .line 373
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
-    .line 374
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPort:I
 
-    .line 375
     move/from16 v0, p13
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerUseSSL:Z
 
-    .line 376
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerUseTLS:Z
 
-    .line 377
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerAcceptAllCertificates:Z
 
-    .line 378
     iput-object p3, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerLogin:Ljava/lang/String;
 
-    .line 379
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
-    .line 380
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
-    .line 381
-    const-string/jumbo v2, "eas"
+    const-string v2, "eas"
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingProtocol:Ljava/lang/String;
 
-    .line 382
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerAddress:Ljava/lang/String;
 
-    .line 383
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPort:I
 
-    .line 384
     move/from16 v0, p13
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerUseSSL:Z
 
-    .line 385
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerUseTLS:Z
 
-    .line 386
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerAcceptAllCertificates:Z
 
-    .line 387
     iput-object p3, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerLogin:Ljava/lang/String;
 
-    .line 388
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
-    .line 389
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPathPrefix:Ljava/lang/String;
 
-    .line 391
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakDays:I
 
-    .line 392
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakStartMinute:I
 
-    .line 393
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakEndMinute:I
 
-    .line 394
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakSyncSchedule:I
 
-    .line 395
     iput p6, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOffPeakSyncSchedule:I
 
-    .line 396
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRoamingSyncSchedule:I
 
-    .line 397
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRetrivalSize:I
 
-    .line 398
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mNotify:Z
 
-    .line 399
     return-void
 .end method
 
@@ -685,54 +590,42 @@
     .param p23, "notify"    # Z
 
     .prologue
-    .line 407
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mId:I
 
-    .line 409
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
-    .line 410
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mFlags:I
 
-    .line 411
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mCompatibilityUuid:Ljava/lang/String;
 
-    .line 412
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRingtoneUri:Ljava/lang/String;
 
-    .line 413
     iput-object p4, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEasDomain:Ljava/lang/String;
 
-    .line 414
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mHostAuthKeyRecv:J
 
-    .line 415
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mHostAuthKeySend:J
 
-    .line 416
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
-    .line 417
     iput-object p2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
-    .line 418
     const/4 v2, 0x1
 
     if-gt v2, p5, :cond_0
@@ -748,153 +641,119 @@
     :cond_1
     iput p5, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSyncLookback:I
 
-    .line 425
     iput p6, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSyncInterval:I
 
-    .line 427
     move/from16 v0, p16
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsDefault:Z
 
-    .line 428
     iput-object p8, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mProtocolVersion:Ljava/lang/String;
 
-    .line 429
     iput-object p7, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSenderName:Ljava/lang/String;
 
-    .line 430
     iput-object p9, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mSignature:Ljava/lang/String;
 
-    .line 431
     iput-boolean p10, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailNotificationVibrateAlways:Z
 
-    .line 432
     iput-boolean p11, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailNotificationVibrateWhenSilent:Z
 
-    .line 433
-    const-string/jumbo v2, "eas"
+    const-string v2, "eas"
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingProtocol:Ljava/lang/String;
 
-    .line 434
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
-    .line 435
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPort:I
 
-    .line 436
     move/from16 v0, p13
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerUseSSL:Z
 
-    .line 437
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerUseTLS:Z
 
-    .line 438
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerAcceptAllCertificates:Z
 
-    .line 439
     iput-object p3, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerLogin:Ljava/lang/String;
 
-    .line 440
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
-    .line 441
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
-    .line 442
-    const-string/jumbo v2, "eas"
+    const-string v2, "eas"
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingProtocol:Ljava/lang/String;
 
-    .line 443
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerAddress:Ljava/lang/String;
 
-    .line 444
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPort:I
 
-    .line 445
     move/from16 v0, p13
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerUseSSL:Z
 
-    .line 446
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerUseTLS:Z
 
-    .line 447
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerAcceptAllCertificates:Z
 
-    .line 448
     iput-object p3, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerLogin:Ljava/lang/String;
 
-    .line 449
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
-    .line 450
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOutGoingServerPathPrefix:Ljava/lang/String;
 
-    .line 452
     move/from16 v0, p17
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakDays:I
 
-    .line 453
     move/from16 v0, p18
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakStartMinute:I
 
-    .line 454
     move/from16 v0, p19
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakEndMinute:I
 
-    .line 455
     move/from16 v0, p20
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mPeakSyncSchedule:I
 
-    .line 456
     iput p6, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mOffPeakSyncSchedule:I
 
-    .line 457
     move/from16 v0, p21
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRoamingSyncSchedule:I
 
-    .line 458
     move/from16 v0, p22
 
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mRetrivalSize:I
 
-    .line 459
     move/from16 v0, p23
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mNotify:Z
 
-    .line 460
     return-void
 .end method

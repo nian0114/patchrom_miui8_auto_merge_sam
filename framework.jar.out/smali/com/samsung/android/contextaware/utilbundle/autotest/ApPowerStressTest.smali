@@ -9,10 +9,8 @@
     .param p1, "delayTime"    # I
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/utilbundle/autotest/InnerProcessStressTest;-><init>(I)V
 
-    .line 38
     return-void
 .end method
 
@@ -21,12 +19,10 @@
     .param p1, "status"    # B
 
     .prologue
-    .line 71
     const/4 v1, 0x3
 
     new-array v0, v1, [B
 
-    .line 73
     .local v0, "packet":[B
     const/4 v1, 0x0
 
@@ -36,7 +32,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 74
     const/4 v1, 0x1
 
     sget-object v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$LIB_TYPE;->TYPE_NOTI_POWER:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$LIB_TYPE;
@@ -45,12 +40,10 @@
 
     aput-byte v2, v0, v1
 
-    .line 75
     const/4 v1, 0x2
 
     aput-byte p1, v0, v1
 
-    .line 77
     return-object v0
 .end method
 
@@ -61,7 +54,6 @@
     .param p1, "service"    # I
 
     .prologue
-    .line 49
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -72,10 +64,8 @@
 
     move-result p1
 
-    .line 51
     packed-switch p1, :pswitch_data_0
 
-    .line 60
     const/4 v0, 0x0
 
     new-array v0, v0, [B
@@ -83,7 +73,6 @@
     :goto_0
     return-object v0
 
-    .line 53
     :pswitch_0
     const/16 v0, -0x2f
 
@@ -93,7 +82,6 @@
 
     goto :goto_0
 
-    .line 55
     :pswitch_1
     const/16 v0, -0x2e
 
@@ -103,7 +91,6 @@
 
     goto :goto_0
 
-    .line 51
     nop
 
     :pswitch_data_0

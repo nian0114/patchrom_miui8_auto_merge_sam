@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 35
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -40,31 +38,26 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 61
     const-string v0, "SecSCReceiver"
 
     const-string v1, "SecSCReceiver : before start service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    const-string/jumbo v1, "start Service"
+    const-string v1, "start Service"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {p0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 66
     const-string v0, "SecSCReceiver"
 
     const-string v1, "SecSCReceiver : after start service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     return-void
 .end method
 
@@ -74,14 +67,12 @@
     .param p1, "startId"    # I
 
     .prologue
-    .line 75
     const-string v0, "SecSCReceiver"
 
     const-string v1, "SecSCReceiver : finishStartingService"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     return-void
 .end method
 
@@ -93,7 +84,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 43
     const-string v0, "SecSCReceiver"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -120,7 +110,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     return-void
 .end method
 
@@ -131,7 +120,6 @@
     .param p3, "privileged"    # Z
 
     .prologue
-    .line 50
     const-string v0, "SecSCReceiver"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -158,14 +146,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     const-class v0, Lcom/android/server/SecSCService;
 
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 52
     invoke-static {p1, p2}, Lcom/android/server/SecSCReceiver;->beginStartingService(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 53
     return-void
 .end method

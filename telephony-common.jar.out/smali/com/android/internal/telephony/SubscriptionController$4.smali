@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 2276
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionController$4;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,14 +38,12 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 2279
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$4;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/SubscriptionController;->getDefaultDataSubId()I
 
     move-result v1
 
-    .line 2280
     .local v1, "subId":I
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$4;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -54,7 +51,6 @@
 
     move-result v0
 
-    .line 2282
     .local v0, "slotId":I
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$4;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -65,7 +61,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 2283
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$4;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -99,13 +94,11 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->logd(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/SubscriptionController;->access$200(Lcom/android/internal/telephony/SubscriptionController;Ljava/lang/String;)V
 
-    .line 2285
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$4;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->setDefaultDataSlotId(I)V
     invoke-static {v2, v0}, Lcom/android/internal/telephony/SubscriptionController;->access$300(Lcom/android/internal/telephony/SubscriptionController;I)V
 
-    .line 2287
     :cond_0
     return-void
 .end method

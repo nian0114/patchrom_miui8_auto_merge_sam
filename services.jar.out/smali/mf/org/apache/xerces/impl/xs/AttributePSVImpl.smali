@@ -33,38 +33,28 @@
 
     const/4 v1, 0x0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSAttributeDeclaration;
 
-    .line 46
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fTypeDecl:Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
-    .line 50
     iput-boolean v2, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fSpecified:Z
 
-    .line 53
     new-instance v0, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
-    .line 56
     iput-short v2, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidationAttempted:S
 
-    .line 59
     iput-short v2, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidity:S
 
-    .line 62
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fErrors:[Ljava/lang/String;
 
-    .line 65
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidationContext:Ljava/lang/String;
 
-    .line 40
     return-void
 .end method
 
@@ -74,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getActualValue()Ljava/lang/Object;
@@ -88,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getActualValueType()S
@@ -102,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSAttributeDeclaration;
 
     return-object v0
@@ -112,7 +99,6 @@
     .locals 3
 
     .prologue
-    .line 130
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fErrors:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -123,11 +109,9 @@
 
     if-nez v0, :cond_1
 
-    .line 131
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/xs/util/StringListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/StringListImpl;
 
-    .line 133
     :goto_0
     return-object v0
 
@@ -147,7 +131,6 @@
     .locals 3
 
     .prologue
-    .line 143
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fErrors:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -158,11 +141,9 @@
 
     if-nez v0, :cond_1
 
-    .line 144
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/xs/util/StringListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/StringListImpl;
 
-    .line 146
     :goto_0
     return-object v0
 
@@ -182,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-boolean v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fSpecified:Z
 
     return v0
@@ -192,7 +172,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getListValueTypes()Lmf/org/apache/xerces/xs/ShortList;
@@ -206,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getMemberTypeDefinition()Lmf/org/apache/xerces/xs/XSSimpleTypeDefinition;
@@ -220,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSAttributeDeclaration;
 
     if-nez v0, :cond_0
@@ -244,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->getNormalizedValue()Ljava/lang/String;
@@ -258,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     return-object v0
@@ -268,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fTypeDecl:Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
     return-object v0
@@ -278,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidationAttempted:S
 
     return v0
@@ -288,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidationContext:Ljava/lang/String;
 
     return-object v0
@@ -298,7 +270,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidity:S
 
     return v0
@@ -312,32 +283,23 @@
 
     const/4 v1, 0x0
 
-    .line 218
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValue:Lmf/org/apache/xerces/impl/dv/ValidatedInfo;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/dv/ValidatedInfo;->reset()V
 
-    .line 219
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fDeclaration:Lmf/org/apache/xerces/xs/XSAttributeDeclaration;
 
-    .line 220
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fTypeDecl:Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
-    .line 221
     iput-boolean v2, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fSpecified:Z
 
-    .line 222
     iput-short v2, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidationAttempted:S
 
-    .line 223
     iput-short v2, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidity:S
 
-    .line 224
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fErrors:[Ljava/lang/String;
 
-    .line 225
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/AttributePSVImpl;->fValidationContext:Ljava/lang/String;
 
-    .line 226
     return-void
 .end method

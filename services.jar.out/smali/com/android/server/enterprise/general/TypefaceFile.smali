@@ -16,16 +16,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFile;->fileName:Ljava/lang/String;
 
-    .line 55
     iput-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFile;->droidName:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method
 
@@ -37,22 +33,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFile;->fileName:Ljava/lang/String;
 
-    .line 55
     iput-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFile;->droidName:Ljava/lang/String;
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/enterprise/general/TypefaceFile;->fileName:Ljava/lang/String;
 
-    .line 71
     iput-object p2, p0, Lcom/android/server/enterprise/general/TypefaceFile;->droidName:Ljava/lang/String;
 
-    .line 73
     return-void
 .end method
 
@@ -62,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFile;->droidName:Ljava/lang/String;
 
     return-object v0
@@ -72,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceFile;->fileName:Ljava/lang/String;
 
     return-object v0
@@ -83,10 +71,8 @@
     .param p1, "droidName"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/server/enterprise/general/TypefaceFile;->droidName:Ljava/lang/String;
 
-    .line 105
     return-void
 .end method
 
@@ -95,10 +81,8 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/enterprise/general/TypefaceFile;->fileName:Ljava/lang/String;
 
-    .line 89
     return-void
 .end method
 
@@ -106,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

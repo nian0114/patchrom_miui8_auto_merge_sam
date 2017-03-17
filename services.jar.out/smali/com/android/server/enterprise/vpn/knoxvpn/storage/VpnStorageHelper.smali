@@ -20,7 +20,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 58
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -44,16 +43,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 61
     invoke-direct {p0, p1, p2, v0, p3}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 55
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->mContext:Landroid/content/Context;
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->mContext:Landroid/content/Context;
 
-    .line 65
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-static {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->isTableExists(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
 
     move-result v0
@@ -77,7 +71,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 53
     invoke-static {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->preTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
     return-void
@@ -89,7 +82,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 53
     invoke-static {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
     return-void
@@ -101,7 +93,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 53
     invoke-static {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->postTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
     return-void
@@ -113,7 +104,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 53
     invoke-static {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->preTableUpdate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)Z
 
     move-result v0
@@ -128,7 +118,6 @@
     .param p2, "x2"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 53
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getMissingColumns(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/android/server/enterprise/storage/Table;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -140,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-boolean v0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->DBG:Z
 
     return v0
@@ -151,14 +139,12 @@
     .param p1, "cv"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 497
     const-string v4, "containerID"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->containsKey(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 498
     .local v3, "hasContainerId":Z
     const-string v4, "adminUid"
 
@@ -166,15 +152,12 @@
 
     move-result v2
 
-    .line 499
     .local v2, "hasAdminId":Z
     const/4 v1, -0x1
 
-    .line 500
     .local v1, "containerId":I
     const/4 v0, -0x1
 
-    .line 502
     .local v0, "adminId":I
     if-eqz v2, :cond_0
 
@@ -196,7 +179,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 505
     const-string v4, "containerID"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -207,7 +189,6 @@
 
     move-result v1
 
-    .line 506
     const-string v4, "adminUid"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -218,17 +199,14 @@
 
     move-result v0
 
-    .line 507
     const-string v4, "containerID"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->remove(Ljava/lang/String;)V
 
-    .line 508
     const-string v4, "adminUid"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->remove(Ljava/lang/String;)V
 
-    .line 509
     const-string v4, "adminUid"
 
     int-to-long v6, v0
@@ -245,7 +223,6 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 512
     :cond_0
     return-void
 .end method
@@ -262,7 +239,6 @@
 
     const/4 v6, 0x0
 
-    .line 173
     const-string v2, "CREATE TABLE %s (%s"
 
     new-array v3, v8, [Ljava/lang/Object;
@@ -281,17 +257,14 @@
 
     move-result-object v0
 
-    .line 177
     .local v0, "command":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/android/server/enterprise/storage/Table;->buildPrimaryKeys()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 178
     .local v1, "primarykeys":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 179
     const-string v2, "%s, PRIMARY KEY (%s)"
 
     new-array v3, v8, [Ljava/lang/Object;
@@ -304,7 +277,6 @@
 
     move-result-object v0
 
-    .line 183
     :cond_0
     iget-object v2, p1, Lcom/android/server/enterprise/storage/Table;->mForeignReferTable:Ljava/lang/String;
 
@@ -318,7 +290,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 185
     const-string v2, "%s FOREIGN KEY (%s) REFERENCES %s(%s) ON DELETE CASCADE ON UPDATE CASCADE"
 
     const/4 v3, 0x4
@@ -345,7 +316,6 @@
 
     move-result-object v0
 
-    .line 190
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -367,14 +337,13 @@
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 192
     sget-boolean v2, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->DBG:Z
 
     if-eqz v2, :cond_2
 
     const-string v2, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v3, "onTableFound Created Table %s with Columns %d"
+    const-string v3, "onTableFound Created Table %s with Columns %d"
 
     new-array v4, v8, [Ljava/lang/Object;
 
@@ -400,7 +369,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :cond_2
     return-void
 .end method
@@ -425,7 +393,6 @@
     .end annotation
 
     .prologue
-    .line 158
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -456,7 +423,6 @@
 
     move-result-object v0
 
-    .line 160
     .local v0, "c":Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
 
@@ -470,11 +436,9 @@
 
     move-result-object v1
 
-    .line 162
     .local v1, "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 164
     return-object v1
 .end method
 
@@ -484,10 +448,8 @@
     .param p1, "table"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     const/4 v1, 0x0
 
-    .line 145
     .local v1, "exists":Z
     if-eqz p0, :cond_0
 
@@ -503,7 +465,6 @@
 
     if-lez v2, :cond_0
 
-    .line 147
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -533,19 +494,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     const/4 v1, 0x1
 
-    .line 153
     :cond_0
     :goto_0
     return v1
 
-    .line 149
     :catch_0
     move-exception v0
 
-    .line 150
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -558,7 +515,6 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 211
     return-void
 .end method
 
@@ -568,7 +524,6 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 202
     return-void
 .end method
 
@@ -578,7 +533,6 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 220
     const/4 v0, 0x0
 
     return v0
@@ -592,7 +546,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 517
     cmp-long v0, p0, v2
 
     if-eqz v0, :cond_0
@@ -601,7 +554,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 521
     .end local p0    # "adminId":J
     :cond_0
     :goto_0
@@ -627,21 +579,17 @@
     .param p3, "whereArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 257
     const/4 v3, 0x0
 
-    .line 259
     .local v3, "result":Z
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 260
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v4, 0x0
 
-    .line 261
     .local v4, "where":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
@@ -651,16 +599,13 @@
 
     if-ge v2, v5, :cond_2
 
-    .line 262
     if-nez v4, :cond_0
 
-    .line 263
     new-instance v4, Ljava/lang/StringBuilder;
 
     .end local v4    # "where":Ljava/lang/StringBuilder;
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 264
     .restart local v4    # "where":Ljava/lang/StringBuilder;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -684,13 +629,11 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 261
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 266
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -724,31 +667,26 @@
 
     goto :goto_1
 
-    .line 274
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v2    # "i":I
     .end local v4    # "where":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v1
 
-    .line 275
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v6, "delete operation failed"
+    const-string v6, "delete operation failed"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 278
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_2
     return v3
 
-    .line 270
     .restart local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2    # "i":I
     .restart local v4    # "where":Ljava/lang/StringBuilder;
@@ -769,12 +707,10 @@
 
     if-lez v5, :cond_1
 
-    .line 271
     const/4 v3, 0x1
 
     goto :goto_2
 
-    .line 270
     :cond_3
     const/4 v5, 0x0
 
@@ -790,31 +726,25 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 423
     const/4 v8, 0x0
 
-    .line 424
     .local v8, "where":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 425
     .local v1, "buf":Ljava/lang/StringBuffer;
     if-eqz p2, :cond_0
 
     if-nez p3, :cond_2
 
-    .line 426
     :cond_0
     const/4 p3, 0x0
 
-    .line 434
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v4
 
-    .line 436
     .local v4, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {v4, p1, v8, p3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
@@ -822,16 +752,13 @@
 
     if-lez v10, :cond_1
 
-    .line 437
     const/4 v9, 0x1
 
-    .line 442
     .end local v4    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_1
     :goto_1
     return v9
 
-    .line 428
     :cond_2
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -839,7 +766,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 429
     .end local v1    # "buf":Ljava/lang/StringBuffer;
     .local v2, "buf":Ljava/lang/StringBuffer;
     move-object v0, p2
@@ -857,7 +783,6 @@
 
     aget-object v3, v0, v6
 
-    .line 430
     .local v3, "column":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -879,12 +804,10 @@
 
     invoke-virtual {v2, v10}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 429
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 432
     .end local v3    # "column":Ljava/lang/String;
     :cond_3
     const/4 v10, 0x0
@@ -907,14 +830,12 @@
     .restart local v1    # "buf":Ljava/lang/StringBuffer;
     goto :goto_0
 
-    .line 439
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v6    # "i$":I
     .end local v7    # "len$":I
     :catch_0
     move-exception v5
 
-    .line 440
     .local v5, "e":Ljava/lang/Exception;
     :goto_3
     const-string v10, "KnoxVpn.StorageHelper"
@@ -925,7 +846,6 @@
 
     goto :goto_1
 
-    .line 439
     .end local v1    # "buf":Ljava/lang/StringBuffer;
     .end local v5    # "e":Ljava/lang/Exception;
     .restart local v0    # "arr$":[Ljava/lang/String;
@@ -945,7 +865,6 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 95
     sget-boolean v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->DBG:Z
 
     if-eqz v1, :cond_0
@@ -956,7 +875,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "doTableCreationOrUpdate Starting + "
+    const-string v3, "doTableCreationOrUpdate Starting + "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -976,7 +895,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :cond_0
     :try_start_0
     new-instance v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;
@@ -986,7 +904,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 140
     :goto_0
     sget-boolean v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->DBG:Z
 
@@ -998,7 +915,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "doTableCreationOrUpdate Done + "
+    const-string v3, "doTableCreationOrUpdate Done + "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1018,20 +935,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     :cond_1
     return-void
 
-    .line 133
     :catch_0
     move-exception v0
 
-    .line 134
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v2, "doTableCreationOrUpdate EX:"
+    const-string v2, "doTableCreationOrUpdate EX:"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
@@ -1039,7 +953,6 @@
 
     goto :goto_0
 
-    .line 135
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1072,44 +985,35 @@
     .end annotation
 
     .prologue
-    .line 453
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    .line 454
     .local v2, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
-    .line 455
     .local v16, "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     const/4 v14, 0x0
 
-    .line 456
     .local v14, "count":I
     const/4 v5, 0x0
 
-    .line 457
     .local v5, "where":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 458
     .local v11, "buf":Ljava/lang/StringBuffer;
     const/4 v15, 0x0
 
-    .line 461
     .local v15, "cursor":Landroid/database/Cursor;
     if-eqz p2, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 462
     :cond_0
     const/16 p3, 0x0
 
-    .line 472
     :goto_0
     const/4 v7, 0x0
 
@@ -1128,10 +1032,8 @@
 
     move-result-object v15
 
-    .line 474
     if-eqz v15, :cond_4
 
-    .line 475
     :goto_1
     invoke-interface {v15}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1139,7 +1041,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 476
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
@@ -1148,7 +1049,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 477
     const/16 v18, 0x0
 
     .local v18, "i":I
@@ -1161,7 +1061,6 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 478
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v14}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1184,12 +1083,10 @@
 
     invoke-virtual {v3, v4, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 477
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_2
 
-    .line 465
     .end local v18    # "i":I
     :cond_1
     new-instance v12, Ljava/lang/StringBuffer;
@@ -1199,7 +1096,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 466
     .end local v11    # "buf":Ljava/lang/StringBuffer;
     .local v12, "buf":Ljava/lang/StringBuffer;
     move-object/from16 v10, p2
@@ -1223,7 +1119,6 @@
 
     aget-object v13, v10, v19
 
-    .line 467
     .local v13, "column":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1245,12 +1140,10 @@
 
     invoke-virtual {v12, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 466
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_3
 
-    .line 469
     .end local v13    # "column":Ljava/lang/String;
     :cond_2
     const/4 v3, 0x0
@@ -1274,7 +1167,6 @@
     .restart local v11    # "buf":Ljava/lang/StringBuffer;
     goto :goto_0
 
-    .line 480
     .end local v10    # "arr$":[Ljava/lang/String;
     .end local v19    # "i$":I
     .end local v20    # "len$":I
@@ -1284,24 +1176,19 @@
 
     goto :goto_1
 
-    .line 486
     .end local v18    # "i":I
     :cond_4
     if-eqz v15, :cond_5
 
-    .line 487
     invoke-interface {v15}, Landroid/database/Cursor;->close()V
 
-    .line 490
     :cond_5
     :goto_4
     return-object v16
 
-    .line 483
     :catch_0
     move-exception v17
 
-    .line 484
     .local v17, "e":Ljava/lang/Exception;
     :goto_5
     :try_start_2
@@ -1313,15 +1200,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 486
     if-eqz v15, :cond_5
 
-    .line 487
     invoke-interface {v15}, Landroid/database/Cursor;->close()V
 
     goto :goto_4
 
-    .line 486
     .end local v17    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -1329,13 +1213,11 @@
     :goto_6
     if-eqz v15, :cond_6
 
-    .line 487
     invoke-interface {v15}, Landroid/database/Cursor;->close()V
 
     :cond_6
     throw v3
 
-    .line 486
     .end local v11    # "buf":Ljava/lang/StringBuffer;
     .restart local v10    # "arr$":[Ljava/lang/String;
     .restart local v12    # "buf":Ljava/lang/StringBuffer;
@@ -1348,7 +1230,6 @@
     .restart local v11    # "buf":Ljava/lang/StringBuffer;
     goto :goto_6
 
-    .line 483
     .end local v11    # "buf":Ljava/lang/StringBuffer;
     .restart local v12    # "buf":Ljava/lang/StringBuffer;
     :catch_1
@@ -1367,17 +1248,14 @@
     .param p2, "contentValues"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 232
     const/4 v2, 0x0
 
-    .line 234
     .local v2, "result":Z
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 236
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v3, 0x0
 
@@ -1393,28 +1271,23 @@
 
     if-eqz v3, :cond_0
 
-    .line 237
     const/4 v2, 0x1
 
-    .line 244
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_0
     :goto_0
     return v2
 
-    .line 240
     :catch_0
     move-exception v1
 
-    .line 241
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v4, "insert operation failed"
+    const-string v4, "insert operation failed"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -1425,10 +1298,8 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 86
     invoke-super {p0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->onConfigure(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 88
     const/4 v1, 0x1
 
     :try_start_0
@@ -1436,15 +1307,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 92
     :goto_0
     return-void
 
-    .line 89
     :catch_0
     move-exception v0
 
-    .line 90
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "KnoxVpn.StorageHelper"
 
@@ -1460,17 +1328,14 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 69
     const-string v0, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v1, "onCreate is called .."
+    const-string v1, "onCreate is called .."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->doTablesCreationOrUpdate(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 71
     return-void
 .end method
 
@@ -1481,14 +1346,12 @@
     .param p3, "newVersion"    # I
 
     .prologue
-    .line 81
     sget-boolean v0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->DBG:Z
 
     if-nez v0, :cond_0
 
     invoke-super {p0, p1, p2, p3}, Landroid/database/sqlite/SQLiteOpenHelper;->onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -1500,7 +1363,6 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 75
     sget-boolean v0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1511,7 +1373,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onUpgrade from : "
+    const-string v2, "onUpgrade from : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1537,11 +1399,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->doTablesCreationOrUpdate(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 77
     return-void
 .end method
 
@@ -1553,33 +1413,27 @@
     .param p4, "cv"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 390
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v5
 
-    .line 392
     .local v5, "db":Landroid/database/sqlite/SQLiteDatabase;
     move-object/from16 v0, p4
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->convertAdminIdToLUID(Landroid/content/ContentValues;)V
 
-    .line 393
     if-eqz p2, :cond_1
 
     if-eqz p3, :cond_1
 
-    .line 394
     const/4 v9, 0x0
 
-    .line 395
     .local v9, "where":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 396
     .local v3, "buf":Ljava/lang/StringBuffer;
     move-object/from16 v2, p2
 
@@ -1595,7 +1449,6 @@
 
     aget-object v4, v2, v7
 
-    .line 397
     .local v4, "column":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -1617,12 +1470,10 @@
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 396
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 399
     .end local v4    # "column":Ljava/lang/String;
     :cond_0
     const/4 v10, 0x0
@@ -1637,7 +1488,6 @@
 
     move-result-object v9
 
-    .line 401
     move-object/from16 v0, p4
 
     move-object/from16 v1, p3
@@ -1648,10 +1498,8 @@
 
     if-lez v10, :cond_1
 
-    .line 402
     const/4 v10, 0x1
 
-    .line 412
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v3    # "buf":Ljava/lang/StringBuffer;
     .end local v5    # "db":Landroid/database/sqlite/SQLiteDatabase;
@@ -1661,7 +1509,6 @@
     :goto_1
     return v10
 
-    .line 406
     .restart local v5    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_1
     const/4 v10, 0x0
@@ -1680,17 +1527,14 @@
 
     if-eqz v10, :cond_2
 
-    .line 407
     const/4 v10, 0x1
 
     goto :goto_1
 
-    .line 409
     .end local v5    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :catch_0
     move-exception v6
 
-    .line 410
     .local v6, "e":Ljava/lang/Exception;
     const-string v10, "KnoxVpn.StorageHelper"
 
@@ -1714,7 +1558,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_2
     const/4 v10, 0x0
@@ -1727,7 +1570,6 @@
     .param p1, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 289
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -1761,7 +1603,6 @@
     .param p2, "columns"    # [Ljava/lang/String;
 
     .prologue
-    .line 299
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -1795,27 +1636,22 @@
     .param p4, "whereArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 313
     monitor-enter p0
 
     const/4 v10, 0x0
 
-    .line 315
     .local v10, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 316
     .local v1, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v13, 0x0
 
-    .line 317
     .local v13, "where":Ljava/lang/StringBuilder;
     if-eqz p3, :cond_2
 
-    .line 318
     const/4 v12, 0x0
 
     .local v12, "i":I
@@ -1826,16 +1662,13 @@
 
     if-ge v12, v2, :cond_2
 
-    .line 319
     if-nez v13, :cond_0
 
-    .line 320
     new-instance v13, Ljava/lang/StringBuilder;
 
     .end local v13    # "where":Ljava/lang/StringBuilder;
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 321
     .restart local v13    # "where":Ljava/lang/StringBuilder;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1859,13 +1692,11 @@
 
     invoke-virtual {v13, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 318
     :goto_1
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 323
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1900,14 +1731,12 @@
 
     goto :goto_1
 
-    .line 330
     .end local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v12    # "i":I
     .end local v13    # "where":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v11
 
-    .line 331
     .local v11, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v2, "KnoxVpn.StorageHelper"
@@ -1916,21 +1745,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     if-eqz v10, :cond_1
 
-    .line 333
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 334
     const/4 v10, 0x0
 
-    .line 335
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 338
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_2
@@ -1938,7 +1762,6 @@
 
     return-object v10
 
-    .line 327
     .restart local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v13    # "where":Ljava/lang/StringBuilder;
     :cond_2
@@ -1978,7 +1801,6 @@
 
     goto :goto_3
 
-    .line 313
     .end local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v13    # "where":Ljava/lang/StringBuilder;
     :catchall_0
@@ -1997,21 +1819,17 @@
     .param p4, "whereArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 355
     const/4 v3, 0x0
 
-    .line 357
     .local v3, "result":Z
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 358
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v4, 0x0
 
-    .line 359
     .local v4, "where":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
@@ -2021,16 +1839,13 @@
 
     if-ge v2, v5, :cond_2
 
-    .line 360
     if-nez v4, :cond_0
 
-    .line 361
     new-instance v4, Ljava/lang/StringBuilder;
 
     .end local v4    # "where":Ljava/lang/StringBuilder;
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 362
     .restart local v4    # "where":Ljava/lang/StringBuilder;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2054,13 +1869,11 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 359
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 364
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2094,31 +1907,26 @@
 
     goto :goto_1
 
-    .line 373
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v2    # "i":I
     .end local v4    # "where":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v1
 
-    .line 374
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v6, "update operation failed"
+    const-string v6, "update operation failed"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 377
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_2
     return v3
 
-    .line 368
     .restart local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2    # "i":I
     .restart local v4    # "where":Ljava/lang/StringBuilder;
@@ -2139,12 +1947,10 @@
 
     if-lez v5, :cond_1
 
-    .line 370
     const/4 v3, 0x1
 
     goto :goto_2
 
-    .line 368
     :cond_3
     const/4 v5, 0x0
 

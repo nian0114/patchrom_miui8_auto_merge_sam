@@ -88,7 +88,6 @@
 
     const/4 v3, 0x0
 
-    .line 3633
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_768"
@@ -97,7 +96,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_768:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3639
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_1024"
@@ -106,7 +104,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_1024:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3645
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_1536"
@@ -115,7 +112,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_1536:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3651
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_2048"
@@ -124,7 +120,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_2048:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3657
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_3072"
@@ -133,7 +128,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_3072:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3663
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_4096"
@@ -144,7 +138,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_4096:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3669
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_6144"
@@ -155,7 +148,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_6144:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3675
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_8192"
@@ -166,7 +158,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_8192:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3681
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ECP_256"
@@ -177,7 +168,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ECP_256:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3687
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ECP_384"
@@ -188,7 +178,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ECP_384:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3693
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ECP_521"
@@ -199,7 +188,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ECP_521:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3699
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_1024_160"
@@ -210,7 +198,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_1024_160:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3705
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_2048_224"
@@ -221,7 +208,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_2048_224:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3711
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_MODP_2048_256"
@@ -232,7 +218,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_MODP_2048_256:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3717
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ECP_192"
@@ -243,7 +228,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ECP_192:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3723
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ECP_224"
@@ -254,7 +238,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ECP_224:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3729
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_BRAINPOOL_ECP_224"
@@ -265,7 +248,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_BRAINPOOL_ECP_224:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3735
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_BRAINPOOL_ECP_256"
@@ -276,7 +258,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_BRAINPOOL_ECP_256:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3741
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_BRAINPOOL_ECP_384"
@@ -287,7 +268,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_BRAINPOOL_ECP_384:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3747
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_BRAINPOOL_ECP_512"
@@ -298,7 +278,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_BRAINPOOL_ECP_512:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3753
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ANY"
@@ -309,7 +288,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ANY:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3759
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_ANY_OR_NONE"
@@ -320,7 +298,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_ANY_OR_NONE:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3765
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     const-string v1, "IPSEC_GROUP_NONE"
@@ -331,7 +308,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->IPSEC_GROUP_NONE:Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
-    .line 3626
     const/16 v0, 0x17
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IPsecGroup;
@@ -478,7 +454,6 @@
     .end annotation
 
     .prologue
-    .line 3626
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -489,7 +464,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3626
     const-class v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -505,7 +479,6 @@
     .locals 1
 
     .prologue
-    .line 3626
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IPsecGroup;->clone()Ljava/lang/Object;

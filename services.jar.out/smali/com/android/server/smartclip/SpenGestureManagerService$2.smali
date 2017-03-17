@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 313
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$2;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -40,27 +39,23 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 317
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
     move-result v1
 
     if-ne v1, v3, :cond_1
 
-    .line 318
     sget-object v1, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     const-string v2, " onCoverStateChanged : SWITCH_STATE_COVER_OPEN"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     iget-object v1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$2;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mClearCoverOpened:Z
     invoke-static {v1, v3}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$702(Lcom/android/server/smartclip/SpenGestureManagerService;Z)Z
 
-    .line 326
     :goto_0
     iget-object v1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$2;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -71,14 +66,12 @@
 
     if-nez v1, :cond_0
 
-    .line 327
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 328
     .local v0, "extras":Landroid/os/Bundle;
-    const-string/jumbo v1, "cover_opened"
+    const-string v1, "cover_opened"
 
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$2;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -89,18 +82,15 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 329
     iget-object v1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$2;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # invokes: Lcom/android/server/smartclip/SpenGestureManagerService;->sendAirCommandStateChangeIntent(Landroid/os/Bundle;)V
     invoke-static {v1, v0}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1400(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/os/Bundle;)V
 
-    .line 331
     .end local v0    # "extras":Landroid/os/Bundle;
     :cond_0
     return-void
 
-    .line 321
     :cond_1
     sget-object v1, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
@@ -108,7 +98,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     iget-object v1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$2;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     const/4 v2, 0x0

@@ -28,19 +28,15 @@
     .param p2, "_packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 477
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$AppInfoBeforeInit;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 478
     iput-object p2, p0, Lcom/android/server/am/MARsPolicyManager$AppInfoBeforeInit;->packageName:Ljava/lang/String;
 
-    .line 479
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/MARsPolicyManager$AppInfoBeforeInit;->runningWidgets:I
 
-    .line 480
     return-void
 .end method

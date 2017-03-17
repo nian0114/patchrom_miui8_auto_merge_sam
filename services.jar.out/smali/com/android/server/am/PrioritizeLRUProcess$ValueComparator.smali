@@ -56,14 +56,11 @@
     .end annotation
 
     .prologue
-    .line 128
     .local p1, "base":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/android/server/am/PrioritizeLRUProcess$LRUStats;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/am/PrioritizeLRUProcess$ValueComparator;->base:Ljava/util/Map;
 
-    .line 130
     return-void
 .end method
 
@@ -75,7 +72,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 124
     check-cast p1, Ljava/lang/String;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -95,7 +91,6 @@
     .param p2, "b"    # Ljava/lang/String;
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/android/server/am/PrioritizeLRUProcess$ValueComparator;->base:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -118,10 +113,8 @@
 
     if-lt v1, v0, :cond_0
 
-    .line 135
     const/4 v0, 0x1
 
-    .line 137
     :goto_0
     return v0
 

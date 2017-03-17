@@ -29,15 +29,12 @@
     .param p2, "adminId"    # I
 
     .prologue
-    .line 731
     iput-object p1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 732
     iput p2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;->mAdminId:I
 
-    .line 733
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 737
     monitor-enter p0
 
     :try_start_0
@@ -87,7 +83,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 738
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
@@ -98,13 +93,11 @@
 
     move-result-object v2
 
-    .line 739
     .local v2, "subscriber":Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;
     invoke-static {p2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v1
 
-    .line 741
     .local v1, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$600()Ljava/util/Map;
@@ -119,7 +112,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 742
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$600()Ljava/util/Map;
 
@@ -133,14 +125,12 @@
 
     invoke-interface {v3, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 743
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     iget v4, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;->mAdminId:I
 
     invoke-virtual {v3, v4}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->setISLCallBack(I)V
 
-    .line 745
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$000()Z
 
@@ -148,7 +138,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 746
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$100()Ljava/lang/String;
 
@@ -174,7 +163,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 747
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$100()Ljava/lang/String;
 
@@ -206,29 +194,24 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 752
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 753
     :try_start_1
     invoke-interface {v2}, Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;->onReady()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 758
     :cond_2
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 755
     :catch_0
     move-exception v0
 
-    .line 756
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
@@ -246,7 +229,6 @@
 
     goto :goto_0
 
-    .line 737
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     .end local v2    # "subscriber":Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;
@@ -263,7 +245,6 @@
     .param p1, "className"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 761
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$000()Z
 
@@ -280,13 +261,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 763
     :cond_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 764
     .local v2, "packageName":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$700()Ljava/util/Map;
@@ -320,7 +299,6 @@
 
     move-result v1
 
-    .line 765
     .local v1, "key":I
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$700()Ljava/util/Map;
@@ -343,7 +321,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 766
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$700()Ljava/util/Map;
 
@@ -355,7 +332,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 767
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$800()Ljava/util/Map;
 
@@ -367,7 +343,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 768
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$600()Ljava/util/Map;
 
@@ -379,7 +354,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 769
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$900()Ljava/util/Map;
 
@@ -393,7 +367,6 @@
 
     goto :goto_0
 
-    .line 775
     .end local v1    # "key":I
     :cond_2
     return-void

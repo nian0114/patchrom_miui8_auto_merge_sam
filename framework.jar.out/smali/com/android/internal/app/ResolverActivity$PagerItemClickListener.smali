@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 2713
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +55,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v1, 0x1
 
-    .line 2717
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # invokes: Lcom/android/internal/app/ResolverActivity;->convertPageModePosition(I)I
@@ -64,7 +62,6 @@
 
     move-result p3
 
-    .line 2718
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -90,10 +87,8 @@
     :goto_0
     invoke-virtual {v2, p3, v0, v1}, Lcom/android/internal/app/ResolverActivity;->startSelected(IZZ)V
 
-    .line 2719
     return-void
 
-    .line 2718
     :cond_0
     const/4 v0, 0x0
 
@@ -119,7 +114,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v2, 0x1
 
-    .line 2723
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # invokes: Lcom/android/internal/app/ResolverActivity;->convertPageModePosition(I)I
@@ -127,7 +121,6 @@
 
     move-result p3
 
-    .line 2725
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
@@ -139,12 +132,10 @@
 
     move-result-object v0
 
-    .line 2726
     .local v0, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$PagerItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/app/ResolverActivity;->showAppDetails(Landroid/content/pm/ResolveInfo;)V
 
-    .line 2727
     return v2
 .end method

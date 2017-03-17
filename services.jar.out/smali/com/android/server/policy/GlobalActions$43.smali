@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5401
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$43;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,16 +41,13 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 5405
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 5406
     .local v0, "action":I
     const/4 v1, 0x0
 
-    .line 5407
     .local v1, "returnValue":Z
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$43;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -61,7 +57,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 5408
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$43;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const/4 v4, 0x1
@@ -77,13 +72,11 @@
 
     move v2, v1
 
-    .line 5412
     .end local v1    # "returnValue":Z
     .local v2, "returnValue":Z
     :goto_0
     return v2
 
-    .line 5411
     .end local v2    # "returnValue":Z
     .restart local v1    # "returnValue":Z
     :cond_0
@@ -102,7 +95,6 @@
 
     move v2, v1
 
-    .line 5412
     .end local v1    # "returnValue":Z
     .restart local v2    # "returnValue":Z
     goto :goto_0

@@ -24,19 +24,16 @@
     .locals 1
 
     .prologue
-    .line 40
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/os/SELinux;->lock:Ljava/lang/Object;
 
-    .line 172
     const-string v0, "android_runtime"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 173
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 329
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
@@ -84,7 +79,6 @@
 
     throw v0
 
-    .line 330
     :cond_1
     const/4 v0, 0x1
 
@@ -111,7 +105,6 @@
     .end annotation
 
     .prologue
-    .line 344
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
@@ -123,7 +116,6 @@
 
     throw v0
 
-    .line 345
     :cond_1
     const/4 v0, 0x0
 
@@ -174,28 +166,22 @@
     .locals 3
 
     .prologue
-    .line 250
     const/4 v0, 0x0
 
-    .line 251
     .local v0, "isSuccess":Z
     sget-object v2, Landroid/os/SELinux;->lock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 252
     :try_start_0
     invoke-static {}, Landroid/os/SELinux;->native_reloadSeappContexts()Z
 
     move-result v0
 
-    .line 253
     monitor-exit v2
 
-    .line 255
     return v0
 
-    .line 253
     :catchall_0
     move-exception v1
 
@@ -218,7 +204,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 220
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -232,15 +217,12 @@
 
     move-result v1
 
-    .line 224
     :goto_0
     return v1
 
-    .line 221
     :catch_0
     move-exception v0
 
-    .line 222
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "SELinux"
 
@@ -281,7 +263,6 @@
     .end annotation
 
     .prologue
-    .line 189
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -290,7 +271,6 @@
 
     throw v0
 
-    .line 190
     :cond_0
     const/4 v0, 0x0
 
@@ -306,7 +286,6 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 239
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -320,15 +299,12 @@
 
     move-result v1
 
-    .line 243
     :goto_0
     return v1
 
-    .line 240
     :catch_0
     move-exception v0
 
-    .line 241
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "SELinux"
 
@@ -356,7 +332,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 243
     const/4 v1, 0x0
 
     goto :goto_0
@@ -368,7 +343,6 @@
     .param p1, "userid"    # I
 
     .prologue
-    .line 271
     invoke-static {p0, p1}, Landroid/os/SELinux;->native_recursive_restorecon_with_category(Ljava/lang/String;I)Z
 
     move-result v0
@@ -388,7 +362,6 @@
     .param p1, "userid"    # I
 
     .prologue
-    .line 301
     invoke-static {p0, p1}, Landroid/os/SELinux;->native_setfilecon_with_category(Ljava/lang/String;I)Z
 
     move-result v0

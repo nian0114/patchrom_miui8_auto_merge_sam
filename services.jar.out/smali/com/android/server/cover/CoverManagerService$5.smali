@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 407
     iput-object p1, p0, Lcom/android/server/cover/CoverManagerService$5;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 410
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService$5;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     # getter for: Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
@@ -57,6 +55,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/cover/StateNotifier;->updatePowerStateLocked(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 411
     return-void
 .end method

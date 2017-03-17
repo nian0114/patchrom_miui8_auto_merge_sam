@@ -25,13 +25,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 7420
     iput-object p1, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 7421
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 7422
     return-void
 .end method
 
@@ -41,15 +38,12 @@
     .locals 1
 
     .prologue
-    .line 7451
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-virtual {v0}, Landroid/view/ViewRootImpl;->unscheduleConsumeBatchedInput()V
 
-    .line 7452
     invoke-super {p0}, Landroid/view/InputEventReceiver;->dispose()V
 
-    .line 7453
     return-void
 .end method
 
@@ -57,21 +51,17 @@
     .locals 1
 
     .prologue
-    .line 7442
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     iget-boolean v0, v0, Landroid/view/ViewRootImpl;->mUnbufferedInputDispatch:Z
 
     if-eqz v0, :cond_0
 
-    .line 7443
     invoke-super {p0}, Landroid/view/InputEventReceiver;->onBatchedInputEventPending()V
 
-    .line 7447
     :goto_0
     return-void
 
-    .line 7445
     :cond_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
@@ -91,10 +81,8 @@
 
     const/4 v6, 0x0
 
-    .line 7426
     const/4 v1, 0x0
 
-    .line 7427
     .local v1, "traceKey":Ljava/lang/String;
     # getter for: Landroid/view/ViewRootImpl;->SAFE_DEBUG:Z
     invoke-static {}, Landroid/view/ViewRootImpl;->access$200()Z
@@ -109,12 +97,10 @@
 
     move-object v0, p1
 
-    .line 7428
     check-cast v0, Landroid/view/MotionEvent;
 
-    .line 7429
     .local v0, "motionEvent":Landroid/view/MotionEvent;
-    const-string/jumbo v2, "onInputEvent(Action=%d, X=%d, Y=%d)"
+    const-string v2, "onInputEvent(Action=%d, X=%d, Y=%d)"
 
     const/4 v3, 0x3
 
@@ -160,23 +146,18 @@
 
     move-result-object v1
 
-    .line 7430
     invoke-static {v8, v9, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 7433
     .end local v0    # "motionEvent":Landroid/view/MotionEvent;
     :cond_0
     iget-object v2, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-virtual {v2, p1, p0, v6, v7}, Landroid/view/ViewRootImpl;->enqueueInputEvent(Landroid/view/InputEvent;Landroid/view/InputEventReceiver;IZ)V
 
-    .line 7435
     if-eqz v1, :cond_1
 
-    .line 7436
     invoke-static {v8, v9}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 7438
     :cond_1
     return-void
 .end method

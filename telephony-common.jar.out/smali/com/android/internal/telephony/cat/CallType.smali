@@ -47,7 +47,6 @@
 
     const/4 v2, 0x0
 
-    .line 234
     new-instance v0, Lcom/android/internal/telephony/cat/CallType;
 
     const-string v1, "CALL_TYPE_MO_VOICE"
@@ -56,7 +55,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallType;->CALL_TYPE_MO_VOICE:Lcom/android/internal/telephony/cat/CallType;
 
-    .line 235
     new-instance v0, Lcom/android/internal/telephony/cat/CallType;
 
     const-string v1, "CALL_TYPE_MO_SMS"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallType;->CALL_TYPE_MO_SMS:Lcom/android/internal/telephony/cat/CallType;
 
-    .line 236
     new-instance v0, Lcom/android/internal/telephony/cat/CallType;
 
     const-string v1, "CALL_TYPE_MO_SS"
@@ -74,7 +71,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallType;->CALL_TYPE_MO_SS:Lcom/android/internal/telephony/cat/CallType;
 
-    .line 237
     new-instance v0, Lcom/android/internal/telephony/cat/CallType;
 
     const-string v1, "CALL_TYPE_MO_USSD"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallType;->CALL_TYPE_MO_USSD:Lcom/android/internal/telephony/cat/CallType;
 
-    .line 238
     new-instance v0, Lcom/android/internal/telephony/cat/CallType;
 
     const-string v1, "CALL_TYPE_PDP_CTXT"
@@ -92,7 +87,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/CallType;->CALL_TYPE_PDP_CTXT:Lcom/android/internal/telephony/cat/CallType;
 
-    .line 233
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/cat/CallType;
@@ -132,13 +126,10 @@
     .end annotation
 
     .prologue
-    .line 242
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 243
     iput p3, p0, Lcom/android/internal/telephony/cat/CallType;->mValue:I
 
-    .line 244
     return-void
 .end method
 
@@ -147,7 +138,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 256
     invoke-static {}, Lcom/android/internal/telephony/cat/CallType;->values()[Lcom/android/internal/telephony/cat/CallType;
 
     move-result-object v0
@@ -164,25 +154,21 @@
 
     aget-object v1, v0, v2
 
-    .line 257
     .local v1, "e":Lcom/android/internal/telephony/cat/CallType;
     iget v4, v1, Lcom/android/internal/telephony/cat/CallType;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 261
     .end local v1    # "e":Lcom/android/internal/telephony/cat/CallType;
     :goto_1
     return-object v1
 
-    .line 256
     .restart local v1    # "e":Lcom/android/internal/telephony/cat/CallType;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 261
     .end local v1    # "e":Lcom/android/internal/telephony/cat/CallType;
     :cond_1
     const/4 v1, 0x0
@@ -195,7 +181,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 233
     const-class v0, Lcom/android/internal/telephony/cat/CallType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -211,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 233
     sget-object v0, Lcom/android/internal/telephony/cat/CallType;->$VALUES:[Lcom/android/internal/telephony/cat/CallType;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/cat/CallType;->clone()Ljava/lang/Object;
@@ -229,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget v0, p0, Lcom/android/internal/telephony/cat/CallType;->mValue:I
 
     return v0

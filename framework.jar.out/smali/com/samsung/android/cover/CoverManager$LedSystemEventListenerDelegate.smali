@@ -33,16 +33,12 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1071
     iput-object p1, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->this$0:Lcom/samsung/android/cover/CoverManager;
 
-    .line 1072
     invoke-direct {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback$Stub;-><init>()V
 
-    .line 1073
     iput-object p2, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$LedSystemEventListener;
 
-    .line 1075
     if-nez p3, :cond_0
 
     # getter for: Lcom/samsung/android/cover/CoverManager;->mContext:Landroid/content/Context;
@@ -54,7 +50,6 @@
 
     move-result-object v0
 
-    .line 1078
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate$1;
@@ -63,10 +58,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 1092
     return-void
 
-    .line 1075
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -81,7 +74,6 @@
     .param p0, "x0"    # Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;
 
     .prologue
-    .line 1064
     iget-object v0, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$LedSystemEventListener;
 
     return-object v0
@@ -93,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 1095
     iget-object v0, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$LedSystemEventListener;
 
     return-object v0
@@ -108,7 +99,6 @@
     .end annotation
 
     .prologue
-    .line 1101
     return-void
 .end method
 
@@ -121,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 1106
     return-void
 .end method
 
@@ -136,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 1110
     iget-object v1, p0, Lcom/samsung/android/cover/CoverManager$LedSystemEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -145,16 +133,12 @@
 
     move-result-object v0
 
-    .line 1111
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1112
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1113
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1114
     return-void
 .end method

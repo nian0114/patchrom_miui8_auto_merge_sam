@@ -33,28 +33,22 @@
     .param p3, "containerId"    # I
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->this$0:Lcom/android/server/enterprise/browser/BrowserPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 109
     iput p2, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mUserId:I
 
-    .line 110
     iput p3, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mContainerId:I
 
-    .line 111
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mAdminUid:I
 
-    .line 112
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mProxySetting:Ljava/lang/String;
 
-    .line 113
     return-void
 .end method
 
@@ -63,7 +57,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mProxySetting:Ljava/lang/String;
 
     return-object v0
@@ -77,33 +70,27 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 132
     iget v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mAdminUid:I
 
     if-eq v1, v4, :cond_0
 
-    .line 133
     iput v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mAdminUid:I
 
-    .line 134
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mProxySetting:Ljava/lang/String;
 
-    .line 135
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "mdm.intent.action.clear.http.proxy"
+    const-string v1, "mdm.intent.action.clear.http.proxy"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 137
     .local v0, "intent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 138
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->this$0:Lcom/android/server/enterprise/browser/BrowserPolicy;
 
@@ -122,10 +109,8 @@
 
     invoke-virtual {v1, v0, v4, v5}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 140
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 142
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v2    # "token":J
     :cond_0
@@ -136,7 +121,6 @@
     .locals 2
 
     .prologue
-    .line 145
     iget v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mAdminUid:I
 
     const/4 v1, -0x1
@@ -159,7 +143,6 @@
     .param p1, "adminUid"    # I
 
     .prologue
-    .line 158
     iget v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mAdminUid:I
 
     if-ne v0, p1, :cond_0
@@ -182,37 +165,29 @@
     .param p3, "broadcast"    # Z
 
     .prologue
-    .line 116
     if-eqz p2, :cond_0
 
-    .line 117
     iput p1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mAdminUid:I
 
-    .line 118
     iput-object p2, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->mProxySetting:Ljava/lang/String;
 
-    .line 119
     if-eqz p3, :cond_0
 
-    .line 120
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "mdm.intent.action.set.http.proxy"
+    const-string v1, "mdm.intent.action.set.http.proxy"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 121
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v1, "mdm.intent.extra.http.proxy.server"
+    const-string v1, "mdm.intent.extra.http.proxy.server"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 123
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 124
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->this$0:Lcom/android/server/enterprise/browser/BrowserPolicy;
 
@@ -231,10 +206,8 @@
 
     invoke-virtual {v1, v0, v4, v5}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 126
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 129
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v2    # "token":J
     :cond_0

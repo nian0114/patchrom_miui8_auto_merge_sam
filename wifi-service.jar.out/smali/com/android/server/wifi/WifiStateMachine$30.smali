@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 19919
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 19922
     const-string v0, "WifiStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +67,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19923
     return-void
 .end method
 
@@ -82,7 +79,6 @@
 
     const/4 v1, 0x0
 
-    .line 19926
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
@@ -93,7 +89,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 19928
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -117,7 +112,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mIsClose:Z
     invoke-static {v2, v0}, Lcom/android/server/wifi/WifiStateMachine;->access$49202(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 19929
     const-string v0, "WifiStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -161,7 +155,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19931
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mIsClose:Z
@@ -171,14 +164,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 19932
     const-string v0, "WifiStateMachine"
 
     const-string v2, "Something closed "
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19933
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mIsRunning:Z
@@ -188,7 +179,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 19934
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -198,7 +188,6 @@
 
     invoke-virtual {v0, v6, v1}, Lcom/android/server/wifi/WifiNative;->callSECApiInt(II)I
 
-    .line 19943
     :cond_0
     :goto_1
     return-void
@@ -206,10 +195,8 @@
     :cond_1
     move v0, v1
 
-    .line 19928
     goto :goto_0
 
-    .line 19937
     :cond_2
     const-string v0, "WifiStateMachine"
 
@@ -217,7 +204,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19938
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mIsRunning:Z
@@ -227,7 +213,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 19939
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$30;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;

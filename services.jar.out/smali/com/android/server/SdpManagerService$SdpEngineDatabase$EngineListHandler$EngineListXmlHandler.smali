@@ -49,25 +49,20 @@
     .locals 1
 
     .prologue
-    .line 1829
     iput-object p1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->this$2:Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;
 
-    .line 1830
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 1834
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->engineList:Landroid/util/SparseArray;
 
-    .line 1831
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->elementStack:Ljava/util/Stack;
 
-    .line 1832
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;
 
     .prologue
-    .line 1826
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->getEngineList()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -97,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 1837
     iget-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->engineList:Landroid/util/SparseArray;
 
     return-object v0
@@ -117,14 +110,13 @@
     .end annotation
 
     .prologue
-    .line 1886
     const-string v0, "SdpManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "start characters : "
+    const-string v2, "start characters : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -144,7 +136,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1888
     return-void
 .end method
 
@@ -157,14 +148,12 @@
     .end annotation
 
     .prologue
-    .line 1849
     const-string v0, "SdpManagerService"
 
-    const-string/jumbo v1, "end document     : "
+    const-string v1, "end document     : "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1850
     return-void
 .end method
 
@@ -180,19 +169,17 @@
     .end annotation
 
     .prologue
-    .line 1873
     iget-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->elementStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
-    .line 1874
     const-string v0, "SdpManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "end element      : "
+    const-string v2, "end element      : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -208,8 +195,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1875
-    const-string/jumbo v0, "engine"
+    const-string v0, "engine"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -217,12 +203,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 1876
     iget v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->attrId:I
 
     if-ltz v0, :cond_0
 
-    .line 1877
     iget-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->engineList:Landroid/util/SparseArray;
 
     iget v1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->attrId:I
@@ -231,18 +215,15 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1879
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->attrAlias:Ljava/lang/String;
 
-    .line 1880
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->attrId:I
 
-    .line 1882
     :cond_1
     return-void
 .end method
@@ -256,21 +237,18 @@
     .end annotation
 
     .prologue
-    .line 1844
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->engineList:Landroid/util/SparseArray;
 
-    .line 1845
     const-string v0, "SdpManagerService"
 
-    const-string/jumbo v1, "start document   : "
+    const-string v1, "start document   : "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1846
     return-void
 .end method
 
@@ -287,19 +265,17 @@
     .end annotation
 
     .prologue
-    .line 1855
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->elementStack:Ljava/util/Stack;
 
     invoke-virtual {v1, p3}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1856
     const-string v1, "SdpManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "start element    : "
+    const-string v3, "start element    : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -315,8 +291,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1858
-    const-string/jumbo v1, "engine"
+    const-string v1, "engine"
 
     invoke-virtual {p3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -324,7 +299,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1860
     const-string v1, "SdpManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -353,7 +327,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1861
     const-string v1, "SdpManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -366,7 +339,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "id"
+    const-string v3, "id"
 
     invoke-interface {p4, v3}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
@@ -382,7 +355,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1864
     const-string v1, "alias"
 
     invoke-interface {p4, v1}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -391,25 +363,21 @@
 
     iput-object v1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->attrAlias:Ljava/lang/String;
 
-    .line 1865
-    const-string/jumbo v1, "id"
+    const-string v1, "id"
 
     invoke-interface {p4, v1}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1866
     .local v0, "strId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1867
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->attrId:I
 
-    .line 1869
     .end local v0    # "strId":Ljava/lang/String;
     :cond_0
     return-void

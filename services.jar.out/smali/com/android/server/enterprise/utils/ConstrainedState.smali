@@ -62,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, 0x4
 
     new-array v0, v0, [B
@@ -71,14 +70,12 @@
 
     sput-object v0, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
-    .line 67
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/utils/ConstrainedState;->mConstrainedState:Lcom/android/server/enterprise/utils/ConstrainedState;
 
     return-void
 
-    .line 50
     :array_0
     .array-data 1
         0x8t
@@ -94,35 +91,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->DEBUG:Z
 
-    .line 64
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 65
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 68
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
 
-    .line 72
     new-instance v0, Lcom/android/server/enterprise/utils/ConstrainedState$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/utils/ConstrainedState$1;-><init>(Lcom/android/server/enterprise/utils/ConstrainedState;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 116
     return-void
 .end method
 
@@ -135,36 +125,28 @@
 
     const/4 v3, 0x0
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-boolean v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->DEBUG:Z
 
-    .line 64
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 65
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 68
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
 
-    .line 72
     new-instance v1, Lcom/android/server/enterprise/utils/ConstrainedState$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/utils/ConstrainedState$1;-><init>(Lcom/android/server/enterprise/utils/ConstrainedState;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 85
     iput-object p1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
-    .line 86
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v2, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
@@ -173,7 +155,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 87
     iget-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -182,28 +163,23 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 88
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 89
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 90
     iget-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 92
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/utils/ConstrainedState;->updateConstrainedStateData(Z)V
 
-    .line 94
     iget-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/utils/PackageDownloader;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/utils/PackageDownloader;
@@ -212,7 +188,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mPackageDownloader:Lcom/android/server/enterprise/utils/PackageDownloader;
 
-    .line 96
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/android/server/enterprise/utils/ConstrainedState$2;
@@ -223,7 +198,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 114
     return-void
 .end method
 
@@ -232,7 +206,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/utils/ConstrainedState;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->updateNotification()V
 
     return-void
@@ -244,7 +217,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/utils/ConstrainedState;->updateConstrainedStateData(Z)V
 
     return-void
@@ -256,20 +228,16 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 523
     const/4 v14, 0x1
 
-    .line 524
     .local v14, "ret":Z
     const/4 v8, 0x0
 
-    .line 525
     .local v8, "changed":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 527
     .local v16, "token":J
     :try_start_0
     move-object/from16 v0, p0
@@ -278,7 +246,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 528
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
@@ -291,7 +258,6 @@
 
     move-result-object v12
 
-    .line 529
     .local v12, "it":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
@@ -300,14 +266,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 530
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Ljava/lang/String;
 
-    .line 531
     .local v13, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -319,7 +283,6 @@
 
     check-cast v9, Landroid/app/enterprise/EnrollData;
 
-    .line 532
     .local v9, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v9}, Landroid/app/enterprise/EnrollData;->getPackageName()Ljava/lang/String;
 
@@ -333,14 +296,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 533
     const-string v2, "ConstrainedState"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "remove! "
+    const-string v4, "remove! "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -356,25 +318,22 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
     new-instance v11, Ljava/io/File;
 
     const-string v2, "/efs/constrained"
 
     invoke-direct {v11, v2, v13}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 535
     .local v11, "file":Ljava/io/File;
     invoke-virtual {v11}, Ljava/io/File;->delete()Z
 
-    .line 537
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "ConstrainedStateTable"
 
-    const-string/jumbo v4, "status"
+    const-string v4, "status"
 
     const/4 v5, 0x1
 
@@ -382,7 +341,6 @@
 
     invoke-virtual {v2, v0, v3, v4, v5}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 542
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -397,13 +355,10 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/utils/ConstrainedState;->showConstrainedStateNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 543
     const/4 v14, 0x1
 
-    .line 544
     const/4 v8, 0x1
 
-    .line 550
     .end local v9    # "data":Landroid/app/enterprise/EnrollData;
     .end local v11    # "file":Ljava/io/File;
     .end local v12    # "it":Ljava/util/Iterator;
@@ -413,7 +368,6 @@
 
     if-ne v8, v2, :cond_2
 
-    .line 551
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -423,11 +377,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 557
     :cond_2
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 560
     :goto_0
     const-string v2, "ConstrainedState"
 
@@ -435,24 +387,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 561
     return v14
 
-    .line 553
     :catch_0
     move-exception v10
 
-    .line 554
     .local v10, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 555
     const/4 v14, 0x0
 
-    .line 557
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -472,38 +419,31 @@
     .param p2, "pkgInst"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 764
     new-instance v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;
 
     invoke-direct {v4}, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;-><init>()V
 
-    .line 766
     .local v4, "pkg":Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;
     if-eqz p2, :cond_2
 
-    .line 768
     :try_start_0
     iget-object v7, p2, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     iput-object v7, v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->packageName:Ljava/lang/String;
 
-    .line 769
     iget-object v7, p2, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
     if-eqz v7, :cond_0
 
-    .line 770
     iget-object v7, p2, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
     iput-object v7, v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->permissions:Ljava/util/List;
 
-    .line 772
     :cond_0
     iget-object v7, p2, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
 
     if-eqz v7, :cond_1
 
-    .line 773
     iget-object v0, p2, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
 
     .local v0, "arr$":[Landroid/content/pm/Signature;
@@ -518,7 +458,6 @@
 
     aget-object v6, v0, v2
 
-    .line 774
     .local v6, "sig":Landroid/content/pm/Signature;
     iget-object v7, v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->signatures:Ljava/util/List;
 
@@ -530,12 +469,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 773
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 777
     .end local v0    # "arr$":[Landroid/content/pm/Signature;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -543,7 +480,6 @@
     :catch_0
     move-exception v1
 
-    .line 778
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "ConstrainedState"
 
@@ -553,7 +489,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 779
     const-string v7, "ConstrainedState"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -576,19 +511,16 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 807
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_1
     return-object v4
 
-    .line 783
     :cond_2
     if-nez p1, :cond_4
 
     const-string p1, ""
 
-    .line 784
     :goto_2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -596,7 +528,6 @@
 
     if-lez v7, :cond_1
 
-    .line 786
     :try_start_1
     iget-object v7, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -606,19 +537,15 @@
 
     move-result-object v5
 
-    .line 788
     .local v5, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v5, :cond_1
 
-    .line 789
     iput-object p1, v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->packageName:Ljava/lang/String;
 
-    .line 790
     iget-object v7, v5, Landroid/content/pm/PackageInfo;->permissions:[Landroid/content/pm/PermissionInfo;
 
     if-eqz v7, :cond_3
 
-    .line 791
     iget-object v7, v5, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     invoke-static {v7}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -627,13 +554,11 @@
 
     iput-object v7, v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->permissions:Ljava/util/List;
 
-    .line 793
     :cond_3
     iget-object v7, v5, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v7, :cond_1
 
-    .line 794
     iget-object v0, v5, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     .restart local v0    # "arr$":[Landroid/content/pm/Signature;
@@ -648,7 +573,6 @@
 
     aget-object v6, v0, v2
 
-    .line 795
     .restart local v6    # "sig":Landroid/content/pm/Signature;
     iget-object v7, v4, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->signatures:Ljava/util/List;
 
@@ -660,12 +584,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 794
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 783
     .end local v0    # "arr$":[Landroid/content/pm/Signature;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -678,15 +600,12 @@
 
     goto :goto_2
 
-    .line 799
     :catch_1
     move-exception v1
 
-    .line 800
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 801
     const-string v7, "ConstrainedState"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -725,24 +644,20 @@
     .end annotation
 
     .prologue
-    .line 571
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 573
     .local v6, "token":J
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
 
     if-eqz v5, :cond_1
 
-    .line 574
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 575
     .local v4, "ret":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     iget-object v5, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
 
@@ -754,7 +669,6 @@
 
     move-result-object v2
 
-    .line 576
     .local v2, "it":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -763,14 +677,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 577
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 578
     .local v3, "key":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
 
@@ -780,7 +692,6 @@
 
     check-cast v0, Landroid/app/enterprise/EnrollData;
 
-    .line 579
     .local v0, "data":Landroid/app/enterprise/EnrollData;
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -789,7 +700,6 @@
 
     goto :goto_0
 
-    .line 584
     .end local v0    # "data":Landroid/app/enterprise/EnrollData;
     .end local v2    # "it":Ljava/util/Iterator;
     .end local v3    # "key":Ljava/lang/String;
@@ -797,17 +707,14 @@
     :catch_0
     move-exception v1
 
-    .line 585
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 587
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 590
     .end local v1    # "e":Ljava/lang/Exception;
     :goto_1
     const/4 v4, 0x0
@@ -815,7 +722,6 @@
     :goto_2
     return-object v4
 
-    .line 581
     .restart local v2    # "it":Ljava/util/Iterator;
     .restart local v4    # "ret":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     :cond_0
@@ -829,7 +735,6 @@
 
     if-nez v5, :cond_1
 
-    .line 587
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -853,15 +758,13 @@
     .locals 2
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "enterprise_policy"
+    const-string v1, "enterprise_policy"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -871,7 +774,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 131
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -883,19 +785,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 119
     sget-object v0, Lcom/android/server/enterprise/utils/ConstrainedState;->mConstrainedState:Lcom/android/server/enterprise/utils/ConstrainedState;
 
     if-nez v0, :cond_0
 
-    .line 120
     new-instance v0, Lcom/android/server/enterprise/utils/ConstrainedState;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/utils/ConstrainedState;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/utils/ConstrainedState;->mConstrainedState:Lcom/android/server/enterprise/utils/ConstrainedState;
 
-    .line 123
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/utils/ConstrainedState;->mConstrainedState:Lcom/android/server/enterprise/utils/ConstrainedState;
 
@@ -911,7 +810,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 225
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -920,19 +818,16 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 226
     add-int v2, p3, v0
 
     array-length v3, p2
 
     if-lt v2, v3, :cond_1
 
-    .line 233
     :cond_0
     :goto_1
     return v1
 
-    .line 229
     :cond_1
     aget-byte v2, p1, v0
 
@@ -942,12 +837,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 225
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 233
     :cond_2
     const/4 v1, 0x1
 
@@ -965,7 +858,6 @@
     .prologue
     const v6, 0x1040b50
 
-    .line 192
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -984,29 +876,24 @@
 
     move-result-object v2
 
-    .line 193
     .local v2, "noti_tag":Ljava/lang/String;
     if-eqz p5, :cond_3
 
-    .line 194
     new-instance v0, Landroid/app/Notification$Builder;
 
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 195
     .local v0, "builder":Landroid/app/Notification$Builder;
     const-wide/16 v4, 0x0
 
     invoke-virtual {v0, v4, v5}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
 
-    .line 196
     const v3, 0x10805e4
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 197
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     const v4, 0x1040b9b
@@ -1017,7 +904,6 @@
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 198
     const-string v3, "DEFAULT"
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1026,7 +912,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 199
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1035,7 +920,6 @@
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 200
     new-instance v3, Landroid/app/Notification$BigTextStyle;
 
     invoke-direct {v3}, Landroid/app/Notification$BigTextStyle;-><init>()V
@@ -1052,18 +936,15 @@
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
 
-    .line 205
     :goto_0
     const/4 v3, 0x2
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setPriority(I)Landroid/app/Notification$Builder;
 
-    .line 206
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
-    .line 208
     if-eqz p3, :cond_1
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
@@ -1072,25 +953,21 @@
 
     if-lez v3, :cond_1
 
-    .line 209
     new-instance v1, Landroid/content/Intent;
 
-    const-string/jumbo v3, "edm.intent.action.sec.CHECK_REENROLLMENT"
+    const-string v3, "edm.intent.action.sec.CHECK_REENROLLMENT"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 210
     .local v1, "intent":Landroid/content/Intent;
-    const-string/jumbo v3, "pkg"
+    const-string v3, "pkg"
 
     invoke-virtual {v1, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 211
-    const-string/jumbo v3, "url"
+    const-string v3, "url"
 
     invoke-virtual {v1, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 212
     if-eqz p4, :cond_0
 
     invoke-virtual {p4}, Ljava/lang/String;->length()I
@@ -1099,12 +976,10 @@
 
     if-lez v3, :cond_0
 
-    .line 213
-    const-string/jumbo v3, "targetPkgName"
+    const-string v3, "targetPkgName"
 
     invoke-virtual {v1, v3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 215
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
@@ -1120,7 +995,6 @@
 
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 218
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
@@ -1139,17 +1013,14 @@
 
     invoke-virtual {v3, v2, v4, v5}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 222
     .end local v0    # "builder":Landroid/app/Notification$Builder;
     :goto_1
     return-void
 
-    .line 202
     .restart local v0    # "builder":Landroid/app/Notification$Builder;
     :cond_2
     invoke-virtual {v0, p2}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 203
     new-instance v3, Landroid/app/Notification$BigTextStyle;
 
     invoke-direct {v3}, Landroid/app/Notification$BigTextStyle;-><init>()V
@@ -1162,7 +1033,6 @@
 
     goto :goto_0
 
-    .line 220
     .end local v0    # "builder":Landroid/app/Notification$Builder;
     :cond_3
     iget-object v3, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
@@ -1193,16 +1063,13 @@
     .end annotation
 
     .prologue
-    .line 237
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    .line 238
     .local v2, "l":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/4 v0, 0x0
 
-    .line 239
     .local v0, "blockStart":I
     const/4 v1, 0x0
 
@@ -1212,35 +1079,29 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 240
     invoke-direct {p0, p1, p2, v1}, Lcom/android/server/enterprise/utils/ConstrainedState;->isMatch([B[BI)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 241
     invoke-static {p2, v0, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v3
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 242
     array-length v3, p1
 
     add-int v0, v1, v3
 
-    .line 243
     move v1, v0
 
-    .line 239
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 246
     :cond_1
     array-length v3, p2
 
@@ -1250,7 +1111,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 247
     return-object v2
 .end method
 
@@ -1259,17 +1119,14 @@
     .param p1, "Noti"    # Z
 
     .prologue
-    .line 252
     const/16 v29, 0x0
 
-    .line 254
     .local v29, "io":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v25, Ljava/util/HashMap;
 
     invoke-direct/range {v25 .. v25}, Ljava/util/HashMap;-><init>()V
 
-    .line 256
     .local v25, "enrollData":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/app/enterprise/EnrollData;>;"
     const/4 v10, 0x2
 
@@ -1277,7 +1134,6 @@
 
     move-object/from16 v20, v0
 
-    .line 257
     .local v20, "columns":[Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -1285,14 +1141,12 @@
 
     aput-object v11, v20, v10
 
-    .line 258
     const/4 v10, 0x1
 
-    const-string/jumbo v11, "status"
+    const-string v11, "status"
 
     aput-object v11, v20, v10
 
-    .line 260
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -1307,7 +1161,6 @@
 
     move-result-object v21
 
-    .line 263
     .local v21, "constainedList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     new-instance v23, Ljava/io/File;
 
@@ -1317,17 +1170,14 @@
 
     invoke-direct {v0, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 264
     .local v23, "dataDir":Ljava/io/File;
     invoke-virtual/range {v23 .. v23}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v33
 
-    .line 265
     .local v33, "listFiles":[Ljava/io/File;
     if-eqz v33, :cond_15
 
-    .line 266
     move-object/from16 v18, v33
 
     .local v18, "arr$":[Ljava/io/File;
@@ -1358,7 +1208,6 @@
     :try_start_1
     aget-object v27, v18, v28
 
-    .line 267
     .local v27, "file":Ljava/io/File;
     invoke-virtual/range {v27 .. v27}, Ljava/io/File;->isFile()Z
 
@@ -1366,7 +1215,6 @@
 
     if-eqz v10, :cond_17
 
-    .line 268
     invoke-virtual/range {v27 .. v27}, Ljava/io/File;->length()J
 
     move-result-wide v10
@@ -1377,7 +1225,6 @@
 
     move-object/from16 v19, v0
 
-    .line 269
     .local v19, "buffer":[B
     new-instance v29, Ljava/io/FileInputStream;
 
@@ -1390,7 +1237,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 270
     .end local v30    # "io":Ljava/io/FileInputStream;
     .restart local v29    # "io":Ljava/io/FileInputStream;
     :try_start_2
@@ -1402,14 +1248,11 @@
 
     move-result v35
 
-    .line 271
     .local v35, "readLen":I
     if-nez v35, :cond_0
 
-    .line 272
     invoke-virtual/range {v29 .. v29}, Ljava/io/FileInputStream;->close()V
 
-    .line 266
     .end local v19    # "buffer":[B
     .end local v35    # "readLen":I
     :goto_1
@@ -1421,7 +1264,6 @@
     .restart local v30    # "io":Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 277
     .end local v30    # "io":Ljava/io/FileInputStream;
     .restart local v19    # "buffer":[B
     .restart local v29    # "io":Ljava/io/FileInputStream;
@@ -1437,11 +1279,9 @@
 
     move-result-object v36
 
-    .line 278
     .local v36, "temp":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/16 v37, 0x0
 
-    .line 279
     .local v37, "type":Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -1453,7 +1293,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 280
     new-instance v37, Ljava/lang/String;
 
     .end local v37    # "type":Ljava/lang/String;
@@ -1485,30 +1324,25 @@
 
     invoke-direct {v0, v10, v12, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 283
     .restart local v37    # "type":Ljava/lang/String;
     :cond_1
     if-nez v37, :cond_2
 
-    .line 284
     const-string v10, "ConstrainedState"
 
-    const-string/jumbo v11, "something\'s wrong // type is null"
+    const-string v11, "something\'s wrong // type is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     :goto_2
     invoke-virtual/range {v29 .. v29}, Ljava/io/FileInputStream;->close()V
 
-    .line 359
     const/16 v29, 0x0
 
     goto :goto_1
 
-    .line 285
     :cond_2
-    const-string/jumbo v10, "normal"
+    const-string v10, "normal"
 
     move-object/from16 v0, v37
 
@@ -1518,7 +1352,7 @@
 
     if-nez v10, :cond_3
 
-    const-string/jumbo v10, "normalv2"
+    const-string v10, "normalv2"
 
     move-object/from16 v0, v37
 
@@ -1528,7 +1362,7 @@
 
     if-nez v10, :cond_3
 
-    const-string/jumbo v10, "normalv3"
+    const-string v10, "normalv3"
 
     move-object/from16 v0, v37
 
@@ -1538,11 +1372,9 @@
 
     if-eqz v10, :cond_13
 
-    .line 286
     :cond_3
     const/4 v3, 0x0
 
-    .line 287
     .local v3, "pkgName":Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -1568,7 +1400,6 @@
 
     if-lez v10, :cond_4
 
-    .line 288
     new-instance v3, Ljava/lang/String;
 
     .end local v3    # "pkgName":Ljava/lang/String;
@@ -1598,15 +1429,12 @@
 
     invoke-direct {v3, v10, v12, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 291
     .restart local v3    # "pkgName":Ljava/lang/String;
     :cond_4
     if-eqz v3, :cond_12
 
-    .line 292
     const/4 v4, 0x0
 
-    .line 293
     .local v4, "comment":Ljava/lang/String;
     const/4 v10, 0x2
 
@@ -1618,7 +1446,6 @@
 
     if-eqz v10, :cond_11
 
-    .line 294
     new-instance v4, Ljava/lang/String;
 
     .end local v4    # "comment":Ljava/lang/String;
@@ -1648,7 +1475,6 @@
 
     invoke-direct {v4, v10, v12, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 296
     .restart local v4    # "comment":Ljava/lang/String;
     const/4 v10, 0x3
 
@@ -1660,15 +1486,12 @@
 
     check-cast v34, [B
 
-    .line 297
     .local v34, "policyBitMaskByteBuffer":[B
     const/4 v5, 0x0
 
-    .line 298
     .local v5, "policyBitMask":I
     if-eqz v34, :cond_5
 
-    .line 299
     const/4 v10, 0x0
 
     aget-byte v10, v34, v10
@@ -1705,14 +1528,12 @@
 
     or-int v5, v10, v11
 
-    .line 305
     :cond_5
     if-gtz v5, :cond_7
 
-    .line 306
     const-string v10, "ConstrainedState"
 
-    const-string/jumbo v11, "something\'s wrong"
+    const-string v11, "something\'s wrong"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
@@ -1721,7 +1542,6 @@
 
     goto/16 :goto_2
 
-    .line 371
     .end local v3    # "pkgName":Ljava/lang/String;
     .end local v4    # "comment":Ljava/lang/String;
     .end local v5    # "policyBitMask":I
@@ -1742,13 +1562,11 @@
     :catch_0
     move-exception v24
 
-    .line 372
     .local v24, "e":Ljava/lang/Exception;
     :goto_3
     :try_start_3
     invoke-virtual/range {v24 .. v24}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 373
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
@@ -1757,22 +1575,18 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 376
     if-eqz v29, :cond_6
 
-    .line 377
     :try_start_4
     invoke-virtual/range {v29 .. v29}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 382
     .end local v24    # "e":Ljava/lang/Exception;
     :cond_6
     :goto_4
     return-void
 
-    .line 308
     .restart local v3    # "pkgName":Ljava/lang/String;
     .restart local v4    # "comment":Ljava/lang/String;
     .restart local v5    # "policyBitMask":I
@@ -1793,18 +1607,15 @@
     :cond_7
     const/4 v6, 0x0
 
-    .line 309
     .local v6, "downloadUrl":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 310
     .local v9, "targetPkgName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 311
     .local v8, "signature":[B
     :try_start_5
-    const-string/jumbo v10, "normalv2"
+    const-string v10, "normalv2"
 
     move-object/from16 v0, v37
 
@@ -1814,7 +1625,7 @@
 
     if-nez v10, :cond_8
 
-    const-string/jumbo v10, "normalv3"
+    const-string v10, "normalv3"
 
     move-object/from16 v0, v37
 
@@ -1824,7 +1635,6 @@
 
     if-eqz v10, :cond_a
 
-    .line 312
     :cond_8
     const/4 v10, 0x4
 
@@ -1836,7 +1646,6 @@
 
     if-eqz v10, :cond_9
 
-    .line 313
     new-instance v6, Ljava/lang/String;
 
     .end local v6    # "downloadUrl":Ljava/lang/String;
@@ -1866,7 +1675,6 @@
 
     invoke-direct {v6, v10, v12, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 316
     .restart local v6    # "downloadUrl":Ljava/lang/String;
     :cond_9
     const/4 v10, 0x5
@@ -1880,10 +1688,9 @@
     .end local v8    # "signature":[B
     check-cast v8, [B
 
-    .line 318
     .restart local v8    # "signature":[B
     :cond_a
-    const-string/jumbo v10, "normalv3"
+    const-string v10, "normalv3"
 
     move-object/from16 v0, v37
 
@@ -1893,7 +1700,6 @@
 
     if-eqz v10, :cond_b
 
-    .line 319
     new-instance v9, Ljava/lang/String;
 
     .end local v9    # "targetPkgName":Ljava/lang/String;
@@ -1923,18 +1729,15 @@
 
     invoke-direct {v9, v10, v12, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 321
     .restart local v9    # "targetPkgName":Ljava/lang/String;
     :cond_b
     new-instance v2, Landroid/app/enterprise/EnrollData;
 
     invoke-direct {v2}, Landroid/app/enterprise/EnrollData;-><init>()V
 
-    .line 322
     .local v2, "data":Landroid/app/enterprise/EnrollData;
     const/4 v7, 0x0
 
-    .line 323
     .local v7, "constrainedStatus":I
     if-eqz v21, :cond_d
 
@@ -1944,16 +1747,13 @@
 
     if-lez v10, :cond_d
 
-    .line 324
     const/16 v22, 0x0
 
-    .line 325
     .local v22, "cv":Landroid/content/ContentValues;
     invoke-interface/range {v21 .. v21}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v31
 
-    .line 326
     .local v31, "it":Ljava/util/Iterator;
     :cond_c
     invoke-interface/range {v31 .. v31}, Ljava/util/Iterator;->hasNext()Z
@@ -1962,7 +1762,6 @@
 
     if-eqz v10, :cond_d
 
-    .line 327
     invoke-interface/range {v31 .. v31}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v22
@@ -1970,7 +1769,6 @@
     .end local v22    # "cv":Landroid/content/ContentValues;
     check-cast v22, Landroid/content/ContentValues;
 
-    .line 328
     .restart local v22    # "cv":Landroid/content/ContentValues;
     const-string v10, "adminUid"
 
@@ -1984,9 +1782,8 @@
 
     move-result v17
 
-    .line 329
     .local v17, "adminUid":I
-    const-string/jumbo v10, "status"
+    const-string v10, "status"
 
     move-object/from16 v0, v22
 
@@ -1998,7 +1795,6 @@
 
     move-result v26
 
-    .line 330
     .local v26, "enrolled_state":I
     move-object/from16 v0, p0
 
@@ -2010,7 +1806,6 @@
 
     move-result-object v16
 
-    .line 331
     .local v16, "adminPkgName":Ljava/lang/String;
     if-eqz v16, :cond_c
 
@@ -2022,10 +1817,8 @@
 
     if-eqz v10, :cond_c
 
-    .line 332
     move/from16 v7, v26
 
-    .line 338
     .end local v16    # "adminPkgName":Ljava/lang/String;
     .end local v17    # "adminUid":I
     .end local v22    # "cv":Landroid/content/ContentValues;
@@ -2034,17 +1827,14 @@
     :cond_d
     invoke-virtual/range {v2 .. v9}, Landroid/app/enterprise/EnrollData;->setData(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;I[BLjava/lang/String;)V
 
-    .line 339
     const/4 v10, 0x1
 
     move/from16 v0, p1
 
     if-ne v0, v10, :cond_e
 
-    .line 340
     if-nez v7, :cond_10
 
-    .line 341
     const/4 v15, 0x1
 
     move-object/from16 v10, p0
@@ -2059,7 +1849,6 @@
 
     invoke-direct/range {v10 .. v15}, Lcom/android/server/enterprise/utils/ConstrainedState;->showConstrainedStateNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 346
     :cond_e
     :goto_5
     invoke-virtual/range {v27 .. v27}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -2075,7 +1864,6 @@
 
     goto/16 :goto_2
 
-    .line 375
     .end local v2    # "data":Landroid/app/enterprise/EnrollData;
     .end local v3    # "pkgName":Ljava/lang/String;
     .end local v4    # "comment":Ljava/lang/String;
@@ -2101,22 +1889,18 @@
     :catchall_0
     move-exception v10
 
-    .line 376
     :goto_6
     if-eqz v29, :cond_f
 
-    .line 377
     :try_start_6
     invoke-virtual/range {v29 .. v29}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 380
     :cond_f
     :goto_7
     throw v10
 
-    .line 343
     .restart local v2    # "data":Landroid/app/enterprise/EnrollData;
     .restart local v3    # "pkgName":Ljava/lang/String;
     .restart local v4    # "comment":Ljava/lang/String;
@@ -2157,7 +1941,6 @@
 
     goto :goto_5
 
-    .line 349
     .end local v2    # "data":Landroid/app/enterprise/EnrollData;
     .end local v5    # "policyBitMask":I
     .end local v6    # "downloadUrl":Ljava/lang/String;
@@ -2174,23 +1957,21 @@
 
     goto/16 :goto_2
 
-    .line 352
     .end local v4    # "comment":Ljava/lang/String;
     :cond_12
     const-string v10, "ConstrainedState"
 
-    const-string/jumbo v11, "package name is null"
+    const-string v11, "package name is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_2
 
-    .line 355
     .end local v3    # "pkgName":Ljava/lang/String;
     :cond_13
     const-string v10, "ConstrainedState"
 
-    const-string/jumbo v11, "type is not normal"
+    const-string v11, "type is not normal"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2206,7 +1987,6 @@
     :cond_14
     move-object/from16 v29, v30
 
-    .line 364
     .end local v18    # "arr$":[Ljava/io/File;
     .end local v28    # "i$":I
     .end local v30    # "io":Ljava/io/FileInputStream;
@@ -2219,14 +1999,12 @@
 
     if-eqz v10, :cond_16
 
-    .line 365
     const-string v10, "ConstrainedState"
 
     const-string v11, "Data is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
@@ -2236,11 +2014,9 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 376
     :goto_8
     if-eqz v29, :cond_6
 
-    .line 377
     :try_start_8
     invoke-virtual/range {v29 .. v29}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -2248,13 +2024,11 @@
 
     goto/16 :goto_4
 
-    .line 379
     :catch_1
     move-exception v10
 
     goto/16 :goto_4
 
-    .line 368
     :cond_16
     :try_start_9
     move-object/from16 v0, p0
@@ -2263,7 +2037,6 @@
 
     invoke-virtual {v10}, Ljava/util/HashMap;->clear()V
 
-    .line 369
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
@@ -2277,7 +2050,6 @@
 
     goto :goto_8
 
-    .line 379
     .end local v20    # "columns":[Ljava/lang/String;
     .end local v21    # "constainedList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     .end local v23    # "dataDir":Ljava/io/File;
@@ -2295,7 +2067,6 @@
 
     goto :goto_7
 
-    .line 375
     .end local v29    # "io":Ljava/io/FileInputStream;
     .restart local v18    # "arr$":[Ljava/io/File;
     .restart local v20    # "columns":[Ljava/lang/String;
@@ -2315,7 +2086,6 @@
     .restart local v29    # "io":Ljava/io/FileInputStream;
     goto :goto_6
 
-    .line 371
     .end local v29    # "io":Ljava/io/FileInputStream;
     .restart local v30    # "io":Ljava/io/FileInputStream;
     :catch_4
@@ -2344,19 +2114,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 151
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getConstrainedStateAll()Ljava/util/List;
 
     move-result-object v10
 
-    .line 152
     .local v10, "dataList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     if-eqz v10, :cond_1
 
-    .line 153
     const/4 v12, 0x0
 
-    .line 154
     .local v12, "policyBitMask":I
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2377,7 +2143,6 @@
 
     check-cast v9, Landroid/app/enterprise/EnrollData;
 
-    .line 155
     .local v9, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v9}, Landroid/app/enterprise/EnrollData;->getPackageName()Ljava/lang/String;
 
@@ -2393,14 +2158,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/utils/ConstrainedState;->showConstrainedStateNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 156
     invoke-virtual {v9}, Landroid/app/enterprise/EnrollData;->getConstrainedState()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 157
     invoke-virtual {v9}, Landroid/app/enterprise/EnrollData;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -2425,7 +2188,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v9    # "data":Landroid/app/enterprise/EnrollData;
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v12    # "policyBitMask":I
@@ -2439,20 +2201,16 @@
     .locals 5
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
-    .line 136
     .local v0, "constrainedMode":Z
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getConstrainedStateAll()Ljava/util/List;
 
     move-result-object v2
 
-    .line 138
     .local v2, "dataList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     if-eqz v2, :cond_1
 
-    .line 139
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -2471,7 +2229,6 @@
 
     check-cast v1, Landroid/app/enterprise/EnrollData;
 
-    .line 140
     .local v1, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v1}, Landroid/app/enterprise/EnrollData;->getConstrainedState()I
 
@@ -2479,10 +2236,8 @@
 
     if-nez v4, :cond_0
 
-    .line 141
     const/4 v0, 0x1
 
-    .line 147
     .end local v1    # "data":Landroid/app/enterprise/EnrollData;
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_1
@@ -2495,28 +2250,23 @@
     .param p2, "packageURI"    # Landroid/net/Uri;
 
     .prologue
-    .line 630
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 635
     .local v4, "archiveFilePath":Ljava/lang/String;
     new-instance v11, Landroid/content/pm/PackageParser;
 
     invoke-direct {v11}, Landroid/content/pm/PackageParser;-><init>()V
 
-    .line 636
     .local v11, "packageParser":Landroid/content/pm/PackageParser;
     new-instance v14, Ljava/io/File;
 
     invoke-direct {v14, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 637
     .local v14, "sourceFile":Ljava/io/File;
     const/4 v12, 0x0
 
-    .line 639
     .local v12, "pkgInst":Landroid/content/pm/PackageParser$Package;
     const/4 v15, 0x0
 
@@ -2525,17 +2275,14 @@
 
     move-result-object v12
 
-    .line 640
     if-eqz v12, :cond_0
 
-    .line 641
     const/4 v15, 0x0
 
     invoke-virtual {v11, v12, v15}, Landroid/content/pm/PackageParser;->collectCertificates(Landroid/content/pm/PackageParser$Package;I)V
     :try_end_0
     .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 651
     :cond_0
     if-eqz p1, :cond_1
 
@@ -2545,49 +2292,40 @@
 
     if-nez v15, :cond_3
 
-    .line 652
     :cond_1
     const-string v15, "ConstrainedState"
 
-    const-string/jumbo v16, "something\'s wrong"
+    const-string v16, "something\'s wrong"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
     :cond_2
     const/4 v15, 0x0
 
     :goto_0
     return v15
 
-    .line 643
     :catch_0
     move-exception v7
 
-    .line 644
     .local v7, "e":Landroid/content/pm/PackageParser$PackageParserException;
     const/4 v12, 0x0
 
-    .line 645
     invoke-virtual {v7}, Landroid/content/pm/PackageParser$PackageParserException;->printStackTrace()V
 
-    .line 648
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 654
     .end local v7    # "e":Landroid/content/pm/PackageParser$PackageParserException;
     :cond_3
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getConstrainedStateAll()Ljava/util/List;
 
     move-result-object v6
 
-    .line 655
     .local v6, "dataList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     if-eqz v6, :cond_2
 
-    .line 656
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -2606,7 +2344,6 @@
 
     check-cast v5, Landroid/app/enterprise/EnrollData;
 
-    .line 659
     .local v5, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v5}, Landroid/app/enterprise/EnrollData;->getPackageName()Ljava/lang/String;
 
@@ -2620,37 +2357,30 @@
 
     if-eqz v15, :cond_4
 
-    .line 660
     invoke-virtual {v5}, Landroid/app/enterprise/EnrollData;->getSignature()[B
 
     move-result-object v9
 
-    .line 661
     .local v9, "orig":[B
     if-nez v9, :cond_5
 
-    .line 664
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 666
     :cond_5
     new-instance v13, Ljava/lang/String;
 
     invoke-direct {v13, v9}, Ljava/lang/String;-><init>([B)V
 
-    .line 667
     .local v13, "s":Ljava/lang/String;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 668
     .local v10, "origsig":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v10, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 670
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -2659,41 +2389,34 @@
 
     move-result-object v2
 
-    .line 671
     .local v2, "appPkgInfo":Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;
     if-eqz v2, :cond_4
 
-    .line 672
     new-instance v3, Ljava/util/ArrayList;
 
     iget-object v15, v2, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->signatures:Ljava/util/List;
 
     invoke-direct {v3, v15}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 673
     .local v3, "appSignatures":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3, v10}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
-    .line 674
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v15
 
     if-eqz v15, :cond_6
 
-    .line 675
     const-string v15, "ConstrainedState"
 
-    const-string/jumbo v16, "signature check success"
+    const-string v16, "signature check success"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 676
     const/4 v15, 0x1
 
     goto :goto_0
 
-    .line 678
     :cond_6
     const-string v15, "ConstrainedState"
 
@@ -2701,7 +2424,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 679
     const/4 v15, 0x0
 
     goto :goto_0
@@ -2713,28 +2435,23 @@
     .param p2, "packageURI"    # Landroid/net/Uri;
 
     .prologue
-    .line 691
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 696
     .local v4, "archiveFilePath":Ljava/lang/String;
     new-instance v11, Landroid/content/pm/PackageParser;
 
     invoke-direct {v11}, Landroid/content/pm/PackageParser;-><init>()V
 
-    .line 697
     .local v11, "packageParser":Landroid/content/pm/PackageParser;
     new-instance v14, Ljava/io/File;
 
     invoke-direct {v14, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 698
     .local v14, "sourceFile":Ljava/io/File;
     const/4 v12, 0x0
 
-    .line 700
     .local v12, "pkgInst":Landroid/content/pm/PackageParser$Package;
     const/4 v15, 0x0
 
@@ -2743,17 +2460,14 @@
 
     move-result-object v12
 
-    .line 701
     if-eqz v12, :cond_0
 
-    .line 702
     const/4 v15, 0x0
 
     invoke-virtual {v11, v12, v15}, Landroid/content/pm/PackageParser;->collectCertificates(Landroid/content/pm/PackageParser$Package;I)V
     :try_end_0
     .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 712
     :cond_0
     if-eqz p1, :cond_1
 
@@ -2763,49 +2477,40 @@
 
     if-nez v15, :cond_3
 
-    .line 713
     :cond_1
     const-string v15, "ConstrainedState"
 
-    const-string/jumbo v16, "something\'s wrong"
+    const-string v16, "something\'s wrong"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
     :cond_2
     const/4 v15, 0x0
 
     :goto_0
     return v15
 
-    .line 704
     :catch_0
     move-exception v7
 
-    .line 705
     .local v7, "e":Landroid/content/pm/PackageParser$PackageParserException;
     const/4 v12, 0x0
 
-    .line 706
     invoke-virtual {v7}, Landroid/content/pm/PackageParser$PackageParserException;->printStackTrace()V
 
-    .line 709
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 715
     .end local v7    # "e":Landroid/content/pm/PackageParser$PackageParserException;
     :cond_3
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getConstrainedStateAll()Ljava/util/List;
 
     move-result-object v6
 
-    .line 716
     .local v6, "dataList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     if-eqz v6, :cond_2
 
-    .line 717
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -2824,7 +2529,6 @@
 
     check-cast v5, Landroid/app/enterprise/EnrollData;
 
-    .line 720
     .local v5, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v5}, Landroid/app/enterprise/EnrollData;->getTargetPkgName()Ljava/lang/String;
 
@@ -2844,37 +2548,30 @@
 
     if-eqz v15, :cond_4
 
-    .line 721
     invoke-virtual {v5}, Landroid/app/enterprise/EnrollData;->getSignature()[B
 
     move-result-object v9
 
-    .line 722
     .local v9, "orig":[B
     if-nez v9, :cond_5
 
-    .line 725
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 727
     :cond_5
     new-instance v13, Ljava/lang/String;
 
     invoke-direct {v13, v9}, Ljava/lang/String;-><init>([B)V
 
-    .line 728
     .local v13, "s":Ljava/lang/String;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 729
     .local v10, "origsig":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v10, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 731
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -2883,41 +2580,34 @@
 
     move-result-object v2
 
-    .line 732
     .local v2, "appPkgInfo":Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;
     if-eqz v2, :cond_4
 
-    .line 733
     new-instance v3, Ljava/util/ArrayList;
 
     iget-object v15, v2, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->signatures:Ljava/util/List;
 
     invoke-direct {v3, v15}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 734
     .local v3, "appSignatures":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3, v10}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
-    .line 735
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v15
 
     if-eqz v15, :cond_6
 
-    .line 736
     const-string v15, "ConstrainedState"
 
-    const-string/jumbo v16, "signature check success"
+    const-string v16, "signature check success"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 737
     const/4 v15, 0x1
 
     goto :goto_0
 
-    .line 739
     :cond_6
     const-string v15, "ConstrainedState"
 
@@ -2925,7 +2615,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
     const/4 v15, 0x0
 
     goto :goto_0
@@ -2936,16 +2625,13 @@
     .param p1, "adminUid"    # I
 
     .prologue
-    .line 164
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 165
     .local v0, "callingUid":I
     if-eq p1, v0, :cond_0
 
-    .line 168
     iget-object v5, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mContext:Landroid/content/Context;
 
     const-string v6, "android.permission.BIND_DEVICE_ADMIN"
@@ -2954,15 +2640,13 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
     :cond_0
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 174
     .local v2, "cvWhere":Landroid/content/ContentValues;
-    const-string/jumbo v5, "status"
+    const-string v5, "status"
 
     const/4 v6, 0x1
 
@@ -2972,7 +2656,6 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 175
     const-string v5, "adminUid"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2981,10 +2664,8 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 176
     const-string v1, "adminUid"
 
-    .line 178
     .local v1, "column":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2994,31 +2675,25 @@
 
     move-result-object v4
 
-    .line 180
     .local v4, "result":Landroid/content/ContentValues;
     if-eqz v4, :cond_2
 
-    .line 181
     iget-object v5, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 182
     .local v3, "pkgName":Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 183
     invoke-direct {p0, p1, v3}, Lcom/android/server/enterprise/utils/ConstrainedState;->disableConstrainedStateInternal(ILjava/lang/String;)Z
 
-    .line 187
     .end local v3    # "pkgName":Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
 
-    .line 185
     :cond_2
     const-string v5, "ConstrainedState"
 
@@ -3034,7 +2709,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 565
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v1
@@ -3045,7 +2719,6 @@
 
     move-result-object p1
 
-    .line 566
     iget-object v1, p0, Lcom/android/server/enterprise/utils/ConstrainedState;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -3054,7 +2727,6 @@
 
     move-result-object v0
 
-    .line 567
     .local v0, "pkgName":Ljava/lang/String;
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -3075,7 +2747,6 @@
     .param p6, "PolicyBitMask"    # I
 
     .prologue
-    .line 385
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v33
@@ -3092,17 +2763,13 @@
 
     move-result-object p1
 
-    .line 387
     if-gtz p6, :cond_0
 
-    .line 388
     const/16 v33, 0x0
 
-    .line 519
     :goto_0
     return v33
 
-    .line 391
     :cond_0
     move-object/from16 v0, p0
 
@@ -3124,13 +2791,11 @@
 
     move-result-object v23
 
-    .line 393
     .local v23, "pkgName":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v34
 
-    .line 395
     .local v34, "token":J
     :try_start_0
     new-instance v8, Ljava/io/File;
@@ -3141,7 +2806,6 @@
 
     invoke-direct {v8, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 396
     .local v8, "dataDir":Ljava/io/File;
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
@@ -3149,10 +2813,8 @@
 
     if-nez v33, :cond_1
 
-    .line 397
     invoke-virtual {v8}, Ljava/io/File;->mkdirs()Z
 
-    .line 400
     :cond_1
     move-object/from16 v0, p0
 
@@ -3162,7 +2824,6 @@
 
     if-eqz v33, :cond_3
 
-    .line 401
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/utils/ConstrainedState;->cachedConstrainedData:Ljava/util/HashMap;
@@ -3177,7 +2838,6 @@
 
     move-result-object v13
 
-    .line 402
     .local v13, "it":Ljava/util/Iterator;
     :cond_2
     invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
@@ -3186,14 +2846,12 @@
 
     if-eqz v33, :cond_3
 
-    .line 403
     invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Ljava/lang/String;
 
-    .line 404
     .local v14, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3209,7 +2867,6 @@
 
     check-cast v7, Landroid/app/enterprise/EnrollData;
 
-    .line 405
     .local v7, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v7}, Landroid/app/enterprise/EnrollData;->getPackageName()Ljava/lang/String;
 
@@ -3225,7 +2882,6 @@
 
     if-eqz v33, :cond_2
 
-    .line 406
     const-string v33, "ConstrainedState"
 
     const-string v36, "already existing values // update"
@@ -3236,7 +2892,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
     new-instance v10, Ljava/io/File;
 
     const-string v33, "/efs/constrained"
@@ -3245,14 +2900,12 @@
 
     invoke-direct {v10, v0, v14}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 408
     .local v10, "file":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 414
     .end local v7    # "data":Landroid/app/enterprise/EnrollData;
     .end local v10    # "file":Ljava/io/File;
     .end local v13    # "it":Ljava/util/Iterator;
@@ -3260,11 +2913,9 @@
     :cond_3
     const/16 v17, 0x0
 
-    .line 415
     .local v17, "os":Ljava/io/FileOutputStream;
     const/16 v19, 0x0
 
-    .line 417
     .local v19, "outFile":Ljava/io/File;
     :try_start_1
     new-instance v33, Ljava/lang/StringBuilder;
@@ -3301,7 +2952,6 @@
 
     move-result-object v32
 
-    .line 418
     .local v32, "temp":Ljava/lang/String;
     invoke-virtual/range {v32 .. v32}, Ljava/lang/String;->hashCode()I
 
@@ -3311,7 +2961,6 @@
 
     and-int v11, v33, v36
 
-    .line 419
     .local v11, "hash":I
     new-instance v20, Ljava/io/File;
 
@@ -3332,7 +2981,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 420
     .end local v19    # "outFile":Ljava/io/File;
     .local v20, "outFile":Ljava/io/File;
     :goto_1
@@ -3343,10 +2991,8 @@
 
     if-eqz v33, :cond_4
 
-    .line 421
     add-int/lit8 v11, v11, 0x1
 
-    .line 422
     new-instance v19, Ljava/io/File;
 
     const-string v33, "/efs/constrained"
@@ -3371,7 +3017,6 @@
     .restart local v20    # "outFile":Ljava/io/File;
     goto :goto_1
 
-    .line 425
     :cond_4
     const/16 v33, 0x4
 
@@ -3427,7 +3072,6 @@
 
     aput-byte v36, v25, v33
 
-    .line 431
     .local v25, "policyBitMaskByteBuffer":[B
     new-instance v18, Ljava/io/FileOutputStream;
 
@@ -3440,7 +3084,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_7
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 433
     .end local v17    # "os":Ljava/io/FileOutputStream;
     .local v18, "os":Ljava/io/FileOutputStream;
     if-eqz p4, :cond_8
@@ -3452,8 +3095,7 @@
 
     if-lez v33, :cond_8
 
-    .line 434
-    const-string/jumbo v33, "normalv3"
+    const-string v33, "normalv3"
 
     invoke-virtual/range {v33 .. v33}, Ljava/lang/String;->getBytes()[B
 
@@ -3465,7 +3107,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 440
     :goto_2
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
@@ -3475,7 +3116,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 441
     invoke-virtual/range {v23 .. v23}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v33
@@ -3486,7 +3126,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 442
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
     move-object/from16 v0, v18
@@ -3495,7 +3134,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 443
     if-eqz p2, :cond_c
 
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->length()I
@@ -3504,7 +3142,6 @@
 
     if-lez v33, :cond_c
 
-    .line 444
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v33
@@ -3515,7 +3152,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 448
     :goto_3
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
@@ -3525,14 +3161,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 449
     move-object/from16 v0, v18
 
     move-object/from16 v1, v25
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 450
     if-eqz p3, :cond_5
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->length()I
@@ -3541,7 +3175,6 @@
 
     if-lez v33, :cond_5
 
-    .line 451
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
     move-object/from16 v0, v18
@@ -3550,7 +3183,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 452
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v33
@@ -3561,7 +3193,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 454
     if-eqz p4, :cond_d
 
     invoke-virtual/range {p4 .. p4}, Ljava/lang/String;->length()I
@@ -3572,7 +3203,6 @@
 
     if-eqz p5, :cond_d
 
-    .line 455
     new-instance v30, Landroid/content/pm/Signature;
 
     invoke-virtual/range {p5 .. p5}, Ljava/lang/String;->getBytes()[B
@@ -3585,13 +3215,11 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/Signature;-><init>([B)V
 
-    .line 456
     .local v30, "targetSig":Landroid/content/pm/Signature;
     invoke-virtual/range {v30 .. v30}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v31
 
-    .line 457
     .local v31, "targetSigBytes":[B
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
@@ -3601,14 +3229,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 458
     move-object/from16 v0, v18
 
     move-object/from16 v1, v31
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 459
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
     move-object/from16 v0, v18
@@ -3617,7 +3243,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 460
     invoke-virtual/range {p4 .. p4}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v33
@@ -3628,23 +3253,19 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 487
     .end local v30    # "targetSig":Landroid/content/pm/Signature;
     .end local v31    # "targetSigBytes":[B
     :cond_5
     :goto_4
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 488
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 489
     const/16 v17, 0x0
 
-    .line 491
     .end local v18    # "os":Ljava/io/FileOutputStream;
     .restart local v17    # "os":Ljava/io/FileOutputStream;
     :try_start_4
@@ -3662,7 +3283,7 @@
 
     const-string v37, "ConstrainedStateTable"
 
-    const-string/jumbo v38, "status"
+    const-string v38, "status"
 
     const/16 v39, 0x1
 
@@ -3680,41 +3301,33 @@
 
     move-result v26
 
-    .line 495
     .local v26, "ret":Z
     if-nez v26, :cond_10
 
-    .line 496
     if-eqz v20, :cond_6
 
-    .line 497
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->delete()Z
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_7
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 498
     :cond_6
     const/16 v33, 0x0
 
-    .line 507
     if-eqz v17, :cond_7
 
-    .line 508
     :try_start_5
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 516
     :cond_7
     :goto_5
     invoke-static/range {v34 .. v35}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 435
     .end local v17    # "os":Ljava/io/FileOutputStream;
     .end local v26    # "ret":Z
     .restart local v18    # "os":Ljava/io/FileOutputStream;
@@ -3728,8 +3341,7 @@
 
     if-lez v33, :cond_a
 
-    .line 436
-    const-string/jumbo v33, "normalv2"
+    const-string v33, "normalv2"
 
     invoke-virtual/range {v33 .. v33}, Ljava/lang/String;->getBytes()[B
 
@@ -3746,7 +3358,6 @@
 
     goto/16 :goto_2
 
-    .line 503
     :catch_0
     move-exception v9
 
@@ -3756,7 +3367,6 @@
     .restart local v19    # "outFile":Ljava/io/File;
     move-object/from16 v17, v18
 
-    .line 504
     .end local v11    # "hash":I
     .end local v18    # "os":Ljava/io/FileOutputStream;
     .end local v25    # "policyBitMaskByteBuffer":[B
@@ -3769,22 +3379,18 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 507
     if-eqz v17, :cond_9
 
-    .line 508
     :try_start_8
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_4
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 516
     :cond_9
     :goto_7
     invoke-static/range {v34 .. v35}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 519
     .end local v8    # "dataDir":Ljava/io/File;
     .end local v17    # "os":Ljava/io/FileOutputStream;
     .end local v19    # "outFile":Ljava/io/File;
@@ -3793,7 +3399,6 @@
 
     goto/16 :goto_0
 
-    .line 438
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v8    # "dataDir":Ljava/io/File;
     .restart local v11    # "hash":I
@@ -3803,7 +3408,7 @@
     .restart local v32    # "temp":Ljava/lang/String;
     :cond_a
     :try_start_9
-    const-string/jumbo v33, "normal"
+    const-string v33, "normal"
 
     invoke-virtual/range {v33 .. v33}, Ljava/lang/String;->getBytes()[B
 
@@ -3820,7 +3425,6 @@
 
     goto/16 :goto_2
 
-    .line 506
     :catchall_0
     move-exception v33
 
@@ -3830,7 +3434,6 @@
     .restart local v19    # "outFile":Ljava/io/File;
     move-object/from16 v17, v18
 
-    .line 507
     .end local v11    # "hash":I
     .end local v18    # "os":Ljava/io/FileOutputStream;
     .end local v25    # "policyBitMaskByteBuffer":[B
@@ -3839,14 +3442,12 @@
     :goto_9
     if-eqz v17, :cond_b
 
-    .line 508
     :try_start_a
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_5
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 511
     :cond_b
     :goto_a
     :try_start_b
@@ -3855,26 +3456,22 @@
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_1
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 513
     .end local v8    # "dataDir":Ljava/io/File;
     .end local v17    # "os":Ljava/io/FileOutputStream;
     .end local v19    # "outFile":Ljava/io/File;
     :catch_1
     move-exception v9
 
-    .line 514
     .restart local v9    # "e":Ljava/lang/Exception;
     :try_start_c
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 516
     invoke-static/range {v34 .. v35}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_8
 
-    .line 446
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v8    # "dataDir":Ljava/io/File;
     .restart local v11    # "hash":I
@@ -3898,11 +3495,9 @@
 
     goto/16 :goto_3
 
-    .line 462
     :cond_d
     const/16 v21, 0x0
 
-    .line 463
     .local v21, "pkgCert":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3914,7 +3509,6 @@
 
     move-result-object v16
 
-    .line 465
     .local v16, "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     const/16 v33, 0x40
 
@@ -3932,18 +3526,15 @@
 
     move-result-object v22
 
-    .line 468
     .local v22, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v22, :cond_e
 
-    .line 469
     move-object/from16 v0, v22
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     move-object/from16 v29, v0
 
-    .line 470
     .local v29, "signs":[Landroid/content/pm/Signature;
     move-object/from16 v6, v29
 
@@ -3959,16 +3550,13 @@
 
     aget-object v28, v6, v12
 
-    .line 471
     .local v28, "sign":Landroid/content/pm/Signature;
     if-eqz v28, :cond_f
 
-    .line 472
     invoke-virtual/range {v28 .. v28}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 478
     .end local v6    # "arr$":[Landroid/content/pm/Signature;
     .end local v12    # "i$":I
     .end local v15    # "len$":I
@@ -3977,7 +3565,6 @@
     :cond_e
     if-eqz v21, :cond_5
 
-    .line 479
     new-instance v27, Landroid/content/pm/Signature;
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->getBytes()[B
@@ -3990,13 +3577,11 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/Signature;-><init>([B)V
 
-    .line 480
     .local v27, "sig":Landroid/content/pm/Signature;
     invoke-virtual/range {v27 .. v27}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v24
 
-    .line 481
     .local v24, "pkgSigBytes":[B
     sget-object v33, Lcom/android/server/enterprise/utils/ConstrainedState;->CONSTRAINED_DELIMITER:[B
 
@@ -4006,7 +3591,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 482
     move-object/from16 v0, v18
 
     move-object/from16 v1, v24
@@ -4018,7 +3602,6 @@
 
     goto/16 :goto_4
 
-    .line 470
     .end local v24    # "pkgSigBytes":[B
     .end local v27    # "sig":Landroid/content/pm/Signature;
     .restart local v6    # "arr$":[Landroid/content/pm/Signature;
@@ -4031,7 +3614,6 @@
 
     goto :goto_b
 
-    .line 509
     .end local v6    # "arr$":[Landroid/content/pm/Signature;
     .end local v12    # "i$":I
     .end local v15    # "len$":I
@@ -4046,7 +3628,6 @@
     :catch_2
     move-exception v9
 
-    .line 510
     .restart local v9    # "e":Ljava/lang/Exception;
     :try_start_e
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
@@ -4056,7 +3637,6 @@
 
     goto/16 :goto_5
 
-    .line 516
     .end local v8    # "dataDir":Ljava/io/File;
     .end local v9    # "e":Ljava/lang/Exception;
     .end local v11    # "hash":I
@@ -4072,7 +3652,6 @@
 
     throw v33
 
-    .line 500
     .restart local v8    # "dataDir":Ljava/io/File;
     .restart local v11    # "hash":I
     .restart local v17    # "os":Ljava/io/FileOutputStream;
@@ -4093,38 +3672,31 @@
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_7
     .catchall {:try_start_f .. :try_end_f} :catchall_3
 
-    .line 501
     const/16 v33, 0x1
 
-    .line 507
     if-eqz v17, :cond_11
 
-    .line 508
     :try_start_10
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_3
     .catchall {:try_start_10 .. :try_end_10} :catchall_1
 
-    .line 516
     :cond_11
     :goto_c
     invoke-static/range {v34 .. v35}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 509
     :catch_3
     move-exception v9
 
-    .line 510
     .restart local v9    # "e":Ljava/lang/Exception;
     :try_start_11
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_c
 
-    .line 509
     .end local v11    # "hash":I
     .end local v20    # "outFile":Ljava/io/File;
     .end local v25    # "policyBitMaskByteBuffer":[B
@@ -4134,17 +3706,14 @@
     :catch_4
     move-exception v9
 
-    .line 510
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_7
 
-    .line 509
     .end local v9    # "e":Ljava/lang/Exception;
     :catch_5
     move-exception v9
 
-    .line 510
     .restart local v9    # "e":Ljava/lang/Exception;
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_11
@@ -4153,7 +3722,6 @@
 
     goto/16 :goto_a
 
-    .line 506
     .end local v9    # "e":Ljava/lang/Exception;
     :catchall_2
     move-exception v33
@@ -4173,7 +3741,6 @@
     .restart local v19    # "outFile":Ljava/io/File;
     goto/16 :goto_9
 
-    .line 503
     .end local v11    # "hash":I
     .end local v32    # "temp":Ljava/lang/String;
     :catch_6
@@ -4199,23 +3766,18 @@
     .locals 5
 
     .prologue
-    .line 611
     const/4 v3, 0x0
 
-    .line 613
     .local v3, "ret":I
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getConstrainedStateAll()Ljava/util/List;
 
     move-result-object v1
 
-    .line 615
     .local v1, "dataList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     if-eqz v1, :cond_1
 
-    .line 616
     const/4 v3, 0x1
 
-    .line 618
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -4234,7 +3796,6 @@
 
     check-cast v0, Landroid/app/enterprise/EnrollData;
 
-    .line 619
     .local v0, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v0}, Landroid/app/enterprise/EnrollData;->getConstrainedState()I
 
@@ -4242,10 +3803,8 @@
 
     if-nez v4, :cond_0
 
-    .line 620
     const/4 v3, 0x2
 
-    .line 626
     .end local v0    # "data":Landroid/app/enterprise/EnrollData;
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_1
@@ -4257,20 +3816,16 @@
     .param p1, "bitMask"    # I
 
     .prologue
-    .line 594
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getConstrainedStateAll()Ljava/util/List;
 
     move-result-object v1
 
-    .line 595
     .local v1, "dataList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnrollData;>;"
     const/4 v3, 0x0
 
-    .line 597
     .local v3, "policyBitMask":I
     if-eqz v1, :cond_1
 
-    .line 598
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -4289,7 +3844,6 @@
 
     check-cast v0, Landroid/app/enterprise/EnrollData;
 
-    .line 599
     .local v0, "data":Landroid/app/enterprise/EnrollData;
     invoke-virtual {v0}, Landroid/app/enterprise/EnrollData;->getConstrainedState()I
 
@@ -4297,20 +3851,16 @@
 
     if-nez v4, :cond_0
 
-    .line 600
     invoke-virtual {v0}, Landroid/app/enterprise/EnrollData;->getPolicyBitMask()I
 
     move-result v3
 
-    .line 601
     and-int v4, v3, p1
 
     if-lez v4, :cond_0
 
-    .line 602
     const/4 v4, 0x1
 
-    .line 607
     .end local v0    # "data":Landroid/app/enterprise/EnrollData;
     .end local v2    # "i$":Ljava/util/Iterator;
     :goto_0

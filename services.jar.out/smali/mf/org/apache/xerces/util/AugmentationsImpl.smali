@@ -25,17 +25,14 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Lmf/org/apache/xerces/util/AugmentationsImpl$SmallContainer;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/util/AugmentationsImpl$SmallContainer;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
-    .line 39
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     iget-object v0, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v0, p1}, Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;->getItem(Ljava/lang/Object;)Ljava/lang/Object;
@@ -60,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;->keys()Ljava/util/Enumeration;
@@ -76,14 +71,12 @@
     .param p2, "item"    # Ljava/lang/Object;
 
     .prologue
-    .line 54
     iget-object v1, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v1, p1, p2}, Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;->putItem(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 56
     .local v0, "oldValue":Ljava/lang/Object;
     if-nez v0, :cond_0
 
@@ -95,7 +88,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 57
     iget-object v1, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v1}, Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;->expand()Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
@@ -104,7 +96,6 @@
 
     iput-object v1, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
-    .line 60
     :cond_0
     return-object v0
 .end method
@@ -113,12 +104,10 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;->clear()V
 
-    .line 97
     return-void
 .end method
 
@@ -127,7 +116,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 81
     iget-object v0, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v0, p1}, Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;->removeItem(Ljava/lang/Object;)Ljava/lang/Object;
@@ -141,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lmf/org/apache/xerces/util/AugmentationsImpl;->fAugmentationsContainer:Lmf/org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .end annotation
 
     .prologue
-    .line 40
     const-string v0, "false"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -44,15 +42,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 41
     :cond_0
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 44
     :goto_0
     return-object v0
 
-    .line 43
     :cond_1
     const-string v0, "true"
 
@@ -70,13 +65,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 44
     :cond_2
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_0
 
-    .line 46
     :cond_3
     new-instance v0, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
@@ -105,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/16 v0, 0x18
 
     return v0

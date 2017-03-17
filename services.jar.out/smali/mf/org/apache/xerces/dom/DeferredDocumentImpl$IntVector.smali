@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 2098
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,24 +37,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2142
     iget-object v1, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
     if-nez v1, :cond_1
 
-    .line 2143
     add-int/lit8 v1, p1, 0xf
 
     new-array v1, v1, [I
 
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
-    .line 2151
     :cond_0
     :goto_0
     return-void
 
-    .line 2145
     :cond_1
     iget-object v1, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
@@ -63,12 +58,10 @@
 
     if-le p1, v1, :cond_0
 
-    .line 2146
     add-int/lit8 v1, p1, 0xf
 
     new-array v0, v1, [I
 
-    .line 2147
     .local v0, "newdata":[I
     iget-object v1, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
@@ -78,7 +71,6 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2148
     iput-object v0, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
     goto :goto_0
@@ -91,14 +83,12 @@
     .param p1, "element"    # I
 
     .prologue
-    .line 2126
     iget v0, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->size:I
 
     add-int/lit8 v0, v0, 0x1
 
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->ensureCapacity(I)V
 
-    .line 2127
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
     iget v1, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->size:I
@@ -109,7 +99,6 @@
 
     aput p1, v0, v1
 
-    .line 2128
     return-void
 .end method
 
@@ -118,7 +107,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 2121
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->data:[I
 
     aget v0, v0, p1
@@ -130,12 +118,10 @@
     .locals 1
 
     .prologue
-    .line 2132
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->size:I
 
-    .line 2133
     return-void
 .end method
 
@@ -143,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 2116
     iget v0, p0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl$IntVector;->size:I
 
     return v0

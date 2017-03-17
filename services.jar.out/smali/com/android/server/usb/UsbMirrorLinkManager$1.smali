@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
 
     .prologue
-    .line 67
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbMirrorLinkManager;->access$000()Ljava/lang/String;
 
@@ -68,14 +66,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     const-string v0, "NCM_DEVICE"
 
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 71
     .local v6, "mirrorlink":Ljava/lang/String;
     new-instance v7, Landroid/content/Intent;
 
@@ -83,13 +79,11 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 72
     .local v7, "mlCommand":Landroid/content/Intent;
-    const-string/jumbo v0, "mirrorlink"
+    const-string v0, "mirrorlink"
 
     invoke-virtual {v7, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->mContext:Landroid/content/Context;
@@ -99,7 +93,6 @@
 
     invoke-virtual {v0, v7}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 76
     const-string v0, "START"
 
     invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -108,17 +101,15 @@
 
     if-eqz v0, :cond_3
 
-    .line 77
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbMirrorLinkManager;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "usb: f/w ncm start uevent receive "
+    const-string v1, "usb: f/w ncm start uevent receive "
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
@@ -128,7 +119,6 @@
 
     if-nez v0, :cond_0
 
-    .line 82
     iget-object v9, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
     new-instance v0, Landroid/os/DVFSHelper;
@@ -151,7 +141,6 @@
     # setter for: Lcom/android/server/usb/UsbMirrorLinkManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
     invoke-static {v9, v0}, Lcom/android/server/usb/UsbMirrorLinkManager;->access$202(Lcom/android/server/usb/UsbMirrorLinkManager;Landroid/os/DVFSHelper;)Landroid/os/DVFSHelper;
 
-    .line 85
     :cond_0
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
@@ -162,7 +151,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
@@ -174,7 +162,6 @@
 
     move-result-object v8
 
-    .line 88
     .local v8, "supportedCPUFreqTable":[I
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
@@ -204,7 +191,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/usb/UsbMirrorLinkManager$1;->this$0:Lcom/android/server/usb/UsbMirrorLinkManager;
 
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
@@ -216,13 +202,11 @@
 
     invoke-virtual {v0, v1}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 100
     .end local v8    # "supportedCPUFreqTable":[I
     :cond_1
     :goto_0
     return-void
 
-    .line 93
     :cond_2
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbMirrorLinkManager;->access$000()Ljava/lang/String;
@@ -235,7 +219,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_3
     const-string v0, "RELEASE"
 
@@ -245,13 +228,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 97
     # getter for: Lcom/android/server/usb/UsbMirrorLinkManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbMirrorLinkManager;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "usb: f/w ncm release uevent receive"
+    const-string v1, "usb: f/w ncm release uevent receive"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

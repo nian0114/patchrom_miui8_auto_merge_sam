@@ -45,46 +45,36 @@
     .param p3, "msgHandler"    # Lcom/android/server/display/WfdBridgeBase$WBPMsgHandler;
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->this$0:Lcom/android/server/display/WfdBridgeBase;
 
-    .line 131
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 125
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mDevice:Lcom/android/server/display/WfdBridgeBase$BrigePeerDevice;
 
-    .line 126
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mBusyFlag:I
 
-    .line 127
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mIsLegacyDevice:Z
 
-    .line 128
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mWbpVersion:F
 
-    .line 132
     const-string v1, "WfdBridgeBase::BridgePeer"
 
     const-string v2, "Create BridgePeer"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     iput-object p3, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mMsgHandler:Lcom/android/server/display/WfdBridgeBase$WBPMsgHandler;
 
-    .line 135
     iput-object p2, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
-    .line 138
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -102,7 +92,6 @@
 
     iput-object v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocReader:Ljava/io/BufferedReader;
 
-    .line 139
     new-instance v1, Ljava/io/PrintWriter;
 
     iget-object v2, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
@@ -117,18 +106,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 144
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->start()V
 
-    .line 145
     return-void
 
-    .line 140
     :catch_0
     move-exception v0
 
-    .line 141
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "WfdBridgeBase::BridgePeer"
 
@@ -147,35 +132,29 @@
     .locals 3
 
     .prologue
-    .line 162
     const-string v1, "WfdBridgeBase::BridgePeer"
 
     const-string v2, "Close Socket"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     invoke-virtual {v1}, Ljava/net/Socket;->close()V
 
-    .line 165
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 169
     :goto_0
     return-void
 
-    .line 166
     :catch_0
     move-exception v0
 
-    .line 167
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "WfdBridgeBase::BridgePeer"
 
@@ -192,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->getInetAddress()Ljava/net/InetAddress;
@@ -206,19 +184,16 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     if-eqz v0, :cond_0
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->isClosed()Z
 
     move-result v0
 
-    .line 158
     :goto_0
     return v0
 
@@ -232,19 +207,16 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     if-eqz v0, :cond_0
 
-    .line 149
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->isConnected()Z
 
     move-result v0
 
-    .line 151
     :goto_0
     return v0
 
@@ -258,20 +230,16 @@
     .locals 9
 
     .prologue
-    .line 192
     const/4 v2, 0x0
 
-    .line 193
     .local v2, "msg":Ljava/lang/String;
     const/16 v5, 0x100
 
     new-array v0, v5, [C
 
-    .line 194
     .local v0, "buf":[C
     const/4 v4, 0x0
 
-    .line 196
     .local v4, "readLen":I
     :goto_0
     iget-object v5, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
@@ -286,7 +254,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 198
     :try_start_0
     iget-object v5, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocReader:Ljava/io/BufferedReader;
 
@@ -300,7 +267,6 @@
 
     if-lez v4, :cond_1
 
-    .line 199
     new-instance v3, Ljava/lang/String;
 
     const/4 v5, 0x0
@@ -309,7 +275,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     .end local v2    # "msg":Ljava/lang/String;
     .local v3, "msg":Ljava/lang/String;
     :try_start_1
@@ -319,7 +284,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "len: "
+    const-string v7, "len: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -345,7 +310,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     const-string v5, "\r\n\r\n"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -354,7 +318,6 @@
 
     if-lez v5, :cond_0
 
-    .line 203
     iget-object v5, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mMsgHandler:Lcom/android/server/display/WfdBridgeBase$WBPMsgHandler;
 
     new-instance v6, Lcom/android/server/display/WfdBridgeBase$WBPMsg;
@@ -373,7 +336,6 @@
     .restart local v2    # "msg":Ljava/lang/String;
     goto :goto_0
 
-    .line 205
     .end local v2    # "msg":Ljava/lang/String;
     .restart local v3    # "msg":Ljava/lang/String;
     :cond_0
@@ -397,7 +359,6 @@
     .restart local v2    # "msg":Ljava/lang/String;
     goto :goto_0
 
-    .line 209
     :cond_1
     const-wide/16 v6, 0xa
 
@@ -408,11 +369,9 @@
 
     goto :goto_0
 
-    .line 212
     :catch_0
     move-exception v1
 
-    .line 213
     .local v1, "e":Ljava/lang/Exception;
     :goto_1
     const-string v5, "WfdBridgeBase::BridgePeer"
@@ -423,7 +382,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     const-string v5, "WfdBridgeBase::BridgePeer"
@@ -432,10 +390,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     return-void
 
-    .line 212
     .end local v2    # "msg":Ljava/lang/String;
     .restart local v3    # "msg":Ljava/lang/String;
     :catch_1
@@ -453,7 +409,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 184
     const-string v0, "WfdBridgeBase::BridgePeer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -476,17 +431,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v0}, Ljava/io/PrintWriter;->flush()V
 
-    .line 187
     const/4 v0, 0x1
 
     return v0
@@ -496,7 +448,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget-object v0, p0, Lcom/android/server/display/WfdBridgeBase$BridgePeer;->mSocket:Ljava/net/Socket;
 
     if-eqz v0, :cond_0
@@ -509,11 +460,9 @@
 
     if-nez v0, :cond_1
 
-    .line 177
     :cond_0
     const/4 v0, 0x0
 
-    .line 180
     :goto_0
     return v0
 

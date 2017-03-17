@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 104
     iput-object p1, p0, Landroid/widget/HorizontalListView$FixedViewInfo;->this$0:Landroid/widget/HorizontalListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

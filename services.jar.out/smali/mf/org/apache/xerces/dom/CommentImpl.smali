@@ -18,10 +18,8 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/dom/CharacterDataImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 50
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const-string v0, "#comment"
 
     return-object v0
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/16 v0, 0x8
 
     return v0

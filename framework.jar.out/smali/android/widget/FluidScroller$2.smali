@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 250
     iput-object p1, p0, Landroid/widget/FluidScroller$2;->this$0:Landroid/widget/FluidScroller;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 253
     iget-object v1, p0, Landroid/widget/FluidScroller$2;->this$0:Landroid/widget/FluidScroller;
 
     iget-object v0, p0, Landroid/widget/FluidScroller$2;->this$0:Landroid/widget/FluidScroller;
@@ -56,10 +54,8 @@
     # setter for: Landroid/widget/FluidScroller;->mShowingPrimary:Z
     invoke-static {v1, v0}, Landroid/widget/FluidScroller;->access$102(Landroid/widget/FluidScroller;Z)Z
 
-    .line 254
     return-void
 
-    .line 253
     :cond_0
     const/4 v0, 0x0
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 910
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$3;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,22 +41,17 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 912
     const-string v7, "1"
 
-    .line 913
     .local v7, "WFC_REGISTERED":Ljava/lang/String;
     const-string v6, "0"
 
-    .line 914
     .local v6, "WFC_NOT_REGISTERED":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 915
     .local v8, "cursor":Landroid/database/Cursor;
     const/4 v10, 0x0
 
-    .line 916
     .local v10, "value":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$3;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -71,7 +65,6 @@
 
     move-result-object v0
 
-    .line 919
     .local v0, "resolver":Landroid/content/ContentResolver;
     :try_start_0
     const-string v1, "content://com.samsung.tmowfc.wfcprovider/registration_state_state_id"
@@ -100,7 +93,6 @@
 
     move-result-object v8
 
-    .line 921
     if-eqz v8, :cond_0
 
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
@@ -109,7 +101,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 922
     const/4 v1, 0x0
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -118,14 +109,11 @@
 
     move-result-object v10
 
-    .line 925
     :cond_0
     if-eqz v8, :cond_1
 
-    .line 926
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 928
     :cond_1
     const-string v1, "GsmSST"
 
@@ -149,7 +137,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 930
     invoke-virtual {v7, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -162,7 +149,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 932
     :cond_2
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$3;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -172,12 +158,10 @@
 
     iput-boolean v2, v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mTmoWfcRegistered:Z
 
-    .line 934
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v9
 
-    .line 935
     .local v9, "updateStatus":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$3;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -188,24 +172,19 @@
 
     invoke-virtual {v9, v1}, Landroid/os/Message;->setTarget(Landroid/os/Handler;)V
 
-    .line 936
     iput v11, v9, Landroid/os/Message;->what:I
 
-    .line 937
     invoke-virtual {v9}, Landroid/os/Message;->sendToTarget()V
 
-    .line 939
     .end local v9    # "updateStatus":Landroid/os/Message;
     :cond_3
     return-void
 
-    .line 925
     :catchall_0
     move-exception v1
 
     if-eqz v8, :cond_4
 
-    .line 926
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_4

@@ -24,7 +24,6 @@
     .param p2, "x0"    # I
 
     .prologue
-    .line 439
     iput-object p1, p0, Lcom/samsung/cpp/CPPProvider$1$2;->this$1:Lcom/samsung/cpp/CPPProvider$1;
 
     invoke-direct {p0, p2}, Landroid/telephony/PhoneStateListener;-><init>(I)V
@@ -39,12 +38,10 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 442
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getState()I
 
     move-result v0
 
-    .line 444
     .local v0, "currentState":I
     return-void
 .end method

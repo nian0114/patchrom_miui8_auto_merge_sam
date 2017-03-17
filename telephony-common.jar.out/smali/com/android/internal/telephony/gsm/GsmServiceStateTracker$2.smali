@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 899
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,10 +39,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 902
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 903
     const-string v0, "GsmSST"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,12 +63,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     # invokes: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updateRegistrationStatus()V
     invoke-static {v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$4300(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;)V
 
-    .line 906
     return-void
 .end method

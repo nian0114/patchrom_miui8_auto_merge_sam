@@ -38,24 +38,18 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p2, p0, Landroid/util/secutil/SmartParser;->mContext:Landroid/content/Context;
 
-    .line 36
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
-    .line 38
     invoke-virtual {p0, p1}, Landroid/util/secutil/SmartParser;->init(Ljava/lang/String;)V
 
-    .line 39
     invoke-virtual {p0}, Landroid/util/secutil/SmartParser;->doParsing()V
 
-    .line 40
     return-void
 .end method
 
@@ -66,22 +60,16 @@
     .param p3, "degree"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object p2, p0, Landroid/util/secutil/SmartParser;->mContext:Landroid/content/Context;
 
-    .line 44
     iput p3, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
-    .line 46
     invoke-virtual {p0, p1}, Landroid/util/secutil/SmartParser;->init(Ljava/lang/String;)V
 
-    .line 47
     invoke-virtual {p0}, Landroid/util/secutil/SmartParser;->doParsing()V
 
-    .line 48
     return-void
 .end method
 
@@ -89,14 +77,12 @@
     .locals 3
 
     .prologue
-    .line 260
     const-string v1, "(\uff03|[[:space:]])+"
 
     invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    .line 261
     .local v0, "p":Ljava/util/regex/Pattern;
     iget-object v1, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -112,7 +98,6 @@
 
     iput-object v1, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 262
     return-void
 .end method
 
@@ -128,18 +113,15 @@
 
     const/4 v6, 0x1
 
-    .line 320
     new-instance v4, Landroid/text/format/Time;
 
     const-string v5, "UTC"
 
     invoke-direct {v4, v5}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 331
     .local v4, "t":Landroid/text/format/Time;
     if-ne p2, v6, :cond_2
 
-    .line 332
     :try_start_0
     const-string v5, "[[[:space:]]\\-\\/\\.\ub144\uc6d4\uc77c]+"
 
@@ -147,13 +129,11 @@
 
     move-result-object v1
 
-    .line 333
     .local v1, "separated":[Ljava/lang/String;
     array-length v5, v1
 
     if-ne v5, v8, :cond_0
 
-    .line 334
     const/4 v5, 0x0
 
     aget-object v5, v1, v5
@@ -164,7 +144,6 @@
 
     iput v5, v4, Landroid/text/format/Time;->year:I
 
-    .line 335
     const/4 v5, 0x1
 
     aget-object v5, v1, v5
@@ -177,7 +156,6 @@
 
     iput v5, v4, Landroid/text/format/Time;->month:I
 
-    .line 336
     const/4 v5, 0x2
 
     aget-object v5, v1, v5
@@ -188,37 +166,32 @@
 
     iput v5, v4, Landroid/text/format/Time;->monthDay:I
 
-    .line 365
     :goto_0
     const/4 v5, 0x0
 
     iput v5, v4, Landroid/text/format/Time;->hour:I
 
-    .line 366
     const/4 v5, 0x0
 
     iput v5, v4, Landroid/text/format/Time;->minute:I
 
-    .line 367
     const/4 v5, 0x0
 
     iput v5, v4, Landroid/text/format/Time;->second:I
 
-    .line 369
     const-string v5, "SmartParser"
 
     const-string v6, "convertDateToMillis() completed successfully"
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     const-string v5, "SmartParser"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "year:"
+    const-string v7, "year:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -296,38 +269,32 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v2
 
-    .line 373
     .local v2, "result":J
     invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 377
     .end local v1    # "separated":[Ljava/lang/String;
     .end local v2    # "result":J
     :goto_1
     return-object v5
 
-    .line 337
     .restart local v1    # "separated":[Ljava/lang/String;
     :cond_0
     array-length v5, v1
 
     if-ne v5, v7, :cond_1
 
-    .line 338
     iget v5, p0, Landroid/util/secutil/SmartParser;->yearOfToday:I
 
     iput v5, v4, Landroid/text/format/Time;->year:I
 
-    .line 339
     const/4 v5, 0x0
 
     aget-object v5, v1, v5
@@ -340,7 +307,6 @@
 
     iput v5, v4, Landroid/text/format/Time;->month:I
 
-    .line 340
     const/4 v5, 0x1
 
     aget-object v5, v1, v5
@@ -355,12 +321,10 @@
 
     goto/16 :goto_0
 
-    .line 375
     .end local v1    # "separated":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 376
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "SmartParser"
 
@@ -388,12 +352,10 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     const-string v5, ""
 
     goto :goto_1
 
-    .line 342
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "separated":[Ljava/lang/String;
     :cond_1
@@ -404,30 +366,25 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     const-string v5, ""
 
     goto :goto_1
 
-    .line 346
     .end local v1    # "separated":[Ljava/lang/String;
     :cond_2
     if-ne p2, v7, :cond_5
 
-    .line 347
     const-string v5, "[[[:space:]]\\,\\.]+"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 348
     .restart local v1    # "separated":[Ljava/lang/String;
     array-length v5, v1
 
     if-ne v5, v8, :cond_3
 
-    .line 349
     const/4 v5, 0x2
 
     aget-object v5, v1, v5
@@ -438,7 +395,6 @@
 
     iput v5, v4, Landroid/text/format/Time;->year:I
 
-    .line 350
     sget-object v5, Landroid/util/secutil/SmartPatterns;->globalDateMap:Ljava/util/Map;
 
     const/4 v6, 0x0
@@ -459,7 +415,6 @@
 
     iput v5, v4, Landroid/text/format/Time;->month:I
 
-    .line 351
     const/4 v5, 0x1
 
     aget-object v5, v1, v5
@@ -476,18 +431,15 @@
 
     goto/16 :goto_0
 
-    .line 352
     :cond_3
     array-length v5, v1
 
     if-ne v5, v7, :cond_4
 
-    .line 353
     iget v5, p0, Landroid/util/secutil/SmartParser;->yearOfToday:I
 
     iput v5, v4, Landroid/text/format/Time;->year:I
 
-    .line 354
     sget-object v5, Landroid/util/secutil/SmartPatterns;->globalDateMap:Ljava/util/Map;
 
     const/4 v6, 0x0
@@ -508,7 +460,6 @@
 
     iput v5, v4, Landroid/text/format/Time;->month:I
 
-    .line 355
     const/4 v5, 0x1
 
     aget-object v5, v1, v5
@@ -525,7 +476,6 @@
 
     goto/16 :goto_0
 
-    .line 357
     :cond_4
     const-string v5, "SmartParser"
 
@@ -533,12 +483,10 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     const-string v5, ""
 
     goto/16 :goto_1
 
-    .line 361
     .end local v1    # "separated":[Ljava/lang/String;
     :cond_5
     const-string v5, "SmartParser"
@@ -547,7 +495,6 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     const-string v5, ""
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -560,14 +507,12 @@
     .param p1, "timeStr"    # Ljava/lang/String;
 
     .prologue
-    .line 396
     new-instance v13, Landroid/text/format/Time;
 
     const-string v14, "UTC"
 
     invoke-direct {v13, v14}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 399
     .local v13, "t":Landroid/text/format/Time;
     :try_start_0
     const-string v14, "((Time|time|\uc2dc\uac04)[[[:space:]]\\:\\;\\-]+)"
@@ -576,7 +521,6 @@
 
     move-result-object v9
 
-    .line 400
     .local v9, "prefixPattern":Ljava/util/regex/Pattern;
     move-object/from16 v0, p1
 
@@ -584,7 +528,6 @@
 
     move-result-object v8
 
-    .line 401
     .local v8, "prefixMatcher":Ljava/util/regex/Matcher;
     move-object/from16 v0, p1
 
@@ -598,20 +541,16 @@
 
     move-result-object p1
 
-    .line 403
     const/4 v14, 0x2
 
     new-array v12, v14, [Ljava/lang/String;
 
-    .line 404
     .local v12, "separated":[Ljava/lang/String;
-    const-string/jumbo v2, "\uc624\uc804"
+    const-string v2, "\uc624\uc804"
 
-    .line 405
     .local v2, "amOfEachCountry":Ljava/lang/String;
-    const-string/jumbo v7, "\uc624\ud6c4"
+    const-string v7, "\uc624\ud6c4"
 
-    .line 407
     .local v7, "pmOfEachCountry":Ljava/lang/String;
     const-string v14, "[0-9]+"
 
@@ -619,7 +558,6 @@
 
     move-result-object v6
 
-    .line 408
     .local v6, "p":Ljava/util/regex/Pattern;
     move-object/from16 v0, p1
 
@@ -627,11 +565,9 @@
 
     move-result-object v5
 
-    .line 410
     .local v5, "m":Ljava/util/regex/Matcher;
     const/4 v4, 0x0
 
-    .line 411
     .local v4, "i":I
     :goto_0
     invoke-virtual {v5}, Ljava/util/regex/Matcher;->find()Z
@@ -640,7 +576,6 @@
 
     if-eqz v14, :cond_0
 
-    .line 412
     const/4 v14, 0x0
 
     invoke-virtual {v5, v14}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -649,12 +584,10 @@
 
     aput-object v14, v12, v4
 
-    .line 413
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 416
     :cond_0
     move-object/from16 v0, p0
 
@@ -662,21 +595,18 @@
 
     iput v14, v13, Landroid/text/format/Time;->year:I
 
-    .line 417
     move-object/from16 v0, p0
 
     iget v14, v0, Landroid/util/secutil/SmartParser;->monthOfToday:I
 
     iput v14, v13, Landroid/text/format/Time;->month:I
 
-    .line 418
     move-object/from16 v0, p0
 
     iget v14, v0, Landroid/util/secutil/SmartParser;->dayOfToday:I
 
     iput v14, v13, Landroid/text/format/Time;->monthDay:I
 
-    .line 420
     const/4 v14, 0x0
 
     aget-object v14, v12, v14
@@ -687,8 +617,7 @@
 
     iput v14, v13, Landroid/text/format/Time;->hour:I
 
-    .line 422
-    const-string/jumbo v14, "pm"
+    const-string v14, "pm"
 
     move-object/from16 v0, p1
 
@@ -716,7 +645,6 @@
 
     if-eqz v14, :cond_3
 
-    .line 423
     :cond_1
     iget v14, v13, Landroid/text/format/Time;->hour:I
 
@@ -724,14 +652,12 @@
 
     if-eq v14, v15, :cond_2
 
-    .line 424
     iget v14, v13, Landroid/text/format/Time;->hour:I
 
     add-int/lit8 v14, v14, 0xc
 
     iput v14, v13, Landroid/text/format/Time;->hour:I
 
-    .line 434
     :cond_2
     :goto_1
     const/4 v14, 0x1
@@ -744,26 +670,23 @@
 
     iput v14, v13, Landroid/text/format/Time;->minute:I
 
-    .line 435
     const/4 v14, 0x0
 
     iput v14, v13, Landroid/text/format/Time;->second:I
 
-    .line 437
     const-string v14, "SmartParser"
 
     const-string v15, "convertTimeToMillis() completed successfully"
 
     invoke-static {v14, v15}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     const-string v14, "SmartParser"
 
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v16, "year:"
+    const-string v16, "year:"
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -853,20 +776,17 @@
 
     invoke-static {v14, v15}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     const/4 v14, 0x1
 
     invoke-virtual {v13, v14}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v10
 
-    .line 441
     .local v10, "result":J
     invoke-static {v10, v11}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 445
     .end local v2    # "amOfEachCountry":Ljava/lang/String;
     .end local v4    # "i":I
     .end local v5    # "m":Ljava/util/regex/Matcher;
@@ -879,7 +799,6 @@
     :goto_2
     return-object v14
 
-    .line 426
     .restart local v2    # "amOfEachCountry":Ljava/lang/String;
     .restart local v4    # "i":I
     .restart local v5    # "m":Ljava/util/regex/Matcher;
@@ -917,7 +836,6 @@
 
     if-eqz v14, :cond_5
 
-    .line 427
     :cond_4
     iget v14, v13, Landroid/text/format/Time;->hour:I
 
@@ -925,7 +843,6 @@
 
     if-ne v14, v15, :cond_2
 
-    .line 428
     const/4 v14, 0x0
 
     iput v14, v13, Landroid/text/format/Time;->hour:I
@@ -934,7 +851,6 @@
 
     goto/16 :goto_1
 
-    .line 443
     .end local v2    # "amOfEachCountry":Ljava/lang/String;
     .end local v4    # "i":I
     .end local v5    # "m":Ljava/util/regex/Matcher;
@@ -946,7 +862,6 @@
     :catch_0
     move-exception v3
 
-    .line 444
     .local v3, "e":Ljava/lang/Exception;
     const-string v14, "SmartParser"
 
@@ -974,12 +889,10 @@
 
     invoke-static {v14, v15}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
     const-string v14, ""
 
     goto :goto_2
 
-    .line 431
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v2    # "amOfEachCountry":Ljava/lang/String;
     .restart local v4    # "i":I
@@ -1014,14 +927,12 @@
 
     const/4 v12, 0x0
 
-    .line 134
     const-string v9, "(((19|20)(([02468][048])|([13579][26]))[\\-|\\/|\\.]0?2[\\-|\\/|\\.]29)|((((20[0-9][0-9])|(19[0-9][0-9]))[\\-|\\/|\\.])?(((0?[13578]|10|12)[\\-|\\/|\\.]31)|((0?[1,3-9]|1[0-2])[\\-|\\/|\\.](29|30))|((0?[1-9]|1[0-2])[\\-|\\/|\\.](1[0-9]|2[0-8]|0?[1-9])))[[:space:]]))"
 
     invoke-static {v9}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v5
 
-    .line 135
     .local v5, "p1":Ljava/util/regex/Pattern;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1029,7 +940,6 @@
 
     move-result-object v1
 
-    .line 136
     .local v1, "m1":Ljava/util/regex/Matcher;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1037,7 +947,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\uff03"
+    const-string v10, "\uff03"
 
     invoke-virtual {v9, v10}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1045,7 +955,6 @@
 
     iput-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 138
     :goto_0
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1053,7 +962,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 139
     invoke-virtual {v1, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1062,13 +970,11 @@
 
     move-result-object v4
 
-    .line 140
     .local v4, "matchString":Ljava/lang/String;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v9, v4, v13}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 142
     const-string v9, "SmartParser"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1093,7 +999,6 @@
 
     goto :goto_0
 
-    .line 146
     .end local v4    # "matchString":Ljava/lang/String;
     :cond_0
     const-string v9, "(((Jan|January|Mar|March|May|Jul|July|Aug|August|Oct|October|Dec|December)(\\.[[:space:]]?|[[:space:]])((([1-2][0-9]|3[01])(th)?)|0?1(st)?|0?2(nd)?|0?3(rd)?|0?[4-9](th)?)((\\,[[:space:]]?|\\.[[:space:]]?|[[:space:]]?)((20[0-9][0-9])|(19[0-9][0-9]))?)?[[:space:]])|((Apr|April|Jun|June|Sep|September|Nov|November)(\\.[[:space:]]?|[[:space:]])((([1-2][0-9]|3[01])(th)?)|0?1(st)?|0?2(nd)?|0?3(rd)?|0?[4-9](th)?)((\\,[[:space:]]?|\\.[[:space:]]?|[[:space:]]?)((20[0-9][0-9])|(19[0-9][0-9]))?)?[[:space:]])|((Feb|February)(\\.[[:space:]]?|[[:space:]])((([1-2][0-9]|3[01])(th)?)|0?1(st)?|0?2(nd)?|0?3(rd)?|0?[4-9](th)?)((\\,[[:space:]]?|\\.[[:space:]]?|[[:space:]]?)((20[0-9][0-9])|(19[0-9][0-9]))?)?[[:space:]]))"
@@ -1102,7 +1007,6 @@
 
     move-result-object v6
 
-    .line 147
     .local v6, "p2":Ljava/util/regex/Pattern;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1110,7 +1014,6 @@
 
     move-result-object v2
 
-    .line 148
     .local v2, "m2":Ljava/util/regex/Matcher;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1118,7 +1021,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\uff03"
+    const-string v10, "\uff03"
 
     invoke-virtual {v9, v10}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1126,7 +1029,6 @@
 
     iput-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 150
     :goto_1
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1134,7 +1036,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 151
     invoke-virtual {v2, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1143,13 +1044,11 @@
 
     move-result-object v4
 
-    .line 152
     .restart local v4    # "matchString":Ljava/lang/String;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v9, v4, v13}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 154
     const-string v9, "SmartParser"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1174,7 +1073,6 @@
 
     goto :goto_1
 
-    .line 158
     .end local v4    # "matchString":Ljava/lang/String;
     :cond_1
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1187,7 +1085,6 @@
 
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 159
     .local v8, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -1203,21 +1100,17 @@
 
     if-ne v9, v10, :cond_2
 
-    .line 160
     invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 161
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 163
     .local v0, "countryDateString":Ljava/lang/String;
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v7
 
-    .line 164
     .local v7, "p3":Ljava/util/regex/Pattern;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1225,7 +1118,6 @@
 
     move-result-object v3
 
-    .line 165
     .local v3, "m3":Ljava/util/regex/Matcher;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1233,7 +1125,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\uff03"
+    const-string v10, "\uff03"
 
     invoke-virtual {v9, v10}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1241,7 +1133,6 @@
 
     iput-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 167
     :goto_2
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1249,7 +1140,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 168
     invoke-virtual {v3, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1258,13 +1148,11 @@
 
     move-result-object v4
 
-    .line 169
     .restart local v4    # "matchString":Ljava/lang/String;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v9, v4, v13}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 171
     const-string v9, "SmartParser"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1289,7 +1177,6 @@
 
     goto :goto_2
 
-    .line 174
     .end local v0    # "countryDateString":Ljava/lang/String;
     .end local v3    # "m3":Ljava/util/regex/Matcher;
     .end local v4    # "matchString":Ljava/lang/String;
@@ -1308,14 +1195,12 @@
 
     const/4 v12, 0x0
 
-    .line 77
     const-string v9, "((((19|20)(([02468][048])|([13579][26]))[\\-|\\/|\\.]0?2[\\-|\\/|\\.]29)|((((20[0-9][0-9])|(19[0-9][0-9]))[\\-|\\/|\\.])?(((0?[13578]|10|12)[\\-|\\/|\\.]31)|((0?[1,3-9]|1[0-2])[\\-|\\/|\\.](29|30))|((0?[1-9]|1[0-2])[\\-|\\/|\\.](1[0-9]|2[0-8]|0?[1-9])))[[:space:]])))"
 
     invoke-static {v9}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v5
 
-    .line 79
     .local v5, "p1":Ljava/util/regex/Pattern;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -1323,7 +1208,6 @@
 
     move-result-object v1
 
-    .line 80
     .local v1, "m1":Ljava/util/regex/Matcher;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -1331,7 +1215,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\uff03"
+    const-string v10, "\uff03"
 
     invoke-virtual {v9, v10}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1339,7 +1223,6 @@
 
     iput-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
-    .line 82
     :goto_0
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1347,7 +1230,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 83
     invoke-virtual {v1, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1356,7 +1238,6 @@
 
     move-result-object v4
 
-    .line 84
     .local v4, "matchString":Ljava/lang/String;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
@@ -1366,7 +1247,6 @@
 
     invoke-virtual {v9, v10, v13}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 85
     const-string v9, "SmartParser"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1391,7 +1271,6 @@
 
     goto :goto_0
 
-    .line 89
     .end local v4    # "matchString":Ljava/lang/String;
     :cond_0
     const-string v9, "((((Jan|January|Mar|March|May|Jul|July|Aug|August|Oct|October|Dec|December)(\\.[[:space:]]?|[[:space:]])((([1-2][0-9]|3[01])(th)?)|0?1(st)?|0?2(nd)?|0?3(rd)?|0?[4-9](th)?)((\\,[[:space:]]?|\\.[[:space:]]?|[[:space:]]?)((20[0-9][0-9])|(19[0-9][0-9]))?)?[[:space:]])|((Apr|April|Jun|June|Sep|September|Nov|November)(\\.[[:space:]]?|[[:space:]])((([1-2][0-9]|3[01])(th)?)|0?1(st)?|0?2(nd)?|0?3(rd)?|0?[4-9](th)?)((\\,[[:space:]]?|\\.[[:space:]]?|[[:space:]]?)((20[0-9][0-9])|(19[0-9][0-9]))?)?[[:space:]])|((Feb|February)(\\.[[:space:]]?|[[:space:]])((([1-2][0-9]|3[01])(th)?)|0?1(st)?|0?2(nd)?|0?3(rd)?|0?[4-9](th)?)((\\,[[:space:]]?|\\.[[:space:]]?|[[:space:]]?)((20[0-9][0-9])|(19[0-9][0-9]))?)?[[:space:]])))"
@@ -1400,7 +1279,6 @@
 
     move-result-object v6
 
-    .line 91
     .local v6, "p2":Ljava/util/regex/Pattern;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -1408,7 +1286,6 @@
 
     move-result-object v2
 
-    .line 92
     .local v2, "m2":Ljava/util/regex/Matcher;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -1416,7 +1293,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\uff03"
+    const-string v10, "\uff03"
 
     invoke-virtual {v9, v10}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1424,7 +1301,6 @@
 
     iput-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
-    .line 94
     :goto_1
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1432,7 +1308,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 95
     invoke-virtual {v2, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1441,7 +1316,6 @@
 
     move-result-object v4
 
-    .line 96
     .restart local v4    # "matchString":Ljava/lang/String;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
@@ -1453,7 +1327,6 @@
 
     invoke-virtual {v9, v10, v13}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 97
     const-string v9, "SmartParser"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1478,7 +1351,6 @@
 
     goto :goto_1
 
-    .line 101
     .end local v4    # "matchString":Ljava/lang/String;
     :cond_1
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mContext:Landroid/content/Context;
@@ -1487,7 +1359,6 @@
 
     move-result-object v0
 
-    .line 102
     .local v0, "countryDateString":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -1503,21 +1374,17 @@
 
     if-ne v9, v10, :cond_2
 
-    .line 103
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 104
     .local v8, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 105
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 106
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1546,7 +1413,6 @@
 
     move-result-object v7
 
-    .line 108
     .local v7, "p3":Ljava/util/regex/Pattern;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -1554,7 +1420,6 @@
 
     move-result-object v3
 
-    .line 109
     .local v3, "m3":Ljava/util/regex/Matcher;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -1562,7 +1427,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\uff03"
+    const-string v10, "\uff03"
 
     invoke-virtual {v9, v10}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1570,7 +1435,6 @@
 
     iput-object v9, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
-    .line 111
     :goto_2
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1578,7 +1442,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 112
     invoke-virtual {v3, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1587,7 +1450,6 @@
 
     move-result-object v4
 
-    .line 113
     .restart local v4    # "matchString":Ljava/lang/String;
     iget-object v9, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
@@ -1597,7 +1459,6 @@
 
     invoke-virtual {v9, v10, v13}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 114
     const-string v9, "SmartParser"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1622,7 +1483,6 @@
 
     goto :goto_2
 
-    .line 117
     .end local v3    # "m3":Ljava/util/regex/Matcher;
     .end local v4    # "matchString":Ljava/lang/String;
     .end local v7    # "p3":Ljava/util/regex/Pattern;
@@ -1639,15 +1499,12 @@
 
     const/4 v7, 0x0
 
-    .line 222
     iget v4, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
     if-ltz v4, :cond_1
 
-    .line 223
     sget-object v3, Landroid/util/Patterns;->EMAIL_ADDRESS:Ljava/util/regex/Pattern;
 
-    .line 227
     .local v3, "p":Ljava/util/regex/Pattern;
     :goto_0
     iget-object v4, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
@@ -1656,20 +1513,18 @@
 
     move-result-object v1
 
-    .line 229
     .local v1, "m":Ljava/util/regex/Matcher;
     iget v4, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
     if-lt v4, v8, :cond_0
 
-    .line 230
     iget-object v4, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v4
 
-    const-string/jumbo v5, "\uff03"
+    const-string v5, "\uff03"
 
     invoke-virtual {v4, v5}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1677,11 +1532,9 @@
 
     iput-object v4, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 232
     :cond_0
     sget-object v0, Landroid/util/secutil/SmartPatterns;->HYPHEN:Ljava/util/regex/Pattern;
 
-    .line 234
     .local v0, "hyphen":Ljava/util/regex/Pattern;
     :goto_1
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
@@ -1690,16 +1543,13 @@
 
     if-eqz v4, :cond_3
 
-    .line 235
     const-string v2, ""
 
-    .line 236
     .local v2, "matchString":Ljava/lang/String;
     iget v4, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
     if-lt v4, v8, :cond_2
 
-    .line 237
     invoke-virtual {v1, v7}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1708,7 +1558,6 @@
 
     move-result-object v2
 
-    .line 241
     :goto_2
     invoke-virtual {v0, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -1720,14 +1569,12 @@
 
     move-result-object v2
 
-    .line 242
     iget-object v4, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     const/4 v5, 0x4
 
     invoke-virtual {v4, v2, v5}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 243
     const-string v4, "SmartParser"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1752,7 +1599,6 @@
 
     goto :goto_1
 
-    .line 225
     .end local v0    # "hyphen":Ljava/util/regex/Pattern;
     .end local v1    # "m":Ljava/util/regex/Matcher;
     .end local v2    # "matchString":Ljava/lang/String;
@@ -1763,7 +1609,6 @@
     .restart local v3    # "p":Ljava/util/regex/Pattern;
     goto :goto_0
 
-    .line 239
     .restart local v0    # "hyphen":Ljava/util/regex/Pattern;
     .restart local v1    # "m":Ljava/util/regex/Matcher;
     .restart local v2    # "matchString":Ljava/lang/String;
@@ -1778,7 +1623,6 @@
 
     goto :goto_2
 
-    .line 245
     .end local v2    # "matchString":Ljava/lang/String;
     :cond_3
     return-void
@@ -1790,15 +1634,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 191
     iget v4, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
     if-ltz v4, :cond_1
 
-    .line 192
     sget-object v3, Landroid/util/secutil/SmartPatterns;->PHONE_NUMBER:Ljava/util/regex/Pattern;
 
-    .line 196
     .local v3, "p":Ljava/util/regex/Pattern;
     :goto_0
     iget-object v4, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
@@ -1807,7 +1648,6 @@
 
     move-result-object v1
 
-    .line 197
     .local v1, "m":Ljava/util/regex/Matcher;
     iget-object v4, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1815,7 +1655,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "\uff03"
+    const-string v5, "\uff03"
 
     invoke-virtual {v4, v5}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1823,10 +1663,8 @@
 
     iput-object v4, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 199
     sget-object v0, Landroid/util/secutil/SmartPatterns;->HYPHEN:Ljava/util/regex/Pattern;
 
-    .line 201
     .local v0, "hyphen":Ljava/util/regex/Pattern;
     :cond_0
     :goto_1
@@ -1836,10 +1674,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 202
     const-string v2, ""
 
-    .line 203
     .local v2, "matchString":Ljava/lang/String;
     iget v4, p0, Landroid/util/secutil/SmartParser;->mDegree:I
 
@@ -1847,7 +1683,6 @@
 
     if-lt v4, v5, :cond_2
 
-    .line 204
     invoke-virtual {v1, v7}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1856,7 +1691,6 @@
 
     move-result-object v2
 
-    .line 209
     :goto_2
     invoke-virtual {v0, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -1868,7 +1702,6 @@
 
     move-result-object v2
 
-    .line 211
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -1877,14 +1710,12 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 212
     iget-object v4, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     const/4 v5, 0x3
 
     invoke-virtual {v4, v2, v5}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 213
     const-string v4, "SmartParser"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1909,7 +1740,6 @@
 
     goto :goto_1
 
-    .line 194
     .end local v0    # "hyphen":Ljava/util/regex/Pattern;
     .end local v1    # "m":Ljava/util/regex/Matcher;
     .end local v2    # "matchString":Ljava/lang/String;
@@ -1920,7 +1750,6 @@
     .restart local v3    # "p":Ljava/util/regex/Pattern;
     goto :goto_0
 
-    .line 206
     .restart local v0    # "hyphen":Ljava/util/regex/Pattern;
     .restart local v1    # "m":Ljava/util/regex/Matcher;
     .restart local v2    # "matchString":Ljava/lang/String;
@@ -1935,12 +1764,10 @@
 
     goto :goto_2
 
-    .line 217
     .end local v2    # "matchString":Ljava/lang/String;
     :cond_3
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->refactoringPhoneNumber()V
 
-    .line 218
     return-void
 .end method
 
@@ -1948,7 +1775,6 @@
     .locals 6
 
     .prologue
-    .line 177
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1977,7 +1803,6 @@
 
     move-result-object v2
 
-    .line 178
     .local v2, "p":Ljava/util/regex/Pattern;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1985,7 +1810,6 @@
 
     move-result-object v0
 
-    .line 179
     .local v0, "m":Ljava/util/regex/Matcher;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -1993,7 +1817,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "\uff03"
+    const-string v4, "\uff03"
 
     invoke-virtual {v3, v4}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2001,7 +1825,6 @@
 
     iput-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 181
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -2009,7 +1832,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 182
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -2020,7 +1842,6 @@
 
     move-result-object v1
 
-    .line 183
     .local v1, "matchString":Ljava/lang/String;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
@@ -2028,7 +1849,6 @@
 
     invoke-virtual {v3, v1, v4}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 185
     const-string v3, "SmartParser"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2053,7 +1873,6 @@
 
     goto :goto_0
 
-    .line 187
     .end local v1    # "matchString":Ljava/lang/String;
     :cond_0
     return-void
@@ -2063,7 +1882,6 @@
     .locals 6
 
     .prologue
-    .line 120
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2098,7 +1916,6 @@
 
     move-result-object v2
 
-    .line 122
     .local v2, "p":Ljava/util/regex/Pattern;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -2106,7 +1923,6 @@
 
     move-result-object v0
 
-    .line 123
     .local v0, "m":Ljava/util/regex/Matcher;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
@@ -2114,7 +1930,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "\uff03"
+    const-string v4, "\uff03"
 
     invoke-virtual {v3, v4}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2122,7 +1938,6 @@
 
     iput-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
-    .line 125
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -2130,7 +1945,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 126
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -2141,7 +1955,6 @@
 
     move-result-object v1
 
-    .line 127
     .local v1, "matchString":Ljava/lang/String;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
@@ -2153,7 +1966,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 128
     const-string v3, "SmartParser"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2178,7 +1990,6 @@
 
     goto :goto_0
 
-    .line 130
     .end local v1    # "matchString":Ljava/lang/String;
     :cond_0
     return-void
@@ -2188,10 +1999,8 @@
     .locals 6
 
     .prologue
-    .line 248
     sget-object v2, Landroid/util/Patterns;->WEB_URL_EX:Ljava/util/regex/Pattern;
 
-    .line 249
     .local v2, "p":Ljava/util/regex/Pattern;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -2199,7 +2008,6 @@
 
     move-result-object v0
 
-    .line 250
     .local v0, "m":Ljava/util/regex/Matcher;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
@@ -2207,7 +2015,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "\uff03"
+    const-string v4, "\uff03"
 
     invoke-virtual {v3, v4}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2215,7 +2023,6 @@
 
     iput-object v3, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 252
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -2223,7 +2030,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 253
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -2234,7 +2040,6 @@
 
     move-result-object v1
 
-    .line 254
     .local v1, "matchString":Ljava/lang/String;
     iget-object v3, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
@@ -2242,7 +2047,6 @@
 
     invoke-virtual {v3, v1, v4}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 255
     const-string v3, "SmartParser"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2267,7 +2071,6 @@
 
     goto :goto_0
 
-    .line 257
     .end local v1    # "matchString":Ljava/lang/String;
     :cond_0
     return-void
@@ -2281,7 +2084,6 @@
 
     const/4 v8, 0x0
 
-    .line 296
     iget-object v5, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v5, v9}, Landroid/util/secutil/SmartParsingData;->getCount(I)I
@@ -2292,7 +2094,6 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 297
     iget-object v5, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v5, v9}, Landroid/util/secutil/SmartParsingData;->getInfo(I)Ljava/util/ArrayList;
@@ -2305,11 +2106,9 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 298
     .local v4, "str":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 300
     .local v3, "spaceCount":I
     const/4 v0, 0x0
 
@@ -2321,7 +2120,6 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 301
     invoke-virtual {v4, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -2330,16 +2128,13 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 302
     add-int/lit8 v3, v3, 0x1
 
-    .line 300
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 306
     :cond_1
     if-lez v3, :cond_2
 
@@ -2355,22 +2150,18 @@
 
     if-le v5, v6, :cond_2
 
-    .line 307
     sget-object v2, Landroid/util/secutil/SmartPatterns;->REFACTORING_PHONE_NUMBER:Ljava/util/regex/Pattern;
 
-    .line 308
     .local v2, "p":Ljava/util/regex/Pattern;
     invoke-virtual {v2, v4}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 309
     .local v1, "m":Ljava/util/regex/Matcher;
     iget-object v5, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v5, v8, v9}, Landroid/util/secutil/SmartParsingData;->deleteInfo(II)Z
 
-    .line 311
     :goto_1
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -2378,7 +2169,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 312
     iget-object v5, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v1, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -2387,7 +2177,6 @@
 
     invoke-virtual {v5, v6, v9}, Landroid/util/secutil/SmartParsingData;->setInfo(Ljava/lang/String;I)V
 
-    .line 313
     const-string v5, "SmartParser"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2416,7 +2205,6 @@
 
     goto :goto_1
 
-    .line 317
     .end local v0    # "i":I
     .end local v1    # "m":Ljava/util/regex/Matcher;
     .end local v2    # "p":Ljava/util/regex/Pattern;
@@ -2431,7 +2219,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 269
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Landroid/util/secutil/SmartParser;->removeUnnecessary(Ljava/lang/String;Z)Ljava/lang/String;
@@ -2447,16 +2234,13 @@
     .param p2, "onlyStartEndCheck"    # Z
 
     .prologue
-    .line 273
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 274
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v2, ""
 
-    .line 276
     .local v2, "result":Ljava/lang/String;
     const-string v4, "\n"
 
@@ -2474,13 +2258,11 @@
 
     if-eqz v4, :cond_1
 
-    .line 277
     :cond_0
     const/4 v4, 0x0
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 280
     :cond_1
     const-string v4, "\n"
 
@@ -2498,7 +2280,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 281
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -2508,23 +2289,19 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 284
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 286
     if-nez p2, :cond_4
 
-    .line 287
     const-string v4, "[:space:]"
 
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
 
-    .line 288
     .local v1, "p":Ljava/util/regex/Pattern;
     invoke-virtual {v1, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -2538,7 +2315,6 @@
 
     move-object v3, v2
 
-    .line 292
     .end local v1    # "p":Ljava/util/regex/Pattern;
     .end local v2    # "result":Ljava/lang/String;
     .local v3, "result":Ljava/lang/String;
@@ -2561,17 +2337,14 @@
     .locals 1
 
     .prologue
-    .line 450
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v0}, Landroid/util/secutil/SmartParsingData;->clear()V
 
-    .line 451
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
-    .line 452
     return-void
 .end method
 
@@ -2580,7 +2353,6 @@
     .param p1, "dayStr"    # Ljava/lang/String;
 
     .prologue
-    .line 382
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -2589,14 +2361,12 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 383
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 385
     .local v0, "builder":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "st"
+    const-string v1, "st"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -2604,7 +2374,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "nd"
+    const-string v1, "nd"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -2612,7 +2382,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "rd"
+    const-string v1, "rd"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -2620,7 +2390,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "th"
+    const-string v1, "th"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -2628,7 +2398,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 386
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -2638,7 +2407,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 387
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
@@ -2647,13 +2415,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 389
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 391
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .end local p1    # "dayStr":Ljava/lang/String;
     :cond_2
@@ -2664,38 +2430,28 @@
     .locals 2
 
     .prologue
-    .line 63
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingEmailInfo()V
 
-    .line 64
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingDateInfo()V
 
-    .line 65
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingTimeInfo()V
 
-    .line 66
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingPhoneNumInfo()V
 
-    .line 67
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingURLInfo()V
 
-    .line 68
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingDateMillisInfo()V
 
-    .line 69
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->parsingTimeMillisInfo()V
 
-    .line 70
     invoke-direct {p0}, Landroid/util/secutil/SmartParser;->arrangeRemainData()V
 
-    .line 72
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     iget-object v1, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/util/secutil/SmartParsingData;->setRemainData(Ljava/lang/String;)V
 
-    .line 73
     return-void
 .end method
 
@@ -2703,7 +2459,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     return-object v0
@@ -2714,19 +2469,16 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     new-instance v0, Landroid/util/secutil/SmartParsingData;
 
     invoke-direct {v0}, Landroid/util/secutil/SmartParsingData;-><init>()V
 
     iput-object v0, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
-    .line 52
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->mParsingData:Landroid/util/secutil/SmartParsingData;
 
     invoke-virtual {v0, p1}, Landroid/util/secutil/SmartParsingData;->setOriginalData(Ljava/lang/String;)V
 
-    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2753,7 +2505,6 @@
 
     iput-object v0, p0, Landroid/util/secutil/SmartParser;->mWorkStr:Ljava/lang/String;
 
-    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2780,14 +2531,12 @@
 
     iput-object v0, p0, Landroid/util/secutil/SmartParser;->mWorkStrForMillis:Ljava/lang/String;
 
-    .line 56
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/util/secutil/SmartParser;->today:Ljava/util/Calendar;
 
-    .line 57
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->today:Ljava/util/Calendar;
 
     const/4 v1, 0x1
@@ -2798,7 +2547,6 @@
 
     iput v0, p0, Landroid/util/secutil/SmartParser;->yearOfToday:I
 
-    .line 58
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->today:Ljava/util/Calendar;
 
     const/4 v1, 0x2
@@ -2809,7 +2557,6 @@
 
     iput v0, p0, Landroid/util/secutil/SmartParser;->monthOfToday:I
 
-    .line 59
     iget-object v0, p0, Landroid/util/secutil/SmartParser;->today:Ljava/util/Calendar;
 
     const/4 v1, 0x5
@@ -2820,6 +2567,5 @@
 
     iput v0, p0, Landroid/util/secutil/SmartParser;->dayOfToday:I
 
-    .line 60
     return-void
 .end method

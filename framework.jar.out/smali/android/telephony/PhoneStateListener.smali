@@ -69,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 269
     const v0, 0x7fffffff
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -78,7 +77,6 @@
 
     invoke-direct {p0, v0, v1}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
 
-    .line 270
     return-void
 .end method
 
@@ -87,14 +85,12 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 289
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
 
-    .line 290
     return-void
 .end method
 
@@ -104,32 +100,26 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 297
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/telephony/PhoneStateListener;->mSubId:I
 
-    .line 623
     new-instance v0, Landroid/telephony/PhoneStateListener$2;
 
     invoke-direct {v0, p0}, Landroid/telephony/PhoneStateListener$2;-><init>(Landroid/telephony/PhoneStateListener;)V
 
     iput-object v0, p0, Landroid/telephony/PhoneStateListener;->callback:Lcom/android/internal/telephony/IPhoneStateListener;
 
-    .line 299
     iput p1, p0, Landroid/telephony/PhoneStateListener;->mSubId:I
 
-    .line 300
     new-instance v0, Landroid/telephony/PhoneStateListener$1;
 
     invoke-direct {v0, p0, p2}, Landroid/telephony/PhoneStateListener$1;-><init>(Landroid/telephony/PhoneStateListener;Landroid/os/Looper;)V
 
     iput-object v0, p0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
 
-    .line 383
     return-void
 .end method
 
@@ -138,12 +128,10 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 278
     const v0, 0x7fffffff
 
     invoke-direct {p0, v0, p1}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
 
-    .line 279
     return-void
 .end method
 
@@ -152,7 +140,6 @@
     .param p0, "x0"    # Landroid/telephony/PhoneStateListener;
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -163,12 +150,10 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 725
     const-string v0, "PhoneStateListener"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     return-void
 .end method
 
@@ -179,7 +164,6 @@
     .param p1, "cfi"    # Z
 
     .prologue
-    .line 423
     return-void
 .end method
 
@@ -189,7 +173,6 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 445
     return-void
 .end method
 
@@ -198,7 +181,6 @@
     .param p1, "active"    # Z
 
     .prologue
-    .line 575
     return-void
 .end method
 
@@ -215,7 +197,6 @@
     .end annotation
 
     .prologue
-    .line 511
     .local p1, "cellInfo":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
     return-void
 .end method
@@ -225,7 +206,6 @@
     .param p1, "location"    # Landroid/telephony/CellLocation;
 
     .prologue
-    .line 430
     return-void
 .end method
 
@@ -234,7 +214,6 @@
     .param p1, "direction"    # I
 
     .prologue
-    .line 476
     return-void
 .end method
 
@@ -243,7 +222,6 @@
     .param p1, "dcRtInfo"    # Landroid/telephony/DataConnectionRealTimeInfo;
 
     .prologue
-    .line 540
     return-void
 .end method
 
@@ -252,7 +230,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 457
     return-void
 .end method
 
@@ -262,7 +239,6 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 463
     return-void
 .end method
 
@@ -271,7 +247,6 @@
     .param p1, "direction"    # I
 
     .prologue
-    .line 599
     return-void
 .end method
 
@@ -281,7 +256,6 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 610
     return-void
 .end method
 
@@ -289,7 +263,6 @@
     .locals 0
 
     .prologue
-    .line 583
     return-void
 .end method
 
@@ -298,7 +271,6 @@
     .param p1, "mwi"    # Z
 
     .prologue
-    .line 416
     return-void
 .end method
 
@@ -307,7 +279,6 @@
     .param p1, "rawData"    # [B
 
     .prologue
-    .line 559
     return-void
 .end method
 
@@ -316,7 +287,6 @@
     .param p1, "otaspMode"    # I
 
     .prologue
-    .line 503
     return-void
 .end method
 
@@ -325,7 +295,6 @@
     .param p1, "callState"    # Landroid/telephony/PreciseCallState;
 
     .prologue
-    .line 520
     return-void
 .end method
 
@@ -334,7 +303,6 @@
     .param p1, "dataConnectionState"    # Landroid/telephony/PreciseDataConnectionState;
 
     .prologue
-    .line 530
     return-void
 .end method
 
@@ -343,7 +311,6 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 395
     return-void
 .end method
 
@@ -354,7 +321,6 @@
     .end annotation
 
     .prologue
-    .line 409
     return-void
 .end method
 
@@ -363,7 +329,6 @@
     .param p1, "signalStrength"    # Landroid/telephony/SignalStrength;
 
     .prologue
-    .line 488
     return-void
 .end method
 
@@ -372,7 +337,6 @@
     .param p1, "stateInfo"    # Landroid/telephony/VoLteServiceState;
 
     .prologue
-    .line 549
     return-void
 .end method
 
@@ -381,6 +345,5 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 616
     return-void
 .end method

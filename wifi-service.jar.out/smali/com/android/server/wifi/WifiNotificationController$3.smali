@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 376
     iput-object p1, p0, Lcom/android/server/wifi/WifiNotificationController$3;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 379
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$3;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     # getter for: Lcom/android/server/wifi/WifiNotificationController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -55,7 +53,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 380
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$3;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     # getter for: Lcom/android/server/wifi/WifiNotificationController;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -65,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 381
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$3;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     # getter for: Lcom/android/server/wifi/WifiNotificationController;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -77,13 +73,11 @@
 
     move-result-object v0
 
-    .line 382
     .local v0, "currState":Landroid/net/NetworkInfo$DetailedState;
     sget-object v1, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     if-ne v0, v1, :cond_0
 
-    .line 383
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$3;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiNotificationController$3;->this$0:Lcom/android/server/wifi/WifiNotificationController;
@@ -107,7 +101,6 @@
     # invokes: Lcom/android/server/wifi/WifiNotificationController;->checkAndSetNotification(Landroid/net/NetworkInfo;Ljava/util/List;)V
     invoke-static {v1, v2, v3}, Lcom/android/server/wifi/WifiNotificationController;->access$1200(Lcom/android/server/wifi/WifiNotificationController;Landroid/net/NetworkInfo;Ljava/util/List;)V
 
-    .line 388
     .end local v0    # "currState":Landroid/net/NetworkInfo$DetailedState;
     :cond_0
     return-void

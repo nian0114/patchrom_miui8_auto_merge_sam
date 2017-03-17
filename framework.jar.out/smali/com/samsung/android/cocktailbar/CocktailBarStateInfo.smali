@@ -61,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 225
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo$1;
 
     invoke-direct {v0}, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo$1;-><init>()V
@@ -78,41 +77,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
-    .line 106
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
-    .line 113
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
-    .line 120
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->mode:I
 
-    .line 127
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
-    .line 134
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
-    .line 141
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
-    .line 148
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->changeFlag:I
 
-    .line 156
     iput p1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->visibility:I
 
-    .line 157
     return-void
 .end method
 
@@ -125,78 +113,62 @@
 
     const/4 v1, 0x0
 
-    .line 174
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
-    .line 106
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
-    .line 113
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
-    .line 120
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->mode:I
 
-    .line 127
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
-    .line 134
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
-    .line 141
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
-    .line 148
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->changeFlag:I
 
-    .line 175
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->visibility:I
 
-    .line 176
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
-    .line 177
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
-    .line 178
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
-    .line 179
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->mode:I
 
-    .line 180
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
-    .line 181
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -206,27 +178,23 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
-    .line 182
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
-    .line 183
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->changeFlag:I
 
-    .line 184
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 181
     goto :goto_0
 .end method
 
@@ -237,73 +205,56 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
-    .line 106
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
-    .line 113
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
-    .line 120
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->mode:I
 
-    .line 127
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
-    .line 134
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
-    .line 141
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
-    .line 148
     iput v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->changeFlag:I
 
-    .line 165
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->visibility:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->visibility:I
 
-    .line 166
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
-    .line 167
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
-    .line 168
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
-    .line 169
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
-    .line 170
     iget-boolean v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
-    .line 171
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
-    .line 172
     return-void
 .end method
 
@@ -315,28 +266,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 191
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 192
     .local v0, "p":Landroid/os/Parcel;
     invoke-virtual {p0, v0, v2}, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 193
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 194
     new-instance v1, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     invoke-direct {v1, v0}, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;-><init>(Landroid/os/Parcel;)V
 
-    .line 195
     .local v1, "stateInfo":Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 196
     return-object v1
 .end method
 
@@ -349,7 +294,6 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->clone()Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     move-result-object v0
@@ -361,7 +305,6 @@
     .locals 1
 
     .prologue
-    .line 204
     const/4 v0, 0x0
 
     return v0
@@ -373,37 +316,30 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 211
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->visibility:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 212
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->backgroundType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 213
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->position:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 214
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->lockState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 215
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->mode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 216
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->showTimeout:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 217
     iget-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->activate:Z
 
     if-eqz v0, :cond_0
@@ -413,20 +349,16 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 218
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->windowType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 219
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;->changeFlag:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 220
     return-void
 
-    .line 217
     :cond_0
     const/4 v0, 0x0
 

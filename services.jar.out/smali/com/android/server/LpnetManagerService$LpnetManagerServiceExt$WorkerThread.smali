@@ -24,13 +24,10 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2198
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerThread;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
-    .line 2199
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 2200
     return-void
 .end method
 
@@ -40,10 +37,8 @@
     .locals 4
 
     .prologue
-    .line 2202
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 2203
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerThread;->this$1:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;
 
     new-instance v1, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;
@@ -57,9 +52,7 @@
     # setter for: Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->mHandler:Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;
     invoke-static {v0, v1}, Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;->access$5802(Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt;Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;)Lcom/android/server/LpnetManagerService$LpnetManagerServiceExt$WorkerHandler;
 
-    .line 2204
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 2205
     return-void
 .end method

@@ -69,34 +69,26 @@
 
     const/4 v3, 0x0
 
-    .line 3148
     iput-object p1, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->this$0:Lcom/android/server/SdpManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3123
     iput-object v3, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
-    .line 3124
     iput-object v3, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mKeyMgnt:Lcom/sec/knox/container/util/KeyManagementUtil;
 
-    .line 3125
     iput-object v3, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
-    .line 3126
     new-instance v2, Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;
 
     invoke-direct {v2, p0, v3}, Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;-><init>(Lcom/android/server/SdpManagerService$SecureFileSystemManager;Lcom/android/server/SdpManagerService$1;)V
 
     iput-object v2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mDB:Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;
 
-    .line 3128
     iput-boolean v4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->timaVersion20:Z
 
-    .line 3133
     iput v4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mStatus:I
 
-    .line 3301
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/String;
@@ -107,19 +99,14 @@
 
     iput-object v2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->defaultApps:[Ljava/lang/String;
 
-    .line 3149
     iput-object p2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->sContext:Landroid/content/Context;
 
-    .line 3150
     iput-object p3, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
-    .line 3151
     iput-object p4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mKeyMgnt:Lcom/sec/knox/container/util/KeyManagementUtil;
 
-    .line 3152
     iput-object p5, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
-    .line 3155
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->getTimaService()Landroid/service/tima/ITimaService;
 
@@ -127,7 +114,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3156
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->getTimaService()Landroid/service/tima/ITimaService;
 
     move-result-object v2
@@ -147,38 +133,32 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3163
     :cond_0
     :goto_0
     return-void
 
-    .line 3157
     :catch_0
     move-exception v1
 
-    .line 3158
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "SecureFileSystem"
 
-    const-string/jumbo v3, "failed to talk with TIMA service."
+    const-string v3, "failed to talk with TIMA service."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3159
     .end local v1    # "re":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 3160
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 3161
     const-string v2, "SecureFileSystem"
 
-    const-string/jumbo v3, "failed to get TIMA version."
+    const-string v3, "failed to get TIMA version."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -195,7 +175,6 @@
     .param p6, "x5"    # Lcom/android/server/SdpManagerService$1;
 
     .prologue
-    .line 3121
     invoke-direct/range {p0 .. p5}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;-><init>(Lcom/android/server/SdpManagerService;Landroid/content/Context;Lcom/android/server/pm/TimaHelper;Lcom/sec/knox/container/util/KeyManagementUtil;Lcom/sec/knox/container/util/EnterprisePartitionManager;)V
 
     return-void
@@ -208,7 +187,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 3121
     invoke-direct {p0, p1, p2}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->createPkgDir(ILjava/lang/String;)Z
 
     move-result v0
@@ -222,7 +200,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 3121
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->setBaseDataUserDir(I)Z
 
     move-result v0
@@ -236,7 +213,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 3121
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->systemReady(I)Z
 
     move-result v0
@@ -251,7 +227,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 3121
     invoke-direct {p0, p1, p2}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->removePkgDir(ILjava/lang/String;)Z
 
     move-result v0
@@ -264,7 +239,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpManagerService$SecureFileSystemManager;
 
     .prologue
-    .line 3121
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mount()Z
 
     move-result v0
@@ -277,7 +251,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpManagerService$SecureFileSystemManager;
 
     .prologue
-    .line 3121
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->isActivated()Z
 
     move-result v0
@@ -290,7 +263,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpManagerService$SecureFileSystemManager;
 
     .prologue
-    .line 3121
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->systemReady()Z
 
     move-result v0
@@ -304,33 +276,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3174
     iget-boolean v2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->timaVersion20:Z
 
     if-eqz v2, :cond_0
 
-    .line 3175
     const-string v2, "SecureFileSystem"
 
     const-string v3, "TIMA 2.0 not supported"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3186
     :goto_0
     return v1
 
-    .line 3179
     :cond_0
     iget-object v2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mKeyMgnt:Lcom/sec/knox/container/util/KeyManagementUtil;
 
-    const-string/jumbo v3, "test"
+    const-string v3, "test"
 
     invoke-virtual {v2, v3}, Lcom/sec/knox/container/util/KeyManagementUtil;->generateEcryptfsKey(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 3180
     .local v0, "eCryptfsKey":[B
     iget-object v2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
@@ -342,11 +309,9 @@
 
     move-result v1
 
-    .line 3182
     .local v1, "ret":Z
     if-eqz v1, :cond_1
 
-    .line 3183
     iget-object v2, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mDB:Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;
 
     const/4 v3, 0x1
@@ -360,11 +325,10 @@
     # invokes: Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;->updateSecureFsXml(ILjava/lang/String;)I
     invoke-static {v2, v3, v4}, Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;->access$2600(Lcom/android/server/SdpManagerService$SecureFileSystemManager$SecureFileSystemDatabase;ILjava/lang/String;)I
 
-    .line 3184
     :cond_1
     const-string v2, "SecureFileSystem"
 
-    const-string/jumbo v3, "createPartition"
+    const-string v3, "createPartition"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -377,16 +341,13 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3250
     const/4 v0, 0x0
 
-    .line 3251
     .local v0, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3253
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
@@ -394,10 +355,8 @@
 
     move-result v0
 
-    .line 3254
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3256
     return v0
 .end method
 
@@ -405,10 +364,9 @@
     .locals 2
 
     .prologue
-    .line 3166
     new-instance v0, Ljava/lang/String;
 
-    const-string/jumbo v1, "eCryptfsKeySecFS"
+    const-string v1, "eCryptfsKeySecFS"
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
@@ -419,8 +377,7 @@
     .locals 2
 
     .prologue
-    .line 3142
-    const-string/jumbo v1, "tima"
+    const-string v1, "tima"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -430,7 +387,6 @@
 
     move-result-object v0
 
-    .line 3144
     .local v0, "timaService":Landroid/service/tima/ITimaService;
     return-object v0
 .end method
@@ -441,12 +397,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 3295
     iget v1, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mStatus:I
 
     if-ne v1, v0, :cond_0
 
-    .line 3298
     :goto_0
     return v0
 
@@ -460,7 +414,6 @@
     .locals 3
 
     .prologue
-    .line 3170
     iget-object v0, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
     const/4 v1, 0x0
@@ -486,12 +439,10 @@
 
     const/4 v3, 0x0
 
-    .line 3201
     iget-boolean v4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->timaVersion20:Z
 
     if-eqz v4, :cond_0
 
-    .line 3202
     const-string v4, "SecureFileSystem"
 
     const-string v5, "TIMA 2.0 not supported"
@@ -500,11 +451,9 @@
 
     move v2, v3
 
-    .line 3236
     :goto_0
     return v2
 
-    .line 3208
     :cond_0
     iget-object v4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
@@ -516,35 +465,28 @@
 
     move-result-object v1
 
-    .line 3209
     .local v1, "eCryptfsKey":[B
     if-nez v1, :cond_2
 
-    .line 3210
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->createPartition()Z
 
     move-result v2
 
-    .line 3212
     .local v2, "ret":Z
     if-nez v2, :cond_1
 
-    .line 3213
     const-string v4, "SecureFileSystem"
 
     const-string v5, "Failed to create partition"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3214
     iput v6, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mStatus:I
 
     move v2, v3
 
-    .line 3215
     goto :goto_0
 
-    .line 3218
     :cond_1
     iget-object v4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
@@ -556,40 +498,33 @@
 
     move-result-object v1
 
-    .line 3219
     if-nez v1, :cond_2
 
-    .line 3220
     const-string v4, "SecureFileSystem"
 
     const-string v5, "Failed to get eCryptfsKey"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3221
     iput v6, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mStatus:I
 
     move v2, v3
 
-    .line 3222
     goto :goto_0
 
-    .line 3226
     .end local v2    # "ret":Z
     :cond_2
     invoke-static {v1, v3}, Lcom/sec/knox/container/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3229
     .local v0, "b64eCryptfsKey":Ljava/lang/String;
     const-string v4, "SecureFileSystem"
 
-    const-string/jumbo v5, "mount"
+    const-string v5, "mount"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3230
     iget-object v4, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     const/4 v5, 0x2
@@ -598,16 +533,13 @@
 
     move-result v2
 
-    .line 3231
     .restart local v2    # "ret":Z
     if-eqz v2, :cond_3
 
-    .line 3232
     iput v7, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mStatus:I
 
     goto :goto_0
 
-    .line 3234
     :cond_3
     iput v6, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mStatus:I
 
@@ -618,19 +550,16 @@
     .locals 3
 
     .prologue
-    .line 3190
     iget-boolean v0, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->timaVersion20:Z
 
     if-eqz v0, :cond_0
 
-    .line 3191
     const-string v0, "SecureFileSystem"
 
     const-string v1, "TIMA 2.0 not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3194
     :cond_0
     iget-object v0, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
 
@@ -642,14 +571,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/pm/TimaHelper;->deleteEntry(ILjava/lang/String;)V
 
-    .line 3196
     const-string v0, "SecureFileSystem"
 
-    const-string/jumbo v1, "removePartition"
+    const-string v1, "removePartition"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3198
     return-void
 .end method
 
@@ -659,16 +586,13 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3260
     const/4 v0, 0x0
 
-    .line 3261
     .local v0, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3263
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
@@ -676,10 +600,8 @@
 
     move-result v0
 
-    .line 3264
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3266
     return v0
 .end method
 
@@ -690,21 +612,19 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 3306
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->isActivated()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 3307
     const-string v2, "SecureFileSystem"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setBaseDataUserDir :: Error - SecureFileSysstem not activated... "
+    const-string v4, "setBaseDataUserDir :: Error - SecureFileSysstem not activated... "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -720,18 +640,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3308
     const/4 v1, 0x0
 
-    .line 3326
     :goto_0
     return v1
 
-    .line 3310
     :cond_0
     const/4 v1, 0x1
 
-    .line 3312
     .local v1, "ret":Z
     new-instance v0, Ljava/io/File;
 
@@ -743,7 +659,6 @@
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3313
     .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -751,22 +666,19 @@
 
     if-nez v2, :cond_1
 
-    .line 3314
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     move-result v1
 
-    .line 3315
     if-nez v1, :cond_2
 
-    .line 3316
     const-string v2, "SecureFileSystem"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setBaseDataUserDir :: Error - user dir creation failed... "
+    const-string v4, "setBaseDataUserDir :: Error - user dir creation failed... "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -782,10 +694,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3317
     const/4 v1, 0x0
 
-    .line 3325
     :cond_1
     :goto_1
     const-string v2, "SecureFileSystem"
@@ -794,7 +704,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setBaseDataUserDir :: User "
+    const-string v4, "setBaseDataUserDir :: User "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -822,7 +732,6 @@
 
     goto :goto_0
 
-    .line 3319
     :cond_2
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -839,7 +748,6 @@
     .locals 4
 
     .prologue
-    .line 3364
     iget-object v3, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->sContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -850,7 +758,6 @@
 
     move-result-object v2
 
-    .line 3366
     .local v2, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -870,7 +777,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 3367
     .local v1, "user":Landroid/content/pm/UserInfo;
     iget v3, v1, Landroid/content/pm/UserInfo;->id:I
 
@@ -878,7 +784,6 @@
 
     goto :goto_0
 
-    .line 3370
     .end local v1    # "user":Landroid/content/pm/UserInfo;
     :cond_0
     const/4 v3, 0x1
@@ -893,19 +798,16 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 3330
     invoke-static {p1}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->isKnoxWorkspace(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 3360
     :cond_0
     :goto_0
     return v5
 
-    .line 3335
     :cond_1
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->isActivated()Z
 
@@ -913,19 +815,16 @@
 
     if-nez v6, :cond_2
 
-    .line 3336
     const-string v5, "SecureFileSystem"
 
-    const-string/jumbo v6, "systemReady error :: SdpFileSystem not activated "
+    const-string v6, "systemReady error :: SdpFileSystem not activated "
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3337
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 3340
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->setBaseDataUserDir(I)Z
 
@@ -933,14 +832,13 @@
 
     if-nez v6, :cond_3
 
-    .line 3341
     const-string v6, "SecureFileSystem"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "systemReady :: Error - Failed to set up base directory for user "
+    const-string v8, "systemReady :: Error - Failed to set up base directory for user "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -956,7 +854,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3344
     :cond_3
     iget-object v1, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->defaultApps:[Ljava/lang/String;
 
@@ -972,31 +869,26 @@
 
     aget-object v0, v1, v2
 
-    .line 3345
     .local v0, "app":Ljava/lang/String;
     invoke-static {p1, v0}, Lcom/sec/enterprise/knox/sdp/SdpFileSystem;->getUserDataDir(ILjava/lang/String;)Ljava/io/File;
 
     move-result-object v4
 
-    .line 3347
     .local v4, "userDataDir":Ljava/io/File;
     if-nez v4, :cond_5
 
-    .line 3348
     const-string v6, "SecureFileSystem"
 
-    const-string/jumbo v7, "systemReady : userDataDir is null"
+    const-string v7, "systemReady : userDataDir is null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3344
     :cond_4
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 3352
     :cond_5
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1004,14 +896,13 @@
 
     if-nez v6, :cond_6
 
-    .line 3353
     const-string v6, "SecureFileSystem"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "systemReady : "
+    const-string v8, "systemReady : "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1033,21 +924,19 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3354
     invoke-direct {p0, p1, v0}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->createPkgDir(ILjava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_4
 
-    .line 3355
     const-string v6, "SecureFileSystem"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "failed to create "
+    const-string v8, "failed to create "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1065,7 +954,6 @@
 
     goto :goto_2
 
-    .line 3357
     :cond_6
     const-string v6, "SecureFileSystem"
 
@@ -1073,7 +961,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "systemReady : "
+    const-string v8, "systemReady : "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1102,27 +990,23 @@
     .locals 3
 
     .prologue
-    .line 3240
     iget-boolean v0, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->timaVersion20:Z
 
     if-eqz v0, :cond_0
 
-    .line 3241
     const-string v0, "SecureFileSystem"
 
     const-string v1, "TIMA 2.0 not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3244
     :cond_0
     const-string v0, "SecureFileSystem"
 
-    const-string/jumbo v1, "unmount"
+    const-string v1, "unmount"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3245
     iget-object v0, p0, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     const/4 v1, 0x0
@@ -1131,6 +1015,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->unmount(II)Z
 
-    .line 3247
     return-void
 .end method

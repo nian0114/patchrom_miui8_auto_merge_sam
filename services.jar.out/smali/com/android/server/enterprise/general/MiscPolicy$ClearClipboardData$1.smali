@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1745
     iput-object p1, p0, Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData$1;->this$0:Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData;
 
     invoke-direct {p0}, Landroid/sec/clipboard/IClipboardWorkingFormUiInterface$Stub;-><init>()V
@@ -43,14 +42,12 @@
     .end annotation
 
     .prologue
-    .line 1749
     const-string v0, "MiscPolicy"
 
-    const-string/jumbo v1, "setClipboardDataListChange"
+    const-string v1, "setClipboardDataListChange"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1750
     return-void
 .end method
 
@@ -64,14 +61,12 @@
     .end annotation
 
     .prologue
-    .line 1755
     const-string v0, "MiscPolicy"
 
-    const-string/jumbo v1, "setClipboardDataMgr"
+    const-string v1, "setClipboardDataMgr"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1756
     return-void
 .end method
 
@@ -85,13 +80,11 @@
     .end annotation
 
     .prologue
-    .line 1761
     const-string v0, "MiscPolicy"
 
-    const-string/jumbo v1, "setClipboardDataUiEvent"
+    const-string v1, "setClipboardDataUiEvent"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1762
     return-void
 .end method

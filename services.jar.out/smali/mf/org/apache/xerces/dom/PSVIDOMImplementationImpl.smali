@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 46
     new-instance v0, Lmf/org/apache/xerces/dom/PSVIDOMImplementationImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/dom/PSVIDOMImplementationImpl;-><init>()V
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/DOMImplementationImpl;-><init>()V
 
     return-void
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lmf/org/apache/xerces/dom/PSVIDOMImplementationImpl;->singleton:Lmf/org/apache/xerces/dom/PSVIDOMImplementationImpl;
 
     return-object v0
@@ -49,7 +46,6 @@
     .param p1, "doctype"    # Lmf/org/w3c/dom/DocumentType;
 
     .prologue
-    .line 86
     new-instance v0, Lmf/org/apache/xerces/dom/PSVIDocumentImpl;
 
     invoke-direct {v0, p1}, Lmf/org/apache/xerces/dom/PSVIDocumentImpl;-><init>(Lmf/org/w3c/dom/DocumentType;)V
@@ -63,15 +59,13 @@
     .param p2, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     invoke-super {p0, p1, p2}, Lmf/org/apache/xerces/dom/DOMImplementationImpl;->hasFeature(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 78
-    const-string/jumbo v0, "psvi"
+    const-string v0, "psvi"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -79,7 +73,6 @@
 
     if-nez v0, :cond_0
 
-    .line 77
     const/4 v0, 0x0
 
     :goto_0

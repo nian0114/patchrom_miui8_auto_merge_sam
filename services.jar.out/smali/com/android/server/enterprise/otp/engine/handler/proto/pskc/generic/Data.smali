@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mCounter:I
 
     return v0
@@ -48,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mEncryptionAlgo:Ljava/lang/String;
 
     return-object v0
@@ -58,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mEncryptionType:I
 
     return v0
@@ -68,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mSecret:Ljava/lang/String;
 
     return-object v0
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mStructuredData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     return-object v0
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mTime:I
 
     return v0
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mTimeDrift:I
 
     return v0
@@ -108,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mTimeInterval:I
 
     return v0
@@ -119,17 +110,14 @@
     .param p1, "counter"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     .prologue
-    .line 56
     if-eqz p1, :cond_0
 
-    .line 57
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 58
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
@@ -140,12 +128,10 @@
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mCounter:I
 
-    .line 63
     :cond_0
     :goto_0
     return-void
 
-    .line 59
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
@@ -161,10 +147,8 @@
     .param p1, "encryptionType"    # I
 
     .prologue
-    .line 117
     iput p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mEncryptionType:I
 
-    .line 118
     return-void
 .end method
 
@@ -173,34 +157,28 @@
     .param p1, "secret"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     .prologue
-    .line 35
     if-eqz p1, :cond_0
 
-    .line 36
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 38
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mSecret:Ljava/lang/String;
 
-    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mEncryptionType:I
 
-    .line 49
     :cond_0
     :goto_0
     return-void
 
-    .line 40
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
@@ -208,12 +186,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 44
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mEncryptionType:I
 
-    .line 45
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
     move-result-object v0
@@ -228,7 +204,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mSecret:Ljava/lang/String;
 
-    .line 46
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
     move-result-object v0
@@ -247,10 +222,8 @@
     .param p1, "mStructuredData"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     .prologue
-    .line 27
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mStructuredData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
-    .line 28
     return-void
 .end method
 
@@ -259,17 +232,14 @@
     .param p1, "time"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     .prologue
-    .line 70
     if-eqz p1, :cond_0
 
-    .line 71
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 72
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
@@ -280,12 +250,10 @@
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mTime:I
 
-    .line 77
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
@@ -301,17 +269,14 @@
     .param p1, "timeDrift"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     .prologue
-    .line 98
     if-eqz p1, :cond_0
 
-    .line 99
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 100
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
@@ -322,12 +287,10 @@
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mTimeDrift:I
 
-    .line 105
     :cond_0
     :goto_0
     return-void
 
-    .line 101
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
@@ -343,17 +306,14 @@
     .param p1, "timeInterval"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     .prologue
-    .line 84
     if-eqz p1, :cond_0
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 86
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getPlainValue()Ljava/lang/String;
 
     move-result-object v0
@@ -364,12 +324,10 @@
 
     iput v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->mTimeInterval:I
 
-    .line 91
     :cond_0
     :goto_0
     return-void
 
-    .line 87
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->getEncryptedValue()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 

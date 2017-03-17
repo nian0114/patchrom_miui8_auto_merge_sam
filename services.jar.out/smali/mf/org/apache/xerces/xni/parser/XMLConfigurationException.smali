@@ -24,16 +24,12 @@
     .param p2, "identifier"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     invoke-direct {p0, p2}, Lmf/org/apache/xerces/xni/XNIException;-><init>(Ljava/lang/String;)V
 
-    .line 73
     iput-short p1, p0, Lmf/org/apache/xerces/xni/parser/XMLConfigurationException;->fType:S
 
-    .line 74
     iput-object p2, p0, Lmf/org/apache/xerces/xni/parser/XMLConfigurationException;->fIdentifier:Ljava/lang/String;
 
-    .line 75
     return-void
 .end method
 
@@ -44,16 +40,12 @@
     .param p3, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     invoke-direct {p0, p3}, Lmf/org/apache/xerces/xni/XNIException;-><init>(Ljava/lang/String;)V
 
-    .line 91
     iput-short p1, p0, Lmf/org/apache/xerces/xni/parser/XMLConfigurationException;->fType:S
 
-    .line 92
     iput-object p2, p0, Lmf/org/apache/xerces/xni/parser/XMLConfigurationException;->fIdentifier:Ljava/lang/String;
 
-    .line 93
     return-void
 .end method
 
@@ -63,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lmf/org/apache/xerces/xni/parser/XMLConfigurationException;->fIdentifier:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-short v0, p0, Lmf/org/apache/xerces/xni/parser/XMLConfigurationException;->fType:S
 
     return v0

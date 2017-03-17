@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 278
     iput-object p1, p0, Lcom/android/server/enterprise/log/FileLogger$LogFileWriter$1;->this$1:Lcom/android/server/enterprise/log/FileLogger$LogFileWriter;
 
     iput-object p2, p0, Lcom/android/server/enterprise/log/FileLogger$LogFileWriter$1;->val$file:Ljava/io/File;
@@ -56,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 304
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->close()V
 
-    .line 305
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 278
     check-cast p1, Ljava/io/BufferedWriter;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -92,10 +88,8 @@
     .end annotation
 
     .prologue
-    .line 298
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 299
     return-void
 .end method
 
@@ -109,7 +103,6 @@
     .end annotation
 
     .prologue
-    .line 278
     check-cast p1, Ljava/io/BufferedWriter;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -127,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 282
     new-instance v0, Ljava/io/BufferedWriter;
 
     new-instance v1, Ljava/io/FileWriter;
@@ -152,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 278
     invoke-virtual {p0}, Lcom/android/server/enterprise/log/FileLogger$LogFileWriter$1;->open()Ljava/io/BufferedWriter;
 
     move-result-object v0
@@ -170,7 +161,6 @@
     .end annotation
 
     .prologue
-    .line 289
     iget-object v2, p0, Lcom/android/server/enterprise/log/FileLogger$LogFileWriter$1;->this$1:Lcom/android/server/enterprise/log/FileLogger$LogFileWriter;
 
     iget-object v2, v2, Lcom/android/server/enterprise/log/FileLogger$LogFileWriter;->lb:Lcom/android/server/enterprise/log/FileLogger$LogBuffer;
@@ -195,21 +185,17 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 290
     .local v1, "log":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 291
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->newLine()V
 
     goto :goto_0
 
-    .line 293
     .end local v1    # "log":Ljava/lang/String;
     :cond_0
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 294
     return-void
 .end method
 
@@ -223,7 +209,6 @@
     .end annotation
 
     .prologue
-    .line 278
     check-cast p1, Ljava/io/BufferedWriter;
 
     .end local p1    # "x0":Ljava/lang/Object;

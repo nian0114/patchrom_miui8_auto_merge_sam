@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4841
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$25;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 3
 
     .prologue
-    .line 4844
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->LTE_PROFILING:Z
 
     if-eqz v0, :cond_1
 
-    .line 4845
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -57,14 +54,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4846
     const-string v0, "[EPDGService]"
 
     const-string v1, "Wifi on is called and L2W handover profiling is running, stop it"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4848
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -72,7 +67,6 @@
 
     invoke-virtual {v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->stopL2WHandoverProfiling()V
 
-    .line 4850
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getIsVoWifiEnabled()Z
 
@@ -93,7 +87,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4852
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -127,7 +120,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->setLteThreshold(II)V
 
-    .line 4857
     :cond_1
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
@@ -155,18 +147,15 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 4859
     const-string v0, "[EPDGService]"
 
     const-string v1, "TEpdg timer running..  wait for it to expire. No timers starting."
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4867
     :goto_0
     return-void
 
-    .line 4860
     :cond_2
     # invokes: Lcom/sec/epdg/EpdgService;->getIsOnDemandApnConnectionFailed()Ljava/lang/Boolean;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$000()Ljava/lang/Boolean;
@@ -179,7 +168,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 4861
     const-string v0, "[EPDGService]"
 
     const-string v1, "OnDemand PDN connection failed. Waiting for the state to be reset."
@@ -188,7 +176,6 @@
 
     goto :goto_0
 
-    .line 4862
     :cond_3
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$25;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -199,7 +186,6 @@
 
     if-nez v0, :cond_4
 
-    .line 4863
     const-string v0, "[EPDGService]"
 
     const-string v1, "Wifi signal is good from monitor. But wifi is not connected"
@@ -208,7 +194,6 @@
 
     goto :goto_0
 
-    .line 4865
     :cond_4
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$25;->this$0:Lcom/sec/epdg/EpdgService;
 

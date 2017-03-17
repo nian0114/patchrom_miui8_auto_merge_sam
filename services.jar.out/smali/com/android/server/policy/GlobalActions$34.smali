@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4146
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v5, 0x0
 
-    .line 4148
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4149
     .local v0, "action":Ljava/lang/String;
     const-string v2, "GlobalActions"
 
@@ -56,7 +53,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mBroadcastReceiver : onReceive : "
+    const-string v4, "mBroadcastReceiver : onReceive : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,7 +69,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4150
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -139,17 +135,15 @@
 
     if-nez v2, :cond_3
 
-    .line 4157
     :cond_0
-    const-string/jumbo v2, "reason"
+    const-string v2, "reason"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4158
     .local v1, "reason":Ljava/lang/String;
-    const-string/jumbo v2, "globalactions"
+    const-string v2, "globalactions"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -157,14 +151,12 @@
 
     if-nez v2, :cond_2
 
-    .line 4159
     const-string v2, "GlobalActions"
 
-    const-string/jumbo v3, "mBroadcastReceiver : onReceive : sendEmptyMessage(MESSAGE_DISMISS) reason #1"
+    const-string v3, "mBroadcastReceiver : onReceive : sendEmptyMessage(MESSAGE_DISMISS) reason #1"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4160
     const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -173,13 +165,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 4161
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsScreenOFF:Z
     invoke-static {v2, v6}, Lcom/android/server/policy/GlobalActions;->access$7602(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 4163
     :cond_1
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -190,13 +180,11 @@
 
     invoke-virtual {v2, v5}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 4190
     .end local v1    # "reason":Ljava/lang/String;
     :cond_2
     :goto_0
     return-void
 
-    .line 4165
     :cond_3
     const-string v2, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
 
@@ -206,7 +194,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 4168
     const-string v2, "PHONE_IN_ECM_STATE"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -224,20 +211,17 @@
 
     if-eqz v2, :cond_2
 
-    .line 4170
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsWaitingForEcmExit:Z
     invoke-static {v2, v5}, Lcom/android/server/policy/GlobalActions;->access$2802(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 4171
     const-string v2, "GlobalActions"
 
-    const-string/jumbo v3, "mBroadcastReceiver changeAirplaneModeSystemSetting called "
+    const-string v3, "mBroadcastReceiver changeAirplaneModeSystemSetting called "
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4172
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->changeAirplaneModeSystemSetting(Z)V
@@ -245,7 +229,6 @@
 
     goto :goto_0
 
-    .line 4174
     :cond_4
     const-string v2, "android.intent.action.ACTION_SUBINFO_RECORD_UPDATED"
 
@@ -255,20 +238,17 @@
 
     if-eqz v2, :cond_5
 
-    .line 4175
     const-string v2, "GlobalActions"
 
     const-string v3, "ACTION_SUBINFO_RECORD_UPDATED received"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4177
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->unregisterPhoneStateListener()V
     invoke-static {v2}, Lcom/android/server/policy/GlobalActions;->access$7700(Lcom/android/server/policy/GlobalActions;)V
 
-    .line 4178
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -283,7 +263,6 @@
 
     goto :goto_0
 
-    .line 4185
     :cond_5
     const-string v2, "com.samsung.settings.action.talkback_toggled"
 
@@ -293,7 +272,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 4186
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHandler:Landroid/os/Handler;
@@ -305,7 +283,6 @@
 
     goto :goto_0
 
-    .line 4187
     :cond_6
     const-string v2, "ACTION_DUALMODE_SETTING"
 
@@ -315,7 +292,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 4188
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$34;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHandler:Landroid/os/Handler;

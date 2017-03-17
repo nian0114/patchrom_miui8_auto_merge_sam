@@ -48,13 +48,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 285
     iput-object p1, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
-    .line 286
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 287
     return-void
 .end method
 
@@ -69,7 +66,6 @@
 
     const/4 v3, 0x1
 
-    .line 290
     # getter for: Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->access$000()Ljava/lang/String;
 
@@ -79,7 +75,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "handleMessage: entry what = "
+    const-string v7, "handleMessage: entry what = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -97,16 +93,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     iget v5, p1, Landroid/os/Message;->what:I
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 335
     :goto_0
     return-void
 
-    .line 293
     :sswitch_0
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -116,7 +109,6 @@
 
     goto :goto_0
 
-    .line 296
     :sswitch_1
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -126,7 +118,6 @@
 
     goto :goto_0
 
-    .line 299
     :sswitch_2
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -136,7 +127,6 @@
 
     goto :goto_0
 
-    .line 302
     :sswitch_3
     iget v5, p1, Landroid/os/Message;->arg1:I
 
@@ -144,7 +134,6 @@
 
     move v2, v3
 
-    .line 303
     .local v2, "shift":Z
     :goto_1
     iget v5, p1, Landroid/os/Message;->arg2:I
@@ -153,7 +142,6 @@
 
     move v1, v3
 
-    .line 304
     .local v1, "dimBackground":Z
     :goto_2
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
@@ -167,17 +155,14 @@
     :cond_0
     move v2, v4
 
-    .line 302
     goto :goto_1
 
     .restart local v2    # "shift":Z
     :cond_1
     move v1, v4
 
-    .line 303
     goto :goto_2
 
-    .line 307
     .end local v2    # "shift":Z
     :sswitch_4
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
@@ -186,7 +171,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->handleUpdatePosition(I)V
 
-    .line 308
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     iget-object v3, v3, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
@@ -197,7 +181,6 @@
 
     goto :goto_0
 
-    .line 311
     :sswitch_5
     iget-object v4, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -207,7 +190,6 @@
 
     goto :goto_0
 
-    .line 314
     :sswitch_6
     iget v5, p1, Landroid/os/Message;->arg1:I
 
@@ -215,14 +197,12 @@
 
     move v0, v3
 
-    .line 315
     .local v0, "activate":Z
     :goto_3
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     invoke-virtual {v3, v0}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->handleUpdateActivate(Z)V
 
-    .line 316
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     iget-object v3, v3, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
@@ -235,10 +215,8 @@
     :cond_2
     move v0, v4
 
-    .line 314
     goto :goto_3
 
-    .line 319
     :sswitch_7
     iget-object v4, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -255,7 +233,6 @@
     :goto_4
     invoke-virtual {v4, v5, v3}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->handleUpdateCocktailBarWindowType(ILjava/lang/String;)V
 
-    .line 320
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     iget-object v3, v3, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->mStateInfo:Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
@@ -266,19 +243,16 @@
 
     goto :goto_0
 
-    .line 319
     :cond_3
     const/4 v3, 0x0
 
     goto :goto_4
 
-    .line 323
     :sswitch_8
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     invoke-virtual {v3}, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;->handleRefreshState()V
 
-    .line 324
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
     const/16 v4, 0x8
@@ -287,7 +261,6 @@
 
     goto :goto_0
 
-    .line 327
     :sswitch_9
     iget-object v4, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -299,7 +272,6 @@
 
     goto/16 :goto_0
 
-    .line 330
     :sswitch_a
     iget-object v3, p0, Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy$CocktailBarStateHandler;->this$0:Lcom/android/server/cocktailbar/policy/state/AbsCocktailBarStatePolicy;
 
@@ -309,7 +281,6 @@
 
     goto/16 :goto_0
 
-    .line 291
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

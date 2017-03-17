@@ -40,10 +40,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 41
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -54,21 +52,18 @@
 
     iput v0, p0, Lcom/android/server/pm/Installer;->ASYNC_CMD_MAX:I
 
-    .line 102
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Installer;->asyncCmds:Ljava/util/HashMap;
 
-    .line 45
     new-instance v0, Lcom/android/internal/os/InstallerConnection;
 
     invoke-direct {v0}, Lcom/android/internal/os/InstallerConnection;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
-    .line 46
     return-void
 .end method
 
@@ -79,21 +74,17 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 55
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 56
     const-string p0, "!"
 
-    .line 61
     :cond_0
     return-object p0
 
-    .line 58
     :cond_1
     const/4 v0, 0x0
 
@@ -111,7 +102,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 59
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -127,15 +117,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 604
     if-nez p0, :cond_1
 
-    .line 614
     :cond_0
     :goto_0
     return v4
 
-    .line 608
     :cond_1
     sget-object v1, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
 
@@ -151,7 +138,6 @@
 
     aget-object v0, v1, v2
 
-    .line 609
     .local v0, "abi":Ljava/lang/String;
     invoke-static {v0}, Ldalvik/system/VMRuntime;->getInstructionSet(Ljava/lang/String;)Ljava/lang/String;
 
@@ -163,12 +149,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 610
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 608
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
@@ -193,7 +177,6 @@
     .param p12, "interpret_only"    # Z
 
     .prologue
-    .line 149
     :goto_0
     move-object/from16 v0, p0
 
@@ -215,7 +198,6 @@
 
     if-nez v4, :cond_0
 
-    .line 151
     const-wide/16 v4, 0x64
 
     :try_start_0
@@ -225,11 +207,9 @@
 
     goto :goto_0
 
-    .line 152
     :catch_0
     move-exception v18
 
-    .line 153
     .local v18, "e":Ljava/lang/InterruptedException;
     const-string v4, "Installer"
 
@@ -241,7 +221,6 @@
 
     goto :goto_0
 
-    .line 156
     .end local v18    # "e":Ljava/lang/InterruptedException;
     :cond_0
     new-instance v17, Lcom/android/server/pm/Installer$AsyncDexopt;
@@ -256,13 +235,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/Installer$AsyncDexopt;-><init>(Lcom/android/server/pm/Installer;Landroid/content/pm/PackageParser$Package;Ljava/lang/String;)V
 
-    .line 157
     .local v17, "cmd":Lcom/android/server/pm/Installer$AsyncDexopt;
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Object;->hashCode()I
 
     move-result v16
 
-    .line 158
     .local v16, "hashCode":I
     move-object/from16 v0, p0
 
@@ -294,11 +271,9 @@
 
     move-result v19
 
-    .line 162
     .local v19, "ret":I
     if-ltz v19, :cond_1
 
-    .line 163
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/Installer;->asyncCmds:Ljava/util/HashMap;
@@ -313,15 +288,13 @@
 
     invoke-virtual {v4, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     :goto_1
     return v19
 
-    .line 165
     :cond_1
     const-string v4, "Installer"
 
-    const-string/jumbo v5, "failed to invoke asyncdexopt"
+    const-string v5, "failed to invoke asyncdexopt"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -336,7 +309,6 @@
     .end annotation
 
     .prologue
-    .line 401
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/Installer;->clearUserData(Ljava/lang/String;Ljava/lang/String;I)I
@@ -355,37 +327,29 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 405
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmuserdata"
+    const-string v1, "rmuserdata"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 406
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 407
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 408
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 409
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 410
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 411
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 412
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -411,59 +375,45 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 383
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "cpcompleteapp"
+    const-string v1, "cpcompleteapp"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 384
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 385
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 386
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 387
     invoke-static {p2}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 388
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 389
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 390
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 391
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 392
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 393
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 394
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 395
     invoke-virtual {v0, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 396
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -485,27 +435,21 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 571
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "createoatdir"
+    const-string v1, "createoatdir"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 572
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 573
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 574
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 575
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 576
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -524,23 +468,19 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 361
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "mkuserconfig"
+    const-string v1, "mkuserconfig"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 362
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 363
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 364
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -564,7 +504,6 @@
     .end annotation
 
     .prologue
-    .line 342
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -595,53 +534,41 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 346
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "mkuserdata"
+    const-string v1, "mkuserdata"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 347
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 348
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 349
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 350
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 351
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 352
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 353
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 354
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 355
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 356
     if-eqz p5, :cond_0
 
     .end local p5    # "seinfo":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 357
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -654,7 +581,6 @@
 
     return v1
 
-    .line 356
     .restart local p5    # "seinfo":Ljava/lang/String;
     :cond_0
     const-string p5, "!"
@@ -670,7 +596,6 @@
     .end annotation
 
     .prologue
-    .line 310
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/Installer;->deleteCacheFiles(Ljava/lang/String;Ljava/lang/String;I)I
@@ -689,37 +614,29 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 314
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmcache"
+    const-string v1, "rmcache"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 315
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 316
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 317
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 318
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 319
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 320
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 321
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -741,7 +658,6 @@
     .end annotation
 
     .prologue
-    .line 326
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/Installer;->deleteCodeCacheFiles(Ljava/lang/String;Ljava/lang/String;I)I
@@ -760,37 +676,29 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 330
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmcodecache"
+    const-string v1, "rmcodecache"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 331
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 332
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 333
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 334
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 335
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 336
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 337
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -813,7 +721,6 @@
     .param p5, "dexoptNeeded"    # I
 
     .prologue
-    .line 87
     const/4 v6, 0x1
 
     move-object v0, p0
@@ -845,14 +752,12 @@
     .param p6, "bootComplete"    # Z
 
     .prologue
-    .line 92
     invoke-static {p4}, Lcom/android/server/pm/Installer;->isValidInstructionSet(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 93
     const-string v0, "Installer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -875,10 +780,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     const/4 v0, -0x1
 
-    .line 97
     :goto_0
     return v0
 
@@ -918,7 +821,6 @@
     .param p10, "interpret_only"    # Z
 
     .prologue
-    .line 196
     const/4 v10, 0x1
 
     move-object v0, p0
@@ -965,14 +867,12 @@
     .param p11, "interpret_only"    # Z
 
     .prologue
-    .line 204
     invoke-static/range {p5 .. p5}, Lcom/android/server/pm/Installer;->isValidInstructionSet(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 205
     const-string v1, "Installer"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -997,10 +897,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     const/4 v1, -0x1
 
-    .line 208
     :goto_0
     return v1
 
@@ -1041,7 +939,6 @@
     .param p1, "command"    # Ljava/lang/String;
 
     .prologue
-    .line 596
     iget-object v0, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/InstallerConnection;->execute(Ljava/lang/String;)I
@@ -1060,7 +957,6 @@
     .end annotation
 
     .prologue
-    .line 292
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/pm/Installer;->fixUid(Ljava/lang/String;Ljava/lang/String;II)I
@@ -1080,43 +976,33 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 296
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "fixuid"
+    const-string v1, "fixuid"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 297
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 298
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 299
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 300
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 301
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 302
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 303
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 304
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 305
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1137,7 +1023,6 @@
     .end annotation
 
     .prologue
-    .line 440
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/Installer;->freeCache(Ljava/lang/String;J)I
@@ -1155,35 +1040,29 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 444
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "freecache"
+    const-string v1, "freecache"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 445
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 446
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 447
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 448
     invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 449
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1201,7 +1080,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget-object v0, p0, Lcom/android/server/pm/Installer;->asyncCmds:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -1225,7 +1103,6 @@
     .end annotation
 
     .prologue
-    .line 455
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -1266,7 +1143,6 @@
     .param p9, "pStats"    # Landroid/content/pm/PackageStats;
 
     .prologue
-    .line 462
     move-object/from16 v2, p8
 
     .local v2, "arr$":[Ljava/lang/String;
@@ -1281,7 +1157,6 @@
 
     aget-object v6, v2, v5
 
-    .line 463
     .local v6, "instructionSet":Ljava/lang/String;
     invoke-static {v6}, Lcom/android/server/pm/Installer;->isValidInstructionSet(Ljava/lang/String;)Z
 
@@ -1289,7 +1164,6 @@
 
     if-nez v10, :cond_0
 
-    .line 464
     const-string v10, "Installer"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1312,10 +1186,8 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
     const/4 v10, -0x1
 
-    .line 504
     .end local v6    # "instructionSet":Ljava/lang/String;
     .end local p5    # "libDirPath":Ljava/lang/String;
     .end local p6    # "fwdLockApkPath":Ljava/lang/String;
@@ -1323,7 +1195,6 @@
     :goto_1
     return v10
 
-    .line 462
     .restart local v6    # "instructionSet":Ljava/lang/String;
     .restart local p5    # "libDirPath":Ljava/lang/String;
     .restart local p6    # "fwdLockApkPath":Ljava/lang/String;
@@ -1333,62 +1204,51 @@
 
     goto :goto_0
 
-    .line 469
     .end local v6    # "instructionSet":Ljava/lang/String;
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v10, "getsize"
+    const-string v10, "getsize"
 
     invoke-direct {v3, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 470
     .local v3, "builder":Ljava/lang/StringBuilder;
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 471
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 472
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 473
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 474
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 475
     move/from16 v0, p3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 476
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 477
     move-object/from16 v0, p4
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 478
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 481
     if-eqz p5, :cond_3
 
     .end local p5    # "libDirPath":Ljava/lang/String;
@@ -1397,12 +1257,10 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 482
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 483
     if-eqz p6, :cond_4
 
     .end local p6    # "fwdLockApkPath":Ljava/lang/String;
@@ -1411,12 +1269,10 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 484
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 485
     if-eqz p7, :cond_5
 
     .end local p7    # "asecPath":Ljava/lang/String;
@@ -1425,19 +1281,16 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 486
     const/16 v10, 0x20
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 489
     const/4 v10, 0x0
 
     aget-object v10, p8, v10
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 491
     iget-object v10, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1448,7 +1301,6 @@
 
     move-result-object v9
 
-    .line 492
     .local v9, "s":Ljava/lang/String;
     const-string v10, " "
 
@@ -1456,7 +1308,6 @@
 
     move-result-object v8
 
-    .line 494
     .local v8, "res":[Ljava/lang/String;
     if-eqz v8, :cond_2
 
@@ -1466,13 +1317,11 @@
 
     if-eq v10, v11, :cond_6
 
-    .line 495
     :cond_2
     const/4 v10, -0x1
 
     goto :goto_1
 
-    .line 481
     .end local v8    # "res":[Ljava/lang/String;
     .end local v9    # "s":Ljava/lang/String;
     .restart local p5    # "libDirPath":Ljava/lang/String;
@@ -1483,21 +1332,18 @@
 
     goto :goto_2
 
-    .line 483
     .end local p5    # "libDirPath":Ljava/lang/String;
     :cond_4
     const-string p6, "!"
 
     goto :goto_3
 
-    .line 485
     .end local p6    # "fwdLockApkPath":Ljava/lang/String;
     :cond_5
     const-string p7, "!"
 
     goto :goto_4
 
-    .line 498
     .end local p7    # "asecPath":Ljava/lang/String;
     .restart local v8    # "res":[Ljava/lang/String;
     .restart local v9    # "s":Ljava/lang/String;
@@ -1515,7 +1361,6 @@
 
     iput-wide v10, v0, Landroid/content/pm/PackageStats;->codeSize:J
 
-    .line 499
     const/4 v10, 0x2
 
     aget-object v10, v8, v10
@@ -1528,7 +1373,6 @@
 
     iput-wide v10, v0, Landroid/content/pm/PackageStats;->dataSize:J
 
-    .line 500
     const/4 v10, 0x3
 
     aget-object v10, v8, v10
@@ -1541,7 +1385,6 @@
 
     iput-wide v10, v0, Landroid/content/pm/PackageStats;->cacheSize:J
 
-    .line 501
     const/4 v10, 0x4
 
     aget-object v10, v8, v10
@@ -1554,7 +1397,6 @@
 
     iput-wide v10, v0, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
-    .line 502
     const/4 v10, 0x0
 
     aget-object v10, v8, v10
@@ -1567,11 +1409,9 @@
 
     goto/16 :goto_1
 
-    .line 503
     :catch_0
     move-exception v4
 
-    .line 504
     .local v4, "e":Ljava/lang/NumberFormatException;
     const/4 v10, -0x1
 
@@ -1587,33 +1427,25 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 215
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "idmap"
+    const-string v1, "idmap"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 216
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 217
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 219
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 221
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 222
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1637,7 +1469,6 @@
     .end annotation
 
     .prologue
-    .line 67
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -1668,53 +1499,41 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "install"
+    const-string v1, "install"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 72
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 73
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 74
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 75
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 77
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 78
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 79
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 80
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 81
     if-eqz p5, :cond_0
 
     .end local p5    # "seinfo":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 82
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1727,7 +1546,6 @@
 
     return v1
 
-    .line 81
     .restart local p5    # "seinfo":Ljava/lang/String;
     :cond_0
     const-string p5, "!"
@@ -1744,33 +1562,25 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 581
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "linkfile"
+    const-string v1, "linkfile"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 582
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 583
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 584
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 585
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 586
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 587
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 588
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1793,7 +1603,6 @@
     .end annotation
 
     .prologue
-    .line 514
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/pm/Installer;->linkNativeLibraryDirectory(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
@@ -1815,71 +1624,56 @@
 
     const/16 v2, 0x20
 
-    .line 526
     if-nez p2, :cond_0
 
-    .line 527
     const-string v2, "Installer"
 
-    const-string/jumbo v3, "linkNativeLibraryDirectory dataPath is null"
+    const-string v3, "linkNativeLibraryDirectory dataPath is null"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
     :goto_0
     return v1
 
-    .line 529
     :cond_0
     if-nez p3, :cond_1
 
-    .line 530
     const-string v2, "Installer"
 
-    const-string/jumbo v3, "linkNativeLibraryDirectory nativeLibPath is null"
+    const-string v3, "linkNativeLibraryDirectory nativeLibPath is null"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 534
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "linklib"
+    const-string v1, "linklib"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 535
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 536
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 537
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 538
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 539
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 540
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 541
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 542
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 544
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1898,14 +1692,12 @@
     .param p1, "instructionSet"    # Ljava/lang/String;
 
     .prologue
-    .line 427
     invoke-static {p1}, Lcom/android/server/pm/Installer;->isValidInstructionSet(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 428
     const-string v1, "Installer"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1928,31 +1720,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     const/4 v1, -0x1
 
-    .line 435
     :goto_0
     return v1
 
-    .line 432
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "markbootcomplete"
+    const-string v1, "markbootcomplete"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 433
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 434
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 435
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1970,10 +1756,9 @@
     .locals 2
 
     .prologue
-    .line 509
     iget-object v0, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
-    const-string/jumbo v1, "movefiles"
+    const-string v1, "movefiles"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/InstallerConnection;->execute(Ljava/lang/String;)I
 
@@ -1991,14 +1776,12 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 226
     invoke-static {p3}, Lcom/android/server/pm/Installer;->isValidInstructionSet(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 227
     const-string v1, "Installer"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2021,41 +1804,31 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     const/4 v1, -0x1
 
-    .line 238
     :goto_0
     return v1
 
-    .line 231
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "movedex"
+    const-string v1, "movedex"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 232
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 233
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 234
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 235
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 236
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 237
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 238
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2073,19 +1846,16 @@
     .locals 2
 
     .prologue
-    .line 50
     const-string v0, "Installer"
 
     const-string v1, "Waiting for installd to be ready."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Lcom/android/internal/os/InstallerConnection;->waitForConnection()V
 
-    .line 52
     return-void
 .end method
 
@@ -2095,14 +1865,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 175
     iget-object v5, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v5}, Lcom/android/internal/os/InstallerConnection;->processAsyncResult()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 176
     .local v2, "r":Ljava/lang/String;
     const-string v5, " "
 
@@ -2110,7 +1878,6 @@
 
     move-result-object v3
 
-    .line 177
     .local v3, "result":[Ljava/lang/String;
     array-length v5, v3
 
@@ -2118,14 +1885,12 @@
 
     if-lt v5, v6, :cond_1
 
-    .line 178
     aget-object v5, v3, v4
 
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 179
     .local v1, "hashCode":I
     iget-object v5, p0, Lcom/android/server/pm/Installer;->asyncCmds:Ljava/util/HashMap;
 
@@ -2139,20 +1904,16 @@
 
     check-cast v0, Lcom/android/server/pm/Installer$AsyncCmd;
 
-    .line 180
     .local v0, "cmd":Lcom/android/server/pm/Installer$AsyncCmd;
     if-eqz v0, :cond_0
 
-    .line 181
     invoke-interface {v0, v3}, Lcom/android/server/pm/Installer$AsyncCmd;->processResult([Ljava/lang/String;)V
 
-    .line 187
     .end local v0    # "cmd":Lcom/android/server/pm/Installer$AsyncCmd;
     .end local v1    # "hashCode":I
     :goto_0
     return v4
 
-    .line 183
     .restart local v0    # "cmd":Lcom/android/server/pm/Installer$AsyncCmd;
     .restart local v1    # "hashCode":I
     :cond_0
@@ -2180,7 +1941,6 @@
 
     goto :goto_0
 
-    .line 187
     .end local v0    # "cmd":Lcom/android/server/pm/Installer$AsyncCmd;
     .end local v1    # "hashCode":I
     :cond_1
@@ -2193,14 +1953,12 @@
     .locals 3
 
     .prologue
-    .line 566
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "reloadseappcontexts"
+    const-string v1, "reloadseappcontexts"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 567
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
@@ -2233,7 +1991,6 @@
     .end annotation
 
     .prologue
-    .line 267
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/Installer;->remove(Ljava/lang/String;Ljava/lang/String;I)I
@@ -2252,37 +2009,29 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 271
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "remove"
+    const-string v1, "remove"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 272
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 273
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 274
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 275
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 276
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 277
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 278
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2304,27 +2053,21 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 417
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmrcl"
+    const-string v1, "rmrcl"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 418
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 419
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 420
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 421
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 422
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2345,7 +2088,6 @@
     .end annotation
 
     .prologue
-    .line 369
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/pm/Installer;->removeUserDataDirs(Ljava/lang/String;I)I
@@ -2363,31 +2105,25 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 373
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmuser"
+    const-string v1, "rmuser"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 374
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 375
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 376
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 377
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 378
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2409,27 +2145,21 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 282
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rename"
+    const-string v1, "rename"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 283
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 284
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 285
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 286
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 287
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2452,7 +2182,6 @@
     .end annotation
 
     .prologue
-    .line 549
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/pm/Installer;->restoreconData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
@@ -2472,47 +2201,37 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 553
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "restorecondata"
+    const-string v1, "restorecondata"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 554
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 555
     invoke-static {p1}, Lcom/android/server/pm/Installer;->escapeNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 556
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 557
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 558
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 559
     if-eqz p3, :cond_0
 
     .end local p3    # "seinfo":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 560
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 561
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 562
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2530,14 +2249,12 @@
     :goto_1
     return v1
 
-    .line 559
     .restart local p3    # "seinfo":Ljava/lang/String;
     :cond_0
     const-string p3, "!"
 
     goto :goto_0
 
-    .line 562
     .end local p3    # "seinfo":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x0
@@ -2550,23 +2267,19 @@
     .param p1, "packageDir"    # Ljava/lang/String;
 
     .prologue
-    .line 259
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmpackagedir"
+    const-string v1, "rmpackagedir"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 260
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 261
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 262
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2588,14 +2301,12 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 242
     invoke-static {p2}, Lcom/android/server/pm/Installer;->isValidInstructionSet(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 243
     const-string v1, "Installer"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2618,35 +2329,27 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     const/4 v1, -0x1
 
-    .line 252
     :goto_0
     return v1
 
-    .line 247
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "rmdex"
+    const-string v1, "rmdex"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 248
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 249
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 250
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 251
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 252
     iget-object v1, p0, Lcom/android/server/pm/Installer;->mInstaller:Lcom/android/internal/os/InstallerConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

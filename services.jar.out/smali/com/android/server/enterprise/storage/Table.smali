@@ -33,29 +33,22 @@
     .param p4, "foreignKey"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
-    .line 47
     iput-object p2, p0, Lcom/android/server/enterprise/storage/Table;->mForeignReferTable:Ljava/lang/String;
 
-    .line 48
     iput-object p3, p0, Lcom/android/server/enterprise/storage/Table;->mForeignReferKey:Ljava/lang/String;
 
-    .line 49
     iput-object p4, p0, Lcom/android/server/enterprise/storage/Table;->mForeignKeyName:Ljava/lang/String;
 
-    .line 50
     return-void
 .end method
 
@@ -66,12 +59,10 @@
     .param p1, "column"    # Lcom/android/server/enterprise/storage/Column;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 54
     return-void
 .end method
 
@@ -79,10 +70,8 @@
     .locals 6
 
     .prologue
-    .line 69
     const-string v2, ""
 
-    .line 71
     .local v2, "ret":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
@@ -105,13 +94,11 @@
 
     check-cast v0, Lcom/android/server/enterprise/storage/Column;
 
-    .line 72
     .local v0, "column":Lcom/android/server/enterprise/storage/Column;
     iget-boolean v3, v0, Lcom/android/server/enterprise/storage/Column;->mIsPrimaryKey:Z
 
     if-eqz v3, :cond_0
 
-    .line 73
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +125,6 @@
 
     goto :goto_0
 
-    .line 78
     .end local v0    # "column":Lcom/android/server/enterprise/storage/Column;
     :cond_1
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -178,10 +164,8 @@
     .locals 6
 
     .prologue
-    .line 57
     const-string v2, ""
 
-    .line 59
     .local v2, "ret":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
@@ -203,7 +187,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/storage/Column;
 
-    .line 60
     .local v0, "column":Lcom/android/server/enterprise/storage/Column;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -231,10 +214,8 @@
 
     move-result-object v2
 
-    .line 61
     goto :goto_0
 
-    .line 64
     .end local v0    # "column":Lcom/android/server/enterprise/storage/Column;
     :cond_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -287,13 +268,11 @@
     .end annotation
 
     .prologue
-    .line 83
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 85
     .local v2, "ret":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
@@ -316,7 +295,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/storage/Column;
 
-    .line 86
     .local v0, "column":Lcom/android/server/enterprise/storage/Column;
     iget-object v3, v0, Lcom/android/server/enterprise/storage/Column;->mColumnName:Ljava/lang/String;
 
@@ -326,12 +304,10 @@
 
     if-nez v3, :cond_0
 
-    .line 87
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "column":Lcom/android/server/enterprise/storage/Column;
     :cond_1
     return-object v2

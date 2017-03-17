@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 874
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 
     const-wide/16 v8, 0x7d0
 
-    .line 877
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -61,7 +59,6 @@
     # invokes: Lcom/android/server/LpnetManagerService;->screenOffAction(J)V
     invoke-static {v0, v2, v3}, Lcom/android/server/LpnetManagerService;->access$2100(Lcom/android/server/LpnetManagerService;J)V
 
-    .line 878
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -73,7 +70,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 879
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -87,7 +83,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mMissedLRUFiring ?:"
+    const-string v2, "mMissedLRUFiring ?:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -112,7 +108,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 881
     :cond_0
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -125,7 +120,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 882
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -137,7 +131,6 @@
 
     monitor-enter v1
 
-    .line 883
     :try_start_0
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -150,7 +143,6 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 884
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -162,12 +154,10 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 885
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 886
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -192,7 +182,6 @@
 
     if-lez v0, :cond_2
 
-    .line 887
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -213,12 +202,10 @@
     # invokes: Lcom/android/server/LpnetManagerService;->setAlarm(Ljava/lang/String;JJ)V
     invoke-static/range {v0 .. v5}, Lcom/android/server/LpnetManagerService;->access$2900(Lcom/android/server/LpnetManagerService;Ljava/lang/String;JJ)V
 
-    .line 915
     :cond_1
     :goto_0
     return-void
 
-    .line 885
     :catchall_0
     move-exception v0
 
@@ -229,7 +216,6 @@
 
     throw v0
 
-    .line 889
     :cond_2
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -251,7 +237,6 @@
 
     goto :goto_0
 
-    .line 892
     :cond_3
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -264,7 +249,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 893
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -276,7 +260,6 @@
 
     monitor-enter v1
 
-    .line 894
     :try_start_2
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -289,7 +272,6 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 895
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -301,12 +283,10 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 896
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 897
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -331,7 +311,6 @@
 
     if-lez v0, :cond_4
 
-    .line 898
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -352,7 +331,6 @@
     # invokes: Lcom/android/server/LpnetManagerService;->setAlarm(Ljava/lang/String;JJ)V
     invoke-static/range {v0 .. v5}, Lcom/android/server/LpnetManagerService;->access$2900(Lcom/android/server/LpnetManagerService;Ljava/lang/String;JJ)V
 
-    .line 902
     :goto_1
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -365,7 +343,6 @@
 
     goto :goto_0
 
-    .line 896
     :catchall_1
     move-exception v0
 
@@ -376,7 +353,6 @@
 
     throw v0
 
-    .line 900
     :cond_4
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -398,13 +374,11 @@
 
     goto :goto_1
 
-    .line 904
     :cond_5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 905
     .local v6, "currentTime":J
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -419,7 +393,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "currentTime:"
+    const-string v2, "currentTime:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -454,7 +428,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 906
     :cond_6
     const-string v0, "LpnetManagerService"
 
@@ -462,7 +435,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mMissedLRUFiring diff:"
+    const-string v2, "mMissedLRUFiring diff:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -493,7 +466,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 907
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -535,7 +507,6 @@
 
     if-lez v0, :cond_1
 
-    .line 908
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$6;->this$0:Lcom/android/server/LpnetManagerService;
@@ -567,7 +538,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 909
     :cond_7
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 
@@ -600,7 +570,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 910
     :cond_8
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$6$1;->this$1:Lcom/android/server/LpnetManagerService$6;
 

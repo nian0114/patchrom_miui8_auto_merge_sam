@@ -25,16 +25,12 @@
     .param p2, "identityConstraint"    # Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/identity/Field;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Field$XPath;
 
-    .line 60
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/identity/Field;->fIdentityConstraint:Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;
 
-    .line 61
     return-void
 .end method
 
@@ -45,7 +41,6 @@
     .param p1, "store"    # Lmf/org/apache/xerces/impl/xs/identity/ValueStore;
 
     .prologue
-    .line 81
     new-instance v0, Lmf/org/apache/xerces/impl/xs/identity/Field$Matcher;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/Field;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Field$XPath;
@@ -59,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/Field;->fIdentityConstraint:Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;
 
     return-object v0
@@ -69,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/Field;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Field$XPath;
 
     return-object v0
@@ -79,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/Field;->fXPath:Lmf/org/apache/xerces/impl/xs/identity/Field$XPath;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/impl/xs/identity/Field$XPath;->toString()Ljava/lang/String;

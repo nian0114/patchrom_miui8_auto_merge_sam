@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,24 +38,20 @@
     .end annotation
 
     .prologue
-    .line 100
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
-    .line 101
     .local v0, "client_id_bytes":[B
     invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
 
-    .line 102
     .local v4, "url_s_bytes":[B
     invoke-static {p3}, Lcom/android/server/enterprise/otp/engine/handler/securedata/DSKPPUtils;->base64ToByteArray(Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 105
     .local v2, "nonce_bytes":[B
     invoke-static {v0, v4}, Lcom/android/server/enterprise/otp/engine/handler/securedata/DSKPPUtils;->mergeByteArray([B[B)[B
 
@@ -66,7 +61,6 @@
 
     move-result-object v3
 
-    .line 109
     .local v3, "s":[B
     const/4 v5, 0x1
 
@@ -82,7 +76,6 @@
 
     move-result-object v1
 
-    .line 111
     .local v1, "macBytes":[B
     const/4 v5, 0x0
 
@@ -97,22 +90,18 @@
     .locals 3
 
     .prologue
-    .line 115
     new-instance v1, Ljava/security/SecureRandom;
 
     invoke-direct {v1}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 116
     .local v1, "random":Ljava/security/SecureRandom;
     const/16 v2, 0x8
 
     new-array v0, v2, [B
 
-    .line 117
     .local v0, "bytes":[B
     invoke-virtual {v1, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 118
     return-object v0
 .end method
 
@@ -124,29 +113,24 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 29
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 30
     :cond_0
     const-string v7, "DSKPPHandler::keyProvClientHello : invalid input"
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 31
     new-instance v5, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
 
     const/16 v7, 0x401
 
     invoke-direct {v5, v11, v11, v7}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;-><init>([B[BI)V
 
-    .line 61
     :goto_0
     return-object v5
 
-    .line 34
     :cond_1
     invoke-virtual {p0}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvTrigger;->getPassword()Ljava/lang/String;
 
@@ -156,24 +140,20 @@
 
     move-result-object v4
 
-    .line 37
     .local v4, "passwdCharArr":[C
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/DSKPPHandler;->generateNonce()[B
 
     move-result-object v3
 
-    .line 39
     .local v3, "nonceByteArr":[B
     const/4 v5, 0x0
 
-    .line 42
     .local v5, "result":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
     :try_start_0
     invoke-static {v3, p1}, Lcom/android/server/enterprise/otp/engine/handler/securedata/DSKPPUtils;->mergeByteArray([B[B)[B
 
     move-result-object v6
 
-    .line 44
     .local v6, "salt":[B
     invoke-virtual {p0}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvTrigger;->getnIterationCount()I
 
@@ -185,7 +165,6 @@
 
     move-result-object v1
 
-    .line 47
     .local v1, "k_ac":[B
     invoke-virtual {p0}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvTrigger;->getClientId()Ljava/lang/String;
 
@@ -207,7 +186,6 @@
 
     move-result-object v2
 
-    .line 51
     .local v2, "macBytes":[B
     sget-object v7, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -247,7 +225,6 @@
 
     invoke-virtual {v7, v8}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 54
     new-instance v5, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
 
     .end local v5    # "result":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
@@ -262,7 +239,6 @@
     .restart local v5    # "result":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
     goto :goto_0
 
-    .line 56
     .end local v1    # "k_ac":[B
     .end local v2    # "macBytes":[B
     .end local v5    # "result":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
@@ -270,7 +246,6 @@
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Ljava/security/GeneralSecurityException;
     :goto_1
     invoke-virtual {v0}, Ljava/security/GeneralSecurityException;->getLocalizedMessage()Ljava/lang/String;
@@ -279,7 +254,6 @@
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 58
     new-instance v5, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
 
     const/16 v7, 0x4ff
@@ -289,7 +263,6 @@
     .restart local v5    # "result":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
     goto :goto_0
 
-    .line 56
     .end local v0    # "e":Ljava/security/GeneralSecurityException;
     .end local v5    # "result":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
     :catch_1
@@ -313,12 +286,10 @@
     .end annotation
 
     .prologue
-    .line 122
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v2, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 123
     .local v2, "f":Ljava/io/InputStream;
     const-string v3, "X.509"
 
@@ -326,7 +297,6 @@
 
     move-result-object v1
 
-    .line 124
     .local v1, "cf":Ljava/security/cert/CertificateFactory;
     invoke-virtual {v1, v2}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
@@ -334,7 +304,6 @@
 
     check-cast v0, Ljava/security/cert/X509Certificate;
 
-    .line 126
     .local v0, "certificate":Ljava/security/cert/X509Certificate;
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
 
@@ -361,14 +330,12 @@
     .end annotation
 
     .prologue
-    .line 88
     const-string v2, "PBKDF2WithHmacSHA1"
 
     invoke-static {v2}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
 
     move-result-object v0
 
-    .line 89
     .local v0, "skf":Ljavax/crypto/SecretKeyFactory;
     new-instance v1, Ljavax/crypto/spec/PBEKeySpec;
 
@@ -376,7 +343,6 @@
 
     invoke-direct {v1, p0, p1, p2, v2}, Ljavax/crypto/spec/PBEKeySpec;-><init>([C[BII)V
 
-    .line 90
     .local v1, "spec":Ljavax/crypto/spec/PBEKeySpec;
     invoke-virtual {v0, v1}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
 

@@ -50,58 +50,46 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 33
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/SKLogger;->LOG_LEVEL_OFF:I
 
-    .line 34
     sput v1, Lcom/android/server/SKLogger;->LOG_LEVEL_DENIALS:I
 
-    .line 35
     const/4 v0, 0x2
 
     sput v0, Lcom/android/server/SKLogger;->LOG_LEVEL_ALL:I
 
-    .line 37
     const-string v0, "SKLogger"
 
     sput-object v0, Lcom/android/server/SKLogger;->LOG_TAG:Ljava/lang/String;
 
-    .line 39
-    const-string/jumbo v0, "persist.security.ams.verbose"
+    const-string v0, "persist.security.ams.verbose"
 
     sput-object v0, Lcom/android/server/SKLogger;->SK_VERBOSE_PROP:Ljava/lang/String;
 
-    .line 40
     sget v0, Lcom/android/server/SKLogger;->LOG_LEVEL_DENIALS:I
 
     sput v0, Lcom/android/server/SKLogger;->SK_VERBOSE_DEFAULT:I
 
-    .line 43
     const-string v0, "/data/misc/audit/sk.log"
 
     sput-object v0, Lcom/android/server/SKLogger;->LOG_NEW:Ljava/lang/String;
 
-    .line 44
     const-string v0, "/data/misc/audit/sk.old"
 
     sput-object v0, Lcom/android/server/SKLogger;->LOG_OLD:Ljava/lang/String;
 
-    .line 45
     const/high16 v0, 0x60000
 
     sput v0, Lcom/android/server/SKLogger;->LOG_MAX_SIZE:I
 
-    .line 46
     sput-boolean v1, Lcom/android/server/SKLogger;->DEBUG:Z
 
-    .line 51
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
-    .line 52
     new-instance v0, Lcom/android/server/SKLogger;
 
     invoke-direct {v0}, Lcom/android/server/SKLogger;-><init>()V
@@ -115,10 +103,8 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     return-void
 .end method
 
@@ -126,7 +112,6 @@
     .locals 2
 
     .prologue
-    .line 97
     sget-object v0, Lcom/android/server/SKLogger;->SK_VERBOSE_PROP:Ljava/lang/String;
 
     sget v1, Lcom/android/server/SKLogger;->SK_VERBOSE_DEFAULT:I
@@ -152,7 +137,6 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 63
     const-class v13, Lcom/android/server/SKLogger;
 
     monitor-enter v13
@@ -162,14 +146,12 @@
     :try_start_0
     sput-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
-    .line 65
     sget-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v0, :cond_1
 
-    .line 67
     :try_start_1
     const-string v0, "SKLogger"
 
@@ -179,21 +161,18 @@
 
     sput-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
-    .line 68
     sget-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/logging/Logger;->setUseParentHandlers(Z)V
 
-    .line 69
     sget-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
     invoke-virtual {v0}, Ljava/util/logging/Logger;->getHandlers()[Ljava/util/logging/Handler;
 
     move-result-object v9
 
-    .line 70
     .local v9, "handlers":[Ljava/util/logging/Handler;
     move-object v6, v9
 
@@ -209,7 +188,6 @@
 
     aget-object v8, v6, v10
 
-    .line 72
     .local v8, "handler":Ljava/util/logging/Handler;
     sget-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
@@ -218,12 +196,10 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 70
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 75
     .end local v8    # "handler":Ljava/util/logging/Handler;
     :cond_0
     :try_start_2
@@ -251,7 +227,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 79
     :try_start_3
     new-instance v0, Lcom/android/server/SKLogger$SKFormatter;
 
@@ -267,14 +242,12 @@
 
     sput-object v0, Lcom/android/server/SKLogger;->mFormatterTxt:Lcom/android/server/SKLogger$SKFormatter;
 
-    .line 80
     sget-object v0, Lcom/android/server/SKLogger;->mSKTxt:Lcom/android/server/SKLogger$SKHandler;
 
     sget-object v1, Lcom/android/server/SKLogger;->mFormatterTxt:Lcom/android/server/SKLogger$SKFormatter;
 
     invoke-virtual {v0, v1}, Lcom/android/server/SKLogger$SKHandler;->setFormatter(Ljava/util/logging/Formatter;)V
 
-    .line 81
     sget-object v0, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
     sget-object v1, Lcom/android/server/SKLogger;->mSKTxt:Lcom/android/server/SKLogger$SKHandler;
@@ -284,7 +257,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 87
     :cond_1
     :try_start_4
     sget-object v0, Lcom/android/server/SKLogger;->mSKLogger:Lcom/android/server/SKLogger;
@@ -298,7 +270,6 @@
 
     return-object v0
 
-    .line 76
     .restart local v10    # "i$":I
     .restart local v11    # "len$":I
     :catch_0
@@ -307,10 +278,8 @@
     .local v7, "e":Ljava/lang/IllegalArgumentException;
     move-object v0, v12
 
-    .line 77
     goto :goto_1
 
-    .line 82
     .end local v7    # "e":Ljava/lang/IllegalArgumentException;
     .end local v10    # "i$":I
     .end local v11    # "len$":I
@@ -320,10 +289,8 @@
     .local v7, "e":Ljava/lang/SecurityException;
     move-object v0, v12
 
-    .line 83
     goto :goto_1
 
-    .line 63
     .end local v7    # "e":Ljava/lang/SecurityException;
     :catchall_0
     move-exception v0
@@ -338,36 +305,28 @@
     .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 189
     if-nez p0, :cond_0
 
-    .line 190
     const-string v3, ""
 
-    .line 203
     :goto_0
     return-object v3
 
-    .line 192
     :cond_0
     move-object v2, p0
 
-    .line 193
     .local v2, "t":Ljava/lang/Throwable;
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 194
     instance-of v3, v2, Ljava/net/UnknownHostException;
 
     if-eqz v3, :cond_1
 
-    .line 195
     const-string v3, ""
 
     goto :goto_0
 
-    .line 197
     :cond_1
     invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -375,23 +334,19 @@
 
     goto :goto_1
 
-    .line 200
     :cond_2
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 201
     .local v1, "sw":Ljava/io/StringWriter;
     new-instance v0, Ljava/io/PrintWriter;
 
     invoke-direct {v0, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 202
     .local v0, "pw":Ljava/io/PrintWriter;
     invoke-virtual {p0, v0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 203
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -414,23 +369,19 @@
     .param p9, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     invoke-static {}, Lcom/android/server/SKLogger;->getCurrentLogLevel()I
 
     move-result v0
 
-    .line 120
     .local v0, "currentLogLevel":I
     sget v3, Lcom/android/server/SKLogger;->LOG_LEVEL_OFF:I
 
     if-ne v0, v3, :cond_1
 
-    .line 150
     :cond_0
     :goto_0
     return-void
 
-    .line 124
     :cond_1
     sget v3, Lcom/android/server/SKLogger;->LOG_LEVEL_DENIALS:I
 
@@ -438,18 +389,15 @@
 
     if-gez p1, :cond_0
 
-    .line 127
     :cond_2
     sget v3, Lcom/android/server/SKLogger;->LOG_LEVEL_ALL:I
 
     if-ne v0, v3, :cond_0
 
-    .line 131
     new-instance v2, Landroid/text/format/Time;
 
     invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
-    .line 132
     .local v2, "tObj":Landroid/text/format/Time;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -457,17 +405,14 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/text/format/Time;->set(J)V
 
-    .line 133
     const-string v3, "%d.%m.%Y %H:%M:%S"
 
     invoke-virtual {v2, v3}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 135
     if-ltz p1, :cond_3
 
     const-string v1, "SK-Allowed <"
 
-    .line 136
     .local v1, "logText":Ljava/lang/String;
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -498,7 +443,6 @@
 
     move-result-object v1
 
-    .line 139
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +451,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "srcInfo="
+    const-string v4, "srcInfo="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -517,7 +461,6 @@
 
     move-result-object v1
 
-    .line 140
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -596,7 +539,6 @@
 
     move-result-object v1
 
-    .line 143
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -615,7 +557,6 @@
 
     move-result-object v1
 
-    .line 144
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -624,7 +565,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "dest_service="
+    const-string v4, "dest_service="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -638,7 +579,6 @@
 
     move-result-object v1
 
-    .line 145
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -661,7 +601,6 @@
 
     move-result-object v1
 
-    .line 146
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -680,12 +619,10 @@
 
     move-result-object v1
 
-    .line 147
     sget-object v4, Lcom/android/server/SKLogger;->mSKLogger:Lcom/android/server/SKLogger;
 
     monitor-enter v4
 
-    .line 148
     :try_start_0
     sget-object v3, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
@@ -693,7 +630,6 @@
 
     invoke-virtual {v3, v5, v1}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 149
     monitor-exit v4
 
     goto/16 :goto_0
@@ -707,7 +643,6 @@
 
     throw v3
 
-    .line 135
     .end local v1    # "logText":Ljava/lang/String;
     :cond_3
     const-string v1, "SK-Denied <"
@@ -721,12 +656,10 @@
     .param p2, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 155
     new-instance v1, Landroid/text/format/Time;
 
     invoke-direct {v1}, Landroid/text/format/Time;-><init>()V
 
-    .line 156
     .local v1, "tObj":Landroid/text/format/Time;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -734,19 +667,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/text/format/Time;->set(J)V
 
-    .line 157
     const-string v2, "%d.%m.%Y %H:%M:%S"
 
     invoke-virtual {v1, v2}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 159
     const-string v2, "%d.%m.%Y %H:%M:%S"
 
     invoke-virtual {v1, v2}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 160
     .local v0, "logText":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -776,7 +706,6 @@
 
     move-result-object v0
 
-    .line 161
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -793,12 +722,10 @@
 
     move-result-object v0
 
-    .line 162
     sget-object v3, Lcom/android/server/SKLogger;->mSKLogger:Lcom/android/server/SKLogger;
 
     monitor-enter v3
 
-    .line 163
     :try_start_0
     sget-object v2, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
@@ -806,13 +733,10 @@
 
     invoke-virtual {v2, v4, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 164
     monitor-exit v3
 
-    .line 165
     return-void
 
-    .line 164
     :catchall_0
     move-exception v2
 
@@ -830,12 +754,10 @@
     .param p3, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 170
     new-instance v1, Landroid/text/format/Time;
 
     invoke-direct {v1}, Landroid/text/format/Time;-><init>()V
 
-    .line 171
     .local v1, "tObj":Landroid/text/format/Time;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -843,19 +765,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/text/format/Time;->set(J)V
 
-    .line 172
     const-string v2, "%d.%m.%Y %H:%M:%S"
 
     invoke-virtual {v1, v2}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 174
     const-string v2, "%d.%m.%Y %H:%M:%S"
 
     invoke-virtual {v1, v2}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 175
     .local v0, "logText":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -885,7 +804,6 @@
 
     move-result-object v0
 
-    .line 176
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -908,7 +826,6 @@
 
     move-result-object v0
 
-    .line 177
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -929,12 +846,10 @@
 
     move-result-object v0
 
-    .line 178
     sget-object v3, Lcom/android/server/SKLogger;->mSKLogger:Lcom/android/server/SKLogger;
 
     monitor-enter v3
 
-    .line 179
     :try_start_0
     sget-object v2, Lcom/android/server/SKLogger;->mLogger:Ljava/util/logging/Logger;
 
@@ -942,13 +857,10 @@
 
     invoke-virtual {v2, v4, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 180
     monitor-exit v3
 
-    .line 181
     return-void
 
-    .line 180
     :catchall_0
     move-exception v2
 

@@ -33,15 +33,12 @@
     .param p2, "originUserID"    # I
 
     .prologue
-    .line 175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 176
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 177
     const-string v0, "EnterpriseIdentity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,19 +71,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     :cond_0
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->containerID:I
 
-    .line 179
     iput-object p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->packageName:Ljava/lang/String;
 
-    .line 180
     iput p2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->originUserID:I
 
-    .line 181
     return-void
 .end method
 
@@ -98,15 +91,12 @@
     .param p4, "isSSOConfigurationEnabled"    # Z
 
     .prologue
-    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 185
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 186
     const-string v0, "EnterpriseIdentity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -149,25 +139,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     :cond_0
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->containerID:I
 
-    .line 190
     iput-object p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->packageName:Ljava/lang/String;
 
-    .line 191
     iput p2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->originUserID:I
 
-    .line 192
     iput-boolean p3, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->isMigrationNeeded:Z
 
-    .line 193
     iput-boolean p4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->isSSOConfigurationEnabled:Z
 
-    .line 194
     return-void
 .end method
 
@@ -177,7 +161,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 167
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->setMigrationStatus(Z)V
 
     return-void
@@ -189,7 +172,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 167
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->setSSOConfigurationEnabled(Z)V
 
     return-void
@@ -201,7 +183,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 167
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->updateContainerID(I)V
 
     return-void
@@ -212,10 +193,8 @@
     .param p1, "isMigrationNeeded"    # Z
 
     .prologue
-    .line 208
     iput-boolean p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->isMigrationNeeded:Z
 
-    .line 209
     return-void
 .end method
 
@@ -224,10 +203,8 @@
     .param p1, "isSSOEnabled"    # Z
 
     .prologue
-    .line 205
     iput-boolean p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->isSSOConfigurationEnabled:Z
 
-    .line 206
     return-void
 .end method
 
@@ -236,17 +213,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 197
     const/16 v0, 0x64
 
     if-lt p1, v0, :cond_1
 
-    .line 198
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 199
     const-string v0, "EnterpriseIdentity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -269,11 +243,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_0
     iput p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->containerID:I
 
-    .line 202
     :cond_1
     return-void
 .end method

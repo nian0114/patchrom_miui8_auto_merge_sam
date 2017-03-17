@@ -12,7 +12,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -30,7 +29,6 @@
     .param p2, "connectionCount"    # I
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -48,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -74,7 +71,6 @@
     .locals 2
 
     .prologue
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -100,7 +96,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -114,7 +109,6 @@
     .locals 2
 
     .prologue
-    .line 13
     monitor-enter p0
 
     :try_start_0
@@ -141,7 +135,6 @@
     .param p1, "host"    # Lorg/apache/http/HttpHost;
 
     .prologue
-    .line 14
     monitor-enter p0
 
     :try_start_0
@@ -168,7 +161,6 @@
     .param p1, "host"    # Lorg/apache/http/HttpHost;
 
     .prologue
-    .line 15
     monitor-enter p0
 
     :try_start_0
@@ -217,7 +209,6 @@
     .end annotation
 
     .prologue
-    .line 11
     .local p4, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -253,7 +244,6 @@
     .end annotation
 
     .prologue
-    .line 10
     .local p3, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -270,7 +260,6 @@
     .param p2, "head"    # Z
 
     .prologue
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -319,7 +308,6 @@
     .end annotation
 
     .prologue
-    .line 12
     .local p4, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -335,7 +323,6 @@
     .param p1, "request"    # Landroid/net/http/Request;
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -349,7 +336,6 @@
     .locals 2
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -363,7 +349,6 @@
     .locals 2
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -377,7 +362,6 @@
     .locals 2
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

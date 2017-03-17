@@ -43,42 +43,29 @@
     .param p11, "uninstallOrStop"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput-object p2, p0, Lcom/android/server/EcryptfsMountParams;->mountPath:Ljava/lang/String;
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/EcryptfsMountParams;->sourcePath:Ljava/lang/String;
 
-    .line 32
     iput-object p3, p0, Lcom/android/server/EcryptfsMountParams;->password:Ljava/lang/String;
 
-    .line 33
     iput-object p4, p0, Lcom/android/server/EcryptfsMountParams;->key:[B
 
-    .line 34
     iput-boolean p5, p0, Lcom/android/server/EcryptfsMountParams;->mountAndEncrypt:Z
 
-    .line 35
     iput p6, p0, Lcom/android/server/EcryptfsMountParams;->excludeMediaTypes:I
 
-    .line 36
     iput p7, p0, Lcom/android/server/EcryptfsMountParams;->containerId:I
 
-    .line 37
     iput-object p9, p0, Lcom/android/server/EcryptfsMountParams;->callback:Landroid/dirEncryption/IDirEncryptionManagerCallBack;
 
-    .line 38
     iput-object p10, p0, Lcom/android/server/EcryptfsMountParams;->newPassword:Ljava/lang/String;
 
-    .line 39
     iput p8, p0, Lcom/android/server/EcryptfsMountParams;->state:I
 
-    .line 40
     iput p11, p0, Lcom/android/server/EcryptfsMountParams;->uninstallOrStop:I
 
-    .line 41
     return-void
 .end method

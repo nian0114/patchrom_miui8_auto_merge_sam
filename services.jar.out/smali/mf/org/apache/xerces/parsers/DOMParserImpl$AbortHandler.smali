@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 1187
     invoke-direct {p0}, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 1346
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -83,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 1294
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -100,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 1234
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -117,7 +112,6 @@
     .end annotation
 
     .prologue
-    .line 1206
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 1202
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -153,7 +146,6 @@
     .end annotation
 
     .prologue
-    .line 1362
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -171,7 +163,6 @@
     .end annotation
 
     .prologue
-    .line 1286
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -187,7 +178,6 @@
     .end annotation
 
     .prologue
-    .line 1350
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -205,7 +195,6 @@
     .end annotation
 
     .prologue
-    .line 1218
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -221,7 +210,6 @@
     .end annotation
 
     .prologue
-    .line 1298
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -237,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 1250
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -253,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 1326
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -269,7 +255,6 @@
     .end annotation
 
     .prologue
-    .line 1378
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -285,7 +270,6 @@
     .end annotation
 
     .prologue
-    .line 1330
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -301,7 +285,6 @@
     .end annotation
 
     .prologue
-    .line 1254
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -318,7 +301,6 @@
     .end annotation
 
     .prologue
-    .line 1242
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -334,7 +316,6 @@
     .end annotation
 
     .prologue
-    .line 1282
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -351,7 +332,6 @@
     .end annotation
 
     .prologue
-    .line 1230
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -367,7 +347,6 @@
     .end annotation
 
     .prologue
-    .line 1374
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -384,7 +363,6 @@
     .end annotation
 
     .prologue
-    .line 1274
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -402,7 +380,6 @@
     .end annotation
 
     .prologue
-    .line 1306
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -412,7 +389,6 @@
     .locals 1
 
     .prologue
-    .line 1386
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;->dtdContentSource:Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
     return-object v0
@@ -422,7 +398,6 @@
     .locals 1
 
     .prologue
-    .line 1338
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;->dtdSource:Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
     return-object v0
@@ -432,7 +407,6 @@
     .locals 1
 
     .prologue
-    .line 1262
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;->documentSource:Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
     return-object v0
@@ -449,7 +423,6 @@
     .end annotation
 
     .prologue
-    .line 1238
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -466,7 +439,6 @@
     .end annotation
 
     .prologue
-    .line 1322
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -485,7 +457,6 @@
     .end annotation
 
     .prologue
-    .line 1302
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -503,7 +474,6 @@
     .end annotation
 
     .prologue
-    .line 1314
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -520,7 +490,6 @@
     .end annotation
 
     .prologue
-    .line 1370
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -536,7 +505,6 @@
     .end annotation
 
     .prologue
-    .line 1358
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -554,7 +522,6 @@
     .end annotation
 
     .prologue
-    .line 1210
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -571,7 +538,6 @@
     .end annotation
 
     .prologue
-    .line 1366
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -582,10 +548,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
     .prologue
-    .line 1382
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;->dtdContentSource:Lmf/org/apache/xerces/xni/parser/XMLDTDContentModelSource;
 
-    .line 1383
     return-void
 .end method
 
@@ -594,10 +558,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
     .prologue
-    .line 1334
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;->dtdSource:Lmf/org/apache/xerces/xni/parser/XMLDTDSource;
 
-    .line 1335
     return-void
 .end method
 
@@ -606,10 +568,8 @@
     .param p1, "source"    # Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
     .prologue
-    .line 1258
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/DOMParserImpl$AbortHandler;->documentSource:Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
 
-    .line 1259
     return-void
 .end method
 
@@ -624,7 +584,6 @@
     .end annotation
 
     .prologue
-    .line 1290
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -640,7 +599,6 @@
     .end annotation
 
     .prologue
-    .line 1246
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -657,7 +615,6 @@
     .end annotation
 
     .prologue
-    .line 1318
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -674,7 +631,6 @@
     .end annotation
 
     .prologue
-    .line 1342
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -691,7 +647,6 @@
     .end annotation
 
     .prologue
-    .line 1266
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -710,7 +665,6 @@
     .end annotation
 
     .prologue
-    .line 1194
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -728,7 +682,6 @@
     .end annotation
 
     .prologue
-    .line 1214
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -745,7 +698,6 @@
     .end annotation
 
     .prologue
-    .line 1278
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -764,7 +716,6 @@
     .end annotation
 
     .prologue
-    .line 1222
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -780,7 +731,6 @@
     .end annotation
 
     .prologue
-    .line 1354
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -799,7 +749,6 @@
     .end annotation
 
     .prologue
-    .line 1270
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -817,7 +766,6 @@
     .end annotation
 
     .prologue
-    .line 1226
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -836,7 +784,6 @@
     .end annotation
 
     .prologue
-    .line 1310
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0
@@ -855,7 +802,6 @@
     .end annotation
 
     .prologue
-    .line 1198
     sget-object v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;->INSTANCE:Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     throw v0

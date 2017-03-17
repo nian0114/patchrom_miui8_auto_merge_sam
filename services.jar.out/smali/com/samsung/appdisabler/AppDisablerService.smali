@@ -18,34 +18,27 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Lcom/samsung/appdisabler/IAppDisablerService$Stub;-><init>()V
 
-    .line 33
     const-string v1, "AppDisablerService start"
 
     invoke-static {v1}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 34
     iput-object p1, p0, Lcom/samsung/appdisabler/AppDisablerService;->mContex:Landroid/content/Context;
 
-    .line 37
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/appdisabler/AppDisablerService;->checkPackages()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 41
     :goto_0
     return-void
 
-    .line 38
     :catch_0
     move-exception v0
 
-    .line 39
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v1, "onReceive"
+    const-string v1, "onReceive"
 
     invoke-static {v1, v0}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -56,14 +49,12 @@
     .locals 2
 
     .prologue
-    .line 76
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/csc/appDisablerList.xml"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 78
     .local v0, "configFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -83,12 +74,10 @@
     .end annotation
 
     .prologue
-    .line 46
     const-string v0, "checkPackages"
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 49
     new-instance v0, Lcom/samsung/appdisabler/ImsiItemChecker;
 
     iget-object v1, p0, Lcom/samsung/appdisabler/AppDisablerService;->mContex:Landroid/content/Context;
@@ -97,7 +86,6 @@
 
     iput-object v0, p0, Lcom/samsung/appdisabler/AppDisablerService;->mCurrentImsiThread:Lcom/samsung/appdisabler/ImsiItemChecker;
 
-    .line 54
     iget-object v0, p0, Lcom/samsung/appdisabler/AppDisablerService;->mCurrentImsiThread:Lcom/samsung/appdisabler/ImsiItemChecker;
 
     invoke-virtual {v0}, Lcom/samsung/appdisabler/ImsiItemChecker;->isApkVersionInstalled()Z
@@ -106,16 +94,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 56
     const-string v0, "Apk version installed exit"
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;)V
 
-    .line 61
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/AppDisablerService;->mCurrentImsiThread:Lcom/samsung/appdisabler/ImsiItemChecker;
 
@@ -128,10 +113,8 @@
     .locals 0
 
     .prologue
-    .line 83
     invoke-virtual {p0}, Lcom/samsung/appdisabler/AppDisablerService;->clearInfo()V
 
-    .line 84
     return-void
 .end method
 
@@ -139,16 +122,13 @@
     .locals 1
 
     .prologue
-    .line 65
     const-string v0, "clearInfo"
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 66
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/appdisabler/AppDisablerService;->mCurrentImsiThread:Lcom/samsung/appdisabler/ImsiItemChecker;
 
-    .line 67
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1647
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$17;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1650
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,12 +50,10 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1655
     move-object v0, p1
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 1656
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -71,14 +67,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1657
     const-string v1, "[EPDGService]"
 
     const-string v2, "ACTION_SHUTDOWN - need de-register"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1659
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$17;->this$0:Lcom/sec/epdg/EpdgService;
 
     const/4 v2, 0x0
@@ -90,14 +84,12 @@
 
     if-nez v1, :cond_0
 
-    .line 1660
     const-string v1, "[EPDGService]"
 
     const-string v2, "ShutDown - do not need de-register "
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1661
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1400()Landroid/os/Handler;
 
@@ -112,7 +104,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1664
     :cond_0
     return-void
 .end method

@@ -45,15 +45,12 @@
     .locals 2
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/ipsec/client/IPsecRelayData;->mOperationId:I
 
-    .line 31
     new-instance v0, Ljava/util/Vector;
 
     const/4 v1, 0x1
@@ -62,7 +59,6 @@
 
     iput-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
-    .line 32
     return-void
 .end method
 
@@ -74,19 +70,16 @@
     .param p2, "aValue"    # Ljava/lang/String;
 
     .prologue
-    .line 254
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
     if-nez v0, :cond_0
 
-    .line 255
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
-    .line 256
     :cond_0
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
@@ -96,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 258
     return-void
 .end method
 
@@ -104,12 +96,10 @@
     .locals 1
 
     .prologue
-    .line 267
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
-    .line 268
     return-void
 .end method
 
@@ -117,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mSignature:[B
 
     if-nez v0, :cond_0
@@ -130,26 +119,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 45
     :cond_0
     const/4 v0, 0x1
 
-    .line 52
     :goto_0
     return v0
 
-    .line 48
     :cond_1
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
     if-eqz v0, :cond_2
 
-    .line 50
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 52
     :cond_2
     const/4 v0, 0x0
 
@@ -169,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
@@ -178,14 +161,12 @@
 
     if-lez v0, :cond_0
 
-    .line 234
     new-instance v0, Ljava/util/Vector;
 
     iget-object v1, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogAttributes:Ljava/util/Vector;
 
     invoke-direct {v0, v1}, Ljava/util/Vector;-><init>(Ljava/util/Collection;)V
 
-    .line 237
     :goto_0
     return-object v0
 
@@ -199,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 206
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogMessage:Ljava/lang/String;
 
     return-object v0
@@ -211,7 +191,6 @@
     .end annotation
 
     .prologue
-    .line 173
     const/4 v0, 0x0
 
     return-object v0
@@ -221,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Lcom/ipsec/client/IPsecRelayData;->mOperationId:I
 
     return v0
@@ -231,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mSignature:[B
 
     return-object v0
@@ -243,7 +220,6 @@
     .end annotation
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
     return-object v0
@@ -253,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mSignatureInput:[B
 
     return-object v0
@@ -263,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/ipsec/client/IPsecRelayData;->mSignatureScheme:Ljava/lang/String;
 
     return-object v0
@@ -274,10 +248,8 @@
     .param p1, "aMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData;->mDialogMessage:Ljava/lang/String;
 
-    .line 221
     return-void
 .end method
 
@@ -286,10 +258,8 @@
     .param p1, "operationId"    # I
 
     .prologue
-    .line 62
     iput p1, p0, Lcom/ipsec/client/IPsecRelayData;->mOperationId:I
 
-    .line 63
     return-void
 .end method
 
@@ -298,10 +268,8 @@
     .param p1, "aSignature"    # [B
 
     .prologue
-    .line 138
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData;->mSignature:[B
 
-    .line 139
     return-void
 .end method
 
@@ -312,7 +280,6 @@
     .end annotation
 
     .prologue
-    .line 157
     return-void
 .end method
 
@@ -321,10 +288,8 @@
     .param p1, "aSignatureInput"    # [B
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData;->mSignatureInput:[B
 
-    .line 119
     return-void
 .end method
 
@@ -333,10 +298,8 @@
     .param p1, "aSignatureScheme"    # Ljava/lang/String;
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcom/ipsec/client/IPsecRelayData;->mSignatureScheme:Ljava/lang/String;
 
-    .line 98
     return-void
 .end method
 
@@ -344,7 +307,6 @@
     .locals 3
 
     .prologue
-    .line 275
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,7 +327,6 @@
 
     move-result-object v0
 
-    .line 276
     .local v0, "str":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -391,7 +352,6 @@
 
     move-result-object v0
 
-    .line 277
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,7 +376,6 @@
 
     move-result-object v0
 
-    .line 279
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,12 +400,10 @@
 
     move-result-object v0
 
-    .line 280
     iget-object v1, p0, Lcom/ipsec/client/IPsecRelayData;->mSignatureInput:[B
 
     if-eqz v1, :cond_0
 
-    .line 282
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -479,13 +436,11 @@
 
     move-result-object v0
 
-    .line 285
     :cond_0
     iget-object v1, p0, Lcom/ipsec/client/IPsecRelayData;->mSignature:[B
 
     if-eqz v1, :cond_1
 
-    .line 287
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -518,7 +473,6 @@
 
     move-result-object v0
 
-    .line 290
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -528,7 +482,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -538,6 +492,5 @@
 
     move-result-object v0
 
-    .line 292
     return-object v0
 .end method

@@ -15,15 +15,12 @@
     .locals 1
 
     .prologue
-    .line 63
     invoke-direct {p0}, Lmf/org/apache/xml/resolver/readers/SAXCatalogReader;-><init>()V
 
-    .line 48
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->catalog:Lmf/org/apache/xml/resolver/Catalog;
 
-    .line 64
     return-void
 .end method
 
@@ -33,18 +30,14 @@
     .param p2, "catalog"    # Lmf/org/apache/xml/resolver/Catalog;
 
     .prologue
-    .line 68
     invoke-direct {p0, p1}, Lmf/org/apache/xml/resolver/readers/SAXCatalogReader;-><init>(Lmf/javax/xml/parsers/SAXParserFactory;)V
 
-    .line 48
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->catalog:Lmf/org/apache/xml/resolver/Catalog;
 
-    .line 69
     invoke-virtual {p0, p2}, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->setCatalog(Lmf/org/apache/xml/resolver/Catalog;)V
 
-    .line 70
     return-void
 .end method
 
@@ -62,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 179
     return-void
 .end method
 
@@ -75,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 89
     return-void
 .end method
 
@@ -91,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 173
     return-void
 .end method
 
@@ -105,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 209
     return-void
 .end method
 
@@ -113,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->catalog:Lmf/org/apache/xml/resolver/Catalog;
 
     return-object v0
@@ -131,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 185
     return-void
 .end method
 
@@ -146,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 191
     return-void
 .end method
 
@@ -155,10 +141,8 @@
     .param p1, "catalog"    # Lmf/org/apache/xml/resolver/Catalog;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->catalog:Lmf/org/apache/xml/resolver/Catalog;
 
-    .line 53
     invoke-virtual {p1}, Lmf/org/apache/xml/resolver/Catalog;->getCatalogManager()Lmf/org/apache/xml/resolver/CatalogManager;
 
     move-result-object v0
@@ -167,7 +151,6 @@
 
     iput-object v0, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
-    .line 54
     return-void
 .end method
 
@@ -176,7 +159,6 @@
     .param p1, "locator"    # Lorg/xml/sax/Locator;
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -190,7 +172,6 @@
     .end annotation
 
     .prologue
-    .line 197
     return-void
 .end method
 
@@ -203,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 83
     return-void
 .end method
 
@@ -224,16 +204,13 @@
 
     const/4 v8, 0x4
 
-    .line 110
     const/4 v3, -0x1
 
-    .line 111
     .local v3, "entryType":I
     new-instance v2, Ljava/util/Vector;
 
     invoke-direct {v2}, Ljava/util/Vector;-><init>()V
 
-    .line 113
     .local v2, "entryArgs":Ljava/util/Vector;
     const-string v4, "Base"
 
@@ -243,10 +220,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 114
     sget v3, Lmf/org/apache/xml/resolver/Catalog;->BASE:I
 
-    .line 115
     const-string v4, "HRef"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -255,7 +230,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 117
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Base"
@@ -268,18 +242,15 @@
 
     invoke-virtual {v4, v8, v5, v6}, Lmf/org/apache/xml/resolver/helpers/Debug;->message(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 154
     :cond_0
     :goto_0
     if-ltz v3, :cond_1
 
-    .line 156
     :try_start_0
     new-instance v0, Lmf/org/apache/xml/resolver/CatalogEntry;
 
     invoke-direct {v0, v3, v2}, Lmf/org/apache/xml/resolver/CatalogEntry;-><init>(ILjava/util/Vector;)V
 
-    .line 157
     .local v0, "ce":Lmf/org/apache/xml/resolver/CatalogEntry;
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->catalog:Lmf/org/apache/xml/resolver/Catalog;
 
@@ -287,13 +258,11 @@
     :try_end_0
     .catch Lmf/org/apache/xml/resolver/CatalogException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
     .end local v0    # "ce":Lmf/org/apache/xml/resolver/CatalogEntry;
     :cond_1
     :goto_1
     return-void
 
-    .line 118
     :cond_2
     const-string v4, "Delegate"
 
@@ -303,10 +272,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 119
     sget v3, Lmf/org/apache/xml/resolver/Catalog;->DELEGATE_PUBLIC:I
 
-    .line 120
     const-string v4, "PublicID"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -315,7 +282,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 121
     const-string v4, "HRef"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -324,12 +290,10 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 123
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Delegate"
 
-    .line 124
     const-string v6, "PublicID"
 
     invoke-interface {p4, v6}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -340,19 +304,16 @@
 
     move-result-object v6
 
-    .line 125
     const-string v7, "HRef"
 
     invoke-interface {p4, v7}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 123
     invoke-virtual {v4, v8, v5, v6, v7}, Lmf/org/apache/xml/resolver/helpers/Debug;->message(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 126
     :cond_3
     const-string v4, "Extend"
 
@@ -362,10 +323,8 @@
 
     if-eqz v4, :cond_4
 
-    .line 127
     sget v3, Lmf/org/apache/xml/resolver/Catalog;->CATALOG:I
 
-    .line 128
     const-string v4, "HRef"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -374,7 +333,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 130
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Extend"
@@ -389,7 +347,6 @@
 
     goto :goto_0
 
-    .line 131
     :cond_4
     const-string v4, "Map"
 
@@ -399,10 +356,8 @@
 
     if-eqz v4, :cond_5
 
-    .line 132
     sget v3, Lmf/org/apache/xml/resolver/Catalog;->PUBLIC:I
 
-    .line 133
     const-string v4, "PublicID"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -411,7 +366,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 134
     const-string v4, "HRef"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -420,12 +374,10 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 136
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Map"
 
-    .line 137
     const-string v6, "PublicID"
 
     invoke-interface {p4, v6}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -436,19 +388,16 @@
 
     move-result-object v6
 
-    .line 138
     const-string v7, "HRef"
 
     invoke-interface {p4, v7}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 136
     invoke-virtual {v4, v8, v5, v6, v7}, Lmf/org/apache/xml/resolver/helpers/Debug;->message(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 139
     :cond_5
     const-string v4, "Remap"
 
@@ -458,10 +407,8 @@
 
     if-eqz v4, :cond_6
 
-    .line 140
     sget v3, Lmf/org/apache/xml/resolver/Catalog;->SYSTEM:I
 
-    .line 141
     const-string v4, "SystemID"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -470,7 +417,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 142
     const-string v4, "HRef"
 
     invoke-interface {p4, v4}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -479,31 +425,26 @@
 
     invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 144
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Remap"
 
-    .line 145
     const-string v6, "SystemID"
 
     invoke-interface {p4, v6}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 146
     const-string v7, "HRef"
 
     invoke-interface {p4, v7}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 144
     invoke-virtual {v4, v8, v5, v6, v7}, Lmf/org/apache/xml/resolver/helpers/Debug;->message(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 147
     :cond_6
     const-string v4, "XCatalog"
 
@@ -513,7 +454,6 @@
 
     if-nez v4, :cond_0
 
-    .line 151
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Invalid catalog entry type"
@@ -522,11 +462,9 @@
 
     goto/16 :goto_0
 
-    .line 158
     :catch_0
     move-exception v1
 
-    .line 159
     .local v1, "cex":Lmf/org/apache/xml/resolver/CatalogException;
     invoke-virtual {v1}, Lmf/org/apache/xml/resolver/CatalogException;->getExceptionType()I
 
@@ -536,7 +474,6 @@
 
     if-ne v4, v5, :cond_7
 
-    .line 160
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Invalid catalog entry type"
@@ -545,7 +482,6 @@
 
     goto/16 :goto_1
 
-    .line 161
     :cond_7
     invoke-virtual {v1}, Lmf/org/apache/xml/resolver/CatalogException;->getExceptionType()I
 
@@ -555,7 +491,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 162
     iget-object v4, p0, Lmf/org/apache/xml/resolver/readers/XCatalogReader;->debug:Lmf/org/apache/xml/resolver/helpers/Debug;
 
     const-string v5, "Invalid catalog entry"
@@ -576,6 +511,5 @@
     .end annotation
 
     .prologue
-    .line 203
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 79
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
     .local v0, "action":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -69,7 +66,6 @@
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 82
     const-string v2, "AP"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -88,7 +84,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 83
     const-string v2, "com.samsung.intent.action.PCO_TEST"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -97,7 +92,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 84
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -115,11 +109,9 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/PhoneBase;->setPcoValue(I)V
 
-    .line 116
     :goto_0
     return-void
 
-    .line 89
     :cond_0
     const-string v2, "com.samsung.intent.action.REFRESH_NITZ_TIME"
 
@@ -129,13 +121,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 90
     const-string v2, "Refresh NITZ time"
 
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 91
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -149,7 +139,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_1
     const-string v2, "com.samsung.intent.action.SET_PREFERRED_NETWORK_TYPE"
 
@@ -159,7 +148,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 97
     const-string v2, "networktype"
 
     const/16 v3, 0x16
@@ -168,7 +156,6 @@
 
     move-result v1
 
-    .line 98
     .local v1, "networkType":I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -191,7 +178,6 @@
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 99
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -203,7 +189,6 @@
 
     goto :goto_0
 
-    .line 104
     .end local v1    # "networkType":I
     :cond_2
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
@@ -223,13 +208,11 @@
 
     if-eqz v2, :cond_3
 
-    .line 105
     const-string v2, "simulate detaching"
 
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 106
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -247,7 +230,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_3
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
@@ -266,13 +248,11 @@
 
     if-eqz v2, :cond_4
 
-    .line 108
     const-string v2, "simulate attaching"
 
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 109
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -290,7 +270,6 @@
 
     goto/16 :goto_0
 
-    .line 110
     :cond_4
     const-string v2, "com.android.internal.telephony.TestConferenceEventPackage"
 
@@ -300,13 +279,11 @@
 
     if-eqz v2, :cond_5
 
-    .line 111
     const-string v2, "inject simulated conference event package"
 
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 112
     iget-object v2, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     const-string v3, "filename"
@@ -320,7 +297,6 @@
 
     goto/16 :goto_0
 
-    .line 114
     :cond_5
     new-instance v2, Ljava/lang/StringBuilder;
 

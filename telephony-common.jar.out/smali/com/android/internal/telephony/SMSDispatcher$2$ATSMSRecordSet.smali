@@ -42,24 +42,20 @@
     .locals 1
 
     .prologue
-    .line 2824
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->this$1:Lcom/android/internal/telephony/SMSDispatcher$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2806
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->FILTER_SIZE:I
 
-    .line 2825
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->mHistory:Ljava/util/ArrayList;
 
-    .line 2826
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p4, "mBody"    # Ljava/lang/String;
 
     .prologue
-    .line 2829
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->mHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -84,14 +79,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 2830
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->mHistory:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2832
     :cond_0
     iget-object v6, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->mHistory:Ljava/util/ArrayList;
 
@@ -111,7 +104,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2833
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;->mHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I

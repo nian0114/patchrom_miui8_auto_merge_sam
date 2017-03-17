@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 114
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 145
     :goto_0
     return-void
 
-    .line 117
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 121
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -81,7 +76,6 @@
 
     goto :goto_0
 
-    .line 125
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -98,7 +92,6 @@
 
     goto :goto_0
 
-    .line 129
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -115,7 +108,6 @@
 
     goto :goto_0
 
-    .line 133
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -132,7 +124,6 @@
 
     goto :goto_0
 
-    .line 137
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -145,7 +136,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

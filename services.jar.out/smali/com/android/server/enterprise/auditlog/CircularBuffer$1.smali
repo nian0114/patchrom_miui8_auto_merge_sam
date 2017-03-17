@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 216
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer$1;->this$0:Lcom/android/server/enterprise/auditlog/CircularBuffer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "o2"    # Ljava/lang/Object;
 
     .prologue
-    .line 218
     new-instance v0, Ljava/lang/Long;
 
     check-cast p1, Ljava/io/File;

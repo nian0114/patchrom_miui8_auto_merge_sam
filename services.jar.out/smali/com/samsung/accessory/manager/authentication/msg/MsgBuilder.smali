@@ -16,17 +16,14 @@
     .locals 1
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     const/16 v0, 0x10
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->randNum:[B
 
-    .line 10
     return-void
 .end method
 
@@ -38,7 +35,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 33
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     const/16 v2, 0x76
@@ -61,7 +57,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 34
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -85,26 +80,21 @@
 
     const/4 v1, 0x0
 
-    .line 55
     const/4 v0, 0x3
 
     new-array v6, v0, [B
 
-    .line 56
     .local v6, "changeData":[B
     aput-byte v1, v6, v1
 
-    .line 57
     const/4 v0, 0x1
 
     aput-byte v1, v6, v0
 
-    .line 58
     const/4 v0, 0x2
 
     aput-byte v2, v6, v0
 
-    .line 59
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     move v3, v1
@@ -117,7 +107,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 60
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -137,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->randNum:[B
 
     return-object v0
@@ -147,7 +135,6 @@
     .locals 6
 
     .prologue
-    .line 23
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     const/16 v1, 0x54
@@ -164,7 +151,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 24
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -186,7 +172,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 18
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     const/16 v2, 0x10
@@ -201,7 +186,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 19
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -223,7 +207,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 13
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     const/16 v2, 0x16
@@ -238,7 +221,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 14
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -258,7 +240,6 @@
     .locals 6
 
     .prologue
-    .line 38
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     const/16 v1, 0x54
@@ -275,7 +256,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 39
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -296,7 +276,6 @@
     .param p1, "id"    # [B
 
     .prologue
-    .line 28
     new-instance v0, Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     const/16 v1, 0x54
@@ -319,7 +298,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
-    .line 29
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsg:Lcom/samsung/accessory/manager/authentication/msg/Message;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->getApdu()[B
@@ -339,12 +317,10 @@
     .locals 2
 
     .prologue
-    .line 43
     const/16 v1, 0x10
 
     new-array v0, v1, [B
 
-    .line 44
     .local v0, "genNum":[B
     new-instance v1, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
@@ -352,16 +328,13 @@
 
     iput-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
-    .line 45
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->genRandom()[B
 
     move-result-object v0
 
-    .line 46
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/MsgBuilder;->randNum:[B
 
-    .line 47
     return-object v0
 .end method

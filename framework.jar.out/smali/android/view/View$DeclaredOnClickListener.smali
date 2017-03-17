@@ -32,16 +32,12 @@
     .param p2, "methodName"    # Ljava/lang/String;
 
     .prologue
-    .line 4723
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4724
     iput-object p1, p0, Landroid/view/View$DeclaredOnClickListener;->mHostView:Landroid/view/View;
 
-    .line 4725
     iput-object p2, p0, Landroid/view/View$DeclaredOnClickListener;->mMethodName:Ljava/lang/String;
 
-    .line 4726
     return-void
 .end method
 
@@ -51,11 +47,9 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 4747
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 4749
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
 
@@ -63,7 +57,6 @@
 
     if-nez v2, :cond_0
 
-    .line 4750
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -88,17 +81,14 @@
 
     return-object v2
 
-    .line 4752
     :catch_0
     move-exception v2
 
-    .line 4756
     :cond_0
     instance-of v2, p1, Landroid/content/ContextWrapper;
 
     if-eqz v2, :cond_1
 
-    .line 4757
     check-cast p1, Landroid/content/ContextWrapper;
 
     .end local p1    # "context":Landroid/content/Context;
@@ -109,13 +99,11 @@
     .restart local p1    # "context":Landroid/content/Context;
     goto :goto_0
 
-    .line 4760
     :cond_1
     const/4 p1, 0x0
 
     goto :goto_0
 
-    .line 4764
     :cond_2
     iget-object v2, p0, Landroid/view/View$DeclaredOnClickListener;->mHostView:Landroid/view/View;
 
@@ -123,7 +111,6 @@
 
     move-result v0
 
-    .line 4765
     .local v0, "id":I
     const/4 v2, -0x1
 
@@ -131,7 +118,6 @@
 
     const-string v1, ""
 
-    .line 4767
     .local v1, "idText":Ljava/lang/String;
     :goto_1
     new-instance v2, Ljava/lang/IllegalStateException;
@@ -186,7 +172,6 @@
 
     throw v2
 
-    .line 4765
     .end local v1    # "idText":Ljava/lang/String;
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
@@ -237,12 +222,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 4730
     iget-object v1, p0, Landroid/view/View$DeclaredOnClickListener;->mMethod:Ljava/lang/reflect/Method;
 
     if-nez v1, :cond_0
 
-    .line 4731
     iget-object v1, p0, Landroid/view/View$DeclaredOnClickListener;->mHostView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -257,7 +240,6 @@
 
     iput-object v1, p0, Landroid/view/View$DeclaredOnClickListener;->mMethod:Ljava/lang/reflect/Method;
 
-    .line 4735
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/view/View$DeclaredOnClickListener;->mMethod:Ljava/lang/reflect/Method;
@@ -281,14 +263,11 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4743
     return-void
 
-    .line 4736
     :catch_0
     move-exception v0
 
-    .line 4737
     .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -298,12 +277,10 @@
 
     throw v1
 
-    .line 4739
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v0
 
-    .line 4740
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     new-instance v1, Ljava/lang/IllegalStateException;
 

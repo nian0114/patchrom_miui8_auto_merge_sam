@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 353
     invoke-static {}, Lcom/android/server/SecExternalDisplayService$EDSToast;->values()[Lcom/android/server/SecExternalDisplayService$EDSToast;
 
     move-result-object v0

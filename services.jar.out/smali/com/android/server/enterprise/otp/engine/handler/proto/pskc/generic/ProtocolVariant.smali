@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mKeyInfo:Lcom/android/server/enterprise/otp/engine/common/OTPEnums$EncryptionKeyType;
 
     return-object v0
@@ -40,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mSupportedProtocolVariant:Lcom/android/server/enterprise/otp/engine/common/OTPEnums$ProtocolVariantType;
 
     return-object v0
@@ -50,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mX509Data:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/X509Data;
 
     return-object v0
@@ -60,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mSupportedKeyProtectionMethod:Ljava/lang/String;
 
     return-object v0
@@ -71,10 +66,8 @@
     .param p1, "mKeyInfo"    # Lcom/android/server/enterprise/otp/engine/common/OTPEnums$EncryptionKeyType;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mKeyInfo:Lcom/android/server/enterprise/otp/engine/common/OTPEnums$EncryptionKeyType;
 
-    .line 46
     return-void
 .end method
 
@@ -83,10 +76,8 @@
     .param p1, "mSupportedKeyProtectionMethod"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mSupportedKeyProtectionMethod:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -95,10 +86,8 @@
     .param p1, "mSupportedProtocolVariant"    # Lcom/android/server/enterprise/otp/engine/common/OTPEnums$ProtocolVariantType;
 
     .prologue
-    .line 21
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mSupportedProtocolVariant:Lcom/android/server/enterprise/otp/engine/common/OTPEnums$ProtocolVariantType;
 
-    .line 22
     return-void
 .end method
 
@@ -107,9 +96,7 @@
     .param p1, "mX509Data"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/X509Data;
 
     .prologue
-    .line 37
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;->mX509Data:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/X509Data;
 
-    .line 38
     return-void
 .end method

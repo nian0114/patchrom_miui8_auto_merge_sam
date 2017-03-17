@@ -148,7 +148,6 @@
 
     const/4 v2, 0x3
 
-    .line 184
     new-array v0, v2, [[F
 
     new-array v1, v2, [F
@@ -171,7 +170,6 @@
 
     sput-object v0, Lcom/android/server/display/ColorFade;->segments70:[[F
 
-    .line 185
     new-array v0, v5, [[F
 
     new-array v1, v2, [F
@@ -188,7 +186,6 @@
 
     sput-object v0, Lcom/android/server/display/ColorFade;->segmentsSIn33:[[F
 
-    .line 239
     const/4 v0, 0x5
 
     new-array v0, v0, [[F
@@ -229,7 +226,6 @@
 
     return-void
 
-    .line 184
     nop
 
     :array_0
@@ -253,7 +249,6 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 185
     :array_3
     .array-data 4
         0x0
@@ -268,7 +263,6 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 239
     :array_5
     .array-data 4
         0x0
@@ -318,54 +312,44 @@
 
     const/4 v1, 0x1
 
-    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 113
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mTexNames:[I
 
-    .line 115
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mTex1D:[I
 
-    .line 120
     new-array v0, v4, [F
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mTexMatrix:[F
 
-    .line 121
     new-array v0, v4, [F
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
-    .line 122
     new-array v0, v2, [I
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
-    .line 128
     new-array v0, v2, [F
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mDeviceDimVec:[F
 
-    .line 135
     invoke-static {v3}, Lcom/android/server/display/ColorFade;->createNativeFloatBuffer(I)Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
-    .line 136
     invoke-static {v3}, Lcom/android/server/display/ColorFade;->createNativeFloatBuffer(I)Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordBuffer:Ljava/nio/FloatBuffer;
 
-    .line 213
     const/16 v0, 0xeb
 
     new-array v0, v0, [B
@@ -374,10 +358,8 @@
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->sine80Tex:[B
 
-    .line 174
     iput p1, p0, Lcom/android/server/display/ColorFade;->mDisplayId:I
 
-    .line 175
     const-class v0, Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -388,24 +370,20 @@
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 178
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
-    .line 179
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurementForPrepare:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
-    .line 181
     return-void
 
-    .line 213
     nop
 
     :array_0
@@ -654,21 +632,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1166
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v1}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 1169
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
 
     if-nez v1, :cond_0
 
-    .line 1180
     :goto_0
     return v0
 
-    .line 1172
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
@@ -684,14 +658,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1173
-    const-string/jumbo v1, "eglMakeCurrent"
+    const-string v1, "eglMakeCurrent"
 
     invoke-static {v1}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1178
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
@@ -701,7 +673,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 1180
     const/4 v0, 0x1
 
     goto :goto_0
@@ -717,30 +688,25 @@
 
     const/4 v0, 0x0
 
-    .line 903
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v1}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 906
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->attachEglContext()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 969
     :goto_0
     return v0
 
-    .line 910
     :cond_0
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/display/ColorFade;->mTexNamesGenerated:Z
 
     if-nez v1, :cond_2
 
-    .line 911
     const/4 v1, 0x1
 
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mTexNames:[I
@@ -749,8 +715,7 @@
 
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 912
-    const-string/jumbo v1, "glGenTextures"
+    const-string v1, "glGenTextures"
 
     invoke-static {v1}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
     :try_end_0
@@ -760,19 +725,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 957
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
     goto :goto_0
 
-    .line 915
     :cond_1
     const/4 v0, 0x1
 
     :try_start_1
     iput-boolean v0, p0, Lcom/android/server/display/ColorFade;->mTexNamesGenerated:Z
 
-    .line 918
     :cond_2
     new-instance v9, Landroid/graphics/SurfaceTexture;
 
@@ -784,7 +746,6 @@
 
     invoke-direct {v9, v0}, Landroid/graphics/SurfaceTexture;-><init>(I)V
 
-    .line 919
     .local v9, "st":Landroid/graphics/SurfaceTexture;
     new-instance v8, Landroid/view/Surface;
 
@@ -792,21 +753,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 922
     .local v8, "s":Landroid/view/Surface;
     const/4 v7, 0x0
 
-    .line 924
     .local v7, "displayId":I
     :try_start_2
     iget v0, p0, Lcom/android/server/display/ColorFade;->mDisplayId:I
 
     if-ne v0, v10, :cond_7
 
-    .line 925
     sget v7, Landroid/view/SurfaceControl;->BUILT_IN_DISPLAY_ID_SUB:I
 
-    .line 929
     :cond_3
     :goto_1
     invoke-static {v7}, Landroid/view/SurfaceControl;->getBuiltInDisplay(I)Landroid/os/IBinder;
@@ -815,24 +772,19 @@
 
     invoke-static {v0, v8}, Landroid/view/SurfaceControl;->screenshot(Landroid/os/IBinder;Landroid/view/Surface;)V
 
-    .line 931
     invoke-virtual {v9}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 932
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTexMatrix:[F
 
     invoke-virtual {v9, v0}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 934
     :try_start_3
     invoke-virtual {v8}, Landroid/view/Surface;->release()V
 
-    .line 935
     invoke-virtual {v9}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 939
     iget v0, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     const/4 v1, 0x3
@@ -843,7 +795,6 @@
 
     if-ne v0, v11, :cond_5
 
-    .line 940
     :cond_4
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mDeviceDimVec:[F
 
@@ -853,7 +804,6 @@
 
     aput v2, v0, v1
 
-    .line 941
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mDeviceDimVec:[F
 
     const/4 v1, 0x1
@@ -870,7 +820,6 @@
 
     aput v2, v0, v1
 
-    .line 948
     :cond_5
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordBuffer:Ljava/nio/FloatBuffer;
 
@@ -888,7 +837,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 949
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v1, 0x2
@@ -905,7 +853,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 950
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v1, 0x4
@@ -922,7 +869,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 951
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v1, 0x6
@@ -939,7 +885,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 954
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -950,7 +895,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 955
     const/4 v1, 0x0
 
     iget v0, p0, Lcom/android/server/display/ColorFade;->mDisplayWidth:I
@@ -973,18 +917,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 957
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
-    .line 960
     iget v0, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     if-ne v0, v11, :cond_6
 
-    .line 962
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->setupGradientTexture()Z
 
-    .line 966
     :cond_6
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
@@ -996,10 +936,8 @@
 
     move v0, v10
 
-    .line 969
     goto/16 :goto_0
 
-    .line 926
     :cond_7
     :try_start_4
     iget v0, p0, Lcom/android/server/display/ColorFade;->mDisplayId:I
@@ -1008,28 +946,24 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 927
     sget v7, Landroid/view/SurfaceControl;->BUILT_IN_DISPLAY_ID_EXPANDED:I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto/16 :goto_1
 
-    .line 934
     :catchall_0
     move-exception v0
 
     :try_start_5
     invoke-virtual {v8}, Landroid/view/Surface;->release()V
 
-    .line 935
     invoke-virtual {v9}, Landroid/graphics/SurfaceTexture;->release()V
 
     throw v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 957
     .end local v7    # "displayId":I
     .end local v8    # "s":Landroid/view/Surface;
     .end local v9    # "st":Landroid/graphics/SurfaceTexture;
@@ -1046,7 +980,6 @@
     .param p0, "func"    # Ljava/lang/String;
 
     .prologue
-    .line 1201
     const/4 v0, 0x1
 
     invoke-static {p0, v0}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;Z)Z
@@ -1062,10 +995,8 @@
     .param p1, "log"    # Z
 
     .prologue
-    .line 1205
     const/4 v1, 0x0
 
-    .line 1207
     .local v1, "hadError":Z
     :goto_0
     invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
@@ -1075,10 +1006,8 @@
     .local v0, "error":I
     if-eqz v0, :cond_1
 
-    .line 1208
     if-eqz p1, :cond_0
 
-    .line 1209
     const-string v2, "ColorFade"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1109,13 +1038,11 @@
 
     invoke-static {v2, v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1211
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1213
     :cond_1
     return v1
 .end method
@@ -1128,46 +1055,38 @@
 
     const/4 v2, 0x0
 
-    .line 990
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 993
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     if-nez v0, :cond_1
 
-    .line 994
     invoke-static {v2}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    .line 995
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     sget-object v4, Landroid/opengl/EGL14;->EGL_NO_DISPLAY:Landroid/opengl/EGLDisplay;
 
     if-ne v0, v4, :cond_0
 
-    .line 996
-    const-string/jumbo v0, "eglGetDisplay"
+    const-string v0, "eglGetDisplay"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
-    .line 1045
     :goto_0
     return v2
 
-    .line 1000
     :cond_0
     const/4 v0, 0x2
 
     new-array v9, v0, [I
 
-    .line 1001
     .local v9, "version":[I
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
@@ -1177,41 +1096,34 @@
 
     if-nez v0, :cond_1
 
-    .line 1002
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    .line 1003
-    const-string/jumbo v0, "eglInitialize"
+    const-string v0, "eglInitialize"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1008
     .end local v9    # "version":[I
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglConfig:Landroid/opengl/EGLConfig;
 
     if-nez v0, :cond_3
 
-    .line 1009
     const/16 v0, 0xb
 
     new-array v1, v0, [I
 
     fill-array-data v1, :array_0
 
-    .line 1018
     .local v1, "eglConfigAttribList":[I
     new-array v6, v10, [I
 
-    .line 1019
     .local v6, "numEglConfigs":[I
     new-array v3, v10, [Landroid/opengl/EGLConfig;
 
-    .line 1020
     .local v3, "eglConfigs":[Landroid/opengl/EGLConfig;
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
@@ -1227,20 +1139,17 @@
 
     if-nez v0, :cond_2
 
-    .line 1022
-    const-string/jumbo v0, "eglChooseConfig"
+    const-string v0, "eglChooseConfig"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1025
     :cond_2
     aget-object v0, v3, v2
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mEglConfig:Landroid/opengl/EGLConfig;
 
-    .line 1028
     .end local v1    # "eglConfigAttribList":[I
     .end local v3    # "eglConfigs":[Landroid/opengl/EGLConfig;
     .end local v6    # "numEglConfigs":[I
@@ -1249,14 +1158,12 @@
 
     if-nez v0, :cond_4
 
-    .line 1029
     const/4 v0, 0x3
 
     new-array v8, v0, [I
 
     fill-array-data v8, :array_1
 
-    .line 1033
     .local v8, "eglContextAttribList":[I
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
@@ -1270,19 +1177,16 @@
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mEglContext:Landroid/opengl/EGLContext;
 
-    .line 1035
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglContext:Landroid/opengl/EGLContext;
 
     if-nez v0, :cond_4
 
-    .line 1036
-    const-string/jumbo v0, "eglCreateContext"
+    const-string v0, "eglCreateContext"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1042
     .end local v8    # "eglContextAttribList":[I
     :cond_4
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
@@ -1295,10 +1199,8 @@
 
     move v2, v10
 
-    .line 1045
     goto :goto_0
 
-    .line 1009
     :array_0
     .array-data 4
         0x3040
@@ -1314,7 +1216,6 @@
         0x3038
     .end array-data
 
-    .line 1029
     :array_1
     .array-data 4
         0x3098
@@ -1331,24 +1232,20 @@
 
     const/4 v1, 0x0
 
-    .line 1099
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 1102
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
 
     if-nez v3, :cond_0
 
-    .line 1103
     new-array v0, v2, [I
 
     const/16 v3, 0x3038
 
     aput v3, v0, v1
 
-    .line 1107
     .local v0, "eglSurfaceAttribList":[I
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
@@ -1362,22 +1259,18 @@
 
     iput-object v3, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
 
-    .line 1109
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
 
     if-nez v3, :cond_0
 
-    .line 1110
-    const-string/jumbo v2, "eglCreateWindowSurface"
+    const-string v2, "eglCreateWindowSurface"
 
     invoke-static {v2}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
-    .line 1119
     .end local v0    # "eglSurfaceAttribList":[I
     :goto_0
     return v1
 
-    .line 1116
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
@@ -1389,7 +1282,6 @@
 
     move v1, v2
 
-    .line 1119
     goto :goto_0
 .end method
 
@@ -1398,14 +1290,12 @@
     .param p0, "size"    # I
 
     .prologue
-    .line 1191
     mul-int/lit8 v1, p0, 0x4
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 1192
     .local v0, "bb":Ljava/nio/ByteBuffer;
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
@@ -1413,7 +1303,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 1193
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v1
@@ -1425,28 +1314,23 @@
     .locals 8
 
     .prologue
-    .line 1050
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 1053
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceSession:Landroid/view/SurfaceSession;
 
     if-nez v0, :cond_0
 
-    .line 1054
     new-instance v0, Landroid/view/SurfaceSession;
 
     invoke-direct {v0}, Landroid/view/SurfaceSession;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceSession:Landroid/view/SurfaceSession;
 
-    .line 1057
     :cond_0
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
 
-    .line 1059
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
     :try_end_0
@@ -1454,7 +1338,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1062
     :try_start_1
     iget v0, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
@@ -1462,10 +1345,8 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1063
     const v6, 0x20004
 
-    .line 1067
     .local v6, "flags":I
     :goto_0
     new-instance v0, Landroid/view/SurfaceControl;
@@ -1487,7 +1368,6 @@
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1076
     .end local v6    # "flags":I
     :cond_1
     :try_start_2
@@ -1497,7 +1377,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl;->setLayerStack(I)V
 
-    .line 1077
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     iget v1, p0, Lcom/android/server/display/ColorFade;->mDisplayWidth:I
@@ -1506,26 +1385,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/SurfaceControl;->setSize(II)V
 
-    .line 1078
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0}, Landroid/view/Surface;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mSurface:Landroid/view/Surface;
 
-    .line 1079
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurface:Landroid/view/Surface;
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, v1}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
-    .line 1081
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceLayout:Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;
 
     if-nez v0, :cond_2
 
-    .line 1082
     new-instance v0, Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
@@ -1538,7 +1413,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceLayout:Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;
 
-    .line 1085
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceLayout:Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;
 
@@ -1546,10 +1420,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1087
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 1091
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     const-string v1, "ColorFade : createSurface"
@@ -1558,25 +1430,21 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 1094
     const/4 v0, 0x1
 
     :goto_1
     return v0
 
-    .line 1065
     :cond_3
     const/16 v6, 0x404
 
     .restart local v6    # "flags":I
     goto :goto_0
 
-    .line 1070
     .end local v6    # "flags":I
     :catch_0
     move-exception v7
 
-    .line 1071
     .local v7, "ex":Landroid/view/Surface$OutOfResourcesException;
     :try_start_3
     const-string v0, "ColorFade"
@@ -1587,10 +1455,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1072
     const/4 v0, 0x0
 
-    .line 1087
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
     goto :goto_1
@@ -1608,12 +1474,10 @@
     .locals 2
 
     .prologue
-    .line 1123
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
 
     if-eqz v0, :cond_1
 
-    .line 1124
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
@@ -1624,18 +1488,15 @@
 
     if-nez v0, :cond_0
 
-    .line 1125
-    const-string/jumbo v0, "eglDestroySurface"
+    const-string v0, "eglDestroySurface"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->logEglError(Ljava/lang/String;)V
 
-    .line 1127
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/ColorFade;->mEglSurface:Landroid/opengl/EGLSurface;
 
-    .line 1129
     :cond_1
     return-void
 .end method
@@ -1644,7 +1505,6 @@
     .locals 3
 
     .prologue
-    .line 542
     const/4 v0, 0x2
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
@@ -1653,12 +1513,10 @@
 
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
 
-    .line 543
-    const-string/jumbo v0, "glDeleteBuffers"
+    const-string v0, "glDeleteBuffers"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
-    .line 544
     return-void
 .end method
 
@@ -1666,17 +1524,14 @@
     .locals 1
 
     .prologue
-    .line 477
     iget v0, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
-    .line 478
-    const-string/jumbo v0, "glDeleteProgram"
+    const-string v0, "glDeleteProgram"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
-    .line 479
     return-void
 .end method
 
@@ -1686,27 +1541,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 973
     iget-boolean v0, p0, Lcom/android/server/display/ColorFade;->mTex1DGenerated:Z
 
     if-eqz v0, :cond_0
 
-    .line 974
     iput-boolean v2, p0, Lcom/android/server/display/ColorFade;->mTex1DGenerated:Z
 
-    .line 975
     const/4 v0, 0x1
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTex1D:[I
 
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
-    .line 976
-    const-string/jumbo v0, "glDeleteTextures"
+    const-string v0, "glDeleteTextures"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
-    .line 978
     :cond_0
     return-void
 .end method
@@ -1717,27 +1567,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 981
     iget-boolean v0, p0, Lcom/android/server/display/ColorFade;->mTexNamesGenerated:Z
 
     if-eqz v0, :cond_0
 
-    .line 982
     iput-boolean v2, p0, Lcom/android/server/display/ColorFade;->mTexNamesGenerated:Z
 
-    .line 983
     const/4 v0, 0x1
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTexNames:[I
 
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
-    .line 984
-    const-string/jumbo v0, "glDeleteTextures"
+    const-string v0, "glDeleteTextures"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
-    .line 986
     :cond_0
     return-void
 .end method
@@ -1748,56 +1593,44 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1132
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_0
 
-    .line 1133
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceLayout:Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;
 
     invoke-virtual {v0}, Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;->dispose()V
 
-    .line 1134
     iput-object v1, p0, Lcom/android/server/display/ColorFade;->mSurfaceLayout:Lcom/android/server/display/ColorFade$NaturalSurfaceLayout;
 
-    .line 1135
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
 
-    .line 1137
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->destroy()V
 
-    .line 1138
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1140
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 1142
     iput-object v1, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 1143
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceVisible:Z
 
-    .line 1144
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceAlpha:F
 
-    .line 1146
     :cond_0
     return-void
 
-    .line 1140
     :catchall_0
     move-exception v0
 
@@ -1810,12 +1643,10 @@
     .locals 4
 
     .prologue
-    .line 1184
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     if-eqz v0, :cond_0
 
-    .line 1185
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
@@ -1826,7 +1657,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
-    .line 1188
     :cond_0
     return-void
 .end method
@@ -1846,14 +1676,12 @@
 
     const/4 v3, 0x0
 
-    .line 706
     sub-float v0, v4, p1
 
     invoke-virtual {p0, v0}, Lcom/android/server/display/ColorFade;->interpol_SineInOut70Interpolation_getStep(F)F
 
     move-result v8
 
-    .line 707
     .local v8, "edgeCollapseStep":F
     sub-float v0, v4, p1
 
@@ -1861,49 +1689,41 @@
 
     move-result v6
 
-    .line 713
     .local v6, "alphaStep":F
     iget v0, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 715
     iget v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrixLoc:I
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     invoke-static {v0, v11, v3, v1, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 716
     iget v0, p0, Lcom/android/server/display/ColorFade;->mTexMatrixLoc:I
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTexMatrix:[F
 
     invoke-static {v0, v11, v3, v1, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 717
     iget v0, p0, Lcom/android/server/display/ColorFade;->mDeviceDimLoc:I
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mDeviceDimVec:[F
 
     invoke-static {v0, v11, v1, v3}, Landroid/opengl/GLES20;->glUniform2fv(II[FI)V
 
-    .line 718
     iget v0, p0, Lcom/android/server/display/ColorFade;->mCollapseLoc:I
 
     invoke-static {v0, v8}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 719
     iget v0, p0, Lcom/android/server/display/ColorFade;->mAlphaLoc:I
 
     invoke-static {v0, v6}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 723
     new-instance v10, Ljava/lang/Float;
 
     invoke-direct {v10, p1}, Ljava/lang/Float;-><init>(F)V
 
-    .line 724
     .local v10, "sat_val":Ljava/lang/Float;
     new-instance v7, Ljava/lang/Float;
 
@@ -1911,35 +1731,28 @@
 
     invoke-direct {v7, v0}, Ljava/lang/Float;-><init>(Ljava/lang/String;)V
 
-    .line 725
     .local v7, "des_sat_val":Ljava/lang/Float;
     invoke-virtual {v10, v7}, Ljava/lang/Float;->compareTo(Ljava/lang/Float;)I
 
     move-result v9
 
-    .line 727
     .local v9, "retval":I
     if-nez v9, :cond_0
 
-    .line 728
     invoke-static {v2, v2, v2, v4}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 729
     const/16 v0, 0x4000
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 750
     :goto_0
     return-void
 
-    .line 733
     :cond_0
     const v0, 0x84c0
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 734
     const v0, 0x8d65
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade;->mTexNames:[I
@@ -1948,19 +1761,16 @@
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 737
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     aget v0, v0, v3
 
     invoke-static {v12, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 738
     iget v0, p0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 739
     iget v0, p0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
 
     const/4 v1, 0x2
@@ -1973,19 +1783,16 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
-    .line 741
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     aget v0, v0, v11
 
     invoke-static {v12, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 742
     iget v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 743
     iget v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
 
     const/4 v1, 0x2
@@ -1998,19 +1805,16 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
-    .line 745
     const/4 v0, 0x6
 
     const/4 v1, 0x4
 
     invoke-static {v0, v3, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 748
     const v0, 0x8d65
 
     invoke-static {v0, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 749
     invoke-static {v12, v3}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
     goto :goto_0
@@ -2021,10 +1825,8 @@
     .param p1, "saturation"    # F
 
     .prologue
-    .line 757
     const v16, 0x3e4ccccd    # 0.2f
 
-    .line 758
     .local v16, "saturationAtMaxFeather":F
     sub-float v1, p1, v16
 
@@ -2034,7 +1836,6 @@
 
     div-float v11, v1, v2
 
-    .line 759
     .local v11, "feather":F
     const/4 v1, 0x0
 
@@ -2042,14 +1843,11 @@
 
     if-gez v1, :cond_0
 
-    .line 760
     const/4 v11, 0x0
 
-    .line 762
     :cond_0
     const v12, 0x3eb33333    # 0.35f
 
-    .line 763
     .local v12, "minStep":F
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -2065,7 +1863,6 @@
 
     sub-float v9, v1, v2
 
-    .line 764
     .local v9, "edgeUniteStep":F
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -2075,7 +1872,6 @@
 
     add-float v9, v1, v12
 
-    .line 765
     const v1, 0x3eb33333    # 0.35f
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -2090,20 +1886,16 @@
 
     mul-float v10, v1, v2
 
-    .line 767
     .local v10, "edgeUniteStepFeather":F
     cmpg-float v1, v9, v12
 
     if-gez v1, :cond_1
 
-    .line 768
     move v9, v12
 
-    .line 771
     :cond_1
     const v7, 0x3e6b851f    # 0.23f
 
-    .line 774
     .local v7, "brightnessAt83percent":F
     sub-float v1, p1, v7
 
@@ -2113,7 +1905,6 @@
 
     div-float v13, v1, v2
 
-    .line 775
     .local v13, "opacity":F
     const/4 v1, 0x0
 
@@ -2123,7 +1914,6 @@
 
     const/4 v13, 0x0
 
-    .line 782
     :cond_2
     move-object/from16 v0, p0
 
@@ -2131,7 +1921,6 @@
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 784
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mProjMatrixLoc:I
@@ -2148,7 +1937,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 785
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mTexMatrixLoc:I
@@ -2165,7 +1953,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 786
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mDeviceDimLoc:I
@@ -2180,28 +1967,24 @@
 
     invoke-static {v1, v2, v3, v4}, Landroid/opengl/GLES20;->glUniform2fv(II[FI)V
 
-    .line 787
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mCollapseLoc:I
 
     invoke-static {v1, v9}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 788
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mFeather:I
 
     invoke-static {v1, v10}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 789
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mOpacity:I
 
     invoke-static {v1, v13}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 790
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mTex1DLoc:I
@@ -2210,14 +1993,12 @@
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 793
     new-instance v15, Ljava/lang/Float;
 
     move/from16 v0, p1
 
     invoke-direct {v15, v0}, Ljava/lang/Float;-><init>(F)V
 
-    .line 794
     .local v15, "sat_val":Ljava/lang/Float;
     new-instance v8, Ljava/lang/Float;
 
@@ -2225,17 +2006,14 @@
 
     invoke-direct {v8, v1}, Ljava/lang/Float;-><init>(Ljava/lang/String;)V
 
-    .line 795
     .local v8, "des_sat_val":Ljava/lang/Float;
     invoke-virtual {v15, v8}, Ljava/lang/Float;->compareTo(Ljava/lang/Float;)I
 
     move-result v14
 
-    .line 797
     .local v14, "retval":I
     if-nez v14, :cond_3
 
-    .line 798
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -2246,22 +2024,18 @@
 
     invoke-static {v1, v2, v3, v4}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 799
     const/16 v1, 0x4000
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 823
     :goto_0
     return-void
 
-    .line 803
     :cond_3
     const v1, 0x84c0
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 804
     const v1, 0x8d65
 
     move-object/from16 v0, p0
@@ -2274,12 +2048,10 @@
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 805
     const v1, 0x84c1
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 806
     const/16 v1, 0xde1
 
     move-object/from16 v0, p0
@@ -2292,7 +2064,6 @@
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 809
     const v1, 0x8892
 
     move-object/from16 v0, p0
@@ -2305,14 +2076,12 @@
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 810
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 811
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
@@ -2329,7 +2098,6 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
-    .line 813
     const v1, 0x8892
 
     move-object/from16 v0, p0
@@ -2342,14 +2110,12 @@
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 814
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 815
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
@@ -2366,7 +2132,6 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
-    .line 817
     const/4 v1, 0x6
 
     const/4 v2, 0x0
@@ -2375,21 +2140,18 @@
 
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 820
     const v1, 0x8d65
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 821
     const/16 v1, 0xde1
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 822
     const v1, 0x8892
 
     const/4 v2, 0x0
@@ -2417,51 +2179,42 @@
 
     const/4 v3, 0x0
 
-    .line 832
     iget v0, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 835
     iget v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrixLoc:I
 
     iget-object v4, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     invoke-static {v0, v6, v3, v4, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 836
     iget v0, p0, Lcom/android/server/display/ColorFade;->mTexMatrixLoc:I
 
     iget-object v4, p0, Lcom/android/server/display/ColorFade;->mTexMatrix:[F
 
     invoke-static {v0, v6, v3, v4, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 837
     iget v0, p0, Lcom/android/server/display/ColorFade;->mOpacityLoc:I
 
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 838
     iget v0, p0, Lcom/android/server/display/ColorFade;->mGammaLoc:I
 
     invoke-static {v0, p2}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 839
     iget v0, p0, Lcom/android/server/display/ColorFade;->mSaturationLoc:I
 
     invoke-static {v0, p3}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 840
     iget v0, p0, Lcom/android/server/display/ColorFade;->mScaleLoc:I
 
     invoke-static {v0, p4}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 843
     const v0, 0x84c0
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 844
     const v0, 0x8d65
 
     iget-object v4, p0, Lcom/android/server/display/ColorFade;->mTexNames:[I
@@ -2470,19 +2223,16 @@
 
     invoke-static {v0, v4}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 847
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     aget v0, v0, v3
 
     invoke-static {v7, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 848
     iget v0, p0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 849
     iget v0, p0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
 
     move v4, v3
@@ -2491,19 +2241,16 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
-    .line 851
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     aget v0, v0, v6
 
     invoke-static {v7, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 852
     iget v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 853
     iget v0, p0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
 
     move v4, v3
@@ -2512,22 +2259,18 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
-    .line 855
     const/4 v0, 0x6
 
     const/4 v1, 0x4
 
     invoke-static {v0, v3, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 858
     const v0, 0x8d65
 
     invoke-static {v0, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 859
     invoke-static {v7, v3}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 860
     return-void
 .end method
 
@@ -2545,12 +2288,10 @@
 
     const/4 v1, 0x0
 
-    .line 483
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v2}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 487
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v3, 0x0
@@ -2567,55 +2308,46 @@
 
     invoke-static {v2, v3, v4, v5, v6}, Lcom/android/server/display/ColorFade;->setQuad(Ljava/nio/FloatBuffer;FFFF)V
 
-    .line 490
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mTexNames:[I
 
     aget v2, v2, v1
 
     invoke-static {v7, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 491
     const/16 v2, 0x2800
 
     invoke-static {v7, v2, v10}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 493
     const/16 v2, 0x2801
 
     invoke-static {v7, v2, v10}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 495
     const/16 v2, 0x2802
 
     const v3, 0x812f
 
     invoke-static {v7, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 497
     const/16 v2, 0x2803
 
     const v3, 0x812f
 
     invoke-static {v7, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 499
     invoke-static {v7, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 502
     const/4 v2, 0x2
 
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     invoke-static {v2, v3, v1}, Landroid/opengl/GLES20;->glGenBuffers(I[II)V
 
-    .line 505
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     aget v2, v2, v1
 
     invoke-static {v9, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 506
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v2}, Ljava/nio/FloatBuffer;->capacity()I
@@ -2630,7 +2362,6 @@
 
     invoke-static {v9, v2, v3, v4}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
 
-    .line 510
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mGLBuffers:[I
 
     const/4 v3, 0x1
@@ -2639,7 +2370,6 @@
 
     invoke-static {v9, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 511
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mTexCoordBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v2}, Ljava/nio/FloatBuffer;->capacity()I
@@ -2654,61 +2384,51 @@
 
     invoke-static {v9, v2, v3, v4}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
 
-    .line 514
     invoke-static {v9, v1}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
-    .line 517
     iget v2, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     const/4 v3, 0x4
 
     if-ne v2, v3, :cond_0
 
-    .line 519
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mTex1D:[I
 
     aget v2, v2, v1
 
     invoke-static {v0, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 520
     const/16 v2, 0x2800
 
     invoke-static {v0, v2, v10}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 522
     const/16 v2, 0x2801
 
     invoke-static {v0, v2, v10}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 524
     const/16 v2, 0x2802
 
     const v3, 0x812f
 
     invoke-static {v0, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 526
     const/16 v2, 0x2803
 
     const v3, 0x812f
 
     invoke-static {v0, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 528
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->sine80Tex:[B
 
     invoke-static {v2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 529
     .local v8, "byteBuffer":Ljava/nio/ByteBuffer;
-    const-string/jumbo v2, "glteximage2d"
+    const-string v2, "glteximage2d"
 
     invoke-static {v2}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
-    .line 530
     const/16 v2, 0x1909
 
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->sine80Tex:[B
@@ -2725,15 +2445,12 @@
 
     invoke-static/range {v0 .. v8}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 531
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 532
-    const-string/jumbo v0, "glteximage2dBindTexture"
+    const-string v0, "glteximage2dBindTexture"
 
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
-    .line 536
     .end local v8    # "byteBuffer":Ljava/nio/ByteBuffer;
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
@@ -2744,7 +2461,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 538
     const/4 v0, 0x1
 
     return v0
@@ -2765,24 +2481,20 @@
 
     const/4 v2, 0x0
 
-    .line 401
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 406
     iget v3, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     if-ne v3, v6, :cond_1
 
-    .line 407
     const v3, 0x110001b
 
     invoke-direct {p0, p1, v3, v5}, Lcom/android/server/display/ColorFade;->loadShader(Landroid/content/Context;II)I
 
     move-result v1
 
-    .line 409
     .local v1, "vshader":I
     const v3, 0x110001a
 
@@ -2790,22 +2502,18 @@
 
     move-result v0
 
-    .line 426
     .local v0, "fshader":I
     :goto_0
     invoke-static {}, Landroid/opengl/GLES20;->glReleaseShaderCompiler()V
 
-    .line 427
     if-eqz v1, :cond_0
 
     if-nez v0, :cond_3
 
-    .line 473
     :cond_0
     :goto_1
     return v2
 
-    .line 412
     .end local v0    # "fshader":I
     .end local v1    # "vshader":I
     :cond_1
@@ -2813,14 +2521,12 @@
 
     if-ne v3, v7, :cond_2
 
-    .line 414
     const v3, 0x110001d
 
     invoke-direct {p0, p1, v3, v5}, Lcom/android/server/display/ColorFade;->loadShader(Landroid/content/Context;II)I
 
     move-result v1
 
-    .line 416
     .restart local v1    # "vshader":I
     const v3, 0x110001c
 
@@ -2831,7 +2537,6 @@
     .restart local v0    # "fshader":I
     goto :goto_0
 
-    .line 420
     .end local v0    # "fshader":I
     .end local v1    # "vshader":I
     :cond_2
@@ -2841,7 +2546,6 @@
 
     move-result v1
 
-    .line 422
     .restart local v1    # "vshader":I
     const v3, 0x1100003
 
@@ -2852,7 +2556,6 @@
     .restart local v0    # "fshader":I
     goto :goto_0
 
-    .line 429
     :cond_3
     invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
 
@@ -2860,31 +2563,25 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    .line 431
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v3, v1}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 432
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 433
     invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 434
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 436
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v3}, Landroid/opengl/GLES20;->glLinkProgram(I)V
 
-    .line 438
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "position"
+    const-string v4, "position"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
@@ -2892,10 +2589,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mVertexLoc:I
 
-    .line 439
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "uv"
+    const-string v4, "uv"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
@@ -2903,10 +2599,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mTexCoordLoc:I
 
-    .line 441
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "proj_matrix"
+    const-string v4, "proj_matrix"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2914,10 +2609,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mProjMatrixLoc:I
 
-    .line 442
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "tex_matrix"
+    const-string v4, "tex_matrix"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2925,10 +2619,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mTexMatrixLoc:I
 
-    .line 444
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "opacity"
+    const-string v4, "opacity"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2936,10 +2629,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mOpacityLoc:I
 
-    .line 445
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "gamma"
+    const-string v4, "gamma"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2947,10 +2639,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mGammaLoc:I
 
-    .line 446
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "saturation"
+    const-string v4, "saturation"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2958,10 +2649,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mSaturationLoc:I
 
-    .line 447
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "scale"
+    const-string v4, "scale"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2969,10 +2659,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mScaleLoc:I
 
-    .line 448
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "texUnit"
+    const-string v4, "texUnit"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2980,15 +2669,13 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mTexUnitLoc:I
 
-    .line 451
     iget v3, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     if-ne v3, v6, :cond_5
 
-    .line 452
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "dev_dim"
+    const-string v4, "dev_dim"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -2996,7 +2683,6 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mDeviceDimLoc:I
 
-    .line 453
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     const-string v4, "collapse"
@@ -3007,7 +2693,6 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mCollapseLoc:I
 
-    .line 454
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     const-string v4, "alphaStep"
@@ -3018,22 +2703,18 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mAlphaLoc:I
 
-    .line 466
     :cond_4
     :goto_2
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     invoke-static {v3}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 467
     iget v3, p0, Lcom/android/server/display/ColorFade;->mTexUnitLoc:I
 
     invoke-static {v3, v2}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 468
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 471
     iget-object v2, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     const-string v3, "ColorFade : initGLShaders"
@@ -3042,21 +2723,18 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 473
     const/4 v2, 0x1
 
     goto/16 :goto_1
 
-    .line 456
     :cond_5
     iget v3, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     if-ne v3, v7, :cond_4
 
-    .line 457
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "dev_dim"
+    const-string v4, "dev_dim"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -3064,7 +2742,6 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mDeviceDimLoc:I
 
-    .line 458
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
     const-string v4, "collapse"
@@ -3075,10 +2752,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mCollapseLoc:I
 
-    .line 459
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "opacity"
+    const-string v4, "opacity"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -3086,10 +2762,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mOpacity:I
 
-    .line 460
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "feather"
+    const-string v4, "feather"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -3097,10 +2772,9 @@
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mFeather:I
 
-    .line 461
     iget v3, p0, Lcom/android/server/display/ColorFade;->mProgram:I
 
-    const-string/jumbo v4, "gradient"
+    const-string v4, "gradient"
 
     invoke-static {v3, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -3120,17 +2794,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 372
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 375
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/ColorFade;->readFile(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 378
     .local v2, "source":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
@@ -3140,35 +2811,28 @@
 
     invoke-virtual {v3, v4, v6, v7}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 381
     invoke-static {p3}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
     move-result v1
 
-    .line 383
     .local v1, "shader":I
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    .line 384
     invoke-static {v1}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
-    .line 386
     const/4 v3, 0x1
 
     new-array v0, v3, [I
 
-    .line 387
     .local v0, "compiled":[I
     const v3, 0x8b81
 
     invoke-static {v1, v3, v0, v5}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    .line 388
     aget v3, v0, v5
 
     if-nez v3, :cond_0
 
-    .line 389
     const-string v3, "ColorFade"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3207,7 +2871,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     const-string v3, "ColorFade"
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glGetShaderSource(I)Ljava/lang/String;
@@ -3216,7 +2879,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     const-string v3, "ColorFade"
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
@@ -3225,13 +2887,10 @@
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 393
     const/4 v1, 0x0
 
-    .line 396
     :cond_0
     return v1
 .end method
@@ -3241,7 +2900,6 @@
     .param p0, "func"    # Ljava/lang/String;
 
     .prologue
-    .line 1197
     const-string v0, "ColorFade"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3276,7 +2934,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1198
     return-void
 .end method
 
@@ -3294,7 +2951,6 @@
 
     const/4 v4, 0x0
 
-    .line 863
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x0
@@ -3305,35 +2961,30 @@
 
     aput v2, v0, v1
 
-    .line 864
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x1
 
     aput v4, v0, v1
 
-    .line 865
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x2
 
     aput v4, v0, v1
 
-    .line 866
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x3
 
     aput v4, v0, v1
 
-    .line 867
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x4
 
     aput v4, v0, v1
 
-    .line 868
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x5
@@ -3344,35 +2995,30 @@
 
     aput v2, v0, v1
 
-    .line 869
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x6
 
     aput v4, v0, v1
 
-    .line 870
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/4 v1, 0x7
 
     aput v4, v0, v1
 
-    .line 871
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0x8
 
     aput v4, v0, v1
 
-    .line 872
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0x9
 
     aput v4, v0, v1
 
-    .line 873
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0xa
@@ -3385,14 +3031,12 @@
 
     aput v2, v0, v1
 
-    .line 874
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0xb
 
     aput v4, v0, v1
 
-    .line 875
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0xc
@@ -3407,7 +3051,6 @@
 
     aput v2, v0, v1
 
-    .line 876
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0xd
@@ -3422,7 +3065,6 @@
 
     aput v2, v0, v1
 
-    .line 877
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0xe
@@ -3437,7 +3079,6 @@
 
     aput v2, v0, v1
 
-    .line 878
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mProjMatrix:[F
 
     const/16 v1, 0xf
@@ -3446,7 +3087,6 @@
 
     aput v2, v0, v1
 
-    .line 879
     return-void
 .end method
 
@@ -3456,7 +3096,6 @@
     .param p2, "resourceId"    # I
 
     .prologue
-    .line 361
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -3466,7 +3105,6 @@
 
     move-result-object v1
 
-    .line 362
     .local v1, "stream":Ljava/io/InputStream;
     new-instance v2, Ljava/lang/String;
 
@@ -3484,12 +3122,10 @@
 
     return-object v2
 
-    .line 364
     .end local v1    # "stream":Ljava/io/InputStream;
     :catch_0
     move-exception v0
 
-    .line 365
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "ColorFade"
 
@@ -3517,7 +3153,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -3534,55 +3169,46 @@
     .param p4, "h"    # F
 
     .prologue
-    .line 550
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 551
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p2}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 552
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0, p1}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 553
     const/4 v0, 0x3
 
     add-float v1, p2, p4
 
     invoke-virtual {p0, v0, v1}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 554
     const/4 v0, 0x4
 
     add-float v1, p1, p3
 
     invoke-virtual {p0, v0, v1}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 555
     const/4 v0, 0x5
 
     add-float v1, p2, p4
 
     invoke-virtual {p0, v0, v1}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 556
     const/4 v0, 0x6
 
     add-float v1, p1, p3
 
     invoke-virtual {p0, v0, v1}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 557
     const/4 v0, 0x7
 
     invoke-virtual {p0, v0, p2}, Ljava/nio/FloatBuffer;->put(IF)Ljava/nio/FloatBuffer;
 
-    .line 558
     return-void
 .end method
 
@@ -3594,25 +3220,21 @@
 
     const/4 v0, 0x0
 
-    .line 883
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->attachEglContext()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 897
     :goto_0
     return v0
 
-    .line 887
     :cond_0
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/display/ColorFade;->mTex1DGenerated:Z
 
     if-nez v2, :cond_2
 
-    .line 888
     const/4 v2, 0x1
 
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTex1D:[I
@@ -3621,8 +3243,7 @@
 
     invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 889
-    const-string/jumbo v2, "glGenTextures"
+    const-string v2, "glGenTextures"
 
     invoke-static {v2}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
     :try_end_0
@@ -3632,12 +3253,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 895
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
     goto :goto_0
 
-    .line 892
     :cond_1
     const/4 v0, 0x1
 
@@ -3646,16 +3265,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 895
     :cond_2
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
     move v0, v1
 
-    .line 897
     goto :goto_0
 
-    .line 895
     :catchall_0
     move-exception v0
 
@@ -3671,7 +3287,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1149
     iget-boolean v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceVisible:Z
 
     if-eqz v0, :cond_0
@@ -3682,11 +3297,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 1150
     :cond_0
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
 
-    .line 1152
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -3694,32 +3307,25 @@
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl;->setLayer(I)V
 
-    .line 1153
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, p1}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 1154
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->show()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1156
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 1158
     iput-boolean v2, p0, Lcom/android/server/display/ColorFade;->mSurfaceVisible:Z
 
-    .line 1159
     iput p1, p0, Lcom/android/server/display/ColorFade;->mSurfaceAlpha:F
 
-    .line 1161
     :cond_1
     return v2
 
-    .line 1156
     :catchall_0
     move-exception v0
 
@@ -3734,28 +3340,22 @@
     .locals 4
 
     .prologue
-    .line 603
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 609
     iget-boolean v0, p0, Lcom/android/server/display/ColorFade;->mPrepared:Z
 
     if-eqz v0, :cond_0
 
-    .line 610
     invoke-virtual {p0}, Lcom/android/server/display/ColorFade;->dismissResources()V
 
-    .line 611
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->destroySurface()V
 
-    .line 612
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/ColorFade;->mPrepared:Z
 
-    .line 615
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
@@ -3765,7 +3365,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 617
     return-void
 .end method
 
@@ -3773,48 +3372,36 @@
     .locals 1
 
     .prologue
-    .line 571
     iget-boolean v0, p0, Lcom/android/server/display/ColorFade;->mCreatedResources:Z
 
     if-eqz v0, :cond_0
 
-    .line 572
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->attachEglContext()Z
 
-    .line 575
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->destroyGradientTexture()V
 
-    .line 577
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->destroyScreenshotTexture()V
 
-    .line 578
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->destroyGLShaders()V
 
-    .line 579
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->destroyGLBuffers()V
 
-    .line 580
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->destroyEglSurface()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 582
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
-    .line 586
     invoke-static {}, Landroid/opengl/GLES20;->glFlush()V
 
-    .line 587
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/ColorFade;->mCreatedResources:Z
 
-    .line 589
     :cond_0
     return-void
 
-    .line 582
     :catchall_0
     move-exception v0
 
@@ -3828,7 +3415,6 @@
     .param p1, "level"    # F
 
     .prologue
-    .line 631
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/display/ColorFade;->mPrepared:Z
@@ -3837,14 +3423,11 @@
 
     if-nez v16, :cond_0
 
-    .line 632
     const/16 v16, 0x0
 
-    .line 701
     :goto_0
     return v16
 
-    .line 635
     :cond_0
     move-object/from16 v0, p0
 
@@ -3860,7 +3443,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 636
     const/high16 v16, 0x3f800000    # 1.0f
 
     sub-float v16, v16, p1
@@ -3875,7 +3457,6 @@
 
     goto :goto_0
 
-    .line 639
     :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/display/ColorFade;->attachEglContext()Z
 
@@ -3883,12 +3464,10 @@
 
     if-nez v16, :cond_2
 
-    .line 640
     const/16 v16, 0x0
 
     goto :goto_0
 
-    .line 644
     :cond_2
     move-object/from16 v0, p0
 
@@ -3900,7 +3479,6 @@
 
     move-result-object v7
 
-    .line 645
     .local v7, "mDisplay":[Landroid/view/Display;
     array-length v0, v7
 
@@ -3914,10 +3492,8 @@
 
     if-le v0, v1, :cond_6
 
-    .line 646
     const/4 v2, 0x6
 
-    .line 647
     .local v2, "CLEAR_FRAME_COUNT":I
     move-object/from16 v0, p0
 
@@ -3960,14 +3536,12 @@
 
     if-gtz v16, :cond_6
 
-    .line 649
     const/4 v6, 0x0
 
     .local v6, "i":I
     :goto_1
     if-ge v6, v2, :cond_4
 
-    .line 650
     const/16 v16, 0x0
 
     const/16 v17, 0x0
@@ -3979,15 +3553,12 @@
     :try_start_0
     invoke-static/range {v16 .. v19}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 651
     const/16 v16, 0x4000
 
     invoke-static/range {v16 .. v16}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 652
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
-    .line 653
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/ColorFade;->mEglDisplay:Landroid/opengl/EGLDisplay;
@@ -4002,7 +3573,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/opengl/EGL14;->eglSwapBuffers(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
-    .line 654
     const/high16 v16, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -4011,14 +3581,12 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/display/ColorFade;->showSurface(F)Z
 
-    .line 649
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 656
     :cond_4
-    const-string/jumbo v16, "drawFrame"
+    const-string v16, "drawFrame"
 
     invoke-static/range {v16 .. v16}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
     :try_end_0
@@ -4028,10 +3596,8 @@
 
     if-eqz v16, :cond_5
 
-    .line 657
     const/16 v16, 0x0
 
-    .line 660
     invoke-direct/range {p0 .. p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
     goto/16 :goto_0
@@ -4039,12 +3605,10 @@
     :cond_5
     invoke-direct/range {p0 .. p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
-    .line 662
     const/16 v16, 0x1
 
     goto/16 :goto_0
 
-    .line 660
     :catchall_0
     move-exception v16
 
@@ -4052,7 +3616,6 @@
 
     throw v16
 
-    .line 669
     .end local v2    # "CLEAR_FRAME_COUNT":I
     .end local v6    # "i":I
     :cond_6
@@ -4067,12 +3630,10 @@
     :try_start_1
     invoke-static/range {v16 .. v19}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 670
     const/16 v16, 0x4000
 
     invoke-static/range {v16 .. v16}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 673
     const/high16 v16, 0x3f800000    # 1.0f
 
     sub-float v16, v16, p1
@@ -4081,7 +3642,6 @@
 
     float-to-double v8, v0
 
-    .line 674
     .local v8, "one_minus_level":D
     const-wide v16, 0x400921fb54442d18L    # Math.PI
 
@@ -4091,7 +3651,6 @@
 
     move-result-wide v4
 
-    .line 675
     .local v4, "cos":D
     const-wide/16 v16, 0x0
 
@@ -4101,7 +3660,6 @@
 
     const-wide/high16 v14, -0x4010000000000000L    # -1.0
 
-    .line 676
     .local v14, "sign":D
     :goto_2
     const-wide/high16 v16, 0x4000000000000000L    # 2.0
@@ -4128,7 +3686,6 @@
 
     add-float v10, v16, v17
 
-    .line 677
     .local v10, "opacity":F
     move/from16 v0, p1
 
@@ -4146,7 +3703,6 @@
 
     double-to-float v11, v0
 
-    .line 678
     .local v11, "saturation":F
     const-wide/high16 v16, 0x4000000000000000L    # 2.0
 
@@ -4178,7 +3734,6 @@
 
     double-to-float v13, v0
 
-    .line 679
     .local v13, "scale":F
     const-wide/high16 v16, 0x3fe0000000000000L    # 0.5
 
@@ -4210,7 +3765,6 @@
 
     double-to-float v3, v0
 
-    .line 681
     .local v3, "gamma":F
     move-object/from16 v0, p0
 
@@ -4226,7 +3780,6 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 682
     move/from16 v0, p1
 
     float-to-double v0, v0
@@ -4243,16 +3796,14 @@
 
     double-to-float v12, v0
 
-    .line 683
     .local v12, "saturationCollapse":F
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/android/server/display/ColorFade;->drawEdgeCollapse(F)V
 
-    .line 693
     .end local v12    # "saturationCollapse":F
     :goto_3
-    const-string/jumbo v16, "drawFrame"
+    const-string v16, "drawFrame"
 
     invoke-static/range {v16 .. v16}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
     :try_end_1
@@ -4262,15 +3813,12 @@
 
     if-eqz v16, :cond_a
 
-    .line 694
     const/16 v16, 0x0
 
-    .line 699
     invoke-direct/range {p0 .. p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
     goto/16 :goto_0
 
-    .line 675
     .end local v3    # "gamma":F
     .end local v10    # "opacity":F
     .end local v11    # "saturation":F
@@ -4281,7 +3829,6 @@
 
     goto/16 :goto_2
 
-    .line 685
     .restart local v3    # "gamma":F
     .restart local v10    # "opacity":F
     .restart local v11    # "saturation":F
@@ -4303,14 +3850,12 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 686
     invoke-direct/range {p0 .. p1}, Lcom/android/server/display/ColorFade;->drawEdgeUnite(F)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_3
 
-    .line 699
     .end local v3    # "gamma":F
     .end local v4    # "cos":D
     .end local v8    # "one_minus_level":D
@@ -4325,7 +3870,6 @@
 
     throw v16
 
-    .line 689
     .restart local v3    # "gamma":F
     .restart local v4    # "cos":D
     .restart local v8    # "one_minus_level":D
@@ -4347,7 +3891,6 @@
 
     goto :goto_3
 
-    .line 697
     :cond_a
     move-object/from16 v0, p0
 
@@ -4365,10 +3908,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 699
     invoke-direct/range {p0 .. p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
-    .line 701
     const/high16 v16, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -4387,15 +3928,12 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1217
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1218
     const-string v0, "Color Fade State:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1219
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4418,7 +3956,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1220
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4441,7 +3978,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1221
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4464,7 +4000,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1222
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4487,7 +4022,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1223
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4510,7 +4044,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4533,7 +4066,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4556,7 +4088,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1226
     return-void
 .end method
 
@@ -4569,16 +4100,13 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 199
     div-float v0, p1, v11
 
-    .line 200
     .local v0, "_loc_5":F
     sget-object v6, Lcom/android/server/display/ColorFade;->segmentsSIn33:[[F
 
     array-length v1, v6
 
-    .line 201
     .local v1, "_loc_6":I
     int-to-float v6, v1
 
@@ -4592,7 +4120,6 @@
 
     double-to-int v4, v6
 
-    .line 202
     .local v4, "_loc_9":I
     sget-object v6, Lcom/android/server/display/ColorFade;->segmentsSIn33:[[F
 
@@ -4606,7 +4133,6 @@
 
     add-int/lit8 v4, v6, -0x1
 
-    .line 204
     :cond_0
     int-to-float v6, v4
 
@@ -4622,13 +4148,11 @@
 
     mul-float v2, v6, v7
 
-    .line 205
     .local v2, "_loc_7":F
     sget-object v6, Lcom/android/server/display/ColorFade;->segmentsSIn33:[[F
 
     aget-object v3, v6, v4
 
-    .line 206
     .local v3, "_loc_8":[F
     const/4 v6, 0x0
 
@@ -4670,7 +4194,6 @@
 
     add-float v5, v6, v7
 
-    .line 207
     .local v5, "ret":F
     return v5
 .end method
@@ -4684,16 +4207,13 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 188
     div-float v0, p1, v11
 
-    .line 189
     .local v0, "_loc_5":F
     sget-object v6, Lcom/android/server/display/ColorFade;->segments70:[[F
 
     array-length v1, v6
 
-    .line 190
     .local v1, "_loc_6":I
     int-to-float v6, v1
 
@@ -4707,7 +4227,6 @@
 
     double-to-int v4, v6
 
-    .line 191
     .local v4, "_loc_9":I
     sget-object v6, Lcom/android/server/display/ColorFade;->segments70:[[F
 
@@ -4721,7 +4240,6 @@
 
     add-int/lit8 v4, v6, -0x1
 
-    .line 192
     :cond_0
     int-to-float v6, v4
 
@@ -4737,13 +4255,11 @@
 
     mul-float v2, v6, v7
 
-    .line 193
     .local v2, "_loc_7":F
     sget-object v6, Lcom/android/server/display/ColorFade;->segments70:[[F
 
     aget-object v3, v6, v4
 
-    .line 194
     .local v3, "_loc_8":[F
     const/4 v6, 0x0
 
@@ -4785,7 +4301,6 @@
 
     add-float v5, v6, v7
 
-    .line 195
     .local v5, "ret":F
     return v5
 .end method
@@ -4799,16 +4314,13 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 243
     div-float v0, p1, v11
 
-    .line 244
     .local v0, "_loc_5":F
     sget-object v6, Lcom/android/server/display/ColorFade;->segments80:[[F
 
     array-length v1, v6
 
-    .line 245
     .local v1, "_loc_6":I
     int-to-float v6, v1
 
@@ -4822,7 +4334,6 @@
 
     double-to-int v4, v6
 
-    .line 246
     .local v4, "_loc_9":I
     sget-object v6, Lcom/android/server/display/ColorFade;->segments80:[[F
 
@@ -4836,7 +4347,6 @@
 
     add-int/lit8 v4, v6, -0x1
 
-    .line 247
     :cond_0
     int-to-float v6, v4
 
@@ -4852,13 +4362,11 @@
 
     mul-float v2, v6, v7
 
-    .line 248
     .local v2, "_loc_7":F
     sget-object v6, Lcom/android/server/display/ColorFade;->segments80:[[F
 
     aget-object v3, v6, v4
 
-    .line 249
     .local v3, "_loc_8":[F
     const/4 v6, 0x0
 
@@ -4900,7 +4408,6 @@
 
     add-float v5, v6, v7
 
-    .line 250
     .local v5, "ret":F
     return v5
 .end method
@@ -4917,14 +4424,13 @@
 
     const/4 v4, 0x1
 
-    .line 262
     const-string v3, "ColorFade"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "prepare: mode="
+    const-string v7, "prepare: mode="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4940,25 +4446,20 @@
 
     invoke-static {v3, v6}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurementForPrepare:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 266
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 269
     iput p2, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
-    .line 271
     iget-boolean v3, p0, Lcom/android/server/display/ColorFade;->mPrepared:Z
 
     if-eqz v3, :cond_0
 
-    .line 272
     const-string v3, "ColorFade"
 
     const-string v5, "ColorFade is already prepared"
@@ -4967,13 +4468,11 @@
 
     move v3, v4
 
-    .line 356
     :goto_0
     return v3
 
-    .line 277
     :cond_0
-    const-string/jumbo v3, "display"
+    const-string v3, "display"
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4983,10 +4482,8 @@
 
     iput-object v3, p0, Lcom/android/server/display/ColorFade;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 283
     iget v0, p0, Lcom/android/server/display/ColorFade;->mDisplayId:I
 
-    .line 298
     .local v0, "displayId":I
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
@@ -4994,34 +4491,29 @@
 
     move-result-object v1
 
-    .line 299
     .local v1, "displayInfo":Landroid/view/DisplayInfo;
     iget v3, v1, Landroid/view/DisplayInfo;->layerStack:I
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mDisplayLayerStack:I
 
-    .line 300
     invoke-virtual {v1}, Landroid/view/DisplayInfo;->getNaturalWidth()I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mDisplayWidth:I
 
-    .line 301
     invoke-virtual {v1}, Landroid/view/DisplayInfo;->getNaturalHeight()I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/display/ColorFade;->mDisplayHeight:I
 
-    .line 304
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     const-string v6, "ColorFade : getDisplayInfo"
 
     invoke-virtual {v3, v6, v8, v9}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 308
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->createSurface()Z
 
     move-result v3
@@ -5046,23 +4538,19 @@
 
     if-nez v3, :cond_2
 
-    .line 310
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/display/ColorFade;->dismiss()V
 
-    .line 311
     const-string v3, "ColorFade"
 
-    const-string/jumbo v4, "prepare:createSurface fail !!!"
+    const-string v4, "prepare:createSurface fail !!!"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move v3, v5
 
-    .line 312
     goto :goto_0
 
-    .line 316
     :cond_2
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->attachEglContext()Z
 
@@ -5070,19 +4558,16 @@
 
     if-nez v3, :cond_3
 
-    .line 317
     const-string v3, "ColorFade"
 
-    const-string/jumbo v4, "prepare:attachEglContext fail !!!"
+    const-string v4, "prepare:attachEglContext fail !!!"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move v3, v5
 
-    .line 318
     goto :goto_0
 
-    .line 321
     :cond_3
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/display/ColorFade;->initGLShaders(Landroid/content/Context;)Z
@@ -5097,7 +4582,7 @@
 
     if-eqz v3, :cond_4
 
-    const-string/jumbo v3, "prepare"
+    const-string v3, "prepare"
 
     invoke-static {v3}, Lcom/android/server/display/ColorFade;->checkGlErrors(Ljava/lang/String;)Z
 
@@ -5105,23 +4590,19 @@
 
     if-eqz v3, :cond_5
 
-    .line 322
     :cond_4
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
-    .line 323
     invoke-virtual {p0}, Lcom/android/server/display/ColorFade;->dismiss()V
 
-    .line 324
     const-string v3, "ColorFade"
 
-    const-string/jumbo v4, "prepare:initGLShaders fail !!!"
+    const-string v4, "prepare:initGLShaders fail !!!"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 328
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
     move v3, v5
@@ -5131,16 +4612,12 @@
     :cond_5
     invoke-direct {p0}, Lcom/android/server/display/ColorFade;->detachEglContext()V
 
-    .line 332
     iput-boolean v4, p0, Lcom/android/server/display/ColorFade;->mCreatedResources:Z
 
-    .line 333
     iput-boolean v4, p0, Lcom/android/server/display/ColorFade;->mPrepared:Z
 
-    .line 342
     if-ne p2, v4, :cond_6
 
-    .line 343
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -5149,24 +4626,20 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 344
     const/high16 v3, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v3}, Lcom/android/server/display/ColorFade;->draw(F)Z
 
-    .line 346
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     const-string v5, "ColorFade : draw"
 
     invoke-virtual {v3, v5, v8, v9}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 343
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 328
     .end local v2    # "i":I
     :catchall_0
     move-exception v3
@@ -5175,7 +4648,6 @@
 
     throw v3
 
-    .line 352
     :cond_6
     iget-object v3, p0, Lcom/android/server/display/ColorFade;->mTimeMeasurementForPrepare:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
@@ -5185,7 +4657,6 @@
 
     invoke-virtual {v3, v5, v6, v7}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printTotalTime(Ljava/lang/String;J)V
 
-    .line 353
     const-string v3, "ColorFade"
 
     const-string v5, "ColorFade is ready"
@@ -5194,6 +4665,5 @@
 
     move v3, v4
 
-    .line 356
     goto/16 :goto_0
 .end method

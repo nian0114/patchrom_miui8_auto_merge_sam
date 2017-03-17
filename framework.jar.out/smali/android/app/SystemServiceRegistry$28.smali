@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 482
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,18 +40,15 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 485
     const-string v4, "cpp_service"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 486
     .local v0, "b":Landroid/os/IBinder;
     const/4 v1, 0x0
 
-    .line 488
     .local v1, "cppManager":Lcom/samsung/cpp/CPPositioningManager;
     :try_start_0
     new-instance v2, Lcom/samsung/cpp/CPPositioningManager;
@@ -69,25 +65,21 @@
     .local v2, "cppManager":Lcom/samsung/cpp/CPPositioningManager;
     move-object v1, v2
 
-    .line 493
     .end local v2    # "cppManager":Lcom/samsung/cpp/CPPositioningManager;
     .restart local v1    # "cppManager":Lcom/samsung/cpp/CPPositioningManager;
     :goto_0
     return-object v2
 
-    .line 489
     :catch_0
     move-exception v3
 
-    .line 490
     .local v3, "e":Ljava/lang/Throwable;
     const-string v4, "SystemServiceRegistry"
 
-    const-string/jumbo v5, "registerService(Context.CP_POSITIONING_SERVICE) failed. error or not support."
+    const-string v5, "registerService(Context.CP_POSITIONING_SERVICE) failed. error or not support."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     const/4 v2, 0x0
 
     goto :goto_0
@@ -98,7 +90,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 482
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$28;->createService(Landroid/app/ContextImpl;)Lcom/samsung/cpp/CPPositioningManager;
 
     move-result-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 868
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$4;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 871
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 880
     :goto_0
     return-void
 
-    .line 874
     :pswitch_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -57,7 +53,6 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 876
     .local v0, "compName":Landroid/content/ComponentName;
     new-instance v2, Landroid/content/Intent;
 
@@ -69,7 +64,6 @@
 
     move-result-object v1
 
-    .line 877
     .local v1, "intent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$4;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -82,7 +76,6 @@
 
     goto :goto_0
 
-    .line 871
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

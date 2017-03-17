@@ -81,7 +81,6 @@
     .locals 3
 
     .prologue
-    .line 1765
     invoke-static {}, Lcom/ipsec/client/IPsecError;->values()[Lcom/ipsec/client/IPsecError;
 
     move-result-object v0
@@ -811,7 +810,6 @@
     :try_end_2c
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2c .. :try_end_2c} :catch_ea
 
-    .line 1746
     :goto_2c
     invoke-static {}, Lcom/ipsec/client/IPsecEvent;->values()[Lcom/ipsec/client/IPsecEvent;
 
@@ -918,7 +916,6 @@
     :try_end_32
     .catch Ljava/lang/NoSuchFieldError; {:try_start_32 .. :try_end_32} :catch_e4
 
-    .line 1363
     :goto_32
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$VirtualAdapterConfigurationMethod;->values()[Lcom/ipsec/client/IPsecConnection$VirtualAdapterConfigurationMethod;
 
@@ -977,7 +974,6 @@
     :try_end_35
     .catch Ljava/lang/NoSuchFieldError; {:try_start_35 .. :try_end_35} :catch_e1
 
-    .line 1347
     :goto_35
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$AdapterConf;->values()[Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
@@ -1036,7 +1032,6 @@
     :try_end_38
     .catch Ljava/lang/NoSuchFieldError; {:try_start_38 .. :try_end_38} :catch_de
 
-    .line 1300
     :goto_38
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IkeGroup;->values()[Lcom/ipsec/client/IPsecConnection$IkeGroup;
 
@@ -1351,7 +1346,6 @@
     :try_end_4b
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4b .. :try_end_4b} :catch_cb
 
-    .line 1254
     :goto_4b
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IkeDhGroup;->values()[Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
@@ -1666,7 +1660,6 @@
     :try_end_5e
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5e .. :try_end_5e} :catch_b8
 
-    .line 1236
     :goto_5e
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$EapMethod;->values()[Lcom/ipsec/client/IPsecConnection$EapMethod;
 
@@ -1741,7 +1734,6 @@
     :try_end_62
     .catch Ljava/lang/NoSuchFieldError; {:try_start_62 .. :try_end_62} :catch_b4
 
-    .line 1219
     :goto_62
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IkeEapType;->values()[Lcom/sec/epdg/IWlanEnum$IkeEapType;
 
@@ -1816,7 +1808,6 @@
     :try_end_66
     .catch Ljava/lang/NoSuchFieldError; {:try_start_66 .. :try_end_66} :catch_b0
 
-    .line 1183
     :goto_66
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IkeEncryption;->values()[Lcom/ipsec/client/IPsecConnection$IkeEncryption;
 
@@ -2051,7 +2042,6 @@
     :try_end_74
     .catch Ljava/lang/NoSuchFieldError; {:try_start_74 .. :try_end_74} :catch_a2
 
-    .line 1146
     :goto_74
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IkeEncryption;->values()[Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
@@ -2286,7 +2276,6 @@
     :try_end_82
     .catch Ljava/lang/NoSuchFieldError; {:try_start_82 .. :try_end_82} :catch_94
 
-    .line 1117
     :goto_82
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->values()[Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
@@ -2457,7 +2446,6 @@
     :try_end_8c
     .catch Ljava/lang/NoSuchFieldError; {:try_start_8c .. :try_end_8c} :catch_8a
 
-    .line 1088
     :goto_8c
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IkeIntegrity;->values()[Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
@@ -2628,7 +2616,6 @@
     :try_end_96
     .catch Ljava/lang/NoSuchFieldError; {:try_start_96 .. :try_end_96} :catch_80
 
-    .line 1074
     :goto_96
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IkeVersion;->values()[Lcom/ipsec/client/IPsecConnection$IkeVersion;
 
@@ -2671,7 +2658,6 @@
     :try_end_98
     .catch Ljava/lang/NoSuchFieldError; {:try_start_98 .. :try_end_98} :catch_7e
 
-    .line 1062
     :goto_98
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$Ikeversion;->values()[Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
@@ -2714,7 +2700,6 @@
     :try_end_9a
     .catch Ljava/lang/NoSuchFieldError; {:try_start_9a .. :try_end_9a} :catch_7c
 
-    .line 1050
     :goto_9a
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;->values()[Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
@@ -2757,7 +2742,6 @@
     :try_end_9c
     .catch Ljava/lang/NoSuchFieldError; {:try_start_9c .. :try_end_9c} :catch_7a
 
-    .line 1037
     :goto_9c
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;->values()[Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
 
@@ -2800,7 +2784,6 @@
     :try_end_9e
     .catch Ljava/lang/NoSuchFieldError; {:try_start_9e .. :try_end_9e} :catch_78
 
-    .line 992
     :goto_9e
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IPsecGroup;->values()[Lcom/ipsec/client/IPsecConnection$IPsecGroup;
 
@@ -3099,7 +3082,6 @@
     :try_end_b0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_b0 .. :try_end_b0} :catch_66
 
-    .line 948
     :goto_b0
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;->values()[Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
@@ -3398,7 +3380,6 @@
     :try_end_c2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_c2 .. :try_end_c2} :catch_54
 
-    .line 912
     :goto_c2
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IPsecIntegrity;->values()[Lcom/ipsec/client/IPsecConnection$IPsecIntegrity;
 
@@ -3633,7 +3614,6 @@
     :try_end_d0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_d0 .. :try_end_d0} :catch_46
 
-    .line 875
     :goto_d0
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;->values()[Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
@@ -3868,7 +3848,6 @@
     :try_end_de
     .catch Ljava/lang/NoSuchFieldError; {:try_start_de .. :try_end_de} :catch_38
 
-    .line 838
     :goto_de
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IPsecEncryption;->values()[Lcom/ipsec/client/IPsecConnection$IPsecEncryption;
 
@@ -4103,7 +4082,6 @@
     :try_end_ec
     .catch Ljava/lang/NoSuchFieldError; {:try_start_ec .. :try_end_ec} :catch_2a
 
-    .line 802
     :goto_ec
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;->values()[Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
@@ -4338,7 +4316,6 @@
     :try_end_fa
     .catch Ljava/lang/NoSuchFieldError; {:try_start_fa .. :try_end_fa} :catch_1c
 
-    .line 789
     :goto_fa
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$TunnelMode;->values()[Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
@@ -4381,7 +4358,6 @@
     :try_end_fc
     .catch Ljava/lang/NoSuchFieldError; {:try_start_fc .. :try_end_fc} :catch_1a
 
-    .line 777
     :goto_fc
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$TunnelModeType;->values()[Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
@@ -4424,7 +4400,6 @@
     :try_end_fe
     .catch Ljava/lang/NoSuchFieldError; {:try_start_fe .. :try_end_fe} :catch_18
 
-    .line 753
     :goto_fe
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IdentityType;->values()[Lcom/ipsec/client/IPsecConnection$IdentityType;
 
@@ -4531,7 +4506,6 @@
     :try_end_104
     .catch Ljava/lang/NoSuchFieldError; {:try_start_104 .. :try_end_104} :catch_12
 
-    .line 722
     :goto_104
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IdentityType;->values()[Lcom/sec/epdg/IWlanEnum$IdentityType;
 
@@ -4638,7 +4612,6 @@
     :try_end_10a
     .catch Ljava/lang/NoSuchFieldError; {:try_start_10a .. :try_end_10a} :catch_c
 
-    .line 707
     :goto_10a
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$IPVersion;->values()[Lcom/ipsec/client/IPsecConnection$IPVersion;
 
@@ -4697,7 +4670,6 @@
     :try_end_10d
     .catch Ljava/lang/NoSuchFieldError; {:try_start_10d .. :try_end_10d} :catch_9
 
-    .line 693
     :goto_10d
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IPSecIpType;->values()[Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
@@ -4756,7 +4728,6 @@
     :try_end_110
     .catch Ljava/lang/NoSuchFieldError; {:try_start_110 .. :try_end_110} :catch_6
 
-    .line 679
     :goto_110
     invoke-static {}, Lcom/ipsec/client/IPsecConnection$HostAuthentication;->values()[Lcom/ipsec/client/IPsecConnection$HostAuthentication;
 
@@ -4815,7 +4786,6 @@
     :try_end_113
     .catch Ljava/lang/NoSuchFieldError; {:try_start_113 .. :try_end_113} :catch_3
 
-    .line 664
     :goto_113
     invoke-static {}, Lcom/sec/epdg/IWlanEnum$IPSecAuthType;->values()[Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
 
@@ -4892,7 +4862,6 @@
 
     goto :goto_114
 
-    .line 679
     :catch_3
     move-exception v0
 
@@ -4908,7 +4877,6 @@
 
     goto :goto_111
 
-    .line 693
     :catch_6
     move-exception v0
 
@@ -4924,7 +4892,6 @@
 
     goto :goto_10e
 
-    .line 707
     :catch_9
     move-exception v0
 
@@ -4940,7 +4907,6 @@
 
     goto/16 :goto_10b
 
-    .line 722
     :catch_c
     move-exception v0
 
@@ -4971,7 +4937,6 @@
 
     goto/16 :goto_105
 
-    .line 753
     :catch_12
     move-exception v0
 
@@ -5002,7 +4967,6 @@
 
     goto/16 :goto_ff
 
-    .line 777
     :catch_18
     move-exception v0
 
@@ -5013,7 +4977,6 @@
 
     goto/16 :goto_fd
 
-    .line 789
     :catch_1a
     move-exception v0
 
@@ -5024,7 +4987,6 @@
 
     goto/16 :goto_fb
 
-    .line 802
     :catch_1c
     move-exception v0
 
@@ -5095,7 +5057,6 @@
 
     goto/16 :goto_ed
 
-    .line 838
     :catch_2a
     move-exception v0
 
@@ -5166,7 +5127,6 @@
 
     goto/16 :goto_df
 
-    .line 875
     :catch_38
     move-exception v0
 
@@ -5237,7 +5197,6 @@
 
     goto/16 :goto_d1
 
-    .line 912
     :catch_46
     move-exception v0
 
@@ -5308,7 +5267,6 @@
 
     goto/16 :goto_c3
 
-    .line 948
     :catch_54
     move-exception v0
 
@@ -5399,7 +5357,6 @@
 
     goto/16 :goto_b1
 
-    .line 992
     :catch_66
     move-exception v0
 
@@ -5490,7 +5447,6 @@
 
     goto/16 :goto_9f
 
-    .line 1037
     :catch_78
     move-exception v0
 
@@ -5501,7 +5457,6 @@
 
     goto/16 :goto_9d
 
-    .line 1050
     :catch_7a
     move-exception v0
 
@@ -5512,7 +5467,6 @@
 
     goto/16 :goto_9b
 
-    .line 1062
     :catch_7c
     move-exception v0
 
@@ -5523,7 +5477,6 @@
 
     goto/16 :goto_99
 
-    .line 1074
     :catch_7e
     move-exception v0
 
@@ -5534,7 +5487,6 @@
 
     goto/16 :goto_97
 
-    .line 1088
     :catch_80
     move-exception v0
 
@@ -5585,7 +5537,6 @@
 
     goto/16 :goto_8d
 
-    .line 1117
     :catch_8a
     move-exception v0
 
@@ -5636,7 +5587,6 @@
 
     goto/16 :goto_83
 
-    .line 1146
     :catch_94
     move-exception v0
 
@@ -5707,7 +5657,6 @@
 
     goto/16 :goto_75
 
-    .line 1183
     :catch_a2
     move-exception v0
 
@@ -5778,7 +5727,6 @@
 
     goto/16 :goto_67
 
-    .line 1219
     :catch_b0
     move-exception v0
 
@@ -5799,7 +5747,6 @@
 
     goto/16 :goto_63
 
-    .line 1236
     :catch_b4
     move-exception v0
 
@@ -5820,7 +5767,6 @@
 
     goto/16 :goto_5f
 
-    .line 1254
     :catch_b8
     move-exception v0
 
@@ -5916,7 +5862,6 @@
 
     goto/16 :goto_4c
 
-    .line 1300
     :catch_cb
     move-exception v0
 
@@ -6012,7 +5957,6 @@
 
     goto/16 :goto_39
 
-    .line 1347
     :catch_de
     move-exception v0
 
@@ -6028,7 +5972,6 @@
 
     goto/16 :goto_36
 
-    .line 1363
     :catch_e1
     move-exception v0
 
@@ -6044,7 +5987,6 @@
 
     goto/16 :goto_33
 
-    .line 1746
     :catch_e4
     move-exception v0
 
@@ -6075,7 +6017,6 @@
 
     goto/16 :goto_2d
 
-    .line 1765
     :catch_ea
     move-exception v0
 

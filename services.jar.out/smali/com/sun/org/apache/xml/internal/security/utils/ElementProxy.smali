@@ -183,7 +183,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "setElement(\""
+    const-string v3, "setElement(\""
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -297,9 +297,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-interface {v0, v1, v2, p1}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -332,13 +332,13 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "http://www.w3.org/2000/xmlns/"
+    const-string v2, "http://www.w3.org/2000/xmlns/"
 
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v4, "xmlns:"
+    const-string v4, "xmlns:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -417,7 +417,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "prefix.AlreadyAssigned"
+    const-string v2, "prefix.AlreadyAssigned"
 
     invoke-direct {v0, v2, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -869,7 +869,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v1, "xml.WrongElement"
+    const-string v1, "xml.WrongElement"
 
     invoke-direct {v0, v1, v4}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -969,7 +969,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "setElement("
+    const-string v3, "setElement("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1042,14 +1042,14 @@
     :cond_0
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v1, "defaultNamespaceCannotBeSetHere"
+    const-string v1, "defaultNamespaceCannotBeSetHere"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_1
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1059,14 +1059,14 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v1, "defaultNamespaceCannotBeSetHere"
+    const-string v1, "defaultNamespaceCannotBeSetHere"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_2
-    const-string/jumbo v0, "xmlns:"
+    const-string v0, "xmlns:"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1077,7 +1077,7 @@
     :goto_0
     iget-object v0, p0, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->_constructionElement:Lorg/w3c/dom/Element;
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v0, v1, p1}, Lorg/w3c/dom/Element;->getAttributeNodeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -1117,7 +1117,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "namespacePrefixAlreadyUsedByOtherURI"
+    const-string v2, "namespacePrefixAlreadyUsedByOtherURI"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -1128,7 +1128,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v1, "xmlns:"
+    const-string v1, "xmlns:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1147,7 +1147,7 @@
     :cond_4
     iget-object v0, p0, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->_constructionElement:Lorg/w3c/dom/Element;
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v0, v1, p1, p2}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3674
     iput-object p1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/ccm/ClientCertificateManager$1;
 
     .prologue
-    .line 3674
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;-><init>(Lcom/android/server/enterprise/ccm/ClientCertificateManager;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 3699
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -76,7 +73,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3700
     return-void
 .end method
 
@@ -85,7 +81,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 3676
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -111,7 +106,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3677
     return-void
 .end method
 
@@ -120,7 +114,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 3681
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -146,7 +139,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3682
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     const/4 v1, -0x1
@@ -154,25 +146,21 @@
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCSRProfileUsingAdminId(II)Z
     invoke-static {v0, v1, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$600(Lcom/android/server/enterprise/ccm/ClientCertificateManager;II)Z
 
-    .line 3683
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCertificateProfile(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$700(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3684
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCCMProfile(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$800(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3685
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCCMDefaultPolicyRecord(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$900(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3686
     return-void
 .end method
 
@@ -181,7 +169,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 3690
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -207,7 +194,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3691
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     const/4 v1, -0x1
@@ -215,25 +201,21 @@
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCSRProfileUsingAdminId(II)Z
     invoke-static {v0, v1, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$600(Lcom/android/server/enterprise/ccm/ClientCertificateManager;II)Z
 
-    .line 3692
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCertificateProfile(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$700(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3693
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCCMProfile(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$800(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3694
     iget-object v0, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->deleteCCMDefaultPolicyRecord(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$900(Lcom/android/server/enterprise/ccm/ClientCertificateManager;I)Z
 
-    .line 3695
     return-void
 .end method
 
@@ -244,6 +226,5 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 3704
     return-void
 .end method

@@ -17,18 +17,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Landroid/content/pm/IPersonaPolicyHandler$Stub;-><init>()V
 
-    .line 33
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PersonaPolicyHandler;->mContext:Landroid/content/Context;
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/pm/PersonaPolicyHandler;->mContext:Landroid/content/Context;
 
-    .line 37
     return-void
 .end method
 
@@ -44,34 +40,27 @@
     .end annotation
 
     .prologue
-    .line 226
     const/16 v11, 0x16
 
-    .line 227
     .local v11, "mLockWidth":I
     const/16 v10, 0x19
 
-    .line 228
     .local v10, "mLockHeight":I
     const/16 v9, 0x30
 
-    .line 229
     .local v9, "mImageWidth":I
     const/16 v8, 0x30
 
-    .line 231
     .local v8, "mImageHeight":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 232
     .local v3, "imageWidth":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
-    .line 234
     .local v4, "imageHeight":I
     int-to-float v0, v11
 
@@ -85,7 +74,6 @@
 
     div-float v12, v0, v1
 
-    .line 235
     .local v12, "scaleX":F
     int-to-float v0, v10
 
@@ -99,17 +87,14 @@
 
     div-float v13, v0, v1
 
-    .line 237
     .local v13, "scaleY":F
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 238
     .local v5, "matrix":Landroid/graphics/Matrix;
     invoke-virtual {v5, v12, v13}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 239
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -122,7 +107,6 @@
 
     move-result-object v7
 
-    .line 241
     .local v7, "b":Landroid/graphics/Bitmap;
     return-object v7
 .end method
@@ -139,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 163
     :try_start_0
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -149,11 +132,9 @@
 
     move-result-object v8
 
-    .line 164
     .local v8, "typeObj":Lcom/sec/enterprise/knox/container/KnoxConfigurationType;
     const/4 v4, 0x0
 
-    .line 165
     .local v4, "inputStreamLock":Ljava/io/InputStream;
     if-eqz v8, :cond_2
 
@@ -163,12 +144,10 @@
 
     if-eqz v13, :cond_2
 
-    .line 166
     invoke-virtual {v8}, Lcom/sec/enterprise/knox/container/KnoxConfigurationType;->getCustomBadgeIcon()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 167
     .local v7, "path":Ljava/lang/String;
     const-string v13, "KnoxPolicyHandler"
 
@@ -192,7 +171,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     new-instance v4, Ljava/io/BufferedInputStream;
 
     .end local v4    # "inputStreamLock":Ljava/io/InputStream;
@@ -206,7 +184,6 @@
 
     invoke-direct {v4, v13}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 193
     .end local v7    # "path":Ljava/lang/String;
     .restart local v4    # "inputStreamLock":Ljava/io/InputStream;
     :cond_0
@@ -215,7 +192,6 @@
 
     move-result-object v5
 
-    .line 194
     .local v5, "lock":Landroid/graphics/Bitmap;
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -235,7 +211,6 @@
 
     move-result-object v5
 
-    .line 196
     sget-object v13, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/4 v14, 0x1
@@ -246,13 +221,11 @@
 
     move-result-object v2
 
-    .line 197
     .local v2, "copyIcon":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 198
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -264,7 +237,6 @@
 
     sub-int v11, v13, v14
 
-    .line 199
     .local v11, "x":I
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -276,7 +248,6 @@
 
     sub-int v12, v13, v14
 
-    .line 200
     .local v12, "y":I
     int-to-float v13, v11
 
@@ -286,13 +257,10 @@
 
     invoke-virtual {v1, v5, v13, v14, v15}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 202
     if-eqz v4, :cond_1
 
-    .line 203
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
 
-    .line 221
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     .end local v2    # "copyIcon":Landroid/graphics/Bitmap;
     .end local v4    # "inputStreamLock":Ljava/io/InputStream;
@@ -304,7 +272,6 @@
     :goto_1
     return-object v2
 
-    .line 170
     .restart local v4    # "inputStreamLock":Ljava/io/InputStream;
     .restart local v8    # "typeObj":Lcom/sec/enterprise/knox/container/KnoxConfigurationType;
     :cond_2
@@ -312,7 +279,7 @@
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaPolicyHandler;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v14, "persona"
+    const-string v14, "persona"
 
     invoke-virtual {v13, v14}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -320,16 +287,14 @@
 
     check-cast v6, Landroid/os/PersonaManager;
 
-    .line 171
     .local v6, "mPersonaManager":Landroid/os/PersonaManager;
     if-eqz v6, :cond_5
 
-    .line 173
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaPolicyHandler;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v14, "user"
+    const-string v14, "user"
 
     invoke-virtual {v13, v14}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -337,7 +302,6 @@
 
     check-cast v10, Landroid/os/UserManager;
 
-    .line 174
     .local v10, "um":Landroid/os/UserManager;
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -347,11 +311,9 @@
 
     move-result-object v9
 
-    .line 175
     .local v9, "ui":Landroid/content/pm/UserInfo;
     if-eqz v9, :cond_3
 
-    .line 176
     const-string v13, "KNOX"
 
     iget-object v14, v9, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
@@ -362,14 +324,12 @@
 
     if-eqz v13, :cond_4
 
-    .line 177
     const-string v13, "KnoxPolicyHandler"
 
-    const-string/jumbo v14, "selecting the lock badge for KNOX container"
+    const-string v14, "selecting the lock badge for KNOX container"
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaPolicyHandler;->mContext:Landroid/content/Context;
@@ -378,23 +338,21 @@
 
     move-result-object v13
 
-    const-string/jumbo v14, "security_home_icon_badge_KNOX.png"
+    const-string v14, "security_home_icon_badge_KNOX.png"
 
     invoke-virtual {v13, v14}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v4
 
-    .line 188
     .end local v9    # "ui":Landroid/content/pm/UserInfo;
     .end local v10    # "um":Landroid/os/UserManager;
     :cond_3
     :goto_2
     if-nez v4, :cond_0
 
-    .line 189
     const-string v13, "KnoxPolicyHandler"
 
-    const-string/jumbo v14, "this should have never happened. No lock image is added!"
+    const-string v14, "this should have never happened. No lock image is added!"
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -402,14 +360,12 @@
 
     goto/16 :goto_0
 
-    .line 217
     .end local v4    # "inputStreamLock":Ljava/io/InputStream;
     .end local v6    # "mPersonaManager":Landroid/os/PersonaManager;
     .end local v8    # "typeObj":Lcom/sec/enterprise/knox/container/KnoxConfigurationType;
     :catch_0
     move-exception v3
 
-    .line 218
     .local v3, "e":Ljava/lang/Exception;
     const-string v13, "KnoxPolicyHandler"
 
@@ -437,15 +393,12 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object/from16 v2, p1
 
-    .line 221
     goto :goto_1
 
-    .line 179
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v4    # "inputStreamLock":Ljava/io/InputStream;
     .restart local v6    # "mPersonaManager":Landroid/os/PersonaManager;
@@ -464,14 +417,12 @@
 
     if-eqz v13, :cond_3
 
-    .line 180
     const-string v13, "KnoxPolicyHandler"
 
-    const-string/jumbo v14, "selecting the lock badge for KNOX II container"
+    const-string v14, "selecting the lock badge for KNOX II container"
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaPolicyHandler;->mContext:Landroid/content/Context;
@@ -480,7 +431,7 @@
 
     move-result-object v13
 
-    const-string/jumbo v14, "security_home_icon_badge_KNOX_II.png"
+    const-string v14, "security_home_icon_badge_KNOX_II.png"
 
     invoke-virtual {v13, v14}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -488,7 +439,6 @@
 
     goto :goto_2
 
-    .line 185
     .end local v9    # "ui":Landroid/content/pm/UserInfo;
     .end local v10    # "um":Landroid/os/UserManager;
     :cond_5
@@ -510,15 +460,13 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 41
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "allowChangePolicy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
-    const-string/jumbo v0, "passwordLock"
+    const-string v0, "passwordLock"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -526,20 +474,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 45
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "PASSWORD_LOCK"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     :goto_0
     return v2
 
-    .line 48
     :cond_0
-    const-string/jumbo v0, "encryption"
+    const-string v0, "encryption"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -547,7 +492,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 50
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "ENCRYPTION"
@@ -556,9 +500,8 @@
 
     goto :goto_0
 
-    .line 53
     :cond_1
-    const-string/jumbo v0, "secureKeystore"
+    const-string v0, "secureKeystore"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -566,7 +509,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 55
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "SECURE_KEYSTORE"
@@ -575,7 +517,6 @@
 
     goto :goto_0
 
-    .line 58
     :cond_2
     const-string v0, "cameraMode"
 
@@ -585,7 +526,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 60
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "CAMERA_MODE"
@@ -594,9 +534,8 @@
 
     goto :goto_0
 
-    .line 63
     :cond_3
-    const-string/jumbo v0, "customBadgeIcon"
+    const-string v0, "customBadgeIcon"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -604,7 +543,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 65
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "CUSTOM_BADGEICON"
@@ -613,9 +551,8 @@
 
     goto :goto_0
 
-    .line 68
     :cond_4
-    const-string/jumbo v0, "disableSwitchWidget"
+    const-string v0, "disableSwitchWidget"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -623,7 +560,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 70
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "DISABLE_SWITCHWIDGET"
@@ -632,9 +568,8 @@
 
     goto :goto_0
 
-    .line 73
     :cond_5
-    const-string/jumbo v0, "customPersonaIcon"
+    const-string v0, "customPersonaIcon"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -642,7 +577,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 75
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "CUSTOM_PERSONAICON"
@@ -651,9 +585,8 @@
 
     goto :goto_0
 
-    .line 78
     :cond_6
-    const-string/jumbo v0, "customColorIdentification"
+    const-string v0, "customColorIdentification"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -661,7 +594,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 80
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "CUSTOM_COLORIDENTIFICATION"
@@ -670,7 +602,6 @@
 
     goto :goto_0
 
-    .line 83
     :cond_7
     const-string v0, "containerReset"
 
@@ -680,7 +611,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 85
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "CONTAINER_RESET"
@@ -689,9 +619,8 @@
 
     goto/16 :goto_0
 
-    .line 88
     :cond_8
-    const-string/jumbo v0, "shortcutCreation"
+    const-string v0, "shortcutCreation"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -699,7 +628,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 90
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "SHORTCUT_CREATION"
@@ -708,9 +636,8 @@
 
     goto/16 :goto_0
 
-    .line 93
     :cond_9
-    const-string/jumbo v0, "dlnaDataTransfer"
+    const-string v0, "dlnaDataTransfer"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -718,7 +645,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 95
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "DLNA_DATATRANSFER"
@@ -727,9 +653,8 @@
 
     goto/16 :goto_0
 
-    .line 98
     :cond_a
-    const-string/jumbo v0, "print"
+    const-string v0, "print"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -737,7 +662,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 100
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "PRINT"
@@ -746,9 +670,8 @@
 
     goto/16 :goto_0
 
-    .line 103
     :cond_b
-    const-string/jumbo v0, "modifyTimeout"
+    const-string v0, "modifyTimeout"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -756,7 +679,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 105
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "MODIFY_TIMEOUT"
@@ -765,7 +687,6 @@
 
     goto/16 :goto_0
 
-    .line 108
     :cond_c
     const-string v0, "allShare"
 
@@ -775,7 +696,6 @@
 
     if-eqz v0, :cond_d
 
-    .line 110
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "ALLSHARE"
@@ -784,9 +704,8 @@
 
     goto/16 :goto_0
 
-    .line 113
     :cond_d
-    const-string/jumbo v0, "gearSupport"
+    const-string v0, "gearSupport"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -794,7 +713,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 115
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "GEAR_SUPPORT"
@@ -803,9 +721,8 @@
 
     goto/16 :goto_0
 
-    .line 118
     :cond_e
-    const-string/jumbo v0, "penWindow"
+    const-string v0, "penWindow"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -813,7 +730,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 120
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "PENWINDOW"
@@ -822,7 +738,6 @@
 
     goto/16 :goto_0
 
-    .line 123
     :cond_f
     const-string v0, "airCommand"
 
@@ -832,7 +747,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 125
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "AIRCOMMAND"
@@ -841,9 +755,8 @@
 
     goto/16 :goto_0
 
-    .line 128
     :cond_10
-    const-string/jumbo v0, "universalCallerId"
+    const-string v0, "universalCallerId"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -851,7 +764,6 @@
 
     if-eqz v0, :cond_11
 
-    .line 130
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "UNIVERSAL_CALLER_ID"
@@ -860,9 +772,8 @@
 
     goto/16 :goto_0
 
-    .line 133
     :cond_11
-    const-string/jumbo v0, "importFiles"
+    const-string v0, "importFiles"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -870,7 +781,6 @@
 
     if-eqz v0, :cond_12
 
-    .line 135
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "IMPORT_FILES"
@@ -879,9 +789,8 @@
 
     goto/16 :goto_0
 
-    .line 138
     :cond_12
-    const-string/jumbo v0, "exportFiles"
+    const-string v0, "exportFiles"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -889,7 +798,6 @@
 
     if-eqz v0, :cond_13
 
-    .line 140
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "EXPORT_FILES"
@@ -898,9 +806,8 @@
 
     goto/16 :goto_0
 
-    .line 143
     :cond_13
-    const-string/jumbo v0, "exportAndDeleteFiles"
+    const-string v0, "exportAndDeleteFiles"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -908,7 +815,6 @@
 
     if-eqz v0, :cond_14
 
-    .line 145
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "EXPORT_AND_DELETE_FILES"
@@ -917,9 +823,8 @@
 
     goto/16 :goto_0
 
-    .line 148
     :cond_14
-    const-string/jumbo v0, "switchNotif"
+    const-string v0, "switchNotif"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -927,7 +832,6 @@
 
     if-eqz v0, :cond_15
 
-    .line 150
     const-string v0, "KnoxPolicyHandler"
 
     const-string v1, "SWITCH_NOTIF"
@@ -936,7 +840,6 @@
 
     goto/16 :goto_0
 
-    .line 155
     :cond_15
     const-string v0, "KnoxPolicyHandler"
 

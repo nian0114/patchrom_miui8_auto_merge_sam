@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2878
     iput-object p1, p0, Landroid/widget/HoverPopupWindow$6;->this$0:Landroid/widget/HoverPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 2881
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$6;->this$0:Landroid/widget/HoverPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/HoverPopupWindow;->dismiss()V
 
-    .line 2883
     return-void
 .end method

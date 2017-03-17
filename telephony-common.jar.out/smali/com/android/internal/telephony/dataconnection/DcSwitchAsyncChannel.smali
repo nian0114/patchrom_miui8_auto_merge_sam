@@ -64,14 +64,12 @@
     .locals 3
 
     .prologue
-    .line 60
     const/16 v0, 0xb
 
     new-array v0, v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
-    .line 62
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -80,7 +78,6 @@
 
     aput-object v2, v0, v1
 
-    .line 63
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -89,7 +86,6 @@
 
     aput-object v2, v0, v1
 
-    .line 64
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -98,7 +94,6 @@
 
     aput-object v2, v0, v1
 
-    .line 65
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x3
@@ -107,7 +102,6 @@
 
     aput-object v2, v0, v1
 
-    .line 66
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x4
@@ -116,7 +110,6 @@
 
     aput-object v2, v0, v1
 
-    .line 67
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x5
@@ -125,7 +118,6 @@
 
     aput-object v2, v0, v1
 
-    .line 68
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x6
@@ -134,7 +126,6 @@
 
     aput-object v2, v0, v1
 
-    .line 69
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/4 v1, 0x7
@@ -143,7 +134,6 @@
 
     aput-object v2, v0, v1
 
-    .line 70
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/16 v1, 0x8
@@ -152,7 +142,6 @@
 
     aput-object v2, v0, v1
 
-    .line 71
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/16 v1, 0x9
@@ -161,7 +150,6 @@
 
     aput-object v2, v0, v1
 
-    .line 72
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     const/16 v1, 0xa
@@ -170,7 +158,6 @@
 
     aput-object v2, v0, v1
 
-    .line 73
     return-void
 .end method
 
@@ -180,21 +167,16 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 116
     invoke-direct {p0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
-    .line 34
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->tagId:I
 
-    .line 117
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->mDcSwitchState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
-    .line 118
     iput p2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->tagId:I
 
-    .line 119
     return-void
 .end method
 
@@ -205,10 +187,8 @@
     .prologue
     const v1, 0x44000
 
-    .line 108
     sub-int/2addr p0, v1
 
-    .line 109
     if-ltz p0, :cond_0
 
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
@@ -217,12 +197,10 @@
 
     if-ge p0, v0, :cond_0
 
-    .line 110
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sCmdToString:[Ljava/lang/String;
 
     aget-object v0, v0, p0
 
-    .line 112
     :goto_0
     return-object v0
 
@@ -241,7 +219,6 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 213
     const-string v0, "DcSwitchAsyncChannel"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -276,7 +253,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     return-void
 .end method
 
@@ -287,12 +263,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 164
     iget v1, p1, Landroid/os/Message;->arg1:I
 
     if-ne v1, v0, :cond_0
 
-    .line 165
     .local v0, "retVal":Z
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -315,10 +289,8 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 166
     return v0
 
-    .line 164
     .end local v0    # "retVal":Z
     :cond_0
     const/4 v0, 0x0
@@ -333,12 +305,10 @@
     .param p1, "apnRequest"    # Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;
 
     .prologue
-    .line 122
     const v0, 0x44000
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(ILjava/lang/Object;)V
 
-    .line 123
     const/4 v0, 0x1
 
     return v0
@@ -348,12 +318,10 @@
     .locals 1
 
     .prologue
-    .line 131
     const v0, 0x44002
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 132
     const/4 v0, 0x1
 
     return v0
@@ -363,14 +331,12 @@
     .locals 3
 
     .prologue
-    .line 191
     const v1, 0x44005
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessageSynchronously(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 192
     .local v0, "response":Landroid/os/Message;
     if-eqz v0, :cond_0
 
@@ -380,16 +346,13 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 193
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->rspIsIdleOrDetaching(Landroid/os/Message;)Z
 
     move-result v1
 
-    .line 196
     :goto_0
     return v1
 
-    .line 195
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -411,7 +374,6 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 196
     const/4 v1, 0x0
 
     goto :goto_0
@@ -421,14 +383,12 @@
     .locals 3
 
     .prologue
-    .line 170
     const v1, 0x44003
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessageSynchronously(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 171
     .local v0, "response":Landroid/os/Message;
     if-eqz v0, :cond_0
 
@@ -438,16 +398,13 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 172
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->rspIsIdle(Landroid/os/Message;)Z
 
     move-result v1
 
-    .line 175
     :goto_0
     return v1
 
-    .line 174
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -469,7 +426,6 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 175
     const/4 v1, 0x0
 
     goto :goto_0
@@ -480,12 +436,10 @@
     .param p1, "isInCall"    # I
 
     .prologue
-    .line 202
     const v0, 0x4400d
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(II)V
 
-    .line 203
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -506,7 +460,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 204
     return-void
 .end method
 
@@ -514,12 +467,10 @@
     .locals 1
 
     .prologue
-    .line 136
     const v0, 0x44007
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 137
     return-void
 .end method
 
@@ -527,12 +478,10 @@
     .locals 1
 
     .prologue
-    .line 140
     const v0, 0x44008
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 141
     return-void
 .end method
 
@@ -540,17 +489,14 @@
     .locals 1
 
     .prologue
-    .line 153
     const v0, 0x4400b
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 154
     const-string v0, "notifyDataDisconnected"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 155
     return-void
 .end method
 
@@ -559,19 +505,15 @@
     .param p1, "start"    # I
 
     .prologue
-    .line 144
     if-eqz p1, :cond_0
 
-    .line 145
     const v0, 0x44009
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 149
     :goto_0
     return-void
 
-    .line 147
     :cond_0
     const v0, 0x4400a
 
@@ -584,17 +526,14 @@
     .locals 1
 
     .prologue
-    .line 158
     const v0, 0x4400c
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 159
     const-string v0, "EVENT_WAIT_FOR_DATA_DISCONNECTED"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 160
     return-void
 .end method
 
@@ -602,17 +541,14 @@
     .locals 1
 
     .prologue
-    .line 180
     const v0, 0x44005
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 181
     const-string v0, "reqIsIdleOrDetaching"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 182
     return-void
 .end method
 
@@ -620,12 +556,10 @@
     .locals 1
 
     .prologue
-    .line 127
     const v0, 0x44001
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
-    .line 128
     return-void
 .end method
 
@@ -636,12 +570,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 185
     iget v1, p1, Landroid/os/Message;->arg1:I
 
     if-ne v1, v0, :cond_0
 
-    .line 186
     .local v0, "retVal":Z
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -664,10 +596,8 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
-    .line 187
     return v0
 
-    .line 185
     .end local v0    # "retVal":Z
     :cond_0
     const/4 v0, 0x0
@@ -679,7 +609,6 @@
     .locals 1
 
     .prologue
-    .line 209
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->mDcSwitchState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->getName()Ljava/lang/String;

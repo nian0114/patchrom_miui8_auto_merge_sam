@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 319
     iput-object p1, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 320
     const-class v0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -48,7 +46,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$1;
 
     .prologue
-    .line 319
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;-><init>(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;)V
 
     return-void
@@ -66,7 +63,6 @@
 
     const/4 v9, 0x0
 
-    .line 324
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
@@ -75,7 +71,6 @@
 
     move-result-object v2
 
-    .line 326
     .local v2, "packageName":Ljava/lang/String;
     const-string v5, "com.sec.enterprise.knox.shareddevice"
 
@@ -85,19 +80,16 @@
 
     if-eqz v5, :cond_4
 
-    .line 327
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->BRTAG:Ljava/lang/String;
 
     const-string v8, "Handling \'com.sec.enterprise.knox.shareddevice\'!"
 
     invoke-static {v5, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 331
     .local v0, "action":Ljava/lang/String;
     const-string v5, "android.intent.action.PACKAGE_ADDED"
 
@@ -116,7 +108,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 332
     # getter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$200()Ljava/lang/String;
 
@@ -126,7 +117,6 @@
 
     invoke-static {v5, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 333
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     invoke-virtual {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->isSharedDeviceEnabled()Z
@@ -135,7 +125,6 @@
 
     if-nez v5, :cond_0
 
-    .line 334
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -145,7 +134,6 @@
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->showProgressDialog(Landroid/content/Context;)V
     invoke-static {v5, v8}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$300(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;Landroid/content/Context;)V
 
-    .line 337
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
@@ -159,7 +147,6 @@
     # setter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->mSDAgentInstallerPackageUid:I
     invoke-static {v5, v8}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$402(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;I)I
 
-    .line 339
     # getter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$200()Ljava/lang/String;
 
@@ -169,20 +156,17 @@
 
     invoke-static {v5, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "com.sec.enterprise.knox.shareddevice.enable"
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 341
     .local v4, "setSDIntent":Landroid/content/Intent;
     const-string v5, "com.sec.enterprise.knox.shareddevice"
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 342
     const-string v5, "SD_INSTALLER_PACKAGE_NAME"
 
     iget-object v8, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
@@ -194,7 +178,6 @@
 
     invoke-virtual {v4, v5, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 343
     const-string v5, "SD_DEFAULT_STORAGE_FILES"
 
     iget-object v8, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
@@ -206,12 +189,10 @@
 
     invoke-virtual {v4, v5, v8}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 344
     const/16 v5, 0x20
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 345
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # getter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->mContext:Landroid/content/Context;
@@ -225,13 +206,11 @@
 
     invoke-virtual {v5, v4, v8, v9}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 346
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->deleteAndroidKeystoreCertificates()Z
     invoke-static {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$800(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;)Z
 
-    .line 347
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     invoke-virtual {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->isSharedDeviceEnabled()Z
@@ -240,20 +219,17 @@
 
     if-eqz v5, :cond_1
 
-    .line 348
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->applyRuntimePermissionsToSDAgent()I
     invoke-static {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$900(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;)I
 
-    .line 382
     .end local v0    # "action":Ljava/lang/String;
     .end local v4    # "setSDIntent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-void
 
-    .line 351
     .restart local v0    # "action":Ljava/lang/String;
     :cond_2
     const-string v5, "android.intent.action.PACKAGE_REMOVED"
@@ -272,7 +248,6 @@
 
     if-nez v5, :cond_3
 
-    .line 352
     # getter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$200()Ljava/lang/String;
 
@@ -282,7 +257,6 @@
 
     invoke-static {v5, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 354
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->getEdmStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -296,7 +270,6 @@
 
     move-result v3
 
-    .line 356
     .local v3, "result":I
     # getter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$200()Ljava/lang/String;
@@ -323,19 +296,16 @@
 
     invoke-static {v5, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 358
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # setter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->mAllLicenseInfo:[Landroid/app/enterprise/license/LicenseInfo;
     invoke-static {v5, v10}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$1102(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;[Landroid/app/enterprise/license/LicenseInfo;)[Landroid/app/enterprise/license/LicenseInfo;
 
-    .line 359
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->removeCredentialStoragePolicies()V
     invoke-static {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$1200(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;)V
 
-    .line 360
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     const v8, 0x7fffffff
@@ -343,18 +313,15 @@
     # setter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->mSDAgentInstallerPackageUid:I
     invoke-static {v5, v8}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$402(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;I)I
 
-    .line 361
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # setter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->mSDAgentInstallerPackage:Ljava/lang/String;
     invoke-static {v5, v10}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$1302(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 363
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 365
     .local v6, "token":J
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
@@ -362,7 +329,6 @@
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->removeAppliedPolicies()V
     invoke-static {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$1400(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;)V
 
-    .line 366
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->getLockPatternUtils()Lcom/android/internal/widget/LockPatternUtils;
@@ -374,13 +340,11 @@
 
     invoke-virtual {v5, v8}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
-    .line 367
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     # invokes: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->disableSDKeyguard()V
     invoke-static {v5}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$1600(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;)V
 
-    .line 368
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->this$0:Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;
 
     const/4 v8, 0x0
@@ -388,7 +352,6 @@
     # setter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->mSharedDevicesState:Z
     invoke-static {v5, v8}, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->access$1702(Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;Z)Z
 
-    .line 369
     const/4 v5, 0x0
 
     # setter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->sSharedDevicesStateInternal:Z
@@ -397,16 +360,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 373
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 370
     :catch_0
     move-exception v1
 
-    .line 371
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     # getter for: Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy;->TAG:Ljava/lang/String;
@@ -422,7 +382,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 373
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
@@ -435,7 +394,6 @@
 
     throw v5
 
-    .line 377
     .end local v3    # "result":I
     .end local v6    # "token":J
     :cond_3
@@ -469,7 +427,6 @@
 
     goto/16 :goto_0
 
-    .line 380
     .end local v0    # "action":Ljava/lang/String;
     :cond_4
     iget-object v5, p0, Lcom/android/server/enterprise/shareddevice/EnterpriseSharedDevicePolicy$SDAgentPackageStateReceiver;->BRTAG:Ljava/lang/String;

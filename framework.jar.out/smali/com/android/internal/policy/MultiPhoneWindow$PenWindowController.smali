@@ -69,29 +69,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2771
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2721
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 2723
     iput v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mControllerHeight:I
 
-    .line 2724
     iput v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mMoveInterval:I
 
-    .line 2733
     iput-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mNeedInvalidate:Z
 
-    .line 2772
     iput-boolean v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsShowing:Z
 
-    .line 2773
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/MultiPhoneWindow;->access$4400(Lcom/android/internal/policy/MultiPhoneWindow;)Landroid/content/Context;
 
@@ -109,7 +102,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mMoveInterval:I
 
-    .line 2775
     return-void
 .end method
 
@@ -119,7 +111,6 @@
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
-    .line 2711
     invoke-direct {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->startDragMode(Landroid/content/Context;)V
 
     return-void
@@ -131,7 +122,6 @@
     .prologue
     const/16 v10, 0x8
 
-    .line 2923
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mActivity:Landroid/app/Activity;
@@ -143,19 +133,15 @@
 
     move-result-object v7
 
-    .line 2924
     .local v7, "pm":Landroid/content/pm/PackageManager;
     if-nez v7, :cond_1
 
-    .line 2966
     :cond_0
     return-void
 
-    .line 2928
     :cond_1
     const/4 v1, 0x0
 
-    .line 2930
     .local v1, "activityInfo":Landroid/content/pm/ActivityInfo;
     :try_start_0
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -177,22 +163,18 @@
 
     move-result-object v1
 
-    .line 2934
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 2938
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2939
     .local v4, "disableFunctions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v8, v1, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v8, :cond_2
 
-    .line 2940
     iget-object v8, v1, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     const-string v9, "com.samsung.android.sdk.multiwindow.disablefunction"
@@ -201,11 +183,9 @@
 
     move-result-object v0
 
-    .line 2941
     .local v0, "activityFunction":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 2942
     const-string v8, "\\|"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -218,7 +198,6 @@
 
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2945
     .end local v0    # "activityFunction":Ljava/lang/String;
     :cond_2
     iget-object v8, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -231,7 +210,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 2946
     iget-object v8, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v8, v8, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -242,11 +220,9 @@
 
     move-result-object v2
 
-    .line 2947
     .local v2, "applicationFunction":Ljava/lang/String;
     if-eqz v2, :cond_3
 
-    .line 2948
     const-string v8, "\\|"
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -259,7 +235,6 @@
 
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2952
     .end local v2    # "applicationFunction":Ljava/lang/String;
     :cond_3
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnDragAndDrop:Landroid/view/View;
@@ -268,7 +243,6 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2954
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -288,9 +262,8 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 2955
     .local v3, "disableFunction":Ljava/lang/String;
-    const-string/jumbo v8, "minimize"
+    const-string v8, "minimize"
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -298,7 +271,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 2956
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     const/4 v9, 0x1
@@ -306,33 +278,29 @@
     # setter for: Lcom/android/internal/policy/MultiPhoneWindow;->mIsMinimizeDisabled:Z
     invoke-static {v8, v9}, Lcom/android/internal/policy/MultiPhoneWindow;->access$4702(Lcom/android/internal/policy/MultiPhoneWindow;Z)Z
 
-    .line 2957
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v8, v10}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 2931
     .end local v3    # "disableFunction":Ljava/lang/String;
     .end local v4    # "disableFunctions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v5
 
-    .line 2932
     .local v5, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v5}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2958
     .end local v5    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v3    # "disableFunction":Ljava/lang/String;
     .restart local v4    # "disableFunctions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .restart local v6    # "i$":Ljava/util/Iterator;
     :cond_5
-    const-string/jumbo v8, "maximize"
+    const-string v8, "maximize"
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -340,14 +308,12 @@
 
     if-eqz v8, :cond_6
 
-    .line 2959
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMaximize:Landroid/view/View;
 
     invoke-virtual {v8, v10}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 2960
     :cond_6
     const-string v8, "exit"
 
@@ -357,14 +323,12 @@
 
     if-eqz v8, :cond_7
 
-    .line 2961
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v8, v10}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 2962
     :cond_7
     const-string v8, "drag_and_drop"
 
@@ -374,7 +338,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 2963
     iget-object v8, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnDragAndDrop:Landroid/view/View;
 
     invoke-virtual {v8, v10}, Landroid/view/View;->setVisibility(I)V
@@ -386,7 +349,6 @@
     .locals 8
 
     .prologue
-    .line 2805
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     if-eqz v5, :cond_1
@@ -399,12 +361,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 2845
     :cond_0
     :goto_0
     return-void
 
-    .line 2810
     :cond_1
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -422,7 +382,6 @@
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    .line 2811
     .local v1, "layoutInflater":Landroid/view/LayoutInflater;
     const v5, 0x1090075
 
@@ -432,7 +391,6 @@
 
     move-result-object v0
 
-    .line 2812
     .local v0, "dnDHelpPopupView":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -465,7 +423,6 @@
 
     if-nez v5, :cond_0
 
-    .line 2816
     :cond_2
     const v5, 0x10203cc
 
@@ -475,7 +432,6 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    .line 2817
     .local v2, "okButton":Landroid/widget/Button;
     new-instance v5, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$1;
 
@@ -483,7 +439,6 @@
 
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2825
     new-instance v5, Landroid/app/Dialog;
 
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -499,19 +454,16 @@
 
     iput-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
-    .line 2826
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     invoke-virtual {v5, v0}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    .line 2827
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 2829
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     new-instance v6, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$2;
@@ -520,33 +472,28 @@
 
     invoke-virtual {v5, v6}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 2835
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     invoke-virtual {v5}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
-    .line 2836
     .local v4, "w":Landroid/view/Window;
     invoke-virtual {v4}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v3
 
-    .line 2837
     .local v3, "p":Landroid/view/WindowManager$LayoutParams;
     const-string v5, "DnDHelpPopupDialog"
 
     invoke-virtual {v3, v5}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 2838
     iget v5, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit16 v5, v5, 0x202
 
     iput v5, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 2839
     iget v5, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const v6, -0x20001
@@ -555,17 +502,14 @@
 
     iput v5, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 2840
     const/high16 v5, 0x3f000000    # 0.5f
 
     iput v5, v3, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 2841
     const/4 v5, 0x2
 
     iput v5, v3, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 2842
     iget-object v5, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialog:Landroid/app/Dialog;
 
     invoke-virtual {v5}, Landroid/app/Dialog;->show()V
@@ -574,7 +518,6 @@
 
     goto/16 :goto_0
 
-    .line 2843
     .end local v0    # "dnDHelpPopupView":Landroid/view/View;
     .end local v1    # "layoutInflater":Landroid/view/LayoutInflater;
     .end local v2    # "okButton":Landroid/widget/Button;
@@ -590,7 +533,6 @@
     .locals 9
 
     .prologue
-    .line 2849
     :try_start_0
     new-instance v2, Landroid/view/ContextThemeWrapper;
 
@@ -605,7 +547,6 @@
 
     invoke-direct {v2, v6, v7}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 2850
     .local v2, "context":Landroid/content/Context;
     const-string v6, "layout_inflater"
 
@@ -615,7 +556,6 @@
 
     check-cast v3, Landroid/view/LayoutInflater;
 
-    .line 2851
     .local v3, "layoutInflater":Landroid/view/LayoutInflater;
     const v6, 0x1090076
 
@@ -625,7 +565,6 @@
 
     move-result-object v1
 
-    .line 2853
     .local v1, "contentView":Landroid/view/View;
     if-eqz v1, :cond_0
 
@@ -650,7 +589,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 2888
     .end local v1    # "contentView":Landroid/view/View;
     .end local v2    # "context":Landroid/content/Context;
     .end local v3    # "layoutInflater":Landroid/view/LayoutInflater;
@@ -658,7 +596,6 @@
     :goto_0
     return-void
 
-    .line 2857
     .restart local v1    # "contentView":Landroid/view/View;
     .restart local v2    # "context":Landroid/content/Context;
     .restart local v3    # "layoutInflater":Landroid/view/LayoutInflater;
@@ -671,7 +608,6 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    .line 2859
     .local v0, "checkBox":Landroid/widget/CheckBox;
     new-instance v6, Landroid/app/AlertDialog$Builder;
 
@@ -721,7 +657,6 @@
 
     iput-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialogLegacy:Landroid/app/AlertDialog;
 
-    .line 2873
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialogLegacy:Landroid/app/AlertDialog;
 
     new-instance v7, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$4;
@@ -730,36 +665,30 @@
 
     invoke-virtual {v6, v7}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 2879
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialogLegacy:Landroid/app/AlertDialog;
 
     invoke-virtual {v6}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
-    .line 2880
     .local v5, "w":Landroid/view/Window;
     const/16 v6, 0x200
 
     invoke-virtual {v5, v6}, Landroid/view/Window;->addFlags(I)V
 
-    .line 2881
     invoke-virtual {v5}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v4
 
-    .line 2882
     .local v4, "p":Landroid/view/WindowManager$LayoutParams;
     const-string v6, "DnDHelpPopupDialog"
 
     invoke-virtual {v4, v6}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 2883
     const/4 v6, 0x2
 
     iput v6, v4, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 2885
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mDnDHelpPopupDialogLegacy:Landroid/app/AlertDialog;
 
     invoke-virtual {v6}, Landroid/app/AlertDialog;->show()V
@@ -768,7 +697,6 @@
 
     goto :goto_0
 
-    .line 2886
     .end local v0    # "checkBox":Landroid/widget/CheckBox;
     .end local v1    # "contentView":Landroid/view/View;
     .end local v2    # "context":Landroid/content/Context;
@@ -785,7 +713,6 @@
     .locals 3
 
     .prologue
-    .line 3218
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -807,7 +734,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mHeaderWindowControllerHoverImage:Landroid/graphics/drawable/Drawable;
 
-    .line 3220
     return-void
 .end method
 
@@ -816,7 +742,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2891
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/MultiPhoneWindow;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -839,17 +764,14 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 2909
     :goto_0
     return-void
 
-    .line 2894
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 2895
     .local v0, "intent":Landroid/content/Intent;
     invoke-static {p1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isSupportSimplificationUI(Landroid/content/Context;)Z
 
@@ -857,21 +779,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 2896
     const-string v1, "com.android.systemui"
 
     const-string v2, "com.android.systemui.multiwindow.centerbarwindow.SmartClipDragDrop"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2902
     :goto_1
     invoke-virtual {p1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 2903
     invoke-virtual {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performStartDragMode()V
 
-    .line 2904
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -890,7 +808,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setDragAndDropModeOfStack(Landroid/os/IBinder;Z)V
 
-    .line 2905
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -906,7 +823,6 @@
 
     goto :goto_0
 
-    .line 2899
     :cond_1
     const-string v1, "com.sec.android.app.FlashBarService"
 
@@ -923,25 +839,20 @@
     .locals 2
 
     .prologue
-    .line 2778
     invoke-virtual {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performInflateController()V
 
-    .line 2780
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2781
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 2782
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
 
-    .line 2784
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mMenuContainer:Landroid/view/View;
 
     const v1, 0x10203fd
@@ -952,17 +863,14 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnDragAndDrop:Landroid/view/View;
 
-    .line 2785
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnDragAndDrop:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2786
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnDragAndDrop:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 2788
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mMenuContainer:Landroid/view/View;
 
     const v1, 0x10203fe
@@ -973,17 +881,14 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMinimize:Landroid/view/View;
 
-    .line 2789
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2790
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 2792
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mMenuContainer:Landroid/view/View;
 
     const v1, 0x10203ff
@@ -994,17 +899,14 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMaximize:Landroid/view/View;
 
-    .line 2793
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMaximize:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2794
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMaximize:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 2796
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mMenuContainer:Landroid/view/View;
 
     const v1, 0x1020400
@@ -1015,23 +917,18 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
-    .line 2797
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2798
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 2800
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->checkFunctionState()V
 
-    .line 2801
     invoke-virtual {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->updateAvailableButtons()V
 
-    .line 2802
     return-void
 .end method
 
@@ -1039,7 +936,6 @@
     .locals 1
 
     .prologue
-    .line 2918
     iget v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mControllerHeight:I
 
     return v0
@@ -1049,7 +945,6 @@
     .locals 1
 
     .prologue
-    .line 2764
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/MultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -1067,12 +962,10 @@
     .locals 1
 
     .prologue
-    .line 2768
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mNeedInvalidate:Z
 
-    .line 2769
     return-void
 .end method
 
@@ -1080,7 +973,6 @@
     .locals 1
 
     .prologue
-    .line 2914
     iget-boolean v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsShowing:Z
 
     return v0
@@ -1095,7 +987,6 @@
 
     const/4 v4, 0x0
 
-    .line 2970
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mPenWindowHeader:Landroid/view/View;
 
     invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1104,15 +995,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 2971
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performUpdateMenuVisibility(Z)V
 
-    .line 3034
     :cond_0
     :goto_0
     return-void
 
-    .line 2972
     :cond_1
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnDragAndDrop:Landroid/view/View;
 
@@ -1122,7 +1010,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 2973
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -1138,15 +1025,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 2974
     .local v0, "checked":Z
     :goto_1
     if-nez v0, :cond_4
 
-    .line 2975
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performUpdateMenuVisibility(Z)V
 
-    .line 2976
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mIsSupportSimplificationUI:Z
@@ -1156,7 +1040,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 2977
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->makeDnDHelpPopupLayout()V
 
     goto :goto_0
@@ -1165,17 +1048,14 @@
     :cond_2
     move v0, v4
 
-    .line 2973
     goto :goto_1
 
-    .line 2979
     .restart local v0    # "checked":Z
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->makeDnDHelpPopupLegacyLayout()V
 
     goto :goto_0
 
-    .line 2982
     :cond_4
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -1188,7 +1068,6 @@
 
     goto :goto_0
 
-    .line 2984
     .end local v0    # "checked":Z
     :cond_5
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMinimize:Landroid/view/View;
@@ -1199,7 +1078,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 2985
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v3, v3, Lcom/android/internal/policy/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
@@ -1211,12 +1089,10 @@
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->removeSelf()V
     invoke-static {v3}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->access$4800(Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;)V
 
-    .line 2986
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v3, v4, v4}, Lcom/android/internal/policy/MultiPhoneWindow;->minimizeWindow(IZ)V
 
-    .line 2987
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -1232,7 +1108,6 @@
 
     goto :goto_0
 
-    .line 2990
     :cond_6
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnMaximize:Landroid/view/View;
 
@@ -1242,7 +1117,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 2991
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContentLayoutGenerated:Z
@@ -1252,17 +1126,14 @@
 
     if-eqz v3, :cond_7
 
-    .line 2992
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->performUpdateVisibility(Z)V
 
-    .line 2994
     :cond_7
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow;->requestState(I)V
     invoke-static {v3, v0}, Lcom/android/internal/policy/MultiPhoneWindow;->access$1200(Lcom/android/internal/policy/MultiPhoneWindow;I)V
 
-    .line 2995
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -1278,7 +1149,6 @@
 
     goto/16 :goto_0
 
-    .line 2998
     :cond_8
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
@@ -1288,7 +1158,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2999
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mActivity:Landroid/app/Activity;
@@ -1298,7 +1167,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 3000
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowExitListener:Lcom/samsung/android/sdk/multiwindow/SMultiWindowListener$ExitListener;
@@ -1321,14 +1189,12 @@
 
     if-nez v3, :cond_9
 
-    .line 3002
     const-string v3, "MultiPhoneWindow"
 
-    const-string/jumbo v4, "onWindowExit return false"
+    const-string v4, "onWindowExit return false"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3003
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -1344,13 +1210,11 @@
 
     goto/16 :goto_0
 
-    .line 3009
     :cond_9
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v2
 
-    .line 3010
     .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v2, :cond_a
 
@@ -1360,13 +1224,11 @@
 
     if-eqz v3, :cond_a
 
-    .line 3011
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow;->forceHideInputMethod()Z
     invoke-static {v3}, Lcom/android/internal/policy/MultiPhoneWindow;->access$900(Lcom/android/internal/policy/MultiPhoneWindow;)Z
 
-    .line 3013
     :cond_a
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
@@ -1376,7 +1238,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 3014
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getHoverPopupWindow()Landroid/widget/HoverPopupWindow;
@@ -1385,7 +1246,6 @@
 
     invoke-virtual {v3}, Landroid/widget/HoverPopupWindow;->dismiss()V
 
-    .line 3018
     :cond_b
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1401,7 +1261,6 @@
 
     if-eqz v3, :cond_c
 
-    .line 3019
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -1426,14 +1285,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3027
     :goto_2
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # setter for: Lcom/android/internal/policy/MultiPhoneWindow;->mIsFinishing:Z
     invoke-static {v3, v0}, Lcom/android/internal/policy/MultiPhoneWindow;->access$5102(Lcom/android/internal/policy/MultiPhoneWindow;Z)Z
 
-    .line 3029
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -1449,7 +1306,6 @@
 
     goto/16 :goto_0
 
-    .line 3021
     :cond_c
     :try_start_1
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1465,11 +1321,9 @@
 
     goto :goto_2
 
-    .line 3023
     :catch_0
     move-exception v1
 
-    .line 3024
     .local v1, "e":Ljava/lang/IllegalStateException;
     iget-object v3, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -1491,7 +1345,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3198
     :try_start_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1509,7 +1362,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 3199
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -1519,25 +1371,21 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 3200
     const/4 v1, 0x5
 
     const/4 v2, -0x1
 
     invoke-static {v1, v2}, Landroid/view/PointerIcon;->setHoveringSpenIcon(II)V
 
-    .line 3214
     :cond_1
     :goto_0
     return v3
 
-    .line 3202
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mHeaderWindowControllerHoverImage:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_3
 
-    .line 3203
     const/4 v1, 0x0
 
     iget-object v2, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mHeaderWindowControllerHoverImage:Landroid/graphics/drawable/Drawable;
@@ -1548,11 +1396,9 @@
 
     goto :goto_0
 
-    .line 3211
     :catch_0
     move-exception v0
 
-    .line 3212
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MultiPhoneWindow"
 
@@ -1562,7 +1408,6 @@
 
     goto :goto_0
 
-    .line 3205
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_3
     :try_start_1
@@ -1570,7 +1415,6 @@
 
     goto :goto_0
 
-    .line 3208
     :cond_4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1580,7 +1424,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 3209
     const/4 v1, 0x1
 
     const/4 v2, -0x1
@@ -1597,33 +1440,28 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 3038
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsMoving:Z
 
     if-eqz v14, :cond_1
 
-    .line 3039
     sget-boolean v14, Lcom/android/internal/policy/MultiPhoneWindow;->DEBUG_MINIMIZE_ANIM:Z
 
     if-eqz v14, :cond_0
 
     const-string v14, "MultiPhoneWindow"
 
-    const-string/jumbo v15, "onLongClick : moving so return false"
+    const-string v15, "onLongClick : moving so return false"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3040
     :cond_0
     const/4 v14, 0x0
 
-    .line 3085
     :goto_0
     return v14
 
-    .line 3042
     :cond_1
     const/4 v14, 0x1
 
@@ -1631,34 +1469,28 @@
 
     iput-boolean v14, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsLongPressed:Z
 
-    .line 3044
     const/4 v14, 0x2
 
     new-array v9, v14, [I
 
-    .line 3045
     .local v9, "screenPos":[I
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3046
     .local v3, "displayFrame":Landroid/graphics/Rect;
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v9}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 3047
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v3}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 3049
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
-    .line 3050
     .local v4, "height":I
     move-object/from16 v0, p0
 
@@ -1671,7 +1503,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 3051
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1682,7 +1513,6 @@
 
     check-cast v6, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
 
-    .line 3052
     .local v6, "menuContainer":Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
     if-eqz v6, :cond_2
 
@@ -1693,7 +1523,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 3053
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->mFloatingMenuContainer:Landroid/widget/LinearLayout;
     invoke-static {v6}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;->access$5200(Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;)Landroid/widget/LinearLayout;
 
@@ -1703,7 +1532,6 @@
 
     move-result v4
 
-    .line 3056
     .end local v6    # "menuContainer":Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$FloatingMenuView;
     :cond_2
     move-object/from16 v0, p0
@@ -1714,7 +1542,6 @@
 
     move-result-object v2
 
-    .line 3057
     .local v2, "context":Landroid/content/Context;
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1726,7 +1553,6 @@
 
     iget v10, v14, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 3059
     .local v10, "screenWidth":I
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1738,7 +1564,6 @@
 
     iget v8, v14, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 3061
     .local v8, "screenHeight":I
     move-object/from16 v0, p0
 
@@ -1753,7 +1578,6 @@
 
     move-result-object v7
 
-    .line 3062
     .local v7, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v7, :cond_5
 
@@ -1765,7 +1589,6 @@
 
     if-ne v14, v15, :cond_5
 
-    .line 3063
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1803,18 +1626,14 @@
 
     if-ge v10, v8, :cond_5
 
-    .line 3067
     :cond_4
     move v11, v10
 
-    .line 3068
     .local v11, "tempWidth":I
     move v10, v8
 
-    .line 3069
     move v8, v11
 
-    .line 3073
     .end local v11    # "tempWidth":I
     :cond_5
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
@@ -1827,11 +1646,9 @@
 
     move-result-object v1
 
-    .line 3075
     .local v1, "cheatSheet":Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->setIgnoreMultiWindowLayout()V
 
-    .line 3076
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -1849,7 +1666,6 @@
 
     check-cast v5, Landroid/view/LayoutInflater;
 
-    .line 3077
     .local v5, "layoutInflater":Landroid/view/LayoutInflater;
     const v14, 0x1090094
 
@@ -1859,11 +1675,9 @@
 
     move-result-object v13
 
-    .line 3078
     .local v13, "toastView":Landroid/view/View;
     invoke-virtual {v1, v13}, Landroid/widget/Toast;->setView(Landroid/view/View;)V
 
-    .line 3079
     const v14, 0x1020401
 
     invoke-virtual {v13, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1872,7 +1686,6 @@
 
     check-cast v12, Landroid/widget/TextView;
 
-    .line 3080
     .local v12, "toastTxt":Landroid/widget/TextView;
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
 
@@ -1880,7 +1693,6 @@
 
     invoke-virtual {v12, v14}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3082
     const/16 v14, 0x35
 
     const/4 v15, 0x0
@@ -1921,10 +1733,8 @@
 
     invoke-virtual {v1, v14, v15, v0}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 3084
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 3085
     const/4 v14, 0x1
 
     goto/16 :goto_0
@@ -1940,35 +1750,29 @@
 
     const/4 v10, 0x1
 
-    .line 3090
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
     and-int/lit16 v0, v6, 0xff
 
-    .line 3091
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 3189
     :cond_0
     :goto_0
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mGestureDetector:Landroid/view/GestureDetector;
 
     if-eqz v6, :cond_1
 
-    .line 3190
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v6, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 3192
     :cond_1
     :goto_1
     return v10
 
-    .line 3093
     :pswitch_0
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -1979,7 +1783,6 @@
 
     if-nez v6, :cond_2
 
-    .line 3094
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -1998,7 +1801,6 @@
 
     move-result v5
 
-    .line 3095
     .local v5, "stackId":I
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2009,12 +1811,10 @@
 
     invoke-virtual {v6, v5, v10}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setFocusedStack(IZ)V
 
-    .line 3098
     .end local v5    # "stackId":I
     :cond_2
     iput-boolean v11, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsInputMethodForceHiding:Z
 
-    .line 3099
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow;->forceHideInputMethod()Z
@@ -2024,12 +1824,10 @@
 
     if-eqz v6, :cond_3
 
-    .line 3100
     iput-boolean v10, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsInputMethodForceHiding:Z
 
     goto :goto_1
 
-    .line 3104
     :cond_3
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2040,13 +1838,10 @@
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/Docking;->init()V
 
-    .line 3105
     iput-boolean v11, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsMoving:Z
 
-    .line 3106
     iput-boolean v11, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsLongPressed:Z
 
-    .line 3107
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -2055,7 +1850,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mLastHandledX:I
 
-    .line 3108
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v6
@@ -2064,13 +1858,11 @@
 
     iput v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mLastHandledY:I
 
-    .line 3110
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # setter for: Lcom/android/internal/policy/MultiPhoneWindow;->mDismissGuideByDockingCanceled:Z
     invoke-static {v6, v11}, Lcom/android/internal/policy/MultiPhoneWindow;->access$102(Lcom/android/internal/policy/MultiPhoneWindow;Z)Z
 
-    .line 3112
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -2080,14 +1872,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 3114
     new-instance v4, Landroid/content/Intent;
 
     const-string v6, "com.sec.android.OUTSIDE_TOUCH"
 
     invoke-direct {v4, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3115
     .local v4, "intent":Landroid/content/Intent;
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2098,7 +1888,6 @@
 
     invoke-virtual {v6, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3118
     .end local v4    # "intent":Landroid/content/Intent;
     :cond_4
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -2118,13 +1907,11 @@
 
     goto :goto_0
 
-    .line 3123
     :pswitch_1
     iget-boolean v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsInputMethodForceHiding:Z
 
     if-nez v6, :cond_1
 
-    .line 3127
     iget-boolean v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsMoving:Z
 
     iget-boolean v7, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsLongPressed:Z
@@ -2199,11 +1986,9 @@
 
     if-ltz v6, :cond_0
 
-    .line 3132
     :cond_5
     iput-boolean v10, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsMoving:Z
 
-    .line 3133
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -2214,7 +1999,6 @@
 
     sub-int v2, v6, v7
 
-    .line 3134
     .local v2, "dx":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
@@ -2226,7 +2010,6 @@
 
     sub-int v3, v6, v7
 
-    .line 3135
     .local v3, "dy":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
@@ -2236,7 +2019,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mLastHandledX:I
 
-    .line 3136
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v6
@@ -2245,7 +2027,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mLastHandledY:I
 
-    .line 3138
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mDocking:Lcom/android/internal/policy/multiwindow/Docking;
@@ -2263,7 +2044,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 3142
     :cond_6
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2276,7 +2056,6 @@
 
     move-result-object v1
 
-    .line 3143
     .local v1, "dockingBound":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2287,7 +2066,6 @@
 
     invoke-virtual {v6, v2, v3}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 3144
     if-eqz v1, :cond_7
 
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -2303,7 +2081,6 @@
 
     if-nez v6, :cond_7
 
-    .line 3145
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     const/4 v7, 0x2
@@ -2312,7 +2089,6 @@
 
     goto/16 :goto_0
 
-    .line 3147
     :cond_7
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2329,7 +2105,6 @@
 
     goto/16 :goto_0
 
-    .line 3154
     .end local v1    # "dockingBound":Landroid/graphics/Rect;
     .end local v2    # "dx":I
     .end local v3    # "dy":I
@@ -2338,12 +2113,10 @@
 
     if-nez v6, :cond_1
 
-    .line 3158
     iget-boolean v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsMoving:Z
 
     if-eqz v6, :cond_a
 
-    .line 3159
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -2354,7 +2127,6 @@
 
     sub-int v2, v6, v7
 
-    .line 3160
     .restart local v2    # "dx":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
@@ -2366,7 +2138,6 @@
 
     sub-int v3, v6, v7
 
-    .line 3162
     .restart local v3    # "dy":I
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2394,7 +2165,6 @@
 
     if-nez v6, :cond_9
 
-    .line 3163
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mDocking:Lcom/android/internal/policy/multiwindow/Docking;
@@ -2404,7 +2174,6 @@
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/Docking;->checkCenterBarPoint()V
 
-    .line 3165
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mIsSupportSimplificationUI:Z
@@ -2414,7 +2183,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 3167
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -2452,13 +2220,11 @@
 
     invoke-virtual {v6, v7, v8, v10}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setMultiWindowStyleWithLogging(Landroid/os/IBinder;Lcom/samsung/android/multiwindow/MultiWindowStyle;I)V
 
-    .line 3183
     .end local v2    # "dx":I
     .end local v3    # "dy":I
     :goto_2
     iput-boolean v11, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mIsMoving:Z
 
-    .line 3184
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mDocking:Lcom/android/internal/policy/multiwindow/Docking;
@@ -2468,14 +2234,12 @@
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/Docking;->clear()V
 
-    .line 3185
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/MultiPhoneWindow;->dismissGuide()V
 
     goto/16 :goto_0
 
-    .line 3170
     .restart local v2    # "dx":I
     .restart local v3    # "dy":I
     :cond_8
@@ -2516,7 +2280,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setMultiWindowStyle(Landroid/os/IBinder;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 3172
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -2532,7 +2295,6 @@
 
     goto :goto_2
 
-    .line 3177
     :cond_9
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
@@ -2543,7 +2305,6 @@
 
     invoke-virtual {v6, v2, v3}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 3178
     iget-object v6, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v7, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -2557,7 +2318,6 @@
 
     goto :goto_2
 
-    .line 3181
     .end local v2    # "dx":I
     .end local v3    # "dy":I
     :cond_a
@@ -2565,7 +2325,6 @@
 
     goto :goto_2
 
-    .line 3091
     nop
 
     :pswitch_data_0
@@ -2584,7 +2343,6 @@
     .locals 0
 
     .prologue
-    .line 2749
     return-void
 .end method
 
@@ -2592,7 +2350,6 @@
     .locals 0
 
     .prologue
-    .line 2753
     return-void
 .end method
 
@@ -2604,7 +2361,6 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 2757
     return-void
 .end method
 
@@ -2619,10 +2375,8 @@
     .param p1, "g"    # Landroid/view/GestureDetector;
 
     .prologue
-    .line 2760
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 2761
     return-void
 .end method
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 511
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 514
     const/4 v1, -0x1
 
     if-ne p2, v1, :cond_0
 
-    .line 515
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     const-string v2, "Reboot due to SIM count mismatched"
@@ -55,7 +52,6 @@
     # invokes: Lcom/android/internal/telephony/uicc/UiccController;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/internal/telephony/uicc/UiccController;->access$000(Lcom/android/internal/telephony/uicc/UiccController;Ljava/lang/String;)V
 
-    .line 516
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/internal/telephony/uicc/UiccController$1$1;
@@ -64,11 +60,9 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 523
     .local v0, "thread":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 525
     .end local v0    # "thread":Ljava/lang/Thread;
     :cond_0
     return-void

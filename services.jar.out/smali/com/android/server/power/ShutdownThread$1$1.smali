@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$1$1;->this$0:Lcom/android/server/power/ShutdownThread$1;
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownThread$1$1;->val$fadeoutView:Landroid/widget/RelativeLayout;
@@ -51,10 +50,8 @@
 
     const v5, 0x3e2e147b    # 0.17f
 
-    .line 549
     const/16 v1, 0x12c
 
-    .line 550
     .local v1, "duration":I
     iget-object v2, p0, Lcom/android/server/power/ShutdownThread$1$1;->val$fadeoutView:Landroid/widget/RelativeLayout;
 
@@ -72,7 +69,6 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 551
     iget-object v2, p0, Lcom/android/server/power/ShutdownThread$1$1;->val$fadeoutView:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -91,7 +87,6 @@
 
     move-result-object v0
 
-    .line 552
     .local v0, "backgroundalpha":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
@@ -105,20 +100,16 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 553
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 554
     new-instance v2, Lcom/android/server/power/ShutdownThread$1$1$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/power/ShutdownThread$1$1$1;-><init>(Lcom/android/server/power/ShutdownThread$1$1;)V
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 564
     return-void
 
-    .line 551
     nop
 
     :array_0

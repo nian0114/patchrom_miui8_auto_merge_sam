@@ -17,10 +17,8 @@
     .param p2, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Lmf/org/apache/wml/dom/WMLElementImpl;-><init>(Lmf/org/apache/wml/dom/WMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 32
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const-string v0, "class"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 103
-    const-string/jumbo v0, "iname"
+    const-string v0, "iname"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -58,8 +54,7 @@
     .locals 1
 
     .prologue
-    .line 87
-    const-string/jumbo v0, "ivalue"
+    const-string v0, "ivalue"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -72,8 +67,7 @@
     .locals 1
 
     .prologue
-    .line 95
-    const-string/jumbo v0, "id"
+    const-string v0, "id"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -86,8 +80,7 @@
     .locals 2
 
     .prologue
-    .line 39
-    const-string/jumbo v0, "multiple"
+    const-string v0, "multiple"
 
     const/4 v1, 0x0
 
@@ -102,8 +95,7 @@
     .locals 1
 
     .prologue
-    .line 111
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -116,8 +108,7 @@
     .locals 2
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "tabindex"
+    const-string v0, "tabindex"
 
     const/4 v1, 0x0
 
@@ -132,8 +123,7 @@
     .locals 1
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "title"
+    const-string v0, "title"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -146,8 +136,7 @@
     .locals 1
 
     .prologue
-    .line 47
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -160,8 +149,7 @@
     .locals 1
 
     .prologue
-    .line 71
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -175,12 +163,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const-string v0, "class"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method
 
@@ -189,12 +175,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 99
-    const-string/jumbo v0, "iname"
+    const-string v0, "iname"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 100
     return-void
 .end method
 
@@ -203,12 +187,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 83
-    const-string/jumbo v0, "ivalue"
+    const-string v0, "ivalue"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     return-void
 .end method
 
@@ -217,12 +199,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 91
-    const-string/jumbo v0, "id"
+    const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     return-void
 .end method
 
@@ -231,12 +211,10 @@
     .param p1, "newValue"    # Z
 
     .prologue
-    .line 35
-    const-string/jumbo v0, "multiple"
+    const-string v0, "multiple"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 36
     return-void
 .end method
 
@@ -245,12 +223,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 107
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 108
     return-void
 .end method
 
@@ -259,12 +235,10 @@
     .param p1, "newValue"    # I
 
     .prologue
-    .line 51
-    const-string/jumbo v0, "tabindex"
+    const-string v0, "tabindex"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;I)V
 
-    .line 52
     return-void
 .end method
 
@@ -273,12 +247,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 75
-    const-string/jumbo v0, "title"
+    const-string v0, "title"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     return-void
 .end method
 
@@ -287,12 +259,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 43
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -301,11 +271,9 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLSelectElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

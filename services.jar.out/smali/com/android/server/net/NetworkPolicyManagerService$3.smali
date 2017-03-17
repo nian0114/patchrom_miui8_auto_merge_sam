@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 734
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/app/IUidObserver$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 746
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -54,14 +52,11 @@
 
     move-result-object v0
 
-    .line 747
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 748
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 750
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 737
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -87,16 +81,12 @@
 
     move-result-object v0
 
-    .line 738
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 739
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    .line 740
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 742
     return-void
 .end method

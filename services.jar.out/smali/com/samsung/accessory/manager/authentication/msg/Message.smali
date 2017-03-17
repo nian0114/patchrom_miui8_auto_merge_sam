@@ -27,39 +27,30 @@
     .prologue
     const/4 v1, 0x5
 
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iput v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->INF_SIZE:I
 
-    .line 6
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->RES_ATQS:I
 
-    .line 21
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
-    .line 22
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
-    .line 23
     invoke-direct/range {p0 .. p5}, Lcom/samsung/accessory/manager/authentication/msg/Message;->setInf(BBBBB)V
 
-    .line 24
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
-    .line 25
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->setApdu()V
 
-    .line 26
     return-void
 .end method
 
@@ -75,18 +66,14 @@
     .prologue
     const/4 v1, 0x5
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iput v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->INF_SIZE:I
 
-    .line 6
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->RES_ATQS:I
 
-    .line 29
     array-length v0, p6
 
     add-int/lit8 v0, v0, 0x5
@@ -95,15 +82,12 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
-    .line 30
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
-    .line 31
     invoke-direct/range {p0 .. p5}, Lcom/samsung/accessory/manager/authentication/msg/Message;->setInf(BBBBB)V
 
-    .line 32
     invoke-virtual {p6}, [B->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -112,10 +96,8 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
-    .line 33
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/msg/Message;->setApdu()V
 
-    .line 34
     return-void
 .end method
 
@@ -129,30 +111,24 @@
 
     const/4 v2, 0x0
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iput v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->INF_SIZE:I
 
-    .line 6
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->RES_ATQS:I
 
-    .line 13
     array-length v0, p2
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
-    .line 14
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
-    .line 16
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
@@ -161,10 +137,8 @@
 
     invoke-static {p2, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 17
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/authentication/msg/Message;->parseMessage(I)V
 
-    .line 18
     return-void
 .end method
 
@@ -175,25 +149,21 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 56
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
     array-length v0, v1
 
-    .line 58
     .local v0, "len":I
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_0
 
-    .line 59
     add-int/lit8 v1, v0, -0x2
 
     new-array v1, v1, [B
 
     iput-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
-    .line 60
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
@@ -202,11 +172,9 @@
 
     invoke-static {v1, v4, v2, v4, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 65
     :goto_0
     return-void
 
-    .line 62
     :cond_0
     add-int/lit8 v1, v0, -0x3
 
@@ -214,7 +182,6 @@
 
     iput-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
-    .line 63
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
@@ -232,7 +199,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 45
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
@@ -243,12 +209,10 @@
 
     invoke-static {v0, v4, v1, v4, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 46
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
     if-eqz v0, :cond_0
 
-    .line 47
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
@@ -263,7 +227,6 @@
 
     invoke-static {v0, v4, v1, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 49
     :cond_0
     return-void
 .end method
@@ -277,42 +240,36 @@
     .param p5, "p3"    # B
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     const/4 v1, 0x0
 
     aput-byte p1, v0, v1
 
-    .line 38
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     const/4 v1, 0x1
 
     aput-byte p2, v0, v1
 
-    .line 39
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     const/4 v1, 0x2
 
     aput-byte p3, v0, v1
 
-    .line 40
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     const/4 v1, 0x3
 
     aput-byte p4, v0, v1
 
-    .line 41
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     const/4 v1, 0x4
 
     aput-byte p5, v0, v1
 
-    .line 42
     return-void
 .end method
 
@@ -322,7 +279,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->apdu:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -338,7 +294,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->data:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -355,7 +310,6 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/msg/Message;->inf:[B
 
     aget-byte v0, v0, p1

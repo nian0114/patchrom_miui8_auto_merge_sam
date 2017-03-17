@@ -46,7 +46,6 @@
 
     const/4 v2, 0x0
 
-    .line 112
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
     const-string v1, "EDS_POWER_MODE_OFF"
@@ -55,7 +54,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_OFF:Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
-    .line 113
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
     const-string v1, "EDS_POWER_MODE_ON"
@@ -64,7 +62,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_ON:Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
-    .line 111
     new-array v0, v4, [Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_OFF:Lcom/android/server/SecExternalDisplayService$EDSBlank;
@@ -90,13 +87,10 @@
     .end annotation
 
     .prologue
-    .line 116
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 117
     iput p3, p0, Lcom/android/server/SecExternalDisplayService$EDSBlank;->value:I
 
-    .line 118
     return-void
 .end method
 
@@ -105,10 +99,8 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 123
     const/4 v3, 0x0
 
-    .line 124
     .local v3, "retStatus":Lcom/android/server/SecExternalDisplayService$EDSBlank;
     invoke-static {}, Lcom/android/server/SecExternalDisplayService$EDSBlank;->values()[Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
@@ -126,7 +118,6 @@
 
     aget-object v4, v0, v1
 
-    .line 125
     .local v4, "tempVal":Lcom/android/server/SecExternalDisplayService$EDSBlank;
     invoke-virtual {v4}, Lcom/android/server/SecExternalDisplayService$EDSBlank;->getValue()I
 
@@ -134,15 +125,12 @@
 
     if-ne v5, p0, :cond_1
 
-    .line 126
     move-object v3, v4
 
-    .line 130
     .end local v4    # "tempVal":Lcom/android/server/SecExternalDisplayService$EDSBlank;
     :cond_0
     return-object v3
 
-    .line 124
     .restart local v4    # "tempVal":Lcom/android/server/SecExternalDisplayService$EDSBlank;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -155,7 +143,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     const-class v0, Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -171,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 111
     sget-object v0, Lcom/android/server/SecExternalDisplayService$EDSBlank;->$VALUES:[Lcom/android/server/SecExternalDisplayService$EDSBlank;
 
     invoke-virtual {v0}, [Lcom/android/server/SecExternalDisplayService$EDSBlank;->clone()Ljava/lang/Object;
@@ -189,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget v0, p0, Lcom/android/server/SecExternalDisplayService$EDSBlank;->value:I
 
     return v0

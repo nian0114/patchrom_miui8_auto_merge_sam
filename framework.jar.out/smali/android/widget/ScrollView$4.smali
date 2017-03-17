@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3111
     iput-object p1, p0, Landroid/widget/ScrollView$4;->this$0:Landroid/widget/ScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 3114
     :try_start_0
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -53,7 +51,6 @@
 
     move-result v0
 
-    .line 3115
     .local v0, "value":I
     iget-object v1, p0, Landroid/widget/ScrollView$4;->this$0:Landroid/widget/ScrollView;
 
@@ -64,19 +61,16 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 3116
     iget-object v1, p0, Landroid/widget/ScrollView$4;->this$0:Landroid/widget/ScrollView;
 
     invoke-virtual {v1}, Landroid/widget/ScrollView;->invalidate()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3119
     .end local v0    # "value":I
     :goto_0
     return-void
 
-    .line 3117
     :catch_0
     move-exception v1
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lmf/org/apache/xerces/impl/xs/util/XSGrammarPool;->toXSModel(S)Lmf/org/apache/xerces/xs/XSModel;
@@ -35,12 +33,10 @@
     .param p1, "schemaVersion"    # S
 
     .prologue
-    .line 51
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 52
     .local v3, "list":Ljava/util/ArrayList;
     const/4 v2, 0x0
 
@@ -52,16 +48,13 @@
 
     if-lt v2, v5, :cond_0
 
-    .line 59
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 60
     .local v4, "size":I
     if-nez v4, :cond_3
 
-    .line 61
     const/4 v5, 0x0
 
     new-array v5, v5, [Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
@@ -70,11 +63,9 @@
 
     move-result-object v5
 
-    .line 64
     :goto_1
     return-object v5
 
-    .line 53
     .end local v4    # "size":I
     :cond_0
     iget-object v5, p0, Lmf/org/apache/xerces/impl/xs/util/XSGrammarPool;->fGrammars:[Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
@@ -85,12 +76,10 @@
     :goto_2
     if-nez v0, :cond_1
 
-    .line 52
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 54
     :cond_1
     iget-object v5, v0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->desc:Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
@@ -106,18 +95,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 55
     iget-object v5, v0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->grammar:Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 53
     :cond_2
     iget-object v0, v0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->next:Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
 
     goto :goto_2
 
-    .line 63
     .end local v0    # "entry":Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
     .restart local v4    # "size":I
     :cond_3
@@ -129,7 +115,6 @@
 
     check-cast v1, [Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
 
-    .line 64
     .local v1, "gs":[Lmf/org/apache/xerces/impl/xs/SchemaGrammar;
     invoke-virtual {p0, v1, p1}, Lmf/org/apache/xerces/impl/xs/util/XSGrammarPool;->toXSModel([Lmf/org/apache/xerces/impl/xs/SchemaGrammar;S)Lmf/org/apache/xerces/xs/XSModel;
 
@@ -144,7 +129,6 @@
     .param p2, "schemaVersion"    # S
 
     .prologue
-    .line 68
     new-instance v0, Lmf/org/apache/xerces/impl/xs/XSModelImpl;
 
     invoke-direct {v0, p1, p2}, Lmf/org/apache/xerces/impl/xs/XSModelImpl;-><init>([Lmf/org/apache/xerces/impl/xs/SchemaGrammar;S)V

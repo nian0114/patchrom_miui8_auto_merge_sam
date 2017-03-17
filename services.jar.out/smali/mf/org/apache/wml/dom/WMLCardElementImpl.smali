@@ -17,10 +17,8 @@
     .param p2, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Lmf/org/apache/wml/dom/WMLElementImpl;-><init>(Lmf/org/apache/wml/dom/WMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 32
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const-string v0, "class"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 95
-    const-string/jumbo v0, "id"
+    const-string v0, "id"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -58,8 +54,7 @@
     .locals 2
 
     .prologue
-    .line 87
-    const-string/jumbo v0, "newcontext"
+    const-string v0, "newcontext"
 
     const/4 v1, 0x0
 
@@ -74,8 +69,7 @@
     .locals 1
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "onenterbackward"
+    const-string v0, "onenterbackward"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -88,8 +82,7 @@
     .locals 1
 
     .prologue
-    .line 103
-    const-string/jumbo v0, "onenterforward"
+    const-string v0, "onenterforward"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -102,8 +95,7 @@
     .locals 1
 
     .prologue
-    .line 39
-    const-string/jumbo v0, "ontimer"
+    const-string v0, "ontimer"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -116,8 +108,7 @@
     .locals 2
 
     .prologue
-    .line 47
-    const-string/jumbo v0, "ordered"
+    const-string v0, "ordered"
 
     const/4 v1, 0x1
 
@@ -132,8 +123,7 @@
     .locals 1
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "title"
+    const-string v0, "title"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -146,8 +136,7 @@
     .locals 1
 
     .prologue
-    .line 71
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -161,12 +150,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const-string v0, "class"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method
 
@@ -175,12 +162,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 91
-    const-string/jumbo v0, "id"
+    const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     return-void
 .end method
 
@@ -189,12 +174,10 @@
     .param p1, "newValue"    # Z
 
     .prologue
-    .line 83
-    const-string/jumbo v0, "newcontext"
+    const-string v0, "newcontext"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 84
     return-void
 .end method
 
@@ -203,12 +186,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 51
-    const-string/jumbo v0, "onenterbackward"
+    const-string v0, "onenterbackward"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     return-void
 .end method
 
@@ -217,12 +198,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 99
-    const-string/jumbo v0, "onenterforward"
+    const-string v0, "onenterforward"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 100
     return-void
 .end method
 
@@ -231,12 +210,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 35
-    const-string/jumbo v0, "ontimer"
+    const-string v0, "ontimer"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 36
     return-void
 .end method
 
@@ -245,12 +222,10 @@
     .param p1, "newValue"    # Z
 
     .prologue
-    .line 43
-    const-string/jumbo v0, "ordered"
+    const-string v0, "ordered"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 44
     return-void
 .end method
 
@@ -259,12 +234,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 75
-    const-string/jumbo v0, "title"
+    const-string v0, "title"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     return-void
 .end method
 
@@ -273,11 +246,9 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLCardElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

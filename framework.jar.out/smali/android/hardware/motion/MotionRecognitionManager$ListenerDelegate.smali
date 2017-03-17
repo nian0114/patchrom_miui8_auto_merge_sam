@@ -26,20 +26,16 @@
     .param p1, "listener"    # Landroid/hardware/motion/MRListener;
 
     .prologue
-    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 169
     new-instance v0, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate$1;
 
     invoke-direct {v0, p0}, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate$1;-><init>(Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;)V
 
     iput-object v0, p0, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;->mListener:Lcom/samsung/android/motion/MRListener;
 
-    .line 185
     iput-object p1, p0, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;->moldListener:Landroid/hardware/motion/MRListener;
 
-    .line 186
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .param p2, "x1"    # Landroid/hardware/motion/MotionRecognitionManager$1;
 
     .prologue
-    .line 167
     invoke-direct {p0, p1}, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;-><init>(Landroid/hardware/motion/MRListener;)V
 
     return-void
@@ -60,7 +55,6 @@
     .param p0, "x0"    # Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;->moldListener:Landroid/hardware/motion/MRListener;
 
     return-object v0
@@ -71,7 +65,6 @@
     .param p0, "x0"    # Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/hardware/motion/MotionRecognitionManager$ListenerDelegate;->mListener:Lcom/samsung/android/motion/MRListener;
 
     return-object v0

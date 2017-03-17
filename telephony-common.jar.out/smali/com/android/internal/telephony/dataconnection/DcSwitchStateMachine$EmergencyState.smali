@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 266
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;
 
     .prologue
-    .line 266
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;)V
 
     return-void
@@ -54,7 +52,6 @@
 
     const/4 v4, 0x0
 
-    .line 269
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -70,7 +67,6 @@
 
     check-cast v1, Lcom/android/internal/telephony/PhoneBase;
 
-    .line 270
     .local v1, "pb":Lcom/android/internal/telephony/PhoneBase;
     iget-object v2, v1, Lcom/android/internal/telephony/PhoneBase;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
@@ -80,7 +76,6 @@
 
     if-nez v2, :cond_1
 
-    .line 271
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -110,7 +105,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v2, v5}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->access$1500(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Ljava/lang/String;)V
 
-    .line 273
     iget v2, p1, Landroid/os/Message;->what:I
 
     const v5, 0x4400a
@@ -126,20 +120,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 274
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # setter for: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsInCall:I
     invoke-static {v2, v4}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->access$802(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;I)I
 
-    .line 276
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->deferMessage(Landroid/os/Message;)V
     invoke-static {v2, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->access$1600(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Landroid/os/Message;)V
 
-    .line 277
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
@@ -154,11 +145,9 @@
 
     move v2, v3
 
-    .line 321
     :goto_0
     return v2
 
-    .line 281
     :cond_1
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -167,10 +156,8 @@
     :pswitch_0
     move v2, v4
 
-    .line 317
     goto :goto_0
 
-    .line 283
     :pswitch_1
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -187,10 +174,8 @@
     :goto_1
     move v2, v3
 
-    .line 321
     goto :goto_0
 
-    .line 288
     :pswitch_2
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -201,13 +186,11 @@
 
     goto :goto_1
 
-    .line 295
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;
 
-    .line 296
     .local v0, "apnRequest":Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;
     if-eqz v0, :cond_2
 
@@ -219,14 +202,12 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 298
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     const-string v4, "processing: REQ_CONNECT for Emergency type"
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->log(Ljava/lang/String;)V
 
-    .line 299
     invoke-static {}, Lcom/android/internal/telephony/dataconnection/DctController;->getInstance()Lcom/android/internal/telephony/dataconnection/DctController;
 
     move-result-object v2
@@ -235,7 +216,6 @@
 
     goto :goto_1
 
-    .line 307
     .end local v0    # "apnRequest":Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;
     :cond_2
     :pswitch_4
@@ -267,7 +247,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->log(Ljava/lang/String;)V
 
-    .line 308
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->deferMessage(Landroid/os/Message;)V
@@ -275,7 +254,6 @@
 
     goto :goto_1
 
-    .line 281
     nop
 
     :pswitch_data_0

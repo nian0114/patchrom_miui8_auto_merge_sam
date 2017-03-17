@@ -13,10 +13,8 @@
     .param p1, "loggerName"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/log/Logger;-><init>(Ljava/lang/String;)V
 
-    .line 40
     return-void
 .end method
 
@@ -29,7 +27,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 46
     iget v1, p0, Lcom/android/server/enterprise/log/ConsoleLogger;->level:I
 
     if-gt v1, p1, :cond_0
@@ -38,7 +35,6 @@
 
     if-eq v1, v0, :cond_0
 
-    .line 49
     :goto_0
     return v0
 
@@ -55,17 +51,14 @@
     .param p3, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/log/ConsoleLogger;->isLoggable(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 57
     invoke-static {p1, p2, p3}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     :cond_0
     return-void
 .end method

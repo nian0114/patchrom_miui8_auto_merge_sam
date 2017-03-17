@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1403
     iput-object p1, p0, Lcom/samsung/android/contextaware/ContextAwareManager$1;->this$0:Lcom/samsung/android/contextaware/ContextAwareManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p2, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1413
     return-void
 .end method

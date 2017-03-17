@@ -42,14 +42,12 @@
     .locals 3
 
     .prologue
-    .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
-    .line 25
     sget-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
     const-string v1, "^/data/data"
@@ -58,7 +56,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     sget-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
     const-string v1, "^/storage/enc_emulated/legacy"
@@ -67,7 +64,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     sget-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
     const-string v1, "^/storage/enc_emulated/([0-9]+)"
@@ -76,7 +72,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     sget-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
     const-string v1, "^/data/clipboard"
@@ -85,7 +80,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     sget-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
     const-string v1, "^/data/user"
@@ -94,7 +88,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     sget-object v0, Lcom/sec/knox/container/util/PathTranslator;->mFilePathMap:Ljava/util/Map;
 
     const-string v1, "^/data/system/container/"
@@ -103,7 +96,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     return-void
 .end method
 
@@ -111,7 +103,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -123,14 +114,11 @@
     .param p1, "containerId"    # I
 
     .prologue
-    .line 42
     const-string v4, ""
 
-    .line 43
     .local v4, "realPath":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 45
     .local v1, "found":Z
     const-string v6, "epmf"
 
@@ -164,7 +152,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -175,17 +162,14 @@
 
     if-ge v6, v7, :cond_2
 
-    .line 47
     :cond_0
     const/4 p0, 0x0
 
-    .line 83
     .end local p0    # "path":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object p0
 
-    .line 49
     .restart local p0    # "path":Ljava/lang/String;
     :cond_2
     const-string v6, "/mnt/extSdCard"
@@ -204,7 +188,6 @@
 
     if-nez v6, :cond_1
 
-    .line 53
     const-string v6, "/mnt/sdcard"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -237,7 +220,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 56
     :cond_3
     const/16 v6, 0x64
 
@@ -245,7 +227,6 @@
 
     const-string v3, "/mnt/knox/default/emulated"
 
-    .line 59
     .local v3, "leadPath":Ljava/lang/String;
     :goto_1
     new-instance v6, Ljava/lang/StringBuilder;
@@ -274,7 +255,6 @@
 
     move-result-object v3
 
-    .line 61
     const-string v6, "/mnt/sdcard"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -285,14 +265,12 @@
 
     const-string v5, "/mnt/sdcard"
 
-    .line 67
     .local v5, "srcPath":Ljava/lang/String;
     :goto_2
     invoke-virtual {p0, v5, v3}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 69
     const-string v6, "epmf"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -325,7 +303,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     .end local v3    # "leadPath":Ljava/lang/String;
     .end local v5    # "srcPath":Ljava/lang/String;
     :cond_4
@@ -354,14 +331,12 @@
 
     goto/16 :goto_0
 
-    .line 57
     :cond_5
     const-string v3, "/mnt/runtime/default/emulated"
 
     .restart local v3    # "leadPath":Ljava/lang/String;
     goto :goto_1
 
-    .line 62
     :cond_6
     const-string v6, "/storage/self/primary"
 
@@ -376,7 +351,6 @@
     .restart local v5    # "srcPath":Ljava/lang/String;
     goto :goto_2
 
-    .line 63
     .end local v5    # "srcPath":Ljava/lang/String;
     :cond_7
     const-string v6, "/storage/emulated/legacy"
@@ -392,7 +366,6 @@
     .restart local v5    # "srcPath":Ljava/lang/String;
     goto :goto_2
 
-    .line 64
     .end local v5    # "srcPath":Ljava/lang/String;
     :cond_8
     const-string v6, "^/storage/emulated/([0-9]+).*"
@@ -408,7 +381,6 @@
     .restart local v5    # "srcPath":Ljava/lang/String;
     goto :goto_2
 
-    .line 65
     .end local v5    # "srcPath":Ljava/lang/String;
     :cond_9
     const-string v5, "/storage/emulated"
@@ -416,7 +388,6 @@
     .restart local v5    # "srcPath":Ljava/lang/String;
     goto :goto_2
 
-    .line 71
     .end local v3    # "leadPath":Ljava/lang/String;
     .end local v5    # "srcPath":Ljava/lang/String;
     :cond_a
@@ -444,7 +415,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 72
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -476,7 +446,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 73
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -493,7 +462,6 @@
 
     move-result-object v4
 
-    .line 74
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -504,7 +472,6 @@
 
     move-result-object p0
 
-    .line 75
     const-string v7, "epmf"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -559,10 +526,8 @@
 
     invoke-static {v7, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     const/4 v1, 0x1
 
-    .line 77
     goto/16 :goto_3
 .end method
 
@@ -572,12 +537,10 @@
     .param p1, "containerId"    # I
 
     .prologue
-    .line 93
     invoke-static {p0, p1}, Lcom/sec/knox/container/util/PathTranslator;->getRealPath(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 94
     .local v1, "translatedPath":Ljava/lang/String;
     const-string v2, "/data/user"
 
@@ -585,11 +548,9 @@
 
     move-result v0
 
-    .line 96
     .local v0, "retVal":Z
     if-eqz v0, :cond_0
 
-    .line 97
     const-string v2, "epmf"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -612,11 +573,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :goto_0
     return v0
 
-    .line 100
     :cond_0
     const-string v2, "epmf"
 

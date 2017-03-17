@@ -24,13 +24,10 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 3564
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$LteToWifiHOSuccessRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 3565
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/EpdgService$HORunnable;-><init>(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 3566
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 6
 
     .prologue
-    .line 3570
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgService$LteToWifiHOSuccessRunnable;->getNetworkType()I
 
     move-result v3
@@ -51,7 +47,6 @@
 
     add-int/lit8 v0, v3, -0x1
 
-    .line 3571
     .local v0, "cid":I
     const-string v3, "[EPDGService]"
 
@@ -75,10 +70,8 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3572
     if-gez v0, :cond_0
 
-    .line 3573
     const-string v3, "[EPDGService]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -105,11 +98,9 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3596
     :goto_0
     return-void
 
-    .line 3577
     :cond_0
     # getter for: Lcom/sec/epdg/EpdgService;->mHOStateMachines:[Lcom/sec/epdg/IPSecDataConnSM;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$3600()[Lcom/sec/epdg/IPSecDataConnSM;
@@ -122,11 +113,9 @@
 
     move-result-object v2
 
-    .line 3579
     .local v2, "smHandler":Landroid/os/Handler;
     if-nez v2, :cond_1
 
-    .line 3580
     const-string v3, "[EPDGService]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -157,41 +146,34 @@
 
     goto :goto_0
 
-    .line 3584
     :cond_1
     invoke-static {v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 3585
     .local v1, "msg":Landroid/os/Message;
     if-eqz v1, :cond_2
 
-    .line 3586
     const-string v3, "[EPDGService]"
 
     const-string v4, "LteToWifiHOSuccessRunnable: Sending START_HO_L2W to state machine"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3588
     const/4 v3, 0x0
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 3589
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgService$LteToWifiHOSuccessRunnable;->getNetworkType()I
 
     move-result v3
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 3590
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 3592
     :cond_2
     const-string v3, "[EPDGService]"
 

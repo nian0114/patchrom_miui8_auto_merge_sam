@@ -25,19 +25,15 @@
     .locals 1
 
     .prologue
-    .line 516
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 514
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$FixedStringContainer;->token:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 515
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$FixedStringContainer;->options:I
 
-    .line 517
     return-void
 .end method

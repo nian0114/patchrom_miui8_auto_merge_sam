@@ -13,13 +13,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-object p1, p0, Landroid/app/wallpaperbackup/LiveChange;->mContext:Landroid/content/Context;
 
-    .line 26
     return-void
 .end method
 
@@ -32,14 +29,12 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 34
     const-string v9, "/"
 
     invoke-virtual {p1, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 35
     .local v0, "classpackage":[Ljava/lang/String;
     new-instance v7, Landroid/content/Intent;
 
@@ -47,13 +42,11 @@
 
     invoke-direct {v7, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 36
     .local v7, "queryIntent":Landroid/content/Intent;
     aget-object v9, v0, v11
 
     invoke-virtual {v7, v9}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 37
     iget-object v9, p0, Landroid/app/wallpaperbackup/LiveChange;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -66,11 +59,9 @@
 
     move-result-object v5
 
-    .line 39
     .local v5, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v5, :cond_0
 
-    .line 40
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -81,14 +72,12 @@
 
     if-ge v2, v9, :cond_0
 
-    .line 41
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/content/pm/ResolveInfo;
 
-    .line 42
     .local v8, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v9, v8, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -104,10 +93,8 @@
 
     if-eqz v9, :cond_1
 
-    .line 43
     const/4 v3, 0x0
 
-    .line 45
     .local v3, "info":Landroid/app/WallpaperInfo;
     :try_start_0
     new-instance v3, Landroid/app/WallpaperInfo;
@@ -120,7 +107,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 53
     .restart local v3    # "info":Landroid/app/WallpaperInfo;
     new-instance v4, Landroid/content/Intent;
 
@@ -128,7 +114,6 @@
 
     invoke-direct {v4, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 54
     .local v4, "intent":Landroid/content/Intent;
     invoke-virtual {v3}, Landroid/app/WallpaperInfo;->getPackageName()Ljava/lang/String;
 
@@ -140,18 +125,15 @@
 
     invoke-virtual {v4, v9, v10}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 55
     new-instance v6, Landroid/app/wallpaperbackup/LivePreview;
 
     iget-object v9, p0, Landroid/app/wallpaperbackup/LiveChange;->mContext:Landroid/content/Context;
 
     invoke-direct {v6, v9}, Landroid/app/wallpaperbackup/LivePreview;-><init>(Landroid/content/Context;)V
 
-    .line 56
     .local v6, "lp":Landroid/app/wallpaperbackup/LivePreview;
     invoke-virtual {v6, v11, v4, v3, v11}, Landroid/app/wallpaperbackup/LivePreview;->set(ILandroid/content/Intent;Landroid/app/WallpaperInfo;Z)V
 
-    .line 62
     .end local v2    # "i":I
     .end local v3    # "info":Landroid/app/WallpaperInfo;
     .end local v4    # "intent":Landroid/content/Intent;
@@ -161,13 +143,11 @@
     :goto_1
     return-void
 
-    .line 46
     .restart local v2    # "i":I
     .restart local v8    # "ri":Landroid/content/pm/ResolveInfo;
     :catch_0
     move-exception v1
 
-    .line 47
     .local v1, "e":Lorg/xmlpull/v1/XmlPullParserException;
     iget-object v9, p0, Landroid/app/wallpaperbackup/LiveChange;->mContext:Landroid/content/Context;
 
@@ -177,12 +157,10 @@
 
     goto :goto_1
 
-    .line 49
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_1
     move-exception v1
 
-    .line 50
     .local v1, "e":Ljava/io/IOException;
     iget-object v9, p0, Landroid/app/wallpaperbackup/LiveChange;->mContext:Landroid/content/Context;
 
@@ -192,7 +170,6 @@
 
     goto :goto_1
 
-    .line 40
     .end local v1    # "e":Ljava/io/IOException;
     :cond_1
     add-int/lit8 v2, v2, 0x1

@@ -18,15 +18,12 @@
     .param p1, "b"    # [B
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/entity/AbstractHttpEntity;-><init>()V
 
-    .line 13
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/apache/http/entity/ByteArrayEntity;->content:[B
 
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -47,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -61,7 +57,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -75,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -89,7 +83,6 @@
     .locals 2
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -103,7 +96,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -123,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

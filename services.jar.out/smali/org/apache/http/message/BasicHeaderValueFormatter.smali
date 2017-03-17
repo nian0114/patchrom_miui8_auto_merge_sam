@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 25
     const/4 v0, 0x0
 
     sput-object v0, Lorg/apache/http/message/BasicHeaderValueFormatter;->DEFAULT:Lorg/apache/http/message/BasicHeaderValueFormatter;
@@ -36,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -55,7 +53,6 @@
     .param p2, "formatter"    # Lorg/apache/http/message/HeaderValueFormatter;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -72,7 +69,6 @@
     .param p2, "formatter"    # Lorg/apache/http/message/HeaderValueFormatter;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -89,7 +85,6 @@
     .param p2, "formatter"    # Lorg/apache/http/message/HeaderValueFormatter;
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -106,7 +101,6 @@
     .param p2, "formatter"    # Lorg/apache/http/message/HeaderValueFormatter;
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -125,7 +119,6 @@
     .param p3, "quote"    # Z
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -140,7 +133,6 @@
     .param p1, "elems"    # [Lorg/apache/http/HeaderElement;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -155,7 +147,6 @@
     .param p1, "elem"    # Lorg/apache/http/HeaderElement;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -170,7 +161,6 @@
     .param p1, "nvp"    # Lorg/apache/http/NameValuePair;
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -185,7 +175,6 @@
     .param p1, "nvps"    # [Lorg/apache/http/NameValuePair;
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -202,7 +191,6 @@
     .param p3, "quote"    # Z
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -219,7 +207,6 @@
     .param p3, "quote"    # Z
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -236,7 +223,6 @@
     .param p3, "quote"    # Z
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -253,7 +239,6 @@
     .param p3, "quote"    # Z
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -268,7 +253,6 @@
     .param p1, "ch"    # C
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -283,7 +267,6 @@
     .param p1, "ch"    # C
 
     .prologue
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

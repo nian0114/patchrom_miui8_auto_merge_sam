@@ -102,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 96
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgSettings;->mEpdgSettings:Lcom/sec/epdg/EpdgSettings;
@@ -114,10 +113,8 @@
     .locals 0
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     return-void
 .end method
 
@@ -125,7 +122,6 @@
     .locals 44
 
     .prologue
-    .line 161
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorTmo()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -136,7 +132,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     const/16 v0, -0x47
 
     const/16 v1, -0x4f
@@ -187,7 +182,7 @@
 
     const v24, 0x5265c0
 
-    const-string/jumbo v25, "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
+    const-string v25, "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
 
     const/16 v26, 0x1
 
@@ -199,9 +194,9 @@
 
     const/16 v30, 0x1
 
-    const-string/jumbo v31, "default"
+    const-string v31, "default"
 
-    const-string/jumbo v32, "ims"
+    const-string v32, "ims"
 
     const/16 v33, 0x1
 
@@ -217,7 +212,7 @@
 
     const/16 v39, 0x1
 
-    const-string/jumbo v40, "none"
+    const-string v40, "none"
 
     const/16 v41, 0x1
 
@@ -229,7 +224,6 @@
 
     move-result-object v0
 
-    .line 166
     :goto_0
     return-object v0
 
@@ -284,7 +278,7 @@
 
     const v24, 0x5265c0
 
-    const-string/jumbo v25, "wo.vzwwo.com"
+    const-string v25, "wo.vzwwo.com"
 
     const/16 v26, 0x0
 
@@ -296,9 +290,9 @@
 
     const/16 v30, 0x0
 
-    const-string/jumbo v31, "ims"
+    const-string v31, "ims"
 
-    const-string/jumbo v32, "ims"
+    const-string v32, "ims"
 
     const/16 v33, 0x1
 
@@ -314,7 +308,7 @@
 
     const/16 v39, 0x0
 
-    const-string/jumbo v40, "emergency"
+    const-string v40, "emergency"
 
     const/16 v41, 0x0
 
@@ -377,19 +371,16 @@
     .param p43, "isIpv6Preferred"    # Z
 
     .prologue
-    .line 178
     sget-object v0, Lcom/sec/epdg/EpdgSettings;->mEpdgSettings:Lcom/sec/epdg/EpdgSettings;
 
     if-nez v0, :cond_0
 
-    .line 179
     new-instance v0, Lcom/sec/epdg/EpdgSettings;
 
     invoke-direct {v0}, Lcom/sec/epdg/EpdgSettings;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/EpdgSettings;->mEpdgSettings:Lcom/sec/epdg/EpdgSettings;
 
-    .line 181
     :cond_0
     sget-object v0, Lcom/sec/epdg/EpdgSettings;->mEpdgSettings:Lcom/sec/epdg/EpdgSettings;
 
@@ -483,7 +474,6 @@
 
     invoke-direct/range {v0 .. v44}, Lcom/sec/epdg/EpdgSettings;->updateVariableValues(IIIIIIIIIIIIIIIIIIIIIIZIILjava/lang/String;ZZZZZLjava/lang/String;Ljava/lang/String;ZZZIIIILjava/lang/String;ZZZ)V
 
-    .line 189
     sget-object v0, Lcom/sec/epdg/EpdgSettings;->mEpdgSettings:Lcom/sec/epdg/EpdgSettings;
 
     return-object v0
@@ -537,199 +527,154 @@
     .param p44, "isIpv6Preferred"    # Z
 
     .prologue
-    .line 114
     iput p1, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiA:I
 
-    .line 115
     iput p2, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiB:I
 
-    .line 116
     iput p3, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiC:I
 
-    .line 117
     iput p4, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiRoveInWifiOnly:I
 
-    .line 118
     iput p5, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiRoveOutWifiOnly:I
 
-    .line 119
     iput p6, p0, Lcom/sec/epdg/EpdgSettings;->mLteRsrp1:I
 
-    .line 120
     iput p7, p0, Lcom/sec/epdg/EpdgSettings;->mLteRsrp2:I
 
-    .line 121
     iput p8, p0, Lcom/sec/epdg/EpdgSettings;->mLteRsrp3:I
 
-    .line 122
     iput p9, p0, Lcom/sec/epdg/EpdgSettings;->mCdmaRssi:I
 
-    .line 123
     iput p10, p0, Lcom/sec/epdg/EpdgSettings;->mPktLossPercent:I
 
-    .line 124
     iput p11, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold4gRoveIn:I
 
-    .line 125
     iput p12, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold4gRoveOut:I
 
-    .line 126
     iput p13, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold3gRoveIn:I
 
-    .line 127
     iput p14, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold3gRoveOut:I
 
-    .line 128
     move/from16 v0, p15
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold2gRoveIn:I
 
-    .line 129
     move/from16 v0, p16
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold2gRoveOut:I
 
-    .line 130
     move/from16 v0, p17
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mSysSelTimer:I
 
-    .line 131
     move/from16 v0, p18
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mTepdgLteTimer:I
 
-    .line 132
     move/from16 v0, p19
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mTepdg1xTimer:I
 
-    .line 133
     move/from16 v0, p20
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mTepdg1xScanTimer:I
 
-    .line 134
     move/from16 v0, p21
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mIdiMac:I
 
-    .line 135
     move/from16 v0, p22
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mIdiImsi:I
 
-    .line 136
     move/from16 v0, p23
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsRetryEnabledForAlwaysOnApn:Z
 
-    .line 137
     move/from16 v0, p24
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mSmartWifiTimer:I
 
-    .line 138
     move/from16 v0, p25
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mKeepAliveTimer:I
 
-    .line 139
     move-object/from16 v0, p26
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mEpdgFqdn:Ljava/lang/String;
 
-    .line 140
     move/from16 v0, p27
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsDynamicFqdn:Z
 
-    .line 141
     move/from16 v0, p28
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsDynamicUserFqdn:Z
 
-    .line 142
     move/from16 v0, p29
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsAnsIntegrationEnabled:Z
 
-    .line 143
     move/from16 v0, p30
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsRtcpIntegrationEnabled:Z
 
-    .line 144
     move/from16 v0, p31
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsBroadcastHONotiEnabled:Z
 
-    .line 145
     move-object/from16 v0, p32
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mAttachPdn:Ljava/lang/String;
 
-    .line 146
     move-object/from16 v0, p33
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mAlwaysOnApnType:Ljava/lang/String;
 
-    .line 147
     move/from16 v0, p34
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsVowifiOn:Z
 
-    .line 148
     move/from16 v0, p35
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsTestingOnDemandPdnHandoff:Z
 
-    .line 149
     move/from16 v0, p36
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsThrottlingEnabled:Z
 
-    .line 150
     move/from16 v0, p37
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mPcscfv4:I
 
-    .line 151
     move/from16 v0, p38
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mPcscfv6:I
 
-    .line 152
     move/from16 v0, p39
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mImeiVendorAttr:I
 
-    .line 153
     move/from16 v0, p40
 
     iput v0, p0, Lcom/sec/epdg/EpdgSettings;->mTestInterfaceNum:I
 
-    .line 154
     move-object/from16 v0, p41
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mEmergencyApnType:Ljava/lang/String;
 
-    .line 155
     move/from16 v0, p42
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsConnectedModeDpdAllow:Z
 
-    .line 156
     move/from16 v0, p43
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsIpv6Enabled:Z
 
-    .line 157
     move/from16 v0, p44
 
     iput-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsIpv6Preferred:Z
 
-    .line 158
     return-void
 .end method
 
@@ -739,7 +684,6 @@
     .locals 1
 
     .prologue
-    .line 325
     iget-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mAlwaysOnApnType:Ljava/lang/String;
 
     return-object v0
@@ -749,7 +693,6 @@
     .locals 1
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mAttachPdn:Ljava/lang/String;
 
     return-object v0
@@ -759,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 317
     iget-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mAttachPdn:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgUtils;->getProfileIdbyApnType(Ljava/lang/String;)I
@@ -773,7 +715,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mCdmaRssi:I
 
     return v0
@@ -783,7 +724,6 @@
     .locals 1
 
     .prologue
-    .line 357
     iget-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mEmergencyApnType:Ljava/lang/String;
 
     return-object v0
@@ -793,7 +733,6 @@
     .locals 1
 
     .prologue
-    .line 293
     iget-object v0, p0, Lcom/sec/epdg/EpdgSettings;->mEpdgFqdn:Ljava/lang/String;
 
     return-object v0
@@ -803,7 +742,6 @@
     .locals 1
 
     .prologue
-    .line 277
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mIdiImsi:I
 
     return v0
@@ -813,7 +751,6 @@
     .locals 1
 
     .prologue
-    .line 273
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mIdiMac:I
 
     return v0
@@ -823,7 +760,6 @@
     .locals 1
 
     .prologue
-    .line 349
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mImeiVendorAttr:I
 
     return v0
@@ -833,7 +769,6 @@
     .locals 1
 
     .prologue
-    .line 305
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsAnsIntegrationEnabled:Z
 
     return v0
@@ -843,7 +778,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsBroadcastHONotiEnabled:Z
 
     return v0
@@ -853,7 +787,6 @@
     .locals 1
 
     .prologue
-    .line 297
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsDynamicFqdn:Z
 
     return v0
@@ -863,7 +796,6 @@
     .locals 1
 
     .prologue
-    .line 301
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsDynamicUserFqdn:Z
 
     return v0
@@ -873,7 +805,6 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsIpv6Enabled:Z
 
     return v0
@@ -883,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 369
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsIpv6Preferred:Z
 
     return v0
@@ -893,7 +823,6 @@
     .locals 1
 
     .prologue
-    .line 309
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsRtcpIntegrationEnabled:Z
 
     return v0
@@ -903,7 +832,6 @@
     .locals 1
 
     .prologue
-    .line 333
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsTestingOnDemandPdnHandoff:Z
 
     return v0
@@ -913,7 +841,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsVowifiOn:Z
 
     return v0
@@ -923,7 +850,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mLteRsrp1:I
 
     return v0
@@ -933,7 +859,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mLteRsrp2:I
 
     return v0
@@ -943,7 +868,6 @@
     .locals 1
 
     .prologue
-    .line 221
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mLteRsrp3:I
 
     return v0
@@ -953,7 +877,6 @@
     .locals 1
 
     .prologue
-    .line 341
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mPcscfv4:I
 
     return v0
@@ -963,7 +886,6 @@
     .locals 1
 
     .prologue
-    .line 345
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mPcscfv6:I
 
     return v0
@@ -973,7 +895,6 @@
     .locals 1
 
     .prologue
-    .line 229
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mPktLossPercent:I
 
     return v0
@@ -983,7 +904,6 @@
     .locals 1
 
     .prologue
-    .line 285
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mSmartWifiTimer:I
 
     return v0
@@ -993,7 +913,6 @@
     .locals 1
 
     .prologue
-    .line 257
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mSysSelTimer:I
 
     return v0
@@ -1003,7 +922,6 @@
     .locals 1
 
     .prologue
-    .line 269
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mTepdg1xScanTimer:I
 
     return v0
@@ -1013,7 +931,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mTepdg1xTimer:I
 
     return v0
@@ -1023,7 +940,6 @@
     .locals 1
 
     .prologue
-    .line 261
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mTepdgLteTimer:I
 
     return v0
@@ -1033,7 +949,6 @@
     .locals 1
 
     .prologue
-    .line 353
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mTestInterfaceNum:I
 
     return v0
@@ -1043,7 +958,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold2gRoveIn:I
 
     return v0
@@ -1053,7 +967,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold2gRoveOut:I
 
     return v0
@@ -1063,7 +976,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold3gRoveIn:I
 
     return v0
@@ -1073,7 +985,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold3gRoveOut:I
 
     return v0
@@ -1083,7 +994,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold4gRoveIn:I
 
     return v0
@@ -1093,7 +1003,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mThreshold4gRoveOut:I
 
     return v0
@@ -1103,7 +1012,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiA:I
 
     return v0
@@ -1113,7 +1021,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiB:I
 
     return v0
@@ -1123,7 +1030,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiC:I
 
     return v0
@@ -1133,7 +1039,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiRoveInWifiOnly:I
 
     return v0
@@ -1143,7 +1048,6 @@
     .locals 1
 
     .prologue
-    .line 209
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mWifiRssiRoveOutWifiOnly:I
 
     return v0
@@ -1153,7 +1057,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget v0, p0, Lcom/sec/epdg/EpdgSettings;->mKeepAliveTimer:I
 
     return v0
@@ -1163,7 +1066,6 @@
     .locals 1
 
     .prologue
-    .line 361
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsConnectedModeDpdAllow:Z
 
     return v0
@@ -1173,7 +1075,6 @@
     .locals 1
 
     .prologue
-    .line 281
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsRetryEnabledForAlwaysOnApn:Z
 
     return v0
@@ -1183,7 +1084,6 @@
     .locals 1
 
     .prologue
-    .line 337
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgSettings;->mIsThrottlingEnabled:Z
 
     return v0

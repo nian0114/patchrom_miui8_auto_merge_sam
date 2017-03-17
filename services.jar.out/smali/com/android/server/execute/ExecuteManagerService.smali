@@ -42,33 +42,27 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 60
     invoke-direct {p0}, Lcom/samsung/android/app/IExecuteManager$Stub;-><init>()V
 
-    .line 52
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/execute/ExecuteManagerService;->mExecutableInfos:Ljava/util/HashMap;
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/execute/ExecuteManagerService;->mContext:Landroid/content/Context;
 
-    .line 62
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 63
     .local v0, "filter":Landroid/content/IntentFilter;
     const/16 v1, 0x3e8
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 64
     iget-object v1, p0, Lcom/android/server/execute/ExecuteManagerService;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/android/server/execute/ExecuteManagerService$BootCompletedReceiver;
@@ -77,7 +71,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 65
     iget-object v1, p0, Lcom/android/server/execute/ExecuteManagerService;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/android/server/execute/ExecuteManagerService$UserReceiver;
@@ -92,7 +85,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 67
     new-instance v1, Lcom/android/server/execute/ExecuteManagerService$MyPackageMonitor;
 
     invoke-direct {v1, p0}, Lcom/android/server/execute/ExecuteManagerService$MyPackageMonitor;-><init>(Lcom/android/server/execute/ExecuteManagerService;)V
@@ -103,7 +95,6 @@
 
     invoke-virtual {v1, p1, v5, v2, v3}, Lcom/android/server/execute/ExecuteManagerService$MyPackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Landroid/os/UserHandle;Z)V
 
-    .line 68
     return-void
 .end method
 
@@ -112,7 +103,6 @@
     .param p0, "x0"    # Lcom/android/server/execute/ExecuteManagerService;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/server/execute/ExecuteManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -123,7 +113,6 @@
     .param p0, "x0"    # Lcom/android/server/execute/ExecuteManagerService;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Lcom/android/server/execute/ExecuteManagerService;->updateExecutableInfo()V
 
     return-void
@@ -135,7 +124,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 47
     invoke-direct {p0, p1}, Lcom/android/server/execute/ExecuteManagerService;->onUserRemoved(I)V
 
     return-void
@@ -146,7 +134,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 118
     return-void
 .end method
 
@@ -154,7 +141,6 @@
     .locals 5
 
     .prologue
-    .line 82
     monitor-enter p0
 
     :try_start_0
@@ -162,20 +148,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 83
     :try_start_1
     iget-object v3, p0, Lcom/android/server/execute/ExecuteManagerService;->mExecutableInfos:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 84
     iget-object v3, p0, Lcom/android/server/execute/ExecuteManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/samsung/android/app/ExecutableInfo;->scanExecutableInfos(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 85
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/app/ExecutableInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -195,7 +178,6 @@
 
     check-cast v1, Lcom/samsung/android/app/ExecutableInfo;
 
-    .line 86
     .local v1, "info":Lcom/samsung/android/app/ExecutableInfo;
     iget-object v3, p0, Lcom/android/server/execute/ExecuteManagerService;->mExecutableInfos:Ljava/util/HashMap;
 
@@ -207,7 +189,6 @@
 
     goto :goto_0
 
-    .line 88
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "info":Lcom/samsung/android/app/ExecutableInfo;
     .end local v2    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/app/ExecutableInfo;>;"
@@ -223,7 +204,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 82
     :catchall_1
     move-exception v3
 
@@ -231,7 +211,6 @@
 
     throw v3
 
-    .line 88
     .restart local v0    # "i$":Ljava/util/Iterator;
     .restart local v2    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/app/ExecutableInfo;>;"
     :cond_0
@@ -240,7 +219,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 89
     monitor-exit p0
 
     return-void
@@ -255,7 +233,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/android/server/execute/ExecuteManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DUMP"
@@ -264,7 +241,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 140
     return-void
 .end method
 
@@ -273,10 +249,8 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     monitor-enter p0
 
-    .line 72
     :try_start_0
     iget-object v0, p0, Lcom/android/server/execute/ExecuteManagerService;->mExecutableInfos:Ljava/util/HashMap;
 
@@ -290,7 +264,6 @@
 
     return-object v0
 
-    .line 73
     :catchall_0
     move-exception v0
 
@@ -314,10 +287,8 @@
     .end annotation
 
     .prologue
-    .line 76
     monitor-enter p0
 
-    .line 77
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -333,7 +304,6 @@
 
     return-object v0
 
-    .line 78
     :catchall_0
     move-exception v0
 

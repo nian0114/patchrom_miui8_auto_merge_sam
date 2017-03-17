@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 757
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$1;
 
     .prologue
-    .line 757
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p2, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 768
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->mLogManager:Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;->LogData(ILjava/lang/String;)V
 
-    .line 769
     return-void
 .end method
 
@@ -73,14 +69,12 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 760
     const-string v0, "LppFusion"
 
     const-string v1, "LppAlgoLnr: onUpdate"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 765
     return-void
 .end method
 
@@ -97,15 +91,13 @@
     .end annotation
 
     .prologue
-    .line 779
     .local p1, "listLppLocation":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;>;"
     const-string v1, "LppFusion"
 
-    const-string/jumbo v2, "onUpdateLPPtraj"
+    const-string v2, "onUpdateLPPtraj"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
     const/4 v0, 0x0
 
     .local v0, "inx":I
@@ -116,7 +108,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 787
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->mListLPPPos:Ljava/util/ArrayList;
@@ -136,12 +127,10 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 784
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 794
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
@@ -159,7 +148,6 @@
 
     invoke-interface {v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/ILppDataProvider;->lppUpdate(Ljava/util/ArrayList;)V
 
-    .line 795
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->mLogManager:Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;
@@ -176,7 +164,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;->AddCoordinate(Ljava/util/ArrayList;)V
 
-    .line 796
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->mLogManager:Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;
@@ -193,7 +180,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;->AddGPSCoordinate(Ljava/util/ArrayList;)V
 
-    .line 808
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->mListLPPPos:Ljava/util/ArrayList;
@@ -203,7 +189,6 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 809
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->mListGPSPos:Ljava/util/ArrayList;
@@ -213,7 +198,6 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 810
     return-void
 .end method
 
@@ -221,7 +205,6 @@
     .locals 0
 
     .prologue
-    .line 816
     return-void
 .end method
 
@@ -230,17 +213,14 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 772
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     iput-object p1, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->strAlgo:Ljava/lang/String;
 
-    .line 773
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppAlgoLnr;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->updateLppFusionStatus(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->access$2700(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;Ljava/lang/String;)V
 
-    .line 774
     return-void
 .end method

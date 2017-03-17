@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2060
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,30 +40,25 @@
     .param p1, "info"    # Landroid/net/wifi/p2p/WifiP2pInfo;
 
     .prologue
-    .line 2063
     if-eqz p1, :cond_1
 
     iget-boolean v0, p1, Landroid/net/wifi/p2p/WifiP2pInfo;->isGroupOwner:Z
 
     if-nez v0, :cond_1
 
-    .line 2064
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pInfo;->groupOwnerAddress:Ljava/net/InetAddress;
 
     if-nez v0, :cond_0
 
-    .line 2065
     const-string v0, "WifiDisplayController"
 
-    const-string/jumbo v1, "info.groupOwnerAddress is null"
+    const-string v1, "info.groupOwnerAddress is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2074
     :goto_0
     return-void
 
-    .line 2069
     :cond_0
     const-string v0, "WifiDisplayController"
 
@@ -94,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2070
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mListener:Lcom/android/server/display/WifiDisplayController$Listener;
@@ -108,7 +101,6 @@
 
     goto :goto_0
 
-    .line 2072
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 

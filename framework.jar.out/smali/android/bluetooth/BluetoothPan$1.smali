@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 129
     iput-object p1, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 132
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 134
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
@@ -56,7 +53,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 135
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     # getter for: Landroid/bluetooth/BluetoothPan;->mContext:Landroid/content/Context;
@@ -72,7 +68,6 @@
 
     check-cast v1, Landroid/app/admin/DevicePolicyManager;
 
-    .line 136
     .local v1, "mDPM":Landroid/app/admin/DevicePolicyManager;
     const-string v2, "BluetoothPan"
 
@@ -114,7 +109,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     invoke-virtual {v1, v5}, Landroid/app/admin/DevicePolicyManager;->getAllowInternetSharing(Landroid/content/ComponentName;)Z
 
     move-result v2
@@ -139,21 +133,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 140
     const-string v2, "BluetoothPan"
 
     const-string v3, "Disable Bluetooth Tethering"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     iget-object v2, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/bluetooth/BluetoothPan;->setBluetoothTethering(Z)V
 
-    .line 144
     .end local v1    # "mDPM":Landroid/app/admin/DevicePolicyManager;
     :cond_1
     return-void

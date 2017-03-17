@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3057
     iput-object p1, p0, Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionAdapter$1;->this$2:Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionAdapter;
 
     iput-object p2, p0, Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionAdapter$1;->val$ripple:Landroid/graphics/drawable/RippleDrawable;
@@ -46,24 +45,20 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3061
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 3062
     .local v0, "x":F
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 3063
     .local v1, "y":F
     iget-object v2, p0, Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionAdapter$1;->val$ripple:Landroid/graphics/drawable/RippleDrawable;
 
     invoke-virtual {v2, v0, v1}, Landroid/graphics/drawable/RippleDrawable;->setHotspot(FF)V
 
-    .line 3064
     const/4 v2, 0x0
 
     return v2

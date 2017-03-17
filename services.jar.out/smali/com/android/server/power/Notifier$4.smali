@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 491
     iput-object p1, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 494
     iget-object v0, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -50,6 +48,5 @@
 
     invoke-interface {v0}, Landroid/view/WindowManagerPolicy;->finishedWakingUp()V
 
-    .line 495
     return-void
 .end method

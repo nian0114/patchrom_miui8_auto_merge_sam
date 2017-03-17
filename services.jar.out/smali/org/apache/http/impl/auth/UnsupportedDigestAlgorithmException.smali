@@ -13,7 +13,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -30,7 +29,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -48,7 +46,6 @@
     .param p2, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;

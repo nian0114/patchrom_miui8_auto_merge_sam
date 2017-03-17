@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 605
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;
 
     .prologue
-    .line 605
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 644
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsAvailable()V
 
-    .line 645
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 626
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -80,7 +75,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsBatchStarted()V
 
-    .line 627
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 638
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -98,7 +91,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsOffBatchStopped()V
 
-    .line 639
     return-void
 .end method
 
@@ -106,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 632
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -116,7 +107,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsOnBatchStopped()V
 
-    .line 633
     return-void
 .end method
 
@@ -124,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 650
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -134,7 +123,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsUnavailable()V
 
-    .line 651
     return-void
 .end method
 
@@ -143,7 +131,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 622
     return-void
 .end method
 
@@ -160,7 +147,6 @@
     .end annotation
 
     .prologue
-    .line 616
     .local p1, "listLPPResult":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     const-string v0, "LppAggregator"
 
@@ -168,13 +154,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 617
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->notifyPositionContext(Ljava/util/ArrayList;)V
     invoke-static {v0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->access$400(Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;Ljava/util/ArrayList;)V
 
-    .line 618
     return-void
 .end method
 
@@ -183,7 +167,6 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 607
     const-string v0, "LppAggregator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -210,7 +193,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -220,7 +202,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 610
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -230,7 +211,6 @@
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->locationUpdate(Landroid/location/Location;)V
 
-    .line 612
     :cond_0
     return-void
 .end method

@@ -21,7 +21,6 @@
     .end annotation
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/impl/io/AbstractSessionOutputBuffer;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;

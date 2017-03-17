@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 51
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

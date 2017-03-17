@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const-string v0, "FontWriter"
 
     sput-object v0, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
@@ -50,16 +49,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput-object v0, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
-    .line 70
     iput-object v0, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
-    .line 72
     iput-object v0, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
     return-void
@@ -71,22 +66,18 @@
     .param p2, "folderName"    # Ljava/lang/String;
 
     .prologue
-    .line 281
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 283
     .local v3, "newDir":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 285
     .local v4, "tmp":[Ljava/lang/String;
     if-eqz v4, :cond_1
 
-    .line 289
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -95,36 +86,30 @@
 
     if-ge v2, v5, :cond_0
 
-    .line 293
     new-instance v1, Ljava/io/File;
 
     aget-object v5, v4, v2
 
     invoke-direct {v1, v3, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 295
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 289
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 299
     .end local v1    # "file":Ljava/io/File;
     :cond_0
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     move-result v0
 
-    .line 307
     .end local v2    # "i":I
     .local v0, "bRet":Z
     :goto_1
     return v0
 
-    .line 305
     .end local v0    # "bRet":Z
     :cond_1
     const/4 v0, 0x0
@@ -140,13 +125,11 @@
     .param p1, "fontPath"    # Ljava/lang/String;
 
     .prologue
-    .line 323
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v1
 
-    .line 325
     .local v1, "run":Ljava/lang/Runtime;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -170,18 +153,15 @@
 
     move-result-object v0
 
-    .line 327
     .local v0, "myProcess":Ljava/lang/Process;
     invoke-virtual {v0}, Ljava/lang/Process;->waitFor()I
 
-    .line 329
     invoke-virtual {v0}, Ljava/lang/Process;->exitValue()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 331
     new-instance v2, Ljava/io/IOException;
 
     const-string v3, "Cannot chmod"
@@ -193,18 +173,15 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 337
     .end local v0    # "myProcess":Ljava/lang/Process;
     .end local v1    # "run":Ljava/lang/Runtime;
     :catch_0
     move-exception v2
 
-    .line 349
     :cond_0
     :goto_0
     return-void
 
-    .line 343
     :catch_1
     move-exception v2
 
@@ -218,45 +195,36 @@
     .param p3, "destination"    # Ljava/lang/String;
 
     .prologue
-    .line 367
     move-object/from16 v10, p2
 
-    .line 369
     .local v10, "myInputStream":Ljava/io/InputStream;
     move-object/from16 v9, p1
 
-    .line 371
     .local v9, "myDirectory":Ljava/io/File;
     move-object/from16 v8, p3
 
-    .line 373
     .local v8, "myDestination":Ljava/lang/String;
     const-string v0, ""
 
-    .line 379
     .local v0, "absolutePath":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v9, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 381
     .local v2, "dest":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
-    .line 383
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 387
     new-instance v12, Ljava/io/FileOutputStream;
 
     invoke-direct {v12, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     iput-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
-    .line 389
     new-instance v12, Ljava/io/BufferedOutputStream;
 
     iget-object v13, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
@@ -265,16 +233,13 @@
 
     iput-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
-    .line 393
     const/16 v12, 0x400
 
     new-array v1, v12, [B
 
-    .line 397
     .local v1, "b":[B
     const/4 v11, 0x0
 
-    .line 399
     .local v11, "read":I
     :goto_0
     invoke-virtual {v10, v1}, Ljava/io/InputStream;->read([B)I
@@ -283,7 +248,6 @@
 
     if-lez v11, :cond_5
 
-    .line 401
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
     const/4 v13, 0x0
@@ -295,27 +259,23 @@
 
     goto :goto_0
 
-    .line 413
     .end local v1    # "b":[B
     .end local v2    # "dest":Ljava/io/File;
     .end local v11    # "read":I
     :catch_0
     move-exception v4
 
-    .line 417
     .local v4, "ex":Ljava/lang/Exception;
     :try_start_1
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v9, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 419
     .local v5, "file":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
     move-result-wide v6
 
-    .line 421
     .local v6, "length":J
     const-wide/16 v12, 0x0
 
@@ -323,25 +283,20 @@
 
     if-nez v12, :cond_0
 
-    .line 423
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 427
     :cond_0
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 435
     if-eqz v10, :cond_1
 
-    .line 437
     :try_start_2
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
 
-    .line 449
     :cond_1
     :goto_1
     :try_start_3
@@ -349,14 +304,12 @@
 
     if-eqz v12, :cond_2
 
-    .line 451
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_5
 
-    .line 463
     :cond_2
     :goto_2
     :try_start_4
@@ -364,14 +317,12 @@
 
     if-eqz v12, :cond_3
 
-    .line 465
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v12}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_6
 
-    .line 477
     .end local v4    # "ex":Ljava/lang/Exception;
     .end local v5    # "file":Ljava/io/File;
     .end local v6    # "length":J
@@ -379,18 +330,15 @@
     :goto_3
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/general/FontWriter;->changeFilePermission(Ljava/lang/String;)V
 
-    .line 483
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v9, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 485
     .restart local v5    # "file":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
     move-result-wide v6
 
-    .line 487
     .restart local v6    # "length":J
     const-wide/16 v12, 0x0
 
@@ -398,14 +346,11 @@
 
     if-nez v12, :cond_4
 
-    .line 489
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 493
     :cond_4
     return-void
 
-    .line 405
     .end local v5    # "file":Ljava/io/File;
     .end local v6    # "length":J
     .restart local v1    # "b":[B
@@ -417,12 +362,10 @@
 
     invoke-virtual {v12}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 407
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 409
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v12}, Ljava/io/BufferedOutputStream;->close()V
@@ -430,16 +373,13 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 435
     if-eqz v10, :cond_6
 
-    .line 437
     :try_start_6
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 449
     :cond_6
     :goto_4
     :try_start_7
@@ -447,14 +387,12 @@
 
     if-eqz v12, :cond_7
 
-    .line 451
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
-    .line 463
     :cond_7
     :goto_5
     :try_start_8
@@ -462,7 +400,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 465
     iget-object v12, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v12}, Ljava/io/BufferedOutputStream;->close()V
@@ -471,11 +408,9 @@
 
     goto :goto_3
 
-    .line 469
     :catch_1
     move-exception v3
 
-    .line 471
     .local v3, "e":Ljava/io/IOException;
     sget-object v12, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -485,12 +420,10 @@
 
     goto :goto_3
 
-    .line 441
     .end local v3    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v3
 
-    .line 443
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v12, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -500,12 +433,10 @@
 
     goto :goto_4
 
-    .line 455
     .end local v3    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v3
 
-    .line 457
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v12, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -515,7 +446,6 @@
 
     goto :goto_5
 
-    .line 441
     .end local v1    # "b":[B
     .end local v2    # "dest":Ljava/io/File;
     .end local v3    # "e":Ljava/io/IOException;
@@ -526,7 +456,6 @@
     :catch_4
     move-exception v3
 
-    .line 443
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v12, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -536,12 +465,10 @@
 
     goto :goto_1
 
-    .line 455
     .end local v3    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v3
 
-    .line 457
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v12, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -551,12 +478,10 @@
 
     goto :goto_2
 
-    .line 469
     .end local v3    # "e":Ljava/io/IOException;
     :catch_6
     move-exception v3
 
-    .line 471
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v12, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -566,7 +491,6 @@
 
     goto :goto_3
 
-    .line 433
     .end local v3    # "e":Ljava/io/IOException;
     .end local v4    # "ex":Ljava/lang/Exception;
     .end local v5    # "file":Ljava/io/File;
@@ -574,16 +498,13 @@
     :catchall_0
     move-exception v12
 
-    .line 435
     if-eqz v10, :cond_8
 
-    .line 437
     :try_start_9
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_7
 
-    .line 449
     :cond_8
     :goto_6
     :try_start_a
@@ -591,14 +512,12 @@
 
     if-eqz v13, :cond_9
 
-    .line 451
     iget-object v13, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_8
 
-    .line 463
     :cond_9
     :goto_7
     :try_start_b
@@ -606,23 +525,19 @@
 
     if-eqz v13, :cond_a
 
-    .line 465
     iget-object v13, p0, Lcom/android/server/enterprise/general/FontWriter;->bos:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v13}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_9
 
-    .line 473
     :cond_a
     :goto_8
     throw v12
 
-    .line 441
     :catch_7
     move-exception v3
 
-    .line 443
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v13, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -632,12 +547,10 @@
 
     goto :goto_6
 
-    .line 455
     .end local v3    # "e":Ljava/io/IOException;
     :catch_8
     move-exception v3
 
-    .line 457
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v13, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -647,12 +560,10 @@
 
     goto :goto_7
 
-    .line 469
     .end local v3    # "e":Ljava/io/IOException;
     :catch_9
     move-exception v3
 
-    .line 471
     .restart local v3    # "e":Ljava/io/IOException;
     sget-object v13, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -670,18 +581,14 @@
     .param p3, "destination"    # Ljava/lang/String;
 
     .prologue
-    .line 499
     const/4 v8, 0x0
 
-    .line 501
     .local v8, "fOut":Ljava/io/FileOutputStream;
     const/4 v3, 0x0
 
-    .line 503
     .local v3, "bos":Ljava/io/BufferedOutputStream;
     move-object/from16 v14, p2
 
-    .line 505
     .local v14, "myInputStream":Ljava/io/InputStream;
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -707,19 +614,16 @@
 
     move-result-object v11
 
-    .line 506
     .local v11, "filePath":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v11}, Lcom/android/server/enterprise/general/FontWriter;->changeFilePermission(Ljava/lang/String;)V
 
-    .line 511
     :try_start_0
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 513
     .local v5, "dest":Ljava/io/File;
     new-instance v9, Ljava/io/FileOutputStream;
 
@@ -728,7 +632,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_a
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 515
     .end local v8    # "fOut":Ljava/io/FileOutputStream;
     .local v9, "fOut":Ljava/io/FileOutputStream;
     :try_start_1
@@ -739,7 +642,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_b
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 518
     .end local v3    # "bos":Ljava/io/BufferedOutputStream;
     .local v4, "bos":Ljava/io/BufferedOutputStream;
     const/16 v16, 0x400
@@ -749,11 +651,9 @@
 
     new-array v2, v0, [B
 
-    .line 521
     .local v2, "b":[B
     const/4 v15, 0x0
 
-    .line 523
     .local v15, "read":I
     :goto_0
     invoke-virtual {v14, v2}, Ljava/io/InputStream;->read([B)I
@@ -762,7 +662,6 @@
 
     if-lez v15, :cond_5
 
-    .line 525
     const/16 v16, 0x0
 
     move/from16 v0, v16
@@ -774,7 +673,6 @@
 
     goto :goto_0
 
-    .line 537
     .end local v2    # "b":[B
     .end local v15    # "read":I
     :catch_0
@@ -786,7 +684,6 @@
     .restart local v3    # "bos":Ljava/io/BufferedOutputStream;
     move-object v8, v9
 
-    .line 541
     .end local v5    # "dest":Ljava/io/File;
     .end local v9    # "fOut":Ljava/io/FileOutputStream;
     .local v7, "ex":Ljava/lang/Exception;
@@ -797,13 +694,11 @@
 
     invoke-direct {v10, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 543
     .local v10, "file":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->length()J
 
     move-result-wide v12
 
-    .line 545
     .local v12, "length":J
     const-wide/16 v16, 0x0
 
@@ -811,47 +706,38 @@
 
     if-nez v16, :cond_0
 
-    .line 547
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
 
-    .line 551
     :cond_0
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 559
     if-eqz v14, :cond_1
 
-    .line 561
     :try_start_4
     invoke-virtual {v14}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 573
     :cond_1
     :goto_2
     if-eqz v8, :cond_2
 
-    .line 575
     :try_start_5
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 587
     :cond_2
     :goto_3
     if-eqz v3, :cond_3
 
-    .line 589
     :try_start_6
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 607
     .end local v7    # "ex":Ljava/lang/Exception;
     .end local v10    # "file":Ljava/io/File;
     .end local v12    # "length":J
@@ -861,13 +747,11 @@
 
     invoke-direct {v10, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 609
     .restart local v10    # "file":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->length()J
 
     move-result-wide v12
 
-    .line 611
     .restart local v12    # "length":J
     const-wide/16 v16, 0x0
 
@@ -875,14 +759,11 @@
 
     if-nez v16, :cond_4
 
-    .line 613
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
 
-    .line 617
     :cond_4
     return-void
 
-    .line 529
     .end local v3    # "bos":Ljava/io/BufferedOutputStream;
     .end local v8    # "fOut":Ljava/io/FileOutputStream;
     .end local v10    # "file":Ljava/io/File;
@@ -896,41 +777,33 @@
     :try_start_7
     invoke-virtual {v4}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 531
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 533
     invoke-virtual {v4}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 559
     if-eqz v14, :cond_6
 
-    .line 561
     :try_start_8
     invoke-virtual {v14}, Ljava/io/InputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 573
     :cond_6
     :goto_5
     if-eqz v9, :cond_7
 
-    .line 575
     :try_start_9
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
 
-    .line 587
     :cond_7
     :goto_6
     if-eqz v4, :cond_8
 
-    .line 589
     :try_start_a
     invoke-virtual {v4}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_a
@@ -943,12 +816,10 @@
     .restart local v3    # "bos":Ljava/io/BufferedOutputStream;
     move-object v8, v9
 
-    .line 597
     .end local v9    # "fOut":Ljava/io/FileOutputStream;
     .restart local v8    # "fOut":Ljava/io/FileOutputStream;
     goto :goto_4
 
-    .line 565
     .end local v3    # "bos":Ljava/io/BufferedOutputStream;
     .end local v8    # "fOut":Ljava/io/FileOutputStream;
     .restart local v4    # "bos":Ljava/io/BufferedOutputStream;
@@ -956,7 +827,6 @@
     :catch_1
     move-exception v6
 
-    .line 567
     .local v6, "e":Ljava/io/IOException;
     sget-object v16, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -966,12 +836,10 @@
 
     goto :goto_5
 
-    .line 579
     .end local v6    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v6
 
-    .line 581
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v16, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -981,12 +849,10 @@
 
     goto :goto_6
 
-    .line 593
     .end local v6    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v6
 
-    .line 595
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v16, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1000,12 +866,10 @@
     .restart local v3    # "bos":Ljava/io/BufferedOutputStream;
     move-object v8, v9
 
-    .line 599
     .end local v9    # "fOut":Ljava/io/FileOutputStream;
     .restart local v8    # "fOut":Ljava/io/FileOutputStream;
     goto :goto_4
 
-    .line 565
     .end local v2    # "b":[B
     .end local v5    # "dest":Ljava/io/File;
     .end local v6    # "e":Ljava/io/IOException;
@@ -1016,7 +880,6 @@
     :catch_4
     move-exception v6
 
-    .line 567
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v16, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1026,12 +889,10 @@
 
     goto :goto_2
 
-    .line 579
     .end local v6    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v6
 
-    .line 581
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v16, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1041,12 +902,10 @@
 
     goto :goto_3
 
-    .line 593
     .end local v6    # "e":Ljava/io/IOException;
     :catch_6
     move-exception v6
 
-    .line 595
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v16, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1056,7 +915,6 @@
 
     goto :goto_4
 
-    .line 557
     .end local v6    # "e":Ljava/io/IOException;
     .end local v7    # "ex":Ljava/lang/Exception;
     .end local v10    # "file":Ljava/io/File;
@@ -1064,48 +922,39 @@
     :catchall_0
     move-exception v16
 
-    .line 559
     :goto_7
     if-eqz v14, :cond_9
 
-    .line 561
     :try_start_b
     invoke-virtual {v14}, Ljava/io/InputStream;->close()V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 573
     :cond_9
     :goto_8
     if-eqz v8, :cond_a
 
-    .line 575
     :try_start_c
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_8
 
-    .line 587
     :cond_a
     :goto_9
     if-eqz v3, :cond_b
 
-    .line 589
     :try_start_d
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_9
 
-    .line 597
     :cond_b
     :goto_a
     throw v16
 
-    .line 565
     :catch_7
     move-exception v6
 
-    .line 567
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v17, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1115,12 +964,10 @@
 
     goto :goto_8
 
-    .line 579
     .end local v6    # "e":Ljava/io/IOException;
     :catch_8
     move-exception v6
 
-    .line 581
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v17, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1130,12 +977,10 @@
 
     goto :goto_9
 
-    .line 593
     .end local v6    # "e":Ljava/io/IOException;
     :catch_9
     move-exception v6
 
-    .line 595
     .restart local v6    # "e":Ljava/io/IOException;
     sget-object v17, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1145,7 +990,6 @@
 
     goto :goto_a
 
-    .line 557
     .end local v6    # "e":Ljava/io/IOException;
     .end local v8    # "fOut":Ljava/io/FileOutputStream;
     .restart local v5    # "dest":Ljava/io/File;
@@ -1176,7 +1020,6 @@
     .restart local v8    # "fOut":Ljava/io/FileOutputStream;
     goto :goto_7
 
-    .line 537
     .end local v5    # "dest":Ljava/io/File;
     :catch_a
     move-exception v7
@@ -1202,17 +1045,14 @@
     .param p2, "fontName"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "createFontDirectory : Start"
+    const-string v12, "createFontDirectory : Start"
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 180
     const/4 v9, 0x0
 
-    .line 182
     .local v9, "settingContext":Landroid/content/Context;
     :try_start_0
     const-string v11, "com.android.settings"
@@ -1225,12 +1065,10 @@
 
     move-result-object v9
 
-    .line 188
     :goto_0
     if-eqz v9, :cond_1
 
-    .line 190
-    const-string/jumbo v11, "fonts"
+    const-string v11, "fonts"
 
     const/4 v12, 0x1
 
@@ -1238,40 +1076,33 @@
 
     move-result-object v6
 
-    .line 191
     .local v6, "newFontDir":Ljava/io/File;
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "newFontDir : Created"
+    const-string v12, "newFontDir : Created"
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 200
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "newFontDir object created : "
+    const-string v12, "newFontDir object created : "
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 202
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v6, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 210
     .local v1, "fontFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v10
 
-    .line 212
     .local v10, "tmp":[Ljava/lang/String;
     if-nez v10, :cond_2
 
-    .line 213
     const/4 v1, 0x0
 
-    .line 265
     .end local v1    # "fontFile":Ljava/io/File;
     .end local v6    # "newFontDir":Ljava/io/File;
     .end local v10    # "tmp":[Ljava/lang/String;
@@ -1279,31 +1110,26 @@
     :goto_1
     return-object v1
 
-    .line 183
     :catch_0
     move-exception v0
 
-    .line 185
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 195
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v12, "newFontDir : Not Created"
+    const-string v12, "newFontDir : Not Created"
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 196
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 216
     .restart local v1    # "fontFile":Ljava/io/File;
     .restart local v6    # "newFontDir":Ljava/io/File;
     .restart local v10    # "tmp":[Ljava/lang/String;
@@ -1316,17 +1142,14 @@
 
     if-ge v2, v11, :cond_3
 
-    .line 220
     aget-object v11, v10, v2
 
     invoke-direct {p0, v6, v11}, Lcom/android/server/enterprise/general/FontWriter;->deleteFolder(Ljava/io/File;Ljava/lang/String;)Z
 
-    .line 216
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 228
     :cond_3
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
@@ -1334,21 +1157,18 @@
 
     if-eqz v11, :cond_4
 
-    .line 229
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
     const-string v12, "Font directory  : Created"
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 237
     :goto_3
     :try_start_1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v7
 
-    .line 239
     .local v7, "run":Ljava/lang/Runtime;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1372,24 +1192,20 @@
 
     move-result-object v8
 
-    .line 241
     .local v8, "s":Ljava/lang/String;
     invoke-virtual {v7, v8}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
 
     move-result-object v5
 
-    .line 243
     .local v5, "myProcess":Ljava/lang/Process;
     invoke-virtual {v5}, Ljava/lang/Process;->waitFor()I
 
-    .line 245
     invoke-virtual {v5}, Ljava/lang/Process;->exitValue()I
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 247
     new-instance v11, Ljava/io/IOException;
 
     const-string v12, "Cannot chmod"
@@ -1401,14 +1217,12 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 253
     .end local v5    # "myProcess":Ljava/lang/Process;
     .end local v7    # "run":Ljava/lang/Runtime;
     .end local v8    # "s":Ljava/lang/String;
     :catch_1
     move-exception v4
 
-    .line 255
     .local v4, "ioEx":Ljava/io/IOException;
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1418,7 +1232,6 @@
 
     goto :goto_1
 
-    .line 231
     .end local v4    # "ioEx":Ljava/io/IOException;
     :cond_4
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
@@ -1429,11 +1242,9 @@
 
     goto :goto_3
 
-    .line 259
     :catch_2
     move-exception v3
 
-    .line 261
     .local v3, "iEx":Ljava/lang/InterruptedException;
     sget-object v11, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
@@ -1451,10 +1262,8 @@
     .param p3, "directory"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     const-string v0, ""
 
-    .line 110
     .local v0, "absolutePath":Ljava/lang/String;
     :try_start_0
     new-instance v1, Ljava/io/File;
@@ -1463,23 +1272,19 @@
 
     invoke-direct {v1, v4, p2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 112
     .local v1, "dest":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
-    .line 114
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 116
     new-instance v4, Ljava/io/FileOutputStream;
 
     invoke-direct {v4, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     iput-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
-    .line 118
     new-instance v4, Ljava/io/OutputStreamWriter;
 
     iget-object v5, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
@@ -1488,7 +1293,6 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
-    .line 120
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1511,12 +1315,10 @@
 
     invoke-virtual {v4, v5}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 122
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->flush()V
 
-    .line 124
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
@@ -1524,20 +1326,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 137
     :try_start_1
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     if-eqz v4, :cond_0
 
-    .line 139
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 151
     :cond_0
     :goto_0
     :try_start_2
@@ -1545,84 +1344,71 @@
 
     if-eqz v4, :cond_1
 
-    .line 153
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 164
     .end local v1    # "dest":Ljava/io/File;
     :cond_1
     :goto_1
-    const-string/jumbo v4, "persist.sys.flipfontpath"
+    const-string v4, "persist.sys.flipfontpath"
 
     invoke-static {v4, p3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/general/FontWriter;->changeFilePermission(Ljava/lang/String;)V
 
-    .line 167
     return-void
 
-    .line 143
     .restart local v1    # "dest":Ljava/io/File;
     :catch_0
     move-exception v2
 
-    .line 145
     .local v2, "e":Ljava/io/IOException;
     sget-object v4, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "writeLoc : osw.close() error"
+    const-string v5, "writeLoc : osw.close() error"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 157
     .end local v2    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v2
 
-    .line 159
     .restart local v2    # "e":Ljava/io/IOException;
     sget-object v4, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "writeLoc : fOut.close() error"
+    const-string v5, "writeLoc : fOut.close() error"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 127
     .end local v1    # "dest":Ljava/io/File;
     .end local v2    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v3
 
-    .line 129
     .local v3, "ex":Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 137
     :try_start_4
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     if-eqz v4, :cond_2
 
-    .line 139
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 151
     :cond_2
     :goto_2
     :try_start_5
@@ -1630,7 +1416,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 153
     iget-object v4, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
@@ -1639,55 +1424,47 @@
 
     goto :goto_1
 
-    .line 157
     :catch_3
     move-exception v2
 
-    .line 159
     .restart local v2    # "e":Ljava/io/IOException;
     sget-object v4, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "writeLoc : fOut.close() error"
+    const-string v5, "writeLoc : fOut.close() error"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 143
     .end local v2    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v2
 
-    .line 145
     .restart local v2    # "e":Ljava/io/IOException;
     sget-object v4, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "writeLoc : osw.close() error"
+    const-string v5, "writeLoc : osw.close() error"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 135
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "ex":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
-    .line 137
     :try_start_6
     iget-object v5, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     if-eqz v5, :cond_3
 
-    .line 139
     iget-object v5, p0, Lcom/android/server/enterprise/general/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v5}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_5
 
-    .line 151
     :cond_3
     :goto_3
     :try_start_7
@@ -1695,42 +1472,36 @@
 
     if-eqz v5, :cond_4
 
-    .line 153
     iget-object v5, p0, Lcom/android/server/enterprise/general/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_6
 
-    .line 161
     :cond_4
     :goto_4
     throw v4
 
-    .line 143
     :catch_5
     move-exception v2
 
-    .line 145
     .restart local v2    # "e":Ljava/io/IOException;
     sget-object v5, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v6, "writeLoc : osw.close() error"
+    const-string v6, "writeLoc : osw.close() error"
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 157
     .end local v2    # "e":Ljava/io/IOException;
     :catch_6
     move-exception v2
 
-    .line 159
     .restart local v2    # "e":Ljava/io/IOException;
     sget-object v5, Lcom/android/server/enterprise/general/FontWriter;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v6, "writeLoc : fOut.close() error"
+    const-string v6, "writeLoc : fOut.close() error"
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 

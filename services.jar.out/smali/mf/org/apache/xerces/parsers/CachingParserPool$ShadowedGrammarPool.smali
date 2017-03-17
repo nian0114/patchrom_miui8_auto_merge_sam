@@ -24,13 +24,10 @@
     .param p1, "grammarPool"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     .prologue
-    .line 354
     invoke-direct {p0}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;-><init>()V
 
-    .line 355
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/CachingParserPool$ShadowedGrammarPool;->fGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
-    .line 356
     return-void
 .end method
 
@@ -42,15 +39,12 @@
     .param p2, "grammars"    # [Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     .prologue
-    .line 398
     invoke-super {p0, p1, p2}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;->cacheGrammars(Ljava/lang/String;[Lmf/org/apache/xerces/xni/grammars/Grammar;)V
 
-    .line 399
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool$ShadowedGrammarPool;->fGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     invoke-interface {v0, p1, p2}, Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;->cacheGrammars(Ljava/lang/String;[Lmf/org/apache/xerces/xni/grammars/Grammar;)V
 
-    .line 400
     return-void
 .end method
 
@@ -59,7 +53,6 @@
     .param p1, "desc"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     .prologue
-    .line 423
     invoke-super {p0, p1}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;->containsGrammar(Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;)Z
 
     move-result v0
@@ -72,19 +65,16 @@
     .param p1, "desc"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     .prologue
-    .line 409
     invoke-super {p0, p1}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;->containsGrammar(Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 410
     invoke-super {p0, p1}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;->getGrammar(Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;)Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     move-result-object v0
 
-    .line 412
     :goto_0
     return-object v0
 
@@ -99,16 +89,13 @@
     .param p1, "gDesc"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     .prologue
-    .line 383
     invoke-super {p0, p1}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;->retrieveGrammar(Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;)Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     move-result-object v0
 
-    .line 384
     .local v0, "g":Lmf/org/apache/xerces/xni/grammars/Grammar;
     if-eqz v0, :cond_0
 
-    .line 385
     .end local v0    # "g":Lmf/org/apache/xerces/xni/grammars/Grammar;
     :goto_0
     return-object v0
@@ -129,16 +116,13 @@
     .param p1, "grammarType"    # Ljava/lang/String;
 
     .prologue
-    .line 370
     invoke-super {p0, p1}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl;->retrieveInitialGrammarSet(Ljava/lang/String;)[Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     move-result-object v0
 
-    .line 371
     .local v0, "grammars":[Lmf/org/apache/xerces/xni/grammars/Grammar;
     if-eqz v0, :cond_0
 
-    .line 372
     .end local v0    # "grammars":[Lmf/org/apache/xerces/xni/grammars/Grammar;
     :goto_0
     return-object v0

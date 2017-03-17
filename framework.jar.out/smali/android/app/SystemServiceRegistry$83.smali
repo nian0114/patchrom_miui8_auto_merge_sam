@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1010
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1013
-    const-string/jumbo v2, "multiwindow_facade"
+    const-string v2, "multiwindow_facade"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1014
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/multiwindow/IMultiWindowFacade$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/multiwindow/IMultiWindowFacade;
 
     move-result-object v1
 
-    .line 1015
     .local v1, "service":Lcom/samsung/android/multiwindow/IMultiWindowFacade;
     new-instance v2, Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
@@ -68,7 +64,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1010
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$83;->createService(Landroid/app/ContextImpl;)Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
     move-result-object v0

@@ -60,7 +60,6 @@
 
     const/4 v5, 0x0
 
-    .line 35
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     const-string v1, "REGISTRATION_NOT_STARTED"
@@ -71,7 +70,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->REGISTRATION_NOT_STARTED:Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
-    .line 36
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     const-string v1, "REGISTRATION_IN_PROGRESS"
@@ -82,7 +80,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->REGISTRATION_IN_PROGRESS:Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
-    .line 37
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     const-string v1, "REGISTRATION_DONE"
@@ -93,7 +90,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->REGISTRATION_DONE:Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
-    .line 38
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     const-string v1, "REGISTRATION_FAILED"
@@ -104,7 +100,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->REGISTRATION_FAILED:Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
-    .line 39
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     const-string v1, "DEREG_SUCCEEDED"
@@ -115,7 +110,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->DEREG_SUCCEEDED:Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
-    .line 40
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     const-string v1, "REGISTRATION_BLOCKED"
@@ -130,7 +124,6 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->REGISTRATION_BLOCKED:Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
-    .line 34
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
@@ -179,16 +172,12 @@
     .end annotation
 
     .prologue
-    .line 46
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 47
     iput p3, p0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->mStatus:I
 
-    .line 48
     iput-object p4, p0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->mText:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -197,7 +186,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     const-class v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -213,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->$VALUES:[Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->clone()Ljava/lang/Object;
@@ -231,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;->mText:Ljava/lang/String;
 
     return-object v0

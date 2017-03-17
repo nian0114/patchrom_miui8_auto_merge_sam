@@ -22,17 +22,14 @@
     .locals 1
 
     .prologue
-    .line 59
     const-string v0, "IntentForwarderActivity"
 
     sput-object v0, Lcom/android/internal/app/IntentForwarderActivity;->TAG:Ljava/lang/String;
 
-    .line 61
     const-string v0, "com.android.internal.app.ForwardIntentToUserOwner"
 
     sput-object v0, Lcom/android/internal/app/IntentForwarderActivity;->FORWARD_INTENT_TO_USER_OWNER:Ljava/lang/String;
 
-    .line 64
     const-string v0, "com.android.internal.app.ForwardIntentToManagedProfile"
 
     sput-object v0, Lcom/android/internal/app/IntentForwarderActivity;->FORWARD_INTENT_TO_MANAGED_PROFILE:Ljava/lang/String;
@@ -44,15 +41,12 @@
     .locals 1
 
     .prologue
-    .line 57
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 68
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/app/IntentForwarderActivity;->TARGET_USER_ID_DEFAULT_VALUE:I
 
-    .line 70
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/app/IntentForwarderActivity;->targetUserIdForKnox:I
@@ -64,8 +58,7 @@
     .locals 7
 
     .prologue
-    .line 294
-    const-string/jumbo v4, "user"
+    const-string v4, "user"
 
     invoke-virtual {p0, v4}, Lcom/android/internal/app/IntentForwarderActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -73,7 +66,6 @@
 
     check-cast v3, Landroid/os/UserManager;
 
-    .line 295
     .local v3, "userManager":Landroid/os/UserManager;
     const/4 v4, 0x0
 
@@ -81,7 +73,6 @@
 
     move-result-object v1
 
-    .line 296
     .local v1, "relatedUsers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -101,7 +92,6 @@
 
     check-cast v2, Landroid/content/pm/UserInfo;
 
-    .line 297
     .local v2, "userInfo":Landroid/content/pm/UserInfo;
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -111,12 +101,10 @@
 
     iget v4, v2, Landroid/content/pm/UserInfo;->id:I
 
-    .line 301
     .end local v2    # "userInfo":Landroid/content/pm/UserInfo;
     :goto_0
     return v4
 
-    .line 299
     :cond_1
     sget-object v4, Lcom/android/internal/app/IntentForwarderActivity;->TAG:Ljava/lang/String;
 
@@ -142,7 +130,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     const/16 v4, -0x2710
 
     goto :goto_0
@@ -160,12 +147,10 @@
 
     const/4 v8, 0x0
 
-    .line 216
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v4
 
-    .line 220
     .local v4, "ipm":Landroid/content/pm/IPackageManager;
     invoke-static {p2}, Landroid/os/PersonaManager;->isKnoxId(I)Z
 
@@ -173,12 +158,11 @@
 
     if-eqz v9, :cond_5
 
-    .line 223
     invoke-virtual {p0}, Lcom/android/internal/app/IntentForwarderActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v9
 
-    const-string/jumbo v10, "persona"
+    const-string v10, "persona"
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -186,9 +170,8 @@
 
     check-cast v5, Landroid/os/PersonaManager;
 
-    .line 224
     .local v5, "personaManager":Landroid/os/PersonaManager;
-    const-string/jumbo v9, "persona_policy"
+    const-string v9, "persona_policy"
 
     invoke-virtual {v5, v9}, Landroid/os/PersonaManager;->getPersonaService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -196,7 +179,6 @@
 
     check-cast v6, Landroid/os/PersonaPolicyManager;
 
-    .line 226
     .local v6, "personaPolicyManager":Landroid/os/PersonaPolicyManager;
     invoke-virtual {v5, p2}, Landroid/os/PersonaManager;->getStateManager(I)Landroid/os/PersonaManager$StateManager;
 
@@ -206,7 +188,6 @@
 
     move-result-object v0
 
-    .line 228
     .local v0, "curState":Landroid/content/pm/PersonaState;
     invoke-virtual {v5, p2}, Landroid/os/PersonaManager;->getStateManager(I)Landroid/os/PersonaManager$StateManager;
 
@@ -240,7 +221,6 @@
 
     if-ne v0, v9, :cond_1
 
-    .line 234
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/app/IntentForwarderActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -256,21 +236,18 @@
 
     invoke-virtual {v9}, Landroid/widget/Toast;->show()V
 
-    .line 282
     .end local v0    # "curState":Landroid/content/pm/PersonaState;
     .end local v5    # "personaManager":Landroid/os/PersonaManager;
     .end local v6    # "personaPolicyManager":Landroid/os/PersonaPolicyManager;
     :goto_0
     return v8
 
-    .line 238
     .restart local v0    # "curState":Landroid/content/pm/PersonaState;
     .restart local v5    # "personaManager":Landroid/os/PersonaManager;
     .restart local v6    # "personaPolicyManager":Landroid/os/PersonaPolicyManager;
     :cond_1
     const/4 v3, 0x0
 
-    .line 240
     .local v3, "intentAction":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -284,7 +261,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 241
     const-string v9, "android.intent.extra.INTENT"
 
     invoke-virtual {p1, v9}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -293,13 +269,11 @@
 
     check-cast v2, Landroid/content/Intent;
 
-    .line 242
     .local v2, "innerIntent":Landroid/content/Intent;
     invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 247
     .end local v2    # "innerIntent":Landroid/content/Intent;
     :goto_1
     if-eqz v3, :cond_5
@@ -320,7 +294,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 249
     :cond_2
     invoke-virtual {v6, p2}, Landroid/os/PersonaPolicyManager;->isMoveFilesToContainerAllowed(I)Z
 
@@ -328,7 +301,6 @@
 
     if-nez v9, :cond_4
 
-    .line 252
     invoke-virtual {p0}, Lcom/android/internal/app/IntentForwarderActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v9
@@ -345,7 +317,6 @@
 
     goto :goto_0
 
-    .line 245
     :cond_3
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -353,13 +324,11 @@
 
     goto :goto_1
 
-    .line 255
     :cond_4
     const/4 v8, 0x1
 
     goto :goto_0
 
-    .line 259
     .end local v0    # "curState":Landroid/content/pm/PersonaState;
     .end local v3    # "intentAction":Ljava/lang/String;
     .end local v5    # "personaManager":Landroid/os/PersonaManager;
@@ -383,7 +352,6 @@
 
     if-eqz v9, :cond_8
 
-    .line 261
     const-string v9, "android.intent.extra.INITIAL_INTENTS"
 
     invoke-virtual {p1, v9}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -392,7 +360,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 262
     sget-object v9, Lcom/android/internal/app/IntentForwarderActivity;->TAG:Ljava/lang/String;
 
     const-string v10, "An chooser intent with extra initial intents cannot be forwarded to a different user"
@@ -401,7 +368,6 @@
 
     goto :goto_0
 
-    .line 266
     :cond_6
     const-string v9, "android.intent.extra.REPLACEMENT_EXTRAS"
 
@@ -411,7 +377,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 267
     sget-object v9, Lcom/android/internal/app/IntentForwarderActivity;->TAG:Ljava/lang/String;
 
     const-string v10, "A chooser intent with replacement extras cannot be forwarded to a different user"
@@ -420,7 +385,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_7
     const-string v9, "android.intent.extra.INTENT"
 
@@ -431,7 +395,6 @@
     .end local p1    # "intent":Landroid/content/Intent;
     check-cast p1, Landroid/content/Intent;
 
-    .line 273
     .restart local p1    # "intent":Landroid/content/Intent;
     :cond_8
     invoke-virtual {p0}, Lcom/android/internal/app/IntentForwarderActivity;->getContentResolver()Landroid/content/ContentResolver;
@@ -442,7 +405,6 @@
 
     move-result-object v7
 
-    .line 274
     .local v7, "resolvedType":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Intent;->getSelector()Landroid/content/Intent;
 
@@ -450,12 +412,10 @@
 
     if-eqz v9, :cond_9
 
-    .line 275
     invoke-virtual {p1}, Landroid/content/Intent;->getSelector()Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 278
     :cond_9
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/app/IntentForwarderActivity;->getUserId()I
@@ -470,11 +430,9 @@
 
     goto/16 :goto_0
 
-    .line 280
     :catch_0
     move-exception v1
 
-    .line 281
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v9, Lcom/android/internal/app/IntentForwarderActivity;->TAG:Ljava/lang/String;
 
@@ -490,15 +448,12 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 75
     invoke-super/range {p0 .. p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 76
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
 
-    .line 78
     .local v14, "intentReceived":Landroid/content/Intent;
     invoke-virtual {v14}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -508,7 +463,6 @@
 
     move-result-object v9
 
-    .line 84
     .local v9, "className":Ljava/lang/String;
     :try_start_0
     new-instance v21, Landroid/content/Intent;
@@ -517,7 +471,6 @@
 
     invoke-direct {v0, v14}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 85
     .local v21, "tempIntent":Landroid/content/Intent;
     const-string v25, "crossProfileTargetUserId"
 
@@ -541,7 +494,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 93
     .end local v21    # "tempIntent":Landroid/content/Intent;
     :goto_0
     sget-object v25, Lcom/android/internal/app/IntentForwarderActivity;->FORWARD_INTENT_TO_USER_OWNER:Ljava/lang/String;
@@ -554,14 +506,11 @@
 
     if-eqz v25, :cond_0
 
-    .line 94
     const v24, 0x104043d
 
-    .line 95
     .local v24, "userMessageId":I
     const/16 v20, 0x0
 
-    .line 109
     .local v20, "targetUserId":I
     :goto_1
     const/16 v25, -0x2710
@@ -572,14 +521,11 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 111
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->finish()V
 
-    .line 213
     :goto_2
     return-void
 
-    .line 96
     .end local v20    # "targetUserId":I
     .end local v24    # "userMessageId":I
     :cond_0
@@ -593,10 +539,8 @@
 
     if-eqz v25, :cond_2
 
-    .line 97
     const v24, 0x104043e
 
-    .line 99
     .restart local v24    # "userMessageId":I
     move-object/from16 v0, p0
 
@@ -612,7 +556,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 100
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/internal/app/IntentForwarderActivity;->targetUserIdForKnox:I
@@ -622,7 +565,6 @@
     .restart local v20    # "targetUserId":I
     goto :goto_1
 
-    .line 103
     .end local v20    # "targetUserId":I
     :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->getManagedProfile()I
@@ -632,7 +574,6 @@
     .restart local v20    # "targetUserId":I
     goto :goto_1
 
-    .line 105
     .end local v20    # "targetUserId":I
     .end local v24    # "userMessageId":I
     :cond_2
@@ -664,17 +605,14 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     const/16 v24, -0x1
 
-    .line 107
     .restart local v24    # "userMessageId":I
     const/16 v20, -0x2710
 
     .restart local v20    # "targetUserId":I
     goto :goto_1
 
-    .line 114
     :cond_3
     new-instance v17, Landroid/content/Intent;
 
@@ -682,7 +620,6 @@
 
     invoke-direct {v0, v14}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 115
     .local v17, "newIntent":Landroid/content/Intent;
     const/16 v25, 0x0
 
@@ -692,7 +629,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 117
     const/16 v25, 0x0
 
     move-object/from16 v0, v17
@@ -701,7 +637,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 118
     const/high16 v25, 0x3000000
 
     move-object/from16 v0, v17
@@ -710,16 +645,13 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 120
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->getUserId()I
 
     move-result v8
 
-    .line 122
     .local v8, "callingUserId":I
     const/4 v12, 0x0
 
-    .line 123
     .local v12, "forwardfromKnox":Z
     const/16 v25, 0x64
 
@@ -727,10 +659,8 @@
 
     if-lt v8, v0, :cond_4
 
-    .line 124
     const/4 v12, 0x1
 
-    .line 128
     :cond_4
     move-object/from16 v0, p0
 
@@ -744,7 +674,6 @@
 
     if-eqz v25, :cond_f
 
-    .line 129
     invoke-virtual/range {v17 .. v17}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v25
@@ -757,7 +686,6 @@
 
     if-eqz v25, :cond_9
 
-    .line 130
     const-string v25, "android.intent.extra.INTENT"
 
     move-object/from16 v0, v17
@@ -770,11 +698,9 @@
 
     check-cast v13, Landroid/content/Intent;
 
-    .line 131
     .local v13, "innerIntent":Landroid/content/Intent;
     invoke-virtual {v13, v8}, Landroid/content/Intent;->prepareToLeaveUser(I)V
 
-    .line 136
     .end local v13    # "innerIntent":Landroid/content/Intent;
     :goto_3
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -795,7 +721,6 @@
 
     move-result-object v18
 
-    .line 141
     .local v18, "ri":Landroid/content/pm/ResolveInfo;
     if-eqz v18, :cond_5
 
@@ -878,7 +803,6 @@
     :cond_5
     const/16 v19, 0x1
 
-    .line 148
     .local v19, "shouldShowDisclosure":Z
     :goto_4
     :try_start_1
@@ -890,7 +814,6 @@
 
     if-nez v20, :cond_b
 
-    .line 149
     if-eqz v17, :cond_b
 
     const-string v25, "file"
@@ -921,12 +844,10 @@
 
     if-nez v25, :cond_b
 
-    .line 150
     new-instance v7, Landroid/content/Intent;
 
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 151
     .local v7, "bbcIntent":Landroid/content/Intent;
     const-string v25, "base_intent"
 
@@ -936,7 +857,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 152
     const-string v25, "com.samsung.android.bbc.fileprovider"
 
     const-string v26, "com.samsung.android.bbc.fileprovider.IntentForwardActivity"
@@ -947,7 +867,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 153
     const/16 v25, 0x0
 
     const/16 v26, 0x0
@@ -960,27 +879,22 @@
 
     invoke-virtual {v0, v7, v1, v2, v8}, Lcom/android/internal/app/IntentForwarderActivity;->startActivityAsCaller(Landroid/content/Intent;Landroid/os/Bundle;ZI)V
 
-    .line 154
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->finish()V
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto/16 :goto_2
 
-    .line 170
     .end local v7    # "bbcIntent":Landroid/content/Intent;
     :catch_0
     move-exception v11
 
-    .line 171
     .local v11, "e":Ljava/lang/RuntimeException;
     const/16 v16, -0x1
 
-    .line 172
     .local v16, "launchedFromUid":I
     const-string v15, "?"
 
-    .line 174
     .local v15, "launchedFromPackage":Ljava/lang/String;
     :try_start_2
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -995,7 +909,6 @@
 
     move-result v16
 
-    .line 176
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v25
@@ -1010,7 +923,6 @@
 
     move-result-object v15
 
-    .line 181
     :goto_5
     sget-object v25, Lcom/android/internal/app/IntentForwarderActivity;->TAG:Ljava/lang/String;
 
@@ -1068,12 +980,11 @@
 
     invoke-static {v0, v1, v11}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 188
     .end local v11    # "e":Ljava/lang/RuntimeException;
     .end local v15    # "launchedFromPackage":Ljava/lang/String;
     .end local v16    # "launchedFromUid":I
     :goto_6
-    const-string/jumbo v25, "user"
+    const-string v25, "user"
 
     move-object/from16 v0, p0
 
@@ -1085,7 +996,6 @@
 
     check-cast v23, Landroid/os/UserManager;
 
-    .line 189
     .local v23, "userManager":Landroid/os/UserManager;
     move-object/from16 v0, v23
 
@@ -1095,7 +1005,6 @@
 
     move-result-object v22
 
-    .line 190
     .local v22, "ui":Landroid/content/pm/UserInfo;
     if-eqz v22, :cond_6
 
@@ -1105,14 +1014,11 @@
 
     if-eqz v25, :cond_6
 
-    .line 191
     const/16 v19, 0x0
 
-    .line 192
     :cond_6
     if-eqz v12, :cond_e
 
-    .line 193
     const-string v25, "activity"
 
     move-object/from16 v0, p0
@@ -1125,7 +1031,6 @@
 
     check-cast v6, Landroid/app/ActivityManager;
 
-    .line 194
     .local v6, "am":Landroid/app/ActivityManager;
     invoke-virtual {v6}, Landroid/app/ActivityManager;->isInLockTaskMode()Z
 
@@ -1133,7 +1038,6 @@
 
     if-nez v25, :cond_8
 
-    .line 195
     invoke-static/range {p0 .. p0}, Landroid/os/PersonaManager;->isKioskModeEnabled(Landroid/content/Context;)Z
 
     move-result v25
@@ -1148,7 +1052,6 @@
 
     if-nez v25, :cond_8
 
-    .line 197
     :cond_7
     new-instance v25, Landroid/view/ContextThemeWrapper;
 
@@ -1178,7 +1081,6 @@
 
     invoke-virtual/range {v25 .. v25}, Landroid/widget/Toast;->show()V
 
-    .line 212
     .end local v6    # "am":Landroid/app/ActivityManager;
     .end local v18    # "ri":Landroid/content/pm/ResolveInfo;
     .end local v19    # "shouldShowDisclosure":Z
@@ -1190,7 +1092,6 @@
 
     goto/16 :goto_2
 
-    .line 133
     :cond_9
     move-object/from16 v0, v17
 
@@ -1198,14 +1099,12 @@
 
     goto/16 :goto_3
 
-    .line 141
     .restart local v18    # "ri":Landroid/content/pm/ResolveInfo;
     :cond_a
     const/16 v19, 0x0
 
     goto/16 :goto_4
 
-    .line 160
     .restart local v19    # "shouldShowDisclosure":Z
     :cond_b
     if-eqz v17, :cond_d
@@ -1235,7 +1134,6 @@
 
     if-eqz v25, :cond_d
 
-    .line 163
     :cond_c
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IntentForwarderActivity;->getResources()Landroid/content/res/Resources;
 
@@ -1257,13 +1155,11 @@
 
     move-result-object v5
 
-    .line 164
     .local v5, "ChooserIntent":Landroid/content/Intent;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 165
     .local v10, "compArrary":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentName;>;"
     new-instance v25, Landroid/content/ComponentName;
 
@@ -1277,14 +1173,12 @@
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 166
     const-string v25, "extra_chooser_droplist"
 
     move-object/from16 v0, v25
 
     invoke-virtual {v5, v0, v10}, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 167
     const/16 v25, 0x0
 
     const/16 v26, 0x0
@@ -1301,7 +1195,6 @@
 
     goto/16 :goto_6
 
-    .line 169
     .end local v5    # "ChooserIntent":Landroid/content/Intent;
     .end local v10    # "compArrary":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentName;>;"
     :cond_d
@@ -1325,13 +1218,11 @@
 
     goto/16 :goto_6
 
-    .line 205
     .restart local v22    # "ui":Landroid/content/pm/UserInfo;
     .restart local v23    # "userManager":Landroid/os/UserManager;
     :cond_e
     if-eqz v19, :cond_8
 
-    .line 206
     move-object/from16 v0, p0
 
     move/from16 v1, v24
@@ -1356,7 +1247,6 @@
 
     goto/16 :goto_7
 
-    .line 209
     .end local v18    # "ri":Landroid/content/pm/ResolveInfo;
     .end local v19    # "shouldShowDisclosure":Z
     .end local v22    # "ui":Landroid/content/pm/UserInfo;
@@ -1368,7 +1258,7 @@
 
     invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v27, "the intent: "
+    const-string v27, "the intent: "
 
     invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1416,7 +1306,6 @@
 
     goto/16 :goto_7
 
-    .line 178
     .restart local v11    # "e":Ljava/lang/RuntimeException;
     .restart local v15    # "launchedFromPackage":Ljava/lang/String;
     .restart local v16    # "launchedFromUid":I
@@ -1427,7 +1316,6 @@
 
     goto/16 :goto_5
 
-    .line 86
     .end local v8    # "callingUserId":I
     .end local v11    # "e":Ljava/lang/RuntimeException;
     .end local v12    # "forwardfromKnox":Z

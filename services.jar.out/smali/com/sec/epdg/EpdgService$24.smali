@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4833
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$24;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,16 +39,13 @@
     .locals 1
 
     .prologue
-    .line 4836
     const/4 v0, 0x0
 
     # invokes: Lcom/sec/epdg/EpdgService;->setIsWifiRssiInPollingZone(Z)V
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$9900(Z)V
 
-    .line 4837
     # invokes: Lcom/sec/epdg/EpdgService;->stopWifiRssiIntentDelayTimerIfRequired()V
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$6800()V
 
-    .line 4838
     return-void
 .end method

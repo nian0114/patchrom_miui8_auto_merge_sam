@@ -39,28 +39,20 @@
     .param p9, "wakeUpCount"    # I
 
     .prologue
-    .line 576
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 577
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->powerUid:D
 
-    .line 578
     iput-object p3, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->packageName:Ljava/lang/String;
 
-    .line 579
     iput-boolean p4, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->isSystem:Z
 
-    .line 580
     iput-wide p5, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->networkUsage:J
 
-    .line 581
     iput-wide p7, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->usageTime:J
 
-    .line 582
     iput p9, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->wakeUpCount:I
 
-    .line 583
     return-void
 .end method
 
@@ -75,7 +67,6 @@
     .param p10, "x6"    # Lcom/android/internal/os/BatteryStatsDumper$1;
 
     .prologue
-    .line 567
     invoke-direct/range {p0 .. p9}, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;-><init>(DLjava/lang/String;ZJJI)V
 
     return-void

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1089
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->val$this$0:Lcom/android/internal/app/ChooserActivity;
@@ -43,17 +42,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1092
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 1093
     iget-object v6, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     invoke-virtual {v6}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->getServiceTargetRowCount()I
 
     move-result v3
 
-    .line 1094
     .local v3, "rcount":I
     iget-object v6, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
@@ -75,7 +71,6 @@
 
     if-eq v6, v3, :cond_5
 
-    .line 1096
     :cond_0
     iget-object v6, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
@@ -84,13 +79,11 @@
 
     move-result-object v1
 
-    .line 1097
     .local v1, "old":[Lcom/android/internal/app/ChooserActivity$RowScale;
     if-eqz v1, :cond_2
 
     array-length v2, v1
 
-    .line 1098
     .local v2, "oldRCount":I
     :goto_0
     iget-object v6, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
@@ -100,12 +93,10 @@
     # setter for: Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mServiceTargetScale:[Lcom/android/internal/app/ChooserActivity$RowScale;
     invoke-static {v6, v7}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->access$402(Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;[Lcom/android/internal/app/ChooserActivity$RowScale;)[Lcom/android/internal/app/ChooserActivity$RowScale;
 
-    .line 1099
     if-eqz v1, :cond_1
 
     if-lez v3, :cond_1
 
-    .line 1100
     iget-object v6, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     # getter for: Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mServiceTargetScale:[Lcom/android/internal/app/ChooserActivity$RowScale;
@@ -121,7 +112,6 @@
 
     invoke-static {v1, v5, v6, v5, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1104
     :cond_1
     move v0, v3
 
@@ -129,12 +119,10 @@
     :goto_1
     if-ge v0, v2, :cond_3
 
-    .line 1105
     aget-object v5, v1, v0
 
     invoke-virtual {v5}, Lcom/android/internal/app/ChooserActivity$RowScale;->cancelAnimation()V
 
-    .line 1104
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -144,10 +132,8 @@
     :cond_2
     move v2, v5
 
-    .line 1097
     goto :goto_0
 
-    .line 1108
     .restart local v0    # "i":I
     .restart local v2    # "oldRCount":I
     :cond_3
@@ -156,7 +142,6 @@
     :goto_2
     if-ge v0, v3, :cond_4
 
-    .line 1109
     new-instance v5, Lcom/android/internal/app/ChooserActivity$RowScale;
 
     iget-object v6, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
@@ -178,7 +163,6 @@
 
     move-result-object v4
 
-    .line 1111
     .local v4, "rs":Lcom/android/internal/app/ChooserActivity$RowScale;
     iget-object v5, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
@@ -189,12 +173,10 @@
 
     aput-object v4, v5, v0
 
-    .line 1108
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 1119
     .end local v4    # "rs":Lcom/android/internal/app/ChooserActivity$RowScale;
     :cond_4
     move v0, v2
@@ -202,7 +184,6 @@
     :goto_3
     if-ge v0, v3, :cond_5
 
-    .line 1120
     iget-object v5, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     # getter for: Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mServiceTargetScale:[Lcom/android/internal/app/ChooserActivity$RowScale;
@@ -214,12 +195,10 @@
 
     invoke-virtual {v5}, Lcom/android/internal/app/ChooserActivity$RowScale;->startAnimation()V
 
-    .line 1119
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 1124
     .end local v0    # "i":I
     .end local v1    # "old":[Lcom/android/internal/app/ChooserActivity$RowScale;
     .end local v2    # "oldRCount":I
@@ -228,7 +207,6 @@
 
     invoke-virtual {v5}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->notifyDataSetChanged()V
 
-    .line 1125
     return-void
 .end method
 
@@ -236,15 +214,12 @@
     .locals 5
 
     .prologue
-    .line 1129
     invoke-super {p0}, Landroid/database/DataSetObserver;->onInvalidated()V
 
-    .line 1130
     iget-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     invoke-virtual {v4}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->notifyDataSetInvalidated()V
 
-    .line 1131
     iget-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     # getter for: Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mServiceTargetScale:[Lcom/android/internal/app/ChooserActivity$RowScale;
@@ -254,7 +229,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1132
     iget-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     # getter for: Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mServiceTargetScale:[Lcom/android/internal/app/ChooserActivity$RowScale;
@@ -274,16 +248,13 @@
 
     aget-object v3, v0, v1
 
-    .line 1133
     .local v3, "rs":Lcom/android/internal/app/ChooserActivity$RowScale;
     invoke-virtual {v3}, Lcom/android/internal/app/ChooserActivity$RowScale;->cancelAnimation()V
 
-    .line 1132
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1136
     .end local v0    # "arr$":[Lcom/android/internal/app/ChooserActivity$RowScale;
     .end local v1    # "i$":I
     .end local v2    # "len$":I

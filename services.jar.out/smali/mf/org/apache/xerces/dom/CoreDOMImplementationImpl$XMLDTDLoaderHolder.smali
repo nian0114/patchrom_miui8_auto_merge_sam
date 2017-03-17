@@ -24,12 +24,9 @@
     .param p1, "loader"    # Lmf/org/apache/xerces/impl/dtd/XMLDTDLoader;
 
     .prologue
-    .line 713
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 714
     iput-object p1, p0, Lmf/org/apache/xerces/dom/CoreDOMImplementationImpl$XMLDTDLoaderHolder;->loader:Lmf/org/apache/xerces/impl/dtd/XMLDTDLoader;
 
-    .line 715
     return-void
 .end method

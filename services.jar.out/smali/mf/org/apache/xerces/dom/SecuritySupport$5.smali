@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/dom/SecuritySupport$5;->val$file:Ljava/io/File;
 
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 97
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object v1, p0, Lmf/org/apache/xerces/dom/SecuritySupport$5;->val$file:Ljava/io/File;

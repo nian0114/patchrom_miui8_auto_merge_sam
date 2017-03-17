@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "o2"    # Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     .prologue
-    .line 106
     invoke-virtual {p1}, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->getImsiSubset()Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +68,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 104
     check-cast p1, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

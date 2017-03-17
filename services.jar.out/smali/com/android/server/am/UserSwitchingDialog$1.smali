@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/am/UserSwitchingDialog$1;->this$0:Lcom/android/server/am/UserSwitchingDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 110
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 119
     :cond_0
     :goto_0
     return-void
 
-    .line 112
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/am/UserSwitchingDialog$1;->this$0:Lcom/android/server/am/UserSwitchingDialog;
 
@@ -68,7 +64,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/am/ActivityManagerService;->startUserInForeground(ILandroid/app/Dialog;)Z
 
-    .line 113
     iget-object v1, p0, Lcom/android/server/am/UserSwitchingDialog$1;->this$0:Lcom/android/server/am/UserSwitchingDialog;
 
     invoke-virtual {v1}, Lcom/android/server/am/UserSwitchingDialog;->getWindow()Landroid/view/Window;
@@ -79,11 +74,9 @@
 
     move-result-object v0
 
-    .line 114
     .local v0, "decorView":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 115
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
@@ -94,7 +87,6 @@
 
     goto :goto_0
 
-    .line 110
     nop
 
     :pswitch_data_0

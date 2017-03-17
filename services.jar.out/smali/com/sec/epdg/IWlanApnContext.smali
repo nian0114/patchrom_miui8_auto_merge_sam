@@ -39,37 +39,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-boolean v1, p0, Lcom/sec/epdg/IWlanApnContext;->mTCRulesStatus:Z
 
-    .line 63
     new-instance v0, Lcom/sec/epdg/IWlanState;
 
     invoke-direct {v0}, Lcom/sec/epdg/IWlanState;-><init>()V
 
     iput-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mIwlanState:Lcom/sec/epdg/IWlanState;
 
-    .line 64
     add-int/lit8 v0, p1, 0x1
 
     invoke-virtual {p0, v0}, Lcom/sec/epdg/IWlanApnContext;->setmRilCid(I)V
 
-    .line 65
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mIwlanState:Lcom/sec/epdg/IWlanState;
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/IWlanState;->setState(I)V
 
-    .line 66
     invoke-static {}, Lcom/sec/epdg/EpdgRilSharedData;->getInstance()Lcom/sec/epdg/EpdgRilSharedData;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mEpdgRilSharedDataInstance:Lcom/sec/epdg/EpdgRilSharedData;
 
-    .line 67
     return-void
 .end method
 
@@ -78,7 +71,6 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 59
     new-instance v0, Lcom/sec/epdg/IWlanApnContext;
 
     invoke-direct {v0, p0}, Lcom/sec/epdg/IWlanApnContext;-><init>(I)V
@@ -91,7 +83,6 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     const-string v0, "[IWLANAPNCONTEXT]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -126,7 +117,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 108
     return-void
 .end method
 
@@ -138,7 +128,6 @@
     .param p2, "epdgApnType"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     const-string v5, "[IWLANAPNCONTEXT]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -171,18 +160,15 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 146
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getAllApnSettings()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 147
     .local v0, "allApnList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/sec/epdg/IWlanApnSetting;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 148
     .local v1, "apnIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/sec/epdg/IWlanApnSetting;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -191,26 +177,22 @@
 
     if-eqz v5, :cond_3
 
-    .line 149
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/sec/epdg/IWlanApnSetting;
 
-    .line 150
     .local v3, "iwlanApnSetting":Lcom/sec/epdg/IWlanApnSetting;
     invoke-virtual {v3}, Lcom/sec/epdg/IWlanApnSetting;->getmIpsecRemoteUri()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 151
     .local v4, "remoteUri":Ljava/lang/String;
     invoke-virtual {v3}, Lcom/sec/epdg/IWlanApnSetting;->getmApnType()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 152
     .local v2, "apnType":Ljava/lang/String;
     if-eqz p1, :cond_1
 
@@ -237,11 +219,9 @@
 
     if-eqz v5, :cond_0
 
-    .line 154
     :cond_2
     invoke-virtual {p0, v3}, Lcom/sec/epdg/IWlanApnContext;->setIWlanSetting(Lcom/sec/epdg/IWlanApnSetting;)V
 
-    .line 161
     .end local v2    # "apnType":Ljava/lang/String;
     .end local v3    # "iwlanApnSetting":Lcom/sec/epdg/IWlanApnSetting;
     .end local v4    # "remoteUri":Ljava/lang/String;
@@ -256,7 +236,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -281,7 +260,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 112
     return-void
 .end method
 
@@ -289,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mIwlanApnName:Ljava/lang/String;
 
     return-object v0
@@ -299,7 +276,6 @@
     .locals 1
 
     .prologue
-    .line 74
     monitor-enter p0
 
     :try_start_0
@@ -323,7 +299,6 @@
     .locals 1
 
     .prologue
-    .line 97
     monitor-enter p0
 
     :try_start_0
@@ -347,7 +322,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-boolean v0, p0, Lcom/sec/epdg/IWlanApnContext;->mTCRulesStatus:Z
 
     return v0
@@ -357,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv4addr:Ljava/lang/String;
 
     return-object v0
@@ -367,7 +340,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv6addr:Ljava/lang/String;
 
     return-object v0
@@ -377,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Lcom/sec/epdg/IWlanApnContext;->mRilCid:I
 
     return v0
@@ -389,20 +360,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 123
     const-string v0, "[IWLANAPNCONTEXT]"
 
-    const-string/jumbo v1, "resetReqIpAddress()"
+    const-string v1, "resetReqIpAddress()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 124
     iput-object v2, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv4addr:Ljava/lang/String;
 
-    .line 125
     iput-object v2, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv6addr:Ljava/lang/String;
 
-    .line 126
     return-void
 .end method
 
@@ -411,7 +378,6 @@
     .param p1, "iwlanSetting"    # Lcom/sec/epdg/IWlanApnSetting;
 
     .prologue
-    .line 78
     monitor-enter p0
 
     :try_start_0
@@ -419,12 +385,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
     monitor-exit p0
 
     return-void
 
-    .line 78
     :catchall_0
     move-exception v0
 
@@ -439,12 +403,10 @@
     .param p2, "ipv4Addr"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     if-nez p2, :cond_0
 
     if-eqz p1, :cond_1
 
-    .line 116
     :cond_0
     const/4 v0, 0x0
 
@@ -480,14 +442,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 118
     :cond_1
     iput-object p2, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv4addr:Ljava/lang/String;
 
-    .line 119
     iput-object p1, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv6addr:Ljava/lang/String;
 
-    .line 120
     return-void
 .end method
 
@@ -496,7 +455,6 @@
     .param p1, "s"    # I
 
     .prologue
-    .line 83
     monitor-enter p0
 
     :try_start_0
@@ -504,7 +462,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setState() previous state:"
+    const-string v1, "setState() previous state:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -526,17 +484,14 @@
 
     invoke-direct {p0, v0}, Lcom/sec/epdg/IWlanApnContext;->log(Ljava/lang/String;)V
 
-    .line 86
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mIwlanState:Lcom/sec/epdg/IWlanState;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/IWlanState;->setState(I)V
 
-    .line 87
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mEpdgRilSharedDataInstance:Lcom/sec/epdg/EpdgRilSharedData;
 
     if-eqz v0, :cond_0
 
-    .line 88
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnContext;->mEpdgRilSharedDataInstance:Lcom/sec/epdg/EpdgRilSharedData;
 
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanApnContext;->getmRilCid()I
@@ -547,13 +502,12 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/sec/epdg/EpdgRilSharedData;->setIWlanApnState(II)V
 
-    .line 92
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setState() Current state:"
+    const-string v1, "setState() Current state:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -577,12 +531,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 94
     monitor-exit p0
 
     return-void
 
-    .line 83
     :catchall_0
     move-exception v0
 
@@ -596,10 +548,8 @@
     .param p1, "tcRuleStatus"    # Z
 
     .prologue
-    .line 39
     iput-boolean p1, p0, Lcom/sec/epdg/IWlanApnContext;->mTCRulesStatus:Z
 
-    .line 40
     return-void
 .end method
 
@@ -608,10 +558,8 @@
     .param p1, "mReqIpv4addr"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv4addr:Ljava/lang/String;
 
-    .line 134
     return-void
 .end method
 
@@ -620,10 +568,8 @@
     .param p1, "mReqIpv6addr"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/sec/epdg/IWlanApnContext;->mReqIpv6addr:Ljava/lang/String;
 
-    .line 142
     return-void
 .end method
 
@@ -632,10 +578,8 @@
     .param p1, "mRilCid"    # I
 
     .prologue
-    .line 55
     iput p1, p0, Lcom/sec/epdg/IWlanApnContext;->mRilCid:I
 
-    .line 56
     return-void
 .end method
 
@@ -643,12 +587,11 @@
     .locals 2
 
     .prologue
-    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{mIwlanName="
+    const-string v1, "{mIwlanName="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -686,7 +629,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

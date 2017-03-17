@@ -33,10 +33,8 @@
     .locals 0
 
     .prologue
-    .line 235
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 237
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .param p1, "x0"    # Lcom/sec/epdg/IWlanApnSetting$1;
 
     .prologue
-    .line 221
     invoke-direct {p0}, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;-><init>()V
 
     return-void
@@ -62,7 +59,6 @@
     .param p6, "x6"    # I
 
     .prologue
-    .line 221
     invoke-direct/range {p0 .. p6}, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->updateIpsecValues(Lcom/sec/epdg/IWlanEnum$TunnelModeType;Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;I)V
 
     return-void
@@ -78,25 +74,18 @@
     .param p6, "ipseclifeval"    # I
 
     .prologue
-    .line 242
     iput-object p1, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mTunnelMode:Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
-    .line 243
     iput-object p2, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecEncryptionType:Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
-    .line 244
     iput-object p3, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecIntegrityType:Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
-    .line 245
     iput-object p4, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecDHGroup:Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
-    .line 246
     iput-object p5, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecLifeTimeType:Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
 
-    .line 247
     iput p6, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecLifeval:I
 
-    .line 248
     return-void
 .end method
 
@@ -106,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecDHGroup:Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
     return-object v0
@@ -116,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecEncryptionType:Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
     return-object v0
@@ -126,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecIntegrityType:Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
     return-object v0
@@ -136,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 267
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecLifeTimeType:Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
 
     return-object v0
@@ -146,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 271
     iget v0, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mIpSecLifeval:I
 
     return v0
@@ -156,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 251
     iget-object v0, p0, Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;->mTunnelMode:Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
     return-object v0

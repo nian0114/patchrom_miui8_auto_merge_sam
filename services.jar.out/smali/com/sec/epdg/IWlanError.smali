@@ -31,12 +31,10 @@
     .param p2, "details"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/sec/epdg/IWlanError;-><init>(Lcom/sec/epdg/IWlanError$EpdgError;Ljava/lang/String;Lcom/sec/epdg/IWlanError$IkeError;)V
 
-    .line 81
     return-void
 .end method
 
@@ -47,16 +45,12 @@
     .param p3, "ikeError"    # Lcom/sec/epdg/IWlanError$IkeError;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput-object p1, p0, Lcom/sec/epdg/IWlanError;->mError:Lcom/sec/epdg/IWlanError$EpdgError;
 
-    .line 69
     iput-object p2, p0, Lcom/sec/epdg/IWlanError;->mDetails:Ljava/lang/String;
 
-    .line 70
     iget-object v0, p0, Lcom/sec/epdg/IWlanError;->mError:Lcom/sec/epdg/IWlanError$EpdgError;
 
     sget-object v1, Lcom/sec/epdg/IWlanError$EpdgError;->IKE_NEGOTIATION_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
@@ -65,7 +59,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 71
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Ike error code should be passed only if error type is IKE_ERROR"
@@ -74,7 +67,6 @@
 
     throw v0
 
-    .line 73
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/IWlanError;->mError:Lcom/sec/epdg/IWlanError$EpdgError;
 
@@ -84,7 +76,6 @@
 
     if-nez p3, :cond_1
 
-    .line 74
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Ike error code not specified"
@@ -93,11 +84,9 @@
 
     throw v0
 
-    .line 76
     :cond_1
     iput-object p3, p0, Lcom/sec/epdg/IWlanError;->mIkeError:Lcom/sec/epdg/IWlanError$IkeError;
 
-    .line 77
     return-void
 .end method
 
@@ -107,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/sec/epdg/IWlanError;->mDetails:Ljava/lang/String;
 
     return-object v0
@@ -117,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/sec/epdg/IWlanError;->mError:Lcom/sec/epdg/IWlanError$EpdgError;
 
     return-object v0
@@ -127,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/sec/epdg/IWlanError;->mIkeError:Lcom/sec/epdg/IWlanError$IkeError;
 
     return-object v0

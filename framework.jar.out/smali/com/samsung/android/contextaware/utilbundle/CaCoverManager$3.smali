@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 179
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$3;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$3;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
@@ -59,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 183
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$3;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
@@ -76,11 +73,9 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/cover/CoverManager;->registerListener(Lcom/samsung/android/cover/CoverManager$StateListener;)V
 
-    .line 187
     :goto_0
     return-void
 
-    .line 185
     :cond_0
     const-string v0, "cover null"
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 309
     iput-object p1, p0, Lcom/android/internal/widget/DirectionLockView$1;->this$0:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +40,5 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 313
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 332
     iput-object p1, p0, Lcom/android/server/accessibility/OverlayMagnifier$2;->this$0:Lcom/android/server/accessibility/OverlayMagnifier;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,12 +38,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 335
     iget-object v0, p0, Lcom/android/server/accessibility/OverlayMagnifier$2;->this$0:Lcom/android/server/accessibility/OverlayMagnifier;
 
     # invokes: Lcom/android/server/accessibility/OverlayMagnifier;->setMagnificationSettings()V
     invoke-static {v0}, Lcom/android/server/accessibility/OverlayMagnifier;->access$600(Lcom/android/server/accessibility/OverlayMagnifier;)V
 
-    .line 336
     return-void
 .end method

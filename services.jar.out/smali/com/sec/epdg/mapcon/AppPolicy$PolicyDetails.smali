@@ -30,19 +30,14 @@
     .param p3, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/sec/epdg/mapcon/AppPolicy$PolicyDetails;->mPreferredRat:Lcom/sec/epdg/mapcon/MapconConstants$MapconRat;
 
-    .line 42
     iput-object p2, p0, Lcom/sec/epdg/mapcon/AppPolicy$PolicyDetails;->mProcessName:Ljava/lang/String;
 
-    .line 43
     iput-object p3, p0, Lcom/sec/epdg/mapcon/AppPolicy$PolicyDetails;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 44
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/sec/epdg/mapcon/AppPolicy$PolicyDetails;->mPendingIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -62,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/sec/epdg/mapcon/AppPolicy$PolicyDetails;->mPreferredRat:Lcom/sec/epdg/mapcon/MapconConstants$MapconRat;
 
     return-object v0
@@ -72,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/sec/epdg/mapcon/AppPolicy$PolicyDetails;->mProcessName:Ljava/lang/String;
 
     return-object v0
@@ -82,7 +74,6 @@
     .locals 2
 
     .prologue
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

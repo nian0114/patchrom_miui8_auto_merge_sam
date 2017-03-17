@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5001
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$29;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 5004
     const-string v0, "[EPDGService]"
 
     const-string v1, "Cdma available"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5005
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -63,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5006
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -73,21 +69,18 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/EpdgTimers;->stopTimer(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)V
 
-    .line 5007
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getIsLteAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 5008
     const-string v0, "[EPDGService]"
 
     const-string v1, "LTE not available and CDMA is good, if IMS is up, trigger L2W handover"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5010
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$29;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
@@ -101,11 +94,9 @@
     # invokes: Lcom/sec/epdg/EpdgService;->retryL2WHandoverIfRequired(Ljava/lang/String;)Z
     invoke-static {v0, v1}, Lcom/sec/epdg/EpdgService;->access$4900(Lcom/sec/epdg/EpdgService;Ljava/lang/String;)Z
 
-    .line 5013
     :cond_0
     invoke-static {v2}, Lcom/sec/epdg/EpdgService;->setIsCsAvailable(Z)V
 
-    .line 5014
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -119,11 +110,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 5027
     :goto_0
     return-void
 
-    .line 5018
     :cond_1
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$29;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -134,7 +123,6 @@
 
     if-nez v0, :cond_2
 
-    .line 5020
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$29;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->sendEpdgRegisterBroadcast(Z)V
@@ -142,14 +130,12 @@
 
     goto :goto_0
 
-    .line 5025
     :cond_2
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$29;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->setHasPendingCdmaIndication(Z)V
     invoke-static {v0, v2}, Lcom/sec/epdg/EpdgService;->access$8100(Lcom/sec/epdg/EpdgService;Z)V
 
-    .line 5026
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$29;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;

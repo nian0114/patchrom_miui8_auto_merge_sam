@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,18 +28,15 @@
     .end annotation
 
     .prologue
-    .line 47
     invoke-virtual {p0}, Lmf/org/apache/xerces/util/ErrorHandlerProxy;->getErrorHandler()Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
 
     move-result-object v0
 
-    .line 48
     .local v0, "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     instance-of v1, v0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 49
     check-cast v0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;
 
     .end local v0    # "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
@@ -48,11 +44,9 @@
 
     invoke-interface {v1, p1}, Lorg/xml/sax/ErrorHandler;->error(Lorg/xml/sax/SAXParseException;)V
 
-    .line 56
     :goto_0
     return-void
 
-    .line 52
     .restart local v0    # "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     :cond_0
     const-string v1, ""
@@ -78,18 +72,15 @@
     .end annotation
 
     .prologue
-    .line 59
     invoke-virtual {p0}, Lmf/org/apache/xerces/util/ErrorHandlerProxy;->getErrorHandler()Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
 
     move-result-object v0
 
-    .line 60
     .local v0, "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     instance-of v1, v0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 61
     check-cast v0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;
 
     .end local v0    # "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
@@ -97,11 +88,9 @@
 
     invoke-interface {v1, p1}, Lorg/xml/sax/ErrorHandler;->fatalError(Lorg/xml/sax/SAXParseException;)V
 
-    .line 66
     :goto_0
     return-void
 
-    .line 64
     .restart local v0    # "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     :cond_0
     const-string v1, ""
@@ -130,18 +119,15 @@
     .end annotation
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lmf/org/apache/xerces/util/ErrorHandlerProxy;->getErrorHandler()Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
 
     move-result-object v0
 
-    .line 70
     .local v0, "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     instance-of v1, v0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 71
     check-cast v0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;
 
     .end local v0    # "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
@@ -149,11 +135,9 @@
 
     invoke-interface {v1, p1}, Lorg/xml/sax/ErrorHandler;->warning(Lorg/xml/sax/SAXParseException;)V
 
-    .line 76
     :goto_0
     return-void
 
-    .line 74
     .restart local v0    # "eh":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     :cond_0
     const-string v1, ""

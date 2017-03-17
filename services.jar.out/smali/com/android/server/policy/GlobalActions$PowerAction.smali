@@ -26,10 +26,8 @@
     .locals 2
 
     .prologue
-    .line 2674
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
-    .line 2675
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
 
@@ -44,10 +42,8 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/policy/GlobalActions$SinglePressAction;-><init>(II)V
 
-    .line 2677
     return-void
 
-    .line 2675
     :cond_0
     const v0, 0x108096e
 
@@ -60,7 +56,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/GlobalActions$1;
 
     .prologue
-    .line 2673
     invoke-direct {p0, p1}, Lcom/android/server/policy/GlobalActions$PowerAction;-><init>(Lcom/android/server/policy/GlobalActions;)V
 
     return-void
@@ -72,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 2751
     invoke-super {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isEnabled()Z
 
     move-result v0
@@ -86,7 +80,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2681
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -94,7 +87,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "user"
+    const-string v3, "user"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -102,9 +95,8 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 2682
     .local v0, "um":Landroid/os/UserManager;
-    const-string/jumbo v2, "no_safe_boot"
+    const-string v2, "no_safe_boot"
 
     invoke-virtual {v0, v2}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;)Z
 
@@ -112,7 +104,6 @@
 
     if-nez v2, :cond_0
 
-    .line 2683
     const-string v2, "VZW"
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mSalesCode:Ljava/lang/String;
@@ -126,7 +117,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2684
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -136,7 +126,6 @@
 
     invoke-interface {v2, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->rebootSafeMode(Z)V
 
-    .line 2688
     :goto_0
     return v1
 
@@ -154,7 +143,6 @@
 
     const/4 v4, 0x0
 
-    .line 2703
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isTSafeLock()Z
@@ -173,7 +161,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2704
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -194,12 +181,10 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 2733
     :cond_0
     :goto_0
     return-void
 
-    .line 2708
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -210,7 +195,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2709
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -233,15 +217,13 @@
 
     goto :goto_0
 
-    .line 2713
     :cond_2
     const-string v0, "GlobalActions"
 
-    const-string/jumbo v1, "in onPress of PowerOFF"
+    const-string v1, "in onPress of PowerOFF"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2714
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v1, "com.android.service.GlobalAction"
@@ -252,8 +234,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/policy/GlobalActions;->insertLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2716
-    const-string/jumbo v0, "eng"
+    const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
@@ -263,14 +244,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 2717
-    const-string/jumbo v0, "persist.sys.shutdown"
+    const-string v0, "persist.sys.shutdown"
 
     const-string v1, "GASD"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2721
     :cond_3
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -288,7 +267,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->shutdown(Z)V
 
-    .line 2722
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
 
@@ -296,7 +274,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2723
     # getter for: Lcom/android/server/policy/GlobalActions;->sIsSecondConfirming:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$000()Z
 
@@ -304,7 +281,6 @@
 
     if-nez v0, :cond_4
 
-    .line 2724
     # getter for: Lcom/android/server/policy/GlobalActions;->sIsConfirmingGuard:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$100()Ljava/lang/Object;
 
@@ -312,19 +288,16 @@
 
     monitor-enter v1
 
-    .line 2725
     const/4 v0, 0x0
 
     :try_start_0
     # setter for: Lcom/android/server/policy/GlobalActions;->sIsConfirming:Z
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$202(Z)Z
 
-    .line 2726
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2730
     :goto_1
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -339,7 +312,6 @@
 
     goto :goto_0
 
-    .line 2726
     :catchall_0
     move-exception v0
 
@@ -350,7 +322,6 @@
 
     throw v0
 
-    .line 2728
     :cond_4
     # setter for: Lcom/android/server/policy/GlobalActions;->sIsSecondConfirming:Z
     invoke-static {v4}, Lcom/android/server/policy/GlobalActions;->access$002(Z)Z
@@ -362,7 +333,6 @@
     .locals 1
 
     .prologue
-    .line 2698
     const/4 v0, 0x1
 
     return v0
@@ -372,7 +342,6 @@
     .locals 1
 
     .prologue
-    .line 2746
     const/4 v0, 0x1
 
     return v0
@@ -382,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 2693
     const/4 v0, 0x1
 
     return v0

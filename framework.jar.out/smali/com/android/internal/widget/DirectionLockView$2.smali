@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 448
     invoke-static {}, Lcom/android/internal/widget/DirectionLockView$Direction;->values()[Lcom/android/internal/widget/DirectionLockView$Direction;
 
     move-result-object v0

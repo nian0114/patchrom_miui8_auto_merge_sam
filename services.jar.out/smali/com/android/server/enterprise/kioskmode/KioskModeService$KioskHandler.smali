@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
-    .line 244
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 245
     return-void
 .end method
 
@@ -45,30 +42,24 @@
 
     const/4 v7, 0x0
 
-    .line 250
     if-eqz p1, :cond_0
 
-    .line 251
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 273
     :cond_0
     :goto_0
     return-void
 
-    .line 253
     :pswitch_0
     # setter for: Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
     invoke-static {v5}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->access$102(Z)Z
 
-    .line 254
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 255
     .local v2, "enableData":Landroid/os/Bundle;
     const-string v4, "adminuid"
 
@@ -76,15 +67,13 @@
 
     move-result v0
 
-    .line 256
     .local v0, "adminUid":I
-    const-string/jumbo v4, "package"
+    const-string v4, "package"
 
     invoke-virtual {v2, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 257
     .local v3, "kioskPackage":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
@@ -95,13 +84,11 @@
     # invokes: Lcom/android/server/enterprise/kioskmode/KioskModeService;->_enableKioskMode(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
     invoke-static {v4, v5, v3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->access$200(Lcom/android/server/enterprise/kioskmode/KioskModeService;Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 258
     # setter for: Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
     invoke-static {v7}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->access$102(Z)Z
 
     goto :goto_0
 
-    .line 262
     .end local v0    # "adminUid":I
     .end local v2    # "enableData":Landroid/os/Bundle;
     .end local v3    # "kioskPackage":Ljava/lang/String;
@@ -109,12 +96,10 @@
     # setter for: Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
     invoke-static {v5}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->access$102(Z)Z
 
-    .line 263
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 264
     .local v1, "disableData":Landroid/os/Bundle;
     const-string v4, "adminuid"
 
@@ -122,7 +107,6 @@
 
     move-result v0
 
-    .line 265
     .restart local v0    # "adminUid":I
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
@@ -135,13 +119,11 @@
     # invokes: Lcom/android/server/enterprise/kioskmode/KioskModeService;->_disableKioskMode(Landroid/app/enterprise/ContextInfo;I)V
     invoke-static {v4, v5, v6}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->access$300(Lcom/android/server/enterprise/kioskmode/KioskModeService;Landroid/app/enterprise/ContextInfo;I)V
 
-    .line 266
     # setter for: Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
     invoke-static {v7}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->access$102(Z)Z
 
     goto :goto_0
 
-    .line 251
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

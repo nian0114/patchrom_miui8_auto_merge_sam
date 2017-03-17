@@ -40,17 +40,14 @@
     .locals 1
 
     .prologue
-    .line 2208
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$RulesEngine;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2206
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/DeviceManager3LMService$RulesEngine;->mRulesList:Ljava/util/ArrayList;
 
-    .line 2208
     return-void
 .end method
 
@@ -70,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 2256
     .local p1, "regexMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     return-void
 .end method
@@ -81,14 +77,11 @@
     .param p2, "def"    # Z
 
     .prologue
-    .line 2289
     move v1, p2
 
-    .line 2290
     .local v1, "returnCode":Z
     const/4 v0, 0x0
 
-    .line 2293
     .local v0, "longestRegexStrMatch":I
     const/4 v2, 0x1
 
@@ -99,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 2212
     const/4 v0, 0x0
 
     return v0
@@ -119,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 2273
     .local p1, "regexPermMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x1
 
@@ -132,7 +123,6 @@
     .param p2, "permitted"    # Z
 
     .prologue
-    .line 2226
     const/4 v0, 0x0
 
     return v0

@@ -40,7 +40,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "endorsed.jdk1.4.0"
+    const-string v3, "endorsed.jdk1.4.0"
 
     invoke-static {v3}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 
@@ -108,7 +108,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "endorsed.jdk1.4.0"
+    const-string v3, "endorsed.jdk1.4.0"
 
     invoke-static {v3}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 
@@ -172,7 +172,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "endorsed.jdk1.4.0"
+    const-string v3, "endorsed.jdk1.4.0"
 
     invoke-static {v3}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 

@@ -110,7 +110,7 @@
 
     check-cast v0, Lorg/w3c/dom/Attr;
 
-    const-string/jumbo v5, "http://www.w3.org/XML/1998/namespace"
+    const-string v5, "http://www.w3.org/XML/1998/namespace"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -122,7 +122,7 @@
 
     if-eqz v5, :cond_2
 
-    const-string/jumbo v5, "http://www.w3.org/XML/1998/namespace"
+    const-string v5, "http://www.w3.org/XML/1998/namespace"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
@@ -236,7 +236,7 @@
 
     check-cast v0, Lorg/w3c/dom/Attr;
 
-    const-string/jumbo v5, "http://www.w3.org/XML/1998/namespace"
+    const-string v5, "http://www.w3.org/XML/1998/namespace"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -248,7 +248,7 @@
 
     if-eqz v5, :cond_2
 
-    const-string/jumbo v5, "http://www.w3.org/XML/1998/namespace"
+    const-string v5, "http://www.w3.org/XML/1998/namespace"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
@@ -393,7 +393,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "http://www.w3.org/2000/xmlns/"
+    const-string v11, "http://www.w3.org/2000/xmlns/"
 
     invoke-virtual {v11, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -413,7 +413,7 @@
     goto :goto_1
 
     :cond_1
-    const-string/jumbo v10, "xml"
+    const-string v10, "xml"
 
     invoke-virtual {v10, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -421,7 +421,7 @@
 
     if-eqz v10, :cond_2
 
-    const-string/jumbo v10, "http://www.w3.org/XML/1998/namespace"
+    const-string v10, "http://www.w3.org/XML/1998/namespace"
 
     invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -481,9 +481,9 @@
     :cond_3
     if-eqz v6, :cond_6
 
-    const-string/jumbo v0, "http://www.w3.org/2000/xmlns/"
+    const-string v0, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v1, "xmlns"
+    const-string v1, "xmlns"
 
     invoke-interface {p1, v0, v1}, Lorg/w3c/dom/Element;->getAttributeNodeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -491,7 +491,7 @@
 
     if-nez v0, :cond_7
 
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     invoke-virtual {p2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/implementations/NameSpaceSymbTable;->getMapping(Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -520,7 +520,7 @@
 
     if-nez v0, :cond_4
 
-    const-string/jumbo v0, "xmlns"
+    const-string v0, "xmlns"
 
     const-string v1, ""
 
@@ -601,7 +601,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "http://www.w3.org/2000/xmlns/"
+    const-string v9, "http://www.w3.org/2000/xmlns/"
 
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -619,7 +619,7 @@
     goto :goto_1
 
     :cond_2
-    const-string/jumbo v8, "xml"
+    const-string v8, "xml"
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -627,7 +627,7 @@
 
     if-eqz v8, :cond_3
 
-    const-string/jumbo v8, "http://www.w3.org/XML/1998/namespace"
+    const-string v8, "http://www.w3.org/XML/1998/namespace"
 
     invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

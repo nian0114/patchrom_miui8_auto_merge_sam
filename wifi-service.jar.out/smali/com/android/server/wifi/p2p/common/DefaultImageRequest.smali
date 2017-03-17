@@ -38,14 +38,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 71
     new-instance v0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;
 
     invoke-direct {v0}, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;-><init>()V
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->EMPTY_DEFAULT_IMAGE_REQUEST:Lcom/android/server/wifi/p2p/common/DefaultImageRequest;
 
-    .line 77
     new-instance v0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;
 
     const/4 v1, 0x1
@@ -63,32 +61,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->scale:F
 
-    .line 54
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->offset:F
 
-    .line 59
     iput-boolean v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->isCircular:Z
 
-    .line 61
     iput v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->letterSize:I
 
-    .line 63
     iput-boolean v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->isAvailableNumber:Z
 
-    .line 65
     iput v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->spamLevel:I
 
-    .line 81
     return-void
 .end method
 
@@ -103,47 +93,34 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->scale:F
 
-    .line 54
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->offset:F
 
-    .line 59
     iput-boolean v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->isCircular:Z
 
-    .line 61
     iput v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->letterSize:I
 
-    .line 63
     iput-boolean v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->isAvailableNumber:Z
 
-    .line 65
     iput v1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->spamLevel:I
 
-    .line 89
     iput-object p1, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->displayName:Ljava/lang/String;
 
-    .line 90
     iput-object p2, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->identifier:Ljava/lang/String;
 
-    .line 91
     iput p3, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->scale:F
 
-    .line 92
     iput p4, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->offset:F
 
-    .line 93
     iput-boolean p5, p0, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;->isCircular:Z
 
-    .line 94
     return-void
 .end method
 
@@ -154,7 +131,6 @@
     .param p3, "isCircular"    # Z
 
     .prologue
-    .line 84
     const/high16 v3, 0x3f800000    # 1.0f
 
     const/4 v4, 0x0
@@ -169,6 +145,5 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/wifi/p2p/common/DefaultImageRequest;-><init>(Ljava/lang/String;Ljava/lang/String;FFZ)V
 
-    .line 85
     return-void
 .end method

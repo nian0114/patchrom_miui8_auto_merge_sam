@@ -42,16 +42,13 @@
     .param p1, "packageManagerService"    # Lcom/android/server/pm/PackageManagerService;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/pm/PackageDexOptimizer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
-    .line 61
     iget-object v1, p1, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -59,7 +56,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 63
     .local v0, "powerManager":Landroid/os/PowerManager;
     const/4 v1, 0x1
 
@@ -71,7 +67,6 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDexoptWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 64
     return-void
 .end method
 
@@ -88,19 +83,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 257
     invoke-virtual {p1}, Landroid/content/pm/PackageParser$Package;->canHaveOatDir()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 267
     :cond_0
     :goto_0
     return-object v2
 
-    .line 260
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -108,7 +100,6 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 261
     .local v0, "codePath":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
@@ -116,12 +107,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 262
     invoke-static {v0}, Lcom/android/server/pm/PackageDexOptimizer;->getOatDir(Ljava/io/File;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 263
     .local v1, "oatDir":Ljava/io/File;
     iget-object v2, p0, Lcom/android/server/pm/PackageDexOptimizer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
@@ -133,7 +122,6 @@
 
     invoke-virtual {v2, v3, p2}, Lcom/android/server/pm/Installer;->createOatDir(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
@@ -146,10 +134,9 @@
     .param p0, "codePath"    # Ljava/io/File;
 
     .prologue
-    .line 271
     new-instance v0, Ljava/io/File;
 
-    const-string/jumbo v1, "oat"
+    const-string v1, "oat"
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -178,18 +165,15 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p6, "done":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     if-eqz p2, :cond_2
 
     move-object/from16 v4, p2
 
-    .line 103
     .local v4, "instructionSets":[Ljava/lang/String;
     :goto_0
     if-eqz p6, :cond_1
 
-    .line 104
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -198,14 +182,12 @@
 
     invoke-virtual {v0, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 105
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->usesLibraries:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 106
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->usesLibraries:Ljava/util/ArrayList;
@@ -222,7 +204,6 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/android/server/pm/PackageDexOptimizer;->performDexOptLibsLI(Ljava/util/ArrayList;[Ljava/lang/String;ZZZLandroid/util/ArraySet;)V
 
-    .line 109
     :cond_0
     move-object/from16 v0, p1
 
@@ -230,7 +211,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 110
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->usesOptionalLibraries:Ljava/util/ArrayList;
@@ -247,7 +227,6 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/android/server/pm/PackageDexOptimizer;->performDexOptLibsLI(Ljava/util/ArrayList;[Ljava/lang/String;ZZZLandroid/util/ArraySet;)V
 
-    .line 115
     :cond_1
     move-object/from16 v0, p1
 
@@ -259,14 +238,11 @@
 
     if-nez v2, :cond_3
 
-    .line 116
     const/4 v2, 0x0
 
-    .line 240
     :goto_1
     return v2
 
-    .line 100
     .end local v4    # "instructionSets":[Ljava/lang/String;
     :cond_2
     move-object/from16 v0, p1
@@ -279,7 +255,6 @@
 
     goto :goto_0
 
-    .line 119
     .restart local v4    # "instructionSets":[Ljava/lang/String;
     :cond_3
     move-object/from16 v0, p1
@@ -294,7 +269,6 @@
 
     const/4 v13, 0x1
 
-    .line 120
     .local v13, "vmSafeMode":Z
     :goto_2
     move-object/from16 v0, p1
@@ -309,24 +283,20 @@
 
     const/4 v14, 0x1
 
-    .line 122
     .local v14, "debuggable":Z
     :goto_3
     invoke-virtual/range {p1 .. p1}, Landroid/content/pm/PackageParser$Package;->getAllCodePathsExcludingResourceOnly()Ljava/util/List;
 
     move-result-object v25
 
-    .line 123
     .local v25, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/16 v26, 0x0
 
-    .line 128
     .local v26, "performedDexOpt":Z
     invoke-static {v4}, Lcom/android/server/pm/InstructionSets;->getDexCodeInstructionSets([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v19
 
-    .line 129
     .local v19, "dexCodeInstructionSets":[Ljava/lang/String;
     move-object/from16 v18, v19
 
@@ -354,7 +324,6 @@
 
     aget-object v11, v18, v22
 
-    .line 130
     .local v11, "dexCodeInstructionSet":Ljava/lang/String;
     if-nez p3, :cond_6
 
@@ -368,7 +337,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 129
     .end local v22    # "i$":I
     :goto_5
     add-int/lit8 v21, v22, 0x1
@@ -380,7 +348,6 @@
     .restart local v22    # "i$":I
     goto :goto_4
 
-    .line 119
     .end local v11    # "dexCodeInstructionSet":Ljava/lang/String;
     .end local v13    # "vmSafeMode":Z
     .end local v14    # "debuggable":Z
@@ -395,14 +362,12 @@
 
     goto :goto_2
 
-    .line 120
     .restart local v13    # "vmSafeMode":Z
     :cond_5
     const/4 v14, 0x0
 
     goto :goto_3
 
-    .line 134
     .restart local v11    # "dexCodeInstructionSet":Ljava/lang/String;
     .restart local v14    # "debuggable":Z
     .restart local v18    # "arr$":[Ljava/lang/String;
@@ -432,14 +397,11 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 136
     .local v7, "path":Ljava/lang/String;
     if-eqz p3, :cond_a
 
-    .line 137
     const/4 v12, 0x1
 
-    .line 148
     .local v12, "dexoptNeeded":I
     :goto_7
     if-nez p3, :cond_8
@@ -448,41 +410,34 @@
 
     if-eqz v12, :cond_8
 
-    .line 150
     const/4 v2, 0x4
 
     if-ne v12, v2, :cond_b
 
-    .line 151
     const/4 v2, 0x1
 
     move-object/from16 v0, p1
 
     iput-boolean v2, v0, Landroid/content/pm/PackageParser$Package;->interpret_only:Z
 
-    .line 167
     :cond_8
     if-nez p4, :cond_7
 
     if-eqz v12, :cond_7
 
-    .line 170
     const/4 v15, 0x0
 
-    .line 171
     .local v15, "oatDir":Ljava/lang/String;
     const/4 v2, 0x1
 
     if-ne v12, v2, :cond_d
 
-    .line 173
     move-object/from16 v0, p1
 
     iget-boolean v2, v0, Landroid/content/pm/PackageParser$Package;->interpret_only:Z
 
     if-eqz v2, :cond_9
 
-    .line 174
     const/4 v2, 0x5
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -509,11 +464,9 @@
 
     invoke-static {v2, v3}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 178
     :cond_9
-    const-string/jumbo v20, "dex2oat"
+    const-string v20, "dex2oat"
 
-    .line 180
     .local v20, "dexoptType":Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p0
@@ -526,7 +479,6 @@
 
     move-result-object v15
 
-    .line 201
     :goto_8
     const-string v2, "PackageManager.DexOptimizer"
 
@@ -630,7 +582,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -641,7 +592,6 @@
 
     move-result v8
 
-    .line 208
     .local v8, "sharedGid":I
     move-object/from16 v0, p0
 
@@ -651,7 +601,6 @@
 
     if-eqz v2, :cond_12
 
-    .line 209
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageDexOptimizer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
@@ -685,7 +634,6 @@
 
     move-result v27
 
-    .line 212
     .local v27, "ret":I
     const-string v2, "PackageManager.DexOptimizer"
 
@@ -693,7 +641,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "do mInstaller.asyncDexopt : "
+    const-string v5, "do mInstaller.asyncDexopt : "
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -711,16 +659,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :goto_a
     if-nez v27, :cond_7
 
-    .line 223
     const/16 v26, 0x1
 
     goto/16 :goto_6
 
-    .line 140
     .end local v8    # "sharedGid":I
     .end local v12    # "dexoptNeeded":I
     .end local v15    # "oatDir":Ljava/lang/String;
@@ -743,12 +688,10 @@
     .restart local v12    # "dexoptNeeded":I
     goto/16 :goto_7
 
-    .line 142
     .end local v12    # "dexoptNeeded":I
     :catch_0
     move-exception v23
 
-    .line 143
     .local v23, "ioe":Ljava/io/IOException;
     const-string v2, "PackageManager.DexOptimizer"
 
@@ -774,12 +717,10 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 144
     const/4 v2, -0x1
 
     goto/16 :goto_1
 
-    .line 158
     .end local v23    # "ioe":Ljava/io/IOException;
     .restart local v12    # "dexoptNeeded":I
     :cond_b
@@ -793,7 +734,6 @@
 
     if-nez v2, :cond_c
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageDexOptimizer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
@@ -834,22 +774,18 @@
 
     invoke-static {v2, v3}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 161
     :cond_c
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/pm/PackageDexOptimizer;->addPackageForDeferredDexopt(Landroid/content/pm/PackageParser$Package;)V
 
-    .line 162
     const/4 v2, 0x2
 
     goto/16 :goto_1
 
-    .line 181
     .restart local v15    # "oatDir":Ljava/lang/String;
     .restart local v20    # "dexoptType":Ljava/lang/String;
     :catch_1
     move-exception v23
 
-    .line 182
     .restart local v23    # "ioe":Ljava/io/IOException;
     const-string v2, "PackageManager.DexOptimizer"
 
@@ -877,12 +813,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     const/4 v2, -0x1
 
     goto/16 :goto_1
 
-    .line 185
     .end local v20    # "dexoptType":Ljava/lang/String;
     .end local v23    # "ioe":Ljava/io/IOException;
     :cond_d
@@ -890,40 +824,33 @@
 
     if-ne v12, v2, :cond_e
 
-    .line 186
-    const-string/jumbo v20, "patchoat"
+    const-string v20, "patchoat"
 
     .restart local v20    # "dexoptType":Ljava/lang/String;
     goto/16 :goto_8
 
-    .line 187
     .end local v20    # "dexoptType":Ljava/lang/String;
     :cond_e
     const/4 v2, 0x3
 
     if-ne v12, v2, :cond_f
 
-    .line 188
-    const-string/jumbo v20, "self patchoat"
+    const-string v20, "self patchoat"
 
     .restart local v20    # "dexoptType":Ljava/lang/String;
     goto/16 :goto_8
 
-    .line 190
     .end local v20    # "dexoptType":Ljava/lang/String;
     :cond_f
     const/4 v2, 0x4
 
     if-ne v12, v2, :cond_10
 
-    .line 191
-    const-string/jumbo v20, "switchoat to dex2oat"
+    const-string v20, "switchoat to dex2oat"
 
-    .line 192
     .restart local v20    # "dexoptType":Ljava/lang/String;
     const/4 v12, 0x1
 
-    .line 193
     const/4 v2, 0x5
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -950,7 +877,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 194
     const/4 v2, 0x0
 
     move-object/from16 v0, p1
@@ -959,7 +885,6 @@
 
     goto/16 :goto_8
 
-    .line 198
     .end local v20    # "dexoptType":Ljava/lang/String;
     :cond_10
     new-instance v2, Ljava/lang/IllegalStateException;
@@ -986,7 +911,6 @@
 
     throw v2
 
-    .line 209
     .restart local v8    # "sharedGid":I
     .restart local v20    # "dexoptType":Ljava/lang/String;
     :cond_11
@@ -994,7 +918,6 @@
 
     goto/16 :goto_9
 
-    .line 214
     :cond_12
     move-object/from16 v0, p0
 
@@ -1036,7 +959,6 @@
 
     goto :goto_b
 
-    .line 233
     .end local v7    # "path":Ljava/lang/String;
     .end local v8    # "sharedGid":I
     .end local v12    # "dexoptNeeded":I
@@ -1051,7 +973,6 @@
 
     goto/16 :goto_5
 
-    .line 240
     .end local v11    # "dexCodeInstructionSet":Ljava/lang/String;
     .end local v21    # "i$":Ljava/util/Iterator;
     .restart local v22    # "i$":I
@@ -1091,7 +1012,6 @@
     .end annotation
 
     .prologue
-    .line 276
     .local p1, "libs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p6, "done":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1113,7 +1033,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 277
     .local v8, "libName":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
@@ -1121,7 +1040,6 @@
 
     move-result-object v1
 
-    .line 279
     .local v1, "libPkg":Landroid/content/pm/PackageParser$Package;
     if-eqz v1, :cond_0
 
@@ -1143,12 +1061,10 @@
 
     move-object v6, p6
 
-    .line 280
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/PackageDexOptimizer;->performDexOptLI(Landroid/content/pm/PackageParser$Package;[Ljava/lang/String;ZZZLandroid/util/ArraySet;)I
 
     goto :goto_0
 
-    .line 283
     .end local v1    # "libPkg":Landroid/content/pm/PackageParser$Package;
     .end local v8    # "libName":Ljava/lang/String;
     :cond_1
@@ -1162,25 +1078,21 @@
     .param p1, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 296
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDeferredDexOpt:Landroid/util/ArraySet;
 
     if-nez v0, :cond_0
 
-    .line 297
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDeferredDexOpt:Landroid/util/ArraySet;
 
-    .line 299
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDeferredDexOpt:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 300
     return-void
 .end method
 
@@ -1197,16 +1109,13 @@
     .end annotation
 
     .prologue
-    .line 290
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDeferredDexOpt:Landroid/util/ArraySet;
 
-    .line 291
     .local v0, "result":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/content/pm/PackageParser$Package;>;"
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDeferredDexOpt:Landroid/util/ArraySet;
 
-    .line 292
     return-object v0
 .end method
 
@@ -1220,7 +1129,6 @@
     .param p6, "bootComplete"    # Z
 
     .prologue
-    .line 76
     if-eqz p5, :cond_3
 
     iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->usesLibraries:Ljava/util/ArrayList;
@@ -1231,19 +1139,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 77
     :cond_0
     new-instance v6, Landroid/util/ArraySet;
 
     invoke-direct {v6}, Landroid/util/ArraySet;-><init>()V
 
-    .line 78
     .local v6, "done":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 82
     :goto_0
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
@@ -1251,15 +1156,12 @@
 
     monitor-enter v8
 
-    .line 83
     :try_start_0
     iget-boolean v7, p0, Lcom/android/server/pm/PackageDexOptimizer;->mSystemReady:Z
 
-    .line 84
     .local v7, "useLock":Z
     if-eqz v7, :cond_1
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDexoptWakeLock:Landroid/os/PowerManager$WakeLock;
 
     new-instance v1, Landroid/os/WorkSource;
@@ -1272,7 +1174,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDexoptWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
@@ -1292,7 +1193,6 @@
 
     move v5, p6
 
-    .line 89
     :try_start_1
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/PackageDexOptimizer;->performDexOptLI(Landroid/content/pm/PackageParser$Package;[Ljava/lang/String;ZZZLandroid/util/ArraySet;)I
     :try_end_1
@@ -1300,10 +1200,8 @@
 
     move-result v0
 
-    .line 91
     if-eqz v7, :cond_2
 
-    .line 92
     :try_start_2
     iget-object v1, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDexoptWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -1314,7 +1212,6 @@
 
     return v0
 
-    .line 80
     .end local v6    # "done":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .end local v7    # "useLock":Z
     :cond_3
@@ -1323,14 +1220,12 @@
     .restart local v6    # "done":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     goto :goto_0
 
-    .line 91
     .restart local v7    # "useLock":Z
     :catchall_0
     move-exception v0
 
     if-eqz v7, :cond_4
 
-    .line 92
     iget-object v1, p0, Lcom/android/server/pm/PackageDexOptimizer;->mDexoptWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -1338,7 +1233,6 @@
     :cond_4
     throw v0
 
-    .line 95
     .end local v7    # "useLock":Z
     :catchall_1
     move-exception v0
@@ -1354,11 +1248,9 @@
     .locals 1
 
     .prologue
-    .line 303
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageDexOptimizer;->mSystemReady:Z
 
-    .line 304
     return-void
 .end method

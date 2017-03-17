@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 279
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     const-string v1, "None"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->None:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
-    .line 280
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     const-string v1, "Pattern"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->Pattern:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
-    .line 281
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     const-string v1, "Password"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->Password:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
-    .line 282
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     const-string v1, "PIN"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->PIN:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
-    .line 283
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     const-string v1, "BackupPin"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->BackupPin:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
-    .line 284
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     const-string v1, "FingerPrint"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->FingerPrint:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
-    .line 278
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 278
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 278
     const-class v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 278
     sget-object v0, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->$VALUES:[Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
     invoke-virtual {v0}, [Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->clone()Ljava/lang/Object;

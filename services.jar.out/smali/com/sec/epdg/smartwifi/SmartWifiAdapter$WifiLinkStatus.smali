@@ -50,7 +50,6 @@
 
     const/4 v3, 0x0
 
-    .line 1598
     new-instance v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
     const-string v1, "UNDETERMINABLE"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->UNDETERMINABLE:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
-    .line 1599
     new-instance v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
     const-string v1, "CAPTIVE_UNAUTHENTICATED"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->CAPTIVE_UNAUTHENTICATED:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
-    .line 1600
     new-instance v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
     const-string v1, "CAPTIVE_AUTHENTICATED"
@@ -83,7 +80,6 @@
 
     sput-object v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->CAPTIVE_AUTHENTICATED:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
-    .line 1597
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
@@ -118,16 +114,12 @@
     .end annotation
 
     .prologue
-    .line 1605
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1606
     iput p3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->mValue:I
 
-    .line 1607
     iput-object p4, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->mText:Ljava/lang/String;
 
-    .line 1608
     return-void
 .end method
 
@@ -136,7 +128,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1597
     const-class v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 1597
     sget-object v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->$VALUES:[Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->clone()Ljava/lang/Object;
@@ -170,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 1612
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiLinkStatus;->mText:Ljava/lang/String;
 
     return-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$2;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 202
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 203
     const-string v0, "Result"
 
     const/4 v1, 0x0
@@ -64,7 +61,6 @@
     # setter for: Lcom/android/server/enterprise/device/DeviceInfo;->mRooting:I
     invoke-static {v0}, Lcom/android/server/enterprise/device/DeviceInfo;->access$102(I)I
 
-    .line 205
     :cond_0
     return-void
 .end method

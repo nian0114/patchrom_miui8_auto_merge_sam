@@ -56,12 +56,10 @@
 
     const/4 v3, 0x6
 
-    .line 718
     iput-object p1, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 691
     const/16 v0, 0x80
 
     new-array v0, v0, [B
@@ -76,12 +74,10 @@
 
     const/16 v1, 0xd
 
-    .line 692
     aput-byte v4, v0, v1
 
     const/16 v1, 0x20
 
-    .line 693
     aput-byte v4, v0, v1
 
     const/16 v1, 0x21
@@ -168,7 +164,6 @@
 
     const/16 v1, 0x35
 
-    .line 694
     aput-byte v5, v0, v1
 
     const/16 v1, 0x36
@@ -253,7 +248,6 @@
 
     const/16 v1, 0x4a
 
-    .line 695
     aput-byte v3, v0, v1
 
     const/16 v1, 0x4b
@@ -338,7 +332,6 @@
 
     const/16 v1, 0x5f
 
-    .line 696
     const/4 v2, 0x7
 
     aput-byte v2, v0, v1
@@ -425,7 +418,6 @@
 
     const/16 v1, 0x74
 
-    .line 697
     aput-byte v3, v0, v1
 
     const/16 v1, 0x75
@@ -474,10 +466,8 @@
 
     iput-object v0, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->fASCIICharMap:[B
 
-    .line 720
     iput-object p2, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->fSymbolTable:Lmf/org/apache/xerces/util/SymbolTable;
 
-    .line 722
     return-void
 .end method
 
@@ -485,7 +475,6 @@
     .locals 0
 
     .prologue
-    .line 718
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;-><init>(Lmf/org/apache/xerces/xpointer/ElementSchemePointer;Lmf/org/apache/xerces/util/SymbolTable;)V
 
     return-void
@@ -500,7 +489,6 @@
     .end annotation
 
     .prologue
-    .line 728
     invoke-direct/range {p0 .. p5}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->scanExpr(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;Ljava/lang/String;II)Z
 
     move-result v0
@@ -522,10 +510,8 @@
     .end annotation
 
     .prologue
-    .line 734
     const/4 v6, 0x0
 
-    .line 737
     .local v6, "nameHandle":Ljava/lang/String;
     :goto_0
     move/from16 v0, p4
@@ -534,19 +520,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 814
     const/4 v8, 0x1
 
     :goto_1
     return v8
 
-    .line 741
     :cond_0
     invoke-virtual/range {p3 .. p4}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 742
     .local v3, "ch":I
     const/16 v8, 0x80
 
@@ -554,18 +537,15 @@
 
     const/16 v4, 0x8
 
-    .line 750
     .local v4, "chartype":B
     :goto_2
     packed-switch v4, :pswitch_data_0
 
     goto :goto_0
 
-    .line 790
     :pswitch_0
     move/from16 v7, p4
 
-    .line 791
     .local v7, "nameOffset":I
     move-object/from16 v0, p3
 
@@ -577,17 +557,14 @@
 
     move-result p4
 
-    .line 793
     move/from16 v0, p4
 
     if-ne v0, v7, :cond_6
 
-    .line 795
     iget-object v8, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     const-string v9, "InvalidNCNameInElementSchemeData"
 
-    .line 796
     const/4 v10, 0x1
 
     new-array v10, v10, [Ljava/lang/Object;
@@ -596,15 +573,12 @@
 
     aput-object p3, v10, v11
 
-    .line 795
     invoke-virtual {v8, v9, v10}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer;->reportError(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 797
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 743
     .end local v4    # "chartype":B
     .end local v7    # "nameOffset":I
     :cond_1
@@ -614,7 +588,6 @@
 
     goto :goto_2
 
-    .line 754
     .restart local v4    # "chartype":B
     :pswitch_1
     add-int/lit8 p4, p4, 0x1
@@ -625,12 +598,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 755
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 758
     :cond_2
     const/4 v8, 0x1
 
@@ -638,15 +609,12 @@
 
     invoke-virtual {p0, v0, v8}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->addToken(Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;I)V
 
-    .line 759
     invoke-virtual/range {p3 .. p4}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 762
     const/4 v5, 0x0
 
-    .line 763
     .local v5, "child":I
     :goto_3
     const/16 v8, 0x30
@@ -657,16 +625,13 @@
 
     if-le v3, v8, :cond_4
 
-    .line 772
     :cond_3
     if-nez v5, :cond_5
 
-    .line 773
     iget-object v8, p0, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->this$0:Lmf/org/apache/xerces/xpointer/ElementSchemePointer;
 
     const-string v9, "InvalidChildSequenceCharacter"
 
-    .line 774
     const/4 v10, 0x1
 
     new-array v10, v10, [Ljava/lang/Object;
@@ -681,15 +646,12 @@
 
     aput-object v12, v10, v11
 
-    .line 773
     invoke-virtual {v8, v9, v10}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer;->reportError(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 775
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 764
     :cond_4
     mul-int/lit8 v8, v5, 0xa
 
@@ -697,7 +659,6 @@
 
     add-int v5, v8, v9
 
-    .line 765
     add-int/lit8 p4, p4, 0x1
 
     move/from16 v0, p4
@@ -706,14 +667,12 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 768
     invoke-virtual/range {p3 .. p4}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
     goto :goto_3
 
-    .line 778
     :cond_5
     move-object/from16 v0, p2
 
@@ -722,7 +681,6 @@
 
     goto/16 :goto_0
 
-    .line 800
     .end local v5    # "child":I
     .restart local v7    # "nameOffset":I
     :cond_6
@@ -732,12 +690,10 @@
 
     if-ge v0, v1, :cond_7
 
-    .line 801
     invoke-virtual/range {p3 .. p4}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 806
     :goto_4
     move-object/from16 v0, p3
 
@@ -751,14 +707,12 @@
 
     move-result-object v6
 
-    .line 808
     const/4 v8, 0x0
 
     move-object/from16 v0, p2
 
     invoke-virtual {p0, v0, v8}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Scanner;->addToken(Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;I)V
 
-    .line 809
     move-object/from16 v0, p2
 
     # invokes: Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->addToken(Ljava/lang/String;)V
@@ -766,13 +720,11 @@
 
     goto/16 :goto_0
 
-    .line 803
     :cond_7
     const/4 v3, -0x1
 
     goto :goto_4
 
-    .line 750
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -799,16 +751,13 @@
 
     const/4 v4, 0x6
 
-    .line 828
     invoke-virtual {p1, p3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 829
     .local v0, "ch":I
     if-lt v0, v6, :cond_0
 
-    .line 830
     invoke-static {v0}, Lmf/org/apache/xerces/util/XMLChar;->isNameStart(I)Z
 
     move-result v3
@@ -817,13 +766,11 @@
 
     move v2, p3
 
-    .line 857
     .end local p3    # "currentOffset":I
     .local v2, "currentOffset":I
     :goto_0
     return v2
 
-    .line 834
     .end local v2    # "currentOffset":I
     .restart local p3    # "currentOffset":I
     :cond_0
@@ -831,21 +778,17 @@
 
     aget-byte v1, v3, v0
 
-    .line 835
     .local v1, "chartype":B
     if-eq v1, v4, :cond_4
 
-    .line 836
     if-eq v1, v5, :cond_4
 
     move v2, p3
 
-    .line 837
     .end local p3    # "currentOffset":I
     .restart local v2    # "currentOffset":I
     goto :goto_0
 
-    .line 841
     .end local v1    # "chartype":B
     .end local v2    # "currentOffset":I
     .restart local p3    # "currentOffset":I
@@ -854,10 +797,8 @@
 
     move-result v0
 
-    .line 842
     if-lt v0, v6, :cond_3
 
-    .line 843
     invoke-static {v0}, Lmf/org/apache/xerces/util/XMLChar;->isName(I)Z
 
     move-result v3
@@ -868,12 +809,10 @@
     :goto_1
     move v2, p3
 
-    .line 857
     .end local p3    # "currentOffset":I
     .restart local v2    # "currentOffset":I
     goto :goto_0
 
-    .line 847
     .end local v2    # "currentOffset":I
     .restart local p3    # "currentOffset":I
     :cond_3
@@ -881,29 +820,23 @@
 
     aget-byte v1, v3, v0
 
-    .line 848
     .restart local v1    # "chartype":B
     if-eq v1, v4, :cond_4
 
-    .line 849
     const/4 v3, 0x5
 
     if-eq v1, v3, :cond_4
 
-    .line 850
     const/4 v3, 0x3
 
     if-eq v1, v3, :cond_4
 
-    .line 851
     const/4 v3, 0x2
 
     if-eq v1, v3, :cond_4
 
-    .line 852
     if-ne v1, v5, :cond_2
 
-    .line 840
     .end local v1    # "chartype":B
     :cond_4
     add-int/lit8 p3, p3, 0x1
@@ -926,10 +859,8 @@
     .end annotation
 
     .prologue
-    .line 873
     # invokes: Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->addToken(I)V
     invoke-static {p1, p2}, Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;->access$0(Lmf/org/apache/xerces/xpointer/ElementSchemePointer$Tokens;I)V
 
-    .line 874
     return-void
 .end method

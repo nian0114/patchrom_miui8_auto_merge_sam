@@ -25,7 +25,6 @@
     .param p4, "x1"    # J
 
     .prologue
-    .line 9933
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -39,21 +38,18 @@
     .locals 2
 
     .prologue
-    .line 9938
     const-string v0, "ActivityManager"
 
-    const-string/jumbo v1, "setMaxStartingBackgroundTimer onfinish"
+    const-string v1, "setMaxStartingBackgroundTimer onfinish"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9939
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActiveServices;->setMaxStartingBackground()V
 
-    .line 9940
     return-void
 .end method
 
@@ -62,6 +58,5 @@
     .param p1, "duration"    # J
 
     .prologue
-    .line 9936
     return-void
 .end method

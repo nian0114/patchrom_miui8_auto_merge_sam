@@ -24,12 +24,10 @@
     .locals 1
 
     .prologue
-    .line 11
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgRilSharedData;->mEpdgRilSharedData:Lcom/sec/epdg/EpdgRilSharedData;
 
-    .line 13
     sget v0, Lcom/sec/epdg/IWlanEnum;->IWLAN_MAX_SETTING:I
 
     new-array v0, v0, [Lcom/sec/epdg/IWlanState;
@@ -44,13 +42,10 @@
     .param p1, "smartWifiState"    # I
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     invoke-virtual {p0, p1}, Lcom/sec/epdg/EpdgRilSharedData;->setSmartWifiState(I)V
 
-    .line 17
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .locals 2
 
     .prologue
-    .line 33
     const-class v1, Lcom/sec/epdg/EpdgRilSharedData;
 
     monitor-enter v1
@@ -86,7 +80,6 @@
     .locals 3
 
     .prologue
-    .line 40
     const-class v1, Lcom/sec/epdg/EpdgRilSharedData;
 
     monitor-enter v1
@@ -96,7 +89,6 @@
 
     if-nez v0, :cond_0
 
-    .line 41
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "call makeInstance first"
@@ -107,7 +99,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
     :catchall_0
     move-exception v0
 
@@ -115,7 +106,6 @@
 
     throw v0
 
-    .line 43
     :cond_0
     :try_start_1
     sget-object v0, Lcom/sec/epdg/EpdgRilSharedData;->mEpdgRilSharedData:Lcom/sec/epdg/EpdgRilSharedData;
@@ -132,7 +122,6 @@
     .param p0, "smartWifiState"    # I
 
     .prologue
-    .line 24
     const-class v2, Lcom/sec/epdg/EpdgRilSharedData;
 
     monitor-enter v2
@@ -144,14 +133,12 @@
 
     invoke-static {v1, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     new-instance v1, Lcom/sec/epdg/EpdgRilSharedData;
 
     invoke-direct {v1, p0}, Lcom/sec/epdg/EpdgRilSharedData;-><init>(I)V
 
     sput-object v1, Lcom/sec/epdg/EpdgRilSharedData;->mEpdgRilSharedData:Lcom/sec/epdg/EpdgRilSharedData;
 
-    .line 26
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -160,7 +147,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 27
     sget-object v1, Lcom/sec/epdg/EpdgRilSharedData;->mIwlanApnState:[Lcom/sec/epdg/IWlanState;
 
     invoke-static {}, Lcom/sec/epdg/EpdgRilSharedData;->getIWlanInstance()Lcom/sec/epdg/IWlanState;
@@ -169,12 +155,10 @@
 
     aput-object v3, v1, v0
 
-    .line 26
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 29
     :cond_0
     sget-object v1, Lcom/sec/epdg/EpdgRilSharedData;->mEpdgRilSharedData:Lcom/sec/epdg/EpdgRilSharedData;
     :try_end_0
@@ -184,7 +168,6 @@
 
     return-object v1
 
-    .line 24
     .end local v0    # "i":I
     :catchall_0
     move-exception v1
@@ -201,7 +184,6 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 60
     monitor-enter p0
 
     :try_start_0
@@ -211,7 +193,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "getIWlanState(): returning state "
+    const-string v2, "getIWlanState(): returning state "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -229,7 +211,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "for cid "
+    const-string v2, "for cid "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -245,7 +227,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
     sget-object v0, Lcom/sec/epdg/EpdgRilSharedData;->mIwlanApnState:[Lcom/sec/epdg/IWlanState;
 
     aget-object v0, v0, p1
@@ -260,7 +241,6 @@
 
     return v0
 
-    .line 60
     :catchall_0
     move-exception v0
 
@@ -273,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 52
     monitor-enter p0
 
     :try_start_0
@@ -299,7 +278,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 67
     monitor-enter p0
 
     :try_start_0
@@ -309,7 +287,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setIWlanState(): setting state "
+    const-string v2, "setIWlanState(): setting state "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -319,7 +297,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "for cid "
+    const-string v2, "for cid "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -335,14 +313,13 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     const-string v0, "[RILSHAREDDATA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mIwlanApnState for cid: "
+    const-string v2, "mIwlanApnState for cid: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -372,14 +349,12 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
     sget-object v0, Lcom/sec/epdg/EpdgRilSharedData;->mIwlanApnState:[Lcom/sec/epdg/IWlanState;
 
     aget-object v0, v0, p1
 
     invoke-virtual {v0, p2}, Lcom/sec/epdg/IWlanState;->setState(I)V
 
-    .line 71
     const-string v0, "[RILSHAREDDATA]"
 
     const-string v1, "Exiting setIWlanApnState"
@@ -388,12 +363,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 72
     monitor-exit p0
 
     return-void
 
-    .line 67
     :catchall_0
     move-exception v0
 
@@ -407,7 +380,6 @@
     .param p1, "smartWifiState"    # I
 
     .prologue
-    .line 56
     monitor-enter p0
 
     :try_start_0
@@ -415,12 +387,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 57
     monitor-exit p0
 
     return-void
 
-    .line 56
     :catchall_0
     move-exception v0
 
@@ -433,7 +403,6 @@
     .locals 4
 
     .prologue
-    .line 75
     monitor-enter p0
 
     :try_start_0
@@ -443,13 +412,11 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 76
     .local v1, "sb":Ljava/lang/StringBuilder;
     sget-object v2, Lcom/sec/epdg/EpdgRilSharedData;->mEpdgRilSharedData:Lcom/sec/epdg/EpdgRilSharedData;
 
     if-eqz v2, :cond_0
 
-    .line 77
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -472,7 +439,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 78
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -483,12 +449,11 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 79
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mIwlanApnState["
+    const-string v3, "mIwlanApnState["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -518,12 +483,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 78
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 83
     .end local v0    # "i":I
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -536,7 +499,6 @@
 
     return-object v2
 
-    .line 75
     .end local v1    # "sb":Ljava/lang/StringBuilder;
     :catchall_0
     move-exception v2

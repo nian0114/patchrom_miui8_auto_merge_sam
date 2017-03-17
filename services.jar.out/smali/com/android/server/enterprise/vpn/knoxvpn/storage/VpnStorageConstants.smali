@@ -76,7 +76,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -87,22 +86,18 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 91
     packed-switch p0, :pswitch_data_0
 
-    .line 95
     const-string v0, "/data/system/knoxvpn/databases/knoxvpn.db"
 
     :goto_0
     return-object v0
 
-    .line 93
     :pswitch_0
     const-string v0, "/data/system/knoxvpn/databases/knoxvpn.db"
 
     goto :goto_0
 
-    .line 91
     nop
 
     :pswitch_data_0
@@ -118,14 +113,11 @@
     .prologue
     const/4 v0, 0x2
 
-    .line 101
     packed-switch p0, :pswitch_data_0
 
-    .line 105
     :pswitch_0
     return v0
 
-    .line 101
     nop
 
     :pswitch_data_0

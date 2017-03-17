@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$3;->val$name:Ljava/lang/String;
 
-    .line 360
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 362
     iget-object v0, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$3;->val$name:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;

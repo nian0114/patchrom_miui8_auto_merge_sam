@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1341
     iput-object p1, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->this$1:Lcom/android/internal/telephony/Am$MyActivityController;
 
     iput-object p2, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->val$converter:Ljava/io/InputStreamReader;
@@ -41,25 +40,21 @@
     .locals 7
 
     .prologue
-    .line 1344
     new-instance v2, Ljava/io/BufferedReader;
 
     iget-object v4, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->val$converter:Ljava/io/InputStreamReader;
 
     invoke-direct {v2, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 1346
     .local v2, "in":Ljava/io/BufferedReader;
     const/4 v0, 0x0
 
-    .line 1348
     .local v0, "count":I
     :goto_0
     iget-object v5, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->this$1:Lcom/android/internal/telephony/Am$MyActivityController;
 
     monitor-enter v5
 
-    .line 1349
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->this$1:Lcom/android/internal/telephony/Am$MyActivityController;
 
@@ -67,49 +62,40 @@
 
     if-nez v4, :cond_1
 
-    .line 1350
     monitor-exit v5
 
-    .line 1365
     :cond_0
     :goto_1
     return-void
 
-    .line 1352
     :cond_1
     const/4 v4, 0x2
 
     if-ne v0, v4, :cond_2
 
-    .line 1353
     iget-object v4, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->this$1:Lcom/android/internal/telephony/Am$MyActivityController;
 
     const/4 v6, 0x1
 
     iput-boolean v6, v4, Lcom/android/internal/telephony/Am$MyActivityController;->mGotGdbPrint:Z
 
-    .line 1354
     iget-object v4, p0, Lcom/android/internal/telephony/Am$MyActivityController$1;->this$1:Lcom/android/internal/telephony/Am$MyActivityController;
 
     invoke-virtual {v4}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1356
     :cond_2
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1358
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1359
     .local v3, "line":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 1362
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -134,12 +120,10 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1363
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1356
     .end local v3    # "line":Ljava/lang/String;
     :catchall_0
     move-exception v4
@@ -151,11 +135,9 @@
 
     throw v4
 
-    .line 1364
     :catch_0
     move-exception v1
 
-    .line 1365
     .local v1, "e":Ljava/io/IOException;
     goto :goto_1
 .end method

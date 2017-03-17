@@ -174,7 +174,6 @@
 
     const/4 v4, 0x0
 
-    .line 123
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$1;
 
     const-string v1, "APDR"
@@ -189,7 +188,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->APDR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 144
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$2;
 
     const-string v1, "PEDOMETER"
@@ -204,7 +202,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->PEDOMETER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 171
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$3;
 
     const-string v1, "GESTURE_APPROACH"
@@ -219,7 +216,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->GESTURE_APPROACH:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 193
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$4;
 
     const-string v1, "STEP_COUNT_ALERT"
@@ -234,7 +230,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->STEP_COUNT_ALERT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 215
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$5;
 
     const-string v1, "MOTION"
@@ -249,7 +244,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 236
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$6;
 
     const-string v1, "MOVEMENT"
@@ -266,7 +260,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->MOVEMENT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 257
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$7;
 
     const-string v1, "AUTO_ROTATION"
@@ -283,7 +276,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->AUTO_ROTATION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 278
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$8;
 
     const-string v1, "POWER_NOTI"
@@ -300,7 +292,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->POWER_NOTI:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 298
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$9;
 
     const-string v1, "MOVEMENT_FOR_POSITIONING"
@@ -317,7 +308,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->MOVEMENT_FOR_POSITIONING:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 321
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$10;
 
     const-string v1, "CURRENT_STATUS_FOR_MOVEMENT_POSITIONING"
@@ -334,7 +324,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->CURRENT_STATUS_FOR_MOVEMENT_POSITIONING:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 345
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$11;
 
     const-string v1, "DIRECT_CALL"
@@ -351,7 +340,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->DIRECT_CALL:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 366
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$12;
 
     const-string v1, "STOP_ALERT"
@@ -368,7 +356,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->STOP_ALERT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 387
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$13;
 
     const-string v1, "RAW_TEMPERATURE_HUMIDITY_SENSOR"
@@ -385,7 +372,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->RAW_TEMPERATURE_HUMIDITY_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 416
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$14;
 
     const-string v1, "RAW_BAROMETER_SENSOR"
@@ -402,7 +388,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->RAW_BAROMETER_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 444
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$15;
 
     const-string v1, "CALL_POSE"
@@ -419,7 +404,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->CALL_POSE:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 465
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$16;
 
     const-string v1, "SHAKE_MOTION"
@@ -436,7 +420,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->SHAKE_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 486
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$17;
 
     const-string v1, "CARE_GIVER"
@@ -453,7 +436,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->CARE_GIVER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 507
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$18;
 
     const-string v1, "ABNORMAL_SHOCK"
@@ -470,7 +452,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ABNORMAL_SHOCK:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 528
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$19;
 
     const-string v1, "FLIP_COVER_ACTION"
@@ -487,7 +468,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->FLIP_COVER_ACTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 550
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$20;
 
     const-string v1, "GYRO_TEMPERATURE"
@@ -504,7 +484,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->GYRO_TEMPERATURE:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 572
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$21;
 
     const-string v1, "PUT_DOWN_MOTION"
@@ -521,7 +500,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->PUT_DOWN_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 593
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$22;
 
     const-string v1, "WAKE_UP_VOICE"
@@ -538,7 +516,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->WAKE_UP_VOICE:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 614
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$23;
 
     const-string v1, "BOUNCE_SHORT_MOTION"
@@ -555,7 +532,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->BOUNCE_SHORT_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 637
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$24;
 
     const-string v1, "BOUNCE_LONG_MOTION"
@@ -572,7 +548,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->BOUNCE_LONG_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 659
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$25;
 
     const-string v1, "WRIST_UP_MOTION"
@@ -589,7 +564,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->WRIST_UP_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 680
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$26;
 
     const-string v1, "FLAT_MOTION"
@@ -606,7 +580,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->FLAT_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 701
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$27;
 
     const-string v1, "MOVEMENT_ALERT"
@@ -623,7 +596,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->MOVEMENT_ALERT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 722
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$28;
 
     const-string v1, "TEST_FLAT_MOTION"
@@ -640,7 +612,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->TEST_FLAT_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 744
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$29;
 
     const-string v1, "TEMPERATURE_ALERT"
@@ -657,7 +628,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->TEMPERATURE_ALERT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 766
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$30;
 
     const-string v1, "PEDOMETER_CURRENT_INFO"
@@ -674,7 +644,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->PEDOMETER_CURRENT_INFO:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 788
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$31;
 
     const-string v1, "STAYING_ALERT"
@@ -691,7 +660,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->STAYING_ALERT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 809
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$32;
 
     const-string v1, "LIFE_LOG_COMPONENT"
@@ -708,7 +676,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->LIFE_LOG_COMPONENT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 833
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$33;
 
     const-string v1, "ACTIVITY_TRACKER"
@@ -725,7 +692,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVITY_TRACKER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 860
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$34;
 
     const-string v1, "ACTIVITY_TRACKER_INTERRUPT"
@@ -742,7 +708,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVITY_TRACKER_INTERRUPT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 890
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$35;
 
     const-string v1, "ACTIVITY_TRACKER_BATCH"
@@ -759,7 +724,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVITY_TRACKER_BATCH:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 919
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$36;
 
     const-string v1, "ACTIVITY_TRACKER_EXTANDED_INTERRUPT"
@@ -776,7 +740,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVITY_TRACKER_EXTANDED_INTERRUPT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 949
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$37;
 
     const-string v1, "ACTIVITY_TRACKER_CURRENT_INFO"
@@ -793,7 +756,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVITY_TRACKER_CURRENT_INFO:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 971
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$38;
 
     const-string v1, "ACTIVITY_TRACKER_BATCH_CURRENT_INFO"
@@ -810,7 +772,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVITY_TRACKER_BATCH_CURRENT_INFO:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 993
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$39;
 
     const-string v1, "SPECIFIC_POSE_ALERT"
@@ -827,7 +788,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->SPECIFIC_POSE_ALERT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1015
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$40;
 
     const-string v1, "SLEEP_MONITOR"
@@ -844,7 +804,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->SLEEP_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1037
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$41;
 
     const-string v1, "SLEEP_MONITOR_CURRENT_INFO"
@@ -861,7 +820,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->SLEEP_MONITOR_CURRENT_INFO:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1059
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$42;
 
     const-string v1, "CAPTURE_MOTION"
@@ -878,7 +836,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->CAPTURE_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1080
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$43;
 
     const-string v1, "CALL_MOTION"
@@ -895,7 +852,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->CALL_MOTION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1101
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$44;
 
     const-string v1, "STEP_LEVEL_MONITOR"
@@ -912,7 +868,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->STEP_LEVEL_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1128
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$45;
 
     const-string v1, "STEP_LEVEL_MONITOR_EXTENDED_INTERRUPT"
@@ -929,7 +884,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->STEP_LEVEL_MONITOR_EXTENDED_INTERRUPT:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1158
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$46;
 
     const-string v1, "ACTIVE_TIME"
@@ -946,7 +900,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ACTIVE_TIME:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1185
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$47;
 
     const-string v1, "FLAT_MOTION_FOR_TABLE_MODE"
@@ -963,7 +916,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->FLAT_MOTION_FOR_TABLE_MODE:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1207
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$48;
 
     const-string v1, "CARRYING_STATUS_MONITOR"
@@ -980,7 +932,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->CARRYING_STATUS_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1229
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$49;
 
     const-string v1, "BOTTOM_FLAT_DETECTOR"
@@ -997,7 +948,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->BOTTOM_FLAT_DETECTOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1251
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$50;
 
     const-string v1, "PHONE_STATE_MONITOR"
@@ -1014,7 +964,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->PHONE_STATE_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1274
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$51;
 
     const-string v1, "EXERCISE"
@@ -1031,7 +980,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->EXERCISE:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1297
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$52;
 
     const-string v1, "AUTO_BRIGHTNESS"
@@ -1048,7 +996,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->AUTO_BRIGHTNESS:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1320
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$53;
 
     const-string v1, "ABNORMAL_PRESSURE_MONITOR"
@@ -1065,7 +1012,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ABNORMAL_PRESSURE_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1343
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$54;
 
     const-string v1, "HALL_SENSOR"
@@ -1082,7 +1028,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->HALL_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1366
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$55;
 
     const-string v1, "EAD"
@@ -1099,7 +1044,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->EAD:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1389
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$56;
 
     const-string v1, "DUAL_DISPLAY_ANGLE"
@@ -1116,7 +1060,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->DUAL_DISPLAY_ANGLE:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1412
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$57;
 
     const-string v1, "WIRELESS_CHARGING_MONITOR"
@@ -1133,7 +1076,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->WIRELESS_CHARGING_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1435
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$58;
 
     const-string v1, "SLOCATION_RUNNER"
@@ -1150,7 +1092,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->SLOCATION_RUNNER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1458
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$59;
 
     const-string v1, "DEVICE_PHYSICAL_CONTEXT_MONITOR"
@@ -1167,7 +1108,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->DEVICE_PHYSICAL_CONTEXT_MONITOR:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1485
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$60;
 
     const-string v1, "MAIN_SCREEN_DETECTION_RUNNER"
@@ -1184,7 +1124,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->MAIN_SCREEN_DETECTION_RUNNER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1508
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$61;
 
     const-string v1, "ANY_MOTION_DETECTOR_RUNNER"
@@ -1201,7 +1140,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->ANY_MOTION_DETECTOR_RUNNER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 1531
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$62;
 
     const-string v1, "SENSOR_STATUS_CHECK_RUNNER"
@@ -1218,7 +1156,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->SENSOR_STATUS_CHECK_RUNNER:Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
-    .line 120
     const/16 v0, 0x3e
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
@@ -1602,13 +1539,10 @@
     .end annotation
 
     .prologue
-    .line 1565
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1566
     iput-object p3, p0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->name:Ljava/lang/String;
 
-    .line 1567
     return-void
 .end method
 
@@ -1620,7 +1554,6 @@
     .param p4, "x3"    # Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$1;
 
     .prologue
-    .line 120
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -1630,7 +1563,6 @@
     .locals 1
 
     .prologue
-    .line 1722
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->getSubKey()Ljava/lang/String;
 
     move-result-object v0
@@ -1658,7 +1590,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1752
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     move-result-object v1
@@ -1667,11 +1598,9 @@
 
     move-result-object v0
 
-    .line 1754
     .local v0, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-eqz v0, :cond_0
 
-    .line 1755
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$39500()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1691,7 +1620,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;->registerParser(Ljava/lang/String;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;)V
 
-    .line 1759
     :cond_0
     return-void
 .end method
@@ -1702,7 +1630,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1734
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     move-result-object v1
@@ -1711,11 +1638,9 @@
 
     move-result-object v0
 
-    .line 1736
     .local v0, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-eqz v0, :cond_0
 
-    .line 1737
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$39400()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1735,7 +1660,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;->registerParser(Ljava/lang/String;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;)V
 
-    .line 1741
     :cond_0
     return-void
 .end method
@@ -1746,7 +1670,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1771
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     move-result-object v1
@@ -1755,11 +1678,9 @@
 
     move-result-object v0
 
-    .line 1773
     .local v0, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-eqz v0, :cond_0
 
-    .line 1774
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$39600()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1779,7 +1700,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;->registerParser(Ljava/lang/String;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;)V
 
-    .line 1778
     :cond_0
     return-void
 .end method
@@ -1790,7 +1710,6 @@
     .param p2, "subKey"    # Ljava/lang/String;
 
     .prologue
-    .line 1789
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -1799,18 +1718,15 @@
 
     if-eqz v2, :cond_2
 
-    .line 1790
     :cond_0
     const-string v2, "Key is null"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1818
     :cond_1
     :goto_0
     return-void
 
-    .line 1794
     :cond_2
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
@@ -1822,7 +1738,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1795
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     move-result-object v2
@@ -1833,7 +1748,6 @@
 
     check-cast v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
 
-    .line 1797
     .local v0, "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     if-eqz v0, :cond_3
 
@@ -1845,10 +1759,8 @@
 
     if-nez v2, :cond_3
 
-    .line 1798
     invoke-virtual {v0, p2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;->unregisterParser(Ljava/lang/String;)V
 
-    .line 1802
     .end local v0    # "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     :cond_3
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
@@ -1859,11 +1771,9 @@
 
     move-result-object v1
 
-    .line 1804
     .local v1, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-eqz v1, :cond_1
 
-    .line 1805
     invoke-static {}, Lcom/samsung/android/contextaware/MultiModeContextList;->getInstance()Lcom/samsung/android/contextaware/MultiModeContextList;
 
     move-result-object v2
@@ -1874,7 +1784,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1806
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     move-result-object v2
@@ -1885,7 +1794,6 @@
 
     check-cast v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
 
-    .line 1808
     .restart local v0    # "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     if-eqz v0, :cond_1
 
@@ -1895,12 +1803,10 @@
 
     if-nez v2, :cond_1
 
-    .line 1813
     .end local v0    # "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     :cond_4
     invoke-virtual {v1, p1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;->unregisterParser(Ljava/lang/String;)V
 
-    .line 1814
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
@@ -1909,7 +1815,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1815
     invoke-virtual {v1, p2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;->unregisterParser(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1920,7 +1825,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 120
     const-class v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1936,7 +1840,6 @@
     .locals 1
 
     .prologue
-    .line 120
     sget-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->$VALUES:[Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->clone()Ljava/lang/Object;
@@ -1958,7 +1861,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1589
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->getObject()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -1970,7 +1872,6 @@
     .locals 1
 
     .prologue
-    .line 1577
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->getObject()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -1983,7 +1884,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1601
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->getObjectForSubCollection()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -1995,7 +1895,6 @@
     .locals 1
 
     .prologue
-    .line 1712
     const/4 v0, 0x0
 
     return-object v0
@@ -2006,7 +1905,6 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 1686
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -2015,18 +1913,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 1687
     :cond_0
     const-string v0, "Service is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1697
     :cond_1
     :goto_0
     return-void
 
-    .line 1690
     :cond_2
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->removeObj(Ljava/lang/String;)Z
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$39300(Ljava/lang/String;)Z
@@ -2035,7 +1930,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1691
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -2052,7 +1946,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1692
     :cond_3
     const-string v0, "Key is null"
 
@@ -2060,7 +1953,6 @@
 
     goto :goto_0
 
-    .line 1695
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->getKey()Ljava/lang/String;
 
@@ -2081,10 +1973,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1674
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->registerExtLibParser(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1675
     return-void
 .end method
 
@@ -2094,10 +1984,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1613
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->registerLibParser(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1614
     return-void
 .end method
 
@@ -2108,10 +1996,8 @@
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1641
     invoke-direct {p0, p1, p3}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->registerLibParser(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1643
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     move-result-object v1
@@ -2122,7 +2008,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1644
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     move-result-object v1
@@ -2133,11 +2018,9 @@
 
     check-cast v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
 
-    .line 1646
     .local v0, "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     if-nez v0, :cond_1
 
-    .line 1647
     sget-object v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PARSER_NOT_EXIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -2150,13 +2033,11 @@
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1662
     .end local v0    # "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     :cond_0
     :goto_0
     return-void
 
-    .line 1652
     .restart local v0    # "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     :cond_1
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
@@ -2180,7 +2061,6 @@
 
     goto :goto_0
 
-    .line 1655
     .end local v0    # "bean":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;
     :cond_2
     sget-object v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;->LIBRARY_DATATYPE_ENVIRONMENT_SENSOR:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;
@@ -2195,7 +2075,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1657
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     move-result-object v2
@@ -2228,9 +2107,7 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1626
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;->registerRequestLibParser(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1627
     return-void
 .end method

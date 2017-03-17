@@ -43,7 +43,7 @@
 
     const-string v1, "IncludeSlashPolicy"
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     invoke-interface {v0, v3, v1, v2}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -212,7 +212,7 @@
 
     const-string v1, "IncludeSlashPolicy"
 
-    const-string/jumbo v2, "false"
+    const-string v2, "false"
 
     invoke-interface {v0, v3, v1, v2}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -415,7 +415,7 @@
 .method public final getBaseNamespace()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.nue.et-inf.uni-siegen.de/~geuer-pollmann/#xpathFilter"
+    const-string v0, "http://www.nue.et-inf.uni-siegen.de/~geuer-pollmann/#xpathFilter"
 
     return-object v0
 .end method
@@ -505,7 +505,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

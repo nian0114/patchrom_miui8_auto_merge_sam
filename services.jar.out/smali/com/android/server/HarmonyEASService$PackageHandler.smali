@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/server/HarmonyEASService$PackageHandler;->this$0:Lcom/android/server/HarmonyEASService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,16 +41,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 98
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 103
     :goto_0
     return-void
 
-    .line 100
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/HarmonyEASService$PackageHandler;->this$0:Lcom/android/server/HarmonyEASService;
 
@@ -62,7 +58,6 @@
 
     goto :goto_0
 
-    .line 98
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -74,57 +74,44 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 192
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     iput-boolean v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
-    .line 159
     const-string v0, "com.samsung.android.contextaware.SLOCATION"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->CURLOC:Ljava/lang/String;
 
-    .line 160
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mBrReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 162
     const/16 v0, 0x96
 
     iput v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->ACCURACY_CurrentLoc:I
 
-    .line 163
     iput v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
-    .line 338
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$2;-><init>(Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsListener:Landroid/location/LocationListener;
 
-    .line 486
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$3;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$3;-><init>(Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsListener:Landroid/location/LocationListener;
 
-    .line 194
     iput-object p2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mLooper:Landroid/os/Looper;
 
-    .line 198
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->initializeManager(Landroid/content/Context;)V
 
-    .line 200
     invoke-virtual {p0, p3}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->registerCurrentPositionObserver(Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;)V
 
-    .line 201
     sput-object p1, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mContext:Landroid/content/Context;
 
-    .line 204
     return-void
 .end method
 
@@ -133,7 +120,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mPrePosition:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     return-object v0
@@ -144,7 +130,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->getGpsSatellites()Ljava/util/Iterator;
 
     move-result-object v0
@@ -157,7 +142,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     return-object v0
@@ -168,7 +152,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     return-object v0
@@ -179,7 +162,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->registerGpsListener()V
 
     return-void
@@ -190,7 +172,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->registerWpsListener()V
 
     return-void
@@ -201,7 +182,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     iget v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
     return v0
@@ -213,7 +193,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 73
     iput p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
     return p1
@@ -225,7 +204,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 73
     iget v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
     or-int/2addr v0, p1
@@ -240,7 +218,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->unregisterGpsListener()V
 
     return-void
@@ -251,7 +228,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->unregisterWpsListener()V
 
     return-void
@@ -262,7 +238,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mBrReceiver:Landroid/content/BroadcastReceiver;
 
     return-object v0
@@ -274,23 +249,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1090
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 1092
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 1094
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheck:Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
 
-    .line 1096
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
-    .line 1100
     :cond_0
     return-void
 .end method
@@ -310,12 +280,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 856
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v1, :cond_0
 
-    .line 862
     :goto_0
     return-object v0
 
@@ -341,21 +309,17 @@
     .locals 7
 
     .prologue
-    .line 1112
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 1114
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1124
     :goto_0
     return-void
 
-    .line 1120
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
@@ -378,26 +342,22 @@
     .locals 7
 
     .prologue
-    .line 1136
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_1
 
-    .line 1138
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1152
     :cond_0
     :goto_0
     return-void
 
-    .line 1144
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
-    const-string/jumbo v1, "network"
+    const-string v1, "network"
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
 
@@ -407,10 +367,9 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1146
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
-    const-string/jumbo v1, "network"
+    const-string v1, "network"
 
     const-wide/16 v2, 0x3e8
 
@@ -429,21 +388,17 @@
     .locals 2
 
     .prologue
-    .line 1164
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 1166
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1174
     :goto_0
     return-void
 
-    .line 1172
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
@@ -458,21 +413,17 @@
     .locals 2
 
     .prologue
-    .line 1186
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 1188
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 1196
     :goto_0
     return-void
 
-    .line 1194
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
@@ -487,22 +438,18 @@
     .locals 15
 
     .prologue
-    .line 1060
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     if-nez v1, :cond_0
 
-    .line 1078
     :goto_0
     return-void
 
-    .line 1066
     :cond_0
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>()V
 
-    .line 1068
     .local v0, "emptyPosition":Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
@@ -551,22 +498,18 @@
     .locals 15
 
     .prologue
-    .line 1000
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     if-nez v0, :cond_0
 
-    .line 1018
     :goto_0
     return-void
 
-    .line 1006
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mPrePosition:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 1008
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
@@ -632,22 +575,18 @@
     .locals 15
 
     .prologue
-    .line 1030
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     if-nez v0, :cond_0
 
-    .line 1048
     :goto_0
     return-void
 
-    .line 1036
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mPrePosition:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 1038
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
@@ -716,14 +655,12 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 284
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
     if-eqz v2, :cond_0
 
-    .line 285
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -748,7 +685,6 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 287
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;
 
     move-result-object v2
@@ -757,37 +693,31 @@
 
     move-result-object v18
 
-    .line 288
     .local v18, "utcTime":[I
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v6
 
-    .line 289
     .local v6, "latitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v8
 
-    .line 290
     .local v8, "longitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v10
 
-    .line 291
     .local v10, "altitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getSpeed()F
 
     move-result v14
 
-    .line 292
     .local v14, "speed":F
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v15
 
-    .line 293
     .local v15, "accuracy":F
     move-object/from16 v0, p0
 
@@ -809,11 +739,9 @@
 
     move-result-wide v12
 
-    .line 297
     .local v12, "distance":D
     const/16 v17, 0x4
 
-    .line 299
     .local v17, "type":I
     move-object/from16 v0, p0
 
@@ -827,15 +755,12 @@
 
     invoke-virtual/range {v3 .. v16}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;->setPosition(I[IDDDDFFI)V
 
-    .line 300
     const-string v2, "CurrentLUpda : SLO update! "
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 302
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->notifyCurrentPositionObserver()V
 
-    .line 304
     .end local v6    # "latitude":D
     .end local v8    # "longitude":D
     .end local v10    # "altitude":D
@@ -852,34 +777,27 @@
     .locals 4
 
     .prologue
-    .line 790
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_1
 
-    .line 792
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 840
     :cond_0
     :goto_0
     return-void
 
-    .line 800
     :cond_1
     iget-boolean v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
     if-eqz v0, :cond_0
 
-    .line 808
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 810
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->clearTimeOutCheckService()V
 
-    .line 812
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mLooper:Landroid/os/Looper;
@@ -894,7 +812,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 838
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
@@ -909,88 +826,72 @@
     .prologue
     const v1, 0x461c4000    # 10000.0f
 
-    .line 612
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 614
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 682
     :goto_0
     return-void
 
-    .line 622
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mLooper:Landroid/os/Looper;
 
     if-nez v0, :cond_1
 
-    .line 624
     const-string v0, "Looper is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 632
     :cond_1
     iget-boolean v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
     if-eqz v0, :cond_2
 
-    .line 634
     const-string v0, "mEnable value is true."
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
-    .line 636
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->disable()V
 
-    .line 642
     :cond_2
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 644
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
-    .line 648
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>(F)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 650
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>(F)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 652
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mPrePosition:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 656
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->clearTimeOutCheckService()V
 
-    .line 660
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
 
     invoke-direct {v0, p0, p1}, Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;-><init>(Lcom/samsung/android/contextaware/utilbundle/ITimeOutCheckObserver;I)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheck:Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
 
-    .line 662
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheck:Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
@@ -999,12 +900,10 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
-    .line 664
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 666
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mLooper:Landroid/os/Looper;
@@ -1030,14 +929,11 @@
     .prologue
     const v2, 0x461c4000    # 10000.0f
 
-    .line 698
     packed-switch p1, :pswitch_data_0
 
-    .line 739
     :goto_0
     return-void
 
-    .line 701
     :pswitch_0
     const/16 v1, 0xa
 
@@ -1045,74 +941,60 @@
 
     goto :goto_0
 
-    .line 706
     :pswitch_1
     const/16 v0, 0xa
 
-    .line 707
     .local v0, "duration":I
     iput p2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->ACCURACY_CurrentLoc:I
 
-    .line 708
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mLooper:Landroid/os/Looper;
 
     if-nez v1, :cond_0
 
-    .line 709
     const-string v1, "Looper is null"
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 712
     :cond_0
     iget-boolean v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
     if-eqz v1, :cond_1
 
-    .line 713
     const-string v1, "mEnable value is true."
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
-    .line 714
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->disable()V
 
-    .line 716
     :cond_1
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 718
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
-    .line 719
     new-instance v1, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v1, v2}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>(F)V
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 720
     new-instance v1, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v1, v2}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>(F)V
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 721
     new-instance v1, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v1}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mPrePosition:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 723
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->clearTimeOutCheckService()V
 
-    .line 724
     new-instance v1, Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
 
     const/16 v2, 0xb
@@ -1121,7 +1003,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheck:Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
 
-    .line 725
     new-instance v1, Ljava/lang/Thread;
 
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheck:Lcom/samsung/android/contextaware/utilbundle/CaTimeOutCheckManager;
@@ -1130,12 +1011,10 @@
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
-    .line 726
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mTimeOutCheckThreadHandler:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 729
     new-instance v1, Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mLooper:Landroid/os/Looper;
@@ -1152,7 +1031,6 @@
 
     goto :goto_0
 
-    .line 698
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1167,7 +1045,6 @@
     .prologue
     const v1, 0x461c4000    # 10000.0f
 
-    .line 226
     const-string v0, "location"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1178,17 +1055,14 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
-    .line 232
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 234
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 244
     :cond_0
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
@@ -1196,27 +1070,23 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 246
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>(F)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 248
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mPrePosition:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
-    .line 250
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
-    .line 252
-    const-string/jumbo v0, "sec_location"
+    const-string v0, "sec_location"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1226,28 +1096,24 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->sLm:Lcom/samsung/location/SLocationManager;
 
-    .line 254
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->filter:Landroid/content/IntentFilter;
 
-    .line 255
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->filter:Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.android.contextaware.SLOCATION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 257
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$1;-><init>(Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mBrReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 281
     return-void
 .end method
 
@@ -1255,7 +1121,6 @@
     .locals 1
 
     .prologue
-    .line 880
     iget-boolean v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mEnable:Z
 
     return v0
@@ -1265,20 +1130,16 @@
     .locals 2
 
     .prologue
-    .line 950
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     if-nez v0, :cond_0
 
-    .line 988
     :goto_0
     return-void
 
-    .line 958
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->disable()V
 
-    .line 962
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;->getType()I
@@ -1287,7 +1148,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 964
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;->getAccuracy()F
@@ -1300,12 +1160,10 @@
 
     if-gtz v0, :cond_1
 
-    .line 966
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->updateGpsPosition()V
 
     goto :goto_0
 
-    .line 968
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
@@ -1315,18 +1173,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 970
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->updateWpsPosition()V
 
     goto :goto_0
 
-    .line 974
     :cond_2
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->updateEmptyPosition()V
 
     goto :goto_0
 
-    .line 978
     :cond_3
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mWpsInfo:Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;
 
@@ -1336,12 +1191,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 980
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->updateWpsPosition()V
 
     goto :goto_0
 
-    .line 984
     :cond_4
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->updateEmptyPosition()V
 
@@ -1352,10 +1205,8 @@
     .locals 0
 
     .prologue
-    .line 1218
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->notifyCurrentPositionObserver()V
 
-    .line 1220
     return-void
 .end method
 
@@ -1364,10 +1215,8 @@
     .param p1, "observer"    # Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
     .prologue
-    .line 906
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
-    .line 908
     return-void
 .end method
 
@@ -1377,12 +1226,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 773
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->sLm:Lcom/samsung/location/SLocationManager;
 
     if-eqz v0, :cond_0
 
-    .line 774
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->sLm:Lcom/samsung/location/SLocationManager;
 
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mContext:Landroid/content/Context;
@@ -1399,12 +1246,10 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/location/SLocationManager;->removeSingleLocation(Landroid/app/PendingIntent;)I
 
-    .line 775
     const-string v0, "Remove CurL"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 778
     :cond_0
     return-void
 .end method
@@ -1416,16 +1261,13 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 743
     const/4 v0, 0x0
 
-    .line 745
     .local v0, "flag_CurrLocOK":Z
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->sLm:Lcom/samsung/location/SLocationManager;
 
     if-eqz v2, :cond_2
 
-    .line 746
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->sLm:Lcom/samsung/location/SLocationManager;
 
     iget v3, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->ACCURACY_CurrentLoc:I
@@ -1446,13 +1288,12 @@
 
     move-result v1
 
-    .line 747
     .local v1, "result":I
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "result of SLM req : "
+    const-string v3, "result of SLM req : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1468,22 +1309,18 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 749
     const/4 v2, -0x1
 
     if-le v1, v2, :cond_0
 
-    .line 750
     const/4 v0, 0x1
 
-    .line 751
     iget v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
     or-int/lit8 v2, v2, 0x2
 
     iput v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
-    .line 753
     sget-object v2, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mBrReceiver:Landroid/content/BroadcastReceiver;
@@ -1492,37 +1329,30 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 755
     const-string v2, "Request CurL"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 763
     .end local v1    # "result":I
     :cond_0
     :goto_0
     if-nez v0, :cond_1
 
-    .line 764
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->registerGpsListener()V
 
-    .line 765
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->registerWpsListener()V
 
-    .line 766
     iget v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
     or-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
 
-    .line 769
     :cond_1
     return-void
 
-    .line 760
     :cond_2
-    const-string/jumbo v2, "requestSingleL err - sLm is null "
+    const-string v2, "requestSingleL err - sLm is null "
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
@@ -1533,21 +1363,17 @@
     .locals 2
 
     .prologue
-    .line 322
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 324
-    const-string/jumbo v0, "mGpsManager is null"
+    const-string v0, "mGpsManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 332
     :goto_0
     return-void
 
-    .line 330
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mGpsManager:Landroid/location/LocationManager;
 
@@ -1562,11 +1388,9 @@
     .locals 1
 
     .prologue
-    .line 928
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mListener:Lcom/samsung/android/contextaware/manager/ICurrrentPositionObserver;
 
-    .line 930
     return-void
 .end method

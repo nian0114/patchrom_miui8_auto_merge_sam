@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 876
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 879
     const-string v2, ""
 
-    .line 880
     .local v2, "curDate":Ljava/lang/String;
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -70,7 +67,6 @@
 
     move-result-object v3
 
-    .line 881
     .local v3, "day":Ljava/lang/String;
     :goto_0
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
@@ -97,7 +93,6 @@
 
     move-result-object v5
 
-    .line 882
     .local v5, "month":Ljava/lang/String;
     :goto_1
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
@@ -124,7 +119,6 @@
 
     move-result-object v6
 
-    .line 883
     .local v6, "year":Ljava/lang/String;
     :goto_2
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
@@ -138,7 +132,6 @@
 
     move-result v1
 
-    .line 884
     .local v1, "cnt":I
     const/4 v4, 0x0
 
@@ -146,7 +139,6 @@
     :goto_3
     if-ge v4, v1, :cond_7
 
-    .line 885
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # getter for: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->mSpinners:Landroid/widget/LinearLayout;
@@ -158,18 +150,15 @@
 
     move-result-object v0
 
-    .line 886
     .local v0, "child":Landroid/view/View;
     if-nez v0, :cond_4
 
-    .line 884
     :cond_0
     :goto_4
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 880
     .end local v0    # "child":Landroid/view/View;
     .end local v1    # "cnt":I
     .end local v3    # "day":Ljava/lang/String;
@@ -181,21 +170,18 @@
 
     goto :goto_0
 
-    .line 881
     .restart local v3    # "day":Ljava/lang/String;
     :cond_2
     const-string v5, "01"
 
     goto :goto_1
 
-    .line 882
     .restart local v5    # "month":Ljava/lang/String;
     :cond_3
     const-string v6, "2013"
 
     goto :goto_2
 
-    .line 889
     .restart local v0    # "child":Landroid/view/View;
     .restart local v1    # "cnt":I
     .restart local v4    # "i":I
@@ -214,7 +200,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 890
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,13 +216,11 @@
 
     move-result-object v2
 
-    .line 898
     :goto_5
     add-int/lit8 v7, v1, -0x1
 
     if-eq v4, v7, :cond_0
 
-    .line 899
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,7 +241,6 @@
 
     goto :goto_4
 
-    .line 891
     :cond_5
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -273,7 +255,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 892
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,7 +273,6 @@
 
     goto :goto_5
 
-    .line 893
     :cond_6
     iget-object v7, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$4;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -307,7 +287,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 894
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -326,7 +305,6 @@
 
     goto :goto_5
 
-    .line 902
     .end local v0    # "child":Landroid/view/View;
     :cond_7
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;

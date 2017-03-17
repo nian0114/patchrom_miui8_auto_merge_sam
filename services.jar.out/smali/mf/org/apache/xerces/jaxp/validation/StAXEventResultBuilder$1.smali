@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 365
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 367
     const/4 v0, 0x0
 
     return v0
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 370
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 373
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

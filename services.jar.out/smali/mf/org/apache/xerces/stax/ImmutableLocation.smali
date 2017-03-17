@@ -28,25 +28,18 @@
     .param p5, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput p1, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fCharacterOffset:I
 
-    .line 47
     iput p2, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fColumnNumber:I
 
-    .line 48
     iput p3, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fLineNumber:I
 
-    .line 49
     iput-object p4, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fPublicId:Ljava/lang/String;
 
-    .line 50
     iput-object p5, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fSystemId:Ljava/lang/String;
 
-    .line 51
     return-void
 .end method
 
@@ -55,7 +48,6 @@
     .param p1, "location"    # Lmf/javax/xml/stream/Location;
 
     .prologue
-    .line 40
     invoke-interface {p1}, Lmf/javax/xml/stream/Location;->getCharacterOffset()I
 
     move-result v1
@@ -64,7 +56,6 @@
 
     move-result v2
 
-    .line 41
     invoke-interface {p1}, Lmf/javax/xml/stream/Location;->getLineNumber()I
 
     move-result v3
@@ -73,7 +64,6 @@
 
     move-result-object v4
 
-    .line 42
     invoke-interface {p1}, Lmf/javax/xml/stream/Location;->getSystemId()Ljava/lang/String;
 
     move-result-object v5
@@ -82,7 +72,6 @@
 
     invoke-direct/range {v0 .. v5}, Lmf/org/apache/xerces/stax/ImmutableLocation;-><init>(IIILjava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     return-void
 .end method
 
@@ -92,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fCharacterOffset:I
 
     return v0
@@ -102,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget v0, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fColumnNumber:I
 
     return v0
@@ -112,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget v0, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fLineNumber:I
 
     return v0
@@ -122,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fPublicId:Ljava/lang/String;
 
     return-object v0
@@ -132,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lmf/org/apache/xerces/stax/ImmutableLocation;->fSystemId:Ljava/lang/String;
 
     return-object v0

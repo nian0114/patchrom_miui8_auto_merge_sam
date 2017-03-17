@@ -21,24 +21,20 @@
     .locals 1
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     new-instance v0, Lcom/android/server/wifi/BCProvider/DefaultCertHelper;
 
     invoke-direct {v0}, Lcom/android/server/wifi/BCProvider/DefaultCertHelper;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter;->helper:Lcom/android/server/wifi/BCProvider/CertHelper;
 
-    .line 27
     new-instance v0, Lcom/android/server/wifi/BCProvider/DefaultCertHelper;
 
     invoke-direct {v0}, Lcom/android/server/wifi/BCProvider/DefaultCertHelper;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter;->helper:Lcom/android/server/wifi/BCProvider/CertHelper;
 
-    .line 28
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 68
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter;->helper:Lcom/android/server/wifi/BCProvider/CertHelper;
 
@@ -64,7 +59,6 @@
 
     move-result-object v0
 
-    .line 70
     .local v0, "cFact":Ljava/security/cert/CertificateFactory;
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
@@ -85,12 +79,10 @@
 
     return-object v2
 
-    .line 72
     .end local v0    # "cFact":Ljava/security/cert/CertificateFactory;
     :catch_0
     move-exception v1
 
-    .line 74
     .local v1, "e":Ljava/io/IOException;
     new-instance v2, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter$ExCertificateParsingException;
 
@@ -120,12 +112,10 @@
 
     throw v2
 
-    .line 76
     .end local v1    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 78
     .local v1, "e":Ljava/security/NoSuchProviderException;
     new-instance v2, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter$ExCertificateException;
 
@@ -161,14 +151,12 @@
     .param p1, "providerName"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     new-instance v0, Lcom/android/server/wifi/BCProvider/NamedCertHelper;
 
     invoke-direct {v0, p1}, Lcom/android/server/wifi/BCProvider/NamedCertHelper;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter;->helper:Lcom/android/server/wifi/BCProvider/CertHelper;
 
-    .line 53
     return-object p0
 .end method
 
@@ -177,13 +165,11 @@
     .param p1, "provider"    # Ljava/security/Provider;
 
     .prologue
-    .line 38
     new-instance v0, Lcom/android/server/wifi/BCProvider/ProviderCertHelper;
 
     invoke-direct {v0, p1}, Lcom/android/server/wifi/BCProvider/ProviderCertHelper;-><init>(Ljava/security/Provider;)V
 
     iput-object v0, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter;->helper:Lcom/android/server/wifi/BCProvider/CertHelper;
 
-    .line 40
     return-object p0
 .end method

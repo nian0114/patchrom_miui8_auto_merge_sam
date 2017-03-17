@@ -2531,7 +2531,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v5, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2613,7 +2613,7 @@
 .method public lengthKeyName()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "KeyName"
 
@@ -2627,7 +2627,7 @@
 .method public lengthKeyValue()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "KeyValue"
 
@@ -2641,7 +2641,7 @@
 .method public lengthMgmtData()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "MgmtData"
 
@@ -2655,7 +2655,7 @@
 .method public lengthPGPData()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "PGPData"
 
@@ -2669,7 +2669,7 @@
 .method public lengthRetrievalMethod()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "RetrievalMethod"
 
@@ -2683,7 +2683,7 @@
 .method public lengthSPKIData()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "SPKIData"
 
@@ -2730,7 +2730,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v4, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2752,7 +2752,7 @@
 .method public lengthX509Data()I
     .locals 2
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v1, "X509Data"
 

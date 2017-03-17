@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 123
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -53,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 127
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 129
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -85,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 133
     return-void
 .end method
 
@@ -96,7 +91,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 117
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -117,7 +111,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 121
     return-void
 .end method
 
@@ -126,7 +119,6 @@
     .param p0, "epdgAvailable"    # I
 
     .prologue
-    .line 135
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -145,7 +137,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 138
     return-void
 .end method
 
@@ -156,7 +147,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 141
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -177,6 +167,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 145
     return-void
 .end method

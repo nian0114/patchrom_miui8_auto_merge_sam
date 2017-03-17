@@ -110,51 +110,38 @@
 
     const/4 v1, 0x0
 
-    .line 850
     invoke-direct {p0}, Landroid/graphics/ImageFilterSet;-><init>()V
 
-    .line 825
     iput v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mPassNum:I
 
-    .line 827
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mParams:[F
 
-    .line 829
     new-array v0, v2, [F
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mData1:[F
 
-    .line 831
     new-array v0, v2, [F
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mData2:[F
 
-    .line 833
     iput-boolean v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsUsed:Z
 
-    .line 835
     iput-boolean v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Used:Z
 
-    .line 837
     iput-boolean v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Used:Z
 
-    .line 839
     iput-boolean v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsModified:Z
 
-    .line 841
     iput-boolean v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Modified:Z
 
-    .line 843
     iput-boolean v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Modified:Z
 
-    .line 851
     invoke-virtual {p0, p1, p2, p3}, Landroid/graphics/ImageFilter$GenericImageFilter;->setup(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 852
     return-void
 .end method
 
@@ -170,51 +157,38 @@
 
     const/4 v2, 0x0
 
-    .line 855
     invoke-direct {p0}, Landroid/graphics/ImageFilterSet;-><init>()V
 
-    .line 825
     iput v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mPassNum:I
 
-    .line 827
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mParams:[F
 
-    .line 829
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mData1:[F
 
-    .line 831
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mData2:[F
 
-    .line 833
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsUsed:Z
 
-    .line 835
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Used:Z
 
-    .line 837
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Used:Z
 
-    .line 839
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsModified:Z
 
-    .line 841
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Modified:Z
 
-    .line 843
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Modified:Z
 
-    .line 856
     iput v3, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mPassNum:I
 
-    .line 857
     new-array v0, v3, [Ljava/lang/String;
 
     aput-object p1, v0, v2
@@ -225,7 +199,6 @@
 
     invoke-virtual {p0, v3, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;->setup(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 858
     return-void
 .end method
 
@@ -235,10 +208,8 @@
     .locals 3
 
     .prologue
-    .line 898
     invoke-super {p0}, Landroid/graphics/ImageFilterSet;->clearFilters()V
 
-    .line 899
     const/4 v0, 0x0
 
     .local v0, "pass":I
@@ -247,7 +218,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 900
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$GenericImageFilter;->getVertexShaderCode(I)Ljava/lang/String;
 
     move-result-object v1
@@ -262,12 +232,10 @@
 
     invoke-virtual {p0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;->addFilter(Landroid/graphics/ImageFilter;)V
 
-    .line 899
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 902
     :cond_0
     return-void
 .end method
@@ -277,17 +245,13 @@
     .param p1, "pass"    # I
 
     .prologue
-    .line 918
     if-gez p1, :cond_0
 
-    .line 919
     const/4 v0, 0x0
 
-    .line 922
     :goto_0
     return-object v0
 
-    .line 920
     :cond_0
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mFrag:[Ljava/lang/String;
 
@@ -295,7 +259,6 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 921
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mFrag:[Ljava/lang/String;
 
     iget-object v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mFrag:[Ljava/lang/String;
@@ -308,7 +271,6 @@
 
     goto :goto_0
 
-    .line 922
     :cond_1
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mFrag:[Ljava/lang/String;
 
@@ -322,17 +284,13 @@
     .param p1, "pass"    # I
 
     .prologue
-    .line 910
     if-gez p1, :cond_0
 
-    .line 911
     const/4 v0, 0x0
 
-    .line 914
     :goto_0
     return-object v0
 
-    .line 912
     :cond_0
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mVert:[Ljava/lang/String;
 
@@ -340,7 +298,6 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 913
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mVert:[Ljava/lang/String;
 
     iget-object v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mVert:[Ljava/lang/String;
@@ -353,7 +310,6 @@
 
     goto :goto_0
 
-    .line 914
     :cond_1
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mVert:[Ljava/lang/String;
 
@@ -366,7 +322,6 @@
     .locals 1
 
     .prologue
-    .line 906
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     return-object v0
@@ -378,7 +333,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 879
     const/4 v1, 0x0
 
     .local v1, "pass":I
@@ -387,14 +341,12 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 880
     invoke-virtual {p0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/ImageFilter$CustomFilter;
 
-    .line 882
     .local v0, "filter":Landroid/graphics/ImageFilter$CustomFilter;
     iget-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsUsed:Z
 
@@ -404,7 +356,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 883
     const-string v2, "filterParams"
 
     iget-object v3, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mParams:[F
@@ -415,7 +366,6 @@
 
     invoke-virtual {v0, v2, v5, v3, v4}, Landroid/graphics/ImageFilter$CustomFilter;->setUniformfv(Ljava/lang/String;II[F)V
 
-    .line 886
     :cond_0
     iget-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Used:Z
 
@@ -425,7 +375,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 887
     const-string v2, "filterData01"
 
     iget-object v3, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mData1:[F
@@ -436,7 +385,6 @@
 
     invoke-virtual {v0, v2, v5, v3, v4}, Landroid/graphics/ImageFilter$CustomFilter;->setUniformfv(Ljava/lang/String;II[F)V
 
-    .line 890
     :cond_1
     iget-boolean v2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Used:Z
 
@@ -446,7 +394,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 891
     const-string v2, "filterData02"
 
     iget-object v3, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mData2:[F
@@ -457,13 +404,11 @@
 
     invoke-virtual {v0, v2, v5, v3, v4}, Landroid/graphics/ImageFilter$CustomFilter;->setUniformfv(Ljava/lang/String;II[F)V
 
-    .line 879
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 894
     .end local v0    # "filter":Landroid/graphics/ImageFilter$CustomFilter;
     :cond_3
     return-void
@@ -473,12 +418,10 @@
     .locals 1
 
     .prologue
-    .line 958
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Modified:Z
 
-    .line 959
     return-void
 .end method
 
@@ -486,12 +429,10 @@
     .locals 1
 
     .prologue
-    .line 976
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Modified:Z
 
-    .line 977
     return-void
 .end method
 
@@ -499,12 +440,10 @@
     .locals 1
 
     .prologue
-    .line 940
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsModified:Z
 
-    .line 941
     return-void
 .end method
 
@@ -513,7 +452,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 986
     const/4 v0, 0x0
 
     .local v0, "pass":I
@@ -522,25 +460,22 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 987
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$GenericImageFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v1
 
     check-cast v1, Landroid/graphics/ImageFilter$CustomFilter;
 
-    const-string/jumbo v2, "maskSampler"
+    const-string v2, "maskSampler"
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3, p1}, Landroid/graphics/ImageFilter$CustomFilter;->setSamplerBitmap(Ljava/lang/String;ILandroid/graphics/Bitmap;)V
 
-    .line 986
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 989
     :cond_0
     return-void
 .end method
@@ -549,12 +484,10 @@
     .locals 1
 
     .prologue
-    .line 954
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Modified:Z
 
-    .line 955
     return-void
 .end method
 
@@ -562,12 +495,10 @@
     .locals 1
 
     .prologue
-    .line 972
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Modified:Z
 
-    .line 973
     return-void
 .end method
 
@@ -575,12 +506,10 @@
     .locals 1
 
     .prologue
-    .line 936
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsModified:Z
 
-    .line 937
     return-void
 .end method
 
@@ -590,18 +519,14 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 980
     iget-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mParams:[F
 
     aput p2, v0, p1
 
-    .line 981
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GenericImageFilter;->useFilterParams()V
 
-    .line 982
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GenericImageFilter;->setFilterParamsChanged()V
 
-    .line 983
     return-void
 .end method
 
@@ -612,7 +537,6 @@
     .param p3, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 992
     const/4 v0, 0x0
 
     .local v0, "pass":I
@@ -621,7 +545,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 993
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$GenericImageFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v1
@@ -630,12 +553,10 @@
 
     invoke-virtual {v1, p1, p2, p3}, Landroid/graphics/ImageFilter$CustomFilter;->setSamplerBitmap(Ljava/lang/String;ILandroid/graphics/Bitmap;)V
 
-    .line 992
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 995
     :cond_0
     return-void
 .end method
@@ -647,7 +568,6 @@
     .param p3, "vertical"    # F
 
     .prologue
-    .line 998
     if-ltz p1, :cond_0
 
     iget v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mPassNum:I
@@ -660,24 +580,20 @@
 
     if-le p1, v1, :cond_1
 
-    .line 1004
     :cond_0
     :goto_0
     return-void
 
-    .line 1001
     :cond_1
     invoke-virtual {p0, p1}, Landroid/graphics/ImageFilter$GenericImageFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v0
 
-    .line 1002
     .local v0, "f":Landroid/graphics/ImageFilter;
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1, p2}, Landroid/graphics/ImageFilter;->setValue(IF)V
 
-    .line 1003
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1, p3}, Landroid/graphics/ImageFilter;->setValue(IF)V
@@ -692,22 +608,16 @@
     .param p3, "frag"    # [Ljava/lang/String;
 
     .prologue
-    .line 870
     iput p1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mPassNum:I
 
-    .line 871
     iput-object p2, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mVert:[Ljava/lang/String;
 
-    .line 872
     iput-object p3, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mFrag:[Ljava/lang/String;
 
-    .line 873
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GenericImageFilter;->buildWorkerFilters()V
 
-    .line 874
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GenericImageFilter;->notifyWorkerFilters()V
 
-    .line 875
     return-void
 .end method
 
@@ -721,30 +631,24 @@
 
     const/4 v1, 0x1
 
-    .line 861
     iput v1, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mPassNum:I
 
-    .line 862
     new-array v0, v1, [Ljava/lang/String;
 
     aput-object p1, v0, v2
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mVert:[Ljava/lang/String;
 
-    .line 863
     new-array v0, v1, [Ljava/lang/String;
 
     aput-object p1, v0, v2
 
     iput-object v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mFrag:[Ljava/lang/String;
 
-    .line 865
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GenericImageFilter;->buildWorkerFilters()V
 
-    .line 866
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$GenericImageFilter;->notifyWorkerFilters()V
 
-    .line 867
     return-void
 .end method
 
@@ -752,12 +656,10 @@
     .locals 1
 
     .prologue
-    .line 950
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Used:Z
 
-    .line 951
     return-void
 .end method
 
@@ -765,12 +667,10 @@
     .locals 1
 
     .prologue
-    .line 968
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Used:Z
 
-    .line 969
     return-void
 .end method
 
@@ -778,12 +678,10 @@
     .locals 1
 
     .prologue
-    .line 932
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsUsed:Z
 
-    .line 933
     return-void
 .end method
 
@@ -791,12 +689,10 @@
     .locals 1
 
     .prologue
-    .line 946
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData01Used:Z
 
-    .line 947
     return-void
 .end method
 
@@ -804,12 +700,10 @@
     .locals 1
 
     .prologue
-    .line 964
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterData02Used:Z
 
-    .line 965
     return-void
 .end method
 
@@ -817,11 +711,9 @@
     .locals 1
 
     .prologue
-    .line 928
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/ImageFilter$GenericImageFilter;->mIsFilterParamsUsed:Z
 
-    .line 929
     return-void
 .end method

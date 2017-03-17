@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1557
     iput-object p1, p0, Lcom/android/server/am/MARsDBManager$SmartManagerExcludedAppObserver;->this$0:Lcom/android/server/am/MARsDBManager;
 
-    .line 1558
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1559
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1563
     iget-object v0, p0, Lcom/android/server/am/MARsDBManager$SmartManagerExcludedAppObserver;->this$0:Lcom/android/server/am/MARsDBManager;
 
     iget-object v0, v0, Lcom/android/server/am/MARsDBManager;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -50,20 +46,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1564
     const-string v0, "MARsDBManager"
 
-    const-string/jumbo v1, "onChange - mSmartManagerExcludedAppObserver!"
+    const-string v1, "onChange - mSmartManagerExcludedAppObserver!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1565
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/MARsDBManager$SmartManagerExcludedAppObserver;->this$0:Lcom/android/server/am/MARsDBManager;
 
     # invokes: Lcom/android/server/am/MARsDBManager;->getExcludedAppDBValues()V
     invoke-static {v0}, Lcom/android/server/am/MARsDBManager;->access$1200(Lcom/android/server/am/MARsDBManager;)V
 
-    .line 1566
     return-void
 .end method

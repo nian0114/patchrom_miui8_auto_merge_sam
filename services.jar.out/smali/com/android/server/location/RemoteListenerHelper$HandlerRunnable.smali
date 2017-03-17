@@ -56,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 244
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.HandlerRunnable;"
     .local p2, "listener":Landroid/os/IInterface;, "TTListener;"
     .local p3, "operation":Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;, "Lcom/android/server/location/RemoteListenerHelper$ListenerOperation<TTListener;>;"
@@ -64,13 +63,10 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 245
     iput-object p2, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->mListener:Landroid/os/IInterface;
 
-    .line 246
     iput-object p3, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->mOperation:Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
 
-    .line 247
     return-void
 .end method
 
@@ -80,7 +76,6 @@
     .locals 3
 
     .prologue
-    .line 252
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.HandlerRunnable;"
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->mOperation:Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
@@ -91,15 +86,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 256
     :goto_0
     return-void
 
-    .line 253
     :catch_0
     move-exception v0
 
-    .line 254
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->this$0:Lcom/android/server/location/RemoteListenerHelper;
 

@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 17
     const-class v0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -58,25 +57,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mContext:Landroid/content/Context;
 
-    .line 91
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mCocktailContext:Landroid/content/Context;
 
-    .line 93
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mListener:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$CocktailLoadablePanelListener;
 
-    .line 95
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mOnCocktailClickHandler:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$OnCocktailClickHandler;
 
-    .line 103
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mContext:Landroid/content/Context;
 
-    .line 104
     return-void
 .end method
 
@@ -88,28 +80,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mContext:Landroid/content/Context;
 
-    .line 91
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mCocktailContext:Landroid/content/Context;
 
-    .line 93
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mListener:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$CocktailLoadablePanelListener;
 
-    .line 95
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mOnCocktailClickHandler:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$OnCocktailClickHandler;
 
-    .line 113
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mContext:Landroid/content/Context;
 
-    .line 114
     iput-object p2, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mCocktailContext:Landroid/content/Context;
 
-    .line 115
     return-void
 .end method
 
@@ -117,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 16
     sget-object v0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -129,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mListener:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$CocktailLoadablePanelListener;
 
     return-object v0
@@ -139,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mOnCocktailClickHandler:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$OnCocktailClickHandler;
 
     return-object v0
@@ -155,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 197
     return-void
 .end method
 
@@ -166,7 +146,6 @@
     .end annotation
 
     .prologue
-    .line 207
     return-void
 .end method
 
@@ -178,7 +157,6 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 187
     return-void
 .end method
 
@@ -187,7 +165,6 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 169
     return-void
 .end method
 
@@ -196,7 +173,6 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 178
     return-void
 .end method
 
@@ -205,10 +181,8 @@
     .param p1, "listener"    # Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$CocktailLoadablePanelListener;
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mListener:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$CocktailLoadablePanelListener;
 
-    .line 122
     return-void
 .end method
 
@@ -217,9 +191,7 @@
     .param p1, "onCocktailClickHandler"    # Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$OnCocktailClickHandler;
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->mOnCocktailClickHandler:Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel$OnCocktailClickHandler;
 
-    .line 137
     return-void
 .end method

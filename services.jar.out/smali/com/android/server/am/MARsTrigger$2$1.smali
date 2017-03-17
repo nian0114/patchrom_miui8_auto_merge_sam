@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 392
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$2$1;->this$1:Lcom/android/server/am/MARsTrigger$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 8
 
     .prologue
-    .line 395
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$2$1;->this$1:Lcom/android/server/am/MARsTrigger$2;
 
     iget-object v1, v1, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -51,11 +49,9 @@
 
     move-result v0
 
-    .line 396
     .local v0, "appUsedRecently":Z
     if-eqz v0, :cond_0
 
-    .line 397
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$2$1;->this$1:Lcom/android/server/am/MARsTrigger$2;
 
     iget-object v1, v1, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -82,7 +78,6 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->setAlarm(Ljava/lang/String;J)V
     invoke-static {v1, v2, v4, v5}, Lcom/android/server/am/MARsTrigger;->access$100(Lcom/android/server/am/MARsTrigger;Ljava/lang/String;J)V
 
-    .line 401
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$2$1;->this$1:Lcom/android/server/am/MARsTrigger$2;
 
@@ -94,10 +89,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/MARsPolicyManager;->setAppUsedRecentlyState(Z)V
 
-    .line 402
     return-void
 
-    .line 399
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$2$1;->this$1:Lcom/android/server/am/MARsTrigger$2;
 

@@ -12,12 +12,9 @@
     .param p4, "type"    # S
 
     .prologue
-    .line 41
     invoke-direct {p0, p1, p2, p3}, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     iput-short p4, p0, Lmf/org/apache/xerces/impl/xs/identity/UniqueOrKey;->type:S
 
-    .line 43
     return-void
 .end method

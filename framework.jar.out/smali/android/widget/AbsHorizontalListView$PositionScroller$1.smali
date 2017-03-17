@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 5529
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$PositionScroller$1;->this$1:Landroid/widget/AbsHorizontalListView$PositionScroller;
 
     iput p2, p0, Landroid/widget/AbsHorizontalListView$PositionScroller$1;->val$position:I
@@ -44,13 +43,11 @@
     .locals 2
 
     .prologue
-    .line 5531
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$PositionScroller$1;->this$1:Landroid/widget/AbsHorizontalListView$PositionScroller;
 
     iget v1, p0, Landroid/widget/AbsHorizontalListView$PositionScroller$1;->val$position:I
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsHorizontalListView$PositionScroller;->start(I)V
 
-    .line 5532
     return-void
 .end method

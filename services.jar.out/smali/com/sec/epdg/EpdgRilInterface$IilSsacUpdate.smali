@@ -33,22 +33,16 @@
     .param p4, "videoTime"    # I
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     iput p1, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVoiceFactor:I
 
-    .line 92
     iput p2, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVoiceTime:I
 
-    .line 93
     iput p3, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVideoFactor:I
 
-    .line 94
     iput p4, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVideoTime:I
 
-    .line 95
     return-void
 .end method
 
@@ -58,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVoiceFactor:I
 
     return v0
@@ -68,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVoiceFactor:I
 
     return v0
@@ -78,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVoiceFactor:I
 
     return v0
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$IilSsacUpdate;->mVoiceFactor:I
 
     return v0

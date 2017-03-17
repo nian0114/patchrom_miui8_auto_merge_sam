@@ -33,30 +33,25 @@
     .locals 2
 
     .prologue
-    .line 107
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 111
-    const-string/jumbo v0, "usb_audio_automatic_routing_disabled"
+    const-string v0, "usb_audio_automatic_routing_disabled"
 
     const-string v1, "0"
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$2;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     const-string v0, "anr_show_background"
 
     const-string v1, "0"
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$2;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     const-string v0, "accessibility_display_daltonizer_enabled"
 
     const-string v1, "0"
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/restriction/DeveloperModeSettings$2;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 116
     return-void
 .end method

@@ -51,25 +51,25 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v2, "http://www.w3.org/2000/09/xmldsig#"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string/jumbo v2, "http://schemas.xmlsoap.org/soap/security/2000-12"
+    const-string v2, "http://schemas.xmlsoap.org/soap/security/2000-12"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x3
 
-    const-string/jumbo v2, "http://www.w3.org/2002/03/xkms#"
+    const-string v2, "http://www.w3.org/2002/03/xkms#"
 
     aput-object v2, v0, v1
 
@@ -257,7 +257,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "getElementByIdType() Search for ID "
+    const-string v3, "getElementByIdType() Search for ID "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -328,7 +328,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "getElementByIdUsingDOM() Search for ID "
+    const-string v3, "getElementByIdUsingDOM() Search for ID "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -420,7 +420,7 @@
     goto :goto_0
 
     :cond_2
-    const-string/jumbo v4, "id"
+    const-string v4, "id"
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 

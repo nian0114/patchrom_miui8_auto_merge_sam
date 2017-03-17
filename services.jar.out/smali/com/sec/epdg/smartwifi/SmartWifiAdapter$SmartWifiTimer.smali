@@ -28,15 +28,12 @@
     .param p2, "millisInFuture"    # J
 
     .prologue
-    .line 2007
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
-    .line 2008
     const-wide/16 v0, 0x2710
 
     invoke-direct {p0, p2, p3, v0, v1}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
-    .line 2009
     return-void
 .end method
 
@@ -46,14 +43,12 @@
     .locals 2
 
     .prologue
-    .line 2016
     const-string v0, "[SMARTWIFI]"
 
     const-string v1, "SmartWifiTimer finished"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2017
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v1, 0x0
@@ -69,14 +64,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2018
     const-string v0, "[SMARTWIFI]"
 
     const-string v1, "SmartWifiTimer L2W is good to go"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2019
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mHandler:Landroid/os/Handler;
@@ -93,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2021
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -102,7 +94,6 @@
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mSmartWifiTimer:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;
     invoke-static {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$6002(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;)Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTimer;
 
-    .line 2022
     return-void
 .end method
 
@@ -111,13 +102,11 @@
     .param p1, "millisUntilFinished"    # J
 
     .prologue
-    .line 2012
     const-string v0, "[SMARTWIFI]"
 
     const-string v1, "SmartWifiTimer tick"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2013
     return-void
 .end method

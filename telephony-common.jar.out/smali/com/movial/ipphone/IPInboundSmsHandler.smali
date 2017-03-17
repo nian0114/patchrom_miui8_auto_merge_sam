@@ -19,7 +19,6 @@
     .param p3, "ipPhone"    # Lcom/movial/ipphone/IPPhone;
 
     .prologue
-    .line 34
     invoke-virtual {p3}, Lcom/movial/ipphone/IPPhone;->getGsmPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -28,7 +27,6 @@
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/SmsStorageMonitor;Lcom/android/internal/telephony/PhoneBase;)V
 
-    .line 35
     return-void
 .end method
 
@@ -39,16 +37,13 @@
     .param p2, "ipPhone"    # Lcom/movial/ipphone/IPPhone;
 
     .prologue
-    .line 28
     new-instance v0, Lcom/movial/ipphone/IPInboundSmsHandler;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/movial/ipphone/IPInboundSmsHandler;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/SmsStorageMonitor;Lcom/movial/ipphone/IPPhone;)V
 
-    .line 29
     .local v0, "handler":Lcom/movial/ipphone/IPInboundSmsHandler;
     invoke-virtual {v0}, Lcom/movial/ipphone/IPInboundSmsHandler;->start()V
 
-    .line 30
     return-object v0
 .end method
 
@@ -61,7 +56,6 @@
     .param p3, "response"    # Landroid/os/Message;
 
     .prologue
-    .line 43
     const-string v1, "IPInboundSmsHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -94,12 +88,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     iget-object v1, p0, Lcom/movial/ipphone/IPInboundSmsHandler;->mIPService:Lcom/movial/ipphone/IIPService;
 
     if-eqz v1, :cond_0
 
-    .line 46
     :try_start_0
     iget-object v1, p0, Lcom/movial/ipphone/IPInboundSmsHandler;->mIPService:Lcom/movial/ipphone/IIPService;
 
@@ -111,15 +103,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 54
     :goto_0
     return-void
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "IPInboundSmsHandler"
 
@@ -145,7 +134,6 @@
 
     goto :goto_0
 
-    .line 52
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
@@ -158,9 +146,7 @@
     .param p1, "ipService"    # Lcom/movial/ipphone/IIPService;
 
     .prologue
-    .line 38
     iput-object p1, p0, Lcom/movial/ipphone/IPInboundSmsHandler;->mIPService:Lcom/movial/ipphone/IIPService;
 
-    .line 39
     return-void
 .end method

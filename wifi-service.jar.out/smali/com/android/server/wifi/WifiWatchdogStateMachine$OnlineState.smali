@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5988
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 5991
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$300()Z
 
@@ -54,7 +52,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$24700(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 5992
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->requestWakeLock(Z)V
 
-    .line 5993
     return-void
 .end method
 
@@ -73,27 +69,22 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 5997
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 6004
     const/4 v0, 0x0
 
-    .line 6006
     :cond_0
     :goto_0
     return v0
 
-    .line 5999
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mIsScreenOn:Z
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$4502(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)Z
 
-    .line 6000
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mPoorNetworkDetectionEnabled:Z
@@ -103,7 +94,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6001
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -118,7 +108,6 @@
 
     goto :goto_0
 
-    .line 5997
     nop
 
     :pswitch_data_0

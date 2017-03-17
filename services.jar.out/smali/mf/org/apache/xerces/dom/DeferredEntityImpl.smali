@@ -23,21 +23,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 83
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/dom/EntityImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 85
     iput p2, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
-    .line 86
     invoke-virtual {p0, v1}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->needsSyncData(Z)V
 
-    .line 87
     invoke-virtual {p0, v1}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->needsSyncChildren(Z)V
 
-    .line 89
     return-void
 .end method
 
@@ -47,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget v0, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
     return v0
@@ -61,29 +55,23 @@
 
     const/4 v1, 0x0
 
-    .line 141
     invoke-virtual {p0, v1}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->needsSyncChildren(Z)V
 
-    .line 143
     invoke-virtual {p0, v1}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->isReadOnly(Z)V
 
-    .line 145
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->ownerDocument()Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     move-result-object v0
 
     check-cast v0, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;
 
-    .line 146
     .local v0, "ownerDocument":Lmf/org/apache/xerces/dom/DeferredDocumentImpl;
     iget v1, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
     invoke-virtual {v0, p0, v1}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->synchronizeChildren(Lmf/org/apache/xerces/dom/ParentNode;I)V
 
-    .line 147
     invoke-virtual {p0, v2, v2}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->setReadOnly(ZZ)V
 
-    .line 149
     return-void
 .end method
 
@@ -91,17 +79,14 @@
     .locals 4
 
     .prologue
-    .line 111
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3}, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->needsSyncData(Z)V
 
-    .line 115
     iget-object v2, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->ownerDocument:Lmf/org/apache/xerces/dom/CoreDocumentImpl;
 
     check-cast v2, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;
 
-    .line 116
     .local v2, "ownerDocument":Lmf/org/apache/xerces/dom/DeferredDocumentImpl;
     iget v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
@@ -111,7 +96,6 @@
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->name:Ljava/lang/String;
 
-    .line 119
     iget v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
     invoke-virtual {v2, v3}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeValue(I)Ljava/lang/String;
@@ -120,7 +104,6 @@
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->publicId:Ljava/lang/String;
 
-    .line 120
     iget v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
     invoke-virtual {v2, v3}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeURI(I)Ljava/lang/String;
@@ -129,44 +112,37 @@
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->systemId:Ljava/lang/String;
 
-    .line 121
     iget v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->fNodeIndex:I
 
     invoke-virtual {v2, v3}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeExtra(I)I
 
     move-result v0
 
-    .line 122
     .local v0, "extraDataIndex":I
     invoke-virtual {v2, v0}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeType(I)S
 
-    .line 124
     invoke-virtual {v2, v0}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeName(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->notationName:Ljava/lang/String;
 
-    .line 127
     invoke-virtual {v2, v0}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeValue(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->version:Ljava/lang/String;
 
-    .line 128
     invoke-virtual {v2, v0}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeURI(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->encoding:Ljava/lang/String;
 
-    .line 131
     invoke-virtual {v2, v0}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeExtra(I)I
 
     move-result v1
 
-    .line 132
     .local v1, "extraIndex2":I
     invoke-virtual {v2, v1}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeName(I)Ljava/lang/String;
 
@@ -174,13 +150,11 @@
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->baseURI:Ljava/lang/String;
 
-    .line 133
     invoke-virtual {v2, v1}, Lmf/org/apache/xerces/dom/DeferredDocumentImpl;->getNodeValue(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lmf/org/apache/xerces/dom/DeferredEntityImpl;->inputEncoding:Ljava/lang/String;
 
-    .line 135
     return-void
 .end method

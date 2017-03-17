@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2354
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$ShortcutMigration;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2357
     const-string v2, "com.sec.knox.action.SHORTCUT_MIGRATION_FOR_2_3_0"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2358
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -62,12 +59,10 @@
 
     invoke-static {v2, v3}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2359
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2360
     .local v1, "service":Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/server/bridge/BridgeProxy$ShortcutMigration;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -85,18 +80,15 @@
 
     move-result-object v0
 
-    .line 2362
     .local v0, "cn":Landroid/content/ComponentName;
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2363
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 2364
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -106,7 +98,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2365
     iget-object v2, p0, Lcom/android/server/bridge/BridgeProxy$ShortcutMigration;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mContext:Landroid/content/Context;
@@ -123,7 +114,6 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 2367
     .end local v0    # "cn":Landroid/content/ComponentName;
     .end local v1    # "service":Landroid/content/Intent;
     :cond_0

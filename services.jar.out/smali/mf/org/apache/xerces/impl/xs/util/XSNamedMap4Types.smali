@@ -15,13 +15,10 @@
     .param p3, "type"    # S
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl;-><init>(Ljava/lang/String;Lmf/org/apache/xerces/util/SymbolHash;)V
 
-    .line 48
     iput-short p3, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fType:S
 
-    .line 49
     return-void
 .end method
 
@@ -33,13 +30,10 @@
     .param p4, "type"    # S
 
     .prologue
-    .line 60
     invoke-direct {p0, p1, p2, p3}, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl;-><init>([Ljava/lang/String;[Lmf/org/apache/xerces/util/SymbolHash;I)V
 
-    .line 61
     iput-short p4, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fType:S
 
-    .line 62
     return-void
 .end method
 
@@ -49,7 +43,6 @@
     .locals 8
 
     .prologue
-    .line 70
     monitor-enter p0
 
     :try_start_0
@@ -59,10 +52,8 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 72
     const/4 v2, 0x0
 
-    .line 73
     .local v2, "length":I
     const/4 v1, 0x0
 
@@ -72,14 +63,11 @@
 
     if-lt v1, v5, :cond_1
 
-    .line 77
     const/4 v3, 0x0
 
-    .line 78
     .local v3, "pos":I
     new-array v0, v2, [Lmf/org/apache/xerces/xs/XSObject;
 
-    .line 79
     .local v0, "array":[Lmf/org/apache/xerces/xs/XSObject;
     const/4 v1, 0x0
 
@@ -88,23 +76,19 @@
 
     if-lt v1, v5, :cond_2
 
-    .line 84
     const/4 v5, 0x0
 
     iput v5, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fLength:I
 
-    .line 85
     new-array v5, v2, [Lmf/org/apache/xerces/xs/XSObject;
 
     iput-object v5, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fArray:[Lmf/org/apache/xerces/xs/XSObject;
 
-    .line 87
     const/4 v1, 0x0
 
     :goto_2
     if-lt v1, v2, :cond_3
 
-    .line 94
     .end local v0    # "array":[Lmf/org/apache/xerces/xs/XSObject;
     .end local v1    # "i":I
     .end local v2    # "length":I
@@ -118,7 +102,6 @@
 
     return v5
 
-    .line 74
     .restart local v1    # "i":I
     .restart local v2    # "length":I
     :cond_1
@@ -133,12 +116,10 @@
 
     add-int/2addr v2, v5
 
-    .line 73
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 80
     .restart local v0    # "array":[Lmf/org/apache/xerces/xs/XSObject;
     .restart local v3    # "pos":I
     :cond_2
@@ -152,18 +133,15 @@
 
     add-int/2addr v3, v5
 
-    .line 79
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 88
     :cond_3
     aget-object v4, v0, v1
 
     check-cast v4, Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
-    .line 89
     .local v4, "type":Lmf/org/apache/xerces/xs/XSTypeDefinition;
     invoke-interface {v4}, Lmf/org/apache/xerces/xs/XSTypeDefinition;->getTypeCategory()S
 
@@ -173,7 +151,6 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 90
     iget-object v5, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fArray:[Lmf/org/apache/xerces/xs/XSObject;
 
     iget v6, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fLength:I
@@ -186,13 +163,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 87
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 70
     .end local v0    # "array":[Lmf/org/apache/xerces/xs/XSObject;
     .end local v1    # "i":I
     .end local v2    # "length":I
@@ -211,7 +186,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 132
     monitor-enter p0
 
     :try_start_0
@@ -219,10 +193,8 @@
 
     if-nez v0, :cond_0
 
-    .line 133
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->getLength()I
 
-    .line 135
     :cond_0
     if-ltz p1, :cond_1
 
@@ -232,11 +204,9 @@
 
     if-lt p1, v0, :cond_2
 
-    .line 136
     :cond_1
     const/4 v0, 0x0
 
-    .line 138
     :goto_0
     monitor-exit p0
 
@@ -252,7 +222,6 @@
 
     goto :goto_0
 
-    .line 132
     :catchall_0
     move-exception v0
 
@@ -269,7 +238,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 108
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -280,12 +248,10 @@
 
     move-object v1, v2
 
-    .line 118
     :cond_0
     :goto_1
     return-object v1
 
-    .line 109
     :cond_1
     iget-object v3, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fNamespaces:[Ljava/lang/String;
 
@@ -297,7 +263,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 110
     iget-object v3, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMap4Types;->fMaps:[Lmf/org/apache/xerces/util/SymbolHash;
 
     aget-object v3, v3, v0
@@ -308,7 +273,6 @@
 
     check-cast v1, Lmf/org/apache/xerces/xs/XSTypeDefinition;
 
-    .line 112
     .local v1, "type":Lmf/org/apache/xerces/xs/XSTypeDefinition;
     if-eqz v1, :cond_2
 
@@ -323,10 +287,8 @@
     :cond_2
     move-object v1, v2
 
-    .line 115
     goto :goto_1
 
-    .line 108
     .end local v1    # "type":Lmf/org/apache/xerces/xs/XSTypeDefinition;
     :cond_3
     add-int/lit8 v0, v0, 0x1

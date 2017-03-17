@@ -24,29 +24,22 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 41
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 30
     iput v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mRetentionTime:I
 
-    .line 32
     const/16 v0, -0x5a
 
     iput v0, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMinimumAngle:I
 
-    .line 34
     const/16 v0, 0x5a
 
     iput v0, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMaximumAngle:I
 
-    .line 36
     iput v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMovingThrs:I
 
-    .line 42
     invoke-direct {p0}, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->setAttribute()V
 
-    .line 43
     return-void
 .end method
 
@@ -60,41 +53,30 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 63
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 30
     iput v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mRetentionTime:I
 
-    .line 32
     const/16 v0, -0x5a
 
     iput v0, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMinimumAngle:I
 
-    .line 34
     const/16 v0, 0x5a
 
     iput v0, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMaximumAngle:I
 
-    .line 36
     iput v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMovingThrs:I
 
-    .line 64
     iput p1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mRetentionTime:I
 
-    .line 65
     iput p2, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMinimumAngle:I
 
-    .line 66
     iput p3, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMaximumAngle:I
 
-    .line 67
     iput p4, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMovingThrs:I
 
-    .line 68
     invoke-direct {p0}, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->setAttribute()V
 
-    .line 69
     return-void
 .end method
 
@@ -102,46 +84,39 @@
     .locals 3
 
     .prologue
-    .line 98
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 99
     .local v0, "attribute":Landroid/os/Bundle;
-    const-string/jumbo v1, "retention_time"
+    const-string v1, "retention_time"
 
     iget v2, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mRetentionTime:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 100
-    const-string/jumbo v1, "minimum_angle"
+    const-string v1, "minimum_angle"
 
     iget v2, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMinimumAngle:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 101
-    const-string/jumbo v1, "maximum_angle"
+    const-string v1, "maximum_angle"
 
     iget v2, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMaximumAngle:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 102
-    const-string/jumbo v1, "moving_thrs"
+    const-string v1, "moving_thrs"
 
     iget v2, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMovingThrs:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 103
     const/16 v1, 0x1c
 
     invoke-super {p0, v1, v0}, Landroid/hardware/scontext/SContextAttribute;->setAttribute(ILandroid/os/Bundle;)V
 
-    .line 104
     return-void
 .end method
 
@@ -157,23 +132,19 @@
 
     const/4 v0, 0x0
 
-    .line 74
     iget v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mRetentionTime:I
 
     if-gez v1, :cond_0
 
-    .line 75
     const-string v1, "SContextSpecificPoseAlertAttribute"
 
     const-string v2, "The retention time is wrong."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     :goto_0
     return v0
 
-    .line 78
     :cond_0
     iget v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMinimumAngle:I
 
@@ -183,7 +154,6 @@
 
     if-le v1, v3, :cond_2
 
-    .line 79
     :cond_1
     const-string v1, "SContextSpecificPoseAlertAttribute"
 
@@ -193,7 +163,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_2
     iget v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMaximumAngle:I
 
@@ -203,7 +172,6 @@
 
     if-le v1, v3, :cond_4
 
-    .line 83
     :cond_3
     const-string v1, "SContextSpecificPoseAlertAttribute"
 
@@ -213,7 +181,6 @@
 
     goto :goto_0
 
-    .line 86
     :cond_4
     iget v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMinimumAngle:I
 
@@ -221,7 +188,6 @@
 
     if-le v1, v2, :cond_5
 
-    .line 87
     const-string v1, "SContextSpecificPoseAlertAttribute"
 
     const-string v2, "The minimum angle must be less than the maximum angle."
@@ -230,13 +196,11 @@
 
     goto :goto_0
 
-    .line 90
     :cond_5
     iget v1, p0, Landroid/hardware/scontext/SContextSpecificPoseAlertAttribute;->mMovingThrs:I
 
     if-gez v1, :cond_6
 
-    .line 91
     const-string v1, "SContextSpecificPoseAlertAttribute"
 
     const-string v2, "The moving threshold is wrong."
@@ -245,7 +209,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_6
     const/4 v0, 0x1
 

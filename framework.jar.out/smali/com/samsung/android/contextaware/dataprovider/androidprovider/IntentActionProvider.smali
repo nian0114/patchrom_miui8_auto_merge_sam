@@ -18,17 +18,14 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 116
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider$1;-><init>(Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 50
     return-void
 .end method
 
@@ -38,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 161
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -49,17 +45,14 @@
 
     if-nez v0, :cond_1
 
-    .line 162
     :cond_0
     const-string v0, "cannot disable"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 167
     :goto_0
     return-void
 
-    .line 166
     :cond_1
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
@@ -76,7 +69,6 @@
     .locals 3
 
     .prologue
-    .line 145
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -91,17 +83,14 @@
 
     if-nez v0, :cond_1
 
-    .line 147
     :cond_0
     const-string v0, "cannot enable"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 152
     :goto_0
     return-void
 
-    .line 151
     :cond_1
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
@@ -120,7 +109,6 @@
     .locals 3
 
     .prologue
-    .line 96
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -138,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 105
     const/4 v0, 0x0
 
     return v0
@@ -151,23 +138,19 @@
     .locals 2
 
     .prologue
-    .line 62
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/AndroidProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 63
     const-string v0, "mContext is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 73
     :goto_0
     return-void
 
-    .line 67
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;->getIntentFilterName()Ljava/lang/String;
 
@@ -185,15 +168,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 68
     :cond_1
-    const-string/jumbo v0, "mIntentAction is null"
+    const-string v0, "mIntentAction is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 72
     :cond_2
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -212,12 +193,10 @@
     .locals 1
 
     .prologue
-    .line 84
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 85
     return-void
 .end method
 

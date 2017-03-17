@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$ApnChangeObserver;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
-    .line 230
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 231
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 236
     const-string v1, "EnterpriseBillingAsyncHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -65,7 +61,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$ApnChangeObserver;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;->mHandler:Landroid/os/Handler;
@@ -81,7 +76,6 @@
 
     move-result-object v0
 
-    .line 238
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$ApnChangeObserver;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -92,6 +86,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 240
     return-void
 .end method

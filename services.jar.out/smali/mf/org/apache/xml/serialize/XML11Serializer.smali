@@ -30,28 +30,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 131
     invoke-direct {p0}, Lmf/org/apache/xml/serialize/XMLSerializer;-><init>()V
 
-    .line 111
     iput-boolean v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOML1:Z
 
-    .line 113
     const/4 v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaceCounter:I
 
-    .line 123
     iput-boolean v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaces:Z
 
-    .line 132
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_format:Lmf/org/apache/xml/serialize/OutputFormat;
 
     const-string v1, "1.1"
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/OutputFormat;->setVersion(Ljava/lang/String;)V
 
-    .line 133
     return-void
 .end method
 
@@ -63,35 +57,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 170
     if-eqz p2, :cond_0
 
     .end local p2    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :goto_0
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xml/serialize/XMLSerializer;-><init>(Ljava/io/OutputStream;Lmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 111
     iput-boolean v2, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOML1:Z
 
-    .line 113
     const/4 v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaceCounter:I
 
-    .line 123
     iput-boolean v2, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaces:Z
 
-    .line 171
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_format:Lmf/org/apache/xml/serialize/OutputFormat;
 
     const-string v1, "1.1"
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/OutputFormat;->setVersion(Ljava/lang/String;)V
 
-    .line 172
     return-void
 
-    .line 170
     .restart local p2    # "format":Lmf/org/apache/xml/serialize/OutputFormat;
     :cond_0
     new-instance p2, Lmf/org/apache/xml/serialize/OutputFormat;
@@ -114,28 +101,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 156
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xml/serialize/XMLSerializer;-><init>(Ljava/io/Writer;Lmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 111
     iput-boolean v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOML1:Z
 
-    .line 113
     const/4 v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaceCounter:I
 
-    .line 123
     iput-boolean v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaces:Z
 
-    .line 157
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_format:Lmf/org/apache/xml/serialize/OutputFormat;
 
     const-string v1, "1.1"
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/OutputFormat;->setVersion(Ljava/lang/String;)V
 
-    .line 158
     return-void
 .end method
 
@@ -146,28 +127,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 142
     invoke-direct {p0, p1}, Lmf/org/apache/xml/serialize/XMLSerializer;-><init>(Lmf/org/apache/xml/serialize/OutputFormat;)V
 
-    .line 111
     iput-boolean v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOML1:Z
 
-    .line 113
     const/4 v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaceCounter:I
 
-    .line 123
     iput-boolean v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fNamespaces:Z
 
-    .line 143
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_format:Lmf/org/apache/xml/serialize/OutputFormat;
 
     const-string v1, "1.1"
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/OutputFormat;->setVersion(Ljava/lang/String;)V
 
-    .line 144
     return-void
 .end method
 
@@ -187,13 +162,11 @@
     .prologue
     const/16 v2, 0x5d
 
-    .line 185
     :try_start_0
     invoke-virtual {p0}, Lmf/org/apache/xml/serialize/XML11Serializer;->content()Lmf/org/apache/xml/serialize/ElementState;
 
     move-result-object v11
 
-    .line 191
     .local v11, "state":Lmf/org/apache/xml/serialize/ElementState;
     iget-boolean v0, v11, Lmf/org/apache/xml/serialize/ElementState;->inCData:Z
 
@@ -203,25 +176,21 @@
 
     if-eqz v0, :cond_7
 
-    .line 197
     :cond_0
     iget-boolean v0, v11, Lmf/org/apache/xml/serialize/ElementState;->inCData:Z
 
     if-nez v0, :cond_1
 
-    .line 198
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v1, "<![CDATA["
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 199
     const/4 v0, 0x1
 
     iput-boolean v0, v11, Lmf/org/apache/xml/serialize/ElementState;->inCData:Z
 
-    .line 201
     :cond_1
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
@@ -229,7 +198,6 @@
 
     move-result v10
 
-    .line 202
     .local v10, "saveIndent":I
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
@@ -237,10 +205,8 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/Printer;->setNextIndent(I)V
 
-    .line 204
     add-int v7, p2, p3
 
-    .line 205
     .local v7, "end":I
     move v9, p2
 
@@ -248,26 +214,22 @@
     :goto_0
     if-lt v9, v7, :cond_2
 
-    .line 233
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v0, v10}, Lmf/org/apache/xml/serialize/Printer;->setNextIndent(I)V
 
-    .line 258
     .end local v7    # "end":I
     .end local v9    # "index":I
     .end local v10    # "saveIndent":I
     :goto_1
     return-void
 
-    .line 206
     .restart local v7    # "end":I
     .restart local v9    # "index":I
     .restart local v10    # "saveIndent":I
     :cond_2
     aget-char v6, p1, v9
 
-    .line 207
     .local v6, "ch":C
     if-ne v6, v2, :cond_3
 
@@ -275,7 +237,6 @@
 
     if-ge v0, v7, :cond_3
 
-    .line 208
     add-int/lit8 v0, v9, 0x1
 
     aget-char v0, p1, v0
@@ -290,23 +251,19 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 209
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v1, "]]]]><![CDATA[>"
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 210
     add-int/lit8 v9, v9, 0x2
 
-    .line 205
     :goto_2
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 213
     :cond_3
     invoke-static {v6}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -314,12 +271,10 @@
 
     if-nez v0, :cond_5
 
-    .line 215
     add-int/lit8 v9, v9, 0x1
 
     if-ge v9, v7, :cond_4
 
-    .line 216
     aget-char v0, p1, v9
 
     const/4 v1, 0x1
@@ -330,7 +285,6 @@
 
     goto :goto_2
 
-    .line 255
     .end local v6    # "ch":C
     .end local v7    # "end":I
     .end local v9    # "index":I
@@ -339,7 +293,6 @@
     :catch_0
     move-exception v8
 
-    .line 256
     .local v8, "except":Ljava/io/IOException;
     new-instance v0, Lorg/xml/sax/SAXException;
 
@@ -347,7 +300,6 @@
 
     throw v0
 
-    .line 219
     .end local v8    # "except":Ljava/io/IOException;
     .restart local v6    # "ch":C
     .restart local v7    # "end":I
@@ -380,7 +332,6 @@
 
     goto :goto_2
 
-    .line 223
     :cond_5
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_encodingInfo:Lmf/org/apache/xml/serialize/EncodingInfo;
 
@@ -396,14 +347,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 224
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v0, v6}, Lmf/org/apache/xml/serialize/Printer;->printText(C)V
 
     goto :goto_2
 
-    .line 228
     :cond_6
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
@@ -411,7 +360,6 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 229
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -420,7 +368,6 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 230
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v1, ";<![CDATA["
@@ -429,7 +376,6 @@
 
     goto :goto_2
 
-    .line 240
     .end local v6    # "ch":C
     .end local v7    # "end":I
     .end local v9    # "index":I
@@ -439,14 +385,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 245
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v0}, Lmf/org/apache/xml/serialize/Printer;->getNextIndent()I
 
     move-result v10
 
-    .line 246
     .restart local v10    # "saveIndent":I
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
@@ -454,7 +398,6 @@
 
     invoke-virtual {v0, v1}, Lmf/org/apache/xml/serialize/Printer;->setNextIndent(I)V
 
-    .line 247
     const/4 v4, 0x1
 
     iget-boolean v5, v11, Lmf/org/apache/xml/serialize/ElementState;->unescaped:Z
@@ -469,14 +412,12 @@
 
     invoke-virtual/range {v0 .. v5}, Lmf/org/apache/xml/serialize/XML11Serializer;->printText([CIIZZ)V
 
-    .line 248
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v0, v10}, Lmf/org/apache/xml/serialize/Printer;->setNextIndent(I)V
 
     goto/16 :goto_1
 
-    .line 251
     .end local v10    # "saveIndent":I
     :cond_8
     const/4 v4, 0x0
@@ -514,12 +455,10 @@
 
     const/4 v7, 0x0
 
-    .line 298
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 301
     .local v3, "length":I
     const/4 v2, 0x0
 
@@ -527,25 +466,20 @@
     :goto_0
     if-lt v2, v3, :cond_0
 
-    .line 369
     return-void
 
-    .line 302
     :cond_0
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 304
     .local v0, "ch":C
     if-ne v0, v9, :cond_3
 
-    .line 305
     add-int/lit8 v5, v2, 0x2
 
     if-ge v5, v3, :cond_3
 
-    .line 306
     add-int/lit8 v5, v2, 0x1
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
@@ -554,7 +488,6 @@
 
     if-ne v5, v9, :cond_3
 
-    .line 307
     add-int/lit8 v5, v2, 0x2
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
@@ -565,47 +498,37 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 308
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOMErrorHandler:Lmf/org/w3c/dom/DOMErrorHandler;
 
     if-eqz v5, :cond_2
 
-    .line 311
     iget-short v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->features:S
 
     and-int/lit8 v5, v5, 0x10
 
     if-nez v5, :cond_1
 
-    .line 312
     iget-short v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->features:S
 
     and-int/lit8 v5, v5, 0x2
 
     if-nez v5, :cond_1
 
-    .line 316
     const-string v5, "http://apache.org/xml/serializer"
 
-    .line 317
     const-string v6, "EndingCDATA"
 
-    .line 315
     invoke-static {v5, v6, v7}, Lmf/org/apache/xerces/dom/DOMMessageFormatter;->formatMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 321
     .local v4, "msg":Ljava/lang/String;
     const/4 v5, 0x3
 
-    .line 322
     iget-object v6, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fCurrentNode:Lmf/org/w3c/dom/Node;
 
-    .line 319
     invoke-virtual {p0, v4, v5, v7, v6}, Lmf/org/apache/xml/serialize/XML11Serializer;->modifyDOMError(Ljava/lang/String;SLjava/lang/String;Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/DOMError;
 
-    .line 324
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOMErrorHandler:Lmf/org/w3c/dom/DOMErrorHandler;
 
     iget-object v6, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOMError:Lmf/org/apache/xerces/dom/DOMErrorImpl;
@@ -614,46 +537,37 @@
 
     move-result v1
 
-    .line 325
     .local v1, "continueProcess":Z
     if-nez v1, :cond_2
 
-    .line 326
     new-instance v5, Ljava/io/IOException;
 
     invoke-direct {v5}, Ljava/io/IOException;-><init>()V
 
     throw v5
 
-    .line 332
     .end local v1    # "continueProcess":Z
     .end local v4    # "msg":Ljava/lang/String;
     :cond_1
     const-string v5, "http://apache.org/xml/serializer"
 
-    .line 333
     const-string v6, "SplittingCDATA"
 
-    .line 331
     invoke-static {v5, v6, v7}, Lmf/org/apache/xerces/dom/DOMMessageFormatter;->formatMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 338
     .restart local v4    # "msg":Ljava/lang/String;
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fCurrentNode:Lmf/org/w3c/dom/Node;
 
-    .line 335
     invoke-virtual {p0, v4, v8, v7, v5}, Lmf/org/apache/xml/serialize/XML11Serializer;->modifyDOMError(Ljava/lang/String;SLjava/lang/String;Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/DOMError;
 
-    .line 339
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOMErrorHandler:Lmf/org/w3c/dom/DOMErrorHandler;
 
     iget-object v6, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->fDOMError:Lmf/org/apache/xerces/dom/DOMErrorImpl;
 
     invoke-interface {v5, v6}, Lmf/org/w3c/dom/DOMErrorHandler;->handleError(Lmf/org/w3c/dom/DOMError;)Z
 
-    .line 343
     .end local v4    # "msg":Ljava/lang/String;
     :cond_2
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
@@ -662,16 +576,13 @@
 
     invoke-virtual {v5, v6}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 344
     add-int/lit8 v2, v2, 0x2
 
-    .line 301
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 348
     :cond_3
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -679,12 +590,10 @@
 
     if-nez v5, :cond_5
 
-    .line 350
     add-int/lit8 v2, v2, 0x1
 
     if-ge v2, v3, :cond_4
 
-    .line 351
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -693,7 +602,6 @@
 
     goto :goto_1
 
-    .line 354
     :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -719,7 +627,6 @@
 
     goto :goto_1
 
-    .line 358
     :cond_5
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_encodingInfo:Lmf/org/apache/xml/serialize/EncodingInfo;
 
@@ -729,21 +636,18 @@
 
     if-eqz v5, :cond_6
 
-    .line 359
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11ValidLiteral(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_6
 
-    .line 360
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v5, v0}, Lmf/org/apache/xml/serialize/Printer;->printText(C)V
 
     goto :goto_1
 
-    .line 364
     :cond_6
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
@@ -751,7 +655,6 @@
 
     invoke-virtual {v5, v6}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 365
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -760,7 +663,6 @@
 
     invoke-virtual {v5, v6}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 366
     iget-object v5, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v6, ";<![CDATA["
@@ -780,12 +682,10 @@
     .end annotation
 
     .prologue
-    .line 264
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 265
     .local v2, "length":I
     const/4 v1, 0x0
 
@@ -793,16 +693,13 @@
     :goto_0
     if-lt v1, v2, :cond_0
 
-    .line 295
     return-void
 
-    .line 266
     :cond_0
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 267
     .local v0, "ch":I
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -810,12 +707,10 @@
 
     if-nez v3, :cond_2
 
-    .line 268
     add-int/lit8 v1, v1, 0x1
 
     if-ge v1, v2, :cond_1
 
-    .line 269
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -824,13 +719,11 @@
 
     invoke-virtual {p0, v0, v3, v4}, Lmf/org/apache/xml/serialize/XML11Serializer;->surrogates(IIZ)V
 
-    .line 265
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 272
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -858,7 +751,6 @@
 
     goto :goto_1
 
-    .line 276
     :cond_2
     const/16 v3, 0xa
 
@@ -880,19 +772,16 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 277
     :cond_3
     invoke-virtual {p0, v0}, Lmf/org/apache/xml/serialize/XML11Serializer;->printHex(I)V
 
     goto :goto_1
 
-    .line 279
     :cond_4
     const/16 v3, 0x3c
 
     if-ne v0, v3, :cond_5
 
-    .line 280
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v4, "&lt;"
@@ -901,13 +790,11 @@
 
     goto :goto_1
 
-    .line 282
     :cond_5
     const/16 v3, 0x26
 
     if-ne v0, v3, :cond_6
 
-    .line 283
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v4, "&amp;"
@@ -916,13 +803,11 @@
 
     goto :goto_1
 
-    .line 285
     :cond_6
     const/16 v3, 0x22
 
     if-ne v0, v3, :cond_7
 
-    .line 286
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v4, "&quot;"
@@ -931,7 +816,6 @@
 
     goto :goto_1
 
-    .line 288
     :cond_7
     const/16 v3, 0x20
 
@@ -947,7 +831,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 289
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     int-to-char v4, v0
@@ -956,7 +839,6 @@
 
     goto :goto_1
 
-    .line 292
     :cond_8
     invoke-virtual {p0, v0}, Lmf/org/apache/xml/serialize/XML11Serializer;->printHex(I)V
 
@@ -977,33 +859,27 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 430
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 431
     .local v2, "length":I
     if-eqz p2, :cond_5
 
-    .line 436
     const/4 v1, 0x0
 
     .local v1, "index":I
     :goto_0
     if-lt v1, v2, :cond_1
 
-    .line 480
     :cond_0
     return-void
 
-    .line 437
     :cond_1
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 438
     .local v0, "ch":C
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -1011,25 +887,21 @@
 
     if-nez v3, :cond_3
 
-    .line 440
     add-int/lit8 v1, v1, 0x1
 
     if-ge v1, v2, :cond_2
 
-    .line 441
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
     invoke-virtual {p0, v0, v3, v5}, Lmf/org/apache/xml/serialize/XML11Serializer;->surrogates(IIZ)V
 
-    .line 436
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 443
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1055,7 +927,6 @@
 
     goto :goto_1
 
-    .line 447
     :cond_3
     if-eqz p3, :cond_4
 
@@ -1065,20 +936,17 @@
 
     if-eqz v3, :cond_4
 
-    .line 448
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v3, v0}, Lmf/org/apache/xml/serialize/Printer;->printText(C)V
 
     goto :goto_1
 
-    .line 451
     :cond_4
     invoke-virtual {p0, v0}, Lmf/org/apache/xml/serialize/XML11Serializer;->printXMLChar(I)V
 
     goto :goto_1
 
-    .line 461
     .end local v0    # "ch":C
     .end local v1    # "index":I
     :cond_5
@@ -1088,12 +956,10 @@
     :goto_2
     if-ge v1, v2, :cond_0
 
-    .line 462
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 463
     .restart local v0    # "ch":C
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -1101,25 +967,21 @@
 
     if-nez v3, :cond_7
 
-    .line 465
     add-int/lit8 v1, v1, 0x1
 
     if-ge v1, v2, :cond_6
 
-    .line 466
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
     invoke-virtual {p0, v0, v3, v5}, Lmf/org/apache/xml/serialize/XML11Serializer;->surrogates(IIZ)V
 
-    .line 461
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 468
     :cond_6
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1145,7 +1007,6 @@
 
     goto :goto_3
 
-    .line 472
     :cond_7
     if-eqz p3, :cond_8
 
@@ -1155,14 +1016,12 @@
 
     if-eqz v3, :cond_8
 
-    .line 473
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v3, v0}, Lmf/org/apache/xml/serialize/Printer;->printText(C)V
 
     goto :goto_3
 
-    .line 476
     :cond_8
     invoke-virtual {p0, v0}, Lmf/org/apache/xml/serialize/XML11Serializer;->printXMLChar(I)V
 
@@ -1185,7 +1044,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 485
     if-eqz p4, :cond_8
 
     move v1, p3
@@ -1194,7 +1052,6 @@
     .local v1, "length":I
     move v2, p2
 
-    .line 490
     .end local p2    # "start":I
     .local v2, "start":I
     :goto_0
@@ -1206,13 +1063,11 @@
 
     move p2, v2
 
-    .line 534
     .end local v2    # "start":I
     .restart local p2    # "start":I
     :goto_1
     return-void
 
-    .line 491
     .end local p2    # "start":I
     .restart local v2    # "start":I
     :cond_0
@@ -1222,7 +1077,6 @@
     .restart local p2    # "start":I
     aget-char v0, p1, v2
 
-    .line 492
     .local v0, "ch":C
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -1230,14 +1084,12 @@
 
     if-nez v3, :cond_2
 
-    .line 494
     add-int/lit8 v1, p3, -0x1
 
     .end local p3    # "length":I
     .restart local v1    # "length":I
     if-lez p3, :cond_1
 
-    .line 495
     add-int/lit8 v2, p2, 0x1
 
     .end local p2    # "start":I
@@ -1248,7 +1100,6 @@
 
     goto :goto_0
 
-    .line 497
     .end local v2    # "start":I
     .restart local p2    # "start":I
     :cond_1
@@ -1276,12 +1127,10 @@
 
     move v2, p2
 
-    .line 499
     .end local p2    # "start":I
     .restart local v2    # "start":I
     goto :goto_0
 
-    .line 501
     .end local v1    # "length":I
     .end local v2    # "start":I
     .restart local p2    # "start":I
@@ -1295,7 +1144,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 502
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v3, v0}, Lmf/org/apache/xml/serialize/Printer;->printText(C)V
@@ -1306,12 +1154,10 @@
     .restart local v1    # "length":I
     move v2, p2
 
-    .line 503
     .end local p2    # "start":I
     .restart local v2    # "start":I
     goto :goto_0
 
-    .line 505
     .end local v1    # "length":I
     .end local v2    # "start":I
     .restart local p2    # "start":I
@@ -1329,7 +1175,6 @@
     .restart local v2    # "start":I
     goto :goto_0
 
-    .line 516
     .end local v0    # "ch":C
     .end local v1    # "length":I
     .restart local p3    # "length":I
@@ -1340,7 +1185,6 @@
     .restart local p2    # "start":I
     aget-char v0, p1, v2
 
-    .line 517
     .restart local v0    # "ch":C
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -1348,14 +1192,12 @@
 
     if-nez v3, :cond_6
 
-    .line 519
     add-int/lit8 v1, p3, -0x1
 
     .end local p3    # "length":I
     .restart local v1    # "length":I
     if-lez p3, :cond_5
 
-    .line 520
     add-int/lit8 v2, p2, 0x1
 
     .end local p2    # "start":I
@@ -1364,7 +1206,6 @@
 
     invoke-virtual {p0, v0, v3, v5}, Lmf/org/apache/xml/serialize/XML11Serializer;->surrogates(IIZ)V
 
-    .line 515
     .end local v0    # "ch":C
     :goto_2
     add-int/lit8 p3, v1, -0x1
@@ -1379,7 +1220,6 @@
     .restart local p2    # "start":I
     goto :goto_1
 
-    .line 522
     .end local p3    # "length":I
     .restart local v0    # "ch":C
     .restart local v1    # "length":I
@@ -1408,12 +1248,10 @@
 
     move v2, p2
 
-    .line 524
     .end local p2    # "start":I
     .restart local v2    # "start":I
     goto :goto_2
 
-    .line 526
     .end local v1    # "length":I
     .end local v2    # "start":I
     .restart local p2    # "start":I
@@ -1427,7 +1265,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 527
     iget-object v3, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-virtual {v3, v0}, Lmf/org/apache/xml/serialize/Printer;->printText(C)V
@@ -1438,12 +1275,10 @@
     .restart local v1    # "length":I
     move v2, p2
 
-    .line 528
     .end local p2    # "start":I
     .restart local v2    # "start":I
     goto :goto_2
 
-    .line 530
     .end local v1    # "length":I
     .end local v2    # "start":I
     .restart local p2    # "start":I
@@ -1474,7 +1309,6 @@
     .end annotation
 
     .prologue
-    .line 374
     const/16 v0, 0xd
 
     if-eq p1, v0, :cond_0
@@ -1487,21 +1321,17 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 375
     :cond_0
     invoke-virtual {p0, p1}, Lmf/org/apache/xml/serialize/XML11Serializer;->printHex(I)V
 
-    .line 394
     :goto_0
     return-void
 
-    .line 377
     :cond_1
     const/16 v0, 0x3c
 
     if-ne p1, v0, :cond_2
 
-    .line 378
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v1, "&lt;"
@@ -1510,13 +1340,11 @@
 
     goto :goto_0
 
-    .line 380
     :cond_2
     const/16 v0, 0x26
 
     if-ne p1, v0, :cond_3
 
-    .line 381
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v1, "&amp;"
@@ -1525,13 +1353,11 @@
 
     goto :goto_0
 
-    .line 383
     :cond_3
     const/16 v0, 0x3e
 
     if-ne p1, v0, :cond_4
 
-    .line 386
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v1, "&gt;"
@@ -1540,7 +1366,6 @@
 
     goto :goto_0
 
-    .line 388
     :cond_4
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_encodingInfo:Lmf/org/apache/xml/serialize/EncodingInfo;
 
@@ -1558,7 +1383,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 389
     iget-object v0, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     int-to-char v1, p1
@@ -1567,7 +1391,6 @@
 
     goto :goto_0
 
-    .line 392
     :cond_5
     invoke-virtual {p0, p1}, Lmf/org/apache/xml/serialize/XML11Serializer;->printHex(I)V
 
@@ -1578,10 +1401,8 @@
     .locals 1
 
     .prologue
-    .line 537
     invoke-super {p0}, Lmf/org/apache/xml/serialize/XMLSerializer;->reset()Z
 
-    .line 538
     const/4 v0, 0x1
 
     return v0
@@ -1599,21 +1420,18 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-static {p1}, Lmf/org/apache/xerces/util/XMLChar;->isHighSurrogate(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 398
     invoke-static {p2}, Lmf/org/apache/xerces/util/XMLChar;->isLowSurrogate(I)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 400
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "The character \'"
@@ -1638,11 +1456,9 @@
 
     invoke-virtual {p0, v1}, Lmf/org/apache/xml/serialize/XML11Serializer;->fatalError(Ljava/lang/String;)V
 
-    .line 424
     :goto_0
     return-void
 
-    .line 403
     :cond_0
     int-to-char v1, p1
 
@@ -1652,7 +1468,6 @@
 
     move-result v0
 
-    .line 404
     .local v0, "supplemental":I
     invoke-static {v0}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
@@ -1660,7 +1475,6 @@
 
     if-nez v1, :cond_1
 
-    .line 406
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "The character \'"
@@ -1687,7 +1501,6 @@
 
     goto :goto_0
 
-    .line 409
     :cond_1
     if-eqz p3, :cond_2
 
@@ -1699,14 +1512,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 410
     iget-object v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v2, "]]>&#x"
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 411
     iget-object v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -1715,7 +1526,6 @@
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xml/serialize/Printer;->printText(Ljava/lang/String;)V
 
-    .line 412
     iget-object v1, p0, Lmf/org/apache/xml/serialize/XML11Serializer;->_printer:Lmf/org/apache/xml/serialize/Printer;
 
     const-string v2, ";<![CDATA["
@@ -1724,13 +1534,11 @@
 
     goto :goto_0
 
-    .line 415
     :cond_2
     invoke-virtual {p0, v0}, Lmf/org/apache/xml/serialize/XML11Serializer;->printHex(I)V
 
     goto :goto_0
 
-    .line 421
     .end local v0    # "supplemental":I
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;

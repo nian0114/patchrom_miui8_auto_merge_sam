@@ -25,7 +25,6 @@
     .param p3, "x1"    # Landroid/os/Looper;
 
     .prologue
-    .line 354
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-direct {p0, p2, p3}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
@@ -40,7 +39,6 @@
     .param p1, "dcRtInfo"    # Landroid/telephony/DataConnectionRealTimeInfo;
 
     .prologue
-    .line 358
     # getter for: Lcom/android/server/NetworkManagementService;->DBG:Z
     invoke-static {}, Lcom/android/server/NetworkManagementService;->access$100()Z
 
@@ -54,7 +52,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onDataConnectionRealTimeInfoChanged: "
+    const-string v2, "onDataConnectionRealTimeInfoChanged: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -70,7 +68,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
 
@@ -89,6 +86,5 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceClassActivity(IIJZ)V
     invoke-static/range {v1 .. v6}, Lcom/android/server/NetworkManagementService;->access$200(Lcom/android/server/NetworkManagementService;IIJZ)V
 
-    .line 361
     return-void
 .end method

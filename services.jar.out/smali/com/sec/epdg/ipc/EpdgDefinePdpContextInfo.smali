@@ -24,10 +24,8 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     return-void
 .end method
 
@@ -40,18 +38,14 @@
     .param p5, "pcscfReq"    # I
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput p1, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mCid:I
 
-    .line 25
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, p2}, Ljava/lang/String;-><init>([B)V
 
-    .line 26
     .local v1, "data":Ljava/lang/String;
     const-string v3, "\u0000"
 
@@ -61,13 +55,11 @@
 
     iput-object v3, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mApnName:[Ljava/lang/String;
 
-    .line 30
     :try_start_0
     invoke-static {p3}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
 
     move-result-object v0
 
-    .line 31
     .local v0, "address":Ljava/net/InetAddress;
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -77,7 +69,6 @@
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     .end local v0    # "address":Ljava/net/InetAddress;
     :goto_0
     :try_start_1
@@ -85,7 +76,6 @@
 
     move-result-object v0
 
-    .line 39
     .restart local v0    # "address":Ljava/net/InetAddress;
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -95,19 +85,15 @@
     :try_end_1
     .catch Ljava/net/UnknownHostException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 45
     .end local v0    # "address":Ljava/net/InetAddress;
     :goto_1
     iput p5, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mPcscfReq:I
 
-    .line 46
     return-void
 
-    .line 32
     :catch_0
     move-exception v2
 
-    .line 33
     .local v2, "e":Ljava/net/UnknownHostException;
     const-string v3, "[DEFINEPDPCONTEXTINFO]"
 
@@ -117,12 +103,10 @@
 
     goto :goto_0
 
-    .line 40
     .end local v2    # "e":Ljava/net/UnknownHostException;
     :catch_1
     move-exception v2
 
-    .line 41
     .restart local v2    # "e":Ljava/net/UnknownHostException;
     const-string v3, "[DEFINEPDPCONTEXTINFO]"
 
@@ -139,7 +123,6 @@
     .locals 2
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mApnName:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -153,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget v0, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mCid:I
 
     return v0
@@ -163,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mIpv4Addr:Ljava/lang/String;
 
     return-object v0
@@ -173,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mIpv6Addr:Ljava/lang/String;
 
     return-object v0
@@ -183,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget v0, p0, Lcom/sec/epdg/ipc/EpdgDefinePdpContextInfo;->mPcscfReq:I
 
     return v0

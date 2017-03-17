@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .param p4, "column"    # I
 
     .prologue
-    .line 42
     const/4 v5, -0x1
 
     move-object v0, p0
@@ -53,7 +50,6 @@
 
     invoke-direct/range {v0 .. v5}, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 43
     return-void
 .end method
 
@@ -66,25 +62,18 @@
     .param p5, "offset"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput p3, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->line:I
 
-    .line 51
     iput p4, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->column:I
 
-    .line 52
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->lsid:Ljava/lang/String;
 
-    .line 53
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->esid:Ljava/lang/String;
 
-    .line 54
     iput p5, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->charOffset:I
 
-    .line 55
     return-void
 .end method
 
@@ -94,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     return-object v0
@@ -104,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->charOffset:I
 
     return v0
@@ -114,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->column:I
 
     return v0
@@ -124,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 137
     const/4 v0, 0x0
 
     return-object v0
@@ -134,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->esid:Ljava/lang/String;
 
     return-object v0
@@ -144,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->line:I
 
     return v0
@@ -154,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->lsid:Ljava/lang/String;
 
     return-object v0
@@ -164,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     return-object v0
@@ -174,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 141
     const/4 v0, 0x0
 
     return-object v0
@@ -185,7 +165,6 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     return-void
 .end method
 
@@ -194,10 +173,8 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 102
     iput p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->charOffset:I
 
-    .line 103
     return-void
 .end method
 
@@ -206,10 +183,8 @@
     .param p1, "col"    # I
 
     .prologue
-    .line 94
     iput p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->column:I
 
-    .line 95
     return-void
 .end method
 
@@ -218,10 +193,8 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->esid:Ljava/lang/String;
 
-    .line 115
     return-void
 .end method
 
@@ -230,10 +203,8 @@
     .param p1, "line"    # I
 
     .prologue
-    .line 98
     iput p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->line:I
 
-    .line 99
     return-void
 .end method
 
@@ -242,10 +213,8 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->lsid:Ljava/lang/String;
 
-    .line 122
     return-void
 .end method
 
@@ -254,7 +223,6 @@
     .param p1, "publicId"    # Ljava/lang/String;
 
     .prologue
-    .line 127
     return-void
 .end method
 
@@ -266,7 +234,6 @@
     .param p4, "column"    # I
 
     .prologue
-    .line 46
     const/4 v5, -0x1
 
     move-object v0, p0
@@ -281,7 +248,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->setValues(Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 47
     return-void
 .end method
 
@@ -294,21 +260,15 @@
     .param p5, "offset"    # I
 
     .prologue
-    .line 58
     iput p3, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->line:I
 
-    .line 59
     iput p4, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->column:I
 
-    .line 60
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->lsid:Ljava/lang/String;
 
-    .line 61
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->esid:Ljava/lang/String;
 
-    .line 62
     iput p5, p0, Lmf/org/apache/xerces/impl/xs/util/SimpleLocator;->charOffset:I
 
-    .line 63
     return-void
 .end method

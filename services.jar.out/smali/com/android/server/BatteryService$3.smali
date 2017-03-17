@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 655
     iput-object p1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 658
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -50,7 +48,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 659
     iget-object v1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -62,7 +59,6 @@
 
     move-result-object v0
 
-    .line 661
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
@@ -73,7 +69,6 @@
 
     monitor-enter v2
 
-    .line 662
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
@@ -82,12 +77,10 @@
     # setter for: Lcom/android/server/BatteryService;->mBootCompleted:Z
     invoke-static {v1, v3}, Lcom/android/server/BatteryService;->access$2102(Lcom/android/server/BatteryService;Z)Z
 
-    .line 663
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 665
     iget-object v1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -97,7 +90,6 @@
 
     monitor-enter v2
 
-    .line 666
     :try_start_1
     iget-object v1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
@@ -108,15 +100,12 @@
 
     invoke-virtual {v1}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
 
-    .line 667
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 668
     return-void
 
-    .line 663
     :catchall_0
     move-exception v1
 
@@ -127,7 +116,6 @@
 
     throw v1
 
-    .line 667
     :catchall_1
     move-exception v1
 

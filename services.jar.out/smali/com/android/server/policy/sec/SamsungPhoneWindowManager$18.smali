@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4155
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$18;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 4158
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$18;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mPWM:Lcom/android/server/policy/PhoneWindowManager;
@@ -49,6 +47,5 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mWatchLaunching:Z
 
-    .line 4159
     return-void
 .end method

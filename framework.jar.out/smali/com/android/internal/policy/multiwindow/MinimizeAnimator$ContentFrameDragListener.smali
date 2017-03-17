@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 913
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/multiwindow/MinimizeAnimator$1;
 
     .prologue
-    .line 913
     invoke-direct {p0, p1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;-><init>(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)V
 
     return-void
@@ -56,16 +54,13 @@
     .prologue
     const/16 v3, 0x64
 
-    .line 916
     invoke-virtual {p2}, Landroid/view/DragEvent;->getAction()I
 
     move-result v0
 
-    .line 917
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 950
     :cond_0
     :goto_0
     const/4 v1, 0x0
@@ -73,13 +68,11 @@
     :goto_1
     return v1
 
-    .line 920
     :pswitch_0
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 924
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -94,7 +87,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 925
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 930
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -117,7 +108,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 931
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -131,7 +121,6 @@
 
     if-nez v1, :cond_0
 
-    .line 932
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -156,7 +145,6 @@
 
     goto :goto_0
 
-    .line 940
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -167,7 +155,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 941
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -181,7 +168,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 942
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mHandler:Landroid/os/Handler;
@@ -193,7 +179,6 @@
 
     goto :goto_0
 
-    .line 917
     nop
 
     :pswitch_data_0

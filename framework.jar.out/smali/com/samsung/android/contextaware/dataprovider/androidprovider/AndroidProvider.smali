@@ -12,10 +12,8 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/DataProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 49
     return-void
 .end method
 
@@ -26,7 +24,6 @@
     .param p1, "listener"    # Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;
 
     .prologue
-    .line 60
     sget-object v0, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_NOT_SUPPORT_CMD:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getMessage()Ljava/lang/String;
@@ -35,7 +32,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 62
     return-void
 .end method
 
@@ -43,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     sget-object v1, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->SUCCESS:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
@@ -64,9 +59,7 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 71
     invoke-super {p0, p1}, Lcom/samsung/android/contextaware/dataprovider/DataProvider;->setAPStatus(I)V
 
-    .line 72
     return-void
 .end method

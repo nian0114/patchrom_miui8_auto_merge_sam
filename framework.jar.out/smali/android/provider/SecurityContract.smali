@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const-string v0, "content://com.android.security"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -40,9 +39,7 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     return-void
 .end method

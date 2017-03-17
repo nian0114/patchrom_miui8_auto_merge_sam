@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 2896
     iput-object p1, p0, Lcom/android/server/LockSettingsService$SdpHandler;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2897
     const-string v0, "LockSettingsService.SdpHandler"
 
     iput-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler;->LOG_TAG:Ljava/lang/String;
@@ -44,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/LockSettingsService$1;
 
     .prologue
-    .line 2896
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsService$SdpHandler;-><init>(Lcom/android/server/LockSettingsService;)V
 
     return-void
@@ -55,7 +52,6 @@
     .param p0, "x0"    # Lcom/android/server/LockSettingsService$SdpHandler;
 
     .prologue
-    .line 2896
     invoke-direct {p0}, Lcom/android/server/LockSettingsService$SdpHandler;->isPwdChangeRequested()Z
 
     move-result v0
@@ -67,7 +63,6 @@
     .locals 6
 
     .prologue
-    .line 3101
     iget-object v3, p0, Lcom/android/server/LockSettingsService$SdpHandler;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mContext:Landroid/content/Context;
@@ -75,7 +70,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "enterprise_policy"
+    const-string v4, "enterprise_policy"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -83,17 +78,14 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 3103
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v2
 
-    .line 3105
     .local v2, "mPwdPolicy":Landroid/app/enterprise/PasswordPolicy;
     const/4 v1, 0x0
 
-    .line 3106
     .local v1, "isPwdChangeRequested":Z
     if-eqz v2, :cond_0
 
@@ -103,10 +95,8 @@
 
     if-lez v3, :cond_0
 
-    .line 3108
     const/4 v1, 0x1
 
-    .line 3110
     :cond_0
     const-string v3, "LockSettingsService.SdpHandler"
 
@@ -114,7 +104,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "isPwdChangeRequested :: "
+    const-string v5, "isPwdChangeRequested :: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,7 +120,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3111
     return v1
 .end method
 
@@ -143,7 +132,6 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 3015
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/LockSettingsService$SdpHandler$5;
@@ -154,7 +142,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 3024
     return-void
 .end method
 
@@ -165,14 +152,13 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 3027
     const-string v2, "LockSettingsService.SdpHandler"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "enroll :: enrolling user "
+    const-string v4, "enroll :: enrolling user "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -188,7 +174,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3028
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -201,16 +186,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 3041
     :cond_0
     :goto_0
     return-void
 
-    .line 3031
     :cond_1
     const/4 v0, 0x0
 
-    .line 3033
     .local v0, "alias":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/sdp/internal/SdpAuthenticator;->getInstance()Lcom/sec/sdp/internal/SdpAuthenticator;
@@ -224,11 +206,9 @@
 
     goto :goto_0
 
-    .line 3034
     :catch_0
     move-exception v1
 
-    .line 3035
     .local v1, "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     const-string v2, "LockSettingsService.SdpHandler"
 
@@ -236,7 +216,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "enroll :: Failed to enroll sdp user... "
+    const-string v4, "enroll :: Failed to enroll sdp user... "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -252,17 +232,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3036
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 3037
     .end local v1    # "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     :catch_1
     move-exception v1
 
-    .line 3038
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "LockSettingsService.SdpHandler"
 
@@ -270,7 +247,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "enroll :: Failed to enroll sdp user... "
+    const-string v4, "enroll :: Failed to enroll sdp user... "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -286,7 +263,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3039
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -297,7 +273,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2989
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/LockSettingsService$SdpHandler$4;
@@ -308,7 +283,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 3012
     return-void
 .end method
 
@@ -319,7 +293,6 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 3058
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/LockSettingsService$SdpHandler$6;
@@ -330,7 +303,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 3067
     return-void
 .end method
 
@@ -341,14 +313,13 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 3070
     const-string v5, "LockSettingsService.SdpHandler"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "migrateCredential :: migrating for user "
+    const-string v7, "migrateCredential :: migrating for user "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -374,10 +345,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3071
     const/4 v3, 0x0
 
-    .line 3072
     .local v3, "result":Z
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -387,19 +356,16 @@
 
     move v4, v3
 
-    .line 3087
     .end local v3    # "result":Z
     .local v4, "result":I
     :goto_0
     return v4
 
-    .line 3075
     .end local v4    # "result":I
     .restart local v3    # "result":Z
     :cond_0
     const/4 v0, 0x0
 
-    .line 3077
     .local v0, "alias":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->getInstance()Lcom/sec/enterprise/knox/sdp/SdpUtil;
@@ -410,24 +376,20 @@
 
     move-result-object v2
 
-    .line 3078
     .local v2, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v2, :cond_1
 
-    .line 3079
     invoke-static {}, Lcom/sec/sdp/internal/SdpAuthenticator;->getInstance()Lcom/sec/sdp/internal/SdpAuthenticator;
 
     move-result-object v5
 
     invoke-virtual {v5, v0, p2, p3}, Lcom/sec/sdp/internal/SdpAuthenticator;->enroll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3080
     const/4 v3, 0x1
 
-    .line 3081
     const-string v5, "LockSettingsService.SdpHandler"
 
-    const-string/jumbo v6, "migrateCredential :: Successful..!"
+    const-string v6, "migrateCredential :: Successful..!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -438,24 +400,20 @@
     :goto_1
     move v4, v3
 
-    .line 3087
     .restart local v4    # "result":I
     goto :goto_0
 
-    .line 3083
     .end local v4    # "result":I
     :catch_0
     move-exception v1
 
-    .line 3084
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "LockSettingsService.SdpHandler"
 
-    const-string/jumbo v6, "migrateCredential :: Failed to migrate backup pin... "
+    const-string v6, "migrateCredential :: Failed to migrate backup pin... "
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3085
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -467,20 +425,16 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 3048
     packed-switch p2, :pswitch_data_0
 
-    .line 3055
     :goto_0
     return-void
 
-    .line 3050
     :pswitch_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/LockSettingsService$SdpHandler;->removeKeyPair(II)V
 
     goto :goto_0
 
-    .line 3048
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_0
@@ -493,7 +447,6 @@
     .param p2, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 3044
     iget-object v0, p0, Lcom/android/server/LockSettingsService$SdpHandler;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mKeyManagementUtil:Lcom/sec/knox/container/util/KeyManagementUtil;
@@ -507,7 +460,6 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/LockSettingsService$SdpHandler;->notifyVerified(II)V
 
-    .line 3045
     return-void
 .end method
 
@@ -517,10 +469,8 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 3091
     const/4 v0, 0x0
 
-    .line 3092
     .local v0, "res":Z
     iget-object v1, p0, Lcom/android/server/LockSettingsService$SdpHandler;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -531,14 +481,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 3093
     const-string v1, "LockSettingsService.SdpHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "removeKeyPair :: User "
+    const-string v3, "removeKeyPair :: User "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -564,7 +513,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3094
     iget-object v1, p0, Lcom/android/server/LockSettingsService$SdpHandler;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mKeyManagementUtil:Lcom/sec/knox/container/util/KeyManagementUtil;
@@ -593,7 +541,6 @@
 
     const/4 v0, 0x1
 
-    .line 3097
     :cond_0
     :goto_0
     const-string v1, "LockSettingsService.SdpHandler"
@@ -602,7 +549,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "removeKeyPair :: Result : "
+    const-string v3, "removeKeyPair :: Result : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -618,10 +565,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3098
     return-void
 
-    .line 3094
     :cond_1
     const/4 v0, 0x0
 
@@ -634,7 +579,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2900
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/LockSettingsService$SdpHandler$1;
@@ -645,7 +589,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 2909
     return-void
 .end method
 
@@ -655,14 +598,13 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2912
     const-string v3, "LockSettingsService.SdpHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setPassword :: Set new credential for user "
+    const-string v5, "setPassword :: Set new credential for user "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -678,23 +620,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2913
     invoke-static {p2}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->isKnoxWorkspace(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 2930
     :cond_0
     :goto_0
     return-void
 
-    .line 2916
     :cond_1
     const/4 v0, 0x0
 
-    .line 2918
     .local v0, "alias":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->getInstance()Lcom/sec/enterprise/knox/sdp/SdpUtil;
@@ -705,25 +643,22 @@
 
     move-result-object v2
 
-    .line 2919
     .local v2, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v2, :cond_0
 
-    .line 2920
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->getInstance()Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
     move-result-object v3
 
     invoke-virtual {v3, v0, p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->setPassword(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2921
     const-string v3, "LockSettingsService.SdpHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setPassword :: SUCCESS!!! "
+    const-string v5, "setPassword :: SUCCESS!!! "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -744,12 +679,10 @@
 
     goto :goto_0
 
-    .line 2923
     .end local v2    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :catch_0
     move-exception v1
 
-    .line 2924
     .local v1, "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     const-string v3, "LockSettingsService.SdpHandler"
 
@@ -757,7 +690,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setPassword :: Failed to set new password... "
+    const-string v5, "setPassword :: Failed to set new password... "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -773,17 +706,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2925
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2926
     .end local v1    # "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     :catch_1
     move-exception v1
 
-    .line 2927
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "LockSettingsService.SdpHandler"
 
@@ -791,7 +721,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setPassword :: Failed to set new password... "
+    const-string v5, "setPassword :: Failed to set new password... "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -807,7 +737,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2928
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -820,7 +749,6 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 2933
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/LockSettingsService$SdpHandler$2;
@@ -831,7 +759,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 2942
     return-void
 .end method
 
@@ -841,7 +768,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2963
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/LockSettingsService$SdpHandler$3;
@@ -852,7 +778,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 2986
     return-void
 .end method
 
@@ -863,14 +788,13 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 2945
     const-string v2, "LockSettingsService.SdpHandler"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "unlock :: Unlocking user "
+    const-string v4, "unlock :: Unlocking user "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -896,7 +820,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2946
     invoke-direct {p0}, Lcom/android/server/LockSettingsService$SdpHandler;->isPwdChangeRequested()Z
 
     move-result v2
@@ -909,16 +832,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 2960
     :cond_0
     :goto_0
     return-void
 
-    .line 2949
     :cond_1
     const/4 v0, 0x0
 
-    .line 2951
     .local v0, "alias":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/sdp/internal/SdpAuthenticator;->getInstance()Lcom/sec/sdp/internal/SdpAuthenticator;
@@ -927,7 +847,6 @@
 
     invoke-virtual {v2, v0, p2, p3}, Lcom/sec/sdp/internal/SdpAuthenticator;->verify(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2952
     invoke-virtual {p0, p1, p3}, Lcom/android/server/LockSettingsService$SdpHandler;->notifyVerified(ILjava/lang/String;)V
     :try_end_0
     .catch Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -935,11 +854,9 @@
 
     goto :goto_0
 
-    .line 2953
     :catch_0
     move-exception v1
 
-    .line 2954
     .local v1, "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     const-string v2, "LockSettingsService.SdpHandler"
 
@@ -947,7 +864,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "unlock :: Failed to unlock engine... "
+    const-string v4, "unlock :: Failed to unlock engine... "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -963,17 +880,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2955
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2956
     .end local v1    # "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     :catch_1
     move-exception v1
 
-    .line 2957
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "LockSettingsService.SdpHandler"
 
@@ -981,7 +895,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "unlock :: Failed to unlock engine... "
+    const-string v4, "unlock :: Failed to unlock engine... "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -997,7 +911,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2958
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

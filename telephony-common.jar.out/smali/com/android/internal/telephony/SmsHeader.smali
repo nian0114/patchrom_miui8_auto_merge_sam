@@ -154,30 +154,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 178
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SmsHeader;->specialSmsMsgList:Ljava/util/ArrayList;
 
-    .line 151
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SmsHeader;->miscEltList:Ljava/util/ArrayList;
 
-    .line 162
     iput-boolean v1, p0, Lcom/android/internal/telephony/SmsHeader;->safeMessageIndication:Z
 
-    .line 169
     iput-boolean v1, p0, Lcom/android/internal/telephony/SmsHeader;->twoPhoneIndication:Z
 
-    .line 178
     return-void
 .end method
 
@@ -186,18 +180,15 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 187
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v2, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 188
     .local v2, "inStream":Ljava/io/ByteArrayInputStream;
     new-instance v9, Lcom/android/internal/telephony/SmsHeader;
 
     invoke-direct {v9}, Lcom/android/internal/telephony/SmsHeader;-><init>()V
 
-    .line 189
     .local v9, "smsHeader":Lcom/android/internal/telephony/SmsHeader;
     :cond_0
     :goto_0
@@ -207,57 +198,47 @@
 
     if-lez v11, :cond_6
 
-    .line 198
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v1
 
-    .line 199
     .local v1, "id":I
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v4
 
-    .line 206
     .local v4, "length":I
     sparse-switch v1, :sswitch_data_0
 
-    .line 298
     new-instance v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;
 
     invoke-direct {v5}, Lcom/android/internal/telephony/SmsHeader$MiscElt;-><init>()V
 
-    .line 299
     .local v5, "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     iput v1, v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;->id:I
 
-    .line 300
     new-array v11, v4, [B
 
     iput-object v11, v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
 
-    .line 301
     iget-object v11, v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
 
     const/4 v12, 0x0
 
     invoke-virtual {v2, v11, v12, v4}, Ljava/io/ByteArrayInputStream;->read([BII)I
 
-    .line 302
     iget-object v11, v9, Lcom/android/internal/telephony/SmsHeader;->miscEltList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 208
     .end local v5    # "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     :sswitch_0
     new-instance v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/SmsHeader$ConcatRef;-><init>()V
 
-    .line 209
     .local v0, "concatRef":Lcom/android/internal/telephony/SmsHeader$ConcatRef;
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
@@ -265,26 +246,22 @@
 
     iput v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
 
-    .line 210
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->msgCount:I
 
-    .line 211
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->seqNumber:I
 
-    .line 212
     const/4 v11, 0x1
 
     iput-boolean v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->isEightBits:Z
 
-    .line 213
     iget v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->msgCount:I
 
     if-eqz v11, :cond_0
@@ -299,19 +276,16 @@
 
     if-gt v11, v12, :cond_0
 
-    .line 215
     iput-object v0, v9, Lcom/android/internal/telephony/SmsHeader;->concatRef:Lcom/android/internal/telephony/SmsHeader$ConcatRef;
 
     goto :goto_0
 
-    .line 219
     .end local v0    # "concatRef":Lcom/android/internal/telephony/SmsHeader$ConcatRef;
     :sswitch_1
     new-instance v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/SmsHeader$ConcatRef;-><init>()V
 
-    .line 220
     .restart local v0    # "concatRef":Lcom/android/internal/telephony/SmsHeader$ConcatRef;
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
@@ -327,26 +301,22 @@
 
     iput v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
 
-    .line 221
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->msgCount:I
 
-    .line 222
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->seqNumber:I
 
-    .line 223
     const/4 v11, 0x0
 
     iput-boolean v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->isEightBits:Z
 
-    .line 224
     iget v11, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->msgCount:I
 
     if-eqz v11, :cond_0
@@ -361,19 +331,16 @@
 
     if-gt v11, v12, :cond_0
 
-    .line 226
     iput-object v0, v9, Lcom/android/internal/telephony/SmsHeader;->concatRef:Lcom/android/internal/telephony/SmsHeader$ConcatRef;
 
     goto/16 :goto_0
 
-    .line 230
     .end local v0    # "concatRef":Lcom/android/internal/telephony/SmsHeader$ConcatRef;
     :sswitch_2
     new-instance v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
     invoke-direct {v7}, Lcom/android/internal/telephony/SmsHeader$PortAddrs;-><init>()V
 
-    .line 231
     .local v7, "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
@@ -381,31 +348,26 @@
 
     iput v11, v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->destPort:I
 
-    .line 232
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->origPort:I
 
-    .line 233
     const/4 v11, 0x1
 
     iput-boolean v11, v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->areEightBits:Z
 
-    .line 234
     iput-object v7, v9, Lcom/android/internal/telephony/SmsHeader;->portAddrs:Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
     goto/16 :goto_0
 
-    .line 237
     .end local v7    # "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     :sswitch_3
     new-instance v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
     invoke-direct {v7}, Lcom/android/internal/telephony/SmsHeader$PortAddrs;-><init>()V
 
-    .line 238
     .restart local v7    # "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
@@ -421,7 +383,6 @@
 
     iput v11, v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->destPort:I
 
-    .line 239
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
@@ -436,38 +397,31 @@
 
     iput v11, v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->origPort:I
 
-    .line 240
     const/4 v11, 0x0
 
     iput-boolean v11, v7, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->areEightBits:Z
 
-    .line 241
     iput-object v7, v9, Lcom/android/internal/telephony/SmsHeader;->portAddrs:Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
     goto/16 :goto_0
 
-    .line 246
     .end local v7    # "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     :sswitch_4
     new-instance v3, Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;
 
     invoke-direct {v3}, Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;-><init>()V
 
-    .line 247
     .local v3, "ktReadConfirm":Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;
     iput v1, v3, Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;->id:I
 
-    .line 248
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v3, Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;->readConfirmID:I
 
-    .line 249
     iput-object v3, v9, Lcom/android/internal/telephony/SmsHeader;->ktReadConfirm:Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;
 
-    .line 250
     const-string v11, "SmsHeader"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -506,7 +460,6 @@
 
     goto/16 :goto_0
 
-    .line 255
     .end local v3    # "ktReadConfirm":Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;
     :sswitch_5
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
@@ -517,7 +470,6 @@
 
     goto/16 :goto_0
 
-    .line 258
     :sswitch_6
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
@@ -527,7 +479,6 @@
 
     goto/16 :goto_0
 
-    .line 261
     :sswitch_7
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -543,42 +494,35 @@
 
     if-eqz v11, :cond_1
 
-    .line 263
     new-instance v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;
 
     invoke-direct {v5}, Lcom/android/internal/telephony/SmsHeader$MiscElt;-><init>()V
 
-    .line 264
     .restart local v5    # "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     iput v1, v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;->id:I
 
-    .line 265
     new-array v11, v4, [B
 
     iput-object v11, v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
 
-    .line 266
     iget-object v11, v5, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
 
     const/4 v12, 0x0
 
     invoke-virtual {v2, v11, v12, v4}, Ljava/io/ByteArrayInputStream;->read([BII)I
 
-    .line 267
     iget-object v11, v9, Lcom/android/internal/telephony/SmsHeader;->miscEltList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 269
     .end local v5    # "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     :cond_1
     new-instance v10, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
 
     invoke-direct {v10}, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;-><init>()V
 
-    .line 270
     .local v10, "specialSmsMsg":Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
@@ -586,28 +530,24 @@
 
     iput v11, v10, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;->msgIndType:I
 
-    .line 271
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v11
 
     iput v11, v10, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;->msgCount:I
 
-    .line 272
     iget-object v11, v9, Lcom/android/internal/telephony/SmsHeader;->specialSmsMsgList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 277
     .end local v10    # "specialSmsMsg":Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
     :sswitch_8
     invoke-virtual {v2}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v6
 
-    .line 278
     .local v6, "operatorControlElementValue":I
     const-string v11, "SmsHeader"
 
@@ -641,7 +581,6 @@
 
     invoke-static {v11, v12}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v11
@@ -654,7 +593,6 @@
 
     if-nez v11, :cond_3
 
-    .line 289
     :goto_1
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -668,19 +606,16 @@
 
     if-eqz v11, :cond_0
 
-    .line 290
     and-int/lit8 v11, v6, 0x1
 
     const/4 v12, 0x1
 
     if-ne v11, v12, :cond_2
 
-    .line 291
     const/4 v11, 0x1
 
     iput-boolean v11, v9, Lcom/android/internal/telephony/SmsHeader;->twoPhoneIndication:Z
 
-    .line 293
     :cond_2
     const-string v11, "TwoPhoneIndication"
 
@@ -708,7 +643,6 @@
 
     goto/16 :goto_0
 
-    .line 281
     :cond_3
     const-string v11, "ril.simtype"
 
@@ -716,7 +650,6 @@
 
     move-result-object v8
 
-    .line 282
     .local v8, "simType":Ljava/lang/String;
     const-string v11, "4"
 
@@ -730,12 +663,10 @@
 
     if-ne v6, v11, :cond_5
 
-    .line 283
     const/4 v11, 0x1
 
     iput-boolean v11, v9, Lcom/android/internal/telephony/SmsHeader;->safeMessageIndication:Z
 
-    .line 287
     :cond_4
     :goto_2
     const-string v11, "SafeMessageIndication"
@@ -764,7 +695,6 @@
 
     goto :goto_1
 
-    .line 284
     :cond_5
     const-string v11, "2"
 
@@ -780,14 +710,12 @@
 
     if-ne v11, v12, :cond_4
 
-    .line 285
     const/4 v11, 0x1
 
     iput-boolean v11, v9, Lcom/android/internal/telephony/SmsHeader;->safeMessageIndication:Z
 
     goto :goto_2
 
-    .line 305
     .end local v1    # "id":I
     .end local v4    # "length":I
     .end local v6    # "operatorControlElementValue":I
@@ -795,7 +723,6 @@
     :cond_6
     return-object v9
 
-    .line 206
     nop
 
     :sswitch_data_0
@@ -825,7 +752,6 @@
 
     const/4 v9, 0x1
 
-    .line 314
     iget-object v7, p0, Lcom/android/internal/telephony/SmsHeader;->portAddrs:Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
     if-nez v7, :cond_0
@@ -862,14 +788,11 @@
 
     if-nez v7, :cond_0
 
-    .line 324
     const/4 v7, 0x0
 
-    .line 390
     :goto_0
     return-object v7
 
-    .line 327
     :cond_0
     new-instance v4, Ljava/io/ByteArrayOutputStream;
 
@@ -877,112 +800,88 @@
 
     invoke-direct {v4, v7}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 329
     .local v4, "outStream":Ljava/io/ByteArrayOutputStream;
     iget-object v0, p0, Lcom/android/internal/telephony/SmsHeader;->concatRef:Lcom/android/internal/telephony/SmsHeader$ConcatRef;
 
-    .line 330
     .local v0, "concatRef":Lcom/android/internal/telephony/SmsHeader$ConcatRef;
     if-eqz v0, :cond_1
 
-    .line 331
     iget-boolean v7, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->isEightBits:Z
 
     if-eqz v7, :cond_5
 
-    .line 332
     invoke-virtual {v4, v10}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 333
     const/4 v7, 0x3
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 334
     iget v7, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 341
     :goto_1
     iget v7, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->msgCount:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 342
     iget v7, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->seqNumber:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 344
     :cond_1
     iget-object v5, p0, Lcom/android/internal/telephony/SmsHeader;->portAddrs:Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
-    .line 345
     .local v5, "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     if-eqz v5, :cond_2
 
-    .line 346
     iget-boolean v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->areEightBits:Z
 
     if-eqz v7, :cond_6
 
-    .line 347
     invoke-virtual {v4, v8}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 348
     invoke-virtual {v4, v11}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 349
     iget v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->destPort:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 350
     iget v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->origPort:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 360
     :cond_2
     :goto_2
     iget v7, p0, Lcom/android/internal/telephony/SmsHeader;->languageShiftTable:I
 
     if-eqz v7, :cond_3
 
-    .line 361
     const/16 v7, 0x24
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 362
     invoke-virtual {v4, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 363
     iget v7, p0, Lcom/android/internal/telephony/SmsHeader;->languageShiftTable:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 365
     :cond_3
     iget v7, p0, Lcom/android/internal/telephony/SmsHeader;->languageTable:I
 
     if-eqz v7, :cond_4
 
-    .line 366
     const/16 v7, 0x25
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 367
     invoke-virtual {v4, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 368
     iget v7, p0, Lcom/android/internal/telephony/SmsHeader;->languageTable:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 370
     :cond_4
     iget-object v7, p0, Lcom/android/internal/telephony/SmsHeader;->specialSmsMsgList:Ljava/util/ArrayList;
 
@@ -1004,21 +903,17 @@
 
     check-cast v6, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
 
-    .line 371
     .local v6, "specialSmsMsg":Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
     invoke-virtual {v4, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 372
     invoke-virtual {v4, v11}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 373
     iget v7, v6, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;->msgIndType:I
 
     and-int/lit16 v7, v7, 0xff
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 374
     iget v7, v6, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;->msgCount:I
 
     and-int/lit16 v7, v7, 0xff
@@ -1027,7 +922,6 @@
 
     goto :goto_3
 
-    .line 336
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v5    # "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     .end local v6    # "specialSmsMsg":Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
@@ -1036,17 +930,14 @@
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 337
     invoke-virtual {v4, v8}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 338
     iget v7, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
 
     ushr-int/lit8 v7, v7, 0x8
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 339
     iget v7, v0, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
 
     and-int/lit16 v7, v7, 0xff
@@ -1055,38 +946,32 @@
 
     goto/16 :goto_1
 
-    .line 352
     .restart local v5    # "portAddrs":Lcom/android/internal/telephony/SmsHeader$PortAddrs;
     :cond_6
     const/4 v7, 0x5
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 353
     invoke-virtual {v4, v8}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 354
     iget v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->destPort:I
 
     ushr-int/lit8 v7, v7, 0x8
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 355
     iget v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->destPort:I
 
     and-int/lit16 v7, v7, 0xff
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 356
     iget v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->origPort:I
 
     ushr-int/lit8 v7, v7, 0x8
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 357
     iget v7, v5, Lcom/android/internal/telephony/SmsHeader$PortAddrs;->origPort:I
 
     and-int/lit16 v7, v7, 0xff
@@ -1095,7 +980,6 @@
 
     goto/16 :goto_2
 
-    .line 376
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_7
     iget-object v7, p0, Lcom/android/internal/telephony/SmsHeader;->miscEltList:Ljava/util/ArrayList;
@@ -1117,20 +1001,17 @@
 
     check-cast v3, Lcom/android/internal/telephony/SmsHeader$MiscElt;
 
-    .line 377
     .local v3, "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     iget v7, v3, Lcom/android/internal/telephony/SmsHeader$MiscElt;->id:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 378
     iget-object v7, v3, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
 
     array-length v7, v7
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 379
     iget-object v7, v3, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
 
     iget-object v8, v3, Lcom/android/internal/telephony/SmsHeader$MiscElt;->data:[B
@@ -1141,29 +1022,23 @@
 
     goto :goto_4
 
-    .line 383
     .end local v3    # "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     :cond_8
     iget-object v2, p0, Lcom/android/internal/telephony/SmsHeader;->ktReadConfirm:Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;
 
-    .line 384
     .local v2, "ktReadConfirm":Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;
     if-eqz v2, :cond_9
 
-    .line 385
     const/16 v7, 0x44
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 386
     invoke-virtual {v4, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 387
     iget v7, v2, Lcom/android/internal/telephony/SmsHeader$KTReadConfirm;->readConfirmID:I
 
     invoke-virtual {v4, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 390
     :cond_9
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -1178,55 +1053,45 @@
     .locals 6
 
     .prologue
-    .line 395
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 396
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v4, "UserDataHeader "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 397
     const-string v4, "{ ConcatRef "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 398
     iget-object v4, p0, Lcom/android/internal/telephony/SmsHeader;->concatRef:Lcom/android/internal/telephony/SmsHeader$ConcatRef;
 
     if-nez v4, :cond_2
 
-    .line 399
     const-string v4, "unset"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 407
     :goto_0
     const-string v4, ", PortAddrs "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 408
     iget-object v4, p0, Lcom/android/internal/telephony/SmsHeader;->portAddrs:Lcom/android/internal/telephony/SmsHeader$PortAddrs;
 
     if-nez v4, :cond_3
 
-    .line 409
     const-string v4, "unset"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 416
     :goto_1
     iget v4, p0, Lcom/android/internal/telephony/SmsHeader;->languageShiftTable:I
 
     if-eqz v4, :cond_0
 
-    .line 417
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1249,13 +1114,11 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 419
     :cond_0
     iget v4, p0, Lcom/android/internal/telephony/SmsHeader;->languageTable:I
 
     if-eqz v4, :cond_1
 
-    .line 420
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1278,7 +1141,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 422
     :cond_1
     iget-object v4, p0, Lcom/android/internal/telephony/SmsHeader;->specialSmsMsgList:Ljava/util/ArrayList;
 
@@ -1300,13 +1162,11 @@
 
     check-cast v3, Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
 
-    .line 423
     .local v3, "specialSmsMsg":Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
     const-string v4, ", SpecialSmsMsg "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 424
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1329,7 +1189,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 425
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1352,14 +1211,12 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 426
     const-string v4, " }"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 401
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "specialSmsMsg":Lcom/android/internal/telephony/SmsHeader$SpecialSmsMsg;
     :cond_2
@@ -1387,7 +1244,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 402
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1412,7 +1268,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 403
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1437,7 +1292,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 404
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1462,14 +1316,12 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 405
     const-string v4, " }"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
 
-    .line 411
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1495,7 +1347,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 412
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1520,7 +1371,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 413
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1545,14 +1395,12 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 414
     const-string v4, " }"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_1
 
-    .line 428
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_4
     iget-object v4, p0, Lcom/android/internal/telephony/SmsHeader;->miscEltList:Ljava/util/ArrayList;
@@ -1574,13 +1422,11 @@
 
     check-cast v2, Lcom/android/internal/telephony/SmsHeader$MiscElt;
 
-    .line 429
     .local v2, "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     const-string v4, ", MiscElt "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 430
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1603,7 +1449,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 431
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1628,7 +1473,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 432
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1655,21 +1499,18 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 433
     const-string v4, " }"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 
-    .line 435
     .end local v2    # "miscElt":Lcom/android/internal/telephony/SmsHeader$MiscElt;
     :cond_5
     const-string v4, " }"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 436
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4

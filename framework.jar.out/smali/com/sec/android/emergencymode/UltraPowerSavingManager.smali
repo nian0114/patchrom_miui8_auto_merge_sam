@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;->sInstance:Lcom/sec/android/emergencymode/UltraPowerSavingManager;
@@ -39,13 +38,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     iput-object p1, p0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;->mContext:Landroid/content/Context;
 
-    .line 79
     return-void
 .end method
 
@@ -54,37 +50,31 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     const-class v1, Lcom/sec/android/emergencymode/UltraPowerSavingManager;
 
     monitor-enter v1
 
     if-nez p0, :cond_0
 
-    .line 68
     const/4 v0, 0x0
 
-    .line 73
     :goto_0
     monitor-exit v1
 
     return-object v0
 
-    .line 70
     :cond_0
     :try_start_0
     sget-object v0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;->sInstance:Lcom/sec/android/emergencymode/UltraPowerSavingManager;
 
     if-nez v0, :cond_1
 
-    .line 71
     new-instance v0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;
 
     invoke-direct {v0, p0}, Lcom/sec/android/emergencymode/UltraPowerSavingManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;->sInstance:Lcom/sec/android/emergencymode/UltraPowerSavingManager;
 
-    .line 73
     :cond_1
     sget-object v0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;->sInstance:Lcom/sec/android/emergencymode/UltraPowerSavingManager;
     :try_end_0
@@ -92,7 +82,6 @@
 
     goto :goto_0
 
-    .line 67
     :catchall_0
     move-exception v0
 
@@ -111,7 +100,6 @@
 
     const/4 v1, 0x0
 
-    .line 94
     iget-object v2, p0, Lcom/sec/android/emergencymode/UltraPowerSavingManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -126,7 +114,6 @@
 
     if-ne v2, v0, :cond_0
 
-    .line 97
     :goto_0
     return v0
 
@@ -140,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 86
     invoke-static {}, Lcom/sec/android/emergencymode/EmergencyManager;->supportUltraPowerSavingMode()Z
 
     move-result v0

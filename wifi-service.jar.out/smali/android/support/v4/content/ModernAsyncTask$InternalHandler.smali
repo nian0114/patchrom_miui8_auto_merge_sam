@@ -19,14 +19,12 @@
     .locals 1
 
     .prologue
-    .line 474
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 475
     return-void
 .end method
 
@@ -37,22 +35,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 480
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;
 
-    .line 481
     .local v0, "result":Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 490
     :goto_0
     return-void
 
-    .line 484
     :pswitch_0
     iget-object v1, v0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroid/support/v4/content/ModernAsyncTask;
 
@@ -67,7 +61,6 @@
 
     goto :goto_0
 
-    .line 487
     :pswitch_1
     iget-object v1, v0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroid/support/v4/content/ModernAsyncTask;
 
@@ -77,7 +70,6 @@
 
     goto :goto_0
 
-    .line 481
     nop
 
     :pswitch_data_0

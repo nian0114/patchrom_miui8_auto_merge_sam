@@ -48,22 +48,18 @@
     .locals 1
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mHandlers:Ljava/util/HashMap;
 
-    .line 83
     sget-object v0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener$State;->UNKNOWN:Lcom/android/internal/telephony/cat/NetworkConnectivityListener$State;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mState:Lcom/android/internal/telephony/cat/NetworkConnectivityListener$State;
 
-    .line 84
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -83,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 161
     iget-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mOtherNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -93,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mReason:Ljava/lang/String;
 
     return-object v0
@@ -103,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mState:Lcom/android/internal/telephony/cat/NetworkConnectivityListener$State;
 
     return-object v0
@@ -113,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-boolean v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mIsFailover:Z
 
     return v0
@@ -123,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-boolean v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mListening:Z
 
     return v0
@@ -133,7 +123,6 @@
     .locals 4
 
     .prologue
-    .line 54
     iget-object v3, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mHandlers:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -144,7 +133,6 @@
 
     move-result-object v0
 
-    .line 55
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/os/Handler;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -153,14 +141,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 56
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/Handler;
 
-    .line 57
     .local v2, "target":Landroid/os/Handler;
     iget-object v3, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mHandlers:Ljava/util/HashMap;
 
@@ -178,13 +164,11 @@
 
     move-result-object v1
 
-    .line 58
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 
-    .line 60
     .end local v1    # "message":Landroid/os/Message;
     .end local v2    # "target":Landroid/os/Handler;
     :cond_0
@@ -197,7 +181,6 @@
     .param p2, "what"    # I
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mHandlers:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -206,7 +189,6 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     return-void
 .end method
 
@@ -215,10 +197,8 @@
     .param p1, "failover"    # Z
 
     .prologue
-    .line 178
     iput-boolean p1, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mIsFailover:Z
 
-    .line 179
     return-void
 .end method
 
@@ -227,10 +207,8 @@
     .param p1, "networkInfo"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 148
     iput-object p1, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 149
     return-void
 .end method
 
@@ -239,10 +217,8 @@
     .param p1, "networkInfo"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 165
     iput-object p1, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mOtherNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 166
     return-void
 .end method
 
@@ -251,10 +227,8 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     iput-object p1, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mReason:Ljava/lang/String;
 
-    .line 193
     return-void
 .end method
 
@@ -263,10 +237,8 @@
     .param p1, "state"    # Lcom/android/internal/telephony/cat/NetworkConnectivityListener$State;
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mState:Lcom/android/internal/telephony/cat/NetworkConnectivityListener$State;
 
-    .line 134
     return-void
 .end method
 
@@ -274,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 91
     monitor-enter p0
 
     :try_start_0
@@ -282,20 +253,17 @@
 
     if-nez v0, :cond_0
 
-    .line 92
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mListening:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 94
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 91
     :catchall_0
     move-exception v0
 
@@ -308,7 +276,6 @@
     .locals 1
 
     .prologue
-    .line 100
     monitor-enter p0
 
     :try_start_0
@@ -316,40 +283,33 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 102
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mOtherNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 103
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mIsFailover:Z
 
-    .line 104
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mReason:Ljava/lang/String;
 
-    .line 105
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mListening:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 107
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 100
     :catchall_0
     move-exception v0
 
@@ -363,11 +323,9 @@
     .param p1, "target"    # Landroid/os/Handler;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/internal/telephony/cat/NetworkConnectivityListener;->mHandlers:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 126
     return-void
 .end method

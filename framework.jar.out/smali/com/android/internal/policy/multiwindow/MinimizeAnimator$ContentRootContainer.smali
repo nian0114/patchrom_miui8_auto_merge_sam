@@ -28,25 +28,20 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 958
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
-    .line 959
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 955
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mDisplaySize:Landroid/graphics/Point;
 
-    .line 956
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mLastOrientation:I
 
-    .line 960
     return-void
 .end method
 
@@ -59,12 +54,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 983
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->gatherTransparentRegion(Landroid/graphics/Region;)Z
 
     move-result v0
 
-    .line 984
     .local v0, "opaque":Z
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -84,11 +77,9 @@
 
     if-eqz v2, :cond_2
 
-    .line 985
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 995
     :goto_0
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$400()Z
@@ -97,7 +88,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 996
     const-string v2, "MinimizeAnimator"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -137,11 +127,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 998
     :cond_1
     return v0
 
-    .line 987
     :cond_2
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -152,7 +140,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 988
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     iget-object v3, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mDisplaySize:Landroid/graphics/Point;
@@ -160,7 +147,6 @@
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->getDisplaySize(Landroid/graphics/Point;)Z
     invoke-static {v2, v3}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$2700(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Landroid/graphics/Point;)Z
 
-    .line 991
     :cond_3
     new-instance v1, Landroid/graphics/Region;
 
@@ -174,7 +160,6 @@
 
     invoke-direct {v1, v4, v4, v2, v3}, Landroid/graphics/Region;-><init>(IIII)V
 
-    .line 992
     .local v1, "transparentRegion":Landroid/graphics/Region;
     iget-object v2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -187,7 +172,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Region;->op(Landroid/graphics/Region;Landroid/graphics/Region$Op;)Z
 
-    .line 993
     invoke-virtual {p1, v1}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
 
     goto :goto_0
@@ -197,10 +181,8 @@
     .locals 2
 
     .prologue
-    .line 964
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 965
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$400()Z
 
@@ -208,7 +190,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 968
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -226,7 +207,6 @@
     # setter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mUsingSelectiveOrientation:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4002(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Z)Z
 
-    .line 969
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mDisplaySize:Landroid/graphics/Point;
@@ -234,12 +214,10 @@
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->getDisplaySize(Landroid/graphics/Point;)Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$2700(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Landroid/graphics/Point;)Z
 
-    .line 970
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mParent:Landroid/view/ViewParent;
 
     invoke-interface {v0, p0}, Landroid/view/ViewParent;->requestTransparentRegion(Landroid/view/View;)V
 
-    .line 971
     return-void
 .end method
 
@@ -248,22 +226,18 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 1003
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 1004
     iget v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mLastOrientation:I
 
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
     if-eq v0, v1, :cond_0
 
-    .line 1005
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mLastOrientation:I
 
-    .line 1006
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     iget-object v1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$ContentRootContainer;->mDisplaySize:Landroid/graphics/Point;
@@ -271,7 +245,6 @@
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->getDisplaySize(Landroid/graphics/Point;)Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$2700(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Landroid/graphics/Point;)Z
 
-    .line 1008
     :cond_0
     return-void
 .end method
@@ -280,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 975
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$400()Z
 
@@ -288,10 +260,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 978
     :cond_0
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 979
     return-void
 .end method

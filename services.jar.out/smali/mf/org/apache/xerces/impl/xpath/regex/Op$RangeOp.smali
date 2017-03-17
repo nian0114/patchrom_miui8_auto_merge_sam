@@ -25,13 +25,10 @@
     .param p2, "tok"    # Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     .prologue
-    .line 220
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Op;-><init>(I)V
 
-    .line 221
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$RangeOp;->tok:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
-    .line 222
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Op$RangeOp;->tok:Lmf/org/apache/xerces/impl/xpath/regex/Token;
 
     check-cast v0, Lmf/org/apache/xerces/impl/xpath/regex/RangeToken;

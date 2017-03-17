@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 195
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$3;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 198
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$3;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v1, "wifi_state"
@@ -53,6 +51,5 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiState:I
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$102(Lcom/samsung/android/server/wifi/SoftApStateMachine;I)I
 
-    .line 200
     return-void
 .end method

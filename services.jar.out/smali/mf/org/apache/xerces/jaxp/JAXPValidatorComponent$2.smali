@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$2;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
-    .line 143
     invoke-direct {p0}, Lmf/org/apache/xerces/util/ErrorHandlerProxy;-><init>()V
 
     return-void
@@ -38,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 145
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$2;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     # getter for: Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->fErrorReporter:Lmf/org/apache/xerces/impl/XMLErrorReporter;
@@ -50,11 +47,9 @@
 
     move-result-object v0
 
-    .line 146
     .local v0, "handler":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     if-eqz v0, :cond_0
 
-    .line 147
     .end local v0    # "handler":Lmf/org/apache/xerces/xni/parser/XMLErrorHandler;
     :goto_0
     return-object v0

@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 267
     const/4 v0, 0x0
 
     sput-object v0, Landroid/bluetooth/BluetoothSecureManager;->This:Landroid/bluetooth/BluetoothSecureManager;
@@ -56,17 +55,14 @@
     .locals 1
 
     .prologue
-    .line 262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
     invoke-static {}, Landroid/bluetooth/BluetoothSecureManager;->loadSecureManager()Landroid/bluetooth/IBluetoothSecureManagerService;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
-    .line 264
     return-void
 .end method
 
@@ -74,49 +70,40 @@
     .locals 2
 
     .prologue
-    .line 128
     sget-object v0, Landroid/bluetooth/BluetoothSecureManager;->This:Landroid/bluetooth/BluetoothSecureManager;
 
     if-eqz v0, :cond_0
 
-    .line 129
     sget-object v0, Landroid/bluetooth/BluetoothSecureManager;->This:Landroid/bluetooth/BluetoothSecureManager;
 
-    .line 135
     :goto_0
     return-object v0
 
-    .line 131
     :cond_0
     const-class v1, Landroid/bluetooth/BluetoothSecureManager;
 
     monitor-enter v1
 
-    .line 132
     :try_start_0
     sget-object v0, Landroid/bluetooth/BluetoothSecureManager;->This:Landroid/bluetooth/BluetoothSecureManager;
 
     if-nez v0, :cond_1
 
-    .line 133
     new-instance v0, Landroid/bluetooth/BluetoothSecureManager;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothSecureManager;-><init>()V
 
     sput-object v0, Landroid/bluetooth/BluetoothSecureManager;->This:Landroid/bluetooth/BluetoothSecureManager;
 
-    .line 134
     :cond_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 135
     sget-object v0, Landroid/bluetooth/BluetoothSecureManager;->This:Landroid/bluetooth/BluetoothSecureManager;
 
     goto :goto_0
 
-    .line 134
     :catchall_0
     move-exception v0
 
@@ -134,7 +121,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 271
     :try_start_0
     const-string v5, "android.os.ServiceManager"
 
@@ -142,7 +128,6 @@
 
     move-result-object v0
 
-    .line 273
     .local v0, "ServiceManager":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "BluetoothSecureManager"
 
@@ -150,7 +135,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
     const-string v5, "getService"
 
     const/4 v6, 0x1
@@ -167,7 +151,6 @@
 
     move-result-object v3
 
-    .line 276
     .local v3, "getService":Ljava/lang/reflect/Method;
     const-string v5, "BluetoothSecureManager"
 
@@ -175,7 +158,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     const/4 v5, 0x0
 
     const/4 v6, 0x1
@@ -194,7 +176,6 @@
 
     check-cast v1, Landroid/os/IBinder;
 
-    .line 279
     .local v1, "binder":Landroid/os/IBinder;
     const-string v5, "BluetoothSecureManager"
 
@@ -218,24 +199,20 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     invoke-static {v1}, Landroid/bluetooth/IBluetoothSecureManagerService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothSecureManagerService;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v4
 
-    .line 283
     .end local v1    # "binder":Landroid/os/IBinder;
     .end local v3    # "getService":Ljava/lang/reflect/Method;
     :goto_0
     return-object v4
 
-    .line 281
     :catch_0
     move-exception v2
 
-    .line 282
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "BluetoothSecureManager"
 
@@ -243,7 +220,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "load bt secure manager failed: "
+    const-string v7, "load bt secure manager failed: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -276,15 +253,12 @@
     .end annotation
 
     .prologue
-    .line 202
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 203
     const/4 v0, 0x0
 
-    .line 204
     :goto_0
     return v0
 
@@ -308,15 +282,12 @@
     .end annotation
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 144
     const/4 v0, 0x0
 
-    .line 145
     :goto_0
     return v0
 
@@ -340,15 +311,12 @@
     .end annotation
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 182
     const/4 v0, 0x0
 
-    .line 183
     :goto_0
     return v0
 
@@ -372,15 +340,12 @@
     .end annotation
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 162
     const/4 v0, 0x0
 
-    .line 163
     :goto_0
     return v0
 
@@ -404,15 +369,12 @@
     .end annotation
 
     .prologue
-    .line 248
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 249
     const/4 v0, 0x0
 
-    .line 250
     :goto_0
     return v0
 
@@ -435,15 +397,12 @@
     .end annotation
 
     .prologue
-    .line 221
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 222
     const/4 v0, -0x1
 
-    .line 223
     :goto_0
     return v0
 
@@ -467,15 +426,12 @@
     .end annotation
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 241
     const/4 v0, 0x0
 
-    .line 242
     :goto_0
     return-object v0
 
@@ -499,15 +455,12 @@
     .end annotation
 
     .prologue
-    .line 231
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 232
     const/4 v0, -0x1
 
-    .line 233
     :goto_0
     return v0
 
@@ -531,15 +484,12 @@
     .end annotation
 
     .prologue
-    .line 256
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 257
     const/4 v0, 0x0
 
-    .line 258
     :goto_0
     return-object v0
 
@@ -562,15 +512,12 @@
     .end annotation
 
     .prologue
-    .line 152
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 153
     const/4 v0, 0x0
 
-    .line 154
     :goto_0
     return v0
 
@@ -593,15 +540,12 @@
     .end annotation
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 191
     const/4 v0, 0x0
 
-    .line 192
     :goto_0
     return v0
 
@@ -626,15 +570,12 @@
     .end annotation
 
     .prologue
-    .line 211
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 212
     const/4 v0, 0x0
 
-    .line 213
     :goto_0
     return v0
 
@@ -659,15 +600,12 @@
     .end annotation
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/bluetooth/BluetoothSecureManager;->mService:Landroid/bluetooth/IBluetoothSecureManagerService;
 
     if-nez v0, :cond_0
 
-    .line 171
     const/4 v0, 0x0
 
-    .line 172
     :goto_0
     return v0
 

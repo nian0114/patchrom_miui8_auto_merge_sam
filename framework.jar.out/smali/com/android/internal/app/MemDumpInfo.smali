@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 83
     new-instance v0, Lcom/android/internal/app/MemDumpInfo$1;
 
     invoke-direct {v0}, Lcom/android/internal/app/MemDumpInfo$1;-><init>()V
@@ -60,31 +59,24 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/app/MemDumpInfo;->hasExtra:Z
 
-    .line 23
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/app/MemDumpInfo;->label:Ljava/lang/String;
 
-    .line 24
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/app/MemDumpInfo;->procName:Ljava/lang/String;
 
-    .line 25
     iput-wide v2, p0, Lcom/android/internal/app/MemDumpInfo;->pss:J
 
-    .line 26
     iput-wide v2, p0, Lcom/android/internal/app/MemDumpInfo;->swap_out:J
 
-    .line 27
     return-void
 .end method
 
@@ -93,10 +85,8 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -108,38 +98,32 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/app/MemDumpInfo;->hasExtra:Z
 
-    .line 31
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/app/MemDumpInfo;->label:Ljava/lang/String;
 
-    .line 32
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/app/MemDumpInfo;->procName:Ljava/lang/String;
 
-    .line 33
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->pss:J
 
-    .line 34
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->swap_out:J
 
-    .line 35
     return-void
 
-    .line 30
     :cond_0
     const/4 v0, 0x1
 
@@ -152,7 +136,6 @@
     .locals 2
 
     .prologue
-    .line 58
     iget-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->free_size:J
 
     return-wide v0
@@ -162,7 +145,6 @@
     .locals 2
 
     .prologue
-    .line 66
     iget-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->lost_size:J
 
     return-wide v0
@@ -172,7 +154,6 @@
     .locals 2
 
     .prologue
-    .line 54
     iget-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->total_size:J
 
     return-wide v0
@@ -182,7 +163,6 @@
     .locals 2
 
     .prologue
-    .line 62
     iget-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->used_size:J
 
     return-wide v0
@@ -193,10 +173,8 @@
     .param p1, "free"    # J
 
     .prologue
-    .line 42
     iput-wide p1, p0, Lcom/android/internal/app/MemDumpInfo;->free_size:J
 
-    .line 43
     return-void
 .end method
 
@@ -205,10 +183,8 @@
     .param p1, "Lost"    # J
 
     .prologue
-    .line 50
     iput-wide p1, p0, Lcom/android/internal/app/MemDumpInfo;->lost_size:J
 
-    .line 51
     return-void
 .end method
 
@@ -217,10 +193,8 @@
     .param p1, "total"    # J
 
     .prologue
-    .line 38
     iput-wide p1, p0, Lcom/android/internal/app/MemDumpInfo;->total_size:J
 
-    .line 39
     return-void
 .end method
 
@@ -229,10 +203,8 @@
     .param p1, "Used"    # J
 
     .prologue
-    .line 46
     iput-wide p1, p0, Lcom/android/internal/app/MemDumpInfo;->used_size:J
 
-    .line 47
     return-void
 .end method
 
@@ -240,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 71
     const/4 v0, 0x0
 
     return v0
@@ -252,7 +223,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 76
     iget-boolean v0, p0, Lcom/android/internal/app/MemDumpInfo;->hasExtra:Z
 
     if-eqz v0, :cond_0
@@ -262,30 +232,24 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 77
     iget-object v0, p0, Lcom/android/internal/app/MemDumpInfo;->label:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 78
     iget-object v0, p0, Lcom/android/internal/app/MemDumpInfo;->procName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 79
     iget-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->pss:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 80
     iget-wide v0, p0, Lcom/android/internal/app/MemDumpInfo;->swap_out:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 81
     return-void
 
-    .line 76
     :cond_0
     const/4 v0, 0x0
 

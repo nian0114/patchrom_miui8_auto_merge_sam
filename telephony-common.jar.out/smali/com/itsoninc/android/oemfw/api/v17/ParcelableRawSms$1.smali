@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 51
     new-instance v0, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;
 
     invoke-direct {v0, p1}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 47
     invoke-virtual {p0, p1}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$1;->createFromParcel(Landroid/os/Parcel;)Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 56
     new-array v0, p1, [Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 47
     invoke-virtual {p0, p1}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$1;->newArray(I)[Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;
 
     move-result-object v0

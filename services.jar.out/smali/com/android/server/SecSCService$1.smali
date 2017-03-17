@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 203
     iput-object p1, p0, Lcom/android/server/SecSCService$1;->this$0:Lcom/android/server/SecSCService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .prologue
     const-wide/16 v10, 0x3e8
 
-    .line 206
     new-instance v0, Landroid/net/SntpClient;
 
     invoke-direct {v0}, Landroid/net/SntpClient;-><init>()V
 
-    .line 207
     .local v0, "client":Landroid/net/SntpClient;
-    const-string/jumbo v1, "pool.ntp.org"
+    const-string v1, "pool.ntp.org"
 
     const/16 v8, 0x1388
 
@@ -59,14 +56,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 208
     invoke-virtual {v0}, Landroid/net/SntpClient;->getNtpTime()J
 
     move-result-wide v8
 
     div-long v2, v8, v10
 
-    .line 209
     .local v2, "networktime":J
     invoke-virtual {v0}, Landroid/net/SntpClient;->getNtpTimeReference()J
 
@@ -74,19 +69,16 @@
 
     div-long v4, v8, v10
 
-    .line 211
     .local v4, "recvElapsedTime":J
     iget-object v1, p0, Lcom/android/server/SecSCService$1;->this$0:Lcom/android/server/SecSCService;
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/android/server/SecSCService;->SecSC_onNetworkStateChanged(JJ)V
 
-    .line 218
     .end local v2    # "networktime":J
     .end local v4    # "recvElapsedTime":J
     :goto_0
     return-void
 
-    .line 214
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -94,7 +86,6 @@
 
     div-long v6, v8, v10
 
-    .line 216
     .local v6, "systime":J
     const-string v1, "SecSCService"
 

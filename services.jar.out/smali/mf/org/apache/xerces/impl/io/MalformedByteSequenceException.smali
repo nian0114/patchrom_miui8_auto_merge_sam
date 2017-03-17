@@ -31,25 +31,18 @@
     .param p5, "arguments"    # [Ljava/lang/Object;
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/io/CharConversionException;-><init>()V
 
-    .line 82
     iput-object p1, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fFormatter:Lmf/org/apache/xerces/util/MessageFormatter;
 
-    .line 83
     iput-object p2, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fLocale:Ljava/util/Locale;
 
-    .line 84
     iput-object p3, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fDomain:Ljava/lang/String;
 
-    .line 85
     iput-object p4, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fKey:Ljava/lang/String;
 
-    .line 86
     iput-object p5, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fArguments:[Ljava/lang/Object;
 
-    .line 87
     return-void
 .end method
 
@@ -59,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fArguments:[Ljava/lang/Object;
 
     return-object v0
@@ -69,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fDomain:Ljava/lang/String;
 
     return-object v0
@@ -79,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fKey:Ljava/lang/String;
 
     return-object v0
@@ -89,7 +79,6 @@
     .locals 4
 
     .prologue
-    .line 128
     monitor-enter p0
 
     :try_start_0
@@ -97,7 +86,6 @@
 
     if-nez v0, :cond_0
 
-    .line 129
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fFormatter:Lmf/org/apache/xerces/util/MessageFormatter;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fLocale:Ljava/util/Locale;
@@ -112,17 +100,14 @@
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fMessage:Ljava/lang/String;
 
-    .line 132
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fFormatter:Lmf/org/apache/xerces/util/MessageFormatter;
 
-    .line 133
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fLocale:Ljava/util/Locale;
 
-    .line 135
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/MalformedByteSequenceException;->fMessage:Ljava/lang/String;
     :try_end_0
@@ -132,7 +117,6 @@
 
     return-object v0
 
-    .line 128
     :catchall_0
     move-exception v0
 

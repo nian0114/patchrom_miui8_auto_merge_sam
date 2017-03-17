@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 101
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowTab;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/multiwindow/MultiWindowTab;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 99
     invoke-virtual {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowTab$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/multiwindow/MultiWindowTab;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 105
     new-array v0, p1, [Lcom/samsung/android/multiwindow/MultiWindowTab;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 99
     invoke-virtual {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowTab$1;->newArray(I)[Lcom/samsung/android/multiwindow/MultiWindowTab;
 
     move-result-object v0

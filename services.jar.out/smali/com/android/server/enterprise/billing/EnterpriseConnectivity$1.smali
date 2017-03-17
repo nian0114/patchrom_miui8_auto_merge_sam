@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -40,7 +39,6 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 348
     iget-boolean v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;->roaming:Z
 
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getRoaming()Z
@@ -49,14 +47,12 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 349
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getRoaming()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;->roaming:Z
 
-    .line 350
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -82,7 +78,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 351
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     const/16 v2, 0x3ef
 
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 354
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0

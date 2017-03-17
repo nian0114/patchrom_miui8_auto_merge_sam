@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1298
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/location/IGpsGeofenceHardware$Stub;-><init>()V
@@ -45,7 +44,6 @@
     .param p11, "unknownTimer"    # I
 
     .prologue
-    .line 1306
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_add_geofence(IDDDIIII)Z
     invoke-static/range {p1 .. p11}, Lcom/android/server/location/GpsLocationProvider;->access$2900(IDDDIIII)Z
 
@@ -58,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 1300
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_is_geofence_supported()Z
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$2800()Z
 
@@ -72,7 +69,6 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 1315
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_pause_geofence(I)Z
     invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->access$3100(I)Z
 
@@ -86,7 +82,6 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 1311
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_remove_geofence(I)Z
     invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->access$3000(I)Z
 
@@ -101,7 +96,6 @@
     .param p2, "monitorTransition"    # I
 
     .prologue
-    .line 1319
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_resume_geofence(II)Z
     invoke-static {p1, p2}, Lcom/android/server/location/GpsLocationProvider;->access$3200(II)Z
 

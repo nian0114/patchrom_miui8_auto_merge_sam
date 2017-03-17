@@ -30,18 +30,13 @@
     .param p3, "policyName"    # Ljava/lang/String;
 
     .prologue
-    .line 2522
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2523
     iput p1, p0, Lcom/android/server/bridge/BridgeProxy$PolicyChanged;->personaId:I
 
-    .line 2524
     iput-object p2, p0, Lcom/android/server/bridge/BridgeProxy$PolicyChanged;->syncerName:Ljava/lang/String;
 
-    .line 2525
     iput-object p3, p0, Lcom/android/server/bridge/BridgeProxy$PolicyChanged;->policyName:Ljava/lang/String;
 
-    .line 2526
     return-void
 .end method

@@ -60,18 +60,15 @@
     .param p2, "onAccessibilityEnabledCallback"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     new-instance v0, Lcom/android/server/policy/EnableAccessibilityController$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/EnableAccessibilityController$1;-><init>(Lcom/android/server/policy/EnableAccessibilityController;)V
 
     iput-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
-    .line 100
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -83,7 +80,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mWindowManager:Landroid/view/IWindowManager;
 
-    .line 103
     const-string v0, "accessibility"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -96,16 +92,13 @@
 
     iput-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mAccessibilityManager:Landroid/view/accessibility/IAccessibilityManager;
 
-    .line 124
     iput-object p1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mContext:Landroid/content/Context;
 
-    .line 125
     iput-object p2, p0, Lcom/android/server/policy/EnableAccessibilityController;->mOnAccessibilityEnabledCallback:Ljava/lang/Runnable;
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "user"
+    const-string v1, "user"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -115,7 +108,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mUserManager:Landroid/os/UserManager;
 
-    .line 127
     new-instance v0, Landroid/speech/tts/TextToSpeech;
 
     new-instance v1, Lcom/android/server/policy/EnableAccessibilityController$2;
@@ -126,7 +118,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mTts:Landroid/speech/tts/TextToSpeech;
 
-    .line 135
     sget-object v0, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
     invoke-static {p1, v0}, Landroid/media/RingtoneManager;->getRingtone(Landroid/content/Context;Landroid/net/Uri;)Landroid/media/Ringtone;
@@ -135,14 +126,12 @@
 
     iput-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mTone:Landroid/media/Ringtone;
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mTone:Landroid/media/Ringtone;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/media/Ringtone;->setStreamType(I)V
 
-    .line 137
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -157,7 +146,6 @@
 
     iput v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mTouchSlop:F
 
-    .line 139
     return-void
 .end method
 
@@ -166,7 +154,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/EnableAccessibilityController;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -177,7 +164,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/EnableAccessibilityController;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mTts:Landroid/speech/tts/TextToSpeech;
 
     return-object v0
@@ -190,7 +176,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/EnableAccessibilityController;->turnOffTalkBackExclusiveOptions(Landroid/content/Context;I)V
 
     return-void
@@ -202,7 +187,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     invoke-static {p0, p1}, Lcom/android/server/policy/EnableAccessibilityController;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
@@ -217,7 +201,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/EnableAccessibilityController;->turnOnTalkback(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
@@ -228,7 +211,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/EnableAccessibilityController;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mTone:Landroid/media/Ringtone;
 
     return-object v0
@@ -239,7 +221,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/EnableAccessibilityController;
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mDestroyed:Z
 
     return v0
@@ -254,12 +235,10 @@
 
     const/4 v2, 0x0
 
-    .line 142
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
 
     move-result-object v0
 
-    .line 145
     .local v0, "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     const-string v3, "com.samsung.android.app.talkback"
 
@@ -269,12 +248,11 @@
 
     if-eqz v3, :cond_2
 
-    .line 146
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "enable_accessibility_global_gesture_enabled"
+    const-string v4, "enable_accessibility_global_gesture_enabled"
 
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -288,7 +266,6 @@
 
     if-nez v3, :cond_1
 
-    .line 157
     :cond_0
     :goto_0
     return v1
@@ -296,10 +273,8 @@
     :cond_1
     move v1, v2
 
-    .line 146
     goto :goto_0
 
-    .line 150
     :cond_2
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
 
@@ -319,16 +294,14 @@
 
     move v1, v2
 
-    .line 153
     goto :goto_0
 
-    .line 157
     :cond_3
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "enable_accessibility_global_gesture_enabled"
+    const-string v4, "enable_accessibility_global_gesture_enabled"
 
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -360,10 +333,8 @@
 
     const/4 v1, 0x1
 
-    .line 250
     iput-boolean v1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mCanceled:Z
 
-    .line 251
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
@@ -372,22 +343,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 256
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 257
     return-void
 
-    .line 253
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
@@ -397,7 +364,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -411,7 +377,6 @@
     .locals 19
 
     .prologue
-    .line 742
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/policy/EnableAccessibilityController;->mContext:Landroid/content/Context;
@@ -422,7 +387,6 @@
 
     move-result-object v14
 
-    .line 744
     .local v14, "services":Ljava/util/List;, "Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
     invoke-interface {v14}, Ljava/util/List;->isEmpty()Z
 
@@ -430,15 +394,12 @@
 
     if-eqz v17, :cond_0
 
-    .line 812
     :goto_0
     return-void
 
-    .line 747
     :cond_0
     const/4 v9, 0x0
 
-    .line 749
     .local v9, "keyguardLocked":Z
     :try_start_0
     move-object/from16 v0, p0
@@ -453,7 +414,6 @@
 
     move-result v9
 
-    .line 754
     :goto_1
     move-object/from16 v0, p0
 
@@ -479,7 +439,6 @@
 
     const/4 v7, 0x1
 
-    .line 756
     .local v7, "hasMoreThanOneUser":Z
     :goto_2
     const/16 v17, 0x0
@@ -492,7 +451,6 @@
 
     check-cast v11, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 757
     .local v11, "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     iget v0, v11, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
@@ -504,17 +462,14 @@
 
     const/4 v5, 0x1
 
-    .line 760
     .local v5, "enableTouchExploration":Z
     :goto_3
     if-nez v5, :cond_1
 
-    .line 761
     invoke-interface {v14}, Ljava/util/List;->size()I
 
     move-result v12
 
-    .line 762
     .local v12, "serviceCount":I
     const/4 v8, 0x1
 
@@ -522,14 +477,12 @@
     :goto_4
     if-ge v8, v12, :cond_1
 
-    .line 763
     invoke-interface {v14, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 764
     .local v3, "candidate":Landroid/accessibilityservice/AccessibilityServiceInfo;
     iget v0, v3, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
@@ -539,13 +492,10 @@
 
     if-eqz v17, :cond_7
 
-    .line 766
     const/4 v5, 0x1
 
-    .line 767
     move-object v11, v3
 
-    .line 773
     .end local v3    # "candidate":Landroid/accessibilityservice/AccessibilityServiceInfo;
     .end local v8    # "i":I
     .end local v12    # "serviceCount":I
@@ -558,7 +508,6 @@
 
     iget-object v13, v0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 774
     .local v13, "serviceInfo":Landroid/content/pm/ServiceInfo;
     new-instance v4, Landroid/content/ComponentName;
 
@@ -576,25 +525,21 @@
 
     invoke-direct {v4, v0, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 775
     .local v4, "componentName":Landroid/content/ComponentName;
     if-eqz v9, :cond_2
 
     if-nez v7, :cond_8
 
-    .line 776
     :cond_2
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v16
 
-    .line 777
     .local v16, "userId":I
     invoke-virtual {v4}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 778
     .local v6, "enabledServiceString":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -606,9 +551,8 @@
 
     move-result-object v10
 
-    .line 780
     .local v10, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v17, "enabled_accessibility_services"
+    const-string v17, "enabled_accessibility_services"
 
     move-object/from16 v0, v17
 
@@ -616,8 +560,7 @@
 
     invoke-static {v10, v0, v6, v1}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 784
-    const-string/jumbo v17, "touch_exploration_granted_accessibility_services"
+    const-string v17, "touch_exploration_granted_accessibility_services"
 
     move-object/from16 v0, v17
 
@@ -625,11 +568,9 @@
 
     invoke-static {v10, v0, v6, v1}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 788
     if-eqz v5, :cond_3
 
-    .line 789
-    const-string/jumbo v17, "touch_exploration_enabled"
+    const-string v17, "touch_exploration_enabled"
 
     const/16 v18, 0x1
 
@@ -641,7 +582,6 @@
 
     invoke-static {v10, v0, v1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 793
     :cond_3
     const-string v17, "accessibility_script_injection"
 
@@ -655,7 +595,6 @@
 
     invoke-static {v10, v0, v1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 796
     const-string v17, "accessibility_enabled"
 
     const/16 v18, 0x1
@@ -668,7 +607,6 @@
 
     invoke-static {v10, v0, v1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 798
     new-instance v15, Landroid/content/Intent;
 
     const-string v17, "com.samsung.settings.action.talkback_toggled"
@@ -677,7 +615,6 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 799
     .local v15, "talk_back_off":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -693,7 +630,6 @@
 
     invoke-virtual {v0, v15, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 809
     .end local v6    # "enabledServiceString":Ljava/lang/String;
     .end local v10    # "resolver":Landroid/content/ContentResolver;
     .end local v15    # "talk_back_off":Landroid/content/Intent;
@@ -716,7 +652,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/policy/EnableAccessibilityController;->turnOffTalkBackExclusiveOptions(Landroid/content/Context;I)V
 
-    .line 811
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/policy/EnableAccessibilityController;->mOnAccessibilityEnabledCallback:Ljava/lang/Runnable;
@@ -727,7 +662,6 @@
 
     goto/16 :goto_0
 
-    .line 754
     .end local v4    # "componentName":Landroid/content/ComponentName;
     .end local v5    # "enableTouchExploration":Z
     .end local v7    # "hasMoreThanOneUser":Z
@@ -738,7 +672,6 @@
 
     goto/16 :goto_2
 
-    .line 757
     .restart local v7    # "hasMoreThanOneUser":Z
     .restart local v11    # "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     :cond_6
@@ -746,7 +679,6 @@
 
     goto/16 :goto_3
 
-    .line 762
     .restart local v3    # "candidate":Landroid/accessibilityservice/AccessibilityServiceInfo;
     .restart local v5    # "enableTouchExploration":Z
     .restart local v8    # "i":I
@@ -756,7 +688,6 @@
 
     goto/16 :goto_4
 
-    .line 800
     .end local v3    # "candidate":Landroid/accessibilityservice/AccessibilityServiceInfo;
     .end local v8    # "i":I
     .end local v12    # "serviceCount":I
@@ -765,7 +696,6 @@
     :cond_8
     if-eqz v9, :cond_4
 
-    .line 802
     :try_start_1
     move-object/from16 v0, p0
 
@@ -781,13 +711,11 @@
 
     goto :goto_5
 
-    .line 804
     :catch_0
     move-exception v17
 
     goto :goto_5
 
-    .line 750
     .end local v4    # "componentName":Landroid/content/ComponentName;
     .end local v5    # "enableTouchExploration":Z
     .end local v7    # "hasMoreThanOneUser":Z
@@ -815,10 +743,8 @@
     .end annotation
 
     .prologue
-    .line 265
     const/16 v0, 0x3a
 
-    .line 267
     .local v0, "ENABLED_ACCESSIBILITY_SERVICES_SEPARATOR":C
     new-instance v6, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -826,13 +752,12 @@
 
     invoke-direct {v6, v7}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 269
     .local v6, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
-    const-string/jumbo v8, "enabled_accessibility_services"
+    const-string v8, "enabled_accessibility_services"
 
     const/4 v9, -0x2
 
@@ -840,34 +765,27 @@
 
     move-result-object v5
 
-    .line 271
     .local v5, "enabledServicesSetting":Ljava/lang/String;
     if-nez v5, :cond_1
 
-    .line 272
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v4
 
-    .line 288
     :cond_0
     return-object v4
 
-    .line 275
     :cond_1
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 276
     .local v4, "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     move-object v1, v6
 
-    .line 277
     .local v1, "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-virtual {v1, v5}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 279
     :cond_2
     :goto_0
     invoke-virtual {v1}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
@@ -876,22 +794,18 @@
 
     if-eqz v7, :cond_0
 
-    .line 280
     invoke-virtual {v1}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 281
     .local v2, "componentNameString":Ljava/lang/String;
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v3
 
-    .line 283
     .local v3, "enabledService":Landroid/content/ComponentName;
     if-eqz v3, :cond_2
 
-    .line 284
     invoke-interface {v4, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -913,12 +827,10 @@
     .end annotation
 
     .prologue
-    .line 165
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 166
     .local v2, "services":Ljava/util/List;, "Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
 
@@ -930,12 +842,10 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 168
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 169
     .local v0, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
     :cond_0
     :goto_0
@@ -945,14 +855,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 170
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 183
     .local v1, "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     iget v3, v1, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
@@ -984,12 +892,10 @@
 
     if-nez v3, :cond_0
 
-    .line 185
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 191
     .end local v1    # "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     :cond_1
     return-object v2
@@ -1001,16 +907,13 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 730
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 731
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/4 v1, 0x1
 
-    .line 733
     .local v1, "hasPkg":Z
     const/16 v3, 0x80
 
@@ -1019,19 +922,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 738
     :goto_0
     return v1
 
-    .line 734
     :catch_0
     move-exception v0
 
-    .line 735
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v1, 0x0
 
-    .line 736
     const-string v3, "EnableAccessibilityController"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1062,26 +961,22 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 382
     const/4 v1, 0x0
 
-    .line 383
     .local v1, "talkbackEnabled":Z
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "enabled_accessibility_services"
+    const-string v3, "enabled_accessibility_services"
 
     invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 385
     .local v0, "accesibilityService":Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    .line 388
     const-string v2, "(?i).*com.samsung.android.app.talkback.TalkBackService.*"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -1101,12 +996,10 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 392
     :cond_1
     :goto_0
     return v1
 
-    .line 388
     :cond_2
     const/4 v1, 0x0
 
@@ -1118,17 +1011,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 585
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOnOffScreenReader(context)"
+    const-string v18, "turnOnOffScreenReader(context)"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
     const/16 v4, 0x3a
 
-    .line 588
     .local v4, "ENABLED_SERVICES_SEPARATOR":C
     new-instance v15, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1138,13 +1028,11 @@
 
     invoke-direct {v15, v0}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 589
     .local v15, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-direct/range {p0 .. p1}, Lcom/android/server/policy/EnableAccessibilityController;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object v9
 
-    .line 591
     .local v9, "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
@@ -1154,13 +1042,11 @@
 
     if-ne v9, v0, :cond_0
 
-    .line 592
     new-instance v9, Ljava/util/HashSet;
 
     .end local v9    # "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
 
-    .line 595
     .restart local v9    # "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     :cond_0
     const-string v17, "com.samsung.android.app.screenreader/com.samsung.android.app.screenreader.ScreenReaderService"
@@ -1169,22 +1055,18 @@
 
     move-result-object v16
 
-    .line 596
     .local v16, "toggledService":Landroid/content/ComponentName;
     const/4 v5, 0x0
 
-    .line 598
     .local v5, "accessibilityEnabled":Z
     move-object/from16 v0, v16
 
     invoke-interface {v9, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 600
     new-instance v14, Ljava/util/HashSet;
 
     invoke-direct {v14}, Ljava/util/HashSet;-><init>()V
 
-    .line 601
     .local v14, "installedServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1204,7 +1086,6 @@
 
     check-cast v8, Landroid/content/ComponentName;
 
-    .line 602
     .local v8, "enabledService":Landroid/content/ComponentName;
     invoke-interface {v14, v8}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -1212,17 +1093,14 @@
 
     if-eqz v17, :cond_1
 
-    .line 604
     const/4 v5, 0x1
 
-    .line 610
     .end local v8    # "enabledService":Landroid/content/ComponentName;
     :cond_2
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 615
     .local v10, "enabledServicesBuilder":Ljava/lang/StringBuilder;
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1241,7 +1119,6 @@
 
     check-cast v8, Landroid/content/ComponentName;
 
-    .line 616
     .restart local v8    # "enabledService":Landroid/content/ComponentName;
     invoke-virtual {v8}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -1251,7 +1128,6 @@
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 617
     const/16 v17, 0x3a
 
     move/from16 v0, v17
@@ -1260,40 +1136,34 @@
 
     goto :goto_0
 
-    .line 619
     .end local v8    # "enabledService":Landroid/content/ComponentName;
     :cond_3
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->length()I
 
     move-result v11
 
-    .line 620
     .local v11, "enabledServicesBuilderLength":I
     if-lez v11, :cond_4
 
-    .line 621
     add-int/lit8 v17, v11, -0x1
 
     move/from16 v0, v17
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 624
     :cond_4
     const/4 v12, 0x0
 
-    .line 625
     .local v12, "enabledServicesSetting":Ljava/lang/String;
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 626
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v17
 
-    const-string/jumbo v18, "enabled_accessibility_services"
+    const-string v18, "enabled_accessibility_services"
 
     const/16 v19, -0x2
 
@@ -1305,17 +1175,13 @@
 
     invoke-static {v0, v1, v12, v2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 630
     if-eqz v12, :cond_6
 
-    .line 631
     move-object v6, v15
 
-    .line 632
     .local v6, "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-virtual {v6, v12}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 634
     :cond_5
     invoke-virtual {v6}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -1323,25 +1189,20 @@
 
     if-eqz v17, :cond_6
 
-    .line 635
     invoke-virtual {v6}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 636
     .local v7, "componentNameString":Ljava/lang/String;
     invoke-static {v7}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v8
 
-    .line 638
     .restart local v8    # "enabledService":Landroid/content/ComponentName;
     if-eqz v8, :cond_5
 
-    .line 639
     const/4 v5, 0x1
 
-    .line 647
     .end local v6    # "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     .end local v7    # "componentNameString":Ljava/lang/String;
     .end local v8    # "enabledService":Landroid/content/ComponentName;
@@ -1369,12 +1230,11 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 649
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v17
 
-    const-string/jumbo v18, "enabled_accessibility_samsung_screen_reader"
+    const-string v18, "enabled_accessibility_samsung_screen_reader"
 
     const/16 v19, 0x0
 
@@ -1382,12 +1242,11 @@
 
     invoke-static/range {v17 .. v20}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 651
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v17
 
-    const-string/jumbo v18, "direct_samsung_screen_reader"
+    const-string v18, "direct_samsung_screen_reader"
 
     const/16 v19, 0x0
 
@@ -1395,10 +1254,8 @@
 
     invoke-static/range {v17 .. v20}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 653
     return-void
 
-    .line 647
     :cond_7
     const/16 v17, 0x0
 
@@ -1411,25 +1268,21 @@
     .param p2, "option_flag"    # I
 
     .prologue
-    .line 400
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v13
 
-    .line 403
     .local v13, "resolver":Landroid/content/ContentResolver;
     and-int/lit8 v17, p2, 0x20
 
     if-lez v17, :cond_0
 
-    .line 404
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x20"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x20"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 405
     const-string v17, "assistant_menu"
 
     const/16 v18, 0x0
@@ -1444,7 +1297,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 406
     new-instance v5, Landroid/content/Intent;
 
     const-string v17, "android.intent.action.MAIN"
@@ -1453,7 +1305,6 @@
 
     invoke-direct {v5, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 407
     .local v5, "assistantMenu":Landroid/content/Intent;
     new-instance v17, Landroid/content/ComponentName;
 
@@ -1467,7 +1318,6 @@
 
     invoke-virtual {v5, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 409
     sget-object v17, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1476,28 +1326,24 @@
 
     invoke-virtual {v0, v5, v1}, Landroid/content/Context;->stopServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Z
 
-    .line 410
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x20"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x20"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     .end local v5    # "assistantMenu":Landroid/content/Intent;
     :cond_0
     and-int/lit8 v17, p2, 0x10
 
     if-lez v17, :cond_2
 
-    .line 415
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x10"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x10"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 416
     const-string v17, "air_motion_engine"
 
     const/16 v18, 0x0
@@ -1512,7 +1358,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 417
     new-instance v3, Landroid/content/Intent;
 
     const-string v17, "com.sec.gesture.AIR_MOTION_SETTINGS_CHANGED"
@@ -1521,9 +1366,8 @@
 
     invoke-direct {v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 418
     .local v3, "air_motion_changed":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x0
 
@@ -1533,7 +1377,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 419
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1542,7 +1385,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 420
     const-string v17, "air_motion_call_accept"
 
     const/16 v18, 0x0
@@ -1567,7 +1409,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 421
     const-string v17, "air_motion_call_accept"
 
     const/16 v18, 0x0
@@ -1582,7 +1423,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 422
     new-instance v11, Landroid/content/Intent;
 
     const-string v17, "com.sec.gesture.AIR_CALL_ACCEPT_SETTINGS_CHANGED"
@@ -1591,9 +1431,8 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 423
     .local v11, "motion_changed_callaccept":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x0
 
@@ -1603,7 +1442,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 424
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1612,10 +1450,9 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 426
     .end local v11    # "motion_changed_callaccept":Landroid/content/Intent;
     :cond_1
-    const-string/jumbo v17, "master_motion"
+    const-string v17, "master_motion"
 
     const/16 v18, 0x0
 
@@ -1639,7 +1476,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 427
     const-string v17, "air_motion_turn"
 
     const/16 v18, 0x0
@@ -1654,7 +1490,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 428
     const-string v17, "air_motion_scroll"
 
     const/16 v18, 0x0
@@ -1669,7 +1504,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 430
     new-instance v12, Landroid/content/Intent;
 
     const-string v17, "com.sec.gesture.AIR_SCROLL_SETTINGS_CHANGED"
@@ -1678,9 +1512,8 @@
 
     invoke-direct {v12, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 431
     .local v12, "motion_changed_scroll":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x0
 
@@ -1690,7 +1523,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 432
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1699,7 +1531,6 @@
 
     invoke-virtual {v0, v12, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 434
     new-instance v10, Landroid/content/Intent;
 
     const-string v17, "com.sec.gesture.AIR_BROWSE_SETTINGS_CHANGED"
@@ -1708,9 +1539,8 @@
 
     invoke-direct {v10, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 435
     .local v10, "motion_changed_browse":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x0
 
@@ -1720,7 +1550,6 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 436
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1729,7 +1558,6 @@
 
     invoke-virtual {v0, v10, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 441
     .end local v3    # "air_motion_changed":Landroid/content/Intent;
     .end local v10    # "motion_changed_browse":Landroid/content/Intent;
     .end local v12    # "motion_changed_scroll":Landroid/content/Intent;
@@ -1738,14 +1566,12 @@
 
     if-lez v17, :cond_3
 
-    .line 442
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x08"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x08"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const-string v17, "air_view_master_onoff"
 
     const/16 v18, 0x0
@@ -1760,8 +1586,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 444
-    const-string/jumbo v17, "pen_hovering"
+    const-string v17, "pen_hovering"
 
     const/16 v18, 0x0
 
@@ -1775,8 +1600,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 445
-    const-string/jumbo v17, "finger_air_view"
+    const-string v17, "finger_air_view"
 
     const/16 v18, 0x0
 
@@ -1790,8 +1614,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 446
-    const-string/jumbo v17, "finger_air_view_highlight"
+    const-string v17, "finger_air_view_highlight"
 
     const/16 v18, 0x0
 
@@ -1805,7 +1628,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 448
     new-instance v6, Landroid/content/Intent;
 
     const-string v17, "com.sec.gesture.FINGER_AIR_VIEW_SETTINGS_CHANGED"
@@ -1814,9 +1636,8 @@
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 449
     .local v6, "finger_air_view_changed":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x0
 
@@ -1826,7 +1647,6 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 450
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1835,21 +1655,18 @@
 
     invoke-virtual {v0, v6, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 454
     .end local v6    # "finger_air_view_changed":Landroid/content/Intent;
     :cond_3
     and-int/lit8 v17, p2, 0x40
 
     if-lez v17, :cond_4
 
-    .line 455
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x40"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x40"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     const-string v17, "access_control_use"
 
     const/16 v18, 0x0
@@ -1864,7 +1681,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 457
     const-string v17, "access_control_enabled"
 
     const/16 v18, 0x0
@@ -1879,7 +1695,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 458
     new-instance v7, Landroid/content/Intent;
 
     const-string v17, "android.intent.action.MAIN"
@@ -1888,7 +1703,6 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 459
     .local v7, "icIntent":Landroid/content/Intent;
     new-instance v17, Landroid/content/ComponentName;
 
@@ -1902,7 +1716,6 @@
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 461
     sget-object v17, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -1911,14 +1724,12 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/content/Context;->stopServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Z
 
-    .line 462
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x40"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x40"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     .end local v7    # "icIntent":Landroid/content/Intent;
     :cond_4
     move/from16 v0, p2
@@ -1929,14 +1740,12 @@
 
     if-lez v17, :cond_6
 
-    .line 467
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x800"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x800"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     const-string v17, "com.samsung.android.app.sounddetector"
 
     move-object/from16 v0, p1
@@ -1949,8 +1758,7 @@
 
     if-eqz v17, :cond_12
 
-    .line 470
-    const-string/jumbo v17, "sound_detector"
+    const-string v17, "sound_detector"
 
     const/16 v18, 0x0
 
@@ -1964,7 +1772,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 472
     new-instance v9, Landroid/content/Intent;
 
     const-string v17, "com.android.settings.action.sound_detector"
@@ -1973,7 +1780,6 @@
 
     invoke-direct {v9, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 473
     .local v9, "mIntent":Landroid/content/Intent;
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
@@ -1983,7 +1789,6 @@
 
     invoke-virtual {v0, v9, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 474
     new-instance v17, Landroid/content/Intent;
 
     const-string v18, "com.samsung.settings.action.sound_detector"
@@ -2000,7 +1805,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 476
     new-instance v14, Landroid/content/Intent;
 
     const-string v17, "android.intent.action.MAIN"
@@ -2009,7 +1813,6 @@
 
     invoke-direct {v14, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 477
     .local v14, "sdIntent":Landroid/content/Intent;
     new-instance v17, Landroid/content/ComponentName;
 
@@ -2023,7 +1826,6 @@
 
     invoke-virtual {v14, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 479
     sget-object v17, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -2032,32 +1834,28 @@
 
     invoke-virtual {v0, v14, v1}, Landroid/content/Context;->stopServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Z
 
-    .line 495
     .end local v9    # "mIntent":Landroid/content/Intent;
     .end local v14    # "sdIntent":Landroid/content/Intent;
     :cond_5
     :goto_0
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x800"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x800"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     :cond_6
     and-int/lit8 v17, p2, 0x4
 
     if-lez v17, :cond_7
 
-    .line 500
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x04"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x04"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
-    const-string/jumbo v17, "pen_hovering"
+    const-string v17, "pen_hovering"
 
     const/16 v18, 0x0
 
@@ -2071,21 +1869,18 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 505
     :cond_7
     and-int/lit8 v17, p2, 0x2
 
     if-lez v17, :cond_8
 
-    .line 506
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x02"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x02"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
-    const-string/jumbo v17, "intelligent_sleep_mode"
+    const-string v17, "intelligent_sleep_mode"
 
     const/16 v18, 0x0
 
@@ -2099,8 +1894,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 508
-    const-string/jumbo v17, "intelligent_rotation_mode"
+    const-string v17, "intelligent_rotation_mode"
 
     const/16 v18, 0x0
 
@@ -2114,8 +1908,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 509
-    const-string/jumbo v17, "smart_pause"
+    const-string v17, "smart_pause"
 
     const/16 v18, 0x0
 
@@ -2129,7 +1922,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 510
     new-instance v15, Landroid/content/Intent;
 
     const-string v17, "com.sec.SMART_PAUSE_CHANGED"
@@ -2138,9 +1930,8 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 511
     .local v15, "smart_pause_changed":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x1
 
@@ -2150,7 +1941,6 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 512
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -2159,8 +1949,7 @@
 
     invoke-virtual {v0, v15, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 513
-    const-string/jumbo v17, "smart_scroll"
+    const-string v17, "smart_scroll"
 
     const/16 v18, 0x0
 
@@ -2174,22 +1963,19 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 514
     new-instance v16, Landroid/content/Intent;
 
     const-string v17, "com.sec.SMART_SCROLL_CHANGED"
 
     invoke-direct/range {v16 .. v17}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 515
     .local v16, "smart_scroll_changed":Landroid/content/Intent;
-    const-string/jumbo v17, "isEnable"
+    const-string v17, "isEnable"
 
     const/16 v18, 0x1
 
     invoke-virtual/range {v16 .. v18}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 516
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -2200,7 +1986,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 520
     .end local v15    # "smart_pause_changed":Landroid/content/Intent;
     .end local v16    # "smart_scroll_changed":Landroid/content/Intent;
     :cond_8
@@ -2208,15 +1993,13 @@
 
     if-lez v17, :cond_9
 
-    .line 521
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x01"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x01"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
-    const-string/jumbo v17, "multi_window_enabled"
+    const-string v17, "multi_window_enabled"
 
     const/16 v18, 0x0
 
@@ -2230,7 +2013,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 526
     :cond_9
     move/from16 v0, p2
 
@@ -2240,15 +2022,13 @@
 
     if-lez v17, :cond_a
 
-    .line 527
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x80"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x80"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
-    const-string/jumbo v17, "pen_writing_buddy"
+    const-string v17, "pen_writing_buddy"
 
     const/16 v18, 0x0
 
@@ -2262,7 +2042,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 529
     const-string v17, "air_button_onoff"
 
     const/16 v18, 0x0
@@ -2277,7 +2056,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 532
     :cond_a
     move/from16 v0, p2
 
@@ -2287,15 +2065,13 @@
 
     if-lez v17, :cond_b
 
-    .line 533
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - 0x100"
+    const-string v18, "turnOffTalkBackExclusiveOptions - 0x100"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
-    const-string/jumbo v17, "surface_palm_swipe"
+    const-string v17, "surface_palm_swipe"
 
     const/16 v18, 0x0
 
@@ -2309,7 +2085,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 538
     :cond_b
     const-string v17, "any_screen_enabled"
 
@@ -2325,7 +2100,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 539
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v17
@@ -2344,8 +2118,7 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 540
-    const-string/jumbo v17, "sidesoftkey_switch"
+    const-string v17, "sidesoftkey_switch"
 
     const/16 v18, 0x0
 
@@ -2359,7 +2132,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 545
     :cond_c
     move/from16 v0, p2
 
@@ -2369,7 +2141,6 @@
 
     if-lez v17, :cond_d
 
-    .line 546
     new-instance v4, Landroid/content/Intent;
 
     const-string v17, "android.settings.ALL_SOUND_MUTE"
@@ -2378,7 +2149,6 @@
 
     invoke-direct {v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 547
     .local v4, "all_sound_off_intent":Landroid/content/Intent;
     const-string v17, "all_sound_off"
 
@@ -2394,8 +2164,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 548
-    const-string/jumbo v17, "mute"
+    const-string v17, "mute"
 
     const/16 v18, 0x0
 
@@ -2405,7 +2174,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 549
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -2414,14 +2182,12 @@
 
     invoke-virtual {v0, v4, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 550
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - TurnOffAllSound in"
+    const-string v18, "turnOffTalkBackExclusiveOptions - TurnOffAllSound in"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     .end local v4    # "all_sound_off_intent":Landroid/content/Intent;
     :cond_d
     move/from16 v0, p2
@@ -2432,17 +2198,14 @@
 
     if-lez v17, :cond_e
 
-    .line 555
     invoke-direct/range {p0 .. p1}, Lcom/android/server/policy/EnableAccessibilityController;->turnOffScreenReader(Landroid/content/Context;)V
 
-    .line 556
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - Screen reader off in"
+    const-string v18, "turnOffTalkBackExclusiveOptions - Screen reader off in"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 560
     :cond_e
     const v17, 0x8000
 
@@ -2450,8 +2213,7 @@
 
     if-lez v17, :cond_f
 
-    .line 561
-    const-string/jumbo v17, "universal_switch_enabled"
+    const-string v17, "universal_switch_enabled"
 
     const/16 v18, 0x0
 
@@ -2465,17 +2227,14 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 562
     invoke-direct/range {p0 .. p1}, Lcom/android/server/policy/EnableAccessibilityController;->turnOffUniversalInput(Landroid/content/Context;)V
 
-    .line 563
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffTalkBackExclusiveOptions - Universal switch off in"
+    const-string v18, "turnOffTalkBackExclusiveOptions - Universal switch off in"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 567
     :cond_f
     const/high16 v17, 0x20000
 
@@ -2483,8 +2242,7 @@
 
     if-lez v17, :cond_10
 
-    .line 568
-    const-string/jumbo v17, "finger_magnifier"
+    const-string v17, "finger_magnifier"
 
     const/16 v18, 0x0
 
@@ -2498,14 +2256,12 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 569
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffMagnifier - Magnifier off in"
+    const-string v18, "turnOffMagnifier - Magnifier off in"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
     :cond_10
     const/high16 v17, 0x40000
 
@@ -2513,8 +2269,7 @@
 
     if-lez v17, :cond_11
 
-    .line 574
-    const-string/jumbo v17, "people_stripe"
+    const-string v17, "people_stripe"
 
     const/16 v18, 0x0
 
@@ -2528,18 +2283,15 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 575
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOffPeopleEdge - 0x40000"
+    const-string v18, "turnOffPeopleEdge - 0x40000"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     :cond_11
     return-void
 
-    .line 480
     :cond_12
     const-string v17, "com.samsung.android.app.advsounddetector"
 
@@ -2553,8 +2305,7 @@
 
     if-eqz v17, :cond_5
 
-    .line 481
-    const-string/jumbo v17, "sound_detector"
+    const-string v17, "sound_detector"
 
     const/16 v18, 0x0
 
@@ -2568,8 +2319,7 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 482
-    const-string/jumbo v17, "doorbell_detector"
+    const-string v17, "doorbell_detector"
 
     const/16 v18, 0x0
 
@@ -2583,7 +2333,6 @@
 
     invoke-static {v13, v0, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 484
     new-instance v8, Landroid/content/Intent;
 
     const-string v17, "com.android.settings.action.doorbell_detector"
@@ -2592,7 +2341,6 @@
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 485
     .local v8, "mDoorIntent":Landroid/content/Intent;
     sget-object v17, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
@@ -2602,7 +2350,6 @@
 
     invoke-virtual {v0, v8, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 486
     new-instance v17, Landroid/content/Intent;
 
     const-string v18, "com.samsung.settings.action.doorbell_detector"
@@ -2619,7 +2366,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 488
     new-instance v14, Landroid/content/Intent;
 
     const-string v17, "android.intent.action.MAIN"
@@ -2628,7 +2374,6 @@
 
     invoke-direct {v14, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 489
     .restart local v14    # "sdIntent":Landroid/content/Intent;
     new-instance v17, Landroid/content/ComponentName;
 
@@ -2642,7 +2387,6 @@
 
     invoke-virtual {v14, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 492
     sget-object v17, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     move-object/from16 v0, p1
@@ -2659,17 +2403,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 661
     const-string v17, "EnableAccessibilityController"
 
-    const-string/jumbo v18, "turnOnOffScreenReader(context)"
+    const-string v18, "turnOnOffScreenReader(context)"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 662
     const/16 v4, 0x3a
 
-    .line 664
     .local v4, "ENABLED_SERVICES_SEPARATOR":C
     new-instance v15, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -2679,13 +2420,11 @@
 
     invoke-direct {v15, v0}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 665
     .local v15, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-direct/range {p0 .. p1}, Lcom/android/server/policy/EnableAccessibilityController;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object v9
 
-    .line 667
     .local v9, "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
@@ -2695,13 +2434,11 @@
 
     if-ne v9, v0, :cond_0
 
-    .line 668
     new-instance v9, Ljava/util/HashSet;
 
     .end local v9    # "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
 
-    .line 671
     .restart local v9    # "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     :cond_0
     const-string v17, "com.samsung.android.universalswitch/com.samsung.android.universalswitch.SwitchControlService"
@@ -2710,22 +2447,18 @@
 
     move-result-object v16
 
-    .line 672
     .local v16, "toggledService":Landroid/content/ComponentName;
     const/4 v5, 0x0
 
-    .line 674
     .local v5, "accessibilityEnabled":Z
     move-object/from16 v0, v16
 
     invoke-interface {v9, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 676
     new-instance v14, Ljava/util/HashSet;
 
     invoke-direct {v14}, Ljava/util/HashSet;-><init>()V
 
-    .line 677
     .local v14, "installedServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -2745,7 +2478,6 @@
 
     check-cast v8, Landroid/content/ComponentName;
 
-    .line 678
     .local v8, "enabledService":Landroid/content/ComponentName;
     invoke-interface {v14, v8}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -2753,17 +2485,14 @@
 
     if-eqz v17, :cond_1
 
-    .line 680
     const/4 v5, 0x1
 
-    .line 686
     .end local v8    # "enabledService":Landroid/content/ComponentName;
     :cond_2
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 691
     .local v10, "enabledServicesBuilder":Ljava/lang/StringBuilder;
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -2782,7 +2511,6 @@
 
     check-cast v8, Landroid/content/ComponentName;
 
-    .line 692
     .restart local v8    # "enabledService":Landroid/content/ComponentName;
     invoke-virtual {v8}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -2792,7 +2520,6 @@
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 693
     const/16 v17, 0x3a
 
     move/from16 v0, v17
@@ -2801,40 +2528,34 @@
 
     goto :goto_0
 
-    .line 695
     .end local v8    # "enabledService":Landroid/content/ComponentName;
     :cond_3
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->length()I
 
     move-result v11
 
-    .line 696
     .local v11, "enabledServicesBuilderLength":I
     if-lez v11, :cond_4
 
-    .line 697
     add-int/lit8 v17, v11, -0x1
 
     move/from16 v0, v17
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 700
     :cond_4
     const/4 v12, 0x0
 
-    .line 701
     .local v12, "enabledServicesSetting":Ljava/lang/String;
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 702
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v17
 
-    const-string/jumbo v18, "enabled_accessibility_services"
+    const-string v18, "enabled_accessibility_services"
 
     const/16 v19, -0x2
 
@@ -2846,17 +2567,13 @@
 
     invoke-static {v0, v1, v12, v2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 706
     if-eqz v12, :cond_6
 
-    .line 707
     move-object v6, v15
 
-    .line 708
     .local v6, "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-virtual {v6, v12}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 710
     :cond_5
     invoke-virtual {v6}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -2864,25 +2581,20 @@
 
     if-eqz v17, :cond_6
 
-    .line 711
     invoke-virtual {v6}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 712
     .local v7, "componentNameString":Ljava/lang/String;
     invoke-static {v7}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v8
 
-    .line 714
     .restart local v8    # "enabledService":Landroid/content/ComponentName;
     if-eqz v8, :cond_5
 
-    .line 715
     const/4 v5, 0x1
 
-    .line 723
     .end local v6    # "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     .end local v7    # "componentNameString":Ljava/lang/String;
     .end local v8    # "enabledService":Landroid/content/ComponentName;
@@ -2910,12 +2622,11 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 725
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v17
 
-    const-string/jumbo v18, "universal_switch_enabled"
+    const-string v18, "universal_switch_enabled"
 
     const/16 v19, 0x0
 
@@ -2923,10 +2634,8 @@
 
     invoke-static/range {v17 .. v20}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 727
     return-void
 
-    .line 723
     :cond_7
     const/16 v17, 0x0
 
@@ -2939,10 +2648,8 @@
     .param p2, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 299
     const/16 v4, 0x3a
 
-    .line 300
     .local v4, "ENABLED_SERVICES_SEPARATOR":C
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -2984,7 +2691,6 @@
 
     move-result-object v17
 
-    .line 302
     .local v17, "toggledService":Landroid/content/ComponentName;
     new-instance v16, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -2996,17 +2702,14 @@
 
     invoke-direct {v0, v1}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 303
     .local v16, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-direct/range {p0 .. p1}, Lcom/android/server/policy/EnableAccessibilityController;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object v9
 
-    .line 305
     .local v9, "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     const/4 v15, 0x0
 
-    .line 307
     .local v15, "keyguardLocked":Z
     :try_start_0
     move-object/from16 v0, p0
@@ -3021,7 +2724,6 @@
 
     move-result v15
 
-    .line 312
     :goto_0
     move-object/from16 v0, p0
 
@@ -3047,7 +2749,6 @@
 
     const/4 v13, 0x1
 
-    .line 314
     .local v13, "hasMoreThanOneUser":Z
     :goto_1
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
@@ -3058,35 +2759,29 @@
 
     if-ne v9, v0, :cond_0
 
-    .line 315
     new-instance v9, Ljava/util/HashSet;
 
     .end local v9    # "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
 
-    .line 318
     .restart local v9    # "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     :cond_0
     const/4 v5, 0x0
 
-    .line 320
     .local v5, "accessibilityEnabled":Z
     move-object/from16 v0, v17
 
     invoke-interface {v9, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 321
     if-eqz v15, :cond_1
 
     if-nez v13, :cond_9
 
-    .line 323
     :cond_1
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 328
     .local v10, "enabledServicesBuilder":Ljava/lang/StringBuilder;
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3106,7 +2801,6 @@
 
     check-cast v8, Landroid/content/ComponentName;
 
-    .line 329
     .local v8, "enabledService":Landroid/content/ComponentName;
     invoke-virtual {v8}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -3116,7 +2810,6 @@
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 330
     const/16 v18, 0x3a
 
     move/from16 v0, v18
@@ -3125,7 +2818,6 @@
 
     goto :goto_2
 
-    .line 312
     .end local v5    # "accessibilityEnabled":Z
     .end local v8    # "enabledService":Landroid/content/ComponentName;
     .end local v10    # "enabledServicesBuilder":Ljava/lang/StringBuilder;
@@ -3136,7 +2828,6 @@
 
     goto :goto_1
 
-    .line 332
     .restart local v5    # "accessibilityEnabled":Z
     .restart local v10    # "enabledServicesBuilder":Ljava/lang/StringBuilder;
     .restart local v13    # "hasMoreThanOneUser":Z
@@ -3146,33 +2837,28 @@
 
     move-result v11
 
-    .line 333
     .local v11, "enabledServicesBuilderLength":I
     if-lez v11, :cond_4
 
-    .line 334
     add-int/lit8 v18, v11, -0x1
 
     move/from16 v0, v18
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 337
     :cond_4
     const/4 v12, 0x0
 
-    .line 338
     .local v12, "enabledServicesSetting":Ljava/lang/String;
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 339
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v18
 
-    const-string/jumbo v19, "enabled_accessibility_services"
+    const-string v19, "enabled_accessibility_services"
 
     const/16 v20, -0x2
 
@@ -3184,17 +2870,13 @@
 
     invoke-static {v0, v1, v12, v2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 343
     if-eqz v12, :cond_6
 
-    .line 344
     move-object/from16 v6, v16
 
-    .line 345
     .local v6, "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-virtual {v6, v12}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 347
     :cond_5
     invoke-virtual {v6}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -3202,25 +2884,20 @@
 
     if-eqz v18, :cond_6
 
-    .line 348
     invoke-virtual {v6}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 349
     .local v7, "componentNameString":Ljava/lang/String;
     invoke-static {v7}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v8
 
-    .line 351
     .restart local v8    # "enabledService":Landroid/content/ComponentName;
     if-eqz v8, :cond_5
 
-    .line 352
     const/4 v5, 0x1
 
-    .line 359
     .end local v6    # "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     .end local v7    # "componentNameString":Ljava/lang/String;
     .end local v8    # "enabledService":Landroid/content/ComponentName;
@@ -3241,7 +2918,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 362
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v19
@@ -3265,7 +2941,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 374
     .end local v10    # "enabledServicesBuilder":Ljava/lang/StringBuilder;
     .end local v11    # "enabledServicesBuilderLength":I
     .end local v12    # "enabledServicesSetting":Ljava/lang/String;
@@ -3280,10 +2955,8 @@
 
     invoke-interface/range {v18 .. v18}, Ljava/lang/Runnable;->run()V
 
-    .line 375
     return-void
 
-    .line 362
     .restart local v10    # "enabledServicesBuilder":Ljava/lang/StringBuilder;
     .restart local v11    # "enabledServicesBuilderLength":I
     .restart local v12    # "enabledServicesSetting":Ljava/lang/String;
@@ -3293,7 +2966,6 @@
 
     goto :goto_3
 
-    .line 364
     .end local v10    # "enabledServicesBuilder":Ljava/lang/StringBuilder;
     .end local v11    # "enabledServicesBuilderLength":I
     .end local v12    # "enabledServicesSetting":Ljava/lang/String;
@@ -3301,14 +2973,12 @@
     :cond_9
     if-eqz v15, :cond_7
 
-    .line 365
     const-string v18, "EnableAccessibilityController"
 
-    const-string/jumbo v19, "turnOnTalkback - keyguardLocked"
+    const-string v19, "turnOnTalkback - keyguardLocked"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     :try_start_1
     move-object/from16 v0, p0
 
@@ -3330,13 +3000,11 @@
 
     goto :goto_4
 
-    .line 369
     :catch_0
     move-exception v18
 
     goto :goto_4
 
-    .line 308
     .end local v5    # "accessibilityEnabled":Z
     .end local v13    # "hasMoreThanOneUser":Z
     :catch_1
@@ -3351,12 +3019,10 @@
     .locals 1
 
     .prologue
-    .line 195
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/policy/EnableAccessibilityController;->mDestroyed:Z
 
-    .line 196
     return-void
 .end method
 
@@ -3369,7 +3035,6 @@
 
     const/4 v0, 0x1
 
-    .line 199
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
@@ -3386,42 +3051,36 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 201
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v2
 
     iput v2, p0, Lcom/android/server/policy/EnableAccessibilityController;->mFirstPointerDownX:F
 
-    .line 202
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mFirstPointerDownY:F
 
-    .line 203
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mSecondPointerDownX:F
 
-    .line 204
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mSecondPointerDownY:F
 
-    .line 205
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x7d0
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 207
     iget-object v1, p0, Lcom/android/server/policy/EnableAccessibilityController;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -3430,7 +3089,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 211
     :goto_0
     return v0
 
@@ -3449,42 +3107,34 @@
 
     const/4 v8, 0x1
 
-    .line 215
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v2
 
-    .line 216
     .local v2, "pointerCount":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 217
     .local v0, "action":I
     iget-boolean v4, p0, Lcom/android/server/policy/EnableAccessibilityController;->mCanceled:Z
 
     if-eqz v4, :cond_1
 
-    .line 218
     if-ne v0, v8, :cond_0
 
-    .line 219
     iput-boolean v5, p0, Lcom/android/server/policy/EnableAccessibilityController;->mCanceled:Z
 
-    .line 246
     :cond_0
     :goto_0
     return v8
 
-    .line 223
     :cond_1
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 230
     :pswitch_1
     invoke-virtual {p1, v5}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -3502,7 +3152,6 @@
 
     move-result v1
 
-    .line 232
     .local v1, "firstPointerMove":F
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
@@ -3514,10 +3163,8 @@
 
     if-lez v4, :cond_2
 
-    .line 233
     invoke-direct {p0}, Lcom/android/server/policy/EnableAccessibilityController;->cancel()V
 
-    .line 235
     :cond_2
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -3535,7 +3182,6 @@
 
     move-result v3
 
-    .line 237
     .local v3, "secondPointerMove":F
     invoke-static {v3}, Ljava/lang/Math;->abs(F)F
 
@@ -3547,12 +3193,10 @@
 
     if-lez v4, :cond_0
 
-    .line 238
     invoke-direct {p0}, Lcom/android/server/policy/EnableAccessibilityController;->cancel()V
 
     goto :goto_0
 
-    .line 225
     .end local v1    # "firstPointerMove":F
     .end local v3    # "secondPointerMove":F
     :pswitch_2
@@ -3560,18 +3204,15 @@
 
     if-le v2, v4, :cond_0
 
-    .line 226
     invoke-direct {p0}, Lcom/android/server/policy/EnableAccessibilityController;->cancel()V
 
     goto :goto_0
 
-    .line 243
     :pswitch_3
     invoke-direct {p0}, Lcom/android/server/policy/EnableAccessibilityController;->cancel()V
 
     goto :goto_0
 
-    .line 223
     nop
 
     :pswitch_data_0

@@ -24,7 +24,6 @@
     .param p2, "l"    # Landroid/os/Looper;
 
     .prologue
-    .line 163
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmConnection$MyHandler;->this$0:Lcom/android/internal/telephony/gsm/GsmConnection;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 169
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 193
     :goto_0
     return-void
 
-    .line 173
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmConnection$MyHandler;->this$0:Lcom/android/internal/telephony/gsm/GsmConnection;
 
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 176
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmConnection$MyHandler;->this$0:Lcom/android/internal/telephony/gsm/GsmConnection;
 
@@ -66,7 +61,6 @@
 
     goto :goto_0
 
-    .line 181
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmConnection$MyHandler;->this$0:Lcom/android/internal/telephony/gsm/GsmConnection;
 
@@ -95,7 +89,6 @@
 
     goto :goto_0
 
-    .line 186
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmConnection$MyHandler;->this$0:Lcom/android/internal/telephony/gsm/GsmConnection;
 
@@ -104,14 +97,12 @@
     # invokes: Lcom/android/internal/telephony/gsm/GsmConnection;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gsm/GsmConnection;->access$300(Lcom/android/internal/telephony/gsm/GsmConnection;Ljava/lang/String;)V
 
-    .line 187
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sec.android.phone.CHANGED_CALL_NUMBER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 188
     .local v0, "i":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmConnection$MyHandler;->this$0:Lcom/android/internal/telephony/gsm/GsmConnection;
 
@@ -125,7 +116,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 189
     const-string v1, "ril.sat_setup_call"
 
     const-string v2, "false"
@@ -134,7 +124,6 @@
 
     goto :goto_0
 
-    .line 169
     nop
 
     :pswitch_data_0

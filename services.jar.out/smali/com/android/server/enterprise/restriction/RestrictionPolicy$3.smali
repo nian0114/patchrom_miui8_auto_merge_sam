@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 492
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 496
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 498
     .local v0, "action":Ljava/lang/String;
     const-string v6, "android.intent.action.BOOT_COMPLETED"
 
@@ -56,7 +53,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 501
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -65,17 +61,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 507
     :goto_0
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v1
 
-    .line 508
     .local v1, "adapter":Landroid/bluetooth/BluetoothAdapter;
     if-eqz v1, :cond_0
 
-    .line 509
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # getter for: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -94,34 +87,29 @@
 
     invoke-virtual {v1, v5, v6, v7}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
-    .line 512
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # invokes: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
     invoke-static {v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$300(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
-    .line 541
     .end local v1    # "adapter":Landroid/bluetooth/BluetoothAdapter;
     :cond_1
     :goto_1
     return-void
 
-    .line 502
     :catch_0
     move-exception v3
 
-    .line 503
     .local v3, "e":Ljava/lang/Exception;
     const-string v5, "RestrictionPolicy"
 
-    const-string/jumbo v6, "updateUsbMode failed"
+    const-string v6, "updateUsbMode failed"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 514
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_2
     const-string v6, "android.intent.action.ACTION_POWER_DISCONNECTED"
@@ -132,7 +120,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 517
     :try_start_1
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -143,24 +130,21 @@
 
     goto :goto_1
 
-    .line 518
     :catch_1
     move-exception v3
 
-    .line 519
     .restart local v3    # "e":Ljava/lang/Exception;
     const-string v5, "RestrictionPolicy"
 
-    const-string/jumbo v6, "updateUsbMode failed"
+    const-string v6, "updateUsbMode failed"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 521
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_3
-    const-string/jumbo v6, "edm.intent.action.internal.sec.DEFAULT_NETWORK_POLICY_APPLIED"
+    const-string v6, "edm.intent.action.internal.sec.DEFAULT_NETWORK_POLICY_APPLIED"
 
     invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -178,7 +162,6 @@
 
     if-nez v6, :cond_4
 
-    .line 523
     :try_start_2
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -188,11 +171,9 @@
 
     goto :goto_1
 
-    .line 524
     :catch_2
     move-exception v3
 
-    .line 525
     .restart local v3    # "e":Ljava/lang/Exception;
     const-string v5, "RestrictionPolicy"
 
@@ -202,7 +183,6 @@
 
     goto :goto_1
 
-    .line 527
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_4
     const-string v6, "android.intent.action.USER_SWITCHED"
@@ -213,20 +193,17 @@
 
     if-eqz v6, :cond_6
 
-    .line 528
     const-string v6, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v6, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 529
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 531
     .local v2, "callingUid":I
     const-string v6, "RestrictionPolicy"
 
@@ -260,8 +237,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
-    const-string/jumbo v6, "screenCaptureEnabled"
+    const-string v6, "screenCaptureEnabled"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -299,7 +275,6 @@
 
     goto/16 :goto_1
 
-    .line 534
     .end local v2    # "callingUid":I
     .end local v4    # "userId":I
     :cond_6
@@ -311,14 +286,12 @@
 
     if-eqz v6, :cond_7
 
-    .line 535
     const-string v6, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v6, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 536
     .restart local v4    # "userId":I
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -327,7 +300,6 @@
 
     goto/16 :goto_1
 
-    .line 537
     .end local v4    # "userId":I
     :cond_7
     const-string v6, "android.intent.action.USER_REMOVED"
@@ -338,14 +310,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 538
     const-string v6, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v6, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 539
     .restart local v4    # "userId":I
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 

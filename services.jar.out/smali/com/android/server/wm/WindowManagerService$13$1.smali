@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 23515
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$13$1;->this$1:Lcom/android/server/wm/WindowManagerService$13;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 23518
     sget-boolean v0, Lcom/android/server/wm/WindowManagerService;->DEBUG_RESIZE:Z
 
     if-eqz v0, :cond_0
@@ -89,7 +87,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23520
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$13$1;->this$1:Lcom/android/server/wm/WindowManagerService$13;
 
@@ -99,14 +96,12 @@
 
     iput-boolean v1, v0, Lcom/android/server/wm/WindowState;->mDelayedResize:Z
 
-    .line 23521
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$13$1;->this$1:Lcom/android/server/wm/WindowManagerService$13;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService$13;->val$win:Lcom/android/server/wm/WindowState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->reportResized()V
 
-    .line 23522
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$13$1;->this$1:Lcom/android/server/wm/WindowManagerService$13;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService$13;->this$0:Lcom/android/server/wm/WindowManagerService;
@@ -119,6 +114,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 23523
     return-void
 .end method

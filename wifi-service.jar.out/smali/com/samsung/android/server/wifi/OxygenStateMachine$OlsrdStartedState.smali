@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 312
     iput-object p1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 315
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mController:Lcom/android/server/wifi/WifiStateMachine;
@@ -49,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(I)V
 
-    .line 316
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 385
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const v1, 0x20166
@@ -65,7 +61,6 @@
     # invokes: Lcom/samsung/android/server/wifi/OxygenStateMachine;->removeMessages(I)V
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$2300(Lcom/samsung/android/server/wifi/OxygenStateMachine;I)V
 
-    .line 386
     return-void
 .end method
 
@@ -78,10 +73,8 @@
 
     const/4 v4, 0x1
 
-    .line 320
     const/4 v8, 0x1
 
-    .line 321
     .local v8, "retValue":Z
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$000()Z
@@ -124,22 +117,18 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 377
     :pswitch_0
     const/4 v8, 0x0
 
-    .line 380
     :goto_0
     :pswitch_1
     return v8
 
-    .line 329
     :pswitch_2
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -157,7 +146,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 330
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -174,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 331
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -197,7 +184,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 332
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -213,7 +199,6 @@
 
     goto :goto_0
 
-    .line 335
     :pswitch_3
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -231,7 +216,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 336
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -248,7 +232,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 337
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -271,7 +254,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 338
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -279,7 +261,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->sendMessage(I)V
 
-    .line 339
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
@@ -294,7 +275,6 @@
 
     goto/16 :goto_0
 
-    .line 342
     :pswitch_4
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -304,7 +284,6 @@
 
     goto/16 :goto_0
 
-    .line 345
     :pswitch_5
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -315,7 +294,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdCommander;->ping()Z
 
-    .line 346
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     const v1, 0x20166
@@ -326,7 +304,6 @@
 
     goto/16 :goto_0
 
-    .line 349
     :pswitch_6
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -358,15 +335,12 @@
 
     goto/16 :goto_0
 
-    .line 352
     :pswitch_7
     iget v7, p1, Landroid/os/Message;->arg1:I
 
-    .line 353
     .local v7, "newAlarmInterval":I
     if-le v7, v4, :cond_7
 
-    .line 354
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mOldAlarmInterval:I
@@ -381,7 +355,6 @@
     # setter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mOldAlarmInterval:I
     invoke-static {v0, v4}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$2202(Lcom/samsung/android/server/wifi/OxygenStateMachine;I)I
 
-    .line 355
     :cond_3
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -405,7 +378,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 356
     :cond_4
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -416,7 +388,6 @@
 
     if-ge v0, v7, :cond_5
 
-    .line 357
     const-string v0, "OxygenStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -460,7 +431,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -496,7 +466,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 360
     :cond_5
     const-string v0, "OxygenStateMachine"
 
@@ -532,7 +501,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -563,7 +531,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setRepeating(IJJLandroid/app/PendingIntent;)V
 
-    .line 374
     :cond_6
     :goto_1
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
@@ -573,11 +540,9 @@
 
     goto/16 :goto_0
 
-    .line 362
     :cond_7
     if-ne v7, v4, :cond_8
 
-    .line 363
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -594,7 +559,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 364
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -611,7 +575,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 365
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -625,7 +588,6 @@
 
     if-nez v0, :cond_6
 
-    .line 366
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -635,7 +597,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 367
     const-string v0, "OxygenStateMachine"
 
     const-string v1, "Alarm interval is 1 sec, so wake_lock is held."
@@ -644,7 +605,6 @@
 
     goto :goto_1
 
-    .line 370
     :cond_8
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
@@ -662,7 +622,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 371
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mAM:Landroid/app/AlarmManager;
@@ -679,7 +638,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 372
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdStartedState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -704,7 +662,6 @@
 
     goto :goto_1
 
-    .line 322
     nop
 
     :pswitch_data_0

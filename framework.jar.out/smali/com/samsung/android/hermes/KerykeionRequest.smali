@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 127
     new-instance v0, Lcom/samsung/android/hermes/KerykeionRequest$1;
 
     invoke-direct {v0}, Lcom/samsung/android/hermes/KerykeionRequest$1;-><init>()V
@@ -59,28 +58,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     iput-object v1, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
-    .line 19
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nPatternType:I
 
-    .line 21
     iput-object v1, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mHermesObject:Lcom/samsung/android/hermes/object/HermesObject;
 
-    .line 27
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
-    .line 28
     return-void
 .end method
 
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     return v0
@@ -100,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mHermesObject:Lcom/samsung/android/hermes/object/HermesObject;
 
     return-object v0
@@ -110,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nPatternType:I
 
     return v0
@@ -129,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
     return-object v0
@@ -139,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nType:I
 
     return v0
@@ -150,14 +138,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 118
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nType:I
 
-    .line 119
     const-class v0, Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -170,14 +156,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
-    .line 120
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nPatternType:I
 
-    .line 121
     const-class v0, Lcom/samsung/android/hermes/object/HermesObject;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -192,7 +176,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mHermesObject:Lcom/samsung/android/hermes/object/HermesObject;
 
-    .line 122
     return-void
 .end method
 
@@ -211,14 +194,11 @@
     .end annotation
 
     .prologue
-    .line 41
     .local p2, "origin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     iput p1, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nType:I
 
-    .line 42
     iput p3, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nPatternType:I
 
-    .line 44
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -236,7 +216,6 @@
 
     move-result-object v1
 
-    .line 45
     .local v1, "obj":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/String;
 
@@ -246,14 +225,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 46
     iget-object v2, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 49
     .end local v1    # "obj":Ljava/lang/Object;
     :cond_1
     return-void
@@ -277,14 +254,11 @@
     .end annotation
 
     .prologue
-    .line 55
     .local p2, "origin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     iput p1, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nType:I
 
-    .line 56
     iput p3, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nPatternType:I
 
-    .line 58
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -302,7 +276,6 @@
 
     move-result-object v1
 
-    .line 59
     .local v1, "obj":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/String;
 
@@ -312,22 +285,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 60
     iget-object v2, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 64
     .end local v1    # "obj":Ljava/lang/Object;
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 65
     iput-object p4, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mHermesObject:Lcom/samsung/android/hermes/object/HermesObject;
 
-    .line 67
     :cond_2
     return-void
 .end method
@@ -338,26 +307,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 107
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 108
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mPrimitive:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 109
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->nPatternType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 110
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionRequest;->mHermesObject:Lcom/samsung/android/hermes/object/HermesObject;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 111
     return-void
 .end method

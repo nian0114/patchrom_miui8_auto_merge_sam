@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 211
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 214
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     new-instance v1, Lcom/android/server/display/WifiDisplayController;
@@ -69,7 +67,6 @@
     # setter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->access$002(Lcom/android/server/display/WifiDisplayAdapter;Lcom/android/server/display/WifiDisplayController;)Lcom/android/server/display/WifiDisplayController;
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     new-instance v1, Lcom/android/server/display/IpRemoteDisplayController;
@@ -98,45 +95,37 @@
     # setter for: Lcom/android/server/display/WifiDisplayAdapter;->mIpRemoteDisplayController:Lcom/android/server/display/IpRemoteDisplayController;
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->access$202(Lcom/android/server/display/WifiDisplayAdapter;Lcom/android/server/display/IpRemoteDisplayController;)Lcom/android/server/display/IpRemoteDisplayController;
 
-    .line 222
     new-instance v3, Landroid/content/IntentFilter;
 
     const-string v0, "android.server.display.wfd.DISCONNECT"
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 223
     .local v3, "filter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.WIFI_DISPLAY"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 224
     const-string v0, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 225
     const-string v0, "com.samsung.wfd.notification"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 227
     const-string v0, "com.sec.android.screensharing.DLNA_STATUS"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 229
     const-string v0, "com.sec.android.screensharing.LOGGING"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 230
     const-string v0, "android.intent.action.WIFI_DISPLAY_SINK_STATE"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->getContext()Landroid/content/Context;
@@ -163,13 +152,11 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 235
-    const-string/jumbo v0, "wlan.wfd.status"
+    const-string v0, "wlan.wfd.status"
 
-    const-string/jumbo v1, "disconnected"
+    const-string v1, "disconnected"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
     return-void
 .end method

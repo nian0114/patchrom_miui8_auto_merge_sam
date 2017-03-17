@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     invoke-static {p0}, Lcom/android/server/analytics/data/collection/logcat/EventLogTags;->extractTagName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -42,14 +40,12 @@
     .param p0, "sb"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     const-string v2, " "
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 62
     .local v1, "start":I
     const-string v2, " "
 
@@ -59,7 +55,6 @@
 
     move-result v0
 
-    .line 63
     .local v0, "end":I
     add-int/lit8 v2, v1, 0x1
 
@@ -86,12 +81,10 @@
     .end annotation
 
     .prologue
-    .line 74
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 77
     .local v0, "tagNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Lcom/android/server/analytics/data/collection/logcat/EventLogTags$1;
 
@@ -99,6 +92,5 @@
 
     invoke-static {v1}, Lcom/android/server/analytics/data/collection/utils/IOExceptionHandler;->process(Lcom/android/server/analytics/data/collection/utils/IOExceptionHandler$IOProcessor;)V
 
-    .line 102
     return-object v0
 .end method

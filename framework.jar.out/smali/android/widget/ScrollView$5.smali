@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3122
     iput-object p1, p0, Landroid/widget/ScrollView$5;->this$0:Landroid/widget/ScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3135
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3128
     :try_start_0
     iget-object v0, p0, Landroid/widget/ScrollView$5;->this$0:Landroid/widget/ScrollView;
 
@@ -61,11 +58,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3131
     :goto_0
     return-void
 
-    .line 3129
     :catch_0
     move-exception v0
 
@@ -77,7 +72,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3133
     return-void
 .end method
 
@@ -86,6 +80,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3124
     return-void
 .end method

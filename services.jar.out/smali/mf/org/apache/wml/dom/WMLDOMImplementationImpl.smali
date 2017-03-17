@@ -15,7 +15,6 @@
     .locals 1
 
     .prologue
-    .line 34
     new-instance v0, Lmf/org/apache/wml/dom/WMLDOMImplementationImpl;
 
     invoke-direct {v0}, Lmf/org/apache/wml/dom/WMLDOMImplementationImpl;-><init>()V
@@ -29,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/DOMImplementationImpl;-><init>()V
 
     return-void
@@ -39,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 38
     sget-object v0, Lmf/org/apache/wml/dom/WMLDOMImplementationImpl;->singleton:Lmf/org/apache/xerces/dom/DOMImplementationImpl;
 
     return-object v0
@@ -52,7 +49,6 @@
     .param p1, "doctype"    # Lmf/org/w3c/dom/DocumentType;
 
     .prologue
-    .line 46
     new-instance v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;
 
     invoke-direct {v0, p1}, Lmf/org/apache/wml/dom/WMLDocumentImpl;-><init>(Lmf/org/w3c/dom/DocumentType;)V

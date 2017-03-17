@@ -18,7 +18,6 @@
     .locals 2
 
     .prologue
-    .line 26
     const-wide/16 v0, -0x1
 
     sput-wide v0, Lcom/samsung/android/mscs/MSCSManager;->RETURN_ERROR:J
@@ -31,24 +30,19 @@
     .param p1, "service"    # Lcom/samsung/android/mscs/IMSCSManager;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     if-nez p1, :cond_0
 
-    .line 32
     const-string v0, "MSCSManager"
 
     const-string v1, "In Constructor Stub-Service(IMSCSManager) is null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
 
-    .line 34
     return-void
 .end method
 
@@ -57,14 +51,12 @@
     .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 79
     const-string v0, "MSCSManager"
 
     const-string v1, "Error MSCSManager"
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 80
     return-void
 .end method
 
@@ -76,16 +68,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 51
     iget-object v2, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
 
     if-nez v2, :cond_0
 
-    .line 58
     :goto_0
     return v1
 
-    .line 56
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
@@ -98,11 +87,9 @@
 
     goto :goto_0
 
-    .line 57
     :catch_0
     move-exception v0
 
-    .line 58
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -113,16 +100,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 38
     iget-object v2, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
 
     if-nez v2, :cond_0
 
-    .line 45
     :goto_0
     return v1
 
-    .line 43
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
@@ -135,11 +119,9 @@
 
     goto :goto_0
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -149,7 +131,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 72
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
 
@@ -157,15 +138,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     :goto_0
     return-void
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/mscs/MSCSManager;->onError(Ljava/lang/Exception;)V
 
@@ -177,7 +155,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 64
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/mscs/MSCSManager;->mService:Lcom/samsung/android/mscs/IMSCSManager;
 
@@ -185,15 +162,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
     :goto_0
     return-void
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/mscs/MSCSManager;->onError(Ljava/lang/Exception;)V
 

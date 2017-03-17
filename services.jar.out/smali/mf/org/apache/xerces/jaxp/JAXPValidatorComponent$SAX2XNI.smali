@@ -27,19 +27,16 @@
     .locals 1
 
     .prologue
-    .line 232
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 238
     new-instance v0, Lmf/org/apache/xerces/util/AugmentationsImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/util/AugmentationsImpl;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->fAugmentations:Lmf/org/apache/xerces/xni/Augmentations;
 
-    .line 244
     new-instance v0, Lmf/org/apache/xerces/xni/QName;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/xni/QName;-><init>()V
@@ -53,7 +50,6 @@
     .locals 0
 
     .prologue
-    .line 232
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;-><init>(Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;)V
 
     return-void
@@ -63,7 +59,6 @@
     .locals 3
 
     .prologue
-    .line 291
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     # getter for: Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->fCurrentAug:Lmf/org/apache/xerces/xni/Augmentations;
@@ -73,7 +68,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 292
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     # getter for: Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->fCurrentAug:Lmf/org/apache/xerces/xni/Augmentations;
@@ -81,7 +75,6 @@
 
     move-result-object v0
 
-    .line 293
     .local v0, "r":Lmf/org/apache/xerces/xni/Augmentations;
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
@@ -89,18 +82,15 @@
 
     invoke-static {v1, v2}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->access$3(Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;Lmf/org/apache/xerces/xni/Augmentations;)V
 
-    .line 297
     .end local v0    # "r":Lmf/org/apache/xerces/xni/Augmentations;
     :goto_0
     return-object v0
 
-    .line 296
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->fAugmentations:Lmf/org/apache/xerces/xni/Augmentations;
 
     invoke-interface {v1}, Lmf/org/apache/xerces/xni/Augmentations;->removeAllItems()V
 
-    .line 297
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->fAugmentations:Lmf/org/apache/xerces/xni/Augmentations;
 
     goto :goto_0
@@ -110,12 +100,10 @@
     .locals 1
 
     .prologue
-    .line 280
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->aug()Lmf/org/apache/xerces/xni/Augmentations;
 
     move-result-object v0
 
-    .line 282
     .local v0, "aug":Lmf/org/apache/xerces/xni/Augmentations;
     return-object v0
 .end method
@@ -124,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->getDocumentHandler()Lmf/org/apache/xerces/xni/XMLDocumentHandler;
@@ -141,10 +128,8 @@
     .param p3, "qname"    # Ljava/lang/String;
 
     .prologue
-    .line 324
     const/4 v1, 0x0
 
-    .line 325
     .local v1, "prefix":Ljava/lang/String;
     const/16 v2, 0x3a
 
@@ -152,11 +137,9 @@
 
     move-result v0
 
-    .line 326
     .local v0, "idx":I
     if-lez v0, :cond_0
 
-    .line 327
     iget-object v2, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     const/4 v3, 0x0
@@ -170,7 +153,6 @@
 
     move-result-object v1
 
-    .line 329
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
@@ -179,7 +161,6 @@
 
     move-result-object p2
 
-    .line 330
     iget-object v2, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     # invokes: Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->symbolize(Ljava/lang/String;)Ljava/lang/String;
@@ -187,7 +168,6 @@
 
     move-result-object p3
 
-    .line 331
     iget-object v2, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     # invokes: Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->symbolize(Ljava/lang/String;)Ljava/lang/String;
@@ -195,12 +175,10 @@
 
     move-result-object p1
 
-    .line 334
     iget-object v2, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->fQName:Lmf/org/apache/xerces/xni/QName;
 
     invoke-virtual {v2, v1, p2, p3, p1}, Lmf/org/apache/xerces/xni/QName;->setValues(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
     iget-object v2, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->fQName:Lmf/org/apache/xerces/xni/QName;
 
     return-object v2
@@ -211,18 +189,15 @@
     .param p1, "xe"    # Lmf/org/apache/xerces/xni/XNIException;
 
     .prologue
-    .line 312
     invoke-virtual {p1}, Lmf/org/apache/xerces/xni/XNIException;->getException()Ljava/lang/Exception;
 
     move-result-object v0
 
-    .line 313
     .local v0, "e":Ljava/lang/Exception;
     if-nez v0, :cond_0
 
     move-object v0, p1
 
-    .line 314
     :cond_0
     instance-of v1, v0, Lorg/xml/sax/SAXException;
 
@@ -230,7 +205,6 @@
 
     check-cast v0, Lorg/xml/sax/SAXException;
 
-    .line 315
     .end local v0    # "e":Ljava/lang/Exception;
     :goto_0
     return-object v0
@@ -260,7 +234,6 @@
     .end annotation
 
     .prologue
-    .line 248
     :try_start_0
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->handler()Lmf/org/apache/xerces/xni/XMLDocumentHandler;
 
@@ -278,14 +251,11 @@
     :try_end_0
     .catch Lmf/org/apache/xerces/xni/XNIException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 252
     return-void
 
-    .line 249
     :catch_0
     move-exception v0
 
-    .line 250
     .local v0, "e":Lmf/org/apache/xerces/xni/XNIException;
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->toSAXException(Lmf/org/apache/xerces/xni/XNIException;)Lorg/xml/sax/SAXException;
 
@@ -306,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 273
     :try_start_0
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->handler()Lmf/org/apache/xerces/xni/XMLDocumentHandler;
 
@@ -324,14 +293,11 @@
     :try_end_0
     .catch Lmf/org/apache/xerces/xni/XNIException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 277
     return-void
 
-    .line 274
     :catch_0
     move-exception v0
 
-    .line 275
     .local v0, "e":Lmf/org/apache/xerces/xni/XNIException;
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->toSAXException(Lmf/org/apache/xerces/xni/XNIException;)Lorg/xml/sax/SAXException;
 
@@ -352,7 +318,6 @@
     .end annotation
 
     .prologue
-    .line 256
     :try_start_0
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->handler()Lmf/org/apache/xerces/xni/XMLDocumentHandler;
 
@@ -370,14 +335,11 @@
     :try_end_0
     .catch Lmf/org/apache/xerces/xni/XNIException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 260
     return-void
 
-    .line 257
     :catch_0
     move-exception v0
 
-    .line 258
     .local v0, "e":Lmf/org/apache/xerces/xni/XNIException;
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->toSAXException(Lmf/org/apache/xerces/xni/XNIException;)Lorg/xml/sax/SAXException;
 
@@ -399,14 +361,12 @@
     .end annotation
 
     .prologue
-    .line 264
     :try_start_0
     iget-object v1, p0, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->this$0:Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;
 
     # invokes: Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->updateAttributes(Lorg/xml/sax/Attributes;)V
     invoke-static {v1, p4}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;->access$0(Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent;Lorg/xml/sax/Attributes;)V
 
-    .line 265
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->handler()Lmf/org/apache/xerces/xni/XMLDocumentHandler;
 
     move-result-object v1
@@ -430,14 +390,11 @@
     :try_end_0
     .catch Lmf/org/apache/xerces/xni/XNIException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 269
     return-void
 
-    .line 266
     :catch_0
     move-exception v0
 
-    .line 267
     .local v0, "e":Lmf/org/apache/xerces/xni/XNIException;
     invoke-direct {p0, v0}, Lmf/org/apache/xerces/jaxp/JAXPValidatorComponent$SAX2XNI;->toSAXException(Lmf/org/apache/xerces/xni/XNIException;)Lorg/xml/sax/SAXException;
 

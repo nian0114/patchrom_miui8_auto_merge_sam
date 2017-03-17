@@ -113,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const-class v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -136,84 +135,68 @@
 
     const/4 v1, 0x0
 
-    .line 210
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 61
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mInternalState:I
 
-    .line 63
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mState:I
 
-    .line 64
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mStateLock:Ljava/lang/Object;
 
-    .line 71
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectAfterEnable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 72
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 77
     iput-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthResultCallback:Lcom/samsung/accessory/manager/SAccessoryManager$AuthenticationResultCallback;
 
-    .line 79
     iput-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
-    .line 81
     iput-boolean v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTurnedOffWhileRunning:Z
 
-    .line 112
     new-instance v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;-><init>(Lcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectivityStateCallback:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
-    .line 211
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mContext:Landroid/content/Context;
 
-    .line 212
     new-instance v0, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     invoke-direct {v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
-    .line 213
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     invoke-virtual {v0, p2}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setRequestPackage(Ljava/lang/String;)V
 
-    .line 214
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     invoke-virtual {v0, p3}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setConnectivityType(I)V
 
-    .line 215
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     const/16 v1, 0x5a
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setReason(I)V
 
-    .line 216
     return-void
 .end method
 
@@ -222,7 +205,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     return-object v0
@@ -232,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 20
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -243,7 +224,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     return-object v0
@@ -254,7 +234,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
 
     return-object v0
@@ -266,7 +245,6 @@
     .param p1, "x1"    # Ljava/lang/Thread;
 
     .prologue
-    .line 20
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
 
     return-object p1
@@ -278,7 +256,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
 
     return-void
@@ -289,7 +266,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->handleStartSession()V
 
     return-void
@@ -301,7 +277,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->handleStopSession(Z)V
 
     return-void
@@ -312,7 +287,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -324,7 +298,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->replayAuthfail(I)V
 
     return-void
@@ -335,7 +308,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->handleTearDown()V
 
     return-void
@@ -347,7 +319,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 20
     iput p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mInternalState:I
 
     return p1
@@ -358,7 +329,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectAfterEnable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -369,7 +339,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->connect()V
 
     return-void
@@ -381,7 +350,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 20
     iput-boolean p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTurnedOffWhileRunning:Z
 
     return p1
@@ -392,7 +360,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->handleSetConnection()V
 
     return-void
@@ -402,23 +369,19 @@
     .locals 2
 
     .prologue
-    .line 437
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     const-string v1, "connect"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-nez v0, :cond_0
 
-    .line 442
     :goto_0
     return-void
 
-    .line 441
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
@@ -434,7 +397,6 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 219
     new-instance v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
@@ -446,23 +408,19 @@
     .locals 2
 
     .prologue
-    .line 445
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "disconnect"
+    const-string v1, "disconnect"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-nez v0, :cond_0
 
-    .line 450
     :goto_0
     return-void
 
-    .line 449
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
@@ -477,35 +435,29 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 341
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "handleSetConnection"
+    const-string v1, "handleSetConnection"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-nez v0, :cond_0
 
-    .line 343
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "mAuthenticator is null"
+    const-string v1, "mAuthenticator is null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     const/16 v0, 0xc
 
     invoke-direct {p0, v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->replayAuthfail(I)V
 
-    .line 366
     :goto_0
     return-void
 
-    .line 346
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->getSessionState()I
 
@@ -515,29 +467,25 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 347
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "session is stopped!"
+    const-string v1, "session is stopped!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 351
     :cond_1
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/Authenticator;->setConnection()V
 
-    .line 352
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectivityStateCallback:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/Authenticator;->setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V
 
-    .line 354
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/Authenticator;->getConnectivity()Lcom/samsung/accessory/manager/connectivity/Connectivity;
@@ -550,7 +498,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 355
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/4 v1, 0x7
@@ -559,7 +506,6 @@
 
     goto :goto_0
 
-    .line 357
     :cond_2
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
@@ -573,30 +519,25 @@
 
     if-eqz v0, :cond_3
 
-    .line 358
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectAfterEnable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 359
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mInternalState:I
 
     goto :goto_0
 
-    .line 361
     :cond_3
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "enable fail"
+    const-string v1, "enable fail"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     invoke-direct {p0, v2}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
 
-    .line 363
     const/16 v0, 0xa
 
     invoke-direct {p0, v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->replayAuthfail(I)V
@@ -610,21 +551,18 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 315
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "handleStartSession"
+    const-string v3, "handleStartSession"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->getSessionState()I
 
     move-result v2
 
     if-eq v2, v4, :cond_0
 
-    .line 318
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -649,38 +587,31 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     const/16 v2, 0x1e
 
     invoke-direct {p0, v2}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->replayAuthfail(I)V
 
-    .line 338
     :goto_0
     return-void
 
-    .line 323
     :cond_0
     const/4 v2, 0x2
 
     invoke-direct {p0, v2}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
 
-    .line 324
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     if-eqz v2, :cond_1
 
-    .line 325
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     invoke-interface {v2, v4, p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;->onSessionEvent(ILcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
-    .line 327
     :cond_1
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-nez v2, :cond_2
 
-    .line 328
     new-instance v0, Lcom/samsung/accessory/manager/authentication/AuthenticatorClientImpl;
 
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mContext:Landroid/content/Context;
@@ -693,7 +624,6 @@
 
     invoke-direct {v0, v2, v3}, Lcom/samsung/accessory/manager/authentication/AuthenticatorClientImpl;-><init>(Landroid/content/Context;I)V
 
-    .line 331
     .local v0, "authenticator":Lcom/samsung/accessory/manager/authentication/AuthenticatorClientImpl;
     :try_start_0
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mContext:Landroid/content/Context;
@@ -702,7 +632,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 337
     .end local v0    # "authenticator":Lcom/samsung/accessory/manager/authentication/AuthenticatorClientImpl;
     :cond_2
     :goto_1
@@ -712,12 +641,10 @@
 
     goto :goto_0
 
-    .line 332
     .restart local v0    # "authenticator":Lcom/samsung/accessory/manager/authentication/AuthenticatorClientImpl;
     :catch_0
     move-exception v1
 
-    .line 333
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
@@ -737,14 +664,13 @@
 
     const/4 v6, 0x1
 
-    .line 255
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "handleStopSession, force? = "
+    const-string v4, "handleStopSession, force? = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -760,30 +686,25 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
 
     if-eqz v2, :cond_2
 
-    .line 258
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "waiting for session thread to terminate"
+    const-string v3, "waiting for session thread to terminate"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     :try_start_0
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-eqz v2, :cond_0
 
-    .line 262
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v2}, Lcom/samsung/accessory/manager/authentication/Authenticator;->onInterrupted()V
 
-    .line 263
     :cond_0
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
 
@@ -791,7 +712,6 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/Thread;->join(J)V
 
-    .line 264
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionThread:Ljava/lang/Thread;
 
     invoke-virtual {v2}, Ljava/lang/Thread;->isAlive()Z
@@ -800,17 +720,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 265
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     const-string v3, "Thread is still running.. force stop session!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     const/4 p1, 0x1
 
-    .line 268
     :cond_1
     const/4 v2, 0x0
 
@@ -818,35 +735,29 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 272
     :goto_0
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "session thread is terminated"
+    const-string v3, "session thread is terminated"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     :cond_2
     if-eqz p1, :cond_4
 
-    .line 276
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     invoke-virtual {v2, v9}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->removeMessages(I)V
 
-    .line 277
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     const/16 v3, 0x1f
 
     invoke-virtual {v2, v3}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setReason(I)V
 
-    .line 284
     :cond_3
     invoke-direct {p0, v8}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
 
-    .line 286
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-eqz v2, :cond_6
@@ -871,7 +782,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 289
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v2}, Lcom/samsung/accessory/manager/authentication/Authenticator;->getConnectivity()Lcom/samsung/accessory/manager/connectivity/Connectivity;
@@ -882,7 +792,6 @@
 
     move-result v1
 
-    .line 290
     .local v1, "isEnabled":Z
     if-eqz v1, :cond_5
 
@@ -898,42 +807,34 @@
 
     if-eqz v2, :cond_5
 
-    .line 292
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v2, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 293
     if-nez p1, :cond_6
 
-    .line 294
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "waiting for connectivity off"
+    const-string v3, "waiting for connectivity off"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mInternalState:I
 
-    .line 312
     .end local v1    # "isEnabled":Z
     :goto_1
     return-void
 
-    .line 269
     :catch_0
     move-exception v0
 
-    .line 270
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 278
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :cond_4
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
@@ -944,38 +845,32 @@
 
     if-eqz v2, :cond_3
 
-    .line 279
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "session will be restarted.. "
+    const-string v3, "session will be restarted.. "
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     iput v6, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mInternalState:I
 
     goto :goto_1
 
-    .line 298
     .restart local v1    # "isEnabled":Z
     :cond_5
     iget-boolean v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTurnedOffWhileRunning:Z
 
     if-eqz v2, :cond_7
 
-    .line 309
     .end local v1    # "isEnabled":Z
     :cond_6
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectAfterEnable:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v2, v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 310
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v2, v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 311
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v3, 0xd
@@ -984,7 +879,6 @@
 
     goto :goto_1
 
-    .line 300
     .restart local v1    # "isEnabled":Z
     :cond_7
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mConnectAfterEnable:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -995,20 +889,16 @@
 
     if-eqz v2, :cond_6
 
-    .line 301
     sget-object v2, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "waiting for connectivity on"
+    const-string v3, "waiting for connectivity on"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     if-nez p1, :cond_6
 
-    .line 303
     iput v8, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mInternalState:I
 
-    .line 304
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v2, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
@@ -1020,30 +910,25 @@
     .locals 2
 
     .prologue
-    .line 369
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "handleTearDown"
+    const-string v1, "handleTearDown"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-eqz v0, :cond_0
 
-    .line 372
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/Authenticator;->close()V
 
-    .line 374
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-eqz v0, :cond_1
 
-    .line 375
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -1052,35 +937,29 @@
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
-    .line 376
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->interrupt()V
 
-    .line 377
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 380
     :cond_1
     const/4 v0, 0x5
 
     invoke-direct {p0, v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
 
-    .line 382
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     if-eqz v0, :cond_2
 
-    .line 383
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     const/4 v1, 0x4
 
     invoke-interface {v0, v1, p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;->onSessionEvent(ILcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
-    .line 385
     :cond_2
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
@@ -1088,7 +967,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->removeMessages(I)V
 
-    .line 386
     return-void
 .end method
 
@@ -1097,24 +975,20 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 393
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     invoke-virtual {v0, p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setReason(I)V
 
-    .line 394
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 395
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     const/4 v1, 0x3
 
     invoke-interface {v0, v1, p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;->onSessionEvent(ILcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
-    .line 396
     :cond_0
     return-void
 .end method
@@ -1130,10 +1004,8 @@
     .end annotation
 
     .prologue
-    .line 430
     if-nez p2, :cond_0
 
-    .line 431
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Authenticator must not be null"
@@ -1142,11 +1014,9 @@
 
     throw v0
 
-    .line 433
     :cond_0
     iput-object p2, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
-    .line 434
     return-void
 .end method
 
@@ -1155,12 +1025,10 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 223
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 224
     :try_start_0
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
@@ -1196,16 +1064,12 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     iput p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mState:I
 
-    .line 226
     monitor-exit v1
 
-    .line 227
     return-void
 
-    .line 226
     :catchall_0
     move-exception v0
 
@@ -1225,19 +1089,15 @@
     .end annotation
 
     .prologue
-    .line 420
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-nez v0, :cond_0
 
-    .line 421
     const/4 v0, 0x0
 
-    .line 426
     :goto_0
     return v0
 
-    .line 424
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
@@ -1245,7 +1105,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/Authenticator;->onAuthenticationChallenge(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)Z
 
-    .line 426
     const/4 v0, 0x1
 
     goto :goto_0
@@ -1260,12 +1119,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 453
     const-string v0, " Current AuthenticationSession state:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 455
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1290,7 +1147,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 456
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1313,7 +1169,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 457
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1340,7 +1195,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 458
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1367,7 +1221,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 460
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     if-eqz v0, :cond_0
@@ -1380,7 +1233,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 461
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/Authenticator;->getConnectivity()Lcom/samsung/accessory/manager/connectivity/Connectivity;
@@ -1389,7 +1241,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 462
     :cond_0
     return-void
 .end method
@@ -1398,7 +1249,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthResultCallback:Lcom/samsung/accessory/manager/SAccessoryManager$AuthenticationResultCallback;
 
     return-object v0
@@ -1408,7 +1258,6 @@
     .locals 1
 
     .prologue
-    .line 389
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     return-object v0
@@ -1418,7 +1267,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthenticator:Lcom/samsung/accessory/manager/authentication/Authenticator;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/Authenticator;->getConnectivityType()I
@@ -1432,12 +1280,10 @@
     .locals 2
 
     .prologue
-    .line 107
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 108
     :try_start_0
     iget v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mState:I
 
@@ -1445,7 +1291,6 @@
 
     return v0
 
-    .line 109
     :catchall_0
     move-exception v0
 
@@ -1460,34 +1305,29 @@
     .locals 4
 
     .prologue
-    .line 401
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->startAuthChall()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 405
     :goto_0
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->disconnect()V
 
-    .line 407
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->setState(I)V
 
-    .line 409
     iget-boolean v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mTurnedOffWhileRunning:Z
 
     if-eqz v1, :cond_0
 
-    .line 410
     sget-object v1, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mTurnedOffWhileRunning ? "
+    const-string v3, "mTurnedOffWhileRunning ? "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1505,35 +1345,29 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mResult:Lcom/samsung/accessory/manager/authentication/AuthenticationResult;
 
     const/16 v2, 0xc
 
     invoke-virtual {v1, v2}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setReason(I)V
 
-    .line 415
     :cond_0
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     if-eqz v1, :cond_1
 
-    .line 416
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     const/4 v2, 0x3
 
     invoke-interface {v1, v2, p0}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;->onSessionEvent(ILcom/samsung/accessory/manager/authentication/AuthenticationSession;)V
 
-    .line 417
     :cond_1
     return-void
 
-    .line 402
     :catch_0
     move-exception v0
 
-    .line 403
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -1545,10 +1379,8 @@
     .param p1, "callback"    # Lcom/samsung/accessory/manager/SAccessoryManager$AuthenticationResultCallback;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mAuthResultCallback:Lcom/samsung/accessory/manager/SAccessoryManager$AuthenticationResultCallback;
 
-    .line 96
     return-void
 .end method
 
@@ -1557,10 +1389,8 @@
     .param p1, "callback"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionEventListener:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$SessionEventListener;
 
-    .line 92
     return-void
 .end method
 
@@ -1568,29 +1398,25 @@
     .locals 4
 
     .prologue
-    .line 230
     monitor-enter p0
 
     :try_start_0
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "startSession"
+    const-string v1, "startSession"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
-    .line 233
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
     const-string v1, "Create handler thread"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "SAAuthentication Session Handler"
@@ -1599,12 +1425,10 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 235
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 236
     new-instance v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mHandlerThread:Landroid/os/HandlerThread;
@@ -1617,7 +1441,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
-    .line 237
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v1, 0xe
@@ -1626,7 +1449,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 240
     :cond_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
@@ -1634,14 +1456,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->removeMessages(I)V
 
-    .line 241
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->removeMessages(I)V
 
-    .line 243
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v1, 0xb
@@ -1650,12 +1470,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 244
     monitor-exit p0
 
     return-void
 
-    .line 230
     :catchall_0
     move-exception v0
 
@@ -1668,31 +1486,27 @@
     .locals 2
 
     .prologue
-    .line 247
     monitor-enter p0
 
     :try_start_0
     sget-object v0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "stopSession"
+    const-string v1, "stopSession"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->removeMessages(I)V
 
-    .line 249
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;->removeMessages(I)V
 
-    .line 251
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/AuthenticationSession;->mSessionHandler:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$EventHandler;
 
     const/16 v1, 0xc
@@ -1701,12 +1515,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 252
     monitor-exit p0
 
     return-void
 
-    .line 247
     :catchall_0
     move-exception v0
 

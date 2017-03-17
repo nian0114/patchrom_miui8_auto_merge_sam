@@ -44,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 287
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternChecker$8;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternChecker$8;->val$password:Ljava/lang/String;
@@ -67,7 +66,6 @@
     .param p1, "args"    # [Ljava/lang/Void;
 
     .prologue
-    .line 293
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternChecker$8;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -87,15 +85,12 @@
 
     move-result-object v1
 
-    .line 296
     :goto_0
     return-object v1
 
-    .line 294
     :catch_0
     move-exception v0
 
-    .line 295
     .local v0, "ex":Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;->getTimeoutMs()I
 
@@ -103,7 +98,6 @@
 
     iput v1, p0, Lcom/android/internal/widget/LockPatternChecker$8;->mThrottleTimeout:I
 
-    .line 296
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -118,7 +112,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 287
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -134,7 +127,6 @@
     .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 302
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternChecker$8;->val$callback:Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -145,7 +137,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;->onChecked(ZI)V
 
-    .line 303
     return-void
 .end method
 
@@ -154,7 +145,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 287
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "x0":Ljava/lang/Object;

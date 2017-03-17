@@ -35,16 +35,12 @@
     .param p3, "n"    # I
 
     .prologue
-    .line 1082
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Token;-><init>(I)V
 
-    .line 1083
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$StringToken;->string:Ljava/lang/String;
 
-    .line 1084
     iput p3, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$StringToken;->refNumber:I
 
-    .line 1085
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1088
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$StringToken;->refNumber:I
 
     return v0
@@ -64,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 1091
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$StringToken;->string:Ljava/lang/String;
 
     return-object v0
@@ -75,14 +69,12 @@
     .param p1, "options"    # I
 
     .prologue
-    .line 1095
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$StringToken;->type:I
 
     const/16 v1, 0xc
 
     if-ne v0, v1, :cond_0
 
-    .line 1096
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "\\"
@@ -99,7 +91,6 @@
 
     move-result-object v0
 
-    .line 1098
     :goto_0
     return-object v0
 

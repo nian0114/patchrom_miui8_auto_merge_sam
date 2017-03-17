@@ -24,13 +24,10 @@
     .param p1, "validator"    # Landroid/content/pm/PersonaValidator;
 
     .prologue
-    .line 11
     invoke-direct {p0}, Landroid/content/pm/IPersonaValidator$Stub;-><init>()V
 
-    .line 12
     iput-object p1, p0, Landroid/content/pm/PersonaValidator$LocalBinder;->mValidator:Landroid/content/pm/PersonaValidator;
 
-    .line 13
     return-void
 .end method
 
@@ -43,12 +40,10 @@
     .param p4, "personaId"    # I
 
     .prologue
-    .line 16
     iget-object v0, p0, Landroid/content/pm/PersonaValidator$LocalBinder;->mValidator:Landroid/content/pm/PersonaValidator;
 
     if-eqz v0, :cond_0
 
-    .line 17
     const-string v0, "Abstract-PersonaValidator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -81,18 +76,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iget-object v0, p0, Landroid/content/pm/PersonaValidator$LocalBinder;->mValidator:Landroid/content/pm/PersonaValidator;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/pm/PersonaValidator;->validateCallerForAPI(JLjava/lang/String;I)I
 
     move-result v0
 
-    .line 21
     :goto_0
     return v0
 
-    .line 20
     :cond_0
     const-string v0, "Abstract-PersonaValidator"
 
@@ -126,7 +118,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     const/4 v0, -0x1
 
     goto :goto_0

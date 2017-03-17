@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 55
     return-void
 .end method
 
@@ -30,8 +28,7 @@
     .locals 1
 
     .prologue
-    .line 37
-    const-string/jumbo v0, "version"
+    const-string v0, "version"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLHtmlElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -49,11 +46,9 @@
     .param p1, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 43
-    const-string/jumbo v0, "version"
+    const-string v0, "version"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLHtmlElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method

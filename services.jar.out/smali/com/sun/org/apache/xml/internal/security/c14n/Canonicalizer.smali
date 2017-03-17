@@ -89,7 +89,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/c14n/InvalidCanonicalizerException;
 
-    const-string/jumbo v2, "signature.Canonicalizer.UnknownCanonicalizer"
+    const-string v2, "signature.Canonicalizer.UnknownCanonicalizer"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/InvalidCanonicalizerException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 

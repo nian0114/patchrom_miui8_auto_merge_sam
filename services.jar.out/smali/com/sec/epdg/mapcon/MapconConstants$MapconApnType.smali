@@ -68,88 +68,80 @@
 
     const/4 v4, 0x0
 
-    .line 49
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_DEFAULT"
 
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_DEFAULT:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 50
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_MMS"
 
-    const-string/jumbo v2, "mms"
+    const-string v2, "mms"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_MMS:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 51
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_SUPL"
 
-    const-string/jumbo v2, "supl"
+    const-string v2, "supl"
 
     invoke-direct {v0, v1, v6, v2}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_SUPL:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 52
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_DUN"
 
-    const-string/jumbo v2, "dun"
+    const-string v2, "dun"
 
     invoke-direct {v0, v1, v7, v2}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_DUN:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 53
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_HIPRI"
 
-    const-string/jumbo v2, "hipri"
+    const-string v2, "hipri"
 
     invoke-direct {v0, v1, v8, v2}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_HIPRI:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 54
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_FOTA"
 
     const/4 v2, 0x5
 
-    const-string/jumbo v3, "fota"
+    const-string v3, "fota"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_FOTA:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 55
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_IMS"
 
     const/4 v2, 0x6
 
-    const-string/jumbo v3, "ims"
+    const-string v3, "ims"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_IMS:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 56
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_CBS"
@@ -162,46 +154,42 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_CBS:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 57
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_IA"
 
     const/16 v2, 0x8
 
-    const-string/jumbo v3, "ia"
+    const-string v3, "ia"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_IA:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 58
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_XCAP"
 
     const/16 v2, 0x9
 
-    const-string/jumbo v3, "xcap"
+    const-string v3, "xcap"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_XCAP:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 59
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     const-string v1, "APN_TYPE_EMERGENCY"
 
     const/16 v2, 0xa
 
-    const-string/jumbo v3, "emergency"
+    const-string v3, "emergency"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->APN_TYPE_EMERGENCY:Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
-    .line 48
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
@@ -279,13 +267,10 @@
     .end annotation
 
     .prologue
-    .line 63
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 64
     iput-object p3, p0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->mText:Ljava/lang/String;
 
-    .line 65
     return-void
 .end method
 
@@ -294,7 +279,6 @@
     .param p0, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     invoke-static {}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->values()[Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     move-result-object v1
@@ -311,7 +295,6 @@
 
     aget-object v0, v1, v2
 
-    .line 69
     .local v0, "apnType":Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
     invoke-virtual {v0}, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->toString()Ljava/lang/String;
 
@@ -323,16 +306,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 70
     return-object v0
 
-    .line 68
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 73
     .end local v0    # "apnType":Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
     :cond_1
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -365,7 +345,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     const-class v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -381,7 +360,6 @@
     .locals 1
 
     .prologue
-    .line 48
     sget-object v0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->$VALUES:[Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->clone()Ljava/lang/Object;
@@ -399,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/sec/epdg/mapcon/MapconConstants$MapconApnType;->mText:Ljava/lang/String;
 
     return-object v0

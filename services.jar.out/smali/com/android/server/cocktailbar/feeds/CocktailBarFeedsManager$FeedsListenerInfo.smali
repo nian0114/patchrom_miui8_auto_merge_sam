@@ -38,24 +38,18 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->this$0:Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     iput-object p2, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 107
     iput-object p3, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 108
     iput p4, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->pid:I
 
-    .line 109
     iput p5, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->uid:I
 
-    .line 110
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .locals 3
 
     .prologue
-    .line 114
     # getter for: Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->access$000()Ljava/lang/String;
 
@@ -93,7 +86,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->this$0:Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;
 
     # getter for: Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->mFeedsListeners:Ljava/util/ArrayList;
@@ -103,7 +95,6 @@
 
     monitor-enter v1
 
-    .line 116
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->this$0:Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;
 
@@ -114,22 +105,18 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 117
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 119
     return-void
 
-    .line 117
     :catchall_0
     move-exception v0
 
@@ -145,7 +132,6 @@
     .locals 3
 
     .prologue
-    .line 138
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,7 +186,6 @@
 
     move-result-object v0
 
-    .line 140
     .local v0, "dumpResult":Ljava/lang/String;
     return-object v0
 .end method
@@ -219,28 +204,24 @@
     .end annotation
 
     .prologue
-    .line 122
     .local p2, "feedsInfoList":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/cocktailbar/FeedsInfo;>;"
     iget-object v2, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v2, :cond_1
 
-    .line 123
     # getter for: Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->access$000()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "onFeedsUpdated : token is null"
+    const-string v3, "onFeedsUpdated : token is null"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     :cond_0
     :goto_0
     return-void
 
-    .line 127
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager$FeedsListenerInfo;->token:Landroid/os/IBinder;
@@ -249,30 +230,26 @@
 
     move-result-object v0
 
-    .line 129
     .local v0, "callback":Lcom/samsung/android/cocktailbar/ICocktailBarFeedsCallback;
     if-eqz v0, :cond_0
 
-    .line 130
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/cocktailbar/ICocktailBarFeedsCallback;->onFeedsUpdated(ILjava/util/List;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 132
     .end local v0    # "callback":Lcom/samsung/android/cocktailbar/ICocktailBarFeedsCallback;
     :catch_0
     move-exception v1
 
-    .line 133
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/feeds/CocktailBarFeedsManager;->access$000()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "onCocktailBarStateChanged : RemoteException : "
+    const-string v3, "onCocktailBarStateChanged : RemoteException : "
 
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

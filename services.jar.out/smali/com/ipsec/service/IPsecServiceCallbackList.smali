@@ -27,10 +27,8 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
@@ -48,7 +46,6 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/ipsec/service/IPsecServiceCallbackList;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     new-instance v1, Ljava/lang/Integer;
@@ -57,7 +54,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;Ljava/lang/Object;)Z
 
-    .line 71
     return-void
 .end method
 
@@ -66,12 +62,10 @@
     .param p1, "cb"    # Lcom/ipsec/client/IIPsecServiceCallback;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/ipsec/service/IPsecServiceCallbackList;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 76
     return-void
 .end method
 
@@ -83,7 +77,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 29
     const/4 v7, -0x1
 
     if-ne p1, v7, :cond_0
@@ -96,7 +89,6 @@
 
     move-result-object v5
 
-    .line 31
     .local v5, "isBroadcast":Ljava/lang/Boolean;
     iget-object v6, p0, Lcom/ipsec/service/IPsecServiceCallbackList;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -104,7 +96,6 @@
 
     move-result v2
 
-    .line 32
     .local v2, "callbackCount":I
     const-string v6, "VPNC"
 
@@ -140,14 +131,12 @@
 
     invoke-static {v6, v7, v8, v9}, Lcom/ipsec/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 33
     const/4 v4, 0x0
 
     .local v4, "i":I
     :goto_0
     if-ge v4, v2, :cond_2
 
-    .line 35
     const-string v6, "VPNC"
 
     const-string v7, "IPsecServiceCallbackList"
@@ -160,14 +149,12 @@
 
     invoke-static {v6, v7, v8, v9}, Lcom/ipsec/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 36
     invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 38
     iget-object v6, p0, Lcom/ipsec/service/IPsecServiceCallbackList;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v6, v4}, Landroid/os/RemoteCallbackList;->getBroadcastCookie(I)Ljava/lang/Object;
@@ -180,18 +167,15 @@
 
     move-result v0
 
-    .line 41
     .local v0, "applicationPid":I
     if-eq p1, v0, :cond_1
 
-    .line 33
     .end local v0    # "applicationPid":I
     :goto_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 47
     :cond_1
     iget-object v6, p0, Lcom/ipsec/service/IPsecServiceCallbackList;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -201,7 +185,6 @@
 
     check-cast v1, Lcom/ipsec/client/IIPsecServiceCallback;
 
-    .line 49
     .local v1, "callback":Lcom/ipsec/client/IIPsecServiceCallback;
     invoke-interface {v1, p2}, Lcom/ipsec/client/IIPsecServiceCallback;->valueChanged(Landroid/os/Bundle;)V
     :try_end_0
@@ -210,7 +193,6 @@
 
     goto :goto_1
 
-    .line 52
     .end local v1    # "callback":Lcom/ipsec/client/IIPsecServiceCallback;
     .end local v2    # "callbackCount":I
     .end local v4    # "i":I
@@ -218,7 +200,6 @@
     :catch_0
     move-exception v3
 
-    .line 54
     .local v3, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v6, "VPNC"
@@ -229,7 +210,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "valueChanged callback exception: "
+    const-string v9, "valueChanged callback exception: "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -251,17 +232,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 58
     iget-object v6, p0, Lcom/ipsec/service/IPsecServiceCallbackList;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v6}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 60
     .end local v3    # "e":Landroid/os/RemoteException;
     :goto_2
     return-void
 
-    .line 58
     .restart local v2    # "callbackCount":I
     .restart local v4    # "i":I
     .restart local v5    # "isBroadcast":Ljava/lang/Boolean;
@@ -290,11 +268,9 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 64
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0, p1}, Lcom/ipsec/service/IPsecServiceCallbackList;->valueChanged(ILandroid/os/Bundle;)V
 
-    .line 65
     return-void
 .end method

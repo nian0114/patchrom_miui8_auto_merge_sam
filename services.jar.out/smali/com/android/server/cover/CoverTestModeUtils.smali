@@ -40,7 +40,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 19
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -50,14 +49,12 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/cover/CoverTestModeUtils;->SHIPPED:Z
 
-    .line 22
     const/4 v0, -0x1
 
     sput v0, Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     return-void
 
-    .line 19
     :cond_0
     const/4 v0, 0x0
 
@@ -70,10 +67,8 @@
     .param p2, "callback"    # Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     const-class v1, Lcom/android/server/cover/CoverTestModeUtils;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -82,44 +77,36 @@
 
     iput-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
-    .line 20
-    const-string/jumbo v1, "cover_test_mode"
+    const-string v1, "cover_test_mode"
 
     iput-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils;->COVER_TEST_MODE:Ljava/lang/String;
 
-    .line 27
     new-instance v1, Lcom/android/server/cover/CoverTestModeUtils$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/cover/CoverTestModeUtils$1;-><init>(Lcom/android/server/cover/CoverTestModeUtils;)V
 
     iput-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils;->mTestModeChangeHandler:Landroid/os/Handler;
 
-    .line 40
     sget-boolean v1, Lcom/android/server/cover/CoverTestModeUtils;->SHIPPED:Z
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 41
     iget-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
     const-string v2, "This version has been shipped!! Then cover test mode is not available"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     :goto_0
     return-void
 
-    .line 45
     :cond_0
     iput-object p1, p0, Lcom/android/server/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
-    .line 46
     iput-object p2, p0, Lcom/android/server/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
-    .line 48
     new-instance v1, Lcom/android/server/cover/CoverTestModeUtils$2;
 
     new-instance v2, Landroid/os/Handler;
@@ -130,14 +117,12 @@
 
     iput-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils;->mObserver:Landroid/database/ContentObserver;
 
-    .line 57
-    const-string/jumbo v1, "cover_test_mode"
+    const-string v1, "cover_test_mode"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 58
     .local v0, "testModeUri":Landroid/net/Uri;
     iget-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
@@ -151,7 +136,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 60
     invoke-direct {p0}, Lcom/android/server/cover/CoverTestModeUtils;->getTestModeFromSetting()I
 
     move-result v1
@@ -165,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 15
     sget v0, Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     return v0
@@ -176,7 +159,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/CoverTestModeUtils;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
     return-object v0
@@ -187,7 +169,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/CoverTestModeUtils;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -198,7 +179,6 @@
     .param p0, "x0"    # Lcom/android/server/cover/CoverTestModeUtils;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcom/android/server/cover/CoverTestModeUtils;->getTestModeFromSetting()I
 
     move-result v0
@@ -212,7 +192,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/server/cover/CoverTestModeUtils;->updateCoverTestMode(I)V
 
     return-void
@@ -222,17 +201,14 @@
     .locals 2
 
     .prologue
-    .line 101
     sget-boolean v0, Lcom/android/server/cover/CoverTestModeUtils;->SHIPPED:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 102
     const/4 v0, -0x1
 
-    .line 105
     :goto_0
     return v0
 
@@ -246,10 +222,8 @@
     .locals 4
 
     .prologue
-    .line 64
     const/4 v1, -0x1
 
-    .line 67
     .local v1, "testMode":I
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
@@ -258,7 +232,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "cover_test_mode"
+    const-string v3, "cover_test_mode"
 
     invoke-static {v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
     :try_end_0
@@ -266,15 +240,12 @@
 
     move-result v1
 
-    .line 72
     :goto_0
     return v1
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Landroid/provider/Settings$SettingNotFoundException;
     invoke-virtual {v0}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
@@ -285,7 +256,6 @@
     .locals 2
 
     .prologue
-    .line 97
     sget-boolean v0, Lcom/android/server/cover/CoverTestModeUtils;->SHIPPED:Z
 
     if-nez v0, :cond_0
@@ -314,14 +284,13 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateCoverTestMode() sCurrentTestMode = "
+    const-string v2, "updateCoverTestMode() sCurrentTestMode = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -349,41 +318,34 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     sget v0, Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     if-ne v0, p1, :cond_1
 
-    .line 94
     :cond_0
     :goto_0
     return-void
 
-    .line 83
     :cond_1
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
     if-eqz v0, :cond_0
 
-    .line 87
     sget v0, Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
     sget v1, Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     invoke-interface {v0, v1, v4}, Lcom/android/server/cover/CoverTestModeUtils$OnCoverTestModeChanged;->onCoverTestModeChanged(IZ)V
 
-    .line 91
     :cond_2
     sput p1, Lcom/android/server/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/cover/CoverTestModeUtils;->mTestModeChangeHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1f4
@@ -402,12 +364,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 109
     const-string v0, " Current CoverTestModeUtils state:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 110
     const-string v0, "  SHIPPED="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -416,7 +376,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 111
     const-string v0, "  sCurrentTestMode="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -425,11 +384,9 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 112
     const-string v0, "  "
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 113
     return-void
 .end method

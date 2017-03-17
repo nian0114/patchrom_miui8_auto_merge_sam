@@ -47,7 +47,6 @@
     .param p2, "schreg"    # Lorg/apache/http/conn/scheme/SchemeRegistry;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -70,7 +69,6 @@
     .end annotation
 
     .prologue
-    .line 22
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -84,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 26
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -100,7 +97,6 @@
     .param p3, "tunit"    # Ljava/util/concurrent/TimeUnit;
 
     .prologue
-    .line 27
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -115,7 +111,6 @@
     .param p1, "schreg"    # Lorg/apache/http/conn/scheme/SchemeRegistry;
 
     .prologue
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -134,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -150,7 +144,6 @@
     .param p2, "state"    # Ljava/lang/Object;
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -164,7 +157,6 @@
     .locals 2
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -181,7 +173,6 @@
     .param p4, "timeUnit"    # Ljava/util/concurrent/TimeUnit;
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -197,7 +188,6 @@
     .param p2, "state"    # Ljava/lang/Object;
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -211,7 +201,6 @@
     .locals 2
 
     .prologue
-    .line 29
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -225,7 +214,6 @@
     .locals 2
 
     .prologue
-    .line 28
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

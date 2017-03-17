@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 65
     iput-object p1, p0, Lcom/android/server/am/AppNotRespondingDialog$1;->this$0:Lcom/android/server/am/AppNotRespondingDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 67
     const-string v0, "-k -t -z -d -o /data/log/dumpstate_app_anr"
 
     invoke-static {v0}, Landroid/os/Debug;->saveDumpstate(Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

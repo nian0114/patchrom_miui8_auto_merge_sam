@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1206
     iput-object p1, p0, Lcom/android/server/RCPManagerService$BootReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1210
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v5
@@ -52,7 +50,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 1211
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -62,7 +59,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1213
     :try_start_0
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -73,12 +69,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1215
     iget-object v5, p0, Lcom/android/server/RCPManagerService$BootReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     iget-object v5, v5, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "persona"
+    const-string v6, "persona"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -86,11 +81,9 @@
 
     check-cast v4, Landroid/os/PersonaManager;
 
-    .line 1217
     .local v4, "personaManager":Landroid/os/PersonaManager;
     if-eqz v4, :cond_0
 
-    .line 1218
     # getter for: Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$1400()Ljava/lang/Integer;
 
@@ -104,7 +97,6 @@
 
     move-result-object v3
 
-    .line 1220
     .local v3, "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -131,7 +123,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1223
     if-eqz v3, :cond_0
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -140,7 +131,6 @@
 
     if-lez v5, :cond_0
 
-    .line 1225
     iget-object v5, p0, Lcom/android/server/RCPManagerService$BootReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
@@ -154,7 +144,6 @@
 
     invoke-virtual {v5, v6}, Lcom/android/server/RCPManagerService;->scanAndStartRCPProxy(I)V
 
-    .line 1226
     iget-object v5, p0, Lcom/android/server/RCPManagerService$BootReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     const-string v6, "com.sec.knox.bridge.receiver.ACTION_USER_SWITCHED"
@@ -171,7 +160,6 @@
     # invokes: Lcom/android/server/RCPManagerService;->startKnoxModeSwitcher(Ljava/lang/String;I)V
     invoke-static {v5, v6, v7}, Lcom/android/server/RCPManagerService;->access$600(Lcom/android/server/RCPManagerService;Ljava/lang/String;I)V
 
-    .line 1230
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -190,7 +178,6 @@
 
     check-cast v2, Landroid/content/pm/PersonaInfo;
 
-    .line 1231
     .local v2, "mPersonaInfo":Landroid/content/pm/PersonaInfo;
     iget-object v5, p0, Lcom/android/server/RCPManagerService$BootReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -202,7 +189,6 @@
 
     goto :goto_0
 
-    .line 1236
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "mPersonaInfo":Landroid/content/pm/PersonaInfo;
     .end local v3    # "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
@@ -210,7 +196,6 @@
     :catch_0
     move-exception v0
 
-    .line 1237
     .local v0, "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -241,7 +226,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1243
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     return-void

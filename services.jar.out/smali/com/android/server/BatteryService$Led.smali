@@ -39,17 +39,14 @@
     .param p3, "lights"    # Lcom/android/server/lights/LightsManager;
 
     .prologue
-    .line 2040
     iput-object p1, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2037
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
-    .line 2041
     const/4 v0, 0x5
 
     invoke-virtual {p3, v0}, Lcom/android/server/lights/LightsManager;->getLight(I)Lcom/android/server/lights/Light;
@@ -58,7 +55,6 @@
 
     iput-object v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/lights/Light;
 
-    .line 2043
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -71,7 +67,6 @@
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLowARGB:I
 
-    .line 2045
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -84,7 +79,6 @@
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryMediumARGB:I
 
-    .line 2047
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -97,7 +91,6 @@
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryFullARGB:I
 
-    .line 2049
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -110,7 +103,6 @@
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOn:I
 
-    .line 2051
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -123,7 +115,6 @@
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOff:I
 
-    .line 2053
     return-void
 .end method
 
@@ -131,22 +122,18 @@
     .locals 13
 
     .prologue
-    .line 2056
     new-instance v11, Ljava/io/File;
 
     const-string v1, "/sys/class/power_supply/usb/type"
 
     invoke-direct {v11, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2057
     .local v11, "mChargerTypeFile":Ljava/io/File;
     const/4 v9, 0x0
 
-    .line 2058
     .local v9, "fileReader":Ljava/io/FileReader;
     const/4 v6, 0x0
 
-    .line 2064
     .local v6, "br":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v10, Ljava/io/FileReader;
@@ -155,7 +142,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2065
     .end local v9    # "fileReader":Ljava/io/FileReader;
     .local v10, "fileReader":Ljava/io/FileReader;
     :try_start_1
@@ -165,7 +151,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2066
     .end local v6    # "br":Ljava/io/BufferedReader;
     .local v7, "br":Ljava/io/BufferedReader;
     :try_start_2
@@ -173,7 +158,6 @@
 
     move-result-object v0
 
-    .line 2067
     .local v0, "type":Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -193,23 +177,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 2068
     const/4 v12, 0x1
 
-    .line 2072
     .local v12, "ret":Z
     :goto_0
     if-eqz v7, :cond_0
 
-    .line 2073
     :try_start_3
     invoke-virtual {v7}, Ljava/io/BufferedReader;->close()V
 
-    .line 2074
     :cond_0
     if-eqz v10, :cond_1
 
-    .line 2075
     invoke-virtual {v10}, Ljava/io/FileReader;->close()V
     :try_end_3
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_3
@@ -222,14 +201,12 @@
     .restart local v6    # "br":Ljava/io/BufferedReader;
     move-object v9, v10
 
-    .line 2085
     .end local v0    # "type":Ljava/lang/String;
     .end local v10    # "fileReader":Ljava/io/FileReader;
     .restart local v9    # "fileReader":Ljava/io/FileReader;
     :goto_1
     return v12
 
-    .line 2070
     .end local v6    # "br":Ljava/io/BufferedReader;
     .end local v9    # "fileReader":Ljava/io/FileReader;
     .end local v12    # "ret":Z
@@ -242,7 +219,6 @@
     .restart local v12    # "ret":Z
     goto :goto_0
 
-    .line 2072
     .end local v0    # "type":Ljava/lang/String;
     .end local v7    # "br":Ljava/io/BufferedReader;
     .end local v10    # "fileReader":Ljava/io/FileReader;
@@ -255,15 +231,12 @@
     :goto_2
     if-eqz v6, :cond_3
 
-    .line 2073
     :try_start_4
     invoke-virtual {v6}, Ljava/io/BufferedReader;->close()V
 
-    .line 2074
     :cond_3
     if-eqz v9, :cond_4
 
-    .line 2075
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
 
     :cond_4
@@ -272,16 +245,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 2077
     :catch_0
     move-exception v8
 
-    .line 2078
     .local v8, "e":Ljava/io/FileNotFoundException;
     :goto_3
     const/4 v12, 0x0
 
-    .line 2079
     .restart local v12    # "ret":Z
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
@@ -294,7 +264,6 @@
 
     goto :goto_1
 
-    .line 2080
     .end local v6    # "br":Ljava/io/BufferedReader;
     .end local v8    # "e":Ljava/io/FileNotFoundException;
     .end local v9    # "fileReader":Ljava/io/FileReader;
@@ -310,7 +279,6 @@
     .restart local v6    # "br":Ljava/io/BufferedReader;
     move-object v9, v10
 
-    .line 2081
     .end local v0    # "type":Ljava/lang/String;
     .end local v10    # "fileReader":Ljava/io/FileReader;
     .end local v12    # "ret":Z
@@ -319,7 +287,6 @@
     :goto_4
     const/4 v12, 0x0
 
-    .line 2082
     .restart local v12    # "ret":Z
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
@@ -332,7 +299,6 @@
 
     goto :goto_1
 
-    .line 2080
     .end local v8    # "e":Ljava/io/IOException;
     .end local v12    # "ret":Z
     :catch_2
@@ -340,7 +306,6 @@
 
     goto :goto_4
 
-    .line 2077
     .end local v6    # "br":Ljava/io/BufferedReader;
     .end local v9    # "fileReader":Ljava/io/FileReader;
     .restart local v0    # "type":Ljava/lang/String;
@@ -360,7 +325,6 @@
     .restart local v9    # "fileReader":Ljava/io/FileReader;
     goto :goto_3
 
-    .line 2072
     .end local v0    # "type":Ljava/lang/String;
     .end local v9    # "fileReader":Ljava/io/FileReader;
     .end local v12    # "ret":Z
@@ -408,7 +372,6 @@
 
     const/4 v4, 0x0
 
-    .line 2092
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mBatteryProps:Landroid/os/BatteryProperties;
@@ -418,7 +381,6 @@
 
     iget v1, v3, Landroid/os/BatteryProperties;->batteryLevel:I
 
-    .line 2093
     .local v1, "level":I
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
@@ -429,7 +391,6 @@
 
     iget v2, v3, Landroid/os/BatteryProperties;->batteryStatus:I
 
-    .line 2094
     .local v2, "status":I
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
@@ -440,7 +401,6 @@
 
     iget v0, v3, Landroid/os/BatteryProperties;->batteryHealth:I
 
-    .line 2130
     .local v0, "health":I
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
@@ -451,12 +411,10 @@
 
     if-nez v3, :cond_1
 
-    .line 2181
     :cond_0
     :goto_0
     return-void
 
-    .line 2134
     :cond_1
     const/4 v3, 0x4
 
@@ -488,45 +446,39 @@
 
     if-eqz v3, :cond_4
 
-    .line 2140
     iget v3, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
     if-eq v6, v3, :cond_3
 
-    .line 2141
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/lights/Light;
 
     invoke-virtual {v3, v4, v6, v4, v4}, Lcom/android/server/lights/Light;->setFlashing(IIII)V
 
-    .line 2142
     iput v6, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
-    .line 2143
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "turn on LED for not charging"
+    const-string v4, "turn on LED for not charging"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2145
     :cond_3
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "stay LED for not charging"
+    const-string v4, "stay LED for not charging"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2147
     :cond_4
     const/4 v3, 0x2
 
@@ -550,45 +502,39 @@
 
     if-eqz v3, :cond_6
 
-    .line 2149
     iget v3, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
     if-eq v5, v3, :cond_5
 
-    .line 2150
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/lights/Light;
 
     invoke-virtual {v3, v4, v5, v4, v4}, Lcom/android/server/lights/Light;->setFlashing(IIII)V
 
-    .line 2151
     iput v5, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
-    .line 2152
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "turn on LED for charging"
+    const-string v4, "turn on LED for charging"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2154
     :cond_5
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "stay LED for charging"
+    const-string v4, "stay LED for charging"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2156
     :cond_6
     const/4 v3, 0x5
 
@@ -612,45 +558,39 @@
 
     if-eqz v3, :cond_8
 
-    .line 2158
     iget v3, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
     if-eq v8, v3, :cond_7
 
-    .line 2159
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/lights/Light;
 
     invoke-virtual {v3, v4, v8, v4, v4}, Lcom/android/server/lights/Light;->setFlashing(IIII)V
 
-    .line 2160
     iput v8, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
-    .line 2161
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "turn on LED for fully charged"
+    const-string v4, "turn on LED for fully charged"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 2163
     :cond_7
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "stay LED for fully charged"
+    const-string v4, "stay LED for fully charged"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 2165
     :cond_8
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
@@ -679,65 +619,56 @@
 
     if-eqz v3, :cond_a
 
-    .line 2167
     iget v3, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
     if-eq v7, v3, :cond_9
 
-    .line 2168
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/lights/Light;
 
     invoke-virtual {v3, v4, v7, v4, v4}, Lcom/android/server/lights/Light;->setFlashing(IIII)V
 
-    .line 2169
     iput v7, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
-    .line 2170
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "turn on LED for low battery"
+    const-string v4, "turn on LED for low battery"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 2172
     :cond_9
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "stay LED for low battery"
+    const-string v4, "stay LED for low battery"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 2174
     :cond_a
     iget v3, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
     if-eqz v3, :cond_0
 
-    .line 2175
     iget-object v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/lights/Light;
 
     invoke-virtual {v3}, Lcom/android/server/lights/Light;->turnOff()V
 
-    .line 2176
     iput v4, p0, Lcom/android/server/BatteryService$Led;->mLedStatus:I
 
-    .line 2177
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "turn off LED"
+    const-string v4, "turn off LED"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

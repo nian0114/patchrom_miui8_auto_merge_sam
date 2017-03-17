@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 717
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 720
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 721
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->access$100()Ljava/lang/String;
@@ -55,7 +52,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "mPackageReceiver : action - "
+    const-string v6, "mPackageReceiver : action - "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,7 +68,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 722
     const-string v4, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,18 +76,15 @@
 
     if-eqz v4, :cond_1
 
-    .line 723
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 724
     .local v3, "uri":Landroid/net/Uri;
     invoke-virtual {v3}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 725
     .local v2, "packageName":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
@@ -106,11 +99,9 @@
 
     move-result-object v1
 
-    .line 726
     .local v1, "msg":Landroid/os/Message;
     iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 727
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mContainerHandler:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$ContainerHandler;
@@ -120,7 +111,6 @@
 
     invoke-virtual {v4, v1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$ContainerHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 736
     .end local v1    # "msg":Landroid/os/Message;
     .end local v2    # "packageName":Ljava/lang/String;
     .end local v3    # "uri":Landroid/net/Uri;
@@ -128,7 +118,6 @@
     :goto_0
     return-void
 
-    .line 728
     :cond_1
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
 
@@ -138,18 +127,15 @@
 
     if-eqz v4, :cond_0
 
-    .line 729
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 730
     .restart local v3    # "uri":Landroid/net/Uri;
     invoke-virtual {v3}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 731
     .restart local v2    # "packageName":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
@@ -164,11 +150,9 @@
 
     move-result-object v1
 
-    .line 732
     .restart local v1    # "msg":Landroid/os/Message;
     iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 733
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mContainerHandler:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$ContainerHandler;

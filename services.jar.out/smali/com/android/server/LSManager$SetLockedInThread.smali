@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 647
     iput-object p1, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/LSManager$1;
 
     .prologue
-    .line 647
     invoke-direct {p0, p1}, Lcom/android/server/LSManager$SetLockedInThread;-><init>(Lcom/android/server/LSManager;)V
 
     return-void
@@ -56,7 +54,6 @@
 
     const/4 v6, 0x0
 
-    .line 650
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     const-string v4, "SetLockedInThread.run()"
@@ -64,10 +61,8 @@
     # invokes: Lcom/android/server/LSManager;->debugLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/LSManager;->access$000(Lcom/android/server/LSManager;Ljava/lang/String;)V
 
-    .line 651
     const-wide/16 v0, 0x0
 
-    .line 653
     .local v0, "completedCount":J
     :cond_0
     # getter for: Lcom/android/server/LSManager;->mSetPasswordExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
@@ -79,23 +74,20 @@
 
     move-result-wide v0
 
-    .line 657
     :try_start_0
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
-    const-string/jumbo v4, "l:Going to wait 666 ms..."
+    const-string v4, "l:Going to wait 666 ms..."
 
     # invokes: Lcom/android/server/LSManager;->debugLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/LSManager;->access$000(Lcom/android/server/LSManager;Ljava/lang/String;)V
 
-    .line 658
     const-wide/16 v4, 0x29a
 
     invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 680
     :goto_0
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
@@ -103,7 +95,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "l:mSetPasswordExecutor.getQueue().size() "
+    const-string v5, "l:mSetPasswordExecutor.getQueue().size() "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -133,14 +125,13 @@
     # invokes: Lcom/android/server/LSManager;->debugLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/LSManager;->access$000(Lcom/android/server/LSManager;Ljava/lang/String;)V
 
-    .line 681
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "l:mSetPasswordExecutor.getActiveCount() "
+    const-string v5, "l:mSetPasswordExecutor.getActiveCount() "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -166,7 +157,6 @@
     # invokes: Lcom/android/server/LSManager;->debugLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/LSManager;->access$000(Lcom/android/server/LSManager;Ljava/lang/String;)V
 
-    .line 682
     # getter for: Lcom/android/server/LSManager;->mSetPasswordExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
     invoke-static {}, Lcom/android/server/LSManager;->access$100()Ljava/util/concurrent/ThreadPoolExecutor;
 
@@ -193,13 +183,11 @@
 
     if-gtz v3, :cond_0
 
-    .line 684
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     # invokes: Lcom/android/server/LSManager;->setLockedState(Z)V
     invoke-static {v3, v7}, Lcom/android/server/LSManager;->access$200(Lcom/android/server/LSManager;Z)V
 
-    .line 685
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     # invokes: Lcom/android/server/LSManager;->isLockedState()Z
@@ -209,13 +197,11 @@
 
     if-eqz v3, :cond_1
 
-    .line 686
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     # invokes: Lcom/android/server/LSManager;->setPasswordReady(Z)V
     invoke-static {v3, v6}, Lcom/android/server/LSManager;->access$400(Lcom/android/server/LSManager;Z)V
 
-    .line 687
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     # invokes: Lcom/android/server/LSManager;->passwordIsProtected()Z
@@ -234,7 +220,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 688
     # getter for: Lcom/android/server/LSManager;->secureStorageLSM:Landroid/os/storage/sensitive/SecureStorageLSM;
     invoke-static {}, Lcom/android/server/LSManager;->access$700()Landroid/os/storage/sensitive/SecureStorageLSM;
 
@@ -246,7 +231,6 @@
 
     invoke-virtual {v3, v4, v5, v7}, Landroid/os/storage/sensitive/SecureStorageLSM;->set_state([B[BI)I
 
-    .line 689
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;
 
     const-string v4, "Locked."
@@ -254,22 +238,18 @@
     # invokes: Lcom/android/server/LSManager;->debugLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/LSManager;->access$000(Lcom/android/server/LSManager;Ljava/lang/String;)V
 
-    .line 694
     :cond_1
     :goto_1
     return-void
 
-    .line 659
     :catch_0
     move-exception v2
 
-    .line 660
     .local v2, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v2}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 691
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :cond_2
     iget-object v3, p0, Lcom/android/server/LSManager$SetLockedInThread;->this$0:Lcom/android/server/LSManager;

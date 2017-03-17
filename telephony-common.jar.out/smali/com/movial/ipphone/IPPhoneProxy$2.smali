@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 497
     iput-object p1, p0, Lcom/movial/ipphone/IPPhoneProxy$2;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,14 +38,12 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 500
     const-string v0, "IPPhoneProxy"
 
     const-string v1, "ContentObserver onChange"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     iget-object v0, p0, Lcom/movial/ipphone/IPPhoneProxy$2;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-virtual {v0}, Lcom/movial/ipphone/IPPhoneProxy;->getContext()Landroid/content/Context;
@@ -67,13 +64,11 @@
 
     if-nez v0, :cond_0
 
-    .line 503
     iget-object v0, p0, Lcom/movial/ipphone/IPPhoneProxy$2;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     # invokes: Lcom/movial/ipphone/IPPhoneProxy;->bindService()V
     invoke-static {v0}, Lcom/movial/ipphone/IPPhoneProxy;->access$200(Lcom/movial/ipphone/IPPhoneProxy;)V
 
-    .line 505
     :cond_0
     return-void
 .end method

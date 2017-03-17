@@ -14,7 +14,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/HttpException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -32,7 +31,6 @@
     .param p2, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/http/HttpException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;

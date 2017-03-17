@@ -36,36 +36,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     iput v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->userId:I
 
-    .line 88
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->fullscreen:Z
 
-    .line 89
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->showWhenLocked:Z
 
-    .line 90
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->isMutiwindowRecord:Z
 
-    .line 94
     iput p2, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->userId:I
 
-    .line 95
     iput-boolean p3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->fullscreen:Z
 
-    .line 96
     iput-boolean p4, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->showWhenLocked:Z
 
-    .line 97
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->isMutiwindowRecord:Z
 
-    .line 98
     return-void
 .end method
 
@@ -79,36 +69,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 100
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     iput v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->userId:I
 
-    .line 88
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->fullscreen:Z
 
-    .line 89
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->showWhenLocked:Z
 
-    .line 90
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->isMutiwindowRecord:Z
 
-    .line 101
     iput p2, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->userId:I
 
-    .line 102
     iput-boolean p3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->fullscreen:Z
 
-    .line 103
     iput-boolean p4, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->showWhenLocked:Z
 
-    .line 104
     iput-boolean p5, p0, Lcom/android/server/pm/KnoxTimeoutHandler$MsgParam;->isMutiwindowRecord:Z
 
-    .line 105
     return-void
 .end method
 
@@ -118,7 +98,6 @@
     .locals 2
 
     .prologue
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

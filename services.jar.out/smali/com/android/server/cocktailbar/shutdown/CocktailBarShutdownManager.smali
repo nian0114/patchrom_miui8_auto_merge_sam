@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 17
     const-class v0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -47,30 +46,24 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mWhiteList:Ljava/util/HashSet;
 
-    .line 26
     iput-object p1, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mContext:Landroid/content/Context;
 
-    .line 27
     iput-object p2, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mMainHandler:Landroid/os/Handler;
 
-    .line 28
     iget-object v0, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mWhiteList:Ljava/util/HashSet;
 
     const-string v1, "com.samsung.android.app.cocktailbarservice"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 29
     return-void
 .end method
 
@@ -79,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;
 
     .prologue
-    .line 16
     iget-object v0, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -94,22 +86,18 @@
 
     const/4 v3, 0x0
 
-    .line 58
     if-nez p1, :cond_1
 
-    .line 59
     sget-object v4, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "isAllowedCallingPackage : packageName is null"
+    const-string v5, "isAllowedCallingPackage : packageName is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     :cond_0
     :goto_0
     return v3
 
-    .line 62
     :cond_1
     iget-object v5, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mContext:Landroid/content/Context;
 
@@ -117,7 +105,6 @@
 
     move-result-object v2
 
-    .line 65
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/4 v5, 0x0
 
@@ -128,7 +115,6 @@
 
     move-result-object v1
 
-    .line 70
     .local v1, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v1, :cond_0
 
@@ -140,7 +126,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 72
     iget-object v3, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mWhiteList:Ljava/util/HashSet;
 
     invoke-virtual {v3, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -151,19 +136,16 @@
 
     move v3, v4
 
-    .line 73
     goto :goto_0
 
-    .line 66
     .end local v1    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-object v4, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "isAllowedCallingPackage : invalid callingPackage"
+    const-string v5, "isAllowedCallingPackage : invalid callingPackage"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -174,7 +156,6 @@
     :cond_2
     move v3, v4
 
-    .line 75
     goto :goto_0
 .end method
 
@@ -185,25 +166,21 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->isAllowedCallingPackage(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 46
     sget-object v0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "reboot : invalid callingPackage"
+    const-string v1, "reboot : invalid callingPackage"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :goto_0
     return-void
 
-    .line 49
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mMainHandler:Landroid/os/Handler;
 
@@ -221,25 +198,21 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->isAllowedCallingPackage(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 33
     sget-object v0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "shutdown : invalid callingPackage"
+    const-string v1, "shutdown : invalid callingPackage"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :goto_0
     return-void
 
-    .line 36
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/shutdown/CocktailBarShutdownManager;->mMainHandler:Landroid/os/Handler;
 

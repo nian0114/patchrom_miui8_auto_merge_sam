@@ -58,7 +58,6 @@
 
     const/4 v4, 0x0
 
-    .line 2955
     new-instance v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     const-string v1, "EAP_METHOD_NONE"
@@ -67,7 +66,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->EAP_METHOD_NONE:Lcom/ipsec/client/IPsecConnection$EapMethod;
 
-    .line 2961
     new-instance v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     const-string v1, "EAP_METHOD_MD5_CHALLENGE"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->EAP_METHOD_MD5_CHALLENGE:Lcom/ipsec/client/IPsecConnection$EapMethod;
 
-    .line 2967
     new-instance v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     const-string v1, "EAP_METHOD_GTC"
@@ -85,7 +82,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->EAP_METHOD_GTC:Lcom/ipsec/client/IPsecConnection$EapMethod;
 
-    .line 2973
     new-instance v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     const-string v1, "EAP_METHOD_SIM"
@@ -94,7 +90,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->EAP_METHOD_SIM:Lcom/ipsec/client/IPsecConnection$EapMethod;
 
-    .line 2979
     new-instance v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     const-string v1, "EAP_METHOD_AKA"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->EAP_METHOD_AKA:Lcom/ipsec/client/IPsecConnection$EapMethod;
 
-    .line 2985
     new-instance v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     const-string v1, "EAP_METHOD_MSCHAPV2"
@@ -118,7 +112,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->EAP_METHOD_MSCHAPV2:Lcom/ipsec/client/IPsecConnection$EapMethod;
 
-    .line 2948
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$EapMethod;
@@ -164,13 +157,10 @@
     .end annotation
 
     .prologue
-    .line 2996
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2997
     iput p3, p0, Lcom/ipsec/client/IPsecConnection$EapMethod;->maskValue:I
 
-    .line 2998
     return-void
 .end method
 
@@ -179,7 +169,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2948
     const-class v0, Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -195,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 2948
     sget-object v0, Lcom/ipsec/client/IPsecConnection$EapMethod;->$VALUES:[Lcom/ipsec/client/IPsecConnection$EapMethod;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$EapMethod;->clone()Ljava/lang/Object;
@@ -213,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 3010
     iget v0, p0, Lcom/ipsec/client/IPsecConnection$EapMethod;->maskValue:I
 
     return v0

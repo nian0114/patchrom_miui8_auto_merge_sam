@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const-string v0, "SmartCardLockscreenPolicy"
 
     sput-object v0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->TAG:Ljava/lang/String;
@@ -52,27 +51,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 103
     invoke-direct {p0}, Lcom/sec/enterprise/knox/smartcard/policy/ISmartCardLockscreenPolicy$Stub;-><init>()V
 
-    .line 97
     iput-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 99
     iput-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 100
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAdminRemoval_auth_state:Z
 
-    .line 101
     iput-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mContext:Landroid/content/Context;
 
-    .line 107
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mContext:Landroid/content/Context;
@@ -81,14 +73,12 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 109
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
-    .line 111
     return-void
 .end method
 
@@ -98,25 +88,21 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 289
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "edm.intent.action.smartcard.lockscreen.authentication"
+    const-string v1, "edm.intent.action.smartcard.lockscreen.authentication"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 290
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v1, "edm.intent.extra.smartcard.authentication.enabled"
+    const-string v1, "edm.intent.extra.smartcard.authentication.enabled"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 292
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 293
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mContext:Landroid/content/Context;
 
@@ -126,10 +112,8 @@
 
     invoke-virtual {v1, v0, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 294
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 295
     return-void
 .end method
 
@@ -137,7 +121,6 @@
     .locals 3
 
     .prologue
-    .line 133
     invoke-direct {p0}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -148,7 +131,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermissionByContext(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 136
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -160,15 +142,13 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "enterprise_policy"
+    const-string v1, "enterprise_policy"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -178,7 +158,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 125
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -193,12 +172,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 165
     invoke-direct {p0}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->enforcePermission()I
 
     move-result v0
 
-    .line 166
     .local v0, "callingUid":I
     const/4 v7, 0x0
 
@@ -206,20 +183,18 @@
 
     move-result v5
 
-    .line 169
     .local v5, "userId":I
     :try_start_0
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->isAuthenticationEnabledAsUser(I)Z
 
     move-result v3
 
-    .line 170
     .local v3, "oldState":Z
     iget-object v7, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v8, "SmartCardLockscreenTable"
 
-    const-string/jumbo v9, "smartcardAuth"
+    const-string v9, "smartcardAuth"
 
     const/4 v10, 0x0
 
@@ -227,24 +202,20 @@
 
     move-result v4
 
-    .line 173
     .local v4, "ret":Z
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->isAuthenticationEnabledAsUser(I)Z
 
     move-result v2
 
-    .line 175
     .local v2, "newState":Z
     if-eq v2, v3, :cond_0
 
-    .line 176
     const/4 v7, 0x0
 
     invoke-direct {p0, v7, v5}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->broadcastIntentAsUser(ZI)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 183
     .end local v2    # "newState":Z
     .end local v3    # "oldState":Z
     .end local v4    # "ret":Z
@@ -252,21 +223,18 @@
     :goto_0
     return v4
 
-    .line 179
     :catch_0
     move-exception v1
 
-    .line 180
     .local v1, "e":Ljava/lang/Exception;
     sget-object v7, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v8, "disableAuthentication() failed"
+    const-string v8, "disableAuthentication() failed"
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move v4, v6
 
-    .line 183
     goto :goto_0
 .end method
 
@@ -274,12 +242,10 @@
     .locals 10
 
     .prologue
-    .line 143
     invoke-direct {p0}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->enforcePermission()I
 
     move-result v0
 
-    .line 144
     .local v0, "callingUid":I
     const/4 v6, 0x0
 
@@ -287,20 +253,18 @@
 
     move-result v5
 
-    .line 147
     .local v5, "userId":I
     :try_start_0
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->isAuthenticationEnabledAsUser(I)Z
 
     move-result v3
 
-    .line 148
     .local v3, "oldState":Z
     iget-object v6, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "SmartCardLockscreenTable"
 
-    const-string/jumbo v8, "smartcardAuth"
+    const-string v8, "smartcardAuth"
 
     const/4 v9, 0x1
 
@@ -308,24 +272,20 @@
 
     move-result v4
 
-    .line 151
     .local v4, "ret":Z
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->isAuthenticationEnabledAsUser(I)Z
 
     move-result v2
 
-    .line 153
     .local v2, "newState":Z
     if-eq v2, v3, :cond_0
 
-    .line 154
     const/4 v6, 0x1
 
     invoke-direct {p0, v6, v5}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->broadcastIntentAsUser(ZI)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 161
     .end local v2    # "newState":Z
     .end local v3    # "oldState":Z
     .end local v4    # "ret":Z
@@ -333,19 +293,16 @@
     :goto_0
     return v4
 
-    .line 157
     :catch_0
     move-exception v1
 
-    .line 158
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v7, "enableAuthentication() failed"
+    const-string v7, "enableAuthentication() failed"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     const/4 v4, 0x0
 
     goto :goto_0
@@ -355,16 +312,13 @@
     .locals 4
 
     .prologue
-    .line 194
     const/4 v1, 0x0
 
-    .line 195
     .local v1, "ret":Z
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 196
     .local v0, "callingUid":I
     const/4 v3, 0x0
 
@@ -372,7 +326,6 @@
 
     move-result v2
 
-    .line 198
     .local v2, "userId":I
     invoke-virtual {p0, v2}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->isAuthenticationEnabledAsUser(I)Z
 
@@ -386,23 +339,20 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 202
     const/4 v2, 0x0
 
-    .line 205
     .local v2, "ret":Z
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v6, "SmartCardLockscreenTable"
 
-    const-string/jumbo v7, "smartcardAuth"
+    const-string v7, "smartcardAuth"
 
     invoke-virtual {v5, v6, v7, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBooleanListAsUser(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 209
     .local v4, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -428,36 +378,30 @@
 
     move-result v3
 
-    .line 210
     .local v3, "value":Z
     if-eqz v3, :cond_0
 
-    .line 211
     move v2, v3
 
     .end local v3    # "value":Z
     :cond_1
     move v5, v2
 
-    .line 220
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
     :goto_0
     return v5
 
-    .line 216
     :catch_0
     move-exception v0
 
-    .line 217
     .local v0, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v6, "isAuthenticationEnabled() failed"
+    const-string v6, "isAuthenticationEnabled() failed"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     const/4 v5, 0x0
 
     goto :goto_0
@@ -468,7 +412,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 241
     return-void
 .end method
 
@@ -479,7 +422,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 247
     new-instance v3, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v3, p1}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -488,19 +430,16 @@
 
     move-result v2
 
-    .line 251
     .local v2, "userId":I
     iget-object v4, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
     monitor-enter v4
 
-    .line 252
     :try_start_0
     invoke-virtual {p0, v2}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->isAuthenticationEnabledAsUser(I)Z
 
     move-result v0
 
-    .line 253
     .local v0, "curr_auth_state":Z
     iget-object v3, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
@@ -514,7 +453,6 @@
 
     if-ne v3, v1, :cond_1
 
-    .line 254
     iget-object v3, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -531,7 +469,6 @@
 
     move-result v1
 
-    .line 255
     .local v1, "prev_auth_state":Z
     iget-object v3, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
@@ -541,23 +478,18 @@
 
     invoke-interface {v3, v5}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     :goto_0
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 261
     if-eq v0, v1, :cond_0
 
-    .line 262
     invoke-direct {p0, v0, v2}, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->broadcastIntentAsUser(ZI)V
 
-    .line 272
     :cond_0
     return-void
 
-    .line 257
     .end local v1    # "prev_auth_state":Z
     :cond_1
     if-eqz v0, :cond_2
@@ -568,7 +500,6 @@
     :cond_2
     goto :goto_0
 
-    .line 259
     .end local v0    # "curr_auth_state":Z
     .end local v1    # "prev_auth_state":Z
     :catchall_0
@@ -587,7 +518,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 277
     new-instance v1, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v1, p1}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -596,13 +526,11 @@
 
     move-result v0
 
-    .line 278
     .local v0, "userId":I
     iget-object v2, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
     monitor-enter v2
 
-    .line 279
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
@@ -616,7 +544,6 @@
 
     if-nez v1, :cond_0
 
-    .line 280
     iget-object v1, p0, Lcom/android/server/enterprise/smartcard/SmartCardLockscreenPolicy;->preAuthState:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -633,14 +560,11 @@
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 281
     :cond_0
     monitor-exit v2
 
-    .line 285
     return-void
 
-    .line 281
     :catchall_0
     move-exception v1
 
@@ -655,6 +579,5 @@
     .locals 0
 
     .prologue
-    .line 231
     return-void
 .end method

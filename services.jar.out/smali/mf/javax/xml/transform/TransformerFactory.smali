@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,14 +22,11 @@
     .end annotation
 
     .prologue
-    .line 122
     :try_start_0
-    const-string/jumbo v1, "javax.xml.transform.TransformerFactory"
+    const-string v1, "javax.xml.transform.TransformerFactory"
 
-    .line 124
     const-string v2, "com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl"
 
-    .line 120
     invoke-static {v1, v2}, Lmf/javax/xml/transform/FactoryFinder;->find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -41,25 +37,20 @@
 
     return-object v1
 
-    .line 125
     :catch_0
     move-exception v0
 
-    .line 126
     .local v0, "e":Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/transform/TransformerFactoryConfigurationError;
 
-    .line 127
     invoke-virtual {v0}, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->getException()Ljava/lang/Exception;
 
     move-result-object v2
 
-    .line 128
     invoke-virtual {v0}, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 126
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/transform/TransformerFactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1
@@ -76,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 171
     const/4 v1, 0x0
 
     :try_start_0
@@ -90,25 +80,20 @@
 
     return-object v1
 
-    .line 172
     :catch_0
     move-exception v0
 
-    .line 173
     .local v0, "e":Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/transform/TransformerFactoryConfigurationError;
 
-    .line 174
     invoke-virtual {v0}, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->getException()Ljava/lang/Exception;
 
     move-result-object v2
 
-    .line 175
     invoke-virtual {v0}, Lmf/javax/xml/transform/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 173
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/transform/TransformerFactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1

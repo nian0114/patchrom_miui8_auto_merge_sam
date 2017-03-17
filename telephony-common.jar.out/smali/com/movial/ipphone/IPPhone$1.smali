@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 183
     iput-object p1, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,25 +39,21 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 187
     :try_start_0
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 284
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 189
     :pswitch_1
     iget v9, p1, Landroid/os/Message;->arg2:I
 
     if-gez v9, :cond_1
 
-    .line 190
     const-string v9, "IPPhone"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -87,17 +82,14 @@
 
     goto :goto_0
 
-    .line 263
     :catch_0
     move-exception v3
 
-    .line 272
     .local v3, "e":Landroid/util/AndroidRuntimeException;
     invoke-virtual {v3}, Landroid/util/AndroidRuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 274
     .local v4, "exceptionMessage":Ljava/lang/String;
     const-string v9, "This message is already in use"
 
@@ -107,7 +99,6 @@
 
     if-eqz v9, :cond_c
 
-    .line 275
     const-string v9, "IPPhone"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -134,7 +125,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mPendingMMIs:Ljava/util/ArrayList;
@@ -144,7 +134,6 @@
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 278
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mMmiCompleteRegistrants:Landroid/os/RegistrantList;
@@ -160,7 +149,6 @@
 
     goto :goto_0
 
-    .line 194
     .end local v3    # "e":Landroid/util/AndroidRuntimeException;
     .end local v4    # "exceptionMessage":Ljava/lang/String;
     :cond_1
@@ -195,7 +183,6 @@
 
     if-nez v9, :cond_3
 
-    .line 195
     :cond_2
     const-string v9, "IPPhone"
 
@@ -205,13 +192,11 @@
 
     goto/16 :goto_0
 
-    .line 198
     :cond_3
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v5
 
-    .line 199
     .local v5, "m":Landroid/os/Message;
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -226,7 +211,6 @@
 
     invoke-virtual {v5, v9}, Landroid/os/Message;->copyFrom(Landroid/os/Message;)V
 
-    .line 200
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mMmiMessages:[Landroid/os/Message;
@@ -244,7 +228,6 @@
 
     invoke-virtual {v5, v9}, Landroid/os/Message;->setTarget(Landroid/os/Handler;)V
 
-    .line 201
     iget v9, p1, Landroid/os/Message;->arg1:I
 
     if-eqz v9, :cond_4
@@ -255,7 +238,6 @@
 
     invoke-direct {v3, v9}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 202
     .local v3, "e":Ljava/lang/Exception;
     :goto_1
     const/4 v9, 0x0
@@ -264,7 +246,6 @@
 
     move-result-object v0
 
-    .line 203
     .local v0, "ar":Landroid/os/AsyncResult;
     invoke-virtual {v5}, Landroid/os/Message;->sendToTarget()V
 
@@ -275,10 +256,8 @@
     :cond_4
     move-object v3, v8
 
-    .line 201
     goto :goto_1
 
-    .line 207
     .end local v5    # "m":Landroid/os/Message;
     :pswitch_2
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
@@ -292,7 +271,6 @@
 
     aget-object v5, v9, v10
 
-    .line 208
     .restart local v5    # "m":Landroid/os/Message;
     if-eqz v5, :cond_5
 
@@ -302,7 +280,6 @@
 
     if-nez v9, :cond_6
 
-    .line 209
     :cond_5
     const-string v9, "IPPhone"
 
@@ -312,7 +289,6 @@
 
     goto/16 :goto_0
 
-    .line 212
     :cond_6
     iget v9, p1, Landroid/os/Message;->arg1:I
 
@@ -324,7 +300,6 @@
 
     invoke-direct {v3, v9}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 213
     .restart local v3    # "e":Ljava/lang/Exception;
     :goto_2
     const/4 v9, 0x0
@@ -333,16 +308,13 @@
 
     move-result-object v0
 
-    .line 214
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     invoke-virtual {v5}, Landroid/os/Message;->sendToTarget()V
 
-    .line 215
     iget v9, p1, Landroid/os/Message;->arg1:I
 
     if-nez v9, :cond_0
 
-    .line 216
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     iget-object v10, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
@@ -362,10 +334,8 @@
     :cond_7
     move-object v3, v8
 
-    .line 212
     goto :goto_2
 
-    .line 221
     .end local v5    # "m":Landroid/os/Message;
     :pswitch_3
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
@@ -379,24 +349,20 @@
 
     aget-object v5, v9, v10
 
-    .line 227
     .restart local v5    # "m":Landroid/os/Message;
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 228
     .local v2, "data":Landroid/os/Bundle;
     if-eqz v2, :cond_8
 
-    .line 229
     const-string v9, "reason"
 
     invoke-virtual {v2, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 230
     .local v6, "reason":Ljava/lang/String;
     const-string v9, "IPPhone"
 
@@ -420,7 +386,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     if-eqz v6, :cond_8
 
     const-string v9, "terminateAll"
@@ -431,7 +396,6 @@
 
     if-eqz v9, :cond_8
 
-    .line 232
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mPendingMMIs:Ljava/util/ArrayList;
@@ -441,7 +405,6 @@
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 234
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mMmiCompleteRegistrants:Landroid/os/RegistrantList;
@@ -461,7 +424,6 @@
 
     invoke-virtual {v9, v10}, Landroid/os/RegistrantList;->notifyRegistrants(Landroid/os/AsyncResult;)V
 
-    .line 235
     const-string v9, "IPPhone"
 
     const-string v10, "cleared pending MMIs because of terminateAllSessions. Possibly the user turned off Wifi immediately after dialing USSD"
@@ -470,7 +432,6 @@
 
     goto/16 :goto_0
 
-    .line 239
     .end local v6    # "reason":Ljava/lang/String;
     :cond_8
     if-eqz v5, :cond_9
@@ -481,7 +442,6 @@
 
     if-nez v9, :cond_a
 
-    .line 240
     :cond_9
     const-string v9, "IPPhone"
 
@@ -491,7 +451,6 @@
 
     goto/16 :goto_0
 
-    .line 243
     :cond_a
     iget v9, p1, Landroid/os/Message;->arg1:I
 
@@ -503,7 +462,6 @@
 
     invoke-direct {v3, v9}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 244
     .restart local v3    # "e":Ljava/lang/Exception;
     :goto_3
     const/4 v9, 0x0
@@ -512,7 +470,6 @@
 
     move-result-object v0
 
-    .line 245
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     invoke-virtual {v5}, Landroid/os/Message;->sendToTarget()V
     :try_end_1
@@ -525,10 +482,8 @@
     :cond_b
     move-object v3, v8
 
-    .line 243
     goto :goto_3
 
-    .line 250
     .end local v2    # "data":Landroid/os/Bundle;
     .end local v5    # "m":Landroid/os/Message;
     :pswitch_4
@@ -537,7 +492,6 @@
 
     move-result-object v1
 
-    .line 251
     .local v1, "bundle":Landroid/os/Bundle;
     const-class v9, Lcom/movial/ipphone/IPPhone;
 
@@ -547,14 +501,12 @@
 
     invoke-virtual {v1, v9}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 252
     const-string v9, "ussd"
 
     invoke-virtual {v1, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 253
     .local v7, "ussdString":Ljava/lang/String;
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -568,13 +520,11 @@
 
     goto/16 :goto_0
 
-    .line 254
     .end local v1    # "bundle":Landroid/os/Bundle;
     .end local v7    # "ussdString":Ljava/lang/String;
     :catch_1
     move-exception v3
 
-    .line 255
     .local v3, "e":Ljava/lang/NumberFormatException;
     :try_start_3
     const-string v9, "IPPhone"
@@ -585,7 +535,6 @@
 
     goto/16 :goto_0
 
-    .line 260
     .end local v3    # "e":Ljava/lang/NumberFormatException;
     :pswitch_5
     iget-object v9, p0, Lcom/movial/ipphone/IPPhone$1;->this$0:Lcom/movial/ipphone/IPPhone;
@@ -601,7 +550,6 @@
 
     goto/16 :goto_0
 
-    .line 280
     .local v3, "e":Landroid/util/AndroidRuntimeException;
     .restart local v4    # "exceptionMessage":Ljava/lang/String;
     :cond_c
@@ -611,14 +559,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     new-instance v8, Landroid/util/AndroidRuntimeException;
 
     invoke-direct {v8, v3}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/Exception;)V
 
     throw v8
 
-    .line 187
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

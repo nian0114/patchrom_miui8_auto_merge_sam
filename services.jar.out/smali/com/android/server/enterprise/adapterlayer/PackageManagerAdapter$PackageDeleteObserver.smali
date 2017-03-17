@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 391
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$PackageDeleteObserver;->this$0:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
@@ -45,37 +44,29 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 397
     monitor-enter p0
 
-    .line 398
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$PackageDeleteObserver;->finished:Z
 
-    .line 399
     if-ne p2, v0, :cond_0
 
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$PackageDeleteObserver;->result:Z
 
-    .line 400
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 401
     monitor-exit p0
 
-    .line 402
     return-void
 
-    .line 399
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 401
     :catchall_0
     move-exception v0
 

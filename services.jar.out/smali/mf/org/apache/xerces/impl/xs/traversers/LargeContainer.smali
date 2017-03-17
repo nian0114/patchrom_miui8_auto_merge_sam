@@ -13,10 +13,8 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1774
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/traversers/Container;-><init>()V
 
-    .line 1775
     new-instance v0, Ljava/util/Hashtable;
 
     mul-int/lit8 v1, p1, 0x2
@@ -27,12 +25,10 @@
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;->items:Ljava/util/Hashtable;
 
-    .line 1776
     new-array v0, p1, [Lmf/org/apache/xerces/impl/xs/traversers/OneAttr;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;->values:[Lmf/org/apache/xerces/impl/xs/traversers/OneAttr;
 
-    .line 1777
     return-void
 .end method
 
@@ -43,7 +39,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 1783
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;->items:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -52,7 +47,6 @@
 
     check-cast v0, Lmf/org/apache/xerces/impl/xs/traversers/OneAttr;
 
-    .line 1784
     .local v0, "ret":Lmf/org/apache/xerces/impl/xs/traversers/OneAttr;
     return-object v0
 .end method
@@ -63,12 +57,10 @@
     .param p2, "value"    # Lmf/org/apache/xerces/impl/xs/traversers/OneAttr;
 
     .prologue
-    .line 1779
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;->items:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1780
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;->values:[Lmf/org/apache/xerces/impl/xs/traversers/OneAttr;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;->pos:I
@@ -79,6 +71,5 @@
 
     aput-object p2, v0, v1
 
-    .line 1781
     return-void
 .end method

@@ -27,13 +27,10 @@
     .param p1, "cpLocListener"    # Lcom/samsung/cpp/ICPPLocationListener;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/samsung/cpp/CPPAndroidLocProvider$androidLocListener;->mCpLocListener:Lcom/samsung/cpp/ICPPLocationListener;
 
-    .line 28
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 32
     const-string v1, "CPPAndroidLocProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -85,7 +81,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     :try_start_0
     iget-object v1, p0, Lcom/samsung/cpp/CPPAndroidLocProvider$androidLocListener;->mCpLocListener:Lcom/samsung/cpp/ICPPLocationListener;
 
@@ -93,15 +88,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 39
     :goto_0
     return-void
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "CPPAndroidLocProvider"
 
@@ -137,7 +129,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     return-void
 .end method
 
@@ -146,7 +137,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -157,6 +147,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 45
     return-void
 .end method

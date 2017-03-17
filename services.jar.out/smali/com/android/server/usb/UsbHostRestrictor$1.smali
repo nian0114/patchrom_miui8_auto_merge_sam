@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/server/usb/UsbHostRestrictor$1;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +38,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 146
     const-string v0, "UsbHostRestrictor"
 
-    const-string/jumbo v1, "mBootCompletedReceiver onReceive"
+    const-string v1, "mBootCompletedReceiver onReceive"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/usb/UsbHostRestrictor$1;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->handleBootCompleteBroadcast()V
     invoke-static {v0}, Lcom/android/server/usb/UsbHostRestrictor;->access$000(Lcom/android/server/usb/UsbHostRestrictor;)V
 
-    .line 149
     return-void
 .end method

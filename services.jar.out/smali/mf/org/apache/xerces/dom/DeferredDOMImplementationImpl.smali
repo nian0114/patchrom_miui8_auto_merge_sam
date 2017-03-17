@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 45
     new-instance v0, Lmf/org/apache/xerces/dom/DeferredDOMImplementationImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/dom/DeferredDOMImplementationImpl;-><init>()V
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/DOMImplementationImpl;-><init>()V
 
     return-void
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lmf/org/apache/xerces/dom/DeferredDOMImplementationImpl;->singleton:Lmf/org/apache/xerces/dom/DeferredDOMImplementationImpl;
 
     return-object v0

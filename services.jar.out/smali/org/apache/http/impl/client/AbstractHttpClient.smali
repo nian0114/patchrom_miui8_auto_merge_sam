@@ -18,7 +18,6 @@
     .param p2, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -37,7 +36,6 @@
     .param p1, "itcp"    # Lorg/apache/http/HttpRequestInterceptor;
 
     .prologue
-    .line 59
     monitor-enter p0
 
     :try_start_0
@@ -65,7 +63,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 60
     monitor-enter p0
 
     :try_start_0
@@ -92,7 +89,6 @@
     .param p1, "itcp"    # Lorg/apache/http/HttpResponseInterceptor;
 
     .prologue
-    .line 53
     monitor-enter p0
 
     :try_start_0
@@ -120,7 +116,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 54
     monitor-enter p0
 
     :try_start_0
@@ -146,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 63
     monitor-enter p0
 
     :try_start_0
@@ -172,7 +166,6 @@
     .locals 2
 
     .prologue
-    .line 57
     monitor-enter p0
 
     :try_start_0
@@ -216,7 +209,6 @@
     .param p12, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 69
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -276,7 +268,6 @@
     .param p1, "req"    # Lorg/apache/http/HttpRequest;
 
     .prologue
-    .line 70
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -310,7 +301,6 @@
     .end annotation
 
     .prologue
-    .line 73
     .local p3, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -348,7 +338,6 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p3, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -381,7 +370,6 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p2, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -417,7 +405,6 @@
     .end annotation
 
     .prologue
-    .line 72
     .local p2, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -440,7 +427,6 @@
     .end annotation
 
     .prologue
-    .line 67
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -463,7 +449,6 @@
     .end annotation
 
     .prologue
-    .line 68
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -484,7 +469,6 @@
     .end annotation
 
     .prologue
-    .line 65
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -506,7 +490,6 @@
     .end annotation
 
     .prologue
-    .line 66
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -520,7 +503,6 @@
     .locals 2
 
     .prologue
-    .line 28
     monitor-enter p0
 
     :try_start_0
@@ -546,7 +528,6 @@
     .locals 2
 
     .prologue
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -572,7 +553,6 @@
     .locals 2
 
     .prologue
-    .line 26
     monitor-enter p0
 
     :try_start_0
@@ -598,7 +578,6 @@
     .locals 2
 
     .prologue
-    .line 32
     monitor-enter p0
 
     :try_start_0
@@ -624,7 +603,6 @@
     .locals 2
 
     .prologue
-    .line 30
     monitor-enter p0
 
     :try_start_0
@@ -650,7 +628,6 @@
     .locals 2
 
     .prologue
-    .line 44
     monitor-enter p0
 
     :try_start_0
@@ -676,7 +653,6 @@
     .locals 2
 
     .prologue
-    .line 46
     monitor-enter p0
 
     :try_start_0
@@ -702,7 +678,6 @@
     .locals 2
 
     .prologue
-    .line 52
     monitor-enter p0
 
     :try_start_0
@@ -728,7 +703,6 @@
     .locals 2
 
     .prologue
-    .line 36
     monitor-enter p0
 
     :try_start_0
@@ -754,7 +728,6 @@
     .locals 2
 
     .prologue
-    .line 24
     monitor-enter p0
 
     :try_start_0
@@ -780,7 +753,6 @@
     .locals 2
 
     .prologue
-    .line 42
     monitor-enter p0
 
     :try_start_0
@@ -806,7 +778,6 @@
     .locals 2
 
     .prologue
-    .line 38
     monitor-enter p0
 
     :try_start_0
@@ -832,7 +803,6 @@
     .locals 2
 
     .prologue
-    .line 27
     monitor-enter p0
 
     :try_start_0
@@ -859,7 +829,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 61
     monitor-enter p0
 
     :try_start_0
@@ -885,7 +854,6 @@
     .locals 2
 
     .prologue
-    .line 62
     monitor-enter p0
 
     :try_start_0
@@ -912,7 +880,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 55
     monitor-enter p0
 
     :try_start_0
@@ -938,7 +905,6 @@
     .locals 2
 
     .prologue
-    .line 56
     monitor-enter p0
 
     :try_start_0
@@ -964,7 +930,6 @@
     .locals 2
 
     .prologue
-    .line 48
     monitor-enter p0
 
     :try_start_0
@@ -990,7 +955,6 @@
     .locals 2
 
     .prologue
-    .line 40
     monitor-enter p0
 
     :try_start_0
@@ -1016,7 +980,6 @@
     .locals 2
 
     .prologue
-    .line 50
     monitor-enter p0
 
     :try_start_0
@@ -1051,7 +1014,6 @@
     .end annotation
 
     .prologue
-    .line 64
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<+Lorg/apache/http/HttpRequestInterceptor;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -1075,7 +1037,6 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<+Lorg/apache/http/HttpResponseInterceptor;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -1091,7 +1052,6 @@
     .param p1, "authSchemeRegistry"    # Lorg/apache/http/auth/AuthSchemeRegistry;
 
     .prologue
-    .line 29
     monitor-enter p0
 
     :try_start_0
@@ -1118,7 +1078,6 @@
     .param p1, "cookieSpecRegistry"    # Lorg/apache/http/cookie/CookieSpecRegistry;
 
     .prologue
-    .line 31
     monitor-enter p0
 
     :try_start_0
@@ -1145,7 +1104,6 @@
     .param p1, "cookieStore"    # Lorg/apache/http/client/CookieStore;
 
     .prologue
-    .line 45
     monitor-enter p0
 
     :try_start_0
@@ -1172,7 +1130,6 @@
     .param p1, "credsProvider"    # Lorg/apache/http/client/CredentialsProvider;
 
     .prologue
-    .line 47
     monitor-enter p0
 
     :try_start_0
@@ -1199,7 +1156,6 @@
     .param p1, "retryHandler"    # Lorg/apache/http/client/HttpRequestRetryHandler;
 
     .prologue
-    .line 37
     monitor-enter p0
 
     :try_start_0
@@ -1226,7 +1182,6 @@
     .param p1, "keepAliveStrategy"    # Lorg/apache/http/conn/ConnectionKeepAliveStrategy;
 
     .prologue
-    .line 35
     monitor-enter p0
 
     :try_start_0
@@ -1253,7 +1208,6 @@
     .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 25
     monitor-enter p0
 
     :try_start_0
@@ -1280,7 +1234,6 @@
     .param p1, "proxyAuthHandler"    # Lorg/apache/http/client/AuthenticationHandler;
 
     .prologue
-    .line 43
     monitor-enter p0
 
     :try_start_0
@@ -1307,7 +1260,6 @@
     .param p1, "redirectHandler"    # Lorg/apache/http/client/RedirectHandler;
 
     .prologue
-    .line 39
     monitor-enter p0
 
     :try_start_0
@@ -1334,7 +1286,6 @@
     .param p1, "reuseStrategy"    # Lorg/apache/http/ConnectionReuseStrategy;
 
     .prologue
-    .line 33
     monitor-enter p0
 
     :try_start_0
@@ -1361,7 +1312,6 @@
     .param p1, "routePlanner"    # Lorg/apache/http/conn/routing/HttpRoutePlanner;
 
     .prologue
-    .line 49
     monitor-enter p0
 
     :try_start_0
@@ -1388,7 +1338,6 @@
     .param p1, "targetAuthHandler"    # Lorg/apache/http/client/AuthenticationHandler;
 
     .prologue
-    .line 41
     monitor-enter p0
 
     :try_start_0
@@ -1415,7 +1364,6 @@
     .param p1, "userTokenHandler"    # Lorg/apache/http/client/UserTokenHandler;
 
     .prologue
-    .line 51
     monitor-enter p0
 
     :try_start_0

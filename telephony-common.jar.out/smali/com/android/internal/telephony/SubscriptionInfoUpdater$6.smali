@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 626
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$6;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 628
     iget-object v0, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$6;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$6;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
@@ -62,6 +60,5 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->broadcastSimStateChanged(ILjava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$1300(Lcom/android/internal/telephony/SubscriptionInfoUpdater;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 630
     return-void
 .end method

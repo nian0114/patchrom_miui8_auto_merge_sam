@@ -26,12 +26,10 @@
     .locals 0
 
     .prologue
-    .line 1631
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$TwKeyListener;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1632
     return-void
 .end method
 
@@ -48,7 +46,6 @@
 
     const/4 v1, 0x0
 
-    .line 1634
     iget-object v3, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$TwKeyListener;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-virtual {p3}, Landroid/view/KeyEvent;->toString()Ljava/lang/String;
@@ -58,25 +55,21 @@
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->twLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$2300(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;Ljava/lang/String;)V
 
-    .line 1635
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v3
 
     if-eq v3, v2, :cond_1
 
-    .line 1647
     :cond_0
     :goto_0
     return v1
 
-    .line 1636
     :cond_1
     sparse-switch p2, :sswitch_data_0
 
     goto :goto_0
 
-    .line 1638
     :sswitch_0
     iget-object v3, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$TwKeyListener;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -90,7 +83,6 @@
 
     move-result-object v0
 
-    .line 1639
     .local v0, "config":Landroid/content/res/Configuration;
     iget v3, v0, Landroid/content/res/Configuration;->keyboard:I
 
@@ -102,10 +94,8 @@
     :sswitch_1
     move v1, v2
 
-    .line 1645
     goto :goto_0
 
-    .line 1636
     nop
 
     :sswitch_data_0

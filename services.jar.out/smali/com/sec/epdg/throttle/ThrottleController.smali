@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/throttle/ThrottleController;->INSTANCE:Lcom/sec/epdg/throttle/ThrottleController;
@@ -49,26 +48,20 @@
     .param p3, "isThrottleEnabled"    # Z
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lcom/sec/epdg/throttle/ThrottleController;->mContext:Landroid/content/Context;
 
-    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
-    .line 41
     iput-boolean p2, p0, Lcom/sec/epdg/throttle/ThrottleController;->mIsRetryEnabled:Z
 
-    .line 42
     iput-boolean p3, p0, Lcom/sec/epdg/throttle/ThrottleController;->mIsThrottleEnabled:Z
 
-    .line 43
     return-void
 .end method
 
@@ -77,7 +70,6 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 207
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     new-instance v1, Lcom/sec/epdg/throttle/ThrottleManager;
@@ -92,7 +84,6 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     return-void
 .end method
 
@@ -103,7 +94,6 @@
     .param p2, "isThrottleEnabled"    # Z
 
     .prologue
-    .line 52
     const-class v1, Lcom/sec/epdg/throttle/ThrottleController;
 
     monitor-enter v1
@@ -113,14 +103,12 @@
 
     if-nez v0, :cond_0
 
-    .line 53
     const-string v0, "ThrottleController"
 
     const-string v2, "Created ThrottleController instance"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     const-string v0, "ThrottleController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -153,7 +141,6 @@
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     new-instance v0, Lcom/sec/epdg/throttle/ThrottleController;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/sec/epdg/throttle/ThrottleController;-><init>(Landroid/content/Context;ZZ)V
@@ -162,13 +149,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 59
     :cond_0
     monitor-exit v1
 
     return-void
 
-    .line 52
     :catchall_0
     move-exception v0
 
@@ -181,7 +166,6 @@
     .locals 3
 
     .prologue
-    .line 61
     const-class v1, Lcom/sec/epdg/throttle/ThrottleController;
 
     monitor-enter v1
@@ -191,14 +175,12 @@
 
     if-nez v0, :cond_0
 
-    .line 62
     const-string v0, "ThrottleController"
 
     const-string v2, "ThrottleController instance null.Call createInstance() before calling getInstance()"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v2, "ThrottleController instance not found."
@@ -209,7 +191,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     :catchall_0
     move-exception v0
 
@@ -217,7 +198,6 @@
 
     throw v0
 
-    .line 67
     :cond_0
     :try_start_1
     sget-object v0, Lcom/sec/epdg/throttle/ThrottleController;->INSTANCE:Lcom/sec/epdg/throttle/ThrottleController;
@@ -234,14 +214,12 @@
     .param p1, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     const-string v2, "ThrottleController"
 
-    const-string/jumbo v3, "handleWifiConnected. "
+    const-string v3, "handleWifiConnected. "
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
     iget-object v2, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -266,13 +244,11 @@
 
     check-cast v1, Lcom/sec/epdg/throttle/ThrottleManager;
 
-    .line 185
     .local v1, "mgr":Lcom/sec/epdg/throttle/ThrottleManager;
     invoke-virtual {v1, p1}, Lcom/sec/epdg/throttle/ThrottleManager;->onWifiConnected(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 187
     .end local v1    # "mgr":Lcom/sec/epdg/throttle/ThrottleManager;
     :cond_0
     return-void
@@ -282,14 +258,12 @@
     .locals 5
 
     .prologue
-    .line 190
     const-string v3, "ThrottleController"
 
-    const-string/jumbo v4, "handleWifiDisconnected."
+    const-string v4, "handleWifiDisconnected."
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
     iget-object v3, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -300,7 +274,6 @@
 
     move-result-object v1
 
-    .line 192
     .local v1, "keySet":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -310,18 +283,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 193
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 194
     .local v0, "apnName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 195
     iget-object v3, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -330,16 +300,13 @@
 
     check-cast v2, Lcom/sec/epdg/throttle/ThrottleManager;
 
-    .line 196
     .local v2, "mgr":Lcom/sec/epdg/throttle/ThrottleManager;
     if-eqz v2, :cond_0
 
-    .line 197
     invoke-virtual {v2, v0}, Lcom/sec/epdg/throttle/ThrottleManager;->onWifiDisconnected(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 201
     .end local v0    # "apnName":Ljava/lang/String;
     .end local v2    # "mgr":Lcom/sec/epdg/throttle/ThrottleManager;
     :cond_1
@@ -353,7 +320,6 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     monitor-enter p0
 
     :try_start_0
@@ -363,7 +329,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "getThrottleCount, apnName: "
+    const-string v3, "getThrottleCount, apnName: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -379,7 +345,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     iget-object v1, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -388,10 +353,8 @@
 
     if-nez v1, :cond_0
 
-    .line 146
     invoke-direct {p0, p1}, Lcom/sec/epdg/throttle/ThrottleController;->addThrottleManager(Ljava/lang/String;)V
 
-    .line 149
     :cond_0
     iget-object v1, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
@@ -405,7 +368,6 @@
 
     move-result v0
 
-    .line 150
     .local v0, "result":I
     const-string v1, "ThrottleController"
 
@@ -413,7 +375,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "getThrottleCount, apnName: "
+    const-string v3, "getThrottleCount, apnName: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -441,12 +403,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 152
     monitor-exit p0
 
     return v0
 
-    .line 144
     .end local v0    # "result":I
     :catchall_0
     move-exception v1
@@ -462,24 +422,20 @@
     .param p2, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 156
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 157
     :try_start_0
     invoke-direct {p0, p2}, Lcom/sec/epdg/throttle/ThrottleController;->handleWifiConnected(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 159
     :cond_0
     :try_start_1
     invoke-direct {p0}, Lcom/sec/epdg/throttle/ThrottleController;->handleWifiDisconnected()V
@@ -488,7 +444,6 @@
 
     goto :goto_0
 
-    .line 156
     :catchall_0
     move-exception v0
 
@@ -503,7 +458,6 @@
     .param p2, "error"    # Lcom/sec/epdg/IWlanError;
 
     .prologue
-    .line 97
     monitor-enter p0
 
     :try_start_0
@@ -513,7 +467,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "isThrottleRequired, apnName: "
+    const-string v2, "isThrottleRequired, apnName: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -529,7 +483,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 98
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -538,10 +491,8 @@
 
     if-nez v0, :cond_0
 
-    .line 99
     invoke-direct {p0, p1}, Lcom/sec/epdg/throttle/ThrottleController;->addThrottleManager(Ljava/lang/String;)V
 
-    .line 102
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
@@ -561,7 +512,6 @@
 
     return v0
 
-    .line 97
     :catchall_0
     move-exception v0
 
@@ -575,7 +525,6 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     monitor-enter p0
 
     :try_start_0
@@ -585,7 +534,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isThrottleTimerRunning, apnName: "
+    const-string v3, "isThrottleTimerRunning, apnName: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -601,7 +550,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     iget-object v1, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -610,10 +558,8 @@
 
     if-nez v1, :cond_0
 
-    .line 81
     invoke-direct {p0, p1}, Lcom/sec/epdg/throttle/ThrottleController;->addThrottleManager(Ljava/lang/String;)V
 
-    .line 84
     :cond_0
     iget-object v1, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
@@ -627,7 +573,6 @@
 
     move-result v0
 
-    .line 85
     .local v0, "result":Z
     const-string v1, "ThrottleController"
 
@@ -635,7 +580,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isThrottleTimerRunning: apnName: "
+    const-string v3, "isThrottleTimerRunning: apnName: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -663,12 +608,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 87
     monitor-exit p0
 
     return v0
 
-    .line 79
     .end local v0    # "result":Z
     :catchall_0
     move-exception v1
@@ -684,16 +627,13 @@
     .param p2, "isThrottleEnabled"    # Z
 
     .prologue
-    .line 165
     monitor-enter p0
 
     :try_start_0
     iput-boolean p1, p0, Lcom/sec/epdg/throttle/ThrottleController;->mIsRetryEnabled:Z
 
-    .line 166
     iput-boolean p2, p0, Lcom/sec/epdg/throttle/ThrottleController;->mIsThrottleEnabled:Z
 
-    .line 167
     const-string v0, "ThrottleController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -726,7 +666,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -735,12 +674,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 170
     monitor-exit p0
 
     return-void
 
-    .line 165
     :catchall_0
     move-exception v0
 
@@ -753,17 +690,15 @@
     .locals 4
 
     .prologue
-    .line 173
     monitor-enter p0
 
     :try_start_0
     const-string v2, "ThrottleController"
 
-    const-string/jumbo v3, "onSimChanged()"
+    const-string v3, "onSimChanged()"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
     iget-object v2, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -788,7 +723,6 @@
 
     check-cast v1, Lcom/sec/epdg/throttle/ThrottleManager;
 
-    .line 175
     .local v1, "mgr":Lcom/sec/epdg/throttle/ThrottleManager;
     invoke-virtual {v1}, Lcom/sec/epdg/throttle/ThrottleManager;->onSimChanged()V
     :try_end_0
@@ -796,7 +730,6 @@
 
     goto :goto_0
 
-    .line 173
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "mgr":Lcom/sec/epdg/throttle/ThrottleManager;
     :catchall_0
@@ -806,7 +739,6 @@
 
     throw v2
 
-    .line 177
     .restart local v0    # "i$":Ljava/util/Iterator;
     :cond_0
     monitor-exit p0
@@ -819,7 +751,6 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 127
     monitor-enter p0
 
     :try_start_0
@@ -829,7 +760,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "resetThrottleState, apnName: "
+    const-string v2, "resetThrottleState, apnName: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -845,7 +776,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -854,10 +784,8 @@
 
     if-nez v0, :cond_0
 
-    .line 129
     invoke-direct {p0, p1}, Lcom/sec/epdg/throttle/ThrottleController;->addThrottleManager(Ljava/lang/String;)V
 
-    .line 132
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
@@ -871,12 +799,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 134
     monitor-exit p0
 
     return-void
 
-    .line 127
     :catchall_0
     move-exception v0
 
@@ -891,7 +817,6 @@
     .param p2, "iwlanError"    # Lcom/sec/epdg/IWlanError;
 
     .prologue
-    .line 110
     monitor-enter p0
 
     :try_start_0
@@ -901,7 +826,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateThrottleState, apnName: "
+    const-string v2, "updateThrottleState, apnName: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -917,17 +842,14 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 111
     invoke-static {p1}, Lcom/sec/epdg/EpdgUtils;->isEpdgNotAvailableRequired(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 112
     invoke-static {p1}, Lcom/sec/epdg/EpdgCommands;->postEpdgNotAvailableForOnDemandFailure(Ljava/lang/String;)V
 
-    .line 114
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
@@ -937,10 +859,8 @@
 
     if-nez v0, :cond_1
 
-    .line 115
     invoke-direct {p0, p1}, Lcom/sec/epdg/throttle/ThrottleController;->addThrottleManager(Ljava/lang/String;)V
 
-    .line 118
     :cond_1
     iget-object v0, p0, Lcom/sec/epdg/throttle/ThrottleController;->mThrottleManagerList:Ljava/util/Map;
 
@@ -954,12 +874,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 119
     monitor-exit p0
 
     return-void
 
-    .line 110
     :catchall_0
     move-exception v0
 

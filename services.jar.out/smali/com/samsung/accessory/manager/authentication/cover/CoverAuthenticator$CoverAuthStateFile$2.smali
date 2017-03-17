@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 912
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 914
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mTmpDir:Ljava/io/File;
@@ -50,7 +48,6 @@
 
     monitor-enter v5
 
-    .line 915
     :try_start_0
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
@@ -66,17 +63,15 @@
 
     move-result-object v4
 
-    const-string/jumbo v6, "read authentication state"
+    const-string v6, "read authentication state"
 
     invoke-static {v4, v6}, Landroid/util/Slog;->secI(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 916
     :cond_0
     const/4 v1, 0x0
 
-    .line 918
     .local v1, "in":Ljava/io/FileInputStream;
     :try_start_1
     new-instance v2, Ljava/io/FileInputStream;
@@ -94,7 +89,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 920
     .end local v1    # "in":Ljava/io/FileInputStream;
     .local v2, "in":Ljava/io/FileInputStream;
     :try_start_2
@@ -102,25 +96,21 @@
 
     move-result v3
 
-    .line 921
     .local v3, "size":I
     if-eq v3, v9, :cond_1
 
-    .line 922
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     new-array v6, v3, [B
 
     iput-object v6, v4, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mId:[B
 
-    .line 923
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     iget-object v4, v4, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mId:[B
 
     invoke-virtual {v2, v4}, Ljava/io/FileInputStream;->read([B)I
 
-    .line 924
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
 
@@ -139,7 +129,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "id is"
+    const-string v7, "id is"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -163,30 +153,25 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 926
     :cond_1
     invoke-virtual {v2}, Ljava/io/FileInputStream;->read()I
 
     move-result v3
 
-    .line 927
     if-eq v3, v9, :cond_2
 
-    .line 928
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     new-array v6, v3, [B
 
     iput-object v6, v4, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mUri:[B
 
-    .line 929
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     iget-object v4, v4, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mUri:[B
 
     invoke-virtual {v2, v4}, Ljava/io/FileInputStream;->read([B)I
 
-    .line 930
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
 
@@ -205,7 +190,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "uri is"
+    const-string v7, "uri is"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -229,30 +214,25 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 932
     :cond_2
     invoke-virtual {v2}, Ljava/io/FileInputStream;->read()I
 
     move-result v3
 
-    .line 933
     if-eq v3, v9, :cond_3
 
-    .line 934
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     new-array v6, v3, [B
 
     iput-object v6, v4, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mExtraData:[B
 
-    .line 935
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile$2;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;
 
     iget-object v4, v4, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$CoverAuthStateFile;->mExtraData:[B
 
     invoke-virtual {v2, v4}, Ljava/io/FileInputStream;->read([B)I
 
-    .line 936
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
 
@@ -271,7 +251,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "extra data is"
+    const-string v7, "extra data is"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -295,7 +275,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 938
     :cond_3
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
@@ -319,14 +298,12 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 944
     :cond_4
     :try_start_3
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     move-object v1, v2
 
-    .line 946
     .end local v2    # "in":Ljava/io/FileInputStream;
     .end local v3    # "size":I
     .restart local v1    # "in":Ljava/io/FileInputStream;
@@ -335,14 +312,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 947
     return-void
 
-    .line 939
     :catch_0
     move-exception v0
 
-    .line 940
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_1
     :try_start_4
@@ -359,13 +333,11 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 944
     :try_start_5
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_0
 
-    .line 946
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     .end local v1    # "in":Ljava/io/FileInputStream;
     :catchall_0
@@ -377,12 +349,10 @@
 
     throw v4
 
-    .line 941
     .restart local v1    # "in":Ljava/io/FileInputStream;
     :catch_1
     move-exception v0
 
-    .line 942
     .local v0, "e":Ljava/io/IOException;
     :goto_2
     :try_start_6
@@ -399,7 +369,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 944
     :try_start_7
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -427,7 +396,6 @@
     .restart local v1    # "in":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 941
     .end local v1    # "in":Ljava/io/FileInputStream;
     .restart local v2    # "in":Ljava/io/FileInputStream;
     :catch_2
@@ -439,7 +407,6 @@
     .restart local v1    # "in":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 939
     .end local v1    # "in":Ljava/io/FileInputStream;
     .restart local v2    # "in":Ljava/io/FileInputStream;
     :catch_3

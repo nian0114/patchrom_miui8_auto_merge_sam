@@ -67,10 +67,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 26
     sput-object v0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mCtx:Landroid/content/Context;
 
-    .line 28
     sput-object v0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mPm:Landroid/os/PersonaManager;
 
     return-void
@@ -81,40 +79,33 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->isInitialized:Z
 
-    .line 33
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->lock:Ljava/lang/Object;
 
-    .line 35
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
-    .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mExtraInfo:Ljava/util/HashMap;
 
-    .line 40
     sput-object p1, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mCtx:Landroid/content/Context;
 
-    .line 41
-    const-string/jumbo v0, "persona"
+    const-string v0, "persona"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -124,10 +115,8 @@
 
     sput-object v0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mPm:Landroid/os/PersonaManager;
 
-    .line 42
     invoke-virtual {p0}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->initialize()V
 
-    .line 43
     return-void
 .end method
 
@@ -138,40 +127,32 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->isExist(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 104
     :goto_0
     return-void
 
-    .line 83
     :cond_0
     new-instance v1, Lcom/android/server/bridge/operations/SimplePersonaInfos$SimplePersonaInfo;
 
     invoke-direct {v1, p0}, Lcom/android/server/bridge/operations/SimplePersonaInfos$SimplePersonaInfo;-><init>(Lcom/android/server/bridge/operations/SimplePersonaInfos;)V
 
-    .line 84
     .local v1, "info":Lcom/android/server/bridge/operations/SimplePersonaInfos$SimplePersonaInfo;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 86
     .local v0, "bundle":Landroid/os/Bundle;
     iput p1, v1, Lcom/android/server/bridge/operations/SimplePersonaInfos$SimplePersonaInfo;->id:I
 
-    .line 87
     iput-object p2, v1, Lcom/android/server/bridge/operations/SimplePersonaInfos$SimplePersonaInfo;->name:Ljava/lang/String;
 
-    .line 88
     iput-object p3, v1, Lcom/android/server/bridge/operations/SimplePersonaInfos$SimplePersonaInfo;->type:Ljava/lang/String;
 
-    .line 90
     const-string v2, "KNOX"
 
     invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -180,42 +161,35 @@
 
     if-eqz v2, :cond_1
 
-    .line 91
     iget-object v2, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
 
-    .line 96
     :goto_1
-    const-string/jumbo v2, "user_id"
+    const-string v2, "user_id"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 97
-    const-string/jumbo v2, "user_name"
+    const-string v2, "user_name"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 98
-    const-string/jumbo v2, "type"
+    const-string v2, "type"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
-    const-string/jumbo v2, "last_import_contact_status"
+    const-string v2, "last_import_contact_status"
 
-    const-string/jumbo v3, "false"
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 100
-    const-string/jumbo v2, "last_import_calendar_status"
-
-    const-string/jumbo v3, "false"
+    const-string v3, "false"
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
+    const-string v2, "last_import_calendar_status"
+
+    const-string v3, "false"
+
+    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v2, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mExtraInfo:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -226,7 +200,6 @@
 
     goto :goto_0
 
-    .line 93
     :cond_1
     iget-object v2, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
@@ -240,7 +213,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 107
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -253,7 +225,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 108
     iget-object v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -266,20 +237,16 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 109
     const/4 v1, 0x1
 
-    .line 113
     :goto_1
     return v1
 
-    .line 107
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 113
     :cond_1
     const/4 v1, 0x0
 
@@ -293,7 +260,6 @@
     .param p1, "userid"    # I
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mExtraInfo:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -314,21 +280,17 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 139
     iget-boolean v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->isInitialized:Z
 
     if-nez v0, :cond_0
 
-    .line 140
     invoke-virtual {p0}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->initialize()V
 
-    .line 143
     :cond_0
     iget-object v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->lock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 144
     :try_start_0
     iget-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
@@ -340,7 +302,6 @@
 
     if-ltz p1, :cond_1
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -351,7 +312,6 @@
 
     monitor-exit v1
 
-    .line 147
     :goto_0
     return-object v0
 
@@ -362,7 +322,6 @@
 
     goto :goto_0
 
-    .line 148
     :catchall_0
     move-exception v0
 
@@ -378,7 +337,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 168
     invoke-virtual {p0, p1}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->getExtraInfo(I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -390,21 +348,17 @@
     .locals 2
 
     .prologue
-    .line 152
     iget-boolean v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->isInitialized:Z
 
     if-nez v0, :cond_0
 
-    .line 153
     invoke-virtual {p0}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->initialize()V
 
-    .line 156
     :cond_0
     iget-object v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->lock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 157
     :try_start_0
     iget-object v0, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
@@ -416,7 +370,6 @@
 
     return v0
 
-    .line 158
     :catchall_0
     move-exception v0
 
@@ -431,23 +384,19 @@
     .locals 9
 
     .prologue
-    .line 46
     sget-object v5, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mPm:Landroid/os/PersonaManager;
 
     if-nez v5, :cond_0
 
-    .line 47
     const-string v5, "SimplePersonaInfos"
 
-    const-string/jumbo v6, "initialize() failed"
+    const-string v6, "initialize() failed"
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :goto_0
     return-void
 
-    .line 51
     :cond_0
     sget-object v5, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mPm:Landroid/os/PersonaManager;
 
@@ -455,31 +404,26 @@
 
     move-result-object v1
 
-    .line 52
     .local v1, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-nez v1, :cond_1
 
-    .line 53
     const-string v5, "SimplePersonaInfos"
 
-    const-string/jumbo v6, "initialize() failed, personas is null"
+    const-string v6, "initialize() failed, personas is null"
 
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 56
     :cond_1
     iget-object v5, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
     invoke-virtual {v5}, Ljava/util/LinkedList;->clear()V
 
-    .line 57
     iget-object v6, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->lock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 58
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -491,23 +435,20 @@
 
     if-ge v0, v5, :cond_3
 
-    .line 59
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/PersonaInfo;
 
-    .line 61
     .local v2, "pi":Landroid/content/pm/PersonaInfo;
     iget-boolean v5, v2, Landroid/content/pm/PersonaInfo;->isBBCContainer:Z
 
     if-nez v5, :cond_2
 
-    .line 62
     sget-object v5, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mCtx:Landroid/content/Context;
 
-    const-string/jumbo v7, "user"
+    const-string v7, "user"
 
     invoke-virtual {v5, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -515,7 +456,6 @@
 
     check-cast v4, Landroid/os/UserManager;
 
-    .line 64
     .local v4, "um":Landroid/os/UserManager;
     iget v5, v2, Landroid/content/pm/PersonaInfo;->id:I
 
@@ -523,7 +463,6 @@
 
     move-result-object v3
 
-    .line 65
     .local v3, "ui":Landroid/content/pm/UserInfo;
     if-eqz v3, :cond_2
 
@@ -531,7 +470,6 @@
 
     if-nez v5, :cond_2
 
-    .line 66
     iget v5, v2, Landroid/content/pm/PersonaInfo;->id:I
 
     iget-object v7, v3, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
@@ -540,7 +478,6 @@
 
     invoke-direct {p0, v5, v7, v8}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->addItem(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 58
     .end local v3    # "ui":Landroid/content/pm/UserInfo;
     .end local v4    # "um":Landroid/os/UserManager;
     :cond_2
@@ -548,14 +485,12 @@
 
     goto :goto_1
 
-    .line 72
     .end local v2    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_3
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->isInitialized:Z
 
-    .line 73
     monitor-exit v6
 
     goto :goto_0
@@ -575,25 +510,20 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 117
     iget-boolean v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->isInitialized:Z
 
     if-nez v1, :cond_0
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->initialize()V
 
-    .line 132
     :goto_0
     return-void
 
-    .line 122
     :cond_0
     iget-object v2, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->lock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 123
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -607,7 +537,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 124
     iget-object v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -620,12 +549,10 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 125
     iget-object v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mList:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(I)Ljava/lang/Object;
 
-    .line 130
     :cond_1
     iget-object v1, p0, Lcom/android/server/bridge/operations/SimplePersonaInfos;->mExtraInfo:Ljava/util/HashMap;
 
@@ -635,7 +562,6 @@
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     monitor-exit v2
 
     goto :goto_0
@@ -649,7 +575,6 @@
 
     throw v1
 
-    .line 123
     :cond_2
     add-int/lit8 v0, v0, 0x1
 

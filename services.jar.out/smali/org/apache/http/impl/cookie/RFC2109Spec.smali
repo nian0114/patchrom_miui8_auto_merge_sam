@@ -13,7 +13,6 @@
     .locals 2
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/http/impl/cookie/CookieSpecBase;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -31,7 +30,6 @@
     .param p2, "oneHeader"    # Z
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/impl/cookie/CookieSpecBase;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -52,7 +50,6 @@
     .param p3, "version"    # I
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -79,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 10
     .local p1, "cookies":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -98,7 +94,6 @@
     .param p4, "version"    # I
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -112,7 +107,6 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -126,7 +120,6 @@
     .locals 2
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -160,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -181,7 +173,6 @@
     .end annotation
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 148
     iput-object p1, p0, Lcom/samsung/cpp/CPPSrvCommunicator$1$1;->this$1:Lcom/samsung/cpp/CPPSrvCommunicator$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "session"    # Ljavax/net/ssl/SSLSession;
 
     .prologue
-    .line 152
     const/4 v0, 0x1
 
     return v0

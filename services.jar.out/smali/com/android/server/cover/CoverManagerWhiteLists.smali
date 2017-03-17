@@ -78,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/cover/CoverManagerWhiteLists;->sInstance:Lcom/android/server/cover/CoverManagerWhiteLists;
@@ -90,40 +89,32 @@
     .locals 1
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
-    .line 46
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mPrefixPackage:Ljava/util/ArrayList;
 
-    .line 60
     invoke-virtual {p0}, Lcom/android/server/cover/CoverManagerWhiteLists;->setupSignaturesMap()V
 
-    .line 61
     invoke-virtual {p0}, Lcom/android/server/cover/CoverManagerWhiteLists;->setupWhiteList()V
 
-    .line 62
     invoke-virtual {p0}, Lcom/android/server/cover/CoverManagerWhiteLists;->setPrefixPackage()V
 
-    .line 63
     return-void
 .end method
 
@@ -132,10 +123,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     if-eqz p1, :cond_1
 
-    .line 221
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mPrefixPackage:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -156,7 +145,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 222
     .local v1, "prefixPackage":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -164,7 +152,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 227
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "prefixPackage":Ljava/lang/String;
     :goto_0
@@ -180,19 +167,16 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Lcom/android/server/cover/CoverManagerWhiteLists;->sInstance:Lcom/android/server/cover/CoverManagerWhiteLists;
 
     if-nez v0, :cond_0
 
-    .line 54
     new-instance v0, Lcom/android/server/cover/CoverManagerWhiteLists;
 
     invoke-direct {v0}, Lcom/android/server/cover/CoverManagerWhiteLists;-><init>()V
 
     sput-object v0, Lcom/android/server/cover/CoverManagerWhiteLists;->sInstance:Lcom/android/server/cover/CoverManagerWhiteLists;
 
-    .line 56
     :cond_0
     sget-object v0, Lcom/android/server/cover/CoverManagerWhiteLists;->sInstance:Lcom/android/server/cover/CoverManagerWhiteLists;
 
@@ -205,7 +189,6 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 207
     const-string v4, "activity"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -214,17 +197,14 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 208
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v2
 
-    .line 209
     .local v2, "listRapi":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v2, :cond_1
 
-    .line 210
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -243,16 +223,13 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 211
     .local v3, "rapi":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v4, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v4, p2, :cond_0
 
-    .line 212
     iget-object v4, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    .line 216
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "rapi":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
@@ -278,12 +255,10 @@
     .end annotation
 
     .prologue
-    .line 231
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 232
     .local v2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/Signature;>;"
     const/4 v1, 0x0
 
@@ -293,18 +268,15 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 233
     const/4 v3, 0x1
 
     shl-int v0, v3, v1
 
-    .line 234
     .local v0, "flag":I
     and-int v3, p1, v0
 
     if-eqz v3, :cond_0
 
-    .line 235
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -313,13 +285,11 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 232
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 238
     .end local v0    # "flag":I
     :cond_1
     return-object v2
@@ -330,7 +300,6 @@
     .param p1, "signatures"    # [Landroid/content/pm/Signature;
 
     .prologue
-    .line 202
     const/4 v0, 0x7
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/cover/CoverManagerWhiteLists;->isMatchedSignature([Landroid/content/pm/Signature;I)Z
@@ -346,18 +315,15 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 242
     invoke-direct {p0, p2}, Lcom/android/server/cover/CoverManagerWhiteLists;->getSignatures(I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 243
     .local v0, "SIGNATURES":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/Signature;>;"
     if-eqz p1, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 244
     move-object v1, p1
 
     .local v1, "arr$":[Landroid/content/pm/Signature;
@@ -376,7 +342,6 @@
 
     aget-object v6, v1, v3
 
-    .line 245
     .local v6, "signature":Landroid/content/pm/Signature;
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -397,7 +362,6 @@
 
     check-cast v5, Landroid/content/pm/Signature;
 
-    .line 246
     .local v5, "s":Landroid/content/pm/Signature;
     if-eqz v5, :cond_0
 
@@ -407,10 +371,8 @@
 
     if-eqz v7, :cond_0
 
-    .line 247
     const/4 v7, 0x1
 
-    .line 252
     .end local v1    # "arr$":[Landroid/content/pm/Signature;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "len$":I
@@ -419,7 +381,6 @@
     :goto_1
     return v7
 
-    .line 244
     .restart local v1    # "arr$":[Landroid/content/pm/Signature;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "len$":I
@@ -434,7 +395,6 @@
     .restart local v3    # "i$":I
     goto :goto_0
 
-    .line 252
     .end local v1    # "arr$":[Landroid/content/pm/Signature;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -454,10 +414,8 @@
     .param p3, "pid"    # I
 
     .prologue
-    .line 141
     const/4 v11, 0x0
 
-    .line 143
     .local v11, "signatureMatch":Z
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -476,21 +434,17 @@
 
     if-nez v15, :cond_0
 
-    .line 144
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : SIGNATURE_MATCH"
+    const-string v16, "isAllowedToUse : SIGNATURE_MATCH"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     const/4 v15, 0x1
 
-    .line 198
     :goto_0
     return v15
 
-    .line 148
     :cond_0
     move-object/from16 v0, p0
 
@@ -502,7 +456,6 @@
 
     move-result-object v8
 
-    .line 149
     .local v8, "packageName":Ljava/lang/String;
     const-string v15, "CoverManagerWhiteLists"
 
@@ -510,7 +463,7 @@
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v17, "isAllowedToUse : packageName = "
+    const-string v17, "isAllowedToUse : packageName = "
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -556,24 +509,20 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v14
 
-    .line 151
     .local v14, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 152
     .local v6, "origId":J
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
-    .line 153
     .local v5, "packageManager":Landroid/content/pm/PackageManager;
     const/16 v15, 0x40
 
@@ -581,50 +530,41 @@
 
     move-result-object v10
 
-    .line 154
     .local v10, "pkgInfo":Landroid/content/pm/PackageInfo;
     invoke-virtual {v5, v8, v14}, Landroid/content/pm/PackageManager;->getPackageUid(Ljava/lang/String;I)I
 
     move-result v9
 
-    .line 155
     .local v9, "packageUid":I
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 157
     if-nez v10, :cond_1
 
-    .line 158
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : pkgInfo is null"
+    const-string v16, "isAllowedToUse : pkgInfo is null"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 162
     :cond_1
     move/from16 v0, p2
 
     if-eq v9, v0, :cond_2
 
-    .line 163
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : pkg does not match uid"
+    const-string v16, "isAllowedToUse : pkg does not match uid"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 167
     :cond_2
     iget-object v15, v10, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -634,21 +574,18 @@
 
     if-eqz v15, :cond_3
 
-    .line 168
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : App is system App"
+    const-string v16, "isAllowedToUse : App is system App"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     const/4 v15, 0x1
 
     goto/16 :goto_0
 
-    .line 172
     :cond_3
-    const-string/jumbo v15, "eng"
+    const-string v15, "eng"
 
     sget-object v16, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
@@ -658,23 +595,19 @@
 
     if-eqz v15, :cond_4
 
-    .line 173
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : build type is eng"
+    const-string v16, "isAllowedToUse : build type is eng"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     const/4 v15, 0x1
 
     goto/16 :goto_0
 
-    .line 177
     :cond_4
     iget-object v12, v10, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 178
     .local v12, "signatures":[Landroid/content/pm/Signature;
     move-object/from16 v0, p0
 
@@ -684,19 +617,16 @@
 
     if-eqz v15, :cond_5
 
-    .line 179
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : App key is samsung key"
+    const-string v16, "isAllowedToUse : App key is samsung key"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     const/4 v15, 0x1
 
     goto/16 :goto_0
 
-    .line 183
     :cond_5
     move-object/from16 v0, p0
 
@@ -704,7 +634,6 @@
 
     move-result-object v8
 
-    .line 184
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
@@ -715,23 +644,19 @@
 
     check-cast v13, Ljava/lang/Integer;
 
-    .line 185
     .local v13, "type":Ljava/lang/Integer;
     if-nez v13, :cond_6
 
-    .line 186
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : cover manager white lists does not include this App"
+    const-string v16, "isAllowedToUse : cover manager white lists does not include this App"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 189
     :cond_6
     invoke-virtual {v13}, Ljava/lang/Integer;->intValue()I
 
@@ -743,13 +668,11 @@
 
     move-result v11
 
-    .line 190
     if-eqz v11, :cond_7
 
-    .line 191
     const-string v15, "CoverManagerWhiteLists"
 
-    const-string/jumbo v16, "isAllowedToUse : cover manager white lists match this App"
+    const-string v16, "isAllowedToUse : cover manager white lists match this App"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -767,18 +690,14 @@
     :goto_1
     move v15, v11
 
-    .line 198
     goto/16 :goto_0
 
-    .line 193
     :catch_0
     move-exception v4
 
-    .line 194
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v4}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    .line 195
     const/4 v11, 0x0
 
     goto :goto_1
@@ -788,14 +707,12 @@
     .locals 2
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mPrefixPackage:Ljava/util/ArrayList;
 
     const-string v1, "com.samsung.radio"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 138
     return-void
 .end method
 
@@ -803,7 +720,6 @@
     .locals 4
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x1
@@ -816,7 +732,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x2
@@ -829,7 +744,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x4
@@ -842,7 +756,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x8
@@ -855,7 +768,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x10
@@ -868,7 +780,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x20
@@ -881,7 +792,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x40
@@ -894,7 +804,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x80
@@ -907,7 +816,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x100
@@ -920,7 +828,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x200
@@ -933,7 +840,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x400
@@ -946,7 +852,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x800
@@ -959,7 +864,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 123
     return-void
 .end method
 
@@ -967,7 +871,6 @@
     .locals 3
 
     .prologue
-    .line 126
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.samsung.radio"
@@ -980,7 +883,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.uplus.ipagent"
@@ -993,7 +895,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.sds.mobiledesk"
@@ -1006,7 +907,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.sec.chatonblue"
@@ -1019,7 +919,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.ktcs.whowho"
@@ -1032,7 +931,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.sec.samsungsoundphone"
@@ -1045,7 +943,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.sec.android.app.shealth"
@@ -1058,7 +955,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerWhiteLists;->mWhiteList:Ljava/util/HashMap;
 
     const-string v1, "com.amc.ui"
@@ -1071,6 +967,5 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     return-void
 .end method

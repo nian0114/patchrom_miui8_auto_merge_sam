@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 971
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$6;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownThread$6;->val$continueSignal:Ljava/util/concurrent/CountDownLatch;
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 974
     # getter for: Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Lcom/android/server/power/ShutdownThread;
 
@@ -58,11 +56,9 @@
     # invokes: Lcom/android/server/power/ShutdownThread;->startShutdownDialog(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$1200(Landroid/content/Context;)V
 
-    .line 975
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$6;->val$continueSignal:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 976
     return-void
 .end method

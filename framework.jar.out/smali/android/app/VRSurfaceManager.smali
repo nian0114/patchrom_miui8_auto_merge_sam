@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const/4 v0, 0x0
 
     sput-object v0, Landroid/app/VRSurfaceManager;->mService:Lcom/android/internal/app/IVRManagerService;
@@ -24,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,17 +33,14 @@
     .param p0, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     :try_start_0
     invoke-static {}, Landroid/app/VRSurfaceManager;->getService()Lcom/android/internal/app/IVRManagerService;
 
     move-result-object v1
 
-    .line 62
     .local v1, "svc":Lcom/android/internal/app/IVRManagerService;
     if-eqz v1, :cond_0
 
-    .line 63
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
@@ -58,16 +53,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
     :cond_0
     return-void
 
-    .line 65
     .end local v1    # "svc":Lcom/android/internal/app/IVRManagerService;
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "ex":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -81,10 +73,8 @@
     .param p0, "surface"    # I
 
     .prologue
-    .line 52
     const/4 v0, -0x1
 
-    .line 53
     .local v0, "result":I
     const-string v1, "VRSurfaceManager"
 
@@ -92,17 +82,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     const-string v1, "getClientBufferAddress"
 
     invoke-static {v1}, Landroid/app/VRSurfaceManager;->enforceCallingPermission(Ljava/lang/String;)V
 
-    .line 55
     invoke-static {p0}, Landroid/app/VRSurfaceManager;->get_client_buffer_address(I)I
 
     move-result v0
 
-    .line 56
     return v0
 .end method
 
@@ -111,10 +98,8 @@
     .param p0, "surface"    # I
 
     .prologue
-    .line 35
     const/4 v0, -0x1
 
-    .line 36
     .local v0, "result":I
     const-string v1, "VRSurfaceManager"
 
@@ -122,17 +107,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     const-string v1, "getFrontBufferAddress"
 
     invoke-static {v1}, Landroid/app/VRSurfaceManager;->enforceCallingPermission(Ljava/lang/String;)V
 
-    .line 38
     invoke-static {p0}, Landroid/app/VRSurfaceManager;->get_front_buffer_address(I)I
 
     move-result v0
 
-    .line 39
     return v0
 .end method
 
@@ -140,7 +122,6 @@
     .locals 3
 
     .prologue
-    .line 15
     const-class v1, Landroid/app/VRSurfaceManager;
 
     monitor-enter v1
@@ -150,8 +131,7 @@
 
     if-nez v0, :cond_0
 
-    .line 16
-    const-string/jumbo v0, "vr"
+    const-string v0, "vr"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -163,19 +143,16 @@
 
     sput-object v0, Landroid/app/VRSurfaceManager;->mService:Lcom/android/internal/app/IVRManagerService;
 
-    .line 17
     sget-object v0, Landroid/app/VRSurfaceManager;->mService:Lcom/android/internal/app/IVRManagerService;
 
     if-nez v0, :cond_0
 
-    .line 18
     const-string v0, "VRSurfaceManager"
 
-    const-string/jumbo v2, "warning: no VR_MANAGER_SERVICE"
+    const-string v2, "warning: no VR_MANAGER_SERVICE"
 
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     :cond_0
     sget-object v0, Landroid/app/VRSurfaceManager;->mService:Lcom/android/internal/app/IVRManagerService;
     :try_end_0
@@ -185,7 +162,6 @@
 
     return-object v0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -201,10 +177,8 @@
     .param p2, "pitch"    # I
 
     .prologue
-    .line 43
     const/4 v0, -0x1
 
-    .line 44
     .local v0, "result":I
     const-string v1, "VRSurfaceManager"
 
@@ -212,17 +186,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     const-string v1, "getSurfaceBufferAddress"
 
     invoke-static {v1}, Landroid/app/VRSurfaceManager;->enforceCallingPermission(Ljava/lang/String;)V
 
-    .line 46
     invoke-static {p0, p1, p2}, Landroid/app/VRSurfaceManager;->get_surface_buffer_address(I[II)I
 
     move-result v0
 
-    .line 48
     return v0
 .end method
 
@@ -241,22 +212,18 @@
     .param p1, "set"    # Z
 
     .prologue
-    .line 29
     const-string v0, "VRSurfaceManager"
 
     const-string v1, "VRSurfaceManager : setFrontBuffer"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 30
-    const-string/jumbo v0, "setFrontBuffer"
+    const-string v0, "setFrontBuffer"
 
     invoke-static {v0}, Landroid/app/VRSurfaceManager;->enforceCallingPermission(Ljava/lang/String;)V
 
-    .line 31
     invoke-static {p0, p1}, Landroid/app/VRSurfaceManager;->set_front_buffer(IZ)V
 
-    .line 32
     return-void
 .end method
 

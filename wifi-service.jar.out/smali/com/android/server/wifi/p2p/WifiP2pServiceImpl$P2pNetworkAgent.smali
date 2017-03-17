@@ -30,7 +30,6 @@
     .param p8, "score"    # I
 
     .prologue
-    .line 735
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pNetworkAgent;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     move-object v0, p0
@@ -49,10 +48,8 @@
 
     move/from16 v7, p8
 
-    .line 736
     invoke-direct/range {v0 .. v7}, Landroid/net/NetworkAgent;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkInfo;Landroid/net/NetworkCapabilities;Landroid/net/LinkProperties;I)V
 
-    .line 737
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 742
     return-void
 .end method
 
@@ -71,6 +67,5 @@
     .locals 0
 
     .prologue
-    .line 739
     return-void
 .end method

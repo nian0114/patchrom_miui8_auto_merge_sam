@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 9463
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .param p2, "object"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 9471
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -56,7 +54,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 9463
     check-cast p2, Lcom/android/server/am/TaskRecord;
 
     .end local p2    # "x1":Ljava/lang/Object;
@@ -70,7 +67,6 @@
     .param p1, "object"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 9466
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -83,7 +79,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 9463
     check-cast p1, Lcom/android/server/am/TaskRecord;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -108,7 +103,6 @@
     .end annotation
 
     .prologue
-    .line 9481
     .local p2, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+Lcom/android/server/am/TaskRecord;>;"
     new-instance v0, Ljava/lang/IllegalAccessError;
 
@@ -130,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 9476
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+Lcom/android/server/am/TaskRecord;>;"
     new-instance v0, Ljava/lang/IllegalAccessError;
 
@@ -143,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 9486
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -156,7 +148,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 9491
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -169,7 +160,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 9463
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityStackSupervisor$3;->remove(I)Lcom/android/server/am/TaskRecord;
 
     move-result-object v0
@@ -182,7 +172,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 9496
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -201,7 +190,6 @@
     .end annotation
 
     .prologue
-    .line 9506
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     new-instance v0, Ljava/lang/IllegalAccessError;
 
@@ -221,7 +209,6 @@
     .end annotation
 
     .prologue
-    .line 9511
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     new-instance v0, Ljava/lang/IllegalAccessError;
 
@@ -236,7 +223,6 @@
     .param p2, "object"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 9501
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -250,7 +236,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 9463
     check-cast p2, Lcom/android/server/am/TaskRecord;
 
     .end local p2    # "x1":Ljava/lang/Object;

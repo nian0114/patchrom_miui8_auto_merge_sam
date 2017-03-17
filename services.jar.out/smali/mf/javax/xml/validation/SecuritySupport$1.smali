@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/validation/SecuritySupport$1;->this$0:Lmf/javax/xml/validation/SecuritySupport;
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,10 +39,8 @@
     .locals 2
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
-    .line 70
     .local v0, "cl":Ljava/lang/ClassLoader;
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -54,15 +50,12 @@
 
     move-result-object v0
 
-    .line 72
     if-nez v0, :cond_0
 
-    .line 73
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 74
     :cond_0
     return-object v0
 .end method

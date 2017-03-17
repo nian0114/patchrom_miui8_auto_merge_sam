@@ -44,18 +44,14 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 57
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 52
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastActiveEdgeArea:I
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
-    .line 59
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -66,7 +62,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mHandler:Landroid/os/Handler;
 
-    .line 60
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p0, "x0"    # Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;
 
     .prologue
-    .line 21
     iget v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastActiveEdgeArea:I
 
     return v0
@@ -91,7 +85,6 @@
 
     const/4 v3, 0x1
 
-    .line 161
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->isSupportCocktailBar(Landroid/content/Context;)Z
@@ -100,14 +93,13 @@
 
     if-nez v5, :cond_3
 
-    .line 162
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    const-string/jumbo v6, "edge_information_stream"
+    const-string v6, "edge_information_stream"
 
     invoke-static {v5, v6, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -117,7 +109,6 @@
 
     move v1, v3
 
-    .line 163
     .local v1, "isInformationStreamOn":Z
     :goto_0
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
@@ -132,7 +123,6 @@
 
     move-result v0
 
-    .line 164
     .local v0, "activeEdgeArea":I
     const-string v5, "CocktailBarSettingObserver"
 
@@ -140,7 +130,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "setupWakeup : setting is changed. ,isInformationStreamOn="
+    const-string v7, "setupWakeup : setting is changed. ,isInformationStreamOn="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -202,10 +192,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     const/4 v2, 0x0
 
-    .line 169
     .local v2, "updateWakeupArea":Z
     iget-boolean v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
 
@@ -215,22 +203,17 @@
 
     if-eq v1, v5, :cond_1
 
-    .line 170
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsInformationStreamOn:Z
 
-    .line 171
     if-eqz v1, :cond_5
 
-    .line 172
     const/4 v2, 0x1
 
-    .line 173
     iget-object v4, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v4, v8, v3}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils$CocktailBarSystemUtil;->updateWakeupGesture(Landroid/content/Context;IZ)V
 
-    .line 178
     :cond_1
     :goto_1
     iget-boolean v3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
@@ -243,11 +226,9 @@
 
     if-eq v0, v3, :cond_3
 
-    .line 179
     :cond_2
     iput v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastActiveEdgeArea:I
 
-    .line 180
     iget-object v3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mHandler:Landroid/os/Handler;
 
     new-instance v4, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver$1;
@@ -258,7 +239,6 @@
 
     invoke-virtual {v3, v4, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 188
     .end local v0    # "activeEdgeArea":I
     .end local v1    # "isInformationStreamOn":Z
     .end local v2    # "updateWakeupArea":Z
@@ -268,10 +248,8 @@
     :cond_4
     move v1, v4
 
-    .line 162
     goto :goto_0
 
-    .line 175
     .restart local v0    # "activeEdgeArea":I
     .restart local v1    # "isInformationStreamOn":Z
     .restart local v2    # "updateWakeupArea":Z
@@ -291,14 +269,13 @@
 
     const/4 v1, 0x0
 
-    .line 150
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "night_mode"
+    const-string v3, "night_mode"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -306,7 +283,6 @@
 
     if-ne v2, v0, :cond_2
 
-    .line 151
     .local v0, "isNightModeOn":Z
     :goto_0
     const-string v1, "CocktailBarSettingObserver"
@@ -315,7 +291,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "startNightClockServiceIfNeed : setting is changed. ,isNightModeOn="
+    const-string v3, "startNightClockServiceIfNeed : setting is changed. ,isNightModeOn="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -355,7 +331,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     iget-boolean v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
 
     if-eqz v1, :cond_0
@@ -364,11 +339,9 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 155
     :cond_0
     iput-boolean v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsNightModeOn:Z
 
-    .line 156
     const-string v1, "com.samsung.android.app.edge.setting"
 
     const-string v2, "com.samsung.android.app.edge.nightclock.NightClockService"
@@ -377,7 +350,6 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startService(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
     :cond_1
     return-void
 
@@ -385,7 +357,6 @@
     :cond_2
     move v0, v1
 
-    .line 150
     goto :goto_0
 .end method
 
@@ -397,14 +368,13 @@
 
     const/4 v3, 0x1
 
-    .line 132
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    const-string/jumbo v6, "turn_over_lighting"
+    const-string v6, "turn_over_lighting"
 
     invoke-static {v5, v6, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -414,7 +384,6 @@
 
     move v2, v3
 
-    .line 133
     .local v2, "isTurnOverLighting":Z
     :goto_0
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
@@ -423,7 +392,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "people_stripe"
+    const-string v6, "people_stripe"
 
     invoke-static {v5, v6, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -433,7 +402,6 @@
 
     move v0, v3
 
-    .line 134
     .local v0, "isPeopleStripeOn":Z
     :goto_1
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
@@ -442,7 +410,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "task_edge"
+    const-string v6, "task_edge"
 
     invoke-static {v5, v6, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -452,7 +420,6 @@
 
     move v1, v3
 
-    .line 135
     .local v1, "isTaskEdgeOn":Z
     :goto_2
     const-string v3, "CocktailBarSettingObserver"
@@ -461,7 +428,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "startPeopleStripeServiceIfNeed : setting is changed. isTurnOverLighting="
+    const-string v5, "startPeopleStripeServiceIfNeed : setting is changed. isTurnOverLighting="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -545,7 +512,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     iget-boolean v3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
 
     if-eqz v3, :cond_0
@@ -562,17 +528,13 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 142
     :cond_0
     iput-boolean v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsTurnOverLightingOn:Z
 
-    .line 143
     iput-boolean v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsPeopleStripeOn:Z
 
-    .line 144
     iput-boolean v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsTaskEdgeOn:Z
 
-    .line 145
     const-string v3, "com.samsung.android.service.peoplestripe"
 
     const-string v4, "com.samsung.android.service.peoplestripe.PeopleStripeService"
@@ -581,7 +543,6 @@
 
     invoke-direct {p0, v3, v4, v5}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startService(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     :cond_1
     return-void
 
@@ -591,21 +552,18 @@
     :cond_2
     move v2, v4
 
-    .line 132
     goto/16 :goto_0
 
     .restart local v2    # "isTurnOverLighting":Z
     :cond_3
     move v0, v4
 
-    .line 133
     goto/16 :goto_1
 
     .restart local v0    # "isPeopleStripeOn":Z
     :cond_4
     move v1, v4
 
-    .line 134
     goto/16 :goto_2
 .end method
 
@@ -616,14 +574,12 @@
     .param p3, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 191
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.android.edge.intent.action.SETTING_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 192
     .local v1, "i":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -631,15 +587,12 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 193
     if-eqz p3, :cond_0
 
-    .line 194
-    const-string/jumbo v2, "reason"
+    const-string v2, "reason"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 197
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
@@ -648,22 +601,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     :goto_0
     return-void
 
-    .line 198
     :catch_0
     move-exception v0
 
-    .line 199
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 200
     const-string v2, "CocktailBarSettingObserver"
 
-    const-string/jumbo v3, "error"
+    const-string v3, "error"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -674,21 +623,16 @@
     .locals 1
 
     .prologue
-    .line 125
     invoke-direct {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startPeopleStripeServiceIfNeed()V
 
-    .line 126
     invoke-direct {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startNightClockServiceIfNeed()V
 
-    .line 127
     invoke-direct {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->setupWakeup()V
 
-    .line 128
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
 
-    .line 129
     return-void
 .end method
 
@@ -700,16 +644,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 63
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 64
     .local v0, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v1, "turn_over_lighting"
+    const-string v1, "turn_over_lighting"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -717,8 +659,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 65
-    const-string/jumbo v1, "people_stripe"
+    const-string v1, "people_stripe"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -726,8 +667,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 66
-    const-string/jumbo v1, "night_mode"
+    const-string v1, "night_mode"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -735,8 +675,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 67
-    const-string/jumbo v1, "task_edge"
+    const-string v1, "task_edge"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -744,7 +683,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 68
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->isSupportCocktailBar(Landroid/content/Context;)Z
@@ -753,8 +691,7 @@
 
     if-nez v1, :cond_0
 
-    .line 69
-    const-string/jumbo v1, "edge_information_stream"
+    const-string v1, "edge_information_stream"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -762,7 +699,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 70
     const-string v1, "active_edge_area"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -771,11 +707,9 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 72
     :cond_0
     invoke-direct {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->updateSetting()V
 
-    .line 73
     return-void
 .end method
 
@@ -786,7 +720,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 81
     const-string v7, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -799,14 +732,12 @@
 
     if-eqz v7, :cond_3
 
-    .line 82
-    const-string/jumbo v7, "reason"
+    const-string v7, "reason"
 
     invoke-virtual {p1, v7, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 83
     .local v5, "reason":I
     const-string v7, "CocktailBarSettingObserver"
 
@@ -830,12 +761,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     const/4 v7, 0x5
 
     if-ne v5, v7, :cond_2
 
-    .line 85
     iget-boolean v7, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsPeopleStripeOn:Z
 
     if-nez v7, :cond_0
@@ -848,23 +777,20 @@
 
     if-eqz v7, :cond_1
 
-    .line 86
     :cond_0
     const-string v7, "com.samsung.android.service.peoplestripe"
 
     const-string v8, "com.samsung.android.service.peoplestripe.PeopleStripeService"
 
-    const-string/jumbo v9, "emergencyMode"
+    const-string v9, "emergencyMode"
 
     invoke-direct {p0, v7, v8, v9}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startService(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 88
     :cond_1
     iget-boolean v7, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mLastIsNightModeOn:Z
 
     if-eqz v7, :cond_2
 
-    .line 89
     const-string v7, "com.samsung.android.app.edge.setting"
 
     const-string v8, "com.samsung.android.app.edge.nightclock.NightClockService"
@@ -873,71 +799,58 @@
 
     invoke-direct {p0, v7, v8, v9}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startService(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
     .end local v5    # "reason":I
     :cond_2
     :goto_0
     return-void
 
-    .line 93
     :cond_3
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
     .local v0, "action":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 95
     .local v1, "added":Z
     const/4 v2, 0x0
 
-    .line 96
     .local v2, "changed":Z
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 97
     .local v6, "uri":Landroid/net/Uri;
     if-eqz v6, :cond_2
 
-    .line 100
     invoke-virtual {v6}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 101
     .local v4, "pkgName":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 104
     const-string v7, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 105
     const-string v7, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 106
     if-nez v1, :cond_4
 
     if-eqz v2, :cond_2
 
-    .line 107
     :cond_4
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 108
     .local v3, "extras":Landroid/os/Bundle;
     if-nez v2, :cond_5
 
@@ -951,7 +864,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 109
     :cond_5
     const-string v7, "com.samsung.android.service.peoplestripe"
 
@@ -961,13 +873,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 110
     iput-boolean v9, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
 
-    .line 111
     invoke-direct {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->startPeopleStripeServiceIfNeed()V
 
-    .line 112
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mInitialized:Z
@@ -980,10 +889,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 121
     invoke-direct {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->updateSetting()V
 
-    .line 122
     return-void
 .end method
 
@@ -991,17 +898,14 @@
     .locals 2
 
     .prologue
-    .line 76
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettingObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 77
     .local v0, "resolver":Landroid/content/ContentResolver;
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 78
     return-void
 .end method

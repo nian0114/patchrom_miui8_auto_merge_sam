@@ -247,7 +247,7 @@
 
     const-string v0, "X509IssuerName"
 
-    const-string/jumbo v1, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v1, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {p0, v0, v1}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getTextFromChildElement(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -265,7 +265,7 @@
 
     const-string v0, "X509SerialNumber"
 
-    const-string/jumbo v1, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v1, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {p0, v0, v1}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getTextFromChildElement(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

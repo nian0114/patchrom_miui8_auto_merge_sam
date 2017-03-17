@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 785
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 787
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -52,25 +50,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 788
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # invokes: Lcom/android/server/enterprise/device/DeviceInfo;->dataUsageValuesInit()V
     invoke-static {v0}, Lcom/android/server/enterprise/device/DeviceInfo;->access$500(Lcom/android/server/enterprise/device/DeviceInfo;)V
 
-    .line 789
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/device/DeviceInfo;->dataUsageTimerActivation(Landroid/app/enterprise/ContextInfo;)V
 
-    .line 797
     :cond_0
     :goto_0
     return-void
 
-    .line 790
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -84,7 +78,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 791
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/16 v1, 0xa
@@ -92,7 +85,6 @@
     # setter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataStatsCounter:I
     invoke-static {v0, v1}, Lcom/android/server/enterprise/device/DeviceInfo;->access$602(Lcom/android/server/enterprise/device/DeviceInfo;I)I
 
-    .line 792
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # getter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataUsageEventsHandler:Landroid/os/Handler;
@@ -109,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 793
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # getter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataUsageTimerActivated:Z
@@ -119,7 +110,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 794
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     # getter for: Lcom/android/server/enterprise/device/DeviceInfo;->mDataUsageEventsHandler:Landroid/os/Handler;

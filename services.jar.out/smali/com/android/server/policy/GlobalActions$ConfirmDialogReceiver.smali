@@ -29,26 +29,21 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4655
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 4656
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "com.android.systemui.statusbar.EXPANDED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 4657
     .local v0, "filter":Landroid/content/IntentFilter;
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->contextInternal:Landroid/content/Context;
 
-    .line 4658
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->contextInternal:Landroid/content/Context;
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 4659
     return-void
 .end method
 
@@ -56,49 +51,41 @@
     .locals 3
 
     .prologue
-    .line 4661
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->contextInternal:Landroid/content/Context;
 
     if-nez v1, :cond_0
 
-    .line 4668
     :goto_0
     return-void
 
-    .line 4662
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 4663
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.samsung.cover.STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4664
-    const-string/jumbo v1, "suppressCoverUI"
+    const-string v1, "suppressCoverUI"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4665
-    const-string/jumbo v1, "miniModeUI"
+    const-string v1, "miniModeUI"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4666
-    const-string/jumbo v1, "sender"
+    const-string v1, "sender"
 
     const-string v2, "GlobalActions$ConfirmDialog"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4667
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->contextInternal:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -115,14 +102,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 4679
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onDismiss() of ConfirmDialogReceiver sIsConfirmingGuard = "
+    const-string v2, "onDismiss() of ConfirmDialogReceiver sIsConfirmingGuard = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -158,11 +144,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4680
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsAirplaneConfirmDialogExist:Z
     invoke-static {v3}, Lcom/android/server/policy/GlobalActions;->access$7002(Z)Z
 
-    .line 4681
     # getter for: Lcom/android/server/policy/GlobalActions;->sIsSecondConfirming:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$000()Z
 
@@ -170,7 +154,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4682
     # getter for: Lcom/android/server/policy/GlobalActions;->sIsConfirmingGuard:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$100()Ljava/lang/Object;
 
@@ -178,24 +161,19 @@
 
     monitor-enter v1
 
-    .line 4683
     const/4 v0, 0x0
 
     :try_start_0
     # setter for: Lcom/android/server/policy/GlobalActions;->sIsConfirming:Z
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$202(Z)Z
 
-    .line 4684
     invoke-direct {p0}, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->restoreQuickpanelBackgroundInternal()V
 
-    .line 4685
     monitor-exit v1
 
-    .line 4689
     :goto_0
     return-void
 
-    .line 4685
     :catchall_0
     move-exception v0
 
@@ -205,7 +183,6 @@
 
     throw v0
 
-    .line 4687
     :cond_0
     # setter for: Lcom/android/server/policy/GlobalActions;->sIsSecondConfirming:Z
     invoke-static {v3}, Lcom/android/server/policy/GlobalActions;->access$002(Z)Z
@@ -219,13 +196,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 4671
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
-    .line 4672
-    const-string/jumbo v1, "keyguard"
+    const-string v1, "keyguard"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -233,7 +208,6 @@
 
     check-cast v0, Landroid/app/KeyguardManager;
 
-    .line 4673
     .local v0, "keyguardManager":Landroid/app/KeyguardManager;
     invoke-virtual {v0}, Landroid/app/KeyguardManager;->isKeyguardSecure()Z
 
@@ -247,13 +221,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 4676
     .end local v0    # "keyguardManager":Landroid/app/KeyguardManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 4674
     .restart local v0    # "keyguardManager":Landroid/app/KeyguardManager;
     :cond_1
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$ConfirmDialogReceiver;->dialog:Landroid/app/AlertDialog;

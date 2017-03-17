@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 209
     iput-object p1, p0, Lcom/android/server/DirEncryptService$2;->this$0:Lcom/android/server/DirEncryptService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 212
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 213
     .local v0, "action":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -66,7 +63,6 @@
 
     invoke-static {v1}, Lcom/android/server/DirEncryptService;->logD(Ljava/lang/String;)V
 
-    .line 214
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -75,18 +71,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 215
     const-string v1, "DirEncryptService received ACTION_BOOT_COMPLETED"
 
     invoke-static {v1}, Lcom/android/server/DirEncryptService;->logD(Ljava/lang/String;)V
 
-    .line 216
     iget-object v1, p0, Lcom/android/server/DirEncryptService$2;->this$0:Lcom/android/server/DirEncryptService;
 
     # invokes: Lcom/android/server/DirEncryptService;->moveDumpstate()Z
     invoke-static {v1}, Lcom/android/server/DirEncryptService;->access$100(Lcom/android/server/DirEncryptService;)Z
 
-    .line 217
     iget-object v1, p0, Lcom/android/server/DirEncryptService$2;->this$0:Lcom/android/server/DirEncryptService;
 
     # getter for: Lcom/android/server/DirEncryptService;->mHelper:Lcom/android/server/DirEncryptServiceHelper;
@@ -98,7 +91,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/DirEncryptServiceHelper;->setBootComplted(Z)V
 
-    .line 219
     :cond_0
     return-void
 .end method

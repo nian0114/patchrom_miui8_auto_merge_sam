@@ -35,24 +35,18 @@
     .param p5, "dataCap"    # I
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->this$0:Lcom/android/internal/telephony/ModemStackController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     iput p2, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mStackId:I
 
-    .line 103
     iput p3, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mSupportedRatBitMask:I
 
-    .line 104
     iput p4, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mVoiceDataCap:I
 
-    .line 105
     iput p5, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mMaxDataCap:I
 
-    .line 106
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget v0, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mMaxDataCap:I
 
     return v0
@@ -72,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget v0, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mStackId:I
 
     return v0
@@ -82,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget v0, p0, Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;->mSupportedRatBitMask:I
 
     return v0
@@ -92,7 +83,6 @@
     .locals 2
 
     .prologue
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

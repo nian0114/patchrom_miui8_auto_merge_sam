@@ -16,16 +16,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput-byte v0, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->act:B
 
-    .line 10
     iput-byte v0, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->srvdomain:B
 
-    .line 11
     return-void
 .end method
 
@@ -35,16 +31,12 @@
     .param p2, "srvdomain"    # B
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput-byte p1, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->act:B
 
-    .line 15
     iput-byte p2, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->srvdomain:B
 
-    .line 16
     return-void
 .end method
 
@@ -54,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 19
     iget-byte v0, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->act:B
 
     return v0
@@ -64,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 27
     iget-byte v0, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->srvdomain:B
 
     return v0
@@ -75,10 +65,8 @@
     .param p1, "act"    # B
 
     .prologue
-    .line 23
     iput-byte p1, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->act:B
 
-    .line 24
     return-void
 .end method
 
@@ -87,9 +75,7 @@
     .param p1, "srvdomain"    # B
 
     .prologue
-    .line 31
     iput-byte p1, p0, Lcom/sec/epdg/ipc/EpdgNetReg;->srvdomain:B
 
-    .line 32
     return-void
 .end method

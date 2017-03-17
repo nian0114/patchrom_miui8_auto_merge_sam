@@ -37,20 +37,16 @@
     .locals 1
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/ActionMode;->mType:I
 
-    .line 66
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/ActionMode;->mDelayMili:I
 
-    .line 372
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Landroid/view/ActionMode;->mDelayMili:I
 
     return v0
@@ -85,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Landroid/view/ActionMode;->mTag:Ljava/lang/Object;
 
     return-object v0
@@ -98,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-boolean v0, p0, Landroid/view/ActionMode;->mTitleOptionalHint:Z
 
     return v0
@@ -108,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 219
     iget v0, p0, Landroid/view/ActionMode;->mType:I
 
     return v0
@@ -119,7 +111,6 @@
     .param p1, "duration"    # J
 
     .prologue
-    .line 251
     return-void
 .end method
 
@@ -130,7 +121,6 @@
     .locals 0
 
     .prologue
-    .line 238
     return-void
 .end method
 
@@ -138,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 189
     const/4 v0, 0x0
 
     return v0
@@ -148,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 307
     const/4 v0, 0x1
 
     return v0
@@ -159,7 +147,6 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 296
     return-void
 .end method
 
@@ -171,10 +158,8 @@
     .param p1, "miliSec"    # I
 
     .prologue
-    .line 72
     iput p1, p0, Landroid/view/ActionMode;->mDelayMili:I
 
-    .line 73
     return-void
 .end method
 
@@ -189,10 +174,8 @@
     .param p1, "tag"    # Ljava/lang/Object;
 
     .prologue
-    .line 93
     iput-object p1, p0, Landroid/view/ActionMode;->mTag:Ljava/lang/Object;
 
-    .line 94
     return-void
 .end method
 
@@ -207,10 +190,8 @@
     .param p1, "titleOptional"    # Z
 
     .prologue
-    .line 170
     iput-boolean p1, p0, Landroid/view/ActionMode;->mTitleOptionalHint:Z
 
-    .line 171
     return-void
 .end method
 
@@ -219,9 +200,7 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 210
     iput p1, p0, Landroid/view/ActionMode;->mType:I
 
-    .line 211
     return-void
 .end method

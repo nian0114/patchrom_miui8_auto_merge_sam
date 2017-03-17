@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2298
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgDelayedInit;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/EpdgService$1;
 
     .prologue
-    .line 2298
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgService$EpdgDelayedInit;-><init>(Lcom/sec/epdg/EpdgService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 2301
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$EpdgDelayedInit;->this$0:Lcom/sec/epdg/EpdgService;
 
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
@@ -63,6 +60,5 @@
     # invokes: Lcom/sec/epdg/EpdgService;->initEpdgService(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/sec/epdg/EpdgService;->access$4000(Lcom/sec/epdg/EpdgService;Landroid/content/Context;)V
 
-    .line 2302
     return-void
 .end method

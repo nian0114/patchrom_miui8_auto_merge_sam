@@ -94,7 +94,6 @@
     .locals 2
 
     .prologue
-    .line 107
     new-instance v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     const/4 v1, 0x1
@@ -117,79 +116,60 @@
 
     const/4 v1, 0x0
 
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     const-string v0, "CircularBuffer"
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->TAG:Ljava/lang/String;
 
-    .line 98
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLock:Ljava/lang/Object;
 
-    .line 109
     iput-boolean v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->isWriting:Z
 
-    .line 111
     iput-boolean v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsDumping:Z
 
-    .line 112
     iput-boolean v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTypeOfDump:Z
 
-    .line 113
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsFirstNode:Z
 
-    .line 114
     iput-boolean v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsBootCompleted:Z
 
-    .line 115
     sget-object v0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mSte:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
-    .line 116
     iput p1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mUid:I
 
-    .line 117
     const/high16 v0, 0x428c0000    # 70.0f
 
     iput v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminCriticalSize:F
 
-    .line 118
     const/high16 v0, 0x42b40000    # 90.0f
 
     iput v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminMaximumSize:F
 
-    .line 119
     const/high16 v0, 0x42c20000    # 97.0f
 
     iput v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mFullBuffer:F
 
-    .line 120
     iput-object p2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mContext:Landroid/content/Context;
 
-    .line 121
     iput-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
-    .line 122
     iput-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
-    .line 123
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLastDumpedFile:Ljava/lang/String;
 
-    .line 124
     iput-object p3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPackageName:Ljava/lang/String;
 
-    .line 125
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mContext:Landroid/content/Context;
@@ -198,21 +178,18 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 126
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->getBufferLogSize()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mBufferLimitSize:J
 
-    .line 127
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->getNumberOfDeprecatedFiles()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mNumberOfDeprecatedFiles:I
 
-    .line 128
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -223,7 +200,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
-    .line 129
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -234,7 +210,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPendingIntentErrors:Ljava/util/List;
 
-    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,10 +236,8 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminDirectoryPath:Ljava/lang/String;
 
-    .line 131
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->populateCircularBuffer()V
 
-    .line 132
     return-void
 .end method
 
@@ -272,21 +245,17 @@
     .locals 4
 
     .prologue
-    .line 293
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsBootCompleted:Z
 
     if-eqz v0, :cond_0
 
-    .line 294
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->checkCriticalSizes()V
 
-    .line 296
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsDumping:Z
 
     if-nez v0, :cond_1
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -303,10 +272,8 @@
 
     if-lez v0, :cond_1
 
-    .line 298
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->cleanBuffer()V
 
-    .line 302
     :cond_1
     new-instance v0, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
@@ -327,10 +294,8 @@
 
     const/4 v2, 0x1
 
-    .line 520
     const/4 v7, 0x0
 
-    .line 523
     .local v7, "intent":Landroid/content/Intent;
     const-wide/16 v0, 0x64
 
@@ -344,7 +309,6 @@
 
     long-to-int v8, v0
 
-    .line 525
     .local v8, "threshold":I
     int-to-float v0, v8
 
@@ -354,20 +318,17 @@
 
     if-ltz v0, :cond_3
 
-    .line 526
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCriticalIntent:Z
 
     if-nez v0, :cond_0
 
-    .line 527
     new-instance v7, Landroid/content/Intent;
 
     .end local v7    # "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "mdm.intent.action.audit.log.critical.size"
+    const-string v0, "mdm.intent.action.audit.log.critical.size"
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 528
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v0, "admin_uid"
 
@@ -375,17 +336,14 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 529
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 530
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 531
     .local v10, "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mContext:Landroid/content/Context;
 
@@ -393,13 +351,10 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 532
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 533
     iput-boolean v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCriticalIntent:Z
 
-    .line 535
     const/4 v0, 0x4
 
     const/4 v1, 0x2
@@ -438,7 +393,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 545
     .end local v10    # "token":J
     :cond_0
     :goto_0
@@ -450,20 +404,17 @@
 
     if-ltz v0, :cond_4
 
-    .line 546
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mMaximumIntent:Z
 
     if-nez v0, :cond_1
 
-    .line 547
     new-instance v7, Landroid/content/Intent;
 
     .end local v7    # "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "mdm.intent.action.audit.log.maximum.size"
+    const-string v0, "mdm.intent.action.audit.log.maximum.size"
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 548
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v0, "admin_uid"
 
@@ -471,17 +422,14 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 549
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 550
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 551
     .restart local v10    # "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mContext:Landroid/content/Context;
 
@@ -489,13 +437,10 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 552
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 553
     iput-boolean v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mMaximumIntent:Z
 
-    .line 560
     .end local v10    # "token":J
     :cond_1
     :goto_1
@@ -507,20 +452,17 @@
 
     if-ltz v0, :cond_5
 
-    .line 561
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mFullIntent:Z
 
     if-nez v0, :cond_2
 
-    .line 562
     new-instance v7, Landroid/content/Intent;
 
     .end local v7    # "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "mdm.intent.action.audit.log.full.size"
+    const-string v0, "mdm.intent.action.audit.log.full.size"
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 563
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v0, "admin_uid"
 
@@ -528,17 +470,14 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 564
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 565
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 566
     .restart local v10    # "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mContext:Landroid/content/Context;
 
@@ -546,13 +485,10 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 567
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 568
     iput-boolean v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mFullIntent:Z
 
-    .line 569
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v0
@@ -563,25 +499,21 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/auditlog/InformFailure;->broadcastFailure(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 574
     .end local v10    # "token":J
     :cond_2
     :goto_2
     return-void
 
-    .line 541
     :cond_3
     iput-boolean v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCriticalIntent:Z
 
     goto :goto_0
 
-    .line 556
     :cond_4
     iput-boolean v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mMaximumIntent:Z
 
     goto :goto_1
 
-    .line 572
     :cond_5
     iput-boolean v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mFullIntent:Z
 
@@ -592,16 +524,13 @@
     .locals 10
 
     .prologue
-    .line 578
     const/4 v3, 0x0
 
-    .line 580
     .local v3, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     monitor-enter v5
 
-    .line 581
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
@@ -609,7 +538,6 @@
 
     move-result-object v2
 
-    .line 583
     .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :goto_0
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
@@ -628,7 +556,6 @@
 
     if-lez v4, :cond_1
 
-    .line 584
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -639,14 +566,12 @@
 
     move-object v3, v0
 
-    .line 586
     invoke-virtual {v3}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->isDeprecated()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 587
     iget v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mNumberOfDeprecatedFiles:I
 
     add-int/lit8 v6, v4, -0x1
@@ -655,7 +580,6 @@
 
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->setNumberOfDeprecatedFiles(I)V
 
-    .line 592
     :goto_1
     iget-wide v6, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
@@ -667,7 +591,6 @@
 
     iput-wide v6, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
-    .line 593
     iget-wide v6, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mBufferLimitSize:J
 
     iget-wide v8, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
@@ -676,15 +599,12 @@
 
     invoke-virtual {p0, v6, v7}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->resizeBubbleFile(J)V
 
-    .line 594
     invoke-virtual {v3}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 595
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 597
     .end local v2    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :catchall_0
     move-exception v4
@@ -695,7 +615,6 @@
 
     throw v4
 
-    .line 589
     .restart local v2    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :cond_0
     :try_start_1
@@ -711,13 +630,11 @@
 
     goto :goto_1
 
-    .line 597
     :cond_1
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 598
     return-void
 .end method
 
@@ -726,14 +643,12 @@
     .param p1, "f"    # Ljava/io/File;
 
     .prologue
-    .line 640
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 643
     invoke-virtual {p1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v6
@@ -742,10 +657,8 @@
 
     if-nez v6, :cond_1
 
-    .line 644
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 645
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -772,18 +685,15 @@
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 675
     :cond_0
     :goto_0
     return-void
 
-    .line 651
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 653
     .local v2, "files":[Ljava/lang/String;
     move-object v0, v2
 
@@ -799,22 +709,18 @@
 
     aget-object v5, v0, v3
 
-    .line 655
     .local v5, "temp":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 658
     .local v1, "fileDelete":Ljava/io/File;
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->deleteDirectory(Ljava/io/File;)V
 
-    .line 653
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 662
     .end local v1    # "fileDelete":Ljava/io/File;
     .end local v5    # "temp":Ljava/lang/String;
     :cond_2
@@ -826,10 +732,8 @@
 
     if-nez v6, :cond_0
 
-    .line 663
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 664
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -858,7 +762,6 @@
 
     goto :goto_0
 
-    .line 671
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "files":[Ljava/lang/String;
     .end local v3    # "i$":I
@@ -866,7 +769,6 @@
     :cond_3
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 672
     const-string v6, "CircularBuffer"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -901,40 +803,32 @@
     .param p1, "folder"    # Ljava/io/File;
 
     .prologue
-    .line 207
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v20
 
     if-nez v20, :cond_0
 
-    .line 208
     const/4 v10, 0x0
 
-    .line 285
     :goto_0
     return-object v10
 
-    .line 210
     :cond_0
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v10
 
-    .line 211
     .local v10, "files":[Ljava/io/File;
     const/4 v13, 0x0
 
-    .line 213
     .local v13, "lastFile":Ljava/io/File;
     if-nez v10, :cond_1
 
-    .line 214
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 216
     :cond_1
     new-instance v20, Lcom/android/server/enterprise/auditlog/CircularBuffer$1;
 
@@ -948,14 +842,12 @@
 
     invoke-static {v10, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 223
     array-length v0, v10
 
     move/from16 v20, v0
 
     if-lez v20, :cond_3
 
-    .line 224
     array-length v0, v10
 
     move/from16 v20, v0
@@ -964,7 +856,6 @@
 
     aget-object v13, v10, v20
 
-    .line 229
     invoke-virtual {v13}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v20
@@ -983,39 +874,33 @@
 
     if-eqz v20, :cond_4
 
-    .line 231
     :cond_2
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->deleteDirectory(Ljava/io/File;)V
 
-    .line 232
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->dirListByAscendingDate(Ljava/io/File;)[Ljava/io/File;
 
     move-result-object v10
 
     goto :goto_0
 
-    .line 226
     :cond_3
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 235
     :cond_4
     const/16 v18, 0x0
 
-    .line 236
     .local v18, "raf":Ljava/io/RandomAccessFile;
     const/16 v17, 0x0
 
-    .line 240
     .local v17, "out":Ljava/nio/MappedByteBuffer;
     :try_start_0
     new-instance v19, Ljava/io/RandomAccessFile;
 
-    const-string/jumbo v20, "rwd"
+    const-string v20, "rwd"
 
     move-object/from16 v0, v19
 
@@ -1026,7 +911,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
     .end local v18    # "raf":Ljava/io/RandomAccessFile;
     .local v19, "raf":Ljava/io/RandomAccessFile;
     const/high16 v20, 0x10000
@@ -1036,27 +920,21 @@
 
     new-array v5, v0, [B
 
-    .line 242
     .local v5, "buffer":[B
     const/4 v6, 0x0
 
-    .line 243
     .local v6, "byteCounter":I
     const/4 v15, 0x0
 
-    .line 244
     .local v15, "length":I
     const/4 v9, 0x0
 
-    .line 245
     .local v9, "fileSize":I
     const/16 v16, 0x0
 
-    .line 246
     .local v16, "lineJumpNumber":I
     const/4 v12, 0x0
 
-    .line 247
     .local v12, "isCorrupted":Z
     :goto_1
     move-object/from16 v0, v19
@@ -1067,23 +945,19 @@
 
     if-lez v15, :cond_6
 
-    .line 248
     const/16 v16, 0x0
 
-    .line 249
     add-int/lit8 v20, v15, -0x1
 
     aget-byte v20, v5, v20
 
     if-nez v20, :cond_a
 
-    .line 250
     const/4 v6, 0x0
 
     :goto_2
     if-ge v6, v15, :cond_6
 
-    .line 251
     aget-byte v20, v5, v6
 
     const/16 v21, 0xa
@@ -1094,23 +968,18 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 252
     move/from16 v16, v6
 
-    .line 254
     :cond_5
     aget-byte v20, v5, v6
 
     if-nez v20, :cond_9
 
-    .line 255
     const/4 v12, 0x1
 
-    .line 264
     :cond_6
     if-eqz v12, :cond_7
 
-    .line 265
     const/high16 v20, 0x10000
 
     mul-int v20, v20, v9
@@ -1128,11 +997,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 271
     :cond_7
     if-eqz v19, :cond_d
 
-    .line 273
     :try_start_2
     invoke-virtual/range {v19 .. v19}, Ljava/io/RandomAccessFile;->close()V
     :try_end_2
@@ -1140,7 +1007,6 @@
 
     move-object/from16 v18, v19
 
-    .line 280
     .end local v5    # "buffer":[B
     .end local v6    # "byteCounter":I
     .end local v9    # "fileSize":I
@@ -1165,7 +1031,6 @@
 
     aget-object v8, v4, v11
 
-    .line 281
     .local v8, "f":Ljava/io/File;
     move-object/from16 v0, p0
 
@@ -1185,12 +1050,10 @@
 
     iput-wide v0, v2, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
-    .line 280
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_4
 
-    .line 250
     .end local v4    # "arr$":[Ljava/io/File;
     .end local v8    # "f":Ljava/io/File;
     .end local v11    # "i$":I
@@ -1208,32 +1071,27 @@
 
     goto :goto_2
 
-    .line 261
     :cond_a
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 274
     :catch_0
     move-exception v7
 
-    .line 275
     .local v7, "e":Ljava/io/IOException;
     const-string v20, "CircularBuffer"
 
-    const-string/jumbo v21, "dirListByAscendingDate.IOException"
+    const-string v21, "dirListByAscendingDate.IOException"
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object/from16 v18, v19
 
-    .line 276
     .end local v19    # "raf":Ljava/io/RandomAccessFile;
     .restart local v18    # "raf":Ljava/io/RandomAccessFile;
     goto :goto_3
 
-    .line 267
     .end local v5    # "buffer":[B
     .end local v6    # "byteCounter":I
     .end local v7    # "e":Ljava/io/IOException;
@@ -1244,17 +1102,15 @@
     :catch_1
     move-exception v7
 
-    .line 268
     .local v7, "e":Ljava/lang/Exception;
     :goto_5
     :try_start_3
     const-string v20, "CircularBuffer"
 
-    const-string/jumbo v21, "dirListByAscendingDate.Exception"
+    const-string v21, "dirListByAscendingDate.Exception"
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 269
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPendingIntentErrors:Ljava/util/List;
@@ -1267,10 +1123,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 271
     if-eqz v18, :cond_8
 
-    .line 273
     :try_start_4
     invoke-virtual/range {v18 .. v18}, Ljava/io/RandomAccessFile;->close()V
     :try_end_4
@@ -1278,21 +1132,18 @@
 
     goto :goto_3
 
-    .line 274
     :catch_2
     move-exception v7
 
-    .line 275
     .local v7, "e":Ljava/io/IOException;
     const-string v20, "CircularBuffer"
 
-    const-string/jumbo v21, "dirListByAscendingDate.IOException"
+    const-string v21, "dirListByAscendingDate.IOException"
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 271
     .end local v7    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v20
@@ -1300,32 +1151,27 @@
     :goto_6
     if-eqz v18, :cond_b
 
-    .line 273
     :try_start_5
     invoke-virtual/range {v18 .. v18}, Ljava/io/RandomAccessFile;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 276
     :cond_b
     :goto_7
     throw v20
 
-    .line 274
     :catch_3
     move-exception v7
 
-    .line 275
     .restart local v7    # "e":Ljava/io/IOException;
     const-string v21, "CircularBuffer"
 
-    const-string/jumbo v22, "dirListByAscendingDate.IOException"
+    const-string v22, "dirListByAscendingDate.IOException"
 
     invoke-static/range {v21 .. v22}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_7
 
-    .line 284
     .end local v7    # "e":Ljava/io/IOException;
     .restart local v4    # "arr$":[Ljava/io/File;
     .restart local v11    # "i$":I
@@ -1353,7 +1199,6 @@
 
     goto/16 :goto_0
 
-    .line 271
     .end local v4    # "arr$":[Ljava/io/File;
     .end local v11    # "i$":I
     .end local v14    # "len$":I
@@ -1368,7 +1213,6 @@
     .restart local v18    # "raf":Ljava/io/RandomAccessFile;
     goto :goto_6
 
-    .line 267
     .end local v18    # "raf":Ljava/io/RandomAccessFile;
     .restart local v19    # "raf":Ljava/io/RandomAccessFile;
     :catch_4
@@ -1402,7 +1246,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 188
     const/4 v3, 0x1
 
     new-array v1, v3, [Ljava/lang/String;
@@ -1411,7 +1254,6 @@
 
     aput-object v3, v1, v6
 
-    .line 189
     .local v1, "columns":[Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1423,26 +1265,20 @@
 
     move-result-object v0
 
-    .line 191
     .local v0, "c":Landroid/database/Cursor;
     const/4 v2, 0x0
 
-    .line 192
     .local v2, "depFiles":I
     if-eqz v0, :cond_0
 
-    .line 193
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 194
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 195
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 197
     :cond_0
     return v2
 .end method
@@ -1463,16 +1299,13 @@
 
     const/4 v3, 0x0
 
-    .line 679
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 680
     .local v1, "fileStream":Ljava/io/FileInputStream;
     new-array v0, v6, [B
 
-    .line 682
     .local v0, "bytes":[B
     const/4 v4, 0x0
 
@@ -1481,7 +1314,6 @@
     :try_start_0
     invoke-virtual {v1, v0, v4, v5}, Ljava/io/FileInputStream;->read([BII)I
 
-    .line 683
     if-eqz v0, :cond_0
 
     array-length v4, v0
@@ -1490,11 +1322,9 @@
 
     if-ge v4, v6, :cond_3
 
-    .line 692
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 694
     :try_start_1
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_1
@@ -1504,12 +1334,10 @@
     :goto_0
     move v2, v3
 
-    .line 695
     :cond_2
     :goto_1
     return v2
 
-    .line 689
     :cond_3
     const/4 v4, 0x0
 
@@ -1530,11 +1358,9 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 692
     :goto_2
     if-eqz v1, :cond_2
 
-    .line 694
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -1542,7 +1368,6 @@
 
     goto :goto_1
 
-    .line 695
     :catch_0
     move-exception v3
 
@@ -1551,22 +1376,18 @@
     :cond_4
     move v2, v3
 
-    .line 689
     goto :goto_2
 
-    .line 692
     :catchall_0
     move-exception v2
 
     if-eqz v1, :cond_5
 
-    .line 694
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 695
     :cond_5
     :goto_3
     throw v2
@@ -1586,20 +1407,16 @@
     .locals 12
 
     .prologue
-    .line 477
     const/4 v2, 0x0
 
-    .line 478
     .local v2, "dumpDeprecated":Z
     const/4 v4, 0x0
 
-    .line 480
     .local v4, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     iget-object v6, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     monitor-enter v6
 
-    .line 482
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
@@ -1613,7 +1430,6 @@
 
     move-result-object v3
 
-    .line 483
     .local v3, "li":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :cond_0
     :goto_0
@@ -1623,7 +1439,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 485
     invoke-interface {v3}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
     move-result-object v5
@@ -1634,22 +1449,18 @@
 
     move-object v4, v0
 
-    .line 486
     invoke-virtual {v4}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getWasWritten()Z
 
     move-result v5
 
     if-nez v5, :cond_1
 
-    .line 487
     invoke-virtual {v4}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 488
     invoke-interface {v3}, Ljava/util/ListIterator;->remove()V
 
     goto :goto_0
 
-    .line 512
     .end local v3    # "li":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :catchall_0
     move-exception v5
@@ -1660,12 +1471,10 @@
 
     throw v5
 
-    .line 491
     .restart local v3    # "li":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :cond_1
     if-eqz v2, :cond_4
 
-    .line 492
     :try_start_1
     invoke-virtual {v4}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->isDeprecated()Z
 
@@ -1673,19 +1482,15 @@
 
     if-eqz v5, :cond_3
 
-    .line 511
     :cond_2
     iget v5, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mNumberOfDeprecatedFiles:I
 
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->setNumberOfDeprecatedFiles(I)V
 
-    .line 512
     monitor-exit v6
 
-    .line 513
     return-void
 
-    .line 496
     :cond_3
     iget-wide v8, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
@@ -1697,12 +1502,10 @@
 
     iput-wide v8, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
-    .line 497
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setDeprecated(Z)Z
 
-    .line 498
     iget v5, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mNumberOfDeprecatedFiles:I
 
     add-int/lit8 v5, v5, 0x1
@@ -1711,13 +1514,11 @@
 
     goto :goto_0
 
-    .line 502
     :cond_4
     iget-object v5, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLastDumpedFile:Ljava/lang/String;
 
     if-eqz v5, :cond_0
 
-    .line 503
     invoke-virtual {v4}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFile()Ljava/io/File;
 
     move-result-object v5
@@ -1734,15 +1535,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 504
     const/4 v2, 0x1
 
-    .line 505
     const/4 v5, 0x0
 
     iput-object v5, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLastDumpedFile:Ljava/lang/String;
 
-    .line 506
     invoke-interface {v3}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1756,14 +1554,12 @@
     .prologue
     const/4 v14, 0x1
 
-    .line 139
     new-instance v3, Ljava/io/File;
 
     iget-object v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminDirectoryPath:Ljava/lang/String;
 
     invoke-direct {v3, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 141
     .local v3, "dir":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -1771,39 +1567,31 @@
 
     if-nez v9, :cond_0
 
-    .line 142
     invoke-virtual {v3}, Ljava/io/File;->mkdir()Z
 
-    .line 143
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->addNode()Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 185
     :goto_0
     return-void
 
-    .line 145
     :cond_0
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->dirListByAscendingDate(Ljava/io/File;)[Ljava/io/File;
 
     move-result-object v0
 
-    .line 146
     .local v0, "allFiles":[Ljava/io/File;
     const/4 v8, 0x0
 
-    .line 147
     .local v8, "node":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     const/4 v2, 0x0
 
-    .line 149
     .local v2, "counter":I
     if-eqz v0, :cond_5
 
-    .line 150
     move-object v1, v0
 
     .local v1, "arr$":[Ljava/io/File;
@@ -1818,7 +1606,6 @@
 
     aget-object v5, v1, v6
 
-    .line 151
     .local v5, "f":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->isDirectory()Z
 
@@ -1826,19 +1613,15 @@
 
     if-eqz v9, :cond_1
 
-    .line 152
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->deleteDirectory(Ljava/io/File;)V
 
-    .line 180
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
-    .line 150
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 154
     :cond_1
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
@@ -1850,12 +1633,10 @@
 
     if-nez v9, :cond_2
 
-    .line 155
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
     goto :goto_2
 
-    .line 157
     :cond_2
     new-instance v8, Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
@@ -1864,11 +1645,9 @@
 
     invoke-direct {v8, v5, v9}, Lcom/android/server/enterprise/auditlog/PartialFileNode;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 158
     .restart local v8    # "node":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     invoke-virtual {v8, v14}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setWasWritten(Z)V
 
-    .line 159
     array-length v9, v0
 
     add-int/lit8 v9, v9, -0x1
@@ -1877,7 +1656,6 @@
 
     if-ne v5, v9, :cond_3
 
-    .line 162
     :try_start_0
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->isCompressed(Ljava/io/File;)Z
 
@@ -1885,24 +1663,20 @@
 
     if-nez v9, :cond_3
 
-    .line 163
     invoke-virtual {v8}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->compressFile()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 169
     :cond_3
     :goto_3
     iget-object v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     invoke-interface {v9, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 171
     iget v9, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mNumberOfDeprecatedFiles:I
 
     if-le v2, v9, :cond_4
 
-    .line 172
     iget-wide v10, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
     invoke-virtual {v8}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFileSize()J
@@ -1915,11 +1689,9 @@
 
     goto :goto_2
 
-    .line 165
     :catch_0
     move-exception v4
 
-    .line 166
     .local v4, "e":Ljava/io/IOException;
     const-string v9, "CircularBuffer"
 
@@ -1949,14 +1721,12 @@
 
     goto :goto_3
 
-    .line 175
     .end local v4    # "e":Ljava/io/IOException;
     :cond_4
     invoke-virtual {v8, v14}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setDeprecated(Z)Z
 
     goto :goto_2
 
-    .line 183
     .end local v1    # "arr$":[Ljava/io/File;
     .end local v5    # "f":Ljava/io/File;
     .end local v6    # "i$":I
@@ -1976,12 +1746,10 @@
     .param p1, "depFiles"    # I
 
     .prologue
-    .line 201
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 202
     .local v0, "cv":Landroid/content/ContentValues;
     const-string v1, "auditNumberOfDepFiles"
 
@@ -1991,7 +1759,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 203
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mUid:I
@@ -2000,7 +1767,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putValues(ILjava/lang/String;Landroid/content/ContentValues;)Z
 
-    .line 204
     return-void
 .end method
 
@@ -2010,7 +1776,6 @@
     .prologue
     const-wide/16 v2, 0x8fc
 
-    .line 702
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -2019,10 +1784,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 703
     const-wide/16 v0, 0x0
 
-    .line 704
     .local v0, "bytesPerFile":J
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
@@ -2036,19 +1799,16 @@
 
     div-long v0, v4, v6
 
-    .line 705
     const-wide/16 v4, 0x0
 
     cmp-long v4, v0, v4
 
     if-eqz v4, :cond_0
 
-    .line 706
     iget-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mBufferLimitSize:J
 
     div-long/2addr v2, v0
 
-    .line 712
     .end local v0    # "bytesPerFile":J
     :cond_0
     return-wide v2
@@ -2060,12 +1820,10 @@
     .locals 2
 
     .prologue
-    .line 408
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 409
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
@@ -2075,27 +1833,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->compressFile()Z
 
-    .line 411
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->closeFile()V
 
-    .line 415
     :goto_0
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->addNode()Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 416
     monitor-exit v1
 
-    .line 417
     return-void
 
-    .line 413
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
@@ -2103,7 +1855,6 @@
 
     goto :goto_0
 
-    .line 416
     :catchall_0
     move-exception v0
 
@@ -2118,7 +1869,6 @@
     .locals 3
 
     .prologue
-    .line 602
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2149,7 +1899,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 603
     .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -2157,10 +1906,8 @@
 
     if-nez v1, :cond_0
 
-    .line 604
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 605
     :cond_0
     return-void
 .end method
@@ -2169,43 +1916,35 @@
     .locals 6
 
     .prologue
-    .line 436
     const/4 v2, 0x0
 
-    .line 437
     .local v2, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     if-eqz v3, :cond_0
 
-    .line 438
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 439
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->closeFile()V
 
-    .line 440
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 441
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 443
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     monitor-enter v4
 
-    .line 444
     :try_start_1
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
@@ -2213,7 +1952,6 @@
 
     move-result-object v1
 
-    .line 445
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -2222,7 +1960,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 446
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -2233,15 +1970,12 @@
 
     move-object v2, v0
 
-    .line 447
     invoke-virtual {v2}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->delete()V
 
-    .line 448
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 450
     .end local v1    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :catchall_0
     move-exception v3
@@ -2252,7 +1986,6 @@
 
     throw v3
 
-    .line 441
     :catchall_1
     move-exception v3
 
@@ -2263,7 +1996,6 @@
 
     throw v3
 
-    .line 450
     .restart local v1    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :cond_1
     :try_start_3
@@ -2271,7 +2003,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 451
     new-instance v3, Ljava/io/File;
 
     iget-object v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminDirectoryPath:Ljava/lang/String;
@@ -2280,7 +2011,6 @@
 
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->deleteDirectory(Ljava/io/File;)V
 
-    .line 452
     new-instance v3, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2313,7 +2043,6 @@
 
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->deleteDirectory(Ljava/io/File;)V
 
-    .line 453
     new-instance v3, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2346,7 +2075,6 @@
 
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->deleteDirectory(Ljava/io/File;)V
 
-    .line 454
     return-void
 .end method
 
@@ -2354,12 +2082,10 @@
     .locals 4
 
     .prologue
-    .line 399
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 400
     .local v0, "filterValue":Landroid/content/ContentValues;
     const-string v1, "adminUid"
 
@@ -2371,7 +2097,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 401
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v2, "AUDITLOG"
@@ -2389,7 +2114,6 @@
     .locals 1
 
     .prologue
-    .line 360
     iget v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminCriticalSize:F
 
     float-to-int v0, v0
@@ -2403,7 +2127,6 @@
     .prologue
     const/16 v1, 0x64
 
-    .line 382
     const-wide/16 v2, 0x64
 
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
@@ -2416,11 +2139,9 @@
 
     long-to-int v0, v2
 
-    .line 383
     .local v0, "res":I
     if-le v0, v1, :cond_0
 
-    .line 384
     .local v1, "ret":I
     :goto_0
     return v1
@@ -2429,7 +2150,6 @@
     :cond_0
     move v1, v0
 
-    .line 383
     goto :goto_0
 .end method
 
@@ -2437,12 +2157,10 @@
     .locals 3
 
     .prologue
-    .line 343
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 344
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -2454,7 +2172,6 @@
 
     return-object v0
 
-    .line 345
     :catchall_0
     move-exception v0
 
@@ -2469,16 +2186,13 @@
     .locals 6
 
     .prologue
-    .line 735
     const-wide/16 v2, 0x0
 
-    .line 736
     .local v2, "timestamp":J
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 737
     .local v0, "filterValue":Landroid/content/ContentValues;
     const-string v1, "adminUid"
 
@@ -2490,7 +2204,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 738
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "AUDITLOG"
@@ -2501,7 +2214,6 @@
 
     move-result-wide v2
 
-    .line 741
     return-wide v2
 .end method
 
@@ -2509,7 +2221,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminMaximumSize:F
 
     float-to-int v0, v0
@@ -2522,14 +2233,12 @@
     .param p1, "size"    # J
 
     .prologue
-    .line 610
     const-wide/16 v4, 0x0
 
     cmp-long v4, p1, v4
 
     if-gtz v4, :cond_1
 
-    .line 611
     new-instance v4, Ljava/io/File;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2562,16 +2271,13 @@
 
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 636
     :cond_0
     :goto_0
     return-void
 
-    .line 614
     :cond_1
     const/4 v2, 0x0
 
-    .line 617
     .local v2, "raf":Ljava/io/RandomAccessFile;
     :try_start_0
     new-instance v3, Ljava/io/RandomAccessFile;
@@ -2606,14 +2312,13 @@
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v5, "rws"
+    const-string v5, "rws"
 
     invoke-direct {v3, v4, v5}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 619
     .end local v2    # "raf":Ljava/io/RandomAccessFile;
     .local v3, "raf":Ljava/io/RandomAccessFile;
     long-to-int v4, p1
@@ -2623,11 +2328,9 @@
     :try_start_1
     new-array v0, v4, [B
 
-    .line 620
     .local v0, "b":[B
     invoke-virtual {v3, p1, p2}, Ljava/io/RandomAccessFile;->setLength(J)V
 
-    .line 622
     const/4 v4, 0x0
 
     array-length v5, v0
@@ -2637,10 +2340,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 627
     if-eqz v3, :cond_3
 
-    .line 629
     :try_start_2
     invoke-virtual {v3}, Ljava/io/RandomAccessFile;->close()V
     :try_end_2
@@ -2648,54 +2349,46 @@
 
     move-object v2, v3
 
-    .line 633
     .end local v3    # "raf":Ljava/io/RandomAccessFile;
     .restart local v2    # "raf":Ljava/io/RandomAccessFile;
     goto :goto_0
 
-    .line 631
     .end local v2    # "raf":Ljava/io/RandomAccessFile;
     .restart local v3    # "raf":Ljava/io/RandomAccessFile;
     :catch_0
     move-exception v1
 
-    .line 632
     .local v1, "e":Ljava/io/IOException;
     const-string v4, "CircularBuffer"
 
-    const-string/jumbo v5, "resizeBubbleFile.IOException"
+    const-string v5, "resizeBubbleFile.IOException"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v2, v3
 
-    .line 633
     .end local v3    # "raf":Ljava/io/RandomAccessFile;
     .restart local v2    # "raf":Ljava/io/RandomAccessFile;
     goto :goto_0
 
-    .line 624
     .end local v0    # "b":[B
     .end local v1    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 625
     .local v1, "e":Ljava/lang/Exception;
     :goto_1
     :try_start_3
     const-string v4, "CircularBuffer"
 
-    const-string/jumbo v5, "resizeBubbleFile.Exception"
+    const-string v5, "resizeBubbleFile.Exception"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 627
     if-eqz v2, :cond_0
 
-    .line 629
     :try_start_4
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_4
@@ -2703,21 +2396,18 @@
 
     goto :goto_0
 
-    .line 631
     :catch_2
     move-exception v1
 
-    .line 632
     .local v1, "e":Ljava/io/IOException;
     const-string v4, "CircularBuffer"
 
-    const-string/jumbo v5, "resizeBubbleFile.IOException"
+    const-string v5, "resizeBubbleFile.IOException"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 627
     .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v4
@@ -2725,32 +2415,27 @@
     :goto_2
     if-eqz v2, :cond_2
 
-    .line 629
     :try_start_5
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 633
     :cond_2
     :goto_3
     throw v4
 
-    .line 631
     :catch_3
     move-exception v1
 
-    .line 632
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v5, "CircularBuffer"
 
-    const-string/jumbo v6, "resizeBubbleFile.IOException"
+    const-string v6, "resizeBubbleFile.IOException"
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 627
     .end local v1    # "e":Ljava/io/IOException;
     .end local v2    # "raf":Ljava/io/RandomAccessFile;
     .restart local v3    # "raf":Ljava/io/RandomAccessFile;
@@ -2763,7 +2448,6 @@
     .restart local v2    # "raf":Ljava/io/RandomAccessFile;
     goto :goto_2
 
-    .line 624
     .end local v2    # "raf":Ljava/io/RandomAccessFile;
     .restart local v3    # "raf":Ljava/io/RandomAccessFile;
     :catch_4
@@ -2791,20 +2475,16 @@
     .param p1, "boot"    # Z
 
     .prologue
-    .line 423
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsBootCompleted:Z
 
-    .line 425
     iget-boolean v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsBootCompleted:Z
 
     if-eqz v1, :cond_1
 
-    .line 426
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPendingIntentErrors:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 427
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mPendingIntentErrors:Ljava/util/List;
 
@@ -2812,7 +2492,6 @@
 
     move-result-object v0
 
-    .line 428
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Exception;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -2821,7 +2500,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 429
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v3
@@ -2838,7 +2516,6 @@
 
     goto :goto_0
 
-    .line 431
     .end local v0    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Exception;>;"
     :catchall_0
     move-exception v1
@@ -2856,7 +2533,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 433
     .end local v0    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Exception;>;"
     :cond_1
     return-void
@@ -2867,13 +2543,10 @@
     .param p1, "bufferSize"    # J
 
     .prologue
-    .line 391
     iput-wide p1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mBufferLimitSize:J
 
-    .line 392
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->createBubbleDir()V
 
-    .line 393
     return-void
 .end method
 
@@ -2882,17 +2555,14 @@
     .param p1, "criticalSize"    # I
 
     .prologue
-    .line 352
     int-to-float v0, p1
 
     iput v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminCriticalSize:F
 
-    .line 353
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCriticalIntent:Z
 
-    .line 354
     return-void
 .end method
 
@@ -2902,13 +2572,11 @@
     .param p2, "result"    # Z
 
     .prologue
-    .line 460
     monitor-enter p0
 
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mIsDumping:Z
 
-    .line 462
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -2917,23 +2585,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 463
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTypeOfDump:Z
 
-    .line 464
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->markDeprecatedFiles()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 466
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 460
     :catchall_0
     move-exception v0
 
@@ -2955,17 +2619,14 @@
     .end annotation
 
     .prologue
-    .line 718
     .local p1, "dumpFilesList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     const/4 v2, 0x0
 
-    .line 719
     .local v2, "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 721
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/enterprise/auditlog/PartialFileNode;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -2974,7 +2635,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 722
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -2985,16 +2645,13 @@
     .restart local v2    # "pfn":Lcom/android/server/enterprise/auditlog/PartialFileNode;
     goto :goto_0
 
-    .line 725
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 726
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 727
     .local v0, "cv":Landroid/content/ContentValues;
     const-string v3, "auditLogLastTimestamp"
 
@@ -3016,7 +2673,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 728
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mUid:I
@@ -3025,7 +2681,6 @@
 
     invoke-virtual {v3, v4, v5, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putValues(ILjava/lang/String;Landroid/content/ContentValues;)Z
 
-    .line 731
     .end local v0    # "cv":Landroid/content/ContentValues;
     :cond_1
     return-void
@@ -3036,17 +2691,14 @@
     .param p1, "maximumSize"    # I
 
     .prologue
-    .line 367
     int-to-float v0, p1
 
     iput v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mAdminMaximumSize:F
 
-    .line 368
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mMaximumIntent:Z
 
-    .line 369
     return-void
 .end method
 
@@ -3055,10 +2707,8 @@
     .param p1, "isFull"    # Z
 
     .prologue
-    .line 469
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTypeOfDump:Z
 
-    .line 470
     return-void
 .end method
 
@@ -3067,21 +2717,17 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 307
     if-nez p1, :cond_0
 
-    .line 308
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setTimestamp()V
 
-    .line 309
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->compressFile()Z
 
-    .line 310
     iget-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
@@ -3094,7 +2740,6 @@
 
     iput-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
-    .line 311
     iget-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
@@ -3107,7 +2752,6 @@
 
     iput-wide v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
-    .line 312
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->getFile()Ljava/io/File;
@@ -3120,30 +2764,25 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLastDumpedFile:Ljava/lang/String;
 
-    .line 313
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->closeFile()V
 
-    .line 314
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 315
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->addNode()Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 337
     :goto_0
     return-void
 
-    .line 318
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mLock:Ljava/lang/Object;
 
@@ -3151,7 +2790,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 319
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
@@ -3161,17 +2799,14 @@
 
     if-nez v1, :cond_1
 
-    .line 320
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setTimestamp()V
 
-    .line 321
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->compressFile()Z
 
-    .line 322
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
@@ -3184,7 +2819,6 @@
 
     iput-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
 
-    .line 323
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
@@ -3197,31 +2831,26 @@
 
     iput-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCircularBufferSize:J
 
-    .line 325
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->closeFile()V
 
-    .line 326
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mDumpList:Ljava/util/List;
 
     iget-object v3, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 327
     invoke-direct {p0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->addNode()Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
-    .line 328
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mCurrentNode:Lcom/android/server/enterprise/auditlog/PartialFileNode;
 
     invoke-virtual {v1, p1}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->write(Ljava/lang/String;)Z
 
-    .line 329
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mBufferLimitSize:J
 
     iget-wide v6, p0, Lcom/android/server/enterprise/auditlog/CircularBuffer;->mTotalDirectoryOccupation:J
@@ -3230,7 +2859,6 @@
 
     invoke-virtual {p0, v4, v5}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->resizeBubbleFile(J)V
 
-    .line 331
     :cond_1
     monitor-exit v2
 
@@ -3248,11 +2876,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 333
     :catch_0
     move-exception v0
 
-    .line 334
     .local v0, "ex":Ljava/lang/Exception;
     const-string v1, "CircularBuffer"
 
@@ -3260,7 +2886,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "write.Exception: "
+    const-string v3, "write.Exception: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3280,7 +2906,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v1

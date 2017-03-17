@@ -189,7 +189,6 @@
 
     const/4 v5, 0x0
 
-    .line 56
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v0
@@ -201,7 +200,6 @@
     :goto_0
     sput-boolean v0, Lcom/samsung/android/fingerprint/FingerprintManager;->DEBUG:Z
 
-    .line 59
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v3, "com.samsung.android.fingerprint.service"
@@ -212,35 +210,26 @@
 
     sput-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->START_ENROLL_ACTIVITY_COMPONENT:Landroid/content/ComponentName;
 
-    .line 189
     sput-boolean v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mIsLinkedDeathRecipient:Z
 
-    .line 190
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mWaitLock:Ljava/lang/Object;
 
-    .line 194
     sput-object v5, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
-    .line 195
     sput-object v5, Lcom/samsung/android/fingerprint/FingerprintManager;->mStringId:Ljava/lang/String;
 
-    .line 197
     sput v6, Lcom/samsung/android/fingerprint/FingerprintManager;->mIndex:I
 
-    .line 198
     sput v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mSecurityLevel:I
 
-    .line 201
     sput-object v5, Lcom/samsung/android/fingerprint/FingerprintManager;->mIdentifyDialog:Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;
 
-    .line 204
     sput v6, Lcom/samsung/android/fingerprint/FingerprintManager;->mEnrollFinishResult:I
 
-    .line 213
     sput-object v5, Lcom/samsung/android/fingerprint/FingerprintManager;->sInstance:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     return-void
@@ -248,7 +237,6 @@
     :cond_0
     move v0, v2
 
-    .line 56
     goto :goto_0
 .end method
 
@@ -257,29 +245,24 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 196
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
 
-    .line 691
     new-instance v0, Lcom/samsung/android/fingerprint/FingerprintManager$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/fingerprint/FingerprintManager$2;-><init>(Lcom/samsung/android/fingerprint/FingerprintManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mActivityLifecycleCallbacks:Landroid/app/Application$ActivityLifecycleCallbacks;
 
-    .line 1143
     new-instance v0, Lcom/samsung/android/fingerprint/FingerprintManager$3;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/fingerprint/FingerprintManager$3;-><init>(Lcom/samsung/android/fingerprint/FingerprintManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mFingerprintListener:Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog$FingerprintListener;
 
-    .line 249
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -290,7 +273,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mHandler:Landroid/os/Handler;
 
-    .line 250
     return-void
 .end method
 
@@ -298,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
 
     return-object v0
@@ -308,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
 
     return-object v0
@@ -319,7 +299,6 @@
     .param p0, "x0"    # Lcom/samsung/android/fingerprint/FingerprintManager;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
 
     return-void
@@ -330,7 +309,6 @@
     .param p0, "x0"    # Lcom/samsung/android/fingerprint/FingerprintManager;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
 
     return-object v0
@@ -344,7 +322,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
     return-void
@@ -355,7 +332,6 @@
     .param p0, "x0"    # Lcom/samsung/android/fingerprint/FingerprintManager;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -365,7 +341,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -375,7 +350,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mEnrollListener:Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishListener;
 
     return-object v0
@@ -385,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mStringId:Ljava/lang/String;
 
     return-object v0
@@ -395,7 +368,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mIndex:I
 
     return v0
@@ -405,21 +377,18 @@
     .locals 7
 
     .prologue
-    .line 318
     const-class v4, Lcom/samsung/android/fingerprint/FingerprintManager;
 
     monitor-enter v4
 
     const/4 v2, 0x0
 
-    .line 320
     .local v2, "isStartedServiceInTime":Z
     :try_start_0
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v3, :cond_0
 
-    .line 321
     const-string v3, "fingerprint_service"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -432,28 +401,23 @@
 
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
-    .line 324
     :cond_0
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v3, :cond_2
 
-    .line 325
     const-string v3, "FPMS_FingerprintManager"
 
     const-string v5, "ensureServiceConnected: mService is null"
 
     invoke-static {v3, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->startFingerprintManagerService()V
 
-    .line 327
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->waitForService()Z
 
     move-result v2
 
-    .line 328
     if-eqz v2, :cond_1
 
     sget-boolean v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mIsLinkedDeathRecipient:Z
@@ -462,7 +426,6 @@
 
     if-nez v3, :cond_1
 
-    .line 330
     :try_start_1
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -476,7 +439,6 @@
 
     invoke-interface {v3, v5, v6}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 331
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mIsLinkedDeathRecipient:Z
@@ -484,18 +446,15 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 362
     :cond_1
     :goto_0
     monitor-exit v4
 
     return-void
 
-    .line 333
     :catch_0
     move-exception v0
 
-    .line 334
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v3, "FPMS_FingerprintManager"
@@ -524,7 +483,6 @@
 
     goto :goto_0
 
-    .line 318
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v3
@@ -533,7 +491,6 @@
 
     throw v3
 
-    .line 339
     :cond_2
     :try_start_3
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -546,33 +503,27 @@
 
     goto :goto_0
 
-    .line 340
     :catch_1
     move-exception v0
 
-    .line 341
     .restart local v0    # "e":Landroid/os/RemoteException;
     :try_start_4
     instance-of v3, v0, Landroid/os/DeadObjectException;
 
     if-eqz v3, :cond_3
 
-    .line 342
     const-string v3, "FPMS_FingerprintManager"
 
     const-string v5, "===DeadObjectException==="
 
     invoke-static {v3, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->startFingerprintManagerService()V
 
-    .line 344
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->waitForService()Z
 
     move-result v2
 
-    .line 345
     if-eqz v2, :cond_1
 
     sget-boolean v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mIsLinkedDeathRecipient:Z
@@ -581,7 +532,6 @@
 
     if-nez v3, :cond_1
 
-    .line 347
     :try_start_5
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -595,12 +545,10 @@
 
     invoke-interface {v3, v5, v6}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 348
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mIsLinkedDeathRecipient:Z
 
-    .line 349
     const-string v3, "FPMS_FingerprintManager"
 
     const-string v5, "ensureServiceConnected: linkToDeath"
@@ -612,11 +560,9 @@
 
     goto :goto_0
 
-    .line 350
     :catch_2
     move-exception v1
 
-    .line 351
     .local v1, "ex":Landroid/os/RemoteException;
     :try_start_6
     const-string v3, "FPMS_FingerprintManager"
@@ -643,7 +589,6 @@
 
     goto :goto_0
 
-    .line 355
     .end local v1    # "ex":Landroid/os/RemoteException;
     :cond_3
     const-string v3, "FPMS_FingerprintManager"
@@ -654,12 +599,10 @@
 
     goto :goto_0
 
-    .line 357
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_3
     move-exception v0
 
-    .line 358
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "FPMS_FingerprintManager"
 
@@ -677,7 +620,6 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1914
     :try_start_0
     const-string v2, "SHA-256"
 
@@ -685,7 +627,6 @@
 
     move-result-object v1
 
-    .line 1915
     .local v1, "md":Ljava/security/MessageDigest;
     const-string v2, "iso-8859-1"
 
@@ -695,7 +636,6 @@
 
     invoke-virtual {v1, v2}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 1916
     invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
@@ -703,16 +643,13 @@
 
     move-result-object v2
 
-    .line 1922
     .end local v1    # "md":Ljava/security/MessageDigest;
     :goto_0
     return-object v2
 
-    .line 1917
     :catch_0
     move-exception v0
 
-    .line 1918
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v2, "FPMS_FingerprintManager"
 
@@ -736,18 +673,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1922
     .end local v0    # "e":Ljava/security/NoSuchAlgorithmException;
     :goto_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1919
     :catch_1
     move-exception v0
 
-    .line 1920
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v2, "FPMS_FingerprintManager"
 
@@ -780,24 +714,19 @@
     .param p1, "mContext"    # Landroid/content/Context;
 
     .prologue
-    .line 1740
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 1741
     .local v2, "mPm":Landroid/content/pm/PackageManager;
     const/4 v3, 0x0
 
-    .line 1742
     .local v3, "mRes":Landroid/content/res/Resources;
     const/4 v4, 0x0
 
-    .line 1743
     .local v4, "result":I
     const/4 v1, 0x0
 
-    .line 1746
     .local v1, "mAni":Landroid/graphics/drawable/AnimationDrawable;
     :try_start_0
     const-string v5, "com.samsung.android.fingerprint.service"
@@ -808,29 +737,23 @@
 
     move-result-object v3
 
-    .line 1751
     :goto_0
     if-nez v3, :cond_0
 
-    .line 1752
     const-string v5, "FPMS_FingerprintManager"
 
-    const-string/jumbo v6, "mRes is null"
+    const-string v6, "mRes is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1753
     const/4 v5, 0x0
 
-    .line 1836
     :goto_1
     return-object v5
 
-    .line 1747
     :catch_0
     move-exception v0
 
-    .line 1748
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, "FPMS_FingerprintManager"
 
@@ -838,19 +761,16 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1749
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1756
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
     const/4 v5, -0x1
 
     if-ne p0, v5, :cond_1
 
-    .line 1758
     :try_start_1
     sget-object v5, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -864,7 +784,6 @@
 
     move-result p0
 
-    .line 1763
     :cond_1
     :goto_2
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->getSensorType()I
@@ -875,11 +794,9 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 1764
     sparse-switch p0, :sswitch_data_0
 
-    .line 1797
-    const-string/jumbo v5, "spass_errimage_default"
+    const-string v5, "spass_errimage_default"
 
     const-string v6, "anim"
 
@@ -889,12 +806,10 @@
 
     move-result v4
 
-    .line 1833
     :cond_2
     :goto_3
     if-eqz v4, :cond_3
 
-    .line 1834
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -906,23 +821,19 @@
     :cond_3
     move-object v5, v1
 
-    .line 1836
     goto :goto_1
 
-    .line 1759
     :catch_1
     move-exception v0
 
-    .line 1760
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 1766
     .end local v0    # "e":Landroid/os/RemoteException;
     :sswitch_0
-    const-string/jumbo v5, "spass_errimage_nomatch"
+    const-string v5, "spass_errimage_nomatch"
 
     const-string v6, "anim"
 
@@ -932,12 +843,10 @@
 
     move-result v4
 
-    .line 1767
     goto :goto_3
 
-    .line 1769
     :sswitch_1
-    const-string/jumbo v5, "spass_errimage_short"
+    const-string v5, "spass_errimage_short"
 
     const-string v6, "anim"
 
@@ -947,12 +856,10 @@
 
     move-result v4
 
-    .line 1770
     goto :goto_3
 
-    .line 1773
     :sswitch_2
-    const-string/jumbo v5, "spass_errimage_speed"
+    const-string v5, "spass_errimage_speed"
 
     const-string v6, "anim"
 
@@ -962,12 +869,10 @@
 
     move-result v4
 
-    .line 1774
     goto :goto_3
 
-    .line 1776
     :sswitch_3
-    const-string/jumbo v5, "spass_errimage_reverse"
+    const-string v5, "spass_errimage_reverse"
 
     const-string v6, "anim"
 
@@ -977,12 +882,10 @@
 
     move-result v4
 
-    .line 1777
     goto :goto_3
 
-    .line 1779
     :sswitch_4
-    const-string/jumbo v5, "spass_errimage_left"
+    const-string v5, "spass_errimage_left"
 
     const-string v6, "anim"
 
@@ -992,12 +895,10 @@
 
     move-result v4
 
-    .line 1780
     goto :goto_3
 
-    .line 1782
     :sswitch_5
-    const-string/jumbo v5, "spass_errimage_right"
+    const-string v5, "spass_errimage_right"
 
     const-string v6, "anim"
 
@@ -1007,12 +908,10 @@
 
     move-result v4
 
-    .line 1783
     goto :goto_3
 
-    .line 1785
     :sswitch_6
-    const-string/jumbo v5, "spass_errimage_wet"
+    const-string v5, "spass_errimage_wet"
 
     const-string v6, "anim"
 
@@ -1022,12 +921,10 @@
 
     move-result v4
 
-    .line 1786
     goto :goto_3
 
-    .line 1788
     :sswitch_7
-    const-string/jumbo v5, "spass_errimage_diagonal"
+    const-string v5, "spass_errimage_diagonal"
 
     const-string v6, "anim"
 
@@ -1037,12 +934,10 @@
 
     move-result v4
 
-    .line 1789
     goto :goto_3
 
-    .line 1791
     :sswitch_8
-    const-string/jumbo v5, "spass_errimage_homekey"
+    const-string v5, "spass_errimage_homekey"
 
     const-string v6, "anim"
 
@@ -1052,12 +947,10 @@
 
     move-result v4
 
-    .line 1792
     goto :goto_3
 
-    .line 1794
     :sswitch_9
-    const-string/jumbo v5, "spass_errimage_same"
+    const-string v5, "spass_errimage_same"
 
     const-string v6, "anim"
 
@@ -1067,10 +960,8 @@
 
     move-result v4
 
-    .line 1795
     goto/16 :goto_3
 
-    .line 1800
     :cond_4
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->getSensorType()I
 
@@ -1080,11 +971,9 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 1801
     sparse-switch p0, :sswitch_data_1
 
-    .line 1829
-    const-string/jumbo v5, "spass_touch_errimage_default"
+    const-string v5, "spass_touch_errimage_default"
 
     const-string v6, "anim"
 
@@ -1096,9 +985,8 @@
 
     goto/16 :goto_3
 
-    .line 1803
     :sswitch_a
-    const-string/jumbo v5, "spass_touch_errimage_nomatch"
+    const-string v5, "spass_touch_errimage_nomatch"
 
     const-string v6, "anim"
 
@@ -1108,12 +996,10 @@
 
     move-result v4
 
-    .line 1804
     goto/16 :goto_3
 
-    .line 1806
     :sswitch_b
-    const-string/jumbo v5, "spass_touch_errimage_too_fast"
+    const-string v5, "spass_touch_errimage_too_fast"
 
     const-string v6, "anim"
 
@@ -1123,12 +1009,10 @@
 
     move-result v4
 
-    .line 1807
     goto/16 :goto_3
 
-    .line 1809
     :sswitch_c
-    const-string/jumbo v5, "spass_touch_errimage_something_on_the_sensor"
+    const-string v5, "spass_touch_errimage_something_on_the_sensor"
 
     const-string v6, "anim"
 
@@ -1138,12 +1022,10 @@
 
     move-result v4
 
-    .line 1810
     goto/16 :goto_3
 
-    .line 1813
     :sswitch_d
-    const-string/jumbo v5, "spass_touch_errimage_short"
+    const-string v5, "spass_touch_errimage_short"
 
     const-string v6, "anim"
 
@@ -1153,12 +1035,10 @@
 
     move-result v4
 
-    .line 1814
     goto/16 :goto_3
 
-    .line 1817
     :sswitch_e
-    const-string/jumbo v5, "spass_touch_errimage_whole"
+    const-string v5, "spass_touch_errimage_whole"
 
     const-string v6, "anim"
 
@@ -1168,12 +1048,10 @@
 
     move-result v4
 
-    .line 1818
     goto/16 :goto_3
 
-    .line 1821
     :sswitch_f
-    const-string/jumbo v5, "spass_touch_errimage_wet"
+    const-string v5, "spass_touch_errimage_wet"
 
     const-string v6, "anim"
 
@@ -1183,12 +1061,10 @@
 
     move-result v4
 
-    .line 1822
     goto/16 :goto_3
 
-    .line 1825
     :sswitch_10
-    const-string/jumbo v5, "spass_touch_errimage_position"
+    const-string v5, "spass_touch_errimage_position"
 
     const-string v6, "anim"
 
@@ -1198,10 +1074,8 @@
 
     move-result v4
 
-    .line 1826
     goto/16 :goto_3
 
-    .line 1764
     nop
 
     :sswitch_data_0
@@ -1219,7 +1093,6 @@
         0x30000000 -> :sswitch_9
     .end sparse-switch
 
-    .line 1801
     :sswitch_data_1
     .sparse-switch
         0x0 -> :sswitch_a
@@ -1238,109 +1111,79 @@
     .param p0, "quality"    # I
 
     .prologue
-    .line 1592
     const/4 v0, 0x0
 
-    .line 1593
     .local v0, "result":I
     sparse-switch p0, :sswitch_data_0
 
-    .line 1639
     :goto_0
     return v0
 
-    .line 1595
     :sswitch_0
     const v0, 0x1040851
 
-    .line 1596
     goto :goto_0
 
-    .line 1600
     :sswitch_1
     const v0, 0x1040852
 
-    .line 1601
     goto :goto_0
 
-    .line 1603
     :sswitch_2
     const v0, 0x1040853
 
-    .line 1604
     goto :goto_0
 
-    .line 1606
     :sswitch_3
     const v0, 0x1040854
 
-    .line 1607
     goto :goto_0
 
-    .line 1609
     :sswitch_4
     const v0, 0x1040855
 
-    .line 1610
     goto :goto_0
 
-    .line 1612
     :sswitch_5
     const v0, 0x1040856
 
-    .line 1613
     goto :goto_0
 
-    .line 1615
     :sswitch_6
     const v0, 0x1040857
 
-    .line 1616
     goto :goto_0
 
-    .line 1618
     :sswitch_7
     const v0, 0x1040858
 
-    .line 1619
     goto :goto_0
 
-    .line 1621
     :sswitch_8
     const v0, 0x1040859
 
-    .line 1622
     goto :goto_0
 
-    .line 1624
     :sswitch_9
     const v0, 0x104085a
 
-    .line 1625
     goto :goto_0
 
-    .line 1627
     :sswitch_a
     const v0, 0x104085b
 
-    .line 1628
     goto :goto_0
 
-    .line 1631
     :sswitch_b
     const v0, 0x104085c
 
-    .line 1632
     goto :goto_0
 
-    .line 1634
     :sswitch_c
     const v0, 0x104085d
 
-    .line 1635
     goto :goto_0
 
-    .line 1593
     nop
 
     :sswitch_data_0
@@ -1370,24 +1213,19 @@
     .param p1, "mContext"    # Landroid/content/Context;
 
     .prologue
-    .line 1679
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 1680
     .local v1, "mPm":Landroid/content/pm/PackageManager;
     const/4 v2, 0x0
 
-    .line 1681
     .local v2, "mRes":Landroid/content/res/Resources;
     const/4 v4, 0x0
 
-    .line 1682
     .local v4, "result":I
     const/4 v3, 0x0
 
-    .line 1685
     .local v3, "mStr":Ljava/lang/String;
     :try_start_0
     const-string v5, "com.samsung.android.fingerprint.service"
@@ -1398,29 +1236,23 @@
 
     move-result-object v2
 
-    .line 1690
     :goto_0
     if-nez v2, :cond_0
 
-    .line 1691
     const-string v5, "FPMS_FingerprintManager"
 
-    const-string/jumbo v6, "mRes is null"
+    const-string v6, "mRes is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1692
     const/4 v5, 0x0
 
-    .line 1735
     :goto_1
     return-object v5
 
-    .line 1686
     :catch_0
     move-exception v0
 
-    .line 1687
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, "FPMS_FingerprintManager"
 
@@ -1428,20 +1260,17 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1688
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1695
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
     sparse-switch p0, :sswitch_data_0
 
-    .line 1729
-    const-string/jumbo v5, "touch_image_quality_finger_offset_too_far_left"
+    const-string v5, "touch_image_quality_finger_offset_too_far_left"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1449,11 +1278,9 @@
 
     move-result v4
 
-    .line 1732
     :goto_2
     if-eqz v4, :cond_1
 
-    .line 1733
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1461,14 +1288,12 @@
     :cond_1
     move-object v5, v3
 
-    .line 1735
     goto :goto_1
 
-    .line 1697
     :sswitch_0
-    const-string/jumbo v5, "recognize_fail"
+    const-string v5, "recognize_fail"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1476,14 +1301,12 @@
 
     move-result v4
 
-    .line 1698
     goto :goto_2
 
-    .line 1700
     :sswitch_1
-    const-string/jumbo v5, "touch_image_quality_finger_offset_too_far_left"
+    const-string v5, "touch_image_quality_finger_offset_too_far_left"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1491,14 +1314,12 @@
 
     move-result v4
 
-    .line 1701
     goto :goto_2
 
-    .line 1705
     :sswitch_2
-    const-string/jumbo v5, "touch_image_quality_finger_offset_too_far_left"
+    const-string v5, "touch_image_quality_finger_offset_too_far_left"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1506,14 +1327,12 @@
 
     move-result v4
 
-    .line 1706
     goto :goto_2
 
-    .line 1708
     :sswitch_3
-    const-string/jumbo v5, "touch_image_quality_pressure_too_light"
+    const-string v5, "touch_image_quality_pressure_too_light"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1521,14 +1340,12 @@
 
     move-result v4
 
-    .line 1709
     goto :goto_2
 
-    .line 1711
     :sswitch_4
-    const-string/jumbo v5, "touch_image_quality_pressure_too_hard"
+    const-string v5, "touch_image_quality_pressure_too_hard"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1536,14 +1353,12 @@
 
     move-result v4
 
-    .line 1712
     goto :goto_2
 
-    .line 1714
     :sswitch_5
-    const-string/jumbo v5, "touch_image_quality_same_as_previous"
+    const-string v5, "touch_image_quality_same_as_previous"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1551,14 +1366,12 @@
 
     move-result v4
 
-    .line 1715
     goto :goto_2
 
-    .line 1717
     :sswitch_6
-    const-string/jumbo v5, "spass_image_quality_extraction_failure"
+    const-string v5, "spass_image_quality_extraction_failure"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1566,14 +1379,12 @@
 
     move-result v4
 
-    .line 1718
     goto :goto_2
 
-    .line 1720
     :sswitch_7
-    const-string/jumbo v5, "spass_image_quality_wet_finger"
+    const-string v5, "spass_image_quality_wet_finger"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1581,14 +1392,12 @@
 
     move-result v4
 
-    .line 1721
     goto :goto_2
 
-    .line 1723
     :sswitch_8
-    const-string/jumbo v5, "spass_something_on_sensor"
+    const-string v5, "spass_something_on_sensor"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1596,14 +1405,12 @@
 
     move-result v4
 
-    .line 1724
     goto :goto_2
 
-    .line 1726
     :sswitch_9
-    const-string/jumbo v5, "spass_status_too_fast"
+    const-string v5, "spass_status_too_fast"
 
-    const-string/jumbo v6, "string"
+    const-string v6, "string"
 
     const-string v7, "com.samsung.android.fingerprint.service"
 
@@ -1611,10 +1418,8 @@
 
     move-result v4
 
-    .line 1727
     goto/16 :goto_2
 
-    .line 1695
     nop
 
     :sswitch_data_0
@@ -1639,77 +1444,56 @@
     .param p0, "quality"    # I
 
     .prologue
-    .line 1643
     const/4 v0, 0x0
 
-    .line 1644
     .local v0, "result":I
     sparse-switch p0, :sswitch_data_0
 
-    .line 1671
     const v0, 0x1080345
 
-    .line 1674
     :goto_0
     return v0
 
-    .line 1646
     :sswitch_0
     const v0, 0x1080348
 
-    .line 1647
     goto :goto_0
 
-    .line 1649
     :sswitch_1
     const v0, 0x1080349
 
-    .line 1650
     goto :goto_0
 
-    .line 1653
     :sswitch_2
     const v0, 0x108034c
 
-    .line 1654
     goto :goto_0
 
-    .line 1656
     :sswitch_3
     const v0, 0x108034a
 
-    .line 1657
     goto :goto_0
 
-    .line 1659
     :sswitch_4
     const v0, 0x108034b
 
-    .line 1660
     goto :goto_0
 
-    .line 1662
     :sswitch_5
     const v0, 0x108034d
 
-    .line 1663
     goto :goto_0
 
-    .line 1665
     :sswitch_6
     const v0, 0x1080346
 
-    .line 1666
     goto :goto_0
 
-    .line 1668
     :sswitch_7
     const v0, 0x1080347
 
-    .line 1669
     goto :goto_0
 
-    .line 1644
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -1729,7 +1513,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 216
     const-class v0, Lcom/samsung/android/fingerprint/FingerprintManager;
 
     monitor-enter v0
@@ -1761,7 +1544,6 @@
     .param p1, "SecurityLevel"    # I
 
     .prologue
-    .line 225
     const-class v1, Lcom/samsung/android/fingerprint/FingerprintManager;
 
     monitor-enter v1
@@ -1796,14 +1578,12 @@
     .param p2, "ownName"    # Ljava/lang/String;
 
     .prologue
-    .line 233
     const-class v1, Lcom/samsung/android/fingerprint/FingerprintManager;
 
     monitor-enter v1
 
     if-nez p0, :cond_0
 
-    .line 234
     :try_start_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1815,7 +1595,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 233
     :catchall_0
     move-exception v0
 
@@ -1823,42 +1602,34 @@
 
     throw v0
 
-    .line 236
     :cond_0
     :try_start_1
     sput-object p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
-    .line 237
     sput p1, Lcom/samsung/android/fingerprint/FingerprintManager;->mSecurityLevel:I
 
-    .line 238
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->sInstance:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     if-nez v0, :cond_1
 
-    .line 239
     new-instance v0, Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/fingerprint/FingerprintManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->sInstance:Lcom/samsung/android/fingerprint/FingerprintManager;
 
-    .line 241
     :cond_1
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->sInstance:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     if-eqz v0, :cond_2
 
-    .line 242
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->sInstance:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-direct {v0, p2}, Lcom/samsung/android/fingerprint/FingerprintManager;->setOwnName(Ljava/lang/String;)V
 
-    .line 244
     :cond_2
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 245
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->sInstance:Lcom/samsung/android/fingerprint/FingerprintManager;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1874,7 +1645,6 @@
     .param p1, "ownName"    # Ljava/lang/String;
 
     .prologue
-    .line 221
     const-class v0, Lcom/samsung/android/fingerprint/FingerprintManager;
 
     monitor-enter v0
@@ -1904,10 +1674,9 @@
     .locals 2
 
     .prologue
-    .line 874
     const-string v0, "google_touch"
 
-    const-string/jumbo v1, "touch"
+    const-string v1, "touch"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1915,10 +1684,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 875
     const/4 v0, 0x2
 
-    .line 877
     :goto_0
     return v0
 
@@ -1934,12 +1701,10 @@
     .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 969
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 970
     return-void
 .end method
 
@@ -1950,12 +1715,10 @@
     .param p3, "extraInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 980
     sget-boolean v0, Lcom/samsung/android/fingerprint/FingerprintManager;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
-    .line 981
     const-string v1, "FPMS_FingerprintManager"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1987,11 +1750,9 @@
 
     invoke-static {v1, v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 985
     :goto_1
     return-void
 
-    .line 981
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2013,7 +1774,6 @@
 
     goto :goto_0
 
-    .line 983
     :cond_1
     const-string v1, "FPMS_FingerprintManager"
 
@@ -2078,12 +1838,10 @@
     .param p4, "extraInfo2"    # Ljava/lang/String;
 
     .prologue
-    .line 988
     sget-boolean v0, Lcom/samsung/android/fingerprint/FingerprintManager;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
-    .line 989
     const-string v1, "FPMS_FingerprintManager"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2115,11 +1873,9 @@
 
     invoke-static {v1, v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 993
     :goto_1
     return-void
 
-    .line 989
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2145,7 +1901,6 @@
 
     goto :goto_0
 
-    .line 991
     :cond_1
     const-string v1, "FPMS_FingerprintManager"
 
@@ -2206,26 +1961,22 @@
     .locals 2
 
     .prologue
-    .line 756
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
     if-eqz v0, :cond_0
 
-    .line 757
     const-string v0, "FPMS_FingerprintManager"
 
-    const-string/jumbo v1, "registerActivityLifeCallback"
+    const-string v1, "registerActivityLifeCallback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 758
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
     iget-object v1, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mActivityLifecycleCallbacks:Landroid/app/Application$ActivityLifecycleCallbacks;
 
     invoke-virtual {v0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    .line 760
     :cond_0
     return-void
 .end method
@@ -2235,10 +1986,8 @@
     .param p1, "ownName"    # Ljava/lang/String;
 
     .prologue
-    .line 1840
     iput-object p1, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
 
-    .line 1841
     return-void
 .end method
 
@@ -2246,13 +1995,11 @@
     .locals 5
 
     .prologue
-    .line 276
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 277
     .local v1, "intent":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2264,17 +2011,14 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 279
     const-string v2, "com.samsung.android.fingerprint.action.START_SERVICE"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 280
     sget-boolean v2, Lcom/samsung/android/fingerprint/FingerprintManager;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 281
     const-string v2, "FPMS_FingerprintManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2297,7 +2041,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     :cond_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
@@ -2307,15 +2050,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 287
     :goto_0
     return-void
 
-    .line 284
     :catch_0
     move-exception v0
 
-    .line 285
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2328,32 +2068,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 763
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
     if-eqz v0, :cond_0
 
-    .line 764
     const-string v0, "FPMS_FingerprintManager"
 
-    const-string/jumbo v1, "unregisterActivityLifeCallback"
+    const-string v1, "unregisterActivityLifeCallback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 765
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
     iget-object v1, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mActivityLifecycleCallbacks:Landroid/app/Application$ActivityLifecycleCallbacks;
 
     invoke-virtual {v0, v1}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    .line 766
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
 
-    .line 767
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
-    .line 769
     :cond_0
     return-void
 .end method
@@ -2362,7 +2096,6 @@
     .locals 6
 
     .prologue
-    .line 253
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -2371,14 +2104,12 @@
 
     add-long v0, v2, v4
 
-    .line 255
     .local v0, "endMillis":J
     :goto_0
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mWaitLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 256
     :try_start_0
     const-string v2, "fingerprint_service"
 
@@ -2392,28 +2123,23 @@
 
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
-    .line 257
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-eqz v2, :cond_0
 
-    .line 258
     const-string v2, "FPMS_FingerprintManager"
 
-    const-string/jumbo v4, "waitForService: FPMS started"
+    const-string v4, "waitForService: FPMS started"
 
     invoke-static {v2, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     const/4 v2, 0x1
 
     monitor-exit v3
 
-    .line 263
     :goto_1
     return v2
 
-    .line 261
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -2423,21 +2149,18 @@
 
     if-ltz v2, :cond_1
 
-    .line 262
     const-string v2, "FPMS_FingerprintManager"
 
-    const-string/jumbo v4, "waitForService: Timeout"
+    const-string v4, "waitForService: Timeout"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     const/4 v2, 0x0
 
     monitor-exit v3
 
     goto :goto_1
 
-    .line 270
     :catchall_0
     move-exception v2
 
@@ -2447,7 +2170,6 @@
 
     throw v2
 
-    .line 266
     :cond_1
     :try_start_1
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mWaitLock:Ljava/lang/Object;
@@ -2459,7 +2181,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 270
     :goto_2
     :try_start_2
     monitor-exit v3
@@ -2468,7 +2189,6 @@
 
     goto :goto_0
 
-    .line 267
     :catch_0
     move-exception v2
 
@@ -2481,41 +2201,34 @@
     .locals 2
 
     .prologue
-    .line 291
     const-string v0, "FPMS_FingerprintManager"
 
     const-string v1, "binderDied called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
-    .line 293
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mIsLinkedDeathRecipient:Z
 
-    .line 294
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
 
     if-eqz v0, :cond_0
 
-    .line 295
     const-string v0, "FPMS_FingerprintManager"
 
     const-string v1, "binderDied: Client is not null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 297
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/samsung/android/fingerprint/FingerprintManager$1;
@@ -2524,7 +2237,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 314
     :cond_0
     return-void
 .end method
@@ -2536,15 +2248,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 407
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 409
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_1
 
-    .line 410
     const-string v2, "cancel"
 
     const/4 v3, 0x0
@@ -2553,12 +2262,10 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 420
     :cond_0
     :goto_0
     return v1
 
-    .line 415
     :cond_1
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -2575,11 +2282,9 @@
 
     goto :goto_0
 
-    .line 416
     :catch_0
     move-exception v0
 
-    .line 417
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "cancel"
 
@@ -2587,7 +2292,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2613,15 +2318,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 945
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 947
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 948
     const-string v2, "closeTransaction"
 
     const/4 v3, 0x0
@@ -2630,11 +2332,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 958
     :goto_0
     return v1
 
-    .line 953
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -2647,11 +2347,9 @@
 
     goto :goto_0
 
-    .line 954
     :catch_0
     move-exception v0
 
-    .line 955
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "closeTransaction"
 
@@ -2659,7 +2357,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2687,15 +2385,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 424
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 426
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 427
     const-string v2, "enroll"
 
     const/4 v3, 0x0
@@ -2704,11 +2399,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 437
     :goto_0
     return v1
 
-    .line 432
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -2721,11 +2414,9 @@
 
     goto :goto_0
 
-    .line 433
     :catch_0
     move-exception v0
 
-    .line 434
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "enroll"
 
@@ -2733,7 +2424,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2782,15 +2473,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 442
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 444
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 445
     const-string v2, "enrollForMultiUser"
 
     const/4 v3, 0x0
@@ -2799,11 +2487,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 455
     :goto_0
     return v1
 
-    .line 450
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -2816,11 +2502,9 @@
 
     goto :goto_0
 
-    .line 451
     :catch_0
     move-exception v0
 
-    .line 452
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "enrollForMultiUser"
 
@@ -2828,7 +2512,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2891,26 +2575,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1427
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1429
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1430
     const-string v2, "getDaemonVersion"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1439
     :goto_0
     return-object v1
 
-    .line 1435
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -2923,11 +2602,9 @@
 
     goto :goto_0
 
-    .line 1436
     :catch_0
     move-exception v0
 
-    .line 1437
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getDaemonVersion"
 
@@ -2940,7 +2617,6 @@
     .locals 1
 
     .prologue
-    .line 1101
     sget v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mEnrollFinishResult:I
 
     return v0
@@ -2952,15 +2628,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1894
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1896
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1897
     const-string v2, "getFingerprintId"
 
     const/4 v3, 0x0
@@ -2969,11 +2642,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1907
     :goto_0
     return v1
 
-    .line 1902
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -2986,11 +2657,9 @@
 
     goto :goto_0
 
-    .line 1903
     :catch_0
     move-exception v0
 
-    .line 1904
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getFingerprintId"
 
@@ -3005,15 +2674,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 804
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 806
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 807
     const-string v2, "getEnrolledFingers"
 
     const/4 v3, 0x0
@@ -3022,11 +2688,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 817
     :goto_0
     return v1
 
-    .line 812
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3041,11 +2705,9 @@
 
     goto :goto_0
 
-    .line 813
     :catch_0
     move-exception v0
 
-    .line 814
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getEnrolledFingers"
 
@@ -3061,26 +2723,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1877
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1879
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1880
     const-string v2, "getFingerprintId"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1890
     :goto_0
     return-object v1
 
-    .line 1885
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3101,11 +2758,9 @@
 
     goto :goto_0
 
-    .line 1886
     :catch_0
     move-exception v0
 
-    .line 1887
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getFingerprintId"
 
@@ -3120,26 +2775,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1860
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1862
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1863
     const-string v2, "getFingerprintIds"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1873
     :goto_0
     return-object v1
 
-    .line 1868
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3160,11 +2810,9 @@
 
     goto :goto_0
 
-    .line 1869
     :catch_0
     move-exception v0
 
-    .line 1870
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getFingerprintIds"
 
@@ -3180,26 +2828,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1557
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1558
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1559
     const-string v2, "getIndexName"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1567
     :goto_0
     return-object v1
 
-    .line 1563
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3212,11 +2855,9 @@
 
     goto :goto_0
 
-    .line 1564
     :catch_0
     move-exception v0
 
-    .line 1565
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getIndexName"
 
@@ -3230,16 +2871,13 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 635
     const/4 v1, 0x0
 
-    .line 636
     .local v1, "imageId":I
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 637
     const-string v2, "getLastImageQuality"
 
     const/4 v3, 0x0
@@ -3248,18 +2886,14 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 638
     const/4 v2, 0x0
 
-    .line 650
     :goto_0
     return v2
 
-    .line 640
     :cond_0
     if-nez p1, :cond_1
 
-    .line 641
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "context is null."
@@ -3268,7 +2902,6 @@
 
     throw v2
 
-    .line 644
     :cond_1
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3287,7 +2920,6 @@
 
     move-result v1
 
-    .line 649
     :goto_1
     const-string v2, "FPMS_FingerprintManager"
 
@@ -3313,14 +2945,11 @@
 
     move v2, v1
 
-    .line 650
     goto :goto_0
 
-    .line 646
     :catch_0
     move-exception v0
 
-    .line 647
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getQualityMessage"
 
@@ -3336,28 +2965,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 617
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_1
 
-    .line 618
     const-string v2, "getLastImageQualityMessage"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 629
     :cond_0
     :goto_0
     return-object v1
 
-    .line 621
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 625
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -3373,11 +2997,9 @@
 
     goto :goto_0
 
-    .line 626
     :catch_0
     move-exception v0
 
-    .line 627
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getLastImageQualityMessage"
 
@@ -3392,26 +3014,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1411
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1413
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1414
     const-string v2, "getSensorInfo"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1423
     :goto_0
     return-object v1
 
-    .line 1419
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3424,11 +3041,9 @@
 
     goto :goto_0
 
-    .line 1420
     :catch_0
     move-exception v0
 
-    .line 1421
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getSensorInfo"
 
@@ -3443,26 +3058,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1443
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1445
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1446
     const-string v2, "getUserIdList"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1455
     :goto_0
     return-object v1
 
-    .line 1451
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3475,11 +3085,9 @@
 
     goto :goto_0
 
-    .line 1452
     :catch_0
     move-exception v0
 
-    .line 1453
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getUserIdList"
 
@@ -3494,15 +3102,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 882
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 884
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 885
     const-string v2, "getVersion"
 
     const/4 v3, 0x0
@@ -3511,11 +3116,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 895
     :goto_0
     return v1
 
-    .line 890
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3528,11 +3131,9 @@
 
     goto :goto_0
 
-    .line 891
     :catch_0
     move-exception v0
 
-    .line 892
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getVersion"
 
@@ -3547,15 +3148,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 857
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 859
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 860
     const-string v2, "hasPendingCommand"
 
     const/4 v3, 0x0
@@ -3564,11 +3162,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 870
     :goto_0
     return v1
 
-    .line 865
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3581,11 +3177,9 @@
 
     goto :goto_0
 
-    .line 866
     :catch_0
     move-exception v0
 
-    .line 867
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "hasPendingCommand"
 
@@ -3602,15 +3196,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 564
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 566
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 567
     const-string v2, "identify"
 
     const/4 v3, 0x0
@@ -3619,11 +3210,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 577
     :goto_0
     return v1
 
-    .line 572
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3636,11 +3225,9 @@
 
     goto :goto_0
 
-    .line 573
     :catch_0
     move-exception v0
 
-    .line 574
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "identify"
 
@@ -3648,7 +3235,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3686,15 +3273,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 598
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 600
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 601
     const-string v2, "identifyForMultiUser"
 
     const/4 v3, 0x0
@@ -3703,11 +3287,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 611
     :goto_0
     return v1
 
-    .line 606
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3720,11 +3302,9 @@
 
     goto :goto_0
 
-    .line 607
     :catch_0
     move-exception v0
 
-    .line 608
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "identifyForMultiUser"
 
@@ -3732,7 +3312,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3787,15 +3367,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 581
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 583
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 584
     const-string v2, "identifyForMultiUser"
 
     const/4 v3, 0x0
@@ -3804,11 +3381,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 594
     :goto_0
     return v1
 
-    .line 589
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3823,11 +3398,9 @@
 
     goto :goto_0
 
-    .line 590
     :catch_0
     move-exception v0
 
-    .line 591
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "identifyForMultiUser"
 
@@ -3835,7 +3408,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3875,34 +3448,27 @@
 
     const/4 v6, 0x0
 
-    .line 530
     const/4 v2, -0x1
 
-    .line 531
     .local v2, "retVal":I
     if-nez p1, :cond_0
 
-    .line 532
     const-string v4, "identifyWithDialog"
 
     const-string v5, "Context is null"
 
     invoke-direct {p0, v4, v6, v5}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 560
     :goto_0
     return v3
 
-    .line 535
     :cond_0
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 536
     sget-object v4, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v4, :cond_1
 
-    .line 537
     const-string v4, "identifyWithDialog"
 
     const-string v5, "FingerprintService is not running!"
@@ -3911,29 +3477,24 @@
 
     goto :goto_0
 
-    .line 540
     :cond_1
     const/4 v0, 0x0
 
-    .line 541
     .local v0, "comName":Landroid/content/ComponentName;
     instance-of v3, p1, Landroid/app/Activity;
 
     if-eqz v3, :cond_3
 
-    .line 542
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
 
     move-object v3, p1
 
-    .line 543
     check-cast v3, Landroid/app/Activity;
 
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
 
     move-object v3, p1
 
-    .line 544
     check-cast v3, Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
@@ -3942,19 +3503,16 @@
 
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
-    .line 545
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->registerActivityLifeCallback()V
 
     move-object v3, p1
 
-    .line 546
     check-cast v3, Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 552
     :goto_1
     :try_start_0
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -3967,10 +3525,8 @@
 
     move-result v2
 
-    .line 553
     if-eqz v2, :cond_2
 
-    .line 554
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -3979,27 +3535,21 @@
     :goto_2
     move v3, v2
 
-    .line 560
     goto :goto_0
 
-    .line 548
     :cond_3
     sput-object v6, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
-    .line 549
     sput-object v6, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
 
     goto :goto_1
 
-    .line 556
     :catch_0
     move-exception v1
 
-    .line 557
     .local v1, "e":Ljava/lang/Exception;
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
 
-    .line 558
     const-string v3, "identifyWithDialog"
 
     invoke-direct {p0, v3, v1}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
@@ -4013,15 +3563,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1542
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1543
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1544
     const-string v2, "isEnrolling"
 
     const/4 v3, 0x0
@@ -4030,11 +3577,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1551
     :goto_0
     return v1
 
-    .line 1548
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4047,11 +3592,9 @@
 
     goto :goto_0
 
-    .line 1549
     :catch_0
     move-exception v0
 
-    .line 1550
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "FPMS_FingerprintManager"
 
@@ -4068,15 +3611,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1329
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1331
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1332
     const-string v2, "isSensorReady"
 
     const/4 v3, 0x0
@@ -4085,11 +3625,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1342
     :goto_0
     return v1
 
-    .line 1337
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4102,11 +3640,9 @@
 
     goto :goto_0
 
-    .line 1338
     :catch_0
     move-exception v0
 
-    .line 1339
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "isSensorReady"
 
@@ -4121,7 +3657,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 919
     sget-object v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
     const-string v2, "fingerprint"
@@ -4138,7 +3673,6 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 922
     :cond_0
     :goto_0
     return v0
@@ -4155,15 +3689,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 900
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 902
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 903
     const-string v2, "isSupportFingerprintIds"
 
     const/4 v3, 0x0
@@ -4172,11 +3703,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 912
     :goto_0
     return v1
 
-    .line 908
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4189,11 +3718,9 @@
 
     goto :goto_0
 
-    .line 909
     :catch_0
     move-exception v0
 
-    .line 910
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "isSupportFingerprintIds"
 
@@ -4208,12 +3735,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1847
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-eqz v2, :cond_0
 
-    .line 1849
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -4225,16 +3750,13 @@
 
     move-result v1
 
-    .line 1855
     :cond_0
     :goto_0
     return v1
 
-    .line 1850
     :catch_0
     move-exception v0
 
-    .line 1851
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -4245,16 +3767,13 @@
     .locals 4
 
     .prologue
-    .line 1491
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1493
     sget-object v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v1, :cond_0
 
-    .line 1494
-    const-string/jumbo v1, "notifyAlternativePasswordBegin"
+    const-string v1, "notifyAlternativePasswordBegin"
 
     const/4 v2, 0x0
 
@@ -4262,7 +3781,6 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1498
     :cond_0
     :try_start_0
     sget-object v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4271,17 +3789,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1502
     :goto_0
     return-void
 
-    .line 1499
     :catch_0
     move-exception v0
 
-    .line 1500
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v1, "notifyAlternativePasswordBegin"
+    const-string v1, "notifyAlternativePasswordBegin"
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4294,16 +3809,13 @@
     .param p2, "extInfo"    # Landroid/os/Bundle;
 
     .prologue
-    .line 742
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 743
     sget-object v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v1, :cond_0
 
-    .line 744
-    const-string/jumbo v1, "notifyAppActivityState"
+    const-string v1, "notifyAppActivityState"
 
     const/4 v2, 0x0
 
@@ -4311,11 +3823,9 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 753
     :goto_0
     return-void
 
-    .line 748
     :cond_0
     :try_start_0
     sget-object v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4326,13 +3836,11 @@
 
     goto :goto_0
 
-    .line 750
     :catch_0
     move-exception v0
 
-    .line 751
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v1, "notifyAppActivityState"
+    const-string v1, "notifyAppActivityState"
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4345,16 +3853,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1346
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1348
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1349
-    const-string/jumbo v2, "notifyEnrollBegin"
+    const-string v2, "notifyEnrollBegin"
 
     const/4 v3, 0x0
 
@@ -4362,11 +3867,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1358
     :goto_0
     return v1
 
-    .line 1354
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4379,13 +3882,11 @@
 
     goto :goto_0
 
-    .line 1355
     :catch_0
     move-exception v0
 
-    .line 1356
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "notifyEnrollBegin"
+    const-string v2, "notifyEnrollBegin"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4398,16 +3899,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1362
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1364
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1365
-    const-string/jumbo v2, "notifyEnrollEnd"
+    const-string v2, "notifyEnrollEnd"
 
     const/4 v3, 0x0
 
@@ -4415,11 +3913,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1374
     :goto_0
     return v1
 
-    .line 1370
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4432,13 +3928,11 @@
 
     goto :goto_0
 
-    .line 1371
     :catch_0
     move-exception v0
 
-    .line 1372
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "notifyEnrollEnd"
+    const-string v2, "notifyEnrollEnd"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4452,16 +3946,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 927
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 929
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 930
-    const-string/jumbo v2, "openTransaction"
+    const-string v2, "openTransaction"
 
     const/4 v3, 0x0
 
@@ -4469,11 +3960,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 940
     :goto_0
     return v1
 
-    .line 935
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4486,19 +3975,17 @@
 
     goto :goto_0
 
-    .line 936
     :catch_0
     move-exception v0
 
-    .line 937
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "openTransaction"
+    const-string v2, "openTransaction"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4523,16 +4010,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1379
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1381
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1382
-    const-string/jumbo v2, "pauseEnroll"
+    const-string v2, "pauseEnroll"
 
     const/4 v3, 0x0
 
@@ -4540,11 +4024,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1391
     :goto_0
     return v1
 
-    .line 1387
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4557,13 +4039,11 @@
 
     goto :goto_0
 
-    .line 1388
     :catch_0
     move-exception v0
 
-    .line 1389
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "pauseEnroll"
+    const-string v2, "pauseEnroll"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4579,26 +4059,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 655
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 656
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 657
-    const-string/jumbo v2, "process"
+    const-string v2, "process"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v1, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 669
     :goto_0
     return-object v1
 
-    .line 661
     :cond_0
     if-eqz p3, :cond_1
 
@@ -4609,9 +4084,8 @@
 
     if-nez p1, :cond_2
 
-    .line 662
     :cond_1
-    const-string/jumbo v2, "process"
+    const-string v2, "process"
 
     const/4 v3, 0x0
 
@@ -4623,19 +4097,17 @@
 
     goto :goto_0
 
-    .line 666
     :catch_0
     move-exception v0
 
-    .line 667
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "process"
+    const-string v2, "process"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4653,7 +4125,6 @@
 
     goto :goto_0
 
-    .line 665
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
@@ -4678,20 +4149,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 674
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 675
     const/4 v1, 0x0
 
-    .line 676
     .local v1, "responseData":[B
     sget-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v3, :cond_0
 
-    .line 677
-    const-string/jumbo v3, "processFIDO"
+    const-string v3, "processFIDO"
 
     const-string v4, "FingerprintService is not running!"
 
@@ -4699,13 +4166,11 @@
 
     move-object v2, v1
 
-    .line 688
     .end local v1    # "responseData":[B
     .local v2, "responseData":[B
     :goto_0
     return-object v2
 
-    .line 681
     .end local v2    # "responseData":[B
     .restart local v1    # "responseData":[B
     :cond_0
@@ -4721,12 +4186,10 @@
     :cond_1
     move-object v2, v1
 
-    .line 682
     .end local v1    # "responseData":[B
     .restart local v2    # "responseData":[B
     goto :goto_0
 
-    .line 684
     .end local v2    # "responseData":[B
     .restart local v1    # "responseData":[B
     :cond_2
@@ -4743,26 +4206,23 @@
     :goto_1
     move-object v2, v1
 
-    .line 688
     .end local v1    # "responseData":[B
     .restart local v2    # "responseData":[B
     goto :goto_0
 
-    .line 685
     .end local v2    # "responseData":[B
     .restart local v1    # "responseData":[B
     :catch_0
     move-exception v0
 
-    .line 686
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "processFIDO"
+    const-string v3, "processFIDO"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "token="
+    const-string v5, "token="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4801,16 +4261,13 @@
 
     const/4 v3, 0x0
 
-    .line 460
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 462
     sget-object v4, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v4, :cond_1
 
-    .line 463
-    const-string/jumbo v4, "registerClient"
+    const-string v4, "registerClient"
 
     const-string v5, "FingerprintService is not running!"
 
@@ -4818,17 +4275,14 @@
 
     move-object v2, v3
 
-    .line 499
     :cond_0
     :goto_0
     return-object v2
 
-    .line 466
     :cond_1
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
 
-    .line 467
-    const-string/jumbo v4, "securityLevel"
+    const-string v4, "securityLevel"
 
     invoke-virtual {p2, v4, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -4836,16 +4290,14 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 468
-    const-string/jumbo v4, "securityLevel"
+    const-string v4, "securityLevel"
 
     sget v5, Lcom/samsung/android/fingerprint/FingerprintManager;->mSecurityLevel:I
 
     invoke-virtual {p2, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 470
     :cond_2
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     sget-object v5, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
@@ -4855,7 +4307,6 @@
 
     invoke-virtual {p2, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 473
     :try_start_0
     sget-object v4, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -4863,25 +4314,21 @@
 
     move-result-object v2
 
-    .line 474
     .local v2, "retBinder":Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
-    .line 475
     sput-object p1, Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 479
     .end local v2    # "retBinder":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 480
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v4, "registerClient"
+    const-string v4, "registerClient"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -4913,19 +4360,15 @@
 
     invoke-direct {p0, v4, v0, v5}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 481
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
-    .line 482
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 483
     sget-object v4, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v4, :cond_3
 
-    .line 484
-    const-string/jumbo v4, "registerClient"
+    const-string v4, "registerClient"
 
     const-string v5, "FingerprintService is not running!"
 
@@ -4933,10 +4376,8 @@
 
     move-object v2, v3
 
-    .line 485
     goto :goto_0
 
-    .line 488
     :cond_3
     :try_start_1
     sget-object v4, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -4945,23 +4386,19 @@
 
     move-result-object v2
 
-    .line 489
     .restart local v2    # "retBinder":Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
-    .line 490
     sput-object p1, Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_0
 
-    .line 494
     .end local v2    # "retBinder":Landroid/os/IBinder;
     :catch_1
     move-exception v1
 
-    .line 495
     .local v1, "ex":Ljava/lang/Exception;
     const-string v4, "FPMS_FingerprintManager"
 
@@ -4969,7 +4406,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "registerClient 2 : failed - client="
+    const-string v6, "registerClient 2 : failed - client="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4997,7 +4434,6 @@
 
     move-object v2, v3
 
-    .line 499
     goto/16 :goto_0
 .end method
 
@@ -5009,7 +4445,6 @@
     .end annotation
 
     .prologue
-    .line 504
     invoke-virtual {p2}, Lcom/samsung/android/fingerprint/FingerprintManager$FingerprintClientSpecBuilder;->build()Landroid/os/Bundle;
 
     move-result-object v0
@@ -5027,16 +4462,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 839
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 841
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 842
-    const-string/jumbo v2, "removeAllEnrolledFingers"
+    const-string v2, "removeAllEnrolledFingers"
 
     const/4 v3, 0x0
 
@@ -5044,11 +4476,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 852
     :goto_0
     return v1
 
-    .line 847
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -5063,13 +4493,11 @@
 
     goto :goto_0
 
-    .line 848
     :catch_0
     move-exception v0
 
-    .line 849
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "removeAllEnrolledFingers"
+    const-string v2, "removeAllEnrolledFingers"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -5083,16 +4511,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 822
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 824
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 825
-    const-string/jumbo v2, "removeEnrolledFinger"
+    const-string v2, "removeEnrolledFinger"
 
     const/4 v3, 0x0
 
@@ -5100,11 +4525,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 835
     :goto_0
     return v1
 
-    .line 830
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -5119,13 +4542,11 @@
 
     goto :goto_0
 
-    .line 831
     :catch_0
     move-exception v0
 
-    .line 832
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "removeEnrolledFinger"
+    const-string v2, "removeEnrolledFinger"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -5140,16 +4561,13 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 1475
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1477
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1478
-    const-string/jumbo v2, "request"
+    const-string v2, "request"
 
     const/4 v3, 0x0
 
@@ -5157,11 +4575,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1487
     :goto_0
     return v1
 
-    .line 1483
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -5174,13 +4590,11 @@
 
     goto :goto_0
 
-    .line 1484
     :catch_0
     move-exception v0
 
-    .line 1485
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "request"
+    const-string v2, "request"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -5193,16 +4607,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1395
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1397
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1398
-    const-string/jumbo v2, "resumeEnroll"
+    const-string v2, "resumeEnroll"
 
     const/4 v3, 0x0
 
@@ -5210,11 +4621,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1407
     :goto_0
     return v1
 
-    .line 1403
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -5227,13 +4636,11 @@
 
     goto :goto_0
 
-    .line 1404
     :catch_0
     move-exception v0
 
-    .line 1405
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "resumeEnroll"
+    const-string v2, "resumeEnroll"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -5245,10 +4652,8 @@
     .param p1, "set"    # I
 
     .prologue
-    .line 1095
     sput p1, Lcom/samsung/android/fingerprint/FingerprintManager;->mEnrollFinishResult:I
 
-    .line 1096
     return-void
 .end method
 
@@ -5260,16 +4665,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1571
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1573
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_1
 
-    .line 1574
-    const-string/jumbo v2, "setIndexName"
+    const-string v2, "setIndexName"
 
     const/4 v3, 0x0
 
@@ -5277,12 +4679,10 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1584
     :cond_0
     :goto_0
     return v1
 
-    .line 1578
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
@@ -5297,7 +4697,6 @@
 
     if-gtz v2, :cond_0
 
-    .line 1579
     :cond_2
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -5309,13 +4708,11 @@
 
     goto :goto_0
 
-    .line 1581
     :catch_0
     move-exception v0
 
-    .line 1582
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "setIndexName"
+    const-string v2, "setIndexName"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -5329,16 +4726,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1525
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1527
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1528
-    const-string/jumbo v2, "setPassword"
+    const-string v2, "setPassword"
 
     const/4 v3, 0x0
 
@@ -5346,11 +4740,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1537
     :goto_0
     return v1
 
-    .line 1533
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -5365,13 +4757,11 @@
 
     goto :goto_0
 
-    .line 1534
     :catch_0
     move-exception v0
 
-    .line 1535
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "setPassword"
+    const-string v2, "setPassword"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -5388,16 +4778,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 773
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 774
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 775
-    const-string/jumbo v2, "showIdentifyDialog"
+    const-string v2, "showIdentifyDialog"
 
     const-string v4, "FingerprintService is not running!"
 
@@ -5405,33 +4792,27 @@
 
     move-object v2, v3
 
-    .line 800
     :goto_0
     return-object v2
 
-    .line 778
     :cond_0
     const/4 v0, 0x0
 
-    .line 779
     .local v0, "comName":Landroid/content/ComponentName;
     instance-of v2, p1, Landroid/app/Activity;
 
     if-eqz v2, :cond_1
 
-    .line 780
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
 
     move-object v2, p1
 
-    .line 781
     check-cast v2, Landroid/app/Activity;
 
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
 
     move-object v2, p1
 
-    .line 782
     check-cast v2, Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
@@ -5440,19 +4821,16 @@
 
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
-    .line 783
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->registerActivityLifeCallback()V
 
     move-object v2, p1
 
-    .line 784
     check-cast v2, Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 789
     :goto_1
     new-instance v2, Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;
 
@@ -5464,7 +4842,6 @@
 
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mIdentifyDialog:Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;
 
-    .line 791
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
@@ -5480,44 +4857,35 @@
 
     if-eqz v2, :cond_2
 
-    .line 792
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v2, v3
 
-    .line 793
     goto :goto_0
 
-    .line 786
     :cond_1
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerApplication:Landroid/app/Application;
 
-    .line 787
     sput-object v3, Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
 
     goto :goto_1
 
-    .line 795
     :catch_0
     move-exception v1
 
-    .line 796
     .local v1, "e":Ljava/lang/Exception;
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
 
-    .line 797
-    const-string/jumbo v2, "showIdentifyDialog"
+    const-string v2, "showIdentifyDialog"
 
     invoke-direct {p0, v2, v1}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
     move-object v2, v3
 
-    .line 798
     goto :goto_0
 
-    .line 800
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mIdentifyDialog:Lcom/samsung/android/fingerprint/FingerprintIdentifyDialog;
@@ -5538,27 +4906,22 @@
 
     const/4 v0, 0x0
 
-    .line 1216
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->getSensorType()I
 
     move-result v2
 
     if-ne v2, v1, :cond_0
 
-    .line 1217
     invoke-virtual {p0, p1, p2, p3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->startEnrollActivity(Landroid/content/Context;Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishListener;Ljava/lang/String;I)Z
 
     move-result v0
 
-    .line 1237
     :goto_0
     return v0
 
-    .line 1219
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1220
     const-string v1, "FPMS_FingerprintManager"
 
     const-string v2, "ActivityContext is null!! startEnrollActivity need activityContext"
@@ -5567,11 +4930,9 @@
 
     goto :goto_0
 
-    .line 1223
     :cond_1
     if-nez p2, :cond_2
 
-    .line 1224
     const-string v1, "FPMS_FingerprintManager"
 
     const-string v2, "Listener is null!! startEnrollActivity need EnrollFinishListener"
@@ -5580,7 +4941,6 @@
 
     goto :goto_0
 
-    .line 1227
     :cond_2
     if-eqz p3, :cond_3
 
@@ -5590,7 +4950,6 @@
 
     if-nez v2, :cond_4
 
-    .line 1228
     :cond_3
     const-string v1, "FPMS_FingerprintManager"
 
@@ -5600,7 +4959,6 @@
 
     goto :goto_0
 
-    .line 1231
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->notifyEnrollBegin()Z
 
@@ -5608,16 +4966,14 @@
 
     if-nez v2, :cond_5
 
-    .line 1232
     const-string v1, "FPMS_FingerprintManager"
 
-    const-string/jumbo v2, "startEnrollActivity: notifyEnrollBegin failed"
+    const-string v2, "startEnrollActivity: notifyEnrollBegin failed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1235
     :cond_5
     const-string v0, "FPMS_FingerprintManager"
 
@@ -5625,7 +4981,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "startEnrollActivity: previousStage(mStringId)="
+    const-string v3, "startEnrollActivity: previousStage(mStringId)="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5653,12 +5009,10 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1236
     invoke-virtual {p0, p1, p2, p3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->startSettingEnrollActivity(Landroid/content/Context;Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishListener;Ljava/lang/String;I)V
 
     move v0, v1
 
-    .line 1237
     goto :goto_0
 .end method
 
@@ -5674,29 +5028,23 @@
 
     const/4 v1, 0x0
 
-    .line 1243
     const/4 v0, 0x0
 
-    .line 1244
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez p1, :cond_0
 
-    .line 1245
     const-string v2, "FPMS_FingerprintManager"
 
     const-string v3, "ActivityContext is null!! startEnrollActivity need activityContext"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1324
     :goto_0
     return v1
 
-    .line 1248
     :cond_0
     if-nez p2, :cond_1
 
-    .line 1249
     const-string v2, "FPMS_FingerprintManager"
 
     const-string v3, "Listener is null!! startEnrollActivity need EnrollFinishListener"
@@ -5705,7 +5053,6 @@
 
     goto :goto_0
 
-    .line 1252
     :cond_1
     if-eqz p3, :cond_2
 
@@ -5715,7 +5062,6 @@
 
     if-nez v3, :cond_3
 
-    .line 1253
     :cond_2
     const-string v2, "FPMS_FingerprintManager"
 
@@ -5725,7 +5071,6 @@
 
     goto :goto_0
 
-    .line 1256
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->notifyEnrollBegin()Z
 
@@ -5733,36 +5078,30 @@
 
     if-nez v3, :cond_4
 
-    .line 1257
     const-string v2, "FPMS_FingerprintManager"
 
-    const-string/jumbo v3, "startEnrollActivity: notifyEnrollBegin failed"
+    const-string v3, "startEnrollActivity: notifyEnrollBegin failed"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1261
     :cond_4
     sput-object p1, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
-    .line 1262
     sput-object p2, Lcom/samsung/android/fingerprint/FingerprintManager;->mEnrollListener:Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishListener;
 
-    .line 1263
     sput-object p3, Lcom/samsung/android/fingerprint/FingerprintManager;->mStringId:Ljava/lang/String;
 
-    .line 1264
     sput p4, Lcom/samsung/android/fingerprint/FingerprintManager;->mIndex:I
 
-    .line 1266
     const-string v1, "FPMS_FingerprintManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "startEnrollActivity: previousStage(mStringId)="
+    const-string v4, "startEnrollActivity: previousStage(mStringId)="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5802,27 +5141,23 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1269
     invoke-virtual {p0}, Lcom/samsung/android/fingerprint/FingerprintManager;->getEnrolledFingers()I
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 1270
     new-instance v0, Landroid/os/Bundle;
 
     .end local v0    # "bundle":Landroid/os/Bundle;
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1271
     .restart local v0    # "bundle":Landroid/os/Bundle;
-    const-string/jumbo v1, "password"
+    const-string v1, "password"
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1272
-    const-string/jumbo v1, "packageName"
+    const-string v1, "packageName"
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -5830,19 +5165,16 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1273
     const-string v1, "demandExtraEvent"
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1274
-    const-string/jumbo v1, "ownName"
+    const-string v1, "ownName"
 
     iget-object v3, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1276
     sget-object v1, Lcom/samsung/android/fingerprint/FingerprintManager;->mContext:Landroid/content/Context;
 
     new-instance v3, Lcom/samsung/android/fingerprint/FingerprintManager$4;
@@ -5853,16 +5185,13 @@
 
     move v1, v2
 
-    .line 1320
     goto/16 :goto_0
 
-    .line 1323
     :cond_5
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/samsung/android/fingerprint/FingerprintManager;->startSettingEnrollActivity(Landroid/content/Context;Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishListener;Ljava/lang/String;I)V
 
     move v1, v2
 
-    .line 1324
     goto/16 :goto_0
 .end method
 
@@ -5874,12 +5203,10 @@
     .param p4, "index"    # I
 
     .prologue
-    .line 1192
     new-instance v1, Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishBroadcastReceiver;
 
     invoke-direct {v1, p0, p2, p3}, Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishBroadcastReceiver;-><init>(Lcom/samsung/android/fingerprint/FingerprintManager;Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishListener;Ljava/lang/String;)V
 
-    .line 1193
     .local v1, "enrollFinishBroadcastReceiver":Lcom/samsung/android/fingerprint/FingerprintManager$EnrollFinishBroadcastReceiver;
     new-instance v3, Landroid/content/IntentFilter;
 
@@ -5887,27 +5214,22 @@
 
     invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 1194
     .local v3, "intentFilter":Landroid/content/IntentFilter;
     invoke-virtual {p1, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1196
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 1197
     .local v2, "intent":Landroid/content/Intent;
     sget-object v4, Lcom/samsung/android/fingerprint/FingerprintManager;->START_ENROLL_ACTIVITY_COMPONENT:Landroid/content/ComponentName;
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1198
-    const-string/jumbo v4, "previousStage"
+    const-string v4, "previousStage"
 
     invoke-virtual {v2, v4, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1199
     iget-object v4, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
 
     if-eqz v4, :cond_0
@@ -5920,21 +5242,18 @@
 
     if-lez v4, :cond_0
 
-    .line 1200
-    const-string/jumbo v4, "ownName"
+    const-string v4, "ownName"
 
     iget-object v5, p0, Lcom/samsung/android/fingerprint/FingerprintManager;->mOwnName:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1202
     :cond_0
     const-string v4, "index"
 
     invoke-virtual {v2, v4, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1203
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -5942,25 +5261,21 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1205
     :try_start_0
     invoke-virtual {p1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1209
     :goto_0
     return-void
 
-    .line 1206
     :catch_0
     move-exception v0
 
-    .line 1207
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "FPMS_FingerprintManager"
 
-    const-string/jumbo v5, "startSettingEnrollActivity: exception"
+    const-string v5, "startSettingEnrollActivity: exception"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -5976,27 +5291,22 @@
 
     const/4 v1, 0x0
 
-    .line 509
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 511
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_1
 
-    .line 512
-    const-string/jumbo v2, "unregisterClient"
+    const-string v2, "unregisterClient"
 
     const-string v3, "FingerprintService is not running!"
 
     invoke-direct {p0, v2, v4, v3}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 525
     :cond_0
     :goto_0
     return v1
 
-    .line 517
     :cond_1
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -6007,31 +5317,27 @@
 
     if-eqz v2, :cond_0
 
-    .line 518
     const/4 v2, 0x0
 
     sput-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mFpClient:Lcom/samsung/android/fingerprint/IFingerprintClient;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 519
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 521
     :catch_0
     move-exception v0
 
-    .line 522
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "unregisterClient"
+    const-string v2, "unregisterClient"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "token="
+    const-string v4, "token="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6058,16 +5364,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1505
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1507
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v2, :cond_0
 
-    .line 1508
-    const-string/jumbo v2, "verifyPassword"
+    const-string v2, "verifyPassword"
 
     const/4 v3, 0x0
 
@@ -6075,11 +5378,9 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 1517
     :goto_0
     return v1
 
-    .line 1513
     :cond_0
     :try_start_0
     sget-object v2, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -6094,13 +5395,11 @@
 
     goto :goto_0
 
-    .line 1514
     :catch_0
     move-exception v0
 
-    .line 1515
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "verifyPassword"
+    const-string v2, "verifyPassword"
 
     invoke-direct {p0, v2, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -6112,7 +5411,6 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 1521
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/fingerprint/FingerprintManager;->verifyPassword(Landroid/os/IBinder;Ljava/lang/String;)Z
@@ -6133,16 +5431,13 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 1459
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->ensureServiceConnected()V
 
-    .line 1461
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
 
     if-nez v0, :cond_0
 
-    .line 1462
-    const-string/jumbo v0, "verifySensorState"
+    const-string v0, "verifySensorState"
 
     const/4 v1, 0x0
 
@@ -6152,11 +5447,9 @@
 
     move v0, v7
 
-    .line 1471
     :goto_0
     return v0
 
-    .line 1467
     :cond_0
     :try_start_0
     sget-object v0, Lcom/samsung/android/fingerprint/FingerprintManager;->mService:Lcom/samsung/android/fingerprint/IFingerprintManager;
@@ -6179,18 +5472,15 @@
 
     goto :goto_0
 
-    .line 1468
     :catch_0
     move-exception v6
 
-    .line 1469
     .local v6, "e":Ljava/lang/Exception;
-    const-string/jumbo v0, "verifySensorState"
+    const-string v0, "verifySensorState"
 
     invoke-direct {p0, v0, v6}, Lcom/samsung/android/fingerprint/FingerprintManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;)V
 
     move v0, v7
 
-    .line 1471
     goto :goto_0
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4814
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/notification/NotificationManagerService$1;
 
     .prologue
-    .line 4814
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$EdgeLight;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -49,27 +47,23 @@
     .locals 5
 
     .prologue
-    .line 4841
     const-string v2, "EdgeLight"
 
     const-string v3, "Turning off"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4843
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 4844
     .local v0, "edgeNotificationData":Landroid/os/Bundle;
-    const-string/jumbo v2, "samsung.people.notification_type"
+    const-string v2, "samsung.people.notification_type"
 
-    const-string/jumbo v3, "led_indicator"
+    const-string v3, "led_indicator"
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4846
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v2, v2, Lcom/android/server/notification/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -78,7 +72,6 @@
 
     move-result-object v1
 
-    .line 4847
     .local v1, "pkg":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -95,7 +88,6 @@
 
     invoke-virtual {v2, v1, v3, v0, v4}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->removeEdgeNotification(Ljava/lang/String;ILandroid/os/Bundle;I)V
 
-    .line 4848
     return-void
 .end method
 
@@ -104,26 +96,21 @@
     .param p1, "r"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 4816
     iget-object v6, p1, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v6}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 4818
     .local v0, "edgeLightNoti":Landroid/app/Notification;
     iget v2, v0, Landroid/app/Notification;->ledARGB:I
 
-    .line 4819
     .local v2, "ledARGB":I
     iget v4, v0, Landroid/app/Notification;->ledOnMS:I
 
-    .line 4820
     .local v4, "ledOnMS":I
     iget v3, v0, Landroid/app/Notification;->ledOffMS:I
 
-    .line 4821
     .local v3, "ledOffMS":I
     iget v6, v0, Landroid/app/Notification;->defaults:I
 
@@ -131,7 +118,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 4822
     iget-object v6, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mDefaultNotificationColor:I
@@ -139,7 +125,6 @@
 
     move-result v2
 
-    .line 4823
     iget-object v6, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mDefaultNotificationLedOn:I
@@ -147,7 +132,6 @@
 
     move-result v4
 
-    .line 4824
     iget-object v6, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # getter for: Lcom/android/server/notification/NotificationManagerService;->mDefaultNotificationLedOff:I
@@ -155,7 +139,6 @@
 
     move-result v3
 
-    .line 4827
     :cond_0
     const-string v6, "EdgeLight"
 
@@ -193,25 +176,21 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4830
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 4831
     .local v1, "edgeNotificationData":Landroid/os/Bundle;
-    const-string/jumbo v6, "samsung.people.notification_type"
+    const-string v6, "samsung.people.notification_type"
 
-    const-string/jumbo v7, "led_indicator"
+    const-string v7, "led_indicator"
 
     invoke-virtual {v1, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4832
-    const-string/jumbo v6, "samsung.people.color"
+    const-string v6, "samsung.people.color"
 
     invoke-virtual {v1, v6, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 4836
     iget-object v6, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v6, v6, Lcom/android/server/notification/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -220,7 +199,6 @@
 
     move-result-object v5
 
-    .line 4837
     .local v5, "pkg":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/notification/NotificationManagerService$EdgeLight;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -241,6 +219,5 @@
 
     invoke-virtual {v6, v5, v7, v1, v8}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->enqueueEdgeNotification(Ljava/lang/String;ILandroid/os/Bundle;I)V
 
-    .line 4838
     return-void
 .end method

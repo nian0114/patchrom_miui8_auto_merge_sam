@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 203
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 206
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v2, "networkInfo"
@@ -52,7 +50,6 @@
 
     iput-object v2, v3, Lcom/samsung/android/server/wifi/SoftApStateMachine;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 208
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->isMobileApOn()Z
@@ -62,7 +59,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 209
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v2, v2, Lcom/samsung/android/server/wifi/SoftApStateMachine;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -75,7 +71,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 210
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v3, "Wifi Connected, Check for Mobile Ap and Wifi Channel and Ip Subnet"
@@ -83,7 +78,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$300(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 211
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->checkMobileApWifiIp()Z
@@ -93,7 +87,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 212
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v3, "IP Subnet of MobileAp needs to be modified. So Reset Mobile Ap"
@@ -101,14 +94,12 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$500(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 213
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.android.intent.action.WIFIAP_RESET"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 214
     .local v1, "resetIntent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -119,13 +110,11 @@
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 222
     .end local v1    # "resetIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 216
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -139,7 +128,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 217
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v3, "Wifi got Disconnected, Send provisioning intent"
@@ -147,14 +135,12 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$700(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 218
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.samsung.intent.action.START_PROVISIONING"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 219
     .local v0, "provisionIntent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 

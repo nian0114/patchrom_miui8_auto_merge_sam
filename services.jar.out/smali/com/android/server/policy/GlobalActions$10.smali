@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1739
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,15 +42,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1742
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {v1}, Lcom/android/server/policy/GlobalActions;->access$4302(Z)Z
 
-    .line 1743
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmLandDlg:Z
     invoke-static {v1}, Lcom/android/server/policy/GlobalActions;->access$4402(Z)Z
 
-    .line 1744
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHandler:Landroid/os/Handler;
@@ -61,6 +57,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1745
     return-void
 .end method

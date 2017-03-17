@@ -50,55 +50,40 @@
 
     const/4 v1, 0x0
 
-    .line 3737
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3728
     iput-boolean v1, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mIsL2W:Z
 
-    .line 3729
     iput v1, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mNetworkType:I
 
-    .line 3730
     const-string v0, ""
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mFeature:Ljava/lang/String;
 
-    .line 3731
     iput-object v2, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mBinder:Landroid/os/IBinder;
 
-    .line 3732
     iput-object v2, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mIntent:Landroid/app/PendingIntent;
 
-    .line 3733
     iput v1, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mRetryCount:I
 
-    .line 3734
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mDelay:I
 
-    .line 3738
     iput-boolean p2, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mIsL2W:Z
 
-    .line 3739
     iput p4, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mNetworkType:I
 
-    .line 3740
     iput-object p5, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mFeature:Ljava/lang/String;
 
-    .line 3741
     iput-object p6, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mBinder:Landroid/os/IBinder;
 
-    .line 3742
     iput-object p7, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mIntent:Landroid/app/PendingIntent;
 
-    .line 3743
     iput p3, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mRetryCount:I
 
-    .line 3744
     return-void
 .end method
 
@@ -108,7 +93,6 @@
     .locals 10
 
     .prologue
-    .line 3748
     const-string v0, "[EPDGService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -133,14 +117,13 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3749
     const-string v0, "[EPDGService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mRetryCount is "
+    const-string v2, "mRetryCount is "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -158,13 +141,11 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3751
     :try_start_0
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->mIsL2W:Z
 
     if-eqz v0, :cond_1
 
-    .line 3752
     const/4 v0, 0x1
 
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgRilSharedData:Lcom/sec/epdg/EpdgRilSharedData;
@@ -184,7 +165,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3754
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1400()Landroid/os/Handler;
 
@@ -218,11 +198,9 @@
 
     invoke-virtual {v9, v0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3765
     :goto_0
     return-void
 
-    .line 3757
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$WifiCallHandover;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -240,11 +218,9 @@
 
     goto :goto_0
 
-    .line 3762
     :catch_0
     move-exception v8
 
-    .line 3763
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "[EPDGService]"
 
@@ -270,7 +246,6 @@
 
     goto :goto_0
 
-    .line 3760
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_1
     :try_start_1

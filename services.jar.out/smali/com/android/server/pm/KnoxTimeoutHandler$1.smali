@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 369
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 372
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 375
     .local v0, "action":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -56,41 +53,35 @@
 
     if-nez v3, :cond_2
 
-    .line 376
     :cond_0
     const-string v3, "KnoxTimeoutHandler"
 
-    const-string/jumbo v4, "invalid action!"
+    const-string v4, "invalid action!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 409
     :cond_1
     :goto_0
     return-void
 
-    .line 380
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 381
     .local v1, "bundle":Landroid/os/Bundle;
     if-nez v1, :cond_3
 
-    .line 382
     const-string v3, "KnoxTimeoutHandler"
 
-    const-string/jumbo v4, "invalid bundle!"
+    const-string v4, "invalid bundle!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 386
     :cond_3
-    const-string/jumbo v3, "personaId"
+    const-string v3, "personaId"
 
     const/4 v4, 0x0
 
@@ -98,7 +89,6 @@
 
     move-result v2
 
-    .line 387
     .local v2, "userId":I
     const-string v3, "KnoxTimeoutHandler"
 
@@ -122,7 +112,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     iget-object v3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # getter for: Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
@@ -136,7 +125,6 @@
 
     if-nez v3, :cond_4
 
-    .line 389
     const-string v3, "KnoxTimeoutHandler"
 
     const-string v4, "container userId does not exist!"
@@ -145,7 +133,6 @@
 
     goto :goto_0
 
-    .line 394
     :cond_4
     iget-object v3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -169,15 +156,13 @@
 
     if-nez v3, :cond_6
 
-    .line 396
     :cond_5
     const-string v3, "KnoxTimeoutHandler"
 
-    const-string/jumbo v4, "lock it up"
+    const-string v4, "lock it up"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     iget-object v3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # getter for: Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
@@ -189,7 +174,6 @@
 
     invoke-virtual {v3, v4, v2}, Lcom/android/server/pm/PersonaManagerService;->fireEvent(Landroid/content/pm/PersonaNewEvent;I)Landroid/content/pm/PersonaState;
 
-    .line 398
     iget-object v3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # getter for: Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentId:I
@@ -199,14 +183,12 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 399
     const-string v3, "KnoxTimeoutHandler"
 
-    const-string/jumbo v4, "keyguard show"
+    const-string v4, "keyguard show"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     iget-object v3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # getter for: Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
@@ -218,7 +200,6 @@
 
     goto/16 :goto_0
 
-    .line 407
     :cond_6
     const-string v3, "KnoxTimeoutHandler"
 
@@ -226,7 +207,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     iget-object v3, p0, Lcom/android/server/pm/KnoxTimeoutHandler$1;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     # invokes: Lcom/android/server/pm/KnoxTimeoutHandler;->resetLockTimer(I)V

@@ -39,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mCanonicalizationMethod:Ljava/lang/String;
 
     return-object v0
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mId:Ljava/lang/String;
 
     return-object v0
@@ -71,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceDigestMethod:Ljava/lang/String;
 
     return-object v0
@@ -81,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceDigestValue:[B
 
     return-object v0
@@ -91,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceId:Ljava/lang/String;
 
     return-object v0
@@ -101,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceUri:Ljava/lang/String;
 
     return-object v0
@@ -111,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceType:Ljava/lang/String;
 
     return-object v0
@@ -121,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mSignatureMethodAlgo:Ljava/lang/String;
 
     return-object v0
@@ -131,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mSignatureMethodHmacLength:I
 
     return v0
@@ -150,7 +140,6 @@
     .end annotation
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mTransforms:Ljava/util/ArrayList;
 
     return-object v0
@@ -161,10 +150,8 @@
     .param p1, "mCanonicalizationMethod"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mCanonicalizationMethod:Ljava/lang/String;
 
-    .line 46
     return-void
 .end method
 
@@ -173,10 +160,8 @@
     .param p1, "mId"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mId:Ljava/lang/String;
 
-    .line 38
     return-void
 .end method
 
@@ -185,10 +170,8 @@
     .param p1, "mReferenceDigestMethod"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceDigestMethod:Ljava/lang/String;
 
-    .line 94
     return-void
 .end method
 
@@ -197,10 +180,8 @@
     .param p1, "mReferenceDigestValue"    # [B
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceDigestValue:[B
 
-    .line 102
     return-void
 .end method
 
@@ -209,10 +190,8 @@
     .param p1, "mReferenceId"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceId:Ljava/lang/String;
 
-    .line 70
     return-void
 .end method
 
@@ -221,10 +200,8 @@
     .param p1, "mReferenceName"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceUri:Ljava/lang/String;
 
-    .line 78
     return-void
 .end method
 
@@ -233,10 +210,8 @@
     .param p1, "mReferenceType"    # Ljava/lang/String;
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mReferenceType:Ljava/lang/String;
 
-    .line 86
     return-void
 .end method
 
@@ -245,10 +220,8 @@
     .param p1, "mSignatureMethodAlgo"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mSignatureMethodAlgo:Ljava/lang/String;
 
-    .line 54
     return-void
 .end method
 
@@ -257,10 +230,8 @@
     .param p1, "mSignatureMethodHmacLength"    # I
 
     .prologue
-    .line 61
     iput p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mSignatureMethodHmacLength:I
 
-    .line 62
     return-void
 .end method
 
@@ -277,10 +248,8 @@
     .end annotation
 
     .prologue
-    .line 109
     .local p1, "mTransforms":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/Transforms;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/SignedInfo;->mTransforms:Ljava/util/ArrayList;
 
-    .line 110
     return-void
 .end method

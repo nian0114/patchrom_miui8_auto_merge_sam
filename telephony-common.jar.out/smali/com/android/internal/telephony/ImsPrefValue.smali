@@ -18,113 +18,96 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/16 v0, 0x14
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
-    .line 32
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     aput v2, v0, v2
 
-    .line 33
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x1
 
     aput v2, v0, v1
 
-    .line 34
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x2
 
     aput v2, v0, v1
 
-    .line 35
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x3
 
     aput v2, v0, v1
 
-    .line 36
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x4
 
     aput v2, v0, v1
 
-    .line 37
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x5
 
     aput v2, v0, v1
 
-    .line 38
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x6
 
     aput v2, v0, v1
 
-    .line 39
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v1, 0x7
 
     aput v2, v0, v1
 
-    .line 40
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v1, 0x8
 
     aput v2, v0, v1
 
-    .line 41
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v1, 0x9
 
     aput v2, v0, v1
 
-    .line 42
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v1, 0xa
 
     aput v2, v0, v1
 
-    .line 43
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v1, 0xb
 
     aput v2, v0, v1
 
-    .line 44
     iget-object v0, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v1, 0xc
 
     aput v2, v0, v1
 
-    .line 45
     const-string v0, "ImsPrefValue"
 
     const-string v1, "ImsPrefValue is made!"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     return-void
 .end method
 
@@ -136,7 +119,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 72
     iget-object v1, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v2, 0x8
@@ -145,7 +127,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 73
     :goto_0
     return v0
 
@@ -160,12 +141,10 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 49
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v3, :cond_0
 
-    .line 51
     :try_start_0
     iget-object v3, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -177,7 +156,6 @@
 
     move-object v2, v0
 
-    .line 52
     .local v2, "setValue":[I
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
@@ -189,7 +167,6 @@
 
     aput v5, v3, v4
 
-    .line 53
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x1
@@ -200,7 +177,6 @@
 
     aput v5, v3, v4
 
-    .line 54
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x2
@@ -211,7 +187,6 @@
 
     aput v5, v3, v4
 
-    .line 55
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x3
@@ -222,7 +197,6 @@
 
     aput v5, v3, v4
 
-    .line 56
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x4
@@ -233,7 +207,6 @@
 
     aput v5, v3, v4
 
-    .line 57
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x5
@@ -244,7 +217,6 @@
 
     aput v5, v3, v4
 
-    .line 58
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x6
@@ -255,7 +227,6 @@
 
     aput v5, v3, v4
 
-    .line 59
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/4 v4, 0x7
@@ -266,7 +237,6 @@
 
     aput v5, v3, v4
 
-    .line 60
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v4, 0x8
@@ -277,7 +247,6 @@
 
     aput v5, v3, v4
 
-    .line 61
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v4, 0x9
@@ -288,7 +257,6 @@
 
     aput v5, v3, v4
 
-    .line 62
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v4, 0xa
@@ -299,7 +267,6 @@
 
     aput v5, v3, v4
 
-    .line 63
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v4, 0xb
@@ -310,7 +277,6 @@
 
     aput v5, v3, v4
 
-    .line 64
     iget-object v3, p0, Lcom/android/internal/telephony/ImsPrefValue;->mPrefValueTable:[I
 
     const/16 v4, 0xc
@@ -323,17 +289,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
     .end local v2    # "setValue":[I
     :cond_0
     :goto_0
     return-void
 
-    .line 65
     :catch_0
     move-exception v1
 
-    .line 66
     .local v1, "ex":Ljava/lang/Exception;
     const-string v3, "ImsPrefValue"
 
@@ -364,7 +327,6 @@
     .locals 3
 
     .prologue
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

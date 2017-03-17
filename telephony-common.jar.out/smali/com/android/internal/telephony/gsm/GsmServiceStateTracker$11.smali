@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5625
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$11;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 5627
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$11;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mRescanDialog:Landroid/app/AlertDialog;
 
-    .line 5628
     return-void
 .end method

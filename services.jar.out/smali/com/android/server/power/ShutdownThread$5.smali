@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 714
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
 
     return-void
@@ -32,12 +31,10 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 717
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
     move-result v0
 
-    .line 718
     .local v0, "newCoverState":Z
     # getter for: Lcom/android/server/power/ShutdownThread;->coverOpen:Z
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$100()Z
@@ -53,7 +50,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 719
     const-string v1, "ShutdownThread"
 
     const-string v2, "cover state : %b"
@@ -76,7 +72,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 720
     # getter for: Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/Dialog;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$600()Landroid/app/Dialog;
 
@@ -84,11 +79,9 @@
 
     invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
 
-    .line 722
     :cond_0
     # setter for: Lcom/android/server/power/ShutdownThread;->coverOpen:Z
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$102(Z)Z
 
-    .line 723
     return-void
 .end method

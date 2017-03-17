@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1899
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$21;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1909
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -49,14 +47,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1910
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeRedCircleAnimation() End of ScaleUpAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1911
     :cond_0
     return-void
 .end method
@@ -66,7 +62,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1906
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1901
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -83,14 +77,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1902
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeRedCircleAnimation() Start of ScaleUpAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1903
     :cond_0
     return-void
 .end method

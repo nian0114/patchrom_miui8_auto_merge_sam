@@ -412,7 +412,7 @@
     :cond_6
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/keyresolver/KeyResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

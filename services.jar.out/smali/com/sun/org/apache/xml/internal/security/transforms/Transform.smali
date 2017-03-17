@@ -102,7 +102,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;
 
-    const-string/jumbo v3, "signature.Transform.UnknownTransform"
+    const-string v3, "signature.Transform.UnknownTransform"
 
     invoke-direct {v2, v3, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -120,7 +120,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;
 
-    const-string/jumbo v3, "signature.Transform.UnknownTransform"
+    const-string v3, "signature.Transform.UnknownTransform"
 
     invoke-direct {v1, v3, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -267,7 +267,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;
 
-    const-string/jumbo v3, "signature.Transform.UnknownTransform"
+    const-string v3, "signature.Transform.UnknownTransform"
 
     invoke-direct {v1, v3, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -326,7 +326,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "xml.WrongContent"
+    const-string v2, "xml.WrongContent"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -369,7 +369,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;
 
-    const-string/jumbo v2, "signature.Transform.UnknownTransform"
+    const-string v2, "signature.Transform.UnknownTransform"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -384,7 +384,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;
 
-    const-string/jumbo v2, "signature.Transform.UnknownTransform"
+    const-string v2, "signature.Transform.UnknownTransform"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -399,7 +399,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;
 
-    const-string/jumbo v2, "signature.Transform.UnknownTransform"
+    const-string v2, "signature.Transform.UnknownTransform"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/InvalidTransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -669,7 +669,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v3, "signature.Transform.ErrorDuringTransform"
+    const-string v3, "signature.Transform.ErrorDuringTransform"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -692,7 +692,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v3, "signature.Transform.ErrorDuringTransform"
+    const-string v3, "signature.Transform.ErrorDuringTransform"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -745,7 +745,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v3, "signature.Transform.ErrorDuringTransform"
+    const-string v3, "signature.Transform.ErrorDuringTransform"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 
@@ -768,7 +768,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;
 
-    const-string/jumbo v3, "signature.Transform.ErrorDuringTransform"
+    const-string v3, "signature.Transform.ErrorDuringTransform"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/CanonicalizationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;)V
 

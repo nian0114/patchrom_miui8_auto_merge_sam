@@ -29,13 +29,10 @@
     .param p1, "array"    # [Ljava/lang/Object;
 
     .prologue
-    .line 628
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 629
     iput-object p1, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->array:[Ljava/lang/Object;
 
-    .line 630
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 644
     iget v0, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->index:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->array:[Ljava/lang/Object;
@@ -69,7 +65,6 @@
     .locals 3
 
     .prologue
-    .line 655
     iget v0, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->index:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->array:[Ljava/lang/Object;
@@ -78,7 +73,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 656
     iget-object v0, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->array:[Ljava/lang/Object;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/Constants$ArrayEnumeration;->index:I
@@ -91,7 +85,6 @@
 
     return-object v0
 
-    .line 658
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 

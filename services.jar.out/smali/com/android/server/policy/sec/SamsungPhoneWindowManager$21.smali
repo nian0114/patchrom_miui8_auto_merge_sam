@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4408
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$21;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 4410
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v2, "com.samsung.android.dualscreencontrolpanel"
@@ -49,24 +47,20 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4412
     .local v0, "cn":Landroid/content/ComponentName;
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 4413
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 4414
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$21;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 4415
     sget-boolean v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->SAFE_DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -77,7 +71,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4416
     :cond_0
     return-void
 .end method

@@ -45,7 +45,6 @@
     .param p2, "maxEntries"    # I
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -64,7 +63,6 @@
     .param p1, "state"    # Ljava/lang/Object;
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -79,7 +77,6 @@
     .param p1, "entry"    # Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -94,7 +91,6 @@
     .param p1, "entry"    # Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -108,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -123,7 +118,6 @@
     .param p1, "entry"    # Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -137,7 +131,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -151,7 +144,6 @@
     .locals 2
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -165,7 +157,6 @@
     .locals 2
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -179,7 +170,6 @@
     .locals 2
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -193,7 +183,6 @@
     .locals 2
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -207,7 +196,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -221,7 +209,6 @@
     .locals 2
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -236,7 +223,6 @@
     .param p1, "wt"    # Lorg/apache/http/impl/conn/tsccm/WaitingThread;
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -251,7 +237,6 @@
     .param p1, "wt"    # Lorg/apache/http/impl/conn/tsccm/WaitingThread;
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

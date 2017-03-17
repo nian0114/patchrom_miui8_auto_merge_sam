@@ -95,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 699
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl$1;
 
     invoke-direct {v0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl$1;-><init>()V
@@ -109,12 +108,10 @@
     .locals 1
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;-><init>(Lcom/samsung/android/smartclip/SmartClipDataCropper;)V
 
-    .line 137
     return-void
 .end method
 
@@ -129,7 +126,6 @@
 
     const/4 v1, 0x0
 
-    .line 141
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -140,7 +136,6 @@
 
     invoke-direct {p0, p1, v0, v1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;-><init>(Lcom/samsung/android/smartclip/SmartClipDataCropper;Landroid/graphics/Rect;Landroid/graphics/RectF;)V
 
-    .line 142
     return-void
 .end method
 
@@ -157,7 +152,6 @@
 
     const/4 v2, 0x0
 
-    .line 146
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v2, v2, v2, v2}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -168,7 +162,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;-><init>(Lcom/samsung/android/smartclip/SmartClipDataCropper;Landroid/graphics/Rect;Landroid/graphics/RectF;I)V
 
-    .line 147
     return-void
 .end method
 
@@ -182,76 +175,58 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
     invoke-direct {v0}, Lcom/samsung/android/smartclip/SmartClipDataRootElement;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
-    .line 101
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
-    .line 104
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
-    .line 107
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 110
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCropper:Lcom/samsung/android/smartclip/SmartClipDataCropper;
 
-    .line 113
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFilePath:Ljava/lang/String;
 
-    .line 116
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFileStyle:I
 
-    .line 119
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mAppPackageName:Ljava/lang/String;
 
-    .line 122
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTargetWindowLayer:I
 
-    .line 127
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mWinFrameRect:Landroid/graphics/Rect;
 
-    .line 128
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mScaleRect:Landroid/graphics/RectF;
 
-    .line 130
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
 
-    .line 151
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCropper:Lcom/samsung/android/smartclip/SmartClipDataCropper;
 
-    .line 152
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mWinFrameRect:Landroid/graphics/Rect;
 
-    .line 153
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0, p3}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mScaleRect:Landroid/graphics/RectF;
 
-    .line 154
     iput p4, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
 
-    .line 155
     return-void
 .end method
 
@@ -260,7 +235,6 @@
     .param p0, "jsonStr"    # Ljava/lang/String;
 
     .prologue
-    .line 722
     new-instance v13, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     const/16 v17, 0x0
@@ -269,7 +243,6 @@
 
     invoke-direct {v13, v0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;-><init>(Lcom/samsung/android/smartclip/SmartClipDataCropper;)V
 
-    .line 725
     .local v13, "repository":Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
     :try_start_0
     new-instance v9, Lorg/json/JSONObject;
@@ -278,7 +251,6 @@
 
     invoke-direct {v9, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 728
     .local v9, "json_repository":Lorg/json/JSONObject;
     const-string v17, "content_type"
 
@@ -296,7 +268,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 729
     const-string v17, "content_type"
 
     move-object/from16 v0, v17
@@ -309,9 +280,8 @@
 
     iput-object v0, v13, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
-    .line 733
     :cond_0
-    const-string/jumbo v17, "repository_id"
+    const-string v17, "repository_id"
 
     move-object/from16 v0, v17
 
@@ -327,8 +297,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 734
-    const-string/jumbo v17, "repository_id"
+    const-string v17, "repository_id"
 
     move-object/from16 v0, v17
 
@@ -340,7 +309,6 @@
 
     iput-object v0, v13, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRepositoryId:Ljava/lang/String;
 
-    .line 738
     :cond_1
     const-string v17, "content_rect"
 
@@ -358,7 +326,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 739
     const-string v17, "content_rect"
 
     move-object/from16 v0, v17
@@ -367,7 +334,6 @@
 
     move-result-object v8
 
-    .line 740
     .local v8, "json_rect":Lorg/json/JSONArray;
     new-instance v17, Landroid/graphics/Rect;
 
@@ -409,7 +375,6 @@
 
     iput-object v0, v13, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
-    .line 744
     .end local v8    # "json_rect":Lorg/json/JSONArray;
     :cond_2
     const-string v17, "captured_image_path"
@@ -428,7 +393,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 745
     const-string v17, "captured_image_path"
 
     move-object/from16 v0, v17
@@ -437,7 +401,6 @@
 
     move-result-object v2
 
-    .line 746
     .local v2, "capturedImageFilePath":Ljava/lang/String;
     const-string v17, "captured_image_style"
 
@@ -447,18 +410,15 @@
 
     move-result v3
 
-    .line 747
     .local v3, "capturedImageFileStyle":I
     if-eqz v2, :cond_3
 
-    .line 748
     invoke-virtual {v13, v2, v3}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->setCapturedImage(Ljava/lang/String;I)V
 
-    .line 753
     .end local v2    # "capturedImageFilePath":Ljava/lang/String;
     .end local v3    # "capturedImageFileStyle":I
     :cond_3
-    const-string/jumbo v17, "meta_tags"
+    const-string v17, "meta_tags"
 
     move-object/from16 v0, v17
 
@@ -474,7 +434,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 754
     new-instance v17, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-direct/range {v17 .. v17}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;-><init>()V
@@ -483,8 +442,7 @@
 
     iput-object v0, v13, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 756
-    const-string/jumbo v17, "meta_tags"
+    const-string v17, "meta_tags"
 
     move-object/from16 v0, v17
 
@@ -492,13 +450,11 @@
 
     move-result-object v11
 
-    .line 757
     .local v11, "json_tagArray":Lorg/json/JSONArray;
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
     move-result v14
 
-    .line 758
     .local v14, "tagCount":I
     const/4 v7, 0x0
 
@@ -506,18 +462,15 @@
     :goto_0
     if-ge v7, v14, :cond_4
 
-    .line 759
     const/4 v12, 0x0
 
-    .line 760
     .local v12, "metaTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     invoke-virtual {v11, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v10
 
-    .line 762
     .local v10, "json_tag":Lorg/json/JSONObject;
-    const-string/jumbo v17, "meta_tag_type"
+    const-string v17, "meta_tag_type"
 
     move-object/from16 v0, v17
 
@@ -525,16 +478,14 @@
 
     move-result-object v15
 
-    .line 763
     .local v15, "tagType":Ljava/lang/String;
     const-string v16, ""
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 766
     .local v16, "tagValue":Ljava/lang/String;
     :try_start_1
-    const-string/jumbo v17, "meta_tag_value"
+    const-string v17, "meta_tag_value"
 
     move-object/from16 v0, v17
 
@@ -544,10 +495,9 @@
 
     move-result-object v16
 
-    .line 772
     :goto_1
     :try_start_2
-    const-string/jumbo v17, "meta_tag_extra_value"
+    const-string v17, "meta_tag_extra_value"
 
     move-object/from16 v0, v17
 
@@ -555,7 +505,6 @@
 
     move-result-object v6
 
-    .line 773
     .local v6, "extraDataStr":Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -565,7 +514,6 @@
 
     move-result-object v5
 
-    .line 775
     .local v5, "extraData":[B
     const-string v17, "SmartClipDataRepositoryImpl"
 
@@ -593,7 +541,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
     new-instance v12, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
     .end local v12    # "metaTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
@@ -603,7 +550,6 @@
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 782
     .end local v5    # "extraData":[B
     .end local v6    # "extraDataStr":Ljava/lang/String;
     .restart local v12    # "metaTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
@@ -617,16 +563,13 @@
 
     invoke-virtual {v0, v12}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->addTag(Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;)V
 
-    .line 758
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 767
     :catch_0
     move-exception v4
 
-    .line 768
     .local v4, "e":Lorg/json/JSONException;
     const-string v17, "SmartClipDataRepositoryImpl"
 
@@ -656,7 +599,6 @@
 
     goto :goto_1
 
-    .line 786
     .end local v4    # "e":Lorg/json/JSONException;
     .end local v7    # "i":I
     .end local v9    # "json_repository":Lorg/json/JSONObject;
@@ -669,7 +611,6 @@
     :catch_1
     move-exception v4
 
-    .line 787
     .restart local v4    # "e":Lorg/json/JSONException;
     const-string v17, "SmartClipDataRepositoryImpl"
 
@@ -697,19 +638,15 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     invoke-virtual {v4}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 789
     const/4 v13, 0x0
 
-    .line 792
     .end local v4    # "e":Lorg/json/JSONException;
     .end local v13    # "repository":Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
     :cond_4
     return-object v13
 
-    .line 779
     .restart local v7    # "i":I
     .restart local v9    # "json_repository":Lorg/json/JSONObject;
     .restart local v10    # "json_tag":Lorg/json/JSONObject;
@@ -721,7 +658,6 @@
     :catch_2
     move-exception v4
 
-    .line 780
     .restart local v4    # "e":Lorg/json/JSONException;
     :try_start_4
     new-instance v12, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
@@ -742,7 +678,6 @@
     .locals 1
 
     .prologue
-    .line 634
     const/4 v0, 0x0
 
     return v0
@@ -752,59 +687,46 @@
     .locals 15
 
     .prologue
-    .line 229
     const/4 v6, 0x0
 
-    .line 230
     .local v6, "contentType":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 231
     .local v1, "bHaveBrowserView":Z
     const/4 v5, 0x0
 
-    .line 232
     .local v5, "bHaveYoutubeView":Z
     const/4 v0, 0x0
 
-    .line 233
     .local v0, "bHaveAudioFilePath":Z
     const/4 v4, 0x0
 
-    .line 234
     .local v4, "bHaveVideoFilePath":Z
     const/4 v2, 0x0
 
-    .line 235
     .local v2, "bHaveImageFilePath":Z
     iget-object v7, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
-    .line 237
     .local v7, "element":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     :goto_0
     if-eqz v7, :cond_9
 
-    .line 238
     invoke-virtual {v7}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getView()Landroid/view/View;
 
     move-result-object v12
 
-    .line 240
     .local v12, "view":Landroid/view/View;
     if-eqz v12, :cond_7
 
-    .line 241
     const/4 v3, 0x0
 
-    .line 242
     .local v3, "bHaveUrlTag":Z
-    const-string/jumbo v13, "url"
+    const-string v13, "url"
 
     invoke-virtual {p0, v13}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getMetaTag(Ljava/lang/String;)Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
 
     move-result-object v11
 
-    .line 243
     .local v11, "urlMetaArray":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
     invoke-virtual {v11}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;->iterator()Ljava/util/Iterator;
 
@@ -824,13 +746,11 @@
 
     check-cast v10, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
 
-    .line 244
     .local v10, "urlMeta":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     invoke-virtual {v10}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getValue()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 245
     .local v9, "url":Ljava/lang/String;
     if-eqz v9, :cond_0
 
@@ -840,10 +760,8 @@
 
     if-nez v13, :cond_0
 
-    .line 246
     const/4 v3, 0x1
 
-    .line 251
     .end local v9    # "url":Ljava/lang/String;
     .end local v10    # "urlMeta":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     :cond_1
@@ -859,10 +777,8 @@
 
     if-lez v13, :cond_2
 
-    .line 252
     const/4 v0, 0x1
 
-    .line 255
     :cond_2
     const-string v13, "file_path_video"
 
@@ -876,10 +792,8 @@
 
     if-lez v13, :cond_3
 
-    .line 256
     const/4 v4, 0x1
 
-    .line 259
     :cond_3
     const-string v13, "file_path_image"
 
@@ -893,16 +807,13 @@
 
     if-lez v13, :cond_4
 
-    .line 260
     const/4 v2, 0x1
 
-    .line 263
     :cond_4
     const/4 v13, 0x1
 
     if-ne v3, v13, :cond_6
 
-    .line 264
     instance-of v13, v12, Landroid/webkit/WebView;
 
     if-nez v13, :cond_5
@@ -933,7 +844,7 @@
 
     move-result-object v13
 
-    const-string/jumbo v14, "org.chromium.content.browser.ChromeView"
+    const-string v14, "org.chromium.content.browser.ChromeView"
 
     invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -951,7 +862,7 @@
 
     move-result-object v13
 
-    const-string/jumbo v14, "org.samsung.content.sbrowser.SbrContentView"
+    const-string v14, "org.samsung.content.sbrowser.SbrContentView"
 
     invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -987,7 +898,7 @@
 
     move-result-object v13
 
-    const-string/jumbo v14, "org.chromium.content.browser.JellyBeanContentView"
+    const-string v14, "org.chromium.content.browser.JellyBeanContentView"
 
     invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -997,11 +908,9 @@
 
     if-ne v13, v14, :cond_8
 
-    .line 270
     :cond_5
     const/4 v1, 0x1
 
-    .line 279
     :cond_6
     :goto_1
     const-string v13, "html"
@@ -1016,10 +925,8 @@
 
     if-lez v13, :cond_7
 
-    .line 280
     const/4 v1, 0x1
 
-    .line 285
     .end local v3    # "bHaveUrlTag":Z
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v11    # "urlMetaArray":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
@@ -1030,10 +937,8 @@
 
     move-result-object v7
 
-    .line 286
     goto/16 :goto_0
 
-    .line 271
     .restart local v3    # "bHaveUrlTag":Z
     .restart local v8    # "i$":Ljava/util/Iterator;
     .restart local v11    # "urlMetaArray":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
@@ -1070,12 +975,10 @@
 
     if-ne v13, v14, :cond_6
 
-    .line 273
     const/4 v5, 0x1
 
     goto :goto_1
 
-    .line 288
     .end local v3    # "bHaveUrlTag":Z
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v11    # "urlMetaArray":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
@@ -1085,63 +988,51 @@
 
     if-ne v0, v13, :cond_a
 
-    .line 289
-    const-string/jumbo v6, "music"
+    const-string v6, "music"
 
-    .line 302
     :goto_2
     iput-object v6, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
-    .line 304
     const/4 v13, 0x1
 
     return v13
 
-    .line 290
     :cond_a
     const/4 v13, 0x1
 
     if-ne v4, v13, :cond_b
 
-    .line 291
-    const-string/jumbo v6, "video"
+    const-string v6, "video"
 
     goto :goto_2
 
-    .line 292
     :cond_b
     const/4 v13, 0x1
 
     if-ne v2, v13, :cond_c
 
-    .line 293
     const-string v6, "image"
 
     goto :goto_2
 
-    .line 294
     :cond_c
     const/4 v13, 0x1
 
     if-ne v5, v13, :cond_d
 
-    .line 295
-    const-string/jumbo v6, "youtube"
+    const-string v6, "youtube"
 
     goto :goto_2
 
-    .line 296
     :cond_d
     const/4 v13, 0x1
 
     if-ne v1, v13, :cond_e
 
-    .line 297
-    const-string/jumbo v6, "web"
+    const-string v6, "web"
 
     goto :goto_2
 
-    .line 299
     :cond_e
     const-string v6, "image"
 
@@ -1155,14 +1046,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 601
     const-string v0, "SmartClipDataRepositoryImpl"
 
     const-string v1, "----- Start of SmartClip repository informations -----"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
     const-string v0, "SmartClipDataRepositoryImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1189,7 +1078,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 605
     const-string v0, "SmartClipDataRepositoryImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1220,7 +1108,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 606
     const-string v0, "SmartClipDataRepositoryImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1245,27 +1132,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     if-ne p1, v3, :cond_0
 
-    .line 610
     const-string v0, "SmartClipDataRepositoryImpl"
 
     const-string v1, "** mTags"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     if-eqz v0, :cond_1
 
-    .line 612
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-virtual {v0}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->dump()V
 
-    .line 618
     :goto_0
     const-string v0, "SmartClipDataRepositoryImpl"
 
@@ -1273,17 +1155,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 619
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
     if-eqz v0, :cond_0
 
-    .line 620
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
     invoke-virtual {v0}, Lcom/samsung/android/smartclip/SmartClipDataRootElement;->dump()Z
 
-    .line 624
     :cond_0
     const-string v0, "SmartClipDataRepositoryImpl"
 
@@ -1291,14 +1170,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 625
     return v3
 
-    .line 614
     :cond_1
     const-string v0, "SmartClipDataRepositoryImpl"
 
-    const-string/jumbo v1, "mTags is null"
+    const-string v1, "mTags is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1309,13 +1186,11 @@
     .locals 17
 
     .prologue
-    .line 803
     :try_start_0
     new-instance v10, Lorg/json/JSONObject;
 
     invoke-direct {v10}, Lorg/json/JSONObject;-><init>()V
 
-    .line 806
     .local v10, "json_repository":Lorg/json/JSONObject;
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getContentType()Ljava/lang/String;
 
@@ -1323,7 +1198,6 @@
 
     if-eqz v14, :cond_0
 
-    .line 807
     const-string v14, "content_type"
 
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getContentType()Ljava/lang/String;
@@ -1332,7 +1206,6 @@
 
     invoke-virtual {v10, v14, v15}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 811
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getRepositoryId()Ljava/lang/String;
 
@@ -1340,8 +1213,7 @@
 
     if-eqz v14, :cond_1
 
-    .line 812
-    const-string/jumbo v14, "repository_id"
+    const-string v14, "repository_id"
 
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getRepositoryId()Ljava/lang/String;
 
@@ -1349,22 +1221,18 @@
 
     invoke-virtual {v10, v14, v15}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 816
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getContentRect()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 817
     .local v3, "contentRect":Landroid/graphics/Rect;
     if-eqz v3, :cond_2
 
-    .line 818
     new-instance v9, Lorg/json/JSONArray;
 
     invoke-direct {v9}, Lorg/json/JSONArray;-><init>()V
 
-    .line 820
     .local v9, "json_rect":Lorg/json/JSONArray;
     const/4 v14, 0x0
 
@@ -1372,75 +1240,62 @@
 
     invoke-virtual {v9, v14, v15}, Lorg/json/JSONArray;->put(II)Lorg/json/JSONArray;
 
-    .line 821
     const/4 v14, 0x1
 
     iget v15, v3, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v9, v14, v15}, Lorg/json/JSONArray;->put(II)Lorg/json/JSONArray;
 
-    .line 822
     const/4 v14, 0x2
 
     iget v15, v3, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v9, v14, v15}, Lorg/json/JSONArray;->put(II)Lorg/json/JSONArray;
 
-    .line 823
     const/4 v14, 0x3
 
     iget v15, v3, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v9, v14, v15}, Lorg/json/JSONArray;->put(II)Lorg/json/JSONArray;
 
-    .line 825
     const-string v14, "content_rect"
 
     invoke-virtual {v10, v14, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 829
     .end local v9    # "json_rect":Lorg/json/JSONArray;
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getCapturedImageFilePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 830
     .local v1, "capturedImageFilePath":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getCapturedImageFileStyle()I
 
     move-result v2
 
-    .line 831
     .local v2, "capturedImageFileStyle":I
     if-eqz v1, :cond_3
 
-    .line 832
     const-string v14, "captured_image_path"
 
     invoke-virtual {v10, v14, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 833
     const-string v14, "captured_image_style"
 
     invoke-virtual {v10, v14, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 837
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getAllMetaTagList()Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     move-result-object v13
 
-    .line 838
     .local v13, "tagArray":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     if-eqz v13, :cond_7
 
-    .line 839
     new-instance v12, Lorg/json/JSONArray;
 
     invoke-direct {v12}, Lorg/json/JSONArray;-><init>()V
 
-    .line 841
     .local v12, "json_tagArray":Lorg/json/JSONArray;
     invoke-virtual {v13}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->iterator()Ljava/util/Iterator;
 
@@ -1461,18 +1316,15 @@
 
     check-cast v4, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
 
-    .line 842
     .local v4, "curTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     if-eqz v4, :cond_4
 
-    .line 843
     new-instance v11, Lorg/json/JSONObject;
 
     invoke-direct {v11}, Lorg/json/JSONObject;-><init>()V
 
-    .line 844
     .local v11, "json_tag":Lorg/json/JSONObject;
-    const-string/jumbo v14, "meta_tag_type"
+    const-string v14, "meta_tag_type"
 
     invoke-virtual {v4}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
 
@@ -1480,8 +1332,7 @@
 
     invoke-virtual {v11, v14, v15}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 845
-    const-string/jumbo v14, "meta_tag_value"
+    const-string v14, "meta_tag_value"
 
     invoke-virtual {v4}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getValue()Ljava/lang/String;
 
@@ -1489,19 +1340,16 @@
 
     invoke-virtual {v11, v14, v15}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 846
     instance-of v14, v4, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
     if-eqz v14, :cond_5
 
-    .line 847
     move-object v0, v4
 
     check-cast v0, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
     move-object v5, v0
 
-    .line 848
     .local v5, "curTagImpl":Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
     invoke-virtual {v5}, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;->getExtraData()[B
 
@@ -1509,12 +1357,10 @@
 
     if-eqz v14, :cond_5
 
-    .line 849
     invoke-virtual {v5}, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;->getExtraData()[B
 
     move-result-object v7
 
-    .line 850
     .local v7, "extraData":[B
     const-string v14, "SmartClipDataRepositoryImpl"
 
@@ -1542,8 +1388,7 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 851
-    const-string/jumbo v14, "meta_tag_extra_value"
+    const-string v14, "meta_tag_extra_value"
 
     const/4 v15, 0x0
 
@@ -1553,7 +1398,6 @@
 
     invoke-virtual {v11, v14, v15}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 854
     .end local v5    # "curTagImpl":Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
     .end local v7    # "extraData":[B
     :cond_5
@@ -1563,7 +1407,6 @@
 
     goto :goto_0
 
-    .line 864
     .end local v1    # "capturedImageFilePath":Ljava/lang/String;
     .end local v2    # "capturedImageFileStyle":I
     .end local v3    # "contentRect":Landroid/graphics/Rect;
@@ -1576,7 +1419,6 @@
     :catch_0
     move-exception v6
 
-    .line 865
     .local v6, "e":Lorg/json/JSONException;
     const-string v14, "SmartClipDataRepositoryImpl"
 
@@ -1604,17 +1446,14 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 866
     invoke-virtual {v6}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 867
     const-string v14, ""
 
     .end local v6    # "e":Lorg/json/JSONException;
     :goto_1
     return-object v14
 
-    .line 858
     .restart local v1    # "capturedImageFilePath":Ljava/lang/String;
     .restart local v2    # "capturedImageFileStyle":I
     .restart local v3    # "contentRect":Landroid/graphics/Rect;
@@ -1630,12 +1469,10 @@
 
     if-lez v14, :cond_7
 
-    .line 859
-    const-string/jumbo v14, "meta_tags"
+    const-string v14, "meta_tags"
 
     invoke-virtual {v10, v14, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 863
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v12    # "json_tagArray":Lorg/json/JSONArray;
     :cond_7
@@ -1656,7 +1493,6 @@
     .param p2, "srcString"    # Ljava/lang/String;
 
     .prologue
-    .line 597
     const/4 v0, 0x0
 
     return-object v0
@@ -1666,12 +1502,10 @@
     .locals 1
 
     .prologue
-    .line 538
     invoke-virtual {p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getAllMetaTagList()Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     move-result-object v0
 
-    .line 539
     .local v0, "arrayList":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     return-object v0
 .end method
@@ -1680,51 +1514,41 @@
     .locals 9
 
     .prologue
-    .line 496
     iget-object v7, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     if-eqz v7, :cond_1
 
-    .line 497
     iget-object v3, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 525
     :cond_0
     :goto_0
     return-object v3
 
-    .line 499
     :cond_1
     new-instance v3, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-direct {v3}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;-><init>()V
 
-    .line 501
     .local v3, "metaList":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
-    .line 503
     .local v1, "element":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 504
     invoke-virtual {v1}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getTagTable()Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
 
     move-result-object v6
 
     check-cast v6, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 505
     .local v6, "tags":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     if-eqz v6, :cond_3
 
-    .line 506
     invoke-virtual {v6}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->size()I
 
     move-result v5
 
-    .line 507
     .local v5, "tagCount":I
     const/4 v2, 0x0
 
@@ -1732,20 +1556,18 @@
     :goto_2
     if-ge v2, v5, :cond_3
 
-    .line 508
     invoke-virtual {v6, v2}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
 
-    .line 510
     .local v0, "curTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     invoke-virtual {v0}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
 
     move-result-object v7
 
-    const-string/jumbo v8, "plain_text"
+    const-string v8, "plain_text"
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1753,16 +1575,13 @@
 
     if-nez v7, :cond_2
 
-    .line 511
     invoke-virtual {v3, v0}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->add(Ljava/lang/Object;)Z
 
-    .line 507
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 516
     .end local v0    # "curTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     .end local v2    # "i":I
     .end local v5    # "tagCount":I
@@ -1773,24 +1592,20 @@
 
     move-result-object v1
 
-    .line 517
     goto :goto_1
 
-    .line 520
     .end local v6    # "tags":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getMergedPlainTextTag()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 521
     .local v4, "plainText":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 522
     new-instance v7, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
-    const-string/jumbo v8, "plain_text"
+    const-string v8, "plain_text"
 
     invoke-direct {v7, v8, v4}, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1803,7 +1618,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mAppPackageName:Ljava/lang/String;
 
     return-object v0
@@ -1813,7 +1627,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFilePath:Ljava/lang/String;
 
     return-object v0
@@ -1823,7 +1636,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFileStyle:I
 
     return v0
@@ -1833,24 +1645,19 @@
     .locals 13
 
     .prologue
-    .line 396
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
     if-eqz v9, :cond_1
 
-    .line 397
     iget-object v2, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
-    .line 487
     :cond_0
     :goto_0
     return-object v2
 
-    .line 399
     :cond_1
     iget-object v4, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
-    .line 400
     .local v4, "element":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     new-instance v2, Landroid/graphics/Rect;
 
@@ -1864,12 +1671,10 @@
 
     invoke-direct {v2, v9, v10, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 402
     .local v2, "contentRect":Landroid/graphics/Rect;
     :goto_1
     if-eqz v4, :cond_b
 
-    .line 403
     invoke-virtual {v4}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getChildCount()I
 
     move-result v9
@@ -1878,7 +1683,6 @@
 
     if-eq v9, v10, :cond_a
 
-    .line 404
     invoke-virtual {v4}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getChildCount()I
 
     move-result v9
@@ -1887,26 +1691,21 @@
 
     if-le v9, v10, :cond_6
 
-    .line 405
     invoke-virtual {v4}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getFirstChild()Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
 
     move-result-object v0
 
-    .line 406
     .local v0, "child":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     :goto_2
     if-eqz v0, :cond_a
 
-    .line 408
     invoke-virtual {v0}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getMetaAreaRect()Landroid/graphics/Rect;
 
     move-result-object v6
 
-    .line 409
     .local v6, "rect":Landroid/graphics/Rect;
     if-eqz v6, :cond_5
 
-    .line 410
     iget v9, v2, Landroid/graphics/Rect;->left:I
 
     iget v10, v6, Landroid/graphics/Rect;->left:I
@@ -1919,12 +1718,10 @@
 
     if-lez v9, :cond_2
 
-    .line 411
     iget v9, v6, Landroid/graphics/Rect;->left:I
 
     iput v9, v2, Landroid/graphics/Rect;->left:I
 
-    .line 413
     :cond_2
     iget v9, v2, Landroid/graphics/Rect;->top:I
 
@@ -1938,12 +1735,10 @@
 
     if-lez v9, :cond_3
 
-    .line 414
     iget v9, v6, Landroid/graphics/Rect;->top:I
 
     iput v9, v2, Landroid/graphics/Rect;->top:I
 
-    .line 416
     :cond_3
     iget v9, v2, Landroid/graphics/Rect;->right:I
 
@@ -1957,12 +1752,10 @@
 
     if-lez v9, :cond_4
 
-    .line 417
     iget v9, v6, Landroid/graphics/Rect;->right:I
 
     iput v9, v2, Landroid/graphics/Rect;->right:I
 
-    .line 419
     :cond_4
     iget v9, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -1976,21 +1769,17 @@
 
     if-lez v9, :cond_5
 
-    .line 420
     iget v9, v6, Landroid/graphics/Rect;->bottom:I
 
     iput v9, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 424
     :cond_5
     invoke-virtual {v0}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getNextSibling()Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
 
     move-result-object v0
 
-    .line 425
     goto :goto_2
 
-    .line 427
     .end local v0    # "child":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     .end local v6    # "rect":Landroid/graphics/Rect;
     :cond_6
@@ -1998,11 +1787,9 @@
 
     move-result-object v6
 
-    .line 428
     .restart local v6    # "rect":Landroid/graphics/Rect;
     if-eqz v6, :cond_a
 
-    .line 429
     iget v9, v2, Landroid/graphics/Rect;->left:I
 
     iget v10, v6, Landroid/graphics/Rect;->left:I
@@ -2015,12 +1802,10 @@
 
     if-lez v9, :cond_7
 
-    .line 430
     iget v9, v6, Landroid/graphics/Rect;->left:I
 
     iput v9, v2, Landroid/graphics/Rect;->left:I
 
-    .line 432
     :cond_7
     iget v9, v2, Landroid/graphics/Rect;->top:I
 
@@ -2034,12 +1819,10 @@
 
     if-lez v9, :cond_8
 
-    .line 433
     iget v9, v6, Landroid/graphics/Rect;->top:I
 
     iput v9, v2, Landroid/graphics/Rect;->top:I
 
-    .line 435
     :cond_8
     iget v9, v2, Landroid/graphics/Rect;->right:I
 
@@ -2053,12 +1836,10 @@
 
     if-lez v9, :cond_9
 
-    .line 436
     iget v9, v6, Landroid/graphics/Rect;->right:I
 
     iput v9, v2, Landroid/graphics/Rect;->right:I
 
-    .line 438
     :cond_9
     iget v9, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -2072,12 +1853,10 @@
 
     if-lez v9, :cond_a
 
-    .line 439
     iget v9, v6, Landroid/graphics/Rect;->bottom:I
 
     iput v9, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 445
     .end local v6    # "rect":Landroid/graphics/Rect;
     :cond_a
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
@@ -2088,7 +1867,6 @@
 
     goto/16 :goto_1
 
-    .line 448
     :cond_b
     iget v9, v2, Landroid/graphics/Rect;->left:I
 
@@ -2096,7 +1874,6 @@
 
     if-le v9, v10, :cond_c
 
-    .line 449
     new-instance v2, Landroid/graphics/Rect;
 
     .end local v2    # "contentRect":Landroid/graphics/Rect;
@@ -2104,7 +1881,6 @@
 
     goto/16 :goto_0
 
-    .line 452
     .restart local v2    # "contentRect":Landroid/graphics/Rect;
     :cond_c
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mScaleRect:Landroid/graphics/RectF;
@@ -2131,7 +1907,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 453
     :cond_d
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mScaleRect:Landroid/graphics/RectF;
 
@@ -2139,7 +1914,6 @@
 
     move-result v5
 
-    .line 454
     .local v5, "hScale":F
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mScaleRect:Landroid/graphics/RectF;
 
@@ -2147,7 +1921,6 @@
 
     move-result v8
 
-    .line 455
     .local v8, "vScale":F
     const/4 v9, 0x0
 
@@ -2161,12 +1934,10 @@
 
     if-eqz v9, :cond_0
 
-    .line 456
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
-    .line 457
     .local v7, "unScaledWinFrame":Landroid/graphics/Rect;
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mWinFrameRect:Landroid/graphics/Rect;
 
@@ -2174,14 +1945,12 @@
 
     iput v9, v7, Landroid/graphics/Rect;->left:I
 
-    .line 458
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mWinFrameRect:Landroid/graphics/Rect;
 
     iget v9, v9, Landroid/graphics/Rect;->top:I
 
     iput v9, v7, Landroid/graphics/Rect;->top:I
 
-    .line 459
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mWinFrameRect:Landroid/graphics/Rect;
 
     iget v9, v9, Landroid/graphics/Rect;->left:I
@@ -2208,7 +1977,6 @@
 
     iput v9, v7, Landroid/graphics/Rect;->right:I
 
-    .line 460
     iget-object v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mWinFrameRect:Landroid/graphics/Rect;
 
     iget v9, v9, Landroid/graphics/Rect;->top:I
@@ -2235,19 +2003,16 @@
 
     iput v9, v7, Landroid/graphics/Rect;->bottom:I
 
-    .line 462
     iget v9, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
 
     if-lez v9, :cond_11
 
-    .line 463
     iget v9, v2, Landroid/graphics/Rect;->left:I
 
     iget v10, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
 
     if-ge v9, v10, :cond_e
 
-    .line 464
     iget v9, v2, Landroid/graphics/Rect;->left:I
 
     iget v10, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
@@ -2256,7 +2021,6 @@
 
     iput v9, v2, Landroid/graphics/Rect;->left:I
 
-    .line 466
     :cond_e
     iget v9, v2, Landroid/graphics/Rect;->right:I
 
@@ -2270,7 +2034,6 @@
 
     if-le v9, v10, :cond_f
 
-    .line 467
     iget v9, v2, Landroid/graphics/Rect;->right:I
 
     iget v10, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
@@ -2279,7 +2042,6 @@
 
     iput v9, v2, Landroid/graphics/Rect;->right:I
 
-    .line 469
     :cond_f
     iget v9, v2, Landroid/graphics/Rect;->top:I
 
@@ -2287,7 +2049,6 @@
 
     if-ge v9, v10, :cond_10
 
-    .line 470
     iget v9, v2, Landroid/graphics/Rect;->top:I
 
     iget v10, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
@@ -2296,7 +2057,6 @@
 
     iput v9, v2, Landroid/graphics/Rect;->top:I
 
-    .line 472
     :cond_10
     iget v9, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -2310,7 +2070,6 @@
 
     if-le v9, v10, :cond_11
 
-    .line 473
     iget v9, v2, Landroid/graphics/Rect;->bottom:I
 
     iget v10, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mPenWindowBorder:I
@@ -2319,19 +2078,16 @@
 
     iput v9, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 477
     :cond_11
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v3
 
-    .line 478
     .local v3, "contentWidth":I
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
-    .line 480
     .local v1, "contentHeight":I
     iget v9, v7, Landroid/graphics/Rect;->left:I
 
@@ -2353,7 +2109,6 @@
 
     iput v9, v2, Landroid/graphics/Rect;->left:I
 
-    .line 481
     iget v9, v7, Landroid/graphics/Rect;->top:I
 
     iget v10, v2, Landroid/graphics/Rect;->top:I
@@ -2374,7 +2129,6 @@
 
     iput v9, v2, Landroid/graphics/Rect;->top:I
 
-    .line 482
     iget v9, v2, Landroid/graphics/Rect;->left:I
 
     int-to-float v10, v3
@@ -2393,7 +2147,6 @@
 
     iput v9, v2, Landroid/graphics/Rect;->right:I
 
-    .line 483
     iget v9, v2, Landroid/graphics/Rect;->top:I
 
     int-to-float v10, v1
@@ -2419,7 +2172,6 @@
     .locals 1
 
     .prologue
-    .line 335
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
     return-object v0
@@ -2429,19 +2181,15 @@
     .locals 2
 
     .prologue
-    .line 381
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
     if-nez v1, :cond_0
 
-    .line 382
     const/4 v0, 0x0
 
-    .line 386
     :goto_0
     return-object v0
 
-    .line 384
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
@@ -2449,7 +2197,6 @@
 
     move-result-object v0
 
-    .line 386
     .local v0, "mergedText":Ljava/lang/String;
     goto :goto_0
 .end method
@@ -2461,25 +2208,21 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 552
     new-instance v3, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-direct {v3}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;-><init>()V
 
-    .line 554
     .local v3, "metaList":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     iget-object v7, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     if-eqz v7, :cond_1
 
-    .line 555
     iget-object v7, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-virtual {v7}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->size()I
 
     move-result v5
 
-    .line 556
     .local v5, "tagCount":I
     const/4 v2, 0x0
 
@@ -2487,7 +2230,6 @@
     :goto_0
     if-ge v2, v5, :cond_2
 
-    .line 557
     iget-object v7, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-virtual {v7, v2}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->get(I)Ljava/lang/Object;
@@ -2506,7 +2248,6 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 558
     iget-object v7, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-virtual {v7, v2}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->get(I)Ljava/lang/Object;
@@ -2515,17 +2256,15 @@
 
     invoke-virtual {v3, v7}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->add(Ljava/lang/Object;)Z
 
-    .line 556
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 562
     .end local v2    # "i":I
     .end local v5    # "tagCount":I
     :cond_1
-    const-string/jumbo v7, "plain_text"
+    const-string v7, "plain_text"
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2533,55 +2272,45 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 564
     invoke-virtual {p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getMergedPlainTextTag()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 565
     .local v4, "plainText":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 566
     new-instance v7, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
-    const-string/jumbo v8, "plain_text"
+    const-string v8, "plain_text"
 
     invoke-direct {v7, v8, v4}, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, v7}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->add(Ljava/lang/Object;)Z
 
-    .line 590
     .end local v4    # "plainText":Ljava/lang/String;
     :cond_2
     return-object v3
 
-    .line 569
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
-    .line 571
     .local v1, "element":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 572
     invoke-virtual {v1}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getTagTable()Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTagArray;
 
     move-result-object v6
 
     check-cast v6, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 574
     .local v6, "tags":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     if-eqz v6, :cond_5
 
-    .line 575
     invoke-virtual {v6}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->size()I
 
     move-result v5
 
-    .line 576
     .restart local v5    # "tagCount":I
     const/4 v2, 0x0
 
@@ -2589,14 +2318,12 @@
     :goto_2
     if-ge v2, v5, :cond_5
 
-    .line 577
     invoke-virtual {v6, v2}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
 
-    .line 579
     .local v0, "curTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     invoke-virtual {v0}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getValue()Ljava/lang/String;
 
@@ -2614,16 +2341,13 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 580
     invoke-virtual {v3, v0}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;->add(Ljava/lang/Object;)Z
 
-    .line 576
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 585
     .end local v0    # "curTag":Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
     .end local v2    # "i":I
     .end local v5    # "tagCount":I
@@ -2634,7 +2358,6 @@
 
     move-result-object v1
 
-    .line 586
     goto :goto_1
 .end method
 
@@ -2642,7 +2365,6 @@
     .locals 1
 
     .prologue
-    .line 355
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRepositoryId:Ljava/lang/String;
 
     return-object v0
@@ -2652,7 +2374,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
     return-object v0
@@ -2662,7 +2383,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCropper:Lcom/samsung/android/smartclip/SmartClipDataCropper;
 
     return-object v0
@@ -2672,7 +2392,6 @@
     .locals 1
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRootElement:Lcom/samsung/android/smartclip/SmartClipDataRootElement;
 
     return-object v0
@@ -2682,7 +2401,6 @@
     .locals 1
 
     .prologue
-    .line 369
     iget v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTargetWindowLayer:I
 
     return v0
@@ -2693,21 +2411,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 672
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
-    .line 675
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRepositoryId:Ljava/lang/String;
 
-    .line 678
     const-class v1, Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -2722,40 +2437,34 @@
 
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
-    .line 681
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFilePath:Ljava/lang/String;
 
-    .line 684
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFileStyle:I
 
-    .line 687
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mAppPackageName:Ljava/lang/String;
 
-    .line 690
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTargetWindowLayer:I
 
-    .line 693
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-direct {v0}, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;-><init>()V
 
-    .line 694
     .local v0, "listArray":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     const-class v1, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
@@ -2770,11 +2479,9 @@
     .end local v0    # "listArray":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     check-cast v0, Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 695
     .restart local v0    # "listArray":Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 696
     return-void
 .end method
 
@@ -2783,10 +2490,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mAppPackageName:Ljava/lang/String;
 
-    .line 225
     return-void
 .end method
 
@@ -2795,15 +2500,12 @@
     .param p1, "capturedImageFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 201
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFilePath:Ljava/lang/String;
 
-    .line 202
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFileStyle:I
 
-    .line 203
     return-void
 .end method
 
@@ -2813,13 +2515,10 @@
     .param p2, "imageStyle"    # I
 
     .prologue
-    .line 212
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFilePath:Ljava/lang/String;
 
-    .line 213
     iput p2, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFileStyle:I
 
-    .line 214
     return-void
 .end method
 
@@ -2829,10 +2528,8 @@
     .param p2, "capturedImageBitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 219
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->setCapturedImage(Ljava/lang/String;)V
 
-    .line 220
     return-void
 .end method
 
@@ -2841,10 +2538,8 @@
     .param p1, "contentType"    # Ljava/lang/String;
 
     .prologue
-    .line 346
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
-    .line 347
     return-void
 .end method
 
@@ -2853,10 +2548,8 @@
     .param p1, "repositoryId"    # Ljava/lang/String;
 
     .prologue
-    .line 364
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRepositoryId:Ljava/lang/String;
 
-    .line 365
     return-void
 .end method
 
@@ -2865,10 +2558,8 @@
     .param p1, "layer"    # I
 
     .prologue
-    .line 374
     iput p1, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTargetWindowLayer:I
 
-    .line 375
     return-void
 .end method
 
@@ -2878,69 +2569,56 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 640
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 641
     invoke-virtual {p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->determineContentType()Z
 
-    .line 643
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentType:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 646
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mRepositoryId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 649
     invoke-virtual {p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getContentRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
-    .line 650
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mContentRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 653
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFilePath:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 656
     iget v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mCapturedImageFileStyle:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 659
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mAppPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 662
     iget v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTargetWindowLayer:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 665
     invoke-virtual {p0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getAllMetaTagList()Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
-    .line 666
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->mTags:Lcom/samsung/android/smartclip/SmartClipMetaTagArrayImpl;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 667
     return-void
 .end method

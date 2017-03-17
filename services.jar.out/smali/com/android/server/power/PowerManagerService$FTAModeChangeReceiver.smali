@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5190
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/power/PowerManagerService$1;
 
     .prologue
-    .line 5190
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;-><init>(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -51,19 +49,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 5193
     const-string v1, "PowerManagerService"
 
     const-string v2, "[api] FTAModeChangeReceiver: onReceive: "
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5194
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5195
     .local v0, "action":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -74,7 +69,6 @@
 
     monitor-enter v2
 
-    .line 5196
     :try_start_0
     const-string v1, "com.sec.factory.app.factorytest.FTA_ON"
 
@@ -84,7 +78,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5197
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v3, 0x1
@@ -92,14 +85,12 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mFTAMode:Z
     invoke-static {v1, v3}, Lcom/android/server/power/PowerManagerService;->access$5202(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 5198
     const-string v1, "PowerManagerService"
 
     const-string v3, "FTA mode ON"
 
     invoke-static {v1, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5203
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
@@ -109,19 +100,15 @@
     # |= operator for: Lcom/android/server/power/PowerManagerService;->mDirty:I
     invoke-static {v1, v3}, Lcom/android/server/power/PowerManagerService;->access$2576(Lcom/android/server/power/PowerManagerService;I)I
 
-    .line 5204
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # invokes: Lcom/android/server/power/PowerManagerService;->updatePowerStateLocked()V
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->access$2600(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 5205
     monitor-exit v2
 
-    .line 5206
     return-void
 
-    .line 5199
     :cond_1
     const-string v1, "com.sec.factory.app.factorytest.FTA_OFF"
 
@@ -131,7 +118,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5200
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$FTAModeChangeReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v3, 0x0
@@ -139,7 +125,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mFTAMode:Z
     invoke-static {v1, v3}, Lcom/android/server/power/PowerManagerService;->access$5202(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 5201
     const-string v1, "PowerManagerService"
 
     const-string v3, "FTA mode OFF"
@@ -148,7 +133,6 @@
 
     goto :goto_0
 
-    .line 5205
     :catchall_0
     move-exception v1
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 549
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$2;->this$0:Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 552
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 554
     .local v0, "action":Ljava/lang/String;
     const-string v5, "android.intent.action.PACKAGE_ADDED"
 
@@ -56,18 +53,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 555
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 556
     .local v3, "uri":Landroid/net/Uri;
     invoke-virtual {v3}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 558
     .local v1, "packageName":Ljava/lang/String;
     const-string v5, "com.cisco.anyconnect.vpn.android.avf"
 
@@ -85,7 +79,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 559
     :cond_0
     const-string v5, "android.intent.extra.UID"
 
@@ -93,20 +86,17 @@
 
     move-result v4
 
-    .line 560
     .local v4, "userId":I
     invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 561
     new-instance v2, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;
 
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$2;->this$0:Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy;
 
     invoke-direct {v2, v5, v4}, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;-><init>(Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy;I)V
 
-    .line 562
     .local v2, "proxyConn":Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$2;->this$0:Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy;
 
@@ -121,10 +111,8 @@
 
     invoke-interface {v5, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 563
     invoke-virtual {v2}, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;->startConnection()V
 
-    .line 578
     .end local v1    # "packageName":Ljava/lang/String;
     .end local v2    # "proxyConn":Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;
     .end local v3    # "uri":Landroid/net/Uri;
@@ -133,7 +121,6 @@
     :goto_0
     return-void
 
-    .line 565
     :cond_2
     const-string v5, "android.intent.action.PACKAGE_REMOVED"
 
@@ -143,18 +130,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 566
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 567
     .restart local v3    # "uri":Landroid/net/Uri;
     invoke-virtual {v3}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 569
     .restart local v1    # "packageName":Ljava/lang/String;
     const-string v5, "com.cisco.anyconnect.vpn.android.avf"
 
@@ -172,7 +156,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 570
     :cond_3
     const-string v5, "android.intent.extra.UID"
 
@@ -180,13 +163,11 @@
 
     move-result v4
 
-    .line 571
     .restart local v4    # "userId":I
     invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 572
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$2;->this$0:Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy;
 
     # getter for: Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy;->mProxyConnections:Ljava/util/Map;
@@ -204,11 +185,9 @@
 
     check-cast v2, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;
 
-    .line 573
     .restart local v2    # "proxyConn":Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;
     if-eqz v2, :cond_1
 
-    .line 574
     invoke-virtual {v2}, Lcom/android/server/enterprise/vpn/EnterpriseVpnPolicy$ProxyServiceConnection;->stopConnection()V
 
     goto :goto_0

@@ -11,12 +11,10 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 39
     return-void
 .end method
 
@@ -26,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/16 v0, -0x1e
 
     return v0
@@ -36,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const/16 v0, -0x1f
 
     return v0

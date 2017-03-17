@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$2;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,11 @@
     .param p2, "session"    # Lcom/samsung/accessory/manager/authentication/AuthenticationSession;
 
     .prologue
-    .line 113
     const/4 v0, -0x1
 
-    .line 114
     .local v0, "authEvent":I
     packed-switch p1, :pswitch_data_0
 
-    .line 128
     :goto_0
     iget-object v1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$2;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
@@ -64,37 +60,28 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 129
     return-void
 
-    .line 116
     :pswitch_0
     const/16 v0, 0xa
 
-    .line 117
     goto :goto_0
 
-    .line 119
     :pswitch_1
     const/16 v0, 0xb
 
-    .line 120
     goto :goto_0
 
-    .line 122
     :pswitch_2
     const/16 v0, 0xc
 
-    .line 123
     goto :goto_0
 
-    .line 125
     :pswitch_3
     const/16 v0, 0xd
 
     goto :goto_0
 
-    .line 114
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

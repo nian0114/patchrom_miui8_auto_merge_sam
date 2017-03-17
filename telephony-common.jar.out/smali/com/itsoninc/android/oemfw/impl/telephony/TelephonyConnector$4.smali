@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 696
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$4;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     invoke-direct {p0}, Lcom/itsoninc/android/oemfw/api/v17/IItsOnTelephonyCallback$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 717
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$4;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     # getter for: Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->telephonyHandler:Landroid/os/Handler;
@@ -65,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 719
     return-void
 .end method
 
@@ -79,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 705
     :try_start_0
     iget-object v2, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$4;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -111,7 +107,6 @@
 
     move-result-object v1
 
-    .line 709
     .local v1, "setPreferredNetworkType":Ljava/lang/reflect/Method;
     iget-object v2, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$4;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
@@ -139,16 +134,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 713
     .end local v1    # "setPreferredNetworkType":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
-    .line 710
     :catch_0
     move-exception v0
 
-    .line 711
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ItsOnOEM.TelephonyConnector"
 
@@ -168,11 +160,9 @@
     .end annotation
 
     .prologue
-    .line 699
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector$4;->this$0:Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;
 
     invoke-virtual {v0}, Lcom/itsoninc/android/oemfw/impl/telephony/TelephonyConnector;->trySetupData()V
 
-    .line 700
     return-void
 .end method

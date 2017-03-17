@@ -38,12 +38,10 @@
     .locals 2
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/DbqHelper;->mInstance:Landroid/os/DbqHelper;
 
-    .line 85
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -61,17 +59,14 @@
     .locals 1
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/os/DbqHelper;->mWhiteList:Ljava/util/HashMap;
 
-    .line 50
     return-void
 .end method
 
@@ -79,7 +74,6 @@
     .locals 2
 
     .prologue
-    .line 55
     const-class v1, Landroid/os/DbqHelper;
 
     monitor-enter v1
@@ -89,14 +83,12 @@
 
     if-nez v0, :cond_0
 
-    .line 56
     new-instance v0, Landroid/os/DbqHelper;
 
     invoke-direct {v0}, Landroid/os/DbqHelper;-><init>()V
 
     sput-object v0, Landroid/os/DbqHelper;->mInstance:Landroid/os/DbqHelper;
 
-    .line 58
     :cond_0
     sget-object v0, Landroid/os/DbqHelper;->mInstance:Landroid/os/DbqHelper;
     :try_end_0
@@ -106,7 +98,6 @@
 
     return-object v0
 
-    .line 55
     :catchall_0
     move-exception v0
 
@@ -121,15 +112,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     sget-boolean v0, Landroid/os/DbqHelper;->isEngBinary:Z
 
     if-eqz v0, :cond_0
 
-    .line 89
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     :cond_0
     return-void
 .end method
@@ -144,7 +132,6 @@
     .param p4, "svEnable"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 62
     monitor-enter p0
 
     :try_start_0
@@ -164,7 +151,6 @@
 
     invoke-direct {v0, p0, v1, v2, v3}, Landroid/os/DbqHelper$DbqInfo;-><init>(Landroid/os/DbqHelper;IZZ)V
 
-    .line 63
     .local v0, "appInfo":Landroid/os/DbqHelper$DbqInfo;
     iget-object v1, p0, Landroid/os/DbqHelper;->mWhiteList:Ljava/util/HashMap;
 
@@ -172,12 +158,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
     monitor-exit p0
 
     return-void
 
-    .line 62
     .end local v0    # "appInfo":Landroid/os/DbqHelper$DbqInfo;
     :catchall_0
     move-exception v1
@@ -192,7 +176,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     monitor-enter p0
 
     :try_start_0
@@ -229,7 +212,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     monitor-enter p0
 
     :try_start_0
@@ -266,7 +248,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     monitor-enter p0
 
     :try_start_0
@@ -303,7 +284,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     monitor-enter p0
 
     :try_start_0
@@ -331,7 +311,6 @@
     .locals 5
 
     .prologue
-    .line 94
     monitor-enter p0
 
     :try_start_0
@@ -359,7 +338,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 95
     .local v0, "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/DbqHelper$DbqInfo;>;"
     const-string v3, "DbqHelper"
 
@@ -447,7 +425,6 @@
 
     goto :goto_0
 
-    .line 94
     .end local v0    # "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/DbqHelper$DbqInfo;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -457,7 +434,6 @@
 
     throw v2
 
-    .line 99
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     monitor-exit p0

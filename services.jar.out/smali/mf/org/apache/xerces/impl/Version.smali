@@ -14,12 +14,10 @@
     .locals 1
 
     .prologue
-    .line 33
     const-string v0, "@@VERSION@@"
 
     sput-object v0, Lmf/org/apache/xerces/impl/Version;->fVersion:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const-string v0, "@@VERSION@@"
 
     return-object v0
@@ -48,13 +44,11 @@
     .param p0, "argv"    # [Ljava/lang/String;
 
     .prologue
-    .line 55
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     sget-object v1, Lmf/org/apache/xerces/impl/Version;->fVersion:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method

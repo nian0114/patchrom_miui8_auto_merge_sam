@@ -20,7 +20,7 @@
 .method protected engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2002/06/xmldsig-filter2"
+    const-string v0, "http://www.w3.org/2002/06/xmldsig-filter2"
 
     return-object v0
 .end method
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v6, "http://www.w3.org/2002/06/xmldsig-filter2"
+    const-string v6, "http://www.w3.org/2002/06/xmldsig-filter2"
 
     const-string v7, "XPath"
 
@@ -96,7 +96,7 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "http://www.w3.org/2002/06/xmldsig-filter2"
+    const-string v2, "http://www.w3.org/2002/06/xmldsig-filter2"
 
     aput-object v2, v0, v1
 
@@ -108,7 +108,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "xml.WrongContent"
+    const-string v2, "xml.WrongContent"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -128,7 +128,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -163,7 +163,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "http://www.w3.org/2002/06/xmldsig-filter2"
+    const-string v8, "http://www.w3.org/2002/06/xmldsig-filter2"
 
     const-string v9, "XPath"
 
@@ -249,7 +249,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -281,7 +281,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -319,7 +319,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -330,7 +330,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -341,7 +341,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -352,7 +352,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -363,7 +363,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

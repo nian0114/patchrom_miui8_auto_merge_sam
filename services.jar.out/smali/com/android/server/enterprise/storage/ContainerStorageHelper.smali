@@ -18,12 +18,10 @@
     .locals 1
 
     .prologue
-    .line 20
     const-string v0, "ContainerStorageHelper"
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    .line 22
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->mInstance:Lcom/android/server/enterprise/storage/ContainerStorageHelper;
@@ -37,7 +35,6 @@
     .param p2, "mContainerDbErrorHandler"    # Landroid/database/DatabaseErrorHandler;
 
     .prologue
-    .line 37
     const-string v2, "/data/system/container/databases/container.db"
 
     const/4 v3, 0x0
@@ -52,17 +49,14 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;ILandroid/database/DatabaseErrorHandler;)V
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->mContext:Landroid/content/Context;
 
-    .line 39
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
     const-string v1, "Created container DB Helper with version 9"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     return-void
 .end method
 
@@ -72,7 +66,6 @@
     .param p1, "mContainerDbErrorHandler"    # Landroid/database/DatabaseErrorHandler;
 
     .prologue
-    .line 25
     const-class v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;
 
     monitor-enter v1
@@ -82,14 +75,12 @@
 
     if-nez v0, :cond_0
 
-    .line 26
     new-instance v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/enterprise/storage/ContainerStorageHelper;-><init>(Landroid/content/Context;Landroid/database/DatabaseErrorHandler;)V
 
     sput-object v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->mInstance:Lcom/android/server/enterprise/storage/ContainerStorageHelper;
 
-    .line 28
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->mInstance:Lcom/android/server/enterprise/storage/ContainerStorageHelper;
     :try_end_0
@@ -99,7 +90,6 @@
 
     return-object v0
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -114,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 33
     monitor-enter p0
 
     :try_start_0
@@ -122,12 +111,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 34
     monitor-exit p0
 
     return-void
 
-    .line 33
     :catchall_0
     move-exception v0
 
@@ -141,14 +128,12 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 44
     sget-object v0, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "onCreate container DB Helper"
+    const-string v1, "onCreate container DB Helper"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     return-void
 .end method
 
@@ -157,10 +142,8 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 49
     invoke-super {p0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->onOpen(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 50
     return-void
 .end method
 
@@ -171,14 +154,13 @@
     .param p3, "newVer"    # I
 
     .prologue
-    .line 54
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onUpgrade container DB Helper from version "
+    const-string v3, "onUpgrade container DB Helper from version "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -204,28 +186,23 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     const/4 v1, 0x2
 
     if-ge p2, v1, :cond_0
 
-    .line 56
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActive:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 58
     :cond_0
     const/4 v1, 0x5
 
     if-ge p2, v1, :cond_1
 
-    .line 59
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActivePassExpired:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 62
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActiveAdminUid:Ljava/lang/String;
 
@@ -233,7 +210,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
     :goto_0
     :try_start_1
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerLockType:Ljava/lang/String;
@@ -242,7 +218,6 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 74
     :goto_1
     :try_start_2
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerType:Ljava/lang/String;
@@ -251,30 +226,25 @@
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 79
     :cond_1
     :goto_2
     const/4 v1, 0x6
 
     if-ge p2, v1, :cond_2
 
-    .line 80
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableContainerActiveFailedPassAttemps:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 81
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->createTableCertificateManager:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 83
     :cond_2
     const/4 v1, 0x7
 
     if-ge p2, v1, :cond_3
 
-    .line 85
     :try_start_3
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableScreenlock:Ljava/lang/String;
 
@@ -282,14 +252,12 @@
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 90
     :cond_3
     :goto_3
     const/16 v1, 0x8
 
     if-ge p2, v1, :cond_4
 
-    .line 92
     :try_start_4
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerDBConstants;->upgradeTableFirmwareVersion:Ljava/lang/String;
 
@@ -297,80 +265,69 @@
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 97
     :cond_4
     :goto_4
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Ljava/lang/Throwable;
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "onUpgrade: AdminUid field was already created"
+    const-string v2, "onUpgrade: AdminUid field was already created"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_1
     move-exception v0
 
-    .line 70
     .restart local v0    # "e":Ljava/lang/Throwable;
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "onUpgrade: Locktype field was already created"
+    const-string v2, "onUpgrade: Locktype field was already created"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 75
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_2
     move-exception v0
 
-    .line 76
     .restart local v0    # "e":Ljava/lang/Throwable;
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "onUpgrade: Locktype field was already created"
+    const-string v2, "onUpgrade: Locktype field was already created"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 86
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_3
     move-exception v0
 
-    .line 87
     .restart local v0    # "e":Ljava/lang/Throwable;
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "onUpgrade: Screenlock field was already created"
+    const-string v2, "onUpgrade: Screenlock field was already created"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 93
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_4
     move-exception v0
 
-    .line 94
     .restart local v0    # "e":Ljava/lang/Throwable;
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "onUpgrade: Firmware version was already created"
+    const-string v2, "onUpgrade: Firmware version was already created"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -385,16 +342,13 @@
     .param p4, "orderBy"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 107
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v9, 0x0
 
-    .line 110
     .local v9, "cursor":Landroid/database/Cursor;
     const/4 v4, 0x0
 
@@ -417,10 +371,8 @@
 
     move-result-object v9
 
-    .line 111
     if-eqz v9, :cond_1
 
-    .line 112
     invoke-interface {v9}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v1
@@ -435,28 +387,23 @@
 
     move-object v1, v9
 
-    .line 121
     :goto_0
     return-object v1
 
-    .line 115
     :cond_0
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 121
     :cond_1
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 117
     :catch_0
     move-exception v10
 
-    .line 118
     .local v10, "e":Ljava/lang/Exception;
     sget-object v1, Lcom/android/server/enterprise/storage/ContainerStorageHelper;->TAG:Ljava/lang/String;
 

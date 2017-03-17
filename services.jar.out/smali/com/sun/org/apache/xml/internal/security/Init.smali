@@ -265,7 +265,7 @@
     goto :goto_3
 
     :cond_4
-    const-string/jumbo v4, "resource/config.xml"
+    const-string v4, "resource/config.xml"
 
     goto :goto_1
 
@@ -337,7 +337,7 @@
 
     move-object v4, v0
 
-    const-string/jumbo v36, "defaultLanguageCode"
+    const-string v36, "defaultLanguageCode"
 
     move-object/from16 v0, v36
 
@@ -345,7 +345,7 @@
 
     move-result-object v36
 
-    const-string/jumbo v37, "defaultCountryCode"
+    const-string v37, "defaultCountryCode"
 
     move-object/from16 v0, v37
 
@@ -394,7 +394,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v32, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v32, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v33, "CanonicalizationMethod"
 
@@ -611,7 +611,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v20, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v20, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v21, "TransformAlgorithm"
 
@@ -859,7 +859,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v22, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v22, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v23, "SignatureAlgorithm"
 
@@ -1060,7 +1060,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v54, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v54, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v55, "Resolver"
 
@@ -1308,7 +1308,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v28, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v28, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v29, "Resolver"
 
@@ -1523,7 +1523,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v6, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v6, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v7, "PrefixMapping"
 
@@ -1542,7 +1542,7 @@
 
     const/16 v39, 0x0
 
-    const-string/jumbo v54, "namespace"
+    const-string v54, "namespace"
 
     move-object/from16 v0, v39
 
@@ -1556,7 +1556,7 @@
 
     const/16 v54, 0x0
 
-    const-string/jumbo v55, "prefix"
+    const-string v55, "prefix"
 
     move-object/from16 v0, v39
 

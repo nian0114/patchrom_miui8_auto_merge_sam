@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 75
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
 
     invoke-direct {v0}, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;-><init>()V
 
-    .line 76
     .local v0, "data":Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
     invoke-virtual {v0, p1}, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 77
     return-object v0
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 73
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
 
     move-result-object v0
@@ -76,7 +71,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 81
     new-array v0, p1, [Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
 
     return-object v0
@@ -87,7 +81,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 73
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent$1;->newArray(I)[Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
 
     move-result-object v0

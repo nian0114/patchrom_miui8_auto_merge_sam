@@ -24,13 +24,10 @@
     .param p2, "l"    # Landroid/os/Looper;
 
     .prologue
-    .line 341
     iput-object p1, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
-    .line 342
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 343
     return-void
 .end method
 
@@ -41,25 +38,21 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 347
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 411
     :cond_0
     :goto_0
     return-void
 
-    .line 350
     :sswitch_0
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbManager;->setCDFSInsert()V
     invoke-static {v1}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->access$300(Lcom/android/server/KiesConnectivity/KiesUsbManager;)V
 
-    .line 351
     const-string v1, "KiesUsbManager"
 
     const-string v2, "KiesUsbManagerHandler -> UsbMode.online"
@@ -70,11 +63,9 @@
 
     goto :goto_0
 
-    .line 408
     :catch_0
     move-exception v0
 
-    .line 409
     .local v0, "e":Ljava/lang/Exception;
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -82,7 +73,6 @@
 
     goto :goto_0
 
-    .line 356
     .end local v0    # "e":Ljava/lang/Exception;
     :sswitch_1
     :try_start_1
@@ -94,7 +84,6 @@
 
     goto :goto_0
 
-    .line 387
     :sswitch_2
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
@@ -103,7 +92,6 @@
 
     goto :goto_0
 
-    .line 393
     :sswitch_3
     const-string v1, "KiesUsbManager"
 
@@ -111,7 +99,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isTwiceReset"
+    const-string v3, "isTwiceReset"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,7 +114,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "isbootcomplete"
+    const-string v3, "isbootcomplete"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -147,7 +135,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbManager;->kiesusbobserver:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->access$100()Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
@@ -155,7 +142,6 @@
 
     sput-boolean v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 395
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbManager;->kiesusbobserver:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->access$100()Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
@@ -163,7 +149,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 396
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbManager;->setUsbCurrentSettingMode()V
@@ -173,7 +158,6 @@
 
     goto :goto_0
 
-    .line 347
     nop
 
     :sswitch_data_0

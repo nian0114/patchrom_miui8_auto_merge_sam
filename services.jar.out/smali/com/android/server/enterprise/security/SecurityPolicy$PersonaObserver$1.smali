@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 336
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->this$1:Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     iput-object p2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->val$previousState:Landroid/content/pm/PersonaState;
@@ -48,7 +47,6 @@
     .locals 5
 
     .prologue
-    .line 341
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->val$previousState:Landroid/content/pm/PersonaState;
 
@@ -70,7 +68,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 342
     const-string v2, "SecurityPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -100,7 +97,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 343
     iget-object v2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->this$1:Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     iget-object v2, v2, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
@@ -118,7 +114,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 344
     iget-object v2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->this$1:Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     iget-object v2, v2, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
@@ -132,7 +127,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/enterprise/security/SecurityPolicy;->startBannerService(I)V
 
-    .line 347
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->val$newState:Landroid/content/pm/PersonaState;
 
@@ -144,7 +138,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 348
     const-string v2, "SecurityPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -174,12 +167,10 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 349
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 350
     .local v1, "intentBanner":Landroid/content/Intent;
     const-string v2, "com.samsung.android.mdm"
 
@@ -187,7 +178,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 351
     iget-object v2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver$1;->this$1:Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     iget-object v2, v2, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
@@ -212,17 +202,14 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 357
     .end local v1    # "intentBanner":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-void
 
-    .line 353
     :catch_0
     move-exception v0
 
-    .line 354
     .local v0, "e":Ljava/lang/SecurityException;
     invoke-virtual {v0}, Ljava/lang/SecurityException;->printStackTrace()V
 

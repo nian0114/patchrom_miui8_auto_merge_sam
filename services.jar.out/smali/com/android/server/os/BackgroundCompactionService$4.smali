@@ -26,7 +26,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 193
     iput-object p1, p0, Lcom/android/server/os/BackgroundCompactionService$4;->this$0:Lcom/android/server/os/BackgroundCompactionService;
 
     iput-object p3, p0, Lcom/android/server/os/BackgroundCompactionService$4;->val$jobParams:Landroid/app/job/JobParameters;
@@ -42,7 +41,6 @@
     .locals 3
 
     .prologue
-    .line 196
     const-string v0, "BackgroundCompactionService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,14 +71,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
-    const-string/jumbo v0, "sys.sysctl.compact_memory"
+    const-string v0, "sys.sysctl.compact_memory"
 
     const-string v1, "1"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/os/BackgroundCompactionService$4;->this$0:Lcom/android/server/os/BackgroundCompactionService;
 
     iget-object v1, p0, Lcom/android/server/os/BackgroundCompactionService$4;->val$jobParams:Landroid/app/job/JobParameters;
@@ -89,20 +85,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/os/BackgroundCompactionService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
-    .line 199
     sget v0, Lcom/android/server/os/BackgroundCompactionService;->bgc_counts:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Lcom/android/server/os/BackgroundCompactionService;->bgc_counts:I
 
-    .line 200
     const-string v0, "BackgroundCompactionService"
 
     const-string v1, "compact_memory command done"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     return-void
 .end method

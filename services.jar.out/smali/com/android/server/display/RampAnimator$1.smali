@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 140
     .local p0, "this":Lcom/android/server/display/RampAnimator$1;, "Lcom/android/server/display/RampAnimator.1;"
     iput-object p1, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -44,7 +43,6 @@
     .local p0, "this":Lcom/android/server/display/RampAnimator$1;, "Lcom/android/server/display/RampAnimator.1;"
     const/4 v8, 0x0
 
-    .line 143
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # getter for: Lcom/android/server/display/RampAnimator;->mChoreographer:Landroid/view/Choreographer;
@@ -56,7 +54,6 @@
 
     move-result-wide v2
 
-    .line 144
     .local v2, "frameTimeNanos":J
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -73,26 +70,23 @@
 
     mul-float v5, v6, v7
 
-    .line 146
     .local v5, "timeDelta":F
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # setter for: Lcom/android/server/display/RampAnimator;->mLastFrameTimeNanos:J
     invoke-static {v6, v2, v3}, Lcom/android/server/display/RampAnimator;->access$102(Lcom/android/server/display/RampAnimator;J)J
 
-    .line 148
     cmpg-float v6, v5, v8
 
     if-gez v6, :cond_1
 
-    .line 149
     const-string v6, "RampAnimator"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "mAnimationCallback timeDelta calculate error!! "
+    const-string v8, "mAnimationCallback timeDelta calculate error!! "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,30 +102,25 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # invokes: Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
     invoke-static {v6}, Lcom/android/server/display/RampAnimator;->access$200(Lcom/android/server/display/RampAnimator;)V
 
-    .line 186
     :cond_0
     :goto_0
     return-void
 
-    .line 159
     :cond_1
     invoke-static {}, Landroid/animation/ValueAnimator;->getDurationScale()F
 
     move-result v4
 
-    .line 160
     .local v4, "scale":F
     cmpl-float v6, v4, v8
 
     if-nez v6, :cond_3
 
-    .line 162
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     iget-object v7, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
@@ -146,7 +135,6 @@
     # setter for: Lcom/android/server/display/RampAnimator;->mAnimatedValue:F
     invoke-static {v6, v7}, Lcom/android/server/display/RampAnimator;->access$302(Lcom/android/server/display/RampAnimator;F)F
 
-    .line 171
     :goto_1
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -155,7 +143,6 @@
 
     move-result v1
 
-    .line 172
     .local v1, "oldCurrentValue":I
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -173,7 +160,6 @@
     # setter for: Lcom/android/server/display/RampAnimator;->mCurrentValue:I
     invoke-static {v6, v7}, Lcom/android/server/display/RampAnimator;->access$602(Lcom/android/server/display/RampAnimator;I)I
 
-    .line 174
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # getter for: Lcom/android/server/display/RampAnimator;->mCurrentValue:I
@@ -183,7 +169,6 @@
 
     if-eq v1, v6, :cond_2
 
-    .line 175
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # getter for: Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
@@ -207,7 +192,6 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/util/IntProperty;->setValue(Ljava/lang/Object;I)V
 
-    .line 178
     :cond_2
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -225,7 +209,6 @@
 
     if-eq v6, v7, :cond_5
 
-    .line 179
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # invokes: Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
@@ -233,7 +216,6 @@
 
     goto :goto_0
 
-    .line 164
     .end local v1    # "oldCurrentValue":I
     :cond_3
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
@@ -249,7 +231,6 @@
 
     div-float v0, v6, v4
 
-    .line 165
     .local v0, "amount":F
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -267,7 +248,6 @@
 
     if-le v6, v7, :cond_4
 
-    .line 166
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     iget-object v7, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
@@ -297,7 +277,6 @@
 
     goto :goto_1
 
-    .line 168
     :cond_4
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -328,7 +307,6 @@
 
     goto/16 :goto_1
 
-    .line 181
     .end local v0    # "amount":F
     .restart local v1    # "oldCurrentValue":I
     :cond_5
@@ -339,7 +317,6 @@
     # setter for: Lcom/android/server/display/RampAnimator;->mAnimating:Z
     invoke-static {v6, v7}, Lcom/android/server/display/RampAnimator;->access$902(Lcom/android/server/display/RampAnimator;Z)Z
 
-    .line 182
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # getter for: Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
@@ -349,7 +326,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 183
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     # getter for: Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;

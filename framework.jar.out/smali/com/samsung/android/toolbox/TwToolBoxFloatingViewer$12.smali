@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 863
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$12;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,11 +38,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 866
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$12;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-virtual {v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->reset()V
 
-    .line 867
     return-void
 .end method

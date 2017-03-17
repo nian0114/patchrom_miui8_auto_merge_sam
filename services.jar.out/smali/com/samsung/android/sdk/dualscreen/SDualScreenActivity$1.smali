@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 388
     iput-object p1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$1;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "screen"    # Lcom/samsung/android/dualscreen/DualScreen;
 
     .prologue
-    .line 391
     invoke-static {p1}, Lcom/samsung/android/sdk/dualscreen/SDualScreenManagerReflector;->convertToSdkDualScreenEnum(Ljava/lang/Object;)Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     move-result-object v0
 
-    .line 393
     .local v0, "sdkScreen":Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
     iget-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$1;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
@@ -57,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 394
     iget-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$1;->this$0:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;
 
     # getter for: Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity;->mSdkScreenChangeListener:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ScreenChangeListener;
@@ -67,7 +63,6 @@
 
     invoke-interface {v1, v0}, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$ScreenChangeListener;->onScreenChanged(Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;)V
 
-    .line 396
     :cond_0
     return-void
 .end method

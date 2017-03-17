@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 285
     iput-object p1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;->this$0:Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/geofencing/GeofenceService$1;
 
     .prologue
-    .line 285
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;-><init>(Lcom/android/server/enterprise/geofencing/GeofenceService;)V
 
     return-void
@@ -53,13 +51,11 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 291
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;->this$0:Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     # setter for: Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocation:Landroid/location/Location;
     invoke-static {v0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->access$702(Lcom/android/server/enterprise/geofencing/GeofenceService;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 292
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;->this$0:Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     const/4 v1, 0x1
@@ -67,7 +63,6 @@
     # invokes: Lcom/android/server/enterprise/geofencing/GeofenceService;->checkDeviceInsideOrOutsideGeo(Landroid/location/Location;Z)Ljava/util/List;
     invoke-static {v0, p1, v1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->access$800(Lcom/android/server/enterprise/geofencing/GeofenceService;Landroid/location/Location;Z)Ljava/util/List;
 
-    .line 293
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 299
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;->this$0:Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     const/4 v1, 0x0
@@ -84,7 +78,6 @@
     # setter for: Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocation:Landroid/location/Location;
     invoke-static {v0, v1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->access$702(Lcom/android/server/enterprise/geofencing/GeofenceService;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 300
     return-void
 .end method
 
@@ -93,7 +86,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 306
     return-void
 .end method
 
@@ -104,6 +96,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 311
     return-void
 .end method

@@ -22,17 +22,14 @@
     .param p2, "gAttrCheck"    # Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractTraverser;-><init>(Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;)V
 
-    .line 382
     new-instance v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
 
-    .line 45
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p6, "parent"    # Lmf/org/apache/xerces/xs/XSObject;
 
     .prologue
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fAttrChecker:Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
@@ -61,17 +57,14 @@
 
     move-result-object v7
 
-    .line 204
     .local v7, "attrValues":[Ljava/lang/Object;
     invoke-static/range {p1 .. p1}, Lmf/org/apache/xerces/util/DOMUtil;->getFirstChildElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
     move-result-object v21
 
-    .line 205
     .local v21, "child":Lmf/org/w3c/dom/Element;
     const/16 v18, 0x0
 
-    .line 206
     .local v18, "annotation":Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
     if-eqz v21, :cond_0
 
@@ -87,7 +80,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 207
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -100,18 +92,15 @@
 
     move-result-object v18
 
-    .line 208
     invoke-static/range {v21 .. v21}, Lmf/org/apache/xerces/util/DOMUtil;->getNextSiblingElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
     move-result-object v9
 
-    .line 217
     .end local v21    # "child":Lmf/org/w3c/dom/Element;
     .local v9, "child":Lmf/org/w3c/dom/Element;
     :goto_0
     const/16 v22, 0x0
 
-    .line 219
     .local v22, "childName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -119,14 +108,11 @@
 
     invoke-virtual {v4}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;->pushContext()V
 
-    .line 221
     :goto_1
     if-nez v9, :cond_1
 
-    .line 266
     const/4 v12, 0x0
 
-    .line 268
     .local v12, "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     sget v4, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_MINOCCURS:I
 
@@ -134,7 +120,6 @@
 
     check-cast v26, Lmf/org/apache/xerces/impl/xs/util/XInt;
 
-    .line 269
     .local v26, "minAtt":Lmf/org/apache/xerces/impl/xs/util/XInt;
     sget v4, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_MAXOCCURS:I
 
@@ -142,7 +127,6 @@
 
     check-cast v25, Lmf/org/apache/xerces/impl/xs/util/XInt;
 
-    .line 270
     .local v25, "maxAtt":Lmf/org/apache/xerces/impl/xs/util/XInt;
     sget v4, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_FROMDEFAULT:I
 
@@ -150,13 +134,11 @@
 
     check-cast v23, Ljava/lang/Long;
 
-    .line 272
     .local v23, "defaultVals":Ljava/lang/Long;
     new-instance v24, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
 
     invoke-direct/range {v24 .. v24}, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;-><init>()V
 
-    .line 273
     .local v24, "group":Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
     if-eqz p5, :cond_a
 
@@ -167,7 +149,6 @@
 
     iput-short v4, v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fCompositor:S
 
-    .line 274
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
@@ -180,7 +161,6 @@
 
     iput v4, v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fParticleCount:I
 
-    .line 275
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
@@ -193,10 +173,8 @@
 
     iput-object v4, v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fParticles:[Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
 
-    .line 277
     if-eqz v18, :cond_b
 
-    .line 278
     new-instance v19, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-direct/range {v19 .. v19}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;-><init>()V
@@ -204,14 +182,12 @@
     .local v19, "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
     move-object/from16 v4, v19
 
-    .line 279
     check-cast v4, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     move-object/from16 v0, v18
 
     invoke-virtual {v4, v0}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->addXSObject(Lmf/org/apache/xerces/xs/XSObject;)V
 
-    .line 283
     :goto_3
     move-object/from16 v0, v19
 
@@ -219,48 +195,40 @@
 
     iput-object v0, v1, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 284
     new-instance v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
 
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     invoke-direct {v12}, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;-><init>()V
 
-    .line 285
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     const/4 v4, 0x3
 
     iput-short v4, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fType:S
 
-    .line 286
     invoke-virtual/range {v26 .. v26}, Lmf/org/apache/xerces/impl/xs/util/XInt;->intValue()I
 
     move-result v4
 
     iput v4, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fMinOccurs:I
 
-    .line 287
     invoke-virtual/range {v25 .. v25}, Lmf/org/apache/xerces/impl/xs/util/XInt;->intValue()I
 
     move-result v4
 
     iput v4, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fMaxOccurs:I
 
-    .line 288
     move-object/from16 v0, v24
 
     iput-object v0, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fValue:Lmf/org/apache/xerces/xs/XSTerm;
 
-    .line 289
     move-object/from16 v0, v19
 
     iput-object v0, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 292
     if-eqz p5, :cond_c
 
     sget-object v13, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_CHOICE:Ljava/lang/String;
 
-    .line 293
     :goto_4
     invoke-interface/range {p1 .. p1}, Lmf/org/w3c/dom/Element;->getParentNode()Lmf/org/w3c/dom/Node;
 
@@ -268,7 +236,6 @@
 
     check-cast v14, Lmf/org/w3c/dom/Element;
 
-    .line 295
     invoke-virtual/range {v23 .. v23}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v16
@@ -277,12 +244,10 @@
 
     move/from16 v15, p4
 
-    .line 291
     invoke-virtual/range {v11 .. v17}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->checkOccurrences(Lmf/org/apache/xerces/impl/xs/XSParticleDecl;Ljava/lang/String;Lmf/org/w3c/dom/Element;IJ)Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
 
     move-result-object v12
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fAttrChecker:Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
@@ -291,10 +256,8 @@
 
     invoke-virtual {v4, v7, v0}, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->returnAttrArray([Ljava/lang/Object;Lmf/org/apache/xerces/impl/xs/traversers/XSDocumentInfo;)V
 
-    .line 298
     return-object v12
 
-    .line 211
     .end local v9    # "child":Lmf/org/w3c/dom/Element;
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     .end local v19    # "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
@@ -309,11 +272,9 @@
 
     move-result-object v6
 
-    .line 212
     .local v6, "text":Ljava/lang/String;
     if-eqz v6, :cond_d
 
-    .line 213
     const/4 v8, 0x0
 
     move-object/from16 v4, p0
@@ -332,19 +293,16 @@
     .restart local v9    # "child":Lmf/org/w3c/dom/Element;
     goto/16 :goto_0
 
-    .line 223
     .end local v6    # "text":Ljava/lang/String;
     .restart local v22    # "childName":Ljava/lang/String;
     :cond_1
     const/4 v12, 0x0
 
-    .line 225
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     invoke-static {v9}, Lmf/org/apache/xerces/util/DOMUtil;->getLocalName(Lmf/org/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v22
 
-    .line 226
     sget-object v4, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_ELEMENT:Ljava/lang/String;
 
     move-object/from16 v0, v22
@@ -355,7 +313,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 227
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fSchemaHandler:Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;
@@ -375,20 +332,17 @@
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     move-result-object v12
 
-    .line 262
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     :cond_2
     :goto_5
     if-eqz v12, :cond_3
 
-    .line 263
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
 
     invoke-virtual {v4, v12}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;->addParticle(Lmf/org/apache/xerces/impl/xs/XSParticleDecl;)V
 
-    .line 221
     :cond_3
     invoke-static {v9}, Lmf/org/apache/xerces/util/DOMUtil;->getNextSiblingElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
@@ -396,7 +350,6 @@
 
     goto/16 :goto_1
 
-    .line 229
     :cond_4
     sget-object v4, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_GROUP:Ljava/lang/String;
 
@@ -408,7 +361,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fSchemaHandler:Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;
@@ -423,7 +375,6 @@
 
     move-result-object v12
 
-    .line 234
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->hasAllContent(Lmf/org/apache/xerces/impl/xs/XSParticleDecl;)Z
@@ -432,10 +383,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 237
     const/4 v12, 0x0
 
-    .line 238
     const-string v4, "cos-all-limited.1.2"
 
     const/4 v5, 0x0
@@ -446,7 +395,6 @@
 
     goto :goto_5
 
-    .line 242
     :cond_5
     sget-object v4, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_CHOICE:Ljava/lang/String;
 
@@ -458,7 +406,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 243
     const/4 v12, 0x0
 
     move-object/from16 v8, p0
@@ -474,11 +421,9 @@
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     move-result-object v12
 
-    .line 244
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     goto :goto_5
 
-    .line 245
     :cond_6
     sget-object v4, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_SEQUENCE:Ljava/lang/String;
 
@@ -490,7 +435,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 246
     const/4 v12, 0x0
 
     move-object/from16 v8, p0
@@ -506,11 +450,9 @@
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     move-result-object v12
 
-    .line 247
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     goto :goto_5
 
-    .line 248
     :cond_7
     sget-object v4, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_ANY:Ljava/lang/String;
 
@@ -522,7 +464,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 249
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fSchemaHandler:Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;
@@ -537,14 +478,11 @@
 
     move-result-object v12
 
-    .line 250
     goto/16 :goto_5
 
-    .line 253
     :cond_8
     if-eqz p5, :cond_9
 
-    .line 254
     const/4 v4, 0x3
 
     new-array v0, v4, [Ljava/lang/Object;
@@ -571,7 +509,6 @@
 
     aput-object v5, v20, v4
 
-    .line 259
     .local v20, "args":[Ljava/lang/Object;
     :goto_6
     const-string v4, "s4s-elt-must-match.1"
@@ -584,7 +521,6 @@
 
     goto/16 :goto_5
 
-    .line 257
     .end local v20    # "args":[Ljava/lang/Object;
     :cond_9
     const/4 v4, 0x3
@@ -616,7 +552,6 @@
     .restart local v20    # "args":[Ljava/lang/Object;
     goto :goto_6
 
-    .line 273
     .end local v20    # "args":[Ljava/lang/Object;
     .restart local v23    # "defaultVals":Ljava/lang/Long;
     .restart local v24    # "group":Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
@@ -627,14 +562,12 @@
 
     goto/16 :goto_2
 
-    .line 281
     :cond_b
     sget-object v19, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     .restart local v19    # "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
     goto/16 :goto_3
 
-    .line 292
     :cond_c
     sget-object v13, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_SEQUENCE:Ljava/lang/String;
 
@@ -667,7 +600,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 304
     if-eqz p1, :cond_1
 
     iget-short v0, p1, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fType:S
@@ -676,7 +608,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 305
     iget-object v0, p1, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fValue:Lmf/org/apache/xerces/xs/XSTerm;
 
     check-cast v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
@@ -689,20 +620,17 @@
 
     const/4 v0, 0x1
 
-    .line 308
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 305
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 308
     goto :goto_0
 .end method
 
@@ -715,7 +643,6 @@
     .param p5, "parent"    # Lmf/org/apache/xerces/xs/XSObject;
 
     .prologue
-    .line 66
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fAttrChecker:Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
@@ -730,17 +657,14 @@
 
     move-result-object v7
 
-    .line 68
     .local v7, "attrValues":[Ljava/lang/Object;
     invoke-static/range {p1 .. p1}, Lmf/org/apache/xerces/util/DOMUtil;->getFirstChildElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
     move-result-object v21
 
-    .line 70
     .local v21, "child":Lmf/org/w3c/dom/Element;
     const/16 v18, 0x0
 
-    .line 71
     .local v18, "annotation":Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
     if-eqz v21, :cond_0
 
@@ -756,7 +680,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 72
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -769,18 +692,15 @@
 
     move-result-object v18
 
-    .line 73
     invoke-static/range {v21 .. v21}, Lmf/org/apache/xerces/util/DOMUtil;->getNextSiblingElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
     move-result-object v9
 
-    .line 81
     .end local v21    # "child":Lmf/org/w3c/dom/Element;
     .local v9, "child":Lmf/org/w3c/dom/Element;
     :goto_0
     const/16 v22, 0x0
 
-    .line 83
     .local v22, "childName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -788,14 +708,11 @@
 
     invoke-virtual {v4}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;->pushContext()V
 
-    .line 85
     :goto_1
     if-nez v9, :cond_1
 
-    .line 103
     const/4 v12, 0x0
 
-    .line 104
     .local v12, "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     sget v4, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_MINOCCURS:I
 
@@ -803,7 +720,6 @@
 
     check-cast v26, Lmf/org/apache/xerces/impl/xs/util/XInt;
 
-    .line 105
     .local v26, "minAtt":Lmf/org/apache/xerces/impl/xs/util/XInt;
     sget v4, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_MAXOCCURS:I
 
@@ -811,7 +727,6 @@
 
     check-cast v25, Lmf/org/apache/xerces/impl/xs/util/XInt;
 
-    .line 106
     .local v25, "maxAtt":Lmf/org/apache/xerces/impl/xs/util/XInt;
     sget v4, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->ATTIDX_FROMDEFAULT:I
 
@@ -819,13 +734,11 @@
 
     check-cast v23, Ljava/lang/Long;
 
-    .line 108
     .local v23, "defaultVals":Ljava/lang/Long;
     new-instance v24, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
 
     invoke-direct/range {v24 .. v24}, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;-><init>()V
 
-    .line 109
     .local v24, "group":Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
     const/16 v4, 0x67
 
@@ -833,7 +746,6 @@
 
     iput-short v4, v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fCompositor:S
 
-    .line 110
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
@@ -846,7 +758,6 @@
 
     iput v4, v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fParticleCount:I
 
-    .line 111
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
@@ -859,10 +770,8 @@
 
     iput-object v4, v0, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fParticles:[Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
 
-    .line 113
     if-eqz v18, :cond_4
 
-    .line 114
     new-instance v19, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-direct/range {v19 .. v19}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;-><init>()V
@@ -870,14 +779,12 @@
     .local v19, "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
     move-object/from16 v4, v19
 
-    .line 115
     check-cast v4, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     move-object/from16 v0, v18
 
     invoke-virtual {v4, v0}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->addXSObject(Lmf/org/apache/xerces/xs/XSObject;)V
 
-    .line 119
     :goto_2
     move-object/from16 v0, v19
 
@@ -885,53 +792,44 @@
 
     iput-object v0, v1, Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 120
     new-instance v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
 
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     invoke-direct {v12}, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;-><init>()V
 
-    .line 121
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     const/4 v4, 0x3
 
     iput-short v4, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fType:S
 
-    .line 122
     invoke-virtual/range {v26 .. v26}, Lmf/org/apache/xerces/impl/xs/util/XInt;->intValue()I
 
     move-result v4
 
     iput v4, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fMinOccurs:I
 
-    .line 123
     invoke-virtual/range {v25 .. v25}, Lmf/org/apache/xerces/impl/xs/util/XInt;->intValue()I
 
     move-result v4
 
     iput v4, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fMaxOccurs:I
 
-    .line 124
     move-object/from16 v0, v24
 
     iput-object v0, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fValue:Lmf/org/apache/xerces/xs/XSTerm;
 
-    .line 125
     move-object/from16 v0, v19
 
     iput-object v0, v12, Lmf/org/apache/xerces/impl/xs/XSParticleDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 128
     sget-object v13, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_ALL:Ljava/lang/String;
 
-    .line 129
     invoke-interface/range {p1 .. p1}, Lmf/org/w3c/dom/Element;->getParentNode()Lmf/org/w3c/dom/Node;
 
     move-result-object v14
 
     check-cast v14, Lmf/org/w3c/dom/Element;
 
-    .line 131
     invoke-virtual/range {v23 .. v23}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v16
@@ -940,12 +838,10 @@
 
     move/from16 v15, p4
 
-    .line 127
     invoke-virtual/range {v11 .. v17}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->checkOccurrences(Lmf/org/apache/xerces/impl/xs/XSParticleDecl;Ljava/lang/String;Lmf/org/w3c/dom/Element;IJ)Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
 
     move-result-object v12
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fAttrChecker:Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;
@@ -954,10 +850,8 @@
 
     invoke-virtual {v4, v7, v0}, Lmf/org/apache/xerces/impl/xs/traversers/XSAttributeChecker;->returnAttrArray([Ljava/lang/Object;Lmf/org/apache/xerces/impl/xs/traversers/XSDocumentInfo;)V
 
-    .line 134
     return-object v12
 
-    .line 76
     .end local v9    # "child":Lmf/org/w3c/dom/Element;
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     .end local v19    # "annotations":Lmf/org/apache/xerces/xs/XSObjectList;
@@ -972,11 +866,9 @@
 
     move-result-object v6
 
-    .line 77
     .local v6, "text":Ljava/lang/String;
     if-eqz v6, :cond_5
 
-    .line 78
     const/4 v8, 0x0
 
     move-object/from16 v4, p0
@@ -995,19 +887,16 @@
     .restart local v9    # "child":Lmf/org/w3c/dom/Element;
     goto/16 :goto_0
 
-    .line 87
     .end local v6    # "text":Ljava/lang/String;
     .restart local v22    # "childName":Ljava/lang/String;
     :cond_1
     const/4 v12, 0x0
 
-    .line 88
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     invoke-static {v9}, Lmf/org/apache/xerces/util/DOMUtil;->getLocalName(Lmf/org/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v22
 
-    .line 91
     sget-object v4, Lmf/org/apache/xerces/impl/xs/SchemaSymbols;->ELT_ELEMENT:Ljava/lang/String;
 
     move-object/from16 v0, v22
@@ -1018,7 +907,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 92
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fSchemaHandler:Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler;
@@ -1038,19 +926,16 @@
     .end local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     move-result-object v12
 
-    .line 99
     .restart local v12    # "particle":Lmf/org/apache/xerces/impl/xs/XSParticleDecl;
     :goto_3
     if-eqz v12, :cond_2
 
-    .line 100
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser;->fPArray:Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;
 
     invoke-virtual {v4, v12}, Lmf/org/apache/xerces/impl/xs/traversers/XSDAbstractParticleTraverser$ParticleArray;->addParticle(Lmf/org/apache/xerces/impl/xs/XSParticleDecl;)V
 
-    .line 85
     :cond_2
     invoke-static {v9}, Lmf/org/apache/xerces/util/DOMUtil;->getNextSiblingElement(Lmf/org/w3c/dom/Node;)Lmf/org/w3c/dom/Element;
 
@@ -1058,7 +943,6 @@
 
     goto/16 :goto_1
 
-    .line 95
     :cond_3
     const/4 v4, 0x3
 
@@ -1086,7 +970,6 @@
 
     aput-object v5, v20, v4
 
-    .line 96
     .local v20, "args":[Ljava/lang/Object;
     const-string v4, "s4s-elt-must-match.1"
 
@@ -1098,7 +981,6 @@
 
     goto :goto_3
 
-    .line 117
     .end local v20    # "args":[Ljava/lang/Object;
     .restart local v23    # "defaultVals":Ljava/lang/Long;
     .restart local v24    # "group":Lmf/org/apache/xerces/impl/xs/XSModelGroupImpl;
@@ -1137,7 +1019,6 @@
     .param p5, "parent"    # Lmf/org/apache/xerces/xs/XSObject;
 
     .prologue
-    .line 182
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -1168,7 +1049,6 @@
     .param p5, "parent"    # Lmf/org/apache/xerces/xs/XSObject;
 
     .prologue
-    .line 158
     const/4 v5, 0x0
 
     move-object v0, p0

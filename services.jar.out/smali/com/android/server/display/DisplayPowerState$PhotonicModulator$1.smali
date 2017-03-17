@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 601
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     # getter for: Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 605
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
@@ -59,7 +56,6 @@
     # setter for: Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingRequestDisplayState:Z
     invoke-static {v0, v2}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->access$2002(Lcom/android/server/display/DisplayPowerState$PhotonicModulator;Z)Z
 
-    .line 606
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
@@ -67,13 +63,10 @@
     # invokes: Lcom/android/server/display/DisplayPowerState;->postScreenUpdateThreadSafe()V
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerState;->access$1500(Lcom/android/server/display/DisplayPowerState;)V
 
-    .line 607
     monitor-exit v1
 
-    .line 608
     return-void
 
-    .line 607
     :catchall_0
     move-exception v0
 

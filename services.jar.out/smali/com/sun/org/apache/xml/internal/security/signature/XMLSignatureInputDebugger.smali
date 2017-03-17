@@ -137,7 +137,7 @@
     :pswitch_1
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;)V
 
@@ -1405,7 +1405,7 @@
     :try_start_1
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

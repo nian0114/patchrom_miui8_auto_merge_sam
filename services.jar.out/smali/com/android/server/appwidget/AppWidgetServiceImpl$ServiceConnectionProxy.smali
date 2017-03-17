@@ -27,17 +27,14 @@
     .param p1, "connectionCb"    # Landroid/os/IBinder;
 
     .prologue
-    .line 4035
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4036
     invoke-static {p1}, Lcom/android/internal/widget/IRemoteViewsAdapterConnection$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/widget/IRemoteViewsAdapterConnection;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ServiceConnectionProxy;->mConnectionCb:Lcom/android/internal/widget/IRemoteViewsAdapterConnection;
 
-    .line 4038
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 4054
     :try_start_0
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ServiceConnectionProxy;->mConnectionCb:Lcom/android/internal/widget/IRemoteViewsAdapterConnection;
 
@@ -55,15 +51,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4058
     :goto_0
     return-void
 
-    .line 4055
     :catch_0
     move-exception v0
 
-    .line 4056
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "AppWidgetServiceImpl"
 
@@ -80,7 +73,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 4042
     :try_start_0
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ServiceConnectionProxy;->mConnectionCb:Lcom/android/internal/widget/IRemoteViewsAdapterConnection;
 
@@ -88,15 +80,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4046
     :goto_0
     return-void
 
-    .line 4043
     :catch_0
     move-exception v0
 
-    .line 4044
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "AppWidgetServiceImpl"
 
@@ -112,9 +101,7 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 4049
     invoke-virtual {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$ServiceConnectionProxy;->disconnect()V
 
-    .line 4050
     return-void
 .end method

@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 14
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgPeriodicDpd;->INSTANCE:Lcom/sec/epdg/EpdgPeriodicDpd;
@@ -32,24 +31,20 @@
     .locals 2
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     const-string v0, "[EpdgPeriodicDpd]"
 
     const-string v1, "EpdgPeriodicDpd instance created"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mContext:Landroid/content/Context;
 
-    .line 23
     iget-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mContext:Landroid/content/Context;
 
     const-string v1, "alarm"
@@ -62,7 +57,6 @@
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 24
     return-void
 .end method
 
@@ -70,7 +64,6 @@
     .locals 3
 
     .prologue
-    .line 29
     const-class v1, Lcom/sec/epdg/EpdgPeriodicDpd;
 
     monitor-enter v1
@@ -80,21 +73,18 @@
 
     if-nez v0, :cond_0
 
-    .line 30
     const-string v0, "[EpdgPeriodicDpd]"
 
     const-string v2, "Creating EpdgPeriodicDpd instance"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 31
     new-instance v0, Lcom/sec/epdg/EpdgPeriodicDpd;
 
     invoke-direct {v0}, Lcom/sec/epdg/EpdgPeriodicDpd;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/EpdgPeriodicDpd;->INSTANCE:Lcom/sec/epdg/EpdgPeriodicDpd;
 
-    .line 33
     :cond_0
     sget-object v0, Lcom/sec/epdg/EpdgPeriodicDpd;->INSTANCE:Lcom/sec/epdg/EpdgPeriodicDpd;
     :try_end_0
@@ -104,7 +94,6 @@
 
     return-object v0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -117,18 +106,15 @@
     .locals 4
 
     .prologue
-    .line 79
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 80
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.sec.epdg.NATT_KEEP_ALIVE_TIMER_EXPIRED"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 81
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -147,12 +133,10 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 57
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -178,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 58
     return-object v0
 .end method
 
@@ -187,18 +170,15 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgPeriodicDpd;->getPeriodicDpdIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 63
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "apn_name"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 64
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -219,28 +199,24 @@
     .param p1, "apnName"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 70
     :try_start_0
     const-string v1, "[EpdgPeriodicDpd]"
 
-    const-string/jumbo v2, "removePeriodicDpdPendingIntent: apnName is null, returning"
+    const-string v2, "removePeriodicDpdPendingIntent: apnName is null, returning"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 76
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 73
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mContext:Landroid/content/Context;
@@ -257,7 +233,6 @@
 
     move-result-object v0
 
-    .line 75
     .local v0, "pIntent":Landroid/app/PendingIntent;
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -267,7 +242,6 @@
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "pIntent":Landroid/app/PendingIntent;
     :catchall_0
     move-exception v1
@@ -281,7 +255,6 @@
     .locals 2
 
     .prologue
-    .line 98
     monitor-enter p0
 
     :try_start_0
@@ -289,7 +262,6 @@
 
     move-result-object v0
 
-    .line 99
     .local v0, "pIntent":Landroid/app/PendingIntent;
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -297,12 +269,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
     monitor-exit p0
 
     return-void
 
-    .line 98
     .end local v0    # "pIntent":Landroid/app/PendingIntent;
     :catchall_0
     move-exception v1
@@ -317,7 +287,6 @@
     .param p1, "NattTimer"    # I
 
     .prologue
-    .line 86
     monitor-enter p0
 
     :try_start_0
@@ -329,7 +298,6 @@
 
     add-long v0, v4, v6
 
-    .line 87
     .local v0, "alarmExpTime":J
     const-string v3, "[EpdgPeriodicDpd]"
 
@@ -337,7 +305,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "startTimerForPeriodicDpd:  NattTimer is: "
+    const-string v5, "startTimerForPeriodicDpd:  NattTimer is: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -363,21 +331,17 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     invoke-direct {p0}, Lcom/sec/epdg/EpdgPeriodicDpd;->getNattKeepAlivePendingIntent()Landroid/app/PendingIntent;
 
     move-result-object v2
 
-    .line 91
     .local v2, "pIntent":Landroid/app/PendingIntent;
     if-eqz v2, :cond_0
 
-    .line 92
     iget-object v3, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v3, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 94
     :cond_0
     iget-object v3, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -387,12 +351,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
     monitor-exit p0
 
     return-void
 
-    .line 86
     .end local v0    # "alarmExpTime":J
     .end local v2    # "pIntent":Landroid/app/PendingIntent;
     :catchall_0
@@ -409,28 +371,24 @@
     .param p2, "dpdTimer"    # I
 
     .prologue
-    .line 37
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 38
     :try_start_0
     const-string v3, "[EpdgPeriodicDpd]"
 
-    const-string/jumbo v4, "startTimerForPeriodicDpd: apnName is null, returning"
+    const-string v4, "startTimerForPeriodicDpd: apnName is null, returning"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 53
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 41
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -441,7 +399,6 @@
 
     add-long v0, v4, v6
 
-    .line 42
     .local v0, "alarmExpTime":J
     const-string v3, "[EpdgPeriodicDpd]"
 
@@ -449,7 +406,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "startTimerForPeriodicDpd: apnName is: "
+    const-string v5, "startTimerForPeriodicDpd: apnName is: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -485,21 +442,17 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgPeriodicDpd;->getPeriodicDpdPendingIntent(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v2
 
-    .line 48
     .local v2, "pIntent":Landroid/app/PendingIntent;
     if-eqz v2, :cond_1
 
-    .line 49
     iget-object v3, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v3, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 51
     :cond_1
     iget-object v3, p0, Lcom/sec/epdg/EpdgPeriodicDpd;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -511,7 +464,6 @@
 
     goto :goto_0
 
-    .line 37
     .end local v0    # "alarmExpTime":J
     .end local v2    # "pIntent":Landroid/app/PendingIntent;
     :catchall_0

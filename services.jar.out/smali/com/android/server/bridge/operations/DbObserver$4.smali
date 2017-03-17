@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcom/android/server/bridge/operations/DbObserver$4;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,12 +38,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/bridge/operations/DbObserver$4;->onChange(ZLandroid/net/Uri;)V
 
-    .line 120
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 128
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/operations/DbObserver;->access$200()Ljava/lang/String;
 
@@ -64,7 +60,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onChange Calendar events UserID : "
+    const-string v2, "onChange Calendar events UserID : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,12 +83,10 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/bridge/operations/DbObserver$4;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     # invokes: Lcom/android/server/bridge/operations/DbObserver;->startCalendarSync()V
     invoke-static {v0}, Lcom/android/server/bridge/operations/DbObserver;->access$800(Lcom/android/server/bridge/operations/DbObserver;)V
 
-    .line 130
     return-void
 .end method

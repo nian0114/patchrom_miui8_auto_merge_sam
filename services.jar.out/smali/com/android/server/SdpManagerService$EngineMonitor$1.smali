@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3881
     iput-object p1, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3883
     const-string v5, "SdpManagerService.monitor"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "received : "
+    const-string v7, "received : "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,7 +64,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3884
     const-string v5, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -79,25 +76,21 @@
 
     if-eqz v5, :cond_1
 
-    .line 3885
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v4
 
-    .line 3886
     .local v4, "userid":I
     iget-object v5, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
     # invokes: Lcom/android/server/SdpManagerService$EngineMonitor;->schedule(I)V
     invoke-static {v5, v4}, Lcom/android/server/SdpManagerService$EngineMonitor;->access$4700(Lcom/android/server/SdpManagerService$EngineMonitor;I)V
 
-    .line 3914
     .end local v4    # "userid":I
     :cond_0
     :goto_0
     return-void
 
-    .line 3887
     :cond_1
     const-string v5, "com.sec.knox.ENGINE_UNLOCK_TIMEOUT"
 
@@ -111,8 +104,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 3888
-    const-string/jumbo v5, "trust"
+    const-string v5, "trust"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -122,9 +114,8 @@
 
     move-result-object v2
 
-    .line 3891
     .local v2, "tm":Landroid/app/trust/ITrustManager;
-    const-string/jumbo v5, "userid"
+    const-string v5, "userid"
 
     const/4 v6, 0x0
 
@@ -132,7 +123,6 @@
 
     move-result v4
 
-    .line 3892
     .restart local v4    # "userid":I
     iget-object v5, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
@@ -143,7 +133,6 @@
 
     move-result-object v3
 
-    .line 3894
     .local v3, "ui":Landroid/content/pm/UserInfo;
     :try_start_0
     invoke-interface {v2, v4}, Landroid/app/trust/ITrustManager;->isDeviceLocked(I)Z
@@ -158,7 +147,6 @@
 
     if-nez v5, :cond_0
 
-    .line 3895
     const-string v5, "SdpManagerService.monitor"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -187,7 +175,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3896
     iget-object v5, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
     iget-object v5, v5, Lcom/android/server/SdpManagerService$EngineMonitor;->this$0:Lcom/android/server/SdpManagerService;
@@ -201,7 +188,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3897
     :try_start_1
     iget-object v5, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
@@ -212,11 +198,9 @@
 
     move-result-object v1
 
-    .line 3898
     .local v1, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v1, :cond_3
 
-    .line 3899
     const-string v5, "SdpManagerService.monitor"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -243,7 +227,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3900
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getState()I
 
     move-result v5
@@ -252,7 +235,6 @@
 
     if-ne v5, v7, :cond_2
 
-    .line 3901
     const-string v5, "SdpManagerService.monitor"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -281,17 +263,15 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3902
     iget-object v5, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
     const-string v7, "KNOX SDP"
 
-    const-string/jumbo v8, "unlock failed"
+    const-string v8, "unlock failed"
 
     # invokes: Lcom/android/server/SdpManagerService$EngineMonitor;->notifyUser(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v5, v7, v8}, Lcom/android/server/SdpManagerService$EngineMonitor;->access$5000(Lcom/android/server/SdpManagerService$EngineMonitor;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3908
     :cond_2
     :goto_1
     monitor-exit v6
@@ -311,17 +291,14 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 3910
     :catch_0
     move-exception v0
 
-    .line 3911
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 3905
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :cond_3
@@ -348,12 +325,11 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3906
     iget-object v5, p0, Lcom/android/server/SdpManagerService$EngineMonitor$1;->this$1:Lcom/android/server/SdpManagerService$EngineMonitor;
 
     const-string v7, "KNOX SDP"
 
-    const-string/jumbo v8, "no engine info"
+    const-string v8, "no engine info"
 
     # invokes: Lcom/android/server/SdpManagerService$EngineMonitor;->notifyUser(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v5, v7, v8}, Lcom/android/server/SdpManagerService$EngineMonitor;->access$5000(Lcom/android/server/SdpManagerService$EngineMonitor;Ljava/lang/String;Ljava/lang/String;)V

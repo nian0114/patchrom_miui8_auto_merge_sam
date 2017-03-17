@@ -28,19 +28,15 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 3443
     iput-object p1, p0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
 
-    .line 3444
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3445
     const-string v0, "SdpHandler"
 
     # invokes: Lcom/android/server/SdpManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0}, Lcom/android/server/SdpManagerService;->access$2700(Ljava/lang/String;)I
 
-    .line 3447
     return-void
 .end method
 
@@ -51,34 +47,29 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3450
     const-string v4, "SdpHandler"
 
     # invokes: Lcom/android/server/SdpManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v4}, Lcom/android/server/SdpManagerService;->access$2700(Ljava/lang/String;)I
 
-    .line 3451
     move-object/from16 v0, p1
 
     iget v4, v0, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 3592
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 3453
     :pswitch_1
     const-string v4, "SdpManagerServiceHandler"
 
-    const-string/jumbo v5, "received MSG_SYSTEM_READY. "
+    const-string v5, "received MSG_SYSTEM_READY. "
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3454
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -95,7 +86,6 @@
     # setter for: Lcom/android/server/SdpManagerService;->mServiceKeeper:Lcom/android/server/SdpServiceKeeper;
     invoke-static {v4, v5}, Lcom/android/server/SdpManagerService;->access$2802(Lcom/android/server/SdpManagerService;Lcom/android/server/SdpServiceKeeper;)Lcom/android/server/SdpServiceKeeper;
 
-    .line 3455
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -112,7 +102,6 @@
     # setter for: Lcom/android/server/SdpManagerService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
     invoke-static {v4, v5}, Lcom/android/server/SdpManagerService;->access$3002(Lcom/android/server/SdpManagerService;Lcom/android/internal/widget/LockPatternUtils;)Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 3458
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -124,7 +113,6 @@
 
     monitor-enter v5
 
-    .line 3459
     :try_start_0
     move-object/from16 v0, p0
 
@@ -140,11 +128,9 @@
 
     move-result-object v10
 
-    .line 3461
     .local v10, "engineList":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     if-eqz v10, :cond_2
 
-    .line 3462
     const/4 v12, 0x0
 
     .local v12, "i":I
@@ -155,12 +141,10 @@
 
     if-ge v12, v4, :cond_2
 
-    .line 3463
     invoke-virtual {v10, v12}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v14
 
-    .line 3464
     .local v14, "id":I
     invoke-virtual {v10, v14}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -168,7 +152,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3466
     .local v2, "alias":Ljava/lang/String;
     const-string v4, "SdpManagerService"
 
@@ -208,7 +191,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3469
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -223,11 +205,9 @@
 
     move-result-object v1
 
-    .line 3471
     .local v1, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v1, :cond_1
 
-    .line 3472
     const-string v4, "SdpManagerService"
 
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->toString()Ljava/lang/String;
@@ -236,7 +216,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3474
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -248,7 +227,6 @@
 
     invoke-virtual {v4, v14, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 3478
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -260,13 +238,11 @@
 
     invoke-virtual {v4, v1}, Lcom/android/server/SdpServiceKeeper;->loadPolicy(Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;)Lcom/android/server/sdp/engine/SdpPolicy;
 
-    .line 3462
     :goto_2
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 3480
     :cond_1
     const-string v6, "SdpManagerService"
 
@@ -304,7 +280,6 @@
 
     goto :goto_2
 
-    .line 3484
     .end local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     .end local v2    # "alias":Ljava/lang/String;
     .end local v10    # "engineList":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
@@ -326,7 +301,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3486
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -338,7 +312,6 @@
     # setter for: Lcom/android/server/SdpManagerService;->mTimaHelper:Lcom/android/server/pm/TimaHelper;
     invoke-static {v4, v5}, Lcom/android/server/SdpManagerService;->access$3302(Lcom/android/server/SdpManagerService;Lcom/android/server/pm/TimaHelper;)Lcom/android/server/pm/TimaHelper;
 
-    .line 3487
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -355,7 +328,6 @@
     # setter for: Lcom/android/server/SdpManagerService;->mEPM:Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-static {v4, v5}, Lcom/android/server/SdpManagerService;->access$3402(Lcom/android/server/SdpManagerService;Lcom/sec/knox/container/util/EnterprisePartitionManager;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
-    .line 3488
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -405,7 +377,6 @@
     # setter for: Lcom/android/server/SdpManagerService;->mSecureFileSystemManager:Lcom/android/server/SdpManagerService$SecureFileSystemManager;
     invoke-static {v8, v1}, Lcom/android/server/SdpManagerService;->access$3502(Lcom/android/server/SdpManagerService;Lcom/android/server/SdpManagerService$SecureFileSystemManager;)Lcom/android/server/SdpManagerService$SecureFileSystemManager;
 
-    .line 3490
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -418,7 +389,6 @@
     # invokes: Lcom/android/server/SdpManagerService$SecureFileSystemManager;->mount()Z
     invoke-static {v4}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->access$3800(Lcom/android/server/SdpManagerService$SecureFileSystemManager;)Z
 
-    .line 3491
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -435,7 +405,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 3492
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -448,7 +417,6 @@
     # invokes: Lcom/android/server/SdpManagerService$SecureFileSystemManager;->systemReady()Z
     invoke-static {v4}, Lcom/android/server/SdpManagerService$SecureFileSystemManager;->access$4000(Lcom/android/server/SdpManagerService$SecureFileSystemManager;)Z
 
-    .line 3499
     :cond_3
     const/4 v12, 0x0
 
@@ -472,7 +440,6 @@
 
     if-ge v12, v0, :cond_4
 
-    .line 3500
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -488,7 +455,6 @@
 
     check-cast v1, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
-    .line 3501
     .restart local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     move-object/from16 v0, p0
 
@@ -501,30 +467,25 @@
     # invokes: Lcom/android/server/SdpManagerService;->bootInternal(I)I
     invoke-static {v4, v5}, Lcom/android/server/SdpManagerService;->access$4100(Lcom/android/server/SdpManagerService;I)I
 
-    .line 3499
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
-    .line 3506
     .end local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :cond_4
     new-instance v11, Landroid/content/IntentFilter;
 
     invoke-direct {v11}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 3508
     .local v11, "filter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v11, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3509
     const-string v4, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v11, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3510
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -542,31 +503,26 @@
 
     invoke-virtual {v4, v5, v11}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 3511
     const-string v4, "SdpManagerServiceHandler"
 
-    const-string/jumbo v5, "registered boradcast receiver for SDP.. "
+    const-string v5, "registered boradcast receiver for SDP.. "
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3513
     new-instance v11, Landroid/content/IntentFilter;
 
     .end local v11    # "filter":Landroid/content/IntentFilter;
     invoke-direct {v11}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 3514
     .restart local v11    # "filter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v11, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3515
-    const-string/jumbo v4, "package"
+    const-string v4, "package"
 
     invoke-virtual {v11, v4}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 3517
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -588,7 +544,6 @@
 
     invoke-virtual {v4, v5, v11, v6, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 3522
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -606,14 +561,12 @@
 
     if-nez v4, :cond_8
 
-    .line 3523
     const-string v4, "SdpManagerServiceHandler"
 
     const-string v5, "Creating default engine."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3525
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -627,11 +580,9 @@
 
     move-result-object v21
 
-    .line 3526
     .local v21, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v21, :cond_0
 
-    .line 3527
     invoke-interface/range {v21 .. v21}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v13
@@ -651,7 +602,6 @@
 
     check-cast v20, Landroid/content/pm/UserInfo;
 
-    .line 3528
     .local v20, "user":Landroid/content/pm/UserInfo;
     if-eqz v20, :cond_5
 
@@ -667,12 +617,10 @@
 
     if-nez v4, :cond_5
 
-    .line 3529
     move-object/from16 v0, v20
 
     iget v3, v0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 3530
     .local v3, "userId":I
     const-string v4, "SdpManagerServiceHandler"
 
@@ -696,12 +644,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3531
     invoke-static {v3}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->getAndroidDefaultAlias(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 3532
     .restart local v2    # "alias":Ljava/lang/String;
     new-instance v1, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
@@ -717,7 +663,6 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;-><init>(Ljava/lang/String;IIIIIZ)V
 
-    .line 3541
     .restart local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     const-string v4, "SdpManagerServiceHandler"
 
@@ -741,7 +686,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3542
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -755,7 +699,6 @@
 
     move-result-object v19
 
-    .line 3543
     .local v19, "rstToken":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -770,18 +713,16 @@
 
     move-result-object v9
 
-    .line 3544
     .local v9, "cmk":[B
     if-nez v9, :cond_6
 
-    .line 3545
     const-string v4, "SdpManagerServiceHandler"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "failed to create keys for "
+    const-string v6, "failed to create keys for "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -803,7 +744,6 @@
 
     goto/16 :goto_4
 
-    .line 3547
     :cond_6
     move-object/from16 v0, p0
 
@@ -816,7 +756,6 @@
 
     monitor-enter v22
 
-    .line 3549
     :try_start_2
     move-object/from16 v0, p0
 
@@ -839,7 +778,6 @@
 
     move-result v18
 
-    .line 3551
     .local v18, "ret":I
     move-object/from16 v0, p0
 
@@ -848,10 +786,8 @@
     # invokes: Lcom/android/server/SdpManagerService;->zeroOut([B)V
     invoke-static {v4, v9}, Lcom/android/server/SdpManagerService;->access$4500(Lcom/android/server/SdpManagerService;[B)V
 
-    .line 3552
     if-eqz v18, :cond_7
 
-    .line 3553
     const-string v4, "SdpManagerServiceHandler"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -876,14 +812,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3554
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
 
     invoke-virtual {v4, v1}, Lcom/android/server/SdpManagerService;->removeKeys(Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;)V
 
-    .line 3558
     :goto_5
     monitor-exit v22
 
@@ -899,7 +833,6 @@
 
     throw v4
 
-    .line 3556
     .restart local v18    # "ret":I
     :cond_7
     :try_start_3
@@ -929,7 +862,6 @@
 
     goto :goto_5
 
-    .line 3564
     .end local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     .end local v2    # "alias":Ljava/lang/String;
     .end local v3    # "userId":I
@@ -957,16 +889,13 @@
 
     check-cast v1, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
-    .line 3565
     .restart local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v1, :cond_0
 
-    .line 3566
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getUserId()I
 
     move-result v3
 
-    .line 3567
     .restart local v3    # "userId":I
     move-object/from16 v0, p0
 
@@ -981,18 +910,15 @@
 
     move-result v17
 
-    .line 3569
     .local v17, "quality":I
     if-nez v17, :cond_9
 
     const/4 v15, 0x1
 
-    .line 3572
     .local v15, "noCredential":Z
     :goto_6
     if-eqz v15, :cond_0
 
-    .line 3573
     const-string v4, "SdpManagerServiceHandler"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1015,7 +941,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3574
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/SdpManagerService$SdpHandler;->this$0:Lcom/android/server/SdpManagerService;
@@ -1029,11 +954,9 @@
 
     move-result v18
 
-    .line 3576
     .restart local v18    # "ret":I
     if-nez v18, :cond_a
 
-    .line 3577
     const-string v4, "SdpManagerServiceHandler"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1058,7 +981,6 @@
 
     goto/16 :goto_0
 
-    .line 3569
     .end local v15    # "noCredential":Z
     .end local v18    # "ret":I
     :cond_9
@@ -1066,7 +988,6 @@
 
     goto :goto_6
 
-    .line 3579
     .restart local v15    # "noCredential":Z
     .restart local v18    # "ret":I
     :cond_a
@@ -1106,7 +1027,6 @@
 
     goto/16 :goto_0
 
-    .line 3451
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

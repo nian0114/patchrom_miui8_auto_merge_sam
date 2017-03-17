@@ -42,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 1300
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$7;->this$0:Landroid/speech/tts/TextToSpeech;
 
     iput-wide p2, p0, Landroid/speech/tts/TextToSpeech$7;->val$durationInMs:J
@@ -68,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 1303
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$7;->this$0:Landroid/speech/tts/TextToSpeech;
 
     # invokes: Landroid/speech/tts/TextToSpeech;->getCallerIdentity()Landroid/os/IBinder;
@@ -105,7 +103,6 @@
     .end annotation
 
     .prologue
-    .line 1300
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$7;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/lang/Integer;
 
     move-result-object v0

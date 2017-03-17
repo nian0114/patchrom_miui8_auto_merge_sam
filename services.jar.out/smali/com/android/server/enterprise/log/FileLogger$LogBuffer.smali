@@ -38,10 +38,8 @@
     .locals 2
 
     .prologue
-    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x14
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Lcom/android/server/enterprise/log/FileLogger$1;
 
     .prologue
-    .line 125
     invoke-direct {p0}, Lcom/android/server/enterprise/log/FileLogger$LogBuffer;-><init>()V
 
     return-void

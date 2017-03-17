@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1711
     iput-object p1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$3;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1714
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1715
     .local v0, "action":Ljava/lang/String;
     const-string v2, "EnterpriseSSOPolicyService"
 
@@ -52,7 +49,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "inside mBReciever onReceive : "
+    const-string v4, "inside mBReciever onReceive : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -68,7 +65,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1716
     const-string v2, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,7 +73,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1717
     const-string v2, "android.intent.extra.user_handle"
 
     const/4 v3, -0x1
@@ -86,7 +81,6 @@
 
     move-result v1
 
-    .line 1718
     .local v1, "userHandle":I
     const-string v2, "EnterpriseSSOPolicyService"
 
@@ -110,7 +104,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1719
     # getter for: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$600()Ljava/util/Map;
 
@@ -144,7 +137,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1720
     :cond_0
     const-string v2, "EnterpriseSSOPolicyService"
 
@@ -173,19 +165,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1721
     iget-object v2, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$3;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     # invokes: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->removeClintEntry(I)V
     invoke-static {v2, v1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$900(Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;I)V
 
-    .line 1722
     iget-object v2, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$3;->this$0:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     # invokes: Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
     invoke-static {v2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->access$800(Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;)V
 
-    .line 1724
     .end local v1    # "userHandle":I
     :cond_1
     return-void

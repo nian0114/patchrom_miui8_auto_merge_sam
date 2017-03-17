@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1011
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$18;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,13 +37,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1019
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$18;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     # invokes: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;->setMainPanelAsContent()V
     invoke-static {v0}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;->access$600(Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;)V
 
-    .line 1020
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1014
     const/4 v0, 0x1
 
     .local v0, "i":I
@@ -73,7 +69,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1015
     iget-object v1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$18;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;->mMainPanel:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
@@ -91,12 +86,10 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1014
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1017
     :cond_0
     return-void
 .end method

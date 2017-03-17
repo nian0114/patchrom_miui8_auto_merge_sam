@@ -25,17 +25,14 @@
     .locals 1
 
     .prologue
-    .line 1344
     iput-object p1, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 1342
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->isRunning:Z
 
-    .line 1346
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 1363
     iget-boolean v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->isRunning:Z
 
     return v0
@@ -58,7 +54,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1369
     const-string v4, "WifiApDatabaseHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -92,10 +87,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1370
     const/4 v0, 0x0
 
-    .line 1371
     .local v0, "flag":Z
     iget-object v4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
@@ -110,7 +103,6 @@
 
     if-lez v4, :cond_3
 
-    .line 1372
     iget-object v4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
     # getter for: Landroid/net/wifi/WifiApDatabaseHelper;->mWifiApList:Ljava/util/List;
@@ -120,7 +112,6 @@
 
     monitor-enter v5
 
-    .line 1373
     :try_start_0
     iget-object v4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
@@ -133,7 +124,6 @@
 
     move-result-object v1
 
-    .line 1374
     .local v1, "it":Ljava/util/Iterator;
     :cond_0
     :goto_0
@@ -143,14 +133,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 1375
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1376
     .local v2, "mac":Ljava/lang/String;
     iget-object v4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
@@ -160,28 +148,23 @@
 
     if-nez v4, :cond_0
 
-    .line 1377
     const/4 v0, 0x1
 
-    .line 1378
     iget-object v4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
     invoke-virtual {v4, v2}, Landroid/net/wifi/WifiApDatabaseHelper;->getStaUsageData(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1379
     .local v3, "usage":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 1380
     iget-object v4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->this$0:Landroid/net/wifi/WifiApDatabaseHelper;
 
     invoke-virtual {v4, v2, v3}, Landroid/net/wifi/WifiApDatabaseHelper;->modifyUsageData(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1383
     .end local v1    # "it":Ljava/util/Iterator;
     .end local v2    # "mac":Ljava/lang/String;
     .end local v3    # "usage":Ljava/lang/String;
@@ -201,21 +184,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1384
     if-eqz v0, :cond_2
 
-    .line 1385
     const-wide/16 v4, 0x3e8
 
     invoke-virtual {p0, v7, v4, v5}, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1389
     .end local v1    # "it":Ljava/util/Iterator;
     :cond_2
     :goto_1
     return-void
 
-    .line 1387
     :cond_3
     iput-boolean v7, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->isRunning:Z
 
@@ -228,7 +207,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1357
     const-string v0, "WifiApDatabaseHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -253,13 +231,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1358
     iput-boolean v3, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->isRunning:Z
 
-    .line 1359
     invoke-virtual {p0, v3}, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->removeMessages(I)V
 
-    .line 1360
     return-void
 .end method
 
@@ -269,7 +244,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1349
     const-string v0, "WifiApDatabaseHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -294,22 +268,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1350
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->isRunning:Z
 
-    .line 1351
     invoke-virtual {p0, v3}, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->hasMessages(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1352
     invoke-virtual {p0, v3}, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataHandler;->sendEmptyMessage(I)Z
 
-    .line 1354
     :cond_0
     return-void
 .end method

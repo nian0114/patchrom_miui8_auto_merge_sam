@@ -35,21 +35,16 @@
     .param p4, "f"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 344
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteRunnable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 345
     iput p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteRunnable;->mNetworkType:I
 
-    .line 346
     iput-object p3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteRunnable;->mSuccess:Ljava/lang/Runnable;
 
-    .line 347
     iput-object p4, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteRunnable;->mFailure:Ljava/lang/Runnable;
 
-    .line 348
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .locals 8
 
     .prologue
-    .line 352
     new-instance v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;
 
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteRunnable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -108,6 +102,5 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 355
     return-void
 .end method

@@ -173,7 +173,7 @@
 
     const/4 v2, 0x4
 
-    const-string/jumbo v3, "xml.WrongContent"
+    const-string v3, "xml.WrongContent"
 
     invoke-static {v3, v1}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -505,7 +505,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -516,7 +516,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -527,7 +527,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -538,7 +538,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/signature/XMLSignatureException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -600,7 +600,7 @@
 
     new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string/jumbo v2, "signature.Verification.IndexOutOfBounds"
+    const-string v2, "signature.Verification.IndexOutOfBounds"
 
     invoke-static {v2, v0}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -610,7 +610,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v0, v2, v1}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -638,7 +638,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -808,7 +808,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v6, "verify "
+    const-string v6, "verify "
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -889,14 +889,14 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    const-string/jumbo v1, "not"
+    const-string v1, "not"
 
     goto :goto_0
 
@@ -1061,7 +1061,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v11, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v11, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {v2, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1117,7 +1117,7 @@
     :try_start_3
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/signature/MissingResourceFailureException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v8}, Lcom/sun/org/apache/xml/internal/security/signature/MissingResourceFailureException;-><init>(Ljava/lang/String;Lcom/sun/org/apache/xml/internal/security/signature/Reference;)V
 
@@ -1134,7 +1134,7 @@
     :try_start_4
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v3, "empty"
+    const-string v3, "empty"
 
     invoke-direct {v2, v3, v1}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1155,7 +1155,7 @@
 
     new-instance v3, Lcom/sun/org/apache/xml/internal/security/signature/MissingResourceFailureException;
 
-    const-string/jumbo v4, "signature.Verification.Reference.NoInput"
+    const-string v4, "signature.Verification.Reference.NoInput"
 
     invoke-direct {v3, v4, v2, v1, v8}, Lcom/sun/org/apache/xml/internal/security/signature/MissingResourceFailureException;-><init>(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Exception;Lcom/sun/org/apache/xml/internal/security/signature/Reference;)V
 
@@ -1234,7 +1234,7 @@
     :try_start_6
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v3, "empty"
+    const-string v3, "empty"
 
     invoke-direct {v2, v3, v1}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1245,7 +1245,7 @@
 
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;
 
-    const-string/jumbo v3, "empty"
+    const-string v3, "empty"
 
     invoke-direct {v2, v3, v1}, Lcom/sun/org/apache/xml/internal/security/signature/ReferenceNotInitializedException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

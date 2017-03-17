@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 7686
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,10 +35,9 @@
     .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 7689
     if-eqz p2, :cond_0
 
-    const-string/jumbo v0, "traces"
+    const-string v0, "traces"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -47,10 +45,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 7690
     const/4 v0, 0x1
 
-    .line 7692
     :goto_0
     return v0
 

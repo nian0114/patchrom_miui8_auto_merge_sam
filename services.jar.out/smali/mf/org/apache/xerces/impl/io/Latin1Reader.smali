@@ -19,12 +19,10 @@
     .param p1, "inputStream"    # Ljava/io/InputStream;
 
     .prologue
-    .line 64
     const/16 v0, 0x800
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/impl/io/Latin1Reader;-><init>(Ljava/io/InputStream;I)V
 
-    .line 65
     return-void
 .end method
 
@@ -34,12 +32,10 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 75
     new-array v0, p2, [B
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/impl/io/Latin1Reader;-><init>(Ljava/io/InputStream;[B)V
 
-    .line 76
     return-void
 .end method
 
@@ -49,16 +45,12 @@
     .param p2, "buffer"    # [B
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
-    .line 85
     iput-object p1, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
-    .line 86
     iput-object p2, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fBuffer:[B
 
-    .line 87
     return-void
 .end method
 
@@ -73,12 +65,10 @@
     .end annotation
 
     .prologue
-    .line 211
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 212
     return-void
 .end method
 
@@ -92,12 +82,10 @@
     .end annotation
 
     .prologue
-    .line 183
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
-    .line 184
     return-void
 .end method
 
@@ -105,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
@@ -124,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 107
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -146,19 +132,16 @@
     .end annotation
 
     .prologue
-    .line 125
     iget-object v2, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fBuffer:[B
 
     array-length v2, v2
 
     if-le p3, v2, :cond_0
 
-    .line 126
     iget-object v2, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fBuffer:[B
 
     array-length p3, v2
 
-    .line 128
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
@@ -170,7 +153,6 @@
 
     move-result v0
 
-    .line 129
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -178,10 +160,8 @@
     :goto_0
     if-lt v1, v0, :cond_1
 
-    .line 132
     return v0
 
-    .line 130
     :cond_1
     add-int v2, p2, v1
 
@@ -195,7 +175,6 @@
 
     aput-char v3, p1, v2
 
-    .line 129
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -210,7 +189,6 @@
     .end annotation
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
     return v0
@@ -225,12 +203,10 @@
     .end annotation
 
     .prologue
-    .line 200
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
 
-    .line 201
     return-void
 .end method
 
@@ -244,7 +220,6 @@
     .end annotation
 
     .prologue
-    .line 146
     iget-object v0, p0, Lmf/org/apache/xerces/impl/io/Latin1Reader;->fInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J

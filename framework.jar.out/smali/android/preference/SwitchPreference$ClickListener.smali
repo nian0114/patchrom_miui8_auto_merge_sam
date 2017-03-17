@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Landroid/preference/SwitchPreference$1;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Landroid/preference/SwitchPreference$ClickListener;-><init>()V
 
     return-void
@@ -46,6 +44,5 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 67
     return-void
 .end method

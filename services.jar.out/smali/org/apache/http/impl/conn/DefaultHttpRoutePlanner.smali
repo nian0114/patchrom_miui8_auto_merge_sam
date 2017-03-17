@@ -21,7 +21,6 @@
     .param p1, "schreg"    # Lorg/apache/http/conn/scheme/SchemeRegistry;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -47,7 +46,6 @@
     .end annotation
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

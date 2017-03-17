@@ -27,7 +27,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 16
     iput-object p1, p0, Lorg/apache/http/impl/conn/SingleClientConnManager$ConnAdapter;->this$0:Lorg/apache/http/impl/conn/SingleClientConnManager;
 
     move-object v0, v1

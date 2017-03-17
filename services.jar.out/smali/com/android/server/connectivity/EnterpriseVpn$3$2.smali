@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 516
     iput-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$3$2;->this$1:Lcom/android/server/connectivity/EnterpriseVpn$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +39,13 @@
     .locals 4
 
     .prologue
-    .line 519
     :try_start_0
     const-string v1, "EnterpriseVpn"
 
-    const-string/jumbo v2, "disconnect system vpn is getting called from enterprisevpn"
+    const-string v2, "disconnect system vpn is getting called from enterprisevpn"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 520
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$3$2;->this$1:Lcom/android/server/connectivity/EnterpriseVpn$3;
 
     iget-object v1, v1, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
@@ -69,7 +66,6 @@
 
     invoke-interface {v1, v2}, Landroid/net/IConnectivityManager;->disconnectSystemVpn(I)V
 
-    .line 521
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$3$2;->this$1:Lcom/android/server/connectivity/EnterpriseVpn$3;
 
     iget-object v1, v1, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
@@ -92,15 +88,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 525
     :goto_0
     return-void
 
-    .line 522
     :catch_0
     move-exception v0
 
-    .line 523
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "EnterpriseVpn"
 

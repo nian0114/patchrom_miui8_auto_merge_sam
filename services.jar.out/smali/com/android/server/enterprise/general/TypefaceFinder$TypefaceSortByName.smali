@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 210
     iput-object p1, p0, Lcom/android/server/enterprise/general/TypefaceFinder$TypefaceSortByName;->this$0:Lcom/android/server/enterprise/general/TypefaceFinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "o2"    # Lcom/android/server/enterprise/general/Typeface;
 
     .prologue
-    .line 216
     invoke-virtual {p1}, Lcom/android/server/enterprise/general/Typeface;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -74,7 +72,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 210
     check-cast p1, Lcom/android/server/enterprise/general/Typeface;
 
     .end local p1    # "x0":Ljava/lang/Object;

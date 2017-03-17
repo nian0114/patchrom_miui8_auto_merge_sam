@@ -35,15 +35,12 @@
     .param p3, "version"    # I
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     new-instance v6, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator;
 
     invoke-direct {v6, p1}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator;-><init>(Landroid/content/Context;)V
 
-    .line 69
     .local v6, "sensorHubParserConcreteCreator":Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator;
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -51,7 +48,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 70
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v2, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;
@@ -64,7 +60,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 72
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v2, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;
@@ -77,12 +72,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 75
     new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    .line 76
     .local v1, "creator":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -94,7 +87,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 77
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     const/4 v2, 0x1
@@ -105,7 +97,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 78
     iget-object v7, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;
@@ -124,14 +115,12 @@
 
     invoke-virtual {v7, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 81
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 82
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaPowerManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaPowerManager;
@@ -140,7 +129,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 83
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
@@ -149,7 +137,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 84
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
@@ -158,7 +145,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 85
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;
@@ -167,7 +153,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 86
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
@@ -176,7 +161,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 88
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;
@@ -185,7 +169,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 89
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaTimeChangeManager;
@@ -194,7 +177,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 90
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-static {p2}, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->getInstance(Landroid/os/Looper;)Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
@@ -203,10 +185,8 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 95
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/manager/ContextManager;->initializeUtil(Landroid/content/Context;)V
 
-    .line 97
     return-void
 .end method
 
@@ -215,7 +195,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 313
     iget-object v2, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mUtilManager:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -236,13 +215,11 @@
 
     check-cast v0, Lcom/samsung/android/contextaware/utilbundle/IUtilManager;
 
-    .line 314
     .local v0, "i":Lcom/samsung/android/contextaware/utilbundle/IUtilManager;
     invoke-interface {v0, p1}, Lcom/samsung/android/contextaware/utilbundle/IUtilManager;->initializeManager(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 316
     .end local v0    # "i":Lcom/samsung/android/contextaware/utilbundle/IUtilManager;
     :cond_0
     return-void
@@ -257,23 +234,19 @@
     .param p3, "observer"    # Lcom/samsung/android/contextaware/manager/IContextObserver;
 
     .prologue
-    .line 174
     invoke-virtual {p0, p2}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 175
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz v0, :cond_0
 
-    .line 176
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
 
     invoke-virtual {v1, p3}, Lcom/samsung/android/contextaware/manager/ContextProvider;->registerObserver(Lcom/samsung/android/contextaware/manager/IContextObserver;)V
 
-    .line 177
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
@@ -288,14 +261,12 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/manager/ContextProvider;->registerCmdProcessResultObserver(Lcom/samsung/android/contextaware/manager/fault/ICmdProcessResultObserver;)V
 
-    .line 179
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/contextaware/manager/ContextProvider;->getContextInfo(Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;)V
 
-    .line 181
     :cond_0
     return-void
 .end method
@@ -305,10 +276,8 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 275
     const/4 v2, 0x0
 
-    .line 277
     .local v2, "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
     iget-object v3, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -316,7 +285,6 @@
 
     move-result-object v1
 
-    .line 278
     .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -325,14 +293,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 279
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
 
-    .line 280
     .local v0, "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     if-eqz v0, :cond_0
 
@@ -342,12 +308,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 281
     invoke-virtual {v0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->create(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v2
 
-    .line 286
     .end local v0    # "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     :cond_1
     return-object v2
@@ -366,7 +330,6 @@
     .end annotation
 
     .prologue
-    .line 324
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -377,23 +340,19 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 261
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 262
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz v0, :cond_0
 
-    .line 263
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/manager/ContextProvider;->notifyInitContext()V
 
-    .line 265
     :cond_0
     return-void
 .end method
@@ -403,14 +362,12 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 296
     iget-object v2, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 297
     .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -419,14 +376,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 298
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
 
-    .line 299
     .local v0, "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     if-eqz v0, :cond_0
 
@@ -436,10 +391,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 300
     invoke-virtual {v0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->removeContextObj(Ljava/lang/String;)V
 
-    .line 304
     .end local v0    # "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     :cond_1
     return-void
@@ -450,16 +403,13 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 228
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 229
     .local v0, "component":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-nez v0, :cond_0
 
-    .line 230
     sget-object v2, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_SERVICE_NOT_RUNNING:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getCode()I
@@ -472,21 +422,17 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 252
     :goto_0
     return-void
 
-    .line 236
     :cond_0
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
 
-    .line 237
     .local v1, "provider":Lcom/samsung/android/contextaware/manager/ContextProvider;
     if-nez v1, :cond_1
 
-    .line 238
     sget-object v2, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_SERVICE_NOT_RUNNING:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getCode()I
@@ -501,7 +447,6 @@
 
     goto :goto_0
 
-    .line 244
     :cond_1
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/manager/ContextProvider;->isRunning()Z
 
@@ -509,7 +454,6 @@
 
     if-nez v2, :cond_2
 
-    .line 245
     sget-object v2, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_SERVICE_NOT_RUNNING:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getCode()I
@@ -524,7 +468,6 @@
 
     goto :goto_0
 
-    .line 251
     :cond_2
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/manager/ContextProvider;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
@@ -550,17 +493,14 @@
     .end annotation
 
     .prologue
-    .line 214
     .local p3, "value":Ljava/lang/Object;, "TE;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 215
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz v0, :cond_0
 
-    .line 216
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
@@ -569,7 +509,6 @@
 
     move-result v1
 
-    .line 218
     :goto_0
     return v1
 
@@ -584,14 +523,12 @@
     .param p1, "version"    # I
 
     .prologue
-    .line 335
     iget-object v1, p0, Lcom/samsung/android/contextaware/manager/ContextManager;->mCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 336
     .local v0, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -600,7 +537,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 337
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -611,7 +547,6 @@
 
     goto :goto_0
 
-    .line 339
     :cond_0
     return-void
 .end method
@@ -624,23 +559,19 @@
     .param p4, "operation"    # I
 
     .prologue
-    .line 113
     invoke-virtual {p0, p2}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 114
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz v0, :cond_0
 
-    .line 115
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
 
     invoke-virtual {v1, p3}, Lcom/samsung/android/contextaware/manager/ContextProvider;->registerObserver(Lcom/samsung/android/contextaware/manager/IContextObserver;)V
 
-    .line 116
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
@@ -655,10 +586,8 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/manager/ContextProvider;->registerCmdProcessResultObserver(Lcom/samsung/android/contextaware/manager/fault/ICmdProcessResultObserver;)V
 
-    .line 118
     invoke-virtual {v0, p1, p4}, Lcom/samsung/android/contextaware/manager/ContextComponent;->start(Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;I)V
 
-    .line 120
     :cond_0
     return-void
 .end method
@@ -672,19 +601,15 @@
     .param p5, "operation"    # I
 
     .prologue
-    .line 139
     invoke-virtual {p0, p2}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v1
 
-    .line 140
     .local v1, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz v1, :cond_0
 
-    .line 141
     invoke-virtual {v1, p1, p5}, Lcom/samsung/android/contextaware/manager/ContextComponent;->stop(Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;I)V
 
-    .line 142
     invoke-static {}, Lcom/samsung/android/contextaware/ContextList;->getInstance()Lcom/samsung/android/contextaware/ContextList;
 
     move-result-object v2
@@ -693,7 +618,6 @@
 
     move-result v0
 
-    .line 144
     .local v0, "key":I
     invoke-virtual {p1}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -729,31 +653,26 @@
 
     if-lez v2, :cond_1
 
-    .line 159
     .end local v0    # "key":I
     :cond_0
     :goto_0
     return-void
 
-    .line 148
     .restart local v0    # "key":I
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 149
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v2
 
     invoke-virtual {v2, p4}, Lcom/samsung/android/contextaware/manager/ContextProvider;->unregisterCmdProcessResultObserver(Lcom/samsung/android/contextaware/manager/fault/ICmdProcessResultObserver;)V
 
-    .line 157
     :goto_1
     invoke-virtual {p0, p2}, Lcom/samsung/android/contextaware/manager/ContextManager;->removeContextProviderObj(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 152
     :cond_2
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
@@ -778,16 +697,13 @@
     .param p2, "observer"    # Lcom/samsung/android/contextaware/manager/IContextObserver;
 
     .prologue
-    .line 193
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/manager/ContextManager;->getContextProviderObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 194
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz v0, :cond_0
 
-    .line 196
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;
 
     move-result-object v1
@@ -802,7 +718,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/manager/ContextProvider;->unregisterCmdProcessResultObserver(Lcom/samsung/android/contextaware/manager/fault/ICmdProcessResultObserver;)V
 
-    .line 199
     :cond_0
     return-void
 .end method

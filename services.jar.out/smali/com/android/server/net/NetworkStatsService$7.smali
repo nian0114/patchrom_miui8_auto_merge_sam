@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 910
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,8 +38,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 913
-    const-string/jumbo v1, "from_quickboot"
+    const-string v1, "from_quickboot"
 
     const/4 v2, 0x0
 
@@ -48,15 +46,12 @@
 
     move-result v0
 
-    .line 914
     .local v0, "fromQuickBoot":Z
     if-eqz v0, :cond_0
 
-    .line 920
     :goto_0
     return-void
 
-    .line 917
     :cond_0
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -67,14 +62,12 @@
 
     monitor-enter v2
 
-    .line 918
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # invokes: Lcom/android/server/net/NetworkStatsService;->shutdownLocked()V
     invoke-static {v1}, Lcom/android/server/net/NetworkStatsService;->access$1800(Lcom/android/server/net/NetworkStatsService;)V
 
-    .line 919
     monitor-exit v2
 
     goto :goto_0

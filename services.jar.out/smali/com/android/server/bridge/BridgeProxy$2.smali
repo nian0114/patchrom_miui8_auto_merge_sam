@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 396
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$2;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     iput p2, p0, Lcom/android/server/bridge/BridgeProxy$2;->val$initCount:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 399
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$2;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$2;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -57,7 +55,6 @@
     # setter for: Lcom/android/server/bridge/BridgeProxy;->mBridgeContext:Landroid/content/Context;
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy;->access$1202(Lcom/android/server/bridge/BridgeProxy;Landroid/content/Context;)Landroid/content/Context;
 
-    .line 400
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$2;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     iget v1, p0, Lcom/android/server/bridge/BridgeProxy$2;->val$initCount:I
@@ -67,6 +64,5 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->initBadgeDataAndObserver(I)V
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy;->access$1400(Lcom/android/server/bridge/BridgeProxy;I)V
 
-    .line 401
     return-void
 .end method

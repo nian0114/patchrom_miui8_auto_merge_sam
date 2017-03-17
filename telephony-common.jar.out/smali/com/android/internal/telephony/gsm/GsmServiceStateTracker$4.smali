@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 943
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 946
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 953
     :goto_0
     return-void
 
-    .line 948
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 946
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -15,15 +15,12 @@
     .locals 1
 
     .prologue
-    .line 36
     new-instance v0, Lmf/org/apache/xerces/jaxp/validation/DraconianErrorHandler;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/jaxp/validation/DraconianErrorHandler;-><init>()V
 
-    .line 35
     sput-object v0, Lmf/org/apache/xerces/jaxp/validation/DraconianErrorHandler;->ERROR_HANDLER_INSTANCE:Lmf/org/apache/xerces/jaxp/validation/DraconianErrorHandler;
 
-    .line 36
     return-void
 .end method
 
@@ -31,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lmf/org/apache/xerces/jaxp/validation/DraconianErrorHandler;->ERROR_HANDLER_INSTANCE:Lmf/org/apache/xerces/jaxp/validation/DraconianErrorHandler;
 
     return-object v0
@@ -59,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 52
     throw p1
 .end method
 
@@ -73,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 57
     throw p1
 .end method
 
@@ -87,6 +80,5 @@
     .end annotation
 
     .prologue
-    .line 48
     return-void
 .end method

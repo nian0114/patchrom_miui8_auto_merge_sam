@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 23798
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$36;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$36;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
@@ -61,7 +60,6 @@
 
     const-wide/16 v2, 0x0
 
-    .line 23803
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$36;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
@@ -78,14 +76,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 23820
     return-void
 
-    .line 23806
     :catch_0
     move-exception v0
 
-    .line 23809
     :cond_0
     iget-wide v0, p0, Lcom/android/server/pm/PackageManagerService$36;->val$startFreeBytes:J
 
@@ -97,7 +92,6 @@
 
     sub-long v6, v0, v10
 
-    .line 23811
     .local v6, "deltaFreeBytes":J
     iget-wide v0, p0, Lcom/android/server/pm/PackageManagerService$36;->val$sizeBytes:J
 
@@ -105,7 +99,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 23812
     mul-long v0, v6, v4
 
     iget-wide v10, p0, Lcom/android/server/pm/PackageManagerService$36;->val$sizeBytes:J
@@ -120,7 +113,6 @@
 
     add-int/lit8 v8, v0, 0xa
 
-    .line 23818
     .local v8, "progress":I
     :goto_1
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$36;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -137,7 +129,6 @@
 
     goto :goto_0
 
-    .line 23816
     .end local v8    # "progress":I
     :cond_1
     const/16 v8, 0x64

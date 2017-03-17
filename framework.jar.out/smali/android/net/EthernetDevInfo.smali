@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 161
     new-instance v0, Landroid/net/EthernetDevInfo$1;
 
     invoke-direct {v0}, Landroid/net/EthernetDevInfo$1;-><init>()V
@@ -60,30 +59,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object v0, p0, Landroid/net/EthernetDevInfo;->dev_name:Ljava/lang/String;
 
-    .line 46
     iput-object v0, p0, Landroid/net/EthernetDevInfo;->ipaddr:Ljava/lang/String;
 
-    .line 47
     iput-object v0, p0, Landroid/net/EthernetDevInfo;->dns:Ljava/lang/String;
 
-    .line 48
     iput-object v0, p0, Landroid/net/EthernetDevInfo;->route:Ljava/lang/String;
 
-    .line 49
     iput-object v0, p0, Landroid/net/EthernetDevInfo;->netmask:Ljava/lang/String;
 
-    .line 50
     const-string v0, "dhcp"
 
     iput-object v0, p0, Landroid/net/EthernetDevInfo;->mode:Ljava/lang/String;
 
-    .line 51
     return-void
 .end method
 
@@ -93,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 146
     const/4 v0, 0x0
 
     return v0
@@ -103,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->mode:Ljava/lang/String;
 
     return-object v0
@@ -113,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->dns:Ljava/lang/String;
 
     return-object v0
@@ -123,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->dev_name:Ljava/lang/String;
 
     return-object v0
@@ -133,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->ipaddr:Ljava/lang/String;
 
     return-object v0
@@ -143,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->netmask:Ljava/lang/String;
 
     return-object v0
@@ -153,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->route:Ljava/lang/String;
 
     return-object v0
@@ -164,7 +148,6 @@
     .param p1, "mode"    # Ljava/lang/String;
 
     .prologue
-    .line 127
     const-string v0, "dhcp"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -173,7 +156,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "manual"
+    const-string v0, "manual"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -181,14 +164,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
     :cond_0
     iput-object p1, p0, Landroid/net/EthernetDevInfo;->mode:Ljava/lang/String;
 
-    .line 129
     const/4 v0, 0x1
 
-    .line 131
     :goto_0
     return v0
 
@@ -203,10 +183,8 @@
     .param p1, "dns"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     iput-object p1, p0, Landroid/net/EthernetDevInfo;->dns:Ljava/lang/String;
 
-    .line 114
     return-void
 .end method
 
@@ -215,10 +193,8 @@
     .param p1, "ifname"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     iput-object p1, p0, Landroid/net/EthernetDevInfo;->dev_name:Ljava/lang/String;
 
-    .line 58
     return-void
 .end method
 
@@ -227,10 +203,8 @@
     .param p1, "ip"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     iput-object p1, p0, Landroid/net/EthernetDevInfo;->ipaddr:Ljava/lang/String;
 
-    .line 72
     return-void
 .end method
 
@@ -239,10 +213,8 @@
     .param p1, "ip"    # Ljava/lang/String;
 
     .prologue
-    .line 85
     iput-object p1, p0, Landroid/net/EthernetDevInfo;->netmask:Ljava/lang/String;
 
-    .line 86
     return-void
 .end method
 
@@ -251,10 +223,8 @@
     .param p1, "route"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     iput-object p1, p0, Landroid/net/EthernetDevInfo;->route:Ljava/lang/String;
 
-    .line 100
     return-void
 .end method
 
@@ -264,36 +234,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 153
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->dev_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 154
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->ipaddr:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 155
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->netmask:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 156
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->route:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 157
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->dns:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 158
     iget-object v0, p0, Landroid/net/EthernetDevInfo;->mode:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 159
     return-void
 .end method

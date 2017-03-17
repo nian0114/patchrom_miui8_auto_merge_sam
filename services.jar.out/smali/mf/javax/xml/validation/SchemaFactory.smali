@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 133
     new-instance v0, Lmf/javax/xml/validation/SecuritySupport;
 
     invoke-direct {v0}, Lmf/javax/xml/validation/SecuritySupport;-><init>()V
@@ -26,10 +25,8 @@
     .locals 0
 
     .prologue
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     return-void
 .end method
 
@@ -38,25 +35,21 @@
     .param p0, "schemaLanguage"    # Ljava/lang/String;
 
     .prologue
-    .line 214
     sget-object v2, Lmf/javax/xml/validation/SchemaFactory;->ss:Lmf/javax/xml/validation/SecuritySupport;
 
     invoke-virtual {v2}, Lmf/javax/xml/validation/SecuritySupport;->getContextClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 216
     .local v0, "cl":Ljava/lang/ClassLoader;
     if-nez v0, :cond_0
 
-    .line 219
     const-class v2, Lmf/javax/xml/validation/SchemaFactory;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 222
     :cond_0
     new-instance v2, Lmf/javax/xml/validation/SchemaFactoryFinder;
 
@@ -66,43 +59,35 @@
 
     move-result-object v1
 
-    .line 223
     .local v1, "f":Lmf/javax/xml/validation/SchemaFactory;
     if-nez v1, :cond_1
 
-    .line 224
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    .line 225
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "No SchemaFactory that implements the schema language specified by: "
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 226
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 227
     const-string v4, " could be loaded"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 225
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 224
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 229
     :cond_1
     return-object v1
 .end method
@@ -114,21 +99,17 @@
     .param p2, "classLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 275
     move-object v0, p2
 
-    .line 277
     .local v0, "cl":Ljava/lang/ClassLoader;
     if-nez v0, :cond_0
 
-    .line 278
     sget-object v2, Lmf/javax/xml/validation/SchemaFactory;->ss:Lmf/javax/xml/validation/SecuritySupport;
 
     invoke-virtual {v2}, Lmf/javax/xml/validation/SecuritySupport;->getContextClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 281
     :cond_0
     new-instance v2, Lmf/javax/xml/validation/SchemaFactoryFinder;
 
@@ -138,14 +119,11 @@
 
     move-result-object v1
 
-    .line 282
     .local v1, "f":Lmf/javax/xml/validation/SchemaFactory;
     if-nez v1, :cond_1
 
-    .line 283
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    .line 284
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Factory "
@@ -156,7 +134,6 @@
 
     move-result-object v3
 
-    .line 285
     const-string v4, " could not be loaded to implement the schema language specified by: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -167,17 +144,14 @@
 
     move-result-object v3
 
-    .line 284
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 283
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 288
     :cond_1
     invoke-virtual {v1, p0}, Lmf/javax/xml/validation/SchemaFactory;->isSchemaLanguageSupported(Ljava/lang/String;)Z
 
@@ -185,14 +159,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 289
     return-object v1
 
-    .line 291
     :cond_2
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    .line 292
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Factory "
@@ -211,7 +182,6 @@
 
     move-result-object v3
 
-    .line 293
     const-string v4, " does not implement the schema language specified by: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -222,12 +192,10 @@
 
     move-result-object v3
 
-    .line 292
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 291
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
@@ -249,19 +217,16 @@
     .end annotation
 
     .prologue
-    .line 338
     if-nez p1, :cond_0
 
-    .line 339
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "the name parameter is null"
+    const-string v1, "the name parameter is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 341
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 
@@ -281,19 +246,16 @@
     .end annotation
 
     .prologue
-    .line 460
     if-nez p1, :cond_0
 
-    .line 461
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "the name parameter is null"
+    const-string v1, "the name parameter is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 463
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 
@@ -326,7 +288,6 @@
     .end annotation
 
     .prologue
-    .line 627
     new-instance v0, Lmf/javax/xml/transform/stream/StreamSource;
 
     invoke-direct {v0, p1}, Lmf/javax/xml/transform/stream/StreamSource;-><init>(Ljava/io/File;)V
@@ -348,7 +309,6 @@
     .end annotation
 
     .prologue
-    .line 643
     new-instance v0, Lmf/javax/xml/transform/stream/StreamSource;
 
     invoke-virtual {p1}, Ljava/net/URL;->toExternalForm()Ljava/lang/String;
@@ -374,7 +334,6 @@
     .end annotation
 
     .prologue
-    .line 611
     const/4 v0, 0x1
 
     new-array v0, v0, [Lmf/javax/xml/transform/Source;
@@ -413,19 +372,16 @@
     .end annotation
 
     .prologue
-    .line 396
     if-nez p1, :cond_0
 
-    .line 397
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "the name parameter is null"
+    const-string v1, "the name parameter is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 399
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 
@@ -446,19 +402,16 @@
     .end annotation
 
     .prologue
-    .line 425
     if-nez p1, :cond_0
 
-    .line 426
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "the name parameter is null"
+    const-string v1, "the name parameter is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 428
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 

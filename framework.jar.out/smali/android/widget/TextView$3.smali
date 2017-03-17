@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6572
     iput-object p1, p0, Landroid/widget/TextView$3;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "anim"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 6575
     iget-object v0, p0, Landroid/widget/TextView$3;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
@@ -51,11 +49,9 @@
     # setter for: Landroid/widget/TextView;->mDrawStrikeAnimationValue:F
     invoke-static {v0, v1}, Landroid/widget/TextView;->access$502(Landroid/widget/TextView;F)F
 
-    .line 6576
     iget-object v0, p0, Landroid/widget/TextView$3;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->invalidate()V
 
-    .line 6577
     return-void
 .end method

@@ -28,31 +28,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    .line 40
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
-    .line 41
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
-    .line 42
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
-    .line 43
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
-    .line 44
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
 
-    .line 45
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->result:Ljavax/xml/transform/stream/StreamResult;
 
-    .line 46
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
     return-void
@@ -66,10 +57,8 @@
     .param p2, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;
 
     .prologue
-    .line 538
     const/4 v0, 0x0
 
-    .line 539
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -81,10 +70,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 540
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "ClientID"
 
@@ -92,14 +80,12 @@
 
     move-result-object v0
 
-    .line 541
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 542
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -116,10 +102,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 543
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 545
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -131,10 +115,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 546
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "AuthenticationCodeMAC"
 
@@ -142,20 +125,16 @@
 
     move-result-object v0
 
-    .line 547
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 548
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 549
     move-object p1, v0
 
-    .line 550
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     move-result-object v1
@@ -170,10 +149,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 551
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "IterationCount"
 
@@ -181,14 +159,12 @@
 
     move-result-object v0
 
-    .line 552
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 553
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -213,10 +189,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 554
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 556
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -232,10 +206,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 557
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "Mac"
 
@@ -243,14 +216,12 @@
 
     move-result-object v0
 
-    .line 558
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 559
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -271,7 +242,6 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 560
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     move-result-object v1
@@ -286,7 +256,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 561
     const-string v1, "MacAlgorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -303,11 +272,9 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 562
     :cond_2
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 564
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -323,10 +290,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 565
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "Nonce"
 
@@ -334,14 +300,12 @@
 
     move-result-object v0
 
-    .line 566
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 567
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -362,10 +326,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 568
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 572
     :cond_4
     return-void
 .end method
@@ -376,10 +338,8 @@
     .param p2, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
 
     .prologue
-    .line 470
     const/4 v0, 0x0
 
-    .line 472
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
 
@@ -387,10 +347,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 473
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "AuthenticationData"
 
@@ -398,20 +357,16 @@
 
     move-result-object v0
 
-    .line 474
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 475
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 476
     move-object p1, v0
 
-    .line 477
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
 
     move-result-object v1
@@ -422,10 +377,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 478
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "IterationCount"
 
@@ -433,14 +387,12 @@
 
     move-result-object v0
 
-    .line 479
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 480
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
@@ -461,10 +413,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 481
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 483
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
 
@@ -476,10 +426,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 484
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "Mac"
 
@@ -487,14 +436,12 @@
 
     move-result-object v0
 
-    .line 485
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 486
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
@@ -511,7 +458,6 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 487
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
 
     move-result-object v1
@@ -522,7 +468,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 488
     const-string v1, "MacAlgorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
@@ -535,11 +480,9 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 489
     :cond_1
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 491
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
 
@@ -551,10 +494,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 492
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "Nonce"
 
@@ -562,14 +504,12 @@
 
     move-result-object v0
 
-    .line 493
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 494
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
@@ -586,10 +526,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 495
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 499
     :cond_3
     return-void
 .end method
@@ -600,10 +538,8 @@
     .param p2, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;
 
     .prologue
-    .line 502
     const/4 v0, 0x0
 
-    .line 503
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -615,10 +551,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 504
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "ClientID"
 
@@ -626,14 +561,12 @@
 
     move-result-object v0
 
-    .line 505
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 506
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -650,10 +583,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 507
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 509
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -665,10 +596,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 510
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "AuthenticationCodeMAC"
 
@@ -676,20 +606,16 @@
 
     move-result-object v0
 
-    .line 511
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 512
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 513
     move-object p1, v0
 
-    .line 514
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     move-result-object v1
@@ -704,10 +630,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 515
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "IterationCount"
 
@@ -715,14 +640,12 @@
 
     move-result-object v0
 
-    .line 516
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 517
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -747,10 +670,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 518
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 520
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -766,10 +687,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 521
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "Mac"
 
@@ -777,14 +697,12 @@
 
     move-result-object v0
 
-    .line 522
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 523
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -805,7 +723,6 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 524
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     move-result-object v1
@@ -820,7 +737,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 525
     const-string v1, "MacAlgorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -837,11 +753,9 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
     :cond_2
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 528
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -857,10 +771,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 529
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v3, "Nonce"
 
@@ -868,14 +781,12 @@
 
     move-result-object v0
 
-    .line 530
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 531
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
@@ -896,10 +807,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 532
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 535
     :cond_4
     return-void
 .end method
@@ -911,10 +820,8 @@
     .param p3, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
 
     .prologue
-    .line 575
     const/4 v0, 0x0
 
-    .line 576
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeyInfoEncryption()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyInfoEncryption;
 
@@ -922,10 +829,9 @@
 
     if-eqz v3, :cond_3
 
-    .line 577
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v4, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v5, "EncryptionKey"
 
@@ -933,14 +839,12 @@
 
     move-result-object v0
 
-    .line 578
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 579
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeyInfoEncryption()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyInfoEncryption;
 
     move-result-object v3
@@ -951,10 +855,9 @@
 
     if-eqz v3, :cond_0
 
-    .line 580
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v4, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v5, "X509Data"
 
@@ -972,14 +875,13 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 581
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v5, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v5, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v6, "X509Certificate"
 
@@ -997,7 +899,6 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 582
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
@@ -1032,7 +933,6 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 584
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeyInfoEncryption()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyInfoEncryption;
 
@@ -1044,10 +944,9 @@
 
     if-eqz v3, :cond_1
 
-    .line 585
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v4, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v5, "KeyName"
 
@@ -1065,7 +964,6 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 586
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
@@ -1090,7 +988,6 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 588
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeyInfoEncryption()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyInfoEncryption;
 
@@ -1102,10 +999,9 @@
 
     if-eqz v3, :cond_2
 
-    .line 589
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "http://www.w3.org/2009/xmlsec-derivedkey#"
+    const-string v4, "http://www.w3.org/2009/xmlsec-derivedkey#"
 
     const-string v5, "DerivedKey"
 
@@ -1123,7 +1019,6 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 590
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
@@ -1140,11 +1035,9 @@
 
     invoke-virtual {p0, v3, v4, p3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createDerivedKey(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/DerivedKey;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;)V
 
-    .line 592
     :cond_2
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 594
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
 
@@ -1152,10 +1045,9 @@
 
     if-eqz v3, :cond_7
 
-    .line 595
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v4, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v5, "MACMethod"
 
@@ -1163,14 +1055,12 @@
 
     move-result-object v0
 
-    .line 596
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 597
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
 
     move-result-object v3
@@ -1181,7 +1071,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 598
     const-string v3, "Algorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
@@ -1194,11 +1083,10 @@
 
     invoke-interface {v0, v3, v4}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 599
     :cond_4
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v4, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v5, "MACKey"
 
@@ -1216,7 +1104,6 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 600
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
 
     move-result-object v3
@@ -1227,10 +1114,9 @@
 
     if-eqz v3, :cond_5
 
-    .line 601
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v4, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v5, "EncryptionMethod"
 
@@ -1238,7 +1124,6 @@
 
     move-result-object v2
 
-    .line 602
     .local v2, "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixXENC()Ljava/lang/String;
 
@@ -1246,7 +1131,6 @@
 
     invoke-interface {v2, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 603
     const-string v3, "Algorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
@@ -1259,14 +1143,12 @@
 
     invoke-interface {v2, v3, v4}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 604
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
 
     invoke-interface {v3, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 606
     .end local v2    # "temp":Lorg/w3c/dom/Element;
     :cond_5
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
@@ -1279,14 +1161,13 @@
 
     if-eqz v3, :cond_6
 
-    .line 607
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v5, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v5, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v6, "CipherData"
 
@@ -1304,10 +1185,9 @@
 
     invoke-interface {v3, v4}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 608
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v4, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v5, "CipherValue"
 
@@ -1315,7 +1195,6 @@
 
     move-result-object v2
 
-    .line 609
     .restart local v2    # "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixXENC()Ljava/lang/String;
 
@@ -1323,7 +1202,6 @@
 
     invoke-interface {v2, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 610
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getMacMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACMethod;
@@ -1340,7 +1218,6 @@
 
     invoke-interface {v2, v3}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 611
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v3
@@ -1351,12 +1228,10 @@
 
     invoke-interface {v3, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 613
     .end local v2    # "temp":Lorg/w3c/dom/Element;
     :cond_6
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 615
     :cond_7
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
 
@@ -1364,7 +1239,6 @@
 
     if-eqz v3, :cond_a
 
-    .line 616
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -1379,10 +1253,9 @@
 
     if-ge v1, v3, :cond_a
 
-    .line 617
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v4, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v5, "KeyPackage"
 
@@ -1390,17 +1263,14 @@
 
     move-result-object v0
 
-    .line 618
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 619
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 620
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
 
     move-result-object v3
@@ -1417,10 +1287,9 @@
 
     if-eqz v3, :cond_8
 
-    .line 621
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v4, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v5, "DeviceInfo"
 
@@ -1428,7 +1297,6 @@
 
     move-result-object v2
 
-    .line 622
     .restart local v2    # "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
@@ -1436,7 +1304,6 @@
 
     invoke-interface {v2, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 623
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
 
     move-result-object v3
@@ -1449,10 +1316,8 @@
 
     invoke-virtual {p0, v2, p3, v3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createDeviceInfo(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;)V
 
-    .line 624
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 626
     .end local v2    # "temp":Lorg/w3c/dom/Element;
     :cond_8
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
@@ -1471,10 +1336,9 @@
 
     if-eqz v3, :cond_9
 
-    .line 627
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v4, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v4, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v5, "Key"
 
@@ -1482,7 +1346,6 @@
 
     move-result-object v2
 
-    .line 628
     .restart local v2    # "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
@@ -1490,7 +1353,6 @@
 
     invoke-interface {v2, v3}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 629
     const-string v4, "Id"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
@@ -1513,7 +1375,6 @@
 
     invoke-interface {v2, v4, v3}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 630
     const-string v4, "Algorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
@@ -1536,7 +1397,6 @@
 
     invoke-interface {v2, v4, v3}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 631
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
 
     move-result-object v3
@@ -1549,17 +1409,14 @@
 
     invoke-virtual {p0, v2, p3, v3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createKey(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;)V
 
-    .line 632
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 616
     .end local v2    # "temp":Lorg/w3c/dom/Element;
     :cond_9
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 636
     .end local v1    # "i":I
     :cond_a
     return-void
@@ -1572,13 +1429,11 @@
     .param p3, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
 
     .prologue
-    .line 771
     const/4 v0, 0x0
 
     .local v0, "element":Lorg/w3c/dom/Element;
     const/4 v1, 0x0
 
-    .line 772
     .local v1, "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/DerivedKey;->getKeyDerivationMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyDerivationMethod;
 
@@ -1586,10 +1441,9 @@
 
     if-eqz v2, :cond_2
 
-    .line 773
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v3, "http://www.w3.org/2009/xmlsec-derivedkey#"
+    const-string v3, "http://www.w3.org/2009/xmlsec-derivedkey#"
 
     const-string v4, "KeyDerivationMethod"
 
@@ -1597,12 +1451,10 @@
 
     move-result-object v0
 
-    .line 774
-    const-string/jumbo v2, "dKey"
+    const-string v2, "dKey"
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 775
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/DerivedKey;->getKeyDerivationMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyDerivationMethod;
 
     move-result-object v2
@@ -1613,7 +1465,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 776
     const-string v2, "Algorithm"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/DerivedKey;->getKeyDerivationMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyDerivationMethod;
@@ -1626,7 +1477,6 @@
 
     invoke-interface {v0, v2, v3}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 777
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/DerivedKey;->getKeyDerivationMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyDerivationMethod;
 
@@ -1638,10 +1488,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 778
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v3, "http://www.rsasecurity.com/rsalabs/pkcs/schemas/pkcs-5v2-0#"
+    const-string v3, "http://www.rsasecurity.com/rsalabs/pkcs/schemas/pkcs-5v2-0#"
 
     const-string v4, "PBKDF2-Params"
 
@@ -1649,14 +1498,12 @@
 
     move-result-object v1
 
-    .line 779
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPkcs5()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v1, v2}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 780
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/DerivedKey;->getKeyDerivationMethod()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/KeyDerivationMethod;
 
     move-result-object v2
@@ -1667,14 +1514,11 @@
 
     invoke-virtual {p0, v1, v2, p3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createPBKDFParams(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;)V
 
-    .line 781
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 783
     :cond_1
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 785
     :cond_2
     return-void
 .end method
@@ -1685,10 +1529,8 @@
     .param p2, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;
 
     .prologue
-    .line 378
     const/4 v0, 0x0
 
-    .line 379
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -1700,10 +1542,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 380
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "Manufacturer"
 
@@ -1711,14 +1552,12 @@
 
     move-result-object v0
 
-    .line 381
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 382
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -1735,10 +1574,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 383
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 385
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -1750,10 +1587,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 386
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "SerialNo"
 
@@ -1761,14 +1597,12 @@
 
     move-result-object v0
 
-    .line 387
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 388
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -1785,10 +1619,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 389
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 391
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -1800,10 +1632,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 392
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "Model"
 
@@ -1811,14 +1642,12 @@
 
     move-result-object v0
 
-    .line 393
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 394
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -1835,10 +1664,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 395
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 397
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -1850,10 +1677,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 398
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "DeviceBinding"
 
@@ -1861,14 +1687,12 @@
 
     move-result-object v0
 
-    .line 399
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 400
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -1885,10 +1709,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 401
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 403
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -1900,10 +1722,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 404
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "StartDate"
 
@@ -1911,14 +1732,12 @@
 
     move-result-object v0
 
-    .line 405
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 406
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -1939,10 +1758,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 407
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 409
     :cond_4
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -1954,10 +1771,9 @@
 
     if-eqz v1, :cond_5
 
-    .line 410
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "ExpiryDate"
 
@@ -1965,14 +1781,12 @@
 
     move-result-object v0
 
-    .line 411
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 412
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -1993,10 +1807,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 413
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 415
     :cond_5
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2008,10 +1820,9 @@
 
     if-eqz v1, :cond_6
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "UserId"
 
@@ -2019,14 +1830,12 @@
 
     move-result-object v0
 
-    .line 417
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 418
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2043,10 +1852,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 419
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 421
     :cond_6
     return-void
 .end method
@@ -2058,10 +1865,8 @@
     .param p3, "mKeyPackage"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;
 
     .prologue
-    .line 424
     const/4 v0, 0x0
 
-    .line 425
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2073,10 +1878,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 426
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "Manufacturer"
 
@@ -2084,14 +1888,12 @@
 
     move-result-object v0
 
-    .line 427
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 428
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2108,10 +1910,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 429
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 431
     :cond_0
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2123,10 +1923,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 432
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "SerialNo"
 
@@ -2134,14 +1933,12 @@
 
     move-result-object v0
 
-    .line 433
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 434
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2158,10 +1955,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 435
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 437
     :cond_1
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2173,10 +1968,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 438
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "Model"
 
@@ -2184,14 +1978,12 @@
 
     move-result-object v0
 
-    .line 439
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 440
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2208,10 +2000,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 441
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 443
     :cond_2
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2223,10 +2013,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "DeviceBinding"
 
@@ -2234,14 +2023,12 @@
 
     move-result-object v0
 
-    .line 445
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 446
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2258,10 +2045,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 447
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 449
     :cond_3
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2273,10 +2058,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 450
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "StartDate"
 
@@ -2284,14 +2068,12 @@
 
     move-result-object v0
 
-    .line 451
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 452
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2312,10 +2094,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 453
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 455
     :cond_4
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2327,10 +2107,9 @@
 
     if-eqz v1, :cond_5
 
-    .line 456
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "ExpiryDate"
 
@@ -2338,14 +2117,12 @@
 
     move-result-object v0
 
-    .line 457
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 458
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2366,10 +2143,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 459
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 461
     :cond_5
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2381,10 +2156,9 @@
 
     if-eqz v1, :cond_6
 
-    .line 462
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "UserId"
 
@@ -2392,14 +2166,12 @@
 
     move-result-object v0
 
-    .line 463
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 464
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2416,10 +2188,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 465
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 467
     :cond_6
     return-void
 .end method
@@ -2430,10 +2200,8 @@
     .param p2, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;
 
     .prologue
-    .line 332
     const/4 v0, 0x0
 
-    .line 333
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2445,10 +2213,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 334
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "Manufacturer"
 
@@ -2456,14 +2223,12 @@
 
     move-result-object v0
 
-    .line 335
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 336
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2480,10 +2245,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 337
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 339
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2495,10 +2258,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 340
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "SerialNo"
 
@@ -2506,14 +2268,12 @@
 
     move-result-object v0
 
-    .line 341
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 342
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2530,10 +2290,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 343
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 345
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2545,10 +2303,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 346
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "Model"
 
@@ -2556,14 +2313,12 @@
 
     move-result-object v0
 
-    .line 347
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 348
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2580,10 +2335,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 349
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 351
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2595,10 +2348,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 352
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "DeviceBinding"
 
@@ -2606,14 +2358,12 @@
 
     move-result-object v0
 
-    .line 353
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 354
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2630,10 +2380,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 355
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 357
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2645,10 +2393,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 358
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "StartDate"
 
@@ -2656,14 +2403,12 @@
 
     move-result-object v0
 
-    .line 359
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 360
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2684,10 +2429,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 361
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 363
     :cond_4
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2699,10 +2442,9 @@
 
     if-eqz v1, :cond_5
 
-    .line 364
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "ExpiryDate"
 
@@ -2710,14 +2452,12 @@
 
     move-result-object v0
 
-    .line 365
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 366
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2738,10 +2478,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 367
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 369
     :cond_5
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
@@ -2753,10 +2491,9 @@
 
     if-eqz v1, :cond_6
 
-    .line 370
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "UserId"
 
@@ -2764,14 +2501,12 @@
 
     move-result-object v0
 
-    .line 371
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 372
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
@@ -2788,10 +2523,8 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 373
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 375
     :cond_6
     return-void
 .end method
@@ -2803,14 +2536,11 @@
     .param p3, "mKey"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;
 
     .prologue
-    .line 639
     const/4 v2, 0x0
 
-    .line 640
     .local v2, "element":Lorg/w3c/dom/Element;
     const/4 v4, 0x0
 
-    .line 641
     .local v4, "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
@@ -2822,10 +2552,9 @@
 
     if-eqz v5, :cond_0
 
-    .line 642
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "Issuer"
 
@@ -2833,14 +2562,12 @@
 
     move-result-object v2
 
-    .line 643
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 644
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -2857,10 +2584,8 @@
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 645
     invoke-interface {p1, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 647
     :cond_0
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
@@ -2872,10 +2597,9 @@
 
     if-eqz v5, :cond_2
 
-    .line 648
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "AlgorithmParameters"
 
@@ -2893,7 +2617,6 @@
 
     invoke-interface {v5, v6}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 649
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v5
@@ -2908,10 +2631,9 @@
 
     if-eqz v5, :cond_1
 
-    .line 650
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "Suite"
 
@@ -2919,14 +2641,12 @@
 
     move-result-object v2
 
-    .line 651
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 652
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -2947,18 +2667,16 @@
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 653
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v5
 
     invoke-interface {v5, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 655
     :cond_1
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "ResponseFormat"
 
@@ -2966,7 +2684,6 @@
 
     move-result-object v2
 
-    .line 656
     const-string v5, "Length"
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -2991,7 +2708,6 @@
 
     invoke-interface {v2, v5, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 657
     const-string v5, "Encoding"
 
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -3028,21 +2744,18 @@
 
     invoke-interface {v2, v5, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 659
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 660
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v5
 
     invoke-interface {v5, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 662
     :cond_2
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
@@ -3054,10 +2767,9 @@
 
     if-eqz v5, :cond_8
 
-    .line 663
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "Data"
 
@@ -3075,7 +2787,6 @@
 
     invoke-interface {v5, v6}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 664
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v5
@@ -3084,7 +2795,6 @@
 
     move-result-object v1
 
-    .line 665
     .local v1, "data":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
@@ -3092,10 +2802,9 @@
 
     if-eqz v5, :cond_7
 
-    .line 666
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "Secret"
 
@@ -3103,14 +2812,12 @@
 
     move-result-object v2
 
-    .line 667
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 668
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     move-result-object v5
@@ -3121,10 +2828,9 @@
 
     if-eqz v5, :cond_5
 
-    .line 669
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "EncryptedValue"
 
@@ -3132,14 +2838,12 @@
 
     move-result-object v4
 
-    .line 670
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v4, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 671
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
     move-result-object v5
@@ -3154,10 +2858,9 @@
 
     if-eqz v5, :cond_3
 
-    .line 672
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v6, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v7, "EncryptionMethod"
 
@@ -3165,7 +2868,6 @@
 
     move-result-object v3
 
-    .line 673
     .local v3, "encryptionAlgo":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixXENC()Ljava/lang/String;
 
@@ -3173,7 +2875,6 @@
 
     invoke-interface {v3, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 674
     const-string v5, "Algorithm"
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
@@ -3190,10 +2891,8 @@
 
     invoke-interface {v3, v5, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 675
     invoke-interface {v4, v3}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 677
     .end local v3    # "encryptionAlgo":Lorg/w3c/dom/Element;
     :cond_3
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
@@ -3210,10 +2909,9 @@
 
     if-eqz v5, :cond_4
 
-    .line 678
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v6, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v7, "CipherData"
 
@@ -3231,10 +2929,9 @@
 
     invoke-interface {v5, v6}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 679
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v6, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v7, "CipherValue"
 
@@ -3242,7 +2939,6 @@
 
     move-result-object v0
 
-    .line 680
     .local v0, "cipherValue":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixXENC()Ljava/lang/String;
 
@@ -3250,7 +2946,6 @@
 
     invoke-interface {v0, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 681
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
@@ -3275,19 +2970,16 @@
 
     invoke-interface {v0, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 682
     invoke-interface {v4}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v5
 
     invoke-interface {v5, v0}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 684
     .end local v0    # "cipherValue":Lorg/w3c/dom/Element;
     :cond_4
     invoke-interface {v2, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 687
     :cond_5
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
 
@@ -3299,10 +2991,9 @@
 
     if-eqz v5, :cond_6
 
-    .line 688
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "ValueMAC"
 
@@ -3310,14 +3001,12 @@
 
     move-result-object v4
 
-    .line 689
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v4, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 690
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getStructuredData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;
@@ -3340,10 +3029,8 @@
 
     invoke-interface {v4, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 691
     invoke-interface {v2, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 693
     :cond_6
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
@@ -3351,11 +3038,10 @@
 
     invoke-interface {v5, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 696
     :cond_7
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "Counter"
 
@@ -3363,17 +3049,15 @@
 
     move-result-object v2
 
-    .line 697
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 698
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "PlainValue"
 
@@ -3381,14 +3065,12 @@
 
     move-result-object v4
 
-    .line 699
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v4, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 700
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;->getCounter()I
@@ -3405,17 +3087,14 @@
 
     invoke-interface {v4, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 701
     invoke-interface {v2, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 702
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v5
 
     invoke-interface {v5, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 704
     .end local v1    # "data":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Data;
     :cond_8
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -3428,10 +3107,9 @@
 
     if-eqz v5, :cond_9
 
-    .line 705
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v7, "Policy"
 
@@ -3439,14 +3117,12 @@
 
     move-result-object v2
 
-    .line 706
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 707
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v5
@@ -3457,10 +3133,8 @@
 
     invoke-virtual {p0, v2, v5, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createPolicy(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;)V
 
-    .line 708
     invoke-interface {p1, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 710
     :cond_9
     return-void
 .end method
@@ -3473,14 +3147,11 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 125
     const/4 v1, 0x0
 
-    .line 126
     .local v1, "element":Lorg/w3c/dom/Element;
     const/4 v5, 0x0
 
-    .line 128
     .local v5, "xmlBuffer":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -3489,14 +3160,12 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
-    .line 129
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     const/4 v8, 0x1
 
     invoke-virtual {v6, v8}, Ljavax/xml/parsers/DocumentBuilderFactory;->setNamespaceAware(Z)V
 
-    .line 130
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
@@ -3505,7 +3174,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
-    .line 131
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
@@ -3514,15 +3182,13 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    .line 132
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-interface {v6, p2}, Lorg/w3c/dom/Document;->setXmlVersion(Ljava/lang/String;)V
 
-    .line 134
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "KeyProvClientHello"
 
@@ -3530,34 +3196,30 @@
 
     move-result-object v3
 
-    .line 135
     .local v3, "root":Lorg/w3c/dom/Element;
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-interface {v6, v3}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 136
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v3, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 137
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     if-eqz v6, :cond_0
 
-    .line 138
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "xmlns:"
+    const-string v9, "xmlns:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3575,11 +3237,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v9, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     invoke-interface {v3, v6, v8, v9}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPSKC()Ljava/lang/String;
 
@@ -3587,14 +3248,13 @@
 
     if-eqz v6, :cond_1
 
-    .line 140
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "xmlns:"
+    const-string v9, "xmlns:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3612,11 +3272,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v9, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     invoke-interface {v3, v6, v8, v9}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixXENC()Ljava/lang/String;
 
@@ -3624,14 +3283,13 @@
 
     if-eqz v6, :cond_2
 
-    .line 142
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "xmlns:"
+    const-string v9, "xmlns:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3649,11 +3307,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v9, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-interface {v3, v6, v8, v9}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getmPrefixDS()Ljava/lang/String;
 
@@ -3661,14 +3318,13 @@
 
     if-eqz v6, :cond_3
 
-    .line 144
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "xmlns:"
+    const-string v9, "xmlns:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3686,11 +3342,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v9, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {v3, v6, v8, v9}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixPKCS5()Ljava/lang/String;
 
@@ -3698,14 +3353,13 @@
 
     if-eqz v6, :cond_4
 
-    .line 146
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "xmlns:"
+    const-string v9, "xmlns:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3723,11 +3377,10 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "http://www.rsasecurity.com/rsalabs/pkcs/schemas/pkcs-5v2-0#"
+    const-string v9, "http://www.rsasecurity.com/rsalabs/pkcs/schemas/pkcs-5v2-0#"
 
     invoke-interface {v3, v6, v8, v9}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     :cond_4
     const-string v6, "Version"
 
@@ -3737,17 +3390,15 @@
 
     invoke-interface {v3, v6, v8}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
     move-result-object v6
 
     if-eqz v6, :cond_5
 
-    .line 149
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "DeviceIdentifierData"
 
@@ -3765,10 +3416,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 150
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "DeviceId"
 
@@ -3776,24 +3426,20 @@
 
     move-result-object v1
 
-    .line 151
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {p0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createDeviceInfo(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;)V
 
-    .line 153
     invoke-interface {v3}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 155
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getKeyID()Ljava/lang/String;
 
@@ -3801,10 +3447,9 @@
 
     if-eqz v6, :cond_6
 
-    .line 156
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "KeyID"
 
@@ -3812,14 +3457,12 @@
 
     move-result-object v1
 
-    .line 157
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 158
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getKeyID()Ljava/lang/String;
@@ -3832,10 +3475,8 @@
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 159
     invoke-interface {v3, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 161
     :cond_6
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedKeyTypes()Ljava/util/ArrayList;
 
@@ -3843,10 +3484,9 @@
 
     if-eqz v6, :cond_9
 
-    .line 162
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "SupportedKeyTypes"
 
@@ -3854,14 +3494,12 @@
 
     move-result-object v1
 
-    .line 163
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 164
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -3876,7 +3514,6 @@
 
     if-ge v2, v6, :cond_8
 
-    .line 165
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedKeyTypes()Ljava/util/ArrayList;
 
     move-result-object v6
@@ -3887,10 +3524,9 @@
 
     if-eqz v6, :cond_7
 
-    .line 166
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "Algorithm"
 
@@ -3898,7 +3534,6 @@
 
     move-result-object v4
 
-    .line 167
     .local v4, "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
@@ -3906,7 +3541,6 @@
 
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 168
     iget-object v8, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedKeyTypes()Ljava/util/ArrayList;
@@ -3925,21 +3559,17 @@
 
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 169
     invoke-interface {v1, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 164
     .end local v4    # "temp":Lorg/w3c/dom/Element;
     :cond_7
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 172
     :cond_8
     invoke-interface {v3, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 174
     .end local v2    # "i":I
     :cond_9
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedEncryptionAlgorithms()Ljava/lang/String;
@@ -3948,10 +3578,9 @@
 
     if-eqz v6, :cond_a
 
-    .line 175
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "SupportedEncryptionAlgorithms"
 
@@ -3969,10 +3598,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 176
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "Algorithm"
 
@@ -3980,14 +3608,12 @@
 
     move-result-object v1
 
-    .line 177
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 178
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedEncryptionAlgorithms()Ljava/lang/String;
@@ -4000,14 +3626,12 @@
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 179
     invoke-interface {v3}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 181
     :cond_a
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedMacAlgorithms()Ljava/lang/String;
 
@@ -4015,10 +3639,9 @@
 
     if-eqz v6, :cond_b
 
-    .line 182
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "SupportedMacAlgorithms"
 
@@ -4036,10 +3659,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 183
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "Algorithm"
 
@@ -4047,14 +3669,12 @@
 
     move-result-object v1
 
-    .line 184
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 185
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedMacAlgorithms()Ljava/lang/String;
@@ -4067,14 +3687,12 @@
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 186
     invoke-interface {v3}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 188
     :cond_b
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getProtocolVariant()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
@@ -4082,10 +3700,9 @@
 
     if-eqz v6, :cond_f
 
-    .line 189
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "SupportedProtocolVariants"
 
@@ -4103,10 +3720,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 190
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getProtocolVariant()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
@@ -4124,17 +3740,14 @@
 
     move-result-object v1
 
-    .line 191
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 192
     const/4 v4, 0x0
 
-    .line 193
     .restart local v4    # "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getProtocolVariant()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
@@ -4146,10 +3759,9 @@
 
     if-eqz v6, :cond_c
 
-    .line 194
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "SupportedKeyProtectionMethod"
 
@@ -4157,14 +3769,12 @@
 
     move-result-object v4
 
-    .line 195
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 196
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getProtocolVariant()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
@@ -4181,10 +3791,8 @@
 
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 197
     invoke-interface {v1, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 199
     :cond_c
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getProtocolVariant()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
@@ -4196,10 +3804,9 @@
 
     if-eqz v6, :cond_d
 
-    .line 200
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "Payload"
 
@@ -4217,10 +3824,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 201
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v8, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v9, "KeyInfo"
 
@@ -4228,17 +3834,15 @@
 
     move-result-object v4
 
-    .line 202
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getmPrefixDS()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 203
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v8, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v9, "X509Data"
 
@@ -4256,14 +3860,13 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 204
     invoke-interface {v4}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     iget-object v8, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v9, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v9, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v10, "X509Certificate"
 
@@ -4281,7 +3884,6 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 205
     invoke-interface {v4}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
@@ -4316,14 +3918,12 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 206
     invoke-interface {v1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v4}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 208
     :cond_d
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getProtocolVariant()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/ProtocolVariant;
 
@@ -4335,10 +3935,9 @@
 
     if-eqz v6, :cond_e
 
-    .line 209
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "Payload"
 
@@ -4356,10 +3955,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 210
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v8, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v9, "KeyInfo"
 
@@ -4367,17 +3965,15 @@
 
     move-result-object v4
 
-    .line 211
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getmPrefixDS()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 212
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v8, "http://www.w3.org/2000/09/xmldsig#"
 
     const-string v9, "KeyName"
 
@@ -4395,7 +3991,6 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 213
     invoke-interface {v4}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
@@ -4420,14 +4015,12 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 214
     invoke-interface {v1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v4}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 216
     :cond_e
     invoke-interface {v3}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
@@ -4435,7 +4028,6 @@
 
     invoke-interface {v6, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 218
     .end local v4    # "temp":Lorg/w3c/dom/Element;
     :cond_f
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedKeyPackageFormat()Ljava/lang/String;
@@ -4444,10 +4036,9 @@
 
     if-eqz v6, :cond_10
 
-    .line 219
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "SupportedKeyPackages"
 
@@ -4465,10 +4056,9 @@
 
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 220
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "KeyPackageFormat"
 
@@ -4476,14 +4066,12 @@
 
     move-result-object v1
 
-    .line 221
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 222
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getSupportedKeyPackageFormat()Ljava/lang/String;
@@ -4496,14 +4084,12 @@
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 223
     invoke-interface {v3}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 225
     :cond_10
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -4511,10 +4097,9 @@
 
     if-eqz v6, :cond_11
 
-    .line 226
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v9, "AuthenticationData"
 
@@ -4522,20 +4107,16 @@
 
     move-result-object v1
 
-    .line 227
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 228
     invoke-virtual {p0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createAuthenticationData(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;)V
 
-    .line 229
     invoke-interface {v3, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 231
     :cond_11
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
@@ -4543,7 +4124,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
-    .line 232
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
     invoke-virtual {v6}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
@@ -4552,7 +4132,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
-    .line 233
     new-instance v6, Ljavax/xml/transform/dom/DOMSource;
 
     iget-object v8, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
@@ -4561,14 +4140,12 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
 
-    .line 234
     new-instance v6, Ljava/io/StringWriter;
 
     invoke-direct {v6}, Ljava/io/StringWriter;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
-    .line 235
     new-instance v6, Ljavax/xml/transform/stream/StreamResult;
 
     iget-object v8, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
@@ -4577,7 +4154,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->result:Ljavax/xml/transform/stream/StreamResult;
 
-    .line 236
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
     iget-object v8, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
@@ -4586,7 +4162,6 @@
 
     invoke-virtual {v6, v8, v9}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 237
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
     invoke-virtual {v6}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
@@ -4599,16 +4174,13 @@
 
     move-object v6, v5
 
-    .line 248
     .end local v3    # "root":Lorg/w3c/dom/Element;
     :goto_1
     return-object v6
 
-    .line 238
     :catch_0
     move-exception v0
 
-    .line 239
     .local v0, "e":Ljavax/xml/parsers/ParserConfigurationException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4636,15 +4208,12 @@
 
     move-object v6, v7
 
-    .line 240
     goto :goto_1
 
-    .line 241
     .end local v0    # "e":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_1
     move-exception v0
 
-    .line 242
     .local v0, "e":Ljavax/xml/transform/TransformerConfigurationException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4672,15 +4241,12 @@
 
     move-object v6, v7
 
-    .line 243
     goto :goto_1
 
-    .line 244
     .end local v0    # "e":Ljavax/xml/transform/TransformerConfigurationException;
     :catch_2
     move-exception v0
 
-    .line 245
     .local v0, "e":Ljavax/xml/transform/TransformerException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4708,7 +4274,6 @@
 
     move-object v6, v7
 
-    .line 246
     goto :goto_1
 .end method
 
@@ -4720,14 +4285,11 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 252
     const/4 v1, 0x0
 
-    .line 253
     .local v1, "element":Lorg/w3c/dom/Element;
     const/4 v4, 0x0
 
-    .line 255
     .local v4, "xmlBuffer":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -4736,14 +4298,12 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
-    .line 256
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     const/4 v7, 0x1
 
     invoke-virtual {v6, v7}, Ljavax/xml/parsers/DocumentBuilderFactory;->setNamespaceAware(Z)V
 
-    .line 257
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
@@ -4752,7 +4312,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
-    .line 258
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
@@ -4761,15 +4320,13 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    .line 259
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-interface {v6, p2}, Lorg/w3c/dom/Document;->setXmlVersion(Ljava/lang/String;)V
 
-    .line 261
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v8, "KeyProvServerFinished"
 
@@ -4777,34 +4334,30 @@
 
     move-result-object v2
 
-    .line 262
     .local v2, "root":Lorg/w3c/dom/Element;
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-interface {v6, v2}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 263
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v2, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 264
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     if-eqz v6, :cond_0
 
-    .line 265
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "xmlns:"
+    const-string v8, "xmlns:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4822,11 +4375,10 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     invoke-interface {v2, v6, v7, v8}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
@@ -4834,14 +4386,13 @@
 
     if-eqz v6, :cond_1
 
-    .line 267
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "xmlns:"
+    const-string v8, "xmlns:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4859,11 +4410,10 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v8, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     invoke-interface {v2, v6, v7, v8}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 268
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixXENC()Ljava/lang/String;
 
@@ -4871,14 +4421,13 @@
 
     if-eqz v6, :cond_2
 
-    .line 269
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "xmlns:"
+    const-string v8, "xmlns:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4896,11 +4445,10 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v8, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-interface {v2, v6, v7, v8}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 270
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDS()Ljava/lang/String;
 
@@ -4908,14 +4456,13 @@
 
     if-eqz v6, :cond_3
 
-    .line 271
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "xmlns:"
+    const-string v8, "xmlns:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4933,11 +4480,10 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v8, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {v2, v6, v7, v8}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 272
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDkey()Ljava/lang/String;
 
@@ -4945,14 +4491,13 @@
 
     if-eqz v6, :cond_4
 
-    .line 273
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "xmlns:"
+    const-string v8, "xmlns:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4970,11 +4515,10 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "http://www.w3.org/2009/xmlsec-derivedkey#"
+    const-string v8, "http://www.w3.org/2009/xmlsec-derivedkey#"
 
     invoke-interface {v2, v6, v7, v8}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
     :cond_4
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPkcs5()Ljava/lang/String;
 
@@ -4982,14 +4526,13 @@
 
     if-eqz v6, :cond_5
 
-    .line 275
-    const-string/jumbo v6, "http://www.w3.org/2000/xmlns/"
+    const-string v6, "http://www.w3.org/2000/xmlns/"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "xmlns:"
+    const-string v8, "xmlns:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5007,11 +4550,10 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "http://www.rsasecurity.com/rsalabs/pkcs/schemas/pkcs-5v2-0#"
+    const-string v8, "http://www.rsasecurity.com/rsalabs/pkcs/schemas/pkcs-5v2-0#"
 
     invoke-interface {v2, v6, v7, v8}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
     :cond_5
     const-string v6, "Version"
 
@@ -5021,7 +4563,6 @@
 
     invoke-interface {v2, v6, v7}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 277
     const-string v6, "Status"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getStatus()Ljava/lang/String;
@@ -5030,7 +4571,6 @@
 
     invoke-interface {v2, v6, v7}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 278
     const-string v6, "SessionID"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getSessionId()Ljava/lang/String;
@@ -5039,17 +4579,15 @@
 
     invoke-interface {v2, v6, v7}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
 
     move-result-object v6
 
     if-eqz v6, :cond_7
 
-    .line 280
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v8, "KeyPackage"
 
@@ -5057,7 +4595,6 @@
 
     move-result-object v3
 
-    .line 281
     .local v3, "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
@@ -5065,10 +4602,8 @@
 
     invoke-interface {v3, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 282
     invoke-interface {v2, v3}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 283
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
 
     move-result-object v6
@@ -5079,25 +4614,22 @@
 
     if-eqz v6, :cond_6
 
-    .line 284
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
-    const-string/jumbo v8, "serverId"
+    const-string v8, "serverId"
 
     invoke-interface {v6, v7, v8}, Lorg/w3c/dom/Document;->createElementNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v1
 
-    .line 285
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 286
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
@@ -5114,10 +4646,8 @@
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 287
     invoke-interface {v3, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 289
     :cond_6
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
 
@@ -5129,10 +4659,9 @@
 
     if-eqz v6, :cond_7
 
-    .line 290
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v8, "KeyContainer"
 
@@ -5140,7 +4669,6 @@
 
     move-result-object v1
 
-    .line 291
     const-string v6, "Version"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
@@ -5157,7 +4685,6 @@
 
     invoke-interface {v1, v6, v7}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 292
     const-string v6, "Id"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
@@ -5174,21 +4701,18 @@
 
     invoke-interface {v1, v6, v7}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 293
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 294
     invoke-interface {v2}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v6
 
     invoke-interface {v6, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 295
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getDSKPPKeyPackage()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DSKPPKeyPackage;
 
     move-result-object v6
@@ -5199,7 +4723,6 @@
 
     invoke-virtual {p0, v1, v6, p1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createDSKPPKeyContainer(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;)V
 
-    .line 298
     .end local v3    # "temp":Lorg/w3c/dom/Element;
     :cond_7
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getMACType()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACTypeDSKPP;
@@ -5208,10 +4731,9 @@
 
     if-eqz v6, :cond_8
 
-    .line 299
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v8, "Mac"
 
@@ -5219,14 +4741,12 @@
 
     move-result-object v1
 
-    .line 300
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 301
     const-string v6, "MacAlgorithm"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getMACType()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACTypeDSKPP;
@@ -5239,7 +4759,6 @@
 
     invoke-interface {v1, v6, v7}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getMACType()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/MACTypeDSKPP;
@@ -5256,10 +4775,8 @@
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 303
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 305
     :cond_8
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationCodeMAC;
 
@@ -5267,10 +4784,9 @@
 
     if-eqz v6, :cond_9
 
-    .line 306
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v8, "AuthenticationData"
 
@@ -5278,20 +4794,16 @@
 
     move-result-object v1
 
-    .line 307
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 308
     invoke-virtual {p0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createAuthenticationData(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;)V
 
-    .line 309
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 311
     :cond_9
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
@@ -5299,7 +4811,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
-    .line 312
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
     invoke-virtual {v6}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
@@ -5308,7 +4819,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
-    .line 313
     new-instance v6, Ljavax/xml/transform/dom/DOMSource;
 
     iget-object v7, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
@@ -5317,14 +4827,12 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
 
-    .line 314
     new-instance v6, Ljava/io/StringWriter;
 
     invoke-direct {v6}, Ljava/io/StringWriter;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
-    .line 315
     new-instance v6, Ljavax/xml/transform/stream/StreamResult;
 
     iget-object v7, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
@@ -5333,7 +4841,6 @@
 
     iput-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->result:Ljavax/xml/transform/stream/StreamResult;
 
-    .line 316
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
     iget-object v7, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
@@ -5342,7 +4849,6 @@
 
     invoke-virtual {v6, v7, v8}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 317
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
     invoke-virtual {v6}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
@@ -5355,16 +4861,13 @@
 
     move-object v5, v4
 
-    .line 328
     .end local v2    # "root":Lorg/w3c/dom/Element;
     :goto_0
     return-object v5
 
-    .line 318
     :catch_0
     move-exception v0
 
-    .line 319
     .local v0, "e":Ljavax/xml/parsers/ParserConfigurationException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -5392,12 +4895,10 @@
 
     goto :goto_0
 
-    .line 321
     .end local v0    # "e":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_1
     move-exception v0
 
-    .line 322
     .local v0, "e":Ljavax/xml/transform/TransformerConfigurationException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -5425,12 +4926,10 @@
 
     goto :goto_0
 
-    .line 324
     .end local v0    # "e":Ljavax/xml/transform/TransformerConfigurationException;
     :catch_2
     move-exception v0
 
-    .line 325
     .local v0, "e":Ljavax/xml/transform/TransformerException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -5467,14 +4966,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 49
     const/4 v1, 0x0
 
-    .line 50
     .local v1, "element":Lorg/w3c/dom/Element;
     const/4 v3, 0x0
 
-    .line 52
     .local v3, "xmlBuffer":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -5483,14 +4979,12 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
-    .line 53
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Ljavax/xml/parsers/DocumentBuilderFactory;->setNamespaceAware(Z)V
 
-    .line 54
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dbf:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     invoke-virtual {v5}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
@@ -5499,7 +4993,6 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
-    .line 55
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dBuilder:Ljavax/xml/parsers/DocumentBuilder;
 
     invoke-virtual {v5}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
@@ -5508,15 +5001,13 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    .line 56
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-interface {v5, p2}, Lorg/w3c/dom/Document;->setXmlVersion(Ljava/lang/String;)V
 
-    .line 58
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "KeyProvTrigger"
 
@@ -5524,34 +5015,30 @@
 
     move-result-object v2
 
-    .line 59
     .local v2, "root":Lorg/w3c/dom/Element;
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-interface {v5, v2}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 60
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v2, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 62
-    const-string/jumbo v5, "http://www.w3.org/2000/xmlns/"
+    const-string v5, "http://www.w3.org/2000/xmlns/"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "xmlns:"
+    const-string v7, "xmlns:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5569,11 +5056,10 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     invoke-interface {v2, v5, v6, v7}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixPSKC()Ljava/lang/String;
 
@@ -5581,14 +5067,13 @@
 
     if-eqz v5, :cond_1
 
-    .line 64
-    const-string/jumbo v5, "http://www.w3.org/2000/xmlns/"
+    const-string v5, "http://www.w3.org/2000/xmlns/"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "xmlns:"
+    const-string v7, "xmlns:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5606,11 +5091,10 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v7, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     invoke-interface {v2, v5, v6, v7}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
     :cond_1
     const-string v5, "Version"
 
@@ -5620,10 +5104,9 @@
 
     invoke-interface {v2, v5, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "InitializationTrigger"
 
@@ -5631,30 +5114,25 @@
 
     move-result-object v1
 
-    .line 67
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 68
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 69
     move-object v2, v1
 
-    .line 70
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getDeviceInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
     move-result-object v5
 
     if-eqz v5, :cond_2
 
-    .line 71
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "DeviceIdentifierData"
 
@@ -5672,10 +5150,9 @@
 
     invoke-interface {v5, v6}, Lorg/w3c/dom/Node;->setPrefix(Ljava/lang/String;)V
 
-    .line 72
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "DeviceId"
 
@@ -5683,24 +5160,20 @@
 
     move-result-object v1
 
-    .line 73
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createDeviceInfo(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;)V
 
-    .line 75
     invoke-interface {v2}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v5
 
     invoke-interface {v5, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 77
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getKeyID()Ljava/lang/String;
 
@@ -5708,10 +5181,9 @@
 
     if-eqz v5, :cond_3
 
-    .line 78
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "KeyID"
 
@@ -5719,14 +5191,12 @@
 
     move-result-object v1
 
-    .line 79
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 80
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getKeyID()Ljava/lang/String;
@@ -5739,10 +5209,8 @@
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 81
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 83
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getTokenPlatformInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
 
@@ -5750,10 +5218,9 @@
 
     if-eqz v5, :cond_6
 
-    .line 84
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "TokenPlatformInfo"
 
@@ -5761,14 +5228,12 @@
 
     move-result-object v1
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getTokenPlatformInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
 
     move-result-object v5
@@ -5779,7 +5244,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 87
     const-string v5, "KeyLocation"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getTokenPlatformInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
@@ -5792,7 +5256,6 @@
 
     invoke-interface {v1, v5, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 88
     :cond_4
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getTokenPlatformInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
 
@@ -5804,7 +5267,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 89
     const-string v5, "AlgorithmLocation"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getTokenPlatformInfo()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
@@ -5817,11 +5279,9 @@
 
     invoke-interface {v1, v5, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 90
     :cond_5
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 92
     :cond_6
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getAuthenticationData()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
@@ -5829,10 +5289,9 @@
 
     if-eqz v5, :cond_7
 
-    .line 93
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "AuthenticationData"
 
@@ -5840,20 +5299,16 @@
 
     move-result-object v1
 
-    .line 94
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 95
     invoke-virtual {p0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createAuthenticationData(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;)V
 
-    .line 96
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 98
     :cond_7
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getServerURL()Ljava/lang/String;
 
@@ -5861,10 +5316,9 @@
 
     if-eqz v5, :cond_8
 
-    .line 99
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
+    const-string v6, "urn:ietf:params:xml:ns:keyprov:dskpp"
 
     const-string v7, "ServerUrl"
 
@@ -5872,14 +5326,12 @@
 
     move-result-object v1
 
-    .line 100
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getPrefixDSKPP()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 101
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->getServerURL()Ljava/lang/String;
@@ -5892,10 +5344,8 @@
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 102
     invoke-interface {v2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 104
     :cond_8
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
@@ -5903,7 +5353,6 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
-    .line 105
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->tf:Ljavax/xml/transform/TransformerFactory;
 
     invoke-virtual {v5}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
@@ -5912,7 +5361,6 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
-    .line 106
     new-instance v5, Ljavax/xml/transform/dom/DOMSource;
 
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
@@ -5921,14 +5369,12 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
 
-    .line 107
     new-instance v5, Ljava/io/StringWriter;
 
     invoke-direct {v5}, Ljava/io/StringWriter;-><init>()V
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
-    .line 108
     new-instance v5, Ljavax/xml/transform/stream/StreamResult;
 
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
@@ -5937,7 +5383,6 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->result:Ljavax/xml/transform/stream/StreamResult;
 
-    .line 109
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->transformer:Ljavax/xml/transform/Transformer;
 
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->dom:Ljavax/xml/transform/dom/DOMSource;
@@ -5946,7 +5391,6 @@
 
     invoke-virtual {v5, v6, v7}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 110
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->stringWriter:Ljava/io/StringWriter;
 
     invoke-virtual {v5}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
@@ -5959,16 +5403,13 @@
 
     move-object v4, v3
 
-    .line 121
     .end local v2    # "root":Lorg/w3c/dom/Element;
     :goto_0
     return-object v4
 
-    .line 111
     :catch_0
     move-exception v0
 
-    .line 112
     .local v0, "e":Ljavax/xml/parsers/ParserConfigurationException;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5996,12 +5437,10 @@
 
     goto :goto_0
 
-    .line 114
     .end local v0    # "e":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_1
     move-exception v0
 
-    .line 115
     .local v0, "e":Ljavax/xml/transform/TransformerConfigurationException;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -6029,12 +5468,10 @@
 
     goto :goto_0
 
-    .line 117
     .end local v0    # "e":Ljavax/xml/transform/TransformerConfigurationException;
     :catch_2
     move-exception v0
 
-    .line 118
     .local v0, "e":Ljavax/xml/transform/TransformerException;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -6070,13 +5507,11 @@
     .param p3, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
 
     .prologue
-    .line 788
     const/4 v0, 0x0
 
     .local v0, "element":Lorg/w3c/dom/Element;
     const/4 v1, 0x0
 
-    .line 789
     .local v1, "temp":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;->getSalt()[B
 
@@ -6084,7 +5519,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 790
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     const-string v3, "Salt"
@@ -6095,7 +5529,6 @@
 
     invoke-interface {p1, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 791
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     const-string v3, "Specified"
@@ -6104,7 +5537,6 @@
 
     move-result-object v0
 
-    .line 792
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;->getSalt()[B
@@ -6121,14 +5553,12 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 793
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getLastChild()Lorg/w3c/dom/Node;
 
     move-result-object v2
 
     invoke-interface {v2, v0}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 795
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;->getIterationCount()I
 
@@ -6136,7 +5566,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 796
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     const-string v3, "IterationCount"
@@ -6145,7 +5574,6 @@
 
     move-result-object v0
 
-    .line 797
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;->getIterationCount()I
@@ -6162,10 +5590,8 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 798
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 800
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;->getKeyLength()I
 
@@ -6173,7 +5599,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 801
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     const-string v3, "KeyLength"
@@ -6182,7 +5607,6 @@
 
     move-result-object v0
 
-    .line 802
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/PBKDF2Params;->getKeyLength()I
@@ -6199,10 +5623,8 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 803
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 805
     :cond_2
     return-void
 .end method
@@ -6214,14 +5636,12 @@
     .param p3, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
 
     .prologue
-    .line 746
     const/4 v0, 0x0
 
-    .line 747
     .local v0, "element":Lorg/w3c/dom/Element;
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v2, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v2, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v3, "PinPolicy"
 
@@ -6229,21 +5649,18 @@
 
     move-result-object v0
 
-    .line 748
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 749
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getPinEncoding()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 750
     const-string v1, "PinEncoding"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getPinEncoding()Ljava/lang/String;
@@ -6252,7 +5669,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 752
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getPinKeyID()Ljava/lang/String;
 
@@ -6260,7 +5676,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 753
     const-string v1, "PinKeyID"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getPinKeyID()Ljava/lang/String;
@@ -6269,7 +5684,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 755
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getPinUsageMode()Ljava/lang/String;
 
@@ -6277,7 +5691,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 756
     const-string v1, "PinUsageMode"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getPinUsageMode()Ljava/lang/String;
@@ -6286,7 +5699,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 758
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getMaxFailedAttempts()I
 
@@ -6294,7 +5706,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 759
     const-string v1, "MaxFailedAttempts"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getMaxFailedAttempts()I
@@ -6307,7 +5718,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 761
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getMaxLength()I
 
@@ -6315,7 +5725,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 762
     const-string v1, "MaxFailedAttempts"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getMinLength()I
@@ -6328,7 +5737,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 764
     :cond_4
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getMinLength()I
 
@@ -6336,7 +5744,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 765
     const-string v1, "MaxFailedAttempts"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;->getMinLength()I
@@ -6349,11 +5756,9 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 767
     :cond_5
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 768
     return-void
 .end method
 
@@ -6364,10 +5769,8 @@
     .param p3, "obj"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
 
     .prologue
-    .line 713
     const/4 v0, 0x0
 
-    .line 714
     .local v0, "element":Lorg/w3c/dom/Element;
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getStartDate()Ljava/lang/String;
 
@@ -6375,10 +5778,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 715
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v3, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v3, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v4, "StartDate"
 
@@ -6386,14 +5788,12 @@
 
     move-result-object v0
 
-    .line 716
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 717
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getStartDate()Ljava/lang/String;
@@ -6406,10 +5806,8 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 718
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 720
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getExpiryDate()Ljava/lang/String;
 
@@ -6417,10 +5815,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 721
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v3, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v3, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v4, "ExpiryDate"
 
@@ -6428,14 +5825,12 @@
 
     move-result-object v0
 
-    .line 722
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 723
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getExpiryDate()Ljava/lang/String;
@@ -6448,10 +5843,8 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 724
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 726
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getNoOfTransactions()I
 
@@ -6459,10 +5852,9 @@
 
     if-eqz v2, :cond_2
 
-    .line 727
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v3, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v3, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v4, "NumberOfTransactions"
 
@@ -6470,14 +5862,12 @@
 
     move-result-object v0
 
-    .line 728
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 729
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getNoOfTransactions()I
@@ -6494,10 +5884,8 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 730
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 732
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getKeyUsage()Ljava/util/ArrayList;
 
@@ -6505,7 +5893,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 733
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -6520,10 +5907,9 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 734
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v3, "urn:ietf:params:xml:ns:keyprov:pskc"
+    const-string v3, "urn:ietf:params:xml:ns:keyprov:pskc"
 
     const-string v4, "KeyUsage"
 
@@ -6531,14 +5917,12 @@
 
     move-result-object v0
 
-    .line 735
     invoke-virtual {p3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;->getPrefixPSKC()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->setPrefix(Ljava/lang/String;)V
 
-    .line 736
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->document:Lorg/w3c/dom/Document;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getKeyUsage()Ljava/util/ArrayList;
@@ -6561,15 +5945,12 @@
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 737
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 733
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 740
     .end local v1    # "i":I
     :cond_3
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getPinPolicy()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;
@@ -6578,14 +5959,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 741
     invoke-virtual {p2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/Policy;->getPinPolicy()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;
 
     move-result-object v2
 
     invoke-virtual {p0, p1, v2, p3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createPinPolicy(Lorg/w3c/dom/Element;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/PinPolicy;Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;)V
 
-    .line 743
     :cond_4
     return-void
 .end method

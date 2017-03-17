@@ -20,12 +20,9 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 32
     iput-short p1, p0, Lmf/org/w3c/dom/ls/LSException;->code:S
 
-    .line 33
     return-void
 .end method

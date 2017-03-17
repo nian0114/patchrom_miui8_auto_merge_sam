@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6467
     iput-object p1, p0, Landroid/widget/Editor$3;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p4, "parentScrolled"    # Z
 
     .prologue
-    .line 6471
     iget-object v1, p0, Landroid/widget/Editor$3;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -58,7 +56,6 @@
 
     move-result-object v0
 
-    .line 6472
     .local v0, "wb":Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
     if-eqz v0, :cond_1
 
@@ -66,7 +63,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 6473
     :cond_0
     if-eqz p3, :cond_2
 
@@ -75,11 +71,9 @@
     :goto_0
     invoke-virtual {v0, v1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->notifyPositionChanged(I)V
 
-    .line 6475
     :cond_1
     return-void
 
-    .line 6473
     :cond_2
     const/4 v1, 0x2
 

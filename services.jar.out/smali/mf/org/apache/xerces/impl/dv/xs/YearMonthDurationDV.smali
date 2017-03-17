@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/DurationDV;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 42
     const/4 v1, 0x1
 
     :try_start_0
@@ -41,11 +39,9 @@
 
     return-object v1
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
     .local v0, "ex":Ljava/lang/Exception;
     new-instance v1, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
@@ -79,10 +75,8 @@
 
     const/4 v4, 0x0
 
-    .line 50
     const/4 v8, 0x1
 
-    .line 51
     .local v8, "sign":I
     iget v0, p1, Lmf/org/apache/xerces/impl/dv/xs/AbstractDateTimeDV$DateTimeData;->year:I
 
@@ -92,17 +86,14 @@
 
     if-gez v0, :cond_1
 
-    .line 52
     :cond_0
     const/4 v8, -0x1
 
-    .line 54
     :cond_1
     sget-object v0, Lmf/org/apache/xerces/impl/dv/xs/YearMonthDurationDV;->datatypeFactory:Lmf/javax/xml/datatype/DatatypeFactory;
 
     if-ne v8, v1, :cond_2
 
-    .line 55
     :goto_0
     iget v2, p1, Lmf/org/apache/xerces/impl/dv/xs/AbstractDateTimeDV$DateTimeData;->year:I
 
@@ -118,7 +109,6 @@
 
     move-result-object v2
 
-    .line 56
     :goto_1
     iget v3, p1, Lmf/org/apache/xerces/impl/dv/xs/AbstractDateTimeDV$DateTimeData;->month:I
 
@@ -141,7 +131,6 @@
 
     move-object v7, v4
 
-    .line 54
     invoke-virtual/range {v0 .. v7}, Lmf/javax/xml/datatype/DatatypeFactory;->newDuration(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigDecimal;)Lmf/javax/xml/datatype/Duration;
 
     move-result-object v0
@@ -156,12 +145,10 @@
     :cond_3
     move-object v2, v4
 
-    .line 55
     goto :goto_1
 
     :cond_4
     move-object v3, v4
 
-    .line 56
     goto :goto_2
 .end method

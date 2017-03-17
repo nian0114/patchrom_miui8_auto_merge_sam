@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     return-void
 .end method
 
@@ -37,17 +35,14 @@
     .end annotation
 
     .prologue
-    .line 378
     if-nez p1, :cond_0
 
-    .line 379
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 382
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 
@@ -67,17 +62,14 @@
     .end annotation
 
     .prologue
-    .line 499
     if-nez p1, :cond_0
 
-    .line 500
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 503
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 
@@ -110,17 +102,14 @@
     .end annotation
 
     .prologue
-    .line 428
     if-nez p1, :cond_0
 
-    .line 429
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 432
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 
@@ -141,17 +130,14 @@
     .end annotation
 
     .prologue
-    .line 461
     if-nez p1, :cond_0
 
-    .line 462
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 465
     :cond_0
     new-instance v0, Lorg/xml/sax/SAXNotRecognizedException;
 

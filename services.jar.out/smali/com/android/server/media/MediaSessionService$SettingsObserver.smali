@@ -25,16 +25,13 @@
     .locals 1
 
     .prologue
-    .line 654
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    .line 655
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 651
-    const-string/jumbo v0, "enabled_notification_listeners"
+    const-string v0, "enabled_notification_listeners"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -42,7 +39,6 @@
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
-    .line 656
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p2, "x1"    # Lcom/android/server/media/MediaSessionService$1;
 
     .prologue
-    .line 650
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService$SettingsObserver;-><init>(Lcom/android/server/media/MediaSessionService;)V
 
     return-void
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService$SettingsObserver;
 
     .prologue
-    .line 650
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService$SettingsObserver;->observe()V
 
     return-void
@@ -73,7 +67,6 @@
     .locals 4
 
     .prologue
-    .line 659
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->this$0:Lcom/android/server/media/MediaSessionService;
 
     # getter for: Lcom/android/server/media/MediaSessionService;->mContentResolver:Landroid/content/ContentResolver;
@@ -89,7 +82,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 661
     return-void
 .end method
 
@@ -101,12 +93,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 665
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->this$0:Lcom/android/server/media/MediaSessionService;
 
     # invokes: Lcom/android/server/media/MediaSessionService;->updateActiveSessionListeners()V
     invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$1300(Lcom/android/server/media/MediaSessionService;)V
 
-    .line 666
     return-void
 .end method

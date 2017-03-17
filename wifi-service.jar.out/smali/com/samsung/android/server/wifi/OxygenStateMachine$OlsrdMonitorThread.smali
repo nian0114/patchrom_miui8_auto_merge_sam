@@ -41,18 +41,14 @@
     .param p3, "sm"    # Lcom/android/internal/util/StateMachine;
 
     .prologue
-    .line 589
     iput-object p1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 590
     iput-object p2, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->m:Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitor;
 
-    .line 591
     iput-object p3, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mSM:Lcom/android/internal/util/StateMachine;
 
-    .line 592
     return-void
 .end method
 
@@ -65,7 +61,6 @@
 
     const/4 v3, 0x1
 
-    .line 635
     const-string v5, "OLSRD_INITIALIZED"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -74,19 +69,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 636
     iget-object v4, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mSM:Lcom/android/internal/util/StateMachine;
 
     const v5, 0x20172
 
     invoke-virtual {v4, v5}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    .line 656
     :cond_0
     :goto_0
     return v3
 
-    .line 638
     :cond_1
     const-string v5, "OLSRD_TERMINATE"
 
@@ -96,7 +88,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 639
     iget-object v3, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mSM:Lcom/android/internal/util/StateMachine;
 
     const v5, 0x20173
@@ -105,10 +96,8 @@
 
     move v3, v4
 
-    .line 640
     goto :goto_0
 
-    .line 641
     :cond_2
     const-string v5, "OLSRD_HUNG"
 
@@ -118,7 +107,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 642
     iget-object v3, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mSM:Lcom/android/internal/util/StateMachine;
 
     const v5, 0x20174
@@ -127,10 +115,8 @@
 
     move v3, v4
 
-    .line 643
     goto :goto_0
 
-    .line 644
     :cond_3
     const-string v4, "OLSRD_CHANGE_ALARM_INTERVAL"
 
@@ -140,20 +126,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 645
     const-string v4, " "
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 646
     .local v2, "tokens":[Ljava/lang/String;
     array-length v4, v2
 
     if-le v4, v3, :cond_0
 
-    .line 648
     const/4 v4, 0x1
 
     :try_start_0
@@ -163,7 +146,6 @@
 
     move-result v1
 
-    .line 649
     .local v1, "interval":I
     iget-object v4, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mSM:Lcom/android/internal/util/StateMachine;
 
@@ -175,12 +157,10 @@
 
     goto :goto_0
 
-    .line 650
     .end local v1    # "interval":I
     :catch_0
     move-exception v0
 
-    .line 651
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v4, "OxygenStateMachine"
 
@@ -221,17 +201,14 @@
     .locals 1
 
     .prologue
-    .line 660
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mUdpSocket:Ljava/net/DatagramSocket;
 
     if-eqz v0, :cond_0
 
-    .line 661
     iget-object v0, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mUdpSocket:Ljava/net/DatagramSocket;
 
     invoke-virtual {v0}, Ljava/net/DatagramSocket;->close()V
 
-    .line 663
     :cond_0
     return-void
 .end method
@@ -240,7 +217,6 @@
     .locals 7
 
     .prologue
-    .line 596
     :try_start_0
     new-instance v4, Ljava/net/DatagramSocket;
 
@@ -252,13 +228,11 @@
     :try_end_0
     .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 605
     :cond_0
     const/16 v4, 0x800
 
     new-array v0, v4, [B
 
-    .line 606
     .local v0, "data":[B
     new-instance v2, Ljava/net/DatagramPacket;
 
@@ -266,7 +240,6 @@
 
     invoke-direct {v2, v0, v4}, Ljava/net/DatagramPacket;-><init>([BI)V
 
-    .line 609
     .local v2, "packet":Ljava/net/DatagramPacket;
     :try_start_1
     iget-object v4, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mUdpSocket:Ljava/net/DatagramSocket;
@@ -275,7 +248,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 614
     :goto_0
     iget-object v4, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->m:Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitor;
 
@@ -286,24 +258,20 @@
 
     if-nez v4, :cond_1
 
-    .line 615
     const-string v4, "OxygenStateMachine"
 
     const-string v5, "terminate monitor thread"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 627
     .end local v0    # "data":[B
     .end local v2    # "packet":Ljava/net/DatagramPacket;
     :goto_1
     return-void
 
-    .line 597
     :catch_0
     move-exception v1
 
-    .line 598
     .local v1, "e":Ljava/net/SocketException;
     const-string v4, "OxygenStateMachine"
 
@@ -311,7 +279,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     iget-object v4, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->mSM:Lcom/android/internal/util/StateMachine;
 
     const v5, 0x20164
@@ -320,14 +287,12 @@
 
     goto :goto_1
 
-    .line 610
     .end local v1    # "e":Ljava/net/SocketException;
     .restart local v0    # "data":[B
     .restart local v2    # "packet":Ljava/net/DatagramPacket;
     :catch_1
     move-exception v1
 
-    .line 611
     .local v1, "e":Ljava/io/IOException;
     const-string v4, "OxygenStateMachine"
 
@@ -337,7 +302,6 @@
 
     goto :goto_0
 
-    .line 619
     .end local v1    # "e":Ljava/io/IOException;
     :cond_1
     new-instance v3, Ljava/lang/String;
@@ -354,7 +318,6 @@
 
     invoke-direct {v3, v4, v5, v6}, Ljava/lang/String;-><init>([BII)V
 
-    .line 620
     .local v3, "result":Ljava/lang/String;
     const-string v4, "OxygenStateMachine"
 
@@ -378,14 +341,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 622
     invoke-direct {p0, v3}, Lcom/samsung/android/server/wifi/OxygenStateMachine$OlsrdMonitorThread;->dispatchMessage(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 623
     const-string v4, "OxygenStateMachine"
 
     const-string v5, "terminate monitor thread"

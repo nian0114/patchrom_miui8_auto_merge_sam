@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 637
     iput-object p1, p0, Lcom/samsung/cpp/CPPProvider$CPPEventHandler$1;->this$1:Lcom/samsung/cpp/CPPProvider$CPPEventHandler;
 
     iput-object p2, p0, Lcom/samsung/cpp/CPPProvider$CPPEventHandler$1;->val$resultMsg:[B
@@ -52,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 640
     iget-object v0, p0, Lcom/samsung/cpp/CPPProvider$CPPEventHandler$1;->this$1:Lcom/samsung/cpp/CPPProvider$CPPEventHandler;
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$CPPEventHandler;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/samsung/cpp/CPPProvider;->sendRespToCpDirect([BJI)V
 
-    .line 641
     return-void
 .end method

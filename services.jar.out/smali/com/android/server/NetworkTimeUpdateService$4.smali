@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 370
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 374
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 375
     .local v0, "action":Ljava/lang/String;
     const-string v9, "NetworkTimeUpdateService"
 
@@ -52,7 +49,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "onReceive + intent "
+    const-string v11, "onReceive + intent "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,7 +69,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     const-string v9, "com.samsung.edm.intent.action.UPDATE_NTP_PARAMETERS"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -81,8 +77,7 @@
 
     if-eqz v9, :cond_6
 
-    .line 377
-    const-string/jumbo v9, "enterprise_policy"
+    const-string v9, "enterprise_policy"
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -90,7 +85,6 @@
 
     check-cast v1, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 379
     .local v1, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->getDateTimePolicy()Landroid/app/enterprise/DateTimePolicy;
 
@@ -100,7 +94,6 @@
 
     move-result-object v3
 
-    .line 380
     .local v3, "ntpInfo":Landroid/app/enterprise/NtpInfo;
     if-eqz v3, :cond_5
 
@@ -110,12 +103,10 @@
 
     if-eqz v9, :cond_5
 
-    .line 381
     invoke-virtual {v3}, Landroid/app/enterprise/NtpInfo;->getPollingInterval()J
 
     move-result-wide v4
 
-    .line 382
     .local v4, "pollingInterval":J
     const-wide/16 v10, 0x0
 
@@ -123,19 +114,16 @@
 
     if-eqz v9, :cond_1
 
-    .line 383
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
     invoke-static {v9, v4, v5}, Lcom/android/server/NetworkTimeUpdateService;->access$702(Lcom/android/server/NetworkTimeUpdateService;J)J
 
-    .line 388
     :goto_0
     invoke-virtual {v3}, Landroid/app/enterprise/NtpInfo;->getPollingInterval()J
 
     move-result-wide v6
 
-    .line 389
     .local v6, "pollingIntervalShorterMs":J
     const-wide/16 v10, 0x0
 
@@ -143,35 +131,29 @@
 
     if-eqz v9, :cond_2
 
-    .line 390
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalShorterMs:J
     invoke-static {v9, v6, v7}, Lcom/android/server/NetworkTimeUpdateService;->access$802(Lcom/android/server/NetworkTimeUpdateService;J)J
 
-    .line 395
     :goto_1
     invoke-virtual {v3}, Landroid/app/enterprise/NtpInfo;->getMaxAttempts()I
 
     move-result v2
 
-    .line 396
     .local v2, "maxAttempts":I
     if-eqz v2, :cond_3
 
-    .line 397
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mTryAgainTimesMax:I
     invoke-static {v9, v2}, Lcom/android/server/NetworkTimeUpdateService;->access$902(Lcom/android/server/NetworkTimeUpdateService;I)I
 
-    .line 402
     :goto_2
     invoke-virtual {v3}, Landroid/app/enterprise/NtpInfo;->getTimeErrorThreshold()I
 
     move-result v8
 
-    .line 403
     .local v8, "timeErrorThreshold":I
     const-wide/16 v10, 0x0
 
@@ -181,13 +163,11 @@
 
     if-eqz v9, :cond_4
 
-    .line 404
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mTimeErrorThresholdMs:I
     invoke-static {v9, v8}, Lcom/android/server/NetworkTimeUpdateService;->access$502(Lcom/android/server/NetworkTimeUpdateService;I)I
 
-    .line 409
     :goto_3
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
@@ -196,7 +176,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mNtpSetByMDM:Z
     invoke-static {v9, v10}, Lcom/android/server/NetworkTimeUpdateService;->access$302(Lcom/android/server/NetworkTimeUpdateService;Z)Z
 
-    .line 410
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     const/4 v10, 0x0
@@ -204,7 +183,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mTryAgainCounter:I
     invoke-static {v9, v10}, Lcom/android/server/NetworkTimeUpdateService;->access$1002(Lcom/android/server/NetworkTimeUpdateService;I)I
 
-    .line 422
     .end local v2    # "maxAttempts":I
     .end local v4    # "pollingInterval":J
     .end local v6    # "pollingIntervalShorterMs":J
@@ -225,14 +203,12 @@
 
     invoke-virtual {v9}, Landroid/os/Message;->sendToTarget()V
 
-    .line 426
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v3    # "ntpInfo":Landroid/app/enterprise/NtpInfo;
     :cond_0
     :goto_5
     return-void
 
-    .line 385
     .restart local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .restart local v3    # "ntpInfo":Landroid/app/enterprise/NtpInfo;
     .restart local v4    # "pollingInterval":J
@@ -256,7 +232,6 @@
 
     goto :goto_0
 
-    .line 392
     .restart local v6    # "pollingIntervalShorterMs":J
     :cond_2
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
@@ -278,7 +253,6 @@
 
     goto :goto_1
 
-    .line 399
     .restart local v2    # "maxAttempts":I
     :cond_3
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
@@ -298,7 +272,6 @@
 
     goto :goto_2
 
-    .line 406
     .restart local v8    # "timeErrorThreshold":I
     :cond_4
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
@@ -318,7 +291,6 @@
 
     goto :goto_3
 
-    .line 412
     .end local v2    # "maxAttempts":I
     .end local v4    # "pollingInterval":J
     .end local v6    # "pollingIntervalShorterMs":J
@@ -331,7 +303,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mNtpSetByMDM:Z
     invoke-static {v9, v10}, Lcom/android/server/NetworkTimeUpdateService;->access$302(Lcom/android/server/NetworkTimeUpdateService;Z)Z
 
-    .line 413
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -349,7 +320,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
     invoke-static {v9, v10, v11}, Lcom/android/server/NetworkTimeUpdateService;->access$702(Lcom/android/server/NetworkTimeUpdateService;J)J
 
-    .line 415
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -367,7 +337,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalShorterMs:J
     invoke-static {v9, v10, v11}, Lcom/android/server/NetworkTimeUpdateService;->access$802(Lcom/android/server/NetworkTimeUpdateService;J)J
 
-    .line 417
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -383,7 +352,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mTryAgainTimesMax:I
     invoke-static {v9, v10}, Lcom/android/server/NetworkTimeUpdateService;->access$902(Lcom/android/server/NetworkTimeUpdateService;I)I
 
-    .line 419
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -401,7 +369,6 @@
 
     goto/16 :goto_4
 
-    .line 423
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v3    # "ntpInfo":Landroid/app/enterprise/NtpInfo;
     :cond_6
@@ -413,7 +380,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 424
     iget-object v9, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     const/4 v10, 0x1

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2194
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$20;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 2198
     const v1, 0x1020006
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -54,7 +52,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2199
     .local v0, "imageView":Landroid/widget/ImageView;
     if-eqz v0, :cond_0
 
@@ -80,7 +77,6 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 2200
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsSafemodeSupport:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6800()Z
 
@@ -88,15 +84,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 2201
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {v3}, Lcom/android/server/policy/GlobalActions;->access$4302(Z)Z
 
-    .line 2202
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmLandDlg:Z
     invoke-static {v3}, Lcom/android/server/policy/GlobalActions;->access$4402(Z)Z
 
-    .line 2203
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$20;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHandler:Landroid/os/Handler;
@@ -106,7 +99,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2204
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$20;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -118,7 +110,6 @@
 
     move v1, v2
 
-    .line 2208
     :goto_0
     return v1
 

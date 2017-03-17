@@ -27,15 +27,11 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
     iput-object v0, p0, Lcom/android/server/pm/PersonaPolicyManagerService$PersonaRCPSettings;->property:Ljava/lang/String;
 
-    .line 128
     iput-object v0, p0, Lcom/android/server/pm/PersonaPolicyManagerService$PersonaRCPSettings;->value:Ljava/lang/String;
 
-    .line 129
     return-void
 .end method

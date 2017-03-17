@@ -23,14 +23,12 @@
     .locals 4
 
     .prologue
-    .line 295
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
-    .line 296
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -45,7 +43,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 297
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -60,7 +57,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 298
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -75,7 +71,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 299
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -90,7 +85,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 300
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -105,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 303
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -120,7 +113,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 304
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -135,7 +127,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 305
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -150,7 +141,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 306
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -165,7 +155,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 307
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -180,7 +169,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 308
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -195,7 +183,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 309
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -210,7 +197,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 310
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -225,7 +211,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 311
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -240,7 +225,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 312
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -255,7 +239,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -270,7 +253,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 314
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -285,7 +267,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 315
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -300,7 +281,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 316
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -315,7 +295,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 317
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -330,7 +309,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 318
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -345,7 +323,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 319
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -360,7 +337,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 320
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -375,7 +351,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 321
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -390,7 +365,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 322
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -405,7 +379,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 323
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -420,7 +393,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 324
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -435,7 +407,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 325
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -450,7 +421,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 326
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -465,7 +435,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 327
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -480,7 +449,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 328
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -495,7 +463,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 329
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -510,7 +477,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 330
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -525,7 +491,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 331
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -540,7 +505,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 332
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -555,7 +519,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 333
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -570,7 +533,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 334
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -585,7 +547,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 335
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -600,7 +561,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 336
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -615,7 +575,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 337
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -630,7 +589,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 338
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -645,7 +603,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 339
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -660,7 +617,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 340
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -675,7 +631,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 341
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -690,7 +645,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 342
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -705,7 +659,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 343
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -720,7 +673,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 344
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -735,7 +687,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 345
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -750,7 +701,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 346
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -765,7 +715,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 347
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -780,7 +729,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 348
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -795,7 +743,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 349
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -810,7 +757,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 350
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -825,7 +771,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 351
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -840,7 +785,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 352
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -855,7 +799,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 353
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -870,7 +813,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 354
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -885,7 +827,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 355
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -900,7 +841,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 356
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -915,7 +855,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 357
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -930,7 +869,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 358
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -945,7 +883,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 359
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -960,7 +897,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 360
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -975,7 +911,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 361
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -990,7 +925,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 362
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1005,7 +939,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 363
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1020,7 +953,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 364
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1035,7 +967,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 365
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1050,7 +981,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1065,7 +995,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1080,7 +1009,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 368
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1095,7 +1023,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 369
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1110,7 +1037,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 370
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1125,7 +1051,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 371
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1140,7 +1065,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 372
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1155,7 +1079,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1170,7 +1093,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 374
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1185,7 +1107,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 375
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1200,7 +1121,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 376
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1215,7 +1135,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 377
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1230,7 +1149,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 378
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1245,7 +1163,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 379
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1260,7 +1177,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1275,7 +1191,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 381
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1290,7 +1205,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 382
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1305,7 +1219,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 383
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1320,7 +1233,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 384
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1335,7 +1247,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 385
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1350,7 +1261,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 386
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1365,7 +1275,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 387
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1380,7 +1289,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 388
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1395,7 +1303,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 389
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1410,7 +1317,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 390
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1425,7 +1331,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 391
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1440,7 +1345,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 392
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1455,7 +1359,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 393
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1470,7 +1373,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 394
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1485,7 +1387,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 395
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1500,7 +1401,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 396
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1515,7 +1415,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 397
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1530,7 +1429,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 398
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1545,7 +1443,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 401
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1560,7 +1457,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 402
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1575,7 +1471,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 403
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1590,7 +1485,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 404
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1605,7 +1499,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 405
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1620,7 +1513,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 406
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1635,7 +1527,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 407
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1650,7 +1541,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 408
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     new-instance v1, Lmf/org/apache/xerces/util/XMLErrorCode;
@@ -1665,7 +1555,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 409
     return-void
 .end method
 
@@ -1673,7 +1562,6 @@
     .locals 0
 
     .prologue
-    .line 415
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -1684,7 +1572,6 @@
     .param p0, "error"    # Lmf/org/apache/xerces/util/XMLErrorCode;
 
     .prologue
-    .line 412
     sget-object v0, Lmf/org/apache/xerces/util/DOMErrorHandlerWrapper$DOMErrorTypeMap;->fgDOMErrorTypeTable:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;

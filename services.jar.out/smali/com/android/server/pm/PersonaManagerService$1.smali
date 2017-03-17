@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 2856
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$1;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PersonaManagerService$1;->val$packages:Ljava/util/List;
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 2858
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$1;->val$packages:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -66,7 +64,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2859
     .local v1, "pkg":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$1;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -81,7 +78,6 @@
 
     goto :goto_0
 
-    .line 2861
     .end local v1    # "pkg":Ljava/lang/String;
     :cond_0
     return-void

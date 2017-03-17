@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 277
     iput-object p1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$ClearUserDataObserver;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "succeeded"    # Z
 
     .prologue
-    .line 279
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
@@ -75,6 +73,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     return-void
 .end method

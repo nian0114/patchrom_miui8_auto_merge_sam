@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaBootStatus$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,10 +38,8 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 126
     if-nez p1, :cond_1
 
-    .line 127
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaBootStatus$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;->mHandler:Landroid/os/Handler;
@@ -54,16 +51,13 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 139
     :cond_0
     :goto_0
     return-void
 
-    .line 131
     :cond_1
     if-nez p2, :cond_2
 
-    .line 132
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaBootStatus$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;->mHandler:Landroid/os/Handler;
@@ -77,7 +71,6 @@
 
     goto :goto_0
 
-    .line 136
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -91,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 137
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaBootStatus$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaBootStatus;->mHandler:Landroid/os/Handler;

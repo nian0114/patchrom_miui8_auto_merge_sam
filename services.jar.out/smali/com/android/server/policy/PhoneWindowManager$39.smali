@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 11153
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$39;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 11156
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$39;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->updateSettings()V
 
-    .line 11157
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$39;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mSPWM:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
@@ -55,7 +52,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->updateSettings()V
 
-    .line 11160
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$39;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mMultiPhoneWindowManager:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
@@ -65,6 +61,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->updateSettings()V
 
-    .line 11163
     return-void
 .end method

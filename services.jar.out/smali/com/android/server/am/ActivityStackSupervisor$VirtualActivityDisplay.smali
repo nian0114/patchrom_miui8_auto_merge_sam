@@ -28,7 +28,6 @@
     .param p4, "density"    # I
 
     .prologue
-    .line 8500
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -43,7 +42,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;-><init>(Lcom/android/server/am/ActivityStackSupervisor;IIIZ)V
 
-    .line 8501
     return-void
 .end method
 
@@ -55,28 +53,22 @@
     .param p5, "virtualScreen"    # Z
 
     .prologue
-    .line 8502
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;-><init>(Lcom/android/server/am/ActivityStackSupervisor;)V
 
-    .line 8504
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v0
 
-    .line 8506
     .local v0, "dm":Landroid/hardware/display/DisplayManagerGlobal;
     const/16 v8, 0x9
 
-    .line 8507
     .local v8, "flags":I
     if-eqz p5, :cond_0
 
-    .line 8508
     or-int/lit8 v8, v8, 0x40
 
-    .line 8511
     :cond_0
     iget-object v1, p1, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -104,28 +96,23 @@
 
     iput-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
-    .line 8515
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     if-nez v1, :cond_1
 
-    .line 8516
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mDisplayId:I
 
-    .line 8517
     const-string v1, "ActivityManager"
 
     const-string v2, "Can\'t create VirtualActivityDisplay."
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8523
     :goto_0
     return-void
 
-    .line 8520
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
@@ -135,7 +122,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->init(Landroid/view/Display;)V
 
-    .line 8522
     iget-object v1, p1, Lcom/android/server/am/ActivityStackSupervisor;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     iget v2, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mDisplayId:I
@@ -152,25 +138,20 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 8533
     invoke-super {p0, p1}, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->detachActivitiesLocked(Lcom/android/server/am/ActivityStack;)V
 
-    .line 8534
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     if-eqz v0, :cond_0
 
-    .line 8535
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     invoke-virtual {v0}, Landroid/hardware/display/VirtualDisplay;->release()V
 
-    .line 8536
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
-    .line 8538
     :cond_0
     return-void
 .end method
@@ -180,17 +161,14 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 8526
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     if-eqz v0, :cond_0
 
-    .line 8527
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/VirtualDisplay;->setSurface(Landroid/view/Surface;)V
 
-    .line 8529
     :cond_0
     return-void
 .end method
@@ -199,7 +177,6 @@
     .locals 2
 
     .prologue
-    .line 8542
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +193,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

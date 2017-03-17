@@ -15,7 +15,6 @@
     .locals 1
 
     .prologue
-    .line 53
     new-instance v0, Lmf/org/apache/xerces/dom/ASDOMImplementationImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/dom/ASDOMImplementationImpl;-><init>()V
@@ -29,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/DOMImplementationImpl;-><init>()V
 
     return-void
@@ -39,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 62
     sget-object v0, Lmf/org/apache/xerces/dom/ASDOMImplementationImpl;->singleton:Lmf/org/apache/xerces/dom/ASDOMImplementationImpl;
 
     return-object v0
@@ -52,7 +49,6 @@
     .param p1, "isNamespaceAware"    # Z
 
     .prologue
-    .line 79
     new-instance v0, Lmf/org/apache/xerces/dom/ASModelImpl;
 
     invoke-direct {v0, p1}, Lmf/org/apache/xerces/dom/ASModelImpl;-><init>(Z)V
@@ -64,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 89
     new-instance v0, Lmf/org/apache/xerces/parsers/DOMASBuilderImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/parsers/DOMASBuilderImpl;-><init>()V
@@ -76,8 +71,7 @@
     .locals 4
 
     .prologue
-    .line 99
-    const-string/jumbo v1, "http://www.w3.org/dom/DOMTR"
+    const-string v1, "http://www.w3.org/dom/DOMTR"
 
     const-string v2, "NOT_SUPPORTED_ERR"
 
@@ -87,7 +81,6 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "msg":Ljava/lang/String;
     new-instance v1, Lmf/org/w3c/dom/DOMException;
 

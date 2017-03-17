@@ -64,79 +64,62 @@
 
     const/4 v3, 0x0
 
-    .line 293
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     iput-boolean v3, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyTimeoutCanceled:Z
 
-    .line 86
     iput-boolean v3, p0, Lcom/movial/ipphone/EmergencyCallController;->mSuccessfulGsmEmergency:Z
 
-    .line 87
     iput-boolean v3, p0, Lcom/movial/ipphone/EmergencyCallController;->mRetryEmergencyIMSRegistration:Z
 
-    .line 88
     iput-boolean v3, p0, Lcom/movial/ipphone/EmergencyCallController;->mTemporaryWFCOff:Z
 
-    .line 89
     iput-boolean v3, p0, Lcom/movial/ipphone/EmergencyCallController;->mIMSRegistered:Z
 
-    .line 90
     const-string v1, "911"
 
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->cachedEmergencyNumber:Ljava/lang/String;
 
-    .line 92
     sget-object v1, Lcom/movial/ipphone/IPUtils$EmergencyState;->NOT_INITIALIZED:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 93
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyCallPref:I
 
-    .line 95
     const/4 v1, 0x3
 
     iput v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mGsmRadioState:I
 
-    .line 96
     new-instance v1, Lcom/movial/ipphone/EmergencyCallController$1;
 
     invoke-direct {v1, p0}, Lcom/movial/ipphone/EmergencyCallController$1;-><init>(Lcom/movial/ipphone/EmergencyCallController;)V
 
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
-    .line 110
     new-instance v1, Lcom/movial/ipphone/EmergencyCallController$2;
 
     invoke-direct {v1, p0}, Lcom/movial/ipphone/EmergencyCallController$2;-><init>(Lcom/movial/ipphone/EmergencyCallController;)V
 
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mHandler:Landroid/os/Handler;
 
-    .line 263
     new-instance v1, Lcom/movial/ipphone/EmergencyCallController$3;
 
     invoke-direct {v1, p0}, Lcom/movial/ipphone/EmergencyCallController$3;-><init>(Lcom/movial/ipphone/EmergencyCallController;)V
 
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 294
     iput-object p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mIPPhoneProxy:Lcom/movial/ipphone/IPPhoneProxy;
 
-    .line 295
     iput-object p2, p0, Lcom/movial/ipphone/EmergencyCallController;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 296
     invoke-interface {p2}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
-    .line 299
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -151,7 +134,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 300
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -162,7 +144,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 301
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -173,7 +154,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 304
     :cond_0
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -183,7 +163,6 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/android/internal/telephony/Phone;->registerForDisconnect(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 305
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mPhone:Lcom/android/internal/telephony/Phone;
 
     iget-object v2, p0, Lcom/movial/ipphone/EmergencyCallController;->mHandler:Landroid/os/Handler;
@@ -192,7 +171,6 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/android/internal/telephony/Phone;->registerForPreciseCallStateChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 306
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mPhone:Lcom/android/internal/telephony/Phone;
 
     iget-object v2, p0, Lcom/movial/ipphone/EmergencyCallController;->mHandler:Landroid/os/Handler;
@@ -201,35 +179,29 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/android/internal/telephony/Phone;->registerForServiceStateChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 308
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 309
     .local v0, "intentfilter":Landroid/content/IntentFilter;
     const-string v1, "com.movial.ims_emergency_fail"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 310
     const-string v1, "com.movial.ims_emergency_start"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 311
     const-string v1, "com.movial.IMS_REGISTRATION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 312
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/movial/ipphone/EmergencyCallController;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 314
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
     const-string v2, "phone"
@@ -246,7 +218,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 315
     return-void
 .end method
 
@@ -255,7 +226,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     return-object v0
@@ -267,7 +237,6 @@
     .param p1, "x1"    # Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     return-object p1
@@ -278,7 +247,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mIPPhoneProxy:Lcom/movial/ipphone/IPPhoneProxy;
 
     return-object v0
@@ -289,7 +257,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mPhone:Lcom/android/internal/telephony/Phone;
 
     return-object v0
@@ -300,7 +267,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mTemporaryWFCOff:Z
 
     return v0
@@ -312,7 +278,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 70
     iput-boolean p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mTemporaryWFCOff:Z
 
     return p1
@@ -323,7 +288,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mGsmRadioState:I
 
     return v0
@@ -335,7 +299,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 70
     iput p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mGsmRadioState:I
 
     return p1
@@ -346,7 +309,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mSuccessfulGsmEmergency:Z
 
     return v0
@@ -358,7 +320,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 70
     iput-boolean p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mSuccessfulGsmEmergency:Z
 
     return p1
@@ -369,7 +330,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mRetryEmergencyIMSRegistration:Z
 
     return v0
@@ -381,7 +341,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 70
     iput-boolean p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mRetryEmergencyIMSRegistration:Z
 
     return p1
@@ -392,7 +351,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -403,7 +361,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyTimeoutCanceled:Z
 
     return v0
@@ -415,7 +372,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 70
     iput-boolean p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyTimeoutCanceled:Z
 
     return p1
@@ -426,7 +382,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyCallPref:I
 
     return v0
@@ -437,7 +392,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->cachedEmergencyNumber:Ljava/lang/String;
 
     return-object v0
@@ -448,7 +402,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -459,7 +412,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/EmergencyCallController;
 
     .prologue
-    .line 70
     iget-boolean v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mIMSRegistered:Z
 
     return v0
@@ -471,7 +423,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 70
     iput-boolean p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mIMSRegistered:Z
 
     return p1
@@ -483,7 +434,6 @@
     .locals 1
 
     .prologue
-    .line 348
     iget v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyCallPref:I
 
     return v0
@@ -493,7 +443,6 @@
     .locals 1
 
     .prologue
-    .line 357
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     return-object v0
@@ -504,17 +453,14 @@
     .param p1, "force"    # Z
 
     .prologue
-    .line 318
     const-string v0, "EmergencyCallController"
 
     const-string v1, "notifyForceEmergencyModeChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     if-nez p1, :cond_1
 
-    .line 320
     iget-boolean v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mSuccessfulGsmEmergency:Z
 
     if-nez v0, :cond_0
@@ -531,7 +477,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 321
     :cond_0
     iget v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyCallPref:I
 
@@ -543,7 +488,6 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 323
     :cond_1
     return-void
 .end method
@@ -553,10 +497,8 @@
     .param p1, "pref"    # I
 
     .prologue
-    .line 352
     iput p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyCallPref:I
 
-    .line 354
     return-void
 .end method
 
@@ -565,10 +507,8 @@
     .param p1, "state"    # Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 362
     return-void
 .end method
 
@@ -577,10 +517,8 @@
     .param p1, "dialString"    # Ljava/lang/String;
 
     .prologue
-    .line 327
     iput-object p1, p0, Lcom/movial/ipphone/EmergencyCallController;->cachedEmergencyNumber:Ljava/lang/String;
 
-    .line 328
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
     sget-object v2, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_TURNING_ON_RADIO:Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -591,7 +529,6 @@
 
     if-nez v1, :cond_0
 
-    .line 329
     const-string v1, "EmergencyCallController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -616,14 +553,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     iget v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mGsmRadioState:I
 
     const/4 v2, 0x1
 
     if-eq v1, v2, :cond_1
 
-    .line 332
     const-string v1, "gsm.ecc.timeout"
 
     const/16 v2, 0x1770
@@ -632,7 +567,6 @@
 
     move-result v0
 
-    .line 338
     .local v0, "timeout":I
     :goto_0
     const-string v1, "EmergencyCallController"
@@ -663,12 +597,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyTimeoutCanceled:Z
 
-    .line 340
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/movial/ipphone/EmergencyCallController;->mHandler:Landroid/os/Handler;
@@ -683,7 +615,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 343
     .end local v0    # "timeout":I
     :cond_0
     iget-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -697,17 +628,14 @@
     :goto_1
     iput-object v1, p0, Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 345
     return-void
 
-    .line 335
     :cond_1
     const/16 v0, 0x64
 
     .restart local v0    # "timeout":I
     goto :goto_0
 
-    .line 343
     .end local v0    # "timeout":I
     :cond_2
     sget-object v1, Lcom/movial/ipphone/IPUtils$EmergencyState;->IMS_CALL_DIALING:Lcom/movial/ipphone/IPUtils$EmergencyState;

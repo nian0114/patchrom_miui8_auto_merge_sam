@@ -45,21 +45,16 @@
     .param p2, "enrollmentParameters"    # Lcom/android/server/wifi/hs20/WifiHs20EnrollmentParameters;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->certStatus:Z
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->mContext:Landroid/content/Context;
 
-    .line 45
     iput-object p2, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->mEnrollmentParameters:Lcom/android/server/wifi/hs20/WifiHs20EnrollmentParameters;
 
-    .line 47
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->mEnrollmentParameters:Lcom/android/server/wifi/hs20/WifiHs20EnrollmentParameters;
 
@@ -67,26 +62,22 @@
 
     if-nez v3, :cond_1
 
-    .line 48
     invoke-virtual {p0}, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->genCertID()I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->id:I
 
-    .line 49
     iget v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->id:I
 
     if-gez v3, :cond_0
 
-    .line 50
     iget v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->id:I
 
     mul-int/lit8 v3, v3, -0x1
 
     iput v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->id:I
 
-    .line 51
     :cond_0
     const-string v3, "HS20CertDetails"
 
@@ -94,11 +85,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :goto_0
     return-void
 
-    .line 53
     :cond_1
     const-string v3, "HS20CertDetails"
 
@@ -106,17 +95,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->init()V
 
-    .line 55
     new-instance v2, Lcom/android/server/wifi/hs20/WifiHs20DBHandler;
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20DBHandler;-><init>(Landroid/content/Context;)V
 
-    .line 56
     .local v2, "mDB":Lcom/android/server/wifi/hs20/WifiHs20DBHandler;
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->mEnrollmentParameters:Lcom/android/server/wifi/hs20/WifiHs20EnrollmentParameters;
 
@@ -128,7 +114,6 @@
 
     move-result-object v1
 
-    .line 58
     .local v1, "mCredential":Lcom/android/server/wifi/hs20/WifiHs20PPSMO$Credential;
     iget-object v3, v1, Lcom/android/server/wifi/hs20/WifiHs20PPSMO$Credential;->digitalCertificateObj:Lcom/android/server/wifi/hs20/WifiHs20PPSMO$DigitalCertificate;
 
@@ -140,13 +125,11 @@
 
     goto :goto_0
 
-    .line 60
     .end local v1    # "mCredential":Lcom/android/server/wifi/hs20/WifiHs20PPSMO$Credential;
     .end local v2    # "mDB":Lcom/android/server/wifi/hs20/WifiHs20DBHandler;
     :catch_0
     move-exception v0
 
-    .line 61
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "HS20CertDetails"
 
@@ -154,7 +137,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -164,14 +146,12 @@
     .locals 2
 
     .prologue
-    .line 67
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20KeyStoreAPI;
 
     invoke-direct {v0}, Lcom/android/server/wifi/hs20/WifiHs20KeyStoreAPI;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->hs20KeyStoreAPI:Lcom/android/server/wifi/hs20/WifiHs20KeyStoreAPI;
 
-    .line 68
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;
 
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->mContext:Landroid/content/Context;
@@ -180,12 +160,10 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->hs20PasswordGenerator:Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20CertDetails;->hs20PasswordGenerator:Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;->genPasswd1()Ljava/lang/String;
 
-    .line 70
     return-void
 .end method
 
@@ -195,23 +173,19 @@
     .locals 8
 
     .prologue
-    .line 73
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
-    .line 74
     .local v0, "dtNow":Landroid/text/format/Time;
     invoke-virtual {v0}, Landroid/text/format/Time;->setToNow()V
 
-    .line 75
     const-string v3, "%Y%m%d%H%M"
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 76
     .local v1, "lsNow":Ljava/lang/String;
     const-string v3, "HS20CertDetails"
 
@@ -235,12 +209,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     new-instance v2, Ljava/util/Random;
 
     invoke-direct {v2}, Ljava/util/Random;-><init>()V
 
-    .line 78
     .local v2, "mRandom":Ljava/util/Random;
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 

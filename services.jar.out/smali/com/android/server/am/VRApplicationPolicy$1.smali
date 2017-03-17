@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 89
     iput-object p1, p0, Lcom/android/server/am/VRApplicationPolicy$1;->this$0:Lcom/android/server/am/VRApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 92
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 93
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.intent.action.HMT_CONNECTED"
 
@@ -56,18 +53,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 94
     iget-object v2, p0, Lcom/android/server/am/VRApplicationPolicy$1;->this$0:Lcom/android/server/am/VRApplicationPolicy;
 
     # setter for: Lcom/android/server/am/VRApplicationPolicy;->mHMTconnected:Z
     invoke-static {v2, v4}, Lcom/android/server/am/VRApplicationPolicy;->access$002(Lcom/android/server/am/VRApplicationPolicy;Z)Z
 
-    .line 100
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     const-string v2, "com.samsung.intent.action.HMT_DISCONNECTED"
 
@@ -77,7 +71,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 96
     iget-object v2, p0, Lcom/android/server/am/VRApplicationPolicy$1;->this$0:Lcom/android/server/am/VRApplicationPolicy;
 
     const/4 v3, 0x0
@@ -85,7 +78,6 @@
     # setter for: Lcom/android/server/am/VRApplicationPolicy;->mHMTconnected:Z
     invoke-static {v2, v3}, Lcom/android/server/am/VRApplicationPolicy;->access$002(Lcom/android/server/am/VRApplicationPolicy;Z)Z
 
-    .line 97
     iget-object v2, p0, Lcom/android/server/am/VRApplicationPolicy$1;->this$0:Lcom/android/server/am/VRApplicationPolicy;
 
     iget-object v2, v2, Lcom/android/server/am/VRApplicationPolicy;->mHandler:Lcom/android/server/am/VRApplicationPolicy$H;
@@ -94,7 +86,6 @@
 
     move-result-object v1
 
-    .line 98
     .local v1, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/am/VRApplicationPolicy$1;->this$0:Lcom/android/server/am/VRApplicationPolicy;
 

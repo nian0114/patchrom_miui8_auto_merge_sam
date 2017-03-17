@@ -57,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 873
     new-instance v0, Landroid/app/ActivityManager$TaskDescription$1;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$TaskDescription$1;-><init>()V
@@ -73,12 +72,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 678
     const/4 v0, 0x0
 
     invoke-direct {p0, v1, v1, v0}, Landroid/app/ActivityManager$TaskDescription;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;I)V
 
-    .line 679
     return-void
 .end method
 
@@ -87,35 +84,28 @@
     .param p1, "td"    # Landroid/app/ActivityManager$TaskDescription;
 
     .prologue
-    .line 684
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 685
     iget-object v0, p1, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
-    .line 686
     iget-object v0, p1, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 687
     iget v0, p1, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
     iput v0, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
-    .line 689
     iget v0, p1, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
     iput v0, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
-    .line 690
     iget-object v0, p1, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
-    .line 691
     return-void
 .end method
 
@@ -124,13 +114,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 693
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 694
     invoke-virtual {p0, p1}, Landroid/app/ActivityManager$TaskDescription;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 695
     return-void
 .end method
 
@@ -140,7 +127,6 @@
     .param p2, "x1"    # Landroid/app/ActivityManager$1;
 
     .prologue
-    .line 611
     invoke-direct {p0, p1}, Landroid/app/ActivityManager$TaskDescription;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -151,14 +137,12 @@
     .param p1, "label"    # Ljava/lang/String;
 
     .prologue
-    .line 671
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Landroid/app/ActivityManager$TaskDescription;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;I)V
 
-    .line 672
     return-void
 .end method
 
@@ -169,15 +153,12 @@
     .param p3, "iconFilename"    # Ljava/lang/String;
 
     .prologue
-    .line 651
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0, p2}, Landroid/app/ActivityManager$TaskDescription;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;I)V
 
-    .line 652
     iput-object p3, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
-    .line 653
     return-void
 .end method
 
@@ -187,12 +168,10 @@
     .param p2, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 662
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/app/ActivityManager$TaskDescription;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;I)V
 
-    .line 663
     return-void
 .end method
 
@@ -203,10 +182,8 @@
     .param p3, "colorPrimary"    # I
 
     .prologue
-    .line 639
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 640
     if-eqz p3, :cond_0
 
     invoke-static {p3}, Landroid/graphics/Color;->alpha(I)I
@@ -217,7 +194,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 641
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "A TaskDescription\'s primary color should be opaque"
@@ -226,17 +202,13 @@
 
     throw v0
 
-    .line 644
     :cond_0
     iput-object p1, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
-    .line 645
     iput-object p2, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 646
     iput p3, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
-    .line 647
     return-void
 .end method
 
@@ -245,10 +217,8 @@
     .param p0, "iconFilename"    # Ljava/lang/String;
 
     .prologue
-    .line 773
     if-eqz p0, :cond_0
 
-    .line 775
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -260,15 +230,12 @@
 
     move-result-object v0
 
-    .line 780
     :goto_0
     return-object v0
 
-    .line 777
     :catch_0
     move-exception v0
 
-    .line 780
     :cond_0
     const/4 v0, 0x0
 
@@ -281,7 +248,6 @@
     .locals 1
 
     .prologue
-    .line 834
     const/4 v0, 0x0
 
     return v0
@@ -291,15 +257,12 @@
     .locals 1
 
     .prologue
-    .line 755
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 756
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 758
     :goto_0
     return-object v0
 
@@ -317,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 763
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
     return-object v0
@@ -327,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 768
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -337,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 748
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
     return-object v0
@@ -347,7 +307,6 @@
     .locals 1
 
     .prologue
-    .line 787
     iget v0, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
     return v0
@@ -357,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 796
     iget v0, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
     return v0
@@ -370,7 +328,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 864
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -384,7 +341,6 @@
     :goto_0
     iput-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
-    .line 865
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -402,21 +358,18 @@
     :goto_1
     iput-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 866
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
-    .line 868
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
-    .line 870
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -430,19 +383,16 @@
     :cond_0
     iput-object v1, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
-    .line 871
     return-void
 
     :cond_1
     move-object v0, v1
 
-    .line 864
     goto :goto_0
 
     :cond_2
     move-object v0, v1
 
-    .line 865
     goto :goto_1
 .end method
 
@@ -454,8 +404,7 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 819
-    const-string/jumbo v0, "task_description_label"
+    const-string v0, "task_description_label"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -463,17 +412,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 820
     invoke-virtual {p0, p2}, Landroid/app/ActivityManager$TaskDescription;->setLabel(Ljava/lang/String;)V
 
-    .line 830
     :cond_0
     :goto_0
     return-void
 
-    .line 821
     :cond_1
-    const-string/jumbo v0, "task_description_color"
+    const-string v0, "task_description_color"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -481,7 +427,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 822
     invoke-static {p2, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
     move-result-wide v0
@@ -492,9 +437,8 @@
 
     goto :goto_0
 
-    .line 824
     :cond_2
-    const-string/jumbo v0, "task_description_text_color"
+    const-string v0, "task_description_text_color"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -502,7 +446,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 825
     invoke-static {p2, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
     move-result-wide v0
@@ -513,9 +456,8 @@
 
     goto :goto_0
 
-    .line 827
     :cond_3
-    const-string/jumbo v0, "task_description_icon_filename"
+    const-string v0, "task_description_icon_filename"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -523,7 +465,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 828
     invoke-virtual {p0, p2}, Landroid/app/ActivityManager$TaskDescription;->setIconFilename(Ljava/lang/String;)V
 
     goto :goto_0
@@ -541,26 +482,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 801
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 802
-    const-string/jumbo v0, "task_description_label"
+    const-string v0, "task_description_label"
 
     iget-object v1, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 804
     :cond_0
     iget v0, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
     if-eqz v0, :cond_1
 
-    .line 805
-    const-string/jumbo v0, "task_description_color"
+    const-string v0, "task_description_color"
 
     iget v1, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
@@ -570,14 +507,12 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 808
     :cond_1
     iget v0, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
     if-eqz v0, :cond_2
 
-    .line 809
-    const-string/jumbo v0, "task_description_text_color"
+    const-string v0, "task_description_text_color"
 
     iget v1, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
@@ -587,20 +522,17 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 812
     :cond_2
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    .line 813
-    const-string/jumbo v0, "task_description_icon_filename"
+    const-string v0, "task_description_icon_filename"
 
     iget-object v1, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 815
     :cond_3
     return-void
 .end method
@@ -610,10 +542,8 @@
     .param p1, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 731
     iput-object p1, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 732
     return-void
 .end method
 
@@ -622,15 +552,12 @@
     .param p1, "iconFilename"    # Ljava/lang/String;
 
     .prologue
-    .line 740
     iput-object p1, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
-    .line 741
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
-    .line 742
     return-void
 .end method
 
@@ -639,10 +566,8 @@
     .param p1, "label"    # Ljava/lang/String;
 
     .prologue
-    .line 702
     iput-object p1, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
-    .line 703
     return-void
 .end method
 
@@ -651,7 +576,6 @@
     .param p1, "primaryColor"    # I
 
     .prologue
-    .line 711
     if-eqz p1, :cond_0
 
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
@@ -662,7 +586,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 712
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "A TaskDescription\'s primary color should be opaque"
@@ -671,11 +594,9 @@
 
     throw v0
 
-    .line 714
     :cond_0
     iput p1, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
-    .line 715
     return-void
 .end method
 
@@ -684,10 +605,8 @@
     .param p1, "textPrimaryColor"    # I
 
     .prologue
-    .line 723
     iput p1, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
-    .line 724
     return-void
 .end method
 
@@ -695,7 +614,6 @@
     .locals 2
 
     .prologue
-    .line 885
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -753,73 +671,58 @@
 
     const/4 v1, 0x0
 
-    .line 839
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 840
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 845
     :goto_0
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    .line 846
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 851
     :goto_1
     iget v0, p0, Landroid/app/ActivityManager$TaskDescription;->mColorPrimary:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 853
     iget v0, p0, Landroid/app/ActivityManager$TaskDescription;->mTextColorPrimary:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 855
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
-    .line 856
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 861
     :goto_2
     return-void
 
-    .line 842
     :cond_0
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 843
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mLabel:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 848
     :cond_1
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 849
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_1
 
-    .line 858
     :cond_2
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 859
     iget-object v0, p0, Landroid/app/ActivityManager$TaskDescription;->mIconFilename:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

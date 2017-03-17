@@ -52,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,33 +67,24 @@
 
     const/4 v1, 0x0
 
-    .line 161
     iput-short v2, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->type:S
 
-    .line 162
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->name:Ljava/lang/String;
 
-    .line 163
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
-    .line 164
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->list:Z
 
-    .line 165
     iput-short v2, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultType:S
 
-    .line 166
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultValue:Ljava/lang/String;
 
-    .line 167
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->nonNormalizedDefaultValue:Ljava/lang/String;
 
-    .line 168
     iput-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->datatypeValidator:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 169
     return-void
 .end method
 
@@ -105,17 +95,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 139
     iget-short v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->type:S
 
     iput-short v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->type:S
 
-    .line 140
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->name:Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->name:Ljava/lang/String;
 
-    .line 142
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -126,7 +113,6 @@
 
     if-lez v0, :cond_0
 
-    .line 143
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
     array-length v0, v0
@@ -135,7 +121,6 @@
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
-    .line 144
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
@@ -146,36 +131,29 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 149
     :goto_0
     iget-boolean v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->list:Z
 
     iput-boolean v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->list:Z
 
-    .line 150
     iget-short v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultType:S
 
     iput-short v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultType:S
 
-    .line 151
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultValue:Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultValue:Ljava/lang/String;
 
-    .line 152
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->nonNormalizedDefaultValue:Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->nonNormalizedDefaultValue:Ljava/lang/String;
 
-    .line 153
     iget-object v0, p1, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->datatypeValidator:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->datatypeValidator:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 155
     return-void
 
-    .line 147
     :cond_0
     const/4 v0, 0x0
 
@@ -198,27 +176,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 118
     iput-short p1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->type:S
 
-    .line 119
     iput-object p2, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->name:Ljava/lang/String;
 
-    .line 121
     if-eqz p3, :cond_0
 
     array-length v0, p3
 
     if-lez v0, :cond_0
 
-    .line 122
     array-length v0, p3
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
-    .line 123
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->enumeration:[Ljava/lang/String;
@@ -227,26 +200,19 @@
 
     invoke-static {p3, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 128
     :goto_0
     iput-boolean p4, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->list:Z
 
-    .line 129
     iput-short p5, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultType:S
 
-    .line 130
     iput-object p6, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->defaultValue:Ljava/lang/String;
 
-    .line 131
     iput-object p7, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->nonNormalizedDefaultValue:Ljava/lang/String;
 
-    .line 132
     iput-object p8, p0, Lmf/org/apache/xerces/impl/dtd/XMLSimpleType;->datatypeValidator:Lmf/org/apache/xerces/impl/dv/DatatypeValidator;
 
-    .line 134
     return-void
 
-    .line 126
     :cond_0
     const/4 v0, 0x0
 

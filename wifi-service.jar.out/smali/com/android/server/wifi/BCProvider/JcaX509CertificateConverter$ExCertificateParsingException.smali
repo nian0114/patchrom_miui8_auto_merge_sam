@@ -27,16 +27,12 @@
     .param p3, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter$ExCertificateParsingException;->this$0:Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter;
 
-    .line 89
     invoke-direct {p0, p2}, Ljava/security/cert/CertificateParsingException;-><init>(Ljava/lang/String;)V
 
-    .line 91
     iput-object p3, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter$ExCertificateParsingException;->cause:Ljava/lang/Throwable;
 
-    .line 92
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/android/server/wifi/BCProvider/JcaX509CertificateConverter$ExCertificateParsingException;->cause:Ljava/lang/Throwable;
 
     return-object v0

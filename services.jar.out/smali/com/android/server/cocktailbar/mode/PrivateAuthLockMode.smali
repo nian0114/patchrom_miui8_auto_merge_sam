@@ -28,7 +28,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 18
     const-class v1, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -37,7 +36,6 @@
 
     sput-object v1, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->TAG:Ljava/lang/String;
 
-    .line 20
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -60,17 +58,14 @@
     .param p4, "listener"    # Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILandroid/os/Handler;Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 26
     new-instance v0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;
 
     invoke-direct {v0, p0, p3}, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;-><init>(Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->mAuthLockObserver:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;
 
-    .line 27
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-boolean v0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->DEBUG:Z
 
     return v0
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -100,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const/4 v0, 0x2
 
     return v0
@@ -110,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x2
 
     return v0
@@ -120,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 62
     const-string v0, "authlock"
 
     return-object v0
@@ -130,8 +120,7 @@
     .locals 4
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "lock"
+    const-string v0, "lock"
 
     iget-object v1, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->mContext:Landroid/content/Context;
 
@@ -139,7 +128,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "missing_phone_lock"
+    const-string v2, "missing_phone_lock"
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 66
     iget-object v1, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
     invoke-static {p2}, Lcom/movial/ipphone/IIPRegistry$Stub;->asInterface(Landroid/os/IBinder;)Lcom/movial/ipphone/IIPRegistry;
@@ -52,7 +50,6 @@
     # setter for: Lcom/movial/ipphone/IPManager;->mIPRegistry:Lcom/movial/ipphone/IIPRegistry;
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPManager;->access$002(Lcom/movial/ipphone/IPManager;Lcom/movial/ipphone/IIPRegistry;)Lcom/movial/ipphone/IIPRegistry;
 
-    .line 67
     iget-object v1, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
     # getter for: Lcom/movial/ipphone/IPManager;->binded:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 69
     :try_start_0
     iget-object v1, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
@@ -81,15 +77,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 74
     :goto_0
     return-void
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
@@ -122,7 +115,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -133,7 +125,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
     const/4 v1, 0x0
@@ -141,7 +132,6 @@
     # setter for: Lcom/movial/ipphone/IPManager;->mIPRegistry:Lcom/movial/ipphone/IIPRegistry;
     invoke-static {v0, v1}, Lcom/movial/ipphone/IPManager;->access$002(Lcom/movial/ipphone/IPManager;Lcom/movial/ipphone/IIPRegistry;)Lcom/movial/ipphone/IIPRegistry;
 
-    .line 77
     iget-object v0, p0, Lcom/movial/ipphone/IPManager$1;->this$0:Lcom/movial/ipphone/IPManager;
 
     # getter for: Lcom/movial/ipphone/IPManager;->binded:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -153,6 +143,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 78
     return-void
 .end method

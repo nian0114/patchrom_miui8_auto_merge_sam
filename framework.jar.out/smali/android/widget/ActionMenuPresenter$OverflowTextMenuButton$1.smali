@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1286
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 1288
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-virtual {v0}, Landroid/widget/ActionMenuPresenter;->showOverflowMenu()Z
 
-    .line 1289
     return-void
 .end method

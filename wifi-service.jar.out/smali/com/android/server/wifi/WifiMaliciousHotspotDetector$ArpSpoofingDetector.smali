@@ -65,60 +65,46 @@
 
     const/4 v0, 0x0
 
-    .line 1359
     iput-object p1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1336
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->DEFAULT_STATE:I
 
-    .line 1337
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpSpoofingDetectionEnabled:I
 
-    .line 1348
     iput-object v2, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
 
-    .line 1349
     iput-object v2, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
 
-    .line 1352
     const/16 v0, 0x5dc
 
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->MAX_LENGTH:I
 
-    .line 1353
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->ETHERNET_TYPE:I
 
-    .line 1354
     const/16 v0, 0x1c
 
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->ARP_LENGTH:I
 
-    .line 1355
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->MAC_ADDR_LENGTH:I
 
-    .line 1356
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->IPV4_LENGTH:I
 
-    .line 1357
     iput v1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->MAC_COMPARE_BYTES:I
 
-    .line 1360
     const/16 v0, 0x1e
 
     iput v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpCheckPeriod_sec:I
 
-    .line 1361
     iput v1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpTableCheckDelay_sec:I
 
-    .line 1362
     return-void
 .end method
 
@@ -132,10 +118,8 @@
 
     const/4 v7, 0x6
 
-    .line 1518
     const/4 v3, 0x0
 
-    .line 1519
     .local v3, "sameCnt":I
     if-eqz p1, :cond_0
 
@@ -144,13 +128,11 @@
     :cond_0
     move v4, v3
 
-    .line 1538
     .end local v3    # "sameCnt":I
     .local v4, "sameCnt":I
     :goto_0
     return v4
 
-    .line 1523
     .end local v4    # "sameCnt":I
     .restart local v3    # "sameCnt":I
     :cond_1
@@ -160,7 +142,6 @@
 
     move-result-object v2
 
-    .line 1524
     .local v2, "oldMac":[Ljava/lang/String;
     const-string v5, ":"
 
@@ -168,7 +149,6 @@
 
     move-result-object v1
 
-    .line 1526
     .local v1, "newMac":[Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
@@ -191,14 +171,12 @@
 
     if-ne v5, v7, :cond_3
 
-    .line 1527
     const/4 v0, 0x1
 
     .local v0, "macIdx":I
     :goto_1
     if-ge v0, v7, :cond_3
 
-    .line 1528
     aget-object v5, v2, v0
 
     aget-object v6, v1, v0
@@ -209,10 +187,8 @@
 
     if-eqz v5, :cond_3
 
-    .line 1529
     add-int/lit8 v3, v3, 0x1
 
-    .line 1530
     const/4 v5, 0x5
 
     if-ne v0, v5, :cond_2
@@ -227,10 +203,8 @@
 
     if-eqz v5, :cond_2
 
-    .line 1531
     add-int/lit8 v3, v3, 0x1
 
-    .line 1527
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -240,7 +214,6 @@
     :cond_3
     move v4, v3
 
-    .line 1538
     .end local v3    # "sameCnt":I
     .restart local v4    # "sameCnt":I
     goto :goto_0
@@ -253,23 +226,18 @@
     .param p1, "GwIp"    # Ljava/lang/String;
 
     .prologue
-    .line 1384
     iget v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpSpoofingDetectionEnabled:I
 
     if-nez v0, :cond_0
 
-    .line 1385
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
-    .line 1397
     :goto_0
     return-void
 
-    .line 1388
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
-    .line 1389
     if-eqz p1, :cond_1
 
     const-string v0, "/"
@@ -280,23 +248,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1390
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1394
     :cond_1
     iput-object p1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
 
-    .line 1395
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
 
-    .line 1396
     iget-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const/4 v1, 0x3
@@ -310,7 +274,6 @@
     .locals 24
 
     .prologue
-    .line 1400
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpSpoofingDetectionEnabled:I
@@ -319,15 +282,12 @@
 
     if-nez v20, :cond_1
 
-    .line 1401
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
-    .line 1515
     :cond_0
     :goto_0
     return-void
 
-    .line 1404
     :cond_1
     move-object/from16 v0, p0
 
@@ -337,7 +297,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 1407
     const-string v20, "0.0.0.0"
 
     move-object/from16 v0, p0
@@ -352,7 +311,6 @@
 
     if-eqz v20, :cond_3
 
-    .line 1408
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -368,11 +326,9 @@
 
     move-result-object v8
 
-    .line 1409
     .local v8, "dhcpInfo":Landroid/net/DhcpInfo;
     if-eqz v8, :cond_3
 
-    .line 1410
     iget v0, v8, Landroid/net/DhcpInfo;->gateway:I
 
     move/from16 v20, v0
@@ -391,7 +347,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
 
-    .line 1411
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
@@ -414,7 +369,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 1412
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
@@ -433,7 +387,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
 
-    .line 1414
     :cond_2
     const/16 v20, 0x0
 
@@ -443,7 +396,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
 
-    .line 1415
     const-string v20, "0.0.0.0"
 
     move-object/from16 v0, p0
@@ -458,24 +410,20 @@
 
     if-eqz v20, :cond_3
 
-    .line 1416
     const-string v20, "WifiMHD::a"
 
     const-string v21, "Check - f to get GW"
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
     goto/16 :goto_0
 
-    .line 1422
     .end local v8    # "dhcpInfo":Landroid/net/DhcpInfo;
     :cond_3
     const/4 v4, 0x0
 
-    .line 1424
     .local v4, "buffer":Ljava/io/BufferedReader;
     :try_start_0
     move-object/from16 v0, p0
@@ -493,7 +441,6 @@
 
     move-result-object v19
 
-    .line 1425
     .local v19, "wifiInfo":Landroid/net/wifi/WifiInfo;
     if-eqz v19, :cond_4
 
@@ -515,7 +462,6 @@
 
     if-eqz v20, :cond_7
 
-    .line 1426
     :cond_4
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
@@ -530,7 +476,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1427
     :cond_5
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
     :try_end_0
@@ -541,22 +486,18 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_6
 
-    .line 1509
     :try_start_1
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 1511
     :cond_6
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1431
     :cond_7
     :try_start_2
     move-object/from16 v0, p0
@@ -576,7 +517,6 @@
 
     if-eqz v20, :cond_9
 
-    .line 1432
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
     :try_end_2
     .catch Ljava/net/SocketException; {:try_start_2 .. :try_end_2} :catch_12
@@ -586,22 +526,18 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_8
 
-    .line 1509
     :try_start_3
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_7
 
-    .line 1511
     :cond_8
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1435
     :cond_9
     :try_start_4
     new-instance v5, Ljava/io/BufferedReader;
@@ -623,7 +559,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_5
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1436
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .local v5, "buffer":Ljava/io/BufferedReader;
     :try_start_5
@@ -631,31 +566,25 @@
 
     move-result-object v13
 
-    .line 1437
     .local v13, "line":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 1438
     .local v11, "ip":Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 1439
     .local v16, "mac":Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 1440
     .local v12, "isWlan0":Z
     new-instance v15, Ljava/util/HashMap;
 
     invoke-direct {v15}, Ljava/util/HashMap;-><init>()V
 
-    .line 1441
     .local v15, "mArpTable":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual/range {v19 .. v19}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1443
     .local v3, "bssid":Ljava/lang/String;
     :cond_a
     :goto_1
@@ -671,10 +600,8 @@
 
     if-lez v20, :cond_17
 
-    .line 1444
     const/16 v17, 0x0
 
-    .line 1445
     .local v17, "parse":[Ljava/lang/String;
     const-string v20, " "
 
@@ -684,10 +611,8 @@
 
     move-result-object v17
 
-    .line 1446
     const/4 v6, 0x0
 
-    .line 1447
     .local v6, "cnt":I
     const/4 v10, 0x0
 
@@ -703,7 +628,6 @@
 
     if-ge v10, v0, :cond_e
 
-    .line 1448
     aget-object v20, v17, v10
 
     if-eqz v20, :cond_d
@@ -716,10 +640,8 @@
 
     if-lez v20, :cond_d
 
-    .line 1449
     add-int/lit8 v6, v6, 0x1
 
-    .line 1450
     const/16 v20, 0x1
 
     move/from16 v0, v20
@@ -732,7 +654,6 @@
 
     move-result-object v11
 
-    .line 1451
     :cond_b
     const/16 v20, 0x4
 
@@ -746,7 +667,6 @@
 
     move-result-object v16
 
-    .line 1452
     :cond_c
     const/16 v20, 0x6
 
@@ -766,13 +686,11 @@
 
     move-result v12
 
-    .line 1447
     :cond_d
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 1456
     :cond_e
     if-eqz v16, :cond_f
 
@@ -788,12 +706,10 @@
 
     if-nez v20, :cond_f
 
-    .line 1457
     move-object/from16 v0, v16
 
     invoke-virtual {v15, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1460
     :cond_f
     move-object/from16 v0, p0
 
@@ -821,7 +737,6 @@
 
     if-eqz v12, :cond_a
 
-    .line 1462
     const-string v20, "00:00:00:00:00:00"
 
     move-object/from16 v0, v20
@@ -834,7 +749,6 @@
 
     if-eqz v20, :cond_11
 
-    .line 1463
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
 
@@ -857,7 +771,6 @@
 
     goto/16 :goto_1
 
-    .line 1496
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v6    # "cnt":I
     .end local v10    # "i":I
@@ -872,7 +785,6 @@
 
     move-object v4, v5
 
-    .line 1497
     .end local v5    # "buffer":Ljava/io/BufferedReader;
     .end local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
@@ -919,22 +831,18 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_10
 
-    .line 1509
     :try_start_7
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_8
 
-    .line 1511
     :cond_10
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1467
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .end local v9    # "e":Ljava/net/SocketException;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -966,7 +874,6 @@
 
     if-nez v20, :cond_a
 
-    .line 1468
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -1043,7 +950,6 @@
 
     move-result-object v14
 
-    .line 1469
     .local v14, "log":Ljava/lang/String;
     const-string v20, "WifiMHD::a"
 
@@ -1051,7 +957,6 @@
 
     invoke-static {v0, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1470
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -1096,7 +1001,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->addMaliciousApLogs(Ljava/lang/String;)V
     invoke-static/range {v20 .. v21}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$2400(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;)V
 
-    .line 1471
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
@@ -1131,7 +1035,6 @@
 
     if-eqz v20, :cond_13
 
-    .line 1473
     move-object/from16 v0, v16
 
     move-object/from16 v1, p0
@@ -1147,7 +1050,6 @@
 
     goto/16 :goto_1
 
-    .line 1498
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v6    # "cnt":I
     .end local v10    # "i":I
@@ -1163,7 +1065,6 @@
 
     move-object v4, v5
 
-    .line 1499
     .end local v5    # "buffer":Ljava/io/BufferedReader;
     .end local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
@@ -1210,22 +1111,18 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_12
 
-    .line 1509
     :try_start_a
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_9
 
-    .line 1511
     :cond_12
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1475
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .end local v9    # "e":Ljava/lang/IllegalArgumentException;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -1264,7 +1161,6 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->handleMaliciousHotspotDetection(Ljava/lang/String;II)V
 
-    .line 1476
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
@@ -1281,7 +1177,6 @@
 
     move-result v18
 
-    .line 1477
     .local v18, "sameCnt":I
     move-object/from16 v0, p0
 
@@ -1302,7 +1197,6 @@
 
     if-nez v20, :cond_a
 
-    .line 1478
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -1322,11 +1216,9 @@
 
     move-result-object v7
 
-    .line 1479
     .local v7, "config":Landroid/net/wifi/WifiConfiguration;
     if-eqz v7, :cond_a
 
-    .line 1480
     iget-object v0, v7, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     move-object/from16 v20, v0
@@ -1339,7 +1231,6 @@
 
     if-eqz v20, :cond_15
 
-    .line 1481
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -1373,7 +1264,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->sendGsimData(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static/range {v20 .. v22}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1100(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1482
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -1428,7 +1318,6 @@
 
     goto/16 :goto_1
 
-    .line 1500
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v6    # "cnt":I
     .end local v7    # "config":Landroid/net/wifi/WifiConfiguration;
@@ -1446,7 +1335,6 @@
 
     move-object v4, v5
 
-    .line 1501
     .end local v5    # "buffer":Ljava/io/BufferedReader;
     .end local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
@@ -1493,22 +1381,18 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_14
 
-    .line 1509
     :try_start_d
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_a
 
-    .line 1511
     :cond_14
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1485
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .end local v9    # "e":Ljava/io/IOException;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -1560,7 +1444,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->sendGsimData(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static/range {v20 .. v22}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1100(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1486
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -1615,7 +1498,6 @@
 
     goto/16 :goto_1
 
-    .line 1502
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v6    # "cnt":I
     .end local v7    # "config":Landroid/net/wifi/WifiConfiguration;
@@ -1633,7 +1515,6 @@
 
     move-object v4, v5
 
-    .line 1503
     .end local v5    # "buffer":Ljava/io/BufferedReader;
     .end local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
@@ -1680,22 +1561,18 @@
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_16
 
-    .line 1509
     :try_start_10
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_10
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_b
 
-    .line 1511
     :cond_16
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1508
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .end local v9    # "e":Ljava/lang/RuntimeException;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -1709,13 +1586,11 @@
     :cond_17
     if-eqz v5, :cond_18
 
-    .line 1509
     :try_start_11
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
     :try_end_11
     .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_4
 
-    .line 1511
     :cond_18
     const/4 v4, 0x0
 
@@ -1723,7 +1598,6 @@
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
     goto/16 :goto_0
 
-    .line 1512
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .restart local v5    # "buffer":Ljava/io/BufferedReader;
     :catch_4
@@ -1731,12 +1605,10 @@
 
     move-object v4, v5
 
-    .line 1514
     .end local v5    # "buffer":Ljava/io/BufferedReader;
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
     goto/16 :goto_0
 
-    .line 1504
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v11    # "ip":Ljava/lang/String;
     .end local v12    # "isWlan0":Z
@@ -1747,7 +1619,6 @@
     :catch_5
     move-exception v9
 
-    .line 1505
     .local v9, "e":Ljava/lang/OutOfMemoryError;
     :goto_7
     :try_start_12
@@ -1791,45 +1662,36 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_0
 
-    .line 1508
     if-eqz v4, :cond_19
 
-    .line 1509
     :try_start_13
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_c
 
-    .line 1511
     :cond_19
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 1507
     .end local v9    # "e":Ljava/lang/OutOfMemoryError;
     :catchall_0
     move-exception v20
 
-    .line 1508
     :goto_8
     if-eqz v4, :cond_1a
 
-    .line 1509
     :try_start_14
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_14
     .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_d
 
-    .line 1511
     :cond_1a
     const/4 v4, 0x0
 
-    .line 1513
     :goto_9
     throw v20
 
-    .line 1512
     .restart local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :catch_6
     move-exception v20
@@ -1878,7 +1740,6 @@
 
     goto :goto_9
 
-    .line 1507
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .restart local v5    # "buffer":Ljava/io/BufferedReader;
     .restart local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
@@ -1891,7 +1752,6 @@
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
     goto :goto_8
 
-    .line 1504
     .end local v4    # "buffer":Ljava/io/BufferedReader;
     .restart local v5    # "buffer":Ljava/io/BufferedReader;
     :catch_e
@@ -1903,26 +1763,22 @@
     .restart local v4    # "buffer":Ljava/io/BufferedReader;
     goto :goto_7
 
-    .line 1502
     .end local v19    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :catch_f
     move-exception v9
 
     goto/16 :goto_6
 
-    .line 1500
     :catch_10
     move-exception v9
 
     goto/16 :goto_5
 
-    .line 1498
     :catch_11
     move-exception v9
 
     goto/16 :goto_4
 
-    .line 1496
     :catch_12
     move-exception v9
 
@@ -1933,7 +1789,6 @@
     .locals 1
 
     .prologue
-    .line 1369
     iget v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpSpoofingDetectionEnabled:I
 
     return v0
@@ -1944,21 +1799,16 @@
     .param p1, "mac"    # [B
 
     .prologue
-    .line 1723
     const-string v2, ""
 
-    .line 1724
     .local v2, "macAddr":Ljava/lang/String;
     if-nez p1, :cond_0
 
-    .line 1725
     const/4 v3, 0x0
 
-    .line 1739
     :goto_0
     return-object v3
 
-    .line 1727
     :cond_0
     const/4 v1, 0x0
 
@@ -1968,7 +1818,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 1728
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1993,7 +1842,6 @@
 
     move-result-object v0
 
-    .line 1732
     .local v0, "hexString":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2021,14 +1869,12 @@
 
     move-result-object v2
 
-    .line 1734
     array-length v3, p1
 
     add-int/lit8 v3, v3, -0x1
 
     if-eq v1, v3, :cond_1
 
-    .line 1735
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2047,7 +1893,6 @@
 
     move-result-object v2
 
-    .line 1727
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -2057,7 +1902,6 @@
     :cond_2
     move-object v3, v2
 
-    .line 1739
     goto :goto_0
 .end method
 
@@ -2069,20 +1913,17 @@
     .param p4, "myMac"    # Ljava/lang/String;
 
     .prologue
-    .line 1663
     const/16 v2, 0x5dc
 
     invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 1664
     .local v8, "buf":Ljava/nio/ByteBuffer;
     invoke-virtual/range {p2 .. p2}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v9
 
-    .line 1665
     .local v9, "desiredIp":[B
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -2094,17 +1935,14 @@
 
     add-long v16, v4, v6
 
-    .line 1666
     .local v16, "timeout":J
     const/4 v2, 0x6
 
     new-array v13, v2, [B
 
-    .line 1667
     .local v13, "mMyMac":[B
     if-eqz p4, :cond_0
 
-    .line 1668
     const/4 v12, 0x0
 
     .local v12, "i":I
@@ -2113,7 +1951,6 @@
 
     if-ge v12, v2, :cond_0
 
-    .line 1669
     mul-int/lit8 v2, v12, 0x3
 
     mul-int/lit8 v4, v12, 0x3
@@ -2136,70 +1973,56 @@
 
     aput-byte v2, v13, v12
 
-    .line 1668
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 1676
     .end local v12    # "i":I
     :cond_0
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 1677
     sget-object v2, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 1679
     const/4 v2, 0x1
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 1680
     const/16 v2, 0x800
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 1681
     const/4 v2, 0x6
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 1682
     const/4 v2, 0x4
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 1683
     const/4 v2, 0x1
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 1684
     invoke-virtual {v8, v13}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 1685
     invoke-virtual/range {p3 .. p3}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v2
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 1686
     const/4 v2, 0x6
 
     new-array v2, v2, [B
 
     invoke-virtual {v8, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 1687
     invoke-virtual {v8, v9}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 1688
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 1689
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
@@ -2220,12 +2043,10 @@
 
     invoke-virtual {v2, v4, v5, v6, v7}, Llibcore/net/RawSocket;->write([B[BII)I
 
-    .line 1691
     const/16 v2, 0x5dc
 
     new-array v3, v2, [B
 
-    .line 1693
     .local v3, "recvBuf":[B
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2236,14 +2057,12 @@
 
     if-gez v2, :cond_2
 
-    .line 1694
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
     sub-long v10, v16, v4
 
-    .line 1695
     .local v10, "duration":J
     move-object/from16 v0, p0
 
@@ -2261,7 +2080,6 @@
 
     move-result v14
 
-    .line 1699
     .local v14, "readLen":I
     const/16 v2, 0x1c
 
@@ -2365,12 +2183,10 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 1710
     const/4 v2, 0x6
 
     new-array v15, v2, [B
 
-    .line 1711
     .local v15, "result":[B
     const/16 v2, 0x8
 
@@ -2380,7 +2196,6 @@
 
     invoke-static {v3, v2, v15, v4, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1716
     .end local v10    # "duration":J
     .end local v14    # "readLen":I
     .end local v15    # "result":[B
@@ -2397,21 +2212,17 @@
     .locals 18
 
     .prologue
-    .line 1542
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpSpoofingDetectionEnabled:I
 
     if-nez v14, :cond_0
 
-    .line 1543
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
-    .line 1656
     :goto_0
     return-void
 
-    .line 1547
     :cond_0
     :try_start_0
     move-object/from16 v0, p0
@@ -2427,7 +2238,6 @@
 
     move-result-object v13
 
-    .line 1548
     .local v13, "wifiInfo":Landroid/net/wifi/WifiInfo;
     if-eqz v13, :cond_1
 
@@ -2449,7 +2259,6 @@
 
     if-eqz v14, :cond_4
 
-    .line 1549
     :cond_1
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
@@ -2464,7 +2273,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1550
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
     :try_end_0
@@ -2475,7 +2283,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_d
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1647
     :try_start_1
     move-object/from16 v0, p0
 
@@ -2483,14 +2290,12 @@
 
     if-eqz v14, :cond_3
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_3
     const/4 v14, 0x0
 
@@ -2502,13 +2307,11 @@
 
     goto :goto_0
 
-    .line 1651
     :catch_0
     move-exception v14
 
     goto :goto_0
 
-    .line 1554
     :cond_4
     :try_start_2
     move-object/from16 v0, p0
@@ -2526,7 +2329,6 @@
 
     if-eqz v14, :cond_6
 
-    .line 1555
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
     :try_end_2
     .catch Ljava/net/SocketException; {:try_start_2 .. :try_end_2} :catch_5
@@ -2536,7 +2338,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_d
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1647
     :try_start_3
     move-object/from16 v0, p0
 
@@ -2544,14 +2345,12 @@
 
     if-eqz v14, :cond_5
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_5
     const/4 v14, 0x0
 
@@ -2563,13 +2362,11 @@
 
     goto :goto_0
 
-    .line 1651
     :catch_1
     move-exception v14
 
     goto :goto_0
 
-    .line 1559
     :cond_6
     :try_start_4
     move-object/from16 v0, p0
@@ -2585,11 +2382,9 @@
 
     move-result-object v5
 
-    .line 1560
     .local v5, "dhcpInfo":Landroid/net/DhcpInfo;
     if-nez v5, :cond_8
 
-    .line 1561
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
     :try_end_4
     .catch Ljava/net/SocketException; {:try_start_4 .. :try_end_4} :catch_5
@@ -2599,7 +2394,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_d
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1647
     :try_start_5
     move-object/from16 v0, p0
 
@@ -2607,14 +2401,12 @@
 
     if-eqz v14, :cond_7
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_7
     const/4 v14, 0x0
 
@@ -2626,13 +2418,11 @@
 
     goto/16 :goto_0
 
-    .line 1651
     :catch_2
     move-exception v14
 
     goto/16 :goto_0
 
-    .line 1564
     :cond_8
     :try_start_6
     iget v14, v5, Landroid/net/DhcpInfo;->ipAddress:I
@@ -2641,7 +2431,6 @@
 
     move-result-object v9
 
-    .line 1565
     .local v9, "inetAddress":Ljava/net/InetAddress;
     iget v14, v5, Landroid/net/DhcpInfo;->gateway:I
 
@@ -2649,13 +2438,11 @@
 
     move-result-object v7
 
-    .line 1567
     .local v7, "gateway":Ljava/net/InetAddress;
     invoke-virtual {v7}, Ljava/net/InetAddress;->toString()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 1568
     .local v11, "sGateway":Ljava/lang/String;
     if-eqz v11, :cond_9
 
@@ -2667,14 +2454,12 @@
 
     if-eqz v14, :cond_9
 
-    .line 1569
     const/4 v14, 0x1
 
     invoke-virtual {v11, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 1571
     :cond_9
     const-string v14, "0.0.0.0"
 
@@ -2712,20 +2497,17 @@
 
     if-nez v14, :cond_c
 
-    .line 1573
     :cond_a
     move-object/from16 v0, p0
 
     iput-object v11, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwIp:Ljava/lang/String;
 
-    .line 1574
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
 
-    .line 1575
     const-string v14, "0.0.0.0"
 
     move-object/from16 v0, p0
@@ -2738,17 +2520,14 @@
 
     if-eqz v14, :cond_c
 
-    .line 1576
     const-string v14, "WifiMHD::a"
 
     const-string v15, "send - f to get GW"
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
-    .line 1578
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -2793,7 +2572,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_6 .. :try_end_6} :catch_d
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 1647
     :try_start_7
     move-object/from16 v0, p0
 
@@ -2801,14 +2579,12 @@
 
     if-eqz v14, :cond_b
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_b
     const/4 v14, 0x0
 
@@ -2820,13 +2596,11 @@
 
     goto/16 :goto_0
 
-    .line 1651
     :catch_3
     move-exception v14
 
     goto/16 :goto_0
 
-    .line 1583
     :cond_c
     :try_start_8
     const-string v14, "/0.0.0.0"
@@ -2871,7 +2645,6 @@
 
     if-nez v14, :cond_f
 
-    .line 1647
     :cond_d
     :try_start_9
     move-object/from16 v0, p0
@@ -2880,14 +2653,12 @@
 
     if-eqz v14, :cond_e
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_e
     const/4 v14, 0x0
 
@@ -2899,13 +2670,11 @@
 
     goto/16 :goto_0
 
-    .line 1651
     :catch_4
     move-exception v14
 
     goto/16 :goto_0
 
-    .line 1588
     :cond_f
     :try_start_a
     new-instance v14, Llibcore/net/RawSocket;
@@ -2931,7 +2700,6 @@
 
     iput-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
-    .line 1589
     const/4 v14, 0x6
 
     new-array v14, v14, [B
@@ -2940,7 +2708,6 @@
 
     iput-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->L2_BROADCAST:[B
 
-    .line 1590
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->L2_BROADCAST:[B
@@ -2949,10 +2716,8 @@
 
     invoke-static {v14, v15}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 1591
     const/4 v3, 0x0
 
-    .line 1593
     .local v3, "bssid":Ljava/lang/String;
     if-eqz v13, :cond_10
 
@@ -2968,12 +2733,10 @@
 
     if-nez v14, :cond_10
 
-    .line 1594
     invoke-virtual {v13}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1596
     :cond_10
     const/4 v8, 0x1
 
@@ -2983,7 +2746,6 @@
 
     if-gt v8, v14, :cond_11
 
-    .line 1597
     mul-int/lit8 v14, v8, 0x64
 
     invoke-virtual {v13}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
@@ -3002,7 +2764,6 @@
 
     move-result-object v2
 
-    .line 1598
     .local v2, "arpResult":Ljava/lang/String;
     if-eqz v2, :cond_1a
 
@@ -3014,19 +2775,16 @@
 
     if-nez v14, :cond_1a
 
-    .line 1600
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
 
     if-nez v14, :cond_13
 
-    .line 1601
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
 
-    .line 1602
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
 
@@ -3069,7 +2827,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_a .. :try_end_a} :catch_d
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 1647
     .end local v2    # "arpResult":Ljava/lang/String;
     :cond_11
     :goto_2
@@ -3080,14 +2837,12 @@
 
     if-eqz v14, :cond_12
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_12
     const/4 v14, 0x0
 
@@ -3097,7 +2852,6 @@
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_10
 
-    .line 1654
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v5    # "dhcpInfo":Landroid/net/DhcpInfo;
     .end local v7    # "gateway":Ljava/net/InetAddress;
@@ -3143,7 +2897,6 @@
 
     invoke-virtual/range {v14 .. v17}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1655
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -3183,7 +2936,6 @@
 
     goto/16 :goto_0
 
-    .line 1603
     .restart local v2    # "arpResult":Ljava/lang/String;
     .restart local v3    # "bssid":Ljava/lang/String;
     .restart local v5    # "dhcpInfo":Landroid/net/DhcpInfo;
@@ -3204,7 +2956,6 @@
 
     if-nez v14, :cond_11
 
-    .line 1604
     # getter for: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$400()Z
 
@@ -3291,7 +3042,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1606
     :cond_14
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -3359,13 +3109,11 @@
 
     move-result-object v10
 
-    .line 1607
     .local v10, "log":Ljava/lang/String;
     const-string v14, "WifiMHD::a"
 
     invoke-static {v14, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1608
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -3406,7 +3154,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->addMaliciousApLogs(Ljava/lang/String;)V
     invoke-static {v14, v15}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$2400(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;)V
 
-    .line 1609
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
@@ -3435,7 +3182,6 @@
 
     if-eqz v14, :cond_16
 
-    .line 1611
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
@@ -3449,7 +3195,6 @@
 
     goto/16 :goto_2
 
-    .line 1635
     .end local v2    # "arpResult":Ljava/lang/String;
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v5    # "dhcpInfo":Landroid/net/DhcpInfo;
@@ -3462,7 +3207,6 @@
     :catch_5
     move-exception v6
 
-    .line 1636
     .local v6, "e":Ljava/net/SocketException;
     :try_start_d
     const-string v14, "WifiMHD::a"
@@ -3505,7 +3249,6 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_0
 
-    .line 1647
     :try_start_e
     move-object/from16 v0, p0
 
@@ -3513,14 +3256,12 @@
 
     if-eqz v14, :cond_15
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_15
     const/4 v14, 0x0
 
@@ -3532,13 +3273,11 @@
 
     goto/16 :goto_3
 
-    .line 1651
     :catch_6
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 1613
     .end local v6    # "e":Ljava/net/SocketException;
     .restart local v2    # "arpResult":Ljava/lang/String;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -3567,7 +3306,6 @@
 
     invoke-virtual {v14, v3, v15, v0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->handleMaliciousHotspotDetection(Ljava/lang/String;II)V
 
-    .line 1614
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mGwMac:Ljava/lang/String;
@@ -3578,7 +3316,6 @@
 
     move-result v12
 
-    .line 1615
     .local v12, "sameCnt":I
     move-object/from16 v0, p0
 
@@ -3595,7 +3332,6 @@
 
     if-nez v14, :cond_11
 
-    .line 1616
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -3613,11 +3349,9 @@
 
     move-result-object v4
 
-    .line 1617
     .local v4, "config":Landroid/net/wifi/WifiConfiguration;
     if-eqz v4, :cond_11
 
-    .line 1618
     iget-object v14, v4, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     const/4 v15, 0x0
@@ -3628,7 +3362,6 @@
 
     if-eqz v14, :cond_18
 
-    .line 1619
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -3658,7 +3391,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->sendGsimData(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static/range {v14 .. v16}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1100(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1620
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -3703,7 +3435,6 @@
 
     goto/16 :goto_2
 
-    .line 1637
     .end local v2    # "arpResult":Ljava/lang/String;
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v4    # "config":Landroid/net/wifi/WifiConfiguration;
@@ -3718,7 +3449,6 @@
     :catch_7
     move-exception v6
 
-    .line 1638
     .local v6, "e":Ljava/lang/IllegalArgumentException;
     :try_start_10
     const-string v14, "WifiMHD::a"
@@ -3761,7 +3491,6 @@
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_0
 
-    .line 1647
     :try_start_11
     move-object/from16 v0, p0
 
@@ -3769,14 +3498,12 @@
 
     if-eqz v14, :cond_17
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_17
     const/4 v14, 0x0
 
@@ -3788,13 +3515,11 @@
 
     goto/16 :goto_3
 
-    .line 1651
     :catch_8
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 1623
     .end local v6    # "e":Ljava/lang/IllegalArgumentException;
     .restart local v2    # "arpResult":Ljava/lang/String;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -3838,7 +3563,6 @@
     # invokes: Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->sendGsimData(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static/range {v14 .. v16}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->access$1100(Lcom/android/server/wifi/WifiMaliciousHotspotDetector;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1624
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
@@ -3883,7 +3607,6 @@
 
     goto/16 :goto_2
 
-    .line 1639
     .end local v2    # "arpResult":Ljava/lang/String;
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v4    # "config":Landroid/net/wifi/WifiConfiguration;
@@ -3898,7 +3621,6 @@
     :catch_9
     move-exception v6
 
-    .line 1640
     .local v6, "e":Ljava/io/IOException;
     :try_start_13
     const-string v14, "WifiMHD::a"
@@ -3941,7 +3663,6 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_0
 
-    .line 1647
     :try_start_14
     move-object/from16 v0, p0
 
@@ -3949,14 +3670,12 @@
 
     if-eqz v14, :cond_19
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_19
     const/4 v14, 0x0
 
@@ -3968,13 +3687,11 @@
 
     goto/16 :goto_3
 
-    .line 1651
     :catch_a
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 1596
     .end local v6    # "e":Ljava/io/IOException;
     .restart local v2    # "arpResult":Ljava/lang/String;
     .restart local v3    # "bssid":Ljava/lang/String;
@@ -3989,7 +3706,6 @@
 
     goto/16 :goto_1
 
-    .line 1641
     .end local v2    # "arpResult":Ljava/lang/String;
     .end local v3    # "bssid":Ljava/lang/String;
     .end local v5    # "dhcpInfo":Landroid/net/DhcpInfo;
@@ -4001,7 +3717,6 @@
     :catch_b
     move-exception v6
 
-    .line 1642
     .local v6, "e":Ljava/lang/RuntimeException;
     :try_start_15
     const-string v14, "WifiMHD::a"
@@ -4044,7 +3759,6 @@
     :try_end_15
     .catchall {:try_start_15 .. :try_end_15} :catchall_0
 
-    .line 1647
     :try_start_16
     move-object/from16 v0, p0
 
@@ -4052,14 +3766,12 @@
 
     if-eqz v14, :cond_1b
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_1b
     const/4 v14, 0x0
 
@@ -4071,18 +3783,15 @@
 
     goto/16 :goto_3
 
-    .line 1651
     :catch_c
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 1643
     .end local v6    # "e":Ljava/lang/RuntimeException;
     :catch_d
     move-exception v6
 
-    .line 1644
     .local v6, "e":Ljava/lang/OutOfMemoryError;
     :try_start_17
     const-string v14, "WifiMHD::a"
@@ -4125,7 +3834,6 @@
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_0
 
-    .line 1647
     :try_start_18
     move-object/from16 v0, p0
 
@@ -4133,14 +3841,12 @@
 
     if-eqz v14, :cond_1c
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v14}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_1c
     const/4 v14, 0x0
 
@@ -4152,18 +3858,15 @@
 
     goto/16 :goto_3
 
-    .line 1651
     :catch_e
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 1646
     .end local v6    # "e":Ljava/lang/OutOfMemoryError;
     :catchall_0
     move-exception v14
 
-    .line 1647
     :try_start_19
     move-object/from16 v0, p0
 
@@ -4171,14 +3874,12 @@
 
     if-eqz v15, :cond_1d
 
-    .line 1648
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mSocket:Llibcore/net/RawSocket;
 
     invoke-virtual {v15}, Llibcore/net/RawSocket;->close()V
 
-    .line 1650
     :cond_1d
     const/4 v15, 0x0
 
@@ -4188,11 +3889,9 @@
     :try_end_19
     .catch Ljava/io/IOException; {:try_start_19 .. :try_end_19} :catch_f
 
-    .line 1652
     :goto_4
     throw v14
 
-    .line 1651
     :catch_f
     move-exception v15
 
@@ -4216,10 +3915,8 @@
     .param p1, "enable"    # I
 
     .prologue
-    .line 1365
     iput p1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpSpoofingDetectionEnabled:I
 
-    .line 1366
     return-void
 .end method
 
@@ -4227,21 +3924,18 @@
     .locals 2
 
     .prologue
-    .line 1379
     iget-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->removeMessages(I)V
 
-    .line 1380
     iget-object v0, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->this$0:Lcom/android/server/wifi/WifiMaliciousHotspotDetector;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector;->removeMessages(I)V
 
-    .line 1381
     return-void
 .end method
 
@@ -4251,15 +3945,11 @@
     .param p2, "arpTableCheckDelay_sec"    # I
 
     .prologue
-    .line 1373
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->stop()V
 
-    .line 1374
     iput p1, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpCheckPeriod_sec:I
 
-    .line 1375
     iput p2, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$ArpSpoofingDetector;->mArpTableCheckDelay_sec:I
 
-    .line 1376
     return-void
 .end method

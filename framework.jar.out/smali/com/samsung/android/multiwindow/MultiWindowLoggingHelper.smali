@@ -68,10 +68,8 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     return-void
 .end method
 
@@ -82,7 +80,6 @@
     .param p2, "extra"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
@@ -93,17 +90,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 64
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 51
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v2, "app_id"
 
@@ -111,42 +105,34 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     const-string v2, "feature"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
     if-eqz p2, :cond_1
 
-    .line 54
     const-string v2, "extra"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 57
     .local v0, "broadcastIntent":Landroid/content/Intent;
     const-string v2, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 58
     const-string v2, "data"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 59
     const-string v2, "com.samsung.android.providers.context"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 60
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v2
@@ -164,7 +150,6 @@
     .param p3, "values"    # [J
 
     .prologue
-    .line 67
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
@@ -175,11 +160,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 94
     :goto_0
     return-void
 
-    .line 72
     :cond_0
     const/4 v3, 0x0
 
@@ -189,16 +172,13 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 73
     aget-object v4, p1, v3
 
     if-nez v4, :cond_3
 
-    .line 77
     :cond_1
     new-array v1, v3, [Landroid/content/ContentValues;
 
-    .line 79
     .local v1, "cvs":[Landroid/content/ContentValues;
     const/4 v2, 0x0
 
@@ -206,14 +186,12 @@
     :goto_2
     if-ge v2, v3, :cond_4
 
-    .line 80
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
     aput-object v4, v1, v2
 
-    .line 81
     aget-object v4, v1, v2
 
     const-string v5, "app_id"
@@ -222,7 +200,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 82
     aget-object v4, v1, v2
 
     const-string v5, "feature"
@@ -231,7 +208,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     aget-object v4, v1, v2
 
     const-string v5, "extra"
@@ -240,13 +216,11 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     if-eqz p3, :cond_2
 
-    .line 85
     aget-object v4, v1, v2
 
-    const-string/jumbo v5, "value"
+    const-string v5, "value"
 
     aget-wide v6, p3, v2
 
@@ -256,13 +230,11 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 79
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 72
     .end local v1    # "cvs":[Landroid/content/ContentValues;
     .end local v2    # "i":I
     :cond_3
@@ -270,7 +242,6 @@
 
     goto :goto_1
 
-    .line 89
     .restart local v1    # "cvs":[Landroid/content/ContentValues;
     .restart local v2    # "i":I
     :cond_4
@@ -278,23 +249,19 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 90
     .local v0, "broadcastIntent":Landroid/content/Intent;
     const-string v4, "com.samsung.android.providers.context.log.action.USE_MULTI_APP_FEATURE_SURVEY"
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 91
     const-string v4, "data"
 
     invoke-virtual {v0, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 92
     const-string v4, "com.samsung.android.providers.context"
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 93
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v4

@@ -39,27 +39,19 @@
     .param p6, "additionalLen2"    # I
 
     .prologue
-    .line 295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 296
     iput p1, p0, Lcom/android/server/FMPlayerNative$RTPlusData;->mContentType1:I
 
-    .line 297
     iput p2, p0, Lcom/android/server/FMPlayerNative$RTPlusData;->mStartPos1:I
 
-    .line 298
     iput p3, p0, Lcom/android/server/FMPlayerNative$RTPlusData;->mAdditionalLen1:I
 
-    .line 300
     iput p4, p0, Lcom/android/server/FMPlayerNative$RTPlusData;->mContentType2:I
 
-    .line 301
     iput p5, p0, Lcom/android/server/FMPlayerNative$RTPlusData;->mStartPos2:I
 
-    .line 302
     iput p6, p0, Lcom/android/server/FMPlayerNative$RTPlusData;->mAdditionalLen2:I
 
-    .line 303
     return-void
 .end method

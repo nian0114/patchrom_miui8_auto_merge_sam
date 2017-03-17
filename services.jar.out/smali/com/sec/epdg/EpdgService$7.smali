@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1360
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$7;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1364
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -54,12 +52,10 @@
     .prologue
     const/16 v8, 0x10
 
-    .line 1369
     move-object v2, p1
 
     check-cast v2, Landroid/content/Intent;
 
-    .line 1370
     .local v2, "intent":Landroid/content/Intent;
     const-string v5, "[EPDGService]"
 
@@ -87,7 +83,6 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1371
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v5
@@ -96,7 +91,6 @@
 
     move-result-object v0
 
-    .line 1372
     .local v0, "apnType":Ljava/lang/String;
     iget-object v5, p0, Lcom/sec/epdg/EpdgService$7;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -105,25 +99,21 @@
 
     move-result-object v4
 
-    .line 1373
     .local v4, "sm":Lcom/sec/epdg/IPSecDataConnSM;
     if-eqz v4, :cond_0
 
-    .line 1374
     const-string v5, "[EPDGService]"
 
     const-string v6, "NATT KEEP ALIVE TIMER EXPIRED"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1375
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->isPdnConnectedOverWifi(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 1376
     invoke-virtual {v4}, Lcom/sec/epdg/IPSecDataConnSM;->getHandler()Landroid/os/Handler;
 
     move-result-object v5
@@ -132,30 +122,25 @@
 
     move-result-object v3
 
-    .line 1377
     .local v3, "msg":Landroid/os/Message;
     const/16 v5, 0x12
 
     iput v5, v3, Landroid/os/Message;->what:I
 
-    .line 1378
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1380
     invoke-virtual {v4, v8}, Lcom/sec/epdg/IPSecDataConnSM;->IsExistExpiredTimeTable(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 1381
     invoke-virtual {v4, v8}, Lcom/sec/epdg/IPSecDataConnSM;->IsTimerExpired(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 1382
     invoke-virtual {v4}, Lcom/sec/epdg/IPSecDataConnSM;->getHandler()Landroid/os/Handler;
 
     move-result-object v5
@@ -164,11 +149,9 @@
 
     move-result-object v1
 
-    .line 1383
     .local v1, "dpdmsg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1388
     .end local v1    # "dpdmsg":Landroid/os/Message;
     .end local v3    # "msg":Landroid/os/Message;
     :cond_0

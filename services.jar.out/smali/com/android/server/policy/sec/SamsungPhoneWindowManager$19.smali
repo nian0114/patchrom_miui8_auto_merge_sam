@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4305
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$TorchCallback;-><init>()V
@@ -39,14 +38,13 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 4316
     const-string v0, "SamsungWindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onTorchModeChanged mCameraId = "
+    const-string v2, "onTorchModeChanged mCameraId = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,7 +85,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4317
     # getter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mCameraId:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$1100()Ljava/lang/String;
 
@@ -106,13 +103,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 4318
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     # setter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->bIsTorchOn:Z
     invoke-static {v0, p2}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$1202(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;Z)Z
 
-    .line 4320
     :cond_0
     return-void
 .end method
@@ -122,14 +117,13 @@
     .param p1, "cameraId"    # Ljava/lang/String;
 
     .prologue
-    .line 4308
     const-string v0, "SamsungWindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onTorchModeUnavailable mCameraId = "
+    const-string v2, "onTorchModeUnavailable mCameraId = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -160,7 +154,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4309
     # getter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mCameraId:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$1100()Ljava/lang/String;
 
@@ -179,7 +172,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4310
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     const/4 v1, 0x0
@@ -187,7 +179,6 @@
     # setter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->bIsTorchOn:Z
     invoke-static {v0, v1}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$1202(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;Z)Z
 
-    .line 4312
     :cond_0
     return-void
 .end method

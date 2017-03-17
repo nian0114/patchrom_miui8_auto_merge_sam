@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6066
     iput-object p1, p0, Lcom/android/server/ConnectivityService$7;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/16 v3, -0x2710
 
-    .line 6069
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6070
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -54,16 +51,13 @@
 
     move-result v1
 
-    .line 6071
     .local v1, "userId":I
     if-ne v1, v3, :cond_1
 
-    .line 6086
     :cond_0
     :goto_0
     return-void
 
-    .line 6073
     :cond_1
     const-string v2, "android.intent.action.USER_STARTING"
 
@@ -73,7 +67,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 6074
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -96,20 +89,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6075
     iget-object v2, p0, Lcom/android/server/ConnectivityService$7;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->onUserStart(I)V
     invoke-static {v2, v1}, Lcom/android/server/ConnectivityService;->access$5400(Lcom/android/server/ConnectivityService;I)V
 
-    .line 6076
     iget-object v2, p0, Lcom/android/server/ConnectivityService$7;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-virtual {v2}, Lcom/android/server/ConnectivityService;->updateLockdownVpn()Z
 
     goto :goto_0
 
-    .line 6077
     :cond_2
     const-string v2, "android.intent.action.USER_STOPPING"
 
@@ -119,7 +109,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 6078
     iget-object v2, p0, Lcom/android/server/ConnectivityService$7;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->onUserStop(I)V
@@ -127,7 +116,6 @@
 
     goto :goto_0
 
-    .line 6081
     :cond_3
     const-string v2, "android.intent.action.USER_STARTED"
 
@@ -137,7 +125,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6082
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -160,7 +147,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6083
     iget-object v2, p0, Lcom/android/server/ConnectivityService$7;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->onUserStart(I)V

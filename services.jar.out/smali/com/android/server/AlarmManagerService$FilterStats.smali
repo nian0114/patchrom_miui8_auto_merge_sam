@@ -39,15 +39,11 @@
     .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 1045
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1046
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$FilterStats;->mBroadcastStats:Lcom/android/server/AlarmManagerService$BroadcastStats;
 
-    .line 1047
     iput-object p2, p0, Lcom/android/server/AlarmManagerService$FilterStats;->mTag:Ljava/lang/String;
 
-    .line 1048
     return-void
 .end method

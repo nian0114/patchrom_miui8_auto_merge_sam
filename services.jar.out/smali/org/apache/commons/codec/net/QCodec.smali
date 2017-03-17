@@ -17,7 +17,6 @@
     .locals 2
 
     .prologue
-    .line 7
     invoke-direct {p0}, Lorg/apache/commons/codec/net/RFC1522Codec;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -34,7 +33,6 @@
     .param p1, "charset"    # Ljava/lang/String;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Lorg/apache/commons/codec/net/RFC1522Codec;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -58,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -78,7 +75,6 @@
     .end annotation
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -98,7 +94,6 @@
     .end annotation
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -118,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -138,7 +132,6 @@
     .end annotation
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -158,7 +151,6 @@
     .end annotation
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -179,7 +171,6 @@
     .end annotation
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -193,7 +184,6 @@
     .locals 2
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -207,7 +197,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -221,7 +210,6 @@
     .locals 2
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -236,7 +224,6 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

@@ -53,10 +53,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 96
     sput-object v0, Lcom/android/internal/telephony/SmsApplication;->sSmsPackageMonitor:Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;
 
-    .line 97
     sput-object v0, Lcom/android/internal/telephony/SmsApplication;->mPendingDeliveryIntent:Landroid/app/PendingIntent;
 
     return-void
@@ -66,10 +64,8 @@
     .locals 0
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 592
     return-void
 .end method
 
@@ -80,7 +76,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 78
     invoke-static {p0, p1, p2}, Lcom/android/internal/telephony/SmsApplication;->configurePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
 
     return-void
@@ -94,7 +89,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 567
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -103,11 +97,9 @@
 
     move-result v3
 
-    .line 568
     .local v3, "result":I
     if-eqz v3, :cond_1
 
-    .line 569
     const-string v4, "SmsApplication"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -130,12 +122,10 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
     :cond_0
     :goto_0
     return-void
 
-    .line 573
     :cond_1
     const/4 v4, 0x0
 
@@ -144,7 +134,6 @@
 
     move-result-object v1
 
-    .line 574
     .local v1, "info":Landroid/content/pm/PackageInfo;
     const/16 v4, 0xf
 
@@ -156,11 +145,9 @@
 
     move-result v2
 
-    .line 576
     .local v2, "mode":I
     if-eqz v2, :cond_0
 
-    .line 577
     const-string v4, "SmsApplication"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -183,7 +170,6 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     const/16 v4, 0xf
 
     iget-object v5, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -198,13 +184,11 @@
 
     goto :goto_0
 
-    .line 581
     .end local v1    # "info":Landroid/content/pm/PackageInfo;
     .end local v2    # "mode":I
     :catch_0
     move-exception v0
 
-    .line 583
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "SmsApplication"
 
@@ -238,27 +222,22 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 660
     const-string v0, "sms"
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/internal/telephony/SmsApplication;->replacePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;ILjava/lang/String;)V
 
-    .line 661
     const-string v0, "smsto"
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/internal/telephony/SmsApplication;->replacePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;ILjava/lang/String;)V
 
-    .line 662
     const-string v0, "mms"
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/internal/telephony/SmsApplication;->replacePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;ILjava/lang/String;)V
 
-    .line 663
     const-string v0, "mmsto"
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/internal/telephony/SmsApplication;->replacePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;ILjava/lang/String;)V
 
-    .line 664
     return-void
 .end method
 
@@ -269,25 +248,20 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 335
     if-nez p0, :cond_1
 
-    .line 336
     const-string v11, "SmsApplication"
 
     const-string v12, "getApplication: context is null!"
 
     invoke-static {v11, v12}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     const/4 v2, 0x0
 
-    .line 438
     :cond_0
     :goto_0
     return-object v2
 
-    .line 340
     :cond_1
     const-string v11, "phone"
 
@@ -297,7 +271,6 @@
 
     check-cast v10, Landroid/telephony/TelephonyManager;
 
-    .line 342
     .local v10, "tm":Landroid/telephony/TelephonyManager;
     const-string v11, "ro.csc.sales_code"
 
@@ -305,7 +278,6 @@
 
     move-result-object v9
 
-    .line 343
     .local v9, "salesCode":Ljava/lang/String;
     const-string v11, "ATT"
 
@@ -321,12 +293,10 @@
 
     if-nez v11, :cond_2
 
-    .line 345
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 348
     :cond_2
     move/from16 v0, p2
 
@@ -334,7 +304,6 @@
 
     move-result-object v3
 
-    .line 354
     .local v3, "applications":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -348,31 +317,25 @@
 
     move-result-object v4
 
-    .line 360
     .local v4, "defaultApplication":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 361
     .local v2, "applicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v4, :cond_3
 
-    .line 362
     invoke-static {v3, v4}, Lcom/android/internal/telephony/SmsApplication;->getApplicationForPackage(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v2
 
-    .line 369
     :cond_3
     if-eqz p1, :cond_5
 
     if-nez v2, :cond_5
 
-    .line 371
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    .line 372
     .local v8, "r":Landroid/content/res/Resources;
     const v11, 0x104002e
 
@@ -380,23 +343,19 @@
 
     move-result-object v5
 
-    .line 374
     .local v5, "defaultPackage":Ljava/lang/String;
     invoke-static {v3, v5}, Lcom/android/internal/telephony/SmsApplication;->getApplicationForPackage(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v2
 
-    .line 376
     if-nez v2, :cond_4
 
-    .line 378
     invoke-interface {v3}, Ljava/util/Collection;->size()I
 
     move-result v11
 
     if-eqz v11, :cond_4
 
-    .line 379
     invoke-interface {v3}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
 
     move-result-object v11
@@ -408,25 +367,21 @@
     .end local v2    # "applicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     check-cast v2, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 384
     .restart local v2    # "applicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 385
     iget-object v11, v2, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
 
     move/from16 v0, p2
 
     invoke-static {v11, p0, v0}, Lcom/android/internal/telephony/SmsApplication;->setDefaultApplicationInternal(Ljava/lang/String;Landroid/content/Context;I)V
 
-    .line 390
     .end local v5    # "defaultPackage":Ljava/lang/String;
     .end local v8    # "r":Landroid/content/res/Resources;
     :cond_5
     if-eqz v2, :cond_0
 
-    .line 391
     const-string v11, "appops"
 
     invoke-virtual {p0, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -435,7 +390,6 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    .line 397
     .local v1, "appOps":Landroid/app/AppOpsManager;
     if-nez p1, :cond_6
 
@@ -447,7 +401,6 @@
 
     if-ne v11, v12, :cond_7
 
-    .line 399
     :cond_6
     const/16 v11, 0xf
 
@@ -459,11 +412,9 @@
 
     move-result v6
 
-    .line 401
     .local v6, "mode":I
     if-eqz v6, :cond_7
 
-    .line 402
     const-string v12, "SmsApplication"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -497,10 +448,8 @@
 
     invoke-static {v12, v11}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 404
     if-eqz p1, :cond_9
 
-    .line 405
     const/16 v11, 0xf
 
     iget v12, v2, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mUid:I
@@ -511,18 +460,15 @@
 
     invoke-virtual {v1, v11, v12, v13, v14}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
-    .line 415
     .end local v6    # "mode":I
     :cond_7
     :goto_2
     if-eqz p1, :cond_0
 
-    .line 420
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
-    .line 421
     .local v7, "packageManager":Landroid/content/pm/PackageManager;
     new-instance v11, Landroid/content/ComponentName;
 
@@ -536,29 +482,24 @@
 
     invoke-static {v7, v11, v0}, Lcom/android/internal/telephony/SmsApplication;->configurePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
 
-    .line 425
     const-string v11, "com.android.phone"
 
     invoke-static {p0, v7, v1, v11}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
-    .line 427
     const-string v11, "com.android.bluetooth"
 
     invoke-static {p0, v7, v1, v11}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
-    .line 429
     const-string v11, "com.android.mms.service"
 
     invoke-static {p0, v7, v1, v11}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
-    .line 431
     const-string v11, "com.android.providers.telephony"
 
     invoke-static {p0, v7, v1, v11}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 402
     .end local v7    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v6    # "mode":I
     :cond_8
@@ -566,7 +507,6 @@
 
     goto :goto_1
 
-    .line 409
     :cond_9
     const/4 v2, 0x0
 
@@ -589,18 +529,15 @@
     .end annotation
 
     .prologue
-    .line 192
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getIncomingUserId(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 193
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 195
     .local v0, "token":J
     :try_start_0
     invoke-static {p0, v2}, Lcom/android/internal/telephony/SmsApplication;->getApplicationCollectionInternal(Landroid/content/Context;I)Ljava/util/Collection;
@@ -609,7 +546,6 @@
 
     move-result-object v3
 
-    .line 197
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v3
@@ -639,12 +575,10 @@
     .end annotation
 
     .prologue
-    .line 203
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    .line 206
     .local v6, "packageManager":Landroid/content/pm/PackageManager;
     new-instance v4, Landroid/content/Intent;
 
@@ -652,7 +586,6 @@
 
     invoke-direct {v4, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 207
     .local v4, "intent":Landroid/content/Intent;
     const/4 v15, 0x0
 
@@ -662,13 +595,11 @@
 
     move-result-object v14
 
-    .line 210
     .local v14, "smsReceivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 213
     .local v8, "receivers":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;>;"
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -689,15 +620,12 @@
 
     check-cast v9, Landroid/content/pm/ResolveInfo;
 
-    .line 214
     .local v9, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 215
     .local v1, "activityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v1, :cond_0
 
-    .line 218
     const-string v15, "android.permission.BROADCAST_SMS"
 
     iget-object v0, v1, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
@@ -710,10 +638,8 @@
 
     if-eqz v15, :cond_0
 
-    .line 221
     iget-object v7, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 222
     .local v7, "packageName":Ljava/lang/String;
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -721,7 +647,6 @@
 
     if-nez v15, :cond_0
 
-    .line 223
     invoke-virtual {v9, v6}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v15
@@ -730,7 +655,6 @@
 
     move-result-object v2
 
-    .line 224
     .local v2, "applicationName":Ljava/lang/String;
     new-instance v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
@@ -740,18 +664,15 @@
 
     invoke-direct {v13, v2, v7, v15}, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 226
     .local v13, "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     iget-object v15, v1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     iput-object v15, v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mSmsReceiverClass:Ljava/lang/String;
 
-    .line 227
     invoke-virtual {v8, v7, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 232
     .end local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v2    # "applicationName":Ljava/lang/String;
     .end local v7    # "packageName":Ljava/lang/String;
@@ -765,7 +686,6 @@
 
     invoke-direct {v4, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 233
     .restart local v4    # "intent":Landroid/content/Intent;
     const/4 v15, 0x0
 
@@ -775,7 +695,6 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 234
     const/4 v15, 0x0
 
     move/from16 v0, p1
@@ -784,7 +703,6 @@
 
     move-result-object v5
 
-    .line 236
     .local v5, "mmsReceivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -804,15 +722,12 @@
 
     check-cast v9, Landroid/content/pm/ResolveInfo;
 
-    .line 237
     .restart local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 238
     .restart local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v1, :cond_2
 
-    .line 241
     const-string v15, "android.permission.BROADCAST_WAP_PUSH"
 
     iget-object v0, v1, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
@@ -825,10 +740,8 @@
 
     if-eqz v15, :cond_2
 
-    .line 244
     iget-object v7, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 245
     .restart local v7    # "packageName":Ljava/lang/String;
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -836,18 +749,15 @@
 
     check-cast v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 246
     .restart local v13    # "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v13, :cond_2
 
-    .line 247
     iget-object v15, v1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     iput-object v15, v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mMmsReceiverClass:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 252
     .end local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v7    # "packageName":Ljava/lang/String;
     .end local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
@@ -872,7 +782,6 @@
 
     invoke-direct {v4, v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 254
     .restart local v4    # "intent":Landroid/content/Intent;
     const/4 v15, 0x0
 
@@ -882,7 +791,6 @@
 
     move-result-object v10
 
-    .line 256
     .local v10, "respondServices":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -902,15 +810,12 @@
 
     check-cast v9, Landroid/content/pm/ResolveInfo;
 
-    .line 257
     .restart local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v12, v9, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 258
     .local v12, "serviceInfo":Landroid/content/pm/ServiceInfo;
     if-eqz v12, :cond_4
 
-    .line 261
     const-string v15, "android.permission.SEND_RESPOND_VIA_MESSAGE"
 
     iget-object v0, v12, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
@@ -923,10 +828,8 @@
 
     if-eqz v15, :cond_4
 
-    .line 264
     iget-object v7, v12, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 265
     .restart local v7    # "packageName":Ljava/lang/String;
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -934,18 +837,15 @@
 
     check-cast v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 266
     .restart local v13    # "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v13, :cond_4
 
-    .line 267
     iget-object v15, v12, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
 
     iput-object v15, v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mRespondViaMessageClass:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 272
     .end local v7    # "packageName":Ljava/lang/String;
     .end local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     .end local v12    # "serviceInfo":Landroid/content/pm/ServiceInfo;
@@ -970,7 +870,6 @@
 
     invoke-direct {v4, v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 274
     .restart local v4    # "intent":Landroid/content/Intent;
     const/4 v15, 0x0
 
@@ -980,7 +879,6 @@
 
     move-result-object v11
 
-    .line 276
     .local v11, "sendToActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1000,18 +898,14 @@
 
     check-cast v9, Landroid/content/pm/ResolveInfo;
 
-    .line 277
     .restart local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 278
     .restart local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v1, :cond_6
 
-    .line 281
     iget-object v7, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 282
     .restart local v7    # "packageName":Ljava/lang/String;
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1019,18 +913,15 @@
 
     check-cast v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 283
     .restart local v13    # "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v13, :cond_6
 
-    .line 284
     iget-object v15, v1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     iput-object v15, v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mSendToClass:Ljava/lang/String;
 
     goto :goto_3
 
-    .line 289
     .end local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v7    # "packageName":Ljava/lang/String;
     .end local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
@@ -1054,18 +945,14 @@
 
     check-cast v9, Landroid/content/pm/ResolveInfo;
 
-    .line 290
     .restart local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 291
     .restart local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v1, :cond_8
 
-    .line 294
     iget-object v7, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 295
     .restart local v7    # "packageName":Ljava/lang/String;
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1073,23 +960,19 @@
 
     check-cast v13, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 296
     .restart local v13    # "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v13, :cond_8
 
-    .line 297
     invoke-virtual {v13}, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->isComplete()Z
 
     move-result v15
 
     if-nez v15, :cond_8
 
-    .line 298
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_4
 
-    .line 302
     .end local v1    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v7    # "packageName":Ljava/lang/String;
     .end local v9    # "resolveInfo":Landroid/content/pm/ResolveInfo;
@@ -1122,16 +1005,13 @@
     .local p0, "applications":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;>;"
     const/4 v2, 0x0
 
-    .line 311
     if-nez p1, :cond_0
 
     move-object v0, v2
 
-    .line 320
     :goto_0
     return-object v0
 
-    .line 315
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1151,7 +1031,6 @@
 
     check-cast v0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 316
     .local v0, "application":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     iget-object v3, v0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
 
@@ -1167,7 +1046,6 @@
     :cond_2
     move-object v0, v2
 
-    .line 320
     goto :goto_0
 .end method
 
@@ -1177,33 +1055,27 @@
     .param p1, "updateIfNeeded"    # Z
 
     .prologue
-    .line 734
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getIncomingUserId(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 735
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 737
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 738
     .local v0, "component":Landroid/content/ComponentName;
     :try_start_0
     invoke-static {p0, p1, v4}, Lcom/android/internal/telephony/SmsApplication;->getApplication(Landroid/content/Context;ZI)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v1
 
-    .line 740
     .local v1, "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v1, :cond_0
 
-    .line 741
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "component":Landroid/content/ComponentName;
@@ -1215,7 +1087,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 746
     .restart local v0    # "component":Landroid/content/ComponentName;
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1238,33 +1109,27 @@
     .param p1, "updateIfNeeded"    # Z
 
     .prologue
-    .line 758
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getIncomingUserId(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 759
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 761
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 762
     .local v0, "component":Landroid/content/ComponentName;
     :try_start_0
     invoke-static {p0, p1, v4}, Lcom/android/internal/telephony/SmsApplication;->getApplication(Landroid/content/Context;ZI)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v1
 
-    .line 764
     .local v1, "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v1, :cond_0
 
-    .line 765
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "component":Landroid/content/ComponentName;
@@ -1276,7 +1141,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 770
     .restart local v0    # "component":Landroid/content/ComponentName;
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1299,33 +1163,27 @@
     .param p1, "updateIfNeeded"    # Z
 
     .prologue
-    .line 784
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getIncomingUserId(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 785
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 787
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 788
     .local v0, "component":Landroid/content/ComponentName;
     :try_start_0
     invoke-static {p0, p1, v4}, Lcom/android/internal/telephony/SmsApplication;->getApplication(Landroid/content/Context;ZI)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v1
 
-    .line 790
     .local v1, "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v1, :cond_0
 
-    .line 791
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "component":Landroid/content/ComponentName;
@@ -1337,7 +1195,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 796
     .restart local v0    # "component":Landroid/content/ComponentName;
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1360,33 +1217,27 @@
     .param p1, "updateIfNeeded"    # Z
 
     .prologue
-    .line 711
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getIncomingUserId(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 712
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 714
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 715
     .local v0, "component":Landroid/content/ComponentName;
     :try_start_0
     invoke-static {p0, p1, v4}, Lcom/android/internal/telephony/SmsApplication;->getApplication(Landroid/content/Context;ZI)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v1
 
-    .line 717
     .local v1, "smsApplicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v1, :cond_0
 
-    .line 718
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "component":Landroid/content/ComponentName;
@@ -1398,7 +1249,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 723
     .restart local v0    # "component":Landroid/content/ComponentName;
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1420,23 +1270,19 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 852
     const/4 v1, 0x0
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/SmsApplication;->getDefaultSmsApplication(Landroid/content/Context;Z)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 853
     .local v0, "component":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 854
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 856
     :goto_0
     return-object v1
 
@@ -1451,12 +1297,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 950
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 953
     .local v2, "packageManager":Landroid/content/pm/PackageManager;
     :try_start_0
     const-string v3, "com.android.mms"
@@ -1473,20 +1317,16 @@
 
     move-result-object v1
 
-    .line 954
     .local v1, "info":Landroid/content/pm/PackageInfo;
     const/4 v3, 0x1
 
-    .line 959
     .end local v1    # "info":Landroid/content/pm/PackageInfo;
     :goto_0
     return v3
 
-    .line 957
     :catch_0
     move-exception v0
 
-    .line 958
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "SmsApplication"
 
@@ -1494,7 +1334,6 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 959
     const/4 v3, 0x0
 
     goto :goto_0
@@ -1505,18 +1344,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 158
     invoke-virtual {p0}, Landroid/content/Context;->getUserId()I
 
     move-result v1
 
-    .line 159
     .local v1, "contextUserId":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 164
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -1526,7 +1362,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 168
     .end local v1    # "contextUserId":I
     :goto_0
     return v1
@@ -1544,7 +1379,6 @@
     .locals 1
 
     .prologue
-    .line 941
     sget-object v0, Lcom/android/internal/telephony/SmsApplication;->mPendingDeliveryIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -1556,12 +1390,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 700
     invoke-static {p1}, Lcom/android/internal/telephony/SmsApplication;->getApplicationCollection(Landroid/content/Context;)Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 701
     .local v0, "applications":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;>;"
     invoke-static {v0, p0}, Lcom/android/internal/telephony/SmsApplication;->getApplicationForPackage(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
@@ -1574,12 +1406,10 @@
     .locals 1
 
     .prologue
-    .line 931
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/internal/telephony/SmsApplication;->mPendingDeliveryIntent:Landroid/app/PendingIntent;
 
-    .line 932
     return-void
 .end method
 
@@ -1588,14 +1418,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 653
     new-instance v0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/internal/telephony/SmsApplication;->sSmsPackageMonitor:Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;
 
-    .line 654
     sget-object v0, Lcom/android/internal/telephony/SmsApplication;->sSmsPackageMonitor:Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;
 
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -1608,7 +1436,6 @@
 
     invoke-virtual {v0, p0, v1, v2, v3}, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Landroid/os/UserHandle;Z)V
 
-    .line 655
     return-void
 .end method
 
@@ -1622,21 +1449,17 @@
 
     const/4 v3, 0x0
 
-    .line 823
     if-nez p1, :cond_1
 
-    .line 848
     :cond_0
     :goto_0
     return v3
 
-    .line 826
     :cond_1
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getDefaultSmsApplicationPackageName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 831
     .local v0, "defaultSmsPackage":Ljava/lang/String;
     invoke-static {p0}, Lcom/android/internal/telephony/SmsApplication;->getEnableSecSms(Landroid/content/Context;)Z
 
@@ -1652,7 +1475,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 832
     const-string v2, "SmsApplication"
 
     const-string v4, "shouldWriteMessageForPackage is true for none SECSMS app model."
@@ -1661,11 +1483,9 @@
 
     goto :goto_0
 
-    .line 837
     :cond_2
     const/4 v1, 0x1
 
-    .line 838
     .local v1, "isCallingIdItsOn":Z
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -1679,7 +1499,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 839
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
@@ -1690,7 +1509,6 @@
 
     move v1, v2
 
-    .line 842
     :cond_3
     :goto_1
     if-eqz v0, :cond_4
@@ -1713,13 +1531,11 @@
     :cond_5
     move v3, v2
 
-    .line 848
     goto :goto_0
 
     :cond_6
     move v1, v3
 
-    .line 839
     goto :goto_1
 .end method
 
@@ -1729,12 +1545,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 862
     sget-object v4, Lcom/android/internal/telephony/SmsApplication;->sPackageNamePattern:[Ljava/lang/String;
 
     if-nez v4, :cond_0
 
-    .line 863
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -1747,7 +1561,6 @@
 
     sput-object v4, Lcom/android/internal/telephony/SmsApplication;->sPackageNamePattern:[Ljava/lang/String;
 
-    .line 867
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/SmsApplication;->sPackageNamePattern:[Ljava/lang/String;
 
@@ -1763,7 +1576,6 @@
 
     aget-object v3, v0, v1
 
-    .line 868
     .local v3, "name":Ljava/lang/String;
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1771,7 +1583,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 869
     const-string v4, "SmsApplication"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1794,22 +1605,18 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 870
     const/4 v4, 0x1
 
-    .line 879
     .end local v3    # "name":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 867
     .restart local v3    # "name":Ljava/lang/String;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 874
     .end local v3    # "name":Ljava/lang/String;
     :cond_2
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1824,14 +1631,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 875
     invoke-static {p0, p1}, Lcom/android/internal/telephony/SmsApplication;->isVzwAuthorizedApp(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
     goto :goto_1
 
-    .line 878
     :cond_3
     const-string v4, "SmsApplication"
 
@@ -1855,7 +1660,6 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 879
     const/4 v4, 0x0
 
     goto :goto_1
@@ -1867,20 +1671,16 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 894
     const/4 v9, 0x0
 
-    .line 895
     .local v9, "result":Z
     const/4 v7, 0x0
 
-    .line 896
     .local v7, "cursor":Landroid/database/Cursor;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 898
     .local v0, "cr":Landroid/content/ContentResolver;
     :try_start_0
     const-string v1, "content://com.verizon.vzwavs.provider/apis"
@@ -1901,7 +1701,6 @@
 
     move-result-object v7
 
-    .line 900
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1910,25 +1709,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 901
     const/4 v1, 0x0
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 902
     .local v6, "apis":Ljava/lang/String;
     if-eqz v6, :cond_0
 
-    .line 903
     const-string v1, "VZWSMS"
 
     invoke-virtual {v6, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v9
 
-    .line 904
     const-string v1, "SmsApplication"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1954,24 +1749,19 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 910
     .end local v6    # "apis":Ljava/lang/String;
     :cond_0
     if-eqz v7, :cond_1
 
-    .line 911
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 913
     :cond_1
     :goto_0
     return v9
 
-    .line 907
     :catch_0
     move-exception v8
 
-    .line 908
     .local v8, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "SmsApplication"
@@ -1982,22 +1772,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 910
     if-eqz v7, :cond_1
 
-    .line 911
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 910
     .end local v8    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
     if-eqz v7, :cond_2
 
-    .line 911
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -2012,7 +1798,6 @@
     .param p3, "scheme"    # Ljava/lang/String;
 
     .prologue
-    .line 672
     new-instance v8, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.SENDTO"
@@ -2027,7 +1812,6 @@
 
     invoke-direct {v8, v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 673
     .local v8, "intent":Landroid/content/Intent;
     const v0, 0x10040
 
@@ -2035,17 +1819,14 @@
 
     move-result-object v10
 
-    .line 678
     .local v10, "resolveInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v9
 
-    .line 679
     .local v9, "n":I
     new-array v3, v9, [Landroid/content/ComponentName;
 
-    .line 680
     .local v3, "set":[Landroid/content/ComponentName;
     const/4 v6, 0x0
 
@@ -2053,14 +1834,12 @@
     :goto_0
     if-ge v6, v9, :cond_0
 
-    .line 681
     invoke-interface {v10, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Landroid/content/pm/ResolveInfo;
 
-    .line 682
     .local v7, "info":Landroid/content/pm/ResolveInfo;
     new-instance v0, Landroid/content/ComponentName;
 
@@ -2076,33 +1855,27 @@
 
     aput-object v0, v3, v6
 
-    .line 680
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 686
     .end local v7    # "info":Landroid/content/pm/ResolveInfo;
     :cond_0
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 687
     .local v1, "intentFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.SENDTO"
 
     invoke-virtual {v1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 688
     const-string v0, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v0}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 689
     invoke-virtual {v1, p3}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 690
     const v2, 0x208000
 
     move-object v0, p0
@@ -2113,7 +1886,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/pm/PackageManager;->replacePreferredActivityAsUser(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/ComponentName;I)V
 
-    .line 693
     return-void
 .end method
 
@@ -2125,26 +1897,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 448
     if-nez p1, :cond_1
 
-    .line 450
     const-string v0, "SmsApplication"
 
     const-string v2, "context in DefaultApplication is null"
 
     invoke-static {v0, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     :cond_0
     :goto_0
     return-void
 
-    .line 453
     :cond_1
     const/4 v7, -0x1
 
-    .line 454
     .local v7, "ret":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -2154,7 +1921,6 @@
 
     move-result v9
 
-    .line 455
     .local v9, "userHandle":I
     const-string v0, "content://com.sec.knox.provider2/ApplicationPolicy"
 
@@ -2162,7 +1928,6 @@
 
     move-result-object v1
 
-    .line 456
     .local v1, "uri":Landroid/net/Uri;
     const/4 v0, 0x2
 
@@ -2180,7 +1945,6 @@
 
     aput-object v3, v4, v0
 
-    .line 457
     .local v4, "selectionArgs":[Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2194,15 +1958,12 @@
 
     move-result-object v6
 
-    .line 458
     .local v6, "cr":Landroid/database/Cursor;
     if-eqz v6, :cond_2
 
-    .line 460
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 461
     const-string v0, "isChangeSmsDefaultAppAllowed"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2224,19 +1985,15 @@
 
     if-eqz v0, :cond_3
 
-    .line 462
     const/4 v7, 0x1
 
-    .line 469
     :goto_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 473
     :cond_2
     :goto_2
     if-nez v7, :cond_4
 
-    .line 475
     const-string v0, "SmsApplication"
 
     const-string v2, "Block setDefaultApplication by admin"
@@ -2245,17 +2002,14 @@
 
     goto :goto_0
 
-    .line 465
     :cond_3
     const/4 v7, 0x0
 
     goto :goto_1
 
-    .line 467
     :catch_0
     move-exception v0
 
-    .line 469
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
@@ -2267,11 +2021,9 @@
 
     throw v0
 
-    .line 480
     :cond_4
     if-eqz p1, :cond_6
 
-    .line 481
     const-string v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2280,7 +2032,6 @@
 
     check-cast v8, Landroid/telephony/TelephonyManager;
 
-    .line 482
     .local v8, "tm":Landroid/telephony/TelephonyManager;
     if-eqz v8, :cond_5
 
@@ -2296,26 +2047,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 488
     :cond_5
     invoke-static {p1}, Lcom/android/internal/telephony/SmsApplication;->getIncomingUserId(Landroid/content/Context;)I
 
     move-result v12
 
-    .line 489
     .local v12, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 491
     .local v10, "token":J
     :try_start_1
     invoke-static {p0, p1, v12}, Lcom/android/internal/telephony/SmsApplication;->setDefaultApplicationInternal(Ljava/lang/String;Landroid/content/Context;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 493
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -2327,7 +2074,6 @@
 
     throw v0
 
-    .line 496
     .end local v8    # "tm":Landroid/telephony/TelephonyManager;
     .end local v10    # "token":J
     .end local v12    # "userId":I
@@ -2350,7 +2096,6 @@
     .prologue
     const/16 v10, 0xf
 
-    .line 503
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
@@ -2361,7 +2106,6 @@
 
     move-result-object v5
 
-    .line 506
     .local v5, "oldPackageName":Ljava/lang/String;
     if-eqz p0, :cond_1
 
@@ -2373,34 +2117,28 @@
 
     if-eqz v7, :cond_1
 
-    .line 552
     :cond_0
     :goto_0
     return-void
 
-    .line 512
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    .line 513
     .local v6, "packageManager":Landroid/content/pm/PackageManager;
     invoke-static {p1}, Lcom/android/internal/telephony/SmsApplication;->getApplicationCollection(Landroid/content/Context;)Ljava/util/Collection;
 
     move-result-object v2
 
-    .line 514
     .local v2, "applications":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;>;"
     invoke-static {v2, p0}, Lcom/android/internal/telephony/SmsApplication;->getApplicationForPackage(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v1
 
-    .line 515
     .local v1, "applicationData":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v1, :cond_0
 
-    .line 517
     const-string v7, "appops"
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2409,11 +2147,9 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 518
     .local v0, "appOps":Landroid/app/AppOpsManager;
     if-eqz v5, :cond_2
 
-    .line 520
     const/16 v7, 0x2000
 
     :try_start_0
@@ -2421,7 +2157,6 @@
 
     move-result-object v4
 
-    .line 522
     .local v4, "info":Landroid/content/pm/PackageInfo;
     const/16 v7, 0xf
 
@@ -2435,7 +2170,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 528
     .end local v4    # "info":Landroid/content/pm/PackageInfo;
     :cond_2
     :goto_1
@@ -2473,7 +2207,6 @@
 
     invoke-static {v7, v8}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 530
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
@@ -2484,7 +2217,6 @@
 
     invoke-static {v7, v8, v9, p2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 535
     new-instance v7, Landroid/content/ComponentName;
 
     iget-object v8, v1, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
@@ -2495,7 +2227,6 @@
 
     invoke-static {v6, v7, p2}, Lcom/android/internal/telephony/SmsApplication;->configurePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
 
-    .line 539
     iget v7, v1, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mUid:I
 
     iget-object v8, v1, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
@@ -2504,33 +2235,27 @@
 
     invoke-virtual {v0, v10, v7, v8, v9}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
-    .line 543
     const-string v7, "com.android.phone"
 
     invoke-static {p1, v6, v0, v7}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
-    .line 545
     const-string v7, "com.android.bluetooth"
 
     invoke-static {p1, v6, v0, v7}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
-    .line 547
     const-string v7, "com.android.mms.service"
 
     invoke-static {p1, v6, v0, v7}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
-    .line 549
     const-string v7, "com.android.providers.telephony"
 
     invoke-static {p1, v6, v0, v7}, Lcom/android/internal/telephony/SmsApplication;->assignWriteSmsPermissionToSystemApp(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/AppOpsManager;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 524
     :catch_0
     move-exception v3
 
-    .line 525
     .local v3, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v7, "SmsApplication"
 
@@ -2562,10 +2287,8 @@
     .param p0, "deliveryIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 922
     sput-object p0, Lcom/android/internal/telephony/SmsApplication;->mPendingDeliveryIntent:Landroid/app/PendingIntent;
 
-    .line 923
     return-void
 .end method
 
@@ -2577,7 +2300,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 807
     const-string v1, "SmsApplication"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2600,7 +2322,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 809
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v1
@@ -2611,7 +2332,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 812
     :cond_0
     :goto_0
     return v0

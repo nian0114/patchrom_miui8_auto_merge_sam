@@ -50,15 +50,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 18
     const-string v0, "android.os.ILpnetManager"
 
     invoke-virtual {p0, p0, v0}, Landroid/os/ILpnetManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 19
     return-void
 .end method
 
@@ -67,17 +64,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 26
     if-nez p0, :cond_0
 
-    .line 27
     const/4 v0, 0x0
 
-    .line 33
     :goto_0
     return-object v0
 
-    .line 29
     :cond_0
     const-string v1, "android.os.ILpnetManager"
 
@@ -85,7 +78,6 @@
 
     move-result-object v0
 
-    .line 30
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -93,12 +85,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 31
     check-cast v0, Landroid/os/ILpnetManager;
 
     goto :goto_0
 
-    .line 33
     :cond_1
     new-instance v0, Landroid/os/ILpnetManager$Stub$Proxy;
 
@@ -114,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 37
     return-object p0
 .end method
 
@@ -133,10 +122,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 133
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -144,7 +131,6 @@
     :goto_0
     return v2
 
-    .line 45
     :sswitch_0
     const-string v3, "android.os.ILpnetManager"
 
@@ -152,20 +138,17 @@
 
     goto :goto_0
 
-    .line 50
     :sswitch_1
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 52
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 53
     sget-object v3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -174,17 +157,14 @@
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 58
     .local v0, "_arg0":Landroid/os/Bundle;
     :goto_1
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->freezeApps(Landroid/os/Bundle;)V
 
-    .line 59
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 56
     .end local v0    # "_arg0":Landroid/os/Bundle;
     :cond_0
     const/4 v0, 0x0
@@ -192,77 +172,63 @@
     .restart local v0    # "_arg0":Landroid/os/Bundle;
     goto :goto_1
 
-    .line 64
     .end local v0    # "_arg0":Landroid/os/Bundle;
     :sswitch_2
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     .local v0, "_arg0":[Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->unFreezeApps([Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 73
     .end local v0    # "_arg0":[Ljava/lang/String;
     :sswitch_3
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p0}, Landroid/os/ILpnetManager$Stub;->getManagedAppList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 75
     .local v1, "_result":Ljava/util/List;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 76
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 81
     .end local v1    # "_result":Ljava/util/List;
     :sswitch_4
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 83
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 84
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->gcmNotificationBroadcast(Ljava/lang/String;)V
 
-    .line 85
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 90
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_5
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -271,50 +237,41 @@
 
     move v0, v2
 
-    .line 93
     .local v0, "_arg0":Z
     :goto_2
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->enableDisableSolution(Z)V
 
-    .line 94
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 92
     .end local v0    # "_arg0":Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_2
 
-    .line 99
     :sswitch_6
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 102
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->getLRUList(I)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 103
     .local v1, "_result":Ljava/util/Map;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 104
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
     goto :goto_0
 
-    .line 109
     .end local v0    # "_arg0":I
     .end local v1    # "_result":Ljava/util/Map;
     :sswitch_7
@@ -322,56 +279,45 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 111
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 112
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->updateLruInDB(I)V
 
-    .line 113
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 118
     .end local v0    # "_arg0":I
     :sswitch_8
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 119
     invoke-virtual {p0}, Landroid/os/ILpnetManager$Stub;->runFreezeBasedOnLRU()V
 
-    .line 120
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 125
     :sswitch_9
     const-string v3, "android.os.ILpnetManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 127
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/os/ILpnetManager$Stub;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 129
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 41
     nop
 
     :sswitch_data_0

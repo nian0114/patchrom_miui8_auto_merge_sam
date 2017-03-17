@@ -47,29 +47,24 @@
     .locals 1
 
     .prologue
-    .line 418
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 419
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ApplicationPackageInfo;->packageName:Ljava/lang/String;
 
-    .line 420
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ApplicationPackageInfo;->permissions:Ljava/util/List;
 
-    .line 421
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ApplicationPackageInfo;->signatures:Ljava/util/List;
 
-    .line 422
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroid/content/pm/Signature;
@@ -85,12 +80,11 @@
     .locals 2
 
     .prologue
-    .line 425
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "packageName : "
+    const-string v1, "packageName : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,7 +96,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "permissions : "
+    const-string v1, "permissions : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,7 +108,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "signatures : "
+    const-string v1, "signatures : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

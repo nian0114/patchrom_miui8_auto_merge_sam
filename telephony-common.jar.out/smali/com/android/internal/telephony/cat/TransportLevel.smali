@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 35
     new-instance v0, Lcom/android/internal/telephony/cat/TransportLevel$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/cat/TransportLevel$1;-><init>()V
@@ -46,16 +45,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
-    .line 16
     iput v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->portNumber:I
 
-    .line 19
     return-void
 .end method
 
@@ -66,30 +61,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
-    .line 16
     iput v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->portNumber:I
 
-    .line 22
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
-    .line 23
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->portNumber:I
 
-    .line 24
     return-void
 .end method
 
@@ -99,7 +88,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/cat/TransportLevel$1;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/TransportLevel;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -111,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 27
     const/4 v0, 0x0
 
     return v0
@@ -121,7 +108,6 @@
     .locals 2
 
     .prologue
-    .line 50
     iget-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
     const/4 v1, 0x4
@@ -152,7 +138,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 63
     iget-byte v1, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
     if-eq v1, v0, :cond_0
@@ -177,7 +162,6 @@
     .locals 2
 
     .prologue
-    .line 46
     iget-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
     const/4 v1, 0x3
@@ -199,7 +183,6 @@
     .locals 2
 
     .prologue
-    .line 55
     iget-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
     const/4 v1, 0x2
@@ -223,7 +206,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 59
     iget-byte v1, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
     if-ne v1, v0, :cond_0
@@ -243,16 +225,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 31
     iget-byte v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->transportProtocol:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 32
     iget v0, p0, Lcom/android/internal/telephony/cat/TransportLevel;->portNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 33
     return-void
 .end method

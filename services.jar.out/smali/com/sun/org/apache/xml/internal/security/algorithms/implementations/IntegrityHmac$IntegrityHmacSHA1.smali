@@ -32,7 +32,7 @@
 .method public engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#hmac-sha1"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#hmac-sha1"
 
     return-object v0
 .end method

@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p2, "value2"    # Ljava/lang/Object;
 
     .prologue
-    .line 52
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/FloatDV$XFloat;
 
     .end local p1    # "value1":Ljava/lang/Object;
@@ -56,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 44
     :try_start_0
     new-instance v1, Lmf/org/apache/xerces/impl/dv/xs/FloatDV$XFloat;
 
@@ -66,11 +63,9 @@
 
     return-object v1
 
-    .line 45
     :catch_0
     move-exception v0
 
-    .line 46
     .local v0, "ex":Ljava/lang/NumberFormatException;
     new-instance v1, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
@@ -99,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const/16 v0, 0x9f8
 
     return v0
@@ -111,12 +105,10 @@
     .param p2, "value2"    # Ljava/lang/Object;
 
     .prologue
-    .line 58
     instance-of v0, p2, Lmf/org/apache/xerces/impl/dv/xs/FloatDV$XFloat;
 
     if-eqz v0, :cond_0
 
-    .line 59
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/FloatDV$XFloat;
 
     .end local p1    # "value1":Ljava/lang/Object;
@@ -127,7 +119,6 @@
 
     move-result v0
 
-    .line 61
     :goto_0
     return v0
 

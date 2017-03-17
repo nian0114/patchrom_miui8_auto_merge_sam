@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$6;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -38,14 +37,12 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 215
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getRoaming()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 217
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$6;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;->mHandler:Landroid/os/Handler;
@@ -59,7 +56,6 @@
 
     move-result-object v0
 
-    .line 218
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$6;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -70,7 +66,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 220
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void

@@ -20,16 +20,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     iput-boolean v0, p0, Lmf/javax/xml/parsers/SAXParserFactory;->validating:Z
 
-    .line 75
     iput-boolean v0, p0, Lmf/javax/xml/parsers/SAXParserFactory;->namespaceAware:Z
 
-    .line 82
     return-void
 .end method
 
@@ -37,14 +33,11 @@
     .locals 4
 
     .prologue
-    .line 147
     :try_start_0
-    const-string/jumbo v1, "javax.xml.parsers.SAXParserFactory"
+    const-string v1, "javax.xml.parsers.SAXParserFactory"
 
-    .line 149
     const-string v2, "com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl"
 
-    .line 145
     invoke-static {v1, v2}, Lmf/javax/xml/parsers/FactoryFinder;->find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -55,11 +48,9 @@
 
     return-object v1
 
-    .line 150
     :catch_0
     move-exception v0
 
-    .line 151
     .local v0, "e":Lmf/javax/xml/parsers/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/parsers/FactoryConfigurationError;
 
@@ -67,12 +58,10 @@
 
     move-result-object v2
 
-    .line 152
     invoke-virtual {v0}, Lmf/javax/xml/parsers/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 151
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/parsers/FactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1
@@ -84,7 +73,6 @@
     .param p1, "classLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 193
     const/4 v1, 0x0
 
     :try_start_0
@@ -98,11 +86,9 @@
 
     return-object v1
 
-    .line 194
     :catch_0
     move-exception v0
 
-    .line 195
     .local v0, "e":Lmf/javax/xml/parsers/FactoryFinder$ConfigurationError;
     new-instance v1, Lmf/javax/xml/parsers/FactoryConfigurationError;
 
@@ -110,12 +96,10 @@
 
     move-result-object v2
 
-    .line 196
     invoke-virtual {v0}, Lmf/javax/xml/parsers/FactoryFinder$ConfigurationError;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 195
     invoke-direct {v1, v2, v3}, Lmf/javax/xml/parsers/FactoryConfigurationError;-><init>(Ljava/lang/Exception;Ljava/lang/String;)V
 
     throw v1
@@ -137,17 +121,14 @@
     .locals 3
 
     .prologue
-    .line 370
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 371
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This parser does not support specification \""
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 372
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -164,14 +145,12 @@
 
     move-result-object v1
 
-    .line 373
     const-string v2, "\" version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 374
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -188,19 +167,16 @@
 
     move-result-object v1
 
-    .line 375
     const-string v2, "\""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 371
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 370
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -210,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 266
     iget-boolean v0, p0, Lmf/javax/xml/parsers/SAXParserFactory;->namespaceAware:Z
 
     return v0
@@ -220,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 278
     iget-boolean v0, p0, Lmf/javax/xml/parsers/SAXParserFactory;->validating:Z
 
     return v0
@@ -230,17 +204,14 @@
     .locals 3
 
     .prologue
-    .line 483
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 484
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This parser does not support specification \""
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 485
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -257,14 +228,12 @@
 
     move-result-object v1
 
-    .line 486
     const-string v2, "\" version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 487
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -281,19 +250,16 @@
 
     move-result-object v1
 
-    .line 488
     const-string v2, "\""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 484
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 483
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -323,10 +289,8 @@
     .param p1, "awareness"    # Z
 
     .prologue
-    .line 225
     iput-boolean p1, p0, Lmf/javax/xml/parsers/SAXParserFactory;->namespaceAware:Z
 
-    .line 226
     return-void
 .end method
 
@@ -335,17 +299,14 @@
     .param p1, "schema"    # Lmf/javax/xml/validation/Schema;
 
     .prologue
-    .line 438
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 439
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "This parser does not support specification \""
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 440
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -362,14 +323,12 @@
 
     move-result-object v1
 
-    .line 441
     const-string v2, "\" version \""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 442
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -386,19 +345,16 @@
 
     move-result-object v1
 
-    .line 443
     const-string v2, "\""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 439
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 438
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -409,10 +365,8 @@
     .param p1, "validating"    # Z
 
     .prologue
-    .line 254
     iput-boolean p1, p0, Lmf/javax/xml/parsers/SAXParserFactory;->validating:Z
 
-    .line 255
     return-void
 .end method
 
@@ -421,10 +375,8 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 465
     if-eqz p1, :cond_0
 
-    .line 466
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -433,7 +385,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 468
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -446,12 +397,10 @@
 
     move-result-object v1
 
-    .line 466
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 470
     :cond_0
     return-void
 .end method

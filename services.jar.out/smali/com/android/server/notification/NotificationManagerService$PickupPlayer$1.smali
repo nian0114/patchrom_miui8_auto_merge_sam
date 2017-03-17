@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4414
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer$1;->this$1:Lcom/android/server/notification/NotificationManagerService$PickupPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .param p1, "motionEvent"    # Lcom/samsung/android/motion/MREvent;
 
     .prologue
-    .line 4416
     invoke-virtual {p1}, Lcom/samsung/android/motion/MREvent;->getMotion()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 4435
     :goto_0
     return-void
 
-    .line 4418
     :pswitch_0
     const-string v1, "NotificationService"
 
@@ -60,7 +56,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4420
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer$1;->this$1:Lcom/android/server/notification/NotificationManagerService$PickupPlayer;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -74,12 +69,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 4421
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 4422
     .local v0, "pickUpHandler":Landroid/os/Handler;
     new-instance v1, Lcom/android/server/notification/NotificationManagerService$PickupPlayer$1$1;
 
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 4416
     :pswitch_data_0
     .packed-switch 0x43
         :pswitch_0

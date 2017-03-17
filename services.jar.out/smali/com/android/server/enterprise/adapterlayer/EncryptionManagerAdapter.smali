@@ -14,10 +14,8 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     return-void
 .end method
 
@@ -26,7 +24,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 55
     const-class v1, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;
 
     monitor-enter v1
@@ -36,17 +33,14 @@
 
     if-nez v0, :cond_0
 
-    .line 56
     sput-object p0, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mContext:Landroid/content/Context;
 
-    .line 57
     new-instance v0, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;
 
-    .line 59
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;
     :try_end_0
@@ -56,7 +50,6 @@
 
     return-object v0
 
-    .line 55
     :catchall_0
     move-exception v0
 
@@ -71,14 +64,12 @@
     .locals 4
 
     .prologue
-    .line 79
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
     sget-object v1, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    .line 80
     .local v0, "dem":Landroid/dirEncryption/DirEncryptionManager;
     const/4 v1, 0x3
 
@@ -97,14 +88,12 @@
     .locals 4
 
     .prologue
-    .line 73
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
     sget-object v1, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    .line 74
     .local v0, "dem":Landroid/dirEncryption/DirEncryptionManager;
     const/4 v1, 0x2
 
@@ -123,14 +112,12 @@
     .locals 2
 
     .prologue
-    .line 103
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
     sget-object v1, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    .line 104
     .local v0, "dem":Landroid/dirEncryption/DirEncryptionManager;
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getExternalSdPath()Ljava/lang/String;
 
@@ -143,10 +130,9 @@
     .locals 3
 
     .prologue
-    .line 67
     sget-object v1, Lcom/android/server/enterprise/adapterlayer/EncryptionManagerAdapter;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "device_policy"
+    const-string v2, "device_policy"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -154,7 +140,6 @@
 
     check-cast v0, Landroid/app/admin/DevicePolicyManager;
 
-    .line 69
     .local v0, "dpm":Landroid/app/admin/DevicePolicyManager;
     const/4 v1, 0x0
 
@@ -169,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 63
     invoke-static {}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionFeatureEnabled()Z
 
     move-result v0
@@ -185,14 +169,12 @@
 
     const/4 v1, 0x0
 
-    .line 85
     invoke-static {}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionFeatureEnabled()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 88
     :try_start_0
     const-string v3, "DirEncryptService"
 
@@ -204,11 +186,9 @@
 
     move-result-object v0
 
-    .line 90
     .local v0, "service":Landroid/os/storage/IDirEncryptService;
     if-eqz v0, :cond_0
 
-    .line 91
     invoke-interface {v0}, Landroid/os/storage/IDirEncryptService;->isStorageCardEncryptionPoliciesApplied()I
 
     move-result v3
@@ -221,7 +201,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 93
     invoke-interface {v0}, Landroid/os/storage/IDirEncryptService;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v3
@@ -236,7 +215,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 99
     .end local v0    # "service":Landroid/os/storage/IDirEncryptService;
     :cond_0
     :goto_0
@@ -246,10 +224,8 @@
     :cond_1
     move v1, v2
 
-    .line 93
     goto :goto_0
 
-    .line 96
     .end local v0    # "service":Landroid/os/storage/IDirEncryptService;
     :catch_0
     move-exception v2

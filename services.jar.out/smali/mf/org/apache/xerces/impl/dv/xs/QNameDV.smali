@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const-string v0, ""
 
     invoke-virtual {v0}, Ljava/lang/String;->intern()Ljava/lang/String;
@@ -36,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/TypeValidator;-><init>()V
 
     return-void
@@ -61,18 +59,15 @@
 
     const/4 v7, 0x0
 
-    .line 51
     const-string v4, ":"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 52
     .local v0, "colonptr":I
     if-lez v0, :cond_0
 
-    .line 53
     invoke-virtual {p1, v7, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
@@ -81,7 +76,6 @@
 
     move-result-object v2
 
-    .line 54
     .local v2, "prefix":Ljava/lang/String;
     add-int/lit8 v4, v0, 0x1
 
@@ -89,7 +83,6 @@
 
     move-result-object v1
 
-    .line 61
     .local v1, "localpart":Ljava/lang/String;
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -104,7 +97,6 @@
 
     if-nez v4, :cond_1
 
-    .line 62
     new-instance v4, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v5, "cvc-datatype-valid.1.2.1"
@@ -121,20 +113,17 @@
 
     throw v4
 
-    .line 56
     .end local v1    # "localpart":Ljava/lang/String;
     .end local v2    # "prefix":Ljava/lang/String;
     :cond_0
     sget-object v2, Lmf/org/apache/xerces/impl/dv/xs/QNameDV;->EMPTY_STRING:Ljava/lang/String;
 
-    .line 57
     .restart local v2    # "prefix":Ljava/lang/String;
     move-object v1, p1
 
     .restart local v1    # "localpart":Ljava/lang/String;
     goto :goto_0
 
-    .line 64
     :cond_1
     invoke-static {v1}, Lmf/org/apache/xerces/util/XMLChar;->isValidNCName(Ljava/lang/String;)Z
 
@@ -142,7 +131,6 @@
 
     if-nez v4, :cond_2
 
-    .line 65
     new-instance v4, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v5, "cvc-datatype-valid.1.2.1"
@@ -159,13 +147,11 @@
 
     throw v4
 
-    .line 68
     :cond_2
     invoke-interface {p2, v2}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->getURI(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 69
     .local v3, "uri":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -175,7 +161,6 @@
 
     if-nez v3, :cond_3
 
-    .line 70
     new-instance v4, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v5, "UndeclaredPrefix"
@@ -190,7 +175,6 @@
 
     throw v4
 
-    .line 72
     :cond_3
     new-instance v4, Lmf/org/apache/xerces/impl/dv/xs/QNameDV$XQName;
 
@@ -211,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 42
     const/16 v0, 0x81f
 
     return v0
@@ -222,7 +205,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 79
     check-cast p1, Lmf/org/apache/xerces/impl/dv/xs/QNameDV$XQName;
 
     .end local p1    # "value":Ljava/lang/Object;

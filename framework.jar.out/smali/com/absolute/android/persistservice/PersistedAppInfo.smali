@@ -27,16 +27,12 @@
     .locals 1
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_appProfile:Lcom/absolute/android/persistence/AppProfile;
 
-    .line 45
     iput-object p2, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_apkPath:Ljava/lang/String;
 
-    .line 46
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -45,17 +41,14 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_updateAttemptCount:Ljava/lang/Integer;
 
-    .line 47
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_flags:Ljava/lang/Integer;
 
-    .line 48
     iput-object p4, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_apkDigest:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -65,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_appProfile:Lcom/absolute/android/persistence/AppProfile;
 
     return-object v0
@@ -75,14 +67,12 @@
     .locals 1
 
     .prologue
-    .line 108
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_updateAttemptCount:Ljava/lang/Integer;
 
-    .line 109
     return-void
 .end method
 
@@ -90,10 +80,8 @@
     .locals 0
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_appProfile:Lcom/absolute/android/persistence/AppProfile;
 
-    .line 69
     return-void
 .end method
 
@@ -101,10 +89,8 @@
     .locals 0
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_apkPath:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -112,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_apkPath:Ljava/lang/String;
 
     return-object v0
@@ -122,14 +107,12 @@
     .locals 1
 
     .prologue
-    .line 128
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_flags:Ljava/lang/Integer;
 
-    .line 129
     return-void
 .end method
 
@@ -137,10 +120,8 @@
     .locals 0
 
     .prologue
-    .line 147
     iput-object p1, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_apkDigest:Ljava/lang/String;
 
-    .line 148
     return-void
 .end method
 
@@ -148,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_updateAttemptCount:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -162,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_flags:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -176,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_apkDigest:Ljava/lang/String;
 
     return-object v0
@@ -190,15 +168,12 @@
 
     const/4 v1, 0x0
 
-    .line 159
     if-ne p0, p1, :cond_1
 
-    .line 172
     :cond_0
     :goto_0
     return v0
 
-    .line 165
     :cond_1
     instance-of v2, p1, Lcom/absolute/android/persistservice/PersistedAppInfo;
 
@@ -206,14 +181,11 @@
 
     move v0, v1
 
-    .line 166
     goto :goto_0
 
-    .line 170
     :cond_2
     check-cast p1, Lcom/absolute/android/persistservice/PersistedAppInfo;
 
-    .line 172
     iget-object v2, p0, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_appProfile:Lcom/absolute/android/persistence/AppProfile;
 
     iget-object v3, p1, Lcom/absolute/android/persistservice/PersistedAppInfo;->m_appProfile:Lcom/absolute/android/persistence/AppProfile;

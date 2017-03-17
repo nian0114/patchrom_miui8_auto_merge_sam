@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     iput-object p2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;->val$config:Lcom/samsung/android/contextaware/aggregator/lpp/LppConfig;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 368
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     new-instance v1, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -56,7 +54,6 @@
     # setter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
     invoke-static {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->access$102(Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;)Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
-    .line 369
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -73,7 +70,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->registerListener(Lcom/samsung/android/contextaware/aggregator/lpp/ILppDataProvider;)V
 
-    .line 370
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -83,6 +79,5 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->start()V
 
-    .line 371
     return-void
 .end method

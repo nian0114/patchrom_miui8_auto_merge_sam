@@ -28,7 +28,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 1410
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     move-object v0, p0
@@ -58,12 +57,10 @@
     .param p4, "inflater"    # Landroid/view/LayoutInflater;
 
     .prologue
-    .line 1467
     invoke-super/range {p0 .. p4}, Lcom/android/server/policy/GlobalActions$ToggleAction;->create(Landroid/content/Context;Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/LayoutInflater;)Landroid/view/View;
 
     move-result-object v9
 
-    .line 1468
     .local v9, "v":Landroid/view/View;
     const/4 v10, 0x1
 
@@ -79,7 +76,6 @@
 
     aput-object v11, v0, v10
 
-    .line 1469
     .local v0, "arg1":[Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -95,7 +91,6 @@
 
     aput-object v11, v1, v10
 
-    .line 1470
     .local v1, "arg2":[Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -111,46 +106,42 @@
 
     aput-object v11, v2, v10
 
-    .line 1472
     .local v2, "arg3":[Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v11, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    const-string/jumbo v12, "getSealedModeString"
+    const-string v12, "getSealedModeString"
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isEDM(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v10, v11, v12, v0}, Lcom/android/server/policy/GlobalActions;->access$3600(Lcom/android/server/policy/GlobalActions;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1473
     .local v7, "proKioskString":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v11, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    const-string/jumbo v12, "getSealedModeString"
+    const-string v12, "getSealedModeString"
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isEDM(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v10, v11, v12, v1}, Lcom/android/server/policy/GlobalActions;->access$3600(Lcom/android/server/policy/GlobalActions;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1474
     .local v6, "proKioskStatusOnString":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v11, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    const-string/jumbo v12, "getSealedModeString"
+    const-string v12, "getSealedModeString"
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isEDM(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v10, v11, v12, v2}, Lcom/android/server/policy/GlobalActions;->access$3600(Lcom/android/server/policy/GlobalActions;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1480
     .local v5, "proKioskStatusOffString":Ljava/lang/String;
     const v10, 0x102000b
 
@@ -160,7 +151,6 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 1481
     .local v3, "messageView":Landroid/widget/TextView;
     const v10, 0x10203ad
 
@@ -170,14 +160,11 @@
 
     check-cast v8, Landroid/widget/TextView;
 
-    .line 1482
     .local v8, "statusView":Landroid/widget/TextView;
     if-eqz v7, :cond_0
 
-    .line 1483
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1485
     :cond_0
     iget-object v10, p0, Lcom/android/server/policy/GlobalActions$8;->mState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
@@ -194,35 +181,28 @@
     :cond_1
     const/4 v4, 0x1
 
-    .line 1486
     .local v4, "on":Z
     :goto_0
     if-eqz v4, :cond_4
 
-    .line 1487
     if-eqz v6, :cond_2
 
-    .line 1488
     invoke-virtual {v8, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1495
     :cond_2
     :goto_1
     return-object v9
 
-    .line 1485
     .end local v4    # "on":Z
     :cond_3
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1491
     .restart local v4    # "on":Z
     :cond_4
     if-eqz v5, :cond_2
 
-    .line 1492
     invoke-virtual {v8, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
@@ -237,12 +217,11 @@
 
     const/4 v12, 0x0
 
-    .line 1413
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v9, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    const-string/jumbo v10, "getSealedState"
+    const-string v10, "getSealedState"
 
     iget-object v11, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -256,7 +235,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "true"
+    const-string v9, "true"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -264,12 +243,10 @@
 
     if-eqz v8, :cond_1
 
-    .line 1414
     new-instance v5, Landroid/content/Intent;
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    .line 1415
     .local v5, "i":Landroid/content/Intent;
     new-array v0, v13, [Ljava/lang/String;
 
@@ -281,7 +258,6 @@
 
     aput-object v8, v0, v12
 
-    .line 1416
     .local v0, "arg1":[Ljava/lang/String;
     new-array v1, v13, [Ljava/lang/String;
 
@@ -293,37 +269,33 @@
 
     aput-object v8, v1, v12
 
-    .line 1418
     .local v1, "arg2":[Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v9, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    const-string/jumbo v10, "getSealedExitUI"
+    const-string v10, "getSealedExitUI"
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isEDM(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v8, v9, v10, v0}, Lcom/android/server/policy/GlobalActions;->access$3600(Lcom/android/server/policy/GlobalActions;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1419
     .local v4, "exitUiPackage":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v9, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    const-string/jumbo v10, "getSealedExitUI"
+    const-string v10, "getSealedExitUI"
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isEDM(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v8, v9, v10, v1}, Lcom/android/server/policy/GlobalActions;->access$3600(Lcom/android/server/policy/GlobalActions;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1422
     .local v3, "exitUiClass":Ljava/lang/String;
     move-object v7, v3
 
-    .line 1423
     .local v7, "qualClass":Ljava/lang/String;
     # getter for: Lcom/android/server/policy/GlobalActions;->mProKioskExitAlertDialogBuilder:Landroid/app/AlertDialog$Builder;
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$3700()Landroid/app/AlertDialog$Builder;
@@ -334,7 +306,6 @@
 
     move-result-object v6
 
-    .line 1427
     .local v6, "proKioskExitDialog":Landroid/app/AlertDialog;
     invoke-virtual {v6}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -344,7 +315,6 @@
 
     invoke-virtual {v8, v9}, Landroid/view/Window;->setType(I)V
 
-    .line 1430
     if-eqz v4, :cond_3
 
     if-eqz v3, :cond_3
@@ -361,14 +331,12 @@
 
     if-lez v8, :cond_3
 
-    .line 1431
     invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v8
 
     if-nez v8, :cond_0
 
-    .line 1432
     const-string v8, "."
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -377,7 +345,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 1433
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -394,17 +361,14 @@
 
     move-result-object v7
 
-    .line 1438
     :cond_0
     :goto_0
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1439
     const/high16 v8, 0x10000000
 
     invoke-virtual {v5, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1441
     :try_start_0
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$8;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -419,7 +383,6 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1449
     .end local v0    # "arg1":[Ljava/lang/String;
     .end local v1    # "arg2":[Ljava/lang/String;
     .end local v3    # "exitUiClass":Ljava/lang/String;
@@ -431,7 +394,6 @@
     :goto_1
     return-void
 
-    .line 1435
     .restart local v0    # "arg1":[Ljava/lang/String;
     .restart local v1    # "arg2":[Ljava/lang/String;
     .restart local v3    # "exitUiClass":Ljava/lang/String;
@@ -464,17 +426,14 @@
 
     goto :goto_0
 
-    .line 1442
     :catch_0
     move-exception v2
 
-    .line 1443
     .local v2, "e":Landroid/content/ActivityNotFoundException;
     invoke-virtual {v6}, Landroid/app/AlertDialog;->show()V
 
     goto :goto_1
 
-    .line 1446
     .end local v2    # "e":Landroid/content/ActivityNotFoundException;
     :cond_3
     invoke-virtual {v6}, Landroid/app/AlertDialog;->show()V
@@ -486,7 +445,6 @@
     .locals 1
 
     .prologue
-    .line 1457
     const/4 v0, 0x1
 
     return v0
@@ -496,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 1461
     const/4 v0, 0x1
 
     return v0
@@ -506,7 +463,6 @@
     .locals 1
 
     .prologue
-    .line 1452
     const/4 v0, 0x1
 
     return v0

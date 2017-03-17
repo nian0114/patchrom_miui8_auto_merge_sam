@@ -70,7 +70,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 18
     const-class v0, Lcom/sec/epdg/EpdgSettingsWriter;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -79,16 +78,12 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
 
-    .line 19
     sput-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mEpdgWriteInstance:Lcom/sec/epdg/EpdgSettingsWriter;
 
-    .line 20
     sput-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
 
-    .line 21
     sput-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -102,10 +97,8 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -113,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
 
     return-object v0
@@ -123,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/sec/epdg/EpdgSettingsWriter;->mList:Ljava/util/ArrayList;
 
     return-object v0
@@ -133,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -143,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -154,7 +143,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 53
     const-class v2, Lcom/sec/epdg/EpdgSettingsWriter;
 
     monitor-enter v2
@@ -164,28 +152,23 @@
 
     if-nez v1, :cond_0
 
-    .line 54
     sput-object p0, Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
 
-    .line 55
     new-instance v1, Lcom/sec/epdg/EpdgSettingsWriter;
 
     invoke-direct {v1}, Lcom/sec/epdg/EpdgSettingsWriter;-><init>()V
 
     sput-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mEpdgWriteInstance:Lcom/sec/epdg/EpdgSettingsWriter;
 
-    .line 57
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "EpdgSettingsWriteThread"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 58
     .local v0, "handlerThread":Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 59
     new-instance v1, Lcom/sec/epdg/EpdgSettingsWriter$SettingsWriteHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -196,7 +179,6 @@
 
     sput-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
 
-    .line 61
     .end local v0    # "handlerThread":Landroid/os/HandlerThread;
     :cond_0
     sget-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mEpdgWriteInstance:Lcom/sec/epdg/EpdgSettingsWriter;
@@ -207,7 +189,6 @@
 
     return-object v1
 
-    .line 53
     :catchall_0
     move-exception v1
 
@@ -226,7 +207,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 184
     sget-object v0, Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
 
     sget-object v1, Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
@@ -243,6 +223,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 185
     return-void
 .end method

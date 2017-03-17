@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 554
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$1$1$1;->this$1:Lcom/android/server/power/ShutdownThread$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 561
     return-void
 .end method
 
@@ -50,14 +48,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 557
     const-string v0, "ShutdownThread"
 
-    const-string/jumbo v1, "onAnimationEnd"
+    const-string v1, "onAnimationEnd"
 
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$1$1$1;->this$1:Lcom/android/server/power/ShutdownThread$1$1;
 
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread$1$1;->this$0:Lcom/android/server/power/ShutdownThread$1;
@@ -69,7 +65,6 @@
     # invokes: Lcom/android/server/power/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;Z)V
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread;->access$400(Landroid/content/Context;Z)V
 
-    .line 559
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 562
     return-void
 .end method
 
@@ -87,6 +81,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 560
     return-void
 .end method

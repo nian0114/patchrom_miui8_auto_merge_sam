@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2221
     iput-object p1, p0, Lcom/android/internal/telephony/InboundSmsHandler$2;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v10, -0x1
 
-    .line 2224
     iget-object v7, p0, Lcom/android/internal/telephony/InboundSmsHandler$2;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -68,18 +66,15 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/InboundSmsHandler;->log(Ljava/lang/String;)V
 
-    .line 2225
     const-string v7, "extra_pdu"
 
     invoke-virtual {p2, v7}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 2226
     .local v2, "pdu":[B
     if-eqz v2, :cond_2
 
-    .line 2227
     const-string v7, "edm.intent.action.internal.RESTRICTION_SEND_BLOCKED_SMS"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -92,20 +87,17 @@
 
     if-eqz v7, :cond_0
 
-    .line 2228
     const-string v7, "send_type"
 
     invoke-virtual {p2, v7, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 2229
     .local v4, "sendType":I
     iget-object v7, p0, Lcom/android/internal/telephony/InboundSmsHandler$2;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-virtual {v7, v2, v4}, Lcom/android/internal/telephony/InboundSmsHandler;->handleBlockedSms([BI)V
 
-    .line 2231
     .end local v4    # "sendType":I
     :cond_0
     const-string v7, "edm.intent.action.internal.RESTRICTION_SEND_BLOCKED_MMS"
@@ -120,7 +112,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 2233
     iget-object v7, p0, Lcom/android/internal/telephony/InboundSmsHandler$2;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     iget-object v7, v7, Lcom/android/internal/telephony/InboundSmsHandler;->mWapPush:Lcom/android/internal/telephony/WapPushOverSms;
@@ -131,18 +122,15 @@
 
     move-result v3
 
-    .line 2235
     .local v3, "result":I
     if-ne v3, v10, :cond_2
 
-    .line 2236
     const-string v7, "extra_orig_address"
 
     invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2237
     .local v1, "origAddress":Ljava/lang/String;
     const-string v7, "extra_time_stamp"
 
@@ -150,13 +138,11 @@
 
     move-result-object v5
 
-    .line 2238
     .local v5, "timeStamp":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2239
     .local v6, "wapSms":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -166,19 +152,16 @@
 
     if-ge v0, v7, :cond_1
 
-    .line 2240
     aget-byte v7, v2, v0
 
     int-to-char v7, v7
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2239
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2242
     :cond_1
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -190,7 +173,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 2243
     iget-object v7, p0, Lcom/android/internal/telephony/InboundSmsHandler$2;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -201,7 +183,6 @@
 
     invoke-virtual {v7, v1, v5, v8, v9}, Lcom/android/internal/telephony/InboundSmsHandler;->storeSMS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 2249
     .end local v0    # "i":I
     .end local v1    # "origAddress":Ljava/lang/String;
     .end local v3    # "result":I

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 626
     iput-object p1, p0, Lcom/android/server/MountService$DefaultContainerConnection;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +41,16 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 630
     const-string v1, "MountService"
 
-    const-string/jumbo v2, "onServiceConnected"
+    const-string v2, "onServiceConnected"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 631
     invoke-static {p2}, Lcom/android/internal/app/IMediaContainerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IMediaContainerService;
 
     move-result-object v0
 
-    .line 632
     .local v0, "imcs":Lcom/android/internal/app/IMediaContainerService;
     iget-object v1, p0, Lcom/android/server/MountService$DefaultContainerConnection;->this$0:Lcom/android/server/MountService;
 
@@ -78,7 +74,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/MountService$ObbActionHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 633
     return-void
 .end method
 
@@ -87,13 +82,11 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 638
     const-string v0, "MountService"
 
-    const-string/jumbo v1, "onServiceDisconnected"
+    const-string v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 639
     return-void
 .end method

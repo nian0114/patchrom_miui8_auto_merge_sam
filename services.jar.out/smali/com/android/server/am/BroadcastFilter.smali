@@ -30,30 +30,22 @@
     .param p6, "_userId"    # I
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Landroid/content/IntentFilter;-><init>(Landroid/content/IntentFilter;)V
 
-    .line 44
     iput-object p2, p0, Lcom/android/server/am/BroadcastFilter;->receiverList:Lcom/android/server/am/ReceiverList;
 
-    .line 45
     iput-object p3, p0, Lcom/android/server/am/BroadcastFilter;->packageName:Ljava/lang/String;
 
-    .line 46
     iput-object p4, p0, Lcom/android/server/am/BroadcastFilter;->requiredPermission:Ljava/lang/String;
 
-    .line 47
     iput p5, p0, Lcom/android/server/am/BroadcastFilter;->owningUid:I
 
-    .line 48
     iput p6, p0, Lcom/android/server/am/BroadcastFilter;->owningUserId:I
 
-    .line 51
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/am/BroadcastFilter;->added:Z
 
-    .line 53
     return-void
 .end method
 
@@ -65,19 +57,16 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     new-instance v0, Landroid/util/PrintWriterPrinter;
 
     invoke-direct {v0, p1}, Landroid/util/PrintWriterPrinter;-><init>(Ljava/io/PrintWriter;)V
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/am/BroadcastFilter;->dumpInReceiverList(Ljava/io/PrintWriter;Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/am/BroadcastFilter;->receiverList:Lcom/android/server/am/ReceiverList;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/ReceiverList;->dumpLocal(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 58
     return-void
 .end method
 
@@ -87,10 +76,8 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BroadcastFilter;->dumpBroadcastFilterState(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 62
     return-void
 .end method
 
@@ -100,15 +87,13 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/am/BroadcastFilter;->requiredPermission:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 71
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "requiredPermission="
+    const-string v0, "requiredPermission="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -116,7 +101,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 73
     :cond_0
     return-void
 .end method
@@ -128,13 +112,10 @@
     .param p3, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     invoke-super {p0, p2, p3}, Landroid/content/IntentFilter;->dump(Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p0, p1, p3}, Lcom/android/server/am/BroadcastFilter;->dumpBroadcastFilterState(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 67
     return-void
 .end method
 
@@ -142,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/server/am/BroadcastFilter;->mPackageWeight:Ljava/lang/Integer;
 
     return-object v0
@@ -153,10 +133,8 @@
     .param p1, "packageWeight"    # Ljava/lang/Integer;
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/server/am/BroadcastFilter;->mPackageWeight:Ljava/lang/Integer;
 
-    .line 77
     return-void
 .end method
 
@@ -166,18 +144,15 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 84
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 85
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string v2, "BroadcastFilter{"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v2
@@ -188,51 +163,40 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 87
     const-string v2, " u"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
     iget v2, p0, Lcom/android/server/am/BroadcastFilter;->owningUserId:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 89
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 90
     invoke-super {p0}, Landroid/content/IntentFilter;->getPriority()I
 
     move-result v0
 
-    .line 91
     .local v0, "priority":I
     if-eqz v0, :cond_0
 
-    .line 92
-    const-string/jumbo v2, "p="
+    const-string v2, "p="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 93
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 94
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 96
     :cond_0
     iget-object v2, p0, Lcom/android/server/am/BroadcastFilter;->receiverList:Lcom/android/server/am/ReceiverList;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 97
     const/16 v2, 0x7d
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 98
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2

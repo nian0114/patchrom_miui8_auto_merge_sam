@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,20 +46,17 @@
     .end annotation
 
     .prologue
-    .line 383
     .local p1, "commandsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p2, "argsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 384
     .local v4, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p1, :cond_2
 
     if-eqz p2, :cond_2
 
-    .line 385
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -78,7 +74,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 386
     .local v0, "elem1":Ljava/lang/String;
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -98,7 +93,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 387
     .local v1, "elem2":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -106,7 +100,6 @@
 
     if-lez v5, :cond_1
 
-    .line 388
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -133,13 +126,11 @@
 
     goto :goto_0
 
-    .line 390
     :cond_1
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 395
     .end local v0    # "elem1":Ljava/lang/String;
     .end local v1    # "elem2":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -175,12 +166,10 @@
 
     const/4 v3, 0x1
 
-    .line 105
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 107
     .local v1, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
@@ -190,30 +179,24 @@
 
     if-nez v2, :cond_1
 
-    .line 108
     :cond_0
     const-string v2, ""
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 150
     :goto_0
     return-object v1
 
-    .line 112
     :cond_1
     const-string v0, ""
 
-    .line 113
     .local v0, "actionStr":Ljava/lang/String;
     if-ne p3, v3, :cond_3
 
-    .line 114
     const-string v0, "-A"
 
-    .line 124
     :goto_1
-    const-string/jumbo v2, "out"
+    const-string v2, "out"
 
     invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -221,7 +204,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 125
     invoke-virtual {p4}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
     move-result v2
@@ -242,7 +224,6 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 127
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -276,25 +257,20 @@
 
     goto :goto_0
 
-    .line 115
     :cond_3
     if-ne p3, v4, :cond_4
 
-    .line 116
     const-string v0, "-D"
 
     goto :goto_1
 
-    .line 117
     :cond_4
     if-ne p3, v5, :cond_5
 
-    .line 118
     const-string v0, "-I"
 
     goto :goto_1
 
-    .line 120
     :cond_5
     const-string v2, ""
 
@@ -302,7 +278,6 @@
 
     goto :goto_0
 
-    .line 128
     :cond_6
     invoke-virtual {p4}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -316,11 +291,9 @@
 
     if-ne v2, v5, :cond_9
 
-    .line 131
     :cond_7
     if-ne p3, v5, :cond_8
 
-    .line 132
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -353,7 +326,6 @@
 
     goto/16 :goto_0
 
-    .line 134
     :cond_8
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -381,7 +353,6 @@
 
     goto/16 :goto_0
 
-    .line 137
     :cond_9
     const-string v2, ""
 
@@ -389,9 +360,8 @@
 
     goto/16 :goto_0
 
-    .line 140
     :cond_a
-    const-string/jumbo v2, "in"
+    const-string v2, "in"
 
     invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -399,7 +369,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 141
     invoke-virtual {p4}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
     move-result v2
@@ -412,7 +381,6 @@
 
     if-ne v2, v4, :cond_c
 
-    .line 142
     :cond_b
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -446,7 +414,6 @@
 
     goto/16 :goto_0
 
-    .line 144
     :cond_c
     const-string v2, ""
 
@@ -454,7 +421,6 @@
 
     goto/16 :goto_0
 
-    .line 147
     :cond_d
     const-string v2, ""
 
@@ -468,10 +434,8 @@
     .param p1, "action"    # I
 
     .prologue
-    .line 225
     const/4 v0, 0x0
 
-    .line 227
     .local v0, "ret":Z
     const/4 v1, 0x2
 
@@ -495,11 +459,9 @@
 
     if-ne v1, p1, :cond_1
 
-    .line 233
     :cond_0
     const/4 v0, 0x1
 
-    .line 235
     :cond_1
     return v0
 .end method
@@ -525,31 +487,25 @@
     .end annotation
 
     .prologue
-    .line 400
     .local p1, "original":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p2, "toConcat":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez p1, :cond_1
 
-    .line 401
     const/4 p1, 0x0
 
-    .line 413
     .end local p1    # "original":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     return-object p1
 
-    .line 403
     .restart local p1    # "original":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     if-eqz p2, :cond_0
 
-    .line 406
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 407
     .local v2, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -569,13 +525,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 408
     .local v0, "elem":Ljava/lang/String;
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 410
     .end local v0    # "elem":Ljava/lang/String;
     :cond_2
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -595,7 +549,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 411
     .restart local v0    # "elem":Ljava/lang/String;
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -605,7 +558,6 @@
     :cond_3
     move-object p1, v2
 
-    .line 413
     goto :goto_0
 .end method
 
@@ -627,16 +579,13 @@
     .end annotation
 
     .prologue
-    .line 155
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 156
     .local v1, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 158
     .local v0, "isIpRange":Z
     if-eqz p1, :cond_1
 
@@ -646,14 +595,12 @@
 
     if-lez v3, :cond_1
 
-    .line 159
     const-string v3, "-"
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 160
     .local v2, "tokens":[Ljava/lang/String;
     array-length v3, v2
 
@@ -661,7 +608,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 161
     const/4 v3, 0x0
 
     aget-object v3, v2, v3
@@ -682,12 +628,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 163
     const/4 v0, 0x1
 
-    .line 171
     :cond_0
-    const-string/jumbo v3, "in"
+    const-string v3, "in"
 
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -695,10 +639,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 172
     if-nez v0, :cond_2
 
-    .line 173
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -719,12 +661,10 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 188
     .end local v2    # "tokens":[Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 167
     :cond_1
     const-string v3, ""
 
@@ -732,7 +672,6 @@
 
     goto :goto_0
 
-    .line 175
     .restart local v2    # "tokens":[Ljava/lang/String;
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
@@ -757,9 +696,8 @@
 
     goto :goto_0
 
-    .line 177
     :cond_3
-    const-string/jumbo v3, "out"
+    const-string v3, "out"
 
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -767,10 +705,8 @@
 
     if-eqz v3, :cond_5
 
-    .line 178
     if-nez v0, :cond_4
 
-    .line 179
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -793,7 +729,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_4
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -817,7 +752,6 @@
 
     goto :goto_0
 
-    .line 184
     :cond_5
     const-string v3, ""
 
@@ -831,23 +765,19 @@
     .param p1, "ip"    # Ljava/lang/String;
 
     .prologue
-    .line 417
     if-eqz p1, :cond_0
 
-    .line 418
     sget-object v1, Landroid/util/Patterns;->IP_ADDRESS:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 419
     .local v0, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
 
-    .line 421
     .end local v0    # "matcher":Ljava/util/regex/Matcher;
     :goto_0
     return v1
@@ -874,12 +804,10 @@
     .end annotation
 
     .prologue
-    .line 269
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 271
     .local v2, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -889,16 +817,13 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 272
     const-string v3, "-j ACCEPT"
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 304
     :goto_0
     return-object v2
 
-    .line 273
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -908,14 +833,12 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 274
     const-string v3, "-j DROP"
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 275
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -925,14 +848,12 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 276
     const-string v3, "-j REJECT"
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 277
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -948,19 +869,16 @@
 
     if-ne v3, v4, :cond_7
 
-    .line 279
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getIpAddress()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 280
     .local v0, "host":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getPort()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 281
     .local v1, "port":Ljava/lang/String;
     if-eqz v0, :cond_5
 
@@ -970,7 +888,6 @@
 
     if-lez v3, :cond_5
 
-    .line 282
     if-eqz v1, :cond_4
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -979,7 +896,6 @@
 
     if-lez v3, :cond_4
 
-    .line 283
     const-string v3, "-"
 
     const-string v4, ":"
@@ -988,7 +904,6 @@
 
     move-result-object v1
 
-    .line 284
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1021,7 +936,6 @@
 
     goto :goto_0
 
-    .line 286
     :cond_4
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1045,7 +959,6 @@
 
     goto :goto_0
 
-    .line 289
     :cond_5
     if-eqz v1, :cond_6
 
@@ -1055,7 +968,6 @@
 
     if-lez v3, :cond_6
 
-    .line 290
     const-string v3, "-"
 
     const-string v4, ":"
@@ -1064,7 +976,6 @@
 
     move-result-object v1
 
-    .line 291
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1087,7 +998,6 @@
 
     goto/16 :goto_0
 
-    .line 293
     :cond_6
     const-string v3, ""
 
@@ -1095,7 +1005,6 @@
 
     goto/16 :goto_0
 
-    .line 296
     .end local v0    # "host":Ljava/lang/String;
     .end local v1    # "port":Ljava/lang/String;
     :cond_7
@@ -1107,14 +1016,12 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 297
     const-string v3, "-j LOG"
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 298
     :cond_8
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -1124,14 +1031,12 @@
 
     if-ne v3, v4, :cond_9
 
-    .line 299
     const-string v3, "-j RETURN"
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 302
     :cond_9
     const-string v3, ""
 
@@ -1158,12 +1063,10 @@
     .end annotation
 
     .prologue
-    .line 239
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 241
     .local v0, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
@@ -1173,17 +1076,14 @@
 
     if-nez v1, :cond_1
 
-    .line 242
     :cond_0
     const-string v1, ""
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 265
     :goto_0
     return-object v0
 
-    .line 243
     :cond_1
     const-string v1, "both"
 
@@ -1193,8 +1093,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 244
-    const-string/jumbo v1, "wifi"
+    const-string v1, "wifi"
 
     invoke-direct {p0, v1, p2}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->networkInterfaceCommandPart(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
@@ -1204,8 +1103,7 @@
 
     move-result-object v0
 
-    .line 245
-    const-string/jumbo v1, "data"
+    const-string v1, "data"
 
     invoke-direct {p0, v1, p2}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->networkInterfaceCommandPart(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
@@ -1217,9 +1115,8 @@
 
     goto :goto_0
 
-    .line 246
     :cond_2
-    const-string/jumbo v1, "wifi"
+    const-string v1, "wifi"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1227,8 +1124,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 247
-    const-string/jumbo v1, "out"
+    const-string v1, "out"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1236,16 +1132,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 248
     const-string v1, "-o wlan+"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 249
     :cond_3
-    const-string/jumbo v1, "in"
+    const-string v1, "in"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1253,14 +1147,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 250
     const-string v1, "-i wlan+"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 252
     :cond_4
     const-string v1, ""
 
@@ -1268,9 +1160,8 @@
 
     goto :goto_0
 
-    .line 254
     :cond_5
-    const-string/jumbo v1, "data"
+    const-string v1, "data"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1278,8 +1169,7 @@
 
     if-eqz v1, :cond_8
 
-    .line 255
-    const-string/jumbo v1, "out"
+    const-string v1, "out"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1287,16 +1177,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 256
     const-string v1, "-o rmnet+"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 257
     :cond_6
-    const-string/jumbo v1, "in"
+    const-string v1, "in"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1304,14 +1192,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 258
     const-string v1, "-i rmnet+"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 260
     :cond_7
     const-string v1, ""
 
@@ -1319,7 +1205,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_8
     const-string v1, ""
 
@@ -1348,12 +1233,10 @@
     .end annotation
 
     .prologue
-    .line 348
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 350
     .local v0, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v1, "both"
 
@@ -1363,15 +1246,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 351
-    const-string/jumbo v1, "in"
+    const-string v1, "in"
 
     invoke-direct {p0, p1, v1, p3}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->portCommandPart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 352
-    const-string/jumbo v1, "out"
+    const-string v1, "out"
 
     invoke-direct {p0, p1, v1, p3}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->portCommandPart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
@@ -1381,13 +1262,11 @@
 
     move-result-object v0
 
-    .line 378
     :goto_0
     return-object v0
 
-    .line 353
     :cond_0
-    const-string/jumbo v1, "out"
+    const-string v1, "out"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1395,7 +1274,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 354
     const-string v1, "both"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1404,7 +1282,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 355
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1425,7 +1302,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 356
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1448,9 +1324,8 @@
 
     goto :goto_0
 
-    .line 357
     :cond_1
-    const-string/jumbo v1, "local"
+    const-string v1, "local"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1458,7 +1333,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 358
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1481,9 +1355,8 @@
 
     goto :goto_0
 
-    .line 359
     :cond_2
-    const-string/jumbo v1, "remote"
+    const-string v1, "remote"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1491,7 +1364,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 360
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1514,7 +1386,6 @@
 
     goto :goto_0
 
-    .line 362
     :cond_3
     const-string v1, ""
 
@@ -1522,9 +1393,8 @@
 
     goto/16 :goto_0
 
-    .line 364
     :cond_4
-    const-string/jumbo v1, "in"
+    const-string v1, "in"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1532,7 +1402,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 365
     const-string v1, "both"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1541,7 +1410,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 366
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1562,7 +1430,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 367
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1585,9 +1452,8 @@
 
     goto/16 :goto_0
 
-    .line 368
     :cond_5
-    const-string/jumbo v1, "local"
+    const-string v1, "local"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1595,7 +1461,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 369
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1618,9 +1483,8 @@
 
     goto/16 :goto_0
 
-    .line 370
     :cond_6
-    const-string/jumbo v1, "remote"
+    const-string v1, "remote"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1628,7 +1492,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 371
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1651,7 +1514,6 @@
 
     goto/16 :goto_0
 
-    .line 373
     :cond_7
     const-string v1, ""
 
@@ -1659,7 +1521,6 @@
 
     goto/16 :goto_0
 
-    .line 376
     :cond_8
     const-string v1, ""
 
@@ -1690,12 +1551,10 @@
     .end annotation
 
     .prologue
-    .line 309
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 311
     .local v0, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v1, "FirewallPolicy"
 
@@ -1703,7 +1562,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "protocolAndPortCommandPart protocol = "
+    const-string v3, "protocolAndPortCommandPart protocol = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1749,7 +1608,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 314
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -1767,24 +1625,20 @@
 
     if-nez v1, :cond_2
 
-    .line 315
     :cond_1
     const-string v1, "FirewallPolicy"
 
-    const-string/jumbo v2, "protocolAndPortCommandPart 1"
+    const-string v2, "protocolAndPortCommandPart 1"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     const-string v1, ""
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 326
     :goto_0
     return-object v0
 
-    .line 317
     :cond_2
     if-eqz p2, :cond_3
 
@@ -1794,37 +1648,32 @@
 
     if-nez v1, :cond_4
 
-    .line 318
     :cond_3
     const-string v1, "FirewallPolicy"
 
-    const-string/jumbo v2, "protocolAndPortCommandPart 2"
+    const-string v2, "protocolAndPortCommandPart 2"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->protocolCommandPart(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 321
     :cond_4
     const-string v1, "FirewallPolicy"
 
-    const-string/jumbo v2, "protocolAndPortCommandPart 3"
+    const-string v2, "protocolAndPortCommandPart 3"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 322
     const-string v1, "both"
 
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->protocolCommandPart(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 323
     invoke-direct {p0, p2, p3, p4}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->portCommandPart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
@@ -1852,12 +1701,10 @@
     .end annotation
 
     .prologue
-    .line 331
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 333
     .local v0, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v1, "both"
 
@@ -1867,23 +1714,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 334
     const-string v1, "-p tcp"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 335
     const-string v1, "-p udp"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 344
     :goto_0
     return-object v0
 
-    .line 336
     :cond_0
-    const-string/jumbo v1, "tcp"
+    const-string v1, "tcp"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1891,16 +1734,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 337
     const-string v1, "-p tcp"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 338
     :cond_1
-    const-string/jumbo v1, "udp"
+    const-string v1, "udp"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1908,14 +1749,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 339
     const-string v1, "-p udp"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 341
     :cond_2
     const-string v1, ""
 
@@ -1945,14 +1784,12 @@
     .prologue
     const/16 v3, 0x3e8
 
-    .line 196
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 198
     .local v1, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    const-string/jumbo v2, "out"
+    const-string v2, "out"
 
     invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1960,7 +1797,7 @@
 
     if-nez v2, :cond_0
 
-    const-string/jumbo v2, "in"
+    const-string v2, "in"
 
     invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1968,7 +1805,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 199
     :cond_0
     invoke-virtual {p3}, Lcom/android/server/enterprise/firewall/FirewallRuleAction;->getAction()I
 
@@ -1980,14 +1816,11 @@
 
     if-eqz v2, :cond_3
 
-    .line 200
     const-string v0, "-m owner --uid-owner "
 
-    .line 201
     .local v0, "command":Ljava/lang/String;
     if-lt p1, v3, :cond_1
 
-    .line 202
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2008,23 +1841,19 @@
 
     move-result-object v0
 
-    .line 208
     :goto_0
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 220
     .end local v0    # "command":Ljava/lang/String;
     :goto_1
     return-object v1
 
-    .line 203
     .restart local v0    # "command":Ljava/lang/String;
     :cond_1
     if-lez p1, :cond_2
 
     if-ge p1, v3, :cond_2
 
-    .line 204
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2059,7 +1888,6 @@
 
     goto :goto_0
 
-    .line 206
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2081,15 +1909,12 @@
 
     goto :goto_0
 
-    .line 212
     .end local v0    # "command":Ljava/lang/String;
     :cond_3
     if-le p1, v3, :cond_4
 
-    .line 213
     const-string v0, "-m owner --uid-owner "
 
-    .line 214
     .restart local v0    # "command":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2111,12 +1936,10 @@
 
     move-result-object v0
 
-    .line 215
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 217
     .end local v0    # "command":Ljava/lang/String;
     :cond_4
     const-string v2, ""
@@ -2144,12 +1967,10 @@
     .end annotation
 
     .prologue
-    .line 80
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
     .local v0, "commands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v3, "both"
 
@@ -2163,52 +1984,43 @@
 
     if-eqz v3, :cond_0
 
-    .line 83
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 84
     .local v1, "inCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 85
     .local v2, "outCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    const-string/jumbo v3, "in"
+    const-string v3, "in"
 
     invoke-virtual {p1, v3}, Lcom/android/server/enterprise/firewall/FirewallRule;->setDirection(Ljava/lang/String;)Z
 
-    .line 86
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->createIpt6Commands(Lcom/android/server/enterprise/firewall/FirewallRule;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 87
-    const-string/jumbo v3, "out"
+    const-string v3, "out"
 
     invoke-virtual {p1, v3}, Lcom/android/server/enterprise/firewall/FirewallRule;->setDirection(Ljava/lang/String;)Z
 
-    .line 88
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->createIpt6Commands(Lcom/android/server/enterprise/firewall/FirewallRule;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 89
     invoke-direct {p0, v1, v2}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->concatLists(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 101
     .end local v1    # "inCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "outCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object v0
 
-    .line 90
     :cond_0
-    const-string/jumbo v3, "in"
+    const-string v3, "in"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getDirection()Ljava/lang/String;
 
@@ -2220,7 +2032,7 @@
 
     if-nez v3, :cond_1
 
-    const-string/jumbo v3, "out"
+    const-string v3, "out"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getDirection()Ljava/lang/String;
 
@@ -2232,7 +2044,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 91
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2258,7 +2069,6 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 92
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getChain()Ljava/lang/String;
 
     move-result-object v3
@@ -2283,7 +2093,6 @@
 
     move-result-object v0
 
-    .line 93
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getHostnameOrIp()Ljava/lang/String;
 
     move-result-object v3
@@ -2300,7 +2109,6 @@
 
     move-result-object v0
 
-    .line 94
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getProtocol()Ljava/lang/String;
 
     move-result-object v3
@@ -2325,7 +2133,6 @@
 
     move-result-object v0
 
-    .line 95
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getNetworkInterface()Ljava/lang/String;
 
     move-result-object v3
@@ -2342,7 +2149,6 @@
 
     move-result-object v0
 
-    .line 96
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getUid()I
 
     move-result v3
@@ -2363,7 +2169,6 @@
 
     move-result-object v0
 
-    .line 97
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getRuleAction()Lcom/android/server/enterprise/firewall/FirewallRuleAction;
 
     move-result-object v3
@@ -2378,7 +2183,6 @@
 
     goto/16 :goto_0
 
-    .line 99
     :cond_2
     const-string v3, ""
 
@@ -2403,12 +2207,10 @@
     .end annotation
 
     .prologue
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 48
     .local v0, "commands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v3, "both"
 
@@ -2422,52 +2224,43 @@
 
     if-eqz v3, :cond_0
 
-    .line 49
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 50
     .local v1, "inCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 51
     .local v2, "outCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    const-string/jumbo v3, "in"
+    const-string v3, "in"
 
     invoke-virtual {p1, v3}, Lcom/android/server/enterprise/firewall/FirewallRule;->setDirection(Ljava/lang/String;)Z
 
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->createIptCommands(Lcom/android/server/enterprise/firewall/FirewallRule;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 53
-    const-string/jumbo v3, "out"
+    const-string v3, "out"
 
     invoke-virtual {p1, v3}, Lcom/android/server/enterprise/firewall/FirewallRule;->setDirection(Ljava/lang/String;)Z
 
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->createIptCommands(Lcom/android/server/enterprise/firewall/FirewallRule;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 55
     invoke-direct {p0, v1, v2}, Lcom/android/server/enterprise/firewall/FirewallIptCommandBuilder;->concatLists(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 76
     .end local v1    # "inCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "outCommands":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object v0
 
-    .line 56
     :cond_0
-    const-string/jumbo v3, "in"
+    const-string v3, "in"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getDirection()Ljava/lang/String;
 
@@ -2479,7 +2272,7 @@
 
     if-nez v3, :cond_1
 
-    const-string/jumbo v3, "out"
+    const-string v3, "out"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getDirection()Ljava/lang/String;
 
@@ -2491,7 +2284,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 57
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2517,7 +2309,6 @@
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 58
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getChain()Ljava/lang/String;
 
     move-result-object v3
@@ -2542,7 +2333,6 @@
 
     move-result-object v0
 
-    .line 62
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getHostnameOrIp()Ljava/lang/String;
 
     move-result-object v3
@@ -2559,7 +2349,6 @@
 
     move-result-object v0
 
-    .line 64
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getProtocol()Ljava/lang/String;
 
     move-result-object v3
@@ -2584,7 +2373,6 @@
 
     move-result-object v0
 
-    .line 68
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getNetworkInterface()Ljava/lang/String;
 
     move-result-object v3
@@ -2601,7 +2389,6 @@
 
     move-result-object v0
 
-    .line 70
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getUid()I
 
     move-result v3
@@ -2622,7 +2409,6 @@
 
     move-result-object v0
 
-    .line 72
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/FirewallRule;->getRuleAction()Lcom/android/server/enterprise/firewall/FirewallRuleAction;
 
     move-result-object v3
@@ -2637,7 +2423,6 @@
 
     goto/16 :goto_0
 
-    .line 74
     :cond_2
     const-string v3, ""
 

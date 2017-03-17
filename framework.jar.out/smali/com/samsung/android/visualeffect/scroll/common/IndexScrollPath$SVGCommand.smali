@@ -70,7 +70,6 @@
 
     const/4 v3, 0x0
 
-    .line 19
     new-instance v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const-string v1, "M"
@@ -201,7 +200,6 @@
 
     sput-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->s:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
-    .line 18
     const/16 v0, 0xe
 
     new-array v0, v0, [Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
@@ -294,7 +292,6 @@
     .end annotation
 
     .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -305,7 +302,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     const-class v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -321,7 +317,6 @@
     .locals 1
 
     .prologue
-    .line 18
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->$VALUES:[Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-virtual {v0}, [Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->clone()Ljava/lang/Object;

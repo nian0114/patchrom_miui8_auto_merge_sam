@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2109
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$10;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,12 +44,10 @@
 
     const/4 v2, 0x0
 
-    .line 2112
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2114
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -60,23 +57,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 2115
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$10;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mScreenOff:Z
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$2002(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 2116
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$10;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1, v4, v3}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V
 
-    .line 2121
     :cond_0
     :goto_0
     return-void
 
-    .line 2117
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -86,13 +79,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 2118
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$10;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mScreenOff:Z
     invoke-static {v1, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$2002(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 2119
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$10;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1, v4, v2}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V

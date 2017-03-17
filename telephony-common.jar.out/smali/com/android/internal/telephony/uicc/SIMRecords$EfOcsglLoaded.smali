@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 823
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfOcsglLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/SIMRecords$1;
 
     .prologue
-    .line 823
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/SIMRecords$EfOcsglLoaded;-><init>(Lcom/android/internal/telephony/uicc/SIMRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 825
     const-string v0, "EF_OCSGL"
 
     return-object v0
@@ -69,16 +66,13 @@
 
     const/4 v7, 0x2
 
-    .line 828
     iget-object v3, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 829
     .local v3, "ocsglList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     const/4 v0, 0x0
 
-    .line 831
     .local v0, "csgIdCount":I
     const/4 v2, 0x0
 
@@ -90,7 +84,6 @@
 
     if-ge v2, v5, :cond_2
 
-    .line 832
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -101,11 +94,9 @@
 
     check-cast v1, [B
 
-    .line 833
     .local v1, "data":[B
     const/4 v4, 0x0
 
-    .line 834
     .local v4, "skipLen":I
     aget-byte v5, v1, v7
 
@@ -115,14 +106,12 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 835
     aget-byte v5, v1, v8
 
     and-int/lit16 v5, v5, 0xff
 
     if-ne v5, v9, :cond_1
 
-    .line 836
     const/4 v5, 0x4
 
     aget-byte v5, v1, v5
@@ -131,10 +120,8 @@
 
     add-int/lit16 v4, v5, 0x80
 
-    .line 837
     add-int/lit8 v4, v4, 0x3
 
-    .line 843
     :goto_1
     add-int/lit8 v5, v4, 0x2
 
@@ -144,7 +131,6 @@
 
     if-ne v5, v9, :cond_0
 
-    .line 844
     add-int/lit8 v5, v4, 0x2
 
     add-int/lit8 v5, v5, 0x1
@@ -155,40 +141,33 @@
 
     if-le v5, v7, :cond_0
 
-    .line 845
     add-int/lit8 v0, v0, 0x1
 
-    .line 831
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 839
     :cond_1
     aget-byte v5, v1, v8
 
     and-int/lit16 v4, v5, 0xff
 
-    .line 840
     add-int/lit8 v4, v4, 0x2
 
     goto :goto_1
 
-    .line 851
     .end local v1    # "data":[B
     .end local v4    # "skipLen":I
     :cond_2
     if-lez v0, :cond_3
 
-    .line 852
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfOcsglLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     const/4 v6, 0x1
 
     iput-boolean v6, v5, Lcom/android/internal/telephony/uicc/SIMRecords;->isAvailableOCSGLList:Z
 
-    .line 857
     :goto_2
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfOcsglLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -226,10 +205,8 @@
 
     invoke-virtual {v5, v6}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 858
     return-void
 
-    .line 854
     :cond_3
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfOcsglLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 

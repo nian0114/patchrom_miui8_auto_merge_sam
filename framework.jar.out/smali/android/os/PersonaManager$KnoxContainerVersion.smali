@@ -68,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 1087
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_NONE"
@@ -77,7 +76,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_NONE:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1088
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_1_0_0"
@@ -86,7 +84,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_1_0_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1089
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_0_0"
@@ -95,7 +92,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_0_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1090
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_1_0"
@@ -104,7 +100,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_1_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1091
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_2_0"
@@ -113,7 +108,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_2_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1092
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_3_0"
@@ -124,7 +118,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_3_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1093
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_3_1"
@@ -135,7 +128,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_3_1:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1094
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_4_0"
@@ -146,7 +138,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_4_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1095
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_4_1"
@@ -157,7 +148,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_4_1:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1096
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_5_0"
@@ -168,7 +158,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_5_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1098
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_5_1"
@@ -179,7 +168,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_5_1:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1100
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_5_2"
@@ -190,7 +178,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_5_2:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1102
     new-instance v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     const-string v1, "KNOX_CONTAINER_VERSION_2_6_0"
@@ -201,7 +188,6 @@
 
     sput-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_6_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
-    .line 1086
     const/16 v0, 0xd
 
     new-array v0, v0, [Landroid/os/PersonaManager$KnoxContainerVersion;
@@ -288,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 1086
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -299,7 +284,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1086
     const-class v0, Landroid/os/PersonaManager$KnoxContainerVersion;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -315,7 +299,6 @@
     .locals 1
 
     .prologue
-    .line 1086
     sget-object v0, Landroid/os/PersonaManager$KnoxContainerVersion;->$VALUES:[Landroid/os/PersonaManager$KnoxContainerVersion;
 
     invoke-virtual {v0}, [Landroid/os/PersonaManager$KnoxContainerVersion;->clone()Ljava/lang/Object;
@@ -333,7 +316,6 @@
     .locals 2
 
     .prologue
-    .line 1139
     sget-object v0, Landroid/os/PersonaManager$1;->$SwitchMap$android$os$PersonaManager$KnoxContainerVersion:[I
 
     invoke-virtual {p0}, Landroid/os/PersonaManager$KnoxContainerVersion;->ordinal()I
@@ -344,85 +326,71 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1166
     const/4 v0, -0x1
 
     :goto_0
     return v0
 
-    .line 1141
     :pswitch_0
     const/16 v0, 0x64
 
     goto :goto_0
 
-    .line 1143
     :pswitch_1
     const/16 v0, 0xc8
 
     goto :goto_0
 
-    .line 1145
     :pswitch_2
     const/16 v0, 0xd2
 
     goto :goto_0
 
-    .line 1147
     :pswitch_3
     const/16 v0, 0xdc
 
     goto :goto_0
 
-    .line 1149
     :pswitch_4
     const/16 v0, 0xe6
 
     goto :goto_0
 
-    .line 1151
     :pswitch_5
     const/16 v0, 0xe7
 
     goto :goto_0
 
-    .line 1153
     :pswitch_6
     const/16 v0, 0xf0
 
     goto :goto_0
 
-    .line 1155
     :pswitch_7
     const/16 v0, 0xf1
 
     goto :goto_0
 
-    .line 1157
     :pswitch_8
     const/16 v0, 0xfa
 
     goto :goto_0
 
-    .line 1159
     :pswitch_9
     const/16 v0, 0xfb
 
     goto :goto_0
 
-    .line 1161
     :pswitch_a
     const/16 v0, 0xfc
 
     goto :goto_0
 
-    .line 1163
     :pswitch_b
     const/16 v0, 0x104
 
     goto :goto_0
 
-    .line 1139
     nop
 
     :pswitch_data_0
@@ -446,7 +414,6 @@
     .locals 2
 
     .prologue
-    .line 1106
     sget-object v0, Landroid/os/PersonaManager$1;->$SwitchMap$android$os$PersonaManager$KnoxContainerVersion:[I
 
     invoke-virtual {p0}, Landroid/os/PersonaManager$KnoxContainerVersion;->ordinal()I
@@ -457,85 +424,71 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1133
     const-string v0, "N/A"
 
     :goto_0
     return-object v0
 
-    .line 1108
     :pswitch_0
     const-string v0, "1.0.0"
 
     goto :goto_0
 
-    .line 1110
     :pswitch_1
     const-string v0, "2.0.0"
 
     goto :goto_0
 
-    .line 1112
     :pswitch_2
     const-string v0, "2.1.0"
 
     goto :goto_0
 
-    .line 1114
     :pswitch_3
     const-string v0, "2.2.0"
 
     goto :goto_0
 
-    .line 1116
     :pswitch_4
     const-string v0, "2.3.0"
 
     goto :goto_0
 
-    .line 1118
     :pswitch_5
     const-string v0, "2.3.1"
 
     goto :goto_0
 
-    .line 1120
     :pswitch_6
     const-string v0, "2.4.0"
 
     goto :goto_0
 
-    .line 1122
     :pswitch_7
     const-string v0, "2.4.1"
 
     goto :goto_0
 
-    .line 1124
     :pswitch_8
     const-string v0, "2.5.0"
 
     goto :goto_0
 
-    .line 1126
     :pswitch_9
     const-string v0, "2.5.1"
 
     goto :goto_0
 
-    .line 1128
     :pswitch_a
     const-string v0, "2.5.2"
 
     goto :goto_0
 
-    .line 1130
     :pswitch_b
     const-string v0, "2.6.0"
 
     goto :goto_0
 
-    .line 1106
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

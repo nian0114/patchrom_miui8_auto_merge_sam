@@ -41,16 +41,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6
     invoke-direct {p0}, Lorg/apache/commons/logging/LogFactory;-><init>()V
 
-    .line 37
     iput-object v0, p0, Lorg/apache/commons/logging/impl/LogFactoryImpl;->logConstructorSignature:[Ljava/lang/Class;
 
-    .line 39
     iput-object v0, p0, Lorg/apache/commons/logging/impl/LogFactoryImpl;->logMethodSignature:[Ljava/lang/Class;
 
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -65,7 +61,6 @@
     .param p0, "clazz"    # Ljava/lang/Class;
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -84,7 +79,6 @@
     .end annotation
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -98,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -115,7 +108,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -129,7 +121,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -149,7 +140,6 @@
     .end annotation
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -169,7 +159,6 @@
     .end annotation
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -185,7 +174,6 @@
     .end annotation
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -207,7 +195,6 @@
     .end annotation
 
     .prologue
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -223,7 +210,6 @@
     .end annotation
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -239,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -255,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 27
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -270,7 +254,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -290,7 +273,6 @@
     .end annotation
 
     .prologue
-    .line 28
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -304,7 +286,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -319,7 +300,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -335,7 +315,6 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

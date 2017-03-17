@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 231
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,14 +37,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 235
     iget v4, p1, Landroid/os/Message;->what:I
 
     const/16 v5, 0x320
 
     if-lt v4, v5, :cond_3
 
-    .line 236
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -61,7 +58,6 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 237
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mRspHandler:Landroid/os/Handler;
@@ -77,7 +73,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 238
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mRspHandler:Landroid/os/Handler;
@@ -89,13 +84,11 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 236
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 241
     :cond_1
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -116,7 +109,6 @@
 
     check-cast v2, Lcom/android/internal/telephony/PhoneBase;
 
-    .line 242
     .local v2, "phoneBase":Lcom/android/internal/telephony/PhoneBase;
     iget-object v4, v2, Lcom/android/internal/telephony/PhoneBase;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
@@ -131,7 +123,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/dataconnection/DcTracker;->unregisterForAllDataDisconnected(Landroid/os/Handler;)V
 
-    .line 244
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +156,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/internal/telephony/dataconnection/DctController;->access$000(Ljava/lang/String;)V
 
-    .line 246
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;
@@ -181,7 +171,6 @@
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->notifyDataDisconnected()V
 
-    .line 248
     const-string v4, "CTC"
 
     const-string v5, "ro.csc.sales_code"
@@ -196,14 +185,12 @@
 
     if-nez v4, :cond_2
 
-    .line 280
     .end local v1    # "i":I
     .end local v2    # "phoneBase":Lcom/android/internal/telephony/PhoneBase;
     :cond_2
     :goto_1
     return-void
 
-    .line 259
     :cond_3
     iget v4, p1, Landroid/os/Message;->what:I
 
@@ -211,7 +198,6 @@
 
     if-lt v4, v5, :cond_4
 
-    .line 260
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,18 +231,15 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/internal/telephony/dataconnection/DctController;->access$000(Ljava/lang/String;)V
 
-    .line 262
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 263
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v3, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 264
     .local v3, "toggle":Ljava/lang/Integer;
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -279,7 +262,6 @@
 
     goto :goto_1
 
-    .line 266
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v3    # "toggle":Ljava/lang/Integer;
     :cond_4
@@ -289,7 +271,6 @@
 
     if-lt v4, v5, :cond_5
 
-    .line 267
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,7 +304,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/internal/telephony/dataconnection/DctController;->access$000(Ljava/lang/String;)V
 
-    .line 269
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;
@@ -341,7 +321,6 @@
 
     goto :goto_1
 
-    .line 271
     :cond_5
     iget v4, p1, Landroid/os/Message;->what:I
 
@@ -349,7 +328,6 @@
 
     if-lt v4, v5, :cond_2
 
-    .line 272
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,7 +361,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/internal/telephony/dataconnection/DctController;->access$000(Ljava/lang/String;)V
 
-    .line 274
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;
@@ -399,7 +376,6 @@
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->notifyDataAttached()V
 
-    .line 276
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mNetworkFactory:[Landroid/net/NetworkFactory;
@@ -417,7 +393,6 @@
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->evalPendingRequest()V
 
-    .line 277
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/dataconnection/DctController;->processRequests()V

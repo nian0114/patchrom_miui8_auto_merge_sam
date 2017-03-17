@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 1374
     iput-object p1, p0, Lcom/android/server/am/MultiWindowPolicy$ZoneRects;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .param p2, "x1"    # Lcom/android/server/am/MultiWindowPolicy$1;
 
     .prologue
-    .line 1374
     invoke-direct {p0, p1}, Lcom/android/server/am/MultiWindowPolicy$ZoneRects;-><init>(Lcom/android/server/am/MultiWindowPolicy;)V
 
     return-void

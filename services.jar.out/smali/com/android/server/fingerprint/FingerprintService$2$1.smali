@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 174
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$2$1;->this$1:Lcom/android/server/fingerprint/FingerprintService$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 177
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$2$1;->this$1:Lcom/android/server/fingerprint/FingerprintService$2;
 
     iget-object v1, v1, Lcom/android/server/fingerprint/FingerprintService$2;->this$0:Lcom/android/server/fingerprint/FingerprintService;
@@ -50,7 +48,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -58,7 +56,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 178
     .local v0, "pm":Landroid/os/PowerManager;
     if-eqz v0, :cond_0
 
@@ -68,7 +65,6 @@
 
     if-nez v1, :cond_1
 
-    .line 179
     :cond_0
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$2$1;->this$1:Lcom/android/server/fingerprint/FingerprintService$2;
 
@@ -78,7 +74,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/fingerprint/FingerprintService;->startPostEnroll(Landroid/os/IBinder;)I
 
-    .line 181
     :cond_1
     return-void
 .end method

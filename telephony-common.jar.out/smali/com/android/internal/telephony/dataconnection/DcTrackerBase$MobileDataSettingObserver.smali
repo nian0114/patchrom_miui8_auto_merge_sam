@@ -25,20 +25,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 965
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$MobileDataSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    .line 966
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 967
     invoke-virtual {p3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p1, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
 
-    .line 968
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 981
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$MobileDataSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$MobileDataSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
@@ -69,16 +64,13 @@
     :goto_0
     iput-boolean v0, v1, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mUserDataEnabled:Z
 
-    .line 982
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$MobileDataSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->sendDataSettingToRIL()V
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->access$300(Lcom/android/internal/telephony/dataconnection/DcTrackerBase;)V
 
-    .line 983
     return-void
 
-    .line 981
     :cond_0
     const/4 v0, 0x0
 
@@ -89,7 +81,6 @@
     .locals 3
 
     .prologue
-    .line 971
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$MobileDataSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
@@ -104,7 +95,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 973
     return-void
 .end method
 
@@ -112,13 +102,11 @@
     .locals 1
 
     .prologue
-    .line 976
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$MobileDataSettingObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 977
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 425
     invoke-static {}, Lcom/itsoninc/android/SmsType;->values()[Lcom/itsoninc/android/SmsType;
 
     move-result-object v0

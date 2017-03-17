@@ -113,86 +113,65 @@
     .end annotation
 
     .prologue
-    .line 1836
     .local p1, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1818
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mTimestamp:J
 
-    .line 1837
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mData:Ljava/util/HashMap;
 
-    .line 1838
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
-    .line 1839
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mDeliveryIntent:Landroid/app/PendingIntent;
 
-    .line 1840
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mRetryCount:I
 
-    .line 1841
     iput-object p4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAppInfo:Landroid/content/pm/PackageInfo;
 
-    .line 1842
     iput-object p5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mDestAddress:Ljava/lang/String;
 
-    .line 1843
     iput-object p6, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mFormat:Ljava/lang/String;
 
-    .line 1844
     iput-boolean p11, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mExpectMore:Z
 
-    .line 1845
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mImsRetry:I
 
-    .line 1846
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageRef:I
 
-    .line 1847
     iput-object p7, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 1848
     iput-object p8, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAnyPartFailed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 1849
     iput-object p9, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
 
-    .line 1850
     iput-object p10, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSmsHeader:Lcom/android/internal/telephony/SmsHeader;
 
-    .line 1851
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mFullMessageText:Ljava/lang/String;
 
-    .line 1852
     move/from16 v0, p13
 
     iput v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSubId:I
 
-    .line 1853
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mIsText:Z
 
-    .line 1854
     move/from16 v0, p15
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPersistMessage:Z
 
-    .line 1855
     return-void
 .end method
 
@@ -216,7 +195,6 @@
     .param p16, "x15"    # Lcom/android/internal/telephony/SMSDispatcher$1;
 
     .prologue
-    .line 1794
     invoke-direct/range {p0 .. p15}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;-><init>(Ljava/util/HashMap;Landroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/content/pm/PackageInfo;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/util/concurrent/atomic/AtomicBoolean;Landroid/net/Uri;Lcom/android/internal/telephony/SmsHeader;ZLjava/lang/String;IZZ)V
 
     return-void
@@ -227,7 +205,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     .prologue
-    .line 1794
     iget-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPersistMessage:Z
 
     return v0
@@ -239,7 +216,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 1794
     iput-boolean p1, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPersistMessage:Z
 
     return p1
@@ -252,19 +228,15 @@
     .param p3, "errorCode"    # I
 
     .prologue
-    .line 1973
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
 
-    .line 1974
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->updateMessageState(Landroid/content/Context;II)V
 
-    .line 1978
     :goto_0
     return-void
 
-    .line 1976
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->persistSentMessageIfRequired(Landroid/content/Context;II)Landroid/net/Uri;
 
@@ -282,7 +254,6 @@
     .param p3, "errorCode"    # I
 
     .prologue
-    .line 1915
     iget-boolean v8, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mIsText:Z
 
     if-eqz v8, :cond_0
@@ -306,21 +277,17 @@
 
     if-nez v8, :cond_2
 
-    .line 1917
     :cond_0
     const/4 v6, 0x0
 
-    .line 1961
     :goto_1
     return-object v6
 
-    .line 1915
     :cond_1
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 1919
     :cond_2
     const-string v9, "SMSDispatcher"
 
@@ -351,12 +318,10 @@
 
     invoke-static {v9, v8}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1921
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1922
     .local v7, "values":Landroid/content/ContentValues;
     const-string v8, "sub_id"
 
@@ -368,21 +333,18 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1923
     const-string v8, "address"
 
     iget-object v9, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mDestAddress:Ljava/lang/String;
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1924
     const-string v8, "body"
 
     iget-object v9, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mFullMessageText:Ljava/lang/String;
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1925
     const-string v8, "date"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -395,7 +357,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1926
     const-string v8, "seen"
 
     const/4 v9, 0x1
@@ -406,7 +367,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1927
     const-string v8, "read"
 
     const/4 v9, 0x1
@@ -417,7 +377,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1928
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAppInfo:Landroid/content/pm/PackageInfo;
 
     if-eqz v8, :cond_a
@@ -426,7 +385,6 @@
 
     iget-object v0, v8, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 1929
     .local v0, "creator":Ljava/lang/String;
     :goto_3
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -435,18 +393,15 @@
 
     if-nez v8, :cond_3
 
-    .line 1930
     const-string v8, "creator"
 
     invoke-virtual {v7, v8, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1932
     :cond_3
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mDeliveryIntent:Landroid/app/PendingIntent;
 
     if-eqz v8, :cond_4
 
-    .line 1933
     const-string v8, "status"
 
     const/16 v9, 0x20
@@ -457,7 +412,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1935
     :cond_4
     if-nez p3, :cond_5
 
@@ -465,7 +419,6 @@
 
     if-eq p3, v8, :cond_6
 
-    .line 1936
     :cond_5
     const-string v8, "error_code"
 
@@ -475,7 +428,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1938
     :cond_6
     invoke-static {}, Lcom/android/internal/telephony/SMSDispatcher;->getEnableMultiSim()Z
 
@@ -483,7 +435,6 @@
 
     if-eqz v8, :cond_7
 
-    .line 1939
     const-string v8, "sim_slot"
 
     iget v9, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPhoneId:I
@@ -494,26 +445,22 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1940
     const-string v8, "sim_imsi"
 
     iget-object v9, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mImsi:Ljava/lang/String;
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1942
     :cond_7
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1943
     .local v2, "identity":J
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    .line 1945
     .local v4, "resolver":Landroid/content/ContentResolver;
     :try_start_0
     sget-object v8, Landroid/provider/Telephony$Sms$Sent;->CONTENT_URI:Landroid/net/Uri;
@@ -522,7 +469,6 @@
 
     move-result-object v6
 
-    .line 1946
     .local v6, "uri":Landroid/net/Uri;
     if-eqz v6, :cond_8
 
@@ -530,14 +476,12 @@
 
     if-ne p2, v8, :cond_8
 
-    .line 1952
     new-instance v5, Landroid/content/ContentValues;
 
     const/4 v8, 0x1
 
     invoke-direct {v5, v8}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 1953
     .local v5, "updateValues":Landroid/content/ContentValues;
     const-string v8, "type"
 
@@ -549,7 +493,6 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1954
     const/4 v8, 0x0
 
     const/4 v9, 0x0
@@ -559,14 +502,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1961
     .end local v5    # "updateValues":Landroid/content/ContentValues;
     :cond_8
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_1
 
-    .line 1919
     .end local v0    # "creator":Ljava/lang/String;
     .end local v2    # "identity":J
     .end local v4    # "resolver":Landroid/content/ContentResolver;
@@ -577,21 +518,18 @@
 
     goto/16 :goto_2
 
-    .line 1928
     .restart local v7    # "values":Landroid/content/ContentValues;
     :cond_a
     const/4 v0, 0x0
 
     goto :goto_3
 
-    .line 1957
     .restart local v0    # "creator":Ljava/lang/String;
     .restart local v2    # "identity":J
     .restart local v4    # "resolver":Landroid/content/ContentResolver;
     :catch_0
     move-exception v1
 
-    .line 1958
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v8, "SMSDispatcher"
@@ -602,10 +540,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1959
     const/4 v6, 0x0
 
-    .line 1961
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_1
@@ -626,16 +562,13 @@
     .param p3, "errorCode"    # I
 
     .prologue
-    .line 1886
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
 
     if-nez v0, :cond_0
 
-    .line 1901
     :goto_0
     return-void
 
-    .line 1889
     :cond_0
     new-instance v3, Landroid/content/ContentValues;
 
@@ -643,7 +576,6 @@
 
     invoke-direct {v3, v0}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 1890
     .local v3, "values":Landroid/content/ContentValues;
     const-string v0, "type"
 
@@ -653,7 +585,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1891
     const-string v0, "error_code"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -662,12 +593,10 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1892
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1894
     .local v6, "identity":J
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -690,7 +619,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1896
     const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -715,7 +643,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1899
     :cond_1
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -735,7 +662,6 @@
     .locals 2
 
     .prologue
-    .line 1862
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mData:Ljava/util/HashMap;
 
     const-string v1, "parts"
@@ -758,27 +684,22 @@
 
     const/4 v3, 0x1
 
-    .line 2001
     iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAnyPartFailed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     if-eqz v5, :cond_0
 
-    .line 2002
     iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAnyPartFailed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v5, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 2005
     :cond_0
     const/4 v2, 0x1
 
-    .line 2006
     .local v2, "isSinglePartOrLastPart":Z
     iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     if-eqz v5, :cond_1
 
-    .line 2007
     const-string v5, "SMSDispatcher"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -807,7 +728,6 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2008
     iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -818,23 +738,19 @@
 
     move v2, v3
 
-    .line 2010
     :cond_1
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 2011
     const/4 v3, 0x5
 
     invoke-direct {p0, p1, v3, p3}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->persistOrUpdateMessage(Landroid/content/Context;II)V
 
-    .line 2013
     :cond_2
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
     if-eqz v3, :cond_8
 
-    .line 2015
     :try_start_0
     const-string v3, "SMSDispatcher"
 
@@ -870,18 +786,15 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2017
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2018
     .local v1, "fillIn":Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
 
     if-eqz v3, :cond_3
 
-    .line 2020
     const-string v3, "uri"
 
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
@@ -892,16 +805,13 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2022
     :cond_3
     if-eqz p3, :cond_4
 
-    .line 2023
     const-string v3, "errorCode"
 
     invoke-virtual {v1, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2025
     :cond_4
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -915,19 +825,16 @@
 
     if-eqz v3, :cond_5
 
-    .line 2027
     const-string v3, "destAddr"
 
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mOrigAddr:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2028
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mOrigAddr:Ljava/lang/String;
 
-    .line 2030
     :cond_5
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -941,14 +848,12 @@
 
     if-eqz v3, :cond_6
 
-    .line 2032
     const-string v3, "errorClass"
 
     iget v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mErrorClass:I
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2033
     const-string v3, "SMSDispatcher"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -973,12 +878,10 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2034
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mErrorClass:I
 
-    .line 2036
     :cond_6
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -986,33 +889,28 @@
 
     if-eqz v2, :cond_a
 
-    .line 2038
     const-string v3, "SendNextMsg"
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2039
     const-string v3, "LastSentMsg"
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2044
     :cond_7
     :goto_1
     iget v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPhoneId:I
 
     invoke-static {v1, v3}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
 
-    .line 2045
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v3, p1, p2, v1}, Landroid/app/PendingIntent;->send(Landroid/content/Context;ILandroid/content/Intent;)V
 
-    .line 2050
     .end local v1    # "fillIn":Landroid/content/Intent;
     :cond_8
     :goto_2
@@ -1021,24 +919,20 @@
     :cond_9
     move v2, v4
 
-    .line 2008
     goto/16 :goto_0
 
-    .line 2040
     .restart local v1    # "fillIn":Landroid/content/Intent;
     :cond_a
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     if-nez v3, :cond_7
 
-    .line 2041
     const-string v3, "SendNextMsg"
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2042
     const-string v3, "LastSentMsg"
 
     const/4 v4, 0x1
@@ -1049,12 +943,10 @@
 
     goto :goto_1
 
-    .line 2046
     .end local v1    # "fillIn":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 2047
     .local v0, "ex":Landroid/app/PendingIntent$CanceledException;
     const-string v3, "SMSDispatcher"
 
@@ -1074,16 +966,12 @@
     .param p5, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 1988
     iput p4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPhoneId:I
 
-    .line 1989
     iput-object p5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mImsi:Ljava/lang/String;
 
-    .line 1990
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->onFailed(Landroid/content/Context;II)V
 
-    .line 1991
     return-void
 .end method
 
@@ -1096,16 +984,13 @@
 
     const/4 v4, 0x1
 
-    .line 2070
     const/4 v2, 0x1
 
-    .line 2071
     .local v2, "isSinglePartOrLastPart":Z
     iget-object v6, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     if-eqz v6, :cond_0
 
-    .line 2072
     const-string v6, "SMSDispatcher"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1134,7 +1019,6 @@
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2073
     iget-object v6, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -1145,15 +1029,12 @@
 
     move v2, v4
 
-    .line 2075
     :cond_0
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 2076
     const/4 v3, 0x2
 
-    .line 2077
     .local v3, "messageType":I
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAnyPartFailed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1167,21 +1048,17 @@
 
     if-eqz v4, :cond_1
 
-    .line 2078
     const/4 v3, 0x5
 
-    .line 2080
     :cond_1
     invoke-direct {p0, p1, v3, v5}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->persistOrUpdateMessage(Landroid/content/Context;II)V
 
-    .line 2082
     .end local v3    # "messageType":I
     :cond_2
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
     if-eqz v4, :cond_5
 
-    .line 2083
     const-string v4, "SMSDispatcher"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1216,19 +1093,16 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2086
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2087
     .local v1, "fillIn":Landroid/content/Intent;
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
 
     if-eqz v4, :cond_3
 
-    .line 2089
     const-string v4, "uri"
 
     iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
@@ -1239,7 +1113,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2091
     :cond_3
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -1247,35 +1120,30 @@
 
     if-eqz v2, :cond_7
 
-    .line 2093
     const-string v4, "SendNextMsg"
 
     const/4 v5, 0x1
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2094
     const-string v4, "LastSentMsg"
 
     const/4 v5, 0x1
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2099
     :cond_4
     :goto_1
     iget v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPhoneId:I
 
     invoke-static {v1, v4}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
 
-    .line 2100
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
     const/4 v5, -0x1
 
     invoke-virtual {v4, p1, v5, v1}, Landroid/app/PendingIntent;->send(Landroid/content/Context;ILandroid/content/Intent;)V
 
-    .line 2105
     .end local v1    # "fillIn":Landroid/content/Intent;
     :cond_5
     :goto_2
@@ -1284,24 +1152,20 @@
     :cond_6
     move v2, v5
 
-    .line 2073
     goto :goto_0
 
-    .line 2095
     .restart local v1    # "fillIn":Landroid/content/Intent;
     :cond_7
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     if-nez v4, :cond_4
 
-    .line 2096
     const-string v4, "SendNextMsg"
 
     const/4 v5, 0x1
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2097
     const-string v4, "LastSentMsg"
 
     const/4 v5, 0x1
@@ -1312,12 +1176,10 @@
 
     goto :goto_1
 
-    .line 2101
     .end local v1    # "fillIn":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 2102
     .local v0, "ex":Landroid/app/PendingIntent$CanceledException;
     const-string v4, "SMSDispatcher"
 
@@ -1335,16 +1197,12 @@
     .param p3, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 2058
     iput p2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mPhoneId:I
 
-    .line 2059
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mImsi:Ljava/lang/String;
 
-    .line 2060
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->onSent(Landroid/content/Context;)V
 
-    .line 2061
     return-void
 .end method
 
@@ -1356,19 +1214,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1869
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mMessageUri:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
 
-    .line 1871
     new-instance v3, Landroid/content/ContentValues;
 
     const/4 v0, 0x1
 
     invoke-direct {v3, v0}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 1872
     .local v3, "values":Landroid/content/ContentValues;
     const-string v0, "status"
 
@@ -1378,7 +1233,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1873
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1391,7 +1245,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/database/sqlite/SqliteWrapper;->update(Landroid/content/Context;Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1876
     .end local v3    # "values":Landroid/content/ContentValues;
     :cond_0
     return-void

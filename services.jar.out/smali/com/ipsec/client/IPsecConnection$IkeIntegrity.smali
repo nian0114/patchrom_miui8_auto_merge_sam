@@ -71,7 +71,6 @@
 
     const/4 v3, 0x0
 
-    .line 3780
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_HMAC_MD5_96"
@@ -80,7 +79,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_HMAC_MD5_96:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3786
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_HMAC_SHA1_96"
@@ -89,7 +87,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_HMAC_SHA1_96:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3792
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_AES_XCBC_MAC_96"
@@ -98,7 +95,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_AES_XCBC_MAC_96:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3798
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_HMAC_SHA_256_128"
@@ -107,7 +103,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_HMAC_SHA_256_128:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3804
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_HMAC_SHA_384_192"
@@ -116,7 +111,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_HMAC_SHA_384_192:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3810
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_HMAC_SHA_512_256"
@@ -127,7 +121,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_HMAC_SHA_512_256:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3816
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_BASIC"
@@ -138,7 +131,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_BASIC:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3822
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_ANY"
@@ -149,7 +141,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_ANY:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3828
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_SUITE_B_GCM_128"
@@ -160,7 +151,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_SUITE_B_GCM_128:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3834
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     const-string v1, "IKE_INTEGRITY_SUITE_B_GCM_256"
@@ -171,7 +161,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->IKE_INTEGRITY_SUITE_B_GCM_256:Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
-    .line 3773
     const/16 v0, 0xa
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
@@ -240,7 +229,6 @@
     .end annotation
 
     .prologue
-    .line 3773
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -251,7 +239,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3773
     const-class v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -267,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 3773
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IkeIntegrity;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IkeIntegrity;->clone()Ljava/lang/Object;

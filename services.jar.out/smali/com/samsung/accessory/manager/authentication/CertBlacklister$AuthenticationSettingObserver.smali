@@ -29,18 +29,14 @@
     .param p2, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 188
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$AuthenticationSettingObserver;->mKey:Ljava/lang/String;
 
-    .line 189
     iput-object p2, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$AuthenticationSettingObserver;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 190
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 206
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$AuthenticationSettingObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$AuthenticationSettingObserver;->mKey:Ljava/lang/String;
@@ -71,17 +66,14 @@
 
     const/4 v2, 0x0
 
-    .line 194
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 195
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$AuthenticationSettingObserver;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 196
     .local v0, "value":Ljava/lang/String;
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -89,11 +81,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 197
     # setter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mIsBlocked:Z
     invoke-static {v3}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$502(Z)Z
 
-    .line 198
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mCertBlacklistListener:Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$400()Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
 
@@ -101,14 +91,12 @@
 
     invoke-interface {v1, v3}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;->onAuthenticationBlocked(Z)V
 
-    .line 203
     :cond_0
     :goto_0
     return-void
 
-    .line 199
     :cond_1
-    const-string/jumbo v1, "false"
+    const-string v1, "false"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -116,11 +104,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 200
     # setter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mIsBlocked:Z
     invoke-static {v2}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$502(Z)Z
 
-    .line 201
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mCertBlacklistListener:Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$400()Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
 

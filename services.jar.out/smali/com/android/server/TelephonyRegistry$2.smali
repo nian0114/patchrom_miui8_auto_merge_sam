@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 301
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 304
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 306
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.USER_SWITCHED"
 
@@ -56,14 +53,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 307
     const-string v4, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v4, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 309
     .local v3, "userHandle":I
     iget-object v4, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
@@ -87,13 +82,11 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 327
     .end local v3    # "userHandle":I
     :cond_0
     :goto_0
     return-void
 
-    .line 310
     :cond_1
     const-string v4, "android.intent.action.ACTION_DEFAULT_SUBSCRIPTION_CHANGED"
 
@@ -103,10 +96,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 311
     new-instance v2, Ljava/lang/Integer;
 
-    const-string/jumbo v4, "subscription"
+    const-string v4, "subscription"
 
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubId()I
 
@@ -118,9 +110,8 @@
 
     invoke-direct {v2, v4}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 313
     .local v2, "newDefaultSubIdObj":Ljava/lang/Integer;
-    const-string/jumbo v4, "slot"
+    const-string v4, "slot"
 
     iget-object v5, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
@@ -137,7 +128,6 @@
 
     move-result v1
 
-    .line 321
     .local v1, "newDefaultPhoneId":I
     iget-object v4, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
@@ -174,7 +164,6 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 323
     :cond_2
     iget-object v4, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 

@@ -26,13 +26,10 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 320
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
-    .line 321
     invoke-direct {p0, p2, p3, p4}, Landroid/content/pm/AbstractPersonaObserver;-><init>(Landroid/content/Context;II)V
 
-    .line 322
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     .prologue
-    .line 318
     iget v0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->containerId:I
 
     return v0
@@ -52,7 +48,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     .prologue
-    .line 318
     iget v0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->containerId:I
 
     return v0
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     .prologue
-    .line 318
     iget v0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->containerId:I
 
     return v0
@@ -74,7 +68,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     .prologue
-    .line 318
     iget v0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->containerId:I
 
     return v0
@@ -85,7 +78,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;
 
     .prologue
-    .line 318
     iget v0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->containerId:I
 
     return v0
@@ -98,14 +90,12 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 331
     const-string v0, "SecurityPolicy"
 
     const-string v1, "IPersonaObserver.onKeyGuardStateChanged()"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     return-void
 .end method
 
@@ -113,14 +103,12 @@
     .locals 2
 
     .prologue
-    .line 326
     const-string v0, "SecurityPolicy"
 
     const-string v1, "PersonaObserver.onSessionExpired()"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 327
     return-void
 .end method
 
@@ -130,7 +118,6 @@
     .param p2, "previousState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 336
     iget-object v0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$PersonaObserver;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     # getter for: Lcom/android/server/enterprise/security/SecurityPolicy;->mHandler:Landroid/os/Handler;
@@ -144,6 +131,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 359
     return-void
 .end method

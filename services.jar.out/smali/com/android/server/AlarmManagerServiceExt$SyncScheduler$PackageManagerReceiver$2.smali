@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 3563
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
     iput-object p2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;->val$uri:Landroid/net/Uri;
@@ -48,19 +47,16 @@
     .locals 4
 
     .prologue
-    .line 3566
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;->val$uri:Landroid/net/Uri;
 
     if-eqz v1, :cond_0
 
-    .line 3567
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;->val$uri:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3568
     .local v0, "pkgName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -76,7 +72,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3569
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
     iget-object v1, v1, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
@@ -88,7 +83,6 @@
 
     monitor-enter v2
 
-    .line 3570
     :try_start_0
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;
 
@@ -104,12 +98,10 @@
 
     invoke-interface {v1, v3}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 3571
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3572
     const-string v1, "AlarmManagerEXT"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -144,12 +136,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3575
     .end local v0    # "pkgName":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 3571
     .restart local v0    # "pkgName":Ljava/lang/String;
     :catchall_0
     move-exception v1

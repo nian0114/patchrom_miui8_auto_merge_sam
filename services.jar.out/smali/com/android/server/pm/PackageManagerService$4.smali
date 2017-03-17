@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 4816
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$4;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-wide p2, p0, Lcom/android/server/pm/PackageManagerService$4;->val$freeStorageSize:J
@@ -52,14 +51,12 @@
     .locals 8
 
     .prologue
-    .line 4818
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$4;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v0, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 4819
     const-string v0, "PackageManager"
 
     const-string v1, "MSG"
@@ -80,7 +77,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "}\n"
+    const-string v4, "}\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -98,7 +95,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "}"
+    const-string v4, "}"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,10 +111,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4823
     const/4 v7, -0x1
 
-    .line 4824
     .local v7, "retCode":I
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$4;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -125,7 +120,6 @@
 
     monitor-enter v1
 
-    .line 4825
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$4;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -139,33 +133,27 @@
 
     move-result v7
 
-    .line 4826
     if-gez v7, :cond_0
 
-    .line 4827
     const-string v0, "PackageManager"
 
     const-string v3, "Couldn\'t clear application caches"
 
     invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4829
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4830
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$4;->val$pi:Landroid/content/IntentSender;
 
     if-eqz v0, :cond_1
 
-    .line 4833
     if-ltz v7, :cond_2
 
     const/4 v2, 0x1
 
-    .line 4834
     .local v2, "code":I
     :goto_0
     :try_start_1
@@ -183,13 +171,11 @@
     :try_end_1
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 4840
     .end local v2    # "code":I
     :cond_1
     :goto_1
     return-void
 
-    .line 4829
     :catchall_0
     move-exception v0
 
@@ -200,18 +186,15 @@
 
     throw v0
 
-    .line 4833
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 4836
     .restart local v2    # "code":I
     :catch_0
     move-exception v6
 
-    .line 4837
     .local v6, "e1":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "PackageManager"
 

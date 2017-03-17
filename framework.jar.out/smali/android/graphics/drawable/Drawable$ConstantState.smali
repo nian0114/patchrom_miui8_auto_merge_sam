@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2719
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 2805
     .local p1, "atlasList":Ljava/util/Collection;, "Ljava/util/Collection<Landroid/graphics/Bitmap;>;"
     const/4 v0, 0x0
 
@@ -51,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 2827
     const/4 v0, 0x0
 
     return v0
@@ -65,7 +62,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 2814
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
@@ -95,10 +91,8 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 2752
     if-eqz p1, :cond_0
 
-    .line 2754
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
@@ -107,7 +101,6 @@
 
     sput v0, Landroid/graphics/drawable/Drawable;->mTempDensity:F
 
-    .line 2758
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -122,10 +115,8 @@
     .param p2, "theme"    # Landroid/content/res/Resources$Theme;
 
     .prologue
-    .line 2773
     if-eqz p1, :cond_0
 
-    .line 2775
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
@@ -134,7 +125,6 @@
 
     sput v0, Landroid/graphics/drawable/Drawable;->mTempDensity:F
 
-    .line 2779
     :cond_0
     const/4 v0, 0x0
 

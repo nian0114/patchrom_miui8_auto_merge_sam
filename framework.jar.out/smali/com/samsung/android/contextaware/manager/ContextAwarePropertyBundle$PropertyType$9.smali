@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 261
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$PropertyType;-><init>(Ljava/lang/String;ILcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$1;)V
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 272
     # getter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->longArrayVal:[J
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$900()[J
 
@@ -60,13 +58,11 @@
     .end annotation
 
     .prologue
-    .line 264
     .local p1, "value":Ljava/lang/Object;, "TT;"
     instance-of v0, p1, [J
 
     if-eqz v0, :cond_0
 
-    .line 265
     check-cast p1, [J
 
     .end local p1    # "value":Ljava/lang/Object;, "TT;"
@@ -75,7 +71,6 @@
     # setter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->longArrayVal:[J
     invoke-static {p1}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$902([J)[J
 
-    .line 267
     :cond_0
     return-void
 .end method

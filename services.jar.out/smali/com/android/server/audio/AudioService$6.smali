@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10065
     iput-object p1, p0, Lcom/android/server/audio/AudioService$6;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +40,5 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 10085
     return-void
 .end method

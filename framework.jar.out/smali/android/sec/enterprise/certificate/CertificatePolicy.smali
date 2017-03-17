@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const-string v0, "CertificatePolicy"
 
     sput-object v0, Landroid/sec/enterprise/certificate/CertificatePolicy;->TAG:Ljava/lang/String;
@@ -64,7 +63,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,33 +77,27 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 178
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 179
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 180
     invoke-interface {v0, p1, p2, p3}, Landroid/sec/enterprise/IEDMProxy;->isCaCertificateTrustedAsUser([BZI)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    .line 185
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v1
 
-    .line 182
     :catch_0
     move-exception v1
 
-    .line 185
     :cond_0
     const/4 v1, 0x1
 
@@ -116,33 +108,27 @@
     .locals 2
 
     .prologue
-    .line 203
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 204
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 205
     invoke-interface {v0}, Landroid/sec/enterprise/IEDMProxy;->isOcspCheckEnabled()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    .line 210
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v1
 
-    .line 207
     :catch_0
     move-exception v1
 
-    .line 210
     :cond_0
     const/4 v1, 0x0
 
@@ -153,33 +139,27 @@
     .locals 2
 
     .prologue
-    .line 190
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 191
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 192
     invoke-interface {v0}, Landroid/sec/enterprise/IEDMProxy;->isRevocationCheckEnabled()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    .line 197
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v1
 
-    .line 194
     :catch_0
     move-exception v1
 
-    .line 197
     :cond_0
     const/4 v1, 0x0
 
@@ -191,33 +171,27 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 230
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 231
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 232
     invoke-interface {v0, p1}, Landroid/sec/enterprise/IEDMProxy;->isUserRemoveCertificatesAllowedAsUser(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    .line 237
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v1
 
-    .line 234
     :catch_0
     move-exception v1
 
-    .line 237
     :cond_0
     const/4 v1, 0x1
 
@@ -231,28 +205,23 @@
     .param p3, "showMsg"    # Z
 
     .prologue
-    .line 145
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 146
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 147
     invoke-interface {v0, p1, p2, p3}, Landroid/sec/enterprise/IEDMProxy;->notifyCertificateFailure(Ljava/lang/String;Ljava/lang/String;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 152
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 149
     :catch_0
     move-exception v1
 
@@ -267,28 +236,23 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 165
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 166
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/sec/enterprise/IEDMProxy;->notifyCertificateFailureAsUser(Ljava/lang/String;Ljava/lang/String;ZI)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 172
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 169
     :catch_0
     move-exception v1
 
@@ -301,28 +265,23 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 216
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 217
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 218
     invoke-interface {v0, p1, p2}, Landroid/sec/enterprise/IEDMProxy;->notifyCertificateRemovedAsUser(Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 223
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 220
     :catch_0
     move-exception v1
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 442
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$1;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,8 +42,7 @@
 
     const/4 v3, 0x1
 
-    .line 445
-    const-string/jumbo v1, "plugged"
+    const-string v1, "plugged"
 
     const/4 v2, -0x1
 
@@ -52,17 +50,14 @@
 
     move-result v0
 
-    .line 446
     .local v0, "plugged":I
     if-ne v0, v3, :cond_1
 
-    .line 447
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$1;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     # setter for: Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;->isUSBConnected:Z
     invoke-static {v1, v3}, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;->access$002(Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;Z)Z
 
-    .line 448
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
 
@@ -72,22 +67,19 @@
 
     const-string v1, "AlarmManagerEXT"
 
-    const-string/jumbo v2, "on AC power"
+    const-string v2, "on AC power"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     :cond_0
     :goto_0
     return-void
 
-    .line 449
     :cond_1
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_3
 
-    .line 450
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
 
@@ -97,11 +89,10 @@
 
     const-string v1, "AlarmManagerEXT"
 
-    const-string/jumbo v2, "on USB power"
+    const-string v2, "on USB power"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 451
     :cond_2
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$1;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
@@ -110,11 +101,9 @@
 
     goto :goto_0
 
-    .line 452
     :cond_3
     if-nez v0, :cond_5
 
-    .line 453
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
 
@@ -124,11 +113,10 @@
 
     const-string v1, "AlarmManagerEXT"
 
-    const-string/jumbo v2, "on Battery power"
+    const-string v2, "on Battery power"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_4
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$1;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
@@ -137,7 +125,6 @@
 
     goto :goto_0
 
-    .line 456
     :cond_5
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
@@ -152,7 +139,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "no Extra info, plugged : "
+    const-string v3, "no Extra info, plugged : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,7 +155,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
     :cond_6
     iget-object v1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$1;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 

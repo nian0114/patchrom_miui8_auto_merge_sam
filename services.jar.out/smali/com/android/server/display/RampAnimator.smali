@@ -75,38 +75,31 @@
     .end annotation
 
     .prologue
-    .line 46
     .local p0, "this":Lcom/android/server/display/RampAnimator;, "Lcom/android/server/display/RampAnimator<TT;>;"
     .local p1, "object":Ljava/lang/Object;, "TT;"
     .local p2, "property":Landroid/util/IntProperty;, "Landroid/util/IntProperty<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    .line 140
     new-instance v0, Lcom/android/server/display/RampAnimator$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/RampAnimator$1;-><init>(Lcom/android/server/display/RampAnimator;)V
 
     iput-object v0, p0, Lcom/android/server/display/RampAnimator;->mAnimationCallback:Ljava/lang/Runnable;
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
 
-    .line 48
     iput-object p2, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
 
-    .line 49
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/RampAnimator;->mChoreographer:Landroid/view/Choreographer;
 
-    .line 50
     return-void
 .end method
 
@@ -115,7 +108,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mChoreographer:Landroid/view/Choreographer;
 
     return-object v0
@@ -126,7 +118,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget-wide v0, p0, Lcom/android/server/display/RampAnimator;->mLastFrameTimeNanos:J
 
     return-wide v0
@@ -137,7 +128,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
     return-object v0
@@ -149,7 +139,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 28
     iput-wide p1, p0, Lcom/android/server/display/RampAnimator;->mLastFrameTimeNanos:J
 
     return-wide p1
@@ -160,7 +149,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
 
     return-void
@@ -171,7 +159,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mAnimatedValue:F
 
     return v0
@@ -183,7 +170,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 28
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mAnimatedValue:F
 
     return p1
@@ -194,7 +180,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
     return v0
@@ -205,7 +190,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mRate:I
 
     return v0
@@ -216,7 +200,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
     return v0
@@ -228,7 +211,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 28
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
     return p1
@@ -239,7 +221,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
 
     return-object v0
@@ -250,7 +231,6 @@
     .param p0, "x0"    # Lcom/android/server/display/RampAnimator;
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
 
     return-object v0
@@ -262,7 +242,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 28
     iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     return p1
@@ -272,7 +251,6 @@
     .locals 4
 
     .prologue
-    .line 137
     .local p0, "this":Lcom/android/server/display/RampAnimator;, "Lcom/android/server/display/RampAnimator<TT;>;"
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mChoreographer:Landroid/view/Choreographer;
 
@@ -284,7 +262,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/view/Choreographer;->removeCallbacks(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 138
     return-void
 .end method
 
@@ -292,7 +269,6 @@
     .locals 4
 
     .prologue
-    .line 133
     .local p0, "this":Lcom/android/server/display/RampAnimator;, "Lcom/android/server/display/RampAnimator<TT;>;"
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mChoreographer:Landroid/view/Choreographer;
 
@@ -304,7 +280,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 134
     return-void
 .end method
 
@@ -321,14 +296,12 @@
 
     const/4 v0, 0x0
 
-    .line 64
     iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
     if-nez v2, :cond_0
 
     if-gtz p2, :cond_5
 
-    .line 65
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
@@ -338,44 +311,34 @@
 
     if-eq p1, v2, :cond_4
 
-    .line 66
     :cond_1
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    .line 67
     iput v0, p0, Lcom/android/server/display/RampAnimator;->mRate:I
 
-    .line 68
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    .line 69
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    .line 70
     iget-object v2, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
 
     iget-object v3, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
 
     invoke-virtual {v2, v3, p1}, Landroid/util/IntProperty;->setValue(Ljava/lang/Object;I)V
 
-    .line 71
     iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     if-eqz v2, :cond_2
 
-    .line 72
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    .line 73
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->cancelAnimationCallback()V
 
-    .line 75
     :cond_2
     iget-object v2, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
     if-eqz v2, :cond_3
 
-    .line 76
     iget-object v2, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
     invoke-interface {v2}, Lcom/android/server/display/RampAnimator$Listener;->onAnimationEnd()V
@@ -383,12 +346,10 @@
     :cond_3
     move v0, v1
 
-    .line 108
     :cond_4
     :goto_0
     return v0
 
-    .line 90
     :cond_5
     iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
@@ -419,11 +380,9 @@
 
     if-gt v2, p1, :cond_8
 
-    .line 94
     :cond_7
     iput p2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
 
-    .line 97
     :cond_8
     iget v2, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
@@ -431,12 +390,10 @@
 
     move v0, v1
 
-    .line 98
     .local v0, "changed":Z
     :cond_9
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    .line 101
     iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     if-nez v2, :cond_4
@@ -445,24 +402,20 @@
 
     if-eq p1, v2, :cond_4
 
-    .line 102
     iput-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    .line 103
     iget v1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
     int-to-float v1, v1
 
     iput v1, p0, Lcom/android/server/display/RampAnimator;->mAnimatedValue:F
 
-    .line 104
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/display/RampAnimator;->mLastFrameTimeNanos:J
 
-    .line 105
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
 
     goto :goto_0
@@ -472,7 +425,6 @@
     .locals 1
 
     .prologue
-    .line 115
     .local p0, "this":Lcom/android/server/display/RampAnimator;, "Lcom/android/server/display/RampAnimator<TT;>;"
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
@@ -483,13 +435,11 @@
     .locals 1
 
     .prologue
-    .line 121
     .local p0, "this":Lcom/android/server/display/RampAnimator;, "Lcom/android/server/display/RampAnimator<TT;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    .line 122
     return-void
 .end method
 
@@ -498,10 +448,8 @@
     .param p1, "listener"    # Lcom/android/server/display/RampAnimator$Listener;
 
     .prologue
-    .line 129
     .local p0, "this":Lcom/android/server/display/RampAnimator;, "Lcom/android/server/display/RampAnimator<TT;>;"
     iput-object p1, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
-    .line 130
     return-void
 .end method

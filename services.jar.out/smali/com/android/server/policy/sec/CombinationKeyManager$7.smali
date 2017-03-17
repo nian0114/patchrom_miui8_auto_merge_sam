@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 897
     iput-object p1, p0, Lcom/android/server/policy/sec/CombinationKeyManager$7;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 899
     # getter for: Lcom/android/server/policy/sec/CombinationKeyManager;->SAFE_DEBUG:Z
     invoke-static {}, Lcom/android/server/policy/sec/CombinationKeyManager;->access$000()Z
 
@@ -54,29 +52,24 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
     :cond_0
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 903
     .local v0, "activityManager":Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->stopLockTaskModeOnCurrent()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 907
     .end local v0    # "activityManager":Landroid/app/IActivityManager;
     :goto_0
     return-void
 
-    .line 904
     :catch_0
     move-exception v1
 
-    .line 905
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "CombinationKeyManager"
 

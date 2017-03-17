@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1950
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisablingState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,13 +36,10 @@
     .locals 6
 
     .prologue
-    .line 1953
     invoke-super {p0}, Lcom/android/internal/util/State;->enter()V
 
-    .line 1954
     const/4 v1, 0x0
 
-    .line 1955
     .local v1, "intent":Landroid/content/Intent;
     const-string v3, "HS20StateMachine"
 
@@ -71,23 +67,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1956
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v2
 
-    .line 1957
     .local v2, "message":Landroid/os/Message;
     const/16 v3, 0x4e24
 
     iput v3, v2, Landroid/os/Message;->what:I
 
-    .line 1958
     const/4 v3, 0x1
 
     iput v3, v2, Landroid/os/Message;->arg1:I
 
-    .line 1960
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisablingState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -100,21 +92,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1964
     :goto_0
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisablingState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->resetVariables()V
     invoke-static {v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$10000(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;)V
 
-    .line 1965
     return-void
 
-    .line 1961
     :catch_0
     move-exception v0
 
-    .line 1962
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -126,20 +114,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1969
     const/4 v0, 0x0
 
-    .line 1970
     .local v0, "bRetVal":Z
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 2001
     :goto_0
     return v0
 
-    .line 1972
     :sswitch_0
     const-string v1, "HS20StateMachine"
 
@@ -147,13 +131,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1973
     const/4 v0, 0x1
 
-    .line 1974
     goto :goto_0
 
-    .line 1976
     :sswitch_1
     const-string v1, "HS20StateMachine"
 
@@ -161,13 +142,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1977
     const/4 v0, 0x1
 
-    .line 1978
     goto :goto_0
 
-    .line 1980
     :sswitch_2
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisablingState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -181,13 +159,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$10300(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1981
     const/4 v0, 0x1
 
-    .line 1982
     goto :goto_0
 
-    .line 1984
     :sswitch_3
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisablingState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -201,13 +176,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$10400(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1985
     const/4 v0, 0x1
 
-    .line 1986
     goto :goto_0
 
-    .line 1970
     nop
 
     :sswitch_data_0

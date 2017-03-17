@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -37,33 +35,27 @@
     .param p2, "o2"    # Ljava/lang/Object;
 
     .prologue
-    .line 49
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 50
     const/4 v2, 0x0
 
-    .line 54
     :goto_0
     return v2
 
     :cond_0
     move-object v0, p1
 
-    .line 52
     check-cast v0, Lmf/javax/xml/namespace/QName;
 
     .local v0, "name1":Lmf/javax/xml/namespace/QName;
     move-object v1, p2
 
-    .line 53
     check-cast v1, Lmf/javax/xml/namespace/QName;
 
-    .line 54
     .local v1, "name2":Lmf/javax/xml/namespace/QName;
     invoke-virtual {v0}, Lmf/javax/xml/namespace/QName;->toString()Ljava/lang/String;
 

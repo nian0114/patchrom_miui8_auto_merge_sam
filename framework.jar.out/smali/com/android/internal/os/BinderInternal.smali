@@ -74,7 +74,6 @@
 
     const/4 v2, 0x1
 
-    .line 42
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     new-instance v1, Lcom/android/internal/os/BinderInternal$GcWatcher;
@@ -85,44 +84,36 @@
 
     sput-object v0, Lcom/android/internal/os/BinderInternal;->sGcWatcher:Ljava/lang/ref/WeakReference;
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/BinderInternal;->sGcWatchers:Ljava/util/ArrayList;
 
-    .line 45
     new-array v0, v2, [Ljava/lang/Runnable;
 
     sput-object v0, Lcom/android/internal/os/BinderInternal;->sTmpWatchers:[Ljava/lang/Runnable;
 
-    .line 141
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/internal/os/BinderInternal;->lastGcDelayRequestTime:J
 
-    .line 142
     sput-object v3, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
 
-    .line 143
     sput-object v3, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
-    .line 144
     invoke-static {v2}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/internal/os/BinderInternal;->executor:Ljava/util/concurrent/ExecutorService;
 
-    .line 145
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
-    .line 146
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -136,10 +127,8 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     return-void
 .end method
 
@@ -148,24 +137,19 @@
     .param p0, "watcher"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 73
     sget-object v1, Lcom/android/internal/os/BinderInternal;->sGcWatchers:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 74
     :try_start_0
     sget-object v0, Lcom/android/internal/os/BinderInternal;->sGcWatchers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 75
     monitor-exit v1
 
-    .line 76
     return-void
 
-    .line 75
     :catchall_0
     move-exception v0
 
@@ -185,18 +169,15 @@
     .prologue
     const-wide/16 v8, 0xbb8
 
-    .line 198
     sget-object v3, Lcom/android/internal/os/BinderInternal;->delayGcMonitorObject:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 199
     :try_start_0
     sget-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
     if-eqz v2, :cond_1
 
-    .line 200
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -205,25 +186,20 @@
 
     sub-long v0, v4, v6
 
-    .line 201
     .local v0, "lastGcDelayRequestDuration":J
     cmp-long v2, v0, v8
 
     if-gez v2, :cond_1
 
-    .line 202
     sget v2, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
     if-eqz v2, :cond_0
 
-    .line 203
     monitor-exit v3
 
-    .line 214
     :goto_0
     return-void
 
-    .line 204
     :cond_0
     sget-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
@@ -231,7 +207,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
 
-    .line 205
     new-instance v2, Lcom/android/internal/os/BinderInternal$TimerGc;
 
     sub-long v4, v8, v0
@@ -240,7 +215,6 @@
 
     sput-object v2, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
 
-    .line 206
     new-instance v2, Ljava/util/concurrent/FutureTask;
 
     sget-object v4, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
@@ -249,24 +223,20 @@
 
     sput-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
-    .line 207
     const/4 v2, 0x1
 
     sput v2, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
-    .line 208
     sget-object v2, Lcom/android/internal/os/BinderInternal;->executor:Ljava/util/concurrent/ExecutorService;
 
     sget-object v4, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
     invoke-interface {v2, v4}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 209
     monitor-exit v3
 
     goto :goto_0
 
-    .line 212
     :catchall_0
     move-exception v2
 
@@ -282,7 +252,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 213
     const-string v2, "Binder"
 
     invoke-static {v2}, Lcom/android/internal/os/BinderInternal;->forceGc(Ljava/lang/String;)V
@@ -295,19 +264,16 @@
     .param p0, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     const/16 v0, 0xab5
 
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 116
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ldalvik/system/VMRuntime;->requestConcurrentGC()V
 
-    .line 117
     return-void
 .end method
 
@@ -318,7 +284,6 @@
     .locals 2
 
     .prologue
-    .line 95
     sget-wide v0, Lcom/android/internal/os/BinderInternal;->sLastGcTime:J
 
     return-wide v0
@@ -334,18 +299,15 @@
     .locals 6
 
     .prologue
-    .line 164
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 165
     .local v0, "nowTime":J
     sget-object v3, Lcom/android/internal/os/BinderInternal;->delayGcMonitorObject:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 166
     :try_start_0
     sget-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
@@ -355,21 +317,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 167
     sget v2, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
     const/4 v4, 0x5
 
     if-gt v2, v4, :cond_0
 
-    .line 168
     sget-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
 
-    .line 169
     sget-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
     invoke-virtual {v2}, Ljava/util/concurrent/FutureTask;->isCancelled()Z
@@ -378,17 +337,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 170
     sput-wide v0, Lcom/android/internal/os/BinderInternal;->lastGcDelayRequestTime:J
 
-    .line 171
     sget v2, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     sput v2, Lcom/android/internal/os/BinderInternal;->postponedGcCount:I
 
-    .line 172
     new-instance v2, Lcom/android/internal/os/BinderInternal$TimerGc;
 
     const-wide/16 v4, 0xbb8
@@ -397,7 +353,6 @@
 
     sput-object v2, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
 
-    .line 173
     new-instance v2, Ljava/util/concurrent/FutureTask;
 
     sget-object v4, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
@@ -406,26 +361,21 @@
 
     sput-object v2, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
-    .line 174
     sget-object v2, Lcom/android/internal/os/BinderInternal;->executor:Ljava/util/concurrent/ExecutorService;
 
     sget-object v4, Lcom/android/internal/os/BinderInternal;->futureTaskInstance:Ljava/util/concurrent/FutureTask;
 
     invoke-interface {v2, v4}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 182
     :cond_0
     :goto_0
     monitor-exit v3
 
-    .line 183
     return-void
 
-    .line 178
     :cond_1
     sput-wide v0, Lcom/android/internal/os/BinderInternal;->lastGcDelayRequestTime:J
 
-    .line 179
     new-instance v2, Lcom/android/internal/os/BinderInternal$TimerGc;
 
     const-wide/16 v4, 0xbb8
@@ -434,7 +384,6 @@
 
     sput-object v2, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
 
-    .line 180
     new-instance v2, Ljava/util/concurrent/FutureTask;
 
     sget-object v4, Lcom/android/internal/os/BinderInternal;->timerGcInstance:Lcom/android/internal/os/BinderInternal$TimerGc;
@@ -445,7 +394,6 @@
 
     goto :goto_0
 
-    .line 182
     :catchall_0
     move-exception v2
 

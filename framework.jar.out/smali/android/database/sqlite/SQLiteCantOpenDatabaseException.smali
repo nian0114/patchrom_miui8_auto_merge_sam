@@ -20,7 +20,6 @@
 
     const/4 v4, 0x0
 
-    .line 25
     const/16 v0, 0xb
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -182,7 +181,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteException;-><init>()V
 
     return-void
@@ -193,7 +191,6 @@
     .param p1, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +213,6 @@
 
     invoke-direct {p0, v0}, Landroid/database/sqlite/SQLiteException;-><init>(Ljava/lang/String;)V
 
-    .line 42
     return-void
 .end method
 
@@ -225,7 +221,6 @@
     .param p0, "errMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     if-eqz p0, :cond_0
 
     const-string v0, "(code "
@@ -236,10 +231,8 @@
 
     if-lez v0, :cond_0
 
-    .line 46
     const-string v0, ""
 
-    .line 47
     :goto_0
     return-object v0
 

@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 57
     return-void
 .end method
 
@@ -35,16 +33,13 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 61
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 62
     # invokes: Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->getMdmPolicy()Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->access$000()Z
 
     move-result v0
 
-    .line 63
     .local v0, "allowed":Z
     if-eqz v0, :cond_0
 
@@ -59,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 64
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcRestrictionPolicyListener:Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$NfcRestrictionPolicyListener;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->access$100()Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$NfcRestrictionPolicyListener;
 
@@ -67,10 +61,8 @@
 
     invoke-interface {v1, v0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$NfcRestrictionPolicyListener;->onNfcRestrictionPolicyChanged(Z)V
 
-    .line 65
     :cond_0
     sput-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsMdmAllowed:Z
 
-    .line 66
     return-void
 .end method

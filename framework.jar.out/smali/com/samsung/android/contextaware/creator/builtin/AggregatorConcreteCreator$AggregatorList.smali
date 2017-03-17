@@ -60,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 52
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList$1;
 
     const-string v1, "LOCATION"
@@ -75,7 +74,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->LOCATION:Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
-    .line 78
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList$2;
 
     const-string v1, "MOVING"
@@ -90,7 +88,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->MOVING:Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
-    .line 102
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList$3;
 
     const-string v1, "LPP"
@@ -105,7 +102,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->LPP:Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
-    .line 124
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList$4;
 
     const-string v1, "TEMPERATURE_HUMIDITY"
@@ -120,7 +116,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->TEMPERATURE_HUMIDITY:Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
-    .line 150
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList$5;
 
     const-string v1, "LIFE_LOG"
@@ -135,7 +130,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->LIFE_LOG:Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
-    .line 49
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
@@ -177,13 +171,10 @@
     .end annotation
 
     .prologue
-    .line 185
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 186
     iput-object p3, p0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->name:Ljava/lang/String;
 
-    .line 187
     return-void
 .end method
 
@@ -195,7 +186,6 @@
     .param p4, "x3"    # Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$1;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -207,10 +197,8 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 201
     const/4 v2, 0x0
 
-    .line 203
     .local v2, "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getRunnerCreator()Ljava/util/concurrent/CopyOnWriteArrayList;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->access$2800()Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -229,28 +217,23 @@
 
     if-eqz v3, :cond_1
 
-    .line 204
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
 
-    .line 206
     .local v0, "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     if-eqz v0, :cond_0
 
-    .line 209
     const/4 v3, 0x1
 
     invoke-virtual {v0, p0, v3, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->create(Ljava/lang/String;Z[Ljava/lang/Object;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v2
 
-    .line 210
     if-eqz v2, :cond_0
 
-    .line 215
     .end local v0    # "creator":Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
     :cond_1
     return-object v2
@@ -261,7 +244,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     const-class v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -277,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 49
     sget-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->$VALUES:[Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->clone()Ljava/lang/Object;
@@ -296,7 +277,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 268
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->getObject()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -308,7 +288,6 @@
     .locals 1
 
     .prologue
-    .line 256
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->getObject()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -321,7 +300,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 280
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->getObjectForSubCollection()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -342,7 +320,6 @@
     .end annotation
 
     .prologue
-    .line 245
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -363,35 +340,28 @@
     .end annotation
 
     .prologue
-    .line 224
     new-instance v2, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    .line 225
     .local v2, "list":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/manager/ContextComponent;>;"
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->getSubCollectionList()Ljava/util/concurrent/CopyOnWriteArrayList;
 
     move-result-object v3
 
-    .line 227
     .local v3, "subCollectionList":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Ljava/lang/String;>;"
     if-nez v3, :cond_1
 
-    .line 228
     const-string v4, "list is null."
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 229
     const/4 v2, 0x0
 
-    .line 236
     .end local v2    # "list":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/manager/ContextComponent;>;"
     :cond_0
     return-object v2
 
-    .line 232
     .restart local v2    # "list":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/manager/ContextComponent;>;"
     :cond_1
     invoke-virtual {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -412,7 +382,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 233
     .local v0, "i":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -432,10 +401,8 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 292
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->removeObj(Ljava/lang/String;)Z
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->access$2900(Ljava/lang/String;)Z
 
-    .line 293
     return-void
 .end method

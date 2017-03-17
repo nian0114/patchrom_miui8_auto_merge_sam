@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 352
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 352
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 355
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 356
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.intent.action.Slot1setCardDataInit"
 
@@ -66,31 +62,26 @@
 
     if-eqz v2, :cond_1
 
-    .line 357
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     const-string v3, "com.samsung.intent.action.Slot1setCardDataInit"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 358
     const-string v2, "gsm.sim.selectnetwork"
 
     const-string v3, "CDMA"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 359
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/RuimRecords;->setCardDataInit()V
 
-    .line 367
     :cond_0
     :goto_0
     return-void
 
-    .line 360
     :cond_1
     const-string v2, "com.samsung.intent.action.setRuimCardDataInit"
 
@@ -100,14 +91,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 361
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     const-string v3, "com.samsung.intent.action.setRuimCardDataInit"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 362
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     const-string v3, "gsm.sim.state"
@@ -118,7 +107,6 @@
 
     move-result-object v1
 
-    .line 363
     .local v1, "state":Ljava/lang/String;
     const-string v2, "READY"
 
@@ -128,7 +116,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 364
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$RUIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/RuimRecords;->setCardDataInit()V

@@ -15,12 +15,10 @@
     .param p1, "grammarPool"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     .prologue
-    .line 38
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/jaxp/validation/XMLSchema;-><init>(Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Z)V
 
-    .line 39
     return-void
 .end method
 
@@ -30,16 +28,12 @@
     .param p2, "fullyComposed"    # Z
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/AbstractXMLSchema;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/validation/XMLSchema;->fGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
-    .line 43
     iput-boolean p2, p0, Lmf/org/apache/xerces/jaxp/validation/XMLSchema;->fFullyComposed:Z
 
-    .line 44
     return-void
 .end method
 
@@ -49,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/XMLSchema;->fGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     return-object v0
@@ -59,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-boolean v0, p0, Lmf/org/apache/xerces/jaxp/validation/XMLSchema;->fFullyComposed:Z
 
     return v0

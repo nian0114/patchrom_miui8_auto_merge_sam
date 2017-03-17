@@ -94,20 +94,17 @@
     .locals 3
 
     .prologue
-    .line 16
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
-    .line 17
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
-    .line 43
     const-string v0, "1"
 
-    const-string/jumbo v1, "ro.config.knox"
+    const-string v1, "ro.config.knox"
 
     const-string v2, "0"
 
@@ -121,14 +118,13 @@
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->SUPPORT_KNOX:Z
 
-    .line 44
-    const-string/jumbo v0, "ro.config.knox"
+    const-string v0, "ro.config.knox"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "v30"
+    const-string v1, "v30"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -143,7 +139,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

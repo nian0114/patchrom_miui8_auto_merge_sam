@@ -61,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const-string v0, "content://com.kddi.android.pdg/pdg_status"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -70,7 +69,6 @@
 
     sput-object v0, Lcom/kddi/android/internal/pdg/PDG$PdgStatus;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 27
     const-string v0, "content://com.kddi.android.pdg.read_only/pdg_status"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -86,7 +84,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

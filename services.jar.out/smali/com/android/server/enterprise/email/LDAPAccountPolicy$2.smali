@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 279
     iput-object p1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 282
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 284
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.USER_REMOVED"
 
@@ -62,7 +59,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 286
     :cond_0
     const-string v3, "android.intent.extra.user_handle"
 
@@ -72,13 +68,11 @@
 
     move-result v2
 
-    .line 287
     .local v2, "userId":I
     const/4 v3, 0x1
 
     if-ge v2, v3, :cond_2
 
-    .line 288
     const-string v3, "LDAPAccountPolicyService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -101,13 +95,11 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
     .end local v2    # "userId":I
     :cond_1
     :goto_0
     return-void
 
-    .line 291
     .restart local v2    # "userId":I
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
@@ -124,14 +116,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 293
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     # invokes: Lcom/android/server/enterprise/email/LDAPAccountPolicy;->unregisterReceiver(I)Z
     invoke-static {v3, v2}, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->access$200(Lcom/android/server/enterprise/email/LDAPAccountPolicy;I)Z
 
-    .line 294
     const-string v3, "LDAPAccountPolicyService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -157,7 +147,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 298
     iget-object v3, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v3, v3, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;
@@ -170,11 +159,9 @@
 
     goto :goto_0
 
-    .line 295
     :catch_0
     move-exception v1
 
-    .line 296
     .local v1, "ex":Ljava/lang/IllegalArgumentException;
     :try_start_1
     const-string v3, "LDAPAccountPolicyService"
@@ -185,7 +172,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 298
     iget-object v3, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     iget-object v3, v3, Lcom/android/server/enterprise/email/LDAPAccountPolicy;->serviceMap:Ljava/util/Map;

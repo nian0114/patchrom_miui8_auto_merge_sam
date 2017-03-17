@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 157
     iput-object p1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     const/4 v1, 0x3
@@ -46,7 +44,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/telephony/WakeLockStateMachine;->sendMessageDelayed(IJ)V
 
-    .line 161
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .locals 2
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     # getter for: Lcom/android/internal/telephony/WakeLockStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -64,14 +60,12 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 166
     iget-object v0, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     const-string v1, "acquired wakelock, leaving Idle state"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/WakeLockStateMachine;->log(Ljava/lang/String;)V
 
-    .line 167
     return-void
 .end method
 
@@ -82,12 +76,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 171
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 192
     :pswitch_0
     const/4 v0, 0x0
 
@@ -95,7 +87,6 @@
     :goto_0
     return v0
 
-    .line 174
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
@@ -105,7 +96,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 175
     iget-object v1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     iget-object v2, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
@@ -120,7 +110,6 @@
 
     goto :goto_0
 
-    .line 180
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
@@ -131,7 +120,6 @@
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 182
     iget-object v1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     # getter for: Lcom/android/internal/telephony/WakeLockStateMachine;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -145,7 +133,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 184
     iget-object v1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
     const-string v2, "mWakeLock is still held after release"
@@ -154,7 +141,6 @@
 
     goto :goto_0
 
-    .line 186
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/WakeLockStateMachine$IdleState;->this$0:Lcom/android/internal/telephony/WakeLockStateMachine;
 
@@ -164,7 +150,6 @@
 
     goto :goto_0
 
-    .line 171
     nop
 
     :pswitch_data_0

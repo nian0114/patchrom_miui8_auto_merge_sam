@@ -72,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 2455
     iput-object p1, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
     iput-object p2, p0, Lcom/android/server/SystemServer$2;->val$context:Landroid/content/Context;
@@ -152,14 +151,12 @@
     .locals 7
 
     .prologue
-    .line 2458
     const-string v3, "SystemServer"
 
     const-string v4, "Making services ready"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2459
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
     # getter for: Lcom/android/server/SystemServer;->mSystemServiceManager:Lcom/android/server/SystemServiceManager;
@@ -171,7 +168,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/SystemServiceManager;->startBootPhase(I)V
 
-    .line 2463
     :try_start_0
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -184,7 +180,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2468
     :goto_0
     const-string v3, "SystemServer"
 
@@ -192,28 +187,23 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2469
     invoke-static {}, Landroid/webkit/WebViewFactory;->prepareWebViewInSystemServer()V
 
-    .line 2473
     const/4 v3, -0x2
 
     :try_start_1
     invoke-static {v3}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 2475
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$context:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/SystemServer;->startSystemUi(Landroid/content/Context;)V
 
-    .line 2476
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$context:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/SystemServer;->startFingerprintService(Landroid/content/Context;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2481
     :goto_1
     :try_start_2
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
@@ -223,7 +213,6 @@
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 2486
     :goto_2
     :try_start_3
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$networkScoreF:Lcom/android/server/NetworkScoreService;
@@ -236,7 +225,6 @@
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 2491
     :cond_0
     :goto_3
     :try_start_4
@@ -246,7 +234,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2492
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$networkManagementF:Lcom/android/server/NetworkManagementService;
 
     if-eqz v3, :cond_1
@@ -255,7 +242,6 @@
 
     invoke-virtual {v3}, Lcom/android/server/NetworkManagementService;->systemReady()V
 
-    .line 2493
     :cond_1
     const-string v3, "SystemServer"
 
@@ -265,7 +251,6 @@
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 2498
     :goto_4
     :try_start_5
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$networkStatsF:Lcom/android/server/net/NetworkStatsService;
@@ -278,7 +263,6 @@
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 2503
     :cond_2
     :goto_5
     :try_start_6
@@ -292,7 +276,6 @@
     :try_end_6
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 2508
     :cond_3
     :goto_6
     :try_start_7
@@ -306,7 +289,6 @@
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_7
 
-    .line 2513
     :cond_4
     :goto_7
     :try_start_8
@@ -320,12 +302,11 @@
     :try_end_8
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_8
 
-    .line 2518
     :cond_5
     :goto_8
     const-string v3, ""
 
-    const-string/jumbo v4, "libc.debug.malloc"
+    const-string v4, "libc.debug.malloc"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -339,7 +320,7 @@
 
     const-string v3, "0"
 
-    const-string/jumbo v4, "libc.debug.malloc"
+    const-string v4, "libc.debug.malloc"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -351,7 +332,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 2520
     :cond_6
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
@@ -359,7 +339,6 @@
 
     invoke-virtual {v3}, Lcom/android/server/Watchdog;->start()V
 
-    .line 2525
     :cond_7
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -372,7 +351,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/SystemServiceManager;->startBootPhase(I)V
 
-    .line 2529
     :try_start_9
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$wallpaperF:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -384,7 +362,6 @@
     :try_end_9
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_9
 
-    .line 2534
     :cond_8
     :goto_9
     :try_start_a
@@ -400,7 +377,6 @@
     :try_end_a
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_a
 
-    .line 2539
     :cond_9
     :goto_a
     :try_start_b
@@ -414,7 +390,6 @@
     :try_end_b
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_b
 
-    .line 2544
     :cond_a
     :goto_b
     :try_start_c
@@ -422,16 +397,14 @@
 
     if-eqz v3, :cond_b
 
-    .line 2545
     const-string v3, "com.samsung.location.SLocationLoader"
 
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 2546
     .local v1, "sLocationLoader":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
-    const-string/jumbo v3, "systemReady"
+    const-string v3, "systemReady"
 
     const/4 v4, 0x2
 
@@ -453,7 +426,6 @@
 
     move-result-object v2
 
-    .line 2547
     .local v2, "sLocationSystemReady":Ljava/lang/reflect/Method;
     const/4 v3, 0x0
 
@@ -477,7 +449,6 @@
     :try_end_c
     .catch Ljava/lang/Throwable; {:try_start_c .. :try_end_c} :catch_c
 
-    .line 2553
     .end local v1    # "sLocationLoader":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v2    # "sLocationSystemReady":Ljava/lang/reflect/Method;
     :cond_b
@@ -493,7 +464,6 @@
     :try_end_d
     .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_d
 
-    .line 2558
     :cond_c
     :goto_d
     :try_start_e
@@ -507,7 +477,6 @@
     :try_end_e
     .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_e
 
-    .line 2563
     :cond_d
     :goto_e
     :try_start_f
@@ -515,14 +484,12 @@
 
     if-eqz v3, :cond_e
 
-    .line 2564
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$commonTimeMgmtServiceF:Lcom/android/server/CommonTimeManagementService;
 
     invoke-virtual {v3}, Lcom/android/server/CommonTimeManagementService;->systemRunning()V
     :try_end_f
     .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_f
 
-    .line 2570
     :cond_e
     :goto_f
     :try_start_10
@@ -530,14 +497,12 @@
 
     if-eqz v3, :cond_f
 
-    .line 2571
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$textServiceManagerServiceF:Lcom/android/server/TextServicesManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/TextServicesManagerService;->systemRunning()V
     :try_end_10
     .catch Ljava/lang/Throwable; {:try_start_10 .. :try_end_10} :catch_10
 
-    .line 2579
     :cond_f
     :goto_10
     :try_start_11
@@ -551,7 +516,6 @@
     :try_end_11
     .catch Ljava/lang/Throwable; {:try_start_11 .. :try_end_11} :catch_11
 
-    .line 2586
     :cond_10
     :goto_11
     :try_start_12
@@ -565,7 +529,6 @@
     :try_end_12
     .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_12} :catch_12
 
-    .line 2592
     :cond_11
     :goto_12
     :try_start_13
@@ -579,7 +542,6 @@
     :try_end_13
     .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_13
 
-    .line 2597
     :cond_12
     :goto_13
     :try_start_14
@@ -593,7 +555,6 @@
     :try_end_14
     .catch Ljava/lang/Throwable; {:try_start_14 .. :try_end_14} :catch_14
 
-    .line 2602
     :cond_13
     :goto_14
     :try_start_15
@@ -607,7 +568,6 @@
     :try_end_15
     .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_15
 
-    .line 2609
     :cond_14
     :goto_15
     :try_start_16
@@ -617,7 +577,6 @@
     :try_end_16
     .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_16
 
-    .line 2624
     :goto_16
     :try_start_17
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->val$coverServiceF:Lcom/android/server/cover/CoverManagerService;
@@ -630,7 +589,6 @@
     :try_end_17
     .catch Ljava/lang/Throwable; {:try_start_17 .. :try_end_17} :catch_17
 
-    .line 2633
     :cond_15
     :goto_17
     :try_start_18
@@ -644,144 +602,125 @@
     :try_end_18
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_18
 
-    .line 2638
     :cond_16
     :goto_18
     return-void
 
-    .line 2464
     :catch_0
     move-exception v0
 
-    .line 2465
     .local v0, "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "observing native crashes"
+    const-string v4, "observing native crashes"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 2477
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_1
     move-exception v0
 
-    .line 2478
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "starting System UI"
+    const-string v4, "starting System UI"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_1
 
-    .line 2482
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_2
     move-exception v0
 
-    .line 2483
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "starting Theme Service"
+    const-string v4, "starting Theme Service"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_2
 
-    .line 2487
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_3
     move-exception v0
 
-    .line 2488
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "making Network Score Service ready"
+    const-string v4, "making Network Score Service ready"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_3
 
-    .line 2494
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_4
     move-exception v0
 
-    .line 2495
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "making Network Managment Service ready"
+    const-string v4, "making Network Managment Service ready"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_4
 
-    .line 2499
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_5
     move-exception v0
 
-    .line 2500
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "making Network Stats Service ready"
+    const-string v4, "making Network Stats Service ready"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 2504
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_6
     move-exception v0
 
-    .line 2505
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "making Network Policy Service ready"
+    const-string v4, "making Network Policy Service ready"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_6
 
-    .line 2509
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_7
     move-exception v0
 
-    .line 2510
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "making Connectivity Service ready"
+    const-string v4, "making Connectivity Service ready"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_7
 
-    .line 2514
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_8
     move-exception v0
 
-    .line 2515
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -792,12 +731,10 @@
 
     goto/16 :goto_8
 
-    .line 2530
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_9
     move-exception v0
 
-    .line 2531
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -808,12 +745,10 @@
 
     goto/16 :goto_9
 
-    .line 2535
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_a
     move-exception v0
 
-    .line 2536
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -824,12 +759,10 @@
 
     goto/16 :goto_a
 
-    .line 2540
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_b
     move-exception v0
 
-    .line 2541
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -840,12 +773,10 @@
 
     goto/16 :goto_b
 
-    .line 2549
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_c
     move-exception v0
 
-    .line 2550
     .restart local v0    # "e":Ljava/lang/Throwable;
     const-string v3, "SystemServer"
 
@@ -853,7 +784,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "making SLocation Service ready :"
+    const-string v5, "making SLocation Service ready :"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -875,12 +806,10 @@
 
     goto/16 :goto_c
 
-    .line 2554
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_d
     move-exception v0
 
-    .line 2555
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -891,12 +820,10 @@
 
     goto/16 :goto_d
 
-    .line 2559
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_e
     move-exception v0
 
-    .line 2560
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -907,12 +834,10 @@
 
     goto/16 :goto_e
 
-    .line 2566
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_f
     move-exception v0
 
-    .line 2567
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -923,12 +848,10 @@
 
     goto/16 :goto_f
 
-    .line 2572
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_10
     move-exception v0
 
-    .line 2573
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -939,28 +862,24 @@
 
     goto/16 :goto_10
 
-    .line 2580
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_11
     move-exception v0
 
-    .line 2581
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
-    const-string/jumbo v4, "making VR Manager Service ready"
+    const-string v4, "making VR Manager Service ready"
 
     # invokes: Lcom/android/server/SystemServer;->reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
     invoke-static {v3, v4, v0}, Lcom/android/server/SystemServer;->access$200(Lcom/android/server/SystemServer;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_11
 
-    .line 2587
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_12
     move-exception v0
 
-    .line 2588
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -971,12 +890,10 @@
 
     goto/16 :goto_12
 
-    .line 2593
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_13
     move-exception v0
 
-    .line 2594
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -987,12 +904,10 @@
 
     goto/16 :goto_13
 
-    .line 2598
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_14
     move-exception v0
 
-    .line 2599
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -1003,12 +918,10 @@
 
     goto/16 :goto_14
 
-    .line 2603
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_15
     move-exception v0
 
-    .line 2604
     .restart local v0    # "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -1019,12 +932,10 @@
 
     goto/16 :goto_15
 
-    .line 2610
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_16
     move-exception v0
 
-    .line 2611
     .local v0, "e":Ljava/lang/Exception;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -1035,12 +946,10 @@
 
     goto/16 :goto_16
 
-    .line 2625
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_17
     move-exception v0
 
-    .line 2626
     .local v0, "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
@@ -1051,12 +960,10 @@
 
     goto/16 :goto_17
 
-    .line 2634
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_18
     move-exception v0
 
-    .line 2635
     .local v0, "e":Ljava/lang/Exception;
     iget-object v3, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 

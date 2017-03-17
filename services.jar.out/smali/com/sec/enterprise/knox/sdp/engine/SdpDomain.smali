@@ -19,10 +19,8 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     if-nez p1, :cond_0
 
     const-string p1, ""
@@ -31,7 +29,6 @@
     :cond_0
     iput-object p1, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;->mAlias:Ljava/lang/String;
 
-    .line 33
     if-nez p2, :cond_1
 
     const-string p2, ""
@@ -40,7 +37,6 @@
     :cond_1
     iput-object p2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;->mPackageName:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;->mAlias:Ljava/lang/String;
 
     return-object v0
@@ -60,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -70,7 +64,6 @@
     .locals 3
 
     .prologue
-    .line 53
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

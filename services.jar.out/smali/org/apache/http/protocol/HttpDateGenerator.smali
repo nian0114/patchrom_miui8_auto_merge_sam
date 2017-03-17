@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 9
     const/4 v0, 0x0
 
     sput-object v0, Lorg/apache/http/protocol/HttpDateGenerator;->GMT:Ljava/util/TimeZone;
@@ -31,7 +30,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -49,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 6
     monitor-enter p0
 
     :try_start_0

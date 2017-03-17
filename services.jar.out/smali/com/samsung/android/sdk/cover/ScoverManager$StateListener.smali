@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 881
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 882
     return-void
 .end method
 
@@ -33,6 +31,5 @@
     .param p1, "state"    # Lcom/samsung/android/sdk/cover/ScoverState;
 
     .prologue
-    .line 891
     return-void
 .end method

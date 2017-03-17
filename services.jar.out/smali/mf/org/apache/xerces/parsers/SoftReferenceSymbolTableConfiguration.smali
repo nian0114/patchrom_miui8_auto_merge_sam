@@ -10,14 +10,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 44
     new-instance v0, Lmf/org/apache/xerces/util/SoftReferenceSymbolTable;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/util/SoftReferenceSymbolTable;-><init>()V
 
     invoke-direct {p0, v0, v1, v1}, Lmf/org/apache/xerces/parsers/SoftReferenceSymbolTableConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 45
     return-void
 .end method
 
@@ -28,10 +26,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 53
     invoke-direct {p0, p1, v0, v0}, Lmf/org/apache/xerces/parsers/SoftReferenceSymbolTableConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 54
     return-void
 .end method
 
@@ -41,12 +37,10 @@
     .param p2, "grammarPool"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lmf/org/apache/xerces/parsers/SoftReferenceSymbolTableConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 68
     return-void
 .end method
 
@@ -57,9 +51,7 @@
     .param p3, "parentSettings"    # Lmf/org/apache/xerces/xni/parser/XMLComponentManager;
 
     .prologue
-    .line 83
     invoke-direct {p0, p1, p2, p3}, Lmf/org/apache/xerces/parsers/XIncludeAwareParserConfiguration;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;Lmf/org/apache/xerces/xni/parser/XMLComponentManager;)V
 
-    .line 84
     return-void
 .end method

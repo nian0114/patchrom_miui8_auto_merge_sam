@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 84
     invoke-direct {p0}, Lmf/javax/xml/transform/TransformerFactory;-><init>()V
 
     return-void

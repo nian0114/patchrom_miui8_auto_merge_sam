@@ -362,7 +362,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -382,7 +382,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     const-string v1, "EncryptedData"
 
@@ -658,7 +658,7 @@
     iput-object v3, v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher;->_contextCipher:Ljavax/crypto/Cipher;
 
     :try_start_0
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -675,7 +675,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -748,7 +748,7 @@
     iput-object v3, v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher;->_kek:Ljava/security/Key;
 
     :try_start_0
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -820,7 +820,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -831,7 +831,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -842,7 +842,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -880,7 +880,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -942,7 +942,7 @@
     iput-object v3, v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher;->_kek:Ljava/security/Key;
 
     :try_start_0
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -996,7 +996,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1007,7 +1007,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1082,7 +1082,7 @@
     iput-object v3, v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher;->_contextCipher:Ljavax/crypto/Cipher;
 
     :try_start_0
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -1099,7 +1099,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1198,7 +1198,7 @@
     iput-object v3, v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLCipher;->_kek:Ljava/security/Key;
 
     :try_start_0
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v1}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -1278,7 +1278,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v4, "provider.name = "
+    const-string v4, "provider.name = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1306,7 +1306,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1317,7 +1317,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1328,7 +1328,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1339,7 +1339,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1377,7 +1377,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -1387,7 +1387,7 @@
 .method private static isValidEncryptionAlgorithm(Ljava/lang/String;)Z
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#tripledes-cbc"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#tripledes-cbc"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1395,7 +1395,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#aes128-cbc"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#aes128-cbc"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1403,7 +1403,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#aes256-cbc"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#aes256-cbc"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1411,7 +1411,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#aes192-cbc"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#aes192-cbc"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1419,7 +1419,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#rsa-1_5"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#rsa-1_5"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1427,7 +1427,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1435,7 +1435,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#kw-tripledes"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#kw-tripledes"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1443,7 +1443,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#kw-aes128"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#kw-aes128"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1451,7 +1451,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#kw-aes256"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#kw-aes256"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1459,7 +1459,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#kw-aes192"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#kw-aes192"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2079,7 +2079,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2090,7 +2090,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2101,7 +2101,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2117,7 +2117,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2128,7 +2128,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2241,7 +2241,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v1, "encryption.nokey"
+    const-string v1, "encryption.nokey"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;)V
 
@@ -2337,7 +2337,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2348,7 +2348,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2359,7 +2359,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2370,7 +2370,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2381,7 +2381,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2392,7 +2392,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2403,7 +2403,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -2474,7 +2474,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -2578,7 +2578,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -2674,7 +2674,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -3180,7 +3180,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/utils/URI;
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#Content"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#Content"
 
     invoke-direct {v1, v2}, Lcom/sun/org/apache/xml/internal/utils/URI;-><init>(Ljava/lang/String;)V
 
@@ -3226,7 +3226,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -3260,7 +3260,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3271,7 +3271,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3282,7 +3282,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3298,7 +3298,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3309,7 +3309,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3320,7 +3320,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3331,7 +3331,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3342,7 +3342,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3354,7 +3354,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/utils/URI;
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#Element"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#Element"
 
     invoke-direct {v1, v2}, Lcom/sun/org/apache/xml/internal/utils/URI;-><init>(Ljava/lang/String;)V
 
@@ -3373,7 +3373,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3702,7 +3702,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/utils/URI;
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#Content"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#Content"
 
     invoke-direct {v1, v2}, Lcom/sun/org/apache/xml/internal/utils/URI;-><init>(Ljava/lang/String;)V
 
@@ -3758,7 +3758,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3769,7 +3769,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3780,7 +3780,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3796,7 +3796,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3807,7 +3807,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3818,7 +3818,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3829,7 +3829,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3840,7 +3840,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -3852,7 +3852,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/utils/URI;
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#Element"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#Element"
 
     invoke-direct {v1, v2}, Lcom/sun/org/apache/xml/internal/utils/URI;-><init>(Ljava/lang/String;)V
 
@@ -3871,7 +3871,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4165,7 +4165,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4176,7 +4176,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4187,7 +4187,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4203,7 +4203,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4214,7 +4214,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4225,7 +4225,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/encryption/XMLEncryptionException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -4354,7 +4354,7 @@
 
     sget-object v1, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v2, "opmode = ENCRYPT_MODE"
+    const-string v2, "opmode = ENCRYPT_MODE"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
@@ -4390,7 +4390,7 @@
 
     sget-object v1, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v2, "opmode = DECRYPT_MODE"
+    const-string v2, "opmode = DECRYPT_MODE"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
@@ -4411,7 +4411,7 @@
 
     sget-object v1, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v2, "opmode = WRAP_MODE"
+    const-string v2, "opmode = WRAP_MODE"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
@@ -4441,7 +4441,7 @@
 
     sget-object v1, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v2, "opmode = UNWRAP_MODE"
+    const-string v2, "opmode = UNWRAP_MODE"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 

@@ -27,28 +27,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fName:Ljava/lang/String;
 
-    .line 42
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fTargetNamespace:Ljava/lang/String;
 
-    .line 44
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fPublicId:Ljava/lang/String;
 
-    .line 46
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fSystemId:Ljava/lang/String;
 
-    .line 49
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 53
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fNamespaceItem:Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
-    .line 37
     return-void
 .end method
 
@@ -58,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 98
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     if-eqz v0, :cond_0
@@ -86,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fAnnotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     if-eqz v0, :cond_0
@@ -106,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fName:Ljava/lang/String;
 
     return-object v0
@@ -116,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fTargetNamespace:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fNamespaceItem:Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
     return-object v0
@@ -136,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fPublicId:Ljava/lang/String;
 
     return-object v0
@@ -146,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fSystemId:Ljava/lang/String;
 
     return-object v0
@@ -156,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const/16 v0, 0xb
 
     return v0
@@ -167,9 +151,7 @@
     .param p1, "namespaceItem"    # Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
     .prologue
-    .line 116
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XSNotationDecl;->fNamespaceItem:Lmf/org/apache/xerces/xs/XSNamespaceItem;
 
-    .line 117
     return-void
 .end method

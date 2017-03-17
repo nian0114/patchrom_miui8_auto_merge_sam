@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1418
     iput-object p1, p0, Landroid/graphics/Paint$1;->this$0:Landroid/graphics/Paint;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "o2"    # Landroid/graphics/Paint$Gradient;
 
     .prologue
-    .line 1421
     iget v0, p1, Landroid/graphics/Paint$Gradient;->position:F
 
     iget v1, p2, Landroid/graphics/Paint$Gradient;->position:F
@@ -91,7 +89,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1418
     check-cast p1, Landroid/graphics/Paint$Gradient;
 
     .end local p1    # "x0":Ljava/lang/Object;

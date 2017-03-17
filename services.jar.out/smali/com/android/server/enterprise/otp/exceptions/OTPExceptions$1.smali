@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 83
     invoke-static {}, Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;->values()[Lcom/android/server/enterprise/otp/exceptions/OTPExceptions$TlcErrors;
 
     move-result-object v0

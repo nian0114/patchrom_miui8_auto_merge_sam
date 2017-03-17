@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 5821
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$7;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$7;->val$appId:I
@@ -48,18 +47,16 @@
     .locals 4
 
     .prologue
-    .line 5824
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$7;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$7;->val$appId:I
 
     iget v2, p0, Lcom/android/server/pm/PackageManagerService$7;->val$userId:I
 
-    const-string/jumbo v3, "permissions revoked"
+    const-string v3, "permissions revoked"
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->killUid(IILjava/lang/String;)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->access$3500(Lcom/android/server/pm/PackageManagerService;IILjava/lang/String;)V
 
-    .line 5826
     return-void
 .end method

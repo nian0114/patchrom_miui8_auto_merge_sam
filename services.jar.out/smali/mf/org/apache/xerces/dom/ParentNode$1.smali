@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/dom/ParentNode$1;->this$0:Lmf/org/apache/xerces/dom/ParentNode;
 
-    .line 813
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 818
     iget-object v0, p0, Lmf/org/apache/xerces/dom/ParentNode$1;->this$0:Lmf/org/apache/xerces/dom/ParentNode;
 
     # invokes: Lmf/org/apache/xerces/dom/ParentNode;->nodeListGetLength()I
@@ -57,7 +54,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 825
     iget-object v0, p0, Lmf/org/apache/xerces/dom/ParentNode$1;->this$0:Lmf/org/apache/xerces/dom/ParentNode;
 
     # invokes: Lmf/org/apache/xerces/dom/ParentNode;->nodeListItem(I)Lmf/org/w3c/dom/Node;

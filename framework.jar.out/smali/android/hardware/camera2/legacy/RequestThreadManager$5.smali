@@ -30,17 +30,14 @@
     .locals 1
 
     .prologue
-    .line 653
     iput-object p1, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 654
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->mCleanup:Z
 
-    .line 655
     new-instance v0, Landroid/hardware/camera2/legacy/LegacyResultMapper;
 
     invoke-direct {v0}, Landroid/hardware/camera2/legacy/LegacyResultMapper;-><init>()V
@@ -57,25 +54,20 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 659
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->mCleanup:Z
 
     if-eqz v3, :cond_0
 
-    .line 660
     const/4 v3, 0x1
 
-    .line 938
     :goto_0
     return v3
 
-    .line 666
     :cond_0
     const-wide/16 v20, 0x0
 
-    .line 670
     .local v20, "startTime":J
     move-object/from16 v0, p1
 
@@ -83,7 +75,6 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 935
     :pswitch_0
     new-instance v3, Ljava/lang/AssertionError;
 
@@ -119,7 +110,6 @@
 
     throw v3
 
-    .line 672
     :pswitch_1
     move-object/from16 v0, p1
 
@@ -127,7 +117,6 @@
 
     check-cast v2, Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;
 
-    .line 673
     .local v2, "config":Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;
     iget-object v3, v2, Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;->surfaces:Ljava/util/Collection;
 
@@ -139,7 +128,6 @@
 
     move-result v19
 
-    .line 674
     .local v19, "sizes":I
     :goto_1
     move-object/from16 v0, p0
@@ -179,7 +167,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 677
     :try_start_0
     move-object/from16 v0, p0
 
@@ -198,11 +185,9 @@
 
     move-result v22
 
-    .line 679
     .local v22, "success":Z
     if-nez v22, :cond_1
 
-    .line 680
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -216,7 +201,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 681
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -230,7 +214,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 690
     :cond_1
     move-object/from16 v0, p0
 
@@ -241,12 +224,10 @@
     # invokes: Landroid/hardware/camera2/legacy/RequestThreadManager;->configureOutputs(Ljava/util/Collection;)V
     invoke-static {v3, v5}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$600(Landroid/hardware/camera2/legacy/RequestThreadManager;Ljava/util/Collection;)V
 
-    .line 691
     iget-object v3, v2, Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;->condition:Landroid/os/ConditionVariable;
 
     invoke-virtual {v3}, Landroid/os/ConditionVariable;->open()V
 
-    .line 938
     .end local v2    # "config":Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;
     .end local v19    # "sizes":I
     .end local v22    # "success":Z
@@ -257,19 +238,16 @@
 
     goto/16 :goto_0
 
-    .line 673
     .restart local v2    # "config":Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;
     :cond_3
     const/16 v19, 0x0
 
     goto :goto_1
 
-    .line 683
     .restart local v19    # "sizes":I
     :catch_0
     move-exception v9
 
-    .line 684
     .local v9, "e":Ljava/lang/InterruptedException;
     move-object/from16 v0, p0
 
@@ -284,7 +262,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 685
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -300,7 +277,6 @@
 
     goto :goto_2
 
-    .line 698
     .end local v2    # "config":Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;
     .end local v9    # "e":Ljava/lang/InterruptedException;
     .end local v19    # "sizes":I
@@ -318,7 +294,6 @@
 
     move-result-object v10
 
-    .line 701
     .local v10, "handler":Landroid/os/Handler;
     move-object/from16 v0, p0
 
@@ -333,11 +308,9 @@
 
     move-result-object v13
 
-    .line 703
     .local v13, "nextBurst":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/hardware/camera2/legacy/BurstHolder;Ljava/lang/Long;>;"
     if-nez v13, :cond_6
 
-    .line 707
     :try_start_1
     move-object/from16 v0, p0
 
@@ -356,11 +329,9 @@
 
     move-result v22
 
-    .line 709
     .restart local v22    # "success":Z
     if-nez v22, :cond_4
 
-    .line 710
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -374,7 +345,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 712
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -388,7 +358,6 @@
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 721
     :cond_4
     move-object/from16 v0, p0
 
@@ -401,7 +370,6 @@
 
     monitor-enter v5
 
-    .line 723
     :try_start_2
     move-object/from16 v0, p0
 
@@ -416,10 +384,8 @@
 
     move-result-object v13
 
-    .line 726
     if-nez v13, :cond_5
 
-    .line 727
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -431,12 +397,10 @@
 
     invoke-virtual {v3}, Landroid/hardware/camera2/legacy/CameraDeviceState;->setIdle()Z
 
-    .line 728
     monitor-exit v5
 
     goto/16 :goto_2
 
-    .line 730
     :catchall_0
     move-exception v3
 
@@ -446,12 +410,10 @@
 
     throw v3
 
-    .line 714
     .end local v22    # "success":Z
     :catch_1
     move-exception v9
 
-    .line 715
     .restart local v9    # "e":Ljava/lang/InterruptedException;
     move-object/from16 v0, p0
 
@@ -466,7 +428,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 716
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -482,7 +443,6 @@
 
     goto/16 :goto_2
 
-    .line 730
     .end local v9    # "e":Ljava/lang/InterruptedException;
     .restart local v22    # "success":Z
     :cond_5
@@ -491,17 +451,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 733
     .end local v22    # "success":Z
     :cond_6
     if-eqz v13, :cond_7
 
-    .line 735
     const/4 v3, 0x2
 
     invoke-virtual {v10, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 739
     :cond_7
     iget-object v3, v13, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -519,7 +476,6 @@
 
     move-result-object v17
 
-    .line 741
     .local v17, "requests":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/legacy/RequestHolder;>;"
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -540,17 +496,14 @@
 
     check-cast v4, Landroid/hardware/camera2/legacy/RequestHolder;
 
-    .line 742
     .local v4, "holder":Landroid/hardware/camera2/legacy/RequestHolder;
     invoke-virtual {v4}, Landroid/hardware/camera2/legacy/RequestHolder;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object v16
 
-    .line 744
     .local v16, "request":Landroid/hardware/camera2/CaptureRequest;
     const/4 v14, 0x0
 
-    .line 747
     .local v14, "paramsChanged":Z
     move-object/from16 v0, p0
 
@@ -578,7 +531,6 @@
 
     if-eq v3, v0, :cond_b
 
-    .line 751
     :cond_9
     move-object/from16 v0, p0
 
@@ -597,7 +549,6 @@
 
     move-result-object v15
 
-    .line 753
     .local v15, "previewSize":Landroid/util/Size;
     new-instance v12, Landroid/hardware/camera2/legacy/LegacyRequest;
 
@@ -623,11 +574,9 @@
 
     invoke-direct {v12, v3, v0, v15, v5}, Landroid/hardware/camera2/legacy/LegacyRequest;-><init>(Landroid/hardware/camera2/CameraCharacteristics;Landroid/hardware/camera2/CaptureRequest;Landroid/util/Size;Landroid/hardware/Camera$Parameters;)V
 
-    .line 758
     .local v12, "legacyRequest":Landroid/hardware/camera2/legacy/LegacyRequest;
     invoke-static {v12}, Landroid/hardware/camera2/legacy/LegacyMetadataMapper;->convertRequestMetadata(Landroid/hardware/camera2/legacy/LegacyRequest;)V
 
-    .line 761
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -645,7 +594,6 @@
 
     if-nez v3, :cond_a
 
-    .line 763
     :try_start_4
     move-object/from16 v0, p0
 
@@ -662,10 +610,8 @@
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 774
     const/4 v14, 0x1
 
-    .line 775
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -675,7 +621,6 @@
     # setter for: Landroid/hardware/camera2/legacy/RequestThreadManager;->mParams:Landroid/hardware/Camera$Parameters;
     invoke-static {v3, v5}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$1102(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/Camera$Parameters;)Landroid/hardware/Camera$Parameters;
 
-    .line 778
     :cond_a
     move-object/from16 v0, p0
 
@@ -684,7 +629,6 @@
     # setter for: Landroid/hardware/camera2/legacy/RequestThreadManager;->mLastRequest:Landroid/hardware/camera2/legacy/LegacyRequest;
     invoke-static {v3, v12}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$1002(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/camera2/legacy/LegacyRequest;)Landroid/hardware/camera2/legacy/LegacyRequest;
 
-    .line 782
     .end local v12    # "legacyRequest":Landroid/hardware/camera2/legacy/LegacyRequest;
     .end local v15    # "previewSize":Landroid/util/Size;
     :cond_b
@@ -715,11 +659,9 @@
 
     move-result v22
 
-    .line 785
     .restart local v22    # "success":Z
     if-nez v22, :cond_c
 
-    .line 787
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -733,10 +675,8 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     invoke-virtual {v4}, Landroid/hardware/camera2/legacy/RequestHolder;->failRequest()V
 
-    .line 789
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -758,12 +698,10 @@
 
     goto/16 :goto_3
 
-    .line 832
     .end local v22    # "success":Z
     :catch_2
     move-exception v9
 
-    .line 833
     .local v9, "e":Ljava/io/IOException;
     move-object/from16 v0, p0
 
@@ -778,7 +716,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 834
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -794,14 +731,12 @@
 
     goto/16 :goto_2
 
-    .line 764
     .end local v9    # "e":Ljava/io/IOException;
     .restart local v12    # "legacyRequest":Landroid/hardware/camera2/legacy/LegacyRequest;
     .restart local v15    # "previewSize":Landroid/util/Size;
     :catch_3
     move-exception v9
 
-    .line 767
     .local v9, "e":Ljava/lang/RuntimeException;
     move-object/from16 v0, p0
 
@@ -816,10 +751,8 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 768
     invoke-virtual {v4}, Landroid/hardware/camera2/legacy/RequestHolder;->failRequest()V
 
-    .line 769
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -837,7 +770,6 @@
 
     goto/16 :goto_3
 
-    .line 797
     .end local v9    # "e":Ljava/lang/RuntimeException;
     .end local v12    # "legacyRequest":Landroid/hardware/camera2/legacy/LegacyRequest;
     .end local v15    # "previewSize":Landroid/util/Size;
@@ -850,7 +782,6 @@
 
     if-eqz v3, :cond_d
 
-    .line 798
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -858,7 +789,6 @@
     # invokes: Landroid/hardware/camera2/legacy/RequestThreadManager;->doPreviewCapture(Landroid/hardware/camera2/legacy/RequestHolder;)V
     invoke-static {v3, v4}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$1400(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/camera2/legacy/RequestHolder;)V
 
-    .line 800
     :cond_d
     invoke-virtual {v4}, Landroid/hardware/camera2/legacy/RequestHolder;->hasJpegTargets()Z
 
@@ -866,7 +796,6 @@
 
     if-eqz v3, :cond_f
 
-    .line 801
     :goto_4
     move-object/from16 v0, p0
 
@@ -887,7 +816,6 @@
 
     if-nez v3, :cond_e
 
-    .line 804
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -901,7 +829,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 806
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -919,12 +846,10 @@
 
     goto :goto_4
 
-    .line 837
     .end local v22    # "success":Z
     :catch_4
     move-exception v9
 
-    .line 838
     .local v9, "e":Ljava/lang/InterruptedException;
     move-object/from16 v0, p0
 
@@ -939,7 +864,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 839
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -955,7 +879,6 @@
 
     goto/16 :goto_2
 
-    .line 808
     .end local v9    # "e":Ljava/lang/InterruptedException;
     .restart local v22    # "success":Z
     :cond_e
@@ -971,7 +894,6 @@
 
     invoke-virtual {v3}, Landroid/os/ConditionVariable;->close()V
 
-    .line 809
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -979,7 +901,6 @@
     # invokes: Landroid/hardware/camera2/legacy/RequestThreadManager;->doJpegCapturePrepare(Landroid/hardware/camera2/legacy/RequestHolder;)V
     invoke-static {v3, v4}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$1500(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/camera2/legacy/RequestHolder;)V
 
-    .line 818
     :cond_f
     move-object/from16 v0, p0
 
@@ -1003,7 +924,6 @@
 
     invoke-virtual {v3, v0, v5}, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->processFaceDetectMode(Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/Camera$Parameters;)V
 
-    .line 822
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1026,14 +946,12 @@
 
     invoke-virtual {v3, v0, v5}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->processRequestTriggers(Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/Camera$Parameters;)V
 
-    .line 824
     invoke-virtual {v4}, Landroid/hardware/camera2/legacy/RequestHolder;->hasJpegTargets()Z
 
     move-result v3
 
     if-eqz v3, :cond_10
 
-    .line 825
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1041,7 +959,6 @@
     # invokes: Landroid/hardware/camera2/legacy/RequestThreadManager;->doJpegCapture(Landroid/hardware/camera2/legacy/RequestHolder;)V
     invoke-static {v3, v4}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$1800(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/camera2/legacy/RequestHolder;)V
 
-    .line 826
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1059,7 +976,6 @@
 
     if-nez v3, :cond_10
 
-    .line 827
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1073,7 +989,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1089,11 +1004,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_7 .. :try_end_7} :catch_4
     .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 849
     :cond_10
     if-eqz v14, :cond_11
 
-    .line 854
     :try_start_8
     move-object/from16 v0, p0
 
@@ -1117,7 +1030,6 @@
     :try_end_8
     .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_6
 
-    .line 863
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1138,7 +1050,6 @@
 
     invoke-virtual {v3, v5}, Landroid/hardware/camera2/legacy/LegacyRequest;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 866
     :cond_11
     new-instance v8, Landroid/util/MutableLong;
 
@@ -1146,7 +1057,6 @@
 
     invoke-direct {v8, v6, v7}, Landroid/util/MutableLong;-><init>(J)V
 
-    .line 868
     .local v8, "timestampMutable":Landroid/util/MutableLong;
     :try_start_9
     move-object/from16 v0, p0
@@ -1166,10 +1076,8 @@
 
     move-result v22
 
-    .line 872
     if-nez v22, :cond_12
 
-    .line 873
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1183,7 +1091,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1197,7 +1104,6 @@
     :try_end_9
     .catch Ljava/lang/InterruptedException; {:try_start_9 .. :try_end_9} :catch_7
 
-    .line 883
     :cond_12
     move-object/from16 v0, p0
 
@@ -1218,7 +1124,6 @@
 
     move-result-object v18
 
-    .line 892
     .local v18, "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     move-object/from16 v0, p0
 
@@ -1233,7 +1138,6 @@
 
     invoke-virtual {v3, v0}, Landroid/hardware/camera2/legacy/LegacyFocusStateMapper;->mapResultTriggers(Landroid/hardware/camera2/impl/CameraMetadataNative;)V
 
-    .line 894
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1256,14 +1160,12 @@
 
     invoke-virtual {v3, v0, v5}, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mapResultFaces(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/legacy/LegacyRequest;)V
 
-    .line 896
     invoke-virtual {v4}, Landroid/hardware/camera2/legacy/RequestHolder;->requestFailed()Z
 
     move-result v3
 
     if-nez v3, :cond_8
 
-    .line 897
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1281,14 +1183,12 @@
 
     goto/16 :goto_3
 
-    .line 842
     .end local v8    # "timestampMutable":Landroid/util/MutableLong;
     .end local v18    # "result":Landroid/hardware/camera2/impl/CameraMetadataNative;
     .end local v22    # "success":Z
     :catch_5
     move-exception v9
 
-    .line 843
     .local v9, "e":Ljava/lang/RuntimeException;
     move-object/from16 v0, p0
 
@@ -1303,7 +1203,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 844
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1319,13 +1218,11 @@
 
     goto/16 :goto_2
 
-    .line 855
     .end local v9    # "e":Ljava/lang/RuntimeException;
     .restart local v22    # "success":Z
     :catch_6
     move-exception v9
 
-    .line 856
     .restart local v9    # "e":Ljava/lang/RuntimeException;
     move-object/from16 v0, p0
 
@@ -1340,7 +1237,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 857
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1356,13 +1252,11 @@
 
     goto/16 :goto_2
 
-    .line 876
     .end local v9    # "e":Ljava/lang/RuntimeException;
     .restart local v8    # "timestampMutable":Landroid/util/MutableLong;
     :catch_7
     move-exception v9
 
-    .line 877
     .local v9, "e":Ljava/lang/InterruptedException;
     move-object/from16 v0, p0
 
@@ -1377,7 +1271,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 878
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1393,7 +1286,6 @@
 
     goto/16 :goto_2
 
-    .line 908
     .end local v4    # "holder":Landroid/hardware/camera2/legacy/RequestHolder;
     .end local v8    # "timestampMutable":Landroid/util/MutableLong;
     .end local v9    # "e":Ljava/lang/InterruptedException;
@@ -1411,7 +1303,6 @@
 
     iput-boolean v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->mCleanup:Z
 
-    .line 910
     :try_start_a
     move-object/from16 v0, p0
 
@@ -1430,11 +1321,9 @@
 
     move-result v22
 
-    .line 912
     .restart local v22    # "success":Z
     if-nez v22, :cond_13
 
-    .line 913
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1448,7 +1337,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 914
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1462,7 +1350,6 @@
     :try_end_a
     .catch Ljava/lang/InterruptedException; {:try_start_a .. :try_end_a} :catch_8
 
-    .line 921
     .end local v22    # "success":Z
     :cond_13
     :goto_5
@@ -1477,7 +1364,6 @@
 
     if-eqz v3, :cond_14
 
-    .line 922
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1489,7 +1375,6 @@
 
     invoke-virtual {v3}, Landroid/hardware/camera2/legacy/GLThreadManager;->quit()V
 
-    .line 923
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1499,7 +1384,6 @@
     # setter for: Landroid/hardware/camera2/legacy/RequestThreadManager;->mGLThreadManager:Landroid/hardware/camera2/legacy/GLThreadManager;
     invoke-static {v3, v5}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$502(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/camera2/legacy/GLThreadManager;)Landroid/hardware/camera2/legacy/GLThreadManager;
 
-    .line 925
     :cond_14
     move-object/from16 v0, p0
 
@@ -1512,7 +1396,6 @@
 
     if-eqz v3, :cond_15
 
-    .line 926
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1524,7 +1407,6 @@
 
     invoke-virtual {v3}, Landroid/hardware/Camera;->release()V
 
-    .line 927
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1534,7 +1416,6 @@
     # setter for: Landroid/hardware/camera2/legacy/RequestThreadManager;->mCamera:Landroid/hardware/Camera;
     invoke-static {v3, v5}, Landroid/hardware/camera2/legacy/RequestThreadManager;->access$1302(Landroid/hardware/camera2/legacy/RequestThreadManager;Landroid/hardware/Camera;)Landroid/hardware/Camera;
 
-    .line 929
     :cond_15
     move-object/from16 v0, p0
 
@@ -1554,11 +1435,9 @@
 
     goto/16 :goto_2
 
-    .line 916
     :catch_8
     move-exception v9
 
-    .line 917
     .restart local v9    # "e":Ljava/lang/InterruptedException;
     move-object/from16 v0, p0
 
@@ -1573,7 +1452,6 @@
 
     invoke-static {v3, v5, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 918
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/hardware/camera2/legacy/RequestThreadManager$5;->this$0:Landroid/hardware/camera2/legacy/RequestThreadManager;
@@ -1589,7 +1467,6 @@
 
     goto :goto_5
 
-    .line 670
     nop
 
     :pswitch_data_0

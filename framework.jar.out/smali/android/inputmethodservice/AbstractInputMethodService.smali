@@ -28,17 +28,14 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 49
     new-instance v0, Landroid/view/KeyEvent$DispatcherState;
 
     invoke-direct {v0}, Landroid/view/KeyEvent$DispatcherState;-><init>()V
 
     iput-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mDispatcherState:Landroid/view/KeyEvent$DispatcherState;
 
-    .line 93
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mIsPressBtnSIPOnOff:Z
 
     return p1
@@ -63,7 +59,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 202
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mDispatcherState:Landroid/view/KeyEvent$DispatcherState;
 
     return-object v0
@@ -81,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 247
     iget-boolean v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mIsPressBtnSIPOnOff:Z
 
     return v0
@@ -92,19 +85,16 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mInputMethod:Landroid/view/inputmethod/InputMethod;
 
     if-nez v0, :cond_0
 
-    .line 207
     invoke-virtual {p0}, Landroid/inputmethodservice/AbstractInputMethodService;->onCreateInputMethodInterface()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mInputMethod:Landroid/view/inputmethod/InputMethod;
 
-    .line 209
     :cond_0
     new-instance v0, Landroid/inputmethodservice/IInputMethodWrapper;
 
@@ -126,7 +116,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 231
     const/4 v0, 0x0
 
     return v0
@@ -137,7 +126,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 220
     const/4 v0, 0x0
 
     return v0
@@ -148,9 +136,7 @@
     .param p1, "isOn"    # Z
 
     .prologue
-    .line 239
     iput-boolean p1, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mIsPressBtnSIPOnOff:Z
 
-    .line 240
     return-void
 .end method

@@ -23,14 +23,11 @@
     .locals 1
 
     .prologue
-    .line 1293
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1294
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnInterfaceList;->mocanaInterface:Lcom/mocana/vpn/android/velo/IEnterpriseMocanaVpnService;
 
-    .line 1295
     return-void
 .end method

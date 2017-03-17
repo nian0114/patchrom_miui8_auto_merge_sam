@@ -26,17 +26,13 @@
     .param p1, "loader"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarLoader;
 
     .prologue
-    .line 371
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 370
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/parsers/XMLGrammarPreparser$XMLGrammarLoaderContainer;->modCount:I
 
-    .line 372
     iput-object p1, p0, Lmf/org/apache/xerces/parsers/XMLGrammarPreparser$XMLGrammarLoaderContainer;->loader:Lmf/org/apache/xerces/xni/grammars/XMLGrammarLoader;
 
-    .line 373
     return-void
 .end method

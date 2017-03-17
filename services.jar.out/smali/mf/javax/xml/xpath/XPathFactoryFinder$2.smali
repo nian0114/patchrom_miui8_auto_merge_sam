@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$2;->this$0:Lmf/javax/xml/xpath/XPathFactoryFinder;
 
     iput-object p2, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$2;->val$e:Ljava/util/Enumeration;
 
-    .line 515
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 521
     iget-object v0, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$2;->val$e:Ljava/util/Enumeration;
 
     invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -59,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 525
     iget-object v0, p0, Lmf/javax/xml/xpath/XPathFactoryFinder$2;->val$e:Ljava/util/Enumeration;
 
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 517
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

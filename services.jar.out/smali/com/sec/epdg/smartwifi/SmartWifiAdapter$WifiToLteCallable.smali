@@ -29,15 +29,12 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 1500
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteCallable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1501
     iput p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteCallable;->mNetworkType:I
 
-    .line 1502
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .end annotation
 
     .prologue
-    .line 1506
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteCallable;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     iget v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteCallable;->mNetworkType:I
@@ -74,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 1497
     invoke-virtual {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiToLteCallable;->call()Ljava/lang/Boolean;
 
     move-result-object v0

@@ -28,21 +28,16 @@
     .param p5, "countDownInterval"    # J
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->this$0:Lcom/sec/epdg/EpdgTimers;
 
-    .line 144
     invoke-direct {p0, p3, p4, p5, p6}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
-    .line 141
     sget-object v0, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->NOTDEFINED:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->mTimerType:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
-    .line 145
     iput-object p2, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->mTimerType:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
-    .line 146
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->mTimerType:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     return-object v0
@@ -62,7 +56,6 @@
     .locals 4
 
     .prologue
-    .line 156
     const-string v1, "[EPDGTimers]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -91,22 +84,18 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
     iget-object v0, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->mTimerType:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
-    .line 158
     .local v0, "timerType":Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
     sget-object v1, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->NOTDEFINED:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     iput-object v1, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->mTimerType:Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
-    .line 159
     iget-object v1, p0, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->this$0:Lcom/sec/epdg/EpdgTimers;
 
     # invokes: Lcom/sec/epdg/EpdgTimers;->onTimerFinished(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)V
     invoke-static {v1, v0}, Lcom/sec/epdg/EpdgTimers;->access$000(Lcom/sec/epdg/EpdgTimers;Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)V
 
-    .line 160
     return-void
 .end method
 
@@ -115,7 +104,6 @@
     .param p1, "millisUntilFinished"    # J
 
     .prologue
-    .line 152
     const-string v0, "[EPDGTimers]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -144,6 +132,5 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     return-void
 .end method

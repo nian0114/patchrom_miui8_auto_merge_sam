@@ -44,31 +44,22 @@
 
     const/4 v0, 0x0
 
-    .line 3618
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3604
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isKnoxCustom:Z
 
-    .line 3605
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->customAction:I
 
-    .line 3619
     iput p1, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 3620
     iput p2, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 3621
     iput-object v1, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 3622
     iput-object v1, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 3624
     invoke-direct {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->init()V
 
-    .line 3626
     return-void
 .end method
 
@@ -81,31 +72,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3628
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3604
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isKnoxCustom:Z
 
-    .line 3605
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->customAction:I
 
-    .line 3629
     iput p1, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 3630
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 3631
     iput-object p3, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 3632
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 3634
     invoke-direct {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->init()V
 
-    .line 3636
     return-void
 .end method
 
@@ -117,33 +99,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3638
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3604
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isKnoxCustom:Z
 
-    .line 3605
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->customAction:I
 
-    .line 3639
     iput p1, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 3640
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 3641
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 3642
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 3644
     invoke-direct {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->init()V
 
-    .line 3646
     return-void
 .end method
 
@@ -156,39 +129,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3606
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3604
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isKnoxCustom:Z
 
-    .line 3605
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->customAction:I
 
-    .line 3607
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 3608
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 3609
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 3610
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 3611
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isKnoxCustom:Z
 
-    .line 3612
     iput p3, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->customAction:I
 
-    .line 3614
     invoke-direct {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->init()V
 
-    .line 3616
     return-void
 .end method
 
@@ -196,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 3649
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
 
@@ -204,7 +165,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3650
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
 
@@ -219,16 +179,13 @@
 
     if-nez v0, :cond_0
 
-    .line 3651
     const v0, 0x109006c
 
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mLayoutId:I
 
-    .line 3662
     :goto_0
     return-void
 
-    .line 3653
     :cond_0
     const v0, 0x109006a
 
@@ -236,7 +193,6 @@
 
     goto :goto_0
 
-    .line 3656
     :cond_1
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
@@ -252,14 +208,12 @@
 
     if-nez v0, :cond_2
 
-    .line 3657
     const v0, 0x109006d
 
     iput v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mLayoutId:I
 
     goto :goto_0
 
-    .line 3659
     :cond_2
     const v0, 0x109006b
 
@@ -282,7 +236,6 @@
 
     const/4 v10, 0x0
 
-    .line 3687
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
 
@@ -290,7 +243,6 @@
 
     if-nez v7, :cond_8
 
-    .line 3688
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
 
@@ -305,14 +257,12 @@
 
     if-nez v7, :cond_7
 
-    .line 3689
     const v7, 0x109006c
 
     invoke-virtual {p4, v7, p3, v10}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v6
 
-    .line 3701
     .local v6, "v":Landroid/view/View;
     :goto_0
     const v7, 0x1020006
@@ -323,7 +273,6 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 3702
     .local v1, "icon":Landroid/widget/ImageView;
     const v7, 0x102000b
 
@@ -333,7 +282,6 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 3703
     .local v3, "messageView":Landroid/widget/TextView;
     const v7, 0x10203ad
 
@@ -343,7 +291,6 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 3704
     .local v5, "statusView":Landroid/widget/TextView;
     const v7, 0x10203af
 
@@ -353,55 +300,45 @@
 
     check-cast v2, Landroid/widget/FrameLayout;
 
-    .line 3706
     .local v2, "imageFrameLayout":Landroid/widget/FrameLayout;
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->isEnabled()Z
 
     move-result v0
 
-    .line 3707
     .local v0, "enabled":Z
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions$SinglePressAction;->getStatus()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 3709
     .local v4, "status":Ljava/lang/String;
     if-eqz v5, :cond_0
 
-    .line 3710
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-nez v7, :cond_a
 
-    .line 3711
     invoke-virtual {v5, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3712
     if-nez v0, :cond_0
 
     invoke-virtual {v5, v8}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 3719
     :cond_0
     :goto_1
     iget-object v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v7, :cond_b
 
-    .line 3720
     iget-object v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3721
     sget-object v7, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 3723
     iget v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -410,28 +347,23 @@
 
     invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 3730
     :cond_1
     :goto_2
     if-eqz v3, :cond_2
 
-    .line 3731
     iget-object v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v7, :cond_c
 
-    .line 3732
     iget-object v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3736
     :goto_3
     if-nez v0, :cond_2
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 3739
     :cond_2
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
@@ -442,12 +374,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 3740
     iget v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessageResId:I
 
     if-eqz v7, :cond_3
 
-    .line 3741
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,24 +418,19 @@
 
     invoke-virtual {v2, v7}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 3745
     :cond_3
     invoke-virtual {v2, v0}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 3746
     if-eqz v0, :cond_d
 
-    .line 3747
     const/4 v7, 0x1
 
     invoke-virtual {v2, v7}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
-    .line 3748
     const/high16 v7, 0x3f800000    # 1.0f
 
     invoke-virtual {v2, v7}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 3755
     :cond_4
     :goto_4
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
@@ -515,7 +440,6 @@
 
     if-nez v7, :cond_6
 
-    .line 3756
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
 
@@ -530,10 +454,8 @@
 
     if-nez v7, :cond_6
 
-    .line 3757
     if-eqz v3, :cond_5
 
-    .line 3758
     const-string v7, "#FF000000"
 
     invoke-static {v7}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -542,11 +464,9 @@
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 3760
     :cond_5
     if-eqz v5, :cond_6
 
-    .line 3761
     const-string v7, "#6B6F72"
 
     invoke-static {v7}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -555,11 +475,9 @@
 
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 3765
     :cond_6
     return-object v6
 
-    .line 3691
     .end local v0    # "enabled":Z
     .end local v1    # "icon":Landroid/widget/ImageView;
     .end local v2    # "imageFrameLayout":Landroid/widget/FrameLayout;
@@ -577,7 +495,6 @@
     .restart local v6    # "v":Landroid/view/View;
     goto/16 :goto_0
 
-    .line 3694
     .end local v6    # "v":Landroid/view/View;
     :cond_8
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
@@ -594,7 +511,6 @@
 
     if-nez v7, :cond_9
 
-    .line 3695
     const v7, 0x109006d
 
     invoke-virtual {p4, v7, p3, v10}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -604,7 +520,6 @@
     .restart local v6    # "v":Landroid/view/View;
     goto/16 :goto_0
 
-    .line 3697
     .end local v6    # "v":Landroid/view/View;
     :cond_9
     const v7, 0x109006b
@@ -616,7 +531,6 @@
     .restart local v6    # "v":Landroid/view/View;
     goto/16 :goto_0
 
-    .line 3714
     .restart local v0    # "enabled":Z
     .restart local v1    # "icon":Landroid/widget/ImageView;
     .restart local v2    # "imageFrameLayout":Landroid/widget/FrameLayout;
@@ -631,20 +545,17 @@
 
     if-nez v7, :cond_0
 
-    .line 3715
     const/16 v7, 0x8
 
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_1
 
-    .line 3725
     :cond_b
     iget v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
     if-eqz v7, :cond_1
 
-    .line 3726
     iget v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -653,7 +564,6 @@
 
     invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3727
     iget v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mIconResId:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -664,7 +574,6 @@
 
     goto/16 :goto_2
 
-    .line 3734
     :cond_c
     iget v7, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessageResId:I
 
@@ -672,11 +581,9 @@
 
     goto/16 :goto_3
 
-    .line 3750
     :cond_d
     invoke-virtual {v2, v10}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
-    .line 3751
     const v7, 0x3ecccccd    # 0.4f
 
     invoke-virtual {v2, v7}, Landroid/widget/FrameLayout;->setAlpha(F)V
@@ -689,15 +596,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3676
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    .line 3677
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 3679
     :goto_0
     return-object v0
 
@@ -715,7 +619,6 @@
     .locals 1
 
     .prologue
-    .line 3670
     const/4 v0, 0x0
 
     return-object v0
@@ -725,7 +628,6 @@
     .locals 1
 
     .prologue
-    .line 3666
     const/4 v0, 0x1
 
     return v0

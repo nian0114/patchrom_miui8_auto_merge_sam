@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2139
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$7;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -42,19 +41,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2142
     const/4 v0, 0x0
 
-    .line 2144
     .local v0, "packageName":[Ljava/lang/String;
     const/4 v1, -0x1
 
     if-eq p1, v1, :cond_1
 
-    .line 2145
     if-eqz p3, :cond_1
 
-    .line 2146
     iget-object v1, p0, Lcom/android/server/LpnetManagerService$7;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->pm:Landroid/content/pm/PackageManager;
@@ -66,19 +61,16 @@
 
     move-result-object v0
 
-    .line 2147
     if-eqz v0, :cond_1
 
     array-length v1, v0
 
     if-lez v1, :cond_1
 
-    .line 2148
     aget-object v1, v0, v4
 
     if-eqz v1, :cond_1
 
-    .line 2149
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -110,7 +102,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2150
     :cond_0
     iget-object v1, p0, Lcom/android/server/LpnetManagerService$7;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -119,7 +110,6 @@
     # invokes: Lcom/android/server/LpnetManagerService;->freezerActionNotificationBroadcast(Ljava/lang/String;I)V
     invoke-static {v1, v2, v4}, Lcom/android/server/LpnetManagerService;->access$5700(Lcom/android/server/LpnetManagerService;Ljava/lang/String;I)V
 
-    .line 2155
     :cond_1
     return-void
 .end method
@@ -130,7 +120,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 2165
     return-void
 .end method
 
@@ -141,6 +130,5 @@
     .param p3, "procState"    # I
 
     .prologue
-    .line 2160
     return-void
 .end method

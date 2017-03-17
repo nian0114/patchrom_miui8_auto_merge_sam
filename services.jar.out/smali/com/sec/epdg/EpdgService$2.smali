@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1264
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$2;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1273
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,14 +50,12 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1267
     const-string v0, "[EPDGService]"
 
-    const-string/jumbo v1, "onReceive action: ACTION_IMS_ON_SIMLOADED"
+    const-string v1, "onReceive action: ACTION_IMS_ON_SIMLOADED"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1268
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$2;->this$0:Lcom/sec/epdg/EpdgService;
 
     const/16 v1, 0x3fd
@@ -67,6 +63,5 @@
     # invokes: Lcom/sec/epdg/EpdgService;->handleImsStateChange(I)V
     invoke-static {v0, v1}, Lcom/sec/epdg/EpdgService;->access$1200(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 1269
     return-void
 .end method

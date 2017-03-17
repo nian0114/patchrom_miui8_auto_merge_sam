@@ -86,54 +86,44 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 61
     sput v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sColors:I
 
-    .line 70
     sput v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontPadding:I
 
-    .line 74
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
-    .line 75
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sRect:Landroid/graphics/Rect;
 
-    .line 76
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sRectF:Landroid/graphics/RectF;
 
-    .line 77
     const/4 v0, 0x2
 
     new-array v0, v0, [C
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sFirstChar:[C
 
-    .line 92
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
-    .line 99
     sput v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sSafetyColors:I
 
-    .line 100
     sput v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sWarningColors:I
 
-    .line 101
     sput v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sDangerColors:I
 
     return-void
@@ -152,65 +142,50 @@
 
     const/4 v2, 0x1
 
-    .line 110
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 71
     iput v4, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontSize:I
 
-    .line 85
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mScale:F
 
-    .line 86
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mOffset:F
 
-    .line 87
     iput-boolean v4, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mIsCircle:Z
 
-    .line 88
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mContactId:J
 
-    .line 96
     iput-boolean v4, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mAvailableNumber:Z
 
-    .line 107
     iput v5, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->intrinsicWidth:I
 
-    .line 108
     iput v5, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->intrinsicHeight:I
 
-    .line 111
     iput-object p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mResources:Landroid/content/res/Resources;
 
-    .line 112
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 116
     sget v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sColors:I
 
     if-nez v0, :cond_0
 
-    .line 117
     const v0, 0x106017d
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -219,7 +194,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sColors:I
 
-    .line 118
     const v0, 0x1060181
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -228,7 +202,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sDefaultColor:I
 
-    .line 119
     const v0, 0x106000b
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -237,7 +210,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontColor:I
 
-    .line 120
     const v0, 0x1130004
 
     invoke-virtual {p1, v0, v2, v2}, Landroid/content/res/Resources;->getFraction(III)F
@@ -246,7 +218,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sLetterToTileRatio:F
 
-    .line 121
     const v0, 0x105029e
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -255,10 +226,8 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontPadding:I
 
-    .line 122
     invoke-direct {p0, p1}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->preloadDefaultPhotos(Landroid/content/res/Resources;)V
 
-    .line 124
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     const v1, 0x1040a6e
@@ -273,19 +242,16 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 126
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 127
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 129
     const v0, 0x1060182
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -294,7 +260,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sSafetyColors:I
 
-    .line 130
     const v0, 0x1060183
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -303,7 +268,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sWarningColors:I
 
-    .line 131
     const v0, 0x1060184
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -312,7 +276,6 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sDangerColors:I
 
-    .line 132
     const v0, 0x108058e
 
     invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -321,7 +284,6 @@
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->SPAM_LEVEL_ICON_SAFETY:Landroid/graphics/Bitmap;
 
-    .line 134
     const v0, 0x108058f
 
     invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -330,7 +292,6 @@
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->SPAM_LEVEL_ICON_WARNING:Landroid/graphics/Bitmap;
 
-    .line 136
     const v0, 0x1080590
 
     invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -339,7 +300,6 @@
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->SPAM_LEVEL_ICON_DANGER:Landroid/graphics/Bitmap;
 
-    .line 140
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
@@ -347,7 +307,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 141
     const v0, 0x106017c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
@@ -356,24 +315,20 @@
 
     sput v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokeColor:I
 
-    .line 142
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
     sget v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokeColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 143
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 144
     sput v4, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokeWidth:I
 
-    .line 145
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
     sget v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokeWidth:I
@@ -382,12 +337,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 146
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 147
     return-void
 .end method
 
@@ -396,10 +349,8 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 369
     packed-switch p1, :pswitch_data_0
 
-    .line 377
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->getColor()I
 
     move-result v0
@@ -407,25 +358,21 @@
     :goto_0
     return v0
 
-    .line 371
     :pswitch_0
     sget v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sSafetyColors:I
 
     goto :goto_0
 
-    .line 373
     :pswitch_1
     sget v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sWarningColors:I
 
     goto :goto_0
 
-    .line 375
     :pswitch_2
     sget v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sDangerColors:I
 
     goto :goto_0
 
-    .line 369
     nop
 
     :pswitch_data_0
@@ -441,10 +388,8 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 382
     packed-switch p1, :pswitch_data_0
 
-    .line 390
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->getBitmapForDefaultAvatar()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -452,25 +397,21 @@
     :goto_0
     return-object v0
 
-    .line 384
     :pswitch_0
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->SPAM_LEVEL_ICON_SAFETY:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 386
     :pswitch_1
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->SPAM_LEVEL_ICON_WARNING:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 388
     :pswitch_2
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->SPAM_LEVEL_ICON_DANGER:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 382
     nop
 
     :pswitch_data_0
@@ -487,12 +428,10 @@
     .param p2, "fontStyle"    # I
 
     .prologue
-    .line 150
     invoke-static {p1, p2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    .line 151
     .local v0, "font":Landroid/graphics/Typeface;
     return-object v0
 .end method
@@ -502,7 +441,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 353
     invoke-static {p0}, Ljava/lang/Character;->isLetter(C)Z
 
     move-result v0
@@ -517,35 +455,30 @@
     .prologue
     const v1, 0x10802a0
 
-    .line 395
     invoke-static {p1, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR:Landroid/graphics/Bitmap;
 
-    .line 397
     invoke-static {p1, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR_1:Landroid/graphics/Bitmap;
 
-    .line 399
     invoke-static {p1, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR_2:Landroid/graphics/Bitmap;
 
-    .line 401
     invoke-static {p1, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR_3:Landroid/graphics/Bitmap;
 
-    .line 423
     return-void
 .end method
 
@@ -556,12 +489,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 156
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 157
     .local v0, "bounds":Landroid/graphics/Rect;
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -569,11 +500,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 163
     :goto_0
     return-void
 
-    .line 162
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->drawLetterTile(Landroid/graphics/Canvas;)V
 
@@ -590,12 +519,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 174
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->copyBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 178
     .local v0, "destRect":Landroid/graphics/Rect;
     iget v2, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mScale:F
 
@@ -621,7 +548,6 @@
 
     float-to-int v1, v2
 
-    .line 179
     .local v1, "halfLength":I
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
@@ -681,19 +607,16 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 185
     sget-object v2, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2, v8, v8, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 186
     sget-object v2, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sRect:Landroid/graphics/Rect;
 
     iget-object v3, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p4, p1, v2, v0, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 187
     return-void
 .end method
 
@@ -708,12 +631,10 @@
 
     const/4 v2, 0x0
 
-    .line 192
     iget v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mSpamLevel:I
 
     if-lez v0, :cond_2
 
-    .line 193
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mSpamLevel:I
@@ -724,7 +645,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 197
     :goto_0
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
@@ -736,12 +656,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 198
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v8
 
-    .line 200
     .local v8, "bounds":Landroid/graphics/Rect;
     new-instance v11, Landroid/graphics/RectF;
 
@@ -779,7 +697,6 @@
 
     invoke-direct {v11, v0, v1, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 202
     .local v11, "strokeRect":Landroid/graphics/RectF;
     invoke-virtual {v8}, Landroid/graphics/Rect;->width()I
 
@@ -793,13 +710,11 @@
 
     move-result v10
 
-    .line 204
     .local v10, "minDimension":I
     iget-boolean v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mIsCircle:Z
 
     if-eqz v0, :cond_3
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
@@ -810,23 +725,19 @@
 
     move-result v9
 
-    .line 206
     .local v9, "cornerRadius":F
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sRectF:Landroid/graphics/RectF;
 
     invoke-virtual {v0, v8}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 207
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v11, v9, v9, v0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 208
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v11, v9, v9, v0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 215
     .end local v9    # "cornerRadius":F
     :goto_1
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mDisplayName:Ljava/lang/String;
@@ -857,11 +768,9 @@
 
     if-eqz v0, :cond_5
 
-    .line 219
     :cond_0
     const/4 v3, 0x1
 
-    .line 220
     .local v3, "numberOfLetters":I
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sFirstChar:[C
 
@@ -877,7 +786,6 @@
 
     aput-char v1, v0, v2
 
-    .line 221
     iget-boolean v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mAvailableNumber:Z
 
     if-eqz v0, :cond_1
@@ -890,10 +798,8 @@
 
     if-le v0, v12, :cond_1
 
-    .line 222
     const/4 v3, 0x2
 
-    .line 223
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sFirstChar:[C
 
     iget-object v1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mDisplayName:Ljava/lang/String;
@@ -908,13 +814,11 @@
 
     aput-char v1, v0, v12
 
-    .line 226
     :cond_1
     iget v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontSize:I
 
     if-eqz v0, :cond_4
 
-    .line 227
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontSize:I
@@ -923,7 +827,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 234
     :goto_2
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
@@ -933,14 +836,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Paint;->getTextBounds([CIILandroid/graphics/Rect;)V
 
-    .line 235
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
 
     sget v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 239
     sget-object v1, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sFirstChar:[C
 
     invoke-virtual {v8}, Landroid/graphics/Rect;->centerX()I
@@ -987,12 +888,10 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->drawText([CIIFFLandroid/graphics/Paint;)V
 
-    .line 252
     .end local v3    # "numberOfLetters":I
     :goto_3
     return-void
 
-    .line 195
     .end local v8    # "bounds":Landroid/graphics/Rect;
     .end local v10    # "minDimension":I
     .end local v11    # "strokeRect":Landroid/graphics/RectF;
@@ -1007,7 +906,6 @@
 
     goto/16 :goto_0
 
-    .line 210
     .restart local v8    # "bounds":Landroid/graphics/Rect;
     .restart local v10    # "minDimension":I
     .restart local v11    # "strokeRect":Landroid/graphics/RectF;
@@ -1016,14 +914,12 @@
 
     invoke-virtual {p1, v8, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 211
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v8, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     goto/16 :goto_1
 
-    .line 230
     .restart local v3    # "numberOfLetters":I
     :cond_4
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sPaint:Landroid/graphics/Paint;
@@ -1042,21 +938,18 @@
 
     goto :goto_2
 
-    .line 245
     .end local v3    # "numberOfLetters":I
     :cond_5
     iget v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mSpamLevel:I
 
     if-lez v0, :cond_6
 
-    .line 246
     iget v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mSpamLevel:I
 
     invoke-direct {p0, v0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->getSpamLevelIcon(I)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 250
     .local v7, "bitmap":Landroid/graphics/Bitmap;
     :goto_4
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->getWidth()I
@@ -1071,7 +964,6 @@
 
     goto :goto_3
 
-    .line 248
     .end local v7    # "bitmap":Landroid/graphics/Bitmap;
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->getBitmapForDefaultAvatar()Landroid/graphics/Bitmap;
@@ -1086,7 +978,6 @@
     .locals 4
 
     .prologue
-    .line 255
     iget-wide v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mContactId:J
 
     const-wide/16 v2, 0x1
@@ -1095,14 +986,11 @@
 
     if-gez v0, :cond_0
 
-    .line 256
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR:Landroid/graphics/Bitmap;
 
-    .line 266
     :goto_0
     return-object v0
 
-    .line 258
     :cond_0
     iget-wide v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mContactId:J
 
@@ -1114,30 +1002,25 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 266
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 260
     :pswitch_0
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR_1:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 262
     :pswitch_1
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR_2:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 264
     :pswitch_2
     sget-object v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->DEFAULT_AVATAR_3:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 258
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1150,7 +1033,6 @@
     .locals 4
 
     .prologue
-    .line 271
     iget-wide v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mContactId:J
 
     const-wide/16 v2, -0x1
@@ -1163,11 +1045,9 @@
 
     if-nez v0, :cond_1
 
-    .line 272
     :cond_0
     sget v0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sDefaultColor:I
 
-    .line 274
     :goto_0
     return v0
 
@@ -1193,7 +1073,6 @@
     .locals 1
 
     .prologue
-    .line 439
     iget v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->intrinsicHeight:I
 
     if-lez v0, :cond_0
@@ -1215,7 +1094,6 @@
     .locals 1
 
     .prologue
-    .line 434
     iget v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->intrinsicWidth:I
 
     if-lez v0, :cond_0
@@ -1237,7 +1115,6 @@
     .locals 1
 
     .prologue
-    .line 292
     const/4 v0, -0x1
 
     return v0
@@ -1248,24 +1125,20 @@
     .param p1, "bounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 427
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 428
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->intrinsicWidth:I
 
-    .line 429
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->intrinsicHeight:I
 
-    .line 430
     return-void
 .end method
 
@@ -1274,12 +1147,10 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 282
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 283
     return-void
 .end method
 
@@ -1288,10 +1159,8 @@
     .param p1, "availableNumber"    # Z
 
     .prologue
-    .line 361
     iput-boolean p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mAvailableNumber:Z
 
-    .line 362
     return-void
 .end method
 
@@ -1300,12 +1169,10 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 287
     iget-object v0, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 288
     return-void
 .end method
 
@@ -1315,10 +1182,8 @@
     .param p2, "identifier"    # Ljava/lang/String;
 
     .prologue
-    .line 326
     iput-object p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mDisplayName:Ljava/lang/String;
 
-    .line 328
     return-void
 .end method
 
@@ -1327,10 +1192,8 @@
     .param p1, "contactId"    # J
 
     .prologue
-    .line 339
     iput-wide p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mContactId:J
 
-    .line 340
     return-void
 .end method
 
@@ -1339,10 +1202,8 @@
     .param p1, "isCircle"    # Z
 
     .prologue
-    .line 335
     iput-boolean p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mIsCircle:Z
 
-    .line 336
     return-void
 .end method
 
@@ -1351,10 +1212,8 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 357
     iput p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->sTileFontSize:I
 
-    .line 358
     return-void
 .end method
 
@@ -1363,7 +1222,6 @@
     .param p1, "offset"    # F
 
     .prologue
-    .line 321
     const/high16 v0, -0x41000000    # -0.5f
 
     cmpl-float v0, p1, v0
@@ -1381,13 +1239,10 @@
     :goto_0
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
-    .line 322
     iput p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mOffset:F
 
-    .line 323
     return-void
 
-    .line 321
     :cond_0
     const/4 v0, 0x0
 
@@ -1399,10 +1254,8 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 303
     iput p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mScale:F
 
-    .line 304
     return-void
 .end method
 
@@ -1411,9 +1264,7 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 365
     iput p1, p0, Lcom/android/server/wifi/p2p/common/LetterTileDrawable;->mSpamLevel:I
 
-    .line 366
     return-void
 .end method

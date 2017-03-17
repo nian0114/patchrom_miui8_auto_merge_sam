@@ -17,9 +17,9 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#dsa-sha1"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#dsa-sha1"
 
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
 
     invoke-direct {p0, p1, v0, v1}, Lcom/sun/org/apache/xml/internal/security/signature/SignedInfo;-><init>(Lorg/w3c/dom/Document;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -183,7 +183,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -191,7 +191,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v1, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -199,7 +199,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v1, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -207,7 +207,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
+    const-string v1, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -306,7 +306,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -317,7 +317,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -328,7 +328,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -475,7 +475,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v3, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -483,7 +483,7 @@
 
     if-nez v3, :cond_2
 
-    const-string/jumbo v3, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
+    const-string v3, "http://www.w3.org/2001/10/xml-exc-c14n#WithComments"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -496,7 +496,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v2, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     const-string v3, "InclusiveNamespaces"
 
@@ -509,7 +509,7 @@
     :try_start_0
     new-instance v2, Lcom/sun/org/apache/xml/internal/security/transforms/params/InclusiveNamespaces;
 
-    const-string/jumbo v3, "http://www.w3.org/2001/10/xml-exc-c14n#"
+    const-string v3, "http://www.w3.org/2001/10/xml-exc-c14n#"
 
     invoke-direct {v2, v1, v3}, Lcom/sun/org/apache/xml/internal/security/transforms/params/InclusiveNamespaces;-><init>(Lorg/w3c/dom/Element;Ljava/lang/String;)V
 

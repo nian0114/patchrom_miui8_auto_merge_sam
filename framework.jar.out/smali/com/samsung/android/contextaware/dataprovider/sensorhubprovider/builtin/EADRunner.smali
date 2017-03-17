@@ -23,17 +23,14 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 75
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 41
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/EADRunner;->mMode:F
 
-    .line 76
     return-void
 .end method
 
@@ -43,13 +40,10 @@
     .locals 0
 
     .prologue
-    .line 257
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 258
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 259
     return-void
 .end method
 
@@ -57,13 +51,10 @@
     .locals 0
 
     .prologue
-    .line 246
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 247
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 248
     return-void
 .end method
 
@@ -71,13 +62,10 @@
     .locals 0
 
     .prologue
-    .line 232
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 234
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 235
     return-void
 .end method
 
@@ -85,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 86
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_EAD:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -99,7 +86,6 @@
     .locals 3
 
     .prologue
-    .line 124
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -141,7 +127,6 @@
     .locals 2
 
     .prologue
-    .line 112
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/EADRunner;->mMode:F
 
     const v1, 0x461c4000    # 10000.0f
@@ -163,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 271
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/EADRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -174,7 +158,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 272
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -186,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/16 v0, 0x34
 
     return v0
@@ -211,24 +193,20 @@
 
     const-wide v6, 0x40c3880000000000L    # 10000.0
 
-    .line 181
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 182
     .local v2, "outerList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/ArrayList<Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;>;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 184
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;>;"
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/EADRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 186
     .local v1, "names":[Ljava/lang/String;
     new-instance v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;
 
@@ -247,7 +225,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 187
     new-instance v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;
 
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;->FLOAT4:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;
@@ -265,7 +242,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
     new-instance v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;
 
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;->FLOAT4:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;
@@ -283,7 +259,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 190
     new-instance v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;
 
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;->LONG:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;
@@ -301,7 +276,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 191
     new-instance v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax;
 
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;->INTEGER:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;
@@ -319,10 +293,8 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 193
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 195
     return-object v2
 .end method
 
@@ -330,7 +302,6 @@
     .locals 0
 
     .prologue
-    .line 208
     return-object p0
 .end method
 
@@ -338,7 +309,6 @@
     .locals 0
 
     .prologue
-    .line 220
     return-object p0
 .end method
 
@@ -361,16 +331,13 @@
 
     const/4 v5, 0x1
 
-    .line 142
     const/4 v2, 0x1
 
-    .line 143
     .local v2, "result":Z
     const/16 v3, 0x42
 
     if-ne p1, v3, :cond_0
 
-    .line 144
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -384,7 +351,6 @@
 
     move-result v1
 
-    .line 146
     .local v1, "mode":F
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -410,10 +376,8 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 148
     iput v1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/EADRunner;->mMode:F
 
-    .line 150
     const v3, 0x461c4000    # 10000.0f
 
     mul-float/2addr v3, v1
@@ -428,19 +392,16 @@
 
     invoke-virtual {p0, v6, v7, v5, v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/EADRunner;->sendPropertyValueToSensorHub(BBB[B)Z
 
-    .line 169
     .end local v1    # "mode":F
     :goto_0
     return v2
 
-    .line 155
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_0
     const/16 v3, 0x43
 
     if-ne p1, v3, :cond_1
 
-    .line 156
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -454,7 +415,6 @@
 
     move-result v0
 
-    .line 159
     .local v0, "duration":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -476,7 +436,6 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 161
     const/4 v3, 0x2
 
     invoke-static {v0, v5}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -487,7 +446,6 @@
 
     goto :goto_0
 
-    .line 167
     .end local v0    # "duration":I
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_1

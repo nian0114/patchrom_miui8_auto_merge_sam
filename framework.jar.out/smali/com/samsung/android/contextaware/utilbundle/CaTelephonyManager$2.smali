@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 172
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->values()[Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
     move-result-object v0

@@ -74,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 55
     const-string v0, "PluginManager"
 
     sput-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
@@ -89,45 +88,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object v1, p0, Landroid/app/epm/PluginManager;->mContext:Landroid/content/Context;
 
-    .line 60
     iput-object v1, p0, Landroid/app/epm/PluginManager;->pluginDetails:Ljava/util/HashMap;
 
-    .line 95
     new-instance v1, Landroid/app/epm/PluginManager$1;
 
     invoke-direct {v1, p0}, Landroid/app/epm/PluginManager$1;-><init>(Landroid/app/epm/PluginManager;)V
 
     iput-object v1, p0, Landroid/app/epm/PluginManager;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 671
     new-instance v1, Landroid/app/epm/PluginManager$2;
 
     invoke-direct {v1, p0}, Landroid/app/epm/PluginManager$2;-><init>(Landroid/app/epm/PluginManager;)V
 
     iput-object v1, p0, Landroid/app/epm/PluginManager;->mCallback:Landroid/app/epm/IPluginManagerCallback;
 
-    .line 83
     iput-object p1, p0, Landroid/app/epm/PluginManager;->mContext:Landroid/content/Context;
 
-    .line 85
     sget-object v1, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     const-string v2, "PluginManager Constructor"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 87
     .local v0, "i":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -139,7 +129,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 88
     iget-object v1, p0, Landroid/app/epm/PluginManager;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/app/epm/PluginManager;->mConnection:Landroid/content/ServiceConnection;
@@ -148,7 +137,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 92
     return-void
 .end method
 
@@ -157,7 +145,6 @@
     .param p0, "x0"    # Lcom/samsung/android/thememanager/IThemeManager;
 
     .prologue
-    .line 53
     sput-object p0, Landroid/app/epm/PluginManager;->sService:Lcom/samsung/android/thememanager/IThemeManager;
 
     return-object p0
@@ -168,7 +155,6 @@
     .param p0, "x0"    # Landroid/app/epm/PluginManager;
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
 
     return-object v0
@@ -178,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -188,20 +173,17 @@
     .locals 5
 
     .prologue
-    .line 510
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 512
     const/16 v3, 0x9
 
     :try_start_0
     new-array v0, v3, [Ljava/lang/String;
 
-    .line 513
     .local v0, "PackageArr":[Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -211,16 +193,13 @@
 
     move-result-object v0
 
-    .line 514
     const/4 v3, 0x0
 
     aget-object v1, v0, v3
 
-    .line 515
     .local v1, "currentPackage":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 516
     const-string v3, "#"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -233,21 +212,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 522
     .end local v0    # "PackageArr":[Ljava/lang/String;
     .end local v1    # "currentPackage":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 518
     :catch_0
     move-exception v2
 
-    .line 519
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 522
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v3, 0x0
@@ -262,19 +237,16 @@
     .end annotation
 
     .prologue
-    .line 123
     sget-object v0, Landroid/app/epm/PluginManager;->mInstance:Landroid/app/epm/PluginManager;
 
     if-nez v0, :cond_0
 
-    .line 124
     new-instance v0, Landroid/app/epm/PluginManager;
 
     invoke-direct {v0, p0}, Landroid/app/epm/PluginManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/app/epm/PluginManager;->mInstance:Landroid/app/epm/PluginManager;
 
-    .line 126
     :cond_0
     sget-object v0, Landroid/app/epm/PluginManager;->mInstance:Landroid/app/epm/PluginManager;
 
@@ -298,7 +270,6 @@
     .end annotation
 
     .prologue
-    .line 558
     const/4 v0, 0x0
 
     return-object v0
@@ -309,7 +280,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 239
     return-void
 .end method
 
@@ -317,7 +287,6 @@
     .locals 3
 
     .prologue
-    .line 69
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -342,15 +311,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     sget-object v0, Landroid/app/epm/PluginManager;->sService:Lcom/samsung/android/thememanager/IThemeManager;
 
     if-eqz v0, :cond_0
 
-    .line 71
     sget-object v0, Landroid/app/epm/PluginManager;->sService:Lcom/samsung/android/thememanager/IThemeManager;
 
-    .line 79
     :goto_0
     return-object v0
 
@@ -365,14 +331,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 288
     iget-object v3, p0, Landroid/app/epm/PluginManager;->mComponentPackageMap:Ljava/util/HashMap;
 
     if-eqz v3, :cond_1
 
     if-eqz p1, :cond_1
 
-    .line 289
     sget-object v3, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -397,10 +361,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     iget-object v3, p0, Landroid/app/epm/PluginManager;->mComponentPackageMap:Ljava/util/HashMap;
 
-    const-string/jumbo v4, "themes"
+    const-string v4, "themes"
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -408,7 +371,6 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 291
     .local v0, "components":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v0, :cond_1
 
@@ -418,7 +380,6 @@
 
     if-lez v3, :cond_1
 
-    .line 292
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -437,7 +398,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 293
     .local v2, "s":Ljava/lang/String;
     const-string v3, "#"
 
@@ -455,7 +415,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 294
     const-string v3, "#"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -466,7 +425,6 @@
 
     aget-object v3, v3, v4
 
-    .line 299
     .end local v0    # "components":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "s":Ljava/lang/String;
@@ -486,12 +444,10 @@
     .param p3, "why"    # I
 
     .prologue
-    .line 625
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 626
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -503,22 +459,18 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 628
     const-string v1, "PACKAGE"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 629
-    const-string/jumbo v1, "isTrial"
+    const-string v1, "isTrial"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 630
-    const-string/jumbo v1, "why"
+    const-string v1, "why"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 631
     const-string v1, "TITLE"
 
     invoke-direct {p0, p1}, Landroid/app/epm/PluginManager;->getTitleFromPackageName(Ljava/lang/String;)Ljava/lang/String;
@@ -527,12 +479,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 632
     iget-object v1, p0, Landroid/app/epm/PluginManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 633
     return-void
 .end method
 
@@ -544,7 +494,6 @@
     .param p2, "isTrial"    # Z
 
     .prologue
-    .line 615
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -567,12 +516,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 617
     const/16 v0, 0x65
 
     invoke-direct {p0, p1, p2, v0}, Landroid/app/epm/PluginManager;->showThemeProgress(Ljava/lang/String;ZI)V
 
-    .line 620
     const/4 v0, 0x1
 
     return v0
@@ -585,7 +532,6 @@
     .param p3, "isTrial"    # Z
 
     .prologue
-    .line 580
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -608,14 +554,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 583
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -627,15 +571,12 @@
 
     move-result v0
 
-    .line 588
     :goto_0
     return v0
 
-    .line 584
     :catch_0
     move-exception v0
 
-    .line 588
     :cond_0
     const/4 v0, 0x0
 
@@ -647,14 +588,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 420
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 422
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -664,12 +603,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 428
     :cond_0
     :goto_0
     return-void
 
-    .line 423
     :catch_0
     move-exception v0
 
@@ -680,7 +617,6 @@
     .locals 3
 
     .prologue
-    .line 461
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -707,14 +643,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 464
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -726,15 +660,12 @@
 
     move-result-object v0
 
-    .line 469
     :goto_0
     return-object v0
 
-    .line 465
     :catch_0
     move-exception v0
 
-    .line 469
     :cond_0
     const/4 v0, 0x0
 
@@ -754,7 +685,6 @@
     .end annotation
 
     .prologue
-    .line 479
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -781,14 +711,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 482
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -800,15 +728,12 @@
 
     move-result-object v0
 
-    .line 487
     :goto_0
     return-object v0
 
-    .line 483
     :catch_0
     move-exception v0
 
-    .line 487
     :cond_0
     const/4 v0, 0x0
 
@@ -820,7 +745,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 191
     iget-object v1, p0, Landroid/app/epm/PluginManager;->pluginDetails:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -829,7 +753,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 192
     .local v0, "status":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -869,14 +792,12 @@
     .end annotation
 
     .prologue
-    .line 644
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 646
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -888,15 +809,12 @@
 
     move-result-object v0
 
-    .line 650
     :goto_0
     return-object v0
 
-    .line 647
     :catch_0
     move-exception v0
 
-    .line 650
     :cond_0
     const/4 v0, 0x0
 
@@ -916,12 +834,10 @@
     .end annotation
 
     .prologue
-    .line 256
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 258
     .local v1, "tmpChineseList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v2, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
@@ -949,14 +865,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 261
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -968,16 +882,13 @@
 
     move-result-object v1
 
-    .line 266
     :cond_0
     :goto_0
     return-object v1
 
-    .line 262
     :catch_0
     move-exception v0
 
-    .line 263
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -988,7 +899,6 @@
     .locals 4
 
     .prologue
-    .line 244
     sget-object v1, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1015,14 +925,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 247
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1038,16 +946,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 252
     :cond_0
     :goto_0
     return-void
 
-    .line 248
     :catch_0
     move-exception v0
 
-    .line 249
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1060,10 +965,8 @@
     .end annotation
 
     .prologue
-    .line 498
     const/4 v1, 0x0
 
-    .line 499
     .local v1, "pkg":Ljava/lang/String;
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1071,7 +974,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 501
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1083,16 +985,13 @@
 
     move-result-object v1
 
-    .line 506
     :cond_0
     :goto_0
     return-object v1
 
-    .line 502
     :catch_0
     move-exception v0
 
-    .line 503
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1104,7 +1003,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     iget-object v1, p0, Landroid/app/epm/PluginManager;->pluginDetails:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1113,7 +1011,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 165
     .local v0, "titleDesc":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1137,10 +1034,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 204
     const/4 v0, 0x0
 
-    .line 206
     .local v0, "icon":Landroid/graphics/drawable/Drawable;
     :try_start_0
     iget-object v1, p0, Landroid/app/epm/PluginManager;->mContext:Landroid/content/Context;
@@ -1155,11 +1050,9 @@
 
     move-result-object v0
 
-    .line 210
     :goto_0
     return-object v0
 
-    .line 207
     :catch_0
     move-exception v1
 
@@ -1180,14 +1073,12 @@
     .end annotation
 
     .prologue
-    .line 662
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 664
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1199,15 +1090,12 @@
 
     move-result-object v0
 
-    .line 668
     :goto_0
     return-object v0
 
-    .line 665
     :catch_0
     move-exception v0
 
-    .line 668
     :cond_0
     const/4 v0, 0x0
 
@@ -1227,12 +1115,10 @@
     .end annotation
 
     .prologue
-    .line 136
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Landroid/app/epm/PluginManager;->getPluginDetailsList(Ljava/lang/String;)V
 
-    .line 137
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/app/epm/PluginManager;->pluginDetails:Ljava/util/HashMap;
@@ -1243,7 +1129,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 138
     .local v0, "pluginList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     return-object v0
 .end method
@@ -1255,14 +1140,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 431
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 433
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1274,16 +1157,13 @@
 
     move-result v1
 
-    .line 439
     :cond_0
     :goto_0
     return v1
 
-    .line 434
     :catch_0
     move-exception v0
 
-    .line 436
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -1293,7 +1173,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 178
     iget-object v1, p0, Landroid/app/epm/PluginManager;->pluginDetails:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1302,7 +1181,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 179
     .local v0, "status":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1346,12 +1224,10 @@
     .end annotation
 
     .prologue
-    .line 278
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 279
     .local v0, "packageListForComponent":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v1, p0, Landroid/app/epm/PluginManager;->mComponentPackageMap:Ljava/util/HashMap;
 
@@ -1365,7 +1241,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 280
     iget-object v1, p0, Landroid/app/epm/PluginManager;->mComponentPackageMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1375,7 +1250,6 @@
     .end local v0    # "packageListForComponent":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 282
     .restart local v0    # "packageListForComponent":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
     return-object v0
@@ -1386,7 +1260,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     iget-object v1, p0, Landroid/app/epm/PluginManager;->pluginDetails:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1395,7 +1268,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 152
     .local v0, "titleDesc":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1419,14 +1291,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 350
     const/4 v2, 0x0
 
-    .line 351
     .local v2, "version":Ljava/lang/String;
     iget-object v3, p0, Landroid/app/epm/PluginManager;->mComponentPackageMap:Ljava/util/HashMap;
 
-    const-string/jumbo v4, "themes"
+    const-string v4, "themes"
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1434,10 +1304,9 @@
 
     if-eqz v3, :cond_1
 
-    .line 352
     iget-object v3, p0, Landroid/app/epm/PluginManager;->mComponentPackageMap:Ljava/util/HashMap;
 
-    const-string/jumbo v4, "themes"
+    const-string v4, "themes"
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1463,7 +1332,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 353
     .local v1, "pkg":Ljava/lang/String;
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1471,7 +1339,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 354
     const-string v3, "#"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -1482,7 +1349,6 @@
 
     aget-object v2, v3, v4
 
-    .line 359
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "pkg":Ljava/lang/String;
     :cond_1
@@ -1493,7 +1359,6 @@
     .locals 1
 
     .prologue
-    .line 370
     const-string v0, "1.0.0"
 
     return-object v0
@@ -1505,14 +1370,12 @@
     .param p2, "isTrial"    # Z
 
     .prologue
-    .line 379
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 381
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1522,12 +1385,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 387
     :cond_0
     :goto_0
     return-void
 
-    .line 382
     :catch_0
     move-exception v0
 
@@ -1539,14 +1400,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 395
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 397
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1558,15 +1417,12 @@
 
     move-result v0
 
-    .line 402
     :goto_0
     return v0
 
-    .line 398
     :catch_0
     move-exception v0
 
-    .line 402
     :cond_0
     const/4 v0, 0x0
 
@@ -1578,14 +1434,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 411
     const/4 v0, 0x0
 
     const/16 v1, 0x66
 
     invoke-direct {p0, p1, v0, v1}, Landroid/app/epm/PluginManager;->showThemeProgress(Ljava/lang/String;ZI)V
 
-    .line 412
     return-void
 .end method
 
@@ -1605,7 +1459,6 @@
     .end annotation
 
     .prologue
-    .line 330
     .local p1, "myEventType":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1613,7 +1466,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 332
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1623,12 +1475,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 338
     :cond_0
     :goto_0
     return-void
 
-    .line 333
     :catch_0
     move-exception v0
 
@@ -1643,14 +1493,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 443
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 445
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1662,16 +1510,13 @@
 
     move-result v1
 
-    .line 451
     :cond_0
     :goto_0
     return v1
 
-    .line 446
     :catch_0
     move-exception v0
 
-    .line 448
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -1681,12 +1526,10 @@
     .param p1, "callback"    # Landroid/app/epm/PluginManager$IStatusListener;
 
     .prologue
-    .line 221
     iget-object v0, p0, Landroid/app/epm/PluginManager;->mClientCallback:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 224
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1709,7 +1552,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     return-void
 .end method
 
@@ -1721,14 +1563,12 @@
     .param p4, "repeatSchedule"    # Ljava/lang/String;
 
     .prologue
-    .line 311
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 313
     :try_start_0
     invoke-static {}, Landroid/app/epm/PluginManager;->getService()Lcom/samsung/android/thememanager/IThemeManager;
 
@@ -1738,12 +1578,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 319
     :cond_0
     :goto_0
     return-void
 
-    .line 314
     :catch_0
     move-exception v0
 
@@ -1754,14 +1592,12 @@
     .locals 2
 
     .prologue
-    .line 600
     sget-object v0, Landroid/app/epm/PluginManager;->TAG:Ljava/lang/String;
 
     const-string v1, "PluginManager stopTrialThemePackage --"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 601
     invoke-direct {p0}, Landroid/app/epm/PluginManager;->getActiveAppliedPackage()Ljava/lang/String;
 
     move-result-object v0

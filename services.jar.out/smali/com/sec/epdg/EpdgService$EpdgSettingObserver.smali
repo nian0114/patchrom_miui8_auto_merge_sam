@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1954
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 1955
     invoke-direct {p0, p2}, Lcom/sec/epdg/EpdgContentObserverBase;-><init>(Landroid/os/Handler;)V
 
-    .line 1956
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1960
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # getter for: Lcom/sec/epdg/EpdgService;->mRoamingUri:Landroid/net/Uri;
@@ -58,14 +54,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1961
     const-string v1, "[EPDGService]"
 
     const-string v2, "EpdgSettingObserver - Roaming WIFI perferred mode changed"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1962
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     sget-object v2, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->PREFERRED_MODE_CHANGED:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
@@ -73,12 +67,10 @@
     # invokes: Lcom/sec/epdg/EpdgService;->setPolicyTable(Lcom/sec/epdg/EpdgService$PolicyUpdateReason;)V
     invoke-static {v1, v2}, Lcom/sec/epdg/EpdgService;->access$3100(Lcom/sec/epdg/EpdgService;Lcom/sec/epdg/EpdgService$PolicyUpdateReason;)V
 
-    .line 1987
     :cond_0
     :goto_0
     return-void
 
-    .line 1963
     :cond_1
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -93,7 +85,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1967
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2500()Landroid/content/Context;
 
@@ -103,13 +94,12 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "wifi_on"
+    const-string v2, "wifi_on"
 
     invoke-static {v1, v2, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1969
     .local v0, "wifion":I
     const-string v1, "[EPDGService]"
 
@@ -133,10 +123,8 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1970
     if-nez v0, :cond_0
 
-    .line 1973
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->isImsDeRegiRequiredNet()Z
@@ -146,7 +134,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1974
     const-string v1, "[EPDGService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -177,7 +164,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1976
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->sendEpdgDeregisterBroadcastIfRequired(Z)Z
@@ -187,14 +173,12 @@
 
     if-nez v1, :cond_0
 
-    .line 1977
     const-string v1, "[EPDGService]"
 
     const-string v2, "EpdgSettingObserver - do not need de-register "
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1978
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1400()Landroid/os/Handler;
 
@@ -211,7 +195,6 @@
 
     goto :goto_0
 
-    .line 1980
     :cond_2
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -240,14 +223,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1982
     const-string v1, "[EPDGService]"
 
     const-string v2, "DE-registration is not required. start WIFI disconnection"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1983
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->sendWifiDelayRequest(Z)V

@@ -14,7 +14,6 @@
     .param p1, "parentContext"    # Lorg/apache/http/protocol/HttpContext;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Lorg/apache/http/protocol/BasicHttpContext;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -33,7 +32,6 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -60,7 +58,6 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -88,7 +85,6 @@
     .param p2, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0

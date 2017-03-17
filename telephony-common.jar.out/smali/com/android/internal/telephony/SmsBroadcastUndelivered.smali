@@ -53,7 +53,6 @@
 
     const/4 v3, 0x0
 
-    .line 56
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/String;
@@ -98,7 +97,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->PDU_PENDING_MESSAGE_PROJECTION:[Ljava/lang/String;
 
-    .line 71
     const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/String;
@@ -149,7 +147,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->PDU_PENDING_MESSAGE_FORMAT_PROJECTION:[Ljava/lang/String;
 
-    .line 87
     sget-object v0, Landroid/provider/Telephony$Sms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "raw"
@@ -170,23 +167,18 @@
     .param p3, "cdmaInboundSmsHandler"    # Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;
 
     .prologue
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mResolver:Landroid/content/ContentResolver;
 
-    .line 101
     iput-object p2, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mGsmInboundSmsHandler:Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;
 
-    .line 102
     iput-object p3, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mCdmaInboundSmsHandler:Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;
 
-    .line 103
     return-void
 .end method
 
@@ -195,31 +187,25 @@
     .param p1, "tracker"    # Lcom/android/internal/telephony/InboundSmsTracker;
 
     .prologue
-    .line 229
     invoke-virtual {p1}, Lcom/android/internal/telephony/InboundSmsTracker;->is3gpp2()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 230
     iget-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mCdmaInboundSmsHandler:Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;
 
-    .line 234
     .local v0, "handler":Lcom/android/internal/telephony/InboundSmsHandler;
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 235
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1, p1}, Lcom/android/internal/telephony/InboundSmsHandler;->sendMessage(ILjava/lang/Object;)V
 
-    .line 239
     :goto_1
     return-void
 
-    .line 232
     .end local v0    # "handler":Lcom/android/internal/telephony/InboundSmsHandler;
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mGsmInboundSmsHandler:Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;
@@ -227,7 +213,6 @@
     .restart local v0    # "handler":Lcom/android/internal/telephony/InboundSmsHandler;
     goto :goto_0
 
-    .line 237
     :cond_1
     const-string v1, "SmsBroadcastUndelivered"
 
@@ -268,12 +253,10 @@
     .locals 28
 
     .prologue
-    .line 122
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v22
 
-    .line 123
     .local v22, "startTime":J
     new-instance v15, Ljava/util/HashMap;
 
@@ -281,7 +264,6 @@
 
     invoke-direct {v15, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 125
     .local v15, "multiPartReceivedCount":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;Ljava/lang/Integer;>;"
     new-instance v17, Ljava/util/HashSet;
 
@@ -291,11 +273,9 @@
 
     invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 126
     .local v17, "oldMultiPartMessages":Ljava/util/HashSet;, "Ljava/util/HashSet<Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;>;"
     const/4 v9, 0x0
 
-    .line 129
     .local v9, "cursor":Landroid/database/Cursor;
     const-string v2, "ReassembleTimeout"
 
@@ -313,7 +293,6 @@
 
     move-result v8
 
-    .line 135
     .local v8, "beLmsReassembleCTCRequired":Z
     :try_start_0
     move-object/from16 v0, p0
@@ -328,7 +307,6 @@
 
     move-result v21
 
-    .line 136
     .local v21, "simSlot":I
     new-instance v25, Ljava/lang/StringBuilder;
 
@@ -338,7 +316,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 137
     .local v25, "where":Ljava/lang/StringBuilder;
     move-object/from16 v0, v25
 
@@ -346,7 +323,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 138
     const-string v2, "SmsBroadcastUndelivered"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -373,10 +349,8 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     if-eqz v8, :cond_1
 
-    .line 141
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mResolver:Landroid/content/ContentResolver;
@@ -397,11 +371,9 @@
 
     move-result-object v9
 
-    .line 146
     :goto_0
     if-nez v9, :cond_2
 
-    .line 147
     const-string v2, "SmsBroadcastUndelivered"
 
     const-string v3, "error getting pending message cursor"
@@ -411,13 +383,10 @@
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 216
     if-eqz v9, :cond_0
 
-    .line 217
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 219
     :cond_0
     const-string v2, "SmsBroadcastUndelivered"
 
@@ -457,13 +426,11 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     .end local v21    # "simSlot":I
     .end local v25    # "where":Ljava/lang/StringBuilder;
     :goto_1
     return-void
 
-    .line 143
     .restart local v21    # "simSlot":I
     .restart local v25    # "where":Ljava/lang/StringBuilder;
     :cond_1
@@ -490,20 +457,16 @@
 
     goto :goto_0
 
-    .line 151
     :cond_2
     const/4 v13, 0x0
 
-    .line 152
     .local v13, "isCurrentFormat3gpp2":Z
     if-nez v8, :cond_3
 
-    .line 153
     invoke-static {}, Lcom/android/internal/telephony/InboundSmsHandler;->isCurrentFormat3gpp2()Z
 
     move-result v13
 
-    .line 156
     :cond_3
     :goto_2
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
@@ -512,17 +475,14 @@
 
     if-eqz v2, :cond_b
 
-    .line 158
     if-eqz v8, :cond_5
 
-    .line 159
     const/16 v2, 0x8
 
     invoke-interface {v9, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 160
     .local v11, "format":Ljava/lang/String;
     if-eqz v11, :cond_4
 
@@ -534,10 +494,8 @@
 
     if-eqz v2, :cond_4
 
-    .line 161
     const/4 v13, 0x1
 
-    .line 163
     :cond_4
     const-string v2, "SmsBroadcastUndelivered"
 
@@ -574,7 +532,6 @@
     .catch Landroid/database/SQLException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 168
     .end local v11    # "format":Ljava/lang/String;
     :cond_5
     :try_start_2
@@ -588,7 +545,6 @@
     .catch Landroid/database/SQLException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 174
     .local v24, "tracker":Lcom/android/internal/telephony/InboundSmsTracker;
     :try_start_3
     invoke-virtual/range {v24 .. v24}, Lcom/android/internal/telephony/InboundSmsTracker;->getMessageCount()I
@@ -599,7 +555,6 @@
 
     if-ne v2, v3, :cond_8
 
-    .line 176
     move-object/from16 v0, p0
 
     move-object/from16 v1, v24
@@ -611,7 +566,6 @@
 
     goto :goto_2
 
-    .line 213
     .end local v13    # "isCurrentFormat3gpp2":Z
     .end local v21    # "simSlot":I
     .end local v24    # "tracker":Lcom/android/internal/telephony/InboundSmsTracker;
@@ -619,7 +573,6 @@
     :catch_0
     move-exception v10
 
-    .line 214
     .local v10, "e":Landroid/database/SQLException;
     :try_start_4
     const-string v2, "SmsBroadcastUndelivered"
@@ -630,13 +583,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 216
     if-eqz v9, :cond_6
 
-    .line 217
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 219
     :cond_6
     const-string v2, "SmsBroadcastUndelivered"
 
@@ -678,7 +628,6 @@
 
     goto/16 :goto_1
 
-    .line 169
     .end local v10    # "e":Landroid/database/SQLException;
     .restart local v13    # "isCurrentFormat3gpp2":Z
     .restart local v21    # "simSlot":I
@@ -686,7 +635,6 @@
     :catch_1
     move-exception v10
 
-    .line 170
     .local v10, "e":Ljava/lang/IllegalArgumentException;
     :try_start_5
     const-string v2, "SmsBroadcastUndelivered"
@@ -716,7 +664,6 @@
 
     goto/16 :goto_2
 
-    .line 216
     .end local v10    # "e":Ljava/lang/IllegalArgumentException;
     .end local v13    # "isCurrentFormat3gpp2":Z
     .end local v21    # "simSlot":I
@@ -726,10 +673,8 @@
 
     if-eqz v9, :cond_7
 
-    .line 217
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 219
     :cond_7
     const-string v3, "SmsBroadcastUndelivered"
 
@@ -771,7 +716,6 @@
 
     throw v2
 
-    .line 178
     .restart local v13    # "isCurrentFormat3gpp2":Z
     .restart local v21    # "simSlot":I
     .restart local v24    # "tracker":Lcom/android/internal/telephony/InboundSmsTracker;
@@ -786,7 +730,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;-><init>(Lcom/android/internal/telephony/InboundSmsTracker;)V
 
-    .line 179
     .local v19, "reference":Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;
     move-object/from16 v0, v19
 
@@ -796,11 +739,9 @@
 
     check-cast v18, Ljava/lang/Integer;
 
-    .line 180
     .local v18, "receivedCount":Ljava/lang/Integer;
     if-nez v18, :cond_9
 
-    .line 181
     const/4 v2, 0x1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -811,7 +752,6 @@
 
     invoke-virtual {v15, v0, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
     invoke-virtual/range {v24 .. v24}, Lcom/android/internal/telephony/InboundSmsTracker;->getTimestamp()J
 
     move-result-wide v2
@@ -828,7 +768,6 @@
 
     if-gez v2, :cond_3
 
-    .line 185
     move-object/from16 v0, v17
 
     move-object/from16 v1, v19
@@ -837,7 +776,6 @@
 
     goto/16 :goto_2
 
-    .line 188
     :cond_9
     invoke-virtual/range {v18 .. v18}, Ljava/lang/Integer;->intValue()I
 
@@ -845,7 +783,6 @@
 
     add-int/lit8 v16, v2, 0x1
 
-    .line 189
     .local v16, "newCount":I
     invoke-virtual/range {v24 .. v24}, Lcom/android/internal/telephony/InboundSmsTracker;->getMessageCount()I
 
@@ -855,21 +792,18 @@
 
     if-ne v0, v2, :cond_a
 
-    .line 192
     const-string v2, "SmsBroadcastUndelivered"
 
     const-string v3, "found complete multi-part message"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     move-object/from16 v0, p0
 
     move-object/from16 v1, v24
 
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->broadcastSms(Lcom/android/internal/telephony/InboundSmsTracker;)V
 
-    .line 195
     move-object/from16 v0, v17
 
     move-object/from16 v1, v19
@@ -878,7 +812,6 @@
 
     goto/16 :goto_2
 
-    .line 197
     :cond_a
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -890,7 +823,6 @@
 
     goto/16 :goto_2
 
-    .line 203
     .end local v16    # "newCount":I
     .end local v18    # "receivedCount":Ljava/lang/Integer;
     .end local v19    # "reference":Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;
@@ -914,7 +846,6 @@
 
     check-cast v14, Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;
 
-    .line 204
     .local v14, "message":Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;
     move-object/from16 v0, p0
 
@@ -932,11 +863,9 @@
 
     move-result v20
 
-    .line 206
     .local v20, "rows":I
     if-nez v20, :cond_c
 
-    .line 207
     const-string v2, "SmsBroadcastUndelivered"
 
     const-string v3, "No rows were deleted from raw table!"
@@ -945,7 +874,6 @@
 
     goto :goto_3
 
-    .line 209
     :cond_c
     const-string v2, "SmsBroadcastUndelivered"
 
@@ -994,16 +922,13 @@
 
     goto :goto_3
 
-    .line 216
     .end local v14    # "message":Lcom/android/internal/telephony/SmsBroadcastUndelivered$SmsReferenceKey;
     .end local v20    # "rows":I
     :cond_d
     if-eqz v9, :cond_e
 
-    .line 217
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 219
     :cond_e
     const-string v2, "SmsBroadcastUndelivered"
 
@@ -1054,38 +979,31 @@
     .prologue
     const/4 v2, 0x6
 
-    .line 107
     const-string v0, "SmsBroadcastUndelivered"
 
     const-string v1, "scanning raw table for undelivered messages"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     invoke-direct {p0}, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->scanRawTable()V
 
-    .line 110
     iget-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mGsmInboundSmsHandler:Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;
 
     if-eqz v0, :cond_0
 
-    .line 111
     iget-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mGsmInboundSmsHandler:Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/telephony/gsm/GsmInboundSmsHandler;->sendMessage(I)V
 
-    .line 113
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mCdmaInboundSmsHandler:Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;
 
     if-eqz v0, :cond_1
 
-    .line 114
     iget-object v0, p0, Lcom/android/internal/telephony/SmsBroadcastUndelivered;->mCdmaInboundSmsHandler:Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;->sendMessage(I)V
 
-    .line 116
     :cond_1
     return-void
 .end method

@@ -27,10 +27,8 @@
     .locals 1
 
     .prologue
-    .line 364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 366
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;->mPermanentThrottleErrorCount:I
@@ -43,7 +41,6 @@
     .param p1, "x0"    # Lcom/sec/epdg/throttle/ThrottleManager$1;
 
     .prologue
-    .line 364
     invoke-direct {p0}, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;-><init>()V
 
     return-void
@@ -55,21 +52,19 @@
     .locals 3
 
     .prologue
-    .line 370
     iget v0, p0, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;->mPermanentThrottleErrorCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;->mPermanentThrottleErrorCount:I
 
-    .line 371
     const-string v0, "[THROTTLEMANAGER]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPermanentThrottleErrorCount: "
+    const-string v2, "mPermanentThrottleErrorCount: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -99,7 +94,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 373
     return-void
 .end method
 
@@ -107,7 +101,6 @@
     .locals 2
 
     .prologue
-    .line 387
     iget v0, p0, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;->mPermanentThrottleErrorCount:I
 
     const/4 v1, 0x3
@@ -129,19 +122,16 @@
     .locals 2
 
     .prologue
-    .line 376
     const-string v0, "[THROTTLEMANAGER]"
 
     const-string v1, "Reset permanent throttle"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 377
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;->mPermanentThrottleErrorCount:I
 
-    .line 378
     return-void
 .end method
 
@@ -151,17 +141,15 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 381
     iput v3, p0, Lcom/sec/epdg/throttle/ThrottleManager$PermanentThrottleManager;->mPermanentThrottleErrorCount:I
 
-    .line 382
     const-string v0, "[THROTTLEMANAGER]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPermanentThrottleErrorCount: "
+    const-string v2, "mPermanentThrottleErrorCount: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -189,6 +177,5 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 384
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;
 
     iput-object p2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
@@ -45,15 +44,12 @@
     .param p1, "table"    # Lcom/android/server/enterprise/storage/Table;
 
     .prologue
-    .line 103
     const/4 v4, 0x0
 
-    .line 105
     .local v4, "name":Ljava/lang/String;
     :try_start_0
     iget-object v4, p1, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
-    .line 106
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->isTableExists(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
@@ -63,30 +59,25 @@
 
     if-nez v5, :cond_1
 
-    .line 107
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->preTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
     invoke-static {v5, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->access$100(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 108
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
     invoke-static {v5, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->access$200(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 109
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->postTableCreate(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
     invoke-static {v5, p1}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->access$300(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/server/enterprise/storage/Table;)V
 
-    .line 127
     :cond_0
     :goto_0
     return-void
 
-    .line 111
     :cond_1
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -97,7 +88,6 @@
 
     if-nez v5, :cond_0
 
-    .line 112
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper;->getMissingColumns(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/android/server/enterprise/storage/Table;)Ljava/util/ArrayList;
@@ -105,7 +95,6 @@
 
     move-result-object v1
 
-    .line 114
     .local v1, "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -125,7 +114,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/storage/Column;
 
-    .line 115
     .local v0, "column":Lcom/android/server/enterprise/storage/Column;
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/VpnStorageHelper$1;->val$db:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -157,14 +145,12 @@
 
     goto :goto_1
 
-    .line 124
     .end local v0    # "column":Lcom/android/server/enterprise/storage/Column;
     .end local v1    # "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
-    .line 125
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxVpn.StorageHelper"
 
@@ -196,7 +182,6 @@
 
     goto :goto_0
 
-    .line 119
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "columns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/storage/Column;>;"
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -211,7 +196,7 @@
 
     const-string v5, "KnoxVpn.StorageHelper"
 
-    const-string/jumbo v6, "onTableFound Altered Table %s with Columns %d"
+    const-string v6, "onTableFound Altered Table %s with Columns %d"
 
     const/4 v7, 0x2
 

@@ -132,7 +132,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/keys/storage/implementations/CertsInFilesystemDirectoryResolver;
 
-    const-string/jumbo v1, "data/ie/baltimore/merlin-examples/merlin-xmldsig-eighteen/certs"
+    const-string v1, "data/ie/baltimore/merlin-examples/merlin-xmldsig-eighteen/certs"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/keys/storage/implementations/CertsInFilesystemDirectoryResolver;-><init>(Ljava/lang/String;)V
 
@@ -371,7 +371,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/keys/storage/StorageResolverException;
 
-    const-string/jumbo v1, "empty"
+    const-string v1, "empty"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/keys/storage/StorageResolverException;-><init>(Ljava/lang/String;)V
 
@@ -382,7 +382,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/keys/storage/StorageResolverException;
 
-    const-string/jumbo v2, "empty"
+    const-string v2, "empty"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/keys/storage/StorageResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 

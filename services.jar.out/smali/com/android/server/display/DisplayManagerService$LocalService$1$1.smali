@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2746
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;->this$2:Lcom/android/server/display/DisplayManagerService$LocalService$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 2749
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;->this$2:Lcom/android/server/display/DisplayManagerService$LocalService$1;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
@@ -54,7 +52,6 @@
 
     monitor-enter v2
 
-    .line 2750
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;->this$2:Lcom/android/server/display/DisplayManagerService$LocalService$1;
 
@@ -65,13 +62,12 @@
 
     move-result-object v1
 
-    const-string/jumbo v3, "mRequestDisplayStateRunnable is running now. "
+    const-string v3, "mRequestDisplayStateRunnable is running now. "
 
     const-wide/16 v4, 0xa
 
     invoke-virtual {v1, v3, v4, v5}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printTotalTime(Ljava/lang/String;J)V
 
-    .line 2751
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;->this$2:Lcom/android/server/display/DisplayManagerService$LocalService$1;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
@@ -83,16 +79,13 @@
     # setter for: Lcom/android/server/display/DisplayManagerService;->mPendingrequestDisplayState:Z
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayManagerService;->access$4702(Lcom/android/server/display/DisplayManagerService;Z)Z
 
-    .line 2752
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;-><init>()V
 
-    .line 2753
     .local v0, "requestDesiredDisplayStateTimeMeasurement":Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 2754
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;->this$2:Lcom/android/server/display/DisplayManagerService$LocalService$1;
 
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;->this$2:Lcom/android/server/display/DisplayManagerService$LocalService$1;
@@ -125,20 +118,16 @@
     # invokes: Lcom/android/server/display/DisplayManagerService$LocalService$1;->requestDesiredDisplayState(III)V
     invoke-static {v1, v3, v4, v5}, Lcom/android/server/display/DisplayManagerService$LocalService$1;->access$5000(Lcom/android/server/display/DisplayManagerService$LocalService$1;III)V
 
-    .line 2755
     const-string v1, "DisplayManagerInternal.requestDesiredDisplayState"
 
     const-wide/16 v4, 0x32
 
     invoke-virtual {v0, v1, v4, v5}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 2756
     monitor-exit v2
 
-    .line 2757
     return-void
 
-    .line 2756
     .end local v0    # "requestDesiredDisplayStateTimeMeasurement":Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
     :catchall_0
     move-exception v1

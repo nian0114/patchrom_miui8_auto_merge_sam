@@ -22,7 +22,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 17
     const-class v1, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -31,7 +30,6 @@
 
     sput-object v1, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->TAG:Ljava/lang/String;
 
-    .line 19
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -55,32 +53,25 @@
     .param p5, "serviceListener"    # Lcom/android/server/cocktailbar/CocktailBarManagerServiceListener;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILandroid/content/BroadcastReceiver;Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 21
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mCurrentUserId:I
 
-    .line 28
     iput-object p5, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mServiceListener:Lcom/android/server/cocktailbar/CocktailBarManagerServiceListener;
 
-    .line 29
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 30
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.sec.knox.container.action.launchinfo"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 32
     invoke-virtual {p0, p3, v0}, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->registerBroadcastReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 33
     return-void
 .end method
 
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 104
     const/4 v0, 0x1
 
     return v0
@@ -100,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 89
     const/4 v0, 0x2
 
     return v0
@@ -110,8 +99,7 @@
     .locals 1
 
     .prologue
-    .line 94
-    const-string/jumbo v0, "knoxmode"
+    const-string v0, "knoxmode"
 
     return-object v0
 .end method
@@ -120,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/os/PersonaManager;->isKioskModeEnabled(Landroid/content/Context;)Z
@@ -139,12 +126,10 @@
 
     const/16 v9, 0x64
 
-    .line 37
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 38
     .local v7, "action":Ljava/lang/String;
     const-string v0, "com.sec.knox.container.action.launchinfo"
 
@@ -154,8 +139,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 39
-    const-string/jumbo v0, "userId"
+    const-string v0, "userId"
 
     const/4 v1, -0x1
 
@@ -163,13 +147,11 @@
 
     move-result v2
 
-    .line 40
     .local v2, "userId":I
     sget-boolean v0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 41
     sget-object v0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -192,7 +174,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mContext:Landroid/content/Context;
 
@@ -204,44 +185,34 @@
 
     move v0, v8
 
-    .line 84
     .end local v2    # "userId":I
     :goto_0
     return v0
 
-    .line 46
     .restart local v2    # "userId":I
     :cond_1
     const/4 v3, 0x0
 
-    .line 47
     .local v3, "currentUserType":I
     const/4 v4, 0x0
 
-    .line 48
     .local v4, "newUserType":I
     const/4 v5, 0x0
 
-    .line 49
     .local v5, "modeId":I
     if-lt v2, v9, :cond_4
 
-    .line 50
     iget v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mCurrentUserId:I
 
     if-ge v0, v9, :cond_3
 
-    .line 51
     const/4 v3, 0x1
 
-    .line 55
     :goto_1
     const/16 v4, 0x100
 
-    .line 56
     const/4 v5, 0x2
 
-    .line 62
     :cond_2
     :goto_2
     iget-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mServiceListener:Lcom/android/server/cocktailbar/CocktailBarManagerServiceListener;
@@ -252,21 +223,17 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceListener;->onSwitchUser(IIIIILandroid/os/IRemoteCallback;)V
 
-    .line 64
     iput v2, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mCurrentUserId:I
 
     move v0, v8
 
-    .line 65
     goto :goto_0
 
-    .line 53
     :cond_3
     const/16 v3, 0x100
 
     goto :goto_1
 
-    .line 57
     :cond_4
     iget v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxMode;->mCurrentUserId:I
 
@@ -274,18 +241,14 @@
 
     if-ge v2, v9, :cond_2
 
-    .line 58
     const/16 v3, 0x100
 
-    .line 59
     const/16 v4, 0x100
 
-    .line 60
     const/4 v5, 0x2
 
     goto :goto_2
 
-    .line 84
     .end local v2    # "userId":I
     .end local v3    # "currentUserType":I
     .end local v4    # "newUserType":I

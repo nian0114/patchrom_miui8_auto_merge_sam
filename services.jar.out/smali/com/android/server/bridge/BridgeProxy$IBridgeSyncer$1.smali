@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1184
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeSyncer$1;->this$1:Lcom/android/server/bridge/BridgeProxy$IBridgeSyncer;
 
     iput-object p2, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeSyncer$1;->val$mSyncerName:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 1188
     :try_start_0
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeSyncer$1;->this$1:Lcom/android/server/bridge/BridgeProxy$IBridgeSyncer;
 
@@ -63,15 +61,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1192
     :goto_0
     return-void
 
-    .line 1189
     :catch_0
     move-exception v0
 
-    .line 1190
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

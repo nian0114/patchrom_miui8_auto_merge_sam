@@ -29,12 +29,10 @@
     .param p3, "time"    # I
 
     .prologue
-    .line 1179
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthReading;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1180
     const-string v0, "[SMARTWIFI]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,13 +75,10 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1181
     iput-object p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthReading;->mSignalStrength:Ljava/lang/Integer;
 
-    .line 1182
     iput p3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthReading;->mTimeStamp:I
 
-    .line 1183
     return-void
 .end method
 
@@ -93,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 1186
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthReading;->mSignalStrength:Ljava/lang/Integer;
 
     return-object v0

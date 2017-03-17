@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1443
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$3;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1446
     iget-object v0, p0, Lcom/android/server/am/MARsPolicyManager$3;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager$3;->this$0:Lcom/android/server/am/MARsPolicyManager;
@@ -53,19 +51,17 @@
     # setter for: Lcom/android/server/am/MARsPolicyManager;->mDefaultIMEPackage:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/android/server/am/MARsPolicyManager;->access$602(Lcom/android/server/am/MARsPolicyManager;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1447
     sget-boolean v0, Lcom/android/server/am/MARsPolicyManager;->DEBUG_MARs:Z
 
     if-eqz v0, :cond_0
 
-    .line 1448
     const-string v0, "MARsPolicyManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onChange - DEFAULT_INPUT_METHOD!  defaultIME = "
+    const-string v2, "onChange - DEFAULT_INPUT_METHOD!  defaultIME = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -88,7 +84,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1449
     :cond_0
     return-void
 .end method

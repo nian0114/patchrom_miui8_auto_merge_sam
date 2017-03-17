@@ -38,24 +38,18 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 589
     iput-object p1, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 590
     iput-object p2, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 591
     iput-object p3, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 592
     iput p4, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->pid:I
 
-    .line 593
     iput p5, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->uid:I
 
-    .line 594
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .locals 3
 
     .prologue
-    .line 598
     const-string v0, "CoverManager.StateNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -90,7 +83,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
     # getter for: Lcom/android/server/cover/StateNotifier;->mLcdOffDisableListeners:Ljava/util/ArrayList;
@@ -100,7 +92,6 @@
 
     monitor-enter v1
 
-    .line 600
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
@@ -111,28 +102,23 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 602
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
     # invokes: Lcom/android/server/cover/StateNotifier;->enableLcdOffByCoverIfPossibleLocked()V
     invoke-static {v0}, Lcom/android/server/cover/StateNotifier;->access$600(Lcom/android/server/cover/StateNotifier;)V
 
-    .line 603
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 604
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$LcdOffDisableListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 605
     return-void
 
-    .line 603
     :catchall_0
     move-exception v0
 

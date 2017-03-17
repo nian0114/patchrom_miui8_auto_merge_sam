@@ -24,13 +24,10 @@
     .param p2, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 340
     iput-object p1, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
-    .line 341
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 342
     return-void
 .end method
 
@@ -43,18 +40,14 @@
     .param p3, "cursor"    # Landroid/database/Cursor;
 
     .prologue
-    .line 346
     const/4 v13, 0x0
 
-    .line 347
     .local v13, "lookupUri":Landroid/net/Uri;
     const/4 v5, 0x0
 
-    .line 348
     .local v5, "createUri":Landroid/net/Uri;
     const/4 v15, 0x0
 
-    .line 349
     .local v15, "trigger":Z
     if-eqz p2, :cond_3
 
@@ -63,20 +56,16 @@
     .end local p2    # "cookie":Ljava/lang/Object;
     move-object/from16 v9, p2
 
-    .line 351
     .local v9, "extras":Landroid/os/Bundle;
     :goto_0
     packed-switch p1, :pswitch_data_0
 
-    .line 386
     :cond_0
     :goto_1
     if-eqz p3, :cond_1
 
-    .line 387
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
 
-    .line 391
     :cond_1
     move-object/from16 v0, p0
 
@@ -89,7 +78,6 @@
     # setter for: Landroid/widget/QuickContactBadge;->mContactUri:Landroid/net/Uri;
     invoke-static {v0, v13}, Landroid/widget/QuickContactBadge;->access$002(Landroid/widget/QuickContactBadge;Landroid/net/Uri;)Landroid/net/Uri;
 
-    .line 392
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
@@ -99,7 +87,6 @@
     # invokes: Landroid/widget/QuickContactBadge;->onContactUriChanged()V
     invoke-static/range {v16 .. v16}, Landroid/widget/QuickContactBadge;->access$100(Landroid/widget/QuickContactBadge;)V
 
-    .line 394
     if-eqz v15, :cond_7
 
     move-object/from16 v0, p0
@@ -115,7 +102,6 @@
 
     if-eqz v16, :cond_7
 
-    .line 396
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
@@ -168,12 +154,10 @@
 
     invoke-static/range {v16 .. v20}, Landroid/provider/ContactsContract$QuickContact;->showQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 428
     :cond_2
     :goto_2
     return-void
 
-    .line 349
     .end local v9    # "extras":Landroid/os/Bundle;
     .restart local p2    # "cookie":Ljava/lang/Object;
     :cond_3
@@ -183,19 +167,17 @@
 
     goto :goto_0
 
-    .line 353
     .end local p2    # "cookie":Ljava/lang/Object;
     .restart local v9    # "extras":Landroid/os/Bundle;
     :pswitch_0
     const/4 v15, 0x1
 
-    .line 354
     if-eqz v9, :cond_4
 
     if-eqz v9, :cond_5
 
     :try_start_0
-    const-string/jumbo v16, "uri_content"
+    const-string v16, "uri_content"
 
     move-object/from16 v0, v16
 
@@ -205,18 +187,15 @@
 
     if-nez v16, :cond_5
 
-    .line 355
     :cond_4
     const/4 v5, 0x0
 
-    .line 356
     goto :goto_1
 
-    .line 358
     :cond_5
-    const-string/jumbo v16, "tel"
+    const-string v16, "tel"
 
-    const-string/jumbo v17, "uri_content"
+    const-string v17, "uri_content"
 
     move-object/from16 v0, v17
 
@@ -230,7 +209,6 @@
 
     move-result-object v5
 
-    .line 362
     :pswitch_1
     if-eqz p3, :cond_0
 
@@ -240,7 +218,6 @@
 
     if-eqz v16, :cond_0
 
-    .line 363
     const/16 v16, 0x0
 
     move-object/from16 v0, p3
@@ -251,7 +228,6 @@
 
     move-result-wide v6
 
-    .line 364
     .local v6, "contactId":J
     const/16 v16, 0x1
 
@@ -263,25 +239,21 @@
 
     move-result-object v12
 
-    .line 365
     .local v12, "lookupKey":Ljava/lang/String;
     invoke-static {v6, v7, v12}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
 
     move-result-object v13
 
-    .line 366
     goto/16 :goto_1
 
-    .line 371
     .end local v6    # "contactId":J
     .end local v12    # "lookupKey":Ljava/lang/String;
     :pswitch_2
     const/4 v15, 0x1
 
-    .line 372
-    const-string/jumbo v16, "mailto"
+    const-string v16, "mailto"
 
-    const-string/jumbo v17, "uri_content"
+    const-string v17, "uri_content"
 
     move-object/from16 v0, v17
 
@@ -295,7 +267,6 @@
 
     move-result-object v5
 
-    .line 377
     :pswitch_3
     if-eqz p3, :cond_0
 
@@ -305,7 +276,6 @@
 
     if-eqz v16, :cond_0
 
-    .line 378
     const/16 v16, 0x0
 
     move-object/from16 v0, p3
@@ -316,7 +286,6 @@
 
     move-result-wide v6
 
-    .line 379
     .restart local v6    # "contactId":J
     const/16 v16, 0x1
 
@@ -328,7 +297,6 @@
 
     move-result-object v12
 
-    .line 380
     .restart local v12    # "lookupKey":Ljava/lang/String;
     invoke-static {v6, v7, v12}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
     :try_end_0
@@ -338,7 +306,6 @@
 
     goto/16 :goto_1
 
-    .line 386
     .end local v6    # "contactId":J
     .end local v12    # "lookupKey":Ljava/lang/String;
     :catchall_0
@@ -346,17 +313,14 @@
 
     if-eqz p3, :cond_6
 
-    .line 387
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
 
     :cond_6
     throw v16
 
-    .line 398
     :cond_7
     if-eqz v5, :cond_2
 
-    .line 400
     new-instance v10, Landroid/content/Intent;
 
     const-string v16, "com.android.contacts.action.SHOW_OR_CREATE_CONTACT"
@@ -365,7 +329,6 @@
 
     invoke-direct {v10, v0, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 403
     .local v10, "intent":Landroid/content/Intent;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -379,7 +342,6 @@
 
     if-eqz v16, :cond_8
 
-    .line 404
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
@@ -397,11 +359,9 @@
 
     move-result v14
 
-    .line 405
     .local v14, "permissionResult":I
     if-nez v14, :cond_8
 
-    .line 406
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
@@ -421,7 +381,6 @@
 
     check-cast v4, Landroid/app/ActivityManager;
 
-    .line 407
     .local v4, "am":Landroid/app/ActivityManager;
     const/16 v16, 0x1
 
@@ -431,7 +390,6 @@
 
     move-result-object v11
 
-    .line 408
     .local v11, "list":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     const/16 v16, 0x0
 
@@ -453,7 +411,6 @@
 
     move-result-object v2
 
-    .line 409
     .local v2, "PackageName":Ljava/lang/String;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -465,7 +422,6 @@
 
     move-result-object v3
 
-    .line 411
     .local v3, "ReplacedPackageName":Ljava/lang/String;
     const-string v16, "com.android.contacts"
 
@@ -483,10 +439,8 @@
 
     if-nez v16, :cond_8
 
-    .line 412
     invoke-virtual {v10, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 417
     .end local v2    # "PackageName":Ljava/lang/String;
     .end local v3    # "ReplacedPackageName":Ljava/lang/String;
     .end local v4    # "am":Landroid/app/ActivityManager;
@@ -495,17 +449,14 @@
     :cond_8
     if-eqz v9, :cond_9
 
-    .line 418
-    const-string/jumbo v16, "uri_content"
+    const-string v16, "uri_content"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v9, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 419
     invoke-virtual {v10, v9}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 422
     :cond_9
     :try_start_1
     move-object/from16 v0, p0
@@ -526,11 +477,9 @@
 
     goto/16 :goto_2
 
-    .line 423
     :catch_0
     move-exception v8
 
-    .line 424
     .local v8, "e":Landroid/content/ActivityNotFoundException;
     move-object/from16 v0, p0
 
@@ -554,7 +503,6 @@
 
     goto/16 :goto_2
 
-    .line 351
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3

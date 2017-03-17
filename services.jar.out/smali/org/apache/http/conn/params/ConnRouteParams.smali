@@ -24,7 +24,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 15
     sput-object v0, Lorg/apache/http/conn/params/ConnRouteParams;->NO_HOST:Lorg/apache/http/HttpHost;
 
     sput-object v0, Lorg/apache/http/conn/params/ConnRouteParams;->NO_ROUTE:Lorg/apache/http/conn/routing/HttpRoute;
@@ -36,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -53,7 +51,6 @@
     .param p0, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -68,7 +65,6 @@
     .param p0, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -83,7 +79,6 @@
     .param p0, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -99,7 +94,6 @@
     .param p1, "proxy"    # Lorg/apache/http/HttpHost;
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -115,7 +109,6 @@
     .param p1, "route"    # Lorg/apache/http/conn/routing/HttpRoute;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -131,7 +124,6 @@
     .param p1, "local"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

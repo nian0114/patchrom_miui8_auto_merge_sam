@@ -29,16 +29,12 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 676
     iput-object p1, p0, Lcom/android/server/BatteryService$NativeDeathRecipient;->this$0:Lcom/android/server/BatteryService;
 
-    .line 677
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 678
     iput-object p2, p0, Lcom/android/server/BatteryService$NativeDeathRecipient;->binder:Landroid/os/IBinder;
 
-    .line 680
     const/4 v1, 0x0
 
     :try_start_0
@@ -46,15 +42,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 684
     :goto_0
     return-void
 
-    .line 681
     :catch_0
     move-exception v0
 
-    .line 682
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/BatteryService$NativeDeathRecipient;->binderDied()V
 
@@ -67,7 +60,6 @@
     .locals 4
 
     .prologue
-    .line 686
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -77,7 +69,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
     iget-object v0, p0, Lcom/android/server/BatteryService$NativeDeathRecipient;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -93,6 +84,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 707
     return-void
 .end method

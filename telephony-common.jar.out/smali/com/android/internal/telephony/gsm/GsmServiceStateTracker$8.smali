@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5212
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 5
 
     .prologue
-    .line 5216
     const/4 v1, 0x0
 
-    .line 5218
     .local v1, "sleepCount":I
     :cond_0
     :try_start_0
@@ -69,12 +66,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 5219
     const-wide/16 v2, 0x1f4
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 5220
     const/16 v2, 0x9
 
     if-le v1, v2, :cond_1
@@ -84,11 +79,9 @@
     # setter for: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->setGsmOnlyModeFlag:Z
     invoke-static {v2}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$4902(Z)Z
 
-    .line 5221
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
-    .line 5222
     # getter for: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->setGsmOnlyModeFlag:Z
     invoke-static {}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$4900()Z
 
@@ -96,7 +89,6 @@
 
     if-nez v2, :cond_0
 
-    .line 5223
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     # getter for: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -112,7 +104,6 @@
 
     invoke-interface {v2, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->setPreferredNetworkType(ILandroid/os/Message;)V
 
-    .line 5224
     # getter for: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->setAutoModeForSlot1:Z
     invoke-static {}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$5100()Z
 
@@ -127,11 +118,9 @@
     # invokes: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->switchNetworkTo(I)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$5200(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;I)V
 
-    .line 5229
     :goto_0
     return-void
 
-    .line 5225
     :cond_2
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -144,11 +133,9 @@
 
     goto :goto_0
 
-    .line 5226
     :catch_0
     move-exception v0
 
-    .line 5227
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 

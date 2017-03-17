@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcom/sec/epdg/ipc/EpdgIpcMessage;-><init>()V
 
-    .line 15
     return-void
 .end method
 
@@ -26,10 +24,8 @@
     .param p3, "cmdType"    # I
 
     .prologue
-    .line 18
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/epdg/ipc/EpdgIpcMessage;-><init>(III)V
 
-    .line 19
     return-void
 .end method
 
@@ -44,10 +40,8 @@
     .end annotation
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/ipc/EpdgIpcMessage;-><init>([BI)V
 
-    .line 23
     return-void
 .end method
 
@@ -57,23 +51,19 @@
     .locals 7
 
     .prologue
-    .line 27
     const-string v5, "[NETIPCMESSAGE]"
 
-    const-string/jumbo v6, "decodeIilSsacInfo()"
+    const-string v6, "decodeIilSsacInfo()"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     iget-object v0, p0, Lcom/sec/epdg/ipc/EpdgIilIpcMessage;->mIpcBody:[B
 
-    .line 29
     .local v0, "ipcBody":[B
     const/4 v5, 0x0
 
     aget-byte v3, v0, v5
 
-    .line 30
     .local v3, "voiceFactor":I
     const/4 v5, 0x2
 
@@ -95,13 +85,11 @@
 
     mul-int/lit16 v4, v5, 0x3e8
 
-    .line 31
     .local v4, "voiceTime":I
     const/4 v5, 0x3
 
     aget-byte v1, v0, v5
 
-    .line 32
     .local v1, "videoFactor":I
     const/4 v5, 0x5
 
@@ -123,7 +111,6 @@
 
     mul-int/lit16 v2, v5, 0x3e8
 
-    .line 34
     .local v2, "videoTime":I
     new-instance v5, Lcom/sec/epdg/ipc/EpdgIilSsacInfo;
 

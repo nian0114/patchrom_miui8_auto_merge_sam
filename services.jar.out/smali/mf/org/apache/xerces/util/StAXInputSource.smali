@@ -17,12 +17,10 @@
     .param p1, "source"    # Lmf/javax/xml/stream/XMLEventReader;
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/util/StAXInputSource;-><init>(Lmf/javax/xml/stream/XMLEventReader;Z)V
 
-    .line 53
     return-void
 .end method
 
@@ -34,17 +32,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 56
     invoke-static {p1}, Lmf/org/apache/xerces/util/StAXInputSource;->getEventReaderSystemId(Lmf/javax/xml/stream/XMLEventReader;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v1, v0, v1}, Lmf/org/apache/xerces/xni/parser/XMLInputSource;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
     if-nez p1, :cond_0
 
-    .line 58
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "XMLEventReader parameter cannot be null."
@@ -53,17 +48,13 @@
 
     throw v0
 
-    .line 60
     :cond_0
     iput-object v1, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fStreamReader:Lmf/javax/xml/stream/XMLStreamReader;
 
-    .line 61
     iput-object p1, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fEventReader:Lmf/javax/xml/stream/XMLEventReader;
 
-    .line 62
     iput-boolean p2, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fConsumeRemainingContent:Z
 
-    .line 63
     return-void
 .end method
 
@@ -72,12 +63,10 @@
     .param p1, "source"    # Lmf/javax/xml/stream/XMLStreamReader;
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/util/StAXInputSource;-><init>(Lmf/javax/xml/stream/XMLStreamReader;Z)V
 
-    .line 39
     return-void
 .end method
 
@@ -89,7 +78,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 42
     invoke-interface {p1}, Lmf/javax/xml/stream/XMLStreamReader;->getLocation()Lmf/javax/xml/stream/Location;
 
     move-result-object v0
@@ -100,10 +88,8 @@
 
     invoke-direct {p0, v1, v0, v1}, Lmf/org/apache/xerces/xni/parser/XMLInputSource;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     if-nez p1, :cond_0
 
-    .line 44
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "XMLStreamReader parameter cannot be null."
@@ -112,17 +98,13 @@
 
     throw v0
 
-    .line 46
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fStreamReader:Lmf/javax/xml/stream/XMLStreamReader;
 
-    .line 47
     iput-object v1, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fEventReader:Lmf/javax/xml/stream/XMLEventReader;
 
-    .line 48
     iput-boolean p2, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fConsumeRemainingContent:Z
 
-    .line 49
     return-void
 .end method
 
@@ -131,10 +113,8 @@
     .param p0, "reader"    # Lmf/javax/xml/stream/XMLEventReader;
 
     .prologue
-    .line 83
     if-eqz p0, :cond_0
 
-    .line 84
     :try_start_0
     invoke-interface {p0}, Lmf/javax/xml/stream/XMLEventReader;->peek()Lmf/javax/xml/stream/events/XMLEvent;
 
@@ -150,15 +130,12 @@
 
     move-result-object v0
 
-    .line 88
     :goto_0
     return-object v0
 
-    .line 87
     :catch_0
     move-exception v0
 
-    .line 88
     :cond_0
     const/4 v0, 0x0
 
@@ -171,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fEventReader:Lmf/javax/xml/stream/XMLEventReader;
 
     return-object v0
@@ -181,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fStreamReader:Lmf/javax/xml/stream/XMLStreamReader;
 
     return-object v0
@@ -192,7 +167,6 @@
     .param p1, "systemId"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Cannot set the system ID on a StAXInputSource"
@@ -206,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-boolean v0, p0, Lmf/org/apache/xerces/util/StAXInputSource;->fConsumeRemainingContent:Z
 
     return v0

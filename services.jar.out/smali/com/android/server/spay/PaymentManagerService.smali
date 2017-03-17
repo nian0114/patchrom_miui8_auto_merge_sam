@@ -36,8 +36,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 28
-    const-string/jumbo v1, "ro.product_ship"
+    const-string v1, "ro.product_ship"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -61,15 +60,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Landroid/spay/IPaymentManager$Stub;-><init>()V
 
-    .line 32
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClient:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
-    .line 53
     sget-boolean v0, Lcom/android/server/spay/PaymentManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -80,11 +76,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     :cond_0
     sput-object p1, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
-    .line 55
     return-void
 .end method
 
@@ -94,7 +88,6 @@
     .param p1, "x1"    # Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClient:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     return-object p1
@@ -105,10 +98,8 @@
     .param p0, "methodName"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     const-string v1, "PaymentManagerService"
 
-    .line 40
     .local v1, "serviceName":Ljava/lang/String;
     sget-object v2, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
@@ -126,7 +117,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 41
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -193,7 +183,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
-    .line 43
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v2, "PaymentManagerService"
 
@@ -201,10 +190,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     throw v0
 
-    .line 46
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_0
     const-string v2, "PaymentManagerService"
@@ -213,7 +200,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     const/4 v2, 0x0
 
     return v2
@@ -223,12 +209,10 @@
     .locals 5
 
     .prologue
-    .line 198
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 199
     .local v2, "token":J
     new-instance v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -236,7 +220,6 @@
 
     invoke-direct {v0, v1}, Landroid/app/enterprise/EnterpriseDeviceManager;-><init>(Landroid/content/Context;)V
 
-    .line 200
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getApplicationPolicy()Landroid/app/enterprise/ApplicationPolicy;
 
@@ -246,10 +229,8 @@
 
     invoke-virtual {v1, v4}, Landroid/app/enterprise/ApplicationPolicy;->setApplicationUninstallationDisabled(Ljava/lang/String;)V
 
-    .line 201
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 202
     return-void
 .end method
 
@@ -264,12 +245,10 @@
     .end annotation
 
     .prologue
-    .line 187
-    const-string/jumbo v0, "getMeasurementFile"
+    const-string v0, "getMeasurementFile"
 
     invoke-static {v0}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 188
     const-string v0, "/system/tima_measurement_info"
 
     invoke-static {v0}, Lcom/android/server/spay/Utils;->readFile(Ljava/lang/String;)[B
@@ -292,12 +271,10 @@
     .end annotation
 
     .prologue
-    .line 193
-    const-string/jumbo v0, "installTA"
+    const-string v0, "installTA"
 
     invoke-static {v0}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 194
     const/4 v0, 0x0
 
     return v0
@@ -308,18 +285,15 @@
     .param p1, "config"    # Landroid/spay/PaymentTZServiceConfig;
 
     .prologue
-    .line 107
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 108
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v6
 
-    .line 109
     .local v6, "pid":I
     move-object/from16 v0, p0
 
@@ -327,7 +301,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 110
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClient:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
@@ -336,14 +309,12 @@
 
     if-eq v6, v1, :cond_c
 
-    .line 112
     const-string v1, "PaymentManagerService"
 
     const-string v2, "Registered Client Died. Need to Rebind"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClient:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
@@ -353,31 +324,26 @@
     # invokes: Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->deleteClient()V
     invoke-static {v1}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->access$100(Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;)V
 
-    .line 120
     :cond_0
-    const-string/jumbo v1, "registerSPayFW"
+    const-string v1, "registerSPayFW"
 
     invoke-static {v1}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 121
     const-string v1, "PaymentManagerService"
 
     const-string v2, "Inside registerSPayFW"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     new-instance v4, Landroid/spay/PaymentTZServiceCommnInfo;
 
     invoke-direct {v4}, Landroid/spay/PaymentTZServiceCommnInfo;-><init>()V
 
-    .line 123
     .local v4, "tzSvcInfo":Landroid/spay/PaymentTZServiceCommnInfo;
     const/4 v1, 0x2
 
     iput v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mServiceVersion:I
 
-    .line 124
     const/4 v1, 0x1
 
     move-object/from16 v0, p1
@@ -388,7 +354,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 125
     new-instance v17, Lcom/android/server/spay/VisaTAController;
 
     const/4 v1, 0x1
@@ -405,7 +370,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/spay/VisaTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 126
     .local v17, "visaTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -419,7 +383,6 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     .end local v17    # "visaTAController":Landroid/os/IBinder;
     :cond_1
     const/4 v1, 0x2
@@ -432,7 +395,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 130
     new-instance v15, Lcom/android/server/spay/MasterTAController;
 
     const/4 v1, 0x2
@@ -447,7 +409,6 @@
 
     invoke-direct {v15, v1, v2}, Lcom/android/server/spay/MasterTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 131
     .local v15, "masterTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -459,7 +420,6 @@
 
     invoke-interface {v1, v2, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     .end local v15    # "masterTAController":Landroid/os/IBinder;
     :cond_2
     const/4 v1, 0x3
@@ -472,7 +432,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 135
     new-instance v9, Lcom/android/server/spay/AmexTAController;
 
     const/4 v1, 0x3
@@ -487,7 +446,6 @@
 
     invoke-direct {v9, v1, v2}, Lcom/android/server/spay/AmexTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 136
     .local v9, "amexTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -499,7 +457,6 @@
 
     invoke-interface {v1, v2, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     .end local v9    # "amexTAController":Landroid/os/IBinder;
     :cond_3
     const/4 v1, 0x4
@@ -512,7 +469,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 140
     new-instance v16, Lcom/android/server/spay/PlccTAController;
 
     const/4 v1, 0x4
@@ -529,7 +485,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/spay/PlccTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 141
     .local v16, "plccTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -543,7 +498,6 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     .end local v16    # "plccTAController":Landroid/os/IBinder;
     :cond_4
     const/4 v1, 0x5
@@ -556,7 +510,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 145
     new-instance v14, Lcom/android/server/spay/KrccTAController;
 
     const/4 v1, 0x5
@@ -571,7 +524,6 @@
 
     invoke-direct {v14, v1, v2}, Lcom/android/server/spay/KrccTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 146
     .local v14, "krccTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -583,7 +535,6 @@
 
     invoke-interface {v1, v2, v14}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 149
     .end local v14    # "krccTAController":Landroid/os/IBinder;
     :cond_5
     const/4 v1, 0x6
@@ -596,7 +547,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 150
     new-instance v8, Lcom/android/server/spay/EurCmmTAController;
 
     const/4 v1, 0x6
@@ -611,7 +561,6 @@
 
     invoke-direct {v8, v1, v2}, Lcom/android/server/spay/EurCmmTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 151
     .local v8, "EurCmmTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -623,7 +572,6 @@
 
     invoke-interface {v1, v2, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 154
     .end local v8    # "EurCmmTAController":Landroid/os/IBinder;
     :cond_6
     const/4 v1, 0x7
@@ -636,7 +584,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 155
     new-instance v7, Lcom/android/server/spay/ChnCmmTAController;
 
     const/4 v1, 0x7
@@ -651,7 +598,6 @@
 
     invoke-direct {v7, v1, v2}, Lcom/android/server/spay/ChnCmmTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 156
     .local v7, "ChnCmmTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -663,7 +609,6 @@
 
     invoke-interface {v1, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     .end local v7    # "ChnCmmTAController":Landroid/os/IBinder;
     :cond_7
     const/16 v1, 0x101
@@ -676,7 +621,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 160
     new-instance v10, Lcom/android/server/spay/TAController;
 
     const/16 v1, 0x101
@@ -691,7 +635,6 @@
 
     invoke-direct {v10, v1, v2}, Lcom/android/server/spay/TAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 161
     .local v10, "authTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -703,7 +646,6 @@
 
     invoke-interface {v1, v2, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
     .end local v10    # "authTAController":Landroid/os/IBinder;
     :cond_8
     const/16 v1, 0x8
@@ -716,7 +658,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 165
     new-instance v12, Lcom/android/server/spay/DiscoverTAController;
 
     const/16 v1, 0x8
@@ -731,7 +672,6 @@
 
     invoke-direct {v12, v1, v2}, Lcom/android/server/spay/DiscoverTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 166
     .local v12, "discoverTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -743,7 +683,6 @@
 
     invoke-interface {v1, v2, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     .end local v12    # "discoverTAController":Landroid/os/IBinder;
     :cond_9
     const/16 v1, 0xa
@@ -756,7 +695,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 170
     new-instance v13, Lcom/android/server/spay/JicTAController;
 
     const/16 v1, 0xa
@@ -771,7 +709,6 @@
 
     invoke-direct {v13, v1, v2}, Lcom/android/server/spay/JicTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 171
     .local v13, "jicTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -783,7 +720,6 @@
 
     invoke-interface {v1, v2, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     .end local v13    # "jicTAController":Landroid/os/IBinder;
     :cond_a
     const/16 v1, 0x9
@@ -796,7 +732,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 175
     new-instance v11, Lcom/android/server/spay/CnccTAController;
 
     const/16 v1, 0x9
@@ -811,7 +746,6 @@
 
     invoke-direct {v11, v1, v2}, Lcom/android/server/spay/CnccTAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 176
     .local v11, "cnccTAController":Landroid/os/IBinder;
     iget-object v1, v4, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
@@ -823,12 +757,10 @@
 
     invoke-interface {v1, v2, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     .end local v11    # "cnccTAController":Landroid/os/IBinder;
     :cond_b
     invoke-direct/range {p0 .. p0}, Lcom/android/server/spay/PaymentManagerService;->disablePaymentFrameworkUpdateRemoval()V
 
-    .line 180
     new-instance v1, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     move-object/from16 v2, p0
@@ -841,12 +773,10 @@
 
     iput-object v1, v0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClient:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
-    .line 181
     .end local v4    # "tzSvcInfo":Landroid/spay/PaymentTZServiceCommnInfo;
     :goto_0
     return-object v4
 
-    .line 115
     :cond_c
     const-string v1, "PaymentManagerService"
 
@@ -854,7 +784,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     const/4 v4, 0x0
 
     goto :goto_0

@@ -44,13 +44,13 @@
 
     const-string v0, "com.sun.org.apache.xml.internal.security.test.warn.on.exceptions"
 
-    const-string/jumbo v1, "false"
+    const-string v1, "false"
 
     invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -60,13 +60,13 @@
 
     const-string v0, "com.sun.org.apache.xml.internal.security.test.throw.exceptions"
 
-    const-string/jumbo v1, "false"
+    const-string v1, "false"
 
     invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

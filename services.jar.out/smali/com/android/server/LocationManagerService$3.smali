@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 352
     iput-object p1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 355
     iget-object v0, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mLock:Ljava/lang/Object;
@@ -51,20 +49,16 @@
 
     monitor-enter v1
 
-    .line 356
     :try_start_0
     iget-object v0, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     # invokes: Lcom/android/server/LocationManagerService;->applyAllProviderRequirementsLocked()V
     invoke-static {v0}, Lcom/android/server/LocationManagerService;->access$400(Lcom/android/server/LocationManagerService;)V
 
-    .line 357
     monitor-exit v1
 
-    .line 358
     return-void
 
-    .line 357
     :catchall_0
     move-exception v0
 

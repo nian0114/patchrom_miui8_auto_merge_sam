@@ -65,65 +65,48 @@
 
     const/4 v2, 0x0
 
-    .line 48
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 15
     const-string v4, "visualeffectScroll"
 
     iput-object v4, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->TAG:Ljava/lang/String;
 
-    .line 17
     const/high16 v4, 0x3f000000    # 0.5f
 
     iput v4, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->Y_SPEED:F
 
-    .line 18
     const v4, 0x3f19999a    # 0.6f
 
     iput v4, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->WIDTH_SPEED:F
 
-    .line 19
     const-wide/16 v4, 0xa
 
     iput-wide v4, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->ANIMATION_DELAY_TIME:J
 
-    .line 21
     iput v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentListTextAlpha:I
 
-    .line 22
     iput v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentTextShapeAlpha:I
 
-    .line 24
     const/4 v4, -0x1
 
     iput v4, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->animationCurrentFrame:I
 
-    .line 33
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->yAniEnabled:Z
 
-    .line 35
     iput-boolean v3, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLTR:Z
 
-    .line 36
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLoop:Z
 
-    .line 37
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isOpen:Z
 
-    .line 38
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isYMoving:Z
 
-    .line 39
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isDrawText:Z
 
-    .line 40
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isWidthMoving:Z
 
-    .line 41
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isFrameMoving:Z
 
-    .line 50
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -132,7 +115,6 @@
 
     move-result-object v0
 
-    .line 51
     .local v0, "config":Landroid/content/res/Configuration;
     invoke-virtual {v0}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
@@ -145,7 +127,6 @@
     :cond_0
     invoke-virtual {p0, v2}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->setIsLTR(Z)V
 
-    .line 53
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -156,7 +137,6 @@
 
     iget v1, v2, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 54
     .local v1, "dpi":I
     int-to-float v2, v1
 
@@ -166,7 +146,6 @@
 
     iput v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->scale:F
 
-    .line 55
     const-string v2, "visualeffectScroll"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -201,36 +180,30 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->shapePaint:Landroid/graphics/Paint;
 
-    .line 58
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->shapePaint:Landroid/graphics/Paint;
 
     sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 59
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->shapePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 61
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->textBounds:Landroid/graphics/Rect;
 
-    .line 62
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->setHandler()V
 
-    .line 63
     return-void
 .end method
 
@@ -239,7 +212,6 @@
     .param p0, "x0"    # Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     .prologue
-    .line 13
     iget-boolean v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->yAniEnabled:Z
 
     return v0
@@ -253,37 +225,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 74
     const-string v0, "visualeffectScroll"
 
     const-string v1, "clearEffect"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->animationCurrentFrame:I
 
-    .line 76
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isOpen:Z
 
-    .line 77
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isYMoving:Z
 
-    .line 78
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isWidthMoving:Z
 
-    .line 79
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isFrameMoving:Z
 
-    .line 80
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->stopAnimation()V
 
-    .line 81
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->invalidate()V
 
-    .line 82
     return-void
 .end method
 
@@ -293,28 +256,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 66
     const-string v0, "visualeffectScroll"
 
     const-string v1, "close"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isOpen:Z
 
-    .line 68
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isFrameMoving:Z
 
-    .line 69
     iput-boolean v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isWidthMoving:Z
 
-    .line 70
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->startAnimation()V
 
-    .line 71
     return-void
 .end method
 
@@ -323,10 +280,8 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 171
     invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 172
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -353,10 +308,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->clearEffect()V
 
-    .line 174
     invoke-virtual {p1}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
     move-result v0
@@ -368,10 +321,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->setIsLTR(Z)V
 
-    .line 175
     return-void
 
-    .line 174
     :cond_0
     const/4 v0, 0x0
 
@@ -383,10 +334,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 86
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 87
     return-void
 .end method
 
@@ -395,15 +344,12 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 179
     invoke-super {p0, p1}, Landroid/view/View;->onWindowFocusChanged(Z)V
 
-    .line 180
     if-eqz p1, :cond_0
 
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->clearEffect()V
 
-    .line 181
     :cond_0
     return-void
 .end method
@@ -413,7 +359,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 90
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -436,12 +381,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->shapePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 92
     return-void
 .end method
 
@@ -449,14 +392,12 @@
     .locals 1
 
     .prologue
-    .line 100
     new-instance v0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;-><init>(Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;)V
 
     iput-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->mHandler:Landroid/os/Handler;
 
-    .line 152
     return-void
 .end method
 
@@ -465,7 +406,6 @@
     .param p1, "isLTR"    # Z
 
     .prologue
-    .line 165
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -488,10 +428,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     iput-boolean p1, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLTR:Z
 
-    .line 167
     return-void
 .end method
 
@@ -503,7 +441,6 @@
     .param p4, "b"    # I
 
     .prologue
-    .line 95
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -556,10 +493,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->layout(IIII)V
 
-    .line 97
     return-void
 .end method
 
@@ -567,22 +502,18 @@
     .locals 4
 
     .prologue
-    .line 155
     iget-boolean v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLoop:Z
 
     if-eqz v0, :cond_0
 
-    .line 158
     :goto_0
     return-void
 
-    .line 156
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLoop:Z
 
-    .line 157
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -598,11 +529,9 @@
     .locals 1
 
     .prologue
-    .line 161
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLoop:Z
 
-    .line 162
     return-void
 .end method

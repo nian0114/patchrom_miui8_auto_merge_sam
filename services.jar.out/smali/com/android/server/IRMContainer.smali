@@ -40,17 +40,14 @@
     .locals 1
 
     .prologue
-    .line 67
     const-string v0, "/data/security/irm/mac_permissions.xml"
 
     sput-object v0, Lcom/android/server/IRMContainer;->IRM_MAC_PERM:Ljava/lang/String;
 
-    .line 68
     const-string v0, "/data/security/irm/seapp_contexts"
 
     sput-object v0, Lcom/android/server/IRMContainer;->IRM_SEAPP_CONTEXTS:Ljava/lang/String;
 
-    .line 81
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v0
@@ -65,14 +62,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 88
     invoke-direct {p0}, Lcom/android/server/SEAMSContainer;-><init>()V
 
-    .line 90
     sput-object p1, Lcom/android/server/IRMContainer;->mContext:Landroid/content/Context;
 
-    .line 91
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -82,7 +76,6 @@
 
     iput-object v0, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
-    .line 92
     return-void
 .end method
 
@@ -96,10 +89,8 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 308
     const/16 v19, 0x0
 
-    .line 309
     .local v19, "appNotInstalled":Z
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
@@ -107,7 +98,6 @@
 
     move-result v28
 
-    .line 313
     .local v28, "userId":I
     const/4 v4, 0x7
 
@@ -121,7 +111,6 @@
 
     if-eq v0, v4, :cond_0
 
-    .line 314
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -148,23 +137,18 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 315
     const/4 v4, -0x3
 
-    .line 459
     :goto_0
     return v4
 
-    .line 319
     :cond_0
     invoke-static/range {p1 .. p1}, Lcom/android/server/IRMContainer;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 320
     if-nez p1, :cond_1
 
-    .line 321
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -173,12 +157,10 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 322
     const/4 v4, -0x1
 
     goto :goto_0
 
-    .line 324
     :cond_1
     const/16 v4, 0x2be
 
@@ -186,7 +168,6 @@
 
     if-eq v0, v4, :cond_2
 
-    .line 325
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -195,36 +176,30 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
     const/16 v4, -0xc
 
     goto :goto_0
 
-    .line 328
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v23
 
-    .line 329
     .local v23, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v23, :cond_3
 
-    .line 330
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "irmMDMID is null, Returning null"
+    const-string v6, "irmMDMID is null, Returning null"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 331
     const/4 v4, -0x2
 
     goto :goto_0
 
-    .line 334
     :cond_3
     move-object/from16 v0, v23
 
@@ -242,7 +217,6 @@
 
     if-nez v4, :cond_4
 
-    .line 335
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -251,35 +225,28 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
     const/4 v4, -0x2
 
     goto :goto_0
 
-    .line 342
     :cond_4
     const/16 v20, 0x0
 
-    .line 343
     .local v20, "certMatch":Z
     const/4 v12, 0x0
 
-    .line 344
     .local v12, "signature":Ljava/lang/String;
     new-instance v26, Ljava/util/ArrayList;
 
     invoke-direct/range {v26 .. v26}, Ljava/util/ArrayList;-><init>()V
 
-    .line 345
     .local v26, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static/range {p1 .. p1}, Lcom/android/server/IRMContainer;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v26
 
-    .line 346
     if-nez p2, :cond_5
 
-    .line 348
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -288,24 +255,19 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 350
     const/16 v4, -0xe
 
     goto :goto_0
 
-    .line 351
     :cond_5
     if-nez v26, :cond_7
 
-    .line 353
     const/4 v4, 0x0
 
     aget-object v12, p2, v4
 
-    .line 354
     const/16 v19, 0x1
 
-    .line 378
     :cond_6
     new-instance v24, Ljava/io/File;
 
@@ -315,7 +277,6 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 379
     .local v24, "macPermFile":Ljava/io/File;
     new-instance v25, Ljava/io/File;
 
@@ -325,22 +286,18 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 384
     .local v25, "seappConfig":Ljava/io/File;
     const/16 v21, 0x0
 
-    .line 389
     .local v21, "containerAllowCat":Ljava/lang/String;
     :try_start_0
     invoke-static/range {p1 .. p2}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v18
 
-    .line 393
     .local v18, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-nez v18, :cond_9
 
-    .line 394
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -351,12 +308,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 395
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 356
     .end local v18    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v21    # "containerAllowCat":Ljava/lang/String;
     .end local v24    # "macPermFile":Ljava/io/File;
@@ -373,7 +328,6 @@
     .end local v12    # "signature":Ljava/lang/String;
     check-cast v12, Ljava/lang/String;
 
-    .line 359
     .restart local v12    # "signature":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -385,14 +339,11 @@
 
     if-eqz v4, :cond_8
 
-    .line 363
     const/16 v20, 0x1
 
-    .line 368
     :cond_8
     if-nez v20, :cond_6
 
-    .line 370
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -401,12 +352,10 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 372
     const/16 v4, -0xd
 
     goto/16 :goto_0
 
-    .line 398
     .restart local v18    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v21    # "containerAllowCat":Ljava/lang/String;
     .restart local v24    # "macPermFile":Ljava/io/File;
@@ -419,7 +368,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 399
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -448,7 +396,6 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 400
     move-object/from16 v0, v18
 
     iget v4, v0, Landroid/content/pm/ApplicationInfo;->category:I
@@ -457,7 +404,6 @@
 
     if-ne v4, v5, :cond_a
 
-    .line 401
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -466,18 +412,15 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
     const/16 v4, -0x9
 
     goto/16 :goto_0
 
-    .line 408
     :cond_a
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v27
 
-    .line 409
     .local v27, "uid":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -499,19 +442,15 @@
 
     move-result-object v7
 
-    .line 410
     .local v7, "argPkgName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 411
     .local v8, "argSeinfo":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 412
     .local v9, "argDomain":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 413
     .local v10, "argDataType":Ljava/lang/String;
     const/4 v4, 0x7
 
@@ -519,16 +458,12 @@
 
     if-ne v0, v4, :cond_b
 
-    .line 414
-    const-string/jumbo v8, "irm_platform"
+    const-string v8, "irm_platform"
 
-    .line 415
-    const-string/jumbo v9, "irm_platform_app"
+    const-string v9, "irm_platform_app"
 
-    .line 416
-    const-string/jumbo v10, "platform_app_data_file"
+    const-string v10, "platform_app_data_file"
 
-    .line 422
     :goto_1
     invoke-virtual/range {v25 .. v25}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -546,7 +481,6 @@
 
     if-gez v4, :cond_c
 
-    .line 423
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -555,24 +489,19 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 424
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 418
     :cond_b
-    const-string/jumbo v8, "irm"
+    const-string v8, "irm"
 
-    .line 419
-    const-string/jumbo v9, "irm_app"
+    const-string v9, "irm_app"
 
-    .line 420
     const-string v10, "app_data_file"
 
     goto :goto_1
 
-    .line 426
     :cond_c
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -594,7 +523,6 @@
 
     if-eqz v4, :cond_d
 
-    .line 427
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -603,12 +531,10 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 428
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 430
     :cond_d
     move-object/from16 v0, p0
 
@@ -626,16 +552,14 @@
 
     if-ne v4, v5, :cond_e
 
-    .line 431
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "loadContainerSetting,POLICY_FAILED is returned."
+    const-string v6, "loadContainerSetting,POLICY_FAILED is returned."
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
@@ -648,25 +572,21 @@
 
     invoke-static {v0, v12, v1, v4, v2}, Lcom/android/server/IRMContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 433
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 438
     :cond_e
-    const-string/jumbo v4, "selinux.reload_policy"
+    const-string v4, "selinux.reload_policy"
 
     const-string v5, "1"
 
     invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 459
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 446
     .end local v7    # "argPkgName":Ljava/lang/String;
     .end local v8    # "argSeinfo":Ljava/lang/String;
     .end local v9    # "argDomain":Ljava/lang/String;
@@ -707,17 +627,14 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 448
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 450
     .end local v18    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v22
 
-    .line 452
     .local v22, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -727,7 +644,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "leave addAppToContainer "
+    const-string v11, "leave addAppToContainer "
 
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -747,7 +664,6 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
     const/4 v4, -0x1
 
     goto/16 :goto_0
@@ -759,14 +675,12 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 105
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v13
 
-    .line 107
     .local v13, "userId":I
     :try_start_0
     new-instance v11, Ljava/io/File;
@@ -775,7 +689,6 @@
 
     invoke-direct {v11, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 108
     .local v11, "irmContainerDir":Ljava/io/File;
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
 
@@ -783,17 +696,14 @@
 
     if-nez v1, :cond_0
 
-    .line 110
     invoke-virtual {v11}, Ljava/io/File;->mkdir()Z
 
-    .line 111
     const/4 v1, 0x1
 
     const/4 v2, 0x1
 
     invoke-virtual {v11, v1, v2}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 112
     const/4 v1, 0x1
 
     const/4 v2, 0x1
@@ -802,7 +712,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -810,29 +719,24 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 122
     .local v0, "macPermFile":Ljava/io/File;
     invoke-virtual {p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v12
 
-    .line 123
     .local v12, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v12, :cond_2
 
-    .line 124
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "IRMContainer"
 
-    const-string/jumbo v3, "createSEContainer, irmMDMID is null"
+    const-string v3, "createSEContainer, irmMDMID is null"
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 125
     const/4 v9, -0x1
 
-    .line 160
     .end local v0    # "macPermFile":Ljava/io/File;
     .end local v11    # "irmContainerDir":Ljava/io/File;
     .end local v12    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
@@ -840,11 +744,9 @@
     :goto_0
     return v9
 
-    .line 114
     :catch_0
     move-exception v10
 
-    .line 115
     .local v10, "e":Ljava/lang/Exception;
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -854,15 +756,12 @@
 
     invoke-virtual {v1, v2, v3, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 116
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 117
     const/4 v9, -0x1
 
     goto :goto_0
 
-    .line 128
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v0    # "macPermFile":Ljava/io/File;
     .restart local v11    # "irmContainerDir":Ljava/io/File;
@@ -878,7 +777,6 @@
 
     aput-object v2, v8, v1
 
-    .line 129
     .local v8, "certificates":[Ljava/lang/String;
     iget-object v1, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -886,27 +784,23 @@
 
     move-result-object v7
 
-    .line 134
     .local v7, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget v1, v7, Landroid/content/pm/ApplicationInfo;->category:I
 
     if-eqz v1, :cond_3
 
-    .line 135
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "IRMContainer"
 
-    const-string/jumbo v3, "createIRMContainer, The Agent is a Container App"
+    const-string v3, "createIRMContainer, The Agent is a Container App"
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
     const/16 v9, -0x9
 
     goto :goto_0
 
-    .line 138
     :cond_3
     iget-object v1, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
@@ -918,13 +812,11 @@
 
     move-result v9
 
-    .line 139
     .local v9, "containerID":I
     const/4 v1, -0x7
 
     if-ne v9, v1, :cond_4
 
-    .line 140
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "IRMContainer"
@@ -933,18 +825,15 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     const/4 v9, -0x7
 
     goto :goto_0
 
-    .line 144
     :cond_4
     const/16 v1, 0x2be
 
     if-ne v9, v1, :cond_1
 
-    .line 145
     iget-object v1, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
     iget-object v2, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -965,16 +854,14 @@
 
     if-eqz v1, :cond_5
 
-    .line 146
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "IRMContainer"
 
-    const-string/jumbo v3, "createSEContainer: addEntryToMac failed"
+    const-string v3, "createSEContainer: addEntryToMac failed"
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     iget-object v1, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -983,12 +870,10 @@
 
     invoke-virtual {v1, v2, v3, v9}, Lcom/android/server/pm/PackageManagerService;->removeContainerID(Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 148
     const/4 v9, -0x1
 
     goto :goto_0
 
-    .line 150
     :cond_5
     iget-object v1, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -1002,16 +887,14 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 151
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "IRMContainer"
 
-    const-string/jumbo v3, "createSEContainer: loadcontainersetting failed"
+    const-string v3, "createSEContainer: loadcontainersetting failed"
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     iget-object v1, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
     iget-object v2, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -1024,7 +907,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/server/IRMContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 153
     iget-object v1, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -1033,7 +915,6 @@
 
     invoke-virtual {v1, v2, v3, v9}, Lcom/android/server/pm/PackageManagerService;->removeContainerID(Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 154
     const/4 v9, -0x1
 
     goto/16 :goto_0
@@ -1047,35 +928,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 237
     const/16 v2, 0x2be
 
     if-ne p1, v2, :cond_2
 
-    .line 241
     invoke-virtual {p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v0
 
-    .line 242
     .local v0, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v0, :cond_0
 
-    .line 243
     sget-object v2, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "IRMContainer"
 
-    const-string/jumbo v4, "irmMDMID is null, Returning null"
+    const-string v4, "irmMDMID is null, Returning null"
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
     .end local v0    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :goto_0
     return-object v1
 
-    .line 246
     .restart local v0    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_0
     iget-object v2, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -1088,7 +963,6 @@
 
     if-nez v2, :cond_1
 
-    .line 247
     sget-object v2, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "IRMContainer"
@@ -1099,13 +973,11 @@
 
     goto :goto_0
 
-    .line 250
     :cond_1
     const/4 v2, 0x7
 
     if-ne p2, v2, :cond_2
 
-    .line 251
     iget-object v1, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v2, 0x4
@@ -1116,7 +988,6 @@
 
     goto :goto_0
 
-    .line 254
     .end local v0    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_2
     sget-object v2, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
@@ -1140,19 +1011,16 @@
     .param p6, "category"    # I
 
     .prologue
-    .line 592
     if-nez p1, :cond_0
 
-    .line 593
     const-string p1, "_app"
 
-    .line 595
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "user="
+    const-string v1, "user="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1222,28 +1090,23 @@
     .end annotation
 
     .prologue
-    .line 262
     invoke-virtual {p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v0
 
-    .line 263
     .local v0, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v0, :cond_0
 
-    .line 265
     sget-object v1, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "IRMContainer"
 
-    const-string/jumbo v3, "getSEContainerIDs, irmMDMID is null, Returning null"
+    const-string v3, "getSEContainerIDs, irmMDMID is null, Returning null"
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
     const/4 v1, 0x0
 
-    .line 269
     :goto_0
     return-object v1
 
@@ -1269,40 +1132,33 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 282
     invoke-static {p1}, Lcom/android/server/IRMContainer;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 283
     invoke-virtual {p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v6
 
-    .line 284
     .local v6, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v6, :cond_0
 
-    .line 286
     sget-object v0, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v1, "IRMContainer"
 
-    const-string/jumbo v2, "irmMDMID is null, Returning null"
+    const-string v2, "irmMDMID is null, Returning null"
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 296
     :goto_0
     return-object v7
 
-    .line 290
     :cond_0
     const/4 v0, 0x7
 
     if-ne p2, v0, :cond_1
 
-    .line 291
     iget-object v0, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v6, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -1319,7 +1175,6 @@
 
     move-result v8
 
-    .line 292
     .local v8, "retContainerID":I
     const/4 v0, 0x1
 
@@ -1329,11 +1184,9 @@
 
     aput v8, v7, v0
 
-    .line 293
     .local v7, "retContainerArray":[I
     goto :goto_0
 
-    .line 295
     .end local v7    # "retContainerArray":[I
     .end local v8    # "retContainerID":I
     :cond_1
@@ -1341,7 +1194,7 @@
 
     const-string v1, "IRMContainer"
 
-    const-string/jumbo v2, "getSEContainerIDsFromPackageName, null is returned"
+    const-string v2, "getSEContainerIDsFromPackageName, null is returned"
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1353,10 +1206,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 300
     const/4 v1, 0x0
 
-    .line 301
     .local v1, "signature":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
@@ -1364,13 +1215,11 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 303
     .local v0, "macPermFile":Ljava/io/File;
     invoke-static {v0, p1}, Lcom/android/server/IRMContainer;->getSignatureEntryFromMac(Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 304
     return-object v1
 .end method
 
@@ -1382,10 +1231,8 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 463
     const/16 v22, 0x0
 
-    .line 467
     .local v22, "appNotInstalled":Z
     const/4 v4, 0x7
 
@@ -1399,7 +1246,6 @@
 
     if-eq v0, v4, :cond_0
 
-    .line 468
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -1408,23 +1254,18 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 469
     const/4 v4, -0x3
 
-    .line 588
     :goto_0
     return v4
 
-    .line 471
     :cond_0
     invoke-static/range {p1 .. p1}, Lcom/android/server/IRMContainer;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 472
     if-nez p1, :cond_1
 
-    .line 473
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -1433,36 +1274,30 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
     const/4 v4, -0x1
 
     goto :goto_0
 
-    .line 476
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v25
 
-    .line 477
     .local v25, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v25, :cond_2
 
-    .line 478
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "irmMDMID is null, Returning null"
+    const-string v6, "irmMDMID is null, Returning null"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 479
     const/4 v4, -0x2
 
     goto :goto_0
 
-    .line 481
     :cond_2
     move-object/from16 v0, v25
 
@@ -1480,7 +1315,6 @@
 
     if-nez v4, :cond_3
 
-    .line 482
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -1489,35 +1323,28 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 483
     const/4 v4, -0x2
 
     goto :goto_0
 
-    .line 486
     :cond_3
     const/16 v23, 0x0
 
-    .line 487
     .local v23, "certMatch":Z
     const/4 v12, 0x0
 
-    .line 488
     .local v12, "signature":Ljava/lang/String;
     new-instance v29, Ljava/util/ArrayList;
 
     invoke-direct/range {v29 .. v29}, Ljava/util/ArrayList;-><init>()V
 
-    .line 489
     .local v29, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static/range {p1 .. p1}, Lcom/android/server/IRMContainer;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v29
 
-    .line 490
     if-nez p2, :cond_4
 
-    .line 492
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -1526,24 +1353,19 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 494
     const/16 v4, -0xe
 
     goto :goto_0
 
-    .line 495
     :cond_4
     if-nez v29, :cond_6
 
-    .line 498
     const/4 v4, 0x0
 
     aget-object v12, p2, v4
 
-    .line 499
     const/16 v22, 0x1
 
-    .line 523
     :cond_5
     new-instance v26, Ljava/io/File;
 
@@ -1553,7 +1375,6 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 524
     .local v26, "macPermFile":Ljava/io/File;
     new-instance v28, Ljava/io/File;
 
@@ -1563,20 +1384,17 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 530
     .local v28, "seappConfig":Ljava/io/File;
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v30
 
-    .line 531
     .local v30, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v27
 
-    .line 532
     .local v27, "pid":I
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
@@ -1584,13 +1402,11 @@
 
     move-result v31
 
-    .line 537
     .local v31, "userId":I
     invoke-static/range {p1 .. p2}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v21
 
-    .line 541
     .local v21, "appInfo":Landroid/content/pm/ApplicationInfo;
     move-object/from16 v0, v21
 
@@ -1598,7 +1414,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 546
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1631,23 +1446,20 @@
 
     if-nez v4, :cond_8
 
-    .line 547
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "removeEntryFromMac failed"
+    const-string v6, "removeEntryFromMac failed"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 548
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 501
     .end local v21    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v26    # "macPermFile":Ljava/io/File;
     .end local v27    # "pid":I
@@ -1666,7 +1478,6 @@
     .end local v12    # "signature":Ljava/lang/String;
     check-cast v12, Ljava/lang/String;
 
-    .line 504
     .restart local v12    # "signature":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -1678,28 +1489,23 @@
 
     if-eqz v4, :cond_7
 
-    .line 508
     const/16 v23, 0x1
 
-    .line 513
     :cond_7
     if-nez v23, :cond_5
 
-    .line 515
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "removeAppFromContainer, input certificate does not match the certificate extracted from package"
+    const-string v6, "removeAppFromContainer, input certificate does not match the certificate extracted from package"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
     const/16 v4, -0xd
 
     goto/16 :goto_0
 
-    .line 550
     .restart local v21    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v26    # "macPermFile":Ljava/io/File;
     .restart local v27    # "pid":I
@@ -1728,19 +1534,15 @@
 
     move-result-object v7
 
-    .line 551
     .local v7, "newPkgName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 552
     .local v8, "argSeinfo":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 553
     .local v9, "argDomain":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 554
     .local v10, "argDataType":Ljava/lang/String;
     const/4 v4, 0x7
 
@@ -1748,16 +1550,12 @@
 
     if-ne v0, v4, :cond_9
 
-    .line 555
-    const-string/jumbo v8, "irm_platform"
+    const-string v8, "irm_platform"
 
-    .line 556
-    const-string/jumbo v9, "irm_platform_app"
+    const-string v9, "irm_platform_app"
 
-    .line 557
-    const-string/jumbo v10, "platform_app_data_file"
+    const-string v10, "platform_app_data_file"
 
-    .line 563
     :goto_1
     invoke-virtual/range {v28 .. v28}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -1775,7 +1573,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 564
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
@@ -1784,7 +1581,6 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 565
     move-object/from16 v0, v21
 
     iget-object v14, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
@@ -1803,7 +1599,6 @@
 
     invoke-static/range {v11 .. v17}, Lcom/android/server/IRMContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 566
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -1814,24 +1609,19 @@
 
     invoke-virtual {v0, v1, v4, v5}, Lcom/android/server/IRMContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 567
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 559
     :cond_9
-    const-string/jumbo v8, "irm"
+    const-string v8, "irm"
 
-    .line 560
-    const-string/jumbo v9, "irm_app"
+    const-string v9, "irm_app"
 
-    .line 561
     const-string v10, "app_data_file"
 
     goto :goto_1
 
-    .line 570
     :cond_a
     move-object/from16 v0, p0
 
@@ -1849,7 +1639,6 @@
 
     if-ne v4, v5, :cond_b
 
-    .line 571
     invoke-virtual/range {v28 .. v28}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v14
@@ -1870,7 +1659,6 @@
 
     invoke-virtual/range {v13 .. v20}, Lcom/android/server/IRMContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 572
     move-object/from16 v0, v21
 
     iget-object v14, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
@@ -1889,25 +1677,21 @@
 
     invoke-static/range {v11 .. v17}, Lcom/android/server/IRMContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 573
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 576
     :cond_b
-    const-string/jumbo v4, "selinux.reload_policy"
+    const-string v4, "selinux.reload_policy"
 
     const-string v5, "1"
 
     invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 578
     .end local v7    # "newPkgName":Ljava/lang/String;
     .end local v8    # "argSeinfo":Ljava/lang/String;
     .end local v9    # "argDomain":Ljava/lang/String;
@@ -1921,7 +1705,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "removeAppFromContainer, "
+    const-string v11, "removeAppFromContainer, "
 
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1947,12 +1731,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 579
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 581
     .end local v21    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v27    # "pid":I
     .end local v30    # "uid":I
@@ -1960,7 +1742,6 @@
     :catch_0
     move-exception v24
 
-    .line 582
     .local v24, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1970,7 +1751,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "leave removeAppFromContainer "
+    const-string v11, "leave removeAppFromContainer "
 
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1990,7 +1771,6 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 583
     const/4 v4, -0x1
 
     goto/16 :goto_0
@@ -2005,50 +1785,42 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 175
     new-instance v1, Ljava/io/File;
 
     sget-object v4, Lcom/android/server/IRMContainer;->IRM_MAC_PERM:Ljava/lang/String;
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 177
     .local v1, "macPermFile":Ljava/io/File;
     invoke-virtual {p0}, Lcom/android/server/IRMContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v0
 
-    .line 178
     .local v0, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-nez v0, :cond_0
 
-    .line 179
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "irmMDMID is null"
+    const-string v6, "irmMDMID is null"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 223
     :goto_0
     return v3
 
-    .line 189
     :cond_0
     const/16 v4, 0x2be
 
     if-ne p3, v4, :cond_5
 
-    .line 193
     const/4 v4, 0x7
 
     invoke-virtual {p0, p3, v4}, Lcom/android/server/IRMContainer;->getPackageNamesFromSEContainer(II)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 194
     .local v2, "packageNames":[Ljava/lang/String;
     if-eqz v2, :cond_1
 
@@ -2056,7 +1828,6 @@
 
     if-nez v4, :cond_4
 
-    .line 198
     :cond_1
     iget-object v4, p0, Lcom/android/server/IRMContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
@@ -2070,7 +1841,6 @@
 
     if-nez v4, :cond_3
 
-    .line 202
     iget-object v4, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
     iget-object v5, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
@@ -2087,36 +1857,32 @@
 
     if-nez v4, :cond_2
 
-    .line 203
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "removeEntryFromMac failed"
+    const-string v6, "removeEntryFromMac failed"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 209
     :cond_2
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 212
     :cond_3
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "remove IRM Container ID Failed"
+    const-string v6, "remove IRM Container ID Failed"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 215
     :cond_4
     sget-object v3, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2126,19 +1892,17 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 216
     const/16 v3, -0xb
 
     goto :goto_0
 
-    .line 222
     .end local v2    # "packageNames":[Ljava/lang/String;
     :cond_5
     sget-object v4, Lcom/android/server/IRMContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "IRMContainer"
 
-    const-string/jumbo v6, "removeSEContainer, POLICY_FAILED is returned"
+    const-string v6, "removeSEContainer, POLICY_FAILED is returned"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 

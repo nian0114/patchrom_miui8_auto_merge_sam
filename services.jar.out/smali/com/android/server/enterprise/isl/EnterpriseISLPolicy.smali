@@ -177,7 +177,6 @@
 
     const/4 v1, 0x0
 
-    .line 105
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -189,69 +188,58 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
-    .line 109
     const-string v0, "EnterpriseISLPolicyService"
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    .line 132
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mPersonaManager:Landroid/os/IPersonaManager;
 
-    .line 136
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
-    .line 139
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAList:Ljava/util/List;
 
-    .line 145
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
-    .line 148
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
 
-    .line 151
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
-    .line 154
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
-    .line 164
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->syncObj:Ljava/lang/Object;
 
-    .line 166
     sput v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mFilesCount:I
 
-    .line 168
     const/4 v0, -0x1
 
     sput v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mProgress:I
@@ -266,55 +254,40 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 184
     invoke-direct {p0}, Lcom/sec/enterprise/knox/IEnterpriseISLPolicy$Stub;-><init>()V
 
-    .line 107
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
-    .line 126
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 128
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->db:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 130
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmIntegrityStorageProvider;
 
-    .line 134
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageBaseProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 142
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->perAdminPackageListMap:Ljava/util/Map;
 
-    .line 170
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemBinObserver:Landroid/os/FileObserver;
 
-    .line 171
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemXbinObserver:Landroid/os/FileObserver;
 
-    .line 172
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemFmwrkObserver:Landroid/os/FileObserver;
 
-    .line 174
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->receiver:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLpolicyReciever;
 
-    .line 175
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->migrationReceiver:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;
 
-    .line 176
-    const-string/jumbo v0, "tima"
+    const-string v0, "tima"
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TIMA_SERVICE:Ljava/lang/String;
 
-    .line 179
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mySharedPreference:Landroid/content/SharedPreferences;
 
-    .line 185
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -325,11 +298,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     :cond_0
     iput-object p1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
-    .line 187
     new-instance v0, Lcom/android/server/enterprise/storage/EdmIntegrityStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
@@ -338,7 +309,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmIntegrityStorageProvider;
 
-    .line 190
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
@@ -347,7 +317,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageBaseProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageBaseProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v0, v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
@@ -358,8 +327,7 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->db:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 192
-    const-string/jumbo v0, "tima"
+    const-string v0, "tima"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -371,7 +339,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mTimaService:Landroid/service/tima/ITimaService;
 
-    .line 194
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_1
@@ -382,11 +349,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->registerEnterpriseISLpolicyReciever()V
 
-    .line 197
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_2
@@ -397,14 +362,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->registerMigrationReceiver()V
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "migrationRequiredPrefs"
+    const-string v1, "migrationRequiredPrefs"
 
     const/4 v2, 0x0
 
@@ -414,7 +377,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mySharedPreference:Landroid/content/SharedPreferences;
 
-    .line 201
     return-void
 .end method
 
@@ -422,7 +384,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     return v0
@@ -432,7 +393,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -442,7 +402,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
     return-object v0
@@ -452,7 +411,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mFilesCount:I
 
     return v0
@@ -463,7 +421,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 102
     sput p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mFilesCount:I
 
     return p0
@@ -473,7 +430,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mFilesCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -489,7 +445,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getAdminId(Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;)I
 
     move-result v0
@@ -503,7 +458,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v0
@@ -515,7 +469,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mProgress:I
 
     return v0
@@ -526,7 +479,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 102
     sput p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mProgress:I
 
     return p0
@@ -536,7 +488,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->syncObj:Ljava/lang/Object;
 
     return-object v0
@@ -548,7 +499,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getAllPackagesFromOwnerspace(I)Ljava/util/List;
 
     move-result-object v0
@@ -561,7 +511,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mySharedPreference:Landroid/content/SharedPreferences;
 
     return-object v0
@@ -572,7 +521,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -583,7 +531,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 102
     invoke-static {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->checkIfUserIsContainer(I)Z
 
     move-result v0
@@ -598,7 +545,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 102
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->checkContainerOwner(II)Z
 
     move-result v0
@@ -611,7 +557,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     .prologue
-    .line 102
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getAdminISAMAPFromDB()Ljava/util/Map;
 
     move-result-object v0
@@ -626,7 +571,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getPackageListfromDB(ILjava/lang/String;)Ljava/util/List;
 
     move-result-object v0
@@ -639,7 +583,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmIntegrityStorageProvider;
 
     return-object v0
@@ -651,7 +594,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->islMigration(Z)V
 
     return-void
@@ -664,7 +606,6 @@
     .param p2, "x2"    # Landroid/content/Intent;
 
     .prologue
-    .line 102
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->sendBroadcastToMDM(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -676,7 +617,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getSubscriberInstance(I)Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;
 
     move-result-object v0
@@ -688,7 +628,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
 
     return-object v0
@@ -698,7 +637,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
     return-object v0
@@ -708,7 +646,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
     return-object v0
@@ -718,7 +655,6 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
     return-object v0
@@ -730,10 +666,8 @@
     .param p2, "adminUid"    # I
 
     .prologue
-    .line 488
     const/4 v1, 0x0
 
-    .line 490
     .local v1, "ret":Z
     iget-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageBaseProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -741,14 +675,11 @@
 
     move-result v0
 
-    .line 493
     .local v0, "ownerUid":I
     if-ne p2, v0, :cond_0
 
-    .line 494
     const/4 v1, 0x1
 
-    .line 495
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v2, :cond_0
@@ -785,7 +716,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     :cond_0
     return v1
 .end method
@@ -795,10 +725,8 @@
     .param p0, "containerId"    # I
 
     .prologue
-    .line 475
     const/4 v1, 0x0
 
-    .line 476
     .local v1, "isUserPersona":Z
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -826,7 +754,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 478
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getPersonaManager()Landroid/os/IPersonaManager;
@@ -835,7 +762,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 479
     sget-object v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mPersonaManager:Landroid/os/IPersonaManager;
 
     invoke-interface {v2, p0}, Landroid/os/IPersonaManager;->exists(I)Z
@@ -844,16 +770,13 @@
 
     move-result v1
 
-    .line 484
     :cond_1
     :goto_0
     return v1
 
-    .line 481
     :catch_0
     move-exception v0
 
-    .line 482
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -892,7 +815,6 @@
     .locals 12
 
     .prologue
-    .line 319
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_0
@@ -903,11 +825,9 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     :cond_0
     const/4 v1, 0x0
 
-    .line 322
     .local v1, "bRet":Z
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -917,27 +837,24 @@
 
     if-eqz v9, :cond_2
 
-    .line 323
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_1
 
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v10, "mMultiMap is empty"
+    const-string v10, "mMultiMap is empty"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     move v2, v1
 
-    .line 380
     .end local v1    # "bRet":Z
     .local v2, "bRet":I
     :goto_0
     return v2
 
-    .line 328
     .end local v2    # "bRet":I
     .restart local v1    # "bRet":Z
     :cond_2
@@ -947,15 +864,13 @@
 
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v10, "full package list in DB"
+    const-string v10, "full package list in DB"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     :cond_3
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mappingAdminPackageList()V
 
-    .line 331
     iget-object v9, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->perAdminPackageListMap:Ljava/util/Map;
 
     invoke-interface {v9}, Ljava/util/Map;->isEmpty()Z
@@ -964,7 +879,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 332
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_4
@@ -975,22 +889,18 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     :cond_4
     const/4 v1, 0x1
 
     move v2, v1
 
-    .line 334
     .restart local v2    # "bRet":I
     goto :goto_0
 
-    .line 337
     .end local v2    # "bRet":I
     :cond_5
     const/4 v1, 0x1
 
-    .line 339
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_6
@@ -1001,7 +911,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     :cond_6
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -1030,7 +939,6 @@
 
     move-result v0
 
-    .line 341
     .local v0, "admin":I
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -1058,31 +966,26 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     :cond_8
     const/4 v6, 0x0
 
-    .line 343
     .local v6, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v6
 
-    .line 344
     if-nez v6, :cond_b
 
-    .line 345
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_9
 
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v10, "interfaceISA is null, need to bind isa"
+    const-string v10, "interfaceISA is null, need to bind isa"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     :cond_9
     const/4 v1, 0x0
 
@@ -1092,11 +995,9 @@
     :goto_1
     move v2, v1
 
-    .line 380
     .restart local v2    # "bRet":I
     goto :goto_0
 
-    .line 350
     .end local v2    # "bRet":I
     .restart local v0    # "admin":I
     .restart local v6    # "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
@@ -1113,11 +1014,9 @@
 
     check-cast v8, Ljava/util/List;
 
-    .line 351
     .local v8, "perAdminPackageList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v8, :cond_7
 
-    .line 354
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1137,9 +1036,8 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 355
     .local v7, "packageName":Ljava/lang/String;
-    const-string/jumbo v9, "sec_container_1."
+    const-string v9, "sec_container_1."
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1147,7 +1045,6 @@
 
     if-eqz v9, :cond_c
 
-    .line 357
     :try_start_0
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -1159,7 +1056,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "migration - packageName : "
+    const-string v11, "migration - packageName : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1175,7 +1072,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
     :cond_d
     invoke-interface {v6, v7}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->removePackageFromBaseline(Ljava/lang/String;)Z
 
@@ -1183,7 +1079,6 @@
 
     if-nez v9, :cond_10
 
-    .line 360
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_e
@@ -1194,7 +1089,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "removePackage failed - packageName : "
+    const-string v11, "removePackage failed - packageName : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1210,21 +1105,18 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     :cond_e
     const/4 v1, 0x0
 
-    .line 375
     .end local v7    # "packageName":Ljava/lang/String;
     :cond_f
     if-nez v1, :cond_7
 
     goto :goto_1
 
-    .line 365
     .restart local v7    # "packageName":Ljava/lang/String;
     :cond_10
-    const-string/jumbo v9, "sec_container_1."
+    const-string v9, "sec_container_1."
 
     const-string v10, ""
 
@@ -1238,7 +1130,6 @@
 
     if-nez v9, :cond_c
 
-    .line 366
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_c
@@ -1249,7 +1140,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "putPackage failed - packageName : "
+    const-string v11, "putPackage failed - packageName : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1269,11 +1160,9 @@
 
     goto/16 :goto_2
 
-    .line 368
     :catch_0
     move-exception v3
 
-    .line 369
     .local v3, "e":Landroid/os/RemoteException;
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -1285,7 +1174,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "migration exception : packagename : "
+    const-string v11, "migration exception : packagename : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1301,7 +1190,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     :cond_11
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -1319,16 +1207,14 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 421
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 422
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "2.0"
 
-    const-string/jumbo v2, "version"
+    const-string v2, "version"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1340,7 +1226,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 423
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v1
@@ -1353,11 +1238,9 @@
 
     iget v1, v1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 427
     :goto_0
     return v1
 
-    .line 426
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1367,7 +1250,6 @@
 
     invoke-virtual {v1, v2}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermission(Ljava/lang/String;)V
 
-    .line 427
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -1380,7 +1262,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 441
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1408,7 +1289,6 @@
     .end annotation
 
     .prologue
-    .line 1072
     sget-boolean v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v1, :cond_0
@@ -1419,7 +1299,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1073
     :cond_0
     const/4 v1, 0x2
 
@@ -1433,11 +1312,10 @@
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "isaPackageName"
+    const-string v2, "isaPackageName"
 
     aput-object v2, v0, v1
 
-    .line 1074
     .local v0, "sReturnColumns":[Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmIntegrityStorageProvider;
 
@@ -1455,10 +1333,8 @@
     .param p1, "callMe"    # Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;
 
     .prologue
-    .line 464
     const/4 v2, -0x1
 
-    .line 465
     .local v2, "retVal":I
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -1466,11 +1342,10 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in getAdminId"
+    const-string v4, "in getAdminId"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     :cond_0
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
@@ -1501,7 +1376,6 @@
 
     move-result v0
 
-    .line 467
     .local v0, "i":I
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
@@ -1515,12 +1389,10 @@
 
     if-ne v3, p1, :cond_1
 
-    .line 468
     move v2, v0
 
     goto :goto_0
 
-    .line 471
     .end local v0    # "i":I
     :cond_2
     return v2
@@ -1540,10 +1412,9 @@
     .end annotation
 
     .prologue
-    .line 502
     iget-object v11, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v12, "user"
+    const-string v12, "user"
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1551,25 +1422,21 @@
 
     check-cast v8, Landroid/os/UserManager;
 
-    .line 503
     .local v8, "userManager":Landroid/os/UserManager;
     invoke-virtual {v8}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v9
 
-    .line 504
     .local v9, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 505
     .local v3, "mPackageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v10
 
-    .line 506
     .local v10, "userlistSize":I
     sget-boolean v11, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -1597,13 +1464,11 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     :cond_0
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 508
     .local v4, "pNames":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1623,7 +1488,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 510
     .local v7, "uf":Landroid/content/pm/UserInfo;
     iget v11, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -1637,7 +1501,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 515
     :cond_2
     iget v11, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -1651,7 +1514,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 516
     :cond_3
     iget-object v11, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
@@ -1667,7 +1529,6 @@
 
     move-result-object v5
 
-    .line 518
     .local v5, "packInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     sget-boolean v11, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -1679,7 +1540,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "in getPackageList-- USER ID = "
+    const-string v13, "in getPackageList-- USER ID = "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1711,11 +1572,9 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
     :cond_4
     if-eqz v5, :cond_1
 
-    .line 521
     :try_start_0
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1736,7 +1595,6 @@
 
     check-cast v6, Landroid/content/pm/PackageInfo;
 
-    .line 522
     .local v6, "pkgInfo":Landroid/content/pm/PackageInfo;
     iget-object v11, v6, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1752,7 +1610,6 @@
 
     if-eq v11, v12, :cond_5
 
-    .line 523
     iget-object v11, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v4, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -1761,13 +1618,11 @@
 
     goto :goto_1
 
-    .line 526
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v6    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v0
 
-    .line 527
     .local v0, "e":Ljava/lang/Exception;
     sget-object v11, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -1779,17 +1634,14 @@
 
     goto/16 :goto_0
 
-    .line 532
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v5    # "packInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     .end local v7    # "uf":Landroid/content/pm/UserInfo;
     :cond_6
     if-eqz v4, :cond_7
 
-    .line 533
     invoke-interface {v3, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 535
     :cond_7
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1812,15 +1664,13 @@
     .locals 2
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 433
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "enterprise_policy"
+    const-string v1, "enterprise_policy"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1830,7 +1680,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 436
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1842,18 +1691,16 @@
     .param p1, "adminUID"    # I
 
     .prologue
-    .line 456
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "in getISAInterface"
+    const-string v1, "in getISAInterface"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
 
@@ -1867,7 +1714,6 @@
 
     if-nez v0, :cond_1
 
-    .line 458
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_1
@@ -1878,7 +1724,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "getISAInterface - ISAInterface not registered for the Admin--"
+    const-string v2, "getISAInterface - ISAInterface not registered for the Admin--"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1894,7 +1740,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     :cond_1
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
 
@@ -1934,7 +1779,6 @@
 
     const/4 v5, 0x0
 
-    .line 1078
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
@@ -1945,7 +1789,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1079
     :cond_0
     new-array v0, v7, [Ljava/lang/String;
 
@@ -1953,11 +1796,10 @@
 
     aput-object v3, v0, v5
 
-    const-string/jumbo v3, "isaPackageName"
+    const-string v3, "isaPackageName"
 
     aput-object v3, v0, v6
 
-    .line 1080
     .local v0, "sColumns":[Ljava/lang/String;
     new-array v2, v7, [Ljava/lang/String;
 
@@ -1969,15 +1811,13 @@
 
     aput-object p2, v2, v6
 
-    .line 1081
     .local v2, "sValues":[Ljava/lang/String;
     new-array v1, v6, [Ljava/lang/String;
 
-    const-string/jumbo v3, "packageName"
+    const-string v3, "packageName"
 
     aput-object v3, v1, v5
 
-    .line 1082
     .local v1, "sReturnColumns":[Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmIntegrityStorageProvider;
 
@@ -1994,13 +1834,11 @@
     .locals 1
 
     .prologue
-    .line 204
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mPersonaManager:Landroid/os/IPersonaManager;
 
     if-nez v0, :cond_0
 
-    .line 205
-    const-string/jumbo v0, "persona"
+    const-string v0, "persona"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2012,7 +1850,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mPersonaManager:Landroid/os/IPersonaManager;
 
-    .line 207
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mPersonaManager:Landroid/os/IPersonaManager;
 
@@ -2024,18 +1861,16 @@
     .param p1, "adminUID"    # I
 
     .prologue
-    .line 447
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "in getSubscriberInstance"
+    const-string v1, "in getSubscriberInstance"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 448
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
@@ -2049,7 +1884,6 @@
 
     if-nez v0, :cond_1
 
-    .line 449
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_1
@@ -2060,7 +1894,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "getSubscriberInstance - Subscriber not registered for the Admin--"
+    const-string v2, "getSubscriberInstance - Subscriber not registered for the Admin--"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2076,7 +1910,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     :cond_1
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
@@ -2100,7 +1933,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 232
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
@@ -2111,7 +1943,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mySharedPreference:Landroid/content/SharedPreferences;
 
@@ -2119,17 +1950,14 @@
 
     move-result-object v1
 
-    .line 234
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->doMigration3rdPartyUpdate()Z
 
     move-result v0
 
-    .line 237
     .local v0, "bMigration":Z
     if-ne v0, v5, :cond_4
 
-    .line 238
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_1
@@ -2140,48 +1968,40 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     :cond_1
-    const-string/jumbo v3, "migrationIMFlag"
+    const-string v3, "migrationIMFlag"
 
     const/4 v4, 0x0
 
     invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 240
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 245
     :cond_2
     :goto_0
     if-ne p1, v5, :cond_3
 
-    .line 246
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.sec.enterprise.knox.IM_MIGRATION_COMPLETE"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 247
     .local v2, "in":Landroid/content/Intent;
     const-string v3, "IM_MIGRATION_RESULT"
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 248
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
     sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v3, v2, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 250
     .end local v2    # "in":Landroid/content/Intent;
     :cond_3
     return-void
 
-    .line 242
     :cond_4
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -2200,12 +2020,10 @@
     .locals 9
 
     .prologue
-    .line 384
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 386
     .local v3, "packageList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v6, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -2236,13 +2054,12 @@
 
     move-result v0
 
-    .line 388
     .local v0, "admin":I
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "select packageName from EnterpriseIslFpTable Where adminUid = "
+    const-string v7, "select packageName from EnterpriseIslFpTable Where adminUid = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2262,7 +2079,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "packageName"
+    const-string v7, "packageName"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2274,7 +2091,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "prebaseLine"
+    const-string v7, "prebaseLine"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2286,7 +2103,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "system"
+    const-string v7, "system"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2302,11 +2119,9 @@
 
     move-result-object v5
 
-    .line 393
     .local v5, "sql":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 394
     .local v1, "cr":Landroid/database/Cursor;
     iget-object v6, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->db:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2316,10 +2131,8 @@
 
     move-result-object v1
 
-    .line 395
     if-eqz v1, :cond_3
 
-    .line 397
     :cond_1
     :goto_1
     :try_start_0
@@ -2329,8 +2142,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 398
-    const-string/jumbo v6, "packageName"
+    const-string v6, "packageName"
 
     invoke-interface {v1, v6}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
@@ -2340,14 +2152,11 @@
 
     move-result-object v4
 
-    .line 399
     .local v4, "pckg":Ljava/lang/String;
     if-eqz v4, :cond_1
 
-    .line 400
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 401
     sget-boolean v6, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v6, :cond_1
@@ -2388,7 +2197,6 @@
 
     goto :goto_1
 
-    .line 405
     .end local v4    # "pckg":Ljava/lang/String;
     :catchall_0
     move-exception v6
@@ -2400,7 +2208,6 @@
     :cond_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 408
     :cond_3
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -2408,7 +2215,6 @@
 
     if-lez v6, :cond_0
 
-    .line 409
     iget-object v6, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->perAdminPackageListMap:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2419,7 +2225,6 @@
 
     goto/16 :goto_0
 
-    .line 412
     .end local v0    # "admin":I
     .end local v1    # "cr":Landroid/database/Cursor;
     .end local v5    # "sql":Ljava/lang/String;
@@ -2432,16 +2237,14 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1087
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1088
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "2.0"
 
-    const-string/jumbo v2, "version"
+    const-string v2, "version"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2453,11 +2256,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 1089
     if-eqz p1, :cond_1
 
-    .line 1090
-    const-string/jumbo v1, "sec_container_1."
+    const-string v1, "sec_container_1."
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -2467,7 +2268,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1091
     sget-boolean v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v1, :cond_0
@@ -2478,7 +2278,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "remove the knox 1.0 prefix - package name : "
+    const-string v3, "remove the knox 1.0 prefix - package name : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2494,9 +2294,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1092
     :cond_0
-    const-string/jumbo v1, "sec_container_1."
+    const-string v1, "sec_container_1."
 
     const-string v2, ""
 
@@ -2504,7 +2303,6 @@
 
     move-result-object p1
 
-    .line 1097
     :cond_1
     return-object p1
 .end method
@@ -2526,17 +2324,15 @@
     .end annotation
 
     .prologue
-    .line 1102
     .local p1, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1103
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "2.0"
 
-    const-string/jumbo v5, "version"
+    const-string v5, "version"
 
     invoke-virtual {v0, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2548,15 +2344,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 1104
     if-eqz p1, :cond_1
 
-    .line 1105
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1106
     .local v2, "packageNamesModified":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2576,7 +2369,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 1107
     .local v3, "pkgName":Ljava/lang/String;
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->removeKnox1Prefix(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2586,12 +2378,10 @@
 
     goto :goto_0
 
-    .line 1109
     .end local v3    # "pkgName":Ljava/lang/String;
     :cond_0
     move-object p1, v2
 
-    .line 1112
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "packageNamesModified":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
@@ -2604,22 +2394,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 262
     const/4 v7, -0x1
 
-    .line 263
     .local v7, "mdmUid":I
     const/4 v1, 0x0
 
-    .line 264
     .local v1, "flag":Z
     const/4 v6, 0x0
 
-    .line 265
     .local v6, "mdmPkgName":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 266
     .local v3, "isMdmuser":Z
     iget-object v12, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
@@ -2627,13 +2412,11 @@
 
     move-result-object v9
 
-    .line 267
     .local v9, "pm":Landroid/content/pm/PackageManager;
     invoke-direct {p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getAdminISAMAPFromDB()Ljava/util/Map;
 
     move-result-object v5
 
-    .line 268
     .local v5, "mAdminISAMapFromDB":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     const-string v12, "android.intent.extra.user_handle"
 
@@ -2645,7 +2428,6 @@
 
     move-result v11
 
-    .line 269
     .local v11, "userHandle":I
     const-string v12, "android.intent.extra.UID"
 
@@ -2657,13 +2439,12 @@
 
     move-result v10
 
-    .line 270
     .local v10, "uID":I
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
     move-result-object v12
 
-    const-string/jumbo v13, "package:"
+    const-string v13, "package:"
 
     const-string v14, ""
 
@@ -2675,7 +2456,6 @@
 
     move-result-object v8
 
-    .line 272
     .local v8, "pkg":Ljava/lang/String;
     sget-object v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -2685,7 +2465,6 @@
 
     if-nez v12, :cond_6
 
-    .line 273
     sget-object v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
     invoke-interface {v12}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -2715,11 +2494,9 @@
 
     move-result v4
 
-    .line 274
     .local v4, "key":I
     move v7, v4
 
-    .line 275
     invoke-virtual {v9, v7}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v12
@@ -2728,12 +2505,10 @@
 
     aget-object v6, v12, v13
 
-    .line 276
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 278
     const/4 v12, -0x1
 
     if-le v7, v12, :cond_4
@@ -2744,10 +2519,8 @@
 
     if-eqz v12, :cond_4
 
-    .line 279
     const/4 v3, 0x1
 
-    .line 280
     sget-boolean v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v12, :cond_1
@@ -2794,27 +2567,22 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     :cond_1
     const/4 v1, 0x1
 
-    .line 310
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "key":I
     :cond_2
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 311
     move-object/from16 v0, p2
 
     invoke-direct {p0, v0, v3}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->sendintent(Landroid/content/Intent;Z)V
 
-    .line 315
     :cond_3
     return-void
 
-    .line 283
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "key":I
     :cond_4
@@ -2826,18 +2594,16 @@
 
     if-eqz v11, :cond_0
 
-    .line 284
     sget-boolean v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v12, :cond_5
 
     sget-object v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v13, "sendBroadcastToMDM-- user is a normal guest user "
+    const-string v13, "sendBroadcastToMDM-- user is a normal guest user "
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     :cond_5
     move-object/from16 v0, p2
 
@@ -2845,7 +2611,6 @@
 
     goto :goto_0
 
-    .line 289
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "key":I
     :cond_6
@@ -2855,7 +2620,6 @@
 
     if-nez v12, :cond_b
 
-    .line 290
     invoke-interface {v5}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v12
@@ -2883,11 +2647,9 @@
 
     move-result v4
 
-    .line 291
     .restart local v4    # "key":I
     move v7, v4
 
-    .line 292
     invoke-virtual {v9, v7}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v12
@@ -2896,12 +2658,10 @@
 
     aget-object v6, v12, v13
 
-    .line 293
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 295
     const/4 v12, -0x1
 
     if-le v7, v12, :cond_9
@@ -2912,10 +2672,8 @@
 
     if-eqz v12, :cond_9
 
-    .line 296
     const/4 v3, 0x1
 
-    .line 297
     sget-boolean v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v12, :cond_8
@@ -2962,14 +2720,11 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     :cond_8
     const/4 v1, 0x1
 
-    .line 299
     goto/16 :goto_1
 
-    .line 300
     :cond_9
     invoke-static {v11}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->checkIfUserIsContainer(I)Z
 
@@ -2979,18 +2734,16 @@
 
     if-eqz v11, :cond_7
 
-    .line 301
     sget-boolean v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v12, :cond_a
 
     sget-object v12, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v13, "sendBroadcastToMDM-- user is a normal guest user "
+    const-string v13, "sendBroadcastToMDM-- user is a normal guest user "
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     :cond_a
     move-object/from16 v0, p2
 
@@ -2998,7 +2751,6 @@
 
     goto :goto_2
 
-    .line 306
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "key":I
     :cond_b
@@ -3021,7 +2773,6 @@
     .param p2, "isMdmuser"    # Z
 
     .prologue
-    .line 254
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v2, :cond_0
@@ -3032,18 +2783,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     :cond_0
-    const-string/jumbo v2, "isMdmUser"
+    const-string v2, "isMdmUser"
 
     invoke-virtual {p1, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 256
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 257
     .local v0, "id":J
     iget-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
@@ -3051,10 +2799,8 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 258
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 259
     return-void
 .end method
 
@@ -3065,18 +2811,16 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 978
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in clearBaseline"
+    const-string v4, "in clearBaseline"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 979
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -3084,20 +2828,16 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 980
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 981
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 982
     if-eqz v2, :cond_2
 
-    .line 984
     :try_start_0
     invoke-interface {v2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->clearBaseline()Z
     :try_end_0
@@ -3105,15 +2845,12 @@
 
     move-result v3
 
-    .line 992
     :goto_0
     return v3
 
-    .line 985
     :catch_0
     move-exception v1
 
-    .line 986
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -3123,7 +2860,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 992
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -3131,7 +2867,6 @@
 
     goto :goto_0
 
-    .line 989
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3151,74 +2886,54 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 797
     const/4 v0, 0x0
 
-    .line 798
     .local v0, "ret":Ljava/lang/String;
     sparse-switch p1, :sswitch_data_0
 
-    .line 835
     :goto_0
     return-object v0
 
-    .line 800
     :sswitch_0
     const-string v0, "Attribute modified"
 
-    .line 801
     goto :goto_0
 
-    .line 804
     :sswitch_1
     const-string v0, "File modified"
 
-    .line 805
     goto :goto_0
 
-    .line 808
     :sswitch_2
     const-string v0, "File or subdirectory moved from"
 
-    .line 809
     goto :goto_0
 
-    .line 812
     :sswitch_3
     const-string v0, "File or subdirectory moved to"
 
-    .line 813
     goto :goto_0
 
-    .line 816
     :sswitch_4
     const-string v0, "New file or subdirectory created"
 
-    .line 817
     goto :goto_0
 
-    .line 820
     :sswitch_5
     const-string v0, "File deleted"
 
-    .line 821
     goto :goto_0
 
-    .line 824
     :sswitch_6
     const-string v0, "Deleted Self"
 
-    .line 825
     goto :goto_0
 
-    .line 828
     :sswitch_7
     const-string v0, "Moved Self"
 
-    .line 829
     goto :goto_0
 
-    .line 798
     nop
 
     :sswitch_data_0
@@ -3240,18 +2955,16 @@
     .param p2, "compareWithPreBaseline"    # Z
 
     .prologue
-    .line 943
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in establishBaselineScan"
+    const-string v4, "in establishBaselineScan"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 944
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -3259,20 +2972,16 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 945
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 946
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 947
     if-eqz v2, :cond_2
 
-    .line 949
     :try_start_0
     invoke-interface {v2, p2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->establishBaselineScan(Z)Z
     :try_end_0
@@ -3280,15 +2989,12 @@
 
     move-result v3
 
-    .line 956
     :goto_0
     return v3
 
-    .line 950
     :catch_0
     move-exception v1
 
-    .line 951
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -3298,7 +3004,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 956
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -3306,7 +3011,6 @@
 
     goto :goto_0
 
-    .line 954
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3314,7 +3018,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "establishBaselineScan - ISA interface is null"
+    const-string v4, "establishBaselineScan - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -3337,18 +3041,16 @@
     .end annotation
 
     .prologue
-    .line 562
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_0
 
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v10, "in getISAList"
+    const-string v10, "in getISAList"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
     :cond_0
     iget-object v9, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
@@ -3356,20 +3058,17 @@
 
     move-result-object v3
 
-    .line 565
     .local v3, "pm":Landroid/content/pm/PackageManager;
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAList:Ljava/util/List;
 
     invoke-interface {v9}, Ljava/util/List;->clear()V
 
-    .line 566
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object v9
 
     iget v0, v9, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 568
     .local v0, "adminId":I
     new-instance v1, Landroid/content/Intent;
 
@@ -3377,13 +3076,11 @@
 
     invoke-direct {v1, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 569
     .local v1, "bindInent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 571
     .local v4, "id":J
     const/4 v9, 0x0
 
@@ -3395,18 +3092,15 @@
 
     move-result-object v8
 
-    .line 572
     .local v8, "servicesList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 573
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result v9
 
     if-lez v9, :cond_2
 
-    .line 575
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -3426,11 +3120,9 @@
 
     check-cast v6, Landroid/content/pm/ResolveInfo;
 
-    .line 576
     .local v6, "resInfo":Landroid/content/pm/ResolveInfo;
     iget-object v7, v6, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 577
     .local v7, "servcInfo":Landroid/content/pm/ServiceInfo;
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAList:Ljava/util/List;
 
@@ -3440,19 +3132,17 @@
 
     invoke-interface {v9, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 578
     sget-boolean v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v9, :cond_1
 
-    .line 579
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "getISAList - Package  Name -- "
+    const-string v11, "getISAList - Package  Name -- "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3472,14 +3162,13 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 580
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "getISAList - Service  Name -- "
+    const-string v11, "getISAList - Service  Name -- "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3499,7 +3188,6 @@
 
     goto :goto_0
 
-    .line 584
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v6    # "resInfo":Landroid/content/pm/ResolveInfo;
     .end local v7    # "servcInfo":Landroid/content/pm/ServiceInfo;
@@ -3510,11 +3198,10 @@
 
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v10, "getISAList - No package found with ISL intent"
+    const-string v10, "getISAList - No package found with ISL intent"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     :cond_3
     sget-object v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAList:Ljava/util/List;
 
@@ -3526,18 +3213,16 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 718
     sget-boolean v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v1, :cond_0
 
     sget-object v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "in isISAReady"
+    const-string v2, "in isISAReady"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -3545,7 +3230,6 @@
 
     iget v0, v1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 720
     .local v0, "adminUid":I
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
@@ -3553,14 +3237,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 721
     const/4 v1, 0x1
 
-    .line 724
     :goto_0
     return v1
 
-    .line 723
     :cond_1
     sget-boolean v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3588,7 +3269,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
     :cond_2
     const/4 v1, 0x0
 
@@ -3600,7 +3280,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1833
     return-void
 .end method
 
@@ -3609,32 +3288,26 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1845
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 1846
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1847
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mISAInterfaceMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1848
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1849
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1851
     return-void
 .end method
 
@@ -3643,7 +3316,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1839
     return-void
 .end method
 
@@ -3652,18 +3324,16 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 925
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in performPreBaselineScan"
+    const-string v4, "in performPreBaselineScan"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 926
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -3671,20 +3341,16 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 927
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 928
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 929
     if-eqz v2, :cond_2
 
-    .line 931
     :try_start_0
     invoke-interface {v2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->performPreBaselineScan()Z
     :try_end_0
@@ -3692,15 +3358,12 @@
 
     move-result v3
 
-    .line 939
     :goto_0
     return v3
 
-    .line 932
     :catch_0
     move-exception v1
 
-    .line 933
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -3710,7 +3373,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 939
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -3718,7 +3380,6 @@
 
     goto :goto_0
 
-    .line 936
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3726,7 +3387,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "performPreBaselineScan - ISA interface is null"
+    const-string v4, "performPreBaselineScan - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -3750,7 +3411,6 @@
     .end annotation
 
     .prologue
-    .line 960
     .local p3, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3758,11 +3418,10 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in performScanNow"
+    const-string v4, "in performScanNow"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 961
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -3770,41 +3429,33 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 962
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 963
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 964
     if-eqz v2, :cond_2
 
-    .line 966
     :try_start_0
     invoke-direct {p0, p3}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->removeKnox1PrefixList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p3
 
-    .line 967
     invoke-interface {v2, p2, p3}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->performScanNow(ILjava/util/List;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v3
 
-    .line 974
     :goto_0
     return v3
 
-    .line 968
     :catch_0
     move-exception v1
 
-    .line 969
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -3814,7 +3465,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 974
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -3822,7 +3472,6 @@
 
     goto :goto_0
 
-    .line 972
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3830,7 +3479,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "performScanNow - ISA interface is null"
+    const-string v4, "performScanNow - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -3843,18 +3492,16 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 996
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in putPackageToBaseline"
+    const-string v4, "in putPackageToBaseline"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 997
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -3862,41 +3509,33 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 998
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 999
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 1000
     if-eqz v2, :cond_2
 
-    .line 1002
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->removeKnox1Prefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 1003
     invoke-interface {v2, p2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->putPackageToBaseline(Ljava/lang/String;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v3
 
-    .line 1010
     :goto_0
     return v3
 
-    .line 1004
     :catch_0
     move-exception v1
 
-    .line 1005
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -3906,7 +3545,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1010
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -3914,7 +3552,6 @@
 
     goto :goto_0
 
-    .line 1008
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -3922,7 +3559,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "putPackageToBaseline - ISA interface is null"
+    const-string v4, "putPackageToBaseline - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -3935,18 +3572,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 547
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "registerEnterpriseISLpolicyReciever - Binding the receiver"
+    const-string v1, "registerEnterpriseISLpolicyReciever - Binding the receiver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 548
     :cond_0
     new-instance v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLpolicyReciever;
 
@@ -3954,38 +3589,31 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->receiver:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLpolicyReciever;
 
-    .line 549
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 550
     .local v3, "systemFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 551
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 552
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 553
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 554
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 555
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->receiver:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLpolicyReciever;
@@ -3996,7 +3624,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 556
     return-void
 .end method
 
@@ -4006,18 +3633,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 539
     sget-boolean v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "registerMigrationReceiver - Registering the receiver"
+    const-string v1, "registerMigrationReceiver - Registering the receiver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     :cond_0
     new-instance v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;
 
@@ -4025,18 +3650,15 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->migrationReceiver:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;
 
-    .line 541
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 542
     .local v3, "migrationfilter":Landroid/content/IntentFilter;
     const-string v0, "com.sec.knox.migrationagent.START_IM_MIGRATION"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 543
     iget-object v0, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->migrationReceiver:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;
@@ -4047,7 +3669,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 544
     return-void
 .end method
 
@@ -4057,18 +3678,16 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1014
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in removePackageFromBaseline"
+    const-string v4, "in removePackageFromBaseline"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1015
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -4076,41 +3695,33 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1016
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 1017
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 1018
     if-eqz v2, :cond_2
 
-    .line 1020
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->removeKnox1Prefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 1021
     invoke-interface {v2, p2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->removePackageFromBaseline(Ljava/lang/String;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v3
 
-    .line 1028
     :goto_0
     return v3
 
-    .line 1022
     :catch_0
     move-exception v1
 
-    .line 1023
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -4120,7 +3731,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1028
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -4128,7 +3738,6 @@
 
     goto :goto_0
 
-    .line 1026
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -4136,7 +3745,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "removePackageFromBaseline - ISA interface is null"
+    const-string v4, "removePackageFromBaseline - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -4149,14 +3758,11 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 597
     const/16 v19, 0x0
 
-    .line 598
     .local v19, "ret":Z
     const/4 v13, 0x1
 
-    .line 600
     .local v13, "flag":Z
     move-object/from16 v0, p0
 
@@ -4166,7 +3772,6 @@
 
     if-eqz v23, :cond_4
 
-    .line 601
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_0
@@ -4177,7 +3782,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 606
     :cond_0
     :goto_0
     move-object/from16 v0, p0
@@ -4188,7 +3792,6 @@
 
     if-eqz v23, :cond_5
 
-    .line 607
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_1
@@ -4199,7 +3802,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 612
     :cond_1
     :goto_1
     if-eqz p2, :cond_2
@@ -4210,7 +3812,6 @@
 
     if-eqz v23, :cond_6
 
-    .line 614
     :cond_2
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -4218,31 +3819,26 @@
 
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v24, "requestBindISA - packageName is null"
+    const-string v24, "requestBindISA - packageName is null"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 615
     :cond_3
     const/16 v23, 0x0
 
-    .line 711
     :goto_2
     return v23
 
-    .line 603
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->registerEnterpriseISLpolicyReciever()V
 
     goto :goto_0
 
-    .line 609
     :cond_5
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->registerMigrationReceiver()V
 
     goto :goto_1
 
-    .line 618
     :cond_6
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -4254,7 +3850,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v25, "in requestBindISA - packageName is -- "
+    const-string v25, "in requestBindISA - packageName is -- "
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4274,7 +3870,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 619
     :cond_7
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -4284,13 +3879,11 @@
 
     iget v5, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 621
     .local v5, "adminId":I
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getAdminISAMAPFromDB()Ljava/util/Map;
 
     move-result-object v16
 
-    .line 623
     .local v16, "mAdminISAMapFromDB":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     const-string v23, "MigrationAgent"
 
@@ -4304,18 +3897,16 @@
 
     if-eqz v23, :cond_9
 
-    .line 624
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_8
 
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v24, "requestBindISA from Migration Agent"
+    const-string v24, "requestBindISA from Migration Agent"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 625
     :cond_8
     invoke-interface/range {v16 .. v16}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -4342,11 +3933,9 @@
 
     move-result v15
 
-    .line 626
     .local v15, "key":I
     move v5, v15
 
-    .line 627
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v23
@@ -4362,7 +3951,6 @@
     .end local p2    # "packageName":Ljava/lang/String;
     check-cast p2, Ljava/lang/String;
 
-    .line 628
     .restart local p2    # "packageName":Ljava/lang/String;
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -4406,7 +3994,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     .end local v14    # "i$":Ljava/util/Iterator;
     .end local v15    # "key":I
     :cond_9
@@ -4460,7 +4047,6 @@
 
     if-nez v23, :cond_c
 
-    .line 636
     :cond_a
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -4468,17 +4054,15 @@
 
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v24, "in requestBindISA - when the map is empty we must check the DB and get the admin for which last binding was there"
+    const-string v24, "in requestBindISA - when the map is empty we must check the DB and get the admin for which last binding was there"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 637
     :cond_b
     const/16 v23, 0x0
 
     goto/16 :goto_2
 
-    .line 642
     :cond_c
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -4500,24 +4084,21 @@
 
     if-nez v23, :cond_e
 
-    .line 643
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_d
 
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v24, "in requestBindISA - add the multiple MDM support backtracking"
+    const-string v24, "in requestBindISA - add the multiple MDM support backtracking"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     :cond_d
     const/16 v23, 0x0
 
     goto/16 :goto_2
 
-    .line 648
     :cond_e
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -4527,7 +4108,6 @@
 
     if-nez v23, :cond_10
 
-    .line 649
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
     invoke-interface/range {v23 .. v23}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -4556,7 +4136,6 @@
 
     move-result v15
 
-    .line 650
     .restart local v15    # "key":I
     if-ne v5, v15, :cond_f
 
@@ -4580,33 +4159,28 @@
 
     if-nez v23, :cond_f
 
-    .line 651
     const/4 v13, 0x0
 
-    .line 657
     .end local v14    # "i$":Ljava/util/Iterator;
     .end local v15    # "key":I
     :cond_10
     if-nez v13, :cond_12
 
-    .line 658
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_11
 
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v24, "in requestBindISA - checking if any of the entries do have ISA so prevent other MDM to bind to that ISA, failed"
+    const-string v24, "in requestBindISA - checking if any of the entries do have ISA so prevent other MDM to bind to that ISA, failed"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 659
     :cond_11
     const/16 v23, 0x0
 
     goto/16 :goto_2
 
-    .line 662
     :cond_12
     new-instance v9, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;
 
@@ -4614,7 +4188,6 @@
 
     invoke-direct {v9, v0, v5}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$ISAConnection;-><init>(Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;I)V
 
-    .line 663
     .local v9, "cISAConnect":Landroid/content/ServiceConnection;
     move-object/from16 v0, p0
 
@@ -4626,7 +4199,6 @@
 
     move-result-object v17
 
-    .line 666
     .local v17, "pm":Landroid/content/pm/PackageManager;
     new-instance v8, Landroid/content/Intent;
 
@@ -4636,13 +4208,11 @@
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 667
     .local v8, "bindInent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 668
     .local v6, "backupUID":J
     const/16 v23, 0x0
 
@@ -4660,18 +4230,15 @@
 
     move-result-object v21
 
-    .line 669
     .local v21, "servicesList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 671
     invoke-interface/range {v21 .. v21}, Ljava/util/List;->size()I
 
     move-result v23
 
     if-lez v23, :cond_19
 
-    .line 672
     invoke-interface/range {v21 .. v21}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v14
@@ -4690,7 +4257,6 @@
 
     check-cast v18, Landroid/content/pm/ResolveInfo;
 
-    .line 673
     .local v18, "resInfo":Landroid/content/pm/ResolveInfo;
     move-object/from16 v0, v18
 
@@ -4698,20 +4264,18 @@
 
     move-object/from16 v20, v0
 
-    .line 674
     .local v20, "servcInfo":Landroid/content/pm/ServiceInfo;
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_14
 
-    .line 675
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v25, "requestBindISA - Package  Name -- "
+    const-string v25, "requestBindISA - Package  Name -- "
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4739,14 +4303,13 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 676
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v25, "requestBindISA - Service  Name -- "
+    const-string v25, "requestBindISA - Service  Name -- "
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4768,7 +4331,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 679
     :cond_14
     move-object/from16 v0, v20
 
@@ -4792,7 +4354,6 @@
 
     if-eqz v23, :cond_13
 
-    .line 680
     new-instance v12, Landroid/content/ComponentName;
 
     move-object/from16 v0, v20
@@ -4819,16 +4380,13 @@
 
     invoke-direct {v12, v0, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 684
     .local v12, "compName":Landroid/content/ComponentName;
     if-eqz v12, :cond_13
 
-    .line 685
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_15
 
-    .line 686
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -4855,7 +4413,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -4882,7 +4439,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 689
     :cond_15
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
@@ -4892,7 +4448,6 @@
 
     invoke-interface/range {v23 .. v24}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 690
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mMultiMap:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4907,16 +4462,13 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 691
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    .line 692
     .local v4, "action":Landroid/content/Intent;
     invoke-virtual {v4, v12}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 694
     new-instance v22, Landroid/os/UserHandle;
 
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
@@ -4925,13 +4477,11 @@
 
     invoke-direct/range {v22 .. v23}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 695
     .local v22, "uHandle":Landroid/os/UserHandle;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 696
     .local v10, "callID":J
     move-object/from16 v0, p0
 
@@ -4949,13 +4499,10 @@
 
     invoke-virtual {v0, v4, v9, v1, v2}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
-    .line 697
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 698
     const/16 v19, 0x1
 
-    .line 707
     .end local v4    # "action":Landroid/content/Intent;
     .end local v10    # "callID":J
     .end local v12    # "compName":Landroid/content/ComponentName;
@@ -4979,7 +4526,7 @@
 
     move-object/from16 v23, v0
 
-    const-string/jumbo v24, "migrationIMFlag"
+    const-string v24, "migrationIMFlag"
 
     const/16 v25, 0x0
 
@@ -4995,7 +4542,6 @@
 
     if-ne v0, v1, :cond_18
 
-    .line 708
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v23, :cond_17
@@ -5006,7 +4552,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
     :cond_17
     const/16 v23, 0x0
 
@@ -5019,10 +4564,8 @@
     :cond_18
     move/from16 v23, v19
 
-    .line 711
     goto/16 :goto_2
 
-    .line 704
     :cond_19
     sget-boolean v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -5030,7 +4573,7 @@
 
     sget-object v23, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v24, "requestBindISA - No package found with ISL intent"
+    const-string v24, "requestBindISA - No package found with ISL intent"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -5042,41 +4585,34 @@
     .param p1, "adminId"    # I
 
     .prologue
-    .line 779
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in setISLCallBack"
+    const-string v4, "in setISLCallBack"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 780
     :cond_0
     const/4 v2, 0x0
 
-    .line 781
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 782
     if-eqz v2, :cond_2
 
-    .line 784
     :try_start_0
     new-instance v0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;-><init>(Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;)V
 
-    .line 785
     .local v0, "callMe":Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;
     invoke-interface {v2, v0}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->setISLCallBack(Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentCallback;)V
 
-    .line 786
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5085,7 +4621,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 787
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mCallBackMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5096,17 +4631,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 794
     .end local v0    # "callMe":Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseIntegrityServiceAgentCallback;
     :cond_1
     :goto_0
     return-void
 
-    .line 788
     :catch_0
     move-exception v1
 
-    .line 789
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -5118,7 +4650,6 @@
 
     goto :goto_0
 
-    .line 792
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
@@ -5127,7 +4658,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "setISLCallBack - ISA interface is null"
+    const-string v4, "setISLCallBack - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -5140,26 +4671,22 @@
     .param p2, "subscriber"    # Lcom/sec/enterprise/knox/IIntegrityResultSubscriber;
 
     .prologue
-    .line 1050
     if-nez p2, :cond_1
 
-    .line 1051
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v2, :cond_0
 
     sget-object v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "setIntegrityResultSubscriber - subscriber is null"
+    const-string v3, "setIntegrityResultSubscriber - subscriber is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1069
     :cond_0
     :goto_0
     return-void
 
-    .line 1054
     :cond_1
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -5167,11 +4694,10 @@
 
     sget-object v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "in setIntegrityResultSubscriber"
+    const-string v3, "in setIntegrityResultSubscriber"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1056
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -5179,7 +4705,6 @@
 
     iget v0, v2, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1057
     .local v0, "adminId":I
     sget-object v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
@@ -5189,7 +4714,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1058
     sget-object v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSubscriberMap:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5198,12 +4722,10 @@
 
     invoke-interface {v2, v3, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1061
     iget-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mTimaService:Landroid/service/tima/ITimaService;
 
     if-eqz v2, :cond_0
 
-    .line 1063
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mTimaService:Landroid/service/tima/ITimaService;
 
@@ -5213,7 +4735,6 @@
 
     invoke-interface {v2, v3}, Landroid/service/tima/ITimaService;->setISLCallback(Landroid/service/tima/ITimaISLCallback;)V
 
-    .line 1064
     sget-boolean v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v2, :cond_0
@@ -5228,11 +4749,9 @@
 
     goto :goto_0
 
-    .line 1065
     :catch_0
     move-exception v1
 
-    .line 1066
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v2, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -5252,18 +4771,16 @@
     .prologue
     const/16 v3, 0xfc6
 
-    .line 839
     sget-boolean v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v1, :cond_0
 
     sget-object v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "in startRuntimeWatch"
+    const-string v2, "in startRuntimeWatch"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 840
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -5271,7 +4788,6 @@
 
     iget v0, v1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 841
     .local v0, "adminUid":I
     sget-object v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
@@ -5281,12 +4797,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 843
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemBinObserver:Landroid/os/FileObserver;
 
     if-nez v1, :cond_1
 
-    .line 844
     new-instance v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$IntegrityObserver;
 
     const-string v2, "/system/bin/"
@@ -5295,18 +4809,15 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemBinObserver:Landroid/os/FileObserver;
 
-    .line 846
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemBinObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v1}, Landroid/os/FileObserver;->startWatching()V
 
-    .line 848
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemXbinObserver:Landroid/os/FileObserver;
 
     if-nez v1, :cond_2
 
-    .line 849
     new-instance v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$IntegrityObserver;
 
     const-string v2, "/system/xbin/"
@@ -5315,18 +4826,15 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemXbinObserver:Landroid/os/FileObserver;
 
-    .line 851
     :cond_2
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemXbinObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v1}, Landroid/os/FileObserver;->startWatching()V
 
-    .line 854
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemFmwrkObserver:Landroid/os/FileObserver;
 
     if-nez v1, :cond_3
 
-    .line 855
     new-instance v1, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$IntegrityObserver;
 
     const-string v2, "/system/framework/"
@@ -5335,13 +4843,11 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemFmwrkObserver:Landroid/os/FileObserver;
 
-    .line 857
     :cond_3
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemFmwrkObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v1}, Landroid/os/FileObserver;->startWatching()V
 
-    .line 859
     const/4 v1, 0x1
 
     return v1
@@ -5354,10 +4860,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 863
     const/4 v2, 0x0
 
-    .line 864
     .local v2, "retValue":Z
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -5365,11 +4869,10 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in stopRuntimeWatch"
+    const-string v4, "in stopRuntimeWatch"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -5377,7 +4880,6 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 866
     .local v0, "admin_UID":I
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
@@ -5389,7 +4891,6 @@
 
     if-le v3, v4, :cond_3
 
-    .line 867
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -5402,7 +4903,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 868
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -5417,28 +4917,23 @@
 
     if-ne v3, v0, :cond_2
 
-    .line 869
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 870
     const/4 v2, 0x1
 
-    .line 892
     .end local v1    # "i":I
     :cond_1
     :goto_1
     return v2
 
-    .line 867
     .restart local v1    # "i":I
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 875
     .end local v1    # "i":I
     :cond_3
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
@@ -5453,7 +4948,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 876
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5476,7 +4970,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 877
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
 
     sget-object v4, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mAdminIdList:Ljava/util/List;
@@ -5491,48 +4984,38 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 878
     const/4 v2, 0x1
 
-    .line 879
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemBinObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v3}, Landroid/os/FileObserver;->stopWatching()V
 
-    .line 880
     iput-object v6, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemBinObserver:Landroid/os/FileObserver;
 
-    .line 881
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemXbinObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v3}, Landroid/os/FileObserver;->stopWatching()V
 
-    .line 882
     iput-object v6, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemXbinObserver:Landroid/os/FileObserver;
 
-    .line 883
     iget-object v3, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemFmwrkObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v3}, Landroid/os/FileObserver;->stopWatching()V
 
-    .line 884
     iput-object v6, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->mSystemFmwrkObserver:Landroid/os/FileObserver;
 
-    .line 885
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     const-string v4, "Stopping system bin watcher for the system"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     const-string v4, "Stopping system xbin watcher for the system"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 887
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
     const-string v4, "Stopping system framework watcher for the system"
@@ -5546,7 +5029,6 @@
     .locals 0
 
     .prologue
-    .line 1827
     return-void
 .end method
 
@@ -5555,18 +5037,16 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1032
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
     if-eqz v3, :cond_0
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "in updatePlatformBaseline"
+    const-string v4, "in updatePlatformBaseline"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1033
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->enforceOwnerOnlyAndEnterpriseISLPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
@@ -5574,20 +5054,16 @@
 
     iget v0, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1034
     .local v0, "adminUid":I
     const/4 v2, 0x0
 
-    .line 1035
     .local v2, "interfaceISA":Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->getISAInterface(I)Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;
 
     move-result-object v2
 
-    .line 1036
     if-eqz v2, :cond_2
 
-    .line 1038
     :try_start_0
     invoke-interface {v2}, Lcom/sec/enterprise/knox/IEnterpriseIntegrityServiceAgentInterface;->updatePlatformBaseline()Z
     :try_end_0
@@ -5595,15 +5071,12 @@
 
     move-result v3
 
-    .line 1045
     :goto_0
     return v3
 
-    .line 1039
     :catch_0
     move-exception v1
 
-    .line 1040
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
@@ -5613,7 +5086,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1045
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -5621,7 +5093,6 @@
 
     goto :goto_0
 
-    .line 1043
     :cond_2
     sget-boolean v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
 
@@ -5629,7 +5100,7 @@
 
     sget-object v3, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "updatePlatformBaseline - ISA interface is null"
+    const-string v4, "updatePlatformBaseline - ISA interface is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

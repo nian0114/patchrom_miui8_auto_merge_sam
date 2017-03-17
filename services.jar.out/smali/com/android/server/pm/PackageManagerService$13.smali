@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 13893
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$13;->val$action:Ljava/lang/String;
@@ -64,27 +63,22 @@
     .locals 27
 
     .prologue
-    .line 13897
     const/4 v10, 0x0
 
-    .line 13898
     .local v10, "requiredPermissions":[Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v2
 
-    .line 13899
     .local v2, "am":Landroid/app/IActivityManager;
     if-nez v2, :cond_1
 
-    .line 14015
     .end local v2    # "am":Landroid/app/IActivityManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 13901
     .restart local v2    # "am":Landroid/app/IActivityManager;
     :cond_1
     invoke-static {}, Landroid/util/GateConfig;->isGateEnabled()Z
@@ -93,7 +87,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 13902
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->val$action:Ljava/lang/String;
@@ -106,14 +99,12 @@
 
     if-eqz v3, :cond_8
 
-    .line 13903
     const-string v3, "GATE"
 
     const-string v5, "<GATE-M> APP_INSTALLED </GATE-M>"
 
     invoke-static {v3, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13912
     :cond_2
     :goto_1
     move-object/from16 v0, p0
@@ -150,7 +141,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 13913
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->val$action:Ljava/lang/String;
@@ -187,7 +177,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 13916
     :cond_3
     const/4 v3, 0x1
 
@@ -205,7 +194,6 @@
     .local v21, "requiredPermissions":[Ljava/lang/String;
     move-object/from16 v10, v21
 
-    .line 13926
     .end local v21    # "requiredPermissions":[Ljava/lang/String;
     .restart local v10    # "requiredPermissions":[Ljava/lang/String;
     :cond_4
@@ -215,12 +203,10 @@
 
     if-nez v3, :cond_9
 
-    .line 13927
     invoke-interface {v2}, Landroid/app/IActivityManager;->getRunningUserIds()[I
 
     move-result-object v22
 
-    .line 13931
     .local v22, "resolvedUserIds":[I
     :goto_2
     move-object/from16 v17, v22
@@ -245,7 +231,6 @@
 
     aget v15, v17, v19
 
-    .line 13932
     .local v15, "id":I
     new-instance v4, Landroid/content/Intent;
 
@@ -259,7 +244,7 @@
 
     if-eqz v3, :cond_a
 
-    const-string/jumbo v3, "package"
+    const-string v3, "package"
 
     move-object/from16 v0, p0
 
@@ -274,7 +259,6 @@
     :goto_4
     invoke-direct {v4, v5, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 13934
     .local v4, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -282,14 +266,12 @@
 
     if-eqz v3, :cond_5
 
-    .line 13935
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->val$extras:Landroid/os/Bundle;
 
     invoke-virtual {v4, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 13937
     :cond_5
     move-object/from16 v0, p0
 
@@ -297,14 +279,12 @@
 
     if-eqz v3, :cond_6
 
-    .line 13938
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->val$targetPkg:Ljava/lang/String;
 
     invoke-virtual {v4, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 13941
     :cond_6
     const-string v3, "android.intent.extra.UID"
 
@@ -314,7 +294,6 @@
 
     move-result v24
 
-    .line 13942
     .local v24, "uid":I
     if-lez v24, :cond_7
 
@@ -324,7 +303,6 @@
 
     if-eq v3, v15, :cond_7
 
-    .line 13943
     invoke-static/range {v24 .. v24}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v3
@@ -333,25 +311,21 @@
 
     move-result v24
 
-    .line 13944
     const-string v3, "android.intent.extra.UID"
 
     move/from16 v0, v24
 
     invoke-virtual {v4, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 13946
     :cond_7
     const-string v3, "android.intent.extra.user_handle"
 
     invoke-virtual {v4, v3, v15}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 13947
     const/high16 v3, 0x4000000
 
     invoke-virtual {v4, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 13955
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->val$action:Ljava/lang/String;
@@ -364,7 +338,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 13956
     const/4 v3, 0x0
 
     const/4 v5, 0x0
@@ -389,13 +362,11 @@
 
     invoke-interface/range {v2 .. v15}, Landroid/app/IActivityManager;->broadcastIntent(Landroid/app/IApplicationThread;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZI)I
 
-    .line 13931
     :goto_5
     add-int/lit8 v19, v19, 0x1
 
     goto/16 :goto_3
 
-    .line 13904
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v15    # "id":I
     .end local v17    # "arr$":[I
@@ -416,7 +387,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 13905
     const-string v3, "GATE"
 
     const-string v5, "<GATE-M> APP_UNINSTALLED </GATE-M>"
@@ -425,14 +395,12 @@
 
     goto/16 :goto_1
 
-    .line 14013
     .end local v2    # "am":Landroid/app/IActivityManager;
     :catch_0
     move-exception v3
 
     goto/16 :goto_0
 
-    .line 13929
     .restart local v2    # "am":Landroid/app/IActivityManager;
     :cond_9
     move-object/from16 v0, p0
@@ -444,7 +412,6 @@
     .restart local v22    # "resolvedUserIds":[I
     goto/16 :goto_2
 
-    .line 13932
     .restart local v15    # "id":I
     .restart local v17    # "arr$":[I
     .restart local v19    # "i$":I
@@ -454,7 +421,6 @@
 
     goto/16 :goto_4
 
-    .line 13960
     .restart local v4    # "intent":Landroid/content/Intent;
     .restart local v24    # "uid":I
     :cond_b
@@ -482,7 +448,6 @@
 
     if-eqz v3, :cond_d
 
-    .line 13961
     :cond_c
     const/4 v3, 0x0
 
@@ -510,7 +475,6 @@
 
     goto :goto_5
 
-    .line 13966
     :cond_d
     const/4 v3, 0x0
 
@@ -550,7 +514,6 @@
 
     goto :goto_6
 
-    .line 13971
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v15    # "id":I
     .end local v24    # "uid":I
@@ -581,7 +544,6 @@
 
     if-eqz v3, :cond_11
 
-    .line 13975
     :cond_10
     move-object/from16 v17, v22
 
@@ -603,7 +565,6 @@
 
     aget v25, v17, v19
 
-    .line 13976
     .local v25, "userId":I
     move-object/from16 v0, p0
 
@@ -617,7 +578,6 @@
 
     invoke-virtual {v3, v5, v0}, Lcom/android/server/pm/PackageManagerService;->applyRuntimePermissionsOnInstallation(Ljava/lang/String;I)V
 
-    .line 13977
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -632,17 +592,14 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 13975
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_7
 
-    .line 13979
     .end local v25    # "userId":I
     :catch_1
     move-exception v18
 
-    .line 13980
     .local v18, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v3, "PackageManager"
@@ -671,7 +628,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13988
     .end local v18    # "e":Ljava/lang/Exception;
     :cond_11
     move-object/from16 v0, p0
@@ -692,7 +648,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 13990
     :try_start_3
     sget-object v3, Lcom/android/server/pm/PackageManagerService;->sUserManager:Lcom/android/server/pm/UserManagerService;
 
@@ -700,11 +655,9 @@
 
     move-result-object v26
 
-    .line 13991
     .local v26, "users":[I
     if-eqz v26, :cond_0
 
-    .line 13992
     move-object/from16 v17, v26
 
     move-object/from16 v0, v17
@@ -724,7 +677,6 @@
 
     aget v25, v17, v19
 
-    .line 13993
     .restart local v25    # "userId":I
     const-string v3, "application_policy"
 
@@ -734,18 +686,15 @@
 
     check-cast v16, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 13996
     .local v16, "appPolicy":Lcom/android/server/enterprise/application/ApplicationPolicy;
     if-nez v16, :cond_13
 
-    .line 13992
     :cond_12
     :goto_9
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_8
 
-    .line 13999
     :cond_13
     move-object/from16 v0, p0
 
@@ -761,7 +710,6 @@
 
     move-result-object v23
 
-    .line 14002
     .local v23, "runtimePerms":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v23, :cond_12
 
@@ -771,7 +719,6 @@
 
     if-lez v3, :cond_12
 
-    .line 14003
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -793,7 +740,6 @@
 
     goto :goto_9
 
-    .line 14008
     .end local v16    # "appPolicy":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .end local v23    # "runtimePerms":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v25    # "userId":I
@@ -801,7 +747,6 @@
     :catch_2
     move-exception v18
 
-    .line 14009
     .restart local v18    # "e":Ljava/lang/Exception;
     :try_start_4
     const-string v3, "PackageManager"

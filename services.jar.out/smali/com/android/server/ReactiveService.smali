@@ -80,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 128
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -93,12 +92,10 @@
 
     sput-object v0, Lcom/android/server/ReactiveService;->mLockUEvent:Ljava/lang/Object;
 
-    .line 135
-    const-string/jumbo v0, "terrier"
+    const-string v0, "terrier"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 136
     return-void
 .end method
 
@@ -107,34 +104,27 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 159
     invoke-direct {p0}, Lcom/samsung/android/service/reactive/IReactiveService$Stub;-><init>()V
 
-    .line 130
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/ReactiveService;->mThreadUartGoWait:Z
 
-    .line 160
     sput-object p1, Lcom/android/server/ReactiveService;->mContext:Landroid/content/Context;
 
-    .line 161
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 163
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->nativeInit()V
 
-    .line 165
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->nativeGetSystemSolution()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
-    .line 167
-    const-string/jumbo v0, "ro.frp.pst"
+    const-string v0, "ro.frp.pst"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -142,7 +132,6 @@
 
     iput-object v0, p0, Lcom/android/server/ReactiveService;->mDataBlockFile:Ljava/lang/String;
 
-    .line 168
     return-void
 .end method
 
@@ -152,10 +141,8 @@
     .param p2, "callingMethodName"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     const-string v2, "com.osp.app.signin"
 
-    .line 174
     .local v2, "SAMSUNG_ACCOUNT_PKG_NAME":Ljava/lang/String;
     new-instance v14, Landroid/content/pm/Signature;
 
@@ -163,15 +150,12 @@
 
     invoke-direct {v14, v15}, Landroid/content/pm/Signature;-><init>(Ljava/lang/String;)V
 
-    .line 175
     .local v14, "sigSA":Landroid/content/pm/Signature;
     const-string v5, ""
 
-    .line 176
     .local v5, "currentPkgName":Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 178
     .local v12, "ret":Z
     sget-object v15, Lcom/android/server/ReactiveService;->mContext:Landroid/content/Context;
 
@@ -183,7 +167,6 @@
 
     check-cast v3, Landroid/app/ActivityManager;
 
-    .line 180
     .local v3, "am":Landroid/app/ActivityManager;
     invoke-virtual {v3}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
@@ -207,7 +190,6 @@
 
     check-cast v11, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 181
     .local v11, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v15, v11, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
@@ -215,10 +197,8 @@
 
     if-ne v15, v0, :cond_0
 
-    .line 182
     iget-object v5, v11, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    .line 188
     .end local v11    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_1
     sget-object v15, Lcom/android/server/ReactiveService;->mContext:Landroid/content/Context;
@@ -227,7 +207,6 @@
 
     move-result-object v10
 
-    .line 191
     .local v10, "pm":Landroid/content/pm/PackageManager;
     const/16 v15, 0x40
 
@@ -236,7 +215,6 @@
 
     move-result-object v9
 
-    .line 192
     .local v9, "pkgInfo":Landroid/content/pm/PackageInfo;
     iget-object v15, v9, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -250,7 +228,6 @@
 
     if-eq v15, v0, :cond_3
 
-    .line 194
     const-string v15, "ReactiveService"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -305,14 +282,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 219
     .end local v7    # "i$":Ljava/util/Iterator;
     .end local v9    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_2
     :goto_0
     if-eqz v12, :cond_6
 
-    .line 220
     const-string v15, "ReactiveService"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -343,11 +318,9 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     :goto_1
     return v12
 
-    .line 198
     .restart local v7    # "i$":Ljava/util/Iterator;
     .restart local v9    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_3
@@ -360,7 +333,6 @@
 
     if-nez v15, :cond_4
 
-    .line 199
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -371,7 +343,6 @@
 
     goto :goto_0
 
-    .line 200
     :cond_4
     const-string v15, "com.osp.app.signin"
 
@@ -381,7 +352,6 @@
 
     if-eqz v15, :cond_2
 
-    .line 202
     iget-object v4, v9, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     .local v4, "arr$":[Landroid/content/pm/Signature;
@@ -396,7 +366,6 @@
 
     aget-object v13, v4, v7
 
-    .line 204
     .local v13, "sig":Landroid/content/pm/Signature;
     invoke-virtual {v14, v13}, Landroid/content/pm/Signature;->equals(Ljava/lang/Object;)Z
 
@@ -404,7 +373,6 @@
 
     if-eqz v15, :cond_5
 
-    .line 206
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -415,16 +383,13 @@
 
     move-result v12
 
-    .line 207
     goto :goto_0
 
-    .line 202
     :cond_5
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 213
     .end local v4    # "arr$":[Landroid/content/pm/Signature;
     .end local v7    # "i$":I
     .end local v8    # "len$":I
@@ -433,11 +398,9 @@
     :catch_0
     move-exception v6
 
-    .line 215
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 216
     const-string v15, "ReactiveService"
 
     const-string v16, "Fail to get packageinfo."
@@ -446,7 +409,6 @@
 
     goto :goto_0
 
-    .line 222
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_6
     const-string v15, "ReactiveService"
@@ -528,7 +490,6 @@
     .locals 6
 
     .prologue
-    .line 230
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -542,7 +503,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 236
     .local v3, "outputStream":Ljava/io/FileOutputStream;
     const-string v4, "ReactiveService"
 
@@ -550,85 +510,72 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     const/4 v4, 0x4
 
     new-array v1, v4, [B
 
-    .line 239
     .local v1, "data":[B
     :try_start_1
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v0
 
-    .line 240
     .local v0, "ch":Ljava/nio/channels/FileChannel;
     const-wide/16 v4, 0x24
 
     invoke-virtual {v0, v4, v5}, Ljava/nio/channels/FileChannel;->position(J)Ljava/nio/channels/FileChannel;
 
-    .line 241
     invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
 
-    .line 242
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Ljava/nio/channels/FileChannel;->force(Z)V
 
-    .line 243
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 248
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 250
     .end local v0    # "ch":Ljava/nio/channels/FileChannel;
     .end local v1    # "data":[B
     .end local v3    # "outputStream":Ljava/io/FileOutputStream;
     :goto_0
     return-void
 
-    .line 231
     :catch_0
     move-exception v2
 
-    .line 232
     .local v2, "e":Ljava/io/FileNotFoundException;
     const-string v4, "ReactiveService"
 
-    const-string/jumbo v5, "partition not available?"
+    const-string v5, "partition not available?"
 
     invoke-static {v4, v5, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 244
     .end local v2    # "e":Ljava/io/FileNotFoundException;
     .restart local v1    # "data":[B
     .restart local v3    # "outputStream":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v2
 
-    .line 245
     .local v2, "e":Ljava/io/IOException;
     :try_start_2
     const-string v4, "ReactiveService"
 
-    const-string/jumbo v5, "failed to reset length"
+    const-string v5, "failed to reset length"
 
     invoke-static {v4, v5, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 248
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_0
@@ -648,7 +595,6 @@
     .locals 1
 
     .prologue
-    .line 624
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     return v0
@@ -659,23 +605,18 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 280
     packed-switch p1, :pswitch_data_0
 
-    .line 358
     :pswitch_0
     const/4 v3, -0x3
 
     iput v3, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 359
     iget v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 369
     :goto_0
     return v2
 
-    .line 283
     :pswitch_1
     iget v3, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
@@ -689,32 +630,26 @@
 
     if-lez v3, :cond_1
 
-    .line 286
     :cond_0
     sget-object v4, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 287
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/ReactiveService;->nativeGetFlag(I)I
 
     move-result v2
 
-    .line 288
     .local v2, "ret":I
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 362
     :goto_1
     if-gez v2, :cond_6
 
-    .line 363
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 367
     :goto_2
     const-string v3, "ReactiveService"
 
@@ -722,7 +657,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "getFlag() : flag=["
+    const-string v5, "getFlag() : flag=["
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -756,7 +691,6 @@
 
     goto :goto_0
 
-    .line 288
     .end local v2    # "ret":I
     :catchall_0
     move-exception v3
@@ -768,15 +702,12 @@
 
     throw v3
 
-    .line 291
     :cond_1
     const/4 v2, -0x2
 
-    .line 292
     .restart local v2    # "ret":I
     goto :goto_1
 
-    .line 295
     .end local v2    # "ret":I
     :pswitch_2
     iget v3, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
@@ -785,10 +716,9 @@
 
     if-lez v3, :cond_5
 
-    .line 321
     sget-object v3, Lcom/android/server/ReactiveService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "persistent_data_block"
+    const-string v4, "persistent_data_block"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -798,24 +728,20 @@
 
     iput-object v3, p0, Lcom/android/server/ReactiveService;->mPdbManager:Landroid/service/persistentdata/PersistentDataBlockManager;
 
-    .line 322
     iget-object v3, p0, Lcom/android/server/ReactiveService;->mPdbManager:Landroid/service/persistentdata/PersistentDataBlockManager;
 
     if-nez v3, :cond_2
 
-    .line 324
     const-string v3, "ReactiveService"
 
     const-string v4, "Failed to load FRP Manager"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     const/4 v2, -0x7
 
     goto :goto_0
 
-    .line 332
     :cond_2
     :try_start_2
     iget-object v3, p0, Lcom/android/server/ReactiveService;->mPdbManager:Landroid/service/persistentdata/PersistentDataBlockManager;
@@ -826,16 +752,13 @@
 
     move-result v1
 
-    .line 341
     .local v1, "frp_flag":Z
     if-eqz v1, :cond_4
 
-    .line 343
     sget-object v4, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 344
     :try_start_3
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->nativeFinishedSetupWizard()Z
 
@@ -843,10 +766,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 345
     const/4 v2, 0x1
 
-    .line 348
     .restart local v2    # "ret":I
     :goto_3
     monitor-exit v4
@@ -863,26 +784,21 @@
 
     throw v3
 
-    .line 334
     .end local v1    # "frp_flag":Z
     :catch_0
     move-exception v0
 
-    .line 335
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 336
     const/4 v3, -0x6
 
     iput v3, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 337
     iget v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto/16 :goto_0
 
-    .line 347
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "frp_flag":Z
     :cond_3
@@ -891,7 +807,6 @@
     .restart local v2    # "ret":I
     goto :goto_3
 
-    .line 351
     .end local v2    # "ret":I
     :cond_4
     const/4 v2, 0x0
@@ -899,17 +814,14 @@
     .restart local v2    # "ret":I
     goto :goto_1
 
-    .line 354
     .end local v1    # "frp_flag":Z
     .end local v2    # "ret":I
     :cond_5
     const/4 v2, -0x2
 
-    .line 355
     .restart local v2    # "ret":I
     goto :goto_1
 
-    .line 365
     :cond_6
     const/4 v3, 0x0
 
@@ -917,7 +829,6 @@
 
     goto :goto_2
 
-    .line 280
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -932,24 +843,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 637
     iget v2, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v2, :cond_1
 
-    .line 639
     const/4 v2, -0x2
 
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     move-object v0, v1
 
-    .line 659
     :cond_0
     :goto_0
     return-object v0
 
-    .line 643
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -977,48 +884,39 @@
 
     if-nez v2, :cond_2
 
-    .line 645
     const/4 v2, -0x5
 
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     move-object v0, v1
 
-    .line 646
     goto :goto_0
 
-    .line 649
     :cond_2
     sget-object v2, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 650
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->nativeGetRandom()[B
 
     move-result-object v0
 
-    .line 651
     .local v0, "ret":[B
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 653
     if-nez v0, :cond_0
 
-    .line 655
     const/4 v2, -0x4
 
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     move-object v0, v1
 
-    .line 656
     goto :goto_0
 
-    .line 651
     .end local v0    # "ret":[B
     :catchall_0
     move-exception v1
@@ -1035,7 +933,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget v0, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     return v0
@@ -1047,22 +944,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 432
     iget v1, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v1, :cond_1
 
-    .line 434
     const/4 v1, -0x2
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 451
     :cond_0
     :goto_0
     return-object v0
 
-    .line 438
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -1090,42 +983,35 @@
 
     if-nez v1, :cond_2
 
-    .line 440
     const/4 v1, -0x5
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 444
     :cond_2
     sget-object v2, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 445
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->nativeGetString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 446
     .local v0, "ret":Ljava/lang/String;
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 448
     if-nez v0, :cond_0
 
-    .line 449
     const/4 v1, -0x4
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 446
     .end local v0    # "ret":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -1142,25 +1028,20 @@
     .locals 4
 
     .prologue
-    .line 501
     iget v1, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v1, :cond_1
 
-    .line 503
     const/4 v1, -0x2
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 504
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 520
     :cond_0
     :goto_0
     return v0
 
-    .line 507
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -1188,43 +1069,35 @@
 
     if-nez v1, :cond_2
 
-    .line 509
     const/4 v1, -0x5
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 510
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 513
     :cond_2
     sget-object v2, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 514
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->nativeRemoveString()I
 
     move-result v0
 
-    .line 515
     .local v0, "ret":I
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 517
     if-eqz v0, :cond_0
 
-    .line 518
     iput v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 515
     .end local v0    # "ret":I
     :catchall_0
     move-exception v1
@@ -1242,31 +1115,25 @@
     .param p1, "input"    # [B
 
     .prologue
-    .line 535
     iget v2, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v2, :cond_1
 
-    .line 537
     const/4 v2, -0x2
 
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 538
     const/4 v1, 0x0
 
-    .line 555
     :cond_0
     :goto_0
     return-object v1
 
-    .line 541
     :cond_1
     sget-object v3, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 543
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/ReactiveService;->nativeSessionAccept([B)[B
     :try_end_0
@@ -1275,7 +1142,6 @@
 
     move-result-object v1
 
-    .line 550
     .local v1, "ret":[B
     :goto_1
     :try_start_1
@@ -1283,26 +1149,21 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 552
     if-nez v1, :cond_0
 
-    .line 553
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 545
     .end local v1    # "ret":[B
     :catch_0
     move-exception v0
 
-    .line 547
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
-    .line 548
     .restart local v1    # "ret":[B
     :try_start_2
     const-string v2, "ReactiveService"
@@ -1315,7 +1176,6 @@
 
     goto :goto_1
 
-    .line 550
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "ret":[B
     :catchall_0
@@ -1333,30 +1193,24 @@
     .param p1, "input"    # [B
 
     .prologue
-    .line 569
     iget v2, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v2, :cond_0
 
-    .line 571
     const/4 v2, -0x2
 
     iput v2, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 572
     iget v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 610
     :goto_0
     return v1
 
-    .line 577
     :cond_0
     sget-object v3, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 579
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/ReactiveService;->nativeSessionComplete([B)I
     :try_end_0
@@ -1365,7 +1219,6 @@
 
     move-result v1
 
-    .line 586
     .local v1, "ret":I
     :goto_1
     :try_start_1
@@ -1373,7 +1226,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 588
     iget v2, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     and-int/lit8 v2, v2, 0x4
@@ -1388,10 +1240,9 @@
 
     if-eqz v2, :cond_2
 
-    .line 592
     sget-object v2, Lcom/android/server/ReactiveService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "persistent_data_block"
+    const-string v3, "persistent_data_block"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1401,33 +1252,27 @@
 
     iput-object v2, p0, Lcom/android/server/ReactiveService;->mPdbManager:Landroid/service/persistentdata/PersistentDataBlockManager;
 
-    .line 593
     iget-object v2, p0, Lcom/android/server/ReactiveService;->mPdbManager:Landroid/service/persistentdata/PersistentDataBlockManager;
 
     if-nez v2, :cond_1
 
-    .line 595
     const-string v2, "ReactiveService"
 
     const-string v3, "Failed to load FRP Manager"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 596
     const/4 v1, -0x7
 
     goto :goto_0
 
-    .line 581
     .end local v1    # "ret":I
     :catch_0
     move-exception v0
 
-    .line 583
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, -0x1
 
-    .line 584
     .restart local v1    # "ret":I
     :try_start_2
     const-string v2, "ReactiveService"
@@ -1440,7 +1285,6 @@
 
     goto :goto_1
 
-    .line 586
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "ret":I
     :catchall_0
@@ -1452,31 +1296,26 @@
 
     throw v2
 
-    .line 600
     .restart local v1    # "ret":I
     :cond_1
     :try_start_3
     invoke-direct {p0}, Lcom/android/server/ReactiveService;->wipeLength()V
 
-    .line 601
     iget-object v2, p0, Lcom/android/server/ReactiveService;->mPdbManager:Landroid/service/persistentdata/PersistentDataBlockManager;
 
     invoke-virtual {v2}, Landroid/service/persistentdata/PersistentDataBlockManager;->wipe()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 608
     :cond_2
     :goto_2
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 603
     :catch_1
     move-exception v0
 
-    .line 604
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1490,22 +1329,17 @@
     .param p3, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 389
     if-eqz p1, :cond_0
 
-    .line 391
     const/4 v1, -0x3
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 392
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 418
     :goto_0
     return v0
 
-    .line 395
     :cond_0
     if-nez p1, :cond_1
 
@@ -1521,17 +1355,14 @@
 
     if-gtz v1, :cond_1
 
-    .line 398
     const/4 v1, -0x2
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 399
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 402
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -1559,41 +1390,33 @@
 
     if-nez v1, :cond_2
 
-    .line 404
     const/4 v1, -0x5
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 405
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 408
     :cond_2
     sget-object v2, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 409
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ReactiveService;->nativeSetFlag(IILjava/lang/String;)I
 
     move-result v0
 
-    .line 410
     .local v0, "ret":I
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 412
     if-gez v0, :cond_3
 
-    .line 413
     iput v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 417
     :goto_1
     const-string v1, "ReactiveService"
 
@@ -1601,7 +1424,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setFlag() : flag=["
+    const-string v3, "setFlag() : flag=["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1645,7 +1468,6 @@
 
     goto :goto_0
 
-    .line 410
     .end local v0    # "ret":I
     :catchall_0
     move-exception v1
@@ -1657,7 +1479,6 @@
 
     throw v1
 
-    .line 415
     .restart local v0    # "ret":I
     :cond_3
     const/4 v1, 0x0
@@ -1672,25 +1493,20 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 467
     iget v1, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v1, :cond_1
 
-    .line 469
     const/4 v1, -0x2
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 470
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 486
     :cond_0
     :goto_0
     return v0
 
-    .line 473
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -1718,43 +1534,35 @@
 
     if-nez v1, :cond_2
 
-    .line 475
     const/4 v1, -0x5
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 476
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 479
     :cond_2
     sget-object v2, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 480
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/ReactiveService;->nativeSetString(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 481
     .local v0, "ret":I
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 483
     if-eqz v0, :cond_0
 
-    .line 484
     iput v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 481
     .end local v0    # "ret":I
     :catchall_0
     move-exception v1
@@ -1773,25 +1581,20 @@
     .param p2, "operation"    # I
 
     .prologue
-    .line 674
     iget v1, p0, Lcom/android/server/ReactiveService;->mServiceSupport:I
 
     if-nez v1, :cond_1
 
-    .line 676
     const/4 v1, -0x2
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 677
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 693
     :cond_0
     :goto_0
     return v0
 
-    .line 680
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -1819,43 +1622,35 @@
 
     if-nez v1, :cond_2
 
-    .line 682
     const/4 v1, -0x5
 
     iput v1, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
-    .line 683
     iget v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 686
     :cond_2
     sget-object v2, Lcom/android/server/ReactiveService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 687
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/ReactiveService;->nativeVerify(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 688
     .local v0, "ret":I
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 690
     if-eqz v0, :cond_0
 
-    .line 691
     iput v0, p0, Lcom/android/server/ReactiveService;->mErrorCode:I
 
     goto :goto_0
 
-    .line 688
     .end local v0    # "ret":I
     :catchall_0
     move-exception v1

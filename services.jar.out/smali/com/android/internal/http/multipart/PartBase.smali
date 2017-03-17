@@ -12,7 +12,6 @@
     .param p4, "transferEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 5
     invoke-direct {p0}, Lcom/android/internal/http/multipart/Part;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -30,7 +29,6 @@
     .locals 2
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -44,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -58,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -72,7 +68,6 @@
     .locals 2
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -87,7 +82,6 @@
     .param p1, "charSet"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -102,7 +96,6 @@
     .param p1, "contentType"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -117,7 +110,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -132,7 +124,6 @@
     .param p1, "transferEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

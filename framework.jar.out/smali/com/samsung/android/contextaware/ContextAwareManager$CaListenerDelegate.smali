@@ -35,19 +35,14 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1204
     iput-object p1, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->this$0:Lcom/samsung/android/contextaware/ContextAwareManager;
 
-    .line 1205
     invoke-direct {p0}, Lcom/samsung/android/contextaware/manager/IContextAwareCallback$Stub;-><init>()V
 
-    .line 1206
     iput-object p2, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mListener:Lcom/samsung/android/contextaware/manager/ContextAwareListener;
 
-    .line 1208
     const/4 v0, 0x0
 
-    .line 1215
     .local v0, "looper":Landroid/os/Looper;
     # getter for: Lcom/samsung/android/contextaware/ContextAwareManager;->mCaeMgrLooper:Landroid/os/Looper;
     invoke-static {p1}, Lcom/samsung/android/contextaware/ContextAwareManager;->access$000(Lcom/samsung/android/contextaware/ContextAwareManager;)Landroid/os/Looper;
@@ -56,13 +51,11 @@
 
     if-nez v1, :cond_0
 
-    .line 1216
     # getter for: Lcom/samsung/android/contextaware/ContextAwareManager;->mMainLooper:Landroid/os/Looper;
     invoke-static {p1}, Lcom/samsung/android/contextaware/ContextAwareManager;->access$100(Lcom/samsung/android/contextaware/ContextAwareManager;)Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 1221
     :goto_0
     new-instance v1, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate$1;
 
@@ -70,10 +63,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 1233
     return-void
 
-    .line 1218
     :cond_0
     # getter for: Lcom/samsung/android/contextaware/ContextAwareManager;->mCaeMgrLooper:Landroid/os/Looper;
     invoke-static {p1}, Lcom/samsung/android/contextaware/ContextAwareManager;->access$000(Lcom/samsung/android/contextaware/ContextAwareManager;)Landroid/os/Looper;
@@ -88,7 +79,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;
 
     .prologue
-    .line 1187
     iget-object v0, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mListener:Lcom/samsung/android/contextaware/manager/ContextAwareListener;
 
     return-object v0
@@ -107,12 +97,10 @@
     .end annotation
 
     .prologue
-    .line 1254
     monitor-enter p0
 
     if-nez p2, :cond_0
 
-    .line 1255
     :try_start_0
     sget-object v1, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_CONTEXT_NULL_EXCEPTION:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
@@ -124,43 +112,36 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1266
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1260
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1261
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 1262
     invoke-virtual {p2}, Landroid/os/Bundle;->clone()Ljava/lang/Object;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1263
     iget-object v1, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1265
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 1254
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -174,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 1241
     iget-object v0, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mListener:Lcom/samsung/android/contextaware/manager/ContextAwareListener;
 
     return-object v0
@@ -189,15 +169,12 @@
     .end annotation
 
     .prologue
-    .line 1276
     iget-object v0, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mListener:Lcom/samsung/android/contextaware/manager/ContextAwareListener;
 
     if-nez v0, :cond_0
 
-    .line 1277
     const/4 v0, 0x0
 
-    .line 1279
     :goto_0
     return-object v0
 

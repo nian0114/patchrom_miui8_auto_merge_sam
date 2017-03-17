@@ -16,7 +16,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 15
     const-class v1, Lcom/android/server/cocktailbar/mode/PrivateKioskMDMMode;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -25,7 +24,6 @@
 
     sput-object v1, Lcom/android/server/cocktailbar/mode/PrivateKioskMDMMode;->TAG:Ljava/lang/String;
 
-    .line 17
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -48,24 +46,19 @@
     .param p4, "listener"    # Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILandroid/content/BroadcastReceiver;Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 21
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 22
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.samsung.edm.intent.action.INFORMATION_STREAM_INTERNAL"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 23
     invoke-virtual {p0, p3, v0}, Lcom/android/server/cocktailbar/mode/PrivateKioskMDMMode;->registerBroadcastReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 24
     return-void
 .end method
 
@@ -75,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 62
     const/4 v0, 0x2
 
     return v0
@@ -85,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const/4 v0, 0x2
 
     return v0
@@ -95,8 +86,7 @@
     .locals 1
 
     .prologue
-    .line 46
-    const-string/jumbo v0, "kioskmode"
+    const-string v0, "kioskmode"
 
     return-object v0
 .end method
@@ -105,18 +95,16 @@
     .locals 4
 
     .prologue
-    .line 52
     iget-object v1, p0, Lcom/android/server/cocktailbar/mode/PrivateKioskMDMMode;->mContext:Landroid/content/Context;
 
     const-string v2, "content://com.sec.knox.provider2/KioskMode"
 
-    const-string/jumbo v3, "isInformationStreamAllowed"
+    const-string v3, "isInformationStreamAllowed"
 
     invoke-static {v1, v2, v3}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 56
     .local v0, "isInformationAllowedAllowed":I
     if-nez v0, :cond_0
 
@@ -138,12 +126,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 28
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 29
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.edm.intent.action.INFORMATION_STREAM_INTERNAL"
 
@@ -153,7 +139,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 30
     const-string v2, "com.samsung.edm.intent.extra.BLOCKED_STATUS"
 
     invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -162,15 +147,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 31
     const/4 v1, 0x2
 
-    .line 36
     :cond_0
     :goto_0
     return v1
 
-    .line 33
     :cond_1
     const/4 v1, 0x3
 

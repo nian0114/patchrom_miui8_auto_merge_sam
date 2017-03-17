@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 70
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     return v0
@@ -58,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -68,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 49
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -80,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     return v0
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 55
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -102,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, -0x1
 
     return v0
@@ -112,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -125,7 +115,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 67
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

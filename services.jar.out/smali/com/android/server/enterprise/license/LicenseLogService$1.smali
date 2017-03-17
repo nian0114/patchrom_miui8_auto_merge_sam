@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 253
     iput-object p1, p0, Lcom/android/server/enterprise/license/LicenseLogService$1;->this$0:Lcom/android/server/enterprise/license/LicenseLogService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 256
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 257
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -54,7 +51,7 @@
 
     if-nez v2, :cond_0
 
-    const-string/jumbo v2, "edm.intent.action.elm.cleanrecords"
+    const-string v2, "edm.intent.action.elm.cleanrecords"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -62,7 +59,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 259
     :cond_0
     const-string v2, "LicenseLogService"
 
@@ -86,7 +82,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     # getter for: Lcom/android/server/enterprise/license/LicenseLogService;->mHandler:Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;
     invoke-static {}, Lcom/android/server/enterprise/license/LicenseLogService;->access$000()Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;
 
@@ -98,7 +93,6 @@
 
     move-result-object v1
 
-    .line 262
     .local v1, "msg":Landroid/os/Message;
     # getter for: Lcom/android/server/enterprise/license/LicenseLogService;->mHandler:Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;
     invoke-static {}, Lcom/android/server/enterprise/license/LicenseLogService;->access$000()Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;
@@ -107,7 +101,6 @@
 
     invoke-virtual {v2, v1}, Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 264
     .end local v1    # "msg":Landroid/os/Message;
     :cond_1
     return-void

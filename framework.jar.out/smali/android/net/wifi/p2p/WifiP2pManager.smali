@@ -339,7 +339,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 142
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -351,7 +350,6 @@
     :cond_0
     sput-boolean v0, Landroid/net/wifi/p2p/WifiP2pManager;->DBG:Z
 
-    .line 188
     const-string v0, "4"
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -368,13 +366,10 @@
     .param p1, "service"    # Landroid/net/wifi/p2p/IWifiP2pManager;
 
     .prologue
-    .line 671
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 672
     iput-object p1, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
-    .line 673
     return-void
 .end method
 
@@ -383,7 +378,6 @@
     .param p0, "c"    # Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     .prologue
-    .line 1171
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -394,7 +388,6 @@
 
     throw v0
 
-    .line 1172
     :cond_0
     return-void
 .end method
@@ -404,7 +397,6 @@
     .param p0, "c"    # Landroid/net/wifi/p2p/WifiP2pConfig;
 
     .prologue
-    .line 1183
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -415,7 +407,6 @@
 
     throw v0
 
-    .line 1184
     :cond_0
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->deviceAddress:Ljava/lang/String;
 
@@ -425,7 +416,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1185
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "deviceAddress cannot be empty"
@@ -434,7 +424,6 @@
 
     throw v0
 
-    .line 1187
     :cond_1
     return-void
 .end method
@@ -444,18 +433,16 @@
     .param p0, "info"    # Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;
 
     .prologue
-    .line 1175
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "service info is null"
+    const-string v1, "service info is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1176
     :cond_0
     return-void
 .end method
@@ -465,18 +452,16 @@
     .param p0, "req"    # Landroid/net/wifi/p2p/nsd/WifiP2pServiceRequest;
 
     .prologue
-    .line 1179
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "service request is null"
+    const-string v1, "service request is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1180
     :cond_0
     return-void
 .end method
@@ -491,23 +476,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1229
     if-nez p4, :cond_1
 
     move-object v0, v1
 
-    .line 1236
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1231
     :cond_1
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;-><init>(Landroid/content/Context;Landroid/os/Looper;Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;)V
 
-    .line 1232
     .local v0, "c":Landroid/net/wifi/p2p/WifiP2pManager$Channel;
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {v0}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
@@ -527,7 +508,6 @@
 
     move-object v0, v1
 
-    .line 1236
     goto :goto_0
 .end method
 
@@ -537,7 +517,6 @@
     .param p1, "f"    # Ljava/lang/String;
 
     .prologue
-    .line 1190
     if-nez p0, :cond_0
 
     new-instance v4, Ljava/lang/IllegalArgumentException;
@@ -548,15 +527,13 @@
 
     throw v4
 
-    .line 1192
     :cond_0
     new-instance v2, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v4, "yyyy-MM-dd HH:mm:ss.SSS"
+    const-string v4, "yyyy-MM-dd HH:mm:ss.SSS"
 
     invoke-direct {v2, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 1193
     .local v2, "dateFormat":Ljava/text/SimpleDateFormat;
     new-instance v4, Ljava/util/Date;
 
@@ -566,24 +543,20 @@
 
     move-result-object v1
 
-    .line 1195
     .local v1, "currentTimeStamp":Ljava/lang/String;
     new-instance v3, Landroid/os/Message;
 
     invoke-direct {v3}, Landroid/os/Message;-><init>()V
 
-    .line 1196
     .local v3, "msg":Landroid/os/Message;
     const v4, 0x22094
 
     iput v4, v3, Landroid/os/Message;->what:I
 
-    .line 1197
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1198
     .local v0, "args":Landroid/os/Bundle;
     const-string v4, "extra_log"
 
@@ -643,10 +616,8 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1201
     iput-object v0, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1202
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p0}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -654,7 +625,6 @@
 
     invoke-virtual {v4, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(Landroid/os/Message;)V
 
-    .line 1203
     return-void
 .end method
 
@@ -667,13 +637,10 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1459
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1460
     invoke-static {p2}, Landroid/net/wifi/p2p/WifiP2pManager;->checkServiceInfo(Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;)V
 
-    .line 1461
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -690,7 +657,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1462
     return-void
 .end method
 
@@ -701,13 +667,10 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1609
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1610
     invoke-static {p2}, Landroid/net/wifi/p2p/WifiP2pManager;->checkServiceRequest(Landroid/net/wifi/p2p/nsd/WifiP2pServiceRequest;)V
 
-    .line 1611
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -724,7 +687,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1613
     return-void
 .end method
 
@@ -738,24 +700,19 @@
 
     const/4 v6, 0x0
 
-    .line 2074
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2075
     if-nez p2, :cond_1
 
-    .line 2122
     :cond_0
     :goto_0
     return v5
 
-    .line 2078
     :cond_1
     iget v7, p2, Landroid/os/Message;->what:I
 
     sparse-switch v7, :sswitch_data_0
 
-    .line 2119
     const-string v6, "WifiP2pManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -782,7 +739,6 @@
 
     goto :goto_0
 
-    .line 2080
     :sswitch_0
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
@@ -795,22 +751,18 @@
 
     move v5, v6
 
-    .line 2081
     goto :goto_0
 
-    .line 2083
     :sswitch_1
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v2
 
-    .line 2084
     .local v2, "req_msg":Landroid/os/Message;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 2085
     .local v1, "req_bundle":Landroid/os/Bundle;
     const-string v7, "REQ_DATA"
 
@@ -820,15 +772,12 @@
 
     invoke-virtual {v1, v7, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2086
     const v5, 0x2208d
 
     iput v5, v2, Landroid/os/Message;->what:I
 
-    .line 2087
     invoke-virtual {v2, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 2088
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -838,10 +787,8 @@
 
     move v5, v6
 
-    .line 2089
     goto :goto_0
 
-    .line 2091
     .end local v1    # "req_bundle":Landroid/os/Bundle;
     .end local v2    # "req_msg":Landroid/os/Message;
     :sswitch_2
@@ -849,13 +796,11 @@
 
     move-result-object v4
 
-    .line 2092
     .local v4, "resp_msg":Landroid/os/Message;
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 2093
     .local v3, "resp_bundle":Landroid/os/Bundle;
     const-string v7, "RESP_DATA"
 
@@ -865,15 +810,12 @@
 
     invoke-virtual {v3, v7, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2094
     const v5, 0x2208e
 
     iput v5, v4, Landroid/os/Message;->what:I
 
-    .line 2095
     invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 2096
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -883,10 +825,8 @@
 
     move v5, v6
 
-    .line 2097
     goto :goto_0
 
-    .line 2099
     .end local v3    # "resp_bundle":Landroid/os/Bundle;
     .end local v4    # "resp_msg":Landroid/os/Message;
     :sswitch_3
@@ -901,25 +841,20 @@
 
     goto :goto_0
 
-    .line 2102
     :sswitch_4
     const/4 v0, -0x1
 
-    .line 2103
     .local v0, "mode":I
     iget v7, p2, Landroid/os/Message;->arg1:I
 
     if-nez v7, :cond_3
 
-    .line 2104
     const/4 v0, 0x0
 
-    .line 2109
     :cond_2
     :goto_1
     if-eq v0, v5, :cond_0
 
-    .line 2111
     :try_start_0
     iget-object v7, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -929,10 +864,8 @@
 
     move v5, v6
 
-    .line 2112
     goto/16 :goto_0
 
-    .line 2105
     :cond_3
     iget v7, p2, Landroid/os/Message;->arg1:I
 
@@ -940,12 +873,10 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 2106
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 2107
     :cond_4
     iget v7, p2, Landroid/os/Message;->arg1:I
 
@@ -953,18 +884,15 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 2108
     const/4 v0, 0x2
 
     goto :goto_1
 
-    .line 2113
     :catch_0
     move-exception v6
 
     goto/16 :goto_0
 
-    .line 2078
     :sswitch_data_0
     .sparse-switch
         0x22082 -> :sswitch_0
@@ -981,10 +909,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1335
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1336
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1001,7 +927,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1337
     return-void
 .end method
 
@@ -1011,10 +936,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1495
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1496
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1031,7 +954,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1497
     return-void
 .end method
 
@@ -1041,10 +963,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1647
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1648
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1061,7 +981,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1650
     return-void
 .end method
 
@@ -1073,10 +992,8 @@
     .param p4, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 2045
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2046
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1091,7 +1008,6 @@
 
     invoke-virtual {v0, v1, p2, v2, p3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 2047
     return-void
 .end method
 
@@ -1102,13 +1018,10 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1318
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1319
     invoke-static {p2}, Landroid/net/wifi/p2p/WifiP2pManager;->checkP2pConfig(Landroid/net/wifi/p2p/WifiP2pConfig;)V
 
-    .line 1320
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1125,7 +1038,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1321
     return-void
 .end method
 
@@ -1136,10 +1048,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1890
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1891
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1156,7 +1066,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1892
     return-void
 .end method
 
@@ -1166,10 +1075,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1359
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1360
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1186,7 +1093,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1362
     return-void
 .end method
 
@@ -1197,10 +1103,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1773
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1774
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1215,7 +1119,6 @@
 
     invoke-virtual {v0, v1, p2, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1775
     return-void
 .end method
 
@@ -1224,10 +1127,8 @@
     .param p1, "c"    # Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     .prologue
-    .line 1833
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1834
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1237,7 +1138,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 1835
     sget-boolean v0, Landroid/net/wifi/p2p/WifiP2pManager;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1254,7 +1154,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1836
     :cond_0
     return-void
 .end method
@@ -1266,10 +1165,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1274
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1275
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1284,7 +1181,6 @@
 
     invoke-virtual {v0, v1, p2, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1311,7 +1207,6 @@
 
     invoke-static {p1, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->sendHistoricalDumplog(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;)V
 
-    .line 1277
     return-void
 .end method
 
@@ -1321,10 +1216,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1260
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1261
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1341,12 +1234,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1262
     const-string v0, "discoverPeers()"
 
     invoke-static {p1, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->sendHistoricalDumplog(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;)V
 
-    .line 1263
     return-void
 .end method
 
@@ -1357,10 +1248,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1846
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1847
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1375,12 +1264,10 @@
 
     invoke-virtual {v0, v1, p2, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1848
     const-string v0, "discoverPeersWithFlush()"
 
     invoke-static {p1, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->sendHistoricalDumplog(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;)V
 
-    .line 1849
     return-void
 .end method
 
@@ -1391,10 +1278,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1583
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1584
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1409,7 +1294,6 @@
 
     invoke-virtual {v0, v1, p2, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1585
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1436,7 +1320,6 @@
 
     invoke-static {p1, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->sendHistoricalDumplog(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;)V
 
-    .line 1586
     return-void
 .end method
 
@@ -1446,10 +1329,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1568
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1569
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1466,12 +1347,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1570
     const-string v0, "discoverServices()"
 
     invoke-static {p1, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->sendHistoricalDumplog(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;)V
 
-    .line 1571
     return-void
 .end method
 
@@ -1480,10 +1359,8 @@
     .param p1, "c"    # Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     .prologue
-    .line 1817
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1818
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1493,7 +1370,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 1819
     sget-boolean v0, Landroid/net/wifi/p2p/WifiP2pManager;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1510,7 +1386,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1820
     :cond_0
     return-void
 .end method
@@ -1519,7 +1394,6 @@
     .locals 2
 
     .prologue
-    .line 2010
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -1529,15 +1403,12 @@
 
     move-result-object v1
 
-    .line 2012
     :goto_0
     return-object v1
 
-    .line 2011
     :catch_0
     move-exception v0
 
-    .line 2012
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -1550,10 +1421,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$HandoverMessageListener;
 
     .prologue
-    .line 2145
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2146
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1570,7 +1439,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 2147
     return-void
 .end method
 
@@ -1580,10 +1448,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$HandoverMessageListener;
 
     .prologue
-    .line 2155
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2156
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1600,7 +1466,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 2157
     return-void
 .end method
 
@@ -1608,7 +1473,6 @@
     .locals 2
 
     .prologue
-    .line 2134
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -1618,15 +1482,12 @@
 
     move-result-object v1
 
-    .line 2136
     :goto_0
     return-object v1
 
-    .line 2135
     :catch_0
     move-exception v0
 
-    .line 2136
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -1640,7 +1501,6 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;
 
     .prologue
-    .line 1215
     invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pManager;->getMessenger()Landroid/os/Messenger;
 
     move-result-object v0
@@ -1659,7 +1519,6 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;
 
     .prologue
-    .line 1224
     invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pManager;->getP2pStateMachineMessenger()Landroid/os/Messenger;
 
     move-result-object v0
@@ -1678,21 +1537,17 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 2164
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2165
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2166
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "android.net.wifi.p2p.EXTRA_HANDOVER_MESSAGE"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2167
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1709,7 +1564,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 2169
     return-void
 .end method
 
@@ -1717,7 +1571,6 @@
     .locals 2
 
     .prologue
-    .line 1928
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -1727,15 +1580,12 @@
 
     move-result v1
 
-    .line 1930
     :goto_0
     return v1
 
-    .line 1929
     :catch_0
     move-exception v0
 
-    .line 1930
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -1748,7 +1598,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1961
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -1762,19 +1611,15 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1962
     const/4 v1, 0x1
 
-    .line 1966
     :cond_0
     :goto_0
     return v1
 
-    .line 1965
     :catch_0
     move-exception v0
 
-    .line 1966
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -1787,7 +1632,6 @@
 
     const/4 v1, 0x0
 
-    .line 1943
     :try_start_0
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -1799,21 +1643,17 @@
 
     if-ne v3, v2, :cond_0
 
-    .line 1948
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 1946
     goto :goto_0
 
-    .line 1947
     :catch_0
     move-exception v0
 
-    .line 1948
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -1825,10 +1665,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1408
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1409
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1848,10 +1686,8 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1411
     return-void
 
-    .line 1409
     :cond_0
     const v0, 0x22044
 
@@ -1865,13 +1701,10 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1400
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1401
     invoke-static {p2}, Landroid/net/wifi/p2p/WifiP2pManager;->checkP2pConfig(Landroid/net/wifi/p2p/WifiP2pConfig;)V
 
-    .line 1402
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1888,7 +1721,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1403
     sget-boolean v0, Landroid/net/wifi/p2p/WifiP2pManager;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1905,7 +1737,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1404
     :cond_0
     return-void
 .end method
@@ -1916,10 +1747,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1376
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1377
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1936,7 +1765,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1378
     sget-boolean v0, Landroid/net/wifi/p2p/WifiP2pManager;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1953,7 +1781,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1379
     :cond_0
     return-void
 .end method
@@ -1965,13 +1792,10 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1478
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1479
     invoke-static {p2}, Landroid/net/wifi/p2p/WifiP2pManager;->checkServiceInfo(Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;)V
 
-    .line 1480
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -1988,7 +1812,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1481
     return-void
 .end method
 
@@ -1999,13 +1822,10 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1629
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1630
     invoke-static {p2}, Landroid/net/wifi/p2p/WifiP2pManager;->checkServiceRequest(Landroid/net/wifi/p2p/nsd/WifiP2pServiceRequest;)V
 
-    .line 1631
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2022,7 +1842,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1633
     return-void
 .end method
 
@@ -2032,10 +1851,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ConfigListListener;
 
     .prologue
-    .line 2061
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2062
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2052,7 +1869,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 2063
     return-void
 .end method
 
@@ -2062,10 +1878,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ConnectionInfoListener;
 
     .prologue
-    .line 1670
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1671
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2082,7 +1896,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1672
     return-void
 .end method
 
@@ -2092,10 +1905,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$GroupInfoListener;
 
     .prologue
-    .line 1681
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1682
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2112,7 +1923,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1683
     return-void
 .end method
 
@@ -2122,10 +1932,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1982
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1983
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2142,7 +1950,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1984
     return-void
 .end method
 
@@ -2153,10 +1960,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1998
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1999
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2176,10 +1981,8 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 2000
     return-void
 
-    .line 1999
     :cond_0
     const/4 v0, 0x0
 
@@ -2192,10 +1995,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1903
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1904
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2212,7 +2013,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1905
     return-void
 .end method
 
@@ -2222,10 +2022,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$PeerListListener;
 
     .prologue
-    .line 1659
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1660
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2242,7 +2040,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1661
     return-void
 .end method
 
@@ -2252,10 +2049,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$PersistentGroupInfoListener;
 
     .prologue
-    .line 1785
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1786
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2272,7 +2067,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1787
     return-void
 .end method
 
@@ -2283,21 +2077,17 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 2177
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 2178
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2179
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "android.net.wifi.p2p.EXTRA_HANDOVER_MESSAGE"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2180
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2314,7 +2104,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 2182
     return-void
 .end method
 
@@ -2325,19 +2114,15 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1692
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1693
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pDevice;
 
     invoke-direct {v0}, Landroid/net/wifi/p2p/WifiP2pDevice;-><init>()V
 
-    .line 1694
     .local v0, "d":Landroid/net/wifi/p2p/WifiP2pDevice;
     iput-object p2, v0, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
-    .line 1695
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2354,7 +2139,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1696
     return-void
 .end method
 
@@ -2364,25 +2148,20 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$DialogListener;
 
     .prologue
-    .line 1738
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1739
     # invokes: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->setDialogListener(Landroid/net/wifi/p2p/WifiP2pManager$DialogListener;)V
     invoke-static {p1, p2}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$1100(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Landroid/net/wifi/p2p/WifiP2pManager$DialogListener;)V
 
-    .line 1746
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1747
     .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1748
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "appPkgName"
 
@@ -2394,7 +2173,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1749
     const-string v3, "dialogResetFlag"
 
     if-nez p2, :cond_0
@@ -2404,15 +2182,12 @@
     :goto_0
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1750
     const v2, 0x22074
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 1751
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1752
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2420,10 +2195,8 @@
 
     invoke-virtual {v2, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(Landroid/os/Message;)V
 
-    .line 1753
     return-void
 
-    .line 1749
     :cond_0
     const/4 v2, 0x0
 
@@ -2437,18 +2210,14 @@
     .param p3, "txtListener"    # Landroid/net/wifi/p2p/WifiP2pManager$DnsSdTxtRecordListener;
 
     .prologue
-    .line 1528
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1529
     # setter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mDnsSdServRspListener:Landroid/net/wifi/p2p/WifiP2pManager$DnsSdServiceResponseListener;
     invoke-static {p1, p2}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$802(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Landroid/net/wifi/p2p/WifiP2pManager$DnsSdServiceResponseListener;)Landroid/net/wifi/p2p/WifiP2pManager$DnsSdServiceResponseListener;
 
-    .line 1530
     # setter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mDnsSdTxtListener:Landroid/net/wifi/p2p/WifiP2pManager$DnsSdTxtRecordListener;
     invoke-static {p1, p3}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$902(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Landroid/net/wifi/p2p/WifiP2pManager$DnsSdTxtRecordListener;)Landroid/net/wifi/p2p/WifiP2pManager$DnsSdTxtRecordListener;
 
-    .line 1531
     return-void
 .end method
 
@@ -2462,36 +2231,29 @@
     .param p6, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1873
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1874
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1875
     .local v0, "p2pLOParams":Landroid/os/Bundle;
     const-string v1, "channel"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1876
-    const-string/jumbo v1, "period"
+    const-string v1, "period"
 
     invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1877
-    const-string/jumbo v1, "interval"
+    const-string v1, "interval"
 
     invoke-virtual {v0, v1, p4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1878
     const-string v1, "count"
 
     invoke-virtual {v0, v1, p5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1879
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2508,7 +2270,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1880
     return-void
 .end method
 
@@ -2518,10 +2279,8 @@
     .param p2, "start"    # Z
 
     .prologue
-    .line 1860
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1861
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2536,10 +2295,8 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(II)V
 
-    .line 1862
     return-void
 
-    .line 1861
     :cond_0
     const/4 v0, 0x0
 
@@ -2551,7 +2308,6 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 1800
     :try_start_0
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pManager;->mService:Landroid/net/wifi/p2p/IWifiP2pManager;
 
@@ -2559,11 +2315,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1804
     :goto_0
     return-void
 
-    .line 1801
     :catch_0
     move-exception v0
 
@@ -2576,14 +2330,11 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ServiceResponseListener;
 
     .prologue
-    .line 1512
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1513
     # setter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mServRspListener:Landroid/net/wifi/p2p/WifiP2pManager$ServiceResponseListener;
     invoke-static {p1, p2}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$702(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Landroid/net/wifi/p2p/WifiP2pManager$ServiceResponseListener;)Landroid/net/wifi/p2p/WifiP2pManager$ServiceResponseListener;
 
-    .line 1514
     return-void
 .end method
 
@@ -2593,10 +2344,8 @@
     .param p2, "start"    # Z
 
     .prologue
-    .line 1915
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1916
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2611,10 +2360,8 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(II)V
 
-    .line 1917
     return-void
 
-    .line 1916
     :cond_0
     const/4 v0, 0x2
 
@@ -2627,14 +2374,11 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$UpnpServiceResponseListener;
 
     .prologue
-    .line 1544
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1545
     # setter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mUpnpServRspListener:Landroid/net/wifi/p2p/WifiP2pManager$UpnpServiceResponseListener;
     invoke-static {p1, p2}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$1002(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Landroid/net/wifi/p2p/WifiP2pManager$UpnpServiceResponseListener;)Landroid/net/wifi/p2p/WifiP2pManager$UpnpServiceResponseListener;
 
-    .line 1546
     return-void
 .end method
 
@@ -2645,10 +2389,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1708
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1709
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2665,7 +2407,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1710
     return-void
 .end method
 
@@ -2677,26 +2418,21 @@
     .param p4, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1415
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1416
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1417
     .local v0, "p2pChannels":Landroid/os/Bundle;
-    const-string/jumbo v1, "lc"
+    const-string v1, "lc"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1418
-    const-string/jumbo v1, "oc"
+    const-string v1, "oc"
 
     invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1419
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2713,7 +2449,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1420
     return-void
 .end method
 
@@ -2724,10 +2459,8 @@
     .param p3, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1433
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1434
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2744,7 +2477,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1435
     return-void
 .end method
 
@@ -2754,10 +2486,8 @@
     .param p2, "listener"    # Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
     .prologue
-    .line 1291
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager;->checkChannel(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)V
 
-    .line 1292
     # getter for: Landroid/net/wifi/p2p/WifiP2pManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/p2p/WifiP2pManager$Channel;->access$400(Landroid/net/wifi/p2p/WifiP2pManager$Channel;)Lcom/android/internal/util/AsyncChannel;
 
@@ -2774,6 +2504,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 1293
     return-void
 .end method

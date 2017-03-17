@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 115
     iput-object p1, p0, Lcom/android/server/cover/CoverManagerService$2;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,16 +47,13 @@
 
     const/4 v3, 0x0
 
-    .line 119
     iget-object v4, p0, Lcom/android/server/cover/CoverManagerService$2;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     # setter for: Lcom/android/server/cover/CoverManagerService;->mCalledByTestModule:Z
     invoke-static {v4, v1}, Lcom/android/server/cover/CoverManagerService;->access$302(Lcom/android/server/cover/CoverManagerService;Z)Z
 
-    .line 120
     if-ne p1, v2, :cond_0
 
-    .line 121
     new-instance v0, Lcom/samsung/android/cover/CoverState;
 
     move v4, v3
@@ -68,7 +64,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/samsung/android/cover/CoverState;-><init>(ZIIIIZ)V
 
-    .line 123
     .local v0, "coverState":Lcom/samsung/android/cover/CoverState;
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService$2;->this$0:Lcom/android/server/cover/CoverManagerService;
 
@@ -78,12 +73,10 @@
 
     invoke-virtual {v1, v2, v3, p2, v0}, Lcom/android/server/cover/CoverManagerService;->notifySmartCoverAttachStateChanged(JZLcom/samsung/android/cover/CoverState;)V
 
-    .line 128
     .end local v0    # "coverState":Lcom/samsung/android/cover/CoverState;
     :goto_0
     return-void
 
-    .line 126
     :cond_0
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService$2;->this$0:Lcom/android/server/cover/CoverManagerService;
 

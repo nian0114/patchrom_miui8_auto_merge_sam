@@ -30,7 +30,6 @@
 
     const/4 v5, 0x0
 
-    .line 7
     const/16 v0, 0xf
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -237,7 +236,6 @@
 
     sput-object v0, Lcom/sec/android/app/IWSpeechRecognizer/CommandLanguage;->CALL:[[Ljava/lang/String;
 
-    .line 26
     const/16 v0, 0xf
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -444,7 +442,6 @@
 
     sput-object v0, Lcom/sec/android/app/IWSpeechRecognizer/CommandLanguage;->ALARM:[[Ljava/lang/String;
 
-    .line 44
     const/16 v0, 0xf
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -951,7 +948,6 @@
 
     sput-object v0, Lcom/sec/android/app/IWSpeechRecognizer/CommandLanguage;->MUSIC:[[Ljava/lang/String;
 
-    .line 62
     const/16 v0, 0xf
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -1368,7 +1364,6 @@
 
     sput-object v0, Lcom/sec/android/app/IWSpeechRecognizer/CommandLanguage;->CAMERA:[[Ljava/lang/String;
 
-    .line 80
     const/16 v0, 0xf
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -1522,7 +1517,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

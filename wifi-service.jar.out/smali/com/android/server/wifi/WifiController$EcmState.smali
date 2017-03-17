@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1390
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 1393
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -46,14 +44,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setSupplicantRunning(Z)V
 
-    .line 1394
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiStateMachine;->clearANQPCache()V
 
-    .line 1395
     return-void
 .end method
 
@@ -64,7 +60,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1399
     iget v1, p1, Landroid/os/Message;->what:I
 
     const v2, 0x26001
@@ -75,7 +70,6 @@
 
     if-nez v1, :cond_3
 
-    .line 1400
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
@@ -86,7 +80,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1401
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # getter for: Lcom/android/server/wifi/WifiController;->mDeviceIdle:Z
@@ -96,7 +89,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1402
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -109,12 +101,10 @@
     # invokes: Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiController;->access$12700(Lcom/android/server/wifi/WifiController;Lcom/android/internal/util/IState;)V
 
-    .line 1419
     :goto_0
     :sswitch_0
     return v0
 
-    .line 1404
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -123,7 +113,6 @@
 
     goto :goto_0
 
-    .line 1406
     :cond_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -135,7 +124,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1407
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -150,7 +138,6 @@
 
     goto :goto_0
 
-    .line 1409
     :cond_2
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$EcmState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -166,18 +153,15 @@
 
     goto :goto_0
 
-    .line 1413
     :cond_3
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 1419
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1413
     nop
 
     :sswitch_data_0

@@ -45,44 +45,34 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 2032
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2026
     iput v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedWidth:I
 
-    .line 2027
     iput v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedHeight:I
 
-    .line 2028
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mWantsPositionSync:Z
 
-    .line 2030
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mEnabled:Z
 
-    .line 2034
     iput-object p2, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mRcDisplay:Landroid/media/IRemoteControlDisplay;
 
-    .line 2035
     invoke-interface {p2}, Landroid/media/IRemoteControlDisplay;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mRcDisplayBinder:Landroid/os/IBinder;
 
-    .line 2036
     iput p3, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedWidth:I
 
-    .line 2037
     iput p4, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedHeight:I
 
-    .line 2038
     return-void
 .end method
 
@@ -91,7 +81,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
     .prologue
-    .line 2022
     iget-boolean v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mWantsPositionSync:Z
 
     return v0
@@ -103,7 +92,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 2022
     iput-boolean p1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mWantsPositionSync:Z
 
     return p1
@@ -114,7 +102,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
     .prologue
-    .line 2022
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mClientNotifListComp:Landroid/content/ComponentName;
 
     return-object v0
@@ -126,7 +113,6 @@
     .param p1, "x1"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2022
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mClientNotifListComp:Landroid/content/ComponentName;
 
     return-object p1
@@ -137,7 +123,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
     .prologue
-    .line 2022
     iget-boolean v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mEnabled:Z
 
     return v0
@@ -149,7 +134,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 2022
     iput-boolean p1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mEnabled:Z
 
     return p1
@@ -160,7 +144,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
     .prologue
-    .line 2022
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mRcDisplay:Landroid/media/IRemoteControlDisplay;
 
     return-object v0
@@ -171,7 +154,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
     .prologue
-    .line 2022
     iget v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedWidth:I
 
     return v0
@@ -183,7 +165,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 2022
     iput p1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedWidth:I
 
     return p1
@@ -194,7 +175,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
     .prologue
-    .line 2022
     iget v0, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedHeight:I
 
     return v0
@@ -206,7 +186,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 2022
     iput p1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mArtworkExpectedHeight:I
 
     return p1
@@ -218,7 +197,6 @@
     .locals 6
 
     .prologue
-    .line 2061
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     # getter for: Lcom/android/server/audio/MediaFocusControl;->mPRStack:Ljava/util/Stack;
@@ -228,7 +206,6 @@
 
     monitor-enter v3
 
-    .line 2062
     :try_start_0
     const-string v2, "MediaFocusControl"
 
@@ -260,7 +237,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2064
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     # getter for: Lcom/android/server/audio/MediaFocusControl;->mRcDisplays:Ljava/util/ArrayList;
@@ -272,7 +248,6 @@
 
     move-result-object v1
 
-    .line 2065
     .local v1, "displayIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -281,14 +256,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 2066
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
 
-    .line 2067
     .local v0, "di":Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
     iget-object v2, v0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mRcDisplay:Landroid/media/IRemoteControlDisplay;
 
@@ -296,18 +269,14 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 2069
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    .line 2070
     monitor-exit v3
 
-    .line 2074
     .end local v0    # "di":Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;
     :goto_0
     return-void
 
-    .line 2073
     :cond_1
     monitor-exit v3
 
@@ -330,7 +299,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2042
     :try_start_0
     iget-object v2, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mRcDisplayBinder:Landroid/os/IBinder;
 
@@ -340,17 +308,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2048
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 2043
     :catch_0
     move-exception v0
 
-    .line 2045
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "MediaFocusControl"
 
@@ -358,7 +323,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerRemoteControlDisplay() has a dead client "
+    const-string v4, "registerRemoteControlDisplay() has a dead client "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -383,7 +348,6 @@
     .locals 3
 
     .prologue
-    .line 2053
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$DisplayInfoForServer;->mRcDisplayBinder:Landroid/os/IBinder;
 
@@ -393,15 +357,12 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2058
     :goto_0
     return-void
 
-    .line 2054
     :catch_0
     move-exception v0
 
-    .line 2056
     .local v0, "e":Ljava/util/NoSuchElementException;
     const-string v1, "MediaFocusControl"
 

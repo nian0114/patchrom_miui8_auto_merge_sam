@@ -26,12 +26,10 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrFactory:Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;
 
-    .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -45,10 +43,8 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     return-void
 .end method
 
@@ -56,26 +52,22 @@
     .locals 3
 
     .prologue
-    .line 58
     sget-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrFactory:Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;
 
     if-nez v0, :cond_0
 
-    .line 59
     const-string v0, "SmartCardPinManagerFactory"
 
     const-string v1, "Creating a new factory"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     new-instance v0, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;
 
     invoke-direct {v0}, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;-><init>()V
 
     sput-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrFactory:Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;
 
-    .line 62
     :cond_0
     const-string v0, "SmartCardPinManagerFactory"
 
@@ -101,7 +93,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     sget-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrFactory:Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;
 
     return-object v0
@@ -114,10 +105,8 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 115
     const/4 v1, 0x0
 
-    .line 117
     .local v1, "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -125,10 +114,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     if-eqz p1, :cond_1
 
-    .line 119
     const-string v2, "SmartCardPinManagerFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -155,7 +142,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     new-instance v0, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
@@ -164,7 +150,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 121
     .local v0, "key":Ljava/lang/Integer;
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
@@ -174,7 +159,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 122
     const-string v2, "SmartCardPinManagerFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -201,7 +185,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -211,20 +194,16 @@
     .end local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     check-cast v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager;
 
-    .line 126
     .restart local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 127
     invoke-virtual {v1}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->unbindSmartCardPinService()V
 
-    .line 128
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     .end local v0    # "key":Ljava/lang/Integer;
     :cond_1
     return-void
@@ -236,10 +215,8 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 67
     const/4 v1, 0x0
 
-    .line 69
     .local v1, "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -247,20 +224,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 71
     :cond_0
     const/4 v2, 0x0
 
-    .line 86
     :goto_0
     return-object v2
 
-    .line 73
     :cond_1
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -298,7 +271,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     new-instance v0, Ljava/lang/Integer;
 
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
@@ -307,7 +279,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 75
     .local v0, "key":Ljava/lang/Integer;
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
@@ -317,7 +288,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 76
     const-string v2, "SmartCardPinManagerFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -344,7 +314,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -354,12 +323,10 @@
     .end local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     check-cast v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager;
 
-    .line 80
     .restart local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     :cond_2
     if-nez v1, :cond_3
 
-    .line 81
     const-string v2, "SmartCardPinManagerFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -392,7 +359,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     new-instance v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager;
 
     .end local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
@@ -400,13 +366,11 @@
 
     invoke-direct {v1, p2, p1, v2}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;-><init>(Landroid/os/UserHandle;Landroid/content/Context;I)V
 
-    .line 83
     .restart local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     :cond_3
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -446,7 +410,6 @@
 
     move-object v2, v1
 
-    .line 86
     goto/16 :goto_0
 .end method
 
@@ -456,10 +419,8 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 90
     const/4 v1, 0x0
 
-    .line 92
     .local v1, "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -467,20 +428,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 94
     :cond_0
     const/4 v2, 0x0
 
-    .line 111
     :goto_0
     return-object v2
 
-    .line 96
     :cond_1
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -518,7 +475,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     new-instance v0, Ljava/lang/Integer;
 
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
@@ -527,7 +483,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 98
     .local v0, "key":Ljava/lang/Integer;
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
@@ -537,7 +492,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 99
     const-string v2, "SmartCardPinManagerFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -564,7 +518,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -574,12 +527,10 @@
     .end local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     check-cast v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager;
 
-    .line 103
     .restart local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     :cond_2
     if-nez v1, :cond_3
 
-    .line 104
     const-string v2, "SmartCardPinManagerFactory"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -612,7 +563,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     new-instance v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager;
 
     .end local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
@@ -620,16 +570,13 @@
 
     invoke-direct {v1, p2, p1, v2}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;-><init>(Landroid/os/UserHandle;Landroid/content/Context;I)V
 
-    .line 106
     .restart local v1    # "scPinMgr":Lcom/sec/smartcard/pinservice/SmartCardPinManager;
     invoke-virtual {v1, p2}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->bindSmartCardPinService_Sync(Landroid/os/UserHandle;)V
 
-    .line 108
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManagerFactory;->mScPinMgrMap:Ljava/util/Map;
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     :cond_3
     const-string v2, "SmartCardPinManagerFactory"
 
@@ -669,6 +616,5 @@
 
     move-object v2, v1
 
-    .line 111
     goto/16 :goto_0
 .end method

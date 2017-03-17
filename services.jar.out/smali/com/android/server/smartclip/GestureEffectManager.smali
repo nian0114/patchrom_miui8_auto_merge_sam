@@ -60,72 +60,54 @@
 
     const/4 v1, 0x0
 
-    .line 2619
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2622
     iput v3, p0, Lcom/android/server/smartclip/GestureEffectManager;->ESTIMATE_FULL_SCREEN_MATRIX_WIDTH:I
 
-    .line 2623
     const/16 v0, 0x500
 
     iput v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->ESTIMATE_FULL_SCREEN_MATRIX_HEIGHT:I
 
-    .line 2624
     iput v2, p0, Lcom/android/server/smartclip/GestureEffectManager;->ESTIMATE_CHECK_GESTURE_AREA_WIDTH:I
 
-    .line 2625
     iput v2, p0, Lcom/android/server/smartclip/GestureEffectManager;->ESTIMATE_CHECK_GESTURE_AREA_HEIGHT:I
 
-    .line 2628
     const/16 v0, 0x32
 
     iput v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->GESTURE_RECOGNITION_MIN_DISTANCE:I
 
-    .line 2629
     iput v3, p0, Lcom/android/server/smartclip/GestureEffectManager;->GESTURE_RECOGNITION_MAX_DISTANCE:I
 
-    .line 2630
     const/16 v0, 0x4b0
 
     iput v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->GESTURE_RECOGNITION_MAX_DISTANCE_FOR_BACK:I
 
-    .line 2637
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->DEBUG:Z
 
-    .line 2639
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mIsShowingGestureEffect:Z
 
-    .line 2640
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mDisplay:Landroid/view/Display;
 
-    .line 2644
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSPenGestureEventDispatchThread:Ljava/lang/Thread;
 
-    .line 2651
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSmartClipView:Lcom/android/server/smartclip/SmartClipView;
 
-    .line 2652
     new-instance v0, Landroid/app/Instrumentation;
 
     invoke-direct {v0}, Landroid/app/Instrumentation;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mInstrumentation:Landroid/app/Instrumentation;
 
-    .line 2654
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mHandler:Landroid/os/Handler;
 
-    .line 2655
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mPenLongPress:Ljava/lang/Runnable;
 
-    .line 2656
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mPenDoubleTap:Ljava/lang/Runnable;
 
-    .line 2657
     iput-object v1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mGesturePad:Ljava/lang/Runnable;
 
     return-void
@@ -136,7 +118,6 @@
     .param p0, "x0"    # Lcom/android/server/smartclip/GestureEffectManager;
 
     .prologue
-    .line 2619
     iget-boolean v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->DEBUG:Z
 
     return v0
@@ -149,7 +130,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 2619
     invoke-direct {p0, p1, p2}, Lcom/android/server/smartclip/GestureEffectManager;->sendKeyDownUpSync(II)V
 
     return-void
@@ -160,7 +140,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 3035
     iget-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSPenGestureEventDispatchThread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_1
@@ -173,25 +152,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 3036
     iget-boolean v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 3037
     const-string v0, "GestureEffectManager"
 
-    const-string/jumbo v1, "send interrupt to previous mSPenGestureEventDispatchThread"
+    const-string v1, "send interrupt to previous mSPenGestureEventDispatchThread"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3038
     :cond_0
     iget-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSPenGestureEventDispatchThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 3041
     :cond_1
     new-instance v0, Ljava/lang/Thread;
 
@@ -203,12 +178,10 @@
 
     iput-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSPenGestureEventDispatchThread:Ljava/lang/Thread;
 
-    .line 3061
     iget-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSPenGestureEventDispatchThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 3062
     return-void
 .end method
 
@@ -218,39 +191,32 @@
     .param p2, "source"    # I
 
     .prologue
-    .line 3065
     new-instance v0, Landroid/view/KeyEvent;
 
     const/4 v2, 0x0
 
     invoke-direct {v0, v2, p1}, Landroid/view/KeyEvent;-><init>(II)V
 
-    .line 3066
     .local v0, "eventDown":Landroid/view/KeyEvent;
     invoke-virtual {v0, p2}, Landroid/view/KeyEvent;->setSource(I)V
 
-    .line 3067
     iget-object v2, p0, Lcom/android/server/smartclip/GestureEffectManager;->mInstrumentation:Landroid/app/Instrumentation;
 
     invoke-virtual {v2, v0}, Landroid/app/Instrumentation;->sendKeySync(Landroid/view/KeyEvent;)V
 
-    .line 3069
     new-instance v1, Landroid/view/KeyEvent;
 
     const/4 v2, 0x1
 
     invoke-direct {v1, v2, p1}, Landroid/view/KeyEvent;-><init>(II)V
 
-    .line 3070
     .local v1, "eventUp":Landroid/view/KeyEvent;
     invoke-virtual {v1, p2}, Landroid/view/KeyEvent;->setSource(I)V
 
-    .line 3071
     iget-object v2, p0, Lcom/android/server/smartclip/GestureEffectManager;->mInstrumentation:Landroid/app/Instrumentation;
 
     invoke-virtual {v2, v1}, Landroid/app/Instrumentation;->sendKeySync(Landroid/view/KeyEvent;)V
 
-    .line 3072
     return-void
 .end method
 
@@ -265,17 +231,15 @@
     .param p5, "gesturePad"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 2660
     iput-object p1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSmartClipView:Lcom/android/server/smartclip/SmartClipView;
 
-    .line 2661
     iget-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mSmartClipView:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-virtual {v0}, Lcom/android/server/smartclip/SmartClipView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -289,19 +253,14 @@
 
     iput-object v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mDisplay:Landroid/view/Display;
 
-    .line 2664
     iput-object p2, p0, Lcom/android/server/smartclip/GestureEffectManager;->mHandler:Landroid/os/Handler;
 
-    .line 2666
     iput-object p3, p0, Lcom/android/server/smartclip/GestureEffectManager;->mPenLongPress:Ljava/lang/Runnable;
 
-    .line 2667
     iput-object p4, p0, Lcom/android/server/smartclip/GestureEffectManager;->mPenDoubleTap:Ljava/lang/Runnable;
 
-    .line 2668
     iput-object p5, p0, Lcom/android/server/smartclip/GestureEffectManager;->mGesturePad:Ljava/lang/Runnable;
 
-    .line 2669
     return-void
 .end method
 
@@ -309,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 3009
     iget-boolean v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mIsShowingGestureEffect:Z
 
     return v0
@@ -320,7 +278,6 @@
     .param p1, "view"    # Lcom/android/server/smartclip/SmartClipView;
 
     .prologue
-    .line 3032
     return-void
 .end method
 
@@ -329,15 +286,12 @@
     .param p1, "isInvisible"    # Z
 
     .prologue
-    .line 3013
     iget-boolean v0, p0, Lcom/android/server/smartclip/GestureEffectManager;->mIsShowingGestureEffect:Z
 
     if-nez v0, :cond_0
 
-    .line 3014
     iput-boolean p1, p0, Lcom/android/server/smartclip/GestureEffectManager;->mIsShowingGestureEffect:Z
 
-    .line 3016
     :cond_0
     return-void
 .end method

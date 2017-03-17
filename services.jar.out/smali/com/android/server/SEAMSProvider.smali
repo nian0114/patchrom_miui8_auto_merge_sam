@@ -20,7 +20,6 @@
     .locals 4
 
     .prologue
-    .line 26
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -29,7 +28,6 @@
 
     sput-object v0, Lcom/android/server/SEAMSProvider;->uriMatcher:Landroid/content/UriMatcher;
 
-    .line 27
     sget-object v0, Lcom/android/server/SEAMSProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.seams.provider"
@@ -40,7 +38,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 28
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -63,7 +59,6 @@
     .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     return v0
@@ -74,7 +69,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return-object v0
@@ -86,7 +80,6 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     return-object v0
@@ -96,14 +89,12 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/SEAMSProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/SEAMSProvider;->mContext:Landroid/content/Context;
 
-    .line 34
     const/4 v0, 0x1
 
     return v0
@@ -118,14 +109,13 @@
     .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     const-string v4, "MIJICHA"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "query uri= "
+    const-string v6, "query uri= "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -151,14 +141,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     const-string v4, "MIJICHA"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "selectionArgs = "
+    const-string v6, "selectionArgs = "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -220,14 +209,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     const/4 v0, 0x0
 
-    .line 47
     .local v0, "cursor":Landroid/database/Cursor;
     if-eqz p1, :cond_0
 
-    .line 48
     sget-object v4, Lcom/android/server/SEAMSProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v4, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -236,14 +222,12 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 77
     :cond_0
     const/4 v4, 0x0
 
     :goto_0
     return-object v4
 
-    .line 50
     :pswitch_0
     const-string v4, "MIJICHA"
 
@@ -251,10 +235,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     if-eqz p3, :cond_0
 
-    const-string/jumbo v4, "isAuthorized"
+    const-string v4, "isAuthorized"
 
     invoke-virtual {p3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -262,25 +245,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 53
     invoke-static {p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v4
 
     if-gtz v4, :cond_1
 
-    .line 54
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 56
     :cond_1
     invoke-static {}, Lcom/android/server/ServiceKeeper;->getServiceKeeper()Lcom/android/server/ServiceKeeper;
 
     move-result-object v3
 
-    .line 58
     .local v3, "sk":Lcom/android/server/ServiceKeeper;
     iget-object v4, p0, Lcom/android/server/SEAMSProvider;->mContext:Landroid/content/Context;
 
@@ -312,7 +291,6 @@
 
     move-result v2
 
-    .line 59
     .local v2, "result":I
     const-string v4, "MIJICHA"
 
@@ -336,12 +314,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     new-instance v1, Ljava/lang/Integer;
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 63
     .local v1, "obj":Ljava/lang/Integer;
     new-instance v4, Landroid/database/MatrixCursor;
 
@@ -351,7 +327,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v7, "isAuthorized"
+    const-string v7, "isAuthorized"
 
     aput-object v7, v5, v6
 
@@ -359,7 +335,6 @@
 
     iput-object v4, p0, Lcom/android/server/SEAMSProvider;->mCursor:Landroid/database/MatrixCursor;
 
-    .line 68
     iget-object v4, p0, Lcom/android/server/SEAMSProvider;->mCursor:Landroid/database/MatrixCursor;
 
     const/4 v5, 0x1
@@ -372,12 +347,10 @@
 
     invoke-virtual {v4, v5}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 73
     iget-object v4, p0, Lcom/android/server/SEAMSProvider;->mCursor:Landroid/database/MatrixCursor;
 
     goto :goto_0
 
-    .line 48
     nop
 
     :pswitch_data_0
@@ -394,7 +367,6 @@
     .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 101
     const/4 v0, 0x0
 
     return v0

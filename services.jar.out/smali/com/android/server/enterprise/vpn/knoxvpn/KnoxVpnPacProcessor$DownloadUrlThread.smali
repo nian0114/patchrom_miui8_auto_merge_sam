@@ -38,27 +38,20 @@
     .param p6, "interfaceName"    # Ljava/lang/String;
 
     .prologue
-    .line 607
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 608
     iput-object p2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->profileName:Ljava/lang/String;
 
-    .line 609
     iput-object p3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->hostname:Ljava/lang/String;
 
-    .line 610
     iput-object p4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->path:Ljava/lang/String;
 
-    .line 611
     iput p5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->port:I
 
-    .line 612
     iput-object p6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->interfaceName:Ljava/lang/String;
 
-    .line 613
     return-void
 .end method
 
@@ -68,10 +61,8 @@
     .locals 0
 
     .prologue
-    .line 628
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->interrupt()V
 
-    .line 629
     return-void
 .end method
 
@@ -79,7 +70,6 @@
     .locals 7
 
     .prologue
-    .line 618
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor$DownloadUrlThread;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor;
 
@@ -99,15 +89,12 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 625
     :goto_0
     return-void
 
-    .line 619
     :catch_0
     move-exception v6
 
-    .line 620
     .local v6, "e":Ljava/lang/IllegalArgumentException;
     const-string v0, "KnoxVpnPacProcessor"
 
@@ -115,7 +102,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 621
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor;->getDownloadStatus()Ljava/util/HashMap;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnPacProcessor;->access$300()Ljava/util/HashMap;
 
@@ -133,12 +119,10 @@
 
     goto :goto_0
 
-    .line 622
     .end local v6    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v6
 
-    .line 623
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "KnoxVpnPacProcessor"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 116
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,20 +38,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 127
     if-nez p2, :cond_1
 
-    .line 128
     const-string v0, "intent is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 135
     :cond_0
     :goto_0
     return-void
 
-    .line 132
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -70,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;
 
     invoke-virtual {v0, p2}, Lcom/samsung/android/contextaware/dataprovider/androidprovider/IntentActionProvider;->updateContext(Landroid/content/Intent;)V

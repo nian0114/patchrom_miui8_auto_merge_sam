@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 16
     const/16 v0, 0x8
 
     new-array v0, v0, [B
@@ -50,16 +49,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->messageType:I
 
-    .line 18
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->flags:I
 
-    .line 21
     return-void
 .end method
 
@@ -70,19 +65,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->messageType:I
 
-    .line 18
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->flags:I
 
-    .line 27
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->messageType:I
 
-    .line 28
     return-void
 .end method
 
@@ -94,22 +84,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->messageType:I
 
-    .line 18
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->flags:I
 
-    .line 35
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->messageType:I
 
-    .line 36
     invoke-virtual {p0, p2}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->setFlags(I)V
 
-    .line 37
     return-void
 .end method
 
@@ -122,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->flags:I
 
     return v0
@@ -132,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->messageType:I
 
     return v0
@@ -143,7 +125,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 62
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->getFlags()I
 
     move-result v0
@@ -176,14 +157,12 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->flags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->flags:I
 
-    .line 55
     return-void
 .end method
 
@@ -193,7 +172,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 70
     if-eqz p2, :cond_0
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->getFlags()I
@@ -205,10 +183,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->setFlags(I)V
 
-    .line 71
     return-void
 
-    .line 70
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/proxyauth/NTLMBaseMessage;->getFlags()I
 

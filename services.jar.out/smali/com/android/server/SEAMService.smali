@@ -169,33 +169,29 @@
 
     const/4 v3, 0x0
 
-    .line 145
     sput v3, Lcom/android/server/SEAMService;->SELF_PID:I
 
-    .line 165
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/server/SEAMSContainer;
 
     sput-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
 
-    .line 166
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
-    .line 169
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "good"
+    const-string v1, "good"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "fixmo"
+    const-string v1, "fixmo"
 
     aput-object v1, v0, v6
 
@@ -205,13 +201,12 @@
 
     const/4 v1, 0x3
 
-    const-string/jumbo v2, "mycontainer"
+    const-string v2, "mycontainer"
 
     aput-object v2, v0, v1
 
     sput-object v0, Lcom/android/server/SEAMService;->containerStrings:[Ljava/lang/String;
 
-    .line 171
     const/16 v0, 0x10
 
     new-array v0, v0, [C
@@ -220,7 +215,6 @@
 
     sput-object v0, Lcom/android/server/SEAMService;->HEX:[C
 
-    .line 173
     new-array v0, v7, [Ljava/lang/String;
 
     const-string v1, "com.sec.enterprise.knox.permission.KNOX_SEAMS"
@@ -233,26 +227,20 @@
 
     sput-object v0, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
-    .line 210
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/SEAMService;->NeedBadge:Ljava/util/HashMap;
 
-    .line 211
     sput-object v4, Lcom/android/server/SEAMService;->policyDataBytes:[B
 
-    .line 212
     sput v5, Lcom/android/server/SEAMService;->policyDataBytesPosition:I
 
-    .line 213
     sput-object v4, Lcom/android/server/SEAMService;->policyHash:Ljava/lang/String;
 
-    .line 214
     sput v5, Lcom/android/server/SEAMService;->policyFileSize:I
 
-    .line 227
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/security/mac_permissions.xml"
@@ -261,28 +249,22 @@
 
     sput-object v0, Lcom/android/server/SEAMService;->MAC_POLICY_FILE:Ljava/io/File;
 
-    .line 230
     const/high16 v0, 0x3200000
 
     sput v0, Lcom/android/server/SEAMService;->MAX_BYTE_ARRAY_SIZE:I
 
-    .line 235
     new-array v0, v3, [Ljava/lang/Object;
 
     sput-object v0, Lcom/android/server/SEAMService;->mSetPolicy:Ljava/lang/Object;
 
-    .line 236
     sput-object v4, Lcom/android/server/SEAMService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 237
     sput-object v4, Lcom/android/server/SEAMService;->mSPDCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 238
     sput-boolean v3, Lcom/android/server/SEAMService;->bootCompleted:Z
 
     return-void
 
-    .line 171
     nop
 
     :array_0
@@ -313,33 +295,26 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 252
     invoke-direct {p0}, Lcom/sec/enterprise/knox/seams/ISEAMS$Stub;-><init>()V
 
-    .line 191
     const/4 v6, 0x0
 
     new-array v6, v6, [Ljava/lang/Object;
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mLock:Ljava/lang/Object;
 
-    .line 239
     const/4 v6, 0x0
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
-    .line 244
     iput v8, p0, Lcom/android/server/SEAMService;->GOOD_SECURED_APPTYPE:I
 
-    .line 245
     const/4 v6, 0x2
 
     iput v6, p0, Lcom/android/server/SEAMService;->GOOD_TRUSTED_APPTYPE:I
 
-    .line 253
     iput-object p1, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
-    .line 254
     new-instance v6, Landroid/os/HandlerThread;
 
     const-string v7, "SEAMService"
@@ -348,12 +323,10 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 255
     iget-object v6, p0, Lcom/android/server/SEAMService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v6}, Landroid/os/HandlerThread;->start()V
 
-    .line 256
     new-instance v6, Lcom/android/server/SEAMService$BrHandler;
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -366,7 +339,6 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mHandler:Lcom/android/server/SEAMService$BrHandler;
 
-    .line 257
     new-instance v6, Landroid/os/HandlerThread;
 
     const-string v7, "SPD"
@@ -375,12 +347,10 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->sHandlerThread:Landroid/os/HandlerThread;
 
-    .line 258
     iget-object v6, p0, Lcom/android/server/SEAMService;->sHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v6}, Landroid/os/HandlerThread;->start()V
 
-    .line 259
     new-instance v6, Lcom/android/server/SEAMService$SpdHandler;
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->sHandlerThread:Landroid/os/HandlerThread;
@@ -393,11 +363,9 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->sHandler:Lcom/android/server/SEAMService$SpdHandler;
 
-    .line 260
     invoke-direct {p0}, Lcom/android/server/SEAMService;->registerBootReceiver()V
 
-    .line 261
-    const-string/jumbo v6, "package"
+    const-string v6, "package"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -407,15 +375,13 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    .line 262
     invoke-direct {p0}, Lcom/android/server/SEAMService;->registerSPDCompleteReceiver()V
 
-    .line 263
     iget-object v6, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v7, "persona"
+    const-string v7, "persona"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -425,18 +391,15 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
-    .line 264
     invoke-static {}, Lcom/android/server/ServiceKeeper;->getServiceKeeper()Lcom/android/server/ServiceKeeper;
 
     move-result-object v4
 
-    .line 265
     .local v4, "serviceKeeper":Lcom/android/server/ServiceKeeper;
     invoke-static {}, Lcom/android/server/ServiceKeeper;->authorizeLoadProcedure()Z
 
     move-result v3
 
-    .line 266
     .local v3, "ret":Z
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -444,7 +407,6 @@
 
     sput v6, Lcom/android/server/SEAMService;->SELF_PID:I
 
-    .line 267
     new-instance v6, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -453,12 +415,10 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 271
     invoke-direct {p0}, Lcom/android/server/SEAMService;->checkFingerprintAndRelabelIfNeeded()I
 
     move-result v2
 
-    .line 278
     .local v2, "isNewBuild":I
     :try_start_0
     new-instance v5, Ljava/io/File;
@@ -467,7 +427,6 @@
 
     invoke-direct {v5, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 279
     .local v5, "spdDir":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
@@ -475,24 +434,20 @@
 
     if-nez v6, :cond_0
 
-    .line 281
     invoke-virtual {v5}, Ljava/io/File;->mkdir()Z
 
-    .line 282
     const/4 v6, 0x1
 
     const/4 v7, 0x1
 
     invoke-virtual {v5, v6, v7}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 283
     const/4 v6, 0x1
 
     const/4 v7, 0x1
 
     invoke-virtual {v5, v6, v7}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 286
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -500,7 +455,6 @@
 
     invoke-direct {v0, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 287
     .local v0, "aasaDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -508,36 +462,32 @@
 
     if-nez v6, :cond_1
 
-    .line 289
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 290
     const/4 v6, 0x1
 
     const/4 v7, 0x1
 
     invoke-virtual {v0, v6, v7}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 291
     const/4 v6, 0x1
 
     const/4 v7, 0x1
 
     invoke-virtual {v0, v6, v7}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 298
     :cond_1
     if-ne v2, v8, :cond_3
 
-    const-string/jumbo v6, "ro.crypto.state"
+    const-string v6, "ro.crypto.state"
 
-    const-string/jumbo v7, "none"
+    const-string v7, "none"
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    const-string/jumbo v7, "unencrypted"
+    const-string v7, "unencrypted"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -545,15 +495,15 @@
 
     if-nez v6, :cond_2
 
-    const-string/jumbo v6, "vold.decrypt"
+    const-string v6, "vold.decrypt"
 
-    const-string/jumbo v7, "none"
+    const-string v7, "none"
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    const-string/jumbo v7, "trigger_restart_framework"
+    const-string v7, "trigger_restart_framework"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -561,15 +511,15 @@
 
     if-nez v6, :cond_2
 
-    const-string/jumbo v6, "vold.decrypt"
+    const-string v6, "vold.decrypt"
 
-    const-string/jumbo v7, "none"
+    const-string v7, "none"
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    const-string/jumbo v7, "trigger_reset_main"
+    const-string v7, "trigger_reset_main"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -577,9 +527,8 @@
 
     if-eqz v6, :cond_3
 
-    .line 301
     :cond_2
-    const-string/jumbo v6, "selinux.sec.restorecon"
+    const-string v6, "selinux.sec.restorecon"
 
     const-string v7, "1"
 
@@ -587,18 +536,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 309
     .end local v0    # "aasaDir":Ljava/io/File;
     .end local v5    # "spdDir":Ljava/io/File;
     :cond_3
     :goto_0
     return-void
 
-    .line 305
     :catch_0
     move-exception v1
 
-    .line 306
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -628,7 +574,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 307
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -639,7 +584,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 142
     sput-boolean p0, Lcom/android/server/SEAMService;->bootCompleted:Z
 
     return p0
@@ -649,7 +593,6 @@
     .locals 1
 
     .prologue
-    .line 142
     sget-object v0, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     return-object v0
@@ -660,7 +603,6 @@
     .param p0, "x0"    # Lcom/android/server/SEAMService;
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     return-object v0
@@ -670,8 +612,7 @@
     .locals 14
 
     .prologue
-    .line 538
-    const-string/jumbo v10, "ro.build.date"
+    const-string v10, "ro.build.date"
 
     const-string v11, "NONE"
 
@@ -679,9 +620,8 @@
 
     move-result-object v2
 
-    .line 541
     .local v2, "curbld":Ljava/lang/String;
-    const-string/jumbo v10, "persist.sys.drs.date"
+    const-string v10, "persist.sys.drs.date"
 
     const-string v11, "NONE"
 
@@ -689,11 +629,9 @@
 
     move-result-object v6
 
-    .line 543
     .local v6, "oldbld":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 544
     .local v5, "isNewbuild":I
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -703,17 +641,13 @@
 
     if-eq v10, v11, :cond_6
 
-    .line 545
     const/4 v5, 0x1
 
-    .line 548
     const/4 v0, 0x0
 
-    .line 549
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     const/4 v7, 0x0
 
-    .line 551
     .local v7, "pkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v10, 0x1
 
@@ -723,27 +657,23 @@
 
     move-result-object v4
 
-    .line 552
     .local v4, "instanceCon":Lcom/android/server/SEAMSContainer;
     if-eqz v4, :cond_2
 
-    .line 553
     invoke-virtual {v4}, Lcom/android/server/SEAMSContainer;->updateSeappContextsAndReload()I
 
     move-result v10
 
     if-eqz v10, :cond_0
 
-    .line 554
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "seapp contexts updates had an issue"
+    const-string v12, "seapp contexts updates had an issue"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 557
     :cond_0
     const/4 v10, 0x1
 
@@ -753,23 +683,20 @@
 
     move-result-object v7
 
-    .line 558
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "got pkgList from getPkgNamesFromContainer"
+    const-string v12, "got pkgList from getPkgNamesFromContainer"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 559
     if-eqz v7, :cond_1
 
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     if-eqz v10, :cond_1
 
-    .line 560
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
@@ -778,7 +705,6 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -797,7 +723,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 562
     .local v8, "pkgName":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
@@ -811,7 +736,6 @@
 
     move-result-object v0
 
-    .line 563
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
@@ -860,7 +784,6 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 564
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v11, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
@@ -873,7 +796,6 @@
 
     goto :goto_0
 
-    .line 567
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v8    # "pkgName":Ljava/lang/String;
     :cond_1
@@ -881,15 +803,13 @@
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "pkglist is empty or pms is null"
+    const-string v12, "pkglist is empty or pms is null"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 576
     :cond_2
     const/4 v1, 0x0
 
-    .line 577
     .local v1, "bbcUserId":I
     const/4 v10, 0x3
 
@@ -899,7 +819,6 @@
 
     move-result-object v7
 
-    .line 579
     if-eqz v7, :cond_3
 
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
@@ -910,14 +829,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 580
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
     invoke-static {}, Landroid/os/PersonaManager;->getBbcEnabled()I
 
     move-result v1
 
-    .line 581
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -936,7 +853,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 582
     .restart local v8    # "pkgName":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
@@ -946,7 +862,6 @@
 
     move-result-object v0
 
-    .line 583
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v11, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
@@ -959,7 +874,6 @@
 
     goto :goto_1
 
-    .line 586
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v8    # "pkgName":Ljava/lang/String;
     :cond_3
@@ -967,17 +881,15 @@
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "pkglist is empty or PMS or Persona is null"
+    const-string v12, "pkglist is empty or PMS or Persona is null"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 589
     :cond_4
     const/4 v9, 0x0
 
-    .line 590
     .local v9, "val":Ljava/lang/String;
-    const-string/jumbo v10, "persist.security.good.enable"
+    const-string v10, "persist.security.good.enable"
 
     const-string v11, "0"
 
@@ -985,7 +897,6 @@
 
     move-result-object v9
 
-    .line 591
     if-eqz v9, :cond_6
 
     const-string v10, "1"
@@ -996,10 +907,8 @@
 
     if-eqz v10, :cond_6
 
-    .line 592
     if-nez v4, :cond_5
 
-    .line 593
     const/4 v10, 0x1
 
     iget-object v11, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -1008,25 +917,21 @@
 
     move-result-object v4
 
-    .line 595
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 596
     invoke-virtual {v4}, Lcom/android/server/SEAMSContainer;->addAgentEntryAfterFotaAndReload()I
 
     move-result v10
 
     if-nez v10, :cond_6
 
-    .line 598
-    const-string/jumbo v10, "persist.security.good.enable"
+    const-string v10, "persist.security.good.enable"
 
     const-string v11, "0"
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 606
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "bbcUserId":I
     .end local v4    # "instanceCon":Lcom/android/server/SEAMSContainer;
@@ -1046,20 +951,16 @@
     .prologue
     const/16 v6, 0x3e8
 
-    .line 414
     const/4 v3, 0x0
 
-    .line 415
     .local v3, "ret":Z
     const/4 v2, 0x0
 
-    .line 416
     .local v2, "packageName":Ljava/lang/String;
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 422
     .local v4, "user_id":I
     iget-object v5, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -1067,7 +968,6 @@
 
     move-result-object v2
 
-    .line 423
     if-ne p1, v6, :cond_0
 
     sget v5, Lcom/android/server/SEAMService;->SELF_PID:I
@@ -1085,15 +985,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 425
     :cond_1
     const/4 v5, 0x1
 
-    .line 447
     :goto_0
     return v5
 
-    .line 427
     :cond_2
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1119,13 +1016,11 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 429
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 431
     .local v1, "mPM":Landroid/content/pm/IPackageManager;
     invoke-interface {v1, p3, v2, v4}, Landroid/content/pm/IPackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;I)I
 
@@ -1133,12 +1028,10 @@
 
     if-nez v5, :cond_4
 
-    .line 433
     if-eqz p4, :cond_3
 
     if-eqz v4, :cond_3
 
-    .line 434
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v6, "SEAMService"
@@ -1147,24 +1040,20 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 435
     const/4 v3, 0x0
 
     .end local v1    # "mPM":Landroid/content/pm/IPackageManager;
     :goto_1
     move v5, v3
 
-    .line 447
     goto :goto_0
 
-    .line 438
     .restart local v1    # "mPM":Landroid/content/pm/IPackageManager;
     :cond_3
     const/4 v3, 0x1
 
     goto :goto_1
 
-    .line 441
     :cond_4
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1178,12 +1067,10 @@
 
     goto :goto_1
 
-    .line 443
     .end local v1    # "mPM":Landroid/content/pm/IPackageManager;
     :catch_0
     move-exception v0
 
-    .line 444
     .local v0, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1193,7 +1080,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "expection in check SEAMS permissions"
+    const-string v8, "expection in check SEAMS permissions"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1213,7 +1100,6 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 445
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -1228,10 +1114,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 390
     if-eqz p3, :cond_0
 
-    .line 391
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/SEAMService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1241,11 +1125,9 @@
 
     move-result-object p1
 
-    .line 409
     :goto_0
     return v2
 
-    .line 397
     :cond_0
     invoke-direct {p0}, Lcom/android/server/SEAMService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1258,14 +1140,11 @@
 
     move-result-object p1
 
-    .line 399
     goto :goto_0
 
-    .line 401
     :catch_0
     move-exception v1
 
-    .line 402
     .local v1, "se":Ljava/lang/SecurityException;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1295,10 +1174,8 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 403
     invoke-virtual {v1}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    .line 408
     .end local v1    # "se":Ljava/lang/SecurityException;
     :goto_1
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
@@ -1309,16 +1186,13 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 409
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 404
     :catch_1
     move-exception v0
 
-    .line 405
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1348,7 +1222,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 406
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -1360,17 +1233,13 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 641
     const/4 v4, 0x0
 
-    .line 643
     .local v4, "ret":Z
     if-eqz p2, :cond_0
 
-    .line 644
     const/4 v1, 0x0
 
-    .line 646
     .local v1, "fileStreamOut":Ljava/io/OutputStream;
     :try_start_0
     new-instance v3, Ljava/io/File;
@@ -1379,7 +1248,6 @@
 
     invoke-direct {v3, v5, p1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 647
     .local v3, "mFileDest":Ljava/io/File;
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -1389,7 +1257,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 648
     .end local v1    # "fileStreamOut":Ljava/io/OutputStream;
     .local v2, "fileStreamOut":Ljava/io/OutputStream;
     :try_start_1
@@ -1399,32 +1266,26 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 649
     const/4 v4, 0x1
 
-    .line 658
     if-eqz v2, :cond_0
 
-    .line 659
     :try_start_2
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 665
     .end local v2    # "fileStreamOut":Ljava/io/OutputStream;
     .end local v3    # "mFileDest":Ljava/io/File;
     :cond_0
     :goto_0
     return v4
 
-    .line 660
     .restart local v2    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v3    # "mFileDest":Ljava/io/File;
     :catch_0
     move-exception v0
 
-    .line 661
     .local v0, "e":Ljava/io/IOException;
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1456,7 +1317,6 @@
 
     goto :goto_0
 
-    .line 650
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "fileStreamOut":Ljava/io/OutputStream;
     .end local v3    # "mFileDest":Ljava/io/File;
@@ -1464,7 +1324,6 @@
     :catch_1
     move-exception v0
 
-    .line 651
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_1
     :try_start_3
@@ -1498,13 +1357,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 652
     const/4 v4, 0x0
 
-    .line 658
     if-eqz v1, :cond_0
 
-    .line 659
     :try_start_4
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_4
@@ -1512,11 +1368,9 @@
 
     goto :goto_0
 
-    .line 660
     :catch_2
     move-exception v0
 
-    .line 661
     .local v0, "e":Ljava/io/IOException;
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1548,12 +1402,10 @@
 
     goto :goto_0
 
-    .line 653
     .end local v0    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v0
 
-    .line 654
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_2
     :try_start_5
@@ -1587,13 +1439,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 655
     const/4 v4, 0x0
 
-    .line 658
     if-eqz v1, :cond_0
 
-    .line 659
     :try_start_6
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_6
@@ -1601,11 +1450,9 @@
 
     goto/16 :goto_0
 
-    .line 660
     :catch_4
     move-exception v0
 
-    .line 661
     sget-object v5, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v6, "SEAMService"
@@ -1636,31 +1483,25 @@
 
     goto/16 :goto_0
 
-    .line 657
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v5
 
-    .line 658
     :goto_3
     if-eqz v1, :cond_1
 
-    .line 659
     :try_start_7
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 662
     :cond_1
     :goto_4
     throw v5
 
-    .line 660
     :catch_5
     move-exception v0
 
-    .line 661
     .restart local v0    # "e":Ljava/io/IOException;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1692,7 +1533,6 @@
 
     goto :goto_4
 
-    .line 657
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v2    # "fileStreamOut":Ljava/io/OutputStream;
@@ -1706,7 +1546,6 @@
     .restart local v1    # "fileStreamOut":Ljava/io/OutputStream;
     goto :goto_3
 
-    .line 653
     .end local v1    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v2    # "fileStreamOut":Ljava/io/OutputStream;
     :catch_6
@@ -1718,7 +1557,6 @@
     .restart local v1    # "fileStreamOut":Ljava/io/OutputStream;
     goto :goto_2
 
-    .line 650
     .end local v1    # "fileStreamOut":Ljava/io/OutputStream;
     .restart local v2    # "fileStreamOut":Ljava/io/OutputStream;
     :catch_7
@@ -1736,7 +1574,6 @@
     .param p1, "byteArray"    # [B
 
     .prologue
-    .line 710
     new-instance v0, Ljava/lang/StringBuffer;
 
     array-length v3, p1
@@ -1745,7 +1582,6 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 711
     .local v0, "hexBuffer":Ljava/lang/StringBuffer;
     const/4 v1, 0x0
 
@@ -1755,14 +1591,12 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 712
     const/4 v2, 0x1
 
     .local v2, "j":I
     :goto_1
     if-ltz v2, :cond_0
 
-    .line 713
     sget-object v3, Lcom/android/server/SEAMService;->HEX:[C
 
     aget-byte v4, p1, v1
@@ -1777,18 +1611,15 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 712
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 711
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 714
     .end local v2    # "j":I
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -1807,7 +1638,6 @@
     .param p5, "fileContents"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 485
     :goto_0
     :try_start_0
     const-string v3, ": "
@@ -1816,11 +1646,9 @@
 
     move-result-object v2
 
-    .line 486
     .local v2, "tokens":[Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 488
     .local v1, "tempString":Ljava/lang/String;
     array-length v3, v2
 
@@ -1828,7 +1656,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 489
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1847,13 +1674,11 @@
 
     invoke-virtual {p5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 509
     .end local v1    # "tempString":Ljava/lang/String;
     .end local v2    # "tokens":[Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 492
     .restart local v1    # "tempString":Ljava/lang/String;
     .restart local v2    # "tokens":[Ljava/lang/String;
     :cond_0
@@ -1861,8 +1686,7 @@
 
     aget-object v1, v2, v3
 
-    .line 493
-    const-string/jumbo v3, "cwd"
+    const-string v3, "cwd"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1870,7 +1694,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 494
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1889,17 +1712,14 @@
 
     invoke-virtual {p5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 504
     :cond_1
     :goto_2
     invoke-virtual {p4}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 505
     goto :goto_0
 
-    .line 496
     :cond_2
     const/4 v3, 0x1
 
@@ -1913,7 +1733,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 497
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1932,14 +1751,12 @@
 
     invoke-virtual {p5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 498
     invoke-virtual {p2, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 499
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1962,13 +1779,11 @@
 
     goto :goto_2
 
-    .line 506
     .end local v1    # "tempString":Ljava/lang/String;
     .end local v2    # "tokens":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 507
     .local v0, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2000,7 +1815,6 @@
 
     goto :goto_1
 
-    .line 501
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "tempString":Ljava/lang/String;
     .restart local v2    # "tokens":[Ljava/lang/String;
@@ -2033,15 +1847,13 @@
     .locals 2
 
     .prologue
-    .line 333
     iget-object v0, p0, Lcom/android/server/SEAMService;->mEdm:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 334
     iget-object v0, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "enterprise_policy"
+    const-string v1, "enterprise_policy"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2051,7 +1863,6 @@
 
     iput-object v0, p0, Lcom/android/server/SEAMService;->mEdm:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 336
     :cond_0
     iget-object v0, p0, Lcom/android/server/SEAMService;->mEdm:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2064,33 +1875,27 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 452
     sget-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
 
     aget-object v0, v0, p0
 
     if-nez v0, :cond_0
 
-    .line 453
     packed-switch p0, :pswitch_data_0
 
-    .line 467
     sget-object v0, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v1, "SEAMService"
 
-    const-string/jumbo v2, "getInstance, null is returned"
+    const-string v2, "getInstance, null is returned"
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 468
     const/4 v0, 0x0
 
-    .line 471
     :goto_0
     return-object v0
 
-    .line 455
     :pswitch_0
     sget-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
 
@@ -2100,7 +1905,6 @@
 
     aput-object v1, v0, p0
 
-    .line 471
     :cond_0
     :goto_1
     sget-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
@@ -2109,7 +1913,6 @@
 
     goto :goto_0
 
-    .line 458
     :pswitch_1
     sget-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
 
@@ -2121,7 +1924,6 @@
 
     goto :goto_1
 
-    .line 461
     :pswitch_2
     sget-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
 
@@ -2133,7 +1935,6 @@
 
     goto :goto_1
 
-    .line 464
     :pswitch_3
     sget-object v0, Lcom/android/server/SEAMService;->instance:[Lcom/android/server/SEAMSContainer;
 
@@ -2145,7 +1946,6 @@
 
     goto :goto_1
 
-    .line 453
     nop
 
     :pswitch_data_0
@@ -2164,32 +1964,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 732
-    const-string/jumbo v2, "persist.sys.mdm.auto"
+    const-string v2, "persist.sys.mdm.auto"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 733
     .local v0, "result":I
     and-int/lit8 v0, v0, -0x1
 
-    .line 734
     and-int v2, v0, p1
 
     if-nez v2, :cond_0
 
-    .line 735
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "SEAMService"
 
-    const-string/jumbo v4, "getMdmProperties, FALSE is returned."
+    const-string v4, "getMdmProperties, FALSE is returned."
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 738
     :goto_0
     return v1
 
@@ -2204,12 +1999,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2774
     invoke-static {p1}, Lcom/android/server/ResourceManager;->getInstance(Landroid/content/Context;)Lcom/android/server/ResourceManager;
 
     move-result-object v0
 
-    .line 2775
     .local v0, "instance":Lcom/android/server/ResourceManager;
     return-object v0
 .end method
@@ -2227,7 +2020,6 @@
     .end annotation
 
     .prologue
-    .line 1972
     .local p0, "hs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     if-eqz p0, :cond_0
 
@@ -2237,7 +2029,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1974
     :cond_0
     const-string v4, "SEAMService"
 
@@ -2245,14 +2036,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1976
     const/4 v0, 0x0
 
-    .line 1984
     :cond_1
     return-object v0
 
-    .line 1978
     :cond_2
     invoke-virtual {p0}, Ljava/util/HashSet;->size()I
 
@@ -2260,17 +2048,14 @@
 
     new-array v0, v4, [I
 
-    .line 1979
     .local v0, "array":[I
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 1980
     .local v3, "itr":Ljava/util/Iterator;
     const/4 v1, 0x0
 
-    .line 1981
     .local v1, "i":I
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -2279,7 +2064,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1982
     add-int/lit8 v2, v1, 0x1
 
     .end local v1    # "i":I
@@ -2309,7 +2093,6 @@
     .locals 1
 
     .prologue
-    .line 2429
     sget-boolean v0, Lcom/android/server/SEAMService;->bootCompleted:Z
 
     return v0
@@ -2320,7 +2103,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 610
     const/16 v0, 0x64
 
     if-gt v0, p1, :cond_0
@@ -2329,24 +2111,20 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 611
     const/4 v0, 0x1
 
-    .line 613
     :goto_0
     return v0
 
-    .line 612
     :cond_0
     sget-object v0, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v1, "SEAMService"
 
-    const-string/jumbo v2, "isPersona, false is returned"
+    const-string v2, "isPersona, false is returned"
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 613
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2361,7 +2139,6 @@
     .param p5, "scanner"    # Ljava/util/Scanner;
 
     .prologue
-    .line 513
     const-string v0, "all"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2382,10 +2159,8 @@
 
     move-object v5, p2
 
-    .line 514
     invoke-direct/range {v0 .. v5}, Lcom/android/server/SEAMService;->getAVCDetails(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Scanner;Ljava/lang/StringBuilder;)V
 
-    .line 517
     :cond_0
     return-void
 .end method
@@ -2398,7 +2173,6 @@
     .param p4, "lineSeparator"    # Ljava/lang/String;
 
     .prologue
-    .line 522
     const-string v0, "all"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2407,7 +2181,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 523
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2426,7 +2199,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 525
     :cond_0
     return-void
 .end method
@@ -2440,7 +2212,6 @@
     .param p4, "scanner"    # Ljava/util/Scanner;
 
     .prologue
-    .line 530
     const-string v0, "all"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2449,7 +2220,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 531
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2468,7 +2238,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 533
     :cond_0
     return-void
 .end method
@@ -2477,20 +2246,17 @@
     .locals 6
 
     .prologue
-    .line 345
     :try_start_0
     sget-object v2, Lcom/android/server/SEAMService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v2, :cond_0
 
-    .line 346
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 347
     .local v1, "intentFilter":Landroid/content/IntentFilter;
     new-instance v2, Lcom/android/server/SEAMService$1;
 
@@ -2498,7 +2264,6 @@
 
     sput-object v2, Lcom/android/server/SEAMService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 353
     iget-object v2, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/android/server/SEAMService;->mBootReceiver:Landroid/content/BroadcastReceiver;
@@ -2511,17 +2276,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 360
     .end local v1    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     :goto_0
     return-void
 
-    .line 357
     :catch_0
     move-exception v0
 
-    .line 358
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2558,13 +2320,11 @@
     .locals 6
 
     .prologue
-    .line 367
     :try_start_0
     sget-object v2, Lcom/android/server/SEAMService;->mSPDCompleteReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v2, :cond_0
 
-    .line 368
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "SEAMService"
@@ -2573,14 +2333,12 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 369
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v2, "com.samsung.spdsuccess"
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 370
     .local v1, "intentFilter":Landroid/content/IntentFilter;
     new-instance v2, Lcom/android/server/SEAMService$2;
 
@@ -2588,7 +2346,6 @@
 
     sput-object v2, Lcom/android/server/SEAMService;->mSPDCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 379
     iget-object v2, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/android/server/SEAMService;->mSPDCompleteReceiver:Landroid/content/BroadcastReceiver;
@@ -2601,17 +2358,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 385
     .end local v1    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     :goto_0
     return-void
 
-    .line 382
     :catch_0
     move-exception v0
 
-    .line 383
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2648,10 +2402,8 @@
     .locals 13
 
     .prologue
-    .line 675
     const/4 v8, 0x0
 
-    .line 677
     .local v8, "ret":Z
     :try_start_0
     new-instance v4, Ljava/io/File;
@@ -2660,7 +2412,6 @@
 
     invoke-direct {v4, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 679
     .local v4, "fileFolder":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
 
@@ -2668,12 +2419,10 @@
 
     if-eqz v9, :cond_2
 
-    .line 680
     invoke-virtual {v4}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 681
     .local v0, "allFiles":[Ljava/lang/String;
     move-object v1, v0
 
@@ -2689,7 +2438,6 @@
 
     aget-object v5, v1, v6
 
-    .line 682
     .local v5, "filename":Ljava/lang/String;
     new-instance v3, Ljava/io/File;
 
@@ -2697,7 +2445,6 @@
 
     invoke-direct {v3, v9, v5}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 683
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
@@ -2705,13 +2452,11 @@
 
     if-eqz v9, :cond_0
 
-    .line 681
     :goto_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 684
     :cond_0
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
     :try_end_0
@@ -2719,7 +2464,6 @@
 
     goto :goto_1
 
-    .line 692
     .end local v0    # "allFiles":[Ljava/lang/String;
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "file":Ljava/io/File;
@@ -2730,7 +2474,6 @@
     :catch_0
     move-exception v2
 
-    .line 693
     .local v2, "e":Ljava/lang/Exception;
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2760,10 +2503,8 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 694
     const/4 v8, 0x0
 
-    .line 697
     .end local v2    # "e":Ljava/lang/Exception;
     :goto_2
     if-eqz v8, :cond_1
@@ -2771,11 +2512,9 @@
     :cond_1
     move v9, v8
 
-    .line 706
     :goto_3
     return v9
 
-    .line 687
     .restart local v4    # "fileFolder":Ljava/io/File;
     :cond_2
     :try_start_1
@@ -2787,18 +2526,16 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 688
     const/4 v9, 0x0
 
     goto :goto_3
 
-    .line 690
     .restart local v0    # "allFiles":[Ljava/lang/String;
     .restart local v1    # "arr$":[Ljava/lang/String;
     .restart local v6    # "i$":I
     .restart local v7    # "len$":I
     :cond_3
-    const-string/jumbo v9, "selinux.reload_policy"
+    const-string v9, "selinux.reload_policy"
 
     const-string v10, "1"
 
@@ -2806,7 +2543,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 691
     const/4 v8, 0x1
 
     goto :goto_2
@@ -2820,19 +2556,14 @@
 
     const/4 v0, -0x1
 
-    .line 475
     sput v0, Lcom/android/server/SEAMService;->policyFileSize:I
 
-    .line 476
     sput-object v1, Lcom/android/server/SEAMService;->policyDataBytes:[B
 
-    .line 477
     sput-object v1, Lcom/android/server/SEAMService;->policyHash:Ljava/lang/String;
 
-    .line 478
     sput v0, Lcom/android/server/SEAMService;->policyDataBytesPosition:I
 
-    .line 479
     return-void
 .end method
 
@@ -2842,8 +2573,7 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 718
-    const-string/jumbo v2, "persist.sys.mdm.auto"
+    const-string v2, "persist.sys.mdm.auto"
 
     const/4 v3, 0x0
 
@@ -2851,29 +2581,24 @@
 
     move-result v0
 
-    .line 719
     .local v0, "result":I
     and-int/lit8 v1, p1, -0x1
 
-    .line 720
     .local v1, "setValue":I
     const/4 v2, 0x1
 
     if-ne p2, v2, :cond_1
 
-    .line 721
     or-int/2addr v0, v1
 
-    .line 726
     :cond_0
     :goto_0
     sget-object v3, Lcom/android/server/SEAMService;->mSetPolicy:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 727
     :try_start_0
-    const-string/jumbo v2, "persist.sys.mdm.auto"
+    const-string v2, "persist.sys.mdm.auto"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2881,24 +2606,19 @@
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 728
     monitor-exit v3
 
-    .line 729
     return-void
 
-    .line 722
     :cond_1
     if-nez p2, :cond_0
 
-    .line 723
     xor-int/lit8 v2, v1, -0x1
 
     and-int/2addr v0, v2
 
     goto :goto_0
 
-    .line 728
     :catchall_0
     move-exception v2
 
@@ -2914,14 +2634,11 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 742
     const/4 v1, -0x1
 
-    .line 745
     .local v1, "ret":I
     if-eqz p1, :cond_0
 
-    .line 746
     :try_start_0
     sget-object v3, Lcom/android/server/SEAMService;->mSetPolicy:Ljava/lang/Object;
 
@@ -2929,25 +2646,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 747
     :try_start_1
-    const-string/jumbo v2, "persist.sys.mdm.auto"
+    const-string v2, "persist.sys.mdm.auto"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 748
     monitor-exit v3
 
-    .line 749
     const/4 v1, 0x0
 
-    .line 760
     :goto_0
     return v1
 
-    .line 748
     :catchall_0
     move-exception v2
 
@@ -2960,11 +2672,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 756
     :catch_0
     move-exception v0
 
-    .line 757
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2994,12 +2704,10 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 758
     const/4 v1, -0x1
 
     goto :goto_0
 
-    .line 751
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     :try_start_3
@@ -3009,23 +2717,19 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 752
     :try_start_4
-    const-string/jumbo v2, "persist.sys.mdm.auto"
+    const-string v2, "persist.sys.mdm.auto"
 
     const-string v4, "0"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 753
     monitor-exit v3
 
-    .line 754
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 753
     :catchall_1
     move-exception v2
 
@@ -3048,22 +2752,18 @@
     .prologue
     const/4 v6, -0x2
 
-    .line 788
     const-string v3, "activateDomain"
 
-    .line 790
     .local v3, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 791
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 794
     .local v4, "pid":I
     sget-object v7, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -3079,7 +2779,6 @@
 
     if-nez v7, :cond_0
 
-    .line 795
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
@@ -3088,11 +2787,9 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 815
     :goto_0
     return v6
 
-    .line 801
     :cond_0
     :try_start_0
     const-string v7, "SEAMS"
@@ -3103,11 +2800,9 @@
 
     move-result v0
 
-    .line 803
     .local v0, "containerType":I
     if-gez v0, :cond_2
 
-    .line 804
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
@@ -3120,12 +2815,10 @@
 
     goto :goto_0
 
-    .line 811
     .end local v0    # "containerType":I
     :catch_0
     move-exception v1
 
-    .line 812
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -3155,17 +2848,14 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 813
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 815
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v6, -0x1
 
     goto :goto_0
 
-    .line 807
     .restart local v0    # "containerType":I
     :cond_2
     :try_start_1
@@ -3175,11 +2865,9 @@
 
     move-result-object v2
 
-    .line 808
     .local v2, "instanceCon":Lcom/android/server/SEAMSContainer;
     if-eqz v2, :cond_1
 
-    .line 809
     invoke-virtual {v2, v5, p1}, Lcom/android/server/SEAMSContainer;->activateDomain(IZ)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -3197,34 +2885,27 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 862
     const-string v9, "addAppToContainer"
 
-    .line 864
     .local v9, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v12
 
-    .line 865
     .local v12, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v10
 
-    .line 866
     .local v10, "pid":I
     const/4 v11, 0x0
 
-    .line 867
     .local v11, "ret":I
     const-wide/16 v6, 0x0
 
-    .line 868
     .local v6, "ident":J
     const/4 v8, 0x0
 
-    .line 871
     .local v8, "instanceCon":Lcom/android/server/SEAMSContainer;
     sget-object v13, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -3242,7 +2923,6 @@
 
     if-nez v13, :cond_0
 
-    .line 872
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
@@ -3251,14 +2931,11 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 873
     const/4 v13, -0x2
 
-    .line 925
     :goto_0
     return v13
 
-    .line 890
     :cond_0
     :try_start_0
     invoke-static/range {p3 .. p3}, Lcom/android/server/pm/SELinuxMMAC;->isMyContainerID(I)Z
@@ -3267,7 +2944,6 @@
 
     if-eqz v13, :cond_1
 
-    .line 891
     const/4 v13, 0x2
 
     move-object/from16 v0, p0
@@ -3278,10 +2954,8 @@
 
     move-result-object v8
 
-    .line 892
     if-eqz v8, :cond_5
 
-    .line 893
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -3296,10 +2970,8 @@
 
     move v13, v11
 
-    .line 894
     goto :goto_0
 
-    .line 896
     :cond_1
     invoke-static/range {p3 .. p3}, Lcom/android/server/pm/SELinuxMMAC;->isBBCContainerID(I)Z
 
@@ -3307,7 +2979,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 897
     const/4 v13, 0x3
 
     move-object/from16 v0, p0
@@ -3318,10 +2989,8 @@
 
     move-result-object v8
 
-    .line 898
     if-eqz v8, :cond_5
 
-    .line 899
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -3336,10 +3005,8 @@
 
     move v13, v11
 
-    .line 900
     goto :goto_0
 
-    .line 902
     :cond_2
     const/16 v13, 0x2be
 
@@ -3347,7 +3014,6 @@
 
     if-ne v0, v13, :cond_3
 
-    .line 903
     const/4 v13, 0x4
 
     move-object/from16 v0, p0
@@ -3358,10 +3024,8 @@
 
     move-result-object v8
 
-    .line 904
     if-eqz v8, :cond_5
 
-    .line 905
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -3376,10 +3040,8 @@
 
     move v13, v11
 
-    .line 906
     goto :goto_0
 
-    .line 909
     :cond_3
     const-string v13, "SEAMS"
 
@@ -3391,11 +3053,9 @@
 
     move-result v4
 
-    .line 910
     .local v4, "containerType":I
     if-gez v4, :cond_4
 
-    .line 911
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
@@ -3428,12 +3088,10 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 912
     const/4 v13, -0x2
 
     goto/16 :goto_0
 
-    .line 914
     :cond_4
     move-object/from16 v0, p0
 
@@ -3443,10 +3101,8 @@
 
     move-result-object v8
 
-    .line 915
     if-eqz v8, :cond_5
 
-    .line 916
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -3463,15 +3119,12 @@
 
     move v13, v11
 
-    .line 917
     goto/16 :goto_0
 
-    .line 920
     .end local v4    # "containerType":I
     :catch_0
     move-exception v5
 
-    .line 921
     .local v5, "e":Ljava/lang/Exception;
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -3501,10 +3154,8 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 922
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 924
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_5
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
@@ -3515,7 +3166,6 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 925
     const/4 v13, -0x1
 
     goto/16 :goto_0
@@ -3529,7 +3179,6 @@
     .param p4, "resourceType"    # I
 
     .prologue
-    .line 2828
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -3538,10 +3187,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2829
     const/4 v0, -0x2
 
-    .line 2831
     :goto_0
     return v0
 
@@ -3567,7 +3214,6 @@
     .param p4, "resourceType"    # I
 
     .prologue
-    .line 2793
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -3576,10 +3222,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2794
     const/4 v0, -0x2
 
-    .line 2796
     :goto_0
     return v0
 
@@ -3603,7 +3247,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 2842
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -3612,10 +3255,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2844
     const/4 v0, -0x2
 
-    .line 2846
     :goto_0
     return v0
 
@@ -3639,7 +3280,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 2807
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -3648,10 +3288,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2808
     const/4 v0, -0x2
 
-    .line 2810
     :goto_0
     return v0
 
@@ -3673,22 +3311,18 @@
     .locals 10
 
     .prologue
-    .line 1062
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 1063
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 1064
     .local v4, "pid":I
     const/4 v1, 0x0
 
-    .line 1065
     .local v1, "callpkgName":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -3696,14 +3330,11 @@
 
     move-result-object v1
 
-    .line 1066
     const/4 v3, 0x0
 
-    .line 1067
     .local v3, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v0, 0x0
 
-    .line 1068
     .local v0, "bbcFlag":Z
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -3711,17 +3342,14 @@
 
     if-eqz v6, :cond_0
 
-    .line 1069
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 1070
     const/4 v0, 0x1
 
-    .line 1074
     :cond_0
     sget-object v6, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -3737,27 +3365,22 @@
 
     if-nez v6, :cond_1
 
-    .line 1075
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
 
-    const-string/jumbo v8, "createSEContainer: License validation failed"
+    const-string v8, "createSEContainer: License validation failed"
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1076
     const/4 v6, -0x2
 
-    .line 1097
     :goto_0
     return v6
 
-    .line 1080
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 1081
     const/4 v6, 0x3
 
     :try_start_0
@@ -3767,18 +3390,15 @@
 
     move-result-object v3
 
-    .line 1089
     :goto_1
     if-eqz v3, :cond_4
 
-    .line 1090
     invoke-virtual {v3, v5, v4}, Lcom/android/server/SEAMSContainer;->createSEContainer(II)I
 
     move-result v6
 
     goto :goto_0
 
-    .line 1083
     :cond_2
     const-string v6, "com.samsung.android.irm.service"
 
@@ -3788,7 +3408,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 1084
     const/4 v6, 0x4
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -3799,7 +3418,6 @@
 
     goto :goto_1
 
-    .line 1086
     :cond_3
     const/4 v6, 0x2
 
@@ -3813,11 +3431,9 @@
 
     goto :goto_1
 
-    .line 1092
     :catch_0
     move-exception v2
 
-    .line 1093
     .local v2, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -3847,21 +3463,18 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1094
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1096
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
 
-    const-string/jumbo v8, "createSEContainer, POLICY_FAILED is returned"
+    const-string v8, "createSEContainer, POLICY_FAILED is returned"
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1097
     const/4 v6, -0x1
 
     goto :goto_0
@@ -3873,22 +3486,18 @@
     .prologue
     const/4 v6, -0x2
 
-    .line 1122
-    const-string/jumbo v3, "deActivateDomain"
+    const-string v3, "deActivateDomain"
 
-    .line 1123
     .local v3, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 1124
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 1127
     .local v4, "pid":I
     sget-object v7, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -3904,47 +3513,40 @@
 
     if-nez v7, :cond_1
 
-    .line 1128
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
 
-    const-string/jumbo v9, "deActivateDomain: License validation failed"
+    const-string v9, "deActivateDomain: License validation failed"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1147
     :cond_0
     :goto_0
     return v6
 
-    .line 1134
     :cond_1
     :try_start_0
     const-string v7, "SEAMS"
 
-    const-string/jumbo v8, "deActivateDomain"
+    const-string v8, "deActivateDomain"
 
     invoke-virtual {p0, v4, v5, v7, v8}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1135
     .local v0, "containerType":I
     if-ltz v0, :cond_0
 
-    .line 1139
     iget-object v6, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v6}, Lcom/android/server/SEAMService;->getInstance(ILandroid/content/Context;)Lcom/android/server/SEAMSContainer;
 
     move-result-object v2
 
-    .line 1140
     .local v2, "instanceCon":Lcom/android/server/SEAMSContainer;
     if-eqz v2, :cond_2
 
-    .line 1141
     invoke-virtual {v2, v5}, Lcom/android/server/SEAMSContainer;->deActivateDomain(I)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -3953,13 +3555,11 @@
 
     goto :goto_0
 
-    .line 1142
     .end local v0    # "containerType":I
     .end local v2    # "instanceCon":Lcom/android/server/SEAMSContainer;
     :catch_0
     move-exception v1
 
-    .line 1143
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -3989,21 +3589,18 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1144
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1146
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
 
-    const-string/jumbo v8, "deActivateDomain, POLICY_FAILED is returned"
+    const-string v8, "deActivateDomain, POLICY_FAILED is returned"
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1147
     const/4 v6, -0x1
 
     goto :goto_0
@@ -4014,18 +3611,14 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1277
     const/4 v1, 0x0
 
-    .line 1278
     .local v1, "amslog":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 1279
     .local v7, "refContainerString":Ljava/lang/String;
-    const-string/jumbo v6, "getAMSLog"
+    const-string v6, "getAMSLog"
 
-    .line 1282
     .local v6, "method":Ljava/lang/String;
     sget-object v10, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -4041,37 +3634,30 @@
 
     if-nez v10, :cond_0
 
-    .line 1283
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getAMSLog: License validation failed"
+    const-string v12, "getAMSLog: License validation failed"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1284
     const/4 v10, 0x0
 
-    .line 1314
     :goto_0
     return-object v10
 
-    .line 1287
     :cond_0
     const-string v7, "all"
 
-    .line 1291
     :try_start_0
     const-string v0, "/data/misc/audit/ams.log"
 
-    .line 1292
     .local v0, "ams_logfile":Ljava/lang/String;
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1293
     .local v3, "file":Ljava/io/File;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4083,21 +3669,18 @@
 
     invoke-direct {v4, v10}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1294
     .local v4, "fileContents":Ljava/lang/StringBuilder;
     new-instance v9, Ljava/util/Scanner;
 
     invoke-direct {v9, v3}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
 
-    .line 1295
     .local v9, "scanner":Ljava/util/Scanner;
-    const-string/jumbo v10, "line.separator"
+    const-string v10, "line.separator"
 
     invoke-static {v10}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1296
     .local v5, "lineSeparator":Ljava/lang/String;
     :cond_1
     :goto_1
@@ -4107,12 +3690,10 @@
 
     if-eqz v10, :cond_3
 
-    .line 1297
     invoke-virtual {v9}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1298
     .local v8, "scannedLine":Ljava/lang/String;
     const-string v10, "Allowed"
 
@@ -4122,14 +3703,12 @@
 
     if-eqz v10, :cond_2
 
-    .line 1299
     invoke-direct {p0, v7, v4, v8, v5}, Lcom/android/server/SEAMService;->processAllowedLine(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 1309
     .end local v0    # "ams_logfile":Ljava/lang/String;
     .end local v3    # "file":Ljava/io/File;
     .end local v4    # "fileContents":Ljava/lang/StringBuilder;
@@ -4139,7 +3718,6 @@
     :catch_0
     move-exception v2
 
-    .line 1310
     .local v2, "e":Ljava/io/FileNotFoundException;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4169,17 +3747,14 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1311
     invoke-virtual {v2}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     .end local v2    # "e":Ljava/io/FileNotFoundException;
     :goto_2
     move-object v10, v1
 
-    .line 1314
     goto :goto_0
 
-    .line 1301
     .restart local v0    # "ams_logfile":Ljava/lang/String;
     .restart local v3    # "file":Ljava/io/File;
     .restart local v4    # "fileContents":Ljava/lang/StringBuilder;
@@ -4196,19 +3771,16 @@
 
     if-eqz v10, :cond_1
 
-    .line 1302
     invoke-static {v7, v4, v8, v5, v9}, Lcom/android/server/SEAMService;->processDeniedLine(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/util/Scanner;)V
 
     goto :goto_1
 
-    .line 1307
     .end local v8    # "scannedLine":Ljava/lang/String;
     :cond_3
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1308
     invoke-virtual {v9}, Ljava/util/Scanner;->close()V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -4221,10 +3793,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1332
-    const-string/jumbo v2, "getAMSLogLevel"
+    const-string v2, "getAMSLogLevel"
 
-    .line 1336
     .local v2, "method":Ljava/lang/String;
     sget-object v4, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -4240,35 +3810,29 @@
 
     if-nez v4, :cond_1
 
-    .line 1337
     sget-object v4, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "SEAMService"
 
-    const-string/jumbo v6, "getAMSLogLevel: License validation failed"
+    const-string v6, "getAMSLogLevel: License validation failed"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1338
     const/4 v0, -0x2
 
-    .line 1354
     :cond_0
     :goto_0
     return v0
 
-    .line 1342
     :cond_1
     const/4 v0, -0x1
 
-    .line 1344
     .local v0, "amsLogLevel":I
     const/4 v3, 0x0
 
-    .line 1345
     .local v3, "val":Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v4, "persist.security.ams.verbose"
+    const-string v4, "persist.security.ams.verbose"
 
     const-string v5, "1"
 
@@ -4276,10 +3840,8 @@
 
     move-result-object v3
 
-    .line 1346
     if-eqz v3, :cond_0
 
-    .line 1347
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -4288,11 +3850,9 @@
 
     goto :goto_0
 
-    .line 1350
     :catch_0
     move-exception v1
 
-    .line 1351
     .local v1, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4302,7 +3862,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "getAMSLogLevel: Exception: "
+    const-string v7, "getAMSLogLevel: Exception: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4322,7 +3882,6 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1352
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -4337,10 +3896,8 @@
 
     const/4 v5, 0x0
 
-    .line 1370
-    const-string/jumbo v2, "getAMSMode"
+    const-string v2, "getAMSMode"
 
-    .line 1374
     .local v2, "method":Ljava/lang/String;
     sget-object v6, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -4352,31 +3909,26 @@
 
     if-nez v6, :cond_1
 
-    .line 1375
     sget-object v4, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "SEAMService"
 
-    const-string/jumbo v6, "getAMSMode: License validation failed"
+    const-string v6, "getAMSMode: License validation failed"
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1376
     const/4 v4, -0x2
 
-    .line 1391
     :cond_0
     :goto_0
     return v4
 
-    .line 1380
     :cond_1
     const/4 v3, 0x0
 
-    .line 1381
     .local v3, "val":Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v6, "persist.security.ams.enforcing"
+    const-string v6, "persist.security.ams.enforcing"
 
     const-string v7, "0"
 
@@ -4384,40 +3936,34 @@
 
     move-result-object v3
 
-    .line 1382
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
-    .line 1383
     .local v0, "amsMode":I
     and-int/lit8 v6, v0, 0x1
 
     if-nez v6, :cond_0
 
-    .line 1390
     .end local v0    # "amsMode":I
     :goto_1
     sget-object v4, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v6, "SEAMService"
 
-    const-string/jumbo v7, "getAMSMode: FALSE is returned"
+    const-string v7, "getAMSMode: FALSE is returned"
 
     invoke-virtual {v4, v6, v7}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move v4, v5
 
-    .line 1391
     goto :goto_0
 
-    .line 1386
     :catch_0
     move-exception v1
 
-    .line 1387
     .local v1, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4447,7 +3993,6 @@
 
     invoke-virtual {v4, v6, v7}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1388
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -4458,14 +4003,11 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1406
     const/4 v1, 0x0
 
-    .line 1407
     .local v1, "refContainerString":Ljava/lang/String;
-    const-string/jumbo v10, "getAVCLog"
+    const-string v10, "getAVCLog"
 
-    .line 1411
     .local v10, "method":Ljava/lang/String;
     sget-object v0, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -4481,41 +4023,33 @@
 
     if-nez v0, :cond_0
 
-    .line 1412
     sget-object v0, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getAVCLog: License validation failed"
+    const-string v12, "getAVCLog: License validation failed"
 
     invoke-virtual {v0, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1413
     const/4 v7, 0x0
 
-    .line 1437
     :goto_0
     return-object v7
 
-    .line 1416
     :cond_0
     const-string v1, "all"
 
-    .line 1417
     const/4 v7, 0x0
 
-    .line 1419
     .local v7, "avclog":Ljava/lang/String;
     :try_start_0
     const-string v6, "/data/misc/audit/audit.log"
 
-    .line 1420
     .local v6, "avc_logfile":Ljava/lang/String;
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1421
     .local v9, "file":Ljava/io/File;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4527,21 +4061,18 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1422
     .local v2, "fileContents":Ljava/lang/StringBuilder;
     new-instance v5, Ljava/util/Scanner;
 
     invoke-direct {v5, v9}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
 
-    .line 1423
     .local v5, "scanner":Ljava/util/Scanner;
-    const-string/jumbo v0, "line.separator"
+    const-string v0, "line.separator"
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1424
     .local v4, "lineSeparator":Ljava/lang/String;
     :cond_1
     :goto_1
@@ -4551,12 +4082,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 1425
     invoke-virtual {v5}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1426
     .local v3, "scannedLine":Ljava/lang/String;
     const-string v0, "avc"
 
@@ -4568,14 +4097,12 @@
 
     move-object v0, p0
 
-    .line 1427
     invoke-direct/range {v0 .. v5}, Lcom/android/server/SEAMService;->processAVCLine(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/util/Scanner;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 1432
     .end local v2    # "fileContents":Ljava/lang/StringBuilder;
     .end local v3    # "scannedLine":Ljava/lang/String;
     .end local v4    # "lineSeparator":Ljava/lang/String;
@@ -4585,7 +4112,6 @@
     :catch_0
     move-exception v8
 
-    .line 1433
     .local v8, "e":Ljava/io/FileNotFoundException;
     sget-object v0, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4615,12 +4141,10 @@
 
     invoke-virtual {v0, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1434
     invoke-virtual {v8}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1430
     .end local v8    # "e":Ljava/io/FileNotFoundException;
     .restart local v2    # "fileContents":Ljava/lang/StringBuilder;
     .restart local v4    # "lineSeparator":Ljava/lang/String;
@@ -4633,7 +4157,6 @@
 
     move-result-object v7
 
-    .line 1431
     invoke-virtual {v5}, Ljava/util/Scanner;->close()V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -4647,22 +4170,18 @@
     .prologue
     const/4 v6, -0x2
 
-    .line 1235
-    const-string/jumbo v3, "getActivationStatus"
+    const-string v3, "getActivationStatus"
 
-    .line 1236
     .local v3, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 1237
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 1240
     .local v4, "pid":I
     sget-object v7, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -4678,35 +4197,30 @@
 
     if-nez v7, :cond_0
 
-    .line 1241
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
 
-    const-string/jumbo v9, "getActivationStatus: License validation failed"
+    const-string v9, "getActivationStatus: License validation failed"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1261
     :goto_0
     return v6
 
-    .line 1247
     :cond_0
     :try_start_0
     const-string v7, "SEAMS"
 
-    const-string/jumbo v8, "getActivationStatus"
+    const-string v8, "getActivationStatus"
 
     invoke-virtual {p0, v4, v5, v7, v8}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1249
     .local v0, "containerType":I
     if-gez v0, :cond_2
 
-    .line 1250
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
@@ -4719,12 +4233,10 @@
 
     goto :goto_0
 
-    .line 1256
     .end local v0    # "containerType":I
     :catch_0
     move-exception v1
 
-    .line 1257
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4754,26 +4266,22 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1258
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1260
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
 
-    const-string/jumbo v8, "getActivationStatus, POLICY_FAILED is returned"
+    const-string v8, "getActivationStatus, POLICY_FAILED is returned"
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1261
     const/4 v6, -0x1
 
     goto :goto_0
 
-    .line 1253
     .restart local v0    # "containerType":I
     :cond_2
     :try_start_1
@@ -4783,11 +4291,9 @@
 
     move-result-object v2
 
-    .line 1254
     .local v2, "instanceCon":Lcom/android/server/SEAMSContainer;
     if-eqz v2, :cond_1
 
-    .line 1255
     invoke-virtual {v2}, Lcom/android/server/SEAMSContainer;->getActivationStatus()I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -4810,32 +4316,27 @@
     .end annotation
 
     .prologue
-    .line 3071
-    const-string/jumbo v5, "getAllSEContainerCategory"
+    const-string v5, "getAllSEContainerCategory"
 
-    .line 3072
     .local v5, "method":Ljava/lang/String;
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3074
     .local v8, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getAllSEContainerCategory begin"
+    const-string v12, "getAllSEContainerCategory begin"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3077
     const/4 v10, 0x2
 
     :try_start_0
     new-array v9, v10, [Ljava/lang/String;
 
-    .line 3078
     .local v9, "sColumns":[Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -4843,14 +4344,12 @@
 
     aput-object v11, v9, v10
 
-    .line 3079
     const/4 v10, 0x1
 
-    const-string/jumbo v11, "mode"
+    const-string v11, "mode"
 
     aput-object v11, v9, v10
 
-    .line 3080
     iget-object v10, p0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "SeamsClipboardTable"
@@ -4861,17 +4360,15 @@
 
     move-result-object v7
 
-    .line 3082
     .local v7, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getAllSEContainerCategory, got the results for database entries"
+    const-string v12, "getAllSEContainerCategory, got the results for database entries"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3083
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
@@ -4880,7 +4377,6 @@
 
     if-nez v10, :cond_1
 
-    .line 3085
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -4899,7 +4395,6 @@
 
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 3086
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v10, "containerID"
 
@@ -4911,7 +4406,6 @@
 
     move-result v0
 
-    .line 3087
     .local v0, "cat":I
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4921,7 +4415,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "getAllSEContainerCategory, cat:"
+    const-string v13, "getAllSEContainerCategory, cat:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4937,7 +4431,6 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3088
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -4948,7 +4441,6 @@
 
     goto :goto_0
 
-    .line 3112
     .end local v0    # "cat":I
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -4957,7 +4449,6 @@
     :catch_0
     move-exception v3
 
-    .line 3113
     .local v3, "e":Ljava/lang/Exception;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4967,7 +4458,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "getAllSEContainerCategory() failed with exception:"
+    const-string v13, "getAllSEContainerCategory() failed with exception:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4983,12 +4474,10 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3115
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_0
     return-object v8
 
-    .line 3092
     .restart local v7    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     .restart local v9    # "sColumns":[Ljava/lang/String;
     :cond_1
@@ -4997,17 +4486,15 @@
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getAllSEContainerCategory, calling getSEContainerIDsForSystem"
+    const-string v12, "getAllSEContainerCategory, calling getSEContainerIDsForSystem"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3093
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     if-nez v10, :cond_2
 
-    .line 3094
-    const-string/jumbo v10, "package"
+    const-string v10, "package"
 
     invoke-static {v10}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -5017,7 +4504,6 @@
 
     iput-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    .line 3096
     :cond_2
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
@@ -5025,12 +4511,10 @@
 
     move-result-object v8
 
-    .line 3097
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 3098
     .local v2, "cvInsert":Landroid/content/ContentValues;
     if-eqz v8, :cond_0
 
@@ -5040,7 +4524,6 @@
 
     if-nez v10, :cond_0
 
-    .line 3099
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -5063,7 +4546,6 @@
 
     move-result v0
 
-    .line 3100
     .restart local v0    # "cat":I
     const-string v10, "containerID"
 
@@ -5073,8 +4555,7 @@
 
     invoke-virtual {v2, v10, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 3101
-    const-string/jumbo v10, "mode"
+    const-string v10, "mode"
 
     const/4 v11, 0x0
 
@@ -5084,7 +4565,6 @@
 
     invoke-virtual {v2, v10, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 3103
     iget-object v10, p0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "SeamsClipboardTable"
@@ -5093,11 +4573,9 @@
 
     move-result v6
 
-    .line 3104
     .local v6, "res":Z
     if-nez v6, :cond_3
 
-    .line 3106
     iget-object v10, p0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "SeamsClipboardTable"
@@ -5106,7 +4584,6 @@
 
     move-result v6
 
-    .line 3108
     :cond_3
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5116,7 +4593,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "getAllSEContainerCategory, added entry to database for cat:"
+    const-string v13, "getAllSEContainerCategory, added entry to database for cat:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5141,7 +4618,6 @@
     .locals 1
 
     .prologue
-    .line 2872
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v0
@@ -5160,10 +4636,8 @@
 
     const/4 v7, 0x0
 
-    .line 1680
-    const-string/jumbo v6, "getDataType"
+    const-string v6, "getDataType"
 
-    .line 1684
     .local v6, "method":Ljava/lang/String;
     sget-object v8, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -5177,57 +4651,48 @@
 
     if-nez v8, :cond_0
 
-    .line 1685
     sget-object v8, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v9, "SEAMService"
 
-    const-string/jumbo v10, "getDataType: License validation failed"
+    const-string v10, "getDataType: License validation failed"
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v7
 
-    .line 1713
     :goto_0
     return-object v1
 
-    .line 1688
     :cond_0
     const/4 v1, 0x0
 
-    .line 1689
     .local v1, "datatype":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1691
     .local v4, "ident":J
     if-gez p3, :cond_1
 
-    .line 1692
     :try_start_0
     sget-object v8, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v9, "SEAMService"
 
-    const-string/jumbo v10, "getDataTypeuserId is less than 0."
+    const-string v10, "getDataTypeuserId is less than 0."
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v7
 
-    .line 1693
     goto :goto_0
 
-    .line 1697
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 1698
     .local v3, "mPM":Landroid/content/pm/IPackageManager;
     const/16 v8, 0x80
 
@@ -5235,25 +4700,21 @@
 
     move-result-object v0
 
-    .line 1700
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_2
 
-    .line 1701
     sget-object v8, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v9, "SEAMService"
 
-    const-string/jumbo v10, "getDataTypeappInfo is null."
+    const-string v10, "getDataTypeappInfo is null."
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v7
 
-    .line 1702
     goto :goto_0
 
-    .line 1704
     :cond_2
     iget v7, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -5267,7 +4728,6 @@
 
     move-result-object v1
 
-    .line 1712
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "mPM":Landroid/content/pm/IPackageManager;
     :goto_1
@@ -5275,11 +4735,9 @@
 
     goto :goto_0
 
-    .line 1708
     :catch_0
     move-exception v2
 
-    .line 1709
     .local v2, "e":Ljava/lang/Exception;
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5309,7 +4767,6 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1710
     const/4 v1, 0x0
 
     goto :goto_1
@@ -5326,10 +4783,8 @@
 
     const/4 v7, 0x0
 
-    .line 1732
-    const-string/jumbo v6, "getDomain"
+    const-string v6, "getDomain"
 
-    .line 1736
     .local v6, "method":Ljava/lang/String;
     sget-object v8, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -5343,57 +4798,48 @@
 
     if-nez v8, :cond_0
 
-    .line 1737
     sget-object v8, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v9, "SEAMService"
 
-    const-string/jumbo v10, "getDomain: License validation failed"
+    const-string v10, "getDomain: License validation failed"
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v7
 
-    .line 1766
     :goto_0
     return-object v1
 
-    .line 1741
     :cond_0
     const/4 v1, 0x0
 
-    .line 1742
     .local v1, "domain":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1745
     .local v4, "ident":J
     if-gez p3, :cond_1
 
-    .line 1746
     :try_start_0
     sget-object v8, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v9, "SEAMService"
 
-    const-string/jumbo v10, "getDomain, userId is less than 0."
+    const-string v10, "getDomain, userId is less than 0."
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v7
 
-    .line 1747
     goto :goto_0
 
-    .line 1751
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 1752
     .local v3, "mPM":Landroid/content/pm/IPackageManager;
     const/16 v8, 0x80
 
@@ -5401,25 +4847,21 @@
 
     move-result-object v0
 
-    .line 1754
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_2
 
-    .line 1755
     sget-object v8, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v9, "SEAMService"
 
-    const-string/jumbo v10, "getDomain, appInfo is null"
+    const-string v10, "getDomain, appInfo is null"
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v7
 
-    .line 1756
     goto :goto_0
 
-    .line 1758
     :cond_2
     iget v7, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -5433,7 +4875,6 @@
 
     move-result-object v1
 
-    .line 1765
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "mPM":Landroid/content/pm/IPackageManager;
     :goto_1
@@ -5441,11 +4882,9 @@
 
     goto :goto_0
 
-    .line 1761
     :catch_0
     move-exception v2
 
-    .line 1762
     .local v2, "e":Ljava/lang/Exception;
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5475,7 +4914,6 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1763
     const/4 v1, 0x0
 
     goto :goto_1
@@ -5489,30 +4927,24 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1840
-    const-string/jumbo v5, "getPackageNamesFromSEContainer"
+    const-string v5, "getPackageNamesFromSEContainer"
 
-    .line 1841
     .local v5, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
 
-    .line 1842
     .local v7, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v6
 
-    .line 1843
     .local v6, "pid":I
     const/4 v4, 0x0
 
-    .line 1844
     .local v4, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v1, 0x0
 
-    .line 1845
     .local v1, "callpkgName":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -5520,10 +4952,8 @@
 
     move-result-object v1
 
-    .line 1846
     const/4 v0, 0x0
 
-    .line 1847
     .local v0, "bbcFlag":Z
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -5531,17 +4961,14 @@
 
     if-eqz v9, :cond_0
 
-    .line 1848
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 1849
     const/4 v0, 0x1
 
-    .line 1854
     :cond_0
     sget-object v9, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -5557,62 +4984,52 @@
 
     if-nez v9, :cond_1
 
-    .line 1855
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "getPackageNamesFromSEContainer, License validation failed"
+    const-string v11, "getPackageNamesFromSEContainer, License validation failed"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1887
     :goto_0
     return-object v8
 
-    .line 1860
     :cond_1
     const/16 v9, 0x66
 
     if-ne p1, v9, :cond_2
 
-    .line 1861
     :try_start_0
     const-string v9, "SEAMS"
 
-    const-string/jumbo v10, "getPackageNamesFromSEContainer"
+    const-string v10, "getPackageNamesFromSEContainer"
 
     invoke-virtual {p0, v6, v7, v9, v10}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1862
     .local v2, "containerType":I
     if-lez v2, :cond_5
 
-    .line 1863
     iget-object v9, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v9}, Lcom/android/server/SEAMService;->getInstance(ILandroid/content/Context;)Lcom/android/server/SEAMSContainer;
 
     move-result-object v4
 
-    .line 1864
     if-eqz v4, :cond_5
 
-    .line 1865
     invoke-virtual {v4, p1, p2}, Lcom/android/server/SEAMSContainer;->getPackageNamesFromSEContainer(II)[Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_0
 
-    .line 1869
     .end local v2    # "containerType":I
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 1870
     const/4 v9, 0x3
 
     iget-object v10, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -5621,18 +5038,15 @@
 
     move-result-object v4
 
-    .line 1878
     :goto_1
     if-eqz v4, :cond_5
 
-    .line 1879
     invoke-virtual {v4, p1, p2}, Lcom/android/server/SEAMSContainer;->getPackageNamesFromSEContainer(II)[Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_0
 
-    .line 1872
     :cond_3
     const-string v9, "com.samsung.android.irm.service"
 
@@ -5642,7 +5056,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 1873
     const/4 v9, 0x4
 
     iget-object v10, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -5653,7 +5066,6 @@
 
     goto :goto_1
 
-    .line 1875
     :cond_4
     const/4 v9, 0x2
 
@@ -5667,11 +5079,9 @@
 
     goto :goto_1
 
-    .line 1882
     :catch_0
     move-exception v3
 
-    .line 1883
     .local v3, "e":Ljava/lang/Exception;
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5701,17 +5111,15 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1884
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1886
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_5
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "getPackageNamesFromSEContainer, null is returned"
+    const-string v11, "getPackageNamesFromSEContainer, null is returned"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5724,7 +5132,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 2850
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -5733,10 +5140,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2851
     const/4 v0, 0x0
 
-    .line 2853
     :goto_0
     return-object v0
 
@@ -5759,7 +5164,6 @@
     .param p1, "resourceType"    # I
 
     .prologue
-    .line 2814
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -5768,10 +5172,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2815
     const/4 v0, 0x0
 
-    .line 2817
     :goto_0
     return-object v0
 
@@ -5795,7 +5197,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 2779
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -5804,10 +5205,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2780
     const/4 v0, 0x0
 
-    .line 2782
     :goto_0
     return-object v0
 
@@ -5840,30 +5239,25 @@
     .end annotation
 
     .prologue
-    .line 2876
-    const-string/jumbo v3, "getPkgNamesFromContainer"
+    const-string v3, "getPkgNamesFromContainer"
 
-    .line 2877
     .local v3, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v9
 
-    .line 2878
     .local v9, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v5
 
-    .line 2879
     .local v5, "pid":I
     const/4 v4, 0x0
 
-    .line 2881
     .local v4, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v10, "SEAMS"
 
-    const-string/jumbo v11, "getPkgNamesFromContainer"
+    const-string v11, "getPkgNamesFromContainer"
 
     invoke-virtual {p0, v5, v9, v10, v11}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
@@ -5871,23 +5265,18 @@
 
     if-gez v10, :cond_0
 
-    .line 2882
     const/4 v10, 0x0
 
-    .line 2913
     :goto_0
     return-object v10
 
-    .line 2884
     :cond_0
     if-eqz p2, :cond_7
 
-    .line 2885
     const/4 v10, 0x3
 
     if-ne p1, v10, :cond_1
 
-    .line 2886
     const/4 v10, 0x3
 
     invoke-static {v10}, Lcom/android/server/pm/SELinuxMMAC;->getAllPackageNamesFromSEContainer(I)Ljava/util/List;
@@ -5896,28 +5285,24 @@
 
     goto :goto_0
 
-    .line 2887
     :cond_1
     const/4 v10, 0x1
 
     if-ne p1, v10, :cond_6
 
-    .line 2888
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getPkgNamesFromContainer for GOOD"
+    const-string v12, "getPkgNamesFromContainer for GOOD"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2889
     new-instance v4, Ljava/util/ArrayList;
 
     .end local v4    # "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2890
     .restart local v4    # "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
@@ -5931,11 +5316,9 @@
 
     move-result-object v7
 
-    .line 2891
     .local v7, "pkgArray1":[Ljava/lang/String;
     if-eqz v7, :cond_2
 
-    .line 2892
     move-object v0, v7
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -5950,7 +5333,6 @@
 
     aget-object v6, v0, v1
 
-    .line 2893
     .local v6, "pkg":Ljava/lang/String;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5960,7 +5342,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "list of pkgs inside Good as secured:"
+    const-string v13, "list of pkgs inside Good as secured:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5976,15 +5358,12 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2894
     invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2892
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 2897
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -5994,11 +5373,10 @@
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "pkgArray1 is null"
+    const-string v12, "pkgArray1 is null"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2899
     :cond_3
     iget-object v10, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
@@ -6012,11 +5390,9 @@
 
     move-result-object v8
 
-    .line 2900
     .local v8, "pkgArray2":[Ljava/lang/String;
     if-eqz v8, :cond_4
 
-    .line 2901
     move-object v0, v8
 
     .restart local v0    # "arr$":[Ljava/lang/String;
@@ -6031,7 +5407,6 @@
 
     aget-object v6, v0, v1
 
-    .line 2902
     .restart local v6    # "pkg":Ljava/lang/String;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -6041,7 +5416,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "list of pkgs inside Good as trusted:"
+    const-string v13, "list of pkgs inside Good as trusted:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6057,15 +5432,12 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2903
     invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2901
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 2906
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -6075,17 +5447,15 @@
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "pkgArray2 is null"
+    const-string v12, "pkgArray2 is null"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     move-object v10, v4
 
-    .line 2908
     goto/16 :goto_0
 
-    .line 2910
     .end local v7    # "pkgArray1":[Ljava/lang/String;
     .end local v8    # "pkgArray2":[Ljava/lang/String;
     :cond_6
@@ -6093,7 +5463,6 @@
 
     goto/16 :goto_0
 
-    .line 2913
     :cond_7
     const/4 v10, 0x0
 
@@ -6105,24 +5474,20 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1452
-    const-string/jumbo v4, "getSEAMSLog"
+    const-string v4, "getSEAMSLog"
 
-    .line 1453
     .local v4, "method":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 1454
     .local v8, "sklog":Ljava/lang/String;
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "getSEAMSLog_begin"
+    const-string v11, "getSEAMSLog_begin"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1456
     sget-object v9, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
     const/4 v10, 0x0
@@ -6137,34 +5502,28 @@
 
     if-nez v9, :cond_0
 
-    .line 1458
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "getSEAMSLog: License validation failed"
+    const-string v11, "getSEAMSLog: License validation failed"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1459
     const/4 v9, 0x0
 
-    .line 1478
     :goto_0
     return-object v9
 
-    .line 1462
     :cond_0
     :try_start_0
     const-string v7, "/data/misc/audit/sk.log"
 
-    .line 1463
     .local v7, "sk_logfile":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1464
     .local v1, "file":Ljava/io/File;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -6176,21 +5535,18 @@
 
     invoke-direct {v2, v9}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1465
     .local v2, "fileContents":Ljava/lang/StringBuilder;
     new-instance v6, Ljava/util/Scanner;
 
     invoke-direct {v6, v1}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
 
-    .line 1466
     .local v6, "scanner":Ljava/util/Scanner;
-    const-string/jumbo v9, "line.separator"
+    const-string v9, "line.separator"
 
     invoke-static {v9}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1467
     .local v3, "lineSeparator":Ljava/lang/String;
     :goto_1
     invoke-virtual {v6}, Ljava/util/Scanner;->hasNextLine()Z
@@ -6199,12 +5555,10 @@
 
     if-eqz v9, :cond_1
 
-    .line 1468
     invoke-virtual {v6}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1469
     .local v5, "scannedLine":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -6228,7 +5582,6 @@
 
     goto :goto_1
 
-    .line 1473
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "fileContents":Ljava/lang/StringBuilder;
     .end local v3    # "lineSeparator":Ljava/lang/String;
@@ -6238,7 +5591,6 @@
     :catch_0
     move-exception v0
 
-    .line 1474
     .local v0, "e":Ljava/io/FileNotFoundException;
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -6268,10 +5620,8 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1475
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
-    .line 1477
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :goto_2
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
@@ -6284,10 +5634,8 @@
 
     move-object v9, v8
 
-    .line 1478
     goto :goto_0
 
-    .line 1471
     .restart local v1    # "file":Ljava/io/File;
     .restart local v2    # "fileContents":Ljava/lang/StringBuilder;
     .restart local v3    # "lineSeparator":Ljava/lang/String;
@@ -6299,7 +5647,6 @@
 
     move-result-object v8
 
-    .line 1472
     invoke-virtual {v6}, Ljava/util/Scanner;->close()V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -6312,34 +5659,27 @@
     .param p1, "containerID"    # I
 
     .prologue
-    .line 3018
-    const-string/jumbo v6, "getSEContainerClipboardMode"
+    const-string v6, "getSEContainerClipboardMode"
 
-    .line 3020
     .local v6, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v9
 
-    .line 3021
     .local v9, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v7
 
-    .line 3022
     .local v7, "pid":I
     const/4 v8, 0x0
 
-    .line 3023
     .local v8, "ret":Z
     const-wide/16 v2, 0x0
 
-    .line 3024
     .local v2, "ident":J
     const/4 v4, 0x0
 
-    .line 3027
     .local v4, "instanceCon":Lcom/android/server/SEAMSContainer;
     sget-object v10, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -6355,29 +5695,24 @@
 
     if-nez v10, :cond_0
 
-    .line 3028
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "getSEContainerClipboardMode: License validation failed"
+    const-string v12, "getSEContainerClipboardMode: License validation failed"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3029
     const/4 v10, -0x2
 
-    .line 3065
     :goto_0
     return v10
 
-    .line 3033
     :cond_0
     sget v10, Lcom/android/server/SEAMService;->SELF_PID:I
 
     if-eq v7, v10, :cond_3
 
-    .line 3034
     const/4 v10, 0x2
 
     iget-object v11, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -6386,19 +5721,15 @@
 
     move-result-object v4
 
-    .line 3035
     if-eqz v4, :cond_2
 
-    .line 3036
     invoke-virtual {v4}, Lcom/android/server/SEAMSContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v5
 
-    .line 3037
     .local v5, "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-eqz v5, :cond_1
 
-    .line 3038
     iget-object v10, v5, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
     iget-object v11, v5, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
@@ -6409,7 +5740,6 @@
 
     if-nez v10, :cond_4
 
-    .line 3039
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
@@ -6446,43 +5776,37 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3040
     const/4 v10, -0x1
 
     goto :goto_0
 
-    .line 3043
     :cond_1
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "mdmID is null"
+    const-string v12, "mdmID is null"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3044
     const/4 v10, -0x1
 
     goto :goto_0
 
-    .line 3047
     .end local v5    # "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_2
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "unable to get instance"
+    const-string v12, "unable to get instance"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3048
     const/4 v10, -0x1
 
     goto :goto_0
 
-    .line 3051
     :cond_3
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -6492,13 +5816,11 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3053
     :cond_4
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 3054
     .local v1, "cvWhere":Landroid/content/ContentValues;
     const-string v10, "containerID"
 
@@ -6508,18 +5830,16 @@
 
     invoke-virtual {v1, v10, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 3056
     iget-object v10, p0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "SeamsClipboardTable"
 
-    const-string/jumbo v12, "mode"
+    const-string v12, "mode"
 
     invoke-virtual {v10, v11, v12, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getValue(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 3058
     .local v0, "cvOld":Landroid/content/ContentValues;
     if-eqz v0, :cond_5
 
@@ -6529,7 +5849,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 3059
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
@@ -6558,7 +5877,6 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3060
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
@@ -6567,7 +5885,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "the clipboard status for container:"
+    const-string v13, "the clipboard status for container:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6583,7 +5901,7 @@
 
     move-result-object v12
 
-    const-string/jumbo v13, "mode"
+    const-string v13, "mode"
 
     invoke-virtual {v0, v13}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -6599,8 +5917,7 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3061
-    const-string/jumbo v10, "mode"
+    const-string v10, "mode"
 
     invoke-virtual {v0, v10}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -6612,17 +5929,15 @@
 
     goto/16 :goto_0
 
-    .line 3063
     :cond_5
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "cvOld is null or size is 0"
+    const-string v12, "cvOld is null or size is 0"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3064
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
@@ -6631,7 +5946,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "the clipboard status for container:"
+    const-string v13, "the clipboard status for container:"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6653,7 +5968,6 @@
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3065
     const/4 v10, -0x1
 
     goto/16 :goto_0
@@ -6667,30 +5981,24 @@
 
     const/4 v13, 0x1
 
-    .line 1915
-    const-string/jumbo v7, "getSEContainerIDs"
+    const-string v7, "getSEContainerIDs"
 
-    .line 1916
     .local v7, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v9
 
-    .line 1917
     .local v9, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v8
 
-    .line 1918
     .local v8, "pid":I
     const/4 v6, 0x0
 
-    .line 1919
     .local v6, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v1, 0x0
 
-    .line 1920
     .local v1, "callpkgName":Ljava/lang/String;
     iget-object v11, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -6698,10 +6006,8 @@
 
     move-result-object v1
 
-    .line 1921
     const/4 v0, 0x0
 
-    .line 1922
     .local v0, "bbcFlag":Z
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -6709,17 +6015,14 @@
 
     if-eqz v11, :cond_0
 
-    .line 1923
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 1924
     const/4 v0, 0x1
 
-    .line 1929
     :cond_0
     sget-object v11, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -6733,30 +6036,25 @@
 
     if-nez v11, :cond_1
 
-    .line 1930
     sget-object v11, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v12, "SEAMService"
 
-    const-string/jumbo v13, "getSEContainerIDs, License validation failed"
+    const-string v13, "getSEContainerIDs, License validation failed"
 
     invoke-virtual {v11, v12, v13}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1965
     :goto_0
     return-object v10
 
-    .line 1933
     :cond_1
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 1935
     .local v2, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     if-eqz v0, :cond_2
 
-    .line 1936
     const/4 v11, 0x3
 
     :try_start_0
@@ -6766,11 +6064,9 @@
 
     move-result-object v6
 
-    .line 1944
     :goto_1
     if-eqz v6, :cond_6
 
-    .line 1945
     invoke-virtual {v6}, Lcom/android/server/SEAMSContainer;->getSEContainerIDs()Ljava/util/HashSet;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -6779,51 +6075,43 @@
 
     move-object v3, v2
 
-    .line 1947
     .end local v2    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .local v3, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :goto_2
     :try_start_1
     const-string v11, "SEAMS"
 
-    const-string/jumbo v12, "getSEContainerIDs"
+    const-string v12, "getSEContainerIDs"
 
     invoke-virtual {p0, v8, v9, v11, v12}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
-    .line 1948
     .local v4, "containerType":I
     if-lez v4, :cond_5
 
-    .line 1949
     iget-object v11, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     invoke-static {v4, v11}, Lcom/android/server/SEAMService;->getInstance(ILandroid/content/Context;)Lcom/android/server/SEAMSContainer;
 
     move-result-object v6
 
-    .line 1950
     if-eqz v6, :cond_5
 
-    .line 1951
     invoke-virtual {v6}, Lcom/android/server/SEAMSContainer;->getActivationStatus()I
 
     move-result v11
 
     if-ne v11, v13, :cond_5
 
-    .line 1952
     if-nez v3, :cond_4
 
-    .line 1953
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1955
     .end local v3    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v2    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :goto_3
@@ -6836,7 +6124,6 @@
 
     invoke-virtual {v2, v11}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1959
     :goto_4
     invoke-static {v2}, Lcom/android/server/SEAMService;->hashset_to_int_array(Ljava/util/HashSet;)[I
 
@@ -6844,7 +6131,6 @@
 
     goto :goto_0
 
-    .line 1938
     .end local v4    # "containerType":I
     :cond_2
     const-string v11, "com.samsung.android.irm.service"
@@ -6855,7 +6141,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 1939
     const/4 v11, 0x4
 
     iget-object v12, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -6866,7 +6151,6 @@
 
     goto :goto_1
 
-    .line 1941
     :cond_3
     const/4 v11, 0x2
 
@@ -6880,11 +6164,9 @@
 
     goto :goto_1
 
-    .line 1960
     :catch_0
     move-exception v5
 
-    .line 1961
     .local v5, "e":Ljava/lang/Exception;
     :goto_5
     sget-object v11, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
@@ -6915,21 +6197,18 @@
 
     invoke-virtual {v11, v12, v13}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1962
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1964
     sget-object v11, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v12, "SEAMService"
 
-    const-string/jumbo v13, "getSEContainerIDs, null is returned"
+    const-string v13, "getSEContainerIDs, null is returned"
 
     invoke-virtual {v11, v12, v13}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1960
     .end local v2    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v5    # "e":Ljava/lang/Exception;
     .restart local v3    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
@@ -6982,30 +6261,24 @@
 
     const/4 v11, 0x1
 
-    .line 1512
-    const-string/jumbo v5, "getSEContainerIDsFromPackageName"
+    const-string v5, "getSEContainerIDsFromPackageName"
 
-    .line 1513
     .local v5, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
 
-    .line 1514
     .local v7, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v6
 
-    .line 1515
     .local v6, "pid":I
     const/4 v4, 0x0
 
-    .line 1516
     .local v4, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v1, 0x0
 
-    .line 1517
     .local v1, "callpkgname":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -7013,10 +6286,8 @@
 
     move-result-object v1
 
-    .line 1518
     const/4 v0, 0x0
 
-    .line 1519
     .local v0, "bbcFlag":Z
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -7024,17 +6295,14 @@
 
     if-eqz v9, :cond_0
 
-    .line 1520
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 1521
     const/4 v0, 0x1
 
-    .line 1526
     :cond_0
     sget-object v9, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -7048,7 +6316,6 @@
 
     if-nez v9, :cond_1
 
-    .line 1527
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
@@ -7057,54 +6324,45 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1559
     :goto_0
     return-object v8
 
-    .line 1532
     :cond_1
     if-eq p2, v11, :cond_2
 
     if-ne p2, v12, :cond_3
 
-    .line 1533
     :cond_2
     :try_start_0
     const-string v9, "SEAMS"
 
-    const-string/jumbo v10, "getSEContainerIDsFromPackageName"
+    const-string v10, "getSEContainerIDsFromPackageName"
 
     invoke-virtual {p0, v6, v7, v9, v10}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1534
     .local v2, "containerType":I
     if-lez v2, :cond_6
 
-    .line 1535
     iget-object v9, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v9}, Lcom/android/server/SEAMService;->getInstance(ILandroid/content/Context;)Lcom/android/server/SEAMSContainer;
 
     move-result-object v4
 
-    .line 1536
     if-eqz v4, :cond_6
 
-    .line 1537
     invoke-virtual {v4, p1, p2}, Lcom/android/server/SEAMSContainer;->getSEContainerIDsFromPackageName(Ljava/lang/String;I)[I
 
     move-result-object v8
 
     goto :goto_0
 
-    .line 1541
     .end local v2    # "containerType":I
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 1542
     const/4 v9, 0x3
 
     iget-object v10, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -7113,18 +6371,15 @@
 
     move-result-object v4
 
-    .line 1550
     :goto_1
     if-eqz v4, :cond_6
 
-    .line 1551
     invoke-virtual {v4, p1, p2}, Lcom/android/server/SEAMSContainer;->getSEContainerIDsFromPackageName(Ljava/lang/String;I)[I
 
     move-result-object v8
 
     goto :goto_0
 
-    .line 1544
     :cond_4
     const-string v9, "com.samsung.android.irm.service"
 
@@ -7134,7 +6389,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 1545
     const/4 v9, 0x4
 
     iget-object v10, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -7145,7 +6399,6 @@
 
     goto :goto_1
 
-    .line 1547
     :cond_5
     const/4 v9, 0x2
 
@@ -7159,11 +6412,9 @@
 
     goto :goto_1
 
-    .line 1554
     :catch_0
     move-exception v3
 
-    .line 1555
     .local v3, "e":Ljava/lang/Exception;
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -7193,17 +6444,15 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1556
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1558
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_6
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "getSEContainerIDsFromPackageName, null is returned"
+    const-string v11, "getSEContainerIDsFromPackageName, null is returned"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -7215,10 +6464,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2059
-    const-string/jumbo v1, "getSELinuxMode"
+    const-string v1, "getSELinuxMode"
 
-    .line 2062
     .local v1, "method":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/os/SELinux;->isSELinuxEnforced()Z
@@ -7229,18 +6476,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 2063
     const/4 v2, 0x1
 
-    .line 2069
     :goto_0
     return v2
 
-    .line 2064
     :catch_0
     move-exception v0
 
-    .line 2065
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -7270,21 +6513,18 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2066
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2068
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "SEAMService"
 
-    const-string/jumbo v4, "getSELinuxMode, FALSE is returned"
+    const-string v4, "getSELinuxMode, FALSE is returned"
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2069
     const/4 v2, 0x0
 
     goto :goto_0
@@ -7295,14 +6535,11 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2081
-    const-string/jumbo v1, "getSepolicyVersion"
+    const-string v1, "getSepolicyVersion"
 
-    .line 2084
     .local v1, "method":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 2086
     .local v2, "sepolicyVersion":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/os/SELinux;->getSEPolicyVersion()Ljava/lang/String;
@@ -7313,15 +6550,12 @@
 
     move-object v3, v2
 
-    .line 2091
     :goto_0
     return-object v3
 
-    .line 2089
     :catch_0
     move-exception v0
 
-    .line 2090
     .local v0, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -7351,7 +6585,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2091
     const/4 v3, 0x0
 
     goto :goto_0
@@ -7366,22 +6599,18 @@
 
     const/4 v8, 0x0
 
-    .line 2112
-    const-string/jumbo v1, "getSignatureFromCertificate"
+    const-string v1, "getSignatureFromCertificate"
 
-    .line 2115
     .local v1, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 2116
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 2118
     .local v2, "pid":I
     sget-object v7, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -7395,27 +6624,23 @@
 
     if-nez v7, :cond_0
 
-    .line 2119
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
 
-    const-string/jumbo v9, "getSignatureFromCertificate: License validation failed"
+    const-string v9, "getSignatureFromCertificate: License validation failed"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2137
     :goto_0
     return-object v6
 
-    .line 2125
     :cond_0
     :try_start_0
     new-instance v4, Ljava/lang/String;
 
     invoke-direct {v4, p1}, Ljava/lang/String;-><init>([B)V
 
-    .line 2126
     .local v4, "signatureString":Ljava/lang/String;
     const-string v7, "-----BEGIN CERTIFICATE-----"
 
@@ -7433,14 +6658,12 @@
 
     move-result-object v4
 
-    .line 2130
     const/4 v7, 0x0
 
     invoke-static {v4, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v3
 
-    .line 2132
     .local v3, "signatureBytes":[B
     invoke-direct {p0, v3}, Lcom/android/server/SEAMService;->encodeBase16([B)Ljava/lang/String;
 
@@ -7454,13 +6677,11 @@
 
     goto :goto_0
 
-    .line 2133
     .end local v3    # "signatureBytes":[B
     .end local v4    # "signatureString":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 2134
     .local v0, "e":Ljava/lang/Exception;
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -7490,12 +6711,11 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2136
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
 
-    const-string/jumbo v9, "getSignatureFromCertificate: null is returned"
+    const-string v9, "getSignatureFromCertificate: null is returned"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -7507,30 +6727,24 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2256
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 2257
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v3
 
-    .line 2258
     .local v3, "pid":I
     const/4 v0, 0x0
 
-    .line 2259
     .local v0, "bbcFlag":Z
     const/4 v2, 0x0
 
-    .line 2260
     .local v2, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v1, 0x0
 
-    .line 2261
     .local v1, "callpkgName":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -7538,30 +6752,24 @@
 
     move-result-object v1
 
-    .line 2262
     const/4 v4, 0x0
 
-    .line 2264
     .local v4, "ret":Ljava/lang/String;
     if-nez p1, :cond_0
 
-    .line 2265
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
 
-    const-string/jumbo v8, "getSignatureFromMac: packageName is null"
+    const-string v8, "getSignatureFromMac: packageName is null"
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2266
     const/4 v6, 0x0
 
-    .line 2290
     :goto_0
     return-object v6
 
-    .line 2269
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -7569,21 +6777,17 @@
 
     if-eqz v6, :cond_1
 
-    .line 2270
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 2271
     const/4 v0, 0x1
 
-    .line 2275
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 2276
     const/4 v6, 0x3
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -7592,7 +6796,6 @@
 
     move-result-object v2
 
-    .line 2277
     invoke-virtual {v2, p1}, Lcom/android/server/SEAMSContainer;->getSignatureFromMac(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -7600,10 +6803,8 @@
     :goto_1
     move-object v6, v4
 
-    .line 2290
     goto :goto_0
 
-    .line 2280
     :cond_2
     const-string v6, "com.samsung.android.irm.service"
 
@@ -7613,7 +6814,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 2281
     const/4 v6, 0x4
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -7622,14 +6822,12 @@
 
     move-result-object v2
 
-    .line 2282
     invoke-virtual {v2, p1}, Lcom/android/server/SEAMSContainer;->getSignatureFromMac(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     goto :goto_1
 
-    .line 2285
     :cond_3
     const/4 v6, 0x2
 
@@ -7639,7 +6837,6 @@
 
     move-result-object v2
 
-    .line 2286
     invoke-virtual {v2, p1}, Lcom/android/server/SEAMSContainer;->getSignatureFromMac(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -7652,35 +6849,28 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2157
-    const-string/jumbo v5, "getSignatureFromPackage"
+    const-string v5, "getSignatureFromPackage"
 
-    .line 2159
     .local v5, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v11
 
-    .line 2160
     .local v11, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v7
 
-    .line 2162
     .local v7, "pid":I
     const/4 v2, 0x0
 
-    .line 2163
     .local v2, "currentUserId":I
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
 
-    .line 2164
     const/4 v1, 0x0
 
-    .line 2167
     .local v1, "bbcFlag":Z
     sget-object v12, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -7698,55 +6888,45 @@
 
     if-nez v12, :cond_0
 
-    .line 2168
     sget-object v12, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v13, "SEAMService"
 
-    const-string/jumbo v14, "getSignatureFromPackage: License validation failed"
+    const-string v14, "getSignatureFromPackage: License validation failed"
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2169
     const/4 v9, 0x0
 
-    .line 2232
     :goto_0
     return-object v9
 
-    .line 2171
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2172
     sget-object v12, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v13, "SEAMService"
 
-    const-string/jumbo v14, "getSignatureFromPackage: packageName is null"
+    const-string v14, "getSignatureFromPackage: packageName is null"
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2173
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 2176
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v8
 
-    .line 2177
     .local v8, "pm":Landroid/content/pm/IPackageManager;
     const/4 v6, 0x0
 
-    .line 2179
     .local v6, "pi":Landroid/content/pm/PackageInfo;
     if-eqz v8, :cond_9
 
-    .line 2180
     const/16 v12, 0x40
 
     :try_start_0
@@ -7756,17 +6936,13 @@
 
     move-result-object v6
 
-    .line 2183
     if-eqz v6, :cond_3
 
-    .line 2184
     iget-object v10, v6, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 2185
     .local v10, "s":[Landroid/content/pm/Signature;
     const/4 v9, 0x0
 
-    .line 2186
     .local v9, "returnSignature":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -7776,7 +6952,6 @@
 
     if-ge v4, v12, :cond_9
 
-    .line 2187
     aget-object v12, v10, v4
 
     invoke-virtual {v12}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
@@ -7791,23 +6966,19 @@
 
     if-nez v12, :cond_2
 
-    .line 2188
     aget-object v12, v10, v4
 
     invoke-virtual {v12}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2190
     goto :goto_0
 
-    .line 2186
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 2194
     .end local v4    # "i":I
     .end local v9    # "returnSignature":Ljava/lang/String;
     .end local v10    # "s":[Landroid/content/pm/Signature;
@@ -7818,28 +6989,23 @@
 
     if-eqz v12, :cond_4
 
-    .line 2195
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v12
 
     if-eqz v12, :cond_4
 
-    .line 2196
     const/4 v1, 0x1
 
-    .line 2199
     :cond_4
     if-eqz v1, :cond_8
 
-    .line 2200
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
     if-eqz v12, :cond_7
 
-    .line 2201
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
@@ -7848,7 +7014,6 @@
 
     move-result v2
 
-    .line 2202
     const/16 v12, 0x40
 
     move-object/from16 v0, p1
@@ -7857,17 +7022,13 @@
 
     move-result-object v6
 
-    .line 2203
     if-eqz v6, :cond_6
 
-    .line 2204
     iget-object v10, v6, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 2205
     .restart local v10    # "s":[Landroid/content/pm/Signature;
     const/4 v9, 0x0
 
-    .line 2206
     .restart local v9    # "returnSignature":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -7877,7 +7038,6 @@
 
     if-ge v4, v12, :cond_9
 
-    .line 2207
     aget-object v12, v10, v4
 
     invoke-virtual {v12}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
@@ -7892,23 +7052,19 @@
 
     if-nez v12, :cond_5
 
-    .line 2208
     aget-object v12, v10, v4
 
     invoke-virtual {v12}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2210
     goto :goto_0
 
-    .line 2206
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 2214
     .end local v4    # "i":I
     .end local v9    # "returnSignature":Ljava/lang/String;
     .end local v10    # "s":[Landroid/content/pm/Signature;
@@ -7917,52 +7073,45 @@
 
     const-string v13, "SEAMService"
 
-    const-string/jumbo v14, "getSignatureFromPackage, pi is null"
+    const-string v14, "getSignatureFromPackage, pi is null"
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2215
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2218
     :cond_7
     sget-object v12, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v13, "SEAMService"
 
-    const-string/jumbo v14, "getSignatureFromPackage, mPersona is null"
+    const-string v14, "getSignatureFromPackage, mPersona is null"
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2219
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2222
     :cond_8
     sget-object v12, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v13, "SEAMService"
 
-    const-string/jumbo v14, "getSignatureFromPackage, bbcFlag is false"
+    const-string v14, "getSignatureFromPackage, bbcFlag is false"
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2223
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2227
     :catch_0
     move-exception v3
 
-    .line 2228
     .local v3, "e1":Ljava/lang/Exception;
     sget-object v12, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -7992,21 +7141,18 @@
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2229
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2231
     .end local v3    # "e1":Ljava/lang/Exception;
     :cond_9
     sget-object v12, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v13, "SEAMService"
 
-    const-string/jumbo v14, "getSignatureFromPackage, null is returned"
+    const-string v14, "getSignatureFromPackage, null is returned"
 
     invoke-virtual {v12, v13, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2232
     const/4 v9, 0x0
 
     goto/16 :goto_0
@@ -8016,34 +7162,29 @@
     .locals 10
 
     .prologue
-    .line 2318
     const/4 v5, 0x0
 
-    .line 2319
     .local v5, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2321
     .local v2, "ident":J
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2323
     .local v4, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     :try_start_0
     iget-object v6, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
     if-nez v6, :cond_0
 
-    .line 2325
     iget-object v6, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v7, "persona"
+    const-string v7, "persona"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -8053,23 +7194,19 @@
 
     iput-object v6, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
-    .line 2328
     :cond_0
     iget-object v6, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
     if-eqz v6, :cond_2
 
-    .line 2330
     iget-object v6, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
     invoke-virtual {v6}, Landroid/os/PersonaManager;->getPersonas()Ljava/util/List;
 
     move-result-object v4
 
-    .line 2331
     if-eqz v4, :cond_2
 
-    .line 2332
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -8080,7 +7217,6 @@
 
     if-ge v1, v6, :cond_2
 
-    .line 2333
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -8107,21 +7243,17 @@
 
     if-gt v6, v7, :cond_1
 
-    .line 2335
     const/4 v5, 0x1
 
-    .line 2332
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2343
     .end local v1    # "i":I
     :catch_0
     move-exception v0
 
-    .line 2344
     .local v0, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -8131,7 +7263,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "hasKnoxContainers - Exception"
+    const-string v9, "hasKnoxContainers - Exception"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8151,15 +7283,12 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2345
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2347
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2349
     return v5
 .end method
 
@@ -8167,10 +7296,8 @@
     .locals 7
 
     .prologue
-    .line 2376
     const/4 v1, 0x0
 
-    .line 2378
     .local v1, "result":I
     :try_start_0
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->hasSEContainers()Z
@@ -8179,16 +7306,13 @@
 
     if-eqz v3, :cond_0
 
-    .line 2379
     const/4 v1, 0x1
 
-    .line 2381
     :cond_0
     const/4 v2, 0x0
 
-    .line 2382
     .local v2, "val":Ljava/lang/String;
-    const-string/jumbo v3, "persist.security.good.enable"
+    const-string v3, "persist.security.good.enable"
 
     const-string v4, "0"
 
@@ -8196,7 +7320,6 @@
 
     move-result-object v2
 
-    .line 2383
     if-eqz v2, :cond_1
 
     const-string v3, "1"
@@ -8209,20 +7332,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 2384
     const/4 v1, 0x1
 
-    .line 2391
     .end local v2    # "val":Ljava/lang/String;
     :cond_1
     :goto_0
     return v1
 
-    .line 2386
     :catch_0
     move-exception v0
 
-    .line 2387
     .local v0, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -8232,7 +7351,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "hasSEContainers - Exception"
+    const-string v6, "hasSEContainers - Exception"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8252,7 +7371,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2388
     const/4 v1, -0x1
 
     goto :goto_0
@@ -8268,7 +7386,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2410
     sget-boolean v2, Lcom/android/server/SEAMService;->bootCompleted:Z
 
     if-nez v2, :cond_1
@@ -8277,18 +7394,15 @@
 
     if-ne v2, p1, :cond_1
 
-    .line 2422
     :cond_0
     :goto_0
     return v0
 
-    .line 2414
     :cond_1
     invoke-static {}, Lcom/android/server/ServiceKeeper;->getServiceKeeper()Lcom/android/server/ServiceKeeper;
 
     move-result-object v1
 
-    .line 2415
     .local v1, "sk":Lcom/android/server/ServiceKeeper;
     invoke-static {}, Lcom/android/server/ServiceKeeper;->isTableActive()Z
 
@@ -8300,7 +7414,6 @@
 
     if-eq v2, p1, :cond_0
 
-    .line 2419
     :cond_2
     iget-object v2, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -8308,7 +7421,6 @@
 
     move-result v0
 
-    .line 2422
     .local v0, "result":I
     goto :goto_0
 .end method
@@ -8317,7 +7429,6 @@
     .locals 1
 
     .prologue
-    .line 2857
     iget-object v0, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     invoke-static {}, Lcom/android/server/pm/PackageManagerService;->isBBCAgent()Z
@@ -8333,7 +7444,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 2821
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -8342,10 +7452,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2822
     const/4 v0, -0x2
 
-    .line 2824
     :goto_0
     return v0
 
@@ -8372,10 +7480,8 @@
 
     const/4 v4, 0x0
 
-    .line 2031
-    const-string/jumbo v1, "isSEAndroidLogDumpStateInclude"
+    const-string v1, "isSEAndroidLogDumpStateInclude"
 
-    .line 2034
     .local v1, "method":Ljava/lang/String;
     sget-object v5, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -8387,27 +7493,23 @@
 
     if-nez v5, :cond_1
 
-    .line 2035
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "SEAMService"
 
-    const-string/jumbo v5, "isSEAndroidLogDumpStateInclude: License validation failed"
+    const-string v5, "isSEAndroidLogDumpStateInclude: License validation failed"
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2036
     const/4 v3, -0x2
 
-    .line 2048
     :cond_0
     :goto_0
     return v3
 
-    .line 2040
     :cond_1
     :try_start_0
-    const-string/jumbo v5, "persist.security.mdm.SElogs"
+    const-string v5, "persist.security.mdm.SElogs"
 
     const-string v6, "1"
 
@@ -8415,7 +7517,6 @@
 
     move-result-object v2
 
-    .line 2041
     .local v2, "val":Ljava/lang/String;
     const-string v5, "1"
 
@@ -8427,27 +7528,23 @@
 
     if-nez v5, :cond_0
 
-    .line 2047
     .end local v2    # "val":Ljava/lang/String;
     :goto_1
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v5, "SEAMService"
 
-    const-string/jumbo v6, "isSEAndroidLogDumpStateInclude, FALSE is returned"
+    const-string v6, "isSEAndroidLogDumpStateInclude, FALSE is returned"
 
     invoke-virtual {v3, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move v3, v4
 
-    .line 2048
     goto :goto_0
 
-    .line 2043
     :catch_0
     move-exception v0
 
-    .line 2044
     .local v0, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -8477,7 +7574,6 @@
 
     invoke-virtual {v3, v5, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2045
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -8492,18 +7588,14 @@
 
     const/4 v5, 0x0
 
-    .line 1577
     const/4 v7, -0x1
 
-    .line 1578
     .local v7, "ret":I
     const/4 v8, 0x0
 
-    .line 1579
     .local v8, "settingValue":I
-    const-string/jumbo v4, "isSEPolicyAutoUpdateEnabled"
+    const-string v4, "isSEPolicyAutoUpdateEnabled"
 
-    .line 1583
     .local v4, "method":Ljava/lang/String;
     sget-object v11, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -8515,23 +7607,19 @@
 
     if-nez v11, :cond_0
 
-    .line 1584
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "isSEPolicyAutoUpdateEnabled: License validation failed"
+    const-string v12, "isSEPolicyAutoUpdateEnabled: License validation failed"
 
     invoke-virtual {v10, v11, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1585
     const/4 v10, -0x2
 
-    .line 1622
     :goto_0
     return v10
 
-    .line 1587
     :cond_0
     iget-object v11, p0, Lcom/android/server/SEAMService;->mEdm:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -8539,7 +7627,6 @@
 
     move-result-object v0
 
-    .line 1588
     .local v0, "currentVersion":Landroid/app/enterprise/EnterpriseDeviceManager$EnterpriseSdkVersion;
     sget-object v11, Landroid/app/enterprise/EnterpriseDeviceManager$EnterpriseSdkVersion;->ENTERPRISE_SDK_VERSION_5_6:Landroid/app/enterprise/EnterpriseDeviceManager$EnterpriseSdkVersion;
 
@@ -8549,17 +7636,14 @@
 
     if-gez v11, :cond_4
 
-    .line 1589
     const-wide/16 v2, 0x0
 
-    .line 1592
     .local v2, "ident":J
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1593
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v11
@@ -8576,7 +7660,6 @@
 
     move v5, v10
 
-    .line 1596
     .local v5, "msaInstalled":Z
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/SEAMService;->getSELinuxMode(Landroid/app/enterprise/ContextInfo;)I
@@ -8585,14 +7668,13 @@
 
     if-ne v11, v10, :cond_3
 
-    .line 1597
     iget-object v10, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
 
-    const-string/jumbo v11, "security_update_db"
+    const-string v11, "security_update_db"
 
     const/4 v12, 0x0
 
@@ -8603,7 +7685,6 @@
 
     move-result v7
 
-    .line 1610
     .end local v5    # "msaInstalled":Z
     :cond_2
     :goto_1
@@ -8613,16 +7694,13 @@
     :goto_2
     move v10, v7
 
-    .line 1622
     goto :goto_0
 
-    .line 1599
     .restart local v2    # "ident":J
     .restart local v5    # "msaInstalled":Z
     :cond_3
     if-eqz v5, :cond_2
 
-    .line 1600
     :try_start_1
     iget-object v10, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -8630,7 +7708,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "cr_msa_auto_update"
+    const-string v11, "cr_msa_auto_update"
 
     const/4 v12, 0x0
 
@@ -8643,33 +7721,27 @@
 
     goto :goto_1
 
-    .line 1603
     .end local v5    # "msaInstalled":Z
     :catch_0
     move-exception v6
 
-    .line 1604
     .local v6, "re":Landroid/os/RemoteException;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v11, "SEAMService"
 
-    const-string/jumbo v12, "remote exception in method:isSEPolicyAutoUpdateEnabled"
+    const-string v12, "remote exception in method:isSEPolicyAutoUpdateEnabled"
 
     invoke-virtual {v10, v11, v12, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1605
     const/4 v7, -0x1
 
-    .line 1609
     goto :goto_1
 
-    .line 1606
     .end local v6    # "re":Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 1607
     .local v1, "e":Ljava/lang/Exception;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -8679,17 +7751,15 @@
 
     invoke-virtual {v10, v11, v12, v1}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1608
     const/4 v7, -0x1
 
     goto :goto_1
 
-    .line 1613
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "ident":J
     :cond_4
     :try_start_2
-    const-string/jumbo v10, "spd_control_policy"
+    const-string v10, "spd_control_policy"
 
     invoke-static {v10}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -8699,25 +7769,21 @@
 
     move-result-object v9
 
-    .line 1615
     .local v9, "spdControlPolicy":Lcom/sec/enterprise/spd/ISPDControlPolicy;
     invoke-interface {v9}, Lcom/sec/enterprise/spd/ISPDControlPolicy;->getAutoSecurityPolicyUpdateMode()I
 
     move-result v8
 
-    .line 1616
     rem-int/lit8 v7, v8, 0x2
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
 
     goto :goto_2
 
-    .line 1617
     .end local v9    # "spdControlPolicy":Lcom/sec/enterprise/spd/ISPDControlPolicy;
     :catch_2
     move-exception v6
 
-    .line 1618
     .restart local v6    # "re":Landroid/os/RemoteException;
     sget-object v10, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -8727,7 +7793,6 @@
 
     invoke-virtual {v10, v11, v12, v6}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1619
     const/4 v7, -0x1
 
     goto :goto_2
@@ -8740,7 +7805,6 @@
     .param p3, "resourceType"    # I
 
     .prologue
-    .line 2786
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -8749,10 +7813,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2787
     const/4 v0, -0x2
 
-    .line 2789
     :goto_0
     return v0
 
@@ -8779,22 +7841,18 @@
 
     const/4 v8, 0x0
 
-    .line 2452
-    const-string/jumbo v4, "loadContainerSetting"
+    const-string v4, "loadContainerSetting"
 
-    .line 2453
     .local v4, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v6
 
-    .line 2454
     .local v6, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v5
 
-    .line 2456
     .local v5, "pid":I
     sget-object v7, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -8806,23 +7864,19 @@
 
     if-nez v7, :cond_0
 
-    .line 2457
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
 
-    const-string/jumbo v9, "loadContainerSetting: License validation failed"
+    const-string v9, "loadContainerSetting: License validation failed"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2458
     const/4 v7, -0x2
 
-    .line 2479
     :goto_0
     return v7
 
-    .line 2463
     :cond_0
     const/4 v7, 0x1
 
@@ -8833,16 +7887,13 @@
 
     move-result-object v2
 
-    .line 2464
     .local v2, "instanceCon":Lcom/android/server/SEAMSContainer;
     if-eqz v2, :cond_2
 
-    .line 2465
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 2466
     .local v3, "mPM":Landroid/content/pm/IPackageManager;
     const/16 v7, 0x80
 
@@ -8854,11 +7905,9 @@
 
     move-result-object v0
 
-    .line 2468
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_1
 
-    .line 2469
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -8869,7 +7918,6 @@
 
     goto :goto_0
 
-    .line 2471
     :cond_1
     const/4 v7, 0x0
 
@@ -8883,14 +7931,12 @@
 
     goto :goto_0
 
-    .line 2474
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "instanceCon":Lcom/android/server/SEAMSContainer;
     .end local v3    # "mPM":Landroid/content/pm/IPackageManager;
     :catch_0
     move-exception v1
 
-    .line 2475
     .local v1, "e":Ljava/lang/Exception;
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -8920,21 +7966,18 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2476
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2478
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     sget-object v7, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "SEAMService"
 
-    const-string/jumbo v9, "loadContainerSetting: POLICY_FAILED is returned"
+    const-string v9, "loadContainerSetting: POLICY_FAILED is returned"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2479
     const/4 v7, -0x1
 
     goto :goto_0
@@ -8945,22 +7988,18 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2502
-    const-string/jumbo v6, "relabelAppDir"
+    const-string v6, "relabelAppDir"
 
-    .line 2503
     .local v6, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 2504
     .local v8, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v7
 
-    .line 2506
     .local v7, "pid":I
     sget-object v9, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -8976,45 +8015,37 @@
 
     if-nez v9, :cond_0
 
-    .line 2507
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "relabelAppDir: License validation failed"
+    const-string v11, "relabelAppDir: License validation failed"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2508
     const/4 v9, -0x2
 
-    .line 2562
     :goto_0
     return v9
 
-    .line 2511
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2512
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "packageName is null"
+    const-string v11, "packageName is null"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2513
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 2516
     :cond_1
     const/4 v4, 0x0
 
-    .line 2517
     .local v4, "hasApp":Z
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
@@ -9022,11 +8053,9 @@
 
     move-result v2
 
-    .line 2518
     .local v2, "currentUid":I
     const/4 v1, 0x0
 
-    .line 2519
     .local v1, "bbcFlag":Z
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -9034,35 +8063,29 @@
 
     if-eqz v9, :cond_2
 
-    .line 2520
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v9
 
     if-eqz v9, :cond_2
 
-    .line 2521
     const/4 v1, 0x1
 
-    .line 2525
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 2526
     iget-object v9, p0, Lcom/android/server/SEAMService;->mPersona:Landroid/os/PersonaManager;
 
     invoke-static {}, Landroid/os/PersonaManager;->getBbcEnabled()I
 
     move-result v2
 
-    .line 2531
     :cond_3
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v5
 
-    .line 2532
     .local v5, "mPM":Landroid/content/pm/IPackageManager;
     const/16 v9, 0x80
 
@@ -9070,9 +8093,8 @@
 
     move-result-object v0
 
-    .line 2533
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
-    const-string/jumbo v9, "package"
+    const-string v9, "package"
 
     invoke-static {v9}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -9082,10 +8104,8 @@
 
     iput-object v9, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    .line 2534
     if-nez v0, :cond_4
 
-    .line 2535
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
@@ -9116,12 +8136,10 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2536
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 2538
     :cond_4
     const-string v9, "/data/system"
 
@@ -9133,7 +8151,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 2539
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
@@ -9166,25 +8183,20 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2540
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2542
     :cond_5
     iget v9, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
     if-eq v8, v9, :cond_6
 
-    .line 2543
     iget v8, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 2545
     :cond_6
     if-eqz v1, :cond_7
 
-    .line 2546
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
@@ -9231,7 +8243,6 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2547
     iget-object v9, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
@@ -9244,7 +8255,6 @@
 
     if-nez v9, :cond_8
 
-    .line 2548
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
@@ -9253,12 +8263,10 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2549
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2552
     :cond_7
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -9268,7 +8276,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "non-BBC (Good/generic) case, relabelAppDir with packageName:"
+    const-string v12, "non-BBC (Good/generic) case, relabelAppDir with packageName:"
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9306,7 +8314,6 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2553
     iget-object v9, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
@@ -9319,44 +8326,38 @@
 
     if-nez v9, :cond_8
 
-    .line 2554
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "non-BBC case, mPMS.relabelAppDir returned false"
+    const-string v11, "non-BBC case, mPMS.relabelAppDir returned false"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2555
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2558
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v5    # "mPM":Landroid/content/pm/IPackageManager;
     :catch_0
     move-exception v3
 
-    .line 2559
     .local v3, "e":Ljava/lang/Exception;
     sget-object v9, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v10, "SEAMService"
 
-    const-string/jumbo v11, "relabelAppDir cannot get app list"
+    const-string v11, "relabelAppDir cannot get app list"
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2560
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2562
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v5    # "mPM":Landroid/content/pm/IPackageManager;
@@ -9375,10 +8376,8 @@
 
     const/4 v2, 0x0
 
-    .line 2580
-    const-string/jumbo v0, "relabelData"
+    const-string v0, "relabelData"
 
-    .line 2583
     .local v0, "method":Ljava/lang/String;
     sget-object v1, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -9390,25 +8389,21 @@
 
     if-nez v1, :cond_0
 
-    .line 2584
     sget-object v1, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMService"
 
-    const-string/jumbo v3, "relabelData: License validation failed"
+    const-string v3, "relabelData: License validation failed"
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2585
     const/4 v1, -0x2
 
-    .line 2597
     :goto_0
     return v1
 
-    .line 2590
     :cond_0
-    const-string/jumbo v1, "package"
+    const-string v1, "package"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -9418,7 +8413,6 @@
 
     iput-object v1, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    .line 2592
     iget-object v1, p0, Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/pm/PackageManagerService;->relabelData()Z
@@ -9427,24 +8421,21 @@
 
     if-nez v1, :cond_1
 
-    .line 2593
     sget-object v1, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "SEAMService"
 
-    const-string/jumbo v4, "mPMS.relabelData returned false"
+    const-string v4, "mPMS.relabelData returned false"
 
     invoke-virtual {v1, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
-    .line 2594
     goto :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 2597
     goto :goto_0
 .end method
 
@@ -9456,26 +8447,21 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 2637
-    const-string/jumbo v9, "removeAppFromContainer"
+    const-string v9, "removeAppFromContainer"
 
-    .line 2638
     .local v9, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v12
 
-    .line 2639
     .local v12, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v10
 
-    .line 2640
     .local v10, "pid":I
     const-wide/16 v6, 0x0
 
-    .line 2643
     .local v6, "ident":J
     sget-object v13, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -9493,31 +8479,25 @@
 
     if-nez v13, :cond_0
 
-    .line 2644
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
 
-    const-string/jumbo v15, "removeAppFromContainer: License validation failed"
+    const-string v15, "removeAppFromContainer: License validation failed"
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2645
     const/4 v11, -0x2
 
-    .line 2698
     :goto_0
     return v11
 
-    .line 2658
     :cond_0
     const/4 v8, 0x0
 
-    .line 2661
     .local v8, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v11, 0x0
 
-    .line 2662
     .local v11, "ret":I
     :try_start_0
     invoke-static/range {p3 .. p3}, Lcom/android/server/pm/SELinuxMMAC;->isMyContainerID(I)Z
@@ -9526,7 +8506,6 @@
 
     if-eqz v13, :cond_1
 
-    .line 2663
     const/4 v13, 0x2
 
     move-object/from16 v0, p0
@@ -9537,10 +8516,8 @@
 
     move-result-object v8
 
-    .line 2664
     if-eqz v8, :cond_5
 
-    .line 2665
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -9553,10 +8530,8 @@
 
     move-result v11
 
-    .line 2666
     goto :goto_0
 
-    .line 2668
     :cond_1
     const/16 v13, 0x2be
 
@@ -9564,7 +8539,6 @@
 
     if-ne v0, v13, :cond_2
 
-    .line 2669
     const/4 v13, 0x4
 
     move-object/from16 v0, p0
@@ -9575,10 +8549,8 @@
 
     move-result-object v8
 
-    .line 2670
     if-eqz v8, :cond_5
 
-    .line 2671
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -9591,10 +8563,8 @@
 
     move-result v11
 
-    .line 2672
     goto :goto_0
 
-    .line 2674
     :cond_2
     invoke-static/range {p3 .. p3}, Lcom/android/server/pm/SELinuxMMAC;->isBBCContainerID(I)Z
 
@@ -9602,7 +8572,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 2675
     const/4 v13, 0x3
 
     move-object/from16 v0, p0
@@ -9613,10 +8582,8 @@
 
     move-result-object v8
 
-    .line 2676
     if-eqz v8, :cond_5
 
-    .line 2677
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -9629,14 +8596,12 @@
 
     move-result v11
 
-    .line 2678
     goto :goto_0
 
-    .line 2681
     :cond_3
     const-string v13, "SEAMS"
 
-    const-string/jumbo v14, "removeAppFromContainer"
+    const-string v14, "removeAppFromContainer"
 
     move-object/from16 v0, p0
 
@@ -9644,11 +8609,9 @@
 
     move-result v4
 
-    .line 2682
     .local v4, "containerType":I
     if-gez v4, :cond_4
 
-    .line 2683
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
@@ -9681,12 +8644,10 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2685
     const/4 v11, -0x2
 
     goto/16 :goto_0
 
-    .line 2687
     :cond_4
     move-object/from16 v0, p0
 
@@ -9696,10 +8657,8 @@
 
     move-result-object v8
 
-    .line 2688
     if-eqz v8, :cond_5
 
-    .line 2689
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -9714,15 +8673,12 @@
 
     move-result v11
 
-    .line 2690
     goto/16 :goto_0
 
-    .line 2693
     .end local v4    # "containerType":I
     :catch_0
     move-exception v5
 
-    .line 2694
     .local v5, "e":Ljava/lang/Exception;
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -9752,21 +8708,18 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2695
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2697
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_5
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
 
-    const-string/jumbo v15, "removeAppFromContainer: POLICY_FAILED is returned"
+    const-string v15, "removeAppFromContainer: POLICY_FAILED is returned"
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2698
     const/4 v11, -0x1
 
     goto/16 :goto_0
@@ -9779,7 +8732,6 @@
     .param p3, "resourceType"    # I
 
     .prologue
-    .line 2835
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -9788,10 +8740,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2836
     const/4 v0, -0x2
 
-    .line 2838
     :goto_0
     return v0
 
@@ -9816,7 +8766,6 @@
     .param p3, "resourceType"    # I
 
     .prologue
-    .line 2800
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -9825,10 +8774,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2801
     const/4 v0, -0x2
 
-    .line 2803
     :goto_0
     return v0
 
@@ -9851,26 +8798,21 @@
     .param p1, "containerID"    # I
 
     .prologue
-    .line 1180
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 1181
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 1182
     .local v4, "pid":I
     const/4 v3, 0x0
 
-    .line 1183
     .local v3, "instanceCon":Lcom/android/server/SEAMSContainer;
     const/4 v1, 0x0
 
-    .line 1184
     .local v1, "callpkgName":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
 
@@ -9878,10 +8820,8 @@
 
     move-result-object v1
 
-    .line 1185
     const/4 v0, 0x0
 
-    .line 1186
     .local v0, "bbcFlag":Z
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->isBBCAgent()Z
 
@@ -9889,17 +8829,14 @@
 
     if-eqz v6, :cond_0
 
-    .line 1187
     invoke-virtual {p0}, Lcom/android/server/SEAMService;->getBBCFlag()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 1188
     const/4 v0, 0x1
 
-    .line 1193
     :cond_0
     sget-object v6, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -9915,7 +8852,6 @@
 
     if-nez v6, :cond_1
 
-    .line 1194
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
@@ -9924,18 +8860,14 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1195
     const/4 v6, -0x2
 
-    .line 1217
     :goto_0
     return v6
 
-    .line 1199
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 1200
     const/4 v6, 0x3
 
     :try_start_0
@@ -9945,18 +8877,15 @@
 
     move-result-object v3
 
-    .line 1209
     :goto_1
     if-eqz v3, :cond_4
 
-    .line 1210
     invoke-virtual {v3, v5, v4, p1}, Lcom/android/server/SEAMSContainer;->removeSEContainer(III)I
 
     move-result v6
 
     goto :goto_0
 
-    .line 1202
     :cond_2
     const-string v6, "com.samsung.android.irm.service"
 
@@ -9966,7 +8895,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 1203
     const/4 v6, 0x4
 
     iget-object v7, p0, Lcom/android/server/SEAMService;->mContext:Landroid/content/Context;
@@ -9977,7 +8905,6 @@
 
     goto :goto_1
 
-    .line 1205
     :cond_3
     const/4 v6, 0x2
 
@@ -9991,11 +8918,9 @@
 
     goto :goto_1
 
-    .line 1212
     :catch_0
     move-exception v2
 
-    .line 1213
     .local v2, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -10025,21 +8950,18 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1214
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1216
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     sget-object v6, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v7, "SEAMService"
 
-    const-string/jumbo v8, "removeSEContainer, POLICY_FAILED is returned"
+    const-string v8, "removeSEContainer, POLICY_FAILED is returned"
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1217
     const/4 v6, -0x1
 
     goto :goto_0
@@ -10055,10 +8977,8 @@
 
     const/4 v3, -0x1
 
-    .line 2715
-    const-string/jumbo v1, "setAMSLogLevel"
+    const-string v1, "setAMSLogLevel"
 
-    .line 2719
     .local v1, "method":Ljava/lang/String;
     :try_start_0
     sget-object v4, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
@@ -10075,23 +8995,19 @@
 
     if-nez v4, :cond_0
 
-    .line 2720
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "SEAMService"
 
-    const-string/jumbo v5, "setAMSLogLevel: License validation failed"
+    const-string v5, "setAMSLogLevel: License validation failed"
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2721
     const/4 v2, -0x2
 
-    .line 2738
     :goto_0
     return v2
 
-    .line 2724
     :cond_0
     if-ltz p2, :cond_1
 
@@ -10099,7 +9015,6 @@
 
     if-le p2, v4, :cond_2
 
-    .line 2726
     :cond_1
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -10111,12 +9026,10 @@
 
     move v2, v3
 
-    .line 2727
     goto :goto_0
 
-    .line 2732
     :cond_2
-    const-string/jumbo v4, "persist.security.ams.verbose"
+    const-string v4, "persist.security.ams.verbose"
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -10128,11 +9041,9 @@
 
     goto :goto_0
 
-    .line 2736
     :catch_0
     move-exception v0
 
-    .line 2737
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -10142,7 +9053,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "setAMSLogLevel failed"
+    const-string v6, "setAMSLogLevel failed"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10164,7 +9075,6 @@
 
     move v2, v3
 
-    .line 2738
     goto :goto_0
 .end method
 
@@ -10173,26 +9083,22 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 2861
-    const-string/jumbo v0, "setBBCFlag"
+    const-string v0, "setBBCFlag"
 
-    .line 2862
     .local v0, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 2863
     .local v2, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 2864
     .local v1, "pid":I
     const-string v3, "SEAMS"
 
-    const-string/jumbo v4, "setBBCFlag"
+    const-string v4, "setBBCFlag"
 
     invoke-virtual {p0, v1, v2, v3, v4}, Lcom/android/server/SEAMService;->isAuthorized(IILjava/lang/String;Ljava/lang/String;)I
 
@@ -10200,18 +9106,14 @@
 
     if-gez v3, :cond_0
 
-    .line 2865
     const/4 v3, -0x1
 
-    .line 2868
     :goto_0
     return v3
 
-    .line 2867
     :cond_0
     invoke-static {p1}, Lcom/android/server/pm/SELinuxMMAC;->setBBCFlag(Z)I
 
-    .line 2868
     const/4 v3, 0x0
 
     goto :goto_0
@@ -10225,10 +9127,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2752
-    const-string/jumbo v1, "setSEAndroidLogDumpStateInclude"
+    const-string v1, "setSEAndroidLogDumpStateInclude"
 
-    .line 2754
     .local v1, "method":Ljava/lang/String;
     sget-object v3, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -10242,29 +9142,24 @@
 
     if-nez v3, :cond_0
 
-    .line 2755
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "SEAMService"
 
-    const-string/jumbo v4, "setSEAndroidLogDumpStateInclude: License validation failed"
+    const-string v4, "setSEAndroidLogDumpStateInclude: License validation failed"
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2756
     const/4 v2, -0x2
 
-    .line 2770
     :goto_0
     return v2
 
-    .line 2760
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 2761
     :try_start_0
-    const-string/jumbo v3, "persist.security.mdm.SElogs"
+    const-string v3, "persist.security.mdm.SElogs"
 
     const-string v4, "1"
 
@@ -10274,11 +9169,9 @@
 
     goto :goto_0
 
-    .line 2765
     :catch_0
     move-exception v0
 
-    .line 2766
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -10308,28 +9201,24 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2767
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2769
     sget-object v2, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "SEAMService"
 
-    const-string/jumbo v4, "setSEAndroidLogDumpStateInclude: POLICY_FAILED is returned"
+    const-string v4, "setSEAndroidLogDumpStateInclude: POLICY_FAILED is returned"
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2770
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 2763
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_1
-    const-string/jumbo v3, "persist.security.mdm.SElogs"
+    const-string v3, "persist.security.mdm.SElogs"
 
     const-string v4, "0"
 
@@ -10346,34 +9235,27 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 2938
-    const-string/jumbo v9, "setSEContainerClipboardMode"
+    const-string v9, "setSEContainerClipboardMode"
 
-    .line 2940
     .local v9, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v12
 
-    .line 2941
     .local v12, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v10
 
-    .line 2942
     .local v10, "pid":I
     const/4 v11, 0x0
 
-    .line 2943
     .local v11, "ret":Z
     const-wide/16 v6, 0x0
 
-    .line 2944
     .local v6, "ident":J
     const/4 v5, 0x0
 
-    .line 2947
     .local v5, "instanceCon":Lcom/android/server/SEAMSContainer;
     sget-object v13, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -10391,23 +9273,19 @@
 
     if-nez v13, :cond_0
 
-    .line 2948
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
 
-    const-string/jumbo v15, "setSEContainerClipboardMode: License validation failed"
+    const-string v15, "setSEContainerClipboardMode: License validation failed"
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2949
     const/4 v13, -0x2
 
-    .line 2994
     :goto_0
     return v13
 
-    .line 2951
     :cond_0
     if-ltz p2, :cond_1
 
@@ -10417,7 +9295,6 @@
 
     if-le v0, v13, :cond_2
 
-    .line 2952
     :cond_1
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -10427,7 +9304,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v16, "mode:"
+    const-string v16, "mode:"
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10445,12 +9322,10 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2953
     const/4 v13, -0x1
 
     goto :goto_0
 
-    .line 2956
     :cond_2
     const/4 v13, 0x2
 
@@ -10462,15 +9337,12 @@
 
     move-result-object v5
 
-    .line 2957
     if-eqz v5, :cond_3
 
-    .line 2958
     invoke-virtual {v5}, Lcom/android/server/SEAMSContainer;->getMDMID()Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     move-result-object v8
 
-    .line 2959
     .local v8, "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iget-object v13, v8, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -10484,7 +9356,6 @@
 
     if-nez v13, :cond_4
 
-    .line 2960
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
@@ -10525,35 +9396,30 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2961
     const/4 v13, -0x1
 
     goto :goto_0
 
-    .line 2964
     .end local v8    # "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_3
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
 
-    const-string/jumbo v15, "unable to get instance"
+    const-string v15, "unable to get instance"
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2965
     const/4 v13, -0x1
 
     goto :goto_0
 
-    .line 2969
     .restart local v8    # "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_4
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2970
     .local v4, "cvWhere":Landroid/content/ContentValues;
     const-string v13, "containerID"
 
@@ -10563,12 +9429,10 @@
 
     invoke-virtual {v4, v13, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2972
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2973
     .local v2, "cv":Landroid/content/ContentValues;
     const-string v13, "containerID"
 
@@ -10578,8 +9442,7 @@
 
     invoke-virtual {v2, v13, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2974
-    const-string/jumbo v13, "mode"
+    const-string v13, "mode"
 
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -10587,20 +9450,18 @@
 
     invoke-virtual {v2, v13, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2978
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v14, "SeamsClipboardTable"
 
-    const-string/jumbo v15, "mode"
+    const-string v15, "mode"
 
     invoke-virtual {v13, v14, v15, v4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getValue(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)Landroid/content/ContentValues;
 
     move-result-object v3
 
-    .line 2980
     .local v3, "cvOld":Landroid/content/ContentValues;
     if-eqz v3, :cond_6
 
@@ -10610,7 +9471,6 @@
 
     if-eqz v13, :cond_6
 
-    .line 2981
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v14, "SEAMService"
@@ -10639,7 +9499,6 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2983
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -10650,7 +9509,6 @@
 
     move-result v11
 
-    .line 2993
     :cond_5
     :goto_1
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
@@ -10661,7 +9519,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v16, "setSecontainerClipboardMode: ret = "
+    const-string v16, "setSecontainerClipboardMode: ret = "
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10677,7 +9535,6 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2994
     const/4 v13, 0x1
 
     if-ne v11, v13, :cond_7
@@ -10686,7 +9543,6 @@
 
     goto/16 :goto_0
 
-    .line 2985
     :cond_6
     sget-object v13, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -10696,7 +9552,6 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2987
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -10707,10 +9562,8 @@
 
     move-result v11
 
-    .line 2988
     if-nez v11, :cond_5
 
-    .line 2990
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/SEAMService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -10723,7 +9576,6 @@
 
     goto :goto_1
 
-    .line 2994
     :cond_7
     const/4 v13, -0x1
 
@@ -10740,34 +9592,27 @@
     .param p6, "removeFlag"    # Z
 
     .prologue
-    .line 975
-    const-string/jumbo v11, "updateAppToContainer"
+    const-string v11, "updateAppToContainer"
 
-    .line 977
     .local v11, "method":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v16
 
-    .line 978
     .local v16, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v14
 
-    .line 979
     .local v14, "pid":I
     const/4 v15, 0x0
 
-    .line 980
     .local v15, "ret":I
     const-wide/16 v12, 0x0
 
-    .line 981
     .local v12, "ident":J
     const/4 v2, 0x0
 
-    .line 984
     .local v2, "instanceCon":Lcom/android/server/SEAMSContainer;
     sget-object v3, Lcom/android/server/SEAMService;->SEAMS_PERMS:[Ljava/lang/String;
 
@@ -10787,23 +9632,19 @@
 
     if-nez v3, :cond_0
 
-    .line 985
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "SEAMService"
 
-    const-string/jumbo v5, "updateAppToContainer: License validation failed"
+    const-string v5, "updateAppToContainer: License validation failed"
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 986
     const/4 v3, -0x2
 
-    .line 1029
     :goto_0
     return v3
 
-    .line 994
     :cond_0
     :try_start_0
     invoke-static/range {p3 .. p3}, Lcom/android/server/pm/SELinuxMMAC;->isMyContainerID(I)Z
@@ -10812,7 +9653,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 995
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
@@ -10823,7 +9663,6 @@
 
     move-result-object v2
 
-    .line 996
     if-eqz v2, :cond_5
 
     move-object/from16 v3, p1
@@ -10838,17 +9677,14 @@
 
     move/from16 v8, p6
 
-    .line 997
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/SEAMSContainer;->updateAppToContainer(Ljava/lang/String;[Ljava/lang/String;IIIZ)I
 
     move-result v15
 
     move v3, v15
 
-    .line 998
     goto :goto_0
 
-    .line 1000
     :cond_1
     invoke-static/range {p3 .. p3}, Lcom/android/server/pm/SELinuxMMAC;->isBBCContainerID(I)Z
 
@@ -10856,7 +9692,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1001
     const/4 v3, 0x3
 
     move-object/from16 v0, p0
@@ -10867,7 +9702,6 @@
 
     move-result-object v2
 
-    .line 1002
     if-eqz v2, :cond_5
 
     move-object/from16 v3, p1
@@ -10882,17 +9716,14 @@
 
     move/from16 v8, p6
 
-    .line 1003
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/SEAMSContainer;->updateAppToContainer(Ljava/lang/String;[Ljava/lang/String;IIIZ)I
 
     move-result v15
 
     move v3, v15
 
-    .line 1004
     goto :goto_0
 
-    .line 1006
     :cond_2
     const/16 v3, 0x2be
 
@@ -10900,7 +9731,6 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 1007
     const/4 v3, 0x4
 
     move-object/from16 v0, p0
@@ -10911,7 +9741,6 @@
 
     move-result-object v2
 
-    .line 1008
     if-eqz v2, :cond_5
 
     move-object/from16 v3, p1
@@ -10926,21 +9755,18 @@
 
     move/from16 v8, p6
 
-    .line 1009
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/SEAMSContainer;->updateAppToContainer(Ljava/lang/String;[Ljava/lang/String;IIIZ)I
 
     move-result v15
 
     move v3, v15
 
-    .line 1010
     goto :goto_0
 
-    .line 1013
     :cond_3
     const-string v3, "SEAMS"
 
-    const-string/jumbo v4, "updateAppToContainer"
+    const-string v4, "updateAppToContainer"
 
     move-object/from16 v0, p0
 
@@ -10950,11 +9776,9 @@
 
     move-result v9
 
-    .line 1014
     .local v9, "containerType":I
     if-gez v9, :cond_4
 
-    .line 1015
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "SEAMService"
@@ -10987,12 +9811,10 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1016
     const/4 v3, -0x2
 
     goto/16 :goto_0
 
-    .line 1018
     :cond_4
     move-object/from16 v0, p0
 
@@ -11002,7 +9824,6 @@
 
     move-result-object v2
 
-    .line 1019
     if-eqz v2, :cond_5
 
     move-object/from16 v3, p1
@@ -11017,7 +9838,6 @@
 
     move/from16 v8, p6
 
-    .line 1020
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/SEAMSContainer;->updateAppToContainer(Ljava/lang/String;[Ljava/lang/String;IIIZ)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -11026,15 +9846,12 @@
 
     move v3, v15
 
-    .line 1021
     goto/16 :goto_0
 
-    .line 1024
     .end local v9    # "containerType":I
     :catch_0
     move-exception v10
 
-    .line 1025
     .local v10, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -11044,21 +9861,18 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1026
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1028
     .end local v10    # "e":Ljava/lang/Exception;
     :cond_5
     sget-object v3, Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "SEAMService"
 
-    const-string/jumbo v5, "updateAppToContainer POLICY_FAILED is returned "
+    const-string v5, "updateAppToContainer POLICY_FAILED is returned "
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1029
     const/4 v3, -0x1
 
     goto/16 :goto_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/server/SecSCService$2;->this$0:Lcom/android/server/SecSCService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,8 +43,7 @@
 
     const-wide/16 v6, 0x0
 
-    .line 233
-    const-string/jumbo v4, "gsm.nitz.time"
+    const-string v4, "gsm.nitz.time"
 
     const-string v5, "NONE"
 
@@ -63,7 +61,6 @@
 
     div-long v0, v4, v8
 
-    .line 234
     .local v0, "nitzTime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -71,7 +68,6 @@
 
     div-long v2, v4, v8
 
-    .line 235
     .local v2, "recvElapsedTime":J
     cmp-long v4, v0, v6
 
@@ -81,11 +77,9 @@
 
     if-lez v4, :cond_0
 
-    .line 237
     # invokes: Lcom/android/server/SecSCService;->SecSC_nitzReceived(JJ)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/SecSCService;->access$300(JJ)V
 
-    .line 239
     :cond_0
     return-void
 .end method

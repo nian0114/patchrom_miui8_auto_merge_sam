@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 46
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$NfcStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$1;
 
     .prologue
-    .line 46
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$NfcStateReceiver;-><init>(Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 49
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.nfc.action.ADAPTER_STATE_CHANGED"
 
@@ -66,7 +62,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 50
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$NfcStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     # getter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->mAdapterStateChangedHandler:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedHandler;
@@ -76,12 +71,10 @@
 
     invoke-interface {v1, p1, p2}, Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedHandler;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 58
     :cond_0
     :goto_0
     return-void
 
-    .line 51
     :cond_1
     const-string v1, "com.sec.android.nfc.AUTH_READY"
 
@@ -91,7 +84,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 52
     # getter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->access$100()Ljava/lang/String;
 
@@ -101,7 +93,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$NfcStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     # getter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->mEnableRequest:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -123,7 +114,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 54
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$NfcStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     # getter for: Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;->mEnableRequest:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -135,7 +125,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 55
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity$NfcStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
     const/4 v2, 0x1

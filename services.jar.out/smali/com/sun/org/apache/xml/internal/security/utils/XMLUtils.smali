@@ -36,9 +36,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->getAttributeNodeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
@@ -46,9 +46,9 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     const-string v3, ""
 
@@ -171,7 +171,7 @@
 
     check-cast v3, Lorg/w3c/dom/Attr;
 
-    const-string/jumbo v7, "http://www.w3.org/2000/xmlns/"
+    const-string v7, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -192,7 +192,7 @@
     goto :goto_3
 
     :cond_4
-    const-string/jumbo v7, "http://www.w3.org/2000/xmlns/"
+    const-string v7, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
@@ -204,7 +204,7 @@
 
     if-nez v7, :cond_3
 
-    const-string/jumbo v7, "http://www.w3.org/2000/xmlns/"
+    const-string v7, "http://www.w3.org/2000/xmlns/"
 
     invoke-interface {v3}, Lorg/w3c/dom/Attr;->getName()Ljava/lang/String;
 
@@ -320,19 +320,19 @@
     :cond_1
     const/4 v0, 0x0
 
-    const-string/jumbo v1, "namespaceContext"
+    const-string v1, "namespaceContext"
 
     invoke-interface {p0, v0, v1}, Lorg/w3c/dom/Document;->createElementNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "xmlns:"
+    const-string v3, "xmlns:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -382,17 +382,17 @@
     if-nez v0, :cond_2
 
     :cond_1
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {p0, v0, p1}, Lorg/w3c/dom/Document;->createElementNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/xmlns/"
+    const-string v1, "http://www.w3.org/2000/xmlns/"
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
-    const-string/jumbo v3, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v3, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {v0, v1, v2, v3}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -400,7 +400,7 @@
     return-object v0
 
     :cond_2
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -428,13 +428,13 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "http://www.w3.org/2000/xmlns/"
+    const-string v2, "http://www.w3.org/2000/xmlns/"
 
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v4, "xmlns:"
+    const-string v4, "xmlns:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -448,7 +448,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v3, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v3, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {v0, v2, v1, v3}, Lorg/w3c/dom/Element;->setAttributeNS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -462,7 +462,7 @@
 
     if-eqz p0, :cond_0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v1, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -501,7 +501,7 @@
 
     if-eqz p0, :cond_0
 
-    const-string/jumbo v1, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v1, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -698,7 +698,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "endorsed.jdk1.4.0"
+    const-string v3, "endorsed.jdk1.4.0"
 
     invoke-static {v3}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 
@@ -785,7 +785,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string/jumbo v3, "endorsed.jdk1.4.0"
+    const-string v3, "endorsed.jdk1.4.0"
 
     invoke-static {v3}, Lcom/sun/org/apache/xml/internal/security/utils/I18n;->translate(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1048,7 +1048,7 @@
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
 
     :cond_0
-    const-string/jumbo v0, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v0, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -1091,7 +1091,7 @@
     .locals 1
 
     :try_start_0
-    const-string/jumbo v0, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v0, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;->getInstance(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/security/c14n/Canonicalizer;
 
@@ -1146,7 +1146,7 @@
 
     if-eqz v2, :cond_1
 
-    const-string/jumbo v2, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v2, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
@@ -1226,7 +1226,7 @@
 .method public static selectDsNodes(Lorg/w3c/dom/Node;Ljava/lang/String;)[Lorg/w3c/dom/Element;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-static {p0, v0, p1}, Lcom/sun/org/apache/xml/internal/security/utils/XMLUtils;->selectNodes(Lorg/w3c/dom/Node;Ljava/lang/String;Ljava/lang/String;)[Lorg/w3c/dom/Element;
 
@@ -1447,7 +1447,7 @@
 
     if-eqz v2, :cond_1
 
-    const-string/jumbo v2, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v2, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 

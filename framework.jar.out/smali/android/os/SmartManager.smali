@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     return-void
 .end method
 
@@ -25,20 +23,16 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 51
     invoke-static {p0}, Landroid/os/SmartManager;->getService(Landroid/content/Context;)Landroid/os/ICustomFrequencyManager;
 
     move-result-object v2
 
-    .line 52
     .local v2, "svc":Landroid/os/ICustomFrequencyManager;
     const/4 v1, 0x0
 
-    .line 53
     .local v1, "remainTime":I
     if-eqz v2, :cond_0
 
-    .line 55
     :try_start_0
     invoke-interface {v2, p1}, Landroid/os/ICustomFrequencyManager;->getBatteryRemainingUsageTime(I)I
     :try_end_0
@@ -46,16 +40,13 @@
 
     move-result v1
 
-    .line 60
     :cond_0
     :goto_0
     return v1
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -70,16 +61,13 @@
     .param p5, "numOfItems"    # I
 
     .prologue
-    .line 76
     invoke-static {p0}, Landroid/os/SmartManager;->getService(Landroid/content/Context;)Landroid/os/ICustomFrequencyManager;
 
     move-result-object v1
 
-    .line 77
     .local v1, "svc":Landroid/os/ICustomFrequencyManager;
     const/4 v7, 0x0
 
-    .line 79
     .local v7, "result":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -89,7 +77,6 @@
 
     move v6, p5
 
-    .line 80
     :try_start_0
     invoke-interface/range {v1 .. v6}, Landroid/os/ICustomFrequencyManager;->getFrequentlyUsedAppListByLocation(DDI)[Ljava/lang/String;
     :try_end_0
@@ -97,16 +84,13 @@
 
     move-result-object v7
 
-    .line 85
     :cond_0
     :goto_0
     return-object v7
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -119,20 +103,16 @@
     .param p1, "numOfItems"    # I
 
     .prologue
-    .line 96
     invoke-static {p0}, Landroid/os/SmartManager;->getService(Landroid/content/Context;)Landroid/os/ICustomFrequencyManager;
 
     move-result-object v2
 
-    .line 97
     .local v2, "svc":Landroid/os/ICustomFrequencyManager;
     const/4 v1, 0x0
 
-    .line 99
     .local v1, "result":[Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 100
     :try_start_0
     invoke-interface {v2, p1}, Landroid/os/ICustomFrequencyManager;->getLeastRecentlyUsedAppList(I)[Ljava/lang/String;
     :try_end_0
@@ -140,16 +120,13 @@
 
     move-result-object v1
 
-    .line 105
     :cond_0
     :goto_0
     return-object v1
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -161,7 +138,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 33
     const-class v2, Landroid/os/SmartManager;
 
     monitor-enter v2
@@ -171,25 +147,21 @@
 
     if-nez v1, :cond_0
 
-    .line 34
     const-string v1, "CustomFrequencyManagerService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 35
     .local v0, "b":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 36
     invoke-static {v0}, Landroid/os/ICustomFrequencyManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/ICustomFrequencyManager;
 
     move-result-object v1
 
     sput-object v1, Landroid/os/SmartManager;->mService:Landroid/os/ICustomFrequencyManager;
 
-    .line 39
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     sget-object v1, Landroid/os/SmartManager;->mService:Landroid/os/ICustomFrequencyManager;
@@ -200,7 +172,6 @@
 
     return-object v1
 
-    .line 33
     :catchall_0
     move-exception v1
 

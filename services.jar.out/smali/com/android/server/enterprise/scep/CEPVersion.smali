@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 55
     const-string v0, "1"
 
     return-object v0
@@ -40,7 +38,6 @@
     .locals 5
 
     .prologue
-    .line 35
     :try_start_0
     invoke-static {}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getInstance()Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
@@ -50,7 +47,6 @@
 
     move-result-object v1
 
-    .line 36
     .local v1, "sdkVersion":Lcom/sec/enterprise/knox/EnterpriseKnoxManager$EnterpriseKnoxSdkVersion;
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager$EnterpriseKnoxSdkVersion;->ordinal()I
 
@@ -64,14 +60,11 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 37
     const-string v2, "N/A"
 
-    .line 50
     :goto_0
     return-object v2
 
-    .line 39
     :cond_0
     const-string v2, "2.0.1"
     :try_end_0
@@ -81,15 +74,12 @@
 
     goto :goto_0
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 41
     .local v0, "e":Ljava/lang/NullPointerException;
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 42
     const-string v2, "CEPVersion"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -116,22 +106,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :goto_1
     const-string v2, "N/A"
 
     goto :goto_0
 
-    .line 43
     :catch_1
     move-exception v0
 
-    .line 44
     .local v0, "e":Ljava/lang/RuntimeException;
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
-    .line 45
     const-string v2, "CEPVersion"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -160,16 +146,13 @@
 
     goto :goto_1
 
-    .line 46
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_2
     move-exception v0
 
-    .line 47
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 48
     const-string v2, "CEPVersion"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -203,14 +186,13 @@
     .locals 3
 
     .prologue
-    .line 60
     const-string v0, "CEPVersion"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "writeVersionInProperties : "
+    const-string v2, "writeVersionInProperties : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -230,8 +212,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
-    const-string/jumbo v0, "net.knoxscep.version"
+    const-string v0, "net.knoxscep.version"
 
     invoke-static {}, Lcom/android/server/enterprise/scep/CEPVersion;->getVersion()Ljava/lang/String;
 
@@ -239,6 +220,5 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 62
     return-void
 .end method

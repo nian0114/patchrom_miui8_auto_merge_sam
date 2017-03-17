@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 64
     invoke-direct {p0}, Lmf/javax/xml/stream/XMLEventFactory;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p4, "context"    # Lmf/javax/xml/namespace/NamespaceContext;
 
     .prologue
-    .line 114
     new-instance v0, Lmf/org/apache/xerces/stax/events/StartElementImpl;
 
     iget-object v5, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -52,7 +50,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;)V
@@ -72,7 +69,6 @@
     .param p4, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p2, p3, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -90,7 +86,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     new-instance v0, Lmf/org/apache/xerces/stax/events/AttributeImpl;
 
     const-string v3, "CDATA"
@@ -113,7 +108,6 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 136
     new-instance v0, Lmf/org/apache/xerces/stax/events/CharactersImpl;
 
     const/16 v1, 0xc
@@ -130,7 +124,6 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 132
     new-instance v0, Lmf/org/apache/xerces/stax/events/CharactersImpl;
 
     const/4 v1, 0x4
@@ -147,7 +140,6 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     new-instance v0, Lmf/org/apache/xerces/stax/events/CommentImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -162,7 +154,6 @@
     .param p1, "dtd"    # Ljava/lang/String;
 
     .prologue
-    .line 183
     new-instance v0, Lmf/org/apache/xerces/stax/events/DTDImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -176,7 +167,6 @@
     .locals 2
 
     .prologue
-    .line 165
     new-instance v0, Lmf/org/apache/xerces/stax/events/EndDocumentImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -193,7 +183,6 @@
     .param p3, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p2, p3, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -215,7 +204,6 @@
     .param p4, "namespaces"    # Ljava/util/Iterator;
 
     .prologue
-    .line 128
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p2, p3, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -233,7 +221,6 @@
     .param p2, "namespaces"    # Ljava/util/Iterator;
 
     .prologue
-    .line 118
     new-instance v0, Lmf/org/apache/xerces/stax/events/EndElementImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -249,7 +236,6 @@
     .param p2, "declaration"    # Lmf/javax/xml/stream/events/EntityDeclaration;
 
     .prologue
-    .line 170
     new-instance v0, Lmf/org/apache/xerces/stax/events/EntityReferenceImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -264,7 +250,6 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     new-instance v0, Lmf/org/apache/xerces/stax/events/CharactersImpl;
 
     const/4 v1, 0x6
@@ -281,7 +266,6 @@
     .param p1, "namespaceURI"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     const-string v0, ""
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->createNamespace(Ljava/lang/String;Ljava/lang/String;)Lmf/javax/xml/stream/events/Namespace;
@@ -297,7 +281,6 @@
     .param p2, "namespaceUri"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     new-instance v0, Lmf/org/apache/xerces/stax/events/NamespaceImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -313,7 +296,6 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     new-instance v0, Lmf/org/apache/xerces/stax/events/ProcessingInstructionImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
@@ -328,7 +310,6 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 140
     invoke-virtual {p0, p1}, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->createCharacters(Ljava/lang/String;)Lmf/javax/xml/stream/events/Characters;
 
     move-result-object v0
@@ -342,7 +323,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 148
     invoke-virtual {p0, v0, v0}, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->createStartDocument(Ljava/lang/String;Ljava/lang/String;)Lmf/javax/xml/stream/events/StartDocument;
 
     move-result-object v0
@@ -355,7 +335,6 @@
     .param p1, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->createStartDocument(Ljava/lang/String;Ljava/lang/String;)Lmf/javax/xml/stream/events/StartDocument;
@@ -373,7 +352,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 157
     new-instance v0, Lmf/org/apache/xerces/stax/events/StartDocumentImpl;
 
     if-eqz p1, :cond_0
@@ -408,7 +386,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 153
     new-instance v0, Lmf/org/apache/xerces/stax/events/StartDocumentImpl;
 
     if-eqz p1, :cond_0
@@ -443,7 +420,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 98
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p2, p3, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -464,7 +440,6 @@
     .param p5, "namespaces"    # Ljava/util/Iterator;
 
     .prologue
-    .line 103
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p2, p3, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -486,7 +461,6 @@
     .param p6, "context"    # Lmf/javax/xml/namespace/NamespaceContext;
 
     .prologue
-    .line 109
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     invoke-direct {v0, p2, p3, p1}, Lmf/javax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -505,7 +479,6 @@
     .param p3, "namespaces"    # Ljava/util/Iterator;
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->createStartElement(Lmf/javax/xml/namespace/QName;Ljava/util/Iterator;Ljava/util/Iterator;Lmf/javax/xml/namespace/NamespaceContext;)Lmf/javax/xml/stream/events/StartElement;
@@ -520,9 +493,7 @@
     .param p1, "location"    # Lmf/javax/xml/stream/Location;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lmf/org/apache/xerces/stax/XMLEventFactoryImpl;->fLocation:Lmf/javax/xml/stream/Location;
 
-    .line 68
     return-void
 .end method

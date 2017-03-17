@@ -33,17 +33,14 @@
     .param p1, "wb"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 2885
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 2886
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$WBHandler;->mWritingBuddy:Ljava/lang/ref/WeakReference;
 
-    .line 2887
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2891
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$WBHandler;->mWritingBuddy:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,15 +59,12 @@
 
     check-cast v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
-    .line 2892
     .local v0, "wb":Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
     if-eqz v0, :cond_0
 
-    .line 2893
     # invokes: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->access$1000(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;Landroid/os/Message;)V
 
-    .line 2895
     :cond_0
     return-void
 .end method

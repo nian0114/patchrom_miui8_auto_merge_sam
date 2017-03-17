@@ -100,7 +100,6 @@
     .locals 3
 
     .prologue
-    .line 129
     const-string v0, "true"
 
     const-string v1, "ro.product_ship"
@@ -126,25 +125,20 @@
     .param p2, "loadedCallback"    # Landroid/os/Message;
 
     .prologue
-    .line 238
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 225
     new-instance v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$1;-><init>(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRetryRunnable:Ljava/lang/Runnable;
 
-    .line 239
     const-string v0, "Creating UiccCarrierPrivilegeRules"
 
     invoke-static {v0}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 240
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mUiccCard:Lcom/android/internal/telephony/uicc/UiccCard;
 
-    .line 241
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -153,23 +147,18 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mState:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 242
     const-string v0, "Not loaded."
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mStatusMessage:Ljava/lang/String;
 
-    .line 243
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mLoadedCallback:Landroid/os/Message;
 
-    .line 244
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRules:Ljava/lang/String;
 
-    .line 246
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->openChannel()V
 
-    .line 247
     return-void
 .end method
 
@@ -178,7 +167,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     invoke-static {p0}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
     return-void
@@ -189,7 +177,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;
 
     .prologue
-    .line 72
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->openChannel()V
 
     return-void
@@ -201,13 +188,11 @@
     .param p1, "algo"    # Ljava/lang/String;
 
     .prologue
-    .line 565
     :try_start_0
     invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
 
-    .line 566
     .local v1, "md":Ljava/security/MessageDigest;
     invoke-virtual {p0}, Landroid/content/pm/Signature;->toByteArray()[B
 
@@ -219,16 +204,13 @@
 
     move-result-object v2
 
-    .line 570
     .end local v1    # "md":Ljava/security/MessageDigest;
     :goto_0
     return-object v2
 
-    .line 567
     :catch_0
     move-exception v0
 
-    .line 568
     .local v0, "ex":Ljava/security/NoSuchAlgorithmException;
     const-string v2, "UiccCarrierPrivilegeRules"
 
@@ -252,7 +234,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     const/4 v2, 0x0
 
     goto :goto_0
@@ -263,47 +244,39 @@
     .param p1, "resolveInfo"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 369
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v0, :cond_0
 
-    .line 370
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 376
     :goto_0
     return-object v0
 
-    .line 371
     :cond_0
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-eqz v0, :cond_1
 
-    .line 372
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v0, v0, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 373
     :cond_1
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     if-eqz v0, :cond_2
 
-    .line 374
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 376
     :cond_2
     const/4 v0, 0x0
 
@@ -315,34 +288,28 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 613
     packed-switch p1, :pswitch_data_0
 
-    .line 621
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 615
     :pswitch_0
     const-string v0, "STATE_LOADING"
 
     goto :goto_0
 
-    .line 617
     :pswitch_1
     const-string v0, "STATE_LOADED"
 
     goto :goto_0
 
-    .line 619
     :pswitch_2
     const-string v0, "STATE_ERROR"
 
     goto :goto_0
 
-    .line 613
     nop
 
     :pswitch_data_0
@@ -357,7 +324,6 @@
     .locals 5
 
     .prologue
-    .line 457
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,7 +346,6 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 458
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRules:Ljava/lang/String;
 
     const-string v3, "FF40"
@@ -391,14 +356,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 459
     new-instance v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     const-string v2, "FF40"
 
     invoke-direct {v0, v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 460
     .local v0, "allRules":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRules:Ljava/lang/String;
 
@@ -406,7 +369,6 @@
 
     move-result-object v1
 
-    .line 461
     .local v1, "lengthBytes":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -428,7 +390,6 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 462
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRules:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -460,30 +421,24 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 464
     const-string v2, "isDataComplete yes"
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 465
     const/4 v2, 0x1
 
-    .line 468
     :goto_0
     return v2
 
-    .line 467
     :cond_0
     const-string v2, "isDataComplete no"
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 468
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 471
     .end local v0    # "allRules":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     .end local v1    # "lengthBytes":Ljava/lang/String;
     :cond_1
@@ -501,7 +456,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 587
     sget-boolean v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->SHIP_BUILD:Z
 
     if-nez v0, :cond_0
@@ -510,7 +464,6 @@
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 589
     :cond_0
     return-void
 .end method
@@ -519,7 +472,6 @@
     .locals 4
 
     .prologue
-    .line 234
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mUiccCard:Lcom/android/internal/telephony/uicc/UiccCard;
 
     const-string v1, "A00000015141434C00"
@@ -534,7 +486,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/uicc/UiccCard;->iccOpenLogicalChannel(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 236
     return-void
 .end method
 
@@ -549,7 +500,6 @@
 
     const/4 v13, 0x0
 
-    .line 507
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -570,22 +520,17 @@
 
     invoke-static {v11}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 509
     const/4 v4, 0x0
 
-    .line 510
     .local v4, "certificateHash":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 511
     .local v6, "packageName":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 512
     .local v10, "tmp":Ljava/lang/String;
     const-wide/16 v2, 0x0
 
-    .line 514
     .local v2, "accessType":J
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
@@ -594,7 +539,6 @@
 
     if-nez v11, :cond_5
 
-    .line 515
     const-string v11, "E1"
 
     invoke-virtual {p0, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -603,20 +547,17 @@
 
     if-eqz v11, :cond_3
 
-    .line 516
     new-instance v9, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     const-string v11, "E1"
 
     invoke-direct {v9, v11}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 517
     .local v9, "refDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     invoke-virtual {v9, p0, v13}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->parse(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 520
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v9}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
 
@@ -630,13 +571,11 @@
 
     if-nez v11, :cond_1
 
-    .line 557
     .end local v9    # "refDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     :cond_0
     :goto_1
     return-object v0
 
-    .line 524
     .restart local v9    # "refDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     :cond_1
     new-instance v5, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
@@ -645,7 +584,6 @@
 
     invoke-direct {v5, v11}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 525
     .local v5, "deviceDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v9}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
@@ -656,20 +594,17 @@
 
     move-result-object v10
 
-    .line 526
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 528
     invoke-virtual {v10}, Ljava/lang/String;->isEmpty()Z
 
     move-result v11
 
     if-nez v11, :cond_2
 
-    .line 529
     const-string v11, "CA"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -678,18 +613,15 @@
 
     if-eqz v11, :cond_0
 
-    .line 532
     new-instance v8, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     const-string v11, "CA"
 
     invoke-direct {v8, v11}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 533
     .local v8, "pkgDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     invoke-virtual {v8, v10, v14}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->parse(Ljava/lang/String;Z)Ljava/lang/String;
 
-    .line 534
     new-instance v6, Ljava/lang/String;
 
     .end local v6    # "packageName":Ljava/lang/String;
@@ -704,18 +636,15 @@
 
     invoke-direct {v6, v11}, Ljava/lang/String;-><init>([B)V
 
-    .line 535
     .restart local v6    # "packageName":Ljava/lang/String;
     goto :goto_0
 
-    .line 536
     .end local v8    # "pkgDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     :cond_2
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 538
     .end local v5    # "deviceDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     .end local v9    # "refDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     :cond_3
@@ -727,20 +656,17 @@
 
     if-eqz v11, :cond_4
 
-    .line 539
     new-instance v1, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     const-string v11, "E3"
 
     invoke-direct {v1, v11}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 540
     .local v1, "arDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     invoke-virtual {v1, p0, v13}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->parse(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 543
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v1}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
 
@@ -754,14 +680,12 @@
 
     if-eqz v11, :cond_0
 
-    .line 547
     new-instance v7, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     const-string v11, "DB"
 
     invoke-direct {v7, v11}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 548
     .local v7, "permDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v1}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
@@ -772,7 +696,6 @@
 
     goto/16 :goto_0
 
-    .line 551
     .end local v1    # "arDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     .end local v7    # "permDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     :cond_4
@@ -784,7 +707,6 @@
 
     throw v11
 
-    .line 555
     :cond_5
     new-instance v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
 
@@ -794,7 +716,6 @@
 
     invoke-direct {v0, v11, v6, v2, v3}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;-><init>([BLjava/lang/String;J)V
 
-    .line 557
     .local v0, "accessRule":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     goto :goto_1
 .end method
@@ -815,12 +736,10 @@
     .end annotation
 
     .prologue
-    .line 479
     sget-boolean v5, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->SHIP_BUILD:Z
 
     if-nez v5, :cond_0
 
-    .line 480
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -841,7 +760,6 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 485
     :goto_0
     new-instance v2, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
@@ -849,25 +767,21 @@
 
     invoke-direct {v2, v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 486
     .local v2, "allRefArDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     const/4 v5, 0x1
 
     invoke-virtual {v2, p0, v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->parse(Ljava/lang/String;Z)Ljava/lang/String;
 
-    .line 488
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 489
     .local v3, "arDos":Ljava/lang/String;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 490
     .local v1, "accessRules":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;>;"
     :goto_1
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
@@ -876,14 +790,12 @@
 
     if-nez v5, :cond_2
 
-    .line 491
     new-instance v4, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     const-string v5, "E2"
 
     invoke-direct {v4, v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;-><init>(Ljava/lang/String;)V
 
-    .line 492
     .local v4, "refArDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     const/4 v5, 0x0
 
@@ -891,7 +803,6 @@
 
     move-result-object v3
 
-    .line 493
     # getter for: Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
     invoke-static {v4}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->access$300(Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;)Ljava/lang/String;
 
@@ -901,16 +812,13 @@
 
     move-result-object v0
 
-    .line 494
     .local v0, "accessRule":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     if-eqz v0, :cond_1
 
-    .line 495
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 482
     .end local v0    # "accessRule":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     .end local v1    # "accessRules":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;>;"
     .end local v2    # "allRefArDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
@@ -925,7 +833,6 @@
 
     goto :goto_0
 
-    .line 497
     .restart local v0    # "accessRule":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     .restart local v1    # "accessRules":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;>;"
     .restart local v2    # "allRefArDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
@@ -961,7 +868,6 @@
 
     goto :goto_1
 
-    .line 500
     .end local v0    # "accessRule":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     .end local v4    # "refArDo":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
     :cond_2
@@ -974,26 +880,21 @@
     .param p2, "statusMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 577
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mState:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 578
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mLoadedCallback:Landroid/os/Message;
 
     if-eqz v0, :cond_0
 
-    .line 579
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mLoadedCallback:Landroid/os/Message;
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 582
     :cond_0
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mStatusMessage:Ljava/lang/String;
 
-    .line 583
     return-void
 .end method
 
@@ -1003,7 +904,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mState:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -1030,7 +930,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 595
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1051,7 +950,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 596
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1082,7 +980,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1111,17 +1008,14 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 598
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mAccessRules:Ljava/util/List;
 
     if-eqz v2, :cond_0
 
-    .line 599
     const-string v2, " mAccessRules: "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 600
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mAccessRules:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1142,7 +1036,6 @@
 
     check-cast v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
 
-    .line 601
     .local v0, "ar":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1172,7 +1065,6 @@
 
     goto :goto_0
 
-    .line 604
     .end local v0    # "ar":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
@@ -1180,11 +1072,9 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 606
     :cond_1
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 607
     return-void
 .end method
 
@@ -1208,18 +1098,15 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 342
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 343
     .local v2, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 344
     .local v3, "receivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-virtual {p1, p2, v7}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
 
@@ -1227,28 +1114,24 @@
 
     invoke-interface {v3, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 345
     invoke-virtual {p1, p2, v7}, Landroid/content/pm/PackageManager;->queryIntentContentProviders(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v6
 
     invoke-interface {v3, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 346
     invoke-virtual {p1, p2, v7}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v6
 
     invoke-interface {v3, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 347
     invoke-virtual {p1, p2, v7}, Landroid/content/pm/PackageManager;->queryIntentServices(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v6
 
     invoke-interface {v3, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 349
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1268,40 +1151,32 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 350
     .local v4, "resolveInfo":Landroid/content/pm/ResolveInfo;
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->getPackageName(Landroid/content/pm/ResolveInfo;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 351
     .local v1, "packageName":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 355
     invoke-virtual {p0, p1, v1}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->getCarrierPrivilegeStatus(Landroid/content/pm/PackageManager;Ljava/lang/String;)I
 
     move-result v5
 
-    .line 356
     .local v5, "status":I
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_1
 
-    .line 357
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 358
     :cond_1
     if-eqz v5, :cond_0
 
-    .line 360
     const/4 v2, 0x0
 
-    .line 364
     .end local v1    # "packageName":Ljava/lang/String;
     .end local v2    # "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v4    # "resolveInfo":Landroid/content/pm/ResolveInfo;
@@ -1316,7 +1191,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 298
     const v8, 0x8040
 
     :try_start_0
@@ -1324,11 +1198,9 @@
 
     move-result-object v5
 
-    .line 300
     .local v5, "pInfo":Landroid/content/pm/PackageInfo;
     iget-object v7, v5, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 301
     .local v7, "signatures":[Landroid/content/pm/Signature;
     move-object v1, v7
 
@@ -1344,7 +1216,6 @@
 
     aget-object v6, v1, v3
 
-    .line 302
     .local v6, "sig":Landroid/content/pm/Signature;
     iget-object v8, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -1354,11 +1225,9 @@
 
     move-result v0
 
-    .line 303
     .local v0, "accessStatus":I
     if-eqz v0, :cond_0
 
-    .line 310
     .end local v0    # "accessStatus":I
     .end local v1    # "arr$":[Landroid/content/pm/Signature;
     .end local v3    # "i$":I
@@ -1369,7 +1238,6 @@
     :goto_1
     return v0
 
-    .line 301
     .restart local v0    # "accessStatus":I
     .restart local v1    # "arr$":[Landroid/content/pm/Signature;
     .restart local v3    # "i$":I
@@ -1382,7 +1250,6 @@
 
     goto :goto_0
 
-    .line 307
     .end local v0    # "accessStatus":I
     .end local v1    # "arr$":[Landroid/content/pm/Signature;
     .end local v3    # "i$":I
@@ -1393,7 +1260,6 @@
     :catch_0
     move-exception v2
 
-    .line 308
     .local v2, "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v8, "UiccCarrierPrivilegeRules"
 
@@ -1401,7 +1267,6 @@
 
     invoke-static {v8, v9, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 310
     .end local v2    # "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     const/4 v0, 0x0
@@ -1415,7 +1280,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 264
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1446,46 +1310,37 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 265
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mState:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v4
 
-    .line 266
     .local v4, "state":I
     if-nez v4, :cond_0
 
-    .line 267
     const-string v5, "Rules not loaded."
 
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 268
     const/4 v5, -0x1
 
-    .line 283
     :goto_0
     return v5
 
-    .line 269
     :cond_0
     const/4 v5, 0x2
 
     if-ne v4, v5, :cond_1
 
-    .line 270
     const-string v5, "Error loading rules."
 
     invoke-static {v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 271
     const/4 v5, -0x2
 
     goto :goto_0
 
-    .line 275
     :cond_1
     const-string v5, "SHA-1"
 
@@ -1493,7 +1348,6 @@
 
     move-result-object v1
 
-    .line 276
     .local v1, "certHash":[B
     const-string v5, "SHA-256"
 
@@ -1501,7 +1355,6 @@
 
     move-result-object v2
 
-    .line 277
     .local v2, "certHash256":[B
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mAccessRules:Ljava/util/List;
 
@@ -1523,7 +1376,6 @@
 
     check-cast v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
 
-    .line 278
     .local v0, "ar":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     invoke-virtual {v0, v1, p2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;->matches([BLjava/lang/String;)Z
 
@@ -1537,13 +1389,11 @@
 
     if-eqz v5, :cond_2
 
-    .line 279
     :cond_3
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 283
     .end local v0    # "ar":Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$AccessRule;
     :cond_4
     const/4 v5, 0x0
@@ -1556,7 +1406,6 @@
     .param p1, "packageManager"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 320
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v6
@@ -1565,7 +1414,6 @@
 
     move-result-object v4
 
-    .line 322
     .local v4, "packages":[Ljava/lang/String;
     move-object v1, v4
 
@@ -1581,23 +1429,19 @@
 
     aget-object v5, v1, v2
 
-    .line 323
     .local v5, "pkg":Ljava/lang/String;
     invoke-virtual {p0, p1, v5}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->getCarrierPrivilegeStatus(Landroid/content/pm/PackageManager;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 324
     .local v0, "accessStatus":I
     if-eqz v0, :cond_0
 
-    .line 328
     .end local v0    # "accessStatus":I
     .end local v5    # "pkg":Ljava/lang/String;
     :goto_1
     return v0
 
-    .line 322
     .restart local v0    # "accessStatus":I
     .restart local v5    # "pkg":Ljava/lang/String;
     :cond_0
@@ -1605,7 +1449,6 @@
 
     goto :goto_0
 
-    .line 328
     .end local v0    # "accessStatus":I
     .end local v5    # "pkg":Ljava/lang/String;
     :cond_1
@@ -1619,14 +1462,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 383
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 448
     const-string v2, "UiccCarrierPrivilegeRules"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1653,24 +1494,20 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     :goto_0
     return-void
 
-    .line 386
     :pswitch_0
     const-string v2, "EVENT_OPEN_LOGICAL_CHANNEL_DONE"
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 387
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 388
     .local v11, "ar":Landroid/os/AsyncResult;
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -1680,7 +1517,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 389
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [I
@@ -1695,7 +1531,6 @@
 
     iput v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mChannelId:I
 
-    .line 390
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mUiccCard:Lcom/android/internal/telephony/uicc/UiccCard;
@@ -1738,7 +1573,6 @@
 
     goto :goto_0
 
-    .line 395
     :cond_0
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -1768,7 +1602,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 398
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRetryCount:I
@@ -1779,7 +1612,6 @@
 
     iput v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRetryCount:I
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRetryRunnable:Ljava/lang/Runnable;
@@ -1788,7 +1620,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 400
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRetryRunnable:Ljava/lang/Runnable;
@@ -1801,7 +1632,6 @@
 
     goto/16 :goto_0
 
-    .line 402
     :cond_1
     const/4 v2, 0x2
 
@@ -1831,21 +1661,18 @@
 
     goto/16 :goto_0
 
-    .line 408
     .end local v11    # "ar":Landroid/os/AsyncResult;
     :pswitch_1
     const-string v2, "EVENT_TRANSMIT_LOGICAL_CHANNEL_DONE"
 
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->log(Ljava/lang/String;)V
 
-    .line 409
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 410
     .restart local v11    # "ar":Landroid/os/AsyncResult;
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -1855,12 +1682,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 411
     iget-object v14, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v14, Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 412
     .local v14, "response":Lcom/android/internal/telephony/uicc/IccIoResult;
     iget v2, v14, Lcom/android/internal/telephony/uicc/IccIoResult;->sw1:I
 
@@ -1882,7 +1707,6 @@
 
     if-lez v2, :cond_3
 
-    .line 415
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1920,14 +1744,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRules:Ljava/lang/String;
 
-    .line 416
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->isDataComplete()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 417
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mRules:Ljava/lang/String;
@@ -1940,7 +1762,6 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules;->mAccessRules:Ljava/util/List;
 
-    .line 418
     const/4 v2, 0x1
 
     const-string v3, "Success!"
@@ -1952,7 +1773,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 438
     .end local v14    # "response":Lcom/android/internal/telephony/uicc/IccIoResult;
     :goto_1
     move-object/from16 v0, p0
@@ -1973,7 +1793,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/UiccCard;->iccCloseLogicalChannel(ILandroid/os/Message;)V
 
-    .line 440
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
@@ -1982,7 +1801,6 @@
 
     goto/16 :goto_0
 
-    .line 420
     .restart local v14    # "response":Lcom/android/internal/telephony/uicc/IccIoResult;
     :cond_2
     :try_start_1
@@ -2031,11 +1849,9 @@
 
     goto/16 :goto_0
 
-    .line 424
     :catch_0
     move-exception v13
 
-    .line 425
     .local v13, "ex":Ljava/lang/IllegalArgumentException;
     const/4 v2, 0x2
 
@@ -2063,12 +1879,10 @@
 
     goto :goto_1
 
-    .line 426
     .end local v13    # "ex":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v13
 
-    .line 427
     .local v13, "ex":Ljava/lang/IndexOutOfBoundsException;
     const/4 v2, 0x2
 
@@ -2096,7 +1910,6 @@
 
     goto :goto_1
 
-    .line 430
     .end local v13    # "ex":Ljava/lang/IndexOutOfBoundsException;
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2143,7 +1956,6 @@
 
     move-result-object v12
 
-    .line 432
     .local v12, "errorMsg":Ljava/lang/String;
     const/4 v2, 0x2
 
@@ -2153,7 +1965,6 @@
 
     goto/16 :goto_1
 
-    .line 435
     .end local v12    # "errorMsg":Ljava/lang/String;
     .end local v14    # "response":Lcom/android/internal/telephony/uicc/IccIoResult;
     :cond_4
@@ -2167,7 +1978,6 @@
 
     goto/16 :goto_1
 
-    .line 444
     .end local v11    # "ar":Landroid/os/AsyncResult;
     :pswitch_2
     const-string v2, "EVENT_CLOSE_LOGICAL_CHANNEL_DONE"
@@ -2176,7 +1986,6 @@
 
     goto/16 :goto_0
 
-    .line 383
     nop
 
     :pswitch_data_0

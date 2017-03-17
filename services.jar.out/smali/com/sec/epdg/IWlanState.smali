@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget v0, p0, Lcom/sec/epdg/IWlanState;->mState:I
 
     return v0
@@ -55,10 +53,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 18
     iput p1, p0, Lcom/sec/epdg/IWlanState;->mState:I
 
-    .line 19
     return-void
 .end method
 
@@ -66,72 +62,60 @@
     .locals 1
 
     .prologue
-    .line 27
     iget v0, p0, Lcom/sec/epdg/IWlanState;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 47
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 29
     :pswitch_0
     const-string v0, "INACTIVE"
 
     goto :goto_0
 
-    .line 31
     :pswitch_1
     const-string v0, "INITIAL_CONNECTING"
 
     goto :goto_0
 
-    .line 33
     :pswitch_2
     const-string v0, "HANDOVER_CONNECTING"
 
     goto :goto_0
 
-    .line 35
     :pswitch_3
     const-string v0, "THROTTLE"
 
     goto :goto_0
 
-    .line 37
     :pswitch_4
     const-string v0, "CONNECTED"
 
     goto :goto_0
 
-    .line 39
     :pswitch_5
     const-string v0, "W2M_IN_PROGRESS"
 
     goto :goto_0
 
-    .line 41
     :pswitch_6
     const-string v0, "DISCONNECTING"
 
     goto :goto_0
 
-    .line 43
     :pswitch_7
     const-string v0, "PEER_DISCONNECTED"
 
     goto :goto_0
 
-    .line 45
     :pswitch_8
     const-string v0, "DISCONNECTED"
 
     goto :goto_0
 
-    .line 27
     nop
 
     :pswitch_data_0

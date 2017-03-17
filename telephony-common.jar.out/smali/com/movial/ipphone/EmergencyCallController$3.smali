@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 263
     iput-object p1, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v7, 0x0
 
-    .line 265
     const-string v4, "EmergencyCallController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -70,12 +68,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 267
     .local v0, "action":Ljava/lang/String;
     const-string v4, "com.movial.ims_emergency_fail"
 
@@ -85,14 +81,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 268
     const-string v4, "canceled_by_user"
 
     invoke-virtual {p2, v4, v7}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 269
     .local v1, "canceledByUser":Z
     iget-object v4, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
@@ -105,7 +99,6 @@
 
     if-nez v1, :cond_1
 
-    .line 270
     iget-object v4, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     sget-object v5, Lcom/movial/ipphone/IPUtils$EmergencyState;->IMS_CALL_FAILED:Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -113,7 +106,6 @@
     # setter for: Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
     invoke-static {v4, v5}, Lcom/movial/ipphone/EmergencyCallController;->access$002(Lcom/movial/ipphone/EmergencyCallController;Lcom/movial/ipphone/IPUtils$EmergencyState;)Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 271
     iget-object v4, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     # getter for: Lcom/movial/ipphone/EmergencyCallController;->mIPPhoneProxy:Lcom/movial/ipphone/IPPhoneProxy;
@@ -123,23 +115,19 @@
 
     invoke-virtual {v4, v8}, Lcom/movial/ipphone/IPPhoneProxy;->setForceEmergencyMode(Z)V
 
-    .line 273
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 274
     .local v2, "dial":Landroid/content/Intent;
     const-string v4, "android.intent.action.CALL_EMERGENCY"
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 275
     const/high16 v4, 0x10000000
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 276
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,7 +159,6 @@
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 278
     :try_start_0
     iget-object v4, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
@@ -184,20 +171,17 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 290
     .end local v1    # "canceledByUser":Z
     .end local v2    # "dial":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 279
     .restart local v1    # "canceledByUser":Z
     .restart local v2    # "dial":Landroid/content/Intent;
     :catch_0
     move-exception v3
 
-    .line 280
     .local v3, "e":Landroid/content/ActivityNotFoundException;
     const-string v4, "EmergencyCallController"
 
@@ -223,7 +207,6 @@
 
     goto :goto_0
 
-    .line 283
     .end local v2    # "dial":Landroid/content/Intent;
     .end local v3    # "e":Landroid/content/ActivityNotFoundException;
     :cond_1
@@ -236,7 +219,6 @@
 
     goto :goto_0
 
-    .line 285
     .end local v1    # "canceledByUser":Z
     :cond_2
     const-string v4, "com.movial.ims_emergency_start"
@@ -247,7 +229,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 286
     iget-object v4, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     sget-object v5, Lcom/movial/ipphone/IPUtils$EmergencyState;->IDLE:Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -257,7 +238,6 @@
 
     goto :goto_0
 
-    .line 287
     :cond_3
     const-string v4, "com.movial.IMS_REGISTRATION"
 
@@ -267,7 +247,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 288
     iget-object v4, p0, Lcom/movial/ipphone/EmergencyCallController$3;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     const-string v5, "IMS_REG_STATUS"

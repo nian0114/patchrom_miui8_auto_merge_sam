@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/server/SatsService$1;->this$0:Lcom/android/server/SatsService;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
 
     .prologue
-    .line 106
     # getter for: Lcom/android/server/SatsService;->mLockUEvent:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/SatsService;->access$000()Ljava/lang/Object;
 
@@ -46,7 +44,6 @@
 
     monitor-enter v5
 
-    .line 108
     :try_start_0
     invoke-virtual {p1}, Landroid/os/UEventObserver$UEvent;->toString()Ljava/lang/String;
 
@@ -64,7 +61,6 @@
 
     if-eq v4, v6, :cond_0
 
-    .line 110
     :try_start_1
     const-string v4, "SWITCH_NAME"
 
@@ -72,9 +68,8 @@
 
     move-result-object v2
 
-    .line 112
     .local v2, "switchName":Ljava/lang/String;
-    const-string/jumbo v4, "uart3"
+    const-string v4, "uart3"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -82,24 +77,20 @@
 
     if-eqz v4, :cond_0
 
-    .line 113
     const-string v4, "SWITCH_STATE"
 
     invoke-virtual {p1, v4}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 114
     .local v3, "switchState":Ljava/lang/String;
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 116
     .local v1, "state":I
     packed-switch v1, :pswitch_data_0
 
-    .line 129
     const-string v4, "SatsService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -131,7 +122,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 138
     .end local v1    # "state":I
     .end local v2    # "switchName":Ljava/lang/String;
     .end local v3    # "switchState":Ljava/lang/String;
@@ -142,10 +132,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 139
     return-void
 
-    .line 118
     .restart local v1    # "state":I
     .restart local v2    # "switchName":Ljava/lang/String;
     .restart local v3    # "switchState":Ljava/lang/String;
@@ -157,7 +145,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     iget-object v4, p0, Lcom/android/server/SatsService$1;->this$0:Lcom/android/server/SatsService;
 
     const/4 v6, 0x1
@@ -170,21 +157,18 @@
 
     goto :goto_0
 
-    .line 134
     .end local v1    # "state":I
     .end local v2    # "switchName":Ljava/lang/String;
     .end local v3    # "switchState":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 135
     .local v0, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 138
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
@@ -195,7 +179,6 @@
 
     throw v4
 
-    .line 122
     .restart local v1    # "state":I
     .restart local v2    # "switchName":Ljava/lang/String;
     .restart local v3    # "switchState":Ljava/lang/String;
@@ -207,7 +190,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     iget-object v4, p0, Lcom/android/server/SatsService$1;->this$0:Lcom/android/server/SatsService;
 
     const/4 v6, 0x0
@@ -215,7 +197,6 @@
     # setter for: Lcom/android/server/SatsService;->mThreadUartGoWait:Z
     invoke-static {v4, v6}, Lcom/android/server/SatsService;->access$102(Lcom/android/server/SatsService;Z)Z
 
-    .line 124
     iget-object v4, p0, Lcom/android/server/SatsService$1;->this$0:Lcom/android/server/SatsService;
 
     # getter for: Lcom/android/server/SatsService;->mThreadUart:Ljava/lang/Thread;
@@ -228,7 +209,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 125
     :try_start_6
     iget-object v4, p0, Lcom/android/server/SatsService$1;->this$0:Lcom/android/server/SatsService;
 
@@ -239,7 +219,6 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->notifyAll()V
 
-    .line 126
     monitor-exit v6
 
     goto :goto_0
@@ -257,7 +236,6 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 116
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

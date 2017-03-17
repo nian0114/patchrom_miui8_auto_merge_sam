@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;->this$0:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -38,7 +37,6 @@
     .locals 9
 
     .prologue
-    .line 139
     iget-object v5, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;->this$0:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mTmpDir:Ljava/io/File;
@@ -48,7 +46,6 @@
 
     monitor-enter v6
 
-    .line 140
     :try_start_0
     iget-object v5, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;->this$0:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
@@ -56,7 +53,6 @@
 
     move-result-object v4
 
-    .line 142
     .local v4, "tmpValue":Ljava/lang/String;
     if-eqz v4, :cond_1
 
@@ -73,7 +69,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 143
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$000()Z
 
@@ -87,25 +82,20 @@
 
     invoke-static {v5, v7}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     :cond_0
     monitor-exit v6
 
-    .line 174
     :goto_0
     return-void
 
-    .line 147
     :cond_1
     if-eqz v4, :cond_4
 
-    .line 148
     iget-object v5, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;->this$0:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     # setter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mBlacklist:Ljava/lang/String;
     invoke-static {v5, v4}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->access$202(Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 149
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$000()Z
 
@@ -121,14 +111,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 150
     :cond_2
     const/4 v1, 0x0
 
-    .line 153
     .local v1, "out":Ljava/io/FileOutputStream;
     :try_start_1
-    const-string/jumbo v5, "journal"
+    const-string v5, "journal"
 
     const-string v7, ""
 
@@ -143,7 +131,6 @@
 
     move-result-object v3
 
-    .line 155
     .local v3, "tmp":Ljava/io/File;
     const/4 v5, 0x1
 
@@ -151,7 +138,6 @@
 
     invoke-virtual {v3, v5, v7}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 157
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -159,7 +145,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 158
     .end local v1    # "out":Ljava/io/FileOutputStream;
     .local v2, "out":Ljava/io/FileOutputStream;
     :try_start_2
@@ -176,10 +161,8 @@
 
     invoke-virtual {v2, v5}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 160
     invoke-static {v2}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
-    .line 162
     new-instance v5, Ljava/io/File;
 
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;->this$0:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
@@ -193,7 +176,6 @@
 
     invoke-virtual {v3, v5}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 163
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$000()Z
 
@@ -210,14 +192,12 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 167
     :cond_3
     :try_start_3
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     move-object v1, v2
 
-    .line 170
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .end local v3    # "tmp":Ljava/io/File;
     .restart local v1    # "out":Ljava/io/FileOutputStream;
@@ -229,7 +209,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 171
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mCertBlacklistListener:Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$400()Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
 
@@ -237,7 +216,6 @@
 
     invoke-interface {v5}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;->onCertBlacklistChanged()V
 
-    .line 173
     .end local v1    # "out":Ljava/io/FileOutputStream;
     :cond_4
     monitor-exit v6
@@ -254,13 +232,11 @@
 
     throw v5
 
-    .line 164
     .restart local v1    # "out":Ljava/io/FileOutputStream;
     .restart local v4    # "tmpValue":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 165
     .local v0, "e":Ljava/io/IOException;
     :goto_2
     :try_start_4
@@ -272,7 +248,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 167
     :try_start_5
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -301,7 +276,6 @@
     .restart local v1    # "out":Ljava/io/FileOutputStream;
     goto :goto_3
 
-    .line 164
     .end local v1    # "out":Ljava/io/FileOutputStream;
     .restart local v2    # "out":Ljava/io/FileOutputStream;
     :catch_1

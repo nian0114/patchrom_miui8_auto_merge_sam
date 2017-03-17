@@ -35,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +71,6 @@
     .locals 0
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

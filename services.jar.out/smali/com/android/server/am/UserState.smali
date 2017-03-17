@@ -61,38 +61,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/UserState;->mStopCallbacks:Ljava/util/ArrayList;
 
-    .line 42
     iput v1, p0, Lcom/android/server/am/UserState;->mState:I
 
-    .line 44
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/am/UserState;->mContainerState:I
 
-    .line 46
     iput v1, p0, Lcom/android/server/am/UserState;->mAdminUid:I
 
-    .line 54
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/UserState;->mProviderLastReportedFg:Landroid/util/ArrayMap;
 
-    .line 57
     iput-object p1, p0, Lcom/android/server/am/UserState;->mHandle:Landroid/os/UserHandle;
 
-    .line 58
     return-void
 .end method
 
@@ -104,24 +96,20 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 61
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mState="
+    const-string v0, "mState="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 62
     iget v0, p0, Lcom/android/server/am/UserState;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 67
     iget v0, p0, Lcom/android/server/am/UserState;->mState:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 69
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/am/UserState;->switching:Z
 
@@ -131,7 +119,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 70
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/am/UserState;->initializing:Z
 
@@ -141,14 +128,11 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 71
     :cond_1
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 72
     return-void
 
-    .line 63
     :pswitch_0
     const-string v0, "BOOTING"
 
@@ -156,7 +140,6 @@
 
     goto :goto_0
 
-    .line 64
     :pswitch_1
     const-string v0, "RUNNING"
 
@@ -164,7 +147,6 @@
 
     goto :goto_0
 
-    .line 65
     :pswitch_2
     const-string v0, "STOPPING"
 
@@ -172,7 +154,6 @@
 
     goto :goto_0
 
-    .line 66
     :pswitch_3
     const-string v0, "SHUTDOWN"
 
@@ -180,7 +161,6 @@
 
     goto :goto_0
 
-    .line 62
     nop
 
     :pswitch_data_0

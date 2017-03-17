@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 331
     iput-object p1, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 337
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     # getter for: Landroid/widget/HoverPopupWindow;->mIsFHAnimationEnabled:Z
@@ -50,12 +48,10 @@
 
     if-nez v2, :cond_1
 
-    .line 406
     :cond_0
     :goto_0
     return-void
 
-    .line 340
     :cond_1
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
@@ -75,7 +71,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 345
     :cond_2
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
@@ -114,7 +109,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 346
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     # getter for: Landroid/widget/HoverPopupWindow;->mAnchorView:Landroid/view/View;
@@ -138,16 +132,13 @@
 
     div-int/lit8 v0, v2, 0x2
 
-    .line 355
     .local v0, "movelength":I
     if-gez v0, :cond_3
 
-    .line 357
     iget v2, p1, Landroid/os/Message;->what:I
 
     if-nez v2, :cond_5
 
-    .line 360
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget v2, v2, Landroid/widget/HoverPopupWindow;->mPopupPosX:I
@@ -169,7 +160,6 @@
 
     add-int v1, v2, v3
 
-    .line 361
     .local v1, "tempMoveLength":I
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
@@ -190,7 +180,6 @@
 
     if-le v2, v3, :cond_4
 
-    .line 362
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v2, v2, Landroid/widget/HoverPopupWindow;->mContentView:Landroid/view/View;
@@ -212,7 +201,6 @@
 
     sub-int v0, v1, v2
 
-    .line 373
     .end local v1    # "tempMoveLength":I
     :cond_3
     :goto_1
@@ -220,7 +208,6 @@
 
     if-nez v2, :cond_6
 
-    .line 377
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v3, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
@@ -233,7 +220,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->mDirection:I
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$602(Landroid/widget/HoverPopupWindow;I)I
 
-    .line 378
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v3, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
@@ -246,7 +232,6 @@
     # invokes: Landroid/widget/HoverPopupWindow;->setAnimator(II)V
     invoke-static {v2, v0, v3}, Landroid/widget/HoverPopupWindow;->access$800(Landroid/widget/HoverPopupWindow;II)V
 
-    .line 379
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     # getter for: Landroid/widget/HoverPopupWindow;->objAnimator:Landroid/animation/ValueAnimator;
@@ -258,34 +243,29 @@
 
     goto/16 :goto_0
 
-    .line 364
     .restart local v1    # "tempMoveLength":I
     :cond_4
     move v0, v1
 
     goto :goto_1
 
-    .line 366
     .end local v1    # "tempMoveLength":I
     :cond_5
     iget v2, p1, Landroid/os/Message;->what:I
 
     if-ne v2, v4, :cond_3
 
-    .line 367
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget v0, v2, Landroid/widget/HoverPopupWindow;->mPopupPosX:I
 
     goto :goto_1
 
-    .line 381
     :cond_6
     iget v2, p1, Landroid/os/Message;->what:I
 
     if-ne v2, v4, :cond_7
 
-    .line 385
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v3, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
@@ -298,7 +278,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->mDirection:I
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$602(Landroid/widget/HoverPopupWindow;I)I
 
-    .line 386
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v3, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
@@ -311,7 +290,6 @@
     # invokes: Landroid/widget/HoverPopupWindow;->setAnimator(II)V
     invoke-static {v2, v0, v3}, Landroid/widget/HoverPopupWindow;->access$800(Landroid/widget/HoverPopupWindow;II)V
 
-    .line 387
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     # getter for: Landroid/widget/HoverPopupWindow;->objAnimator:Landroid/animation/ValueAnimator;
@@ -323,7 +301,6 @@
 
     goto/16 :goto_0
 
-    .line 389
     :cond_7
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -331,7 +308,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 396
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     # getter for: Landroid/widget/HoverPopupWindow;->mDirection:I
@@ -348,7 +324,6 @@
 
     if-ne v2, v3, :cond_9
 
-    .line 397
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v3, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
@@ -361,7 +336,6 @@
     # setter for: Landroid/widget/HoverPopupWindow;->mDirection:I
     invoke-static {v2, v3}, Landroid/widget/HoverPopupWindow;->access$602(Landroid/widget/HoverPopupWindow;I)I
 
-    .line 402
     :cond_8
     :goto_2
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
@@ -376,7 +350,6 @@
     # invokes: Landroid/widget/HoverPopupWindow;->setAnimator(II)V
     invoke-static {v2, v0, v3}, Landroid/widget/HoverPopupWindow;->access$800(Landroid/widget/HoverPopupWindow;II)V
 
-    .line 403
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     # getter for: Landroid/widget/HoverPopupWindow;->objAnimator:Landroid/animation/ValueAnimator;
@@ -388,7 +361,6 @@
 
     goto/16 :goto_0
 
-    .line 398
     :cond_9
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
@@ -406,7 +378,6 @@
 
     if-ne v2, v3, :cond_8
 
-    .line 399
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;
 
     iget-object v3, p0, Landroid/widget/HoverPopupWindow$1;->this$0:Landroid/widget/HoverPopupWindow;

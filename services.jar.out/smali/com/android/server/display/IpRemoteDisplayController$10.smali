@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 590
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$10;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iput-object p2, p0, Lcom/android/server/display/IpRemoteDisplayController$10;->val$addr:Ljava/net/InetAddress;
@@ -48,7 +47,6 @@
     .locals 6
 
     .prologue
-    .line 594
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/IpRemoteDisplayController$10;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
@@ -69,15 +67,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 599
     :goto_0
     return-void
 
-    .line 595
     :catch_0
     move-exception v0
 
-    .line 596
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "IpRemoteDisplayController"
 
@@ -85,7 +80,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

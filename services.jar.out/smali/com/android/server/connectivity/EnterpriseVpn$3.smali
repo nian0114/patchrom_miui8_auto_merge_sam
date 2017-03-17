@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 494
     iput-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "interfaze"    # Ljava/lang/String;
 
     .prologue
-    .line 498
     const-string v0, "EnterpriseVpn"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -61,12 +59,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     monitor-enter v1
 
-    .line 500
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
@@ -90,12 +86,10 @@
 
     if-nez v0, :cond_1
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/EnterpriseVpn;->prepare()Z
 
-    .line 502
     iget-object v0, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     # getter for: Lcom/android/server/connectivity/EnterpriseVpn;->mRouteInfo:Z
@@ -105,14 +99,12 @@
 
     if-nez v0, :cond_2
 
-    .line 503
     const-string v0, "EnterpriseVpn"
 
-    const-string/jumbo v2, "disconnect per-app vpn is getting called from enterprisevpn"
+    const-string v2, "disconnect per-app vpn is getting called from enterprisevpn"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 504
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v2, Lcom/android/server/connectivity/EnterpriseVpn$3$1;
@@ -123,21 +115,17 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 528
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/EnterpriseVpn;->agentDisconnect()V
 
-    .line 530
     :cond_1
     monitor-exit v1
 
-    .line 531
     return-void
 
-    .line 514
     :cond_2
     iget-object v0, p0, Lcom/android/server/connectivity/EnterpriseVpn$3;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
@@ -150,14 +138,13 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 515
     const-string v0, "EnterpriseVpn"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mRouteInfo value is : "
+    const-string v3, "mRouteInfo value is : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -180,7 +167,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v2, Lcom/android/server/connectivity/EnterpriseVpn$3$2;
@@ -193,7 +179,6 @@
 
     goto :goto_0
 
-    .line 530
     :catchall_0
     move-exception v0
 

@@ -15,23 +15,18 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;-><init>()V
 
-    .line 19
     const-string v0, "LPPDataLogging"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->TAG:Ljava/lang/String;
 
-    .line 21
     const-string v0, "log"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->FileType:Ljava/lang/String;
 
-    .line 24
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->strLogFileName:Ljava/lang/String;
 
-    .line 25
     return-void
 .end method
 
@@ -42,10 +37,8 @@
     .param p1, "folderName"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-super/range {p0 .. p0}, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->LogInit()V
 
-    .line 31
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->TAG:Ljava/lang/String;
@@ -86,12 +79,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
-    .line 34
     .local v2, "curTime":Ljava/util/Calendar;
     const/16 v18, 0x1
 
@@ -105,7 +96,6 @@
 
     int-to-long v14, v0
 
-    .line 35
     .local v14, "curTimeYear":J
     const/16 v18, 0x2
 
@@ -121,7 +111,6 @@
 
     int-to-long v10, v0
 
-    .line 36
     .local v10, "curTimeMonth":J
     const/16 v18, 0x5
 
@@ -135,7 +124,6 @@
 
     int-to-long v4, v0
 
-    .line 37
     .local v4, "curTimeDay":J
     const/16 v18, 0xb
 
@@ -149,7 +137,6 @@
 
     int-to-long v6, v0
 
-    .line 38
     .local v6, "curTimeHour":J
     const/16 v18, 0xc
 
@@ -163,7 +150,6 @@
 
     int-to-long v8, v0
 
-    .line 39
     .local v8, "curTimeMinute":J
     const/16 v18, 0xd
 
@@ -177,7 +163,6 @@
 
     int-to-long v12, v0
 
-    .line 41
     .local v12, "curTimeSecond":J
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -289,7 +274,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->saveFilePath:Ljava/lang/String;
 
-    .line 46
     :try_start_0
     new-instance v3, Ljava/io/File;
 
@@ -303,7 +287,6 @@
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 47
     .local v3, "dir":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -311,16 +294,13 @@
 
     if-nez v18, :cond_0
 
-    .line 48
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
 
     move-result v17
 
-    .line 49
     .local v17, "rst":Z
     if-nez v17, :cond_0
 
-    .line 50
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->TAG:Ljava/lang/String;
@@ -355,18 +335,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 60
     .end local v3    # "dir":Ljava/io/File;
     .end local v17    # "rst":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 54
     :catch_0
     move-exception v16
 
-    .line 55
     .local v16, "e":Ljava/lang/Exception;
     move-object/from16 v0, p0
 
@@ -406,12 +383,10 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->m_LoggingData:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 64
     return-void
 .end method
 
@@ -419,12 +394,10 @@
     .locals 7
 
     .prologue
-    .line 67
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 69
     .local v2, "ident":J
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->TAG:Ljava/lang/String;
@@ -451,7 +424,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     new-instance v1, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -488,7 +460,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 71
     .local v1, "m_fileOut":Ljava/io/File;
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -498,19 +469,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     .end local v1    # "m_fileOut":Ljava/io/File;
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 77
     return-void
 
-    .line 72
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, "e":Ljava/io/IOException;
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->TAG:Ljava/lang/String;
 
@@ -546,9 +513,7 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/LPPDataLogging;->FileType:Ljava/lang/String;
 
-    .line 81
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3906
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,16 +41,13 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3908
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
 
-    .line 3909
     .local v2, "action":I
     if-nez v2, :cond_1
 
-    .line 3911
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -71,7 +67,6 @@
 
     aput v9, v6, v8
 
-    .line 3912
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -91,7 +86,6 @@
 
     aput v9, v6, v8
 
-    .line 3913
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -111,7 +105,6 @@
 
     aput v9, v6, v8
 
-    .line 3914
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -131,7 +124,6 @@
 
     aput v9, v6, v8
 
-    .line 3982
     :cond_0
     :goto_0
     const/4 v6, 0x0
@@ -139,25 +131,21 @@
     :goto_1
     return v6
 
-    .line 3915
     :cond_1
     const/4 v6, 0x2
 
     if-ne v2, v6, :cond_5
 
-    .line 3916
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isHardwareAccelerated()Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    .line 3919
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3920
     .local v4, "now":J
     move-object/from16 v0, p0
 
@@ -170,7 +158,6 @@
 
     sub-long v24, v4, v8
 
-    .line 3921
     .local v24, "timeDiff":J
     const-wide/16 v8, 0x0
 
@@ -184,12 +171,10 @@
 
     if-gez v6, :cond_2
 
-    .line 3922
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 3924
     :cond_2
     move-object/from16 v0, p0
 
@@ -198,7 +183,6 @@
     # setter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFloatingMenuLastUpdateTime:J
     invoke-static {v6, v4, v5}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$2802(Lcom/android/internal/policy/PhoneWindow$DecorView;J)J
 
-    .line 3927
     .end local v4    # "now":J
     .end local v24    # "timeDiff":J
     :cond_3
@@ -223,7 +207,6 @@
 
     sub-int v16, v6, v8
 
-    .line 3928
     .local v16, "moveX":I
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -246,7 +229,6 @@
 
     sub-int v17, v6, v8
 
-    .line 3930
     .local v17, "moveY":I
     move-object/from16 v0, p0
 
@@ -263,7 +245,6 @@
 
     add-int v18, v6, v16
 
-    .line 3931
     .local v18, "newX":I
     move-object/from16 v0, p0
 
@@ -280,13 +261,11 @@
 
     add-int v19, v6, v17
 
-    .line 3934
     .local v19, "newY":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v20
 
-    .line 3935
     .local v20, "parent":Landroid/view/ViewParent;
     move-object/from16 v0, v20
 
@@ -294,7 +273,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 3936
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -305,7 +283,6 @@
 
     move-result v21
 
-    .line 3937
     .local v21, "statusBarHeight":I
     const/4 v6, 0x0
 
@@ -317,7 +294,6 @@
 
     move-object/from16 v6, v20
 
-    .line 3938
     check-cast v6, Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getWidth()I
@@ -336,7 +312,6 @@
 
     move-result v18
 
-    .line 3940
     move/from16 v0, v19
 
     move/from16 v1, v21
@@ -345,7 +320,6 @@
 
     move-result v19
 
-    .line 3941
     check-cast v20, Landroid/view/View;
 
     .end local v20    # "parent":Landroid/view/ViewParent;
@@ -365,7 +339,6 @@
 
     move-result v19
 
-    .line 3945
     .end local v21    # "statusBarHeight":I
     :cond_4
     move/from16 v0, v18
@@ -376,7 +349,6 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setX(F)V
 
-    .line 3946
     move/from16 v0, v19
 
     int-to-float v6, v0
@@ -385,7 +357,6 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setY(F)V
 
-    .line 3949
     move-object/from16 v0, p1
 
     instance-of v6, v0, Lcom/android/internal/policy/PhoneWindow$FloatingMenuButton;
@@ -402,12 +373,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 3951
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->requestLayout()V
 
     goto/16 :goto_0
 
-    .line 3953
     .end local v16    # "moveX":I
     .end local v17    # "moveY":I
     .end local v18    # "newX":I
@@ -417,7 +386,6 @@
 
     if-ne v2, v6, :cond_0
 
-    .line 3954
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getX()F
 
     move-result v6
@@ -439,7 +407,6 @@
 
     sub-int v16, v6, v8
 
-    .line 3955
     .restart local v16    # "moveX":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getY()F
 
@@ -462,7 +429,6 @@
 
     sub-int v17, v6, v8
 
-    .line 3956
     .restart local v17    # "moveY":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -492,7 +458,6 @@
 
     move/from16 v23, v0
 
-    .line 3960
     .local v23, "threshold":I
     mul-int v6, v16, v16
 
@@ -504,7 +469,6 @@
 
     if-ge v6, v8, :cond_0
 
-    .line 3961
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v6
@@ -517,12 +481,10 @@
 
     if-eqz v6, :cond_7
 
-    .line 3962
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3963
     .restart local v4    # "now":J
     new-instance v3, Landroid/view/KeyEvent;
 
@@ -536,7 +498,6 @@
 
     invoke-direct/range {v3 .. v10}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    .line 3964
     .local v3, "keyDown":Landroid/view/KeyEvent;
     new-instance v7, Landroid/view/KeyEvent;
 
@@ -554,13 +515,11 @@
 
     invoke-direct/range {v7 .. v14}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    .line 3967
     .local v7, "keyUp":Landroid/view/KeyEvent;
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v15
 
-    .line 3968
     .local v15, "im":Landroid/hardware/input/InputManager;
     const/4 v6, 0x0
 
@@ -580,12 +539,10 @@
 
     const/16 v22, 0x1
 
-    .line 3972
     .local v22, "success":Z
     :goto_2
     if-nez v22, :cond_0
 
-    .line 3973
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -599,7 +556,6 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 3974
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$3;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -615,14 +571,12 @@
 
     goto/16 :goto_0
 
-    .line 3968
     .end local v22    # "success":Z
     :cond_6
     const/16 v22, 0x0
 
     goto :goto_2
 
-    .line 3977
     .end local v3    # "keyDown":Landroid/view/KeyEvent;
     .end local v4    # "now":J
     .end local v7    # "keyUp":Landroid/view/KeyEvent;

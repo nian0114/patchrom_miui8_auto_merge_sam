@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver$1;->this$1:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,10 +39,9 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 347
     if-eqz p2, :cond_0
 
-    const-string/jumbo v0, "multi_window_enabled"
+    const-string v0, "multi_window_enabled"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -55,11 +53,9 @@
 
     if-nez v0, :cond_0
 
-    .line 357
     :goto_0
     return-void
 
-    .line 350
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver$1;->this$1:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
@@ -72,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 351
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver$1;->this$1:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
@@ -84,7 +79,6 @@
 
     if-nez v0, :cond_1
 
-    .line 352
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver$1;->this$1:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
@@ -94,7 +88,6 @@
     # setter for: Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
     invoke-static {v0, v1}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->access$202(Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;Z)Z
 
-    .line 355
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver$1;->this$1:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
@@ -102,7 +95,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->updateSettings()V
 
-    .line 356
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver$1;->this$1:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;

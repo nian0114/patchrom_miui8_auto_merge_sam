@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->this$1:Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1;
 
     iput p2, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->val$length:I
 
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->val$entries:[Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;
 
-    .line 237
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 238
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->index:I
@@ -56,7 +53,6 @@
     .locals 2
 
     .prologue
-    .line 240
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->index:I
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->val$length:I
@@ -78,14 +74,12 @@
     .locals 3
 
     .prologue
-    .line 243
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->index:I
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->val$length:I
 
     if-ge v0, v1, :cond_0
 
-    .line 244
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->val$entries:[Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;->index:I
@@ -98,7 +92,6 @@
 
     return-object v0
 
-    .line 246
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -111,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 249
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

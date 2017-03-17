@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 4273
     invoke-direct {p0}, Lmf/org/apache/xerces/util/ErrorHandlerWrapper;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "exception"    # Lorg/xml/sax/SAXParseException;
 
     .prologue
-    .line 4275
     invoke-static {p0}, Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler$SAX2XNIUtil;->createXMLParseException(Lorg/xml/sax/SAXParseException;)Lmf/org/apache/xerces/xni/parser/XMLParseException;
 
     move-result-object v0
@@ -43,7 +41,6 @@
     .param p0, "exception"    # Lorg/xml/sax/SAXException;
 
     .prologue
-    .line 4278
     invoke-static {p0}, Lmf/org/apache/xerces/impl/xs/traversers/XSDHandler$SAX2XNIUtil;->createXNIException(Lorg/xml/sax/SAXException;)Lmf/org/apache/xerces/xni/XNIException;
 
     move-result-object v0

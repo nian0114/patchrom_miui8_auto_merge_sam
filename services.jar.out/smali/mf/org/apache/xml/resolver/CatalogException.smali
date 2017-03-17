@@ -35,7 +35,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Catalog Exception "
@@ -52,21 +51,16 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 56
     iput-object v2, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 57
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 78
     iput p1, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 79
     iput-object v2, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 80
     return-void
 .end method
 
@@ -78,24 +72,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 66
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 56
     iput-object v1, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 57
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 67
     iput p1, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 68
     iput-object v1, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 69
     return-void
 .end method
 
@@ -104,28 +92,22 @@
     .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 56
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 57
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 93
     const/4 v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 94
     iput-object p1, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 95
     return-void
 .end method
 
@@ -135,28 +117,22 @@
     .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 107
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 56
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 57
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 108
     const/4 v0, 0x1
 
     iput v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
-    .line 109
     iput-object p2, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
-    .line 110
     return-void
 .end method
 
@@ -166,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
     return-object v0
@@ -176,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exceptionType:I
 
     return v0
@@ -186,12 +160,10 @@
     .locals 2
 
     .prologue
-    .line 123
     invoke-super {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
     .local v0, "message":Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -199,14 +171,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 126
     iget-object v1, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
     .end local v0    # "message":Ljava/lang/String;
     :cond_0
     return-object v0
@@ -216,19 +186,16 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
     if-eqz v0, :cond_0
 
-    .line 160
     iget-object v0, p0, Lmf/org/apache/xml/resolver/CatalogException;->exception:Ljava/lang/Exception;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 162
     :goto_0
     return-object v0
 

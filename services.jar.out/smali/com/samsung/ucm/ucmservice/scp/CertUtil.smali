@@ -26,10 +26,8 @@
     .locals 1
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
@@ -42,7 +40,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -51,7 +48,6 @@
 
     new-array v0, v4, [B
 
-    .line 35
     .local v0, "b":[B
     const/4 v1, 0x0
 
@@ -61,10 +57,8 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 36
     mul-int/lit8 v2, v1, 0x2
 
-    .line 37
     .local v2, "index":I
     add-int/lit8 v4, v2, 0x2
 
@@ -78,18 +72,15 @@
 
     move-result v3
 
-    .line 38
     .local v3, "v":I
     int-to-byte v4, v3
 
     aput-byte v4, v0, v1
 
-    .line 35
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 40
     .end local v2    # "index":I
     .end local v3    # "v":I
     :cond_0
@@ -101,7 +92,6 @@
     .param p0, "a"    # B
 
     .prologue
-    .line 30
     const-string v0, "%02x"
 
     const/4 v1, 0x1
@@ -130,7 +120,6 @@
     .param p0, "a"    # [B
 
     .prologue
-    .line 23
     new-instance v4, Ljava/lang/StringBuilder;
 
     array-length v5, p0
@@ -139,7 +128,6 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 24
     .local v4, "sb":Ljava/lang/StringBuilder;
     move-object v0, p0
 
@@ -155,7 +143,6 @@
 
     aget-byte v1, v0, v2
 
-    .line 25
     .local v1, "b":B
     const-string v5, "%02x"
 
@@ -179,12 +166,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 24
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 26
     .end local v1    # "b":B
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -206,7 +191,6 @@
     .end annotation
 
     .prologue
-    .line 52
     const/4 v10, 0x0
 
     array-length v11, p1
@@ -215,7 +199,6 @@
 
     move-result-object v8
 
-    .line 53
     .local v8, "tlv_ca_cert":Lcom/samsung/ucm/ucmservice/scp/BerTLV;
     new-instance v10, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
@@ -229,7 +212,6 @@
 
     check-cast v9, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;
 
-    .line 55
     .local v9, "tlv_pub_key":Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;
     new-instance v10, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
@@ -243,7 +225,6 @@
 
     check-cast v3, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 56
     .local v3, "key_val":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     new-instance v10, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
@@ -257,13 +238,11 @@
 
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 57
     .local v2, "key_param":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-eqz v3, :cond_6
 
     if-eqz v2, :cond_6
 
-    .line 59
     const-string v10, "EC"
 
     const-string v11, "BC"
@@ -272,7 +251,6 @@
 
     move-result-object v4
 
-    .line 60
     .local v4, "kf":Ljava/security/KeyFactory;
     new-instance v10, Ljava/security/spec/X509EncodedKeySpec;
 
@@ -288,13 +266,11 @@
 
     check-cast v6, Ljava/security/interfaces/ECPublicKey;
 
-    .line 63
     .local v6, "pubKey2":Ljava/security/interfaces/ECPublicKey;
     invoke-interface {v6}, Ljava/security/interfaces/ECPublicKey;->getW()Ljava/security/spec/ECPoint;
 
     move-result-object v5
 
-    .line 65
     .local v5, "point":Ljava/security/spec/ECPoint;
     iget-boolean v10, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
 
@@ -306,7 +282,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "pubkey value : "
+    const-string v12, "pubkey value : "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -330,7 +306,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :cond_0
     new-instance v10, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
@@ -340,7 +315,6 @@
 
     invoke-virtual {v9, v10}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->remove(Lcom/samsung/ucm/ucmservice/scp/Tag;)V
 
-    .line 67
     new-instance v10, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v11, -0x10
@@ -349,18 +323,15 @@
 
     invoke-virtual {v9, v10}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->remove(Lcom/samsung/ucm/ucmservice/scp/Tag;)V
 
-    .line 69
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 70
     .local v1, "bos":Ljava/io/ByteArrayOutputStream;
     const/4 v10, 0x4
 
     invoke-virtual {v1, v10}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 71
     invoke-virtual {v5}, Ljava/security/spec/ECPoint;->getAffineX()Ljava/math/BigInteger;
 
     move-result-object v10
@@ -371,7 +342,6 @@
 
     invoke-virtual {v1, v10}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 72
     invoke-virtual {v5}, Ljava/security/spec/ECPoint;->getAffineY()Ljava/math/BigInteger;
 
     move-result-object v10
@@ -382,7 +352,6 @@
 
     invoke-virtual {v1, v10}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 73
     iget-boolean v10, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
 
     if-eqz v10, :cond_1
@@ -421,7 +390,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :cond_1
     iget-boolean v10, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
 
@@ -461,7 +429,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_2
     iget-boolean v10, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
 
@@ -473,7 +440,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "removed pubkey value : "
+    const-string v12, "removed pubkey value : "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -497,7 +464,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     :cond_3
     new-instance v10, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
@@ -515,10 +481,8 @@
 
     invoke-virtual {v9, v10}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 79
     invoke-virtual {v9, v2}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 80
     iget-boolean v10, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
 
     if-eqz v10, :cond_4
@@ -553,13 +517,11 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     :cond_4
     invoke-virtual {v8}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->write()[B
 
     move-result-object v0
 
-    .line 83
     .local v0, "a":[B
     iget-boolean v10, p0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;->DEBUG:Z
 
@@ -571,7 +533,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "final tlv : "
+    const-string v12, "final tlv : "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -591,7 +553,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_5
     const/4 v10, 0x0
 
@@ -601,7 +562,6 @@
 
     move-result-object v7
 
-    .line 86
     .local v7, "test":Lcom/samsung/ucm/ucmservice/scp/BerTLV;
     invoke-virtual {v8}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->write()[B
 
@@ -609,7 +569,6 @@
 
     return-object v10
 
-    .line 89
     .end local v0    # "a":[B
     .end local v1    # "bos":Ljava/io/ByteArrayOutputStream;
     .end local v4    # "kf":Ljava/security/KeyFactory;

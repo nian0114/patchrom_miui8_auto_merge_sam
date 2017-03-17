@@ -61,15 +61,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 950
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 953
     iput v2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mIndex:I
 
-    .line 954
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0xa
@@ -78,21 +75,16 @@
 
     iput-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mSignalStrengthHistory:Ljava/util/ArrayList;
 
-    .line 957
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mPingThread:Ljava/util/concurrent/Future;
 
-    .line 958
     iput v2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mWeakWifiLevel:I
 
-    .line 959
     iput v2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mDefaultWifiLevel:I
 
-    .line 960
     iput v2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mDefaultWifiGoodDbValue:I
 
-    .line 961
     iput v2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mDefaultWifiBadDbValue:I
 
     return-void
@@ -104,7 +96,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/smartwifi/SmartWifiAdapter$1;
 
     .prologue
-    .line 950
     invoke-direct {p0, p1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;-><init>(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;)V
 
     return-void
@@ -115,7 +106,6 @@
     .param p0, "x0"    # Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;
 
     .prologue
-    .line 950
     invoke-direct {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->getLastKnownReadingLevel()I
 
     move-result v0
@@ -127,7 +117,6 @@
     .locals 2
 
     .prologue
-    .line 1169
     monitor-enter p0
 
     :try_start_0
@@ -169,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 1162
     monitor-enter p0
 
     :try_start_0
@@ -183,10 +171,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1163
     const/4 v0, 0x0
 
-    .line 1165
     :goto_0
     monitor-exit p0
 
@@ -206,7 +192,6 @@
 
     goto :goto_0
 
-    .line 1162
     :catchall_0
     move-exception v0
 
@@ -225,14 +210,13 @@
 
     const/4 v0, 0x1
 
-    .line 1099
     const-string v2, "[SMARTWIFI]"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "isWifiSignalDegraded: lastStrength: "
+    const-string v4, "isWifiSignalDegraded: lastStrength: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -258,7 +242,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1101
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
     move-result-object v2
@@ -269,7 +252,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1103
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiBadDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2500()I
 
@@ -284,12 +266,10 @@
 
     if-lt p1, v2, :cond_1
 
-    .line 1120
     :cond_0
     :goto_0
     return v0
 
-    .line 1106
     :cond_1
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiHandoverDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$3200()I
@@ -312,10 +292,9 @@
 
     if-ge p1, v2, :cond_2
 
-    .line 1109
     const-string v1, "[SMARTWIFI]"
 
-    const-string/jumbo v2, "isWifiSignalDegraded: Wifi rssi further dropped till handover DB value"
+    const-string v2, "isWifiSignalDegraded: Wifi rssi further dropped till handover DB value"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -324,10 +303,8 @@
     :cond_2
     move v0, v1
 
-    .line 1113
     goto :goto_0
 
-    .line 1116
     :cond_3
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiBadDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2500()I
@@ -346,7 +323,6 @@
     :cond_4
     move v0, v1
 
-    .line 1120
     goto :goto_0
 .end method
 
@@ -356,14 +332,13 @@
     .param p2, "currentStrength"    # I
 
     .prologue
-    .line 1075
     const-string v0, "[SMARTWIFI]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "isWifiSignalUpgraded: lastStrength: "
+    const-string v2, "isWifiSignalUpgraded: lastStrength: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -389,7 +364,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1078
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiGoodDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2400()I
 
@@ -425,16 +399,13 @@
     .param p1, "currentStrength"    # I
 
     .prologue
-    .line 1083
     const/4 v0, 0x0
 
-    .line 1084
     .local v0, "result":Z
     sget-boolean v1, Lcom/sec/epdg/EpdgOperatorConstants;->WIFI_THRESHOLD_BASED_HO:Z
 
     if-eqz v1, :cond_1
 
-    .line 1085
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-virtual {v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->isL2WHandoverProfilingRunning()Z
@@ -452,21 +423,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 1087
     const-string v1, "[SMARTWIFI]"
 
     const-string v2, "L2WHandoverProfiling is running and wifi is now better then wifi A"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1088
     const/4 v0, 0x1
 
-    .line 1095
     :goto_0
     return v0
 
-    .line 1090
     :cond_0
     const-string v1, "[SMARTWIFI]"
 
@@ -476,7 +443,6 @@
 
     goto :goto_0
 
-    .line 1093
     :cond_1
     const-string v1, "[SMARTWIFI]"
 
@@ -491,7 +457,6 @@
     .locals 3
 
     .prologue
-    .line 993
     monitor-enter p0
 
     :try_start_0
@@ -499,7 +464,6 @@
 
     if-nez v0, :cond_0
 
-    .line 995
     new-instance v0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$PingThread;
 
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -521,13 +485,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 999
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 997
     :cond_0
     :try_start_1
     const-string v0, "[SMARTWIFI]"
@@ -556,7 +518,6 @@
 
     goto :goto_0
 
-    .line 993
     :catchall_0
     move-exception v0
 
@@ -572,7 +533,6 @@
     .param p1, "sigstr"    # Ljava/lang/Integer;
 
     .prologue
-    .line 1017
     monitor-enter p0
 
     :try_start_0
@@ -582,7 +542,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1018
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mSignalStrengthHistory:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthReading;
@@ -597,12 +556,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1020
     monitor-exit p0
 
     return-void
 
-    .line 1017
     :catchall_0
     move-exception v0
 
@@ -616,7 +573,6 @@
     .param p1, "sigstr"    # Ljava/lang/Integer;
 
     .prologue
-    .line 1023
     monitor-enter p0
 
     :try_start_0
@@ -624,7 +580,6 @@
 
     move-result v1
 
-    .line 1024
     .local v1, "lastStrength":I
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mSignalStrengthHistory:Ljava/util/ArrayList;
 
@@ -632,35 +587,30 @@
 
     move-result v2
 
-    .line 1025
     .local v2, "size":I
     const/16 v3, 0x14
 
     if-lt v2, v3, :cond_0
 
-    .line 1027
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mSignalStrengthHistory:Ljava/util/ArrayList;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1028
     const-string v3, "[SMARTWIFI]"
 
-    const-string/jumbo v4, "wifi oldest entry removed"
+    const-string v4, "wifi oldest entry removed"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1030
     :cond_0
     const-string v3, "[SMARTWIFI]"
 
-    const-string/jumbo v4, "wifi entry added"
+    const-string v4, "wifi entry added"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1031
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mSignalStrengthHistory:Ljava/util/ArrayList;
 
     new-instance v4, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthReading;
@@ -673,12 +623,10 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1033
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 1034
     .local v0, "currentStrength":I
     invoke-direct {p0, v1, v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->isWifiSignalUpgraded(II)Z
 
@@ -686,7 +634,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1035
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v4, 0x0
@@ -694,7 +641,6 @@
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mMetHoThreshold:Z
     invoke-static {v3, v4}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2302(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Z)Z
 
-    .line 1037
     const-string v3, "[SMARTWIFI]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -769,7 +715,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1043
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     iget-object v4, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -791,14 +736,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1072
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1045
     :cond_2
     :try_start_1
     invoke-direct {p0, v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->isWifiSignalUpgradedToL2WHandoverThreshold(I)Z
@@ -807,7 +750,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 1046
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     iget-object v4, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -824,7 +766,6 @@
 
     goto :goto_0
 
-    .line 1023
     .end local v0    # "currentStrength":I
     .end local v1    # "lastStrength":I
     .end local v2    # "size":I
@@ -835,7 +776,6 @@
 
     throw v3
 
-    .line 1048
     .restart local v0    # "currentStrength":I
     .restart local v1    # "lastStrength":I
     .restart local v2    # "size":I
@@ -915,21 +855,18 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1054
     invoke-direct {p0, v1, v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->isWifiSignalDegraded(II)Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 1055
     const-string v3, "[SMARTWIFI]"
 
     const-string v4, "Wifi entered into weak zone again"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1056
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
     move-result-object v3
@@ -960,21 +897,18 @@
 
     if-nez v3, :cond_5
 
-    .line 1058
     const-string v3, "[SMARTWIFI]"
 
     const-string v4, "But ignore W2L HO in non-LTE NW"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1059
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->setHandoverThresholdMet(Z)V
 
-    .line 1060
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v4, 0x1
@@ -984,7 +918,6 @@
 
     goto/16 :goto_0
 
-    .line 1062
     :cond_5
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -993,7 +926,6 @@
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mMetHoThreshold:Z
     invoke-static {v3, v4}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2302(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Z)Z
 
-    .line 1063
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     iget-object v4, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -1008,7 +940,6 @@
 
     goto/16 :goto_0
 
-    .line 1066
     :cond_6
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -1018,14 +949,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 1067
     const-string v3, "[SMARTWIFI]"
 
     const-string v4, "Need to clear handover threshold"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1068
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v4, 0x0
@@ -1041,7 +970,6 @@
     .locals 2
 
     .prologue
-    .line 1126
     monitor-enter p0
 
     :try_start_0
@@ -1053,38 +981,32 @@
 
     if-nez v0, :cond_0
 
-    .line 1127
     const-string v0, "[SMARTWIFI]"
 
-    const-string/jumbo v1, "wifi history cleared"
+    const-string v1, "wifi history cleared"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1128
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mSignalStrengthHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1130
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mPingThread:Ljava/util/concurrent/Future;
 
     if-eqz v0, :cond_1
 
-    .line 1132
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mPingThread:Ljava/util/concurrent/Future;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1134
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 1126
     :catchall_0
     move-exception v0
 
@@ -1097,7 +1019,6 @@
     .locals 1
 
     .prologue
-    .line 972
     monitor-enter p0
 
     :try_start_0
@@ -1121,7 +1042,6 @@
     .locals 1
 
     .prologue
-    .line 989
     monitor-enter p0
 
     :try_start_0
@@ -1145,7 +1065,6 @@
     .locals 1
 
     .prologue
-    .line 985
     monitor-enter p0
 
     :try_start_0
@@ -1169,13 +1088,11 @@
     .locals 6
 
     .prologue
-    .line 1002
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->runPingIfNeeded()V
 
-    .line 1003
     new-instance v2, Ljava/lang/Boolean;
 
     const/4 v3, 0x0
@@ -1184,7 +1101,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1005
     .local v2, "ret":Ljava/lang/Boolean;
     :try_start_1
     iget-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mPingThread:Ljava/util/concurrent/Future;
@@ -1203,7 +1119,6 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1011
     :goto_0
     :try_start_2
     const-string v3, "[SMARTWIFI]"
@@ -1228,23 +1143,19 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1012
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mPingThread:Ljava/util/concurrent/Future;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1013
     monitor-exit p0
 
     return-object v2
 
-    .line 1006
     :catch_0
     move-exception v1
 
-    .line 1007
     .local v1, "e":Ljava/lang/InterruptedException;
     :try_start_3
     const-string v3, "[SMARTWIFI]"
@@ -1257,7 +1168,6 @@
 
     goto :goto_0
 
-    .line 1002
     .end local v1    # "e":Ljava/lang/InterruptedException;
     .end local v2    # "ret":Ljava/lang/Boolean;
     :catchall_0
@@ -1267,12 +1177,10 @@
 
     throw v3
 
-    .line 1008
     .restart local v2    # "ret":Ljava/lang/Boolean;
     :catch_1
     move-exception v1
 
-    .line 1009
     .local v1, "e":Ljava/util/concurrent/ExecutionException;
     :try_start_4
     invoke-virtual {v1}, Ljava/util/concurrent/ExecutionException;->printStackTrace()V
@@ -1286,7 +1194,6 @@
     .locals 1
 
     .prologue
-    .line 964
     monitor-enter p0
 
     :try_start_0
@@ -1312,7 +1219,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1137
     monitor-enter p0
 
     :try_start_0
@@ -1324,25 +1230,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 1139
     const-string v3, "[SMARTWIFI]"
 
-    const-string/jumbo v4, "not enough wifi history"
+    const-string v4, "not enough wifi history"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1140
     const/4 v3, 0x1
 
-    .line 1158
     :goto_0
     monitor-exit p0
 
     return v3
 
-    .line 1142
     :cond_0
     :try_start_1
     invoke-direct {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->getLastKnownReading()Ljava/lang/Integer;
@@ -1353,7 +1255,6 @@
 
     move-result v2
 
-    .line 1143
     .local v2, "wifiSignal":I
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiBadDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2500()I
@@ -1362,14 +1263,12 @@
 
     add-int/lit8 v0, v4, -0x1
 
-    .line 1144
     .local v0, "badWifiValue":I
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiGoodDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2400()I
 
     move-result v1
 
-    .line 1146
     .local v1, "goodWifiValue":I
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
@@ -1381,10 +1280,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 1147
     if-gt v2, v0, :cond_2
 
-    .line 1148
     const-string v4, "[SMARTWIFI]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1411,7 +1308,6 @@
 
     goto :goto_0
 
-    .line 1137
     .end local v0    # "badWifiValue":I
     .end local v1    # "goodWifiValue":I
     .end local v2    # "wifiSignal":I
@@ -1422,14 +1318,12 @@
 
     throw v3
 
-    .line 1152
     .restart local v0    # "badWifiValue":I
     .restart local v1    # "goodWifiValue":I
     .restart local v2    # "wifiSignal":I
     :cond_1
     if-ge v2, v1, :cond_2
 
-    .line 1153
     :try_start_2
     const-string v4, "[SMARTWIFI]"
 
@@ -1455,15 +1349,13 @@
 
     goto :goto_0
 
-    .line 1157
     :cond_2
     const-string v3, "[SMARTWIFI]"
 
-    const-string/jumbo v4, "wifi strong enough"
+    const-string v4, "wifi strong enough"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1158
     invoke-virtual {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->getPingResult()Ljava/lang/Boolean;
 
     move-result-object v3
@@ -1482,7 +1374,6 @@
     .param p1, "wifiLevel"    # I
 
     .prologue
-    .line 976
     monitor-enter p0
 
     :try_start_0
@@ -1490,12 +1381,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 977
     monitor-exit p0
 
     return-void
 
-    .line 976
     :catchall_0
     move-exception v0
 
@@ -1510,23 +1399,19 @@
     .param p2, "badValue"    # I
 
     .prologue
-    .line 980
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mDefaultWifiGoodDbValue:I
 
-    .line 981
     iput p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->mDefaultWifiBadDbValue:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 982
     monitor-exit p0
 
     return-void
 
-    .line 980
     :catchall_0
     move-exception v0
 
@@ -1540,7 +1425,6 @@
     .param p1, "wifiLevel"    # I
 
     .prologue
-    .line 968
     monitor-enter p0
 
     :try_start_0
@@ -1548,12 +1432,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 969
     monitor-exit p0
 
     return-void
 
-    .line 968
     :catchall_0
     move-exception v0
 

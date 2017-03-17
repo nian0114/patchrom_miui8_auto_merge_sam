@@ -16,7 +16,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5
     move-object v0, v1
 
     check-cast v0, Landroid/content/Context;
@@ -43,7 +42,6 @@
     .param p0, "sessionDir"    # Ljava/io/File;
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 2
     invoke-super {p0}, Landroid/net/http/Connection;->toString()Ljava/lang/String;
 
     move-result-object v0

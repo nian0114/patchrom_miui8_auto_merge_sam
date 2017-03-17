@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,42 +28,35 @@
     .locals 2
 
     .prologue
-    .line 42
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
 
     if-nez v0, :cond_1
 
-    .line 43
     const-class v1, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
 
     monitor-enter v1
 
-    .line 44
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
 
     if-nez v0, :cond_0
 
-    .line 45
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
 
-    .line 47
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;
 
     return-object v0
 
-    .line 47
     :catchall_0
     move-exception v0
 
@@ -82,12 +74,10 @@
     .locals 2
 
     .prologue
-    .line 110
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 111
     .local v0, "localCalendar":Ljava/util/Calendar;
     const/16 v1, 0xb
 
@@ -102,12 +92,10 @@
     .locals 2
 
     .prologue
-    .line 120
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 121
     .local v0, "localCalendar":Ljava/util/Calendar;
     const/16 v1, 0xc
 
@@ -122,12 +110,10 @@
     .locals 2
 
     .prologue
-    .line 130
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 131
     .local v0, "localCalendar":Ljava/util/Calendar;
     const/16 v1, 0xd
 
@@ -143,21 +129,17 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 61
     if-nez p1, :cond_0
 
-    .line 62
     const-string v0, "Context is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 70
     :goto_0
     return-void
 
-    .line 66
     :cond_0
-    const-string/jumbo v0, "vibrator"
+    const-string v0, "vibrator"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -174,12 +156,10 @@
     .locals 1
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->mVibrator:Landroid/os/Vibrator;
 
-    .line 81
     return-void
 .end method
 
@@ -188,30 +168,24 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->mVibrator:Landroid/os/Vibrator;
 
     if-nez v0, :cond_0
 
-    .line 91
-    const-string/jumbo v0, "mVibrator is null"
+    const-string v0, "mVibrator is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 102
     :goto_0
     return-void
 
-    .line 95
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 96
-    const-string/jumbo v0, "vibrate alarm"
+    const-string v0, "vibrate alarm"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 97
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->mVibrator:Landroid/os/Vibrator;
 
     const-wide/16 v2, 0x7d0
@@ -220,13 +194,11 @@
 
     goto :goto_0
 
-    .line 99
     :cond_1
-    const-string/jumbo v0, "vibrate Cancel"
+    const-string v0, "vibrate Cancel"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 100
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaAlarmManager;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V

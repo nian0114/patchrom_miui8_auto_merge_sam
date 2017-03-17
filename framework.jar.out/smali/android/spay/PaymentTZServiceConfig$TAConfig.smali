@@ -27,15 +27,11 @@
     .param p2, "recvsize"    # I
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput p1, p0, Landroid/spay/PaymentTZServiceConfig$TAConfig;->maxSendCmdSize:I
 
-    .line 21
     iput p2, p0, Landroid/spay/PaymentTZServiceConfig$TAConfig;->maxRecvRespSize:I
 
-    .line 22
     return-void
 .end method

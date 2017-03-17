@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,25 +21,21 @@
     .locals 2
 
     .prologue
-    .line 34
     const-class v1, Landroid/view/inputmethod/InputMethodManagerWrapper;
 
     monitor-enter v1
 
-    .line 35
     :try_start_0
     sget-object v0, Landroid/view/inputmethod/InputMethodManagerWrapper;->sInstance:Landroid/view/inputmethod/InputMethodManagerWrapper;
 
     if-nez v0, :cond_0
 
-    .line 36
     new-instance v0, Landroid/view/inputmethod/InputMethodManagerWrapper;
 
     invoke-direct {v0}, Landroid/view/inputmethod/InputMethodManagerWrapper;-><init>()V
 
     sput-object v0, Landroid/view/inputmethod/InputMethodManagerWrapper;->sInstance:Landroid/view/inputmethod/InputMethodManagerWrapper;
 
-    .line 38
     :cond_0
     sget-object v0, Landroid/view/inputmethod/InputMethodManagerWrapper;->sInstance:Landroid/view/inputmethod/InputMethodManagerWrapper;
 
@@ -48,7 +43,6 @@
 
     return-object v0
 
-    .line 39
     :catchall_0
     move-exception v0
 
@@ -65,12 +59,10 @@
     .locals 2
 
     .prologue
-    .line 58
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 59
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-nez v0, :cond_0
 
@@ -91,12 +83,10 @@
     .locals 2
 
     .prologue
-    .line 48
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 49
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-nez v0, :cond_0
 

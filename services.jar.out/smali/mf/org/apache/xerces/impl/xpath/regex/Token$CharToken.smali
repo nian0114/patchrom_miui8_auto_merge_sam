@@ -32,13 +32,10 @@
     .param p2, "ch"    # I
 
     .prologue
-    .line 1147
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/xpath/regex/Token;-><init>(I)V
 
-    .line 1148
     iput p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->chardata:I
 
-    .line 1149
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 1152
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->chardata:I
 
     return v0
@@ -59,12 +55,10 @@
     .param p1, "ch"    # I
 
     .prologue
-    .line 1194
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->type:I
 
     if-nez v0, :cond_1
 
-    .line 1195
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->chardata:I
 
     if-ne p1, v0, :cond_0
@@ -79,7 +73,6 @@
 
     goto :goto_0
 
-    .line 1197
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -109,34 +102,28 @@
     .param p1, "options"    # I
 
     .prologue
-    .line 1157
     iget v2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->type:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 1188
     const/4 v1, 0x0
 
-    .line 1190
     .local v1, "ret":Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 1159
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_0
     iget v2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->chardata:I
 
     sparse-switch v2, :sswitch_data_1
 
-    .line 1172
     iget v2, p0, Lmf/org/apache/xerces/impl/xpath/regex/Token$CharToken;->chardata:I
 
     const/high16 v3, 0x10000
 
     if-lt v2, v3, :cond_0
 
-    .line 1173
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "0"
@@ -157,7 +144,6 @@
 
     move-result-object v0
 
-    .line 1174
     .local v0, "pre":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -187,11 +173,9 @@
 
     move-result-object v1
 
-    .line 1175
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1163
     .end local v0    # "pre":Ljava/lang/String;
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_1
@@ -213,11 +197,9 @@
 
     move-result-object v1
 
-    .line 1164
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1165
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_2
     const-string v1, "\\f"
@@ -225,7 +207,6 @@
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1166
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_3
     const-string v1, "\\n"
@@ -233,7 +214,6 @@
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1167
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_4
     const-string v1, "\\r"
@@ -241,7 +221,6 @@
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1168
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_5
     const-string v1, "\\t"
@@ -249,7 +228,6 @@
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1169
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_6
     const-string v1, "\\e"
@@ -257,7 +235,6 @@
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1176
     .end local v1    # "ret":Ljava/lang/String;
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
@@ -276,11 +253,9 @@
 
     move-result-object v1
 
-    .line 1178
     .restart local v1    # "ret":Ljava/lang/String;
     goto :goto_0
 
-    .line 1181
     .end local v1    # "ret":Ljava/lang/String;
     :sswitch_7
     sget-object v2, Lmf/org/apache/xerces/impl/xpath/regex/Token;->token_linebeginning:Lmf/org/apache/xerces/impl/xpath/regex/Token;
@@ -291,7 +266,6 @@
 
     if-ne p0, v2, :cond_2
 
-    .line 1182
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -312,7 +286,6 @@
     .restart local v1    # "ret":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 1184
     .end local v1    # "ret":Ljava/lang/String;
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -333,18 +306,15 @@
 
     move-result-object v1
 
-    .line 1185
     .restart local v1    # "ret":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 1157
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
         0x8 -> :sswitch_7
     .end sparse-switch
 
-    .line 1159
     :sswitch_data_1
     .sparse-switch
         0x9 -> :sswitch_5

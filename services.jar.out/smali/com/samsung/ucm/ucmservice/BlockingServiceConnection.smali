@@ -22,19 +22,14 @@
     .param p3, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->context:Landroid/content/Context;
 
-    .line 28
     iput-object p2, p0, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->serviceConnection:Landroid/content/ServiceConnection;
 
-    .line 29
     iput-object p3, p0, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->service:Landroid/os/IBinder;
 
-    .line 30
     return-void
 .end method
 
@@ -53,10 +48,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 77
     if-nez p0, :cond_0
 
-    .line 78
     new-instance v3, Ljava/lang/NullPointerException;
 
     const-string v4, "context == null"
@@ -65,45 +58,37 @@
 
     throw v3
 
-    .line 80
     :cond_0
     if-nez p1, :cond_1
 
-    .line 81
     new-instance v3, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v4, "intent == null"
+    const-string v4, "intent == null"
 
     invoke-direct {v3, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 83
     :cond_1
     invoke-static {p0}, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->ensureNotOnMainThread(Landroid/content/Context;)V
 
-    .line 84
     new-instance v2, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v2, v3}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
-    .line 85
     .local v2, "q":Ljava/util/concurrent/BlockingQueue;, "Ljava/util/concurrent/BlockingQueue<Landroid/os/IBinder;>;"
     new-instance v1, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection$1;
 
     invoke-direct {v1, v2}, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection$1;-><init>(Ljava/util/concurrent/BlockingQueue;)V
 
-    .line 106
     .local v1, "keyChainServiceConnection":Landroid/content/ServiceConnection;
     invoke-virtual {p0, p1, v1, v3, p2}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
     move-result v0
 
-    .line 108
     .local v0, "isBound":Z
     if-nez v0, :cond_2
 
-    .line 109
     new-instance v3, Ljava/lang/AssertionError;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -128,7 +113,6 @@
 
     throw v3
 
-    .line 111
     :cond_2
     new-instance v4, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;
 
@@ -148,12 +132,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 117
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 118
     .local v0, "looper":Landroid/os/Looper;
     if-eqz v0, :cond_0
 
@@ -163,7 +145,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 119
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "calling this from your main thread can lead to deadlock"
@@ -172,7 +153,6 @@
 
     throw v1
 
-    .line 122
     :cond_0
     return-void
 .end method
@@ -188,16 +168,13 @@
     .end annotation
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->context:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 49
     :goto_0
     return-void
 
-    .line 44
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->context:Landroid/content/Context;
@@ -210,7 +187,6 @@
 
     goto :goto_0
 
-    .line 46
     :catch_0
     move-exception v0
 
@@ -221,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/BlockingServiceConnection;->service:Landroid/os/IBinder;
 
     return-object v0

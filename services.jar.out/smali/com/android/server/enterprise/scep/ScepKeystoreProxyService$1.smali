@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 414
     iput-object p1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$1;->this$0:Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;
 
     iput p2, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$1;->val$uidscep:I
@@ -48,10 +47,8 @@
     .locals 6
 
     .prologue
-    .line 416
     const/4 v1, 0x0
 
-    .line 418
     .local v1, "keyChainConnection":Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$1;->this$0:Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;
@@ -67,12 +64,10 @@
 
     move-result-object v1
 
-    .line 419
     invoke-virtual {v1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
 
     move-result-object v2
 
-    .line 420
     .local v2, "keyChainService":Landroid/security/IKeyChainService;
     iget v3, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$1;->val$uidscep:I
 
@@ -87,67 +82,56 @@
     .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 430
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->close()V
 
-    .line 432
     .end local v2    # "keyChainService":Landroid/security/IKeyChainService;
     :cond_0
     :goto_0
     return-void
 
-    .line 421
     :catch_0
     move-exception v0
 
-    .line 423
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 430
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->close()V
 
     goto :goto_0
 
-    .line 424
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catch_1
     move-exception v0
 
-    .line 426
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 430
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->close()V
 
     goto :goto_0
 
-    .line 427
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v0
 
-    .line 428
     .local v0, "e":Ljava/lang/AssertionError;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/AssertionError;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 430
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->close()V

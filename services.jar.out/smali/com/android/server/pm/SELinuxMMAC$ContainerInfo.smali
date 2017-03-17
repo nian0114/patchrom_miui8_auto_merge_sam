@@ -51,48 +51,33 @@
 
     const/4 v0, 0x0
 
-    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 199
     iput v1, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
-    .line 200
     iput v1, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbccategory:I
 
-    .line 201
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowCategory:Ljava/lang/String;
 
-    .line 202
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 203
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->seInfo:Ljava/lang/String;
 
-    .line 204
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcseInfo:Ljava/lang/String;
 
-    .line 205
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 206
     iput v1, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->accessInfo:I
 
-    .line 207
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 208
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 209
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 210
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 211
     iput-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->destPkgName:[Ljava/lang/String;
 
-    .line 212
     return-void
 .end method

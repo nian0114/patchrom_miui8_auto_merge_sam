@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const-string v0, "http://www.w3.org/XML/1998/namespace"
 
     invoke-virtual {v0}, Ljava/lang/String;->intern()Ljava/lang/String;
@@ -23,7 +22,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/xni/NamespaceContext;->XML_URI:Ljava/lang/String;
 
-    .line 53
     const-string v0, "http://www.w3.org/2000/xmlns/"
 
     invoke-virtual {v0}, Ljava/lang/String;->intern()Ljava/lang/String;

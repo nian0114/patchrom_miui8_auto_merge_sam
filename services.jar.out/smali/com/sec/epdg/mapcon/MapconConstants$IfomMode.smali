@@ -68,7 +68,6 @@
 
     const/4 v4, 0x0
 
-    .line 331
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_IWLAN_LTE"
@@ -79,7 +78,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_IWLAN_LTE:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 332
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_IWLAN_LTE_CELLULAR"
@@ -90,7 +88,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_IWLAN_LTE_CELLULAR:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 333
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_LTE_IWLAN_CELLULAR"
@@ -101,7 +98,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_LTE_IWLAN_CELLULAR:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 334
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_LTE_CELLULAR_IWLAN"
@@ -112,7 +108,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_LTE_CELLULAR_IWLAN:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 335
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_LTE_CELLULAR"
@@ -123,7 +118,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_LTE_CELLULAR:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 336
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_LTE"
@@ -136,7 +130,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_LTE:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 337
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_IWLAN"
@@ -149,7 +142,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_IWLAN:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 339
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_IWLAN_CELLULAR"
@@ -162,7 +154,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_IWLAN_CELLULAR:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 340
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_LTE_IWLAN"
@@ -175,7 +166,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_LTE_IWLAN:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 341
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_CELLULAR_IWLAN"
@@ -188,7 +178,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_CELLULAR_IWLAN:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 342
     new-instance v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     const-string v1, "APP_CELLULAR"
@@ -201,7 +190,6 @@
 
     sput-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->APP_CELLULAR:Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
-    .line 330
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
@@ -279,13 +267,10 @@
     .end annotation
 
     .prologue
-    .line 346
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 347
     iput-object p3, p0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->mText:Ljava/lang/String;
 
-    .line 348
     return-void
 .end method
 
@@ -294,7 +279,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 330
     const-class v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -310,7 +294,6 @@
     .locals 1
 
     .prologue
-    .line 330
     sget-object v0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->$VALUES:[Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->clone()Ljava/lang/Object;
@@ -328,7 +311,6 @@
     .locals 1
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/sec/epdg/mapcon/MapconConstants$IfomMode;->mText:Ljava/lang/String;
 
     return-object v0

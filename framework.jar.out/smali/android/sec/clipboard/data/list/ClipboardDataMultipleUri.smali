@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;-><init>()V
 
-    .line 35
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .end annotation
 
     .prologue
-    .line 86
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->getUriList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -44,7 +41,6 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 47
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
@@ -65,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p1, "uries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/Uri;>;"
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->setUriList(Ljava/util/ArrayList;)Z
 
@@ -87,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 76
     .local p1, "uries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->setUriListInternal(Ljava/util/ArrayList;)Z
 
@@ -100,10 +94,8 @@
     .locals 0
 
     .prologue
-    .line 56
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->clearData()V
 
-    .line 57
     return-void
 .end method
 
@@ -112,7 +104,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 95
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -125,7 +116,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 133
     return-void
 .end method
 
@@ -134,10 +124,8 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 117
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->readFromSource(Landroid/os/Parcel;)V
 
-    .line 118
     return-void
 .end method
 
@@ -145,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 126
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -159,9 +146,7 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 106
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataUriList;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 107
     return-void
 .end method

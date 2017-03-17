@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/movial/ipphone/IPStateListener$1;->this$0:Lcom/movial/ipphone/IPStateListener;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IIPStateListener$Stub;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 56
     iget-object v0, p0, Lcom/movial/ipphone/IPStateListener$1;->this$0:Lcom/movial/ipphone/IPStateListener;
 
     # getter for: Lcom/movial/ipphone/IPStateListener;->mHandler:Landroid/os/Handler;
@@ -62,10 +60,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 57
     return-void
 
-    .line 56
     :cond_0
     const/4 v0, 0x0
 
@@ -78,7 +74,6 @@
     .param p2, "status"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/movial/ipphone/IPStateListener$1;->this$0:Lcom/movial/ipphone/IPStateListener;
 
     # getter for: Lcom/movial/ipphone/IPStateListener;->mHandler:Landroid/os/Handler;
@@ -96,6 +91,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 61
     return-void
 .end method

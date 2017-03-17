@@ -19,7 +19,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6
     move-object v0, v1
 
     check-cast v0, Lorg/apache/http/io/SessionInputBuffer;
@@ -54,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

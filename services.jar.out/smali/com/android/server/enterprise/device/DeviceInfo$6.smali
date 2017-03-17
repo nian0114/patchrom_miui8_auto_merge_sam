@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1585
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$6;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1590
     iget-object v11, p0, Lcom/android/server/enterprise/device/DeviceInfo$6;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/4 v12, 0x0
@@ -50,30 +48,25 @@
 
     if-nez v11, :cond_1
 
-    .line 1625
     :cond_0
     :goto_0
     return-void
 
-    .line 1594
     :cond_1
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1595
     .local v0, "action":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v8
 
-    .line 1597
     .local v8, "msgData":Landroid/os/Bundle;
     if-eqz v0, :cond_2
 
     if-nez v8, :cond_3
 
-    .line 1598
     :cond_2
     const-string v11, "DeviceInfo"
 
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 1603
     :cond_3
     const-string v11, "com.samsung.mms.RECEIVED_MSG"
 
@@ -93,21 +85,18 @@
 
     if-eqz v11, :cond_5
 
-    .line 1604
     const/4 v6, 0x1
 
-    .line 1612
     .local v6, "isInbound":Z
     :goto_1
-    const-string/jumbo v11, "msg_type"
+    const-string v11, "msg_type"
 
     invoke-virtual {v8, v11}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1613
     .local v10, "type":Ljava/lang/String;
-    const-string/jumbo v11, "mms"
+    const-string v11, "mms"
 
     invoke-virtual {v11, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -115,38 +104,33 @@
 
     if-eqz v11, :cond_0
 
-    .line 1615
-    const-string/jumbo v11, "msg_address"
+    const-string v11, "msg_address"
 
     invoke-virtual {v8, v11}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1616
     .local v1, "address":Ljava/lang/String;
-    const-string/jumbo v11, "date"
+    const-string v11, "date"
 
     invoke-virtual {v8, v11}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v4
 
-    .line 1617
     .local v4, "date":J
-    const-string/jumbo v11, "msg_subject"
+    const-string v11, "msg_subject"
 
     invoke-virtual {v8, v11}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1618
     .local v9, "subject":Ljava/lang/String;
-    const-string/jumbo v11, "msg_body"
+    const-string v11, "msg_body"
 
     invoke-virtual {v8, v11}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1619
     .local v2, "body":Ljava/lang/String;
     const-string v11, "content_location"
 
@@ -154,7 +138,6 @@
 
     move-result-object v3
 
-    .line 1621
     .local v3, "contentLocation":Ljava/lang/String;
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -192,7 +175,6 @@
 
     move-result-object v7
 
-    .line 1623
     .local v7, "message":Ljava/lang/String;
     iget-object v11, p0, Lcom/android/server/enterprise/device/DeviceInfo$6;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
@@ -204,7 +186,6 @@
 
     goto :goto_0
 
-    .line 1605
     .end local v1    # "address":Ljava/lang/String;
     .end local v3    # "contentLocation":Ljava/lang/String;
     .end local v4    # "date":J
@@ -221,13 +202,11 @@
 
     if-eqz v11, :cond_6
 
-    .line 1606
     const/4 v6, 0x0
 
     .restart local v6    # "isInbound":Z
     goto :goto_1
 
-    .line 1608
     .end local v6    # "isInbound":Z
     :cond_6
     const-string v11, "DeviceInfo"
@@ -238,7 +217,6 @@
 
     goto/16 :goto_0
 
-    .line 1621
     .restart local v1    # "address":Ljava/lang/String;
     .restart local v2    # "body":Ljava/lang/String;
     .restart local v3    # "contentLocation":Ljava/lang/String;

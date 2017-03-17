@@ -118,7 +118,6 @@
     .locals 4
 
     .prologue
-    .line 150
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -127,7 +126,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    .line 151
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -138,7 +136,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 152
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -149,7 +146,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 153
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -160,7 +156,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 154
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -171,7 +166,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 155
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -182,7 +176,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 156
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -193,7 +186,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 157
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -204,7 +196,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 158
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -215,7 +206,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 159
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -226,7 +216,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 160
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -237,7 +226,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 161
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -248,7 +236,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 162
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -259,7 +246,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 163
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -270,7 +256,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 164
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -281,7 +266,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 165
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -292,7 +276,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 166
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -303,7 +286,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 167
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -314,7 +296,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 168
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -325,7 +306,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 169
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -336,7 +316,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 170
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -347,7 +326,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 171
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -358,7 +336,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 172
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -369,7 +346,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 173
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -380,7 +356,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 174
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -391,7 +366,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 175
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -402,7 +376,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 176
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -413,7 +386,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 177
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -424,7 +396,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 178
     return-void
 .end method
 
@@ -432,7 +403,6 @@
     .locals 0
 
     .prologue
-    .line 105
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -443,12 +413,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 2865
     const/4 v0, 0x0
 
-    .line 2866
     .local v0, "callerName":Ljava/lang/String;
-    const-string/jumbo v2, "package"
+    const-string v2, "package"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -456,20 +424,17 @@
 
     check-cast v1, Lcom/android/server/pm/PackageManagerService;
 
-    .line 2867
     .local v1, "mPackageManagerService":Lcom/android/server/pm/PackageManagerService;
     if-eqz v1, :cond_0
 
-    .line 2868
     invoke-virtual {v1, p1}, Lcom/android/server/pm/PackageManagerService;->getNameForUid(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2870
     :cond_0
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "fail to get caller name."
+    const-string v0, "fail to get caller name."
 
     .end local v0    # "callerName":Ljava/lang/String;
     :cond_1
@@ -483,7 +448,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2893
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -506,13 +470,11 @@
 
     move-result-object v0
 
-    .line 2894
     .local v0, "content_uri":Landroid/net/Uri;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2895
     .local v2, "token":J
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -524,10 +486,8 @@
 
     invoke-virtual {v1, v0, v4, v5, p2}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;ZI)V
 
-    .line 2896
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2897
     return-void
 .end method
 
@@ -540,7 +500,6 @@
     .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 2876
     const/4 v0, 0x0
 
     return v0
@@ -551,7 +510,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 2882
     const/4 v0, 0x0
 
     return-object v0
@@ -563,12 +521,10 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 2751
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v11
 
-    .line 2752
     .local v11, "callingUid":I
     const-string v2, "SecContentProvider"
 
@@ -576,7 +532,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "insert(), uri = "
+    const-string v4, "insert(), uri = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -600,7 +556,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2753
     const-string v2, "SecContentProvider"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -629,7 +584,6 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2759
     sget-object v2, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     move-object/from16 v0, p1
@@ -640,7 +594,6 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 2859
     :cond_0
     :goto_0
     :sswitch_0
@@ -648,7 +601,6 @@
 
     return-object v2
 
-    .line 2767
     :sswitch_1
     const-string v2, "browser_policy"
 
@@ -658,11 +610,9 @@
 
     check-cast v13, Lcom/android/server/enterprise/browser/BrowserPolicy;
 
-    .line 2770
     .local v13, "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     if-eqz v13, :cond_0
 
-    .line 2771
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -671,11 +621,10 @@
 
     move-result-object v10
 
-    .line 2772
     .local v10, "api":Ljava/lang/String;
     if-eqz v10, :cond_0
 
-    const-string/jumbo v2, "saveURLBlockedReport"
+    const-string v2, "saveURLBlockedReport"
 
     invoke-virtual {v10, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -683,12 +632,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 2773
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v11}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "url"
+    const-string v3, "url"
 
     move-object/from16 v0, p2
 
@@ -700,7 +648,6 @@
 
     goto :goto_0
 
-    .line 2783
     .end local v10    # "api":Ljava/lang/String;
     .end local v13    # "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     :sswitch_2
@@ -712,11 +659,9 @@
 
     check-cast v14, Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 2786
     .local v14, "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     if-eqz v14, :cond_0
 
-    .line 2787
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -725,9 +670,8 @@
 
     move-result-object v10
 
-    .line 2788
     .restart local v10    # "api":Ljava/lang/String;
-    const-string/jumbo v2, "fail"
+    const-string v2, "fail"
 
     move-object/from16 v0, p2
 
@@ -735,11 +679,10 @@
 
     move-result-object v12
 
-    .line 2789
     .local v12, "fail":Ljava/lang/Integer;
     if-eqz v10, :cond_0
 
-    const-string/jumbo v2, "notifyCertificateFailure"
+    const-string v2, "notifyCertificateFailure"
 
     invoke-virtual {v10, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -749,8 +692,7 @@
 
     if-eqz v12, :cond_0
 
-    .line 2790
-    const-string/jumbo v2, "module"
+    const-string v2, "module"
 
     move-object/from16 v0, p2
 
@@ -768,7 +710,6 @@
 
     goto :goto_0
 
-    .line 2802
     .end local v10    # "api":Ljava/lang/String;
     .end local v12    # "fail":Ljava/lang/Integer;
     .end local v14    # "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
@@ -781,11 +722,9 @@
 
     check-cast v1, Lcom/android/server/enterprise/auditlog/AuditLogService;
 
-    .line 2805
     .local v1, "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     if-eqz v1, :cond_0
 
-    .line 2807
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -794,7 +733,6 @@
 
     move-result-object v10
 
-    .line 2808
     .restart local v10    # "api":Ljava/lang/String;
     if-eqz v10, :cond_1
 
@@ -806,12 +744,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 2809
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v11}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "severity"
+    const-string v3, "severity"
 
     move-object/from16 v0, p2
 
@@ -823,7 +760,7 @@
 
     move-result v3
 
-    const-string/jumbo v4, "group"
+    const-string v4, "group"
 
     move-object/from16 v0, p2
 
@@ -835,7 +772,7 @@
 
     move-result v4
 
-    const-string/jumbo v5, "outcome"
+    const-string v5, "outcome"
 
     move-object/from16 v0, p2
 
@@ -847,7 +784,7 @@
 
     move-result v5
 
-    const-string/jumbo v6, "uid"
+    const-string v6, "uid"
 
     move-object/from16 v0, p2
 
@@ -867,7 +804,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "message"
+    const-string v8, "message"
 
     move-object/from16 v0, p2
 
@@ -875,7 +812,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "userid"
+    const-string v9, "userid"
 
     move-object/from16 v0, p2
 
@@ -891,13 +828,12 @@
 
     goto/16 :goto_0
 
-    .line 2819
     :cond_1
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v11}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "severity"
+    const-string v3, "severity"
 
     move-object/from16 v0, p2
 
@@ -909,7 +845,7 @@
 
     move-result v3
 
-    const-string/jumbo v4, "group"
+    const-string v4, "group"
 
     move-object/from16 v0, p2
 
@@ -921,7 +857,7 @@
 
     move-result v4
 
-    const-string/jumbo v5, "outcome"
+    const-string v5, "outcome"
 
     move-object/from16 v0, p2
 
@@ -933,7 +869,7 @@
 
     move-result v5
 
-    const-string/jumbo v6, "uid"
+    const-string v6, "uid"
 
     move-object/from16 v0, p2
 
@@ -953,7 +889,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "message"
+    const-string v8, "message"
 
     move-object/from16 v0, p2
 
@@ -965,11 +901,10 @@
 
     goto/16 :goto_0
 
-    .line 2834
     .end local v1    # "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     .end local v10    # "api":Ljava/lang/String;
     :sswitch_4
-    const-string/jumbo v2, "password_policy"
+    const-string v2, "password_policy"
 
     invoke-static {v2}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -977,11 +912,9 @@
 
     check-cast v15, Lcom/android/server/enterprise/security/PasswordPolicy;
 
-    .line 2837
     .local v15, "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     if-eqz v15, :cond_0
 
-    .line 2838
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -990,11 +923,10 @@
 
     move-result-object v10
 
-    .line 2839
     .restart local v10    # "api":Ljava/lang/String;
     if-eqz v10, :cond_0
 
-    const-string/jumbo v2, "setPwdChangeRequested"
+    const-string v2, "setPwdChangeRequested"
 
     invoke-virtual {v10, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1002,12 +934,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 2840
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v11}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "flag"
+    const-string v3, "flag"
 
     move-object/from16 v0, p2
 
@@ -1023,11 +954,10 @@
 
     goto/16 :goto_0
 
-    .line 2846
     .end local v10    # "api":Ljava/lang/String;
     .end local v15    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     :sswitch_5
-    const-string/jumbo v2, "security_policy"
+    const-string v2, "security_policy"
 
     invoke-static {v2}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1035,11 +965,9 @@
 
     check-cast v16, Lcom/android/server/enterprise/security/SecurityPolicy;
 
-    .line 2848
     .local v16, "lSecurityPolicy":Lcom/android/server/enterprise/security/SecurityPolicy;
     if-eqz v16, :cond_0
 
-    .line 2849
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -1048,11 +976,10 @@
 
     move-result-object v10
 
-    .line 2850
     .restart local v10    # "api":Ljava/lang/String;
     if-eqz v10, :cond_0
 
-    const-string/jumbo v2, "setDodBannerVisibleStatus"
+    const-string v2, "setDodBannerVisibleStatus"
 
     invoke-virtual {v10, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1060,12 +987,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 2851
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v11}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "isVisible"
+    const-string v3, "isVisible"
 
     move-object/from16 v0, p2
 
@@ -1083,7 +1009,6 @@
 
     goto/16 :goto_0
 
-    .line 2759
     :sswitch_data_0
     .sparse-switch
         0x2 -> :sswitch_3
@@ -1099,14 +1024,12 @@
     .locals 1
 
     .prologue
-    .line 215
     invoke-virtual {p0}, Lcom/android/server/enterprise/content/SecContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/content/SecContentProvider;->mContext:Landroid/content/Context;
 
-    .line 216
     const/4 v0, 0x1
 
     return v0
@@ -1121,26 +1044,21 @@
     .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 223
     .local v8, "callingUid":I
     invoke-static {v8}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v7
 
-    .line 230
     .local v7, "userId":I
     const/16 v61, 0x0
 
-    .line 233
     .local v61, "showMsg":Z
     const/16 v52, 0x0
 
-    .line 235
     .local v52, "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const-string v5, "SecContentProvider"
 
@@ -1148,7 +1066,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "query(), uri = "
+    const-string v69, "query(), uri = "
 
     move-object/from16 v0, v69
 
@@ -1192,7 +1110,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1225,7 +1142,6 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     sget-object v5, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     move-object/from16 v0, p1
@@ -1236,7 +1152,6 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 2745
     :cond_0
     :goto_0
     :pswitch_0
@@ -1245,9 +1160,8 @@
     :goto_1
     return-object v5
 
-    .line 244
     :pswitch_1
-    const-string/jumbo v5, "restriction_policy"
+    const-string v5, "restriction_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1255,13 +1169,11 @@
 
     check-cast v42, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 246
     .local v42, "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v42, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 247
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -1274,12 +1186,10 @@
     :goto_2
     packed-switch v5, :pswitch_data_1
 
-    .line 503
     const/4 v5, 0x0
 
     goto :goto_1
 
-    .line 247
     :sswitch_0
     const-string v6, "checkPackageSource"
 
@@ -1296,7 +1206,7 @@
     goto :goto_2
 
     :sswitch_1
-    const-string/jumbo v6, "isActivationLockAllowed"
+    const-string v6, "isActivationLockAllowed"
 
     move-object/from16 v0, p3
 
@@ -1311,7 +1221,7 @@
     goto :goto_2
 
     :sswitch_2
-    const-string/jumbo v6, "isAirplaneModeAllowed"
+    const-string v6, "isAirplaneModeAllowed"
 
     move-object/from16 v0, p3
 
@@ -1326,7 +1236,7 @@
     goto :goto_2
 
     :sswitch_3
-    const-string/jumbo v6, "isAndroidBeamAllowed"
+    const-string v6, "isAndroidBeamAllowed"
 
     move-object/from16 v0, p3
 
@@ -1341,7 +1251,7 @@
     goto :goto_2
 
     :sswitch_4
-    const-string/jumbo v6, "isAudioRecordAllowed"
+    const-string v6, "isAudioRecordAllowed"
 
     move-object/from16 v0, p3
 
@@ -1356,7 +1266,7 @@
     goto :goto_2
 
     :sswitch_5
-    const-string/jumbo v6, "isBackgroundDataEnabled"
+    const-string v6, "isBackgroundDataEnabled"
 
     move-object/from16 v0, p3
 
@@ -1371,7 +1281,7 @@
     goto :goto_2
 
     :sswitch_6
-    const-string/jumbo v6, "isBackgroundProcessLimitEnabled"
+    const-string v6, "isBackgroundProcessLimitEnabled"
 
     move-object/from16 v0, p3
 
@@ -1386,7 +1296,7 @@
     goto :goto_2
 
     :sswitch_7
-    const-string/jumbo v6, "isBackupAllowed"
+    const-string v6, "isBackupAllowed"
 
     move-object/from16 v0, p3
 
@@ -1401,7 +1311,7 @@
     goto :goto_2
 
     :sswitch_8
-    const-string/jumbo v6, "isBluetoothTetheringEnabled"
+    const-string v6, "isBluetoothTetheringEnabled"
 
     move-object/from16 v0, p3
 
@@ -1416,7 +1326,7 @@
     goto :goto_2
 
     :sswitch_9
-    const-string/jumbo v6, "isCameraEnabled"
+    const-string v6, "isCameraEnabled"
 
     move-object/from16 v0, p3
 
@@ -1431,7 +1341,7 @@
     goto/16 :goto_2
 
     :sswitch_a
-    const-string/jumbo v6, "isCellularDataAllowed"
+    const-string v6, "isCellularDataAllowed"
 
     move-object/from16 v0, p3
 
@@ -1446,7 +1356,7 @@
     goto/16 :goto_2
 
     :sswitch_b
-    const-string/jumbo v6, "isClipboardAllowed"
+    const-string v6, "isClipboardAllowed"
 
     move-object/from16 v0, p3
 
@@ -1461,7 +1371,7 @@
     goto/16 :goto_2
 
     :sswitch_c
-    const-string/jumbo v6, "isClipboardAllowedAsUser"
+    const-string v6, "isClipboardAllowedAsUser"
 
     move-object/from16 v0, p3
 
@@ -1476,7 +1386,7 @@
     goto/16 :goto_2
 
     :sswitch_d
-    const-string/jumbo v6, "isClipboardShareAllowedAsUser"
+    const-string v6, "isClipboardShareAllowedAsUser"
 
     move-object/from16 v0, p3
 
@@ -1491,7 +1401,7 @@
     goto/16 :goto_2
 
     :sswitch_e
-    const-string/jumbo v6, "isClipboardShareAllowed"
+    const-string v6, "isClipboardShareAllowed"
 
     move-object/from16 v0, p3
 
@@ -1506,7 +1416,7 @@
     goto/16 :goto_2
 
     :sswitch_f
-    const-string/jumbo v6, "isDeveloperModeAllowed"
+    const-string v6, "isDeveloperModeAllowed"
 
     move-object/from16 v0, p3
 
@@ -1521,7 +1431,7 @@
     goto/16 :goto_2
 
     :sswitch_10
-    const-string/jumbo v6, "isFactoryResetAllowed"
+    const-string v6, "isFactoryResetAllowed"
 
     move-object/from16 v0, p3
 
@@ -1536,7 +1446,7 @@
     goto/16 :goto_2
 
     :sswitch_11
-    const-string/jumbo v6, "isFastEncryptionAllowed"
+    const-string v6, "isFastEncryptionAllowed"
 
     move-object/from16 v0, p3
 
@@ -1550,7 +1460,6 @@
 
     goto/16 :goto_2
 
-    .line 249
     :pswitch_2
     if-eqz p4, :cond_2
 
@@ -1560,13 +1469,11 @@
 
     if-gtz v5, :cond_3
 
-    .line 250
     :cond_2
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 252
     :cond_3
     const/4 v5, 0x0
 
@@ -1578,7 +1485,6 @@
 
     move-result v57
 
-    .line 255
     .local v57, "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1597,7 +1503,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 258
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -1618,10 +1523,8 @@
     :goto_3
     move-object/from16 v5, v52
 
-    .line 506
     goto/16 :goto_1
 
-    .line 263
     .end local v57    # "result":Z
     :pswitch_3
     if-eqz p4, :cond_4
@@ -1632,13 +1535,11 @@
 
     if-gtz v5, :cond_5
 
-    .line 264
     :cond_4
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 266
     :cond_5
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -1658,7 +1559,6 @@
 
     move-result v57
 
-    .line 270
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1669,7 +1569,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isActivationLockAllowed"
+    const-string v69, "isActivationLockAllowed"
 
     aput-object v69, v5, v6
 
@@ -1677,7 +1577,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 273
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -1697,12 +1596,10 @@
 
     goto :goto_3
 
-    .line 279
     .end local v57    # "result":Z
     :pswitch_4
     const/4 v10, 0x0
 
-    .line 280
     .local v10, "arg":Z
     if-eqz p4, :cond_6
 
@@ -1712,7 +1609,6 @@
 
     if-lez v5, :cond_6
 
-    .line 281
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -1721,7 +1617,6 @@
 
     move-result v10
 
-    .line 282
     :cond_6
     move-object/from16 v0, v42
 
@@ -1729,7 +1624,6 @@
 
     move-result v57
 
-    .line 285
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1740,7 +1634,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isAirplaneModeAllowed"
+    const-string v69, "isAirplaneModeAllowed"
 
     aput-object v69, v5, v6
 
@@ -1748,7 +1642,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 288
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -1768,13 +1661,11 @@
 
     goto :goto_3
 
-    .line 294
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_5
     const/4 v10, 0x0
 
-    .line 295
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_7
 
@@ -1784,7 +1675,6 @@
 
     if-lez v5, :cond_7
 
-    .line 296
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -1793,7 +1683,6 @@
 
     move-result v10
 
-    .line 297
     :cond_7
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -1805,7 +1694,6 @@
 
     move-result v57
 
-    .line 300
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1816,7 +1704,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isAndroidBeamAllowed"
+    const-string v69, "isAndroidBeamAllowed"
 
     aput-object v69, v5, v6
 
@@ -1824,7 +1712,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 303
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -1844,13 +1731,11 @@
 
     goto/16 :goto_3
 
-    .line 309
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_6
     const/4 v10, 0x0
 
-    .line 310
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_8
 
@@ -1860,7 +1745,6 @@
 
     if-lez v5, :cond_8
 
-    .line 311
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -1869,7 +1753,6 @@
 
     move-result v10
 
-    .line 312
     :cond_8
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -1881,7 +1764,6 @@
 
     move-result v57
 
-    .line 315
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1892,7 +1774,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isAudioRecordAllowed"
+    const-string v69, "isAudioRecordAllowed"
 
     aput-object v69, v5, v6
 
@@ -1900,7 +1782,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 318
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -1920,7 +1801,6 @@
 
     goto/16 :goto_3
 
-    .line 324
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_7
@@ -1934,7 +1814,6 @@
 
     move-result v57
 
-    .line 327
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1945,7 +1824,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBackgroundDataEnabled"
+    const-string v69, "isBackgroundDataEnabled"
 
     aput-object v69, v5, v6
 
@@ -1953,7 +1832,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 330
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -1973,7 +1851,6 @@
 
     goto/16 :goto_3
 
-    .line 336
     .end local v57    # "result":Z
     :pswitch_8
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -1986,7 +1863,6 @@
 
     move-result v57
 
-    .line 339
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -1997,7 +1873,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBackgroundProcessLimitEnabled"
+    const-string v69, "isBackgroundProcessLimitEnabled"
 
     aput-object v69, v5, v6
 
@@ -2005,7 +1881,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 342
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2025,7 +1900,6 @@
 
     goto/16 :goto_3
 
-    .line 348
     .end local v57    # "result":Z
     :pswitch_9
     if-eqz p4, :cond_9
@@ -2036,13 +1910,11 @@
 
     if-gtz v5, :cond_a
 
-    .line 349
     :cond_9
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 350
     :cond_a
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -2062,7 +1934,6 @@
 
     move-result v57
 
-    .line 354
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2073,7 +1944,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBackupAllowed"
+    const-string v69, "isBackupAllowed"
 
     aput-object v69, v5, v6
 
@@ -2081,7 +1952,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 357
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2101,7 +1971,6 @@
 
     goto/16 :goto_3
 
-    .line 363
     .end local v57    # "result":Z
     :pswitch_a
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -2114,7 +1983,6 @@
 
     move-result v57
 
-    .line 366
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2125,7 +1993,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBluetoothTetheringEnabled"
+    const-string v69, "isBluetoothTetheringEnabled"
 
     aput-object v69, v5, v6
 
@@ -2133,7 +2001,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 369
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2153,7 +2020,6 @@
 
     goto/16 :goto_3
 
-    .line 375
     .end local v57    # "result":Z
     :pswitch_b
     if-eqz p4, :cond_b
@@ -2164,13 +2030,11 @@
 
     if-gtz v5, :cond_c
 
-    .line 376
     :cond_b
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 377
     :cond_c
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -2190,7 +2054,6 @@
 
     move-result v57
 
-    .line 380
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2201,7 +2064,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isCameraEnabled"
+    const-string v69, "isCameraEnabled"
 
     aput-object v69, v5, v6
 
@@ -2209,7 +2072,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 383
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2229,7 +2091,6 @@
 
     goto/16 :goto_3
 
-    .line 389
     .end local v57    # "result":Z
     :pswitch_c
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -2242,7 +2103,6 @@
 
     move-result v57
 
-    .line 392
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2253,7 +2113,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isCellularDataAllowed"
+    const-string v69, "isCellularDataAllowed"
 
     aput-object v69, v5, v6
 
@@ -2261,7 +2121,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 395
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2281,7 +2140,6 @@
 
     goto/16 :goto_3
 
-    .line 401
     .end local v57    # "result":Z
     :pswitch_d
     if-eqz p4, :cond_d
@@ -2292,7 +2150,6 @@
 
     if-gtz v5, :cond_e
 
-    .line 403
     :cond_d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -2306,7 +2163,6 @@
 
     move-result v57
 
-    .line 410
     .restart local v57    # "result":Z
     :goto_4
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -2318,7 +2174,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isClipboardAllowed"
+    const-string v69, "isClipboardAllowed"
 
     aput-object v69, v5, v6
 
@@ -2326,7 +2182,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 413
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2346,7 +2201,6 @@
 
     goto/16 :goto_3
 
-    .line 405
     .end local v57    # "result":Z
     :cond_e
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -2370,7 +2224,6 @@
     .restart local v57    # "result":Z
     goto :goto_4
 
-    .line 419
     .end local v57    # "result":Z
     :pswitch_e
     if-eqz p4, :cond_f
@@ -2383,13 +2236,11 @@
 
     if-ge v5, v6, :cond_10
 
-    .line 420
     :cond_f
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 421
     :cond_10
     const/4 v5, 0x0
 
@@ -2413,7 +2264,6 @@
 
     move-result v57
 
-    .line 422
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -2441,7 +2291,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -2451,7 +2300,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isClipboardAllowedAsUser"
+    const-string v69, "isClipboardAllowedAsUser"
 
     aput-object v69, v5, v6
 
@@ -2459,7 +2308,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 427
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2479,7 +2327,6 @@
 
     goto/16 :goto_3
 
-    .line 434
     .end local v57    # "result":Z
     :pswitch_f
     if-eqz p4, :cond_11
@@ -2490,13 +2337,11 @@
 
     if-gtz v5, :cond_12
 
-    .line 435
     :cond_11
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 436
     :cond_12
     const/4 v5, 0x0
 
@@ -2512,7 +2357,6 @@
 
     move-result v57
 
-    .line 439
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2523,7 +2367,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isClipboardShareAllowedAsUser"
+    const-string v69, "isClipboardShareAllowedAsUser"
 
     aput-object v69, v5, v6
 
@@ -2531,7 +2375,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 442
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2551,7 +2394,6 @@
 
     goto/16 :goto_3
 
-    .line 448
     .end local v57    # "result":Z
     :pswitch_10
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -2564,7 +2406,6 @@
 
     move-result v57
 
-    .line 451
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2575,7 +2416,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isClipboardShareAllowed"
+    const-string v69, "isClipboardShareAllowed"
 
     aput-object v69, v5, v6
 
@@ -2583,7 +2424,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 454
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2603,12 +2443,10 @@
 
     goto/16 :goto_3
 
-    .line 460
     .end local v57    # "result":Z
     :pswitch_11
     const/4 v10, 0x0
 
-    .line 461
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_13
 
@@ -2618,7 +2456,6 @@
 
     if-lez v5, :cond_13
 
-    .line 462
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -2627,7 +2464,6 @@
 
     move-result v10
 
-    .line 463
     :cond_13
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -2639,7 +2475,6 @@
 
     move-result v57
 
-    .line 466
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2650,7 +2485,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isDeveloperModeAllowed"
+    const-string v69, "isDeveloperModeAllowed"
 
     aput-object v69, v5, v6
 
@@ -2658,7 +2493,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 469
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2678,10 +2512,8 @@
 
     move-object/from16 v5, v52
 
-    .line 474
     goto/16 :goto_1
 
-    .line 476
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_12
@@ -2695,7 +2527,6 @@
 
     move-result v57
 
-    .line 479
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -2706,7 +2537,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isFactoryResetAllowed"
+    const-string v69, "isFactoryResetAllowed"
 
     aput-object v69, v5, v6
 
@@ -2714,7 +2545,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 482
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2734,7 +2564,6 @@
 
     goto/16 :goto_3
 
-    .line 488
     .end local v57    # "result":Z
     :pswitch_13
     if-eqz p4, :cond_14
@@ -2747,12 +2576,10 @@
 
     if-ge v5, v6, :cond_14
 
-    .line 489
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 491
     :cond_14
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -2772,7 +2599,6 @@
 
     move-result v57
 
-    .line 492
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -2780,7 +2606,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isFastEncryptionAllowed return = "
+    const-string v69, "isFastEncryptionAllowed return = "
 
     move-object/from16 v0, v69
 
@@ -2800,7 +2626,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -2810,7 +2635,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isFastEncryptionAllowed"
+    const-string v69, "isFastEncryptionAllowed"
 
     aput-object v69, v5, v6
 
@@ -2818,7 +2643,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 497
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -2838,11 +2662,10 @@
 
     goto/16 :goto_3
 
-    .line 510
     .end local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v57    # "result":Z
     :pswitch_14
-    const-string/jumbo v5, "restriction_policy"
+    const-string v5, "restriction_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2850,13 +2673,11 @@
 
     check-cast v42, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 512
     .restart local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v42, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 513
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -2869,21 +2690,18 @@
     :goto_5
     packed-switch v5, :pswitch_data_2
 
-    .line 784
     const-string v5, "SecContentProvider"
 
-    const-string/jumbo v6, "return null"
+    const-string v6, "return null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 785
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 513
     :sswitch_12
-    const-string/jumbo v6, "isFirmwareAutoUpdateAllowed"
+    const-string v6, "isFirmwareAutoUpdateAllowed"
 
     move-object/from16 v0, p3
 
@@ -2898,7 +2716,7 @@
     goto :goto_5
 
     :sswitch_13
-    const-string/jumbo v6, "isFirmwareRecoveryAllowed"
+    const-string v6, "isFirmwareRecoveryAllowed"
 
     move-object/from16 v0, p3
 
@@ -2913,7 +2731,7 @@
     goto :goto_5
 
     :sswitch_14
-    const-string/jumbo v6, "isGoogleAccountsAutoSyncAllowed"
+    const-string v6, "isGoogleAccountsAutoSyncAllowed"
 
     move-object/from16 v0, p3
 
@@ -2928,7 +2746,7 @@
     goto :goto_5
 
     :sswitch_15
-    const-string/jumbo v6, "isGoogleCrashReportedAllowed"
+    const-string v6, "isGoogleCrashReportedAllowed"
 
     move-object/from16 v0, p3
 
@@ -2943,7 +2761,7 @@
     goto :goto_5
 
     :sswitch_16
-    const-string/jumbo v6, "isHeadPhoneEnabled"
+    const-string v6, "isHeadPhoneEnabled"
 
     move-object/from16 v0, p3
 
@@ -2958,7 +2776,7 @@
     goto :goto_5
 
     :sswitch_17
-    const-string/jumbo v6, "isHomeKeyEnabled"
+    const-string v6, "isHomeKeyEnabled"
 
     move-object/from16 v0, p3
 
@@ -2973,7 +2791,7 @@
     goto :goto_5
 
     :sswitch_18
-    const-string/jumbo v6, "isKillingActivitiesOnLeaveAllowed"
+    const-string v6, "isKillingActivitiesOnLeaveAllowed"
 
     move-object/from16 v0, p3
 
@@ -2988,7 +2806,7 @@
     goto :goto_5
 
     :sswitch_19
-    const-string/jumbo v6, "isLockScreenEnabled"
+    const-string v6, "isLockScreenEnabled"
 
     move-object/from16 v0, p3
 
@@ -3003,7 +2821,7 @@
     goto :goto_5
 
     :sswitch_1a
-    const-string/jumbo v6, "isLockScreenViewAllowed"
+    const-string v6, "isLockScreenViewAllowed"
 
     move-object/from16 v0, p3
 
@@ -3018,7 +2836,7 @@
     goto/16 :goto_5
 
     :sswitch_1b
-    const-string/jumbo v6, "isMicrophoneEnabled"
+    const-string v6, "isMicrophoneEnabled"
 
     move-object/from16 v0, p3
 
@@ -3033,7 +2851,7 @@
     goto/16 :goto_5
 
     :sswitch_1c
-    const-string/jumbo v6, "isMicrophoneEnabledAsUser"
+    const-string v6, "isMicrophoneEnabledAsUser"
 
     move-object/from16 v0, p3
 
@@ -3048,7 +2866,7 @@
     goto/16 :goto_5
 
     :sswitch_1d
-    const-string/jumbo v6, "isMockLocationEnabled"
+    const-string v6, "isMockLocationEnabled"
 
     move-object/from16 v0, p3
 
@@ -3063,7 +2881,7 @@
     goto/16 :goto_5
 
     :sswitch_1e
-    const-string/jumbo v6, "isNewAdminInstallationEnabled"
+    const-string v6, "isNewAdminInstallationEnabled"
 
     move-object/from16 v0, p3
 
@@ -3078,7 +2896,7 @@
     goto/16 :goto_5
 
     :sswitch_1f
-    const-string/jumbo v6, "isNFCEnabled"
+    const-string v6, "isNFCEnabled"
 
     move-object/from16 v0, p3
 
@@ -3093,7 +2911,7 @@
     goto/16 :goto_5
 
     :sswitch_20
-    const-string/jumbo v6, "isNFCEnabledWithMsg"
+    const-string v6, "isNFCEnabledWithMsg"
 
     move-object/from16 v0, p3
 
@@ -3108,7 +2926,7 @@
     goto/16 :goto_5
 
     :sswitch_21
-    const-string/jumbo v6, "isNonMarketAppAllowed"
+    const-string v6, "isNonMarketAppAllowed"
 
     move-object/from16 v0, p3
 
@@ -3123,7 +2941,7 @@
     goto/16 :goto_5
 
     :sswitch_22
-    const-string/jumbo v6, "isNonTrustedAppInstallBlocked"
+    const-string v6, "isNonTrustedAppInstallBlocked"
 
     move-object/from16 v0, p3
 
@@ -3137,7 +2955,6 @@
 
     goto/16 :goto_5
 
-    .line 515
     :pswitch_15
     if-eqz p4, :cond_16
 
@@ -3147,13 +2964,11 @@
 
     if-gtz v5, :cond_17
 
-    .line 516
     :cond_16
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 518
     :cond_17
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -3173,7 +2988,6 @@
 
     move-result v57
 
-    .line 522
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3184,7 +2998,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isFirmwareAutoUpdateAllowed"
+    const-string v69, "isFirmwareAutoUpdateAllowed"
 
     aput-object v69, v5, v6
 
@@ -3192,7 +3006,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 525
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3213,10 +3026,8 @@
     :goto_6
     move-object/from16 v5, v52
 
-    .line 788
     goto/16 :goto_1
 
-    .line 531
     .end local v57    # "result":Z
     :pswitch_16
     if-eqz p4, :cond_18
@@ -3227,13 +3038,11 @@
 
     if-gtz v5, :cond_19
 
-    .line 532
     :cond_18
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 534
     :cond_19
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -3253,7 +3062,6 @@
 
     move-result v57
 
-    .line 538
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3264,7 +3072,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isFirmwareRecoveryAllowed"
+    const-string v69, "isFirmwareRecoveryAllowed"
 
     aput-object v69, v5, v6
 
@@ -3272,7 +3080,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 541
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3292,7 +3099,6 @@
 
     goto :goto_6
 
-    .line 547
     .end local v57    # "result":Z
     :pswitch_17
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -3305,7 +3111,6 @@
 
     move-result v57
 
-    .line 550
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3316,7 +3121,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isGoogleAccountsAutoSyncAllowed"
+    const-string v69, "isGoogleAccountsAutoSyncAllowed"
 
     aput-object v69, v5, v6
 
@@ -3324,7 +3129,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 553
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3344,7 +3148,6 @@
 
     goto :goto_6
 
-    .line 559
     .end local v57    # "result":Z
     :pswitch_18
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -3357,7 +3160,6 @@
 
     move-result v57
 
-    .line 562
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3368,7 +3170,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isGoogleCrashReportedAllowed"
+    const-string v69, "isGoogleCrashReportedAllowed"
 
     aput-object v69, v5, v6
 
@@ -3376,7 +3178,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 565
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3396,7 +3197,6 @@
 
     goto/16 :goto_6
 
-    .line 571
     .end local v57    # "result":Z
     :pswitch_19
     if-eqz p4, :cond_1a
@@ -3407,13 +3207,11 @@
 
     if-gtz v5, :cond_1b
 
-    .line 572
     :cond_1a
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 573
     :cond_1b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -3433,7 +3231,6 @@
 
     move-result v57
 
-    .line 577
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3444,7 +3241,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isHeadPhoneEnabled"
+    const-string v69, "isHeadPhoneEnabled"
 
     aput-object v69, v5, v6
 
@@ -3452,7 +3249,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 580
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3472,12 +3268,10 @@
 
     goto/16 :goto_6
 
-    .line 586
     .end local v57    # "result":Z
     :pswitch_1a
     const/4 v10, 0x0
 
-    .line 587
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_1c
 
@@ -3487,7 +3281,6 @@
 
     if-lez v5, :cond_1c
 
-    .line 588
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -3496,7 +3289,6 @@
 
     move-result v10
 
-    .line 589
     :cond_1c
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -3508,7 +3300,6 @@
 
     move-result v57
 
-    .line 592
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3519,7 +3310,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isHomeKeyEnabled"
+    const-string v69, "isHomeKeyEnabled"
 
     aput-object v69, v5, v6
 
@@ -3527,7 +3318,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 595
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3547,13 +3337,11 @@
 
     goto/16 :goto_6
 
-    .line 601
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_1b
     if-nez p4, :cond_1d
 
-    .line 602
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v5, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -3564,7 +3352,6 @@
 
     move-result v57
 
-    .line 603
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -3572,7 +3359,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isKillingActivitiesOnLeaveAllowed return = "
+    const-string v69, "isKillingActivitiesOnLeaveAllowed return = "
 
     move-object/from16 v0, v69
 
@@ -3604,7 +3391,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 610
     :goto_7
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3615,7 +3401,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isKillingActivitiesOnLeaveAllowed"
+    const-string v69, "isKillingActivitiesOnLeaveAllowed"
 
     aput-object v69, v5, v6
 
@@ -3623,7 +3409,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 613
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3643,7 +3428,6 @@
 
     goto/16 :goto_6
 
-    .line 606
     .end local v57    # "result":Z
     :cond_1d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -3664,7 +3448,6 @@
 
     move-result v57
 
-    .line 607
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -3672,7 +3455,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isKillingActivitiesOnLeaveAllowed return = "
+    const-string v69, "isKillingActivitiesOnLeaveAllowed return = "
 
     move-object/from16 v0, v69
 
@@ -3716,7 +3499,6 @@
 
     goto :goto_7
 
-    .line 619
     .end local v57    # "result":Z
     :pswitch_1c
     if-eqz p4, :cond_1e
@@ -3727,13 +3509,11 @@
 
     if-gtz v5, :cond_1f
 
-    .line 620
     :cond_1e
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 621
     :cond_1f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -3753,7 +3533,6 @@
 
     move-result v57
 
-    .line 625
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -3764,7 +3543,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isLockScreenEnabled"
+    const-string v69, "isLockScreenEnabled"
 
     aput-object v69, v5, v6
 
@@ -3772,7 +3551,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 628
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3792,7 +3570,6 @@
 
     goto/16 :goto_6
 
-    .line 634
     .end local v57    # "result":Z
     :pswitch_1d
     if-eqz p4, :cond_20
@@ -3805,13 +3582,11 @@
 
     if-ge v5, v6, :cond_21
 
-    .line 635
     :cond_20
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 636
     :cond_21
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -3821,7 +3596,6 @@
 
     if-ne v5, v6, :cond_22
 
-    .line 637
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x0
@@ -3848,7 +3622,6 @@
 
     move-result v57
 
-    .line 644
     .restart local v57    # "result":Z
     :goto_8
     const-string v5, "SecContentProvider"
@@ -3857,7 +3630,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isLockScreenViewAllowed return = "
+    const-string v69, "isLockScreenViewAllowed return = "
 
     move-object/from16 v0, v69
 
@@ -3877,7 +3650,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -3887,7 +3659,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isLockScreenViewAllowed"
+    const-string v69, "isLockScreenViewAllowed"
 
     aput-object v69, v5, v6
 
@@ -3895,7 +3667,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 649
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -3915,7 +3686,6 @@
 
     goto/16 :goto_6
 
-    .line 641
     .end local v57    # "result":Z
     :cond_22
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -3939,7 +3709,6 @@
     .restart local v57    # "result":Z
     goto :goto_8
 
-    .line 655
     .end local v57    # "result":Z
     :pswitch_1e
     if-eqz p4, :cond_23
@@ -3952,13 +3721,11 @@
 
     if-ge v5, v6, :cond_24
 
-    .line 656
     :cond_23
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 657
     :cond_24
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -3968,7 +3735,6 @@
 
     if-ne v5, v6, :cond_25
 
-    .line 658
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x0
@@ -3995,7 +3761,6 @@
 
     move-result v57
 
-    .line 665
     .restart local v57    # "result":Z
     :goto_9
     const-string v5, "SecContentProvider"
@@ -4004,7 +3769,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isMicrophoneEnabled return = "
+    const-string v69, "isMicrophoneEnabled return = "
 
     move-object/from16 v0, v69
 
@@ -4024,7 +3789,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -4034,7 +3798,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isMicrophoneEnabled"
+    const-string v69, "isMicrophoneEnabled"
 
     aput-object v69, v5, v6
 
@@ -4042,7 +3806,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 670
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4062,7 +3825,6 @@
 
     goto/16 :goto_6
 
-    .line 662
     .end local v57    # "result":Z
     :cond_25
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -4086,7 +3848,6 @@
     .restart local v57    # "result":Z
     goto :goto_9
 
-    .line 676
     .end local v57    # "result":Z
     :pswitch_1f
     if-eqz p4, :cond_26
@@ -4099,13 +3860,11 @@
 
     if-ge v5, v6, :cond_27
 
-    .line 677
     :cond_26
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 678
     :cond_27
     const/4 v5, 0x0
 
@@ -4129,7 +3888,6 @@
 
     move-result v57
 
-    .line 680
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -4137,7 +3895,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isMicrophoneEnabledAsUser return = "
+    const-string v69, "isMicrophoneEnabledAsUser return = "
 
     move-object/from16 v0, v69
 
@@ -4157,7 +3915,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 682
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -4167,7 +3924,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isMicrophoneEnabledAsUser"
+    const-string v69, "isMicrophoneEnabledAsUser"
 
     aput-object v69, v5, v6
 
@@ -4175,7 +3932,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 685
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4195,12 +3951,10 @@
 
     goto/16 :goto_6
 
-    .line 692
     .end local v57    # "result":Z
     :pswitch_20
     if-nez p4, :cond_28
 
-    .line 693
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v5, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -4211,7 +3965,6 @@
 
     move-result v57
 
-    .line 694
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -4237,7 +3990,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 700
     :goto_a
     const-string v5, "SecContentProvider"
 
@@ -4245,7 +3997,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isMockLocationEnabled return = "
+    const-string v69, "isMockLocationEnabled return = "
 
     move-object/from16 v0, v69
 
@@ -4265,7 +4017,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 702
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -4275,7 +4026,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isMockLocationEnabled"
+    const-string v69, "isMockLocationEnabled"
 
     aput-object v69, v5, v6
 
@@ -4283,7 +4034,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 705
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4303,7 +4053,6 @@
 
     goto/16 :goto_6
 
-    .line 697
     .end local v57    # "result":Z
     :cond_28
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -4324,7 +4073,6 @@
 
     move-result v57
 
-    .line 698
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -4362,7 +4110,6 @@
 
     goto :goto_a
 
-    .line 711
     .end local v57    # "result":Z
     :pswitch_21
     if-eqz p4, :cond_29
@@ -4373,13 +4120,11 @@
 
     if-gtz v5, :cond_2a
 
-    .line 712
     :cond_29
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 713
     :cond_2a
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -4399,7 +4144,6 @@
 
     move-result v57
 
-    .line 717
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -4410,7 +4154,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isNewAdminInstallationEnabled"
+    const-string v69, "isNewAdminInstallationEnabled"
 
     aput-object v69, v5, v6
 
@@ -4418,7 +4162,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 720
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4438,14 +4181,12 @@
 
     goto/16 :goto_6
 
-    .line 726
     .end local v57    # "result":Z
     :pswitch_22
     invoke-virtual/range {v42 .. v42}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNFCEnabled()Z
 
     move-result v57
 
-    .line 729
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -4456,7 +4197,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isNFCEnabled"
+    const-string v69, "isNFCEnabled"
 
     aput-object v69, v5, v6
 
@@ -4464,7 +4205,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 732
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4484,7 +4224,6 @@
 
     goto/16 :goto_6
 
-    .line 738
     .end local v57    # "result":Z
     :pswitch_23
     if-eqz p4, :cond_2b
@@ -4497,11 +4236,9 @@
 
     if-ge v5, v6, :cond_2c
 
-    .line 739
     :cond_2b
     const/16 v61, 0x0
 
-    .line 743
     :goto_b
     move-object/from16 v0, v42
 
@@ -4511,7 +4248,6 @@
 
     move-result v57
 
-    .line 746
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -4522,7 +4258,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isNFCEnabledWithMsg"
+    const-string v69, "isNFCEnabledWithMsg"
 
     aput-object v69, v5, v6
 
@@ -4530,7 +4266,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 749
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4550,7 +4285,6 @@
 
     goto/16 :goto_6
 
-    .line 741
     .end local v57    # "result":Z
     :cond_2c
     const/4 v5, 0x0
@@ -4563,11 +4297,9 @@
 
     goto :goto_b
 
-    .line 755
     :pswitch_24
     if-eqz p4, :cond_2d
 
-    .line 756
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x0
@@ -4586,7 +4318,6 @@
 
     move-result v57
 
-    .line 763
     .restart local v57    # "result":Z
     :goto_c
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -4598,7 +4329,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isNonMarketAppAllowed"
+    const-string v69, "isNonMarketAppAllowed"
 
     aput-object v69, v5, v6
 
@@ -4606,7 +4337,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 766
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4626,7 +4356,6 @@
 
     goto/16 :goto_6
 
-    .line 759
     .end local v57    # "result":Z
     :cond_2d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -4642,7 +4371,6 @@
     .restart local v57    # "result":Z
     goto :goto_c
 
-    .line 772
     .end local v57    # "result":Z
     :pswitch_25
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -4655,7 +4383,6 @@
 
     move-result v57
 
-    .line 775
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -4666,7 +4393,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isNonTrustedAppInstallBlocked"
+    const-string v69, "isNonTrustedAppInstallBlocked"
 
     aput-object v69, v5, v6
 
@@ -4674,7 +4401,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 778
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -4694,11 +4420,10 @@
 
     goto/16 :goto_6
 
-    .line 792
     .end local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v57    # "result":Z
     :pswitch_26
-    const-string/jumbo v5, "restriction_policy"
+    const-string v5, "restriction_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4706,13 +4431,11 @@
 
     check-cast v42, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 794
     .restart local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v42, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 795
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -4725,14 +4448,12 @@
     :goto_d
     packed-switch v5, :pswitch_data_3
 
-    .line 1039
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 795
     :sswitch_23
-    const-string/jumbo v6, "isSettingsChangesAllowed"
+    const-string v6, "isSettingsChangesAllowed"
 
     move-object/from16 v0, p3
 
@@ -4747,7 +4468,7 @@
     goto :goto_d
 
     :sswitch_24
-    const-string/jumbo v6, "isShareListAllowed"
+    const-string v6, "isShareListAllowed"
 
     move-object/from16 v0, p3
 
@@ -4762,7 +4483,7 @@
     goto :goto_d
 
     :sswitch_25
-    const-string/jumbo v6, "isOdeTrustedBootVerificationEnabled"
+    const-string v6, "isOdeTrustedBootVerificationEnabled"
 
     move-object/from16 v0, p3
 
@@ -4777,7 +4498,7 @@
     goto :goto_d
 
     :sswitch_26
-    const-string/jumbo v6, "isOTAUpgradeAllowed"
+    const-string v6, "isOTAUpgradeAllowed"
 
     move-object/from16 v0, p3
 
@@ -4792,7 +4513,7 @@
     goto :goto_d
 
     :sswitch_27
-    const-string/jumbo v6, "isPowerOffAllowed"
+    const-string v6, "isPowerOffAllowed"
 
     move-object/from16 v0, p3
 
@@ -4807,7 +4528,7 @@
     goto :goto_d
 
     :sswitch_28
-    const-string/jumbo v6, "isSafeModeAllowed"
+    const-string v6, "isSafeModeAllowed"
 
     move-object/from16 v0, p3
 
@@ -4822,7 +4543,7 @@
     goto :goto_d
 
     :sswitch_29
-    const-string/jumbo v6, "isSBeamAllowed"
+    const-string v6, "isSBeamAllowed"
 
     move-object/from16 v0, p3
 
@@ -4837,7 +4558,7 @@
     goto :goto_d
 
     :sswitch_2a
-    const-string/jumbo v6, "isScreenCaptureEnabled"
+    const-string v6, "isScreenCaptureEnabled"
 
     move-object/from16 v0, p3
 
@@ -4852,7 +4573,7 @@
     goto :goto_d
 
     :sswitch_2b
-    const-string/jumbo v6, "isSdCardEnabled"
+    const-string v6, "isSdCardEnabled"
 
     move-object/from16 v0, p3
 
@@ -4867,7 +4588,7 @@
     goto :goto_d
 
     :sswitch_2c
-    const-string/jumbo v6, "isSDCardMoveAllowed"
+    const-string v6, "isSDCardMoveAllowed"
 
     move-object/from16 v0, p3
 
@@ -4882,7 +4603,7 @@
     goto/16 :goto_d
 
     :sswitch_2d
-    const-string/jumbo v6, "isScreenPinningAllowedAsUser"
+    const-string v6, "isScreenPinningAllowedAsUser"
 
     move-object/from16 v0, p3
 
@@ -4897,7 +4618,7 @@
     goto/16 :goto_d
 
     :sswitch_2e
-    const-string/jumbo v6, "isSmartClipModeAllowed"
+    const-string v6, "isSmartClipModeAllowed"
 
     move-object/from16 v0, p3
 
@@ -4912,7 +4633,7 @@
     goto/16 :goto_d
 
     :sswitch_2f
-    const-string/jumbo v6, "isStatusBarExpansionallowedAsUser"
+    const-string v6, "isStatusBarExpansionallowedAsUser"
 
     move-object/from16 v0, p3
 
@@ -4927,7 +4648,7 @@
     goto/16 :goto_d
 
     :sswitch_30
-    const-string/jumbo v6, "isStopSystemAppAllowed"
+    const-string v6, "isStopSystemAppAllowed"
 
     move-object/from16 v0, p3
 
@@ -4942,7 +4663,7 @@
     goto/16 :goto_d
 
     :sswitch_31
-    const-string/jumbo v6, "isSVoiceAllowed"
+    const-string v6, "isSVoiceAllowed"
 
     move-object/from16 v0, p3
 
@@ -4957,7 +4678,7 @@
     goto/16 :goto_d
 
     :sswitch_32
-    const-string/jumbo v6, "isUsbDebuggingEnabled"
+    const-string v6, "isUsbDebuggingEnabled"
 
     move-object/from16 v0, p3
 
@@ -4971,7 +4692,6 @@
 
     goto/16 :goto_d
 
-    .line 797
     :pswitch_27
     if-eqz p4, :cond_2f
 
@@ -4983,13 +4703,11 @@
 
     if-ge v5, v6, :cond_30
 
-    .line 798
     :cond_2f
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 799
     :cond_30
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -4999,7 +4717,6 @@
 
     if-ne v5, v6, :cond_31
 
-    .line 800
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x1
@@ -5026,7 +4743,6 @@
 
     move-result v57
 
-    .line 809
     .restart local v57    # "result":Z
     :goto_e
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -5038,7 +4754,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSettingsChangesAllowed"
+    const-string v69, "isSettingsChangesAllowed"
 
     aput-object v69, v5, v6
 
@@ -5046,7 +4762,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 812
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5067,10 +4782,8 @@
     :goto_f
     move-object/from16 v5, v52
 
-    .line 1042
     goto/16 :goto_1
 
-    .line 804
     .end local v57    # "result":Z
     :cond_31
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -5094,7 +4807,6 @@
     .restart local v57    # "result":Z
     goto :goto_e
 
-    .line 818
     .end local v57    # "result":Z
     :pswitch_28
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -5105,7 +4817,6 @@
 
     if-ne v5, v6, :cond_32
 
-    .line 819
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v5, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -5124,7 +4835,6 @@
 
     move-result v57
 
-    .line 825
     .restart local v57    # "result":Z
     :goto_10
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -5136,7 +4846,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isShareListAllowed"
+    const-string v69, "isShareListAllowed"
 
     aput-object v69, v5, v6
 
@@ -5144,7 +4854,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 828
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5164,7 +4873,6 @@
 
     goto :goto_f
 
-    .line 821
     .end local v57    # "result":Z
     :cond_32
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -5182,7 +4890,6 @@
     .restart local v57    # "result":Z
     goto :goto_10
 
-    .line 834
     .end local v57    # "result":Z
     :pswitch_29
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -5195,7 +4902,6 @@
 
     move-result v57
 
-    .line 837
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5206,7 +4912,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isOdeTrustedBootVerificationEnabled"
+    const-string v69, "isOdeTrustedBootVerificationEnabled"
 
     aput-object v69, v5, v6
 
@@ -5214,7 +4920,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 840
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5234,7 +4939,6 @@
 
     goto/16 :goto_f
 
-    .line 846
     .end local v57    # "result":Z
     :pswitch_2a
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -5247,7 +4951,6 @@
 
     move-result v57
 
-    .line 849
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5258,7 +4961,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isOTAUpgradeAllowed"
+    const-string v69, "isOTAUpgradeAllowed"
 
     aput-object v69, v5, v6
 
@@ -5266,7 +4969,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 852
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5286,15 +4988,12 @@
 
     move-object/from16 v5, v52
 
-    .line 857
     goto/16 :goto_1
 
-    .line 859
     .end local v57    # "result":Z
     :pswitch_2b
     const/4 v10, 0x0
 
-    .line 860
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_33
 
@@ -5304,7 +5003,6 @@
 
     if-lez v5, :cond_33
 
-    .line 861
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -5313,7 +5011,6 @@
 
     move-result v10
 
-    .line 863
     :cond_33
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -5325,7 +5022,6 @@
 
     move-result v57
 
-    .line 866
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5336,7 +5032,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isPowerOffAllowed"
+    const-string v69, "isPowerOffAllowed"
 
     aput-object v69, v5, v6
 
@@ -5344,7 +5040,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 869
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5364,7 +5059,6 @@
 
     goto/16 :goto_f
 
-    .line 875
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_2c
@@ -5378,7 +5072,6 @@
 
     move-result v57
 
-    .line 878
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5389,7 +5082,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSafeModeAllowed"
+    const-string v69, "isSafeModeAllowed"
 
     aput-object v69, v5, v6
 
@@ -5397,7 +5090,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 881
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5417,12 +5109,10 @@
 
     goto/16 :goto_f
 
-    .line 887
     .end local v57    # "result":Z
     :pswitch_2d
     const/4 v10, 0x0
 
-    .line 888
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_34
 
@@ -5432,7 +5122,6 @@
 
     if-lez v5, :cond_34
 
-    .line 889
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -5441,7 +5130,6 @@
 
     move-result v10
 
-    .line 890
     :cond_34
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -5453,7 +5141,6 @@
 
     move-result v57
 
-    .line 893
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5464,7 +5151,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSBeamAllowed"
+    const-string v69, "isSBeamAllowed"
 
     aput-object v69, v5, v6
 
@@ -5472,7 +5159,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 896
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5492,7 +5178,6 @@
 
     goto/16 :goto_f
 
-    .line 902
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_2e
@@ -5504,13 +5189,11 @@
 
     if-gtz v5, :cond_36
 
-    .line 903
     :cond_35
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 904
     :cond_36
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -5530,7 +5213,6 @@
 
     move-result v57
 
-    .line 908
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5541,7 +5223,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isScreenCaptureEnabled"
+    const-string v69, "isScreenCaptureEnabled"
 
     aput-object v69, v5, v6
 
@@ -5549,7 +5231,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 911
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5569,7 +5250,6 @@
 
     goto/16 :goto_f
 
-    .line 917
     .end local v57    # "result":Z
     :pswitch_2f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -5582,7 +5262,6 @@
 
     move-result v57
 
-    .line 920
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5593,7 +5272,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSdCardEnabled"
+    const-string v69, "isSdCardEnabled"
 
     aput-object v69, v5, v6
 
@@ -5601,7 +5280,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 923
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5621,7 +5299,6 @@
 
     goto/16 :goto_f
 
-    .line 929
     .end local v57    # "result":Z
     :pswitch_30
     if-eqz p4, :cond_37
@@ -5632,13 +5309,11 @@
 
     if-gtz v5, :cond_38
 
-    .line 930
     :cond_37
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 931
     :cond_38
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -5658,7 +5333,6 @@
 
     move-result v57
 
-    .line 935
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5669,7 +5343,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSDCardMoveAllowed"
+    const-string v69, "isSDCardMoveAllowed"
 
     aput-object v69, v5, v6
 
@@ -5677,7 +5351,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 938
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5697,16 +5370,13 @@
 
     goto/16 :goto_f
 
-    .line 944
     .end local v57    # "result":Z
     :pswitch_31
     const/4 v10, 0x0
 
-    .line 945
     .restart local v10    # "arg":Z
     move/from16 v66, v7
 
-    .line 946
     .local v66, "user":I
     if-eqz p4, :cond_39
 
@@ -5716,7 +5386,6 @@
 
     if-lez v5, :cond_39
 
-    .line 947
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -5725,7 +5394,6 @@
 
     move-result v10
 
-    .line 949
     :cond_39
     if-eqz p4, :cond_3a
 
@@ -5737,7 +5405,6 @@
 
     if-ne v5, v6, :cond_3a
 
-    .line 950
     const/4 v5, 0x1
 
     aget-object v5, p4, v5
@@ -5746,7 +5413,6 @@
 
     move-result v66
 
-    .line 952
     :cond_3a
     move-object/from16 v0, v42
 
@@ -5756,7 +5422,6 @@
 
     move-result v57
 
-    .line 955
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5767,7 +5432,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isScreenPinningAllowedAsUser"
+    const-string v69, "isScreenPinningAllowedAsUser"
 
     aput-object v69, v5, v6
 
@@ -5775,7 +5440,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 958
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5795,14 +5459,12 @@
 
     goto/16 :goto_f
 
-    .line 964
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     .end local v66    # "user":I
     :pswitch_32
     const/4 v10, 0x0
 
-    .line 965
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_3b
 
@@ -5812,7 +5474,6 @@
 
     if-lez v5, :cond_3b
 
-    .line 966
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -5821,7 +5482,6 @@
 
     move-result v10
 
-    .line 967
     :cond_3b
     move-object/from16 v0, v42
 
@@ -5829,7 +5489,6 @@
 
     move-result v57
 
-    .line 970
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5840,7 +5499,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSmartClipModeAllowed"
+    const-string v69, "isSmartClipModeAllowed"
 
     aput-object v69, v5, v6
 
@@ -5848,7 +5507,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 973
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5868,13 +5526,11 @@
 
     goto/16 :goto_f
 
-    .line 979
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_33
     const/4 v10, 0x0
 
-    .line 980
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_3c
 
@@ -5884,7 +5540,6 @@
 
     if-lez v5, :cond_3c
 
-    .line 981
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -5893,7 +5548,6 @@
 
     move-result v10
 
-    .line 982
     :cond_3c
     move-object/from16 v0, v42
 
@@ -5901,7 +5555,6 @@
 
     move-result v57
 
-    .line 985
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5912,7 +5565,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isStatusBarExpansionallowedAsUser"
+    const-string v69, "isStatusBarExpansionallowedAsUser"
 
     aput-object v69, v5, v6
 
@@ -5920,7 +5573,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 988
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5940,7 +5592,6 @@
 
     goto/16 :goto_f
 
-    .line 994
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_34
@@ -5954,7 +5605,6 @@
 
     move-result v57
 
-    .line 997
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -5965,7 +5615,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isStopSystemAppAllowed"
+    const-string v69, "isStopSystemAppAllowed"
 
     aput-object v69, v5, v6
 
@@ -5973,7 +5623,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1000
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -5993,16 +5642,13 @@
 
     goto/16 :goto_f
 
-    .line 1006
     .end local v57    # "result":Z
     :pswitch_35
     const/4 v10, 0x0
 
-    .line 1007
     .restart local v10    # "arg":Z
     move/from16 v64, v8
 
-    .line 1008
     .local v64, "uid":I
     if-eqz p4, :cond_3e
 
@@ -6014,7 +5660,6 @@
 
     if-ne v5, v6, :cond_3e
 
-    .line 1009
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -6023,7 +5668,6 @@
 
     move-result v10
 
-    .line 1015
     :cond_3d
     :goto_11
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -6038,7 +5682,6 @@
 
     move-result v57
 
-    .line 1016
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -6046,7 +5689,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isSVoiceAllowed result = "
+    const-string v69, "isSVoiceAllowed result = "
 
     move-object/from16 v0, v69
 
@@ -6080,7 +5723,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1018
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -6090,7 +5732,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSVoiceAllowed"
+    const-string v69, "isSVoiceAllowed"
 
     aput-object v69, v5, v6
 
@@ -6098,7 +5740,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1021
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6118,7 +5759,6 @@
 
     goto/16 :goto_f
 
-    .line 1011
     .end local v57    # "result":Z
     :cond_3e
     if-eqz p4, :cond_3d
@@ -6131,7 +5771,6 @@
 
     if-ne v5, v6, :cond_3d
 
-    .line 1012
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -6140,7 +5779,6 @@
 
     move-result v10
 
-    .line 1013
     const/4 v5, 0x1
 
     aget-object v5, p4, v5
@@ -6151,7 +5789,6 @@
 
     goto :goto_11
 
-    .line 1027
     .end local v10    # "arg":Z
     .end local v64    # "uid":I
     :pswitch_36
@@ -6165,7 +5802,6 @@
 
     move-result v57
 
-    .line 1030
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6176,7 +5812,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUsbDebuggingEnabled"
+    const-string v69, "isUsbDebuggingEnabled"
 
     aput-object v69, v5, v6
 
@@ -6184,7 +5820,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1033
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6204,11 +5839,10 @@
 
     goto/16 :goto_f
 
-    .line 1046
     .end local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v57    # "result":Z
     :pswitch_37
-    const-string/jumbo v5, "restriction_policy"
+    const-string v5, "restriction_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -6216,13 +5850,11 @@
 
     check-cast v42, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 1048
     .restart local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v42, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1049
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -6235,14 +5867,12 @@
     :goto_12
     packed-switch v5, :pswitch_data_4
 
-    .line 1279
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1049
     :sswitch_33
-    const-string/jumbo v6, "isUsbHostStorageAllowed"
+    const-string v6, "isUsbHostStorageAllowed"
 
     move-object/from16 v0, p3
 
@@ -6257,7 +5887,7 @@
     goto :goto_12
 
     :sswitch_34
-    const-string/jumbo v6, "isUsbMassStorageEnabled"
+    const-string v6, "isUsbMassStorageEnabled"
 
     move-object/from16 v0, p3
 
@@ -6272,7 +5902,7 @@
     goto :goto_12
 
     :sswitch_35
-    const-string/jumbo v6, "isUsbMediaPlayerAvailable"
+    const-string v6, "isUsbMediaPlayerAvailable"
 
     move-object/from16 v0, p3
 
@@ -6287,7 +5917,7 @@
     goto :goto_12
 
     :sswitch_36
-    const-string/jumbo v6, "isUsbTetheringEnabled"
+    const-string v6, "isUsbTetheringEnabled"
 
     move-object/from16 v0, p3
 
@@ -6302,7 +5932,7 @@
     goto :goto_12
 
     :sswitch_37
-    const-string/jumbo v6, "isUserMobileDataLimitAllowed"
+    const-string v6, "isUserMobileDataLimitAllowed"
 
     move-object/from16 v0, p3
 
@@ -6317,7 +5947,7 @@
     goto :goto_12
 
     :sswitch_38
-    const-string/jumbo v6, "isUseSecureKeypadEnabled"
+    const-string v6, "isUseSecureKeypadEnabled"
 
     move-object/from16 v0, p3
 
@@ -6332,7 +5962,7 @@
     goto :goto_12
 
     :sswitch_39
-    const-string/jumbo v6, "isVideoRecordAllowed"
+    const-string v6, "isVideoRecordAllowed"
 
     move-object/from16 v0, p3
 
@@ -6347,7 +5977,7 @@
     goto :goto_12
 
     :sswitch_3a
-    const-string/jumbo v6, "isVpnAllowed"
+    const-string v6, "isVpnAllowed"
 
     move-object/from16 v0, p3
 
@@ -6362,7 +5992,7 @@
     goto :goto_12
 
     :sswitch_3b
-    const-string/jumbo v6, "isWallpaperChangeAllowed"
+    const-string v6, "isWallpaperChangeAllowed"
 
     move-object/from16 v0, p3
 
@@ -6377,7 +6007,7 @@
     goto :goto_12
 
     :sswitch_3c
-    const-string/jumbo v6, "isWifiDirectAllowed"
+    const-string v6, "isWifiDirectAllowed"
 
     move-object/from16 v0, p3
 
@@ -6392,7 +6022,7 @@
     goto/16 :goto_12
 
     :sswitch_3d
-    const-string/jumbo v6, "isWifiTetheringEnabled"
+    const-string v6, "isWifiTetheringEnabled"
 
     move-object/from16 v0, p3
 
@@ -6407,7 +6037,7 @@
     goto/16 :goto_12
 
     :sswitch_3e
-    const-string/jumbo v6, "isSDCardWriteAllowed"
+    const-string v6, "isSDCardWriteAllowed"
 
     move-object/from16 v0, p3
 
@@ -6422,7 +6052,7 @@
     goto/16 :goto_12
 
     :sswitch_3f
-    const-string/jumbo v6, "isWifiEnabled"
+    const-string v6, "isWifiEnabled"
 
     move-object/from16 v0, p3
 
@@ -6437,7 +6067,7 @@
     goto/16 :goto_12
 
     :sswitch_40
-    const-string/jumbo v6, "isScreenCaptureEnabledInternal"
+    const-string v6, "isScreenCaptureEnabledInternal"
 
     move-object/from16 v0, p3
 
@@ -6452,7 +6082,7 @@
     goto/16 :goto_12
 
     :sswitch_41
-    const-string/jumbo v6, "isFotaVersionAllowed"
+    const-string v6, "isFotaVersionAllowed"
 
     move-object/from16 v0, p3
 
@@ -6467,7 +6097,7 @@
     goto/16 :goto_12
 
     :sswitch_42
-    const-string/jumbo v6, "isGearPolicyEnabled"
+    const-string v6, "isGearPolicyEnabled"
 
     move-object/from16 v0, p3
 
@@ -6481,11 +6111,9 @@
 
     goto/16 :goto_12
 
-    .line 1051
     :pswitch_38
     const/4 v10, 0x0
 
-    .line 1052
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_40
 
@@ -6495,7 +6123,6 @@
 
     if-lez v5, :cond_40
 
-    .line 1053
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -6504,7 +6131,6 @@
 
     move-result v10
 
-    .line 1054
     :cond_40
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -6516,7 +6142,6 @@
 
     move-result v57
 
-    .line 1058
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6527,7 +6152,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUsbHostStorageAllowed"
+    const-string v69, "isUsbHostStorageAllowed"
 
     aput-object v69, v5, v6
 
@@ -6535,7 +6160,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1061
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6557,10 +6181,8 @@
     :goto_13
     move-object/from16 v5, v52
 
-    .line 1282
     goto/16 :goto_1
 
-    .line 1067
     .end local v57    # "result":Z
     :pswitch_39
     if-eqz p4, :cond_41
@@ -6571,13 +6193,11 @@
 
     if-gtz v5, :cond_42
 
-    .line 1068
     :cond_41
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1069
     :cond_42
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -6597,7 +6217,6 @@
 
     move-result v57
 
-    .line 1073
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6608,7 +6227,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUsbMassStorageEnabled"
+    const-string v69, "isUsbMassStorageEnabled"
 
     aput-object v69, v5, v6
 
@@ -6616,7 +6235,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1076
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6636,7 +6254,6 @@
 
     goto :goto_13
 
-    .line 1082
     .end local v57    # "result":Z
     :pswitch_3a
     if-eqz p4, :cond_43
@@ -6647,13 +6264,11 @@
 
     if-gtz v5, :cond_44
 
-    .line 1083
     :cond_43
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1084
     :cond_44
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -6673,7 +6288,6 @@
 
     move-result v57
 
-    .line 1088
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6684,7 +6298,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUsbMediaPlayerAvailable"
+    const-string v69, "isUsbMediaPlayerAvailable"
 
     aput-object v69, v5, v6
 
@@ -6692,7 +6306,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1091
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6712,7 +6325,6 @@
 
     goto :goto_13
 
-    .line 1097
     .end local v57    # "result":Z
     :pswitch_3b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -6725,7 +6337,6 @@
 
     move-result v57
 
-    .line 1101
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6736,7 +6347,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUsbTetheringEnabled"
+    const-string v69, "isUsbTetheringEnabled"
 
     aput-object v69, v5, v6
 
@@ -6744,7 +6355,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1104
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6764,7 +6374,6 @@
 
     goto/16 :goto_13
 
-    .line 1110
     .end local v57    # "result":Z
     :pswitch_3c
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -6777,7 +6386,6 @@
 
     move-result v57
 
-    .line 1114
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6788,7 +6396,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUserMobileDataLimitAllowed"
+    const-string v69, "isUserMobileDataLimitAllowed"
 
     aput-object v69, v5, v6
 
@@ -6796,7 +6404,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1117
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6816,7 +6423,6 @@
 
     goto/16 :goto_13
 
-    .line 1123
     .end local v57    # "result":Z
     :pswitch_3d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -6829,7 +6435,6 @@
 
     move-result v57
 
-    .line 1127
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6840,7 +6445,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUseSecureKeypadEnabled"
+    const-string v69, "isUseSecureKeypadEnabled"
 
     aput-object v69, v5, v6
 
@@ -6848,7 +6453,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1130
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6868,12 +6472,10 @@
 
     goto/16 :goto_13
 
-    .line 1136
     .end local v57    # "result":Z
     :pswitch_3e
     const/4 v10, 0x0
 
-    .line 1137
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_45
 
@@ -6883,7 +6485,6 @@
 
     if-lez v5, :cond_45
 
-    .line 1138
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -6892,7 +6493,6 @@
 
     move-result v10
 
-    .line 1139
     :cond_45
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -6904,7 +6504,6 @@
 
     move-result v57
 
-    .line 1143
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6915,7 +6514,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isVideoRecordAllowed"
+    const-string v69, "isVideoRecordAllowed"
 
     aput-object v69, v5, v6
 
@@ -6923,7 +6522,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1146
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6943,7 +6541,6 @@
 
     goto/16 :goto_13
 
-    .line 1152
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_3f
@@ -6957,7 +6554,6 @@
 
     move-result v57
 
-    .line 1156
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -6968,7 +6564,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isVpnAllowed"
+    const-string v69, "isVpnAllowed"
 
     aput-object v69, v5, v6
 
@@ -6976,7 +6572,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1159
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -6996,12 +6591,10 @@
 
     goto/16 :goto_13
 
-    .line 1165
     .end local v57    # "result":Z
     :pswitch_40
     const/4 v10, 0x0
 
-    .line 1166
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_46
 
@@ -7011,7 +6604,6 @@
 
     if-lez v5, :cond_46
 
-    .line 1167
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -7020,7 +6612,6 @@
 
     move-result v10
 
-    .line 1168
     :cond_46
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -7032,7 +6623,6 @@
 
     move-result v57
 
-    .line 1172
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7043,7 +6633,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isWallpaperChangeAllowed"
+    const-string v69, "isWallpaperChangeAllowed"
 
     aput-object v69, v5, v6
 
@@ -7051,7 +6641,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1175
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7071,13 +6660,11 @@
 
     goto/16 :goto_13
 
-    .line 1181
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_41
     const/4 v10, 0x0
 
-    .line 1182
     .restart local v10    # "arg":Z
     if-eqz p4, :cond_47
 
@@ -7087,7 +6674,6 @@
 
     if-lez v5, :cond_47
 
-    .line 1183
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -7096,7 +6682,6 @@
 
     move-result v10
 
-    .line 1184
     :cond_47
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -7108,7 +6693,6 @@
 
     move-result v57
 
-    .line 1188
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7119,7 +6703,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isWifiDirectAllowed"
+    const-string v69, "isWifiDirectAllowed"
 
     aput-object v69, v5, v6
 
@@ -7127,7 +6711,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1191
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7147,7 +6730,6 @@
 
     goto/16 :goto_13
 
-    .line 1197
     .end local v10    # "arg":Z
     .end local v57    # "result":Z
     :pswitch_42
@@ -7161,7 +6743,6 @@
 
     move-result v57
 
-    .line 1201
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7172,7 +6753,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isWifiTetheringEnabled"
+    const-string v69, "isWifiTetheringEnabled"
 
     aput-object v69, v5, v6
 
@@ -7180,7 +6761,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1204
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7200,7 +6780,6 @@
 
     goto/16 :goto_13
 
-    .line 1210
     .end local v57    # "result":Z
     :pswitch_43
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -7213,7 +6792,6 @@
 
     move-result v57
 
-    .line 1214
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7224,7 +6802,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSDCardWriteAllowed"
+    const-string v69, "isSDCardWriteAllowed"
 
     aput-object v69, v5, v6
 
@@ -7232,7 +6810,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1217
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7252,10 +6829,9 @@
 
     goto/16 :goto_13
 
-    .line 1222
     .end local v57    # "result":Z
     :pswitch_44
-    const-string/jumbo v5, "wifi_policy"
+    const-string v5, "wifi_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -7263,11 +6839,9 @@
 
     check-cast v48, Lcom/android/server/enterprise/wifi/WifiPolicy;
 
-    .line 1224
     .local v48, "lWifiPolicy":Lcom/android/server/enterprise/wifi/WifiPolicy;
     if-eqz v48, :cond_48
 
-    .line 1225
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v5, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -7286,7 +6860,6 @@
 
     move-result v57
 
-    .line 1227
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7297,7 +6870,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isWifiEnabled"
+    const-string v69, "isWifiEnabled"
 
     aput-object v69, v5, v6
 
@@ -7305,7 +6878,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1230
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7325,19 +6897,16 @@
 
     goto/16 :goto_13
 
-    .line 1235
     .end local v57    # "result":Z
     :cond_48
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1239
     .end local v48    # "lWifiPolicy":Lcom/android/server/enterprise/wifi/WifiPolicy;
     :pswitch_45
     const/16 v61, 0x0
 
-    .line 1240
     if-nez p4, :cond_49
 
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -7346,7 +6915,6 @@
 
     if-lez v5, :cond_4a
 
-    .line 1241
     :cond_49
     const/4 v5, 0x0
 
@@ -7356,7 +6924,6 @@
 
     move-result v61
 
-    .line 1244
     :cond_4a
     move-object/from16 v0, v42
 
@@ -7366,7 +6933,6 @@
 
     move-result v57
 
-    .line 1246
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7383,7 +6949,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1249
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7403,7 +6968,6 @@
 
     goto/16 :goto_13
 
-    .line 1254
     .end local v57    # "result":Z
     :pswitch_46
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -7420,7 +6984,6 @@
 
     move-result v57
 
-    .line 1258
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7431,7 +6994,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isFotaVersionAllowed"
+    const-string v69, "isFotaVersionAllowed"
 
     aput-object v69, v5, v6
 
@@ -7439,7 +7002,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1262
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7459,7 +7021,6 @@
 
     goto/16 :goto_13
 
-    .line 1268
     .end local v57    # "result":Z
     :pswitch_47
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -7474,7 +7035,6 @@
 
     move-result v57
 
-    .line 1270
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7491,7 +7051,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1273
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7511,7 +7070,6 @@
 
     goto/16 :goto_13
 
-    .line 1286
     .end local v42    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v57    # "result":Z
     :pswitch_48
@@ -7523,13 +7081,11 @@
 
     check-cast v37, Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 1288
     .local v37, "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     if-eqz v37, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1289
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -7546,12 +7102,10 @@
     :goto_15
     move-object/from16 v5, v52
 
-    .line 1471
     goto/16 :goto_1
 
-    .line 1289
     :sswitch_43
-    const-string/jumbo v6, "isCaCertificateTrustedAsUser"
+    const-string v6, "isCaCertificateTrustedAsUser"
 
     move-object/from16 v0, p3
 
@@ -7566,7 +7120,7 @@
     goto :goto_14
 
     :sswitch_44
-    const-string/jumbo v6, "isCaCertificateDisabledAsUser"
+    const-string v6, "isCaCertificateDisabledAsUser"
 
     move-object/from16 v0, p3
 
@@ -7581,7 +7135,7 @@
     goto :goto_14
 
     :sswitch_45
-    const-string/jumbo v6, "isUserRemoveCertificatesAllowed"
+    const-string v6, "isUserRemoveCertificatesAllowed"
 
     move-object/from16 v0, p3
 
@@ -7596,7 +7150,7 @@
     goto :goto_14
 
     :sswitch_46
-    const-string/jumbo v6, "isSignatureIdentityInformationEnabled"
+    const-string v6, "isSignatureIdentityInformationEnabled"
 
     move-object/from16 v0, p3
 
@@ -7611,7 +7165,7 @@
     goto :goto_14
 
     :sswitch_47
-    const-string/jumbo v6, "getIdentitiesFromSignatures"
+    const-string v6, "getIdentitiesFromSignatures"
 
     move-object/from16 v0, p3
 
@@ -7626,7 +7180,7 @@
     goto :goto_14
 
     :sswitch_48
-    const-string/jumbo v6, "notifyCertificateFailure"
+    const-string v6, "notifyCertificateFailure"
 
     move-object/from16 v0, p3
 
@@ -7641,7 +7195,7 @@
     goto :goto_14
 
     :sswitch_49
-    const-string/jumbo v6, "isRevocationCheckEnabled"
+    const-string v6, "isRevocationCheckEnabled"
 
     move-object/from16 v0, p3
 
@@ -7656,7 +7210,7 @@
     goto :goto_14
 
     :sswitch_4a
-    const-string/jumbo v6, "isOcspCheckEnabled"
+    const-string v6, "isOcspCheckEnabled"
 
     move-object/from16 v0, p3
 
@@ -7671,7 +7225,7 @@
     goto :goto_14
 
     :sswitch_4b
-    const-string/jumbo v6, "isCertificateValidationAtInstallEnabled"
+    const-string v6, "isCertificateValidationAtInstallEnabled"
 
     move-object/from16 v0, p3
 
@@ -7686,7 +7240,7 @@
     goto :goto_14
 
     :sswitch_4c
-    const-string/jumbo v6, "validateCertificateAtInstall"
+    const-string v6, "validateCertificateAtInstall"
 
     move-object/from16 v0, p3
 
@@ -7701,7 +7255,7 @@
     goto/16 :goto_14
 
     :sswitch_4d
-    const-string/jumbo v6, "validateChainAtInstall"
+    const-string v6, "validateChainAtInstall"
 
     move-object/from16 v0, p3
 
@@ -7716,7 +7270,7 @@
     goto/16 :goto_14
 
     :sswitch_4e
-    const-string/jumbo v6, "isPrivateKeyApplicationPermitted"
+    const-string v6, "isPrivateKeyApplicationPermitted"
 
     move-object/from16 v0, p3
 
@@ -7730,7 +7284,6 @@
 
     goto/16 :goto_14
 
-    .line 1291
     :pswitch_49
     if-eqz p4, :cond_4d
 
@@ -7742,17 +7295,14 @@
 
     if-gt v5, v6, :cond_4e
 
-    .line 1292
     :cond_4d
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1293
     :cond_4e
     move/from16 v66, v7
 
-    .line 1294
     .restart local v66    # "user":I
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -7762,7 +7312,6 @@
 
     if-le v5, v6, :cond_4f
 
-    .line 1295
     const/4 v5, 0x2
 
     aget-object v5, p4, v5
@@ -7771,7 +7320,6 @@
 
     move-result v66
 
-    .line 1297
     :cond_4f
     const/4 v5, 0x0
 
@@ -7799,7 +7347,6 @@
 
     move-result v57
 
-    .line 1302
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7810,7 +7357,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isCaCertificateTrustedAsUser"
+    const-string v69, "isCaCertificateTrustedAsUser"
 
     aput-object v69, v5, v6
 
@@ -7818,7 +7365,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1306
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7838,7 +7384,6 @@
 
     goto/16 :goto_15
 
-    .line 1311
     .end local v57    # "result":Z
     .end local v66    # "user":I
     :pswitch_4a
@@ -7850,17 +7395,14 @@
 
     if-gtz v5, :cond_51
 
-    .line 1312
     :cond_50
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1313
     :cond_51
     move/from16 v24, v7
 
-    .line 1314
     .local v24, "defaultUser":I
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -7870,7 +7412,6 @@
 
     if-le v5, v6, :cond_52
 
-    .line 1315
     const/4 v5, 0x1
 
     aget-object v5, p4, v5
@@ -7879,7 +7420,6 @@
 
     move-result v24
 
-    .line 1317
     :cond_52
     const/4 v5, 0x0
 
@@ -7893,7 +7433,6 @@
 
     move-result v57
 
-    .line 1320
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -7904,7 +7443,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isCaCertificateDisabledAsUser"
+    const-string v69, "isCaCertificateDisabledAsUser"
 
     aput-object v69, v5, v6
 
@@ -7912,7 +7451,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1324
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -7932,7 +7470,6 @@
 
     goto/16 :goto_15
 
-    .line 1331
     .end local v24    # "defaultUser":I
     .end local v57    # "result":Z
     :pswitch_4b
@@ -7948,12 +7485,10 @@
 
     const/16 v27, 0x1
 
-    .line 1333
     .local v27, "hasUserIdArgument":Z
     :goto_16
     if-eqz v27, :cond_54
 
-    .line 1334
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -7962,7 +7497,6 @@
 
     move-result v67
 
-    .line 1335
     .local v67, "userIdArgument":I
     move-object/from16 v0, v37
 
@@ -7972,7 +7506,6 @@
 
     move-result v57
 
-    .line 1344
     .end local v67    # "userIdArgument":I
     .restart local v57    # "result":Z
     :goto_17
@@ -7985,7 +7518,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUserRemoveCertificatesAllowed"
+    const-string v69, "isUserRemoveCertificatesAllowed"
 
     aput-object v69, v5, v6
 
@@ -7993,7 +7526,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1348
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8013,7 +7545,6 @@
 
     goto/16 :goto_15
 
-    .line 1331
     .end local v27    # "hasUserIdArgument":Z
     .end local v57    # "result":Z
     :cond_53
@@ -8021,7 +7552,6 @@
 
     goto :goto_16
 
-    .line 1338
     .restart local v27    # "hasUserIdArgument":Z
     :cond_54
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -8037,7 +7567,6 @@
     .restart local v57    # "result":Z
     goto :goto_17
 
-    .line 1353
     .end local v27    # "hasUserIdArgument":Z
     .end local v57    # "result":Z
     :pswitch_4c
@@ -8049,13 +7578,11 @@
 
     if-gtz v5, :cond_56
 
-    .line 1354
     :cond_55
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1355
     :cond_56
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -8075,7 +7602,6 @@
 
     move-result v57
 
-    .line 1358
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8086,7 +7612,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSignatureIdentityInformationEnabled"
+    const-string v69, "isSignatureIdentityInformationEnabled"
 
     aput-object v69, v5, v6
 
@@ -8094,7 +7620,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1362
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8114,7 +7639,6 @@
 
     goto/16 :goto_15
 
-    .line 1367
     .end local v57    # "result":Z
     :pswitch_4d
     if-eqz p4, :cond_57
@@ -8125,13 +7649,11 @@
 
     if-gtz v5, :cond_58
 
-    .line 1368
     :cond_57
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1369
     :cond_58
     new-instance v6, Landroid/app/enterprise/ContextInfo;
 
@@ -8155,7 +7677,6 @@
 
     move-result-object v51
 
-    .line 1372
     .local v51, "list":Ljava/util/List;, "Ljava/util/List<[Ljava/lang/String;>;"
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8166,7 +7687,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getIdentitiesFromSignatures"
+    const-string v69, "getIdentitiesFromSignatures"
 
     aput-object v69, v5, v6
 
@@ -8174,7 +7695,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1376
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v51, :cond_4c
 
@@ -8184,7 +7704,6 @@
 
     if-nez v5, :cond_4c
 
-    .line 1378
     invoke-interface/range {v51 .. v51}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v28
@@ -8202,7 +7721,6 @@
 
     check-cast v68, [Ljava/lang/String;
 
-    .line 1379
     .local v68, "value":[Ljava/lang/String;
     move-object/from16 v11, v68
 
@@ -8224,7 +7742,6 @@
 
     aget-object v30, v11, v29
 
-    .line 1380
     .local v30, "internalValue":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -8238,12 +7755,10 @@
 
     invoke-virtual {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 1379
     add-int/lit8 v29, v29, 0x1
 
     goto :goto_18
 
-    .line 1388
     .end local v11    # "arr$":[Ljava/lang/String;
     .end local v29    # "i$":I
     .end local v30    # "internalValue":Ljava/lang/String;
@@ -8261,13 +7776,11 @@
 
     if-gt v5, v6, :cond_5b
 
-    .line 1389
     :cond_5a
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1390
     :cond_5b
     const/4 v5, 0x0
 
@@ -8291,13 +7804,10 @@
 
     invoke-virtual {v0, v5, v6, v1}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->notifyCertificateFailure(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1392
     const/16 v52, 0x0
 
-    .line 1393
     goto/16 :goto_15
 
-    .line 1395
     :pswitch_4f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -8309,7 +7819,6 @@
 
     move-result v57
 
-    .line 1398
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8320,7 +7829,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isRevocationCheckEnabled"
+    const-string v69, "isRevocationCheckEnabled"
 
     aput-object v69, v5, v6
 
@@ -8328,7 +7837,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1402
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8348,7 +7856,6 @@
 
     goto/16 :goto_15
 
-    .line 1407
     .end local v57    # "result":Z
     :pswitch_50
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -8361,7 +7868,6 @@
 
     move-result v57
 
-    .line 1410
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8372,7 +7878,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isOcspCheckEnabled"
+    const-string v69, "isOcspCheckEnabled"
 
     aput-object v69, v5, v6
 
@@ -8380,7 +7886,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1414
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8400,7 +7905,6 @@
 
     goto/16 :goto_15
 
-    .line 1419
     .end local v57    # "result":Z
     :pswitch_51
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -8413,7 +7917,6 @@
 
     move-result v57
 
-    .line 1422
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8424,7 +7927,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isCertificateValidationAtInstallEnabled"
+    const-string v69, "isCertificateValidationAtInstallEnabled"
 
     aput-object v69, v5, v6
 
@@ -8432,7 +7935,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1426
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8452,7 +7954,6 @@
 
     goto/16 :goto_15
 
-    .line 1431
     .end local v57    # "result":Z
     :pswitch_52
     if-eqz p4, :cond_5c
@@ -8463,13 +7964,11 @@
 
     if-gtz v5, :cond_5d
 
-    .line 1432
     :cond_5c
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1433
     :cond_5d
     const/4 v5, 0x0
 
@@ -8487,7 +7986,6 @@
 
     move-result v56
 
-    .line 1435
     .local v56, "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8498,7 +7996,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "validateCertificateAtInstall"
+    const-string v69, "validateCertificateAtInstall"
 
     aput-object v69, v5, v6
 
@@ -8506,7 +8004,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1439
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8526,7 +8023,6 @@
 
     goto/16 :goto_15
 
-    .line 1444
     .end local v56    # "res":I
     :pswitch_53
     if-eqz p4, :cond_5e
@@ -8537,13 +8033,11 @@
 
     if-gtz v5, :cond_5f
 
-    .line 1445
     :cond_5e
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1446
     :cond_5f
     const/4 v5, 0x0
 
@@ -8561,7 +8055,6 @@
 
     move-result v56
 
-    .line 1448
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8572,7 +8065,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "validateChainAtInstall"
+    const-string v69, "validateChainAtInstall"
 
     aput-object v69, v5, v6
 
@@ -8580,7 +8073,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1452
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8600,7 +8092,6 @@
 
     goto/16 :goto_15
 
-    .line 1457
     .end local v56    # "res":I
     :pswitch_54
     if-eqz p4, :cond_60
@@ -8613,13 +8104,11 @@
 
     if-gt v5, v6, :cond_61
 
-    .line 1458
     :cond_60
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1459
     :cond_61
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -8651,7 +8140,6 @@
 
     move-result-object v63
 
-    .line 1462
     .local v63, "stringResult":Ljava/lang/String;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8662,7 +8150,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isPrivateKeyApplicationPermitted"
+    const-string v69, "isPrivateKeyApplicationPermitted"
 
     aput-object v69, v5, v6
 
@@ -8670,7 +8158,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1466
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -8686,11 +8173,10 @@
 
     goto/16 :goto_15
 
-    .line 1475
     .end local v37    # "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     .end local v63    # "stringResult":Ljava/lang/String;
     :pswitch_55
-    const-string/jumbo v5, "password_policy"
+    const-string v5, "password_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -8698,13 +8184,11 @@
 
     check-cast v41, Lcom/android/server/enterprise/security/PasswordPolicy;
 
-    .line 1477
     .local v41, "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     if-eqz v41, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1478
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -8717,14 +8201,12 @@
     :goto_19
     packed-switch v5, :pswitch_data_6
 
-    .line 1668
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1478
     :sswitch_4f
-    const-string/jumbo v6, "getForbiddenStrings"
+    const-string v6, "getForbiddenStrings"
 
     move-object/from16 v0, p3
 
@@ -8739,7 +8221,7 @@
     goto :goto_19
 
     :sswitch_50
-    const-string/jumbo v6, "getMaximumCharacterOccurences"
+    const-string v6, "getMaximumCharacterOccurences"
 
     move-object/from16 v0, p3
 
@@ -8754,7 +8236,7 @@
     goto :goto_19
 
     :sswitch_51
-    const-string/jumbo v6, "getMaximumCharacterSequenceLength"
+    const-string v6, "getMaximumCharacterSequenceLength"
 
     move-object/from16 v0, p3
 
@@ -8769,7 +8251,7 @@
     goto :goto_19
 
     :sswitch_52
-    const-string/jumbo v6, "getMaximumNumericSequenceLength"
+    const-string v6, "getMaximumNumericSequenceLength"
 
     move-object/from16 v0, p3
 
@@ -8784,7 +8266,7 @@
     goto :goto_19
 
     :sswitch_53
-    const-string/jumbo v6, "getMinimumCharacterChangeLength"
+    const-string v6, "getMinimumCharacterChangeLength"
 
     move-object/from16 v0, p3
 
@@ -8799,7 +8281,7 @@
     goto :goto_19
 
     :sswitch_54
-    const-string/jumbo v6, "getPasswordChangeTimeout"
+    const-string v6, "getPasswordChangeTimeout"
 
     move-object/from16 v0, p3
 
@@ -8814,7 +8296,7 @@
     goto :goto_19
 
     :sswitch_55
-    const-string/jumbo v6, "getRequiredPwdPatternRestrictions"
+    const-string v6, "getRequiredPwdPatternRestrictions"
 
     move-object/from16 v0, p3
 
@@ -8829,7 +8311,7 @@
     goto :goto_19
 
     :sswitch_56
-    const-string/jumbo v6, "hasForbiddenCharacterSequence"
+    const-string v6, "hasForbiddenCharacterSequence"
 
     move-object/from16 v0, p3
 
@@ -8844,7 +8326,7 @@
     goto :goto_19
 
     :sswitch_57
-    const-string/jumbo v6, "hasForbiddenData"
+    const-string v6, "hasForbiddenData"
 
     move-object/from16 v0, p3
 
@@ -8859,7 +8341,7 @@
     goto :goto_19
 
     :sswitch_58
-    const-string/jumbo v6, "hasForbiddenNumericSequence"
+    const-string v6, "hasForbiddenNumericSequence"
 
     move-object/from16 v0, p3
 
@@ -8874,7 +8356,7 @@
     goto/16 :goto_19
 
     :sswitch_59
-    const-string/jumbo v6, "hasForbiddenStringDistance"
+    const-string v6, "hasForbiddenStringDistance"
 
     move-object/from16 v0, p3
 
@@ -8889,7 +8371,7 @@
     goto/16 :goto_19
 
     :sswitch_5a
-    const-string/jumbo v6, "hasMaxRepeatedCharacters"
+    const-string v6, "hasMaxRepeatedCharacters"
 
     move-object/from16 v0, p3
 
@@ -8903,7 +8385,6 @@
 
     goto/16 :goto_19
 
-    .line 1480
     :pswitch_56
     if-eqz p4, :cond_63
 
@@ -8913,13 +8394,11 @@
 
     if-gtz v5, :cond_64
 
-    .line 1481
     :cond_63
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1482
     :cond_64
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -8939,7 +8418,6 @@
 
     move-result-object v50
 
-    .line 1486
     .local v50, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -8950,7 +8428,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getForbiddenStrings"
+    const-string v69, "getForbiddenStrings"
 
     aput-object v69, v5, v6
 
@@ -8958,7 +8436,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1490
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v50, :cond_65
 
@@ -8968,7 +8445,6 @@
 
     if-nez v5, :cond_65
 
-    .line 1493
     invoke-interface/range {v50 .. v50}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v28
@@ -8987,7 +8463,6 @@
 
     check-cast v68, Ljava/lang/String;
 
-    .line 1494
     .local v68, "value":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -9003,7 +8478,6 @@
 
     goto :goto_1a
 
-    .line 1502
     .end local v28    # "i$":Ljava/util/Iterator;
     .end local v50    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v68    # "value":Ljava/lang/String;
@@ -9018,7 +8492,6 @@
 
     move-result v56
 
-    .line 1506
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9029,7 +8502,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getMaximumCharacterOccurences"
+    const-string v69, "getMaximumCharacterOccurences"
 
     aput-object v69, v5, v6
 
@@ -9037,7 +8510,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1510
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9060,10 +8532,8 @@
     :goto_1b
     move-object/from16 v5, v52
 
-    .line 1671
     goto/16 :goto_1
 
-    .line 1516
     :pswitch_58
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9075,7 +8545,6 @@
 
     move-result v56
 
-    .line 1520
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9086,7 +8555,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getMaximumCharacterSequenceLength"
+    const-string v69, "getMaximumCharacterSequenceLength"
 
     aput-object v69, v5, v6
 
@@ -9094,7 +8563,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1524
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9114,7 +8582,6 @@
 
     goto :goto_1b
 
-    .line 1530
     .end local v56    # "res":I
     :pswitch_59
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -9127,7 +8594,6 @@
 
     move-result v56
 
-    .line 1534
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9138,7 +8604,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getMaximumNumericSequenceLength"
+    const-string v69, "getMaximumNumericSequenceLength"
 
     aput-object v69, v5, v6
 
@@ -9146,7 +8612,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1538
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9166,7 +8631,6 @@
 
     goto :goto_1b
 
-    .line 1544
     .end local v56    # "res":I
     :pswitch_5a
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -9179,7 +8643,6 @@
 
     move-result v56
 
-    .line 1548
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9190,7 +8653,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getMinimumCharacterChangeLength"
+    const-string v69, "getMinimumCharacterChangeLength"
 
     aput-object v69, v5, v6
 
@@ -9198,7 +8661,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1552
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9218,7 +8680,6 @@
 
     goto/16 :goto_1b
 
-    .line 1558
     .end local v56    # "res":I
     :pswitch_5b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -9231,7 +8692,6 @@
 
     move-result v56
 
-    .line 1562
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9242,7 +8702,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getPasswordChangeTimeout"
+    const-string v69, "getPasswordChangeTimeout"
 
     aput-object v69, v5, v6
 
@@ -9250,7 +8710,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1566
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9270,7 +8729,6 @@
 
     goto/16 :goto_1b
 
-    .line 1572
     .end local v56    # "res":I
     :pswitch_5c
     if-eqz p4, :cond_66
@@ -9281,13 +8739,11 @@
 
     if-gtz v5, :cond_67
 
-    .line 1573
     :cond_66
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1574
     :cond_67
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9307,7 +8763,6 @@
 
     move-result-object v62
 
-    .line 1578
     .local v62, "str":Ljava/lang/String;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9318,7 +8773,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getRequiredPwdPatternRestrictions"
+    const-string v69, "getRequiredPwdPatternRestrictions"
 
     aput-object v69, v5, v6
 
@@ -9326,7 +8781,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1582
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9342,7 +8796,6 @@
 
     goto/16 :goto_1b
 
-    .line 1588
     .end local v62    # "str":Ljava/lang/String;
     :pswitch_5d
     if-eqz p4, :cond_68
@@ -9353,13 +8806,11 @@
 
     if-gtz v5, :cond_69
 
-    .line 1589
     :cond_68
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1590
     :cond_69
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9375,7 +8826,6 @@
 
     move-result v57
 
-    .line 1594
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9386,7 +8836,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "hasForbiddenCharacterSequence"
+    const-string v69, "hasForbiddenCharacterSequence"
 
     aput-object v69, v5, v6
 
@@ -9394,7 +8844,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1598
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9414,7 +8863,6 @@
 
     goto/16 :goto_1b
 
-    .line 1604
     .end local v57    # "result":Z
     :pswitch_5e
     if-eqz p4, :cond_6a
@@ -9425,13 +8873,11 @@
 
     if-gtz v5, :cond_6b
 
-    .line 1605
     :cond_6a
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1606
     :cond_6b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9447,7 +8893,6 @@
 
     move-result v57
 
-    .line 1610
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9458,7 +8903,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "hasForbiddenData"
+    const-string v69, "hasForbiddenData"
 
     aput-object v69, v5, v6
 
@@ -9466,7 +8911,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1614
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9486,7 +8930,6 @@
 
     goto/16 :goto_1b
 
-    .line 1620
     .end local v57    # "result":Z
     :pswitch_5f
     if-eqz p4, :cond_6c
@@ -9497,13 +8940,11 @@
 
     if-gtz v5, :cond_6d
 
-    .line 1621
     :cond_6c
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1622
     :cond_6d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9519,7 +8960,6 @@
 
     move-result v57
 
-    .line 1626
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9530,7 +8970,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "hasForbiddenNumericSequence"
+    const-string v69, "hasForbiddenNumericSequence"
 
     aput-object v69, v5, v6
 
@@ -9538,7 +8978,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1630
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9558,7 +8997,6 @@
 
     goto/16 :goto_1b
 
-    .line 1636
     .end local v57    # "result":Z
     :pswitch_60
     if-eqz p4, :cond_6e
@@ -9571,13 +9009,11 @@
 
     if-gt v5, v6, :cond_6f
 
-    .line 1637
     :cond_6e
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1638
     :cond_6f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9599,7 +9035,6 @@
 
     move-result v57
 
-    .line 1642
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9610,7 +9045,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "hasForbiddenStringDistance"
+    const-string v69, "hasForbiddenStringDistance"
 
     aput-object v69, v5, v6
 
@@ -9618,7 +9053,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1646
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9638,7 +9072,6 @@
 
     goto/16 :goto_1b
 
-    .line 1652
     .end local v57    # "result":Z
     :pswitch_61
     if-eqz p4, :cond_70
@@ -9649,13 +9082,11 @@
 
     if-gtz v5, :cond_71
 
-    .line 1653
     :cond_70
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1654
     :cond_71
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9671,7 +9102,6 @@
 
     move-result v57
 
-    .line 1658
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9682,7 +9112,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "hasMaxRepeatedCharacters"
+    const-string v69, "hasMaxRepeatedCharacters"
 
     aput-object v69, v5, v6
 
@@ -9690,7 +9120,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1662
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9710,11 +9139,10 @@
 
     goto/16 :goto_1b
 
-    .line 1675
     .end local v41    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     .end local v57    # "result":Z
     :pswitch_62
-    const-string/jumbo v5, "password_policy"
+    const-string v5, "password_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -9722,13 +9150,11 @@
 
     check-cast v41, Lcom/android/server/enterprise/security/PasswordPolicy;
 
-    .line 1677
     .restart local v41    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     if-eqz v41, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1678
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -9741,14 +9167,12 @@
     :goto_1c
     packed-switch v5, :pswitch_data_7
 
-    .line 1847
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1678
     :sswitch_5b
-    const-string/jumbo v6, "isBiometricAuthenticationEnabled"
+    const-string v6, "isBiometricAuthenticationEnabled"
 
     move-object/from16 v0, p3
 
@@ -9763,7 +9187,7 @@
     goto :goto_1c
 
     :sswitch_5c
-    const-string/jumbo v6, "isChangeRequested"
+    const-string v6, "isChangeRequested"
 
     move-object/from16 v0, p3
 
@@ -9778,7 +9202,7 @@
     goto :goto_1c
 
     :sswitch_5d
-    const-string/jumbo v6, "isExternalStorageForFailedPasswordsWipeExcluded"
+    const-string v6, "isExternalStorageForFailedPasswordsWipeExcluded"
 
     move-object/from16 v0, p3
 
@@ -9793,7 +9217,7 @@
     goto :goto_1c
 
     :sswitch_5e
-    const-string/jumbo v6, "isPasswordPatternMatched"
+    const-string v6, "isPasswordPatternMatched"
 
     move-object/from16 v0, p3
 
@@ -9808,7 +9232,7 @@
     goto :goto_1c
 
     :sswitch_5f
-    const-string/jumbo v6, "isPasswordVisibilityEnabled"
+    const-string v6, "isPasswordVisibilityEnabled"
 
     move-object/from16 v0, p3
 
@@ -9823,7 +9247,7 @@
     goto :goto_1c
 
     :sswitch_60
-    const-string/jumbo v6, "isPasswordVisibilityEnabledAsUser"
+    const-string v6, "isPasswordVisibilityEnabledAsUser"
 
     move-object/from16 v0, p3
 
@@ -9838,7 +9262,7 @@
     goto :goto_1c
 
     :sswitch_61
-    const-string/jumbo v6, "getPasswordLockDelay"
+    const-string v6, "getPasswordLockDelay"
 
     move-object/from16 v0, p3
 
@@ -9853,7 +9277,7 @@
     goto :goto_1c
 
     :sswitch_62
-    const-string/jumbo v6, "getMaximumFailedPasswordsForDisable"
+    const-string v6, "getMaximumFailedPasswordsForDisable"
 
     move-object/from16 v0, p3
 
@@ -9868,7 +9292,7 @@
     goto :goto_1c
 
     :sswitch_63
-    const-string/jumbo v6, "getMaximumFailedPasswordsForWipe"
+    const-string v6, "getMaximumFailedPasswordsForWipe"
 
     move-object/from16 v0, p3
 
@@ -9882,7 +9306,6 @@
 
     goto :goto_1c
 
-    .line 1680
     :pswitch_63
     if-eqz p4, :cond_73
 
@@ -9892,13 +9315,11 @@
 
     if-gtz v5, :cond_74
 
-    .line 1681
     :cond_73
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1682
     :cond_74
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9918,7 +9339,6 @@
 
     move-result v57
 
-    .line 1686
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9929,7 +9349,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBiometricAuthenticationEnabled"
+    const-string v69, "isBiometricAuthenticationEnabled"
 
     aput-object v69, v5, v6
 
@@ -9937,7 +9357,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1690
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -9959,10 +9378,8 @@
     :goto_1d
     move-object/from16 v5, v52
 
-    .line 1850
     goto/16 :goto_1
 
-    .line 1696
     :pswitch_64
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -9974,7 +9391,6 @@
 
     move-result v56
 
-    .line 1700
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -9985,7 +9401,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isChangeRequested"
+    const-string v69, "isChangeRequested"
 
     aput-object v69, v5, v6
 
@@ -9993,7 +9409,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1704
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10013,12 +9428,10 @@
 
     goto :goto_1d
 
-    .line 1710
     .end local v56    # "res":I
     :pswitch_65
     if-eqz p4, :cond_75
 
-    .line 1711
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -10049,7 +9462,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1712
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x0
@@ -10068,7 +9480,6 @@
 
     move-result v57
 
-    .line 1719
     .restart local v57    # "result":Z
     :goto_1e
     const-string v5, "SecContentProvider"
@@ -10097,7 +9508,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1721
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -10107,7 +9517,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isExternalStorageForFailedPasswordsWipeExcluded"
+    const-string v69, "isExternalStorageForFailedPasswordsWipeExcluded"
 
     aput-object v69, v5, v6
 
@@ -10115,7 +9525,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1725
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10135,7 +9544,6 @@
 
     goto/16 :goto_1d
 
-    .line 1716
     .end local v57    # "result":Z
     :cond_75
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -10151,7 +9559,6 @@
     .restart local v57    # "result":Z
     goto :goto_1e
 
-    .line 1731
     .end local v57    # "result":Z
     :pswitch_66
     if-eqz p4, :cond_76
@@ -10162,13 +9569,11 @@
 
     if-gtz v5, :cond_77
 
-    .line 1732
     :cond_76
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1733
     :cond_77
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -10184,7 +9589,6 @@
 
     move-result v57
 
-    .line 1737
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -10195,7 +9599,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isPasswordPatternMatched"
+    const-string v69, "isPasswordPatternMatched"
 
     aput-object v69, v5, v6
 
@@ -10203,7 +9607,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1741
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10223,12 +9626,10 @@
 
     goto/16 :goto_1d
 
-    .line 1747
     .end local v57    # "result":Z
     :pswitch_67
     if-nez p4, :cond_78
 
-    .line 1748
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v5, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -10239,7 +9640,6 @@
 
     move-result v57
 
-    .line 1750
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -10247,7 +9647,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isPasswordVisibilityEnabled callingUid = "
+    const-string v69, "isPasswordVisibilityEnabled callingUid = "
 
     move-object/from16 v0, v69
 
@@ -10265,7 +9665,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1757
     :goto_1f
     const-string v5, "SecContentProvider"
 
@@ -10273,7 +9672,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isPasswordVisibilityEnabled return = "
+    const-string v69, "isPasswordVisibilityEnabled return = "
 
     move-object/from16 v0, v69
 
@@ -10293,7 +9692,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1759
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -10303,7 +9701,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isPasswordVisibilityEnabled"
+    const-string v69, "isPasswordVisibilityEnabled"
 
     aput-object v69, v5, v6
 
@@ -10311,7 +9709,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1763
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10331,7 +9728,6 @@
 
     goto/16 :goto_1d
 
-    .line 1753
     .end local v57    # "result":Z
     :cond_78
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -10352,7 +9748,6 @@
 
     move-result v57
 
-    .line 1755
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -10360,7 +9755,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isPasswordVisibilityEnabled callingUid = "
+    const-string v69, "isPasswordVisibilityEnabled callingUid = "
 
     move-object/from16 v0, v69
 
@@ -10390,7 +9785,6 @@
 
     goto :goto_1f
 
-    .line 1770
     .end local v57    # "result":Z
     :pswitch_68
     if-eqz p4, :cond_79
@@ -10403,13 +9797,11 @@
 
     if-ge v5, v6, :cond_7a
 
-    .line 1771
     :cond_79
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1772
     :cond_7a
     const/4 v5, 0x0
 
@@ -10425,7 +9817,6 @@
 
     move-result v57
 
-    .line 1774
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -10433,7 +9824,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isPasswordVisibilityEnabledAsUser return = "
+    const-string v69, "isPasswordVisibilityEnabledAsUser return = "
 
     move-object/from16 v0, v69
 
@@ -10453,7 +9844,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1776
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -10463,7 +9853,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isPasswordVisibilityEnabledAsUser"
+    const-string v69, "isPasswordVisibilityEnabledAsUser"
 
     aput-object v69, v5, v6
 
@@ -10471,7 +9861,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1780
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10491,7 +9880,6 @@
 
     goto/16 :goto_1d
 
-    .line 1786
     .end local v57    # "result":Z
     :pswitch_69
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -10504,7 +9892,6 @@
 
     move-result v56
 
-    .line 1790
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -10515,7 +9902,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getPasswordLockDelay"
+    const-string v69, "getPasswordLockDelay"
 
     aput-object v69, v5, v6
 
@@ -10523,7 +9910,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1794
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10543,12 +9929,10 @@
 
     goto/16 :goto_1d
 
-    .line 1800
     .end local v56    # "res":I
     :pswitch_6a
     if-eqz p4, :cond_7b
 
-    .line 1801
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -10579,7 +9963,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1802
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x0
@@ -10598,7 +9981,6 @@
 
     move-result v56
 
-    .line 1809
     .restart local v56    # "res":I
     :goto_20
     const-string v5, "SecContentProvider"
@@ -10627,7 +10009,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1812
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -10637,7 +10018,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getMaximumFailedPasswordsForDisable"
+    const-string v69, "getMaximumFailedPasswordsForDisable"
 
     aput-object v69, v5, v6
 
@@ -10645,7 +10026,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1815
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10665,7 +10045,6 @@
 
     goto/16 :goto_1d
 
-    .line 1806
     .end local v56    # "res":I
     :cond_7b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -10681,7 +10060,6 @@
     .restart local v56    # "res":I
     goto :goto_20
 
-    .line 1821
     .end local v56    # "res":I
     :pswitch_6b
     if-eqz p4, :cond_7c
@@ -10694,13 +10072,11 @@
 
     if-ge v5, v6, :cond_7d
 
-    .line 1822
     :cond_7c
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1824
     :cond_7d
     const/4 v5, 0x0
 
@@ -10708,10 +10084,8 @@
 
     if-nez v5, :cond_7e
 
-    .line 1825
     const/16 v23, 0x0
 
-    .line 1828
     .local v23, "cn":Landroid/content/ComponentName;
     :goto_21
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -10722,7 +10096,6 @@
 
     if-ne v5, v6, :cond_7f
 
-    .line 1829
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -10753,7 +10126,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1830
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     const/4 v6, 0x1
@@ -10774,7 +10146,6 @@
 
     move-result v56
 
-    .line 1837
     .restart local v56    # "res":I
     :goto_22
     const-string v5, "SecContentProvider"
@@ -10803,7 +10174,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1839
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -10813,7 +10183,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getMaximumFailedPasswordsForWipe"
+    const-string v69, "getMaximumFailedPasswordsForWipe"
 
     aput-object v69, v5, v6
 
@@ -10821,7 +10191,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1842
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -10841,7 +10210,6 @@
 
     goto/16 :goto_1d
 
-    .line 1827
     .end local v23    # "cn":Landroid/content/ComponentName;
     .end local v56    # "res":I
     :cond_7e
@@ -10856,7 +10224,6 @@
     .restart local v23    # "cn":Landroid/content/ComponentName;
     goto :goto_21
 
-    .line 1834
     :cond_7f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -10873,7 +10240,6 @@
     .restart local v56    # "res":I
     goto :goto_22
 
-    .line 1855
     .end local v23    # "cn":Landroid/content/ComponentName;
     .end local v41    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     .end local v56    # "res":I
@@ -10886,13 +10252,11 @@
 
     check-cast v36, Lcom/android/server/enterprise/browser/BrowserPolicy;
 
-    .line 1858
     .local v36, "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     if-eqz v36, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1859
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -10905,14 +10269,12 @@
     :goto_23
     packed-switch v5, :pswitch_data_8
 
-    .line 1952
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1859
     :sswitch_64
-    const-string/jumbo v6, "getHttpProxy"
+    const-string v6, "getHttpProxy"
 
     move-object/from16 v0, p3
 
@@ -10927,7 +10289,7 @@
     goto :goto_23
 
     :sswitch_65
-    const-string/jumbo v6, "getAutoFillSetting"
+    const-string v6, "getAutoFillSetting"
 
     move-object/from16 v0, p3
 
@@ -10942,7 +10304,7 @@
     goto :goto_23
 
     :sswitch_66
-    const-string/jumbo v6, "getCookiesSetting"
+    const-string v6, "getCookiesSetting"
 
     move-object/from16 v0, p3
 
@@ -10957,7 +10319,7 @@
     goto :goto_23
 
     :sswitch_67
-    const-string/jumbo v6, "getJavaScriptSetting"
+    const-string v6, "getJavaScriptSetting"
 
     move-object/from16 v0, p3
 
@@ -10972,7 +10334,7 @@
     goto :goto_23
 
     :sswitch_68
-    const-string/jumbo v6, "getPopupsSetting"
+    const-string v6, "getPopupsSetting"
 
     move-object/from16 v0, p3
 
@@ -10987,7 +10349,7 @@
     goto :goto_23
 
     :sswitch_69
-    const-string/jumbo v6, "getForceFraudWarningSetting"
+    const-string v6, "getForceFraudWarningSetting"
 
     move-object/from16 v0, p3
 
@@ -11001,7 +10363,6 @@
 
     goto :goto_23
 
-    .line 1861
     :pswitch_6d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -11013,7 +10374,6 @@
 
     move-result-object v55
 
-    .line 1864
     .local v55, "proxy":Ljava/lang/String;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11024,7 +10384,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getHttpProxy"
+    const-string v69, "getHttpProxy"
 
     aput-object v69, v5, v6
 
@@ -11032,7 +10392,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1867
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11050,10 +10409,8 @@
     :goto_24
     move-object/from16 v5, v52
 
-    .line 1955
     goto/16 :goto_1
 
-    .line 1874
     :pswitch_6e
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -11067,7 +10424,6 @@
 
     move-result v12
 
-    .line 1879
     .local v12, "bAutoFill":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11078,7 +10434,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getAutoFillSetting"
+    const-string v69, "getAutoFillSetting"
 
     aput-object v69, v5, v6
 
@@ -11086,7 +10442,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1883
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11106,7 +10461,6 @@
 
     goto :goto_24
 
-    .line 1891
     .end local v12    # "bAutoFill":Z
     :pswitch_6f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -11121,7 +10475,6 @@
 
     move-result v13
 
-    .line 1896
     .local v13, "bCookiesSettings":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11132,7 +10485,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getCookiesSetting"
+    const-string v69, "getCookiesSetting"
 
     aput-object v69, v5, v6
 
@@ -11140,7 +10493,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1899
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11160,7 +10512,6 @@
 
     goto :goto_24
 
-    .line 1906
     .end local v13    # "bCookiesSettings":Z
     :pswitch_70
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -11175,7 +10526,6 @@
 
     move-result v19
 
-    .line 1911
     .local v19, "bJavaScriptSetting":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11186,7 +10536,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getJavaScriptSetting"
+    const-string v69, "getJavaScriptSetting"
 
     aput-object v69, v5, v6
 
@@ -11194,7 +10544,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1915
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11214,7 +10563,6 @@
 
     goto/16 :goto_24
 
-    .line 1923
     .end local v19    # "bJavaScriptSetting":Z
     :pswitch_71
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -11229,7 +10577,6 @@
 
     move-result v20
 
-    .line 1928
     .local v20, "bPopupSettings":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11240,7 +10587,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getPopupsSetting"
+    const-string v69, "getPopupsSetting"
 
     aput-object v69, v5, v6
 
@@ -11248,7 +10595,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1931
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11268,7 +10614,6 @@
 
     goto/16 :goto_24
 
-    .line 1938
     .end local v20    # "bPopupSettings":Z
     :pswitch_72
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -11283,7 +10628,6 @@
 
     move-result v14
 
-    .line 1943
     .local v14, "bForceWarning":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11294,7 +10638,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getForceFraudWarningSetting"
+    const-string v69, "getForceFraudWarningSetting"
 
     aput-object v69, v5, v6
 
@@ -11302,7 +10646,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1946
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11322,7 +10665,6 @@
 
     goto/16 :goto_24
 
-    .line 1961
     .end local v14    # "bForceWarning":Z
     .end local v36    # "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     :pswitch_73
@@ -11334,13 +10676,11 @@
 
     check-cast v35, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
-    .line 1963
     .local v35, "lBluetoothPolicy":Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
     if-eqz v35, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1964
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -11353,14 +10693,12 @@
     :goto_25
     packed-switch v5, :pswitch_data_9
 
-    .line 2076
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1964
     :sswitch_6a
-    const-string/jumbo v6, "isBluetoothEnabled"
+    const-string v6, "isBluetoothEnabled"
 
     move-object/from16 v0, p3
 
@@ -11375,7 +10713,7 @@
     goto :goto_25
 
     :sswitch_6b
-    const-string/jumbo v6, "isBluetoothEnabledWithMsg"
+    const-string v6, "isBluetoothEnabledWithMsg"
 
     move-object/from16 v0, p3
 
@@ -11390,7 +10728,7 @@
     goto :goto_25
 
     :sswitch_6c
-    const-string/jumbo v6, "isOutgoingCallsAllowed"
+    const-string v6, "isOutgoingCallsAllowed"
 
     move-object/from16 v0, p3
 
@@ -11405,7 +10743,7 @@
     goto :goto_25
 
     :sswitch_6d
-    const-string/jumbo v6, "isLimitedDiscoverableEnabled"
+    const-string v6, "isLimitedDiscoverableEnabled"
 
     move-object/from16 v0, p3
 
@@ -11420,7 +10758,7 @@
     goto :goto_25
 
     :sswitch_6e
-    const-string/jumbo v6, "isDiscoverableEnabled"
+    const-string v6, "isDiscoverableEnabled"
 
     move-object/from16 v0, p3
 
@@ -11435,7 +10773,7 @@
     goto :goto_25
 
     :sswitch_6f
-    const-string/jumbo v6, "isDesktopConnectivityEnabled"
+    const-string v6, "isDesktopConnectivityEnabled"
 
     move-object/from16 v0, p3
 
@@ -11465,7 +10803,7 @@
     goto :goto_25
 
     :sswitch_71
-    const-string/jumbo v6, "isBluetoothLogEnabled"
+    const-string v6, "isBluetoothLogEnabled"
 
     move-object/from16 v0, p3
 
@@ -11479,7 +10817,6 @@
 
     goto :goto_25
 
-    .line 1966
     :pswitch_74
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -11491,7 +10828,6 @@
 
     move-result v57
 
-    .line 1967
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -11499,7 +10835,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isBluetoothEnabled = "
+    const-string v69, "isBluetoothEnabled = "
 
     move-object/from16 v0, v69
 
@@ -11519,7 +10855,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1969
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -11529,7 +10864,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBluetoothEnabled"
+    const-string v69, "isBluetoothEnabled"
 
     aput-object v69, v5, v6
 
@@ -11537,7 +10872,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1973
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11558,10 +10892,8 @@
     :goto_26
     move-object/from16 v5, v52
 
-    .line 2079
     goto/16 :goto_1
 
-    .line 1979
     .end local v57    # "result":Z
     :pswitch_75
     if-eqz p4, :cond_82
@@ -11572,13 +10904,11 @@
 
     if-gtz v5, :cond_83
 
-    .line 1980
     :cond_82
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1981
     :cond_83
     const/4 v5, 0x0
 
@@ -11594,7 +10924,6 @@
 
     move-result v57
 
-    .line 1983
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -11602,7 +10931,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isBluetoothEnabled = "
+    const-string v69, "isBluetoothEnabled = "
 
     move-object/from16 v0, v69
 
@@ -11622,7 +10951,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1985
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -11632,7 +10960,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBluetoothEnabledWithMsg"
+    const-string v69, "isBluetoothEnabledWithMsg"
 
     aput-object v69, v5, v6
 
@@ -11640,7 +10968,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1989
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11660,7 +10987,6 @@
 
     goto :goto_26
 
-    .line 1995
     .end local v57    # "result":Z
     :pswitch_76
     if-eqz p4, :cond_84
@@ -11671,13 +10997,11 @@
 
     if-gtz v5, :cond_85
 
-    .line 1996
     :cond_84
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 1997
     :cond_85
     const/4 v5, 0x0
 
@@ -11693,7 +11017,6 @@
 
     move-result v57
 
-    .line 1999
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -11701,7 +11024,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "isOutgoingCallsAllowed = "
+    const-string v69, "isOutgoingCallsAllowed = "
 
     move-object/from16 v0, v69
 
@@ -11721,7 +11044,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2001
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -11731,7 +11053,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isOutgoingCallsAllowed"
+    const-string v69, "isOutgoingCallsAllowed"
 
     aput-object v69, v5, v6
 
@@ -11739,7 +11061,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2005
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11759,7 +11080,6 @@
 
     goto/16 :goto_26
 
-    .line 2011
     .end local v57    # "result":Z
     :pswitch_77
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -11772,7 +11092,6 @@
 
     move-result v57
 
-    .line 2014
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11783,7 +11102,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isLimitedDiscoverableEnabled"
+    const-string v69, "isLimitedDiscoverableEnabled"
 
     aput-object v69, v5, v6
 
@@ -11791,7 +11110,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2018
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11811,7 +11129,6 @@
 
     goto/16 :goto_26
 
-    .line 2023
     .end local v57    # "result":Z
     :pswitch_78
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -11824,7 +11141,6 @@
 
     move-result v57
 
-    .line 2026
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11835,7 +11151,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isDiscoverableEnabled"
+    const-string v69, "isDiscoverableEnabled"
 
     aput-object v69, v5, v6
 
@@ -11843,7 +11159,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2030
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11863,7 +11178,6 @@
 
     goto/16 :goto_26
 
-    .line 2035
     .end local v57    # "result":Z
     :pswitch_79
     if-eqz p4, :cond_86
@@ -11874,13 +11188,11 @@
 
     if-gtz v5, :cond_87
 
-    .line 2036
     :cond_86
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2037
     :cond_87
     const/4 v5, 0x0
 
@@ -11896,7 +11208,6 @@
 
     move-result v57
 
-    .line 2040
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11907,7 +11218,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isDesktopConnectivityEnabled"
+    const-string v69, "isDesktopConnectivityEnabled"
 
     aput-object v69, v5, v6
 
@@ -11915,7 +11226,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2044
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -11935,7 +11245,6 @@
 
     goto/16 :goto_26
 
-    .line 2049
     .end local v57    # "result":Z
     :pswitch_7a
     if-eqz p4, :cond_88
@@ -11948,13 +11257,11 @@
 
     if-ge v5, v6, :cond_89
 
-    .line 2050
     :cond_88
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2051
     :cond_89
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -11976,7 +11283,6 @@
 
     move-result v57
 
-    .line 2055
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -11995,7 +11301,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2059
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12015,7 +11320,6 @@
 
     goto/16 :goto_26
 
-    .line 2064
     .end local v57    # "result":Z
     :pswitch_7b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -12028,7 +11332,6 @@
 
     move-result v57
 
-    .line 2067
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -12039,7 +11342,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBluetoothLogEnabled"
+    const-string v69, "isBluetoothLogEnabled"
 
     aput-object v69, v5, v6
 
@@ -12047,7 +11350,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2071
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12067,13 +11369,11 @@
 
     goto/16 :goto_26
 
-    .line 2083
     .end local v35    # "lBluetoothPolicy":Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
     .end local v57    # "result":Z
     :pswitch_7c
     if-eqz p3, :cond_0
 
-    .line 2084
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -12089,12 +11389,10 @@
     :goto_28
     move-object/from16 v5, v52
 
-    .line 2198
     goto/16 :goto_1
 
-    .line 2084
     :sswitch_72
-    const-string/jumbo v6, "isProfileAuthorizedBySecurityPolicy"
+    const-string v6, "isProfileAuthorizedBySecurityPolicy"
 
     move-object/from16 v0, p3
 
@@ -12109,7 +11407,7 @@
     goto :goto_27
 
     :sswitch_73
-    const-string/jumbo v6, "isBluetoothLogEnabled"
+    const-string v6, "isBluetoothLogEnabled"
 
     move-object/from16 v0, p3
 
@@ -12124,7 +11422,7 @@
     goto :goto_27
 
     :sswitch_74
-    const-string/jumbo v6, "isPairingAllowedbySecurityPolicy"
+    const-string v6, "isPairingAllowedbySecurityPolicy"
 
     move-object/from16 v0, p3
 
@@ -12139,7 +11437,7 @@
     goto :goto_27
 
     :sswitch_75
-    const-string/jumbo v6, "isHeadsetAllowedBySecurityPolicy"
+    const-string v6, "isHeadsetAllowedBySecurityPolicy"
 
     move-object/from16 v0, p3
 
@@ -12154,7 +11452,7 @@
     goto :goto_27
 
     :sswitch_76
-    const-string/jumbo v6, "isSocketAllowedBySecurityPolicy"
+    const-string v6, "isSocketAllowedBySecurityPolicy"
 
     move-object/from16 v0, p3
 
@@ -12184,7 +11482,7 @@
     goto :goto_27
 
     :sswitch_78
-    const-string/jumbo v6, "isSvcRfComPortNumberBlockedBySecurityPolicy"
+    const-string v6, "isSvcRfComPortNumberBlockedBySecurityPolicy"
 
     move-object/from16 v0, p3
 
@@ -12243,7 +11541,6 @@
 
     goto/16 :goto_27
 
-    .line 2086
     :pswitch_7d
     if-eqz p4, :cond_8b
 
@@ -12253,13 +11550,11 @@
 
     if-gtz v5, :cond_8c
 
-    .line 2087
     :cond_8b
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2088
     :cond_8c
     const/4 v5, 0x0
 
@@ -12273,7 +11568,6 @@
 
     move-result v57
 
-    .line 2091
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -12284,7 +11578,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isProfileAuthorizedBySecurityPolicy"
+    const-string v69, "isProfileAuthorizedBySecurityPolicy"
 
     aput-object v69, v5, v6
 
@@ -12292,7 +11586,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2095
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12312,14 +11605,12 @@
 
     goto/16 :goto_28
 
-    .line 2100
     .end local v57    # "result":Z
     :pswitch_7e
     invoke-static {}, Landroid/sec/enterprise/BluetoothUtils;->isBluetoothLogEnabled()Z
 
     move-result v57
 
-    .line 2103
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -12330,7 +11621,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isBluetoothLogEnabled"
+    const-string v69, "isBluetoothLogEnabled"
 
     aput-object v69, v5, v6
 
@@ -12338,7 +11629,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2107
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12358,7 +11648,6 @@
 
     goto/16 :goto_28
 
-    .line 2112
     .end local v57    # "result":Z
     :pswitch_7f
     if-eqz p4, :cond_8d
@@ -12369,13 +11658,11 @@
 
     if-gtz v5, :cond_8e
 
-    .line 2113
     :cond_8d
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2114
     :cond_8e
     const/4 v5, 0x0
 
@@ -12385,7 +11672,6 @@
 
     move-result v57
 
-    .line 2115
     .restart local v57    # "result":Z
     const-string v5, "SecContentProvider"
 
@@ -12413,7 +11699,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2117
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -12423,7 +11708,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isPairingAllowedbySecurityPolicy"
+    const-string v69, "isPairingAllowedbySecurityPolicy"
 
     aput-object v69, v5, v6
 
@@ -12431,7 +11716,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2121
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12451,7 +11735,6 @@
 
     goto/16 :goto_28
 
-    .line 2126
     .end local v57    # "result":Z
     :pswitch_80
     if-eqz p4, :cond_8f
@@ -12462,13 +11745,11 @@
 
     if-gtz v5, :cond_90
 
-    .line 2127
     :cond_8f
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2128
     :cond_90
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -12486,7 +11767,6 @@
 
     move-result v57
 
-    .line 2131
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -12497,7 +11777,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isHeadsetAllowedBySecurityPolicy"
+    const-string v69, "isHeadsetAllowedBySecurityPolicy"
 
     aput-object v69, v5, v6
 
@@ -12505,7 +11785,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2135
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12525,7 +11804,6 @@
 
     goto/16 :goto_28
 
-    .line 2140
     .end local v57    # "result":Z
     :pswitch_81
     if-eqz p4, :cond_91
@@ -12538,13 +11816,11 @@
 
     if-ge v5, v6, :cond_92
 
-    .line 2141
     :cond_91
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2142
     :cond_92
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -12590,7 +11866,6 @@
 
     move-result v57
 
-    .line 2145
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -12601,7 +11876,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSocketAllowedBySecurityPolicy"
+    const-string v69, "isSocketAllowedBySecurityPolicy"
 
     aput-object v69, v5, v6
 
@@ -12609,7 +11884,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2149
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12629,7 +11903,6 @@
 
     goto/16 :goto_28
 
-    .line 2154
     .end local v57    # "result":Z
     :pswitch_82
     if-eqz p4, :cond_93
@@ -12642,13 +11915,11 @@
 
     if-ge v5, v6, :cond_94
 
-    .line 2155
     :cond_93
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2156
     :cond_94
     const/4 v5, 0x0
 
@@ -12692,7 +11963,6 @@
 
     goto/16 :goto_28
 
-    .line 2160
     :pswitch_83
     if-eqz p4, :cond_95
 
@@ -12702,13 +11972,11 @@
 
     if-gtz v5, :cond_96
 
-    .line 2161
     :cond_95
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2162
     :cond_96
     const/4 v5, 0x0
 
@@ -12722,7 +11990,6 @@
 
     move-result v57
 
-    .line 2166
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -12733,7 +12000,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSvcRfComPortNumberBlockedBySecurityPolicy"
+    const-string v69, "isSvcRfComPortNumberBlockedBySecurityPolicy"
 
     aput-object v69, v5, v6
 
@@ -12741,7 +12008,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2170
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -12761,7 +12027,6 @@
 
     goto/16 :goto_28
 
-    .line 2175
     .end local v57    # "result":Z
     :pswitch_84
     if-eqz p4, :cond_97
@@ -12780,13 +12045,11 @@
 
     if-nez v5, :cond_98
 
-    .line 2176
     :cond_97
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2177
     :cond_98
     const/4 v5, 0x0
 
@@ -12800,7 +12063,6 @@
 
     goto/16 :goto_28
 
-    .line 2180
     :pswitch_85
     if-eqz p4, :cond_99
 
@@ -12818,13 +12080,11 @@
 
     if-nez v5, :cond_9a
 
-    .line 2181
     :cond_99
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2182
     :cond_9a
     const/4 v5, 0x0
 
@@ -12844,7 +12104,6 @@
 
     goto/16 :goto_28
 
-    .line 2186
     :pswitch_86
     if-eqz p4, :cond_9b
 
@@ -12862,13 +12121,11 @@
 
     if-nez v5, :cond_9c
 
-    .line 2187
     :cond_9b
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2188
     :cond_9c
     const/4 v5, 0x2
 
@@ -12876,7 +12133,6 @@
 
     if-nez v5, :cond_9d
 
-    .line 2189
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -12897,7 +12153,6 @@
 
     goto/16 :goto_28
 
-    .line 2193
     :cond_9d
     const/4 v5, 0x0
 
@@ -12929,9 +12184,8 @@
 
     goto/16 :goto_28
 
-    .line 2202
     :pswitch_87
-    const-string/jumbo v5, "roaming_policy"
+    const-string v5, "roaming_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -12939,13 +12193,11 @@
 
     check-cast v43, Lcom/android/server/enterprise/restriction/RoamingPolicy;
 
-    .line 2204
     .local v43, "lRoamingPolicy":Lcom/android/server/enterprise/restriction/RoamingPolicy;
     if-eqz v43, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2205
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -12958,14 +12210,12 @@
     :goto_29
     packed-switch v5, :pswitch_data_b
 
-    .line 2259
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2205
     :sswitch_7c
-    const-string/jumbo v6, "isRoamingSyncEnabled"
+    const-string v6, "isRoamingSyncEnabled"
 
     move-object/from16 v0, p3
 
@@ -12980,7 +12230,7 @@
     goto :goto_29
 
     :sswitch_7d
-    const-string/jumbo v6, "isRoamingPushEnabled"
+    const-string v6, "isRoamingPushEnabled"
 
     move-object/from16 v0, p3
 
@@ -12995,7 +12245,7 @@
     goto :goto_29
 
     :sswitch_7e
-    const-string/jumbo v6, "isRoamingDataEnabled"
+    const-string v6, "isRoamingDataEnabled"
 
     move-object/from16 v0, p3
 
@@ -13010,7 +12260,7 @@
     goto :goto_29
 
     :sswitch_7f
-    const-string/jumbo v6, "isRoamingVoiceCallsEnabled"
+    const-string v6, "isRoamingVoiceCallsEnabled"
 
     move-object/from16 v0, p3
 
@@ -13024,7 +12274,6 @@
 
     goto :goto_29
 
-    .line 2207
     :pswitch_88
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -13036,7 +12285,6 @@
 
     move-result v57
 
-    .line 2210
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13047,7 +12295,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isRoamingSyncEnabled"
+    const-string v69, "isRoamingSyncEnabled"
 
     aput-object v69, v5, v6
 
@@ -13055,7 +12303,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2214
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13076,10 +12323,8 @@
     :goto_2a
     move-object/from16 v5, v52
 
-    .line 2262
     goto/16 :goto_1
 
-    .line 2220
     .end local v57    # "result":Z
     :pswitch_89
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -13092,7 +12337,6 @@
 
     move-result v57
 
-    .line 2223
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13103,7 +12347,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isRoamingPushEnabled"
+    const-string v69, "isRoamingPushEnabled"
 
     aput-object v69, v5, v6
 
@@ -13111,7 +12355,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2227
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13131,7 +12374,6 @@
 
     goto :goto_2a
 
-    .line 2233
     .end local v57    # "result":Z
     :pswitch_8a
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -13144,7 +12386,6 @@
 
     move-result v57
 
-    .line 2236
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13155,7 +12396,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isRoamingDataEnabled"
+    const-string v69, "isRoamingDataEnabled"
 
     aput-object v69, v5, v6
 
@@ -13163,7 +12404,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2240
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13183,7 +12423,6 @@
 
     goto :goto_2a
 
-    .line 2246
     .end local v57    # "result":Z
     :pswitch_8b
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -13196,7 +12435,6 @@
 
     move-result v57
 
-    .line 2249
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13207,7 +12445,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isRoamingVoiceCallsEnabled"
+    const-string v69, "isRoamingVoiceCallsEnabled"
 
     aput-object v69, v5, v6
 
@@ -13215,7 +12453,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2253
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13235,11 +12472,10 @@
 
     goto/16 :goto_2a
 
-    .line 2268
     .end local v43    # "lRoamingPolicy":Lcom/android/server/enterprise/restriction/RoamingPolicy;
     .end local v57    # "result":Z
     :pswitch_8c
-    const-string/jumbo v5, "location_policy"
+    const-string v5, "location_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -13247,13 +12483,11 @@
 
     check-cast v39, Lcom/android/server/enterprise/location/LocationPolicy;
 
-    .line 2270
     .local v39, "lLocationPolicy":Lcom/android/server/enterprise/location/LocationPolicy;
     if-eqz v39, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2271
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -13266,14 +12500,12 @@
     :goto_2b
     packed-switch v5, :pswitch_data_c
 
-    .line 2321
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2271
     :sswitch_80
-    const-string/jumbo v6, "isLocationProviderBlocked"
+    const-string v6, "isLocationProviderBlocked"
 
     move-object/from16 v0, p3
 
@@ -13288,7 +12520,7 @@
     goto :goto_2b
 
     :sswitch_81
-    const-string/jumbo v6, "isLocationProviderBlockedAsUser"
+    const-string v6, "isLocationProviderBlockedAsUser"
 
     move-object/from16 v0, p3
 
@@ -13303,7 +12535,7 @@
     goto :goto_2b
 
     :sswitch_82
-    const-string/jumbo v6, "isGPSStateChangeAllowed"
+    const-string v6, "isGPSStateChangeAllowed"
 
     move-object/from16 v0, p3
 
@@ -13317,7 +12549,6 @@
 
     goto :goto_2b
 
-    .line 2273
     :pswitch_8d
     if-eqz p4, :cond_a0
 
@@ -13327,13 +12558,11 @@
 
     if-gtz v5, :cond_a1
 
-    .line 2274
     :cond_a0
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2275
     :cond_a1
     const/4 v5, 0x0
 
@@ -13345,7 +12574,6 @@
 
     move-result v57
 
-    .line 2278
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13356,7 +12584,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isLocationProviderBlocked"
+    const-string v69, "isLocationProviderBlocked"
 
     aput-object v69, v5, v6
 
@@ -13364,7 +12592,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2282
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13385,10 +12612,8 @@
     :goto_2c
     move-object/from16 v5, v52
 
-    .line 2324
     goto/16 :goto_1
 
-    .line 2288
     .end local v57    # "result":Z
     :pswitch_8e
     if-eqz p4, :cond_a2
@@ -13401,13 +12626,11 @@
 
     if-ge v5, v6, :cond_a3
 
-    .line 2289
     :cond_a2
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2290
     :cond_a3
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -13417,7 +12640,6 @@
 
     if-ne v5, v6, :cond_a4
 
-    .line 2291
     const/4 v5, 0x0
 
     aget-object v5, p4, v5
@@ -13436,7 +12658,6 @@
 
     move-result v57
 
-    .line 2298
     .restart local v57    # "result":Z
     :goto_2d
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -13448,7 +12669,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isLocationProviderBlockedAsUser"
+    const-string v69, "isLocationProviderBlockedAsUser"
 
     aput-object v69, v5, v6
 
@@ -13456,7 +12677,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2302
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13476,7 +12696,6 @@
 
     goto :goto_2c
 
-    .line 2294
     .end local v57    # "result":Z
     :cond_a4
     const/4 v5, 0x0
@@ -13492,7 +12711,6 @@
     .restart local v57    # "result":Z
     goto :goto_2d
 
-    .line 2308
     .end local v57    # "result":Z
     :pswitch_8f
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -13505,7 +12723,6 @@
 
     move-result v57
 
-    .line 2311
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13516,7 +12733,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isGPSStateChangeAllowed"
+    const-string v69, "isGPSStateChangeAllowed"
 
     aput-object v69, v5, v6
 
@@ -13524,7 +12741,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2315
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13544,7 +12760,6 @@
 
     goto :goto_2c
 
-    .line 2328
     .end local v39    # "lLocationPolicy":Lcom/android/server/enterprise/location/LocationPolicy;
     .end local v57    # "result":Z
     :pswitch_90
@@ -13556,14 +12771,12 @@
 
     check-cast v34, Lcom/android/server/enterprise/auditlog/AuditLogService;
 
-    .line 2331
     .local v34, "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     if-eqz v34, :cond_0
 
-    .line 2332
     if-eqz p3, :cond_0
 
-    const-string/jumbo v5, "isAuditLogEnabled"
+    const-string v5, "isAuditLogEnabled"
 
     move-object/from16 v0, p3
 
@@ -13573,14 +12786,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 2334
     move-object/from16 v0, v34
 
     invoke-virtual {v0, v7}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditLogEnabledAsUser(I)Z
 
     move-result v17
 
-    .line 2337
     .local v17, "bIsAuditLogEnabled":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13591,7 +12802,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isAuditLogEnabled"
+    const-string v69, "isAuditLogEnabled"
 
     aput-object v69, v5, v6
 
@@ -13599,7 +12810,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2340
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13619,14 +12829,12 @@
 
     move-object/from16 v5, v52
 
-    .line 2345
     goto/16 :goto_1
 
-    .line 2353
     .end local v17    # "bIsAuditLogEnabled":Z
     .end local v34    # "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     :pswitch_91
-    const-string/jumbo v5, "smartcard_browser_policy"
+    const-string v5, "smartcard_browser_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -13634,14 +12842,12 @@
 
     check-cast v47, Lcom/android/server/enterprise/smartcard/SmartCardBrowserPolicy;
 
-    .line 2356
     .local v47, "lSmartCardBrowserPolicy":Lcom/android/server/enterprise/smartcard/SmartCardBrowserPolicy;
     if-eqz v47, :cond_0
 
-    .line 2357
     if-eqz p3, :cond_a5
 
-    const-string/jumbo v5, "isAuthenticationEnabled"
+    const-string v5, "isAuthenticationEnabled"
 
     move-object/from16 v0, p3
 
@@ -13651,7 +12857,6 @@
 
     if-eqz v5, :cond_a5
 
-    .line 2359
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v5, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -13662,7 +12867,6 @@
 
     move-result v18
 
-    .line 2363
     .local v18, "bIsAuthenticationEnabled":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13673,7 +12877,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isAuthenticationEnabled"
+    const-string v69, "isAuthenticationEnabled"
 
     aput-object v69, v5, v6
 
@@ -13681,7 +12885,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2367
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13701,15 +12904,13 @@
 
     move-object/from16 v5, v52
 
-    .line 2372
     goto/16 :goto_1
 
-    .line 2374
     .end local v18    # "bIsAuthenticationEnabled":Z
     :cond_a5
     if-eqz p3, :cond_0
 
-    const-string/jumbo v5, "getClientCertificateAlias"
+    const-string v5, "getClientCertificateAlias"
 
     move-object/from16 v0, p3
 
@@ -13719,7 +12920,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 2377
     if-eqz p4, :cond_a6
 
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -13728,13 +12928,11 @@
 
     if-gtz v5, :cond_a7
 
-    .line 2378
     :cond_a6
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2380
     :cond_a7
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -13760,7 +12958,6 @@
 
     move-result-object v60
 
-    .line 2385
     .local v60, "sGetClientCertificateAlias":Ljava/lang/String;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13771,7 +12968,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getClientCertificateAlias"
+    const-string v69, "getClientCertificateAlias"
 
     aput-object v69, v5, v6
 
@@ -13779,7 +12976,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2390
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13795,14 +12991,12 @@
 
     move-object/from16 v5, v52
 
-    .line 2395
     goto/16 :goto_1
 
-    .line 2401
     .end local v47    # "lSmartCardBrowserPolicy":Lcom/android/server/enterprise/smartcard/SmartCardBrowserPolicy;
     .end local v60    # "sGetClientCertificateAlias":Ljava/lang/String;
     :pswitch_92
-    const-string/jumbo v5, "security_policy"
+    const-string v5, "security_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -13810,13 +13004,11 @@
 
     check-cast v46, Lcom/android/server/enterprise/security/SecurityPolicy;
 
-    .line 2404
     .local v46, "lSecurityPolicy":Lcom/android/server/enterprise/security/SecurityPolicy;
     if-eqz v46, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2405
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -13829,14 +13021,12 @@
     :goto_2e
     packed-switch v5, :pswitch_data_d
 
-    .line 2439
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2405
     :sswitch_83
-    const-string/jumbo v6, "isDodBannerVisible"
+    const-string v6, "isDodBannerVisible"
 
     move-object/from16 v0, p3
 
@@ -13851,7 +13041,7 @@
     goto :goto_2e
 
     :sswitch_84
-    const-string/jumbo v6, "getCredentialStorageStatus"
+    const-string v6, "getCredentialStorageStatus"
 
     move-object/from16 v0, p3
 
@@ -13865,7 +13055,6 @@
 
     goto :goto_2e
 
-    .line 2409
     :pswitch_93
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -13877,7 +13066,6 @@
 
     move-result v25
 
-    .line 2412
     .local v25, "dodbanner":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13888,7 +13076,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isDodBannerVisible"
+    const-string v69, "isDodBannerVisible"
 
     aput-object v69, v5, v6
 
@@ -13896,7 +13084,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2416
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13918,10 +13105,8 @@
     :goto_2f
     move-object/from16 v5, v52
 
-    .line 2442
     goto/16 :goto_1
 
-    .line 2424
     :pswitch_94
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -13933,7 +13118,6 @@
 
     move-result v56
 
-    .line 2428
     .restart local v56    # "res":I
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -13950,7 +13134,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2432
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -13968,14 +13151,13 @@
 
     invoke-virtual {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 2435
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "getCredentialStorageStatus = "
+    const-string v69, "getCredentialStorageStatus = "
 
     move-object/from16 v0, v69
 
@@ -13997,7 +13179,6 @@
 
     goto :goto_2f
 
-    .line 2447
     .end local v46    # "lSecurityPolicy":Lcom/android/server/enterprise/security/SecurityPolicy;
     .end local v56    # "res":I
     :pswitch_95
@@ -14009,9 +13190,8 @@
 
     check-cast v36, Lcom/android/server/enterprise/browser/BrowserPolicy;
 
-    .line 2449
     .restart local v36    # "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
-    const-string/jumbo v5, "misc_policy"
+    const-string v5, "misc_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -14019,7 +13199,6 @@
 
     check-cast v40, Lcom/android/server/enterprise/general/MiscPolicy;
 
-    .line 2451
     .local v40, "lMiscPolicy":Lcom/android/server/enterprise/general/MiscPolicy;
     if-eqz v36, :cond_0
 
@@ -14027,7 +13206,6 @@
 
     if-eqz v40, :cond_0
 
-    .line 2452
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -14040,14 +13218,12 @@
     :goto_30
     packed-switch v5, :pswitch_data_e
 
-    .line 2541
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2452
     :sswitch_85
-    const-string/jumbo v6, "getURLFilterEnabled"
+    const-string v6, "getURLFilterEnabled"
 
     move-object/from16 v0, p3
 
@@ -14062,7 +13238,7 @@
     goto :goto_30
 
     :sswitch_86
-    const-string/jumbo v6, "getURLFilterList"
+    const-string v6, "getURLFilterList"
 
     move-object/from16 v0, p3
 
@@ -14077,7 +13253,7 @@
     goto :goto_30
 
     :sswitch_87
-    const-string/jumbo v6, "getURLFilterReportEnabled"
+    const-string v6, "getURLFilterReportEnabled"
 
     move-object/from16 v0, p3
 
@@ -14092,7 +13268,7 @@
     goto :goto_30
 
     :sswitch_88
-    const-string/jumbo v6, "isUrlBlocked"
+    const-string v6, "isUrlBlocked"
 
     move-object/from16 v0, p3
 
@@ -14107,7 +13283,7 @@
     goto :goto_30
 
     :sswitch_89
-    const-string/jumbo v6, "isGlobalProxyAllowed"
+    const-string v6, "isGlobalProxyAllowed"
 
     move-object/from16 v0, p3
 
@@ -14121,7 +13297,6 @@
 
     goto :goto_30
 
-    .line 2456
     :pswitch_96
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -14139,7 +13314,6 @@
 
     move-result v15
 
-    .line 2460
     .local v15, "bGetURLFilterEnabled":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14150,7 +13324,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getURLFilterEnabled"
+    const-string v69, "getURLFilterEnabled"
 
     aput-object v69, v5, v6
 
@@ -14158,7 +13332,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2464
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14181,10 +13354,8 @@
     :goto_31
     move-object/from16 v5, v52
 
-    .line 2544
     goto/16 :goto_1
 
-    .line 2473
     :pswitch_97
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -14202,7 +13373,6 @@
 
     move-result-object v65
 
-    .line 2476
     .local v65, "urFilterList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14213,7 +13383,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getURLFilterList"
+    const-string v69, "getURLFilterList"
 
     aput-object v69, v5, v6
 
@@ -14221,7 +13391,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2481
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v65, :cond_aa
 
@@ -14231,7 +13400,6 @@
 
     if-nez v5, :cond_aa
 
-    .line 2484
     invoke-interface/range {v65 .. v65}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v28
@@ -14250,7 +13418,6 @@
 
     check-cast v26, Ljava/lang/String;
 
-    .line 2485
     .local v26, "filterList":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -14266,7 +13433,6 @@
 
     goto :goto_32
 
-    .line 2496
     .end local v26    # "filterList":Ljava/lang/String;
     .end local v28    # "i$":Ljava/util/Iterator;
     .end local v65    # "urFilterList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -14291,7 +13457,6 @@
 
     move-result-object v22
 
-    .line 2500
     .local v22, "bUrlFilterReportEnable":Ljava/lang/Boolean;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14302,7 +13467,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getURLFilterReportEnabled"
+    const-string v69, "getURLFilterReportEnabled"
 
     aput-object v69, v5, v6
 
@@ -14310,7 +13475,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2504
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14326,7 +13490,6 @@
 
     goto :goto_31
 
-    .line 2510
     .end local v22    # "bUrlFilterReportEnable":Ljava/lang/Boolean;
     :pswitch_99
     if-eqz p4, :cond_ab
@@ -14337,13 +13500,11 @@
 
     if-gtz v5, :cond_ac
 
-    .line 2511
     :cond_ab
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2512
     :cond_ac
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -14363,7 +13524,6 @@
 
     move-result-object v21
 
-    .line 2516
     .local v21, "bUrlBlocked":Ljava/lang/Boolean;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14374,7 +13534,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isUrlBlocked"
+    const-string v69, "isUrlBlocked"
 
     aput-object v69, v5, v6
 
@@ -14382,7 +13542,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2520
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14398,7 +13557,6 @@
 
     goto/16 :goto_31
 
-    .line 2526
     .end local v21    # "bUrlBlocked":Ljava/lang/Boolean;
     :pswitch_9a
     if-eqz p4, :cond_ad
@@ -14409,13 +13567,11 @@
 
     if-gtz v5, :cond_ae
 
-    .line 2527
     :cond_ad
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2528
     :cond_ae
     invoke-virtual/range {v40 .. v40}, Lcom/android/server/enterprise/general/MiscPolicy;->isGlobalProxyAllowed()Z
 
@@ -14425,7 +13581,6 @@
 
     move-result-object v16
 
-    .line 2531
     .local v16, "bGlobalProxy":Ljava/lang/Boolean;
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14436,7 +13591,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isGlobalProxyAllowed"
+    const-string v69, "isGlobalProxyAllowed"
 
     aput-object v69, v5, v6
 
@@ -14444,7 +13599,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2535
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14460,7 +13614,6 @@
 
     goto/16 :goto_31
 
-    .line 2560
     .end local v16    # "bGlobalProxy":Ljava/lang/Boolean;
     .end local v36    # "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     .end local v40    # "lMiscPolicy":Lcom/android/server/enterprise/general/MiscPolicy;
@@ -14473,13 +13626,11 @@
 
     check-cast v33, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
 
-    .line 2563
     .local v33, "lAppPermissionControlPol":Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
     if-eqz v33, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2564
     if-eqz p4, :cond_af
 
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -14490,15 +13641,13 @@
 
     if-gt v5, v6, :cond_b0
 
-    .line 2565
     :cond_af
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2567
     :cond_b0
-    const-string/jumbo v5, "getPermissionBlockedList"
+    const-string v5, "getPermissionBlockedList"
 
     move-object/from16 v0, p3
 
@@ -14508,12 +13657,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 2568
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2569
     .local v9, "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v5, 0x1
 
@@ -14526,7 +13673,6 @@
     .end local v9    # "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     check-cast v9, Ljava/util/List;
 
-    .line 2570
     .restart local v9    # "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -14542,7 +13688,6 @@
 
     move-result-object v54
 
-    .line 2574
     .local v54, "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14553,7 +13698,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getPermissionBlockedList"
+    const-string v69, "getPermissionBlockedList"
 
     aput-object v69, v5, v6
 
@@ -14561,7 +13706,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2579
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v54, :cond_b1
 
@@ -14571,7 +13715,6 @@
 
     if-nez v5, :cond_b1
 
-    .line 2582
     invoke-interface/range {v54 .. v54}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v28
@@ -14590,7 +13733,6 @@
 
     check-cast v53, Ljava/lang/String;
 
-    .line 2583
     .local v53, "perm":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -14611,15 +13753,13 @@
     :cond_b1
     move-object/from16 v5, v52
 
-    .line 2590
     goto/16 :goto_1
 
-    .line 2596
     .end local v9    # "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v33    # "lAppPermissionControlPol":Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
     .end local v54    # "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :pswitch_9c
-    const-string/jumbo v5, "date_time_policy"
+    const-string v5, "date_time_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -14627,13 +13767,11 @@
 
     check-cast v38, Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
-    .line 2599
     .local v38, "lDateTimePolicy":Lcom/android/server/enterprise/datetime/DateTimePolicy;
     if-eqz v38, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2600
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -14646,14 +13784,12 @@
     :goto_34
     packed-switch v5, :pswitch_data_f
 
-    .line 2633
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2600
     :sswitch_8a
-    const-string/jumbo v6, "isDateTimeChangeEnalbed"
+    const-string v6, "isDateTimeChangeEnalbed"
 
     move-object/from16 v0, p3
 
@@ -14668,7 +13804,7 @@
     goto :goto_34
 
     :sswitch_8b
-    const-string/jumbo v6, "getAutomaticTime"
+    const-string v6, "getAutomaticTime"
 
     move-object/from16 v0, p3
 
@@ -14682,7 +13818,6 @@
 
     goto :goto_34
 
-    .line 2603
     :pswitch_9d
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -14694,7 +13829,6 @@
 
     move-result v57
 
-    .line 2607
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14705,7 +13839,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isDateTimeChangeEnalbed"
+    const-string v69, "isDateTimeChangeEnalbed"
 
     aput-object v69, v5, v6
 
@@ -14713,7 +13847,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2612
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14734,10 +13867,8 @@
     :goto_35
     move-object/from16 v5, v52
 
-    .line 2636
     goto/16 :goto_1
 
-    .line 2619
     .end local v57    # "result":Z
     :pswitch_9e
     new-instance v5, Landroid/app/enterprise/ContextInfo;
@@ -14750,7 +13881,6 @@
 
     move-result v57
 
-    .line 2623
     .restart local v57    # "result":Z
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -14761,7 +13891,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getAutomaticTime"
+    const-string v69, "getAutomaticTime"
 
     aput-object v69, v5, v6
 
@@ -14769,7 +13899,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2628
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14789,11 +13918,10 @@
 
     goto :goto_35
 
-    .line 2640
     .end local v38    # "lDateTimePolicy":Lcom/android/server/enterprise/datetime/DateTimePolicy;
     .end local v57    # "result":Z
     :pswitch_9f
-    const-string/jumbo v5, "spd_control_policy"
+    const-string v5, "spd_control_policy"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -14801,13 +13929,11 @@
 
     check-cast v45, Lcom/android/server/enterprise/spd/SPDControlPolicy;
 
-    .line 2642
     .local v45, "lSPDControlPolicy":Lcom/android/server/enterprise/spd/SPDControlPolicy;
     if-eqz v45, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2643
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -14820,14 +13946,12 @@
     :goto_36
     packed-switch v5, :pswitch_data_11
 
-    .line 2653
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2643
     :pswitch_a0
-    const-string/jumbo v6, "isSPDAutomaticUpdateEnabled"
+    const-string v6, "isSPDAutomaticUpdateEnabled"
 
     move-object/from16 v0, p3
 
@@ -14841,17 +13965,14 @@
 
     goto :goto_36
 
-    .line 2645
     :pswitch_a1
     const/16 v59, -0x1
 
-    .line 2646
     .local v59, "ret":I
     invoke-virtual/range {v45 .. v45}, Lcom/android/server/enterprise/spd/SPDControlPolicy;->getAutoSecurityPolicyUpdateMode()I
 
     move-result v59
 
-    .line 2647
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
     .end local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -14861,7 +13982,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isSPDAutomaticUpdateEnabled"
+    const-string v69, "isSPDAutomaticUpdateEnabled"
 
     aput-object v69, v5, v6
 
@@ -14869,7 +13990,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2650
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -14889,7 +14009,6 @@
 
     goto/16 :goto_0
 
-    .line 2658
     .end local v45    # "lSPDControlPolicy":Lcom/android/server/enterprise/spd/SPDControlPolicy;
     .end local v59    # "ret":I
     :pswitch_a2
@@ -14901,13 +14020,11 @@
 
     check-cast v44, Lcom/android/server/SEAMService;
 
-    .line 2659
     .local v44, "lSEAMSPolicy":Lcom/android/server/SEAMService;
     if-eqz v44, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2660
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -14920,14 +14037,12 @@
     :goto_37
     packed-switch v5, :pswitch_data_12
 
-    .line 2689
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2660
     :sswitch_8c
-    const-string/jumbo v6, "getSEContainerClipboardMode"
+    const-string v6, "getSEContainerClipboardMode"
 
     move-object/from16 v0, p3
 
@@ -14942,7 +14057,7 @@
     goto :goto_37
 
     :sswitch_8d
-    const-string/jumbo v6, "getAllSEContainerCategory"
+    const-string v6, "getAllSEContainerCategory"
 
     move-object/from16 v0, p3
 
@@ -14956,7 +14071,6 @@
 
     goto :goto_37
 
-    .line 2662
     :pswitch_a3
     if-eqz p4, :cond_b5
 
@@ -14966,13 +14080,11 @@
 
     if-gtz v5, :cond_b6
 
-    .line 2663
     :cond_b5
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2665
     :cond_b6
     const/4 v5, 0x0
 
@@ -14994,7 +14106,6 @@
 
     const/16 v57, 0x1
 
-    .line 2668
     .restart local v57    # "result":Z
     :goto_38
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
@@ -15006,7 +14117,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getSEContainerClipboardMode"
+    const-string v69, "getSEContainerClipboardMode"
 
     aput-object v69, v5, v6
 
@@ -15014,7 +14125,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2671
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     const/4 v5, 0x1
 
@@ -15036,22 +14146,18 @@
     :cond_b7
     move-object/from16 v5, v52
 
-    .line 2691
     goto/16 :goto_1
 
-    .line 2665
     :cond_b8
     const/16 v57, 0x0
 
     goto :goto_38
 
-    .line 2677
     :pswitch_a4
     invoke-virtual/range {v44 .. v44}, Lcom/android/server/SEAMService;->getAllSEContainerCategory()Ljava/util/List;
 
     move-result-object v58
 
-    .line 2679
     .local v58, "resultList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -15062,7 +14168,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "getAllSEContainerCategory"
+    const-string v69, "getAllSEContainerCategory"
 
     aput-object v69, v5, v6
 
@@ -15070,7 +14176,6 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2682
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v58, :cond_b7
 
@@ -15080,7 +14185,6 @@
 
     if-nez v5, :cond_b7
 
-    .line 2683
     invoke-interface/range {v58 .. v58}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v28
@@ -15099,7 +14203,6 @@
 
     check-cast v68, Ljava/lang/Integer;
 
-    .line 2684
     .local v68, "value":Ljava/lang/Integer;
     const/4 v5, 0x1
 
@@ -15115,7 +14218,6 @@
 
     goto :goto_39
 
-    .line 2695
     .end local v28    # "i$":Ljava/util/Iterator;
     .end local v44    # "lSEAMSPolicy":Lcom/android/server/SEAMService;
     .end local v58    # "resultList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -15123,7 +14225,6 @@
     :pswitch_a5
     if-eqz p3, :cond_bf
 
-    .line 2696
     const/4 v5, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -15136,21 +14237,18 @@
     :goto_3a
     packed-switch v5, :pswitch_data_13
 
-    .line 2735
     const-string v5, "SecContentProvider"
 
     const-string v6, "Case DLP selection is not matched"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2736
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 2696
     :sswitch_8e
-    const-string/jumbo v6, "isAllowedToShare"
+    const-string v6, "isAllowedToShare"
 
     move-object/from16 v0, p3
 
@@ -15165,7 +14263,7 @@
     goto :goto_3a
 
     :sswitch_8f
-    const-string/jumbo v6, "isDLPActivated"
+    const-string v6, "isDLPActivated"
 
     move-object/from16 v0, p3
 
@@ -15179,7 +14277,6 @@
 
     goto :goto_3a
 
-    .line 2698
     :pswitch_a6
     const/4 v5, 0x1
 
@@ -15187,7 +14284,6 @@
 
     move-result-object v32
 
-    .line 2699
     .local v32, "isShareAllowed":Ljava/lang/Boolean;
     invoke-static {v7}, Landroid/os/PersonaManager;->isKnoxId(I)Z
 
@@ -15195,8 +14291,7 @@
 
     if-eqz v5, :cond_ba
 
-    .line 2701
-    const-string/jumbo v5, "enterprise_dlp_service"
+    const-string v5, "enterprise_dlp_service"
 
     invoke-static {v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -15204,11 +14299,9 @@
 
     check-cast v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
-    .line 2703
     .local v3, "IdlpPolicy":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
     if-eqz v3, :cond_bc
 
-    .line 2704
     new-instance v4, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v4, v8}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -15218,7 +14311,6 @@
 
     move-object/from16 v6, p3
 
-    .line 2705
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isShareAllowed(Landroid/app/enterprise/ContextInfo;[Ljava/lang/String;Ljava/lang/String;II)Z
 
     move-result v5
@@ -15227,7 +14319,6 @@
 
     move-result-object v32
 
-    .line 2710
     .end local v3    # "IdlpPolicy":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
     .end local v4    # "ctxInfo":Landroid/app/enterprise/ContextInfo;
     :cond_ba
@@ -15241,7 +14332,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isAllowedToShare"
+    const-string v69, "isAllowedToShare"
 
     aput-object v69, v5, v6
 
@@ -15249,11 +14340,9 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2714
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v52, :cond_bb
 
-    .line 2715
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -15284,7 +14373,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2717
     :cond_bb
     const/4 v5, 0x1
 
@@ -15302,10 +14390,8 @@
     :goto_3c
     move-object/from16 v5, v52
 
-    .line 2738
     goto/16 :goto_1
 
-    .line 2707
     .restart local v3    # "IdlpPolicy":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
     .restart local v32    # "isShareAllowed":Ljava/lang/Boolean;
     :cond_bc
@@ -15315,7 +14401,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v69, "dlp service is null:"
+    const-string v69, "dlp service is null:"
 
     move-object/from16 v0, v69
 
@@ -15337,7 +14423,6 @@
 
     goto :goto_3b
 
-    .line 2720
     .end local v3    # "IdlpPolicy":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
     .end local v32    # "isShareAllowed":Ljava/lang/Boolean;
     :pswitch_a7
@@ -15347,7 +14432,6 @@
 
     move-result-object v31
 
-    .line 2721
     .local v31, "isDLPActivated":Ljava/lang/Boolean;
     invoke-static {v7}, Landroid/os/PersonaManager;->isKnoxId(I)Z
 
@@ -15355,7 +14439,6 @@
 
     if-eqz v5, :cond_bd
 
-    .line 2723
     invoke-static {v7}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
 
     move-result v5
@@ -15364,7 +14447,6 @@
 
     move-result-object v31
 
-    .line 2725
     :cond_bd
     new-instance v52, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
 
@@ -15375,7 +14457,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v69, "isDLPActivated"
+    const-string v69, "isDLPActivated"
 
     aput-object v69, v5, v6
 
@@ -15383,11 +14465,9 @@
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2729
     .restart local v52    # "mCursor":Lcom/android/server/enterprise/content/EnterpriseMatrixCursor;
     if-eqz v52, :cond_be
 
-    .line 2730
     const-string v5, "SecContentProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -15418,7 +14498,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2732
     :cond_be
     const/4 v5, 0x1
 
@@ -15434,7 +14513,6 @@
 
     goto :goto_3c
 
-    .line 2740
     .end local v31    # "isDLPActivated":Ljava/lang/Boolean;
     :cond_bf
     const-string v5, "SecContentProvider"
@@ -15445,7 +14523,6 @@
 
     goto/16 :goto_0
 
-    .line 242
     nop
 
     :pswitch_data_0
@@ -15479,7 +14556,6 @@
         :pswitch_a5
     .end packed-switch
 
-    .line 247
     :sswitch_data_0
     .sparse-switch
         -0x5d9fe8ab -> :sswitch_8
@@ -15524,7 +14600,6 @@
         :pswitch_13
     .end packed-switch
 
-    .line 513
     :sswitch_data_1
     .sparse-switch
         -0x74a4d725 -> :sswitch_20
@@ -15567,7 +14642,6 @@
         :pswitch_25
     .end packed-switch
 
-    .line 795
     :sswitch_data_2
     .sparse-switch
         -0x6c43a0eb -> :sswitch_24
@@ -15608,7 +14682,6 @@
         :pswitch_36
     .end packed-switch
 
-    .line 1049
     :sswitch_data_3
     .sparse-switch
         -0x562f9482 -> :sswitch_35
@@ -15649,7 +14722,6 @@
         :pswitch_47
     .end packed-switch
 
-    .line 1289
     :sswitch_data_4
     .sparse-switch
         -0x7f682541 -> :sswitch_4b
@@ -15682,7 +14754,6 @@
         :pswitch_54
     .end packed-switch
 
-    .line 1478
     :sswitch_data_5
     .sparse-switch
         -0x7f91d479 -> :sswitch_53
@@ -15715,7 +14786,6 @@
         :pswitch_61
     .end packed-switch
 
-    .line 1678
     :sswitch_data_6
     .sparse-switch
         -0x4e857510 -> :sswitch_62
@@ -15742,7 +14812,6 @@
         :pswitch_6b
     .end packed-switch
 
-    .line 1859
     :sswitch_data_7
     .sparse-switch
         -0x74ddc0dd -> :sswitch_69
@@ -15763,7 +14832,6 @@
         :pswitch_72
     .end packed-switch
 
-    .line 1964
     :sswitch_data_8
     .sparse-switch
         -0x625ba203 -> :sswitch_6a
@@ -15788,7 +14856,6 @@
         :pswitch_7b
     .end packed-switch
 
-    .line 2084
     :sswitch_data_9
     .sparse-switch
         -0x74fa9afd -> :sswitch_72
@@ -15817,7 +14884,6 @@
         :pswitch_86
     .end packed-switch
 
-    .line 2205
     :sswitch_data_a
     .sparse-switch
         -0x3edf31d1 -> :sswitch_7f
@@ -15834,7 +14900,6 @@
         :pswitch_8b
     .end packed-switch
 
-    .line 2271
     :sswitch_data_b
     .sparse-switch
         -0x66608807 -> :sswitch_81
@@ -15849,7 +14914,6 @@
         :pswitch_8f
     .end packed-switch
 
-    .line 2405
     :sswitch_data_c
     .sparse-switch
         -0x6e1bb3c9 -> :sswitch_83
@@ -15862,7 +14926,6 @@
         :pswitch_94
     .end packed-switch
 
-    .line 2452
     :sswitch_data_d
     .sparse-switch
         -0x7bb5f0b1 -> :sswitch_86
@@ -15881,7 +14944,6 @@
         :pswitch_9a
     .end packed-switch
 
-    .line 2600
     :sswitch_data_e
     .sparse-switch
         -0x57099b48 -> :sswitch_8a
@@ -15894,7 +14956,6 @@
         :pswitch_9e
     .end packed-switch
 
-    .line 2643
     :pswitch_data_10
     .packed-switch -0x28e089b6
         :pswitch_a0
@@ -15905,7 +14966,6 @@
         :pswitch_a1
     .end packed-switch
 
-    .line 2660
     :sswitch_data_f
     .sparse-switch
         -0x74717860 -> :sswitch_8c
@@ -15918,7 +14978,6 @@
         :pswitch_a4
     .end packed-switch
 
-    .line 2696
     :sswitch_data_10
     .sparse-switch
         -0x1d831fed -> :sswitch_8f
@@ -15940,7 +14999,6 @@
     .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 2889
     const/4 v0, 0x0
 
     return v0

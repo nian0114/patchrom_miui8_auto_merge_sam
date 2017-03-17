@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;-><init>(Ljava/lang/String;ILcom/samsung/android/contextaware/utilbundle/logger/CaLogger$1;)V
@@ -36,7 +35,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 66
     # getter for: Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isConsoleLogging:Z
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->access$100()Z
 
@@ -57,7 +55,6 @@
 
     const/4 v1, 0x1
 
-    .line 68
     .local v1, "usable":Z
     :goto_0
     # invokes: Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->getCallerInfo(Z)Ljava/lang/String;
@@ -65,16 +62,13 @@
 
     move-result-object v0
 
-    .line 69
     .local v0, "str":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 70
     const-string v2, "CAE"
 
     invoke-static {v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     :cond_0
     return-object v0
 
@@ -83,7 +77,6 @@
     :cond_1
     move v1, v2
 
-    .line 66
     goto :goto_0
 .end method
 
@@ -94,7 +87,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 77
     # getter for: Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isFileLogging:Z
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->access$400()Z
 
@@ -115,12 +107,10 @@
 
     const/4 v0, 0x1
 
-    .line 79
     .local v0, "usable":Z
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 80
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->getInstance()Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     move-result-object v2
@@ -143,7 +133,6 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->logging(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
     :cond_0
     return-void
 
@@ -151,6 +140,5 @@
     :cond_1
     move v0, v1
 
-    .line 77
     goto :goto_0
 .end method

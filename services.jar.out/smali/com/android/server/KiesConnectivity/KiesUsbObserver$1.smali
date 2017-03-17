@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 89
     iput-object p1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$1;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,21 +38,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 92
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 93
     .local v0, "action":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 104
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -63,12 +58,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 96
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isbootcomplete:Z
 
-    .line 97
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000()Ljava/lang/String;
 
@@ -78,7 +71,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isbootcomplete = "
+    const-string v3, "isbootcomplete = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,7 +89,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000()Ljava/lang/String;
 
@@ -106,7 +98,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "isbootcomplete = "
+    const-string v3, "isbootcomplete = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,7 +110,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "isTwiceReset"
+    const-string v3, "isTwiceReset"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -136,7 +128,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$1;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     const/16 v2, 0x2328

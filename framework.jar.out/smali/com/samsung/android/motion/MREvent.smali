@@ -286,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 1038
     new-instance v0, Lcom/samsung/android/motion/MREvent$1;
 
     invoke-direct {v0}, Lcom/samsung/android/motion/MREvent$1;-><init>()V
@@ -302,34 +301,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 660
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 661
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
-    .line 662
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDx:I
 
-    .line 663
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDy:I
 
-    .line 664
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDz:I
 
-    .line 665
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDxImage:I
 
-    .line 666
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDyImage:I
 
-    .line 667
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDzImage:I
 
-    .line 668
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->walkingStatus:I
 
-    .line 669
     return-void
 .end method
 
@@ -338,13 +327,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 675
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 676
     invoke-virtual {p0, p1}, Lcom/samsung/android/motion/MREvent;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 677
     return-void
 .end method
 
@@ -354,7 +340,6 @@
     .locals 1
 
     .prologue
-    .line 996
     const/4 v0, 0x0
 
     return v0
@@ -364,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 685
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
     return v0
@@ -374,7 +358,6 @@
     .locals 1
 
     .prologue
-    .line 751
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDx:I
 
     return v0
@@ -384,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 831
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDxImage:I
 
     return v0
@@ -394,7 +376,6 @@
     .locals 1
 
     .prologue
-    .line 760
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDy:I
 
     return v0
@@ -404,7 +385,6 @@
     .locals 1
 
     .prologue
-    .line 839
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDyImage:I
 
     return v0
@@ -414,7 +394,6 @@
     .locals 1
 
     .prologue
-    .line 769
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDz:I
 
     return v0
@@ -424,7 +403,6 @@
     .locals 1
 
     .prologue
-    .line 848
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDzImage:I
 
     return v0
@@ -434,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 778
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDz:I
 
     return v0
@@ -444,7 +421,6 @@
     .locals 1
 
     .prologue
-    .line 787
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->tilt:I
 
     return v0
@@ -454,7 +430,6 @@
     .locals 1
 
     .prologue
-    .line 796
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->walkingStatus:I
 
     return v0
@@ -465,70 +440,60 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1023
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
-    .line 1024
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDx:I
 
-    .line 1025
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDy:I
 
-    .line 1026
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDz:I
 
-    .line 1027
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDxImage:I
 
-    .line 1028
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDyImage:I
 
-    .line 1029
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->panningDzImage:I
 
-    .line 1030
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->tilt:I
 
-    .line 1031
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->walkingStatus:I
 
-    .line 1032
     return-void
 .end method
 
@@ -537,22 +502,18 @@
     .param p1, "m"    # I
 
     .prologue
-    .line 694
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
-    .line 695
     if-ltz p1, :cond_0
 
     const/16 v0, 0x78
 
     if-gt p1, v0, :cond_0
 
-    .line 696
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
-    .line 698
     :cond_0
     return-void
 .end method
@@ -562,10 +523,8 @@
     .param p1, "dx"    # I
 
     .prologue
-    .line 706
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->panningDx:I
 
-    .line 707
     return-void
 .end method
 
@@ -574,10 +533,8 @@
     .param p1, "dx"    # I
 
     .prologue
-    .line 805
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->panningDxImage:I
 
-    .line 806
     return-void
 .end method
 
@@ -586,10 +543,8 @@
     .param p1, "dy"    # I
 
     .prologue
-    .line 715
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->panningDy:I
 
-    .line 716
     return-void
 .end method
 
@@ -598,10 +553,8 @@
     .param p1, "dy"    # I
 
     .prologue
-    .line 814
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->panningDyImage:I
 
-    .line 815
     return-void
 .end method
 
@@ -610,10 +563,8 @@
     .param p1, "dz"    # I
 
     .prologue
-    .line 724
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->panningDz:I
 
-    .line 725
     return-void
 .end method
 
@@ -622,10 +573,8 @@
     .param p1, "dz"    # I
 
     .prologue
-    .line 823
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->panningDzImage:I
 
-    .line 824
     return-void
 .end method
 
@@ -634,10 +583,8 @@
     .param p1, "t"    # I
 
     .prologue
-    .line 733
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->tilt:I
 
-    .line 734
     return-void
 .end method
 
@@ -646,10 +593,8 @@
     .param p1, "ws"    # I
 
     .prologue
-    .line 742
     iput p1, p0, Lcom/samsung/android/motion/MREvent;->walkingStatus:I
 
-    .line 743
     return-void
 .end method
 
@@ -657,7 +602,6 @@
     .locals 3
 
     .prologue
-    .line 857
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -682,27 +626,23 @@
 
     move-result-object v0
 
-    .line 859
     .local v0, "string":Ljava/lang/String;
     iget v1, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 979
     :goto_0
     :pswitch_0
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 981
     iget v1, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
     const/16 v2, 0x3d
 
     if-ne v1, v2, :cond_0
 
-    .line 982
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -757,7 +697,6 @@
 
     move-result-object v0
 
-    .line 984
     :cond_0
     iget v1, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
@@ -765,7 +704,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 985
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -808,11 +746,9 @@
 
     move-result-object v0
 
-    .line 987
     :cond_1
     return-object v0
 
-    .line 860
     :pswitch_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -834,7 +770,6 @@
 
     goto/16 :goto_0
 
-    .line 861
     :pswitch_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -856,7 +791,6 @@
 
     goto/16 :goto_0
 
-    .line 862
     :pswitch_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -878,7 +812,6 @@
 
     goto/16 :goto_0
 
-    .line 863
     :pswitch_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -900,7 +833,6 @@
 
     goto/16 :goto_0
 
-    .line 864
     :pswitch_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -922,7 +854,6 @@
 
     goto/16 :goto_0
 
-    .line 865
     :pswitch_6
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -944,7 +875,6 @@
 
     goto/16 :goto_0
 
-    .line 866
     :pswitch_7
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -966,7 +896,6 @@
 
     goto/16 :goto_0
 
-    .line 867
     :pswitch_8
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -988,7 +917,6 @@
 
     goto/16 :goto_0
 
-    .line 868
     :pswitch_9
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1010,7 +938,6 @@
 
     goto/16 :goto_0
 
-    .line 869
     :pswitch_a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1032,7 +959,6 @@
 
     goto/16 :goto_0
 
-    .line 870
     :pswitch_b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1054,7 +980,6 @@
 
     goto/16 :goto_0
 
-    .line 871
     :pswitch_c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1076,7 +1001,6 @@
 
     goto/16 :goto_0
 
-    .line 872
     :pswitch_d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1098,7 +1022,6 @@
 
     goto/16 :goto_0
 
-    .line 873
     :pswitch_e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1120,7 +1043,6 @@
 
     goto/16 :goto_0
 
-    .line 874
     :pswitch_f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1142,7 +1064,6 @@
 
     goto/16 :goto_0
 
-    .line 875
     :pswitch_10
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1164,7 +1085,6 @@
 
     goto/16 :goto_0
 
-    .line 876
     :pswitch_11
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1186,7 +1106,6 @@
 
     goto/16 :goto_0
 
-    .line 877
     :pswitch_12
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1208,7 +1127,6 @@
 
     goto/16 :goto_0
 
-    .line 878
     :pswitch_13
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1230,7 +1148,6 @@
 
     goto/16 :goto_0
 
-    .line 879
     :pswitch_14
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1252,7 +1169,6 @@
 
     goto/16 :goto_0
 
-    .line 880
     :pswitch_15
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1274,7 +1190,6 @@
 
     goto/16 :goto_0
 
-    .line 881
     :pswitch_16
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1296,7 +1211,6 @@
 
     goto/16 :goto_0
 
-    .line 882
     :pswitch_17
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1318,7 +1232,6 @@
 
     goto/16 :goto_0
 
-    .line 883
     :pswitch_18
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1340,7 +1253,6 @@
 
     goto/16 :goto_0
 
-    .line 884
     :pswitch_19
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1362,7 +1274,6 @@
 
     goto/16 :goto_0
 
-    .line 885
     :pswitch_1a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1384,7 +1295,6 @@
 
     goto/16 :goto_0
 
-    .line 886
     :pswitch_1b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1406,7 +1316,6 @@
 
     goto/16 :goto_0
 
-    .line 887
     :pswitch_1c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1428,7 +1337,6 @@
 
     goto/16 :goto_0
 
-    .line 888
     :pswitch_1d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1450,7 +1358,6 @@
 
     goto/16 :goto_0
 
-    .line 889
     :pswitch_1e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1472,7 +1379,6 @@
 
     goto/16 :goto_0
 
-    .line 890
     :pswitch_1f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1494,7 +1400,6 @@
 
     goto/16 :goto_0
 
-    .line 891
     :pswitch_20
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1516,7 +1421,6 @@
 
     goto/16 :goto_0
 
-    .line 892
     :pswitch_21
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1538,7 +1442,6 @@
 
     goto/16 :goto_0
 
-    .line 893
     :pswitch_22
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1560,7 +1463,6 @@
 
     goto/16 :goto_0
 
-    .line 894
     :pswitch_23
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1582,7 +1484,6 @@
 
     goto/16 :goto_0
 
-    .line 895
     :pswitch_24
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1604,7 +1505,6 @@
 
     goto/16 :goto_0
 
-    .line 896
     :pswitch_25
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1626,7 +1526,6 @@
 
     goto/16 :goto_0
 
-    .line 897
     :pswitch_26
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1648,7 +1547,6 @@
 
     goto/16 :goto_0
 
-    .line 898
     :pswitch_27
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1670,7 +1568,6 @@
 
     goto/16 :goto_0
 
-    .line 899
     :pswitch_28
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1692,7 +1589,6 @@
 
     goto/16 :goto_0
 
-    .line 900
     :pswitch_29
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1714,7 +1610,6 @@
 
     goto/16 :goto_0
 
-    .line 901
     :pswitch_2a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1736,7 +1631,6 @@
 
     goto/16 :goto_0
 
-    .line 902
     :pswitch_2b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1758,7 +1652,6 @@
 
     goto/16 :goto_0
 
-    .line 903
     :pswitch_2c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1780,7 +1673,6 @@
 
     goto/16 :goto_0
 
-    .line 904
     :pswitch_2d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1802,7 +1694,6 @@
 
     goto/16 :goto_0
 
-    .line 905
     :pswitch_2e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1824,7 +1715,6 @@
 
     goto/16 :goto_0
 
-    .line 906
     :pswitch_2f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1846,7 +1736,6 @@
 
     goto/16 :goto_0
 
-    .line 907
     :pswitch_30
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1868,7 +1757,6 @@
 
     goto/16 :goto_0
 
-    .line 908
     :pswitch_31
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1890,7 +1778,6 @@
 
     goto/16 :goto_0
 
-    .line 909
     :pswitch_32
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1912,7 +1799,6 @@
 
     goto/16 :goto_0
 
-    .line 910
     :pswitch_33
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1934,7 +1820,6 @@
 
     goto/16 :goto_0
 
-    .line 911
     :pswitch_34
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1956,7 +1841,6 @@
 
     goto/16 :goto_0
 
-    .line 912
     :pswitch_35
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1978,7 +1862,6 @@
 
     goto/16 :goto_0
 
-    .line 913
     :pswitch_36
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2000,7 +1883,6 @@
 
     goto/16 :goto_0
 
-    .line 914
     :pswitch_37
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2022,7 +1904,6 @@
 
     goto/16 :goto_0
 
-    .line 915
     :pswitch_38
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2044,7 +1925,6 @@
 
     goto/16 :goto_0
 
-    .line 916
     :pswitch_39
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2066,7 +1946,6 @@
 
     goto/16 :goto_0
 
-    .line 917
     :pswitch_3a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2088,7 +1967,6 @@
 
     goto/16 :goto_0
 
-    .line 918
     :pswitch_3b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2110,7 +1988,6 @@
 
     goto/16 :goto_0
 
-    .line 919
     :pswitch_3c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2132,7 +2009,6 @@
 
     goto/16 :goto_0
 
-    .line 920
     :pswitch_3d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2154,7 +2030,6 @@
 
     goto/16 :goto_0
 
-    .line 921
     :pswitch_3e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2176,7 +2051,6 @@
 
     goto/16 :goto_0
 
-    .line 922
     :pswitch_3f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2198,7 +2072,6 @@
 
     goto/16 :goto_0
 
-    .line 923
     :pswitch_40
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2220,7 +2093,6 @@
 
     goto/16 :goto_0
 
-    .line 924
     :pswitch_41
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2242,7 +2114,6 @@
 
     goto/16 :goto_0
 
-    .line 925
     :pswitch_42
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2264,7 +2135,6 @@
 
     goto/16 :goto_0
 
-    .line 926
     :pswitch_43
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2286,7 +2156,6 @@
 
     goto/16 :goto_0
 
-    .line 927
     :pswitch_44
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2308,7 +2177,6 @@
 
     goto/16 :goto_0
 
-    .line 928
     :pswitch_45
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2330,7 +2198,6 @@
 
     goto/16 :goto_0
 
-    .line 929
     :pswitch_46
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2352,7 +2219,6 @@
 
     goto/16 :goto_0
 
-    .line 930
     :pswitch_47
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2374,7 +2240,6 @@
 
     goto/16 :goto_0
 
-    .line 931
     :pswitch_48
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2396,7 +2261,6 @@
 
     goto/16 :goto_0
 
-    .line 932
     :pswitch_49
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2418,7 +2282,6 @@
 
     goto/16 :goto_0
 
-    .line 933
     :pswitch_4a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2440,7 +2303,6 @@
 
     goto/16 :goto_0
 
-    .line 934
     :pswitch_4b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2462,7 +2324,6 @@
 
     goto/16 :goto_0
 
-    .line 935
     :pswitch_4c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2484,7 +2345,6 @@
 
     goto/16 :goto_0
 
-    .line 936
     :pswitch_4d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2506,7 +2366,6 @@
 
     goto/16 :goto_0
 
-    .line 937
     :pswitch_4e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2528,7 +2387,6 @@
 
     goto/16 :goto_0
 
-    .line 938
     :pswitch_4f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2550,7 +2408,6 @@
 
     goto/16 :goto_0
 
-    .line 939
     :pswitch_50
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2572,7 +2429,6 @@
 
     goto/16 :goto_0
 
-    .line 940
     :pswitch_51
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2594,7 +2450,6 @@
 
     goto/16 :goto_0
 
-    .line 941
     :pswitch_52
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2616,7 +2471,6 @@
 
     goto/16 :goto_0
 
-    .line 942
     :pswitch_53
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2638,7 +2492,6 @@
 
     goto/16 :goto_0
 
-    .line 943
     :pswitch_54
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2660,7 +2513,6 @@
 
     goto/16 :goto_0
 
-    .line 944
     :pswitch_55
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2682,7 +2534,6 @@
 
     goto/16 :goto_0
 
-    .line 945
     :pswitch_56
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2704,7 +2555,6 @@
 
     goto/16 :goto_0
 
-    .line 946
     :pswitch_57
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2726,7 +2576,6 @@
 
     goto/16 :goto_0
 
-    .line 947
     :pswitch_58
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2748,7 +2597,6 @@
 
     goto/16 :goto_0
 
-    .line 948
     :pswitch_59
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2770,7 +2618,6 @@
 
     goto/16 :goto_0
 
-    .line 949
     :pswitch_5a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2792,7 +2639,6 @@
 
     goto/16 :goto_0
 
-    .line 950
     :pswitch_5b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2814,7 +2660,6 @@
 
     goto/16 :goto_0
 
-    .line 952
     :pswitch_5c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2836,7 +2681,6 @@
 
     goto/16 :goto_0
 
-    .line 953
     :pswitch_5d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2858,7 +2702,6 @@
 
     goto/16 :goto_0
 
-    .line 954
     :pswitch_5e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2880,7 +2723,6 @@
 
     goto/16 :goto_0
 
-    .line 955
     :pswitch_5f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2902,7 +2744,6 @@
 
     goto/16 :goto_0
 
-    .line 956
     :pswitch_60
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2924,7 +2765,6 @@
 
     goto/16 :goto_0
 
-    .line 957
     :pswitch_61
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2946,7 +2786,6 @@
 
     goto/16 :goto_0
 
-    .line 958
     :pswitch_62
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2968,7 +2807,6 @@
 
     goto/16 :goto_0
 
-    .line 959
     :pswitch_63
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2990,7 +2828,6 @@
 
     goto/16 :goto_0
 
-    .line 960
     :pswitch_64
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3012,7 +2849,6 @@
 
     goto/16 :goto_0
 
-    .line 961
     :pswitch_65
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3034,7 +2870,6 @@
 
     goto/16 :goto_0
 
-    .line 962
     :pswitch_66
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3056,7 +2891,6 @@
 
     goto/16 :goto_0
 
-    .line 963
     :pswitch_67
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3078,7 +2912,6 @@
 
     goto/16 :goto_0
 
-    .line 964
     :pswitch_68
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3100,7 +2933,6 @@
 
     goto/16 :goto_0
 
-    .line 965
     :pswitch_69
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3122,7 +2954,6 @@
 
     goto/16 :goto_0
 
-    .line 966
     :pswitch_6a
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3144,7 +2975,6 @@
 
     goto/16 :goto_0
 
-    .line 967
     :pswitch_6b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3166,7 +2996,6 @@
 
     goto/16 :goto_0
 
-    .line 968
     :pswitch_6c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3188,7 +3017,6 @@
 
     goto/16 :goto_0
 
-    .line 969
     :pswitch_6d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3210,7 +3038,6 @@
 
     goto/16 :goto_0
 
-    .line 970
     :pswitch_6e
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3232,7 +3059,6 @@
 
     goto/16 :goto_0
 
-    .line 971
     :pswitch_6f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3254,7 +3080,6 @@
 
     goto/16 :goto_0
 
-    .line 972
     :pswitch_70
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3276,7 +3101,6 @@
 
     goto/16 :goto_0
 
-    .line 973
     :pswitch_71
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3298,7 +3122,6 @@
 
     goto/16 :goto_0
 
-    .line 974
     :pswitch_72
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3320,7 +3143,6 @@
 
     goto/16 :goto_0
 
-    .line 975
     :pswitch_73
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3342,7 +3164,6 @@
 
     goto/16 :goto_0
 
-    .line 976
     :pswitch_74
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3364,7 +3185,6 @@
 
     goto/16 :goto_0
 
-    .line 977
     :pswitch_75
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3386,7 +3206,6 @@
 
     goto/16 :goto_0
 
-    .line 859
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -3519,51 +3338,41 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1005
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->motion:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1006
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDx:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1007
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDy:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1008
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDz:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1009
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDxImage:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1010
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDyImage:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1011
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->panningDzImage:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1012
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->tilt:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1013
     iget v0, p0, Lcom/samsung/android/motion/MREvent;->walkingStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1014
     return-void
 .end method

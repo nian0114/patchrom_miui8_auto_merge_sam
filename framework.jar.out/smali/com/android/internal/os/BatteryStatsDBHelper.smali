@@ -178,21 +178,18 @@
     .locals 1
 
     .prologue
-    .line 131
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->unNotifiedAbuserMap:Ljava/util/HashMap;
 
-    .line 132
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->notifiedPowerDrainingApps:Ljava/util/HashMap;
 
-    .line 161
     const-string v0, "content://com.samsung.android.sm/settings"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -209,8 +206,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 168
-    const-string/jumbo v0, "powerManager"
+    const-string v0, "powerManager"
 
     const/4 v1, 0x0
 
@@ -218,44 +214,36 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 142
     const-wide/high16 v0, 0x4008000000000000L    # 3.0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper;->ONE_HOUR_THRESHOLD:D
 
-    .line 145
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper;->ONE_HOUR_THRESHOLD_HEALING_CAMP:D
 
-    .line 212
     new-instance v0, Lcom/android/internal/os/BatteryStatsDBHelper$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/os/BatteryStatsDBHelper$1;-><init>(Lcom/android/internal/os/BatteryStatsDBHelper;)V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper;->mFakeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 169
     sput-object p1, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
-    .line 170
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/internal/os/BatteryStatsDBHelper;->sSystemTimeSnapshot:J
 
-    .line 171
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/internal/os/BatteryStatsDBHelper;->sRealTimeSnapshot:J
 
-    .line 172
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->registerReceiver()V
 
-    .line 173
     return-void
 .end method
 
@@ -265,7 +253,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-static {p0, p1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -275,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 56
     sget-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -290,7 +276,6 @@
     .param p6, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 288
     monitor-enter p0
 
     if-eqz p1, :cond_1
@@ -302,24 +287,20 @@
 
     const/4 v1, 0x1
 
-    .line 290
     .local v1, "screenCondition":Z
     :goto_0
     if-eqz v1, :cond_2
 
     const/4 v0, 0x4
 
-    .line 292
     .local v0, "lcdCondition":I
     :goto_1
     invoke-direct {p0, p6, p2, p3}, Lcom/android/internal/os/BatteryStatsDBHelper;->maintainDayData(Landroid/database/sqlite/SQLiteDatabase;J)V
 
-    .line 294
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 295
     .local v2, "values":Landroid/content/ContentValues;
     const-string v3, "lcd_condition"
 
@@ -329,8 +310,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 296
-    const-string/jumbo v3, "time"
+    const-string v3, "time"
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -338,7 +318,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 297
     const-string v3, "batterydelta"
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -347,7 +326,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 298
     const-string v3, "batterypercent"
 
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -356,7 +334,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 299
     const-string v3, "Battery_Delta"
 
     const/4 v4, 0x0
@@ -365,12 +342,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 300
     monitor-exit p0
 
     return-void
 
-    .line 288
     .end local v0    # "lcdCondition":I
     .end local v1    # "screenCondition":Z
     .end local v2    # "values":Landroid/content/ContentValues;
@@ -387,14 +362,12 @@
 
     goto :goto_0
 
-    .line 290
     .restart local v1    # "screenCondition":Z
     :cond_2
     const/16 v0, 0x8
 
     goto :goto_1
 
-    .line 288
     .end local v1    # "screenCondition":Z
     :catchall_0
     move-exception v3
@@ -414,26 +387,23 @@
     .param p7, "percentage"    # D
 
     .prologue
-    .line 791
     const/4 v1, 0x1
 
     new-array v3, v1, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     aput-object v2, v3, v1
 
-    .line 792
     .local v3, "columns":[Ljava/lang/String;
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 793
     .local v10, "values":Landroid/content/ContentValues;
-    const-string/jumbo v1, "time"
+    const-string v1, "time"
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -441,13 +411,11 @@
 
     invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 794
-    const-string/jumbo v1, "packageName"
+    const-string v1, "packageName"
 
     invoke-virtual {v10, v1, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 795
-    const-string/jumbo v1, "percentage"
+    const-string v1, "percentage"
 
     invoke-static/range {p7 .. p8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -455,24 +423,21 @@
 
     invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 796
     const-string v1, "abusive_type"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 797
-    const-string/jumbo v1, "meta_data"
+    const-string v1, "meta_data"
 
     move-object/from16 v0, p6
 
     invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 799
-    const-string/jumbo v2, "power_consuming_packages"
+    const-string v2, "power_consuming_packages"
 
-    const-string/jumbo v4, "packageName = ?"
+    const-string v4, "packageName = ?"
 
     const/4 v1, 0x1
 
@@ -494,7 +459,6 @@
 
     move-result-object v9
 
-    .line 801
     .local v9, "cursor":Landroid/database/Cursor;
     if-eqz v9, :cond_0
 
@@ -504,15 +468,13 @@
 
     if-nez v1, :cond_1
 
-    .line 802
     :cond_0
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v1, v2, v10}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 803
     const-string v1, "BatteryStatsDBHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -535,18 +497,15 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 809
     :goto_0
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 810
     return-void
 
-    .line 805
     :cond_1
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
-    const-string/jumbo v2, "packageName = ?"
+    const-string v2, "packageName = ?"
 
     const/4 v4, 0x1
 
@@ -558,7 +517,6 @@
 
     invoke-virtual {p1, v1, v10, v2, v4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 807
     const-string v1, "BatteryStatsDBHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -602,7 +560,6 @@
     .end annotation
 
     .prologue
-    .line 762
     .local p4, "abuserMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Double;>;"
     const/4 v1, 0x1
 
@@ -610,21 +567,18 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     aput-object v2, v3, v1
 
-    .line 763
     .local v3, "columns":[Ljava/lang/String;
     const-string v9, "battery"
 
-    .line 765
     .local v9, "abusiveType":Ljava/lang/String;
     invoke-virtual/range {p4 .. p4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v14
 
-    .line 766
     .local v14, "packageSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Double;>;>;"
     invoke-interface {v14}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -644,7 +598,6 @@
 
     check-cast v11, Ljava/util/Map$Entry;
 
-    .line 767
     .local v11, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Double;>;"
     invoke-interface {v11}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -652,15 +605,13 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 769
     .local v13, "packageName":Ljava/lang/String;
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 770
     .local v15, "values":Landroid/content/ContentValues;
-    const-string/jumbo v1, "time"
+    const-string v1, "time"
 
     invoke-static/range {p2 .. p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -668,13 +619,11 @@
 
     invoke-virtual {v15, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 771
-    const-string/jumbo v1, "packageName"
+    const-string v1, "packageName"
 
     invoke-virtual {v15, v1, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 772
-    const-string/jumbo v2, "percentage"
+    const-string v2, "percentage"
 
     invoke-interface {v11}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -684,15 +633,13 @@
 
     invoke-virtual {v15, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 773
     const-string v1, "abusive_type"
 
     invoke-virtual {v15, v1, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 775
-    const-string/jumbo v2, "power_consuming_packages"
+    const-string v2, "power_consuming_packages"
 
-    const-string/jumbo v4, "packageName = ?"
+    const-string v4, "packageName = ?"
 
     const/4 v1, 0x1
 
@@ -714,7 +661,6 @@
 
     move-result-object v10
 
-    .line 777
     .local v10, "cursor":Landroid/database/Cursor;
     if-eqz v10, :cond_0
 
@@ -724,9 +670,8 @@
 
     if-nez v1, :cond_1
 
-    .line 778
     :cond_0
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
     const/4 v2, 0x0
 
@@ -734,7 +679,6 @@
 
     invoke-virtual {v0, v1, v2, v15}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 779
     const-string v1, "BatteryStatsDBHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -757,17 +701,15 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 786
     :goto_1
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 781
     :cond_1
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
-    const-string/jumbo v2, "packageName = ?"
+    const-string v2, "packageName = ?"
 
     const/4 v4, 0x1
 
@@ -781,7 +723,6 @@
 
     invoke-virtual {v0, v1, v15, v2, v4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 783
     const-string v1, "BatteryStatsDBHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -806,7 +747,6 @@
 
     goto :goto_1
 
-    .line 788
     .end local v10    # "cursor":Landroid/database/Cursor;
     .end local v11    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Double;>;"
     .end local v13    # "packageName":Ljava/lang/String;
@@ -819,18 +759,15 @@
     .locals 14
 
     .prologue
-    .line 1515
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 1516
     .local v2, "actualSystemTime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 1517
     .local v0, "actualRealtime":J
     sget-wide v10, Lcom/android/internal/os/BatteryStatsDBHelper;->sRealTimeSnapshot:J
 
@@ -840,31 +777,25 @@
 
     add-long v4, v10, v12
 
-    .line 1519
     .local v4, "expectedSystemTime":J
     sub-long v8, v2, v4
 
-    .line 1520
     .local v8, "timeDiff":J
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v6
 
-    .line 1521
     .local v6, "time":J
     sput-wide v0, Lcom/android/internal/os/BatteryStatsDBHelper;->sRealTimeSnapshot:J
 
-    .line 1522
     sput-wide v2, Lcom/android/internal/os/BatteryStatsDBHelper;->sSystemTimeSnapshot:J
 
-    .line 1524
     const-wide/16 v10, 0x7d0
 
     cmp-long v10, v6, v10
 
     if-lez v10, :cond_0
 
-    .line 1529
     .end local v8    # "timeDiff":J
     :goto_0
     return-wide v8
@@ -883,7 +814,6 @@
     .param p4, "power"    # D
 
     .prologue
-    .line 505
     const-string v6, "BatteryStatsDBHelper"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -908,7 +838,6 @@
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 507
     const-string v6, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\' AND name!=\'all\'"
 
     const/4 v7, 0x0
@@ -919,7 +848,6 @@
 
     move-result-object v17
 
-    .line 508
     .local v17, "c":Landroid/database/Cursor;
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -927,34 +855,28 @@
 
     if-nez v6, :cond_1
 
-    .line 509
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
 
-    .line 510
     const-string v6, "BatteryStatsDBHelper"
 
     const-string v7, "checkForPowerThreshold:: no tables found, closing cursor"
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 642
     :cond_0
     :goto_0
     return-void
 
-    .line 513
     :cond_1
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
-    .line 514
     .local v16, "appSippersForLastHour":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/os/UidSipper;>;"
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 516
     .local v15, "appSippersFor24Hours":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/os/UidSipper;>;"
     move-object/from16 v0, p0
 
@@ -962,23 +884,19 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->maintainNotifiedAppList(J)V
 
-    .line 518
     sget-boolean v6, Lcom/android/internal/os/BatteryStatsDumper;->mIsOnBattery:Z
 
     if-nez v6, :cond_2
 
-    .line 519
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 523
     :cond_2
     invoke-direct/range {p0 .. p3}, Lcom/android/internal/os/BatteryStatsDBHelper;->collectTotalTableData(Landroid/database/sqlite/SQLiteDatabase;J)Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     move-result-object v40
 
-    .line 524
     .local v40, "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneHour:D
     invoke-static/range {v40 .. v40}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$600(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)D
@@ -991,12 +909,10 @@
 
     if-gtz v6, :cond_3
 
-    .line 525
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 529
     :cond_3
     const/4 v6, 0x3
 
@@ -1004,7 +920,7 @@
 
     const/4 v6, 0x0
 
-    const-string/jumbo v7, "time"
+    const-string v7, "time"
 
     aput-object v7, v8, v6
 
@@ -1016,11 +932,10 @@
 
     const/4 v6, 0x2
 
-    const-string/jumbo v7, "power"
+    const-string v7, "power"
 
     aput-object v7, v8, v6
 
-    .line 530
     .local v8, "requestingColumn":[Ljava/lang/String;
     :goto_1
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->isAfterLast()Z
@@ -1029,8 +944,7 @@
 
     if-nez v6, :cond_d
 
-    .line 531
-    const-string/jumbo v6, "name"
+    const-string v6, "name"
 
     move-object/from16 v0, v17
 
@@ -1044,7 +958,6 @@
 
     move-result-object v31
 
-    .line 532
     .local v31, "packageName":Ljava/lang/String;
     const-string v6, "BatteryStatsDBHelper"
 
@@ -1070,7 +983,6 @@
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 534
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1113,7 +1025,6 @@
 
     move-result-object v21
 
-    .line 538
     .local v21, "cursor":Landroid/database/Cursor;
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToLast()Z
 
@@ -1121,7 +1032,6 @@
 
     if-nez v6, :cond_4
 
-    .line 540
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1152,15 +1062,12 @@
 
     invoke-virtual {v0, v6}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 541
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 542
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_1
 
-    .line 546
     :cond_4
     const-string v6, "lcd_condition"
 
@@ -1170,9 +1077,8 @@
 
     move-result v25
 
-    .line 547
     .local v25, "lcdColumn":I
-    const-string/jumbo v6, "time"
+    const-string v6, "time"
 
     move-object/from16 v0, v21
 
@@ -1180,9 +1086,8 @@
 
     move-result v37
 
-    .line 548
     .local v37, "timeColumn":I
-    const-string/jumbo v6, "power"
+    const-string v6, "power"
 
     move-object/from16 v0, v21
 
@@ -1190,7 +1095,6 @@
 
     move-result v34
 
-    .line 549
     .local v34, "powerColumn":I
     move-object/from16 v0, v21
 
@@ -1208,36 +1112,29 @@
 
     const/16 v24, 0x1
 
-    .line 551
     .local v24, "isSystemUid":Z
     :goto_2
     if-eqz v24, :cond_6
 
-    .line 552
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 553
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_1
 
-    .line 549
     .end local v24    # "isSystemUid":Z
     :cond_5
     const/16 v24, 0x0
 
     goto :goto_2
 
-    .line 558
     .restart local v24    # "isSystemUid":Z
     :cond_6
     const/4 v14, 0x0
 
-    .line 559
     .local v14, "appSipper":Lcom/android/internal/os/UidSipper;
     const-wide/16 v28, 0x0
 
-    .line 560
     .local v28, "lcdOffPowerInLastHour":D
     :goto_3
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->isBeforeFirst()Z
@@ -1246,7 +1143,6 @@
 
     if-nez v6, :cond_8
 
-    .line 561
     move-object/from16 v0, v21
 
     move/from16 v1, v37
@@ -1255,7 +1151,6 @@
 
     move-result-wide v38
 
-    .line 562
     .local v38, "thisTime":J
     sub-long v6, p2, v38
 
@@ -1265,7 +1160,6 @@
 
     if-gez v6, :cond_8
 
-    .line 563
     move-object/from16 v0, v21
 
     move/from16 v1, v34
@@ -1274,7 +1168,6 @@
 
     move-result-wide v18
 
-    .line 564
     .local v18, "curPower":D
     move-object/from16 v0, v21
 
@@ -1294,19 +1187,16 @@
     :goto_4
     add-double v28, v28, v18
 
-    .line 569
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToPrevious()Z
 
     goto :goto_3
 
-    .line 564
     .restart local v18    # "curPower":D
     :cond_7
     const-wide/16 v18, 0x0
 
     goto :goto_4
 
-    .line 571
     .end local v18    # "curPower":D
     .end local v38    # "thisTime":J
     :cond_8
@@ -1316,7 +1206,6 @@
 
     if-lez v6, :cond_9
 
-    .line 572
     new-instance v14, Lcom/android/internal/os/UidSipper;
 
     .end local v14    # "appSipper":Lcom/android/internal/os/UidSipper;
@@ -1324,22 +1213,18 @@
 
     invoke-direct {v14, v0}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 573
     .restart local v14    # "appSipper":Lcom/android/internal/os/UidSipper;
     move-wide/from16 v0, v28
 
     invoke-virtual {v14, v0, v1}, Lcom/android/internal/os/UidSipper;->setTotalPower(D)V
 
-    .line 574
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 578
     :cond_9
     move-wide/from16 v26, v28
 
-    .line 579
     .local v26, "lcdOffPowerIn24Hours":D
     :goto_5
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->isBeforeFirst()Z
@@ -1348,7 +1233,6 @@
 
     if-nez v6, :cond_b
 
-    .line 580
     move-object/from16 v0, v21
 
     move/from16 v1, v34
@@ -1357,7 +1241,6 @@
 
     move-result-wide v18
 
-    .line 581
     .restart local v18    # "curPower":D
     move-object/from16 v0, v21
 
@@ -1377,19 +1260,16 @@
     :goto_6
     add-double v26, v26, v18
 
-    .line 583
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToPrevious()Z
 
     goto :goto_5
 
-    .line 581
     .restart local v18    # "curPower":D
     :cond_a
     const-wide/16 v18, 0x0
 
     goto :goto_6
 
-    .line 585
     .end local v18    # "curPower":D
     :cond_b
     const-wide/16 v6, 0x0
@@ -1398,7 +1278,6 @@
 
     if-lez v6, :cond_c
 
-    .line 586
     new-instance v14, Lcom/android/internal/os/UidSipper;
 
     .end local v14    # "appSipper":Lcom/android/internal/os/UidSipper;
@@ -1406,25 +1285,20 @@
 
     invoke-direct {v14, v0}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 587
     .restart local v14    # "appSipper":Lcom/android/internal/os/UidSipper;
     move-wide/from16 v0, v26
 
     invoke-virtual {v14, v0, v1}, Lcom/android/internal/os/UidSipper;->setTotalPower(D)V
 
-    .line 588
     invoke-virtual {v15, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 590
     :cond_c
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->close()V
 
-    .line 591
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->moveToNext()Z
 
     goto/16 :goto_1
 
-    .line 593
     .end local v14    # "appSipper":Lcom/android/internal/os/UidSipper;
     .end local v21    # "cursor":Landroid/database/Cursor;
     .end local v24    # "isSystemUid":Z
@@ -1437,7 +1311,6 @@
     :cond_d
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
 
-    .line 595
     invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v6
@@ -1450,13 +1323,11 @@
 
     if-nez v6, :cond_0
 
-    .line 599
     :cond_e
     new-instance v20, Ljava/util/HashMap;
 
     invoke-direct/range {v20 .. v20}, Ljava/util/HashMap;-><init>()V
 
-    .line 600
     .local v20, "currentAbuserMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Double;>;"
     sget-boolean v6, Lcom/android/internal/os/BatteryStatsDumper;->sScreenOn:Z
 
@@ -1472,7 +1343,6 @@
 
     const/16 v35, 0x1
 
-    .line 602
     .local v35, "sendBroadcast":Z
     :goto_7
     invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1494,14 +1364,12 @@
 
     check-cast v36, Lcom/android/internal/os/UidSipper;
 
-    .line 603
     .local v36, "sipper":Lcom/android/internal/os/UidSipper;
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneHour:I
     invoke-static/range {v40 .. v40}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$700(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)I
 
     move-result v30
 
-    .line 604
     .local v30, "oneHourTotalDelta":I
     invoke-virtual/range {v36 .. v36}, Lcom/android/internal/os/UidSipper;->getTotalPower()D
 
@@ -1520,7 +1388,6 @@
 
     mul-double v32, v6, v10
 
-    .line 606
     .local v32, "percentage":D
     move/from16 v0, v30
 
@@ -1530,21 +1397,18 @@
 
     if-lez v6, :cond_10
 
-    .line 607
     const-string v6, "BatteryStatsDBHelper"
 
     const-string v7, "Strange!!. Percentage is greater than battery delta"
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 608
     move/from16 v0, v30
 
     int-to-double v0, v0
 
     move-wide/from16 v32, v0
 
-    .line 611
     :cond_10
     const-string v6, "BatteryStatsDBHelper"
 
@@ -1584,7 +1448,6 @@
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 612
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lcom/android/internal/os/BatteryStatsDBHelper;->ONE_HOUR_THRESHOLD:D
@@ -1593,7 +1456,6 @@
 
     if-lez v6, :cond_f
 
-    .line 613
     const-string v6, "BatteryStatsDBHelper"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1634,7 +1496,6 @@
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 615
     move-object/from16 v0, v36
 
     iget-object v6, v0, Lcom/android/internal/os/UidSipper;->name:Ljava/lang/String;
@@ -1647,7 +1508,6 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 616
     sget-object v6, Lcom/android/internal/os/BatteryStatsDBHelper;->notifiedPowerDrainingApps:Ljava/util/HashMap;
 
     move-object/from16 v0, v36
@@ -1660,15 +1520,12 @@
 
     if-nez v6, :cond_f
 
-    .line 619
     sget-boolean v6, Lcom/android/internal/os/BatteryStatsDumper;->sScreenOn:Z
 
     if-eqz v6, :cond_12
 
-    .line 620
     or-int/lit8 v35, v35, 0x1
 
-    .line 624
     :goto_9
     sget-object v6, Lcom/android/internal/os/BatteryStatsDBHelper;->unNotifiedAbuserMap:Ljava/util/HashMap;
 
@@ -1684,7 +1541,6 @@
 
     goto/16 :goto_8
 
-    .line 600
     .end local v23    # "i$":Ljava/util/Iterator;
     .end local v30    # "oneHourTotalDelta":I
     .end local v32    # "percentage":D
@@ -1695,7 +1551,6 @@
 
     goto/16 :goto_7
 
-    .line 622
     .restart local v23    # "i$":Ljava/util/Iterator;
     .restart local v30    # "oneHourTotalDelta":I
     .restart local v32    # "percentage":D
@@ -1730,7 +1585,6 @@
 
     goto :goto_9
 
-    .line 628
     .end local v30    # "oneHourTotalDelta":I
     .end local v32    # "percentage":D
     .end local v36    # "sipper":Lcom/android/internal/os/UidSipper;
@@ -1745,12 +1599,10 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/internal/os/BatteryStatsDBHelper;->addPowerConsumingApps(Landroid/database/sqlite/SQLiteDatabase;JLjava/util/HashMap;)V
 
-    .line 630
     sget-boolean v6, Lcom/android/internal/os/BatteryStatsDumper;->sScreenOn:Z
 
     if-eqz v6, :cond_14
 
-    .line 631
     sget-object v6, Lcom/android/internal/os/BatteryStatsDBHelper;->unNotifiedAbuserMap:Ljava/util/HashMap;
 
     move-object/from16 v0, p0
@@ -1761,32 +1613,27 @@
 
     invoke-direct {v0, v1, v2, v3, v6}, Lcom/android/internal/os/BatteryStatsDBHelper;->markAsNotified(Landroid/database/sqlite/SQLiteDatabase;JLjava/util/HashMap;)V
 
-    .line 632
     sget-object v6, Lcom/android/internal/os/BatteryStatsDBHelper;->unNotifiedAbuserMap:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 635
     :cond_14
     if-eqz v35, :cond_15
 
-    .line 636
     const-string v6, "BatteryStatsDBHelper"
 
     const-string v7, "Sending Battery abuse broadcast"
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 637
     new-instance v22, Landroid/content/Intent;
 
-    const-string/jumbo v6, "sec.intent.action.BATTERY_ABUSE"
+    const-string v6, "sec.intent.action.BATTERY_ABUSE"
 
     move-object/from16 v0, v22
 
     invoke-direct {v0, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 638
     .local v22, "i":Landroid/content/Intent;
     sget-object v6, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
@@ -1794,7 +1641,6 @@
 
     invoke-virtual {v6, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 641
     .end local v22    # "i":Landroid/content/Intent;
     :cond_15
     const-string v6, "BatteryStatsDBHelper"
@@ -1812,7 +1658,6 @@
     .param p2, "curTime"    # J
 
     .prologue
-    .line 660
     const-string v1, "[all]"
 
     const/4 v0, 0x3
@@ -1821,13 +1666,13 @@
 
     const/4 v0, 0x0
 
-    const-string/jumbo v7, "time"
+    const-string v7, "time"
 
     aput-object v7, v2, v0
 
     const/4 v0, 0x1
 
-    const-string/jumbo v7, "power"
+    const-string v7, "power"
 
     aput-object v7, v2, v0
 
@@ -1853,23 +1698,18 @@
 
     move-result-object v9
 
-    .line 663
     .local v9, "cursor":Landroid/database/Cursor;
     const-wide/16 v1, 0x0
 
-    .line 664
     .local v1, "oneHourPower":D
     const-wide/16 v4, 0x0
 
-    .line 665
     .local v4, "oneDayPower":D
     const/4 v3, 0x0
 
-    .line 666
     .local v3, "oneHourBatteryDelta":I
     const/4 v6, 0x0
 
-    .line 668
     .local v6, "oneDayBatteryDelta":I
     invoke-interface {v9}, Landroid/database/Cursor;->moveToLast()Z
 
@@ -1877,22 +1717,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 669
-    const-string/jumbo v0, "time"
+    const-string v0, "time"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 670
     .local v11, "timeColumn":I
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 671
     .local v10, "powerColumn":I
     const-string v0, "batterydelta"
 
@@ -1900,7 +1737,6 @@
 
     move-result v8
 
-    .line 672
     .local v8, "batteryColumn":I
     :goto_0
     invoke-interface {v9}, Landroid/database/Cursor;->isBeforeFirst()Z
@@ -1909,12 +1745,10 @@
 
     if-nez v0, :cond_0
 
-    .line 673
     invoke-interface {v9, v11}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v12
 
-    .line 674
     .local v12, "time":J
     sub-long v14, p2, v12
 
@@ -1924,34 +1758,28 @@
 
     if-gez v0, :cond_0
 
-    .line 675
     invoke-interface {v9, v10}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v14
 
     add-double/2addr v1, v14
 
-    .line 676
     invoke-interface {v9, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     add-int/2addr v3, v0
 
-    .line 680
     invoke-interface {v9}, Landroid/database/Cursor;->moveToPrevious()Z
 
     goto :goto_0
 
-    .line 683
     .end local v12    # "time":J
     :cond_0
     move-wide v4, v1
 
-    .line 684
     move v6, v3
 
-    .line 685
     :goto_1
     invoke-interface {v9}, Landroid/database/Cursor;->isBeforeFirst()Z
 
@@ -1959,33 +1787,28 @@
 
     if-nez v0, :cond_1
 
-    .line 686
     invoke-interface {v9, v10}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v14
 
     add-double/2addr v4, v14
 
-    .line 687
     invoke-interface {v9, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     add-int/2addr v6, v0
 
-    .line 688
     invoke-interface {v9}, Landroid/database/Cursor;->moveToPrevious()Z
 
     goto :goto_1
 
-    .line 691
     .end local v8    # "batteryColumn":I
     .end local v10    # "powerColumn":I
     .end local v11    # "timeColumn":I
     :cond_1
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 692
     new-instance v0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     const/4 v7, 0x0
@@ -2001,7 +1824,6 @@
     .param p2, "TABLE_PROCESS"    # Ljava/lang/String;
 
     .prologue
-    .line 249
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2047,7 +1869,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "time"
+    const-string v3, "time"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2065,7 +1887,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "power"
+    const-string v3, "power"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2083,7 +1905,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "totalpower"
+    const-string v3, "totalpower"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2101,7 +1923,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "network_usage"
+    const-string v3, "network_usage"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2119,7 +1941,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "usage_time"
+    const-string v3, "usage_time"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2137,7 +1959,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "wakeup_count"
+    const-string v3, "wakeup_count"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2159,24 +1981,20 @@
 
     move-result-object v0
 
-    .line 254
     .local v0, "CREATE_POWER_TABLE":Ljava/lang/String;
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 259
     const/4 v2, 0x1
 
     .end local v0    # "CREATE_POWER_TABLE":Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 255
     :catch_0
     move-exception v1
 
-    .line 256
     .local v1, "e":Landroid/database/SQLException;
     const-string v2, "BatteryStatsDBHelper"
 
@@ -2214,7 +2032,6 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
     const/4 v2, 0x0
 
     goto :goto_0
@@ -2224,10 +2041,9 @@
     .locals 3
 
     .prologue
-    .line 1533
     sget-object v1, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "powerManager"
+    const-string v2, "powerManager"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
@@ -2237,22 +2053,18 @@
 
     move-result v0
 
-    .line 1534
     .local v0, "ret":Z
     if-eqz v0, :cond_0
 
-    .line 1535
     const-string v1, "BatteryStatsDBHelper"
 
     const-string v2, "Database has been deleted"
 
     invoke-static {v1, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1539
     :goto_0
     return v0
 
-    .line 1537
     :cond_0
     const-string v1, "BatteryStatsDBHelper"
 
@@ -2270,18 +2082,15 @@
     .param p4, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 698
     const-wide/16 v6, 0x7d0
 
     add-long v0, p2, v6
 
-    .line 699
     .local v0, "maxTime":J
     const-wide/32 v6, 0x5265c00
 
     sub-long v2, p2, v6
 
-    .line 701
     .local v2, "minTime":J
     const-wide/16 v6, 0x0
 
@@ -2291,7 +2100,6 @@
 
     const-wide/16 v2, 0x0
 
-    .line 703
     :cond_0
     const/4 v5, 0x2
 
@@ -2313,7 +2121,6 @@
 
     aput-object v6, v4, v5
 
-    .line 704
     .local v4, "requestingColumn":[Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2339,11 +2146,10 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "time > ? OR time <= ?"
+    const-string v6, "time > ? OR time <= ?"
 
     invoke-virtual {p1, v5, v6, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 706
     return-void
 .end method
 
@@ -2354,7 +2160,6 @@
     .param p3, "maxNumOfItems"    # I
 
     .prologue
-    .line 1789
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2379,19 +2184,16 @@
 
     move-result-object v5
 
-    .line 1790
     .local v5, "tableName":Ljava/lang/String;
     invoke-static {p1, v5}, Landroid/database/DatabaseUtils;->queryNumEntries(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 1793
     .local v0, "numOfItems":J
     int-to-long v6, p3
 
     sub-long v2, v0, v6
 
-    .line 1794
     .local v2, "numOfRemoval":J
     const-wide/16 v6, 0x0
 
@@ -2399,7 +2201,6 @@
 
     if-lez v6, :cond_0
 
-    .line 1795
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2444,11 +2245,9 @@
 
     move-result-object v4
 
-    .line 1798
     .local v4, "query":Ljava/lang/String;
     invoke-virtual {p1, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 1800
     .end local v4    # "query":Ljava/lang/String;
     :cond_0
     return-void
@@ -2467,16 +2266,14 @@
     .end annotation
 
     .prologue
-    .line 183
     new-instance v9, Ljava/util/HashSet;
 
     invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
 
-    .line 185
     .local v9, "launchedPackageSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     sget-object v1, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "usagestats"
+    const-string v2, "usagestats"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2484,13 +2281,11 @@
 
     check-cast v0, Landroid/app/usage/UsageStatsManager;
 
-    .line 188
     .local v0, "mUsageStatsManager":Landroid/app/usage/UsageStatsManager;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v6
 
-    .line 189
     .local v6, "cal":Ljava/util/Calendar;
     const/4 v1, 0x6
 
@@ -2498,7 +2293,6 @@
 
     invoke-virtual {v6, v1, v2}, Ljava/util/Calendar;->add(II)V
 
-    .line 191
     const/4 v1, 0x4
 
     invoke-virtual {v6}, Ljava/util/Calendar;->getTimeInMillis()J
@@ -2513,21 +2307,17 @@
 
     move-result-object v11
 
-    .line 193
     .local v11, "stats":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/UsageStats;>;"
     if-nez v11, :cond_1
 
-    .line 203
     :cond_0
     return-object v9
 
-    .line 197
     :cond_1
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v7
 
-    .line 198
     .local v7, "count":I
     const/4 v8, 0x0
 
@@ -2535,7 +2325,6 @@
     :goto_0
     if-ge v8, v7, :cond_0
 
-    .line 199
     invoke-interface {v11, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2546,7 +2335,6 @@
 
     move-result-object v10
 
-    .line 200
     .local v10, "pkgName":Ljava/lang/String;
     const-string v1, "BatteryStatsDBHelper"
 
@@ -2570,10 +2358,8 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
     invoke-interface {v9, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 198
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
@@ -2583,7 +2369,6 @@
     .locals 22
 
     .prologue
-    .line 1291
     monitor-enter p0
 
     :try_start_0
@@ -2591,13 +2376,11 @@
 
     move-result-object v15
 
-    .line 1292
     .local v15, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v18, Lcom/android/internal/os/UidSipperImpl;
 
     invoke-direct/range {v18 .. v18}, Lcom/android/internal/os/UidSipperImpl;-><init>()V
 
-    .line 1293
     .local v18, "result":Lcom/android/internal/os/UidSipperImpl;
     new-instance v2, Lcom/android/internal/os/UidSipper;
 
@@ -2605,13 +2388,11 @@
 
     invoke-direct {v2, v8}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 1295
     .local v2, "sipper":Lcom/android/internal/os/UidSipper;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
 
-    .line 1297
     .local v12, "curTime":J
     const-string v8, "SELECT lcd_condition,time,batterypercent FROM Battery_Delta"
 
@@ -2621,7 +2402,6 @@
 
     move-result-object v11
 
-    .line 1298
     .local v11, "cursor":Landroid/database/Cursor;
     const-string v8, "lcd_condition"
 
@@ -2629,15 +2409,13 @@
 
     move-result v16
 
-    .line 1299
     .local v16, "lcdColumn":I
-    const-string/jumbo v8, "time"
+    const-string v8, "time"
 
     invoke-interface {v11, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v19
 
-    .line 1300
     .local v19, "timeColumn":I
     const-string v8, "batterypercent"
 
@@ -2645,7 +2423,6 @@
 
     move-result v10
 
-    .line 1305
     .local v10, "batteryPercColumn":I
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -2653,14 +2430,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 1307
     move/from16 v0, v19
 
     invoke-interface {v11, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
-    .line 1308
     .local v3, "time":J
     sub-long v8, v12, v3
 
@@ -2670,10 +2445,8 @@
 
     if-ltz v8, :cond_0
 
-    .line 1309
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1311
     :cond_0
     :goto_0
     invoke-interface {v11}, Landroid/database/Cursor;->isAfterLast()Z
@@ -2682,7 +2455,6 @@
 
     if-nez v8, :cond_2
 
-    .line 1312
     move/from16 v0, v16
 
     invoke-interface {v11, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -2695,7 +2467,6 @@
 
     const/4 v5, 0x1
 
-    .line 1313
     .local v5, "lcdOn":Z
     :goto_1
     move/from16 v0, v19
@@ -2704,27 +2475,23 @@
 
     move-result-wide v3
 
-    .line 1314
     invoke-interface {v11, v10}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v8
 
     int-to-double v6, v8
 
-    .line 1315
     .local v6, "batteryPerc":D
     const-wide/16 v8, 0x0
 
     invoke-virtual/range {v2 .. v9}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1316
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 1291
     .end local v2    # "sipper":Lcom/android/internal/os/UidSipper;
     .end local v3    # "time":J
     .end local v5    # "lcdOn":Z
@@ -2743,7 +2510,6 @@
 
     throw v8
 
-    .line 1312
     .restart local v2    # "sipper":Lcom/android/internal/os/UidSipper;
     .restart local v3    # "time":J
     .restart local v10    # "batteryPercColumn":I
@@ -2758,23 +2524,19 @@
 
     goto :goto_1
 
-    .line 1319
     .end local v3    # "time":J
     :cond_2
     :try_start_1
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1322
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v2}, Lcom/android/internal/os/UidSipperImpl;->addUidSipper(Lcom/android/internal/os/UidSipper;)V
 
-    .line 1324
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v17
 
-    .line 1325
     .local v17, "out":Landroid/os/Parcel;
     move-object/from16 v0, v18
 
@@ -2782,18 +2544,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/UidSipperImpl;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 1326
     invoke-virtual/range {v17 .. v17}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v14
 
-    .line 1327
     .local v14, "data":[B
     invoke-virtual/range {v17 .. v17}, Landroid/os/Parcel;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1328
     monitor-exit p0
 
     return-object v14
@@ -2803,7 +2562,6 @@
     .locals 34
 
     .prologue
-    .line 1332
     monitor-enter p0
 
     :try_start_0
@@ -2811,19 +2569,16 @@
 
     move-result-object v18
 
-    .line 1333
     .local v18, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v26, Lcom/android/internal/os/UidSipperImpl;
 
     invoke-direct/range {v26 .. v26}, Lcom/android/internal/os/UidSipperImpl;-><init>()V
 
-    .line 1335
     .local v26, "result":Lcom/android/internal/os/UidSipperImpl;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v14
 
-    .line 1337
     .local v14, "curTime":J
     const-string v8, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\' AND name!=\'all\'"
 
@@ -2835,11 +2590,9 @@
 
     move-result-object v11
 
-    .line 1338
     .local v11, "c":Landroid/database/Cursor;
     const-wide/16 v12, 0x0
 
-    .line 1339
     .local v12, "allUidTotalPower":D
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -2847,12 +2600,10 @@
 
     if-eqz v8, :cond_a
 
-    .line 1340
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getAppUsageStats()Ljava/util/Set;
 
     move-result-object v20
 
-    .line 1341
     .local v20, "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v11}, Landroid/database/Cursor;->isAfterLast()Z
@@ -2861,8 +2612,7 @@
 
     if-nez v8, :cond_8
 
-    .line 1342
-    const-string/jumbo v8, "name"
+    const-string v8, "name"
 
     invoke-interface {v11, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -2872,7 +2622,6 @@
 
     move-result-object v29
 
-    .line 1344
     .local v29, "val":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2900,7 +2649,6 @@
 
     move-result-object v27
 
-    .line 1345
     .local v27, "selectQuery":Ljava/lang/String;
     const/4 v8, 0x0
 
@@ -2912,11 +2660,9 @@
 
     move-result-object v16
 
-    .line 1346
     .local v16, "cursor":Landroid/database/Cursor;
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1348
     const-string v8, "lcd_condition"
 
     move-object/from16 v0, v16
@@ -2925,9 +2671,8 @@
 
     move-result v21
 
-    .line 1349
     .local v21, "lcdColumn":I
-    const-string/jumbo v8, "time"
+    const-string v8, "time"
 
     move-object/from16 v0, v16
 
@@ -2935,9 +2680,8 @@
 
     move-result v28
 
-    .line 1350
     .local v28, "timeColumn":I
-    const-string/jumbo v8, "power"
+    const-string v8, "power"
 
     move-object/from16 v0, v16
 
@@ -2945,7 +2689,6 @@
 
     move-result v25
 
-    .line 1352
     .local v25, "powerColumn":I
     move-object/from16 v0, v16
 
@@ -2955,7 +2698,6 @@
 
     move-result v22
 
-    .line 1353
     .local v22, "lcdNtype":I
     and-int/lit8 v8, v22, 0x10
 
@@ -2963,24 +2705,20 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 1354
     const-string v8, "BatteryStatsDBHelper"
 
     const-string v9, "System app"
 
     invoke-static {v8, v9}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1355
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 1356
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 1332
     .end local v11    # "c":Landroid/database/Cursor;
     .end local v12    # "allUidTotalPower":D
     .end local v14    # "curTime":J
@@ -3001,7 +2739,6 @@
 
     throw v8
 
-    .line 1361
     .restart local v11    # "c":Landroid/database/Cursor;
     .restart local v12    # "allUidTotalPower":D
     .restart local v14    # "curTime":J
@@ -3025,7 +2762,6 @@
 
     move-result-wide v3
 
-    .line 1362
     .local v3, "time":J
     sub-long v8, v14, v3
 
@@ -3035,10 +2771,8 @@
 
     if-ltz v8, :cond_1
 
-    .line 1363
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1366
     :cond_1
     new-instance v2, Lcom/android/internal/os/UidSipper;
 
@@ -3046,18 +2780,15 @@
 
     invoke-direct {v2, v0}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 1368
     .local v2, "sipper":Lcom/android/internal/os/UidSipper;
     const-wide/16 v30, 0x0
 
     .local v30, "totalPower":D
     const-wide/16 v6, 0x0
 
-    .line 1369
     .local v6, "power":D
     const/16 v19, 0x0
 
-    .line 1370
     .local v19, "isUsingNetwork":Z
     :goto_1
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->isAfterLast()Z
@@ -3066,7 +2797,6 @@
 
     if-nez v8, :cond_4
 
-    .line 1371
     move-object/from16 v0, v16
 
     move/from16 v1, v21
@@ -3075,7 +2805,6 @@
 
     move-result v22
 
-    .line 1372
     move-object/from16 v0, v16
 
     move/from16 v1, v28
@@ -3084,7 +2813,6 @@
 
     move-result-wide v3
 
-    .line 1373
     and-int/lit8 v8, v22, 0x4
 
     const/4 v9, 0x4
@@ -3093,7 +2821,6 @@
 
     const/4 v5, 0x1
 
-    .line 1374
     .local v5, "lcdOn":Z
     :goto_2
     move-object/from16 v0, v16
@@ -3104,15 +2831,12 @@
 
     move-result-wide v6
 
-    .line 1375
     const-wide/16 v8, 0x0
 
     invoke-virtual/range {v2 .. v9}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1376
     add-double v30, v30, v6
 
-    .line 1377
     and-int/lit8 v8, v22, 0x20
 
     const/16 v9, 0x20
@@ -3124,26 +2848,22 @@
     :goto_3
     or-int v19, v19, v8
 
-    .line 1378
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
 
-    .line 1373
     .end local v5    # "lcdOn":Z
     :cond_2
     const/4 v5, 0x0
 
     goto :goto_2
 
-    .line 1377
     .restart local v5    # "lcdOn":Z
     :cond_3
     const/4 v8, 0x0
 
     goto :goto_3
 
-    .line 1380
     .end local v5    # "lcdOn":Z
     :cond_4
     const-string v8, "BatteryStatsDBHelper"
@@ -3178,7 +2898,6 @@
 
     invoke-static {v8, v9}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1382
     iget-object v8, v2, Lcom/android/internal/os/UidSipper;->batterySipStats:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3187,15 +2906,12 @@
 
     if-nez v8, :cond_6
 
-    .line 1383
     move-wide/from16 v0, v30
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/UidSipper;->setTotalPower(D)V
 
-    .line 1384
     add-double v12, v12, v30
 
-    .line 1385
     move-object/from16 v0, v20
 
     move-object/from16 v1, v29
@@ -3206,42 +2922,34 @@
 
     if-eqz v8, :cond_7
 
-    .line 1386
     invoke-virtual {v2}, Lcom/android/internal/os/UidSipper;->makeUserLaunch()V
 
-    .line 1390
     :cond_5
     :goto_4
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v2}, Lcom/android/internal/os/UidSipperImpl;->addUidSipper(Lcom/android/internal/os/UidSipper;)V
 
-    .line 1391
     const-string v8, "BatteryStatsDBHelper"
 
     const-string v9, "added"
 
     invoke-static {v8, v9}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1394
     :cond_6
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 1395
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
 
     goto/16 :goto_0
 
-    .line 1387
     :cond_7
     if-eqz v19, :cond_5
 
-    .line 1388
     invoke-virtual {v2}, Lcom/android/internal/os/UidSipper;->makeNetworkUser()V
 
     goto :goto_4
 
-    .line 1398
     .end local v2    # "sipper":Lcom/android/internal/os/UidSipper;
     .end local v3    # "time":J
     .end local v6    # "power":D
@@ -3261,24 +2969,19 @@
 
     if-gtz v8, :cond_9
 
-    .line 1399
     const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
 
-    .line 1400
     :cond_9
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v12, v13}, Lcom/android/internal/os/UidSipperImpl;->setFinalPower(D)V
 
-    .line 1402
     .end local v20    # "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_a
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1405
     const-string v27, "SELECT  * FROM power_consuming_packages"
 
-    .line 1406
     .restart local v27    # "selectQuery":Ljava/lang/String;
     const/4 v8, 0x0
 
@@ -3290,9 +2993,8 @@
 
     move-result-object v16
 
-    .line 1408
     .restart local v16    # "cursor":Landroid/database/Cursor;
-    const-string/jumbo v8, "time"
+    const-string v8, "time"
 
     move-object/from16 v0, v16
 
@@ -3300,9 +3002,8 @@
 
     move-result v28
 
-    .line 1409
     .restart local v28    # "timeColumn":I
-    const-string/jumbo v8, "packageName"
+    const-string v8, "packageName"
 
     move-object/from16 v0, v16
 
@@ -3310,18 +3011,15 @@
 
     move-result v10
 
-    .line 1411
     .local v10, "abuserNameColumn":I
     invoke-virtual/range {v26 .. v26}, Lcom/android/internal/os/UidSipperImpl;->initializeConsumerList()V
 
-    .line 1414
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v8
 
     if-eqz v8, :cond_c
 
-    .line 1416
     move-object/from16 v0, v16
 
     move/from16 v1, v28
@@ -3330,7 +3028,6 @@
 
     move-result-wide v3
 
-    .line 1417
     .restart local v3    # "time":J
     sub-long v8, v14, v3
 
@@ -3340,10 +3037,8 @@
 
     if-ltz v8, :cond_b
 
-    .line 1418
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1421
     :cond_b
     :goto_5
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->isAfterLast()Z
@@ -3352,7 +3047,6 @@
 
     if-nez v8, :cond_c
 
-    .line 1422
     move-object/from16 v0, v16
 
     move/from16 v1, v28
@@ -3361,14 +3055,12 @@
 
     move-result-wide v3
 
-    .line 1423
     move-object/from16 v0, v16
 
     invoke-interface {v0, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v23
 
-    .line 1424
     .local v23, "names":Ljava/lang/String;
     invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -3380,23 +3072,19 @@
 
     invoke-virtual {v0, v8, v1}, Lcom/android/internal/os/UidSipperImpl;->addConsumerPackages(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1425
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_5
 
-    .line 1428
     .end local v3    # "time":J
     .end local v23    # "names":Ljava/lang/String;
     :cond_c
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 1431
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v24
 
-    .line 1432
     .local v24, "out":Landroid/os/Parcel;
     move-object/from16 v0, v26
 
@@ -3404,18 +3092,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/UidSipperImpl;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 1433
     invoke-virtual/range {v24 .. v24}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v17
 
-    .line 1434
     .local v17, "data":[B
     invoke-virtual/range {v24 .. v24}, Landroid/os/Parcel;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1435
     monitor-exit p0
 
     return-object v17
@@ -3426,7 +3111,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 176
     const-class v1, Lcom/android/internal/os/BatteryStatsDBHelper;
 
     monitor-enter v1
@@ -3436,14 +3120,12 @@
 
     if-nez v0, :cond_0
 
-    .line 177
     new-instance v0, Lcom/android/internal/os/BatteryStatsDBHelper;
 
     invoke-direct {v0, p0}, Lcom/android/internal/os/BatteryStatsDBHelper;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->mBatteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
 
-    .line 179
     :cond_0
     sget-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->mBatteryStatsDBHelper:Lcom/android/internal/os/BatteryStatsDBHelper;
     :try_end_0
@@ -3453,7 +3135,6 @@
 
     return-object v0
 
-    .line 176
     :catchall_0
     move-exception v0
 
@@ -3470,7 +3151,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 827
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3495,17 +3175,14 @@
 
     move-result-object v9
 
-    .line 828
     .local v9, "selectQuery":Ljava/lang/String;
     invoke-virtual {p1, v9, v8}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 829
     .local v0, "cursor":Landroid/database/Cursor;
     const/4 v1, 0x0
 
-    .line 830
     .local v1, "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
     invoke-interface {v0}, Landroid/database/Cursor;->moveToLast()Z
 
@@ -3513,11 +3190,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 831
     new-instance v1, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
 
     .end local v1    # "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
-    const-string/jumbo v2, "time"
+    const-string v2, "time"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3527,7 +3203,7 @@
 
     move-result-wide v2
 
-    const-string/jumbo v4, "totalpower"
+    const-string v4, "totalpower"
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3537,7 +3213,7 @@
 
     move-result-wide v4
 
-    const-string/jumbo v6, "network_usage"
+    const-string v6, "network_usage"
 
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3549,12 +3225,10 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;-><init>(JDJLcom/android/internal/os/BatteryStatsDBHelper$1;)V
 
-    .line 835
     .restart local v1    # "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 836
     return-object v1
 .end method
 
@@ -3565,18 +3239,15 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 862
     const-string v2, "SELECT time,totalpower,batterypercent FROM [all]"
 
     invoke-virtual {p1, v2, v5}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 863
     .local v0, "cursor":Landroid/database/Cursor;
     const/4 v1, 0x0
 
-    .line 864
     .local v1, "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
     invoke-interface {v0}, Landroid/database/Cursor;->moveToLast()Z
 
@@ -3584,11 +3255,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 865
     new-instance v1, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
 
     .end local v1    # "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
-    const-string/jumbo v2, "totalpower"
+    const-string v2, "totalpower"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3610,12 +3280,10 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;-><init>(DILcom/android/internal/os/BatteryStatsDBHelper$1;)V
 
-    .line 869
     .restart local v1    # "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 870
     return-object v1
 .end method
 
@@ -3624,7 +3292,6 @@
     .param p1, "needOffList"    # Z
 
     .prologue
-    .line 1074
     monitor-enter p0
 
     :try_start_0
@@ -3632,13 +3299,11 @@
 
     move-result-object v25
 
-    .line 1075
     .local v25, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v33, Lcom/android/internal/os/UidSipperImpl;
 
     invoke-direct/range {v33 .. v33}, Lcom/android/internal/os/UidSipperImpl;-><init>()V
 
-    .line 1077
     .local v33, "result":Lcom/android/internal/os/UidSipperImpl;
     const-string v10, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\' AND name!=\'all\'"
 
@@ -3650,11 +3315,9 @@
 
     move-result-object v20
 
-    .line 1078
     .local v20, "c":Landroid/database/Cursor;
     const-wide/16 v18, 0x0
 
-    .line 1079
     .local v18, "allUidTotalPower":D
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -3662,18 +3325,15 @@
 
     if-eqz v10, :cond_d
 
-    .line 1080
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v22
 
-    .line 1081
     .local v22, "curTime":J
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getAppUsageStats()Ljava/util/Set;
 
     move-result-object v28
 
-    .line 1082
     .local v28, "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :goto_0
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->isAfterLast()Z
@@ -3682,8 +3342,7 @@
 
     if-nez v10, :cond_b
 
-    .line 1083
-    const-string/jumbo v10, "name"
+    const-string v10, "name"
 
     move-object/from16 v0, v20
 
@@ -3697,7 +3356,6 @@
 
     move-result-object v38
 
-    .line 1085
     .local v38, "val":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -3725,7 +3383,6 @@
 
     move-result-object v34
 
-    .line 1086
     .local v34, "selectQuery":Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -3737,11 +3394,9 @@
 
     move-result-object v21
 
-    .line 1087
     .local v21, "cursor":Landroid/database/Cursor;
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1089
     const-string v10, "lcd_condition"
 
     move-object/from16 v0, v21
@@ -3750,9 +3405,8 @@
 
     move-result v29
 
-    .line 1090
     .local v29, "lcdColumn":I
-    const-string/jumbo v10, "time"
+    const-string v10, "time"
 
     move-object/from16 v0, v21
 
@@ -3760,9 +3414,8 @@
 
     move-result v35
 
-    .line 1091
     .local v35, "timeColumn":I
-    const-string/jumbo v10, "power"
+    const-string v10, "power"
 
     move-object/from16 v0, v21
 
@@ -3770,7 +3423,6 @@
 
     move-result v32
 
-    .line 1094
     .local v32, "powerColumn":I
     move-object/from16 v0, v21
 
@@ -3780,7 +3432,6 @@
 
     move-result-wide v5
 
-    .line 1095
     .local v5, "time":J
     sub-long v10, v22, v5
 
@@ -3790,10 +3441,8 @@
 
     if-ltz v10, :cond_0
 
-    .line 1096
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1099
     :cond_0
     new-instance v4, Lcom/android/internal/os/UidSipper;
 
@@ -3801,22 +3450,18 @@
 
     invoke-direct {v4, v0}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 1101
     .local v4, "sipper":Lcom/android/internal/os/UidSipper;
     const-wide/16 v36, 0x0
 
     .local v36, "totalPower":D
     const-wide/16 v8, 0x0
 
-    .line 1102
     .local v8, "power":D
     const/16 v30, 0x0
 
-    .line 1103
     .local v30, "lcdNtype":I
     const/16 v27, 0x0
 
-    .line 1104
     .local v27, "isUsingNetwork":Z
     move-object/from16 v0, v21
 
@@ -3834,7 +3479,6 @@
 
     const/16 v26, 0x1
 
-    .line 1105
     .local v26, "isSystemApp":Z
     :goto_1
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->isAfterLast()Z
@@ -3843,7 +3487,6 @@
 
     if-nez v10, :cond_7
 
-    .line 1106
     move-object/from16 v0, v21
 
     move/from16 v1, v29
@@ -3852,10 +3495,8 @@
 
     move-result v30
 
-    .line 1107
     if-nez p1, :cond_5
 
-    .line 1108
     move-object/from16 v0, v21
 
     move/from16 v1, v35
@@ -3864,7 +3505,6 @@
 
     move-result-wide v5
 
-    .line 1109
     and-int/lit8 v10, v30, 0x4
 
     const/4 v11, 0x4
@@ -3873,7 +3513,6 @@
 
     const/4 v7, 0x1
 
-    .line 1110
     .local v7, "lcdOn":Z
     :goto_2
     move-object/from16 v0, v21
@@ -3884,15 +3523,12 @@
 
     move-result-wide v8
 
-    .line 1111
     const-wide/16 v10, 0x0
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1112
     add-double v36, v36, v8
 
-    .line 1113
     and-int/lit8 v10, v30, 0x20
 
     const/16 v11, 0x20
@@ -3904,7 +3540,6 @@
     :goto_3
     or-int v27, v27, v10
 
-    .line 1121
     .end local v7    # "lcdOn":Z
     :cond_1
     :goto_4
@@ -3914,7 +3549,6 @@
 
     goto :goto_1
 
-    .line 1074
     .end local v4    # "sipper":Lcom/android/internal/os/UidSipper;
     .end local v5    # "time":J
     .end local v8    # "power":D
@@ -3941,7 +3575,6 @@
 
     throw v10
 
-    .line 1104
     .restart local v4    # "sipper":Lcom/android/internal/os/UidSipper;
     .restart local v5    # "time":J
     .restart local v8    # "power":D
@@ -3965,21 +3598,18 @@
 
     goto :goto_1
 
-    .line 1109
     .restart local v26    # "isSystemApp":Z
     :cond_3
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 1113
     .restart local v7    # "lcdOn":Z
     :cond_4
     const/4 v10, 0x0
 
     goto :goto_3
 
-    .line 1114
     .end local v7    # "lcdOn":Z
     :cond_5
     and-int/lit8 v10, v30, 0x8
@@ -3988,7 +3618,6 @@
 
     if-ne v10, v11, :cond_1
 
-    .line 1115
     :try_start_1
     move-object/from16 v0, v21
 
@@ -3998,7 +3627,6 @@
 
     move-result-wide v5
 
-    .line 1116
     move-object/from16 v0, v21
 
     move/from16 v1, v32
@@ -4007,7 +3635,6 @@
 
     move-result-wide v8
 
-    .line 1117
     const/4 v13, 0x0
 
     const-wide/16 v16, 0x0
@@ -4020,10 +3647,8 @@
 
     invoke-virtual/range {v10 .. v17}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1118
     add-double v36, v36, v8
 
-    .line 1119
     and-int/lit8 v10, v30, 0x20
 
     const/16 v11, 0x20
@@ -4042,7 +3667,6 @@
 
     goto :goto_5
 
-    .line 1123
     :cond_7
     const-string v10, "BatteryStatsDBHelper"
 
@@ -4074,7 +3698,6 @@
 
     invoke-static {v10, v11}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1125
     iget-object v10, v4, Lcom/android/internal/os/UidSipper;->batterySipStats:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->isEmpty()Z
@@ -4083,15 +3706,12 @@
 
     if-nez v10, :cond_9
 
-    .line 1126
     move-wide/from16 v0, v36
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/UidSipper;->setTotalPower(D)V
 
-    .line 1127
     add-double v18, v18, v36
 
-    .line 1128
     move-object/from16 v0, v28
 
     move-object/from16 v1, v38
@@ -4102,44 +3722,36 @@
 
     if-eqz v10, :cond_a
 
-    .line 1129
     invoke-virtual {v4}, Lcom/android/internal/os/UidSipper;->makeUserLaunch()V
 
-    .line 1133
     :cond_8
     :goto_6
     move-object/from16 v0, v33
 
     invoke-virtual {v0, v4}, Lcom/android/internal/os/UidSipperImpl;->addUidSipper(Lcom/android/internal/os/UidSipper;)V
 
-    .line 1134
     const-string v10, "BatteryStatsDBHelper"
 
     const-string v11, "added"
 
     invoke-static {v10, v11}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1137
     :cond_9
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->close()V
 
-    .line 1138
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->moveToNext()Z
 
     goto/16 :goto_0
 
-    .line 1130
     :cond_a
     if-eqz v27, :cond_8
 
     if-nez v26, :cond_8
 
-    .line 1131
     invoke-virtual {v4}, Lcom/android/internal/os/UidSipper;->makeNetworkUser()V
 
     goto :goto_6
 
-    .line 1140
     .end local v4    # "sipper":Lcom/android/internal/os/UidSipper;
     .end local v5    # "time":J
     .end local v8    # "power":D
@@ -4160,10 +3772,8 @@
 
     if-gtz v10, :cond_c
 
-    .line 1141
     const-wide/high16 v18, 0x3ff0000000000000L    # 1.0
 
-    .line 1142
     :cond_c
     move-object/from16 v0, v33
 
@@ -4171,18 +3781,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/UidSipperImpl;->setFinalPower(D)V
 
-    .line 1144
     .end local v22    # "curTime":J
     .end local v28    # "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_d
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->close()V
 
-    .line 1146
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v31
 
-    .line 1147
     .local v31, "out":Landroid/os/Parcel;
     move-object/from16 v0, v33
 
@@ -4190,18 +3797,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/UidSipperImpl;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 1148
     invoke-virtual/range {v31 .. v31}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v24
 
-    .line 1149
     .local v24, "data":[B
     invoke-virtual/range {v31 .. v31}, Landroid/os/Parcel;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1150
     monitor-exit p0
 
     return-object v24
@@ -4212,7 +3816,6 @@
     .param p1, "needOffList"    # Z
 
     .prologue
-    .line 1154
     monitor-enter p0
 
     :try_start_0
@@ -4220,13 +3823,11 @@
 
     move-result-object v25
 
-    .line 1155
     .local v25, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v32, Lcom/android/internal/os/UidSipperImpl;
 
     invoke-direct/range {v32 .. v32}, Lcom/android/internal/os/UidSipperImpl;-><init>()V
 
-    .line 1157
     .local v32, "result":Lcom/android/internal/os/UidSipperImpl;
     const-string v10, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\' AND name!=\'all\'"
 
@@ -4238,11 +3839,9 @@
 
     move-result-object v20
 
-    .line 1158
     .local v20, "c":Landroid/database/Cursor;
     const-wide/16 v18, 0x0
 
-    .line 1159
     .local v18, "allUidTotalPower":D
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -4250,18 +3849,15 @@
 
     if-eqz v10, :cond_d
 
-    .line 1160
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v22
 
-    .line 1161
     .local v22, "curTime":J
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getAppUsageStats()Ljava/util/Set;
 
     move-result-object v27
 
-    .line 1162
     .local v27, "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :goto_0
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->isAfterLast()Z
@@ -4270,8 +3866,7 @@
 
     if-nez v10, :cond_b
 
-    .line 1163
-    const-string/jumbo v10, "name"
+    const-string v10, "name"
 
     move-object/from16 v0, v20
 
@@ -4285,7 +3880,6 @@
 
     move-result-object v35
 
-    .line 1165
     .local v35, "val":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -4313,7 +3907,6 @@
 
     move-result-object v33
 
-    .line 1166
     .local v33, "selectQuery":Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -4325,11 +3918,9 @@
 
     move-result-object v21
 
-    .line 1167
     .local v21, "cursor":Landroid/database/Cursor;
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1169
     const-string v10, "lcd_condition"
 
     move-object/from16 v0, v21
@@ -4338,9 +3929,8 @@
 
     move-result v28
 
-    .line 1170
     .local v28, "lcdColumn":I
-    const-string/jumbo v10, "time"
+    const-string v10, "time"
 
     move-object/from16 v0, v21
 
@@ -4348,9 +3938,8 @@
 
     move-result v34
 
-    .line 1171
     .local v34, "timeColumn":I
-    const-string/jumbo v10, "power"
+    const-string v10, "power"
 
     move-object/from16 v0, v21
 
@@ -4358,7 +3947,6 @@
 
     move-result v31
 
-    .line 1173
     .local v31, "powerColumn":I
     move-object/from16 v0, v21
 
@@ -4368,7 +3956,6 @@
 
     move-result v29
 
-    .line 1174
     .local v29, "lcdNtype":I
     and-int/lit8 v10, v29, 0x10
 
@@ -4376,24 +3963,20 @@
 
     if-ne v10, v11, :cond_0
 
-    .line 1175
     const-string v10, "BatteryStatsDBHelper"
 
     const-string v11, "System app"
 
     invoke-static {v10, v11}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1176
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->close()V
 
-    .line 1177
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 1154
     .end local v18    # "allUidTotalPower":D
     .end local v20    # "c":Landroid/database/Cursor;
     .end local v21    # "cursor":Landroid/database/Cursor;
@@ -4414,7 +3997,6 @@
 
     throw v10
 
-    .line 1182
     .restart local v18    # "allUidTotalPower":D
     .restart local v20    # "c":Landroid/database/Cursor;
     .restart local v21    # "cursor":Landroid/database/Cursor;
@@ -4438,7 +4020,6 @@
 
     move-result-wide v5
 
-    .line 1183
     .local v5, "time":J
     sub-long v10, v22, v5
 
@@ -4448,10 +4029,8 @@
 
     if-ltz v10, :cond_1
 
-    .line 1184
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1187
     :cond_1
     new-instance v4, Lcom/android/internal/os/UidSipper;
 
@@ -4459,18 +4038,15 @@
 
     invoke-direct {v4, v0}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 1189
     .local v4, "sipper":Lcom/android/internal/os/UidSipper;
     const-wide/16 v36, 0x0
 
     .local v36, "totalPower":D
     const-wide/16 v8, 0x0
 
-    .line 1190
     .local v8, "power":D
     const/16 v26, 0x0
 
-    .line 1191
     .local v26, "isUsingNetwork":Z
     :goto_1
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->isAfterLast()Z
@@ -4479,7 +4055,6 @@
 
     if-nez v10, :cond_7
 
-    .line 1192
     move-object/from16 v0, v21
 
     move/from16 v1, v28
@@ -4488,10 +4063,8 @@
 
     move-result v29
 
-    .line 1193
     if-nez p1, :cond_5
 
-    .line 1194
     move-object/from16 v0, v21
 
     move/from16 v1, v34
@@ -4500,7 +4073,6 @@
 
     move-result-wide v5
 
-    .line 1195
     and-int/lit8 v10, v29, 0x4
 
     const/4 v11, 0x4
@@ -4509,7 +4081,6 @@
 
     const/4 v7, 0x1
 
-    .line 1196
     .local v7, "lcdOn":Z
     :goto_2
     move-object/from16 v0, v21
@@ -4520,15 +4091,12 @@
 
     move-result-wide v8
 
-    .line 1197
     const-wide/16 v10, 0x0
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1198
     add-double v36, v36, v8
 
-    .line 1199
     and-int/lit8 v10, v29, 0x20
 
     const/16 v11, 0x20
@@ -4540,7 +4108,6 @@
     :goto_3
     or-int v26, v26, v10
 
-    .line 1207
     .end local v7    # "lcdOn":Z
     :cond_2
     :goto_4
@@ -4548,20 +4115,17 @@
 
     goto :goto_1
 
-    .line 1195
     :cond_3
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 1199
     .restart local v7    # "lcdOn":Z
     :cond_4
     const/4 v10, 0x0
 
     goto :goto_3
 
-    .line 1200
     .end local v7    # "lcdOn":Z
     :cond_5
     const/16 v10, 0x8
@@ -4570,7 +4134,6 @@
 
     if-ne v0, v10, :cond_2
 
-    .line 1201
     move-object/from16 v0, v21
 
     move/from16 v1, v34
@@ -4579,7 +4142,6 @@
 
     move-result-wide v5
 
-    .line 1202
     move-object/from16 v0, v21
 
     move/from16 v1, v31
@@ -4588,7 +4150,6 @@
 
     move-result-wide v8
 
-    .line 1203
     const/4 v13, 0x0
 
     const-wide/16 v16, 0x0
@@ -4601,10 +4162,8 @@
 
     invoke-virtual/range {v10 .. v17}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1204
     add-double v36, v36, v8
 
-    .line 1205
     and-int/lit8 v10, v29, 0x20
 
     const/16 v11, 0x20
@@ -4623,7 +4182,6 @@
 
     goto :goto_5
 
-    .line 1209
     :cond_7
     const-string v10, "BatteryStatsDBHelper"
 
@@ -4655,7 +4213,6 @@
 
     invoke-static {v10, v11}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1211
     iget-object v10, v4, Lcom/android/internal/os/UidSipper;->batterySipStats:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->isEmpty()Z
@@ -4664,15 +4221,12 @@
 
     if-nez v10, :cond_9
 
-    .line 1212
     move-wide/from16 v0, v36
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/UidSipper;->setTotalPower(D)V
 
-    .line 1213
     add-double v18, v18, v36
 
-    .line 1214
     move-object/from16 v0, v27
 
     move-object/from16 v1, v35
@@ -4683,42 +4237,34 @@
 
     if-eqz v10, :cond_a
 
-    .line 1215
     invoke-virtual {v4}, Lcom/android/internal/os/UidSipper;->makeUserLaunch()V
 
-    .line 1219
     :cond_8
     :goto_6
     move-object/from16 v0, v32
 
     invoke-virtual {v0, v4}, Lcom/android/internal/os/UidSipperImpl;->addUidSipper(Lcom/android/internal/os/UidSipper;)V
 
-    .line 1220
     const-string v10, "BatteryStatsDBHelper"
 
     const-string v11, "added"
 
     invoke-static {v10, v11}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1223
     :cond_9
     invoke-interface/range {v21 .. v21}, Landroid/database/Cursor;->close()V
 
-    .line 1224
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->moveToNext()Z
 
     goto/16 :goto_0
 
-    .line 1216
     :cond_a
     if-eqz v26, :cond_8
 
-    .line 1217
     invoke-virtual {v4}, Lcom/android/internal/os/UidSipper;->makeNetworkUser()V
 
     goto :goto_6
 
-    .line 1227
     .end local v4    # "sipper":Lcom/android/internal/os/UidSipper;
     .end local v5    # "time":J
     .end local v8    # "power":D
@@ -4738,10 +4284,8 @@
 
     if-gtz v10, :cond_c
 
-    .line 1228
     const-wide/high16 v18, 0x3ff0000000000000L    # 1.0
 
-    .line 1229
     :cond_c
     move-object/from16 v0, v32
 
@@ -4749,18 +4293,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/UidSipperImpl;->setFinalPower(D)V
 
-    .line 1232
     .end local v22    # "curTime":J
     .end local v27    # "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_d
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->close()V
 
-    .line 1234
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v30
 
-    .line 1235
     .local v30, "out":Landroid/os/Parcel;
     move-object/from16 v0, v32
 
@@ -4768,18 +4309,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/UidSipperImpl;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 1236
     invoke-virtual/range {v30 .. v30}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v24
 
-    .line 1237
     .local v24, "data":[B
     invoke-virtual/range {v30 .. v30}, Landroid/os/Parcel;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1238
     monitor-exit p0
 
     return-object v24
@@ -4789,7 +4327,6 @@
     .locals 28
 
     .prologue
-    .line 1242
     monitor-enter p0
 
     :try_start_0
@@ -4797,23 +4334,19 @@
 
     move-result-object v16
 
-    .line 1243
     .local v16, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v21, Lcom/android/internal/os/UidSipperImpl;
 
     invoke-direct/range {v21 .. v21}, Lcom/android/internal/os/UidSipperImpl;-><init>()V
 
-    .line 1245
     .local v21, "result":Lcom/android/internal/os/UidSipperImpl;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
 
-    .line 1247
     .local v12, "curTime":J
     const-string v22, "SELECT lcd_condition,time,power FROM[all]"
 
-    .line 1248
     .local v22, "selectQuery":Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -4825,7 +4358,6 @@
 
     move-result-object v14
 
-    .line 1250
     .local v14, "cursor":Landroid/database/Cursor;
     const-string v10, "lcd_condition"
 
@@ -4833,23 +4365,20 @@
 
     move-result v17
 
-    .line 1251
     .local v17, "lcdColumn":I
-    const-string/jumbo v10, "time"
+    const-string v10, "time"
 
     invoke-interface {v14, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v23
 
-    .line 1252
     .local v23, "timeColumn":I
-    const-string/jumbo v10, "power"
+    const-string v10, "power"
 
     invoke-interface {v14, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v20
 
-    .line 1254
     .local v20, "powerColumn":I
     new-instance v4, Lcom/android/internal/os/UidSipper;
 
@@ -4857,14 +4386,12 @@
 
     invoke-direct {v4, v10}, Lcom/android/internal/os/UidSipper;-><init>(Ljava/lang/String;)V
 
-    .line 1255
     .local v4, "sipper":Lcom/android/internal/os/UidSipper;
     const-wide/16 v24, 0x0
 
     .local v24, "totalPower":D
     const-wide/16 v8, 0x0
 
-    .line 1258
     .local v8, "power":D
     invoke-interface {v14}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -4872,14 +4399,12 @@
 
     if-eqz v10, :cond_2
 
-    .line 1260
     move/from16 v0, v23
 
     invoke-interface {v14, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v5
 
-    .line 1261
     .local v5, "time":J
     sub-long v10, v12, v5
 
@@ -4889,10 +4414,8 @@
 
     if-ltz v10, :cond_0
 
-    .line 1262
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1265
     :cond_0
     :goto_0
     invoke-interface {v14}, Landroid/database/Cursor;->isAfterLast()Z
@@ -4901,21 +4424,18 @@
 
     if-nez v10, :cond_2
 
-    .line 1266
     move/from16 v0, v23
 
     invoke-interface {v14, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v5
 
-    .line 1267
     move/from16 v0, v17
 
     invoke-interface {v14, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v18
 
-    .line 1268
     .local v18, "lcdNtype":I
     const/4 v10, 0x4
 
@@ -4925,7 +4445,6 @@
 
     const/4 v7, 0x1
 
-    .line 1269
     .local v7, "lcdOn":Z
     :goto_1
     move/from16 v0, v20
@@ -4934,22 +4453,18 @@
 
     move-result-wide v8
 
-    .line 1270
     const-wide/16 v10, 0x0
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/internal/os/UidSipper;->addBatterySipStat(JZDD)V
 
-    .line 1271
     add-double v24, v24, v8
 
-    .line 1272
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 1242
     .end local v4    # "sipper":Lcom/android/internal/os/UidSipper;
     .end local v5    # "time":J
     .end local v7    # "lcdOn":Z
@@ -4971,7 +4486,6 @@
 
     throw v10
 
-    .line 1268
     .restart local v4    # "sipper":Lcom/android/internal/os/UidSipper;
     .restart local v5    # "time":J
     .restart local v8    # "power":D
@@ -4990,31 +4504,26 @@
 
     goto :goto_1
 
-    .line 1275
     .end local v5    # "time":J
     .end local v18    # "lcdNtype":I
     :cond_2
     :try_start_1
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 1278
     move-wide/from16 v0, v24
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/UidSipper;->setTotalPower(D)V
 
-    .line 1279
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v4}, Lcom/android/internal/os/UidSipperImpl;->addUidSipper(Lcom/android/internal/os/UidSipper;)V
 
-    .line 1280
     move-object/from16 v0, v21
 
     move-wide/from16 v1, v24
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/UidSipperImpl;->setFinalPower(D)V
 
-    .line 1281
     const-string v10, "BatteryStatsDBHelper"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -5041,12 +4550,10 @@
 
     invoke-static {v10, v11}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1283
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v19
 
-    .line 1284
     .local v19, "out":Landroid/os/Parcel;
     move-object/from16 v0, v21
 
@@ -5054,18 +4561,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/UidSipperImpl;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 1285
     invoke-virtual/range {v19 .. v19}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v15
 
-    .line 1286
     .local v15, "data":[B
     invoke-virtual/range {v19 .. v19}, Landroid/os/Parcel;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1287
     monitor-exit p0
 
     return-object v15
@@ -5077,7 +4581,6 @@
     .param p2, "curTime"    # J
 
     .prologue
-    .line 710
     const-string v6, "BatteryStatsDBHelper"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -5100,20 +4603,16 @@
 
     invoke-static {v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 712
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 714
     .local v4, "tableList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v0, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name != \'android_metadata\' AND name != \'null\'"
 
-    .line 716
     .local v0, "QUERY_GET_TABLES_NAME":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 718
     .local v1, "c":Landroid/database/Cursor;
     :try_start_0
     const-string v6, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name != \'android_metadata\' AND name != \'null\'"
@@ -5124,14 +4623,12 @@
 
     move-result-object v1
 
-    .line 719
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 720
     :goto_0
     invoke-interface {v1}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -5139,8 +4636,7 @@
 
     if-nez v6, :cond_3
 
-    .line 721
-    const-string/jumbo v6, "name"
+    const-string v6, "name"
 
     invoke-interface {v1, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -5150,7 +4646,6 @@
 
     move-result-object v5
 
-    .line 722
     .local v5, "tableName":Ljava/lang/String;
     if-eqz v5, :cond_0
 
@@ -5160,10 +4655,8 @@
 
     if-lez v6, :cond_0
 
-    .line 723
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 725
     :cond_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
@@ -5172,25 +4665,20 @@
 
     goto :goto_0
 
-    .line 728
     .end local v5    # "tableName":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 729
     .local v2, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 731
     if-eqz v1, :cond_1
 
-    .line 732
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 737
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_1
@@ -5213,7 +4701,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 738
     .restart local v5    # "tableName":Ljava/lang/String;
     invoke-direct {p0, p1, p2, p3, v5}, Lcom/android/internal/os/BatteryStatsDBHelper;->deleteExceptDayData(Landroid/database/sqlite/SQLiteDatabase;JLjava/lang/String;)V
     :try_end_2
@@ -5221,37 +4708,30 @@
 
     goto :goto_2
 
-    .line 740
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v5    # "tableName":Ljava/lang/String;
     :catch_1
     move-exception v2
 
-    .line 741
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 744
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_2
     return-void
 
-    .line 731
     :cond_3
     if-eqz v1, :cond_1
 
-    .line 732
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 731
     :catchall_0
     move-exception v6
 
     if-eqz v1, :cond_4
 
-    .line 732
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -5263,14 +4743,12 @@
     .param p1, "curTime"    # J
 
     .prologue
-    .line 747
     const-string v3, "BatteryStatsDBHelper"
 
     const-string v6, " maintainNotifiedAppList called "
 
     invoke-static {v3, v6}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 748
     sget-object v3, Lcom/android/internal/os/BatteryStatsDBHelper;->notifiedPowerDrainingApps:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -5281,7 +4759,6 @@
 
     move-result-object v1
 
-    .line 749
     .local v1, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;>;"
     :cond_0
     :goto_0
@@ -5291,14 +4768,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 750
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 751
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -5306,7 +4781,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 752
     .local v2, "packageName":Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -5318,7 +4792,6 @@
 
     move-result-wide v4
 
-    .line 753
     .local v4, "thisTime":J
     sub-long v6, p1, v4
 
@@ -5328,7 +4801,6 @@
 
     if-ltz v3, :cond_0
 
-    .line 754
     const-string v3, "BatteryStatsDBHelper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -5351,12 +4823,10 @@
 
     invoke-static {v3, v6}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 755
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 758
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;"
     .end local v2    # "packageName":Ljava/lang/String;
     .end local v4    # "thisTime":J
@@ -5369,7 +4839,6 @@
     .param p0, "power"    # D
 
     .prologue
-    .line 1543
     const-wide/16 v2, 0x0
 
     cmpl-double v1, p0, v2
@@ -5378,11 +4847,9 @@
 
     const-string v1, "0"
 
-    .line 1557
     :goto_0
     return-object v1
 
-    .line 1546
     :cond_0
     const-wide v2, 0x3ee4f8b588e368f1L    # 1.0E-5
 
@@ -5392,7 +4859,6 @@
 
     const-string v0, "%.8f"
 
-    .line 1557
     .local v0, "format":Ljava/lang/String;
     :goto_1
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -5415,7 +4881,6 @@
 
     goto :goto_0
 
-    .line 1547
     .end local v0    # "format":Ljava/lang/String;
     :cond_1
     const-wide v2, 0x3f1a36e2eb1c432dL    # 1.0E-4
@@ -5429,7 +4894,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1548
     .end local v0    # "format":Ljava/lang/String;
     :cond_2
     const-wide v2, 0x3f50624dd2f1a9fcL    # 0.001
@@ -5443,7 +4907,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1549
     .end local v0    # "format":Ljava/lang/String;
     :cond_3
     const-wide v2, 0x3f847ae147ae147bL    # 0.01
@@ -5457,7 +4920,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1550
     .end local v0    # "format":Ljava/lang/String;
     :cond_4
     const-wide v2, 0x3fb999999999999aL    # 0.1
@@ -5471,7 +4933,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1551
     .end local v0    # "format":Ljava/lang/String;
     :cond_5
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -5485,7 +4946,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1552
     .end local v0    # "format":Ljava/lang/String;
     :cond_6
     const-wide/high16 v2, 0x4024000000000000L    # 10.0
@@ -5499,7 +4959,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1553
     .end local v0    # "format":Ljava/lang/String;
     :cond_7
     const-wide/high16 v2, 0x4059000000000000L    # 100.0
@@ -5513,7 +4972,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 1554
     .end local v0    # "format":Ljava/lang/String;
     :cond_8
     const-string v0, "%.0f"
@@ -5540,15 +4998,13 @@
     .end annotation
 
     .prologue
-    .line 814
     .local p4, "abuserMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Double;>;"
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 815
     .local v1, "notiValues":Landroid/content/ContentValues;
-    const-string/jumbo v4, "notified_time"
+    const-string v4, "notified_time"
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -5556,12 +5012,10 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 817
     invoke-virtual {p4}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 818
     .local v3, "packages":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -5581,7 +5035,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 819
     .local v2, "packageName":Ljava/lang/String;
     sget-object v4, Lcom/android/internal/os/BatteryStatsDBHelper;->notifiedPowerDrainingApps:Ljava/util/HashMap;
 
@@ -5591,10 +5044,9 @@
 
     invoke-virtual {v4, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 820
-    const-string/jumbo v4, "power_consuming_packages"
+    const-string v4, "power_consuming_packages"
 
-    const-string/jumbo v5, "packageName = ?"
+    const-string v5, "packageName = ?"
 
     const/4 v6, 0x1
 
@@ -5606,7 +5058,6 @@
 
     invoke-virtual {p1, v4, v1, v5, v6}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 822
     const-string v4, "BatteryStatsDBHelper"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -5631,7 +5082,6 @@
 
     goto :goto_0
 
-    .line 824
     .end local v2    # "packageName":Ljava/lang/String;
     :cond_0
     return-void
@@ -5643,7 +5093,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -5651,14 +5100,12 @@
     .locals 3
 
     .prologue
-    .line 208
     new-instance v0, Landroid/content/IntentFilter;
 
-    const-string/jumbo v1, "send.battery.drain.broadcast"
+    const-string v1, "send.battery.drain.broadcast"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 209
     .local v0, "filter":Landroid/content/IntentFilter;
     sget-object v1, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
@@ -5666,7 +5113,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 210
     return-void
 .end method
 
@@ -5679,7 +5125,6 @@
     .param p3, "metaData"    # Ljava/lang/String;
 
     .prologue
-    .line 429
     monitor-enter p0
 
     :try_start_0
@@ -5687,19 +5132,16 @@
 
     move-result-wide v6
 
-    .line 430
     .local v6, "time":J
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 432
     .local v1, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-direct {p0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->collectTotalTableData(Landroid/database/sqlite/SQLiteDatabase;J)Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     move-result-object v2
 
-    .line 433
     .local v2, "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneHour:D
     invoke-static {v2}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$600(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)D
@@ -5712,7 +5154,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 434
     const-string v0, "BatteryStatsDBHelper"
 
     const-string v3, "abusiveDetectionFromHCamp:: no total power"
@@ -5722,7 +5163,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 444
     .end local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v2    # "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     .end local v6    # "time":J
@@ -5743,18 +5183,15 @@
 
     move-object v5, p3
 
-    .line 437
     :try_start_1
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/os/BatteryStatsDBHelper;->checkPowerAbuseLocked(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 439
     new-instance v9, Landroid/content/Intent;
 
-    const-string/jumbo v0, "sec.intent.action.BATTERY_ABUSE"
+    const-string v0, "sec.intent.action.BATTERY_ABUSE"
 
     invoke-direct {v9, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 440
     .local v9, "i":Landroid/content/Intent;
     sget-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
@@ -5765,7 +5202,6 @@
 
     goto :goto_0
 
-    .line 441
     .end local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v2    # "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     .end local v6    # "time":J
@@ -5773,7 +5209,6 @@
     :catch_0
     move-exception v8
 
-    .line 442
     .local v8, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "BatteryStatsDBHelper"
@@ -5806,7 +5241,6 @@
 
     goto :goto_0
 
-    .line 429
     .end local v8    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
@@ -5832,7 +5266,6 @@
     .end annotation
 
     .prologue
-    .line 403
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
@@ -5841,13 +5274,11 @@
 
     move-result-wide v8
 
-    .line 404
     .local v8, "time":J
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
 
-    .line 406
     .local v3, "db":Landroid/database/sqlite/SQLiteDatabase;
     move-object/from16 v0, p0
 
@@ -5855,7 +5286,6 @@
 
     move-result-object v4
 
-    .line 407
     .local v4, "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneHour:D
     invoke-static {v4}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$600(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)D
@@ -5868,7 +5298,6 @@
 
     if-gtz v2, :cond_0
 
-    .line 408
     const-string v2, "BatteryStatsDBHelper"
 
     const-string v6, "abusiveDetectionFromHCamp:: no total power"
@@ -5878,7 +5307,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 425
     .end local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v4    # "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     .end local v8    # "time":J
@@ -5887,7 +5315,6 @@
 
     return-void
 
-    .line 411
     .restart local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v4    # "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     .restart local v8    # "time":J
@@ -5897,7 +5324,6 @@
 
     move-result v12
 
-    .line 412
     .local v12, "size":I
     const/4 v11, 0x0
 
@@ -5905,7 +5331,6 @@
     :goto_1
     if-ge v11, v12, :cond_1
 
-    .line 413
     move-object/from16 v0, p1
 
     invoke-interface {v0, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -5914,11 +5339,9 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 414
     .local v7, "meta":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 415
     .local v5, "packageName":Ljava/lang/String;
     const-string v2, ","
 
@@ -5930,7 +5353,6 @@
 
     aget-object v5, v2, v6
 
-    .line 416
     const-string v2, "BatteryStatsDBHelper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -5967,26 +5389,22 @@
 
     move-object/from16 v6, p2
 
-    .line 417
     invoke-virtual/range {v2 .. v9}, Lcom/android/internal/os/BatteryStatsDBHelper;->checkPowerAbuseLocked(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 412
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 420
     .end local v5    # "packageName":Ljava/lang/String;
     .end local v7    # "meta":Ljava/lang/String;
     :cond_1
     new-instance v11, Landroid/content/Intent;
 
     .end local v11    # "i":I
-    const-string/jumbo v2, "sec.intent.action.BATTERY_ABUSE"
+    const-string v2, "sec.intent.action.BATTERY_ABUSE"
 
     invoke-direct {v11, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 421
     .local v11, "i":Landroid/content/Intent;
     sget-object v2, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
@@ -5997,7 +5415,6 @@
 
     goto :goto_0
 
-    .line 422
     .end local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v4    # "totalTableDataSet":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     .end local v8    # "time":J
@@ -6006,7 +5423,6 @@
     :catch_0
     move-exception v10
 
-    .line 423
     .local v10, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "BatteryStatsDBHelper"
@@ -6039,7 +5455,6 @@
 
     goto :goto_0
 
-    .line 403
     .end local v10    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -6069,7 +5484,6 @@
     .end annotation
 
     .prologue
-    .line 305
     .local p5, "entries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/os/BatteryStatsDumper$PowerObject;>;"
     monitor-enter p0
 
@@ -6079,7 +5493,6 @@
 
     const/16 v25, 0x1
 
-    .line 306
     .local v25, "screenCondition":Z
     :goto_0
     :try_start_0
@@ -6087,18 +5500,15 @@
 
     move-result-object v8
 
-    .line 307
     .local v8, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {v8}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 309
     if-eqz v25, :cond_5
 
     const/16 v21, 0x4
 
-    .line 313
     .local v21, "lcdCondition":I
     :goto_1
     :try_start_1
@@ -6121,7 +5531,6 @@
 
     check-cast v17, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
 
-    .line 314
     .local v17, "entry":Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
     move-object/from16 v0, v17
 
@@ -6135,7 +5544,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 317
     const-string v2, "BatteryStatsDBHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6162,14 +5570,12 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
     move-object/from16 v0, v17
 
     iget-wide v0, v0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->powerUid:D
 
     move-wide/from16 v32, v0
 
-    .line 319
     .local v32, "totalPower":D
     move-object/from16 v0, v17
 
@@ -6177,7 +5583,6 @@
 
     move-wide/from16 v26, v0
 
-    .line 320
     .local v26, "networkUsage":J
     move-object/from16 v0, v17
 
@@ -6185,11 +5590,9 @@
 
     move-wide/from16 v34, v0
 
-    .line 321
     .local v34, "uidUsageTime":J
     move/from16 v18, v21
 
-    .line 323
     .local v18, "finalLcdCondition":I
     move-object/from16 v0, v17
 
@@ -6201,17 +5604,14 @@
 
     move-result-object v20
 
-    .line 324
     .local v20, "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
     if-eqz v20, :cond_8
 
-    .line 325
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->totalPower:D
     invoke-static/range {v20 .. v20}, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->access$200(Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;)D
 
     move-result-wide v22
 
-    .line 326
     .local v22, "lastPower":D
     const-string v2, "BatteryStatsDBHelper"
 
@@ -6237,10 +5637,8 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 327
     sub-double v14, v32, v22
 
-    .line 328
     .local v14, "diff":D
     const-wide/16 v2, 0x0
 
@@ -6248,10 +5646,8 @@
 
     if-ltz v2, :cond_7
 
-    .line 329
     move-wide/from16 v30, v14
 
-    .line 330
     .local v30, "power":D
     const-string v3, "BatteryStatsDBHelper"
 
@@ -6286,7 +5682,6 @@
 
     invoke-static {v3, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
     :goto_4
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->networkUsage:J
     invoke-static/range {v20 .. v20}, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->access$300(Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;)J
@@ -6295,7 +5690,6 @@
 
     sub-long v28, v26, v2
 
-    .line 337
     .local v28, "networkUseDiff":J
     const-wide/16 v2, 0x0
 
@@ -6303,10 +5697,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 338
     or-int/lit8 v18, v18, 0x20
 
-    .line 348
     .end local v14    # "diff":D
     .end local v22    # "lastPower":D
     .end local v28    # "networkUseDiff":J
@@ -6318,16 +5710,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 349
     or-int/lit8 v18, v18, 0x10
 
-    .line 352
     :cond_2
     new-instance v36, Landroid/content/ContentValues;
 
     invoke-direct/range {v36 .. v36}, Landroid/content/ContentValues;-><init>()V
 
-    .line 353
     .local v36, "values":Landroid/content/ContentValues;
     const-string v2, "lcd_condition"
 
@@ -6339,8 +5728,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 354
-    const-string/jumbo v2, "time"
+    const-string v2, "time"
 
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -6350,8 +5738,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 355
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-static/range {v30 .. v31}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -6361,8 +5748,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 356
-    const-string/jumbo v2, "totalpower"
+    const-string v2, "totalpower"
 
     invoke-static/range {v32 .. v33}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -6372,8 +5758,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 357
-    const-string/jumbo v2, "network_usage"
+    const-string v2, "network_usage"
 
     invoke-static/range {v26 .. v27}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -6383,8 +5768,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 358
-    const-string/jumbo v2, "usage_time"
+    const-string v2, "usage_time"
 
     invoke-static/range {v34 .. v35}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -6394,8 +5778,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 359
-    const-string/jumbo v2, "wakeup_count"
+    const-string v2, "wakeup_count"
 
     move-object/from16 v0, v17
 
@@ -6409,7 +5792,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 360
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -6449,7 +5831,6 @@
 
     goto/16 :goto_2
 
-    .line 392
     .end local v17    # "entry":Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
     .end local v18    # "finalLcdCondition":I
     .end local v19    # "i$":Ljava/util/Iterator;
@@ -6462,7 +5843,6 @@
     :catch_0
     move-exception v16
 
-    .line 393
     .local v16, "e":Ljava/lang/IllegalStateException;
     :try_start_2
     const-string v2, "BatteryStatsDBHelper"
@@ -6493,20 +5873,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 396
     :try_start_3
     invoke-virtual {v8}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 398
     .end local v16    # "e":Ljava/lang/IllegalStateException;
     :goto_6
     monitor-exit p0
 
     return-void
 
-    .line 305
     .end local v8    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v21    # "lcdCondition":I
     .end local v25    # "screenCondition":Z
@@ -6520,7 +5897,6 @@
 
     goto/16 :goto_0
 
-    .line 309
     .restart local v8    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v25    # "screenCondition":Z
     :cond_5
@@ -6528,7 +5904,6 @@
 
     goto/16 :goto_1
 
-    .line 330
     .restart local v14    # "diff":D
     .restart local v17    # "entry":Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
     .restart local v18    # "finalLcdCondition":I
@@ -6546,12 +5921,10 @@
 
     goto/16 :goto_3
 
-    .line 333
     .end local v30    # "power":D
     :cond_7
     const-wide/16 v30, 0x0
 
-    .line 334
     .restart local v30    # "power":D
     const-string v2, "BatteryStatsDBHelper"
 
@@ -6582,7 +5955,6 @@
 
     goto/16 :goto_4
 
-    .line 396
     .end local v14    # "diff":D
     .end local v17    # "entry":Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
     .end local v18    # "finalLcdCondition":I
@@ -6603,7 +5975,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 305
     .end local v8    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v21    # "lcdCondition":I
     :catchall_1
@@ -6613,7 +5984,6 @@
 
     throw v2
 
-    .line 341
     .restart local v8    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v17    # "entry":Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
     .restart local v18    # "finalLcdCondition":I
@@ -6626,7 +5996,6 @@
     :cond_8
     const-wide/16 v30, 0x0
 
-    .line 342
     .restart local v30    # "power":D
     const-wide/16 v2, 0x0
 
@@ -6634,10 +6003,8 @@
 
     if-eqz v2, :cond_9
 
-    .line 343
     or-int/lit8 v18, v18, 0x20
 
-    .line 345
     :cond_9
     :try_start_6
     const-string v2, "BatteryStatsDBHelper"
@@ -6666,7 +6033,6 @@
 
     goto/16 :goto_5
 
-    .line 363
     .end local v17    # "entry":Lcom/android/internal/os/BatteryStatsDumper$PowerObject;
     .end local v18    # "finalLcdCondition":I
     .end local v20    # "lastData":Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
@@ -6681,26 +6047,21 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 364
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/android/internal/os/BatteryStatsDBHelper;->getLastTotalEntry(Landroid/database/sqlite/SQLiteDatabase;)Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
 
     move-result-object v24
 
-    .line 365
     .local v24, "mLastEntry":Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;
     const-wide/16 v30, 0x0
 
-    .line 366
     .restart local v30    # "power":D
     const/4 v13, 0x0
 
-    .line 367
     .local v13, "delta":I
     if-eqz v24, :cond_c
 
-    .line 368
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->totalPower:D
     invoke-static/range {v24 .. v24}, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->access$400(Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;)D
 
@@ -6708,7 +6069,6 @@
 
     sub-double v30, p8, v2
 
-    .line 369
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->batteryLevel:I
     invoke-static/range {v24 .. v24}, Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;->access$500(Lcom/android/internal/os/BatteryStatsDBHelper$LastTotalDatabaseInfo;)I
 
@@ -6716,32 +6076,26 @@
 
     sub-int v13, p10, v2
 
-    .line 371
     const-wide/16 v2, 0x0
 
     cmpg-double v2, v30, v2
 
     if-gez v2, :cond_b
 
-    .line 372
     const-wide/16 v30, 0x0
 
-    .line 374
     :cond_b
     if-gez v13, :cond_c
 
-    .line 375
     const/4 v13, 0x0
 
-    .line 378
     :cond_c
     new-instance v36, Landroid/content/ContentValues;
 
     invoke-direct/range {v36 .. v36}, Landroid/content/ContentValues;-><init>()V
 
-    .line 379
     .restart local v36    # "values":Landroid/content/ContentValues;
-    const-string/jumbo v2, "time"
+    const-string v2, "time"
 
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -6751,8 +6105,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 380
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-static/range {v30 .. v31}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -6762,8 +6115,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 381
-    const-string/jumbo v2, "totalpower"
+    const-string v2, "totalpower"
 
     invoke-static/range {p8 .. p9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -6773,7 +6125,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 382
     const-string v2, "batterydelta"
 
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6784,7 +6135,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 383
     const-string v2, "batterypercent"
 
     invoke-static/range {p10 .. p10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6795,7 +6145,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 384
     const-string v2, "[all]"
 
     const/4 v3, 0x0
@@ -6804,7 +6153,6 @@
 
     invoke-virtual {v8, v2, v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 385
     const-string v2, "BatteryStatsDBHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6839,7 +6187,6 @@
 
     move/from16 v7, p7
 
-    .line 387
     invoke-direct/range {v2 .. v8}, Lcom/android/internal/os/BatteryStatsDBHelper;->addBatteryDelta(ZJIILandroid/database/sqlite/SQLiteDatabase;)V
 
     move-object/from16 v7, p0
@@ -6848,16 +6195,13 @@
 
     move-wide/from16 v11, p8
 
-    .line 388
     invoke-direct/range {v7 .. v12}, Lcom/android/internal/os/BatteryStatsDBHelper;->checkForPowerThreshold(Landroid/database/sqlite/SQLiteDatabase;JD)V
 
-    .line 390
     invoke-virtual {v8}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_6
     .catch Ljava/lang/IllegalStateException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 396
     :try_start_7
     invoke-virtual {v8}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_7
@@ -6876,7 +6220,6 @@
     .param p6, "curTime"    # J
 
     .prologue
-    .line 449
     const-string v2, "BatteryStatsDBHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6901,7 +6244,6 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 453
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -6935,7 +6277,7 @@
 
     const/4 v2, 0x0
 
-    const-string/jumbo v5, "time"
+    const-string v5, "time"
 
     aput-object v5, v4, v2
 
@@ -6947,7 +6289,7 @@
 
     const/4 v2, 0x2
 
-    const-string/jumbo v5, "power"
+    const-string v5, "power"
 
     aput-object v5, v4, v2
 
@@ -6967,7 +6309,6 @@
 
     move-result-object v11
 
-    .line 456
     .local v11, "cursor":Landroid/database/Cursor;
     const-string v2, "lcd_condition"
 
@@ -6975,27 +6316,23 @@
 
     move-result v15
 
-    .line 457
     .local v15, "lcdColumn":I
-    const-string/jumbo v2, "time"
+    const-string v2, "time"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v19
 
-    .line 458
     .local v19, "timeColumn":I
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v18
 
-    .line 460
     .local v18, "powerColumn":I
     const-wide/16 v16, 0x0
 
-    .line 461
     .local v16, "lcdOffPowerInLastHour":D
     :goto_0
     invoke-interface {v11}, Landroid/database/Cursor;->isBeforeFirst()Z
@@ -7004,14 +6341,12 @@
 
     if-nez v2, :cond_1
 
-    .line 462
     move/from16 v0, v19
 
     invoke-interface {v11, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v20
 
-    .line 463
     .local v20, "thisTime":J
     sub-long v2, p6, v20
 
@@ -7021,14 +6356,12 @@
 
     if-gez v2, :cond_1
 
-    .line 464
     move/from16 v0, v18
 
     invoke-interface {v11, v0}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v12
 
-    .line 465
     .local v12, "curPower":D
     invoke-interface {v11, v15}, Landroid/database/Cursor;->getInt(I)I
 
@@ -7044,14 +6377,12 @@
     :goto_1
     add-double v16, v16, v12
 
-    .line 470
     invoke-interface {v11}, Landroid/database/Cursor;->moveToPrevious()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 498
     .end local v11    # "cursor":Landroid/database/Cursor;
     .end local v15    # "lcdColumn":I
     .end local v16    # "lcdOffPowerInLastHour":D
@@ -7061,7 +6392,6 @@
     :catch_0
     move-exception v14
 
-    .line 499
     .local v14, "e":Ljava/lang/Exception;
     const-string v2, "BatteryStatsDBHelper"
 
@@ -7089,7 +6419,6 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 501
     .end local v14    # "e":Ljava/lang/Exception;
     :goto_2
     const-string v2, "BatteryStatsDBHelper"
@@ -7098,11 +6427,9 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 502
     :goto_3
     return-void
 
-    .line 465
     .restart local v11    # "cursor":Landroid/database/Cursor;
     .restart local v12    # "curPower":D
     .restart local v15    # "lcdColumn":I
@@ -7115,14 +6442,12 @@
 
     goto :goto_1
 
-    .line 473
     .end local v12    # "curPower":D
     .end local v20    # "thisTime":J
     :cond_1
     :try_start_1
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 475
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneHour:D
     invoke-static/range {p2 .. p2}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$600(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)D
 
@@ -7139,7 +6464,6 @@
 
     mul-double v9, v2, v4
 
-    .line 477
     .local v9, "percentage":D
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneHour:I
     invoke-static/range {p2 .. p2}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$700(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)I
@@ -7152,14 +6476,12 @@
 
     if-lez v2, :cond_2
 
-    .line 478
     const-string v2, "BatteryStatsDBHelper"
 
     const-string v3, "Strange!!. Percentage is greater than battery delta"
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 479
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneHour:I
     invoke-static/range {p2 .. p2}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->access$700(Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;)I
 
@@ -7167,9 +6489,8 @@
 
     int-to-double v9, v2
 
-    .line 482
     :cond_2
-    const-string/jumbo v2, "wakelock"
+    const-string v2, "wakelock"
 
     move-object/from16 v0, p4
 
@@ -7189,7 +6510,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 483
     :cond_3
     move-object/from16 v0, p0
 
@@ -7199,14 +6519,13 @@
 
     if-gez v2, :cond_5
 
-    .line 484
     const-string v2, "BatteryStatsDBHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "percentage i.e. "
+    const-string v4, "percentage i.e. "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7238,7 +6557,6 @@
 
     goto :goto_3
 
-    .line 487
     :cond_4
     const-string v2, "ble"
 
@@ -7250,7 +6568,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 488
     const-string v2, "BatteryStatsDBHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -7275,10 +6592,8 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 489
     const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
 
-    .line 492
     :cond_5
     const-string v2, "BatteryStatsDBHelper"
 
@@ -7330,7 +6645,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "total power in lastonehour:"
+    const-string v4, "total power in lastonehour:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7342,7 +6657,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "percentage:"
+    const-string v4, "percentage:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7370,7 +6685,6 @@
 
     move-object/from16 v8, p5
 
-    .line 497
     invoke-direct/range {v2 .. v10}, Lcom/android/internal/os/BatteryStatsDBHelper;->addPowerConsumingApps(Landroid/database/sqlite/SQLiteDatabase;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;D)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -7383,24 +6697,20 @@
     .param p1, "maxNumOfItems"    # I
 
     .prologue
-    .line 1732
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 1733
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    .line 1734
     .local v2, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1736
     const/4 v7, 0x7
 
     const/4 v8, 0x7
@@ -7408,36 +6718,30 @@
     :try_start_1
     invoke-virtual {p0, v2, v7, v8}, Lcom/android/internal/os/BatteryStatsDBHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
-    .line 1737
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1741
     :try_start_2
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1786
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1738
     :catch_0
     move-exception v3
 
-    .line 1739
     .local v3, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1741
     :try_start_4
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_4
@@ -7445,7 +6749,6 @@
 
     goto :goto_0
 
-    .line 1732
     .end local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v3    # "e":Ljava/lang/Exception;
     :catchall_0
@@ -7455,7 +6758,6 @@
 
     throw v7
 
-    .line 1741
     .restart local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :catchall_1
     move-exception v7
@@ -7465,30 +6767,25 @@
 
     throw v7
 
-    .line 1746
     .end local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    .line 1747
     .restart local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1749
     .local v5, "tableList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v0, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name != \'android_metadata\' AND name != \'null\'"
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 1751
     .local v0, "QUERY_GET_TABLES_NAME":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1753
     .local v1, "c":Landroid/database/Cursor;
     :try_start_6
     const-string v7, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name != \'android_metadata\' AND name != \'null\'"
@@ -7499,14 +6796,12 @@
 
     move-result-object v1
 
-    .line 1754
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 1755
     :goto_1
     invoke-interface {v1}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -7514,8 +6809,7 @@
 
     if-nez v7, :cond_3
 
-    .line 1756
-    const-string/jumbo v7, "name"
+    const-string v7, "name"
 
     invoke-interface {v1, v7}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -7525,7 +6819,6 @@
 
     move-result-object v6
 
-    .line 1757
     .local v6, "tableName":Ljava/lang/String;
     if-eqz v6, :cond_1
 
@@ -7535,10 +6828,8 @@
 
     if-lez v7, :cond_1
 
-    .line 1758
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1760
     :cond_1
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_6
@@ -7547,26 +6838,21 @@
 
     goto :goto_1
 
-    .line 1763
     .end local v6    # "tableName":Ljava/lang/String;
     :catch_1
     move-exception v3
 
-    .line 1764
     .restart local v3    # "e":Ljava/lang/Exception;
     :try_start_7
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 1766
     if-eqz v1, :cond_2
 
-    .line 1767
     :try_start_8
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 1772
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_2
@@ -7574,12 +6860,10 @@
 
     move-result-object v2
 
-    .line 1773
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 1775
     :try_start_9
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -7599,7 +6883,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 1776
     .restart local v6    # "tableName":Ljava/lang/String;
     invoke-direct {p0, v2, v6, p1}, Lcom/android/internal/os/BatteryStatsDBHelper;->deleteRecordsExceptLatest(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;I)V
     :try_end_9
@@ -7608,42 +6891,35 @@
 
     goto :goto_3
 
-    .line 1780
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v6    # "tableName":Ljava/lang/String;
     :catch_2
     move-exception v3
 
-    .line 1781
     .restart local v3    # "e":Ljava/lang/Exception;
     :try_start_a
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 1784
     :try_start_b
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     goto :goto_0
 
-    .line 1766
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_3
     if-eqz v1, :cond_2
 
-    .line 1767
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
 
-    .line 1766
     :catchall_2
     move-exception v7
 
     if-eqz v1, :cond_4
 
-    .line 1767
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -7651,7 +6927,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 1778
     .restart local v4    # "i$":Ljava/util/Iterator;
     :cond_5
     :try_start_c
@@ -7660,7 +6935,6 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_2
     .catchall {:try_start_c .. :try_end_c} :catchall_3
 
-    .line 1784
     :try_start_d
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
@@ -7682,7 +6956,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 937
     monitor-enter p0
 
     :try_start_0
@@ -7708,12 +6981,10 @@
 
     invoke-static {v1, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 938
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 939
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v1, 0x1
 
@@ -7721,7 +6992,7 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v3, "packageName"
+    const-string v3, "packageName"
 
     aput-object v3, v2, v1
     :try_end_0
@@ -7730,11 +7001,9 @@
     .local v2, "columns":[Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 940
     .local v10, "requestingColumn":[Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 942
     .local v8, "cursor":Landroid/database/Cursor;
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7763,10 +7032,9 @@
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 943
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
-    const-string/jumbo v3, "packageName = ?"
+    const-string v3, "packageName = ?"
 
     const/4 v4, 0x1
 
@@ -7786,7 +7054,6 @@
 
     move-result-object v8
 
-    .line 945
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
@@ -7795,7 +7062,6 @@
 
     if-lez v1, :cond_1
 
-    .line 946
     const/4 v1, 0x1
 
     new-array v11, v1, [Ljava/lang/String;
@@ -7807,13 +7073,12 @@
     .catch Landroid/database/SQLException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 947
     .end local v10    # "requestingColumn":[Ljava/lang/String;
     .local v11, "requestingColumn":[Ljava/lang/String;
     :try_start_2
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
-    const-string/jumbo v3, "packageName = ?"
+    const-string v3, "packageName = ?"
 
     invoke-virtual {v0, v1, v3, v11}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_2
@@ -7822,26 +7087,22 @@
 
     move-object v10, v11
 
-    .line 954
     .end local v11    # "requestingColumn":[Ljava/lang/String;
     .restart local v10    # "requestingColumn":[Ljava/lang/String;
     :goto_0
     if-eqz v8, :cond_0
 
-    .line 955
     :try_start_3
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 959
     :cond_0
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 949
     :cond_1
     :try_start_4
     const-string v1, "BatteryStatsDBHelper"
@@ -7855,11 +7116,9 @@
 
     goto :goto_0
 
-    .line 951
     :catch_0
     move-exception v9
 
-    .line 952
     .local v9, "e":Landroid/database/SQLException;
     :goto_2
     :try_start_5
@@ -7891,10 +7150,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 954
     if-eqz v8, :cond_0
 
-    .line 955
     :try_start_6
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
     :try_end_6
@@ -7902,7 +7159,6 @@
 
     goto :goto_1
 
-    .line 937
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v2    # "columns":[Ljava/lang/String;
     .end local v8    # "cursor":Landroid/database/Cursor;
@@ -7915,7 +7171,6 @@
 
     throw v1
 
-    .line 954
     .restart local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2    # "columns":[Ljava/lang/String;
     .restart local v8    # "cursor":Landroid/database/Cursor;
@@ -7926,7 +7181,6 @@
     :goto_3
     if-eqz v8, :cond_2
 
-    .line 955
     :try_start_7
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
@@ -7935,7 +7189,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 954
     .end local v10    # "requestingColumn":[Ljava/lang/String;
     .restart local v11    # "requestingColumn":[Ljava/lang/String;
     :catchall_2
@@ -7947,7 +7200,6 @@
     .restart local v10    # "requestingColumn":[Ljava/lang/String;
     goto :goto_3
 
-    .line 951
     .end local v10    # "requestingColumn":[Ljava/lang/String;
     .restart local v11    # "requestingColumn":[Ljava/lang/String;
     :catch_1
@@ -7965,7 +7217,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1637
     monitor-enter p0
 
     :try_start_0
@@ -7973,19 +7224,17 @@
 
     move-result-object v4
 
-    .line 1638
     .local v4, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v21, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v5, "yyyy-MM-dd HH:mm:ss.SSS"
+    const-string v5, "yyyy-MM-dd HH:mm:ss.SSS"
 
     move-object/from16 v0, v21
 
     invoke-direct {v0, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 1639
     .local v21, "sdf":Ljava/text/SimpleDateFormat;
-    const-string/jumbo v5, "power_consuming_packages"
+    const-string v5, "power_consuming_packages"
 
     const/4 v6, 0x0
 
@@ -8003,13 +7252,11 @@
 
     move-result-object v13
 
-    .line 1641
     .local v13, "cursor":Landroid/database/Cursor;
     const/4 v5, 0x0
 
     new-array v12, v5, [Ljava/lang/String;
 
-    .line 1642
     .local v12, "abuserList":[Ljava/lang/String;
     invoke-interface {v13}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -8017,38 +7264,33 @@
 
     if-eqz v5, :cond_0
 
-    .line 1643
-    const-string/jumbo v5, "time"
+    const-string v5, "time"
 
     invoke-interface {v13, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v24
 
-    .line 1644
     .local v24, "timeColumn":I
-    const-string/jumbo v5, "packageName"
+    const-string v5, "packageName"
 
     invoke-interface {v13, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v17
 
-    .line 1645
     .local v17, "packageColumn":I
-    const-string/jumbo v5, "percentage"
+    const-string v5, "percentage"
 
     invoke-interface {v13, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v18
 
-    .line 1646
     .local v18, "percentageColumn":I
-    const-string/jumbo v5, "notified_time"
+    const-string v5, "notified_time"
 
     invoke-interface {v13, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v16
 
-    .line 1648
     .local v16, "notifiedTimeColumn":I
     invoke-interface {v13}, Landroid/database/Cursor;->getCount()I
 
@@ -8056,16 +7298,13 @@
 
     new-array v12, v5, [Ljava/lang/String;
 
-    .line 1649
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1650
     .local v20, "sb":Ljava/lang/StringBuilder;
     const/4 v14, 0x0
 
-    .line 1652
     .local v14, "index":I
     const-string v5, "Abusive app list:"
 
@@ -8075,7 +7314,6 @@
 
     move v15, v14
 
-    .line 1653
     .end local v14    # "index":I
     .local v15, "index":I
     :goto_0
@@ -8085,28 +7323,24 @@
 
     if-nez v5, :cond_0
 
-    .line 1654
     const/4 v5, 0x0
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 1655
     const-string v5, "Package name: "
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1656
     move/from16 v0, v17
 
     invoke-interface {v13, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v19
 
-    .line 1657
     .local v19, "pkgName":Ljava/lang/String;
     move-object/from16 v0, v20
 
@@ -8114,14 +7348,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1658
     const-string v5, " consumed "
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1659
     move/from16 v0, v18
 
     invoke-interface {v13, v0}, Landroid/database/Cursor;->getDouble(I)D
@@ -8132,14 +7364,12 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 1660
     const-string v5, " was found abusive at: "
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1661
     move/from16 v0, v24
 
     invoke-interface {v13, v0}, Landroid/database/Cursor;->getLong(I)J
@@ -8160,14 +7390,12 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1662
     const-string v5, " and last notified at: "
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1663
     move/from16 v0, v16
 
     invoke-interface {v13, v0}, Landroid/database/Cursor;->getLong(I)J
@@ -8188,7 +7416,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1664
     invoke-virtual/range {v20 .. v20}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -8197,10 +7424,8 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1665
     invoke-interface {v13}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1666
     add-int/lit8 v14, v15, 0x1
 
     .end local v15    # "index":I
@@ -8209,12 +7434,10 @@
 
     move v15, v14
 
-    .line 1667
     .end local v14    # "index":I
     .restart local v15    # "index":I
     goto :goto_0
 
-    .line 1669
     .end local v15    # "index":I
     .end local v16    # "notifiedTimeColumn":I
     .end local v17    # "packageColumn":I
@@ -8225,15 +7448,12 @@
     :cond_0
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
-    .line 1670
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1672
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v22
 
-    .line 1673
     .local v22, "time":J
     move-object/from16 v0, p0
 
@@ -8243,13 +7463,12 @@
 
     move-result-object v25
 
-    .line 1674
     .local v25, "totalData":Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "oneHourPower: "
+    const-string v6, "oneHourPower: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8323,10 +7542,8 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1678
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1679
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -8353,7 +7570,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1680
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -8380,10 +7596,8 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1681
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1685
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -8392,12 +7606,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1686
     monitor-exit p0
 
     return-void
 
-    .line 1637
     .end local v4    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v12    # "abuserList":[Ljava/lang/String;
     .end local v13    # "cursor":Landroid/database/Cursor;
@@ -8418,7 +7630,6 @@
     .param p2, "abuserList"    # [Ljava/lang/String;
 
     .prologue
-    .line 1689
     monitor-enter p0
 
     :try_start_0
@@ -8426,17 +7637,15 @@
 
     move-result-object v2
 
-    .line 1690
     .local v2, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v24, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v3, "yyyy-MM-dd HH:mm:ss.SSS"
+    const-string v3, "yyyy-MM-dd HH:mm:ss.SSS"
 
     move-object/from16 v0, v24
 
     invoke-direct {v0, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 1691
     .local v24, "sdf":Ljava/text/SimpleDateFormat;
     move-object/from16 v10, p2
 
@@ -8452,7 +7661,6 @@
 
     aget-object v16, v10, v12
 
-    .line 1692
     .local v16, "name":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -8496,7 +7704,6 @@
 
     move-result-object v11
 
-    .line 1694
     .local v11, "cursor":Landroid/database/Cursor;
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -8504,62 +7711,54 @@
 
     if-eqz v3, :cond_1
 
-    .line 1695
     const-string v3, "lcd_condition"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v13
 
-    .line 1696
     .local v13, "lcdColumn":I
-    const-string/jumbo v3, "time"
+    const-string v3, "time"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v28
 
-    .line 1697
     .local v28, "timeColumn":I
-    const-string/jumbo v3, "power"
+    const-string v3, "power"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v22
 
-    .line 1698
     .local v22, "powerColumn":I
-    const-string/jumbo v3, "totalpower"
+    const-string v3, "totalpower"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v29
 
-    .line 1699
     .local v29, "totalPowerColumn":I
-    const-string/jumbo v3, "network_usage"
+    const-string v3, "network_usage"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v17
 
-    .line 1700
     .local v17, "networkColumn":I
-    const-string/jumbo v3, "usage_time"
+    const-string v3, "usage_time"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v32
 
-    .line 1701
     .local v32, "usageColumn":I
-    const-string/jumbo v3, "wakeup_count"
+    const-string v3, "wakeup_count"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v33
 
-    .line 1703
     .local v33, "wakeUpColumn":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -8585,14 +7784,12 @@
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1704
     const-string v3, "lcd |        time        |    power    |   totalpower |    network    |    usage_time |    wakeUpCount"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1706
     :goto_1
     invoke-interface {v11}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -8600,12 +7797,10 @@
 
     if-nez v3, :cond_1
 
-    .line 1707
     invoke-interface {v11, v13}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v14
 
-    .line 1708
     .local v14, "lcdCondition":I
     move/from16 v0, v22
 
@@ -8613,7 +7808,6 @@
 
     move-result-wide v20
 
-    .line 1709
     .local v20, "power":D
     and-int/lit8 v3, v14, 0x8
 
@@ -8623,7 +7817,6 @@
 
     const-string v25, "OFF"
 
-    .line 1710
     .local v25, "strLcdCond":Ljava/lang/String;
     :goto_2
     move/from16 v0, v28
@@ -8632,7 +7825,6 @@
 
     move-result-wide v26
 
-    .line 1711
     .local v26, "time":J
     invoke-static/range {v26 .. v27}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -8644,7 +7836,6 @@
 
     move-result-object v23
 
-    .line 1712
     .local v23, "resultTime":Ljava/lang/String;
     move/from16 v0, v29
 
@@ -8652,7 +7843,6 @@
 
     move-result-wide v30
 
-    .line 1713
     .local v30, "totalPower":D
     move/from16 v0, v17
 
@@ -8660,7 +7850,6 @@
 
     move-result-wide v18
 
-    .line 1714
     .local v18, "networkUsage":J
     move/from16 v0, v32
 
@@ -8668,7 +7857,6 @@
 
     move-result-wide v34
 
-    .line 1715
     .local v34, "usageTime":J
     move/from16 v0, v33
 
@@ -8676,7 +7864,6 @@
 
     move-result v36
 
-    .line 1717
     .local v36, "wakeUpCount":I
     const-string v3, "%s | %s | %11.5f | %11.5f | %13d | %13d | %10d"
 
@@ -8740,14 +7927,12 @@
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1720
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
-    .line 1689
     .end local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v10    # "arr$":[Ljava/lang/String;
     .end local v11    # "cursor":Landroid/database/Cursor;
@@ -8778,7 +7963,6 @@
 
     throw v3
 
-    .line 1709
     .restart local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v10    # "arr$":[Ljava/lang/String;
     .restart local v11    # "cursor":Landroid/database/Cursor;
@@ -8801,7 +7985,6 @@
 
     goto :goto_2
 
-    .line 1723
     .end local v13    # "lcdColumn":I
     .end local v14    # "lcdCondition":I
     .end local v17    # "networkColumn":I
@@ -8814,17 +7997,14 @@
     :cond_1
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1724
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->println()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1691
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_0
 
-    .line 1727
     .end local v11    # "cursor":Landroid/database/Cursor;
     .end local v16    # "name":Ljava/lang/String;
     :cond_2
@@ -8840,7 +8020,6 @@
     .param p4, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1562
     monitor-enter p0
 
     :try_start_0
@@ -8848,7 +8027,6 @@
 
     move-result-object v8
 
-    .line 1564
     .local v8, "db":Landroid/database/sqlite/SQLiteDatabase;
     const-string v22, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\' AND name!=\'all\'"
 
@@ -8862,11 +8040,9 @@
 
     move-result-object v4
 
-    .line 1565
     .local v4, "c":Landroid/database/Cursor;
     const-wide/16 v2, 0x0
 
-    .line 1566
     .local v2, "allUidTotalPower":D
     invoke-interface {v4}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -8874,18 +8050,15 @@
 
     if-eqz v22, :cond_7
 
-    .line 1567
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 1568
     .local v6, "curTime":J
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getAppUsageStats()Ljava/util/Set;
 
     move-result-object v9
 
-    .line 1569
     .local v9, "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v4}, Landroid/database/Cursor;->isAfterLast()Z
@@ -8894,8 +8067,7 @@
 
     if-nez v22, :cond_5
 
-    .line 1570
-    const-string/jumbo v22, "name"
+    const-string v22, "name"
 
     move-object/from16 v0, v22
 
@@ -8909,7 +8081,6 @@
 
     move-result-object v19
 
-    .line 1572
     .local v19, "val":Ljava/lang/String;
     new-instance v22, Ljava/lang/StringBuilder;
 
@@ -8939,7 +8110,6 @@
 
     move-result-object v15
 
-    .line 1573
     .local v15, "selectQuery":Ljava/lang/String;
     const/16 v22, 0x0
 
@@ -8949,11 +8119,9 @@
 
     move-result-object v5
 
-    .line 1574
     .local v5, "cursor":Landroid/database/Cursor;
     invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1576
     const-string v22, "lcd_condition"
 
     move-object/from16 v0, v22
@@ -8962,9 +8130,8 @@
 
     move-result v10
 
-    .line 1577
     .local v10, "lcdColumn":I
-    const-string/jumbo v22, "time"
+    const-string v22, "time"
 
     move-object/from16 v0, v22
 
@@ -8972,9 +8139,8 @@
 
     move-result v18
 
-    .line 1578
     .local v18, "timeColumn":I
-    const-string/jumbo v22, "power"
+    const-string v22, "power"
 
     move-object/from16 v0, v22
 
@@ -8982,7 +8148,6 @@
 
     move-result v14
 
-    .line 1581
     .local v14, "powerColumn":I
     move/from16 v0, v18
 
@@ -8990,18 +8155,15 @@
 
     move-result-wide v16
 
-    .line 1582
     .local v16, "time":J
     const-wide/16 v20, 0x0
 
     .local v20, "totalPower":D
     const-wide/16 v12, 0x0
 
-    .line 1583
     .local v12, "power":D
     const/4 v11, 0x0
 
-    .line 1584
     .local v11, "lcdNtype":I
     sub-long v22, v6, v16
 
@@ -9011,10 +8173,8 @@
 
     if-ltz v22, :cond_0
 
-    .line 1585
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1588
     :cond_0
     :goto_1
     invoke-interface {v5}, Landroid/database/Cursor;->isAfterLast()Z
@@ -9023,37 +8183,30 @@
 
     if-nez v22, :cond_3
 
-    .line 1589
     invoke-interface {v5, v10}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v11
 
-    .line 1590
     move/from16 v0, v18
 
     invoke-interface {v5, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v16
 
-    .line 1591
     sub-long v22, v6, v16
 
     cmp-long v22, v22, p1
 
     if-gez v22, :cond_1
 
-    .line 1592
     if-nez p3, :cond_2
 
-    .line 1593
     invoke-interface {v5, v14}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v12
 
-    .line 1594
     add-double v20, v20, v12
 
-    .line 1601
     :cond_1
     :goto_2
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
@@ -9062,7 +8215,6 @@
 
     goto :goto_1
 
-    .line 1562
     .end local v2    # "allUidTotalPower":D
     .end local v4    # "c":Landroid/database/Cursor;
     .end local v5    # "cursor":Landroid/database/Cursor;
@@ -9085,7 +8237,6 @@
 
     throw v22
 
-    .line 1596
     .restart local v2    # "allUidTotalPower":D
     .restart local v4    # "c":Landroid/database/Cursor;
     .restart local v5    # "cursor":Landroid/database/Cursor;
@@ -9112,18 +8263,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1597
     :try_start_1
     invoke-interface {v5, v14}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v12
 
-    .line 1598
     add-double v20, v20, v12
 
     goto :goto_2
 
-    .line 1604
     :cond_3
     const-wide v22, 0x3f847ae147ae147bL    # 0.01
 
@@ -9131,7 +8279,6 @@
 
     if-lez v22, :cond_4
 
-    .line 1605
     new-instance v22, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v22 .. v22}, Ljava/lang/StringBuilder;-><init>()V
@@ -9168,19 +8315,15 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1608
     :cond_4
     add-double v2, v2, v20
 
-    .line 1609
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 1610
     invoke-interface {v4}, Landroid/database/Cursor;->moveToNext()Z
 
     goto/16 :goto_0
 
-    .line 1612
     .end local v5    # "cursor":Landroid/database/Cursor;
     .end local v10    # "lcdColumn":I
     .end local v11    # "lcdNtype":I
@@ -9198,10 +8341,8 @@
 
     if-gtz v22, :cond_6
 
-    .line 1613
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    .line 1615
     :cond_6
     new-instance v22, Ljava/lang/StringBuilder;
 
@@ -9229,7 +8370,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1617
     .end local v6    # "curTime":J
     .end local v9    # "launchedAppList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_7
@@ -9237,7 +8377,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1619
     monitor-exit p0
 
     return-void
@@ -9250,33 +8389,26 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1623
     const-string v0, "3 Hours batterystats in screen off:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1625
     const-wide/32 v0, 0xa4cb80
 
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/android/internal/os/BatteryStatsDBHelper;->dumpUsageList(JZLjava/io/PrintWriter;)V
 
-    .line 1627
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1629
     const-string v0, "24 Hours batterystats in screen off:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1631
     const-wide/32 v0, 0x5265c00
 
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/android/internal/os/BatteryStatsDBHelper;->dumpUsageList(JZLjava/io/PrintWriter;)V
 
-    .line 1632
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1634
     return-void
 .end method
 
@@ -9284,7 +8416,6 @@
     .locals 14
 
     .prologue
-    .line 1439
     monitor-enter p0
 
     :try_start_0
@@ -9292,9 +8423,8 @@
 
     move-result-object v0
 
-    .line 1440
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
-    const-string/jumbo v1, "power_consuming_packages"
+    const-string v1, "power_consuming_packages"
 
     const/4 v2, 0x2
 
@@ -9302,13 +8432,13 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x1
 
-    const-string/jumbo v4, "percentage"
+    const-string v4, "percentage"
 
     aput-object v4, v2, v3
 
@@ -9326,7 +8456,6 @@
 
     move-result-object v9
 
-    .line 1443
     .local v9, "cursor":Landroid/database/Cursor;
     if-eqz v9, :cond_1
 
@@ -9336,22 +8465,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 1444
-    const-string/jumbo v1, "packageName"
+    const-string v1, "packageName"
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v12
 
-    .line 1445
     .local v12, "packageColumn":I
-    const-string/jumbo v1, "percentage"
+    const-string v1, "percentage"
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v13
 
-    .line 1446
     .local v13, "percentageColumn":I
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
@@ -9359,14 +8485,12 @@
 
     new-array v8, v1, [Ljava/lang/String;
 
-    .line 1447
     .local v8, "abuserList":[Ljava/lang/String;
     const/4 v10, 0x0
 
     .local v10, "index":I
     move v11, v10
 
-    .line 1448
     .end local v10    # "index":I
     .local v11, "index":I
     :goto_0
@@ -9376,7 +8500,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1449
     add-int/lit8 v10, v11, 0x1
 
     .end local v11    # "index":I
@@ -9413,7 +8536,6 @@
 
     aput-object v1, v8, v11
 
-    .line 1451
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
 
     move v11, v10
@@ -9422,13 +8544,11 @@
     .restart local v11    # "index":I
     goto :goto_0
 
-    .line 1453
     :cond_0
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1457
     .end local v8    # "abuserList":[Ljava/lang/String;
     .end local v11    # "index":I
     .end local v12    # "packageColumn":I
@@ -9438,12 +8558,10 @@
 
     return-object v8
 
-    .line 1456
     :cond_1
     :try_start_1
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 1457
     const/4 v1, 0x0
 
     new-array v8, v1, [Ljava/lang/String;
@@ -9452,7 +8570,6 @@
 
     goto :goto_1
 
-    .line 1439
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v9    # "cursor":Landroid/database/Cursor;
     :catchall_0
@@ -9468,7 +8585,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 881
     monitor-enter p0
 
     :try_start_0
@@ -9500,7 +8616,6 @@
 
     move-result-object v16
 
-    .line 883
     .local v16, "selectQuery":Ljava/lang/String;
     const-string v20, "BatteryStatsDBHelper"
 
@@ -9508,7 +8623,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 884
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9535,12 +8649,10 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 886
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v9
 
-    .line 887
     .local v9, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/16 v20, 0x0
 
@@ -9552,9 +8664,8 @@
 
     move-result-object v8
 
-    .line 888
     .local v8, "cursor":Landroid/database/Cursor;
-    const-string/jumbo v20, "usage_time"
+    const-string v20, "usage_time"
 
     move-object/from16 v0, v20
 
@@ -9562,9 +8673,8 @@
 
     move-result v17
 
-    .line 889
     .local v17, "usageTimeColumn":I
-    const-string/jumbo v20, "power"
+    const-string v20, "power"
 
     move-object/from16 v0, v20
 
@@ -9572,15 +8682,12 @@
 
     move-result v11
 
-    .line 891
     .local v11, "powerColumn":I
     const-wide/16 v6, 0x0
 
-    .line 892
     .local v6, "appUsageTime":J
     const-wide/16 v14, 0x0
 
-    .line 893
     .local v14, "power":D
     invoke-interface {v8}, Landroid/database/Cursor;->moveToLast()Z
 
@@ -9588,18 +8695,15 @@
 
     if-eqz v20, :cond_1
 
-    .line 894
     move/from16 v0, v17
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
 
-    .line 895
     .local v4, "appTotalTime":J
     move-wide v6, v4
 
-    .line 896
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9624,12 +8728,10 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 897
     invoke-interface {v8, v11}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v14
 
-    .line 898
     :goto_0
     invoke-interface {v8}, Landroid/database/Cursor;->moveToPrevious()Z
 
@@ -9637,14 +8739,12 @@
 
     if-eqz v20, :cond_1
 
-    .line 899
     move/from16 v0, v17
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v18
 
-    .line 900
     .local v18, "tempTime":J
     const-string v20, "BatteryStatsDBHelper"
 
@@ -9672,7 +8772,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 901
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9697,7 +8796,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 903
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9722,19 +8820,15 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 906
     cmp-long v20, v18, v4
 
     if-lez v20, :cond_0
 
-    .line 907
     add-long v6, v6, v18
 
-    .line 909
     :cond_0
     move-wide/from16 v4, v18
 
-    .line 910
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9759,7 +8853,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 912
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9784,14 +8877,12 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 914
     invoke-interface {v8, v11}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v20
 
     add-double v14, v14, v20
 
-    .line 915
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9821,7 +8912,6 @@
 
     goto/16 :goto_0
 
-    .line 930
     .end local v4    # "appTotalTime":J
     .end local v6    # "appUsageTime":J
     .end local v8    # "cursor":Landroid/database/Cursor;
@@ -9834,7 +8924,6 @@
     :catch_0
     move-exception v10
 
-    .line 931
     .local v10, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v20, "BatteryStatsDBHelper"
@@ -9845,7 +8934,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 932
     const-wide/16 v12, 0x0
 
     .end local v10    # "e":Ljava/lang/Exception;
@@ -9854,7 +8942,6 @@
 
     return-wide v12
 
-    .line 918
     .restart local v6    # "appUsageTime":J
     .restart local v8    # "cursor":Landroid/database/Cursor;
     .restart local v9    # "db":Landroid/database/sqlite/SQLiteDatabase;
@@ -9866,7 +8953,6 @@
     :try_start_2
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 920
     const-string v20, "BatteryStatsDBHelper"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -9923,17 +9009,14 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 922
     const-wide/16 v20, 0x0
 
     cmp-long v20, v6, v20
 
     if-nez v20, :cond_2
 
-    .line 923
     const-wide/16 v6, 0x1
 
-    .line 925
     :cond_2
     const-string v20, "BatteryStatsDBHelper"
 
@@ -9971,7 +9054,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 927
     const-wide/high16 v20, 0x4059000000000000L    # 100.0
 
     mul-double v20, v20, v14
@@ -9994,7 +9076,6 @@
 
     div-double v12, v20, v22
 
-    .line 928
     .local v12, "i":D
     const-string v20, "BatteryStatsDBHelper"
 
@@ -10025,7 +9106,6 @@
 
     goto/16 :goto_1
 
-    .line 881
     .end local v6    # "appUsageTime":J
     .end local v8    # "cursor":Landroid/database/Cursor;
     .end local v9    # "db":Landroid/database/sqlite/SQLiteDatabase;
@@ -10047,7 +9127,6 @@
     .param p1, "screenCondition"    # I
 
     .prologue
-    .line 1022
     monitor-enter p0
 
     :try_start_0
@@ -10055,7 +9134,6 @@
 
     move-result-object v2
 
-    .line 1023
     .local v2, "db":Landroid/database/sqlite/SQLiteDatabase;
     const-string v5, "SELECT batterydelta,lcd_condition FROM Battery_Delta"
 
@@ -10065,7 +9143,6 @@
 
     move-result-object v1
 
-    .line 1025
     .local v1, "cursor":Landroid/database/Cursor;
     const-string v5, "batterydelta"
 
@@ -10073,7 +9150,6 @@
 
     move-result v0
 
-    .line 1026
     .local v0, "batteryDeltaColumn":I
     const-string v5, "lcd_condition"
 
@@ -10081,11 +9157,9 @@
 
     move-result v3
 
-    .line 1028
     .local v3, "lcdColumn":I
     const/4 v4, 0x0
 
-    .line 1030
     .local v4, "totalDelta":I
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -10093,20 +9167,17 @@
 
     if-eqz v5, :cond_2
 
-    .line 1032
     :cond_0
     const/4 v5, 0x2
 
     if-ne p1, v5, :cond_3
 
-    .line 1033
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v5
 
     add-int/2addr v4, v5
 
-    .line 1037
     :cond_1
     :goto_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
@@ -10115,18 +9186,15 @@
 
     if-nez v5, :cond_0
 
-    .line 1039
     :cond_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1041
     monitor-exit p0
 
     return v4
 
-    .line 1034
     :cond_3
     :try_start_1
     invoke-interface {v1, v3}, Landroid/database/Cursor;->getInt(I)I
@@ -10137,7 +9205,6 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 1035
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -10148,7 +9215,6 @@
 
     goto :goto_0
 
-    .line 1022
     .end local v0    # "batteryDeltaColumn":I
     .end local v1    # "cursor":Landroid/database/Cursor;
     .end local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
@@ -10176,10 +9242,8 @@
 
     const/4 v2, 0x0
 
-    .line 1045
     sparse-switch p1, :sswitch_data_0
 
-    .line 1068
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Wrong screen condition. Please check BatteryStatsDBHandler.java"
@@ -10188,7 +9252,6 @@
 
     throw v0
 
-    .line 1047
     :sswitch_0
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10196,16 +9259,13 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1048
     invoke-direct {p0, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->getScreenOffUsageList(Z)[B
 
     move-result-object v0
 
-    .line 1066
     :goto_0
     return-object v0
 
-    .line 1050
     :sswitch_1
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10213,14 +9273,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1051
     invoke-direct {p0, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->getScreenOffUsageList(Z)[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1053
     :sswitch_2
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10228,14 +9286,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1054
     invoke-direct {p0, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->getScreenOffUsageListOnlyApp(Z)[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1056
     :sswitch_3
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10243,14 +9299,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1057
     invoke-direct {p0, v3}, Lcom/android/internal/os/BatteryStatsDBHelper;->getScreenOffUsageListOnlyApp(Z)[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1059
     :sswitch_4
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10258,14 +9312,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1060
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getTotalUsageList()[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1062
     :sswitch_5
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10273,14 +9325,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1063
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getBatteryPercentageList()[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1065
     :sswitch_6
     const-string v0, "BatteryStatsDBHelper"
 
@@ -10288,14 +9338,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1066
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getConsumerListOnlyApp()[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1045
     nop
 
     :sswitch_data_0
@@ -10316,7 +9364,6 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 1461
     monitor-enter p0
 
     :try_start_0
@@ -10326,19 +9373,16 @@
 
     move-result-wide v2
 
-    .line 1462
     .local v2, "delta":J
     cmp-long v8, v2, v10
 
     if-nez v8, :cond_0
 
-    .line 1512
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1466
     :cond_0
     const-wide/32 v8, 0x5265c00
 
@@ -10346,7 +9390,6 @@
 
     if-ltz v8, :cond_1
 
-    .line 1468
     :try_start_1
     const-string v8, "BatteryStatsDBHelper"
 
@@ -10376,18 +9419,15 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1469
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 1470
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1472
     const/4 v8, 0x7
 
     const/4 v9, 0x7
@@ -10395,13 +9435,11 @@
     :try_start_2
     invoke-virtual {p0, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsDBHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
-    .line 1473
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1477
     :try_start_3
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_3
@@ -10409,7 +9447,6 @@
 
     goto :goto_0
 
-    .line 1461
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v2    # "delta":J
     :catchall_0
@@ -10419,20 +9456,17 @@
 
     throw v8
 
-    .line 1474
     .restart local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2    # "delta":J
     :catch_0
     move-exception v4
 
-    .line 1475
     .local v4, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1477
     :try_start_5
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
@@ -10446,7 +9480,6 @@
 
     throw v8
 
-    .line 1482
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_1
     cmp-long v8, v2, v10
@@ -10471,7 +9504,6 @@
 
     move-result-object v1
 
-    .line 1483
     .local v1, "deltaStr":Ljava/lang/String;
     :goto_1
     const-string v8, "BatteryStatsDBHelper"
@@ -10496,18 +9528,15 @@
 
     invoke-static {v8, v9}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1484
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsDBHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    .line 1485
     .restart local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 1487
     :try_start_6
     const-string v8, "SELECT name FROM sqlite_master WHERE type=\'table\' AND name!=\'android_metadata\' AND name!=\'Battery_Delta\' AND name!=\'power_consuming_packages\' AND name!=\'null\'"
 
@@ -10517,7 +9546,6 @@
 
     move-result-object v5
 
-    .line 1488
     .local v5, "listCursor":Landroid/database/Cursor;
     invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -10525,7 +9553,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 1489
     :goto_2
     invoke-interface {v5}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -10533,8 +9560,7 @@
 
     if-nez v8, :cond_3
 
-    .line 1490
-    const-string/jumbo v8, "name"
+    const-string v8, "name"
 
     invoke-interface {v5, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -10544,7 +9570,6 @@
 
     move-result-object v6
 
-    .line 1491
     .local v6, "packageName":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -10580,11 +9605,9 @@
 
     move-result-object v7
 
-    .line 1493
     .local v7, "updateString":Ljava/lang/String;
     invoke-virtual {v0, v7}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 1494
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
@@ -10592,25 +9615,21 @@
 
     goto :goto_2
 
-    .line 1505
     .end local v5    # "listCursor":Landroid/database/Cursor;
     .end local v6    # "packageName":Ljava/lang/String;
     .end local v7    # "updateString":Ljava/lang/String;
     :catch_1
     move-exception v4
 
-    .line 1506
     .restart local v4    # "e":Ljava/lang/Exception;
     :try_start_7
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 1509
     :try_start_8
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 1511
     .end local v4    # "e":Ljava/lang/Exception;
     :goto_3
     const-string v8, "BatteryStatsDBHelper"
@@ -10621,7 +9640,6 @@
 
     goto/16 :goto_0
 
-    .line 1482
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v1    # "deltaStr":Ljava/lang/String;
     :cond_2
@@ -10633,7 +9651,6 @@
 
     goto :goto_1
 
-    .line 1497
     .restart local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .restart local v1    # "deltaStr":Ljava/lang/String;
     .restart local v5    # "listCursor":Landroid/database/Cursor;
@@ -10641,7 +9658,6 @@
     :try_start_9
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 1498
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -10660,11 +9676,9 @@
 
     move-result-object v7
 
-    .line 1499
     .restart local v7    # "updateString":Ljava/lang/String;
     invoke-virtual {v0, v7}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 1500
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -10693,16 +9707,13 @@
 
     move-result-object v7
 
-    .line 1502
     invoke-virtual {v0, v7}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 1503
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 1509
     :try_start_a
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
@@ -10724,19 +9735,17 @@
     .locals 8
 
     .prologue
-    .line 992
     monitor-enter p0
 
     :try_start_0
     const-string v0, "BatteryStatsDBHelper"
 
-    const-string/jumbo v1, "modifyHealingCampThresholdIfNecessary called "
+    const-string v1, "modifyHealingCampThresholdIfNecessary called "
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 994
     :try_start_1
     sget-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
@@ -10758,7 +9767,7 @@
 
     const/4 v3, 0x1
 
-    const-string/jumbo v4, "value"
+    const-string v4, "value"
 
     aput-object v4, v2, v3
 
@@ -10772,11 +9781,9 @@
 
     move-result-object v6
 
-    .line 997
     .local v6, "cThreshold":Landroid/database/Cursor;
     if-nez v6, :cond_0
 
-    .line 998
     const-string v0, "BatteryStatsDBHelper"
 
     const-string v1, "cursor null in modifyHealingCampThresholdIfNecessary"
@@ -10786,14 +9793,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1019
     .end local v6    # "cThreshold":Landroid/database/Cursor;
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1002
     .restart local v6    # "cThreshold":Landroid/database/Cursor;
     :cond_0
     :try_start_2
@@ -10803,14 +9808,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1003
     const-string v0, "BatteryStatsDBHelper"
 
     const-string v1, "cursor empty in modifyHealingCampThresholdIfNecessary"
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1004
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -10818,28 +9821,24 @@
 
     goto :goto_0
 
-    .line 1015
     .end local v6    # "cThreshold":Landroid/database/Cursor;
     :catch_0
     move-exception v7
 
-    .line 1016
     .local v7, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v0, "BatteryStatsDBHelper"
 
-    const-string/jumbo v1, "modifyHealingCampThresholdIfNecessary remote exception "
+    const-string v1, "modifyHealingCampThresholdIfNecessary remote exception "
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1017
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_0
 
-    .line 992
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
@@ -10848,7 +9847,6 @@
 
     throw v0
 
-    .line 1008
     .restart local v6    # "cThreshold":Landroid/database/Cursor;
     :cond_1
     :goto_1
@@ -10859,8 +9857,7 @@
 
     if-nez v0, :cond_3
 
-    .line 1009
-    const-string/jumbo v0, "one_hr_healingcamp_threshold"
+    const-string v0, "one_hr_healingcamp_threshold"
 
     const/4 v1, 0x0
 
@@ -10874,7 +9871,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1010
     const/4 v0, 0x1
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -10887,13 +9883,11 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper;->ONE_HOUR_THRESHOLD_HEALING_CAMP:D
 
-    .line 1012
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
 
-    .line 1014
     :cond_3
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -10907,19 +9901,17 @@
     .locals 8
 
     .prologue
-    .line 962
     monitor-enter p0
 
     :try_start_0
     const-string v0, "BatteryStatsDBHelper"
 
-    const-string/jumbo v1, "modifyThresholdIfNecessary called "
+    const-string v1, "modifyThresholdIfNecessary called "
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 964
     :try_start_1
     sget-object v0, Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
 
@@ -10941,7 +9933,7 @@
 
     const/4 v3, 0x1
 
-    const-string/jumbo v4, "value"
+    const-string v4, "value"
 
     aput-object v4, v2, v3
 
@@ -10955,11 +9947,9 @@
 
     move-result-object v6
 
-    .line 967
     .local v6, "cThreshold":Landroid/database/Cursor;
     if-nez v6, :cond_0
 
-    .line 968
     const-string v0, "BatteryStatsDBHelper"
 
     const-string v1, "cursor null in modifyThresholdIfNecessary"
@@ -10969,14 +9959,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 989
     .end local v6    # "cThreshold":Landroid/database/Cursor;
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 972
     .restart local v6    # "cThreshold":Landroid/database/Cursor;
     :cond_0
     :try_start_2
@@ -10986,14 +9974,12 @@
 
     if-nez v0, :cond_1
 
-    .line 973
     const-string v0, "BatteryStatsDBHelper"
 
     const-string v1, "cursor empty in modifyThresholdIfNecessary"
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 974
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -11001,28 +9987,24 @@
 
     goto :goto_0
 
-    .line 985
     .end local v6    # "cThreshold":Landroid/database/Cursor;
     :catch_0
     move-exception v7
 
-    .line 986
     .local v7, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v0, "BatteryStatsDBHelper"
 
-    const-string/jumbo v1, "modifyThresholdIfNecessary remote exception "
+    const-string v1, "modifyThresholdIfNecessary remote exception "
 
     invoke-static {v0, v1}, Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 987
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_0
 
-    .line 962
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
@@ -11031,7 +10013,6 @@
 
     throw v0
 
-    .line 978
     .restart local v6    # "cThreshold":Landroid/database/Cursor;
     :cond_1
     :goto_1
@@ -11042,8 +10023,7 @@
 
     if-nez v0, :cond_3
 
-    .line 979
-    const-string/jumbo v0, "one_hr_battery_threshold"
+    const-string v0, "one_hr_battery_threshold"
 
     const/4 v1, 0x0
 
@@ -11057,7 +10037,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 980
     const/4 v0, 0x1
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -11070,13 +10049,11 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper;->ONE_HOUR_THRESHOLD:D
 
-    .line 982
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
 
-    .line 984
     :cond_3
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -11091,28 +10068,21 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 226
     const-string v0, "CREATE TABLE Battery_Delta(lcd_condition INTEGER,time LONG,batterydelta INTEGER,batterypercent INTEGER)"
 
-    .line 230
     .local v0, "CREATE_BATTERY_DELTA_TABLE":Ljava/lang/String;
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 233
     const-string v2, "CREATE TABLE power_consuming_packages(time LONG,packageName TEXT,percentage DOUBLE,notified_time LONG,abusive_type TEXT,meta_data TEXT)"
 
-    .line 237
     .local v2, "createPowerConsumingPackageTable":Ljava/lang/String;
     invoke-virtual {p1, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 239
     const-string v1, "CREATE TABLE [all](time LONG,power DOUBLE,totalpower DOUBLE,batterydelta INTEGER,batterypercent INTEGER)"
 
-    .line 243
     .local v1, "createAllPowerTable":Ljava/lang/String;
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 244
     return-void
 .end method
 
@@ -11123,12 +10093,10 @@
     .param p3, "newVersion"    # I
 
     .prologue
-    .line 266
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 267
     .local v3, "tables":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v4, "SELECT * FROM sqlite_master WHERE type=\'table\';"
 
@@ -11138,11 +10106,9 @@
 
     move-result-object v0
 
-    .line 268
     .local v0, "cursor":Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 269
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -11150,14 +10116,12 @@
 
     if-nez v4, :cond_1
 
-    .line 270
     const/4 v4, 0x1
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 271
     .local v2, "tableName":Ljava/lang/String;
     const-string v4, "android_metadata"
 
@@ -11167,7 +10131,7 @@
 
     if-nez v4, :cond_0
 
-    const-string/jumbo v4, "sqlite_sequence"
+    const-string v4, "sqlite_sequence"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -11175,21 +10139,17 @@
 
     if-nez v4, :cond_0
 
-    .line 272
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 274
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_0
 
-    .line 276
     .end local v2    # "tableName":Ljava/lang/String;
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 278
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -11208,7 +10168,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 279
     .restart local v2    # "tableName":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -11238,11 +10197,9 @@
 
     goto :goto_1
 
-    .line 283
     .end local v2    # "tableName":Ljava/lang/String;
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsDBHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 284
     return-void
 .end method

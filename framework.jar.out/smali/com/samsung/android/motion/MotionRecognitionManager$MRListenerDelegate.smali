@@ -36,54 +36,44 @@
     .param p4, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 793
     iput-object p1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     invoke-direct {p0}, Lcom/samsung/android/motion/IMotionRecognitionCallback$Stub;-><init>()V
 
-    .line 785
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListenerPackageName:Ljava/lang/String;
 
-    .line 786
     const/16 v1, 0x35
 
     iput v1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->EVENT_FROM_SERVICE:I
 
-    .line 794
     iput-object p2, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListener:Lcom/samsung/android/motion/MRListener;
 
-    .line 795
     if-eqz p4, :cond_0
 
     invoke-virtual {p4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 796
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     iput p3, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mMotionEvents:I
 
-    .line 799
     invoke-static {}, Landroid/app/ActivityThread;->currentPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListenerPackageName:Ljava/lang/String;
 
-    .line 802
     new-instance v1, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate$1;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate$1;-><init>(Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;Landroid/os/Looper;Lcom/samsung/android/motion/MotionRecognitionManager;)V
 
     iput-object v1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 819
     return-void
 
-    .line 795
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     # getter for: Lcom/samsung/android/motion/MotionRecognitionManager;->mMainLooper:Landroid/os/Looper;
@@ -99,7 +89,6 @@
     .param p0, "x0"    # Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
 
     .prologue
-    .line 780
     iget-object v0, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListener:Lcom/samsung/android/motion/MRListener;
 
     return-object v0
@@ -111,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 822
     iget-object v0, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListener:Lcom/samsung/android/motion/MRListener;
 
     return-object v0
@@ -121,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 841
     iget-object v0, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListener:Lcom/samsung/android/motion/MRListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -135,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 846
     iget-object v0, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mListenerPackageName:Ljava/lang/String;
 
     return-object v0
@@ -145,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 826
     iget v0, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mMotionEvents:I
 
     return v0
@@ -156,26 +141,21 @@
     .param p1, "motionEvent"    # Lcom/samsung/android/motion/MREvent;
 
     .prologue
-    .line 834
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 835
     .local v0, "msg":Landroid/os/Message;
     const/16 v1, 0x35
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 836
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 837
     iget-object v1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 838
     return-void
 .end method
 
@@ -184,9 +164,7 @@
     .param p1, "motionevents"    # I
 
     .prologue
-    .line 830
     iput p1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->mMotionEvents:I
 
-    .line 831
     return-void
 .end method

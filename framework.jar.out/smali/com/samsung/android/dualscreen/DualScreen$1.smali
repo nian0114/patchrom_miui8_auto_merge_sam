@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 86
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 87
     .local v0, "index":I
     if-ltz v0, :cond_0
 
@@ -62,31 +59,27 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 88
     invoke-static {}, Lcom/samsung/android/dualscreen/DualScreen;->values()[Lcom/samsung/android/dualscreen/DualScreen;
 
     move-result-object v1
 
     aget-object v1, v1, v0
 
-    .line 93
     :goto_0
     return-object v1
 
-    .line 90
     :cond_0
     sget-boolean v1, Lcom/samsung/android/dualscreen/DualScreenManager;->DEBUG_WARNING:Z
 
     if-eqz v1, :cond_1
 
-    .line 91
     const-string v1, "DualScreen"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "wrong index !! index="
+    const-string v3, "wrong index !! index="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,7 +111,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_1
     sget-object v1, Lcom/samsung/android/dualscreen/DualScreen;->MAIN:Lcom/samsung/android/dualscreen/DualScreen;
 
@@ -130,7 +122,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 83
     invoke-virtual {p0, p1}, Lcom/samsung/android/dualscreen/DualScreen$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/dualscreen/DualScreen;
 
     move-result-object v0
@@ -143,7 +134,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 98
     new-array v0, p1, [Lcom/samsung/android/dualscreen/DualScreen;
 
     return-object v0
@@ -154,7 +144,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 83
     invoke-virtual {p0, p1}, Lcom/samsung/android/dualscreen/DualScreen$1;->newArray(I)[Lcom/samsung/android/dualscreen/DualScreen;
 
     move-result-object v0

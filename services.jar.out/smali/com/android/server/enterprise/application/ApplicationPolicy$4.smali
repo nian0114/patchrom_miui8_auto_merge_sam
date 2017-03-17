@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1654
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1658
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->getPackageName(Landroid/content/Intent;)Ljava/lang/String;
@@ -47,19 +45,16 @@
 
     move-result-object v5
 
-    .line 1659
     .local v5, "pkgName":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1660
     .local v4, "pkgAction":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->getSendingUserId()I
 
     move-result v9
 
-    .line 1663
     .local v9, "userId":I
     if-eqz v5, :cond_1
 
@@ -86,7 +81,6 @@
 
     if-lez v10, :cond_1
 
-    .line 1665
     const-string v10, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v4, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -95,7 +89,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 1666
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -107,7 +100,6 @@
 
     move-result-object v7
 
-    .line 1667
     .local v7, "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -132,13 +124,11 @@
 
     move-result v6
 
-    .line 1668
     .local v6, "storedUid":I
     new-instance v0, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v0, v6}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    .line 1669
     .local v0, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -150,7 +140,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 1670
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const-string v11, "applicationUninstallationCount"
@@ -158,7 +147,6 @@
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->updateCount(ILjava/lang/String;Ljava/lang/String;)V
     invoke-static {v10, v6, v5, v11}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$1200(Lcom/android/server/enterprise/application/ApplicationPolicy;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1672
     const-string v10, "android.intent.extra.REPLACING"
 
     const/4 v11, 0x0
@@ -167,7 +155,6 @@
 
     move-result v2
 
-    .line 1674
     .local v2, "extraReplacing":Z
     if-nez v2, :cond_0
 
@@ -180,7 +167,6 @@
 
     if-nez v10, :cond_0
 
-    .line 1675
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const/4 v11, 0x2
@@ -194,7 +180,6 @@
 
     goto :goto_0
 
-    .line 1705
     .end local v0    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
     .end local v2    # "extraReplacing":Z
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -203,17 +188,14 @@
     :catch_0
     move-exception v1
 
-    .line 1706
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1708
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_1
     return-void
 
-    .line 1681
     :cond_2
     :try_start_1
     const-string v10, "android.intent.action.PACKAGE_CHANGED"
@@ -224,7 +206,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 1699
     :cond_3
     :goto_2
     const-string v10, "android.intent.action.PACKAGE_REMOVED"
@@ -235,7 +216,6 @@
 
     if-nez v10, :cond_1
 
-    .line 1700
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object v11, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -250,7 +230,6 @@
 
     goto :goto_1
 
-    .line 1683
     :cond_4
     const-string v10, "android.intent.action.PACKAGE_ADDED"
 
@@ -260,7 +239,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 1684
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -272,7 +250,6 @@
 
     move-result-object v8
 
-    .line 1685
     .local v8, "uidList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -297,13 +274,11 @@
 
     move-result v6
 
-    .line 1686
     .restart local v6    # "storedUid":I
     new-instance v0, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v0, v6}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    .line 1687
     .restart local v0    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -315,7 +290,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 1688
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const-string v11, "applicationInstallationCount"
@@ -323,7 +297,6 @@
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->updateCount(ILjava/lang/String;Ljava/lang/String;)V
     invoke-static {v10, v6, v5, v11}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$1200(Lcom/android/server/enterprise/application/ApplicationPolicy;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1690
     const-string v10, "ApplicationPolicy"
 
     const-string v11, "App install count incremented"
@@ -332,7 +305,6 @@
 
     goto :goto_3
 
-    .line 1694
     .end local v0    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
     .end local v6    # "storedUid":I
     :cond_6
@@ -345,7 +317,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 1695
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$4;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->updateSystemAppDisableState(Ljava/lang/String;)V

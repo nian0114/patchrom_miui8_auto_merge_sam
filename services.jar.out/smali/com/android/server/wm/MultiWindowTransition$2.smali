@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 175
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowTransition$2;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     iput-object p2, p0, Lcom/android/server/wm/MultiWindowTransition$2;->val$wtoken:Lcom/android/server/wm/AppWindowToken;
@@ -45,14 +44,12 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 186
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$2;->val$wtoken:Lcom/android/server/wm/AppWindowToken;
 
     const/4 v1, -0x1
 
     iput v1, v0, Lcom/android/server/wm/AppWindowToken;->mTargetTransit:I
 
-    .line 187
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 182
     return-void
 .end method
 
@@ -70,6 +66,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 178
     return-void
 .end method

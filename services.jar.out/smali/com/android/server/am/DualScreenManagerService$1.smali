@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 122
     iput-object p1, p0, Lcom/android/server/am/DualScreenManagerService$1;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
     invoke-direct {p0}, Landroid/os/RemoteCallbackList;-><init>()V
@@ -47,7 +46,6 @@
     .param p1, "x0"    # Landroid/os/IInterface;
 
     .prologue
-    .line 122
     check-cast p1, Lcom/samsung/android/multidisplay/dualscreen/IDualScreenCallbacks;
 
     .end local p1    # "x0":Landroid/os/IInterface;
@@ -61,12 +59,9 @@
     .param p1, "callback"    # Lcom/samsung/android/multidisplay/dualscreen/IDualScreenCallbacks;
 
     .prologue
-    .line 125
     invoke-super {p0, p1}, Landroid/os/RemoteCallbackList;->onCallbackDied(Landroid/os/IInterface;)V
 
-    .line 126
     invoke-virtual {p0, p1}, Lcom/android/server/am/DualScreenManagerService$1;->unregister(Landroid/os/IInterface;)Z
 
-    .line 127
     return-void
 .end method

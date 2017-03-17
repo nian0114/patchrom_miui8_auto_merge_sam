@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 748
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$3;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,16 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 751
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 752
     .local v16, "sb":Ljava/lang/StringBuilder;
     const-string v7, ""
 
-    .line 753
     .local v7, "OTAWifiProfile":Ljava/lang/String;
     const-string v17, "WifiService"
 
@@ -56,7 +52,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 754
     const-string v17, "NetworkSSID"
 
     move-object/from16 v0, p2
@@ -67,7 +62,6 @@
 
     move-result-object v6
 
-    .line 755
     .local v6, "NetworkSSID":Ljava/lang/String;
     const-string v17, "KeyMgmt"
 
@@ -79,7 +73,6 @@
 
     move-result-object v5
 
-    .line 756
     .local v5, "KeyMgmt":Ljava/lang/String;
     const-string v17, "EAPMethod"
 
@@ -91,7 +84,6 @@
 
     move-result-object v3
 
-    .line 757
     .local v3, "EAPMethod":Ljava/lang/String;
     const-string v17, "Phase2"
 
@@ -103,7 +95,6 @@
 
     move-result-object v9
 
-    .line 758
     .local v9, "Phase2":Ljava/lang/String;
     const-string v17, "Identity"
 
@@ -115,7 +106,6 @@
 
     move-result-object v4
 
-    .line 759
     .local v4, "Identity":Ljava/lang/String;
     const-string v17, "Password"
 
@@ -127,7 +117,6 @@
 
     move-result-object v8
 
-    .line 760
     .local v8, "Password":Ljava/lang/String;
     const-string v17, "WIFICount"
 
@@ -143,7 +132,6 @@
 
     move-result v10
 
-    .line 761
     .local v10, "WifiCount":I
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$100()Z
@@ -176,19 +164,16 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 764
     :cond_0
     const/16 v17, 0x0
 
     :try_start_0
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 765
     const-string v17, "network={\n"
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 766
     if-eqz v6, :cond_1
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -219,7 +204,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 767
     :cond_1
     if-eqz v5, :cond_2
 
@@ -251,7 +235,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 768
     :cond_2
     if-eqz v3, :cond_3
 
@@ -283,7 +266,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 769
     :cond_3
     if-eqz v4, :cond_4
 
@@ -315,7 +297,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 770
     :cond_4
     if-eqz v8, :cond_5
 
@@ -347,7 +328,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 771
     :cond_5
     if-eqz v9, :cond_6
 
@@ -361,12 +341,10 @@
 
     if-nez v17, :cond_6
 
-    .line 772
     const-string v17, "    phase2=\""
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 773
     const-string v17, "MSCHAPV2"
 
     move-object/from16 v0, v17
@@ -377,12 +355,10 @@
 
     if-eqz v17, :cond_c
 
-    .line 774
     const-string v17, "auth=MSCHAPV2\"\n"
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 778
     :cond_6
     :goto_0
     new-instance v17, Ljava/lang/StringBuilder;
@@ -422,24 +398,20 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 779
     const-string v17, "    vendor_spec_ssid=1\n}\n"
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 780
     # operator++ for: Lcom/android/server/wifi/WifiServiceImpl;->OTACount:I
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$1308()I
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 784
     :goto_1
     invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 785
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,7 +438,6 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->AddedWifiProfile:Ljava/lang/String;
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1402(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 786
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$100()Z
 
@@ -474,7 +445,6 @@
 
     if-eqz v17, :cond_7
 
-    .line 787
     const-string v17, "WifiService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -502,7 +472,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     const-string v17, "WifiService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -527,7 +496,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
     const-string v17, "WifiService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -555,7 +523,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 791
     :cond_7
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->OTACount:I
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$1300()I
@@ -566,7 +533,6 @@
 
     if-ne v0, v10, :cond_b
 
-    .line 792
     new-instance v17, Ljava/io/File;
 
     const-string v18, "/data/misc/wifi/default_ap.conf"
@@ -576,10 +542,8 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mFilePath:Ljava/io/File;
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1502(Ljava/io/File;)Ljava/io/File;
 
-    .line 793
     const/4 v13, 0x0
 
-    .line 794
     .local v13, "fw":Ljava/io/FileOutputStream;
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mFilePath:Ljava/io/File;
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$1500()Ljava/io/File;
@@ -592,14 +556,12 @@
 
     if-eqz v17, :cond_8
 
-    .line 795
     const-string v17, "WifiService"
 
     const-string v18, "Default file delete is called by OTA"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 796
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->mFilePath:Ljava/io/File;
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$1500()Ljava/io/File;
 
@@ -607,7 +569,6 @@
 
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->delete()Z
 
-    .line 799
     :cond_8
     :try_start_1
     new-instance v15, Ljava/io/File;
@@ -622,11 +583,9 @@
 
     invoke-direct {v15, v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 800
     .local v15, "profilefilepath":Ljava/io/File;
     invoke-virtual {v15}, Ljava/io/File;->createNewFile()Z
 
-    .line 801
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v17
@@ -635,7 +594,6 @@
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
 
-    .line 802
     new-instance v14, Ljava/io/FileOutputStream;
 
     const/16 v17, 0x1
@@ -649,7 +607,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 803
     .end local v13    # "fw":Ljava/io/FileOutputStream;
     .local v14, "fw":Ljava/io/FileOutputStream;
     :try_start_2
@@ -671,7 +628,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_9
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 812
     if-eqz v14, :cond_9
 
     :try_start_3
@@ -682,7 +638,6 @@
     :cond_9
     move-object v13, v14
 
-    .line 818
     .end local v14    # "fw":Ljava/io/FileOutputStream;
     .end local v15    # "profilefilepath":Ljava/io/File;
     .restart local v13    # "fw":Ljava/io/FileOutputStream;
@@ -693,36 +648,30 @@
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mWifiProfileLoaded:Z
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1602(Z)Z
 
-    .line 819
     const/16 v17, 0x0
 
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->mFirstScanAddProfile:Z
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1702(Z)Z
 
-    .line 820
     const/16 v17, 0x0
 
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->flagForDefaultAp:Z
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1802(Z)Z
 
-    .line 821
     const/16 v17, 0x0
 
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->OTACount:I
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1302(I)I
 
-    .line 822
     const-string v17, ""
 
     # setter for: Lcom/android/server/wifi/WifiServiceImpl;->AddedWifiProfile:Ljava/lang/String;
     invoke-static/range {v17 .. v17}, Lcom/android/server/wifi/WifiServiceImpl;->access$1402(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 824
     .end local v13    # "fw":Ljava/io/FileOutputStream;
     :cond_b
     return-void
 
-    .line 776
     :cond_c
     :try_start_4
     const-string v17, "auth=GTC\"\n"
@@ -733,11 +682,9 @@
 
     goto/16 :goto_0
 
-    .line 781
     :catch_0
     move-exception v11
 
-    .line 782
     .local v11, "e":Ljava/lang/NullPointerException;
     const-string v17, "WifiService"
 
@@ -747,14 +694,12 @@
 
     goto/16 :goto_1
 
-    .line 813
     .end local v11    # "e":Ljava/lang/NullPointerException;
     .restart local v14    # "fw":Ljava/io/FileOutputStream;
     .restart local v15    # "profilefilepath":Ljava/io/File;
     :catch_1
     move-exception v12
 
-    .line 814
     .local v12, "e2":Ljava/lang/Exception;
     const-string v17, "WifiService"
 
@@ -766,18 +711,15 @@
 
     move-object v13, v14
 
-    .line 816
     .end local v14    # "fw":Ljava/io/FileOutputStream;
     .restart local v13    # "fw":Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 804
     .end local v12    # "e2":Ljava/lang/Exception;
     .end local v15    # "profilefilepath":Ljava/io/File;
     :catch_2
     move-exception v11
 
-    .line 805
     .local v11, "e":Ljava/io/FileNotFoundException;
     :goto_3
     :try_start_5
@@ -789,7 +731,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 812
     if-eqz v13, :cond_a
 
     :try_start_6
@@ -799,11 +740,9 @@
 
     goto :goto_2
 
-    .line 813
     :catch_3
     move-exception v12
 
-    .line 814
     .restart local v12    # "e2":Ljava/lang/Exception;
     const-string v17, "WifiService"
 
@@ -815,13 +754,11 @@
 
     goto :goto_2
 
-    .line 806
     .end local v11    # "e":Ljava/io/FileNotFoundException;
     .end local v12    # "e2":Ljava/lang/Exception;
     :catch_4
     move-exception v11
 
-    .line 807
     .local v11, "e":Ljava/io/IOException;
     :goto_4
     :try_start_7
@@ -829,7 +766,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 812
     if-eqz v13, :cond_a
 
     :try_start_8
@@ -839,11 +775,9 @@
 
     goto :goto_2
 
-    .line 813
     :catch_5
     move-exception v12
 
-    .line 814
     .restart local v12    # "e2":Ljava/lang/Exception;
     const-string v17, "WifiService"
 
@@ -855,13 +789,11 @@
 
     goto :goto_2
 
-    .line 808
     .end local v11    # "e":Ljava/io/IOException;
     .end local v12    # "e2":Ljava/lang/Exception;
     :catch_6
     move-exception v11
 
-    .line 809
     .local v11, "e":Ljava/lang/Exception;
     :goto_5
     :try_start_9
@@ -893,7 +825,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 812
     if-eqz v13, :cond_a
 
     :try_start_a
@@ -903,11 +834,9 @@
 
     goto/16 :goto_2
 
-    .line 813
     :catch_7
     move-exception v12
 
-    .line 814
     .restart local v12    # "e2":Ljava/lang/Exception;
     const-string v17, "WifiService"
 
@@ -919,13 +848,11 @@
 
     goto/16 :goto_2
 
-    .line 811
     .end local v11    # "e":Ljava/lang/Exception;
     .end local v12    # "e2":Ljava/lang/Exception;
     :catchall_0
     move-exception v17
 
-    .line 812
     :goto_6
     if-eqz v13, :cond_d
 
@@ -934,16 +861,13 @@
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_8
 
-    .line 815
     :cond_d
     :goto_7
     throw v17
 
-    .line 813
     :catch_8
     move-exception v12
 
-    .line 814
     .restart local v12    # "e2":Ljava/lang/Exception;
     const-string v18, "WifiService"
 
@@ -955,7 +879,6 @@
 
     goto :goto_7
 
-    .line 811
     .end local v12    # "e2":Ljava/lang/Exception;
     .end local v13    # "fw":Ljava/io/FileOutputStream;
     .restart local v14    # "fw":Ljava/io/FileOutputStream;
@@ -969,7 +892,6 @@
     .restart local v13    # "fw":Ljava/io/FileOutputStream;
     goto :goto_6
 
-    .line 808
     .end local v13    # "fw":Ljava/io/FileOutputStream;
     .restart local v14    # "fw":Ljava/io/FileOutputStream;
     :catch_9
@@ -981,7 +903,6 @@
     .restart local v13    # "fw":Ljava/io/FileOutputStream;
     goto :goto_5
 
-    .line 806
     .end local v13    # "fw":Ljava/io/FileOutputStream;
     .restart local v14    # "fw":Ljava/io/FileOutputStream;
     :catch_a
@@ -993,7 +914,6 @@
     .restart local v13    # "fw":Ljava/io/FileOutputStream;
     goto :goto_4
 
-    .line 804
     .end local v13    # "fw":Ljava/io/FileOutputStream;
     .restart local v14    # "fw":Ljava/io/FileOutputStream;
     :catch_b

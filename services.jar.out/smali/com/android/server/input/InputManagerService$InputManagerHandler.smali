@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 3257
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
-    .line 3258
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 3259
     return-void
 .end method
 
@@ -47,17 +44,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 3263
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 3308
     :goto_0
     :pswitch_0
     return-void
 
-    .line 3265
     :pswitch_1
     iget-object v5, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -72,7 +66,6 @@
 
     goto :goto_0
 
-    .line 3268
     :pswitch_2
     iget-object v4, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -85,7 +78,6 @@
 
     goto :goto_0
 
-    .line 3271
     :pswitch_3
     iget-object v4, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -94,7 +86,6 @@
 
     goto :goto_0
 
-    .line 3274
     :pswitch_4
     iget-object v4, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -103,7 +94,6 @@
 
     goto :goto_0
 
-    .line 3277
     :pswitch_5
     iget-object v4, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -112,13 +102,11 @@
 
     goto :goto_0
 
-    .line 3280
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 3281
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget v4, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
@@ -138,7 +126,6 @@
 
     or-long v2, v4, v6
 
-    .line 3282
     .local v2, "whenNanos":J
     iget-object v4, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -148,7 +135,6 @@
 
     move-result v1
 
-    .line 3283
     .local v1, "inTabletMode":Z
     iget-object v4, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -157,7 +143,6 @@
 
     goto :goto_0
 
-    .line 3287
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     .end local v1    # "inTabletMode":Z
     .end local v2    # "whenNanos":J
@@ -177,7 +162,6 @@
 
     goto :goto_0
 
-    .line 3291
     :pswitch_8
     iget-object v5, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -190,7 +174,6 @@
 
     goto :goto_0
 
-    .line 3295
     :pswitch_9
     iget-object v5, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -207,7 +190,6 @@
 
     goto :goto_0
 
-    .line 3298
     :pswitch_a
     iget-object v5, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -224,7 +206,6 @@
 
     goto :goto_0
 
-    .line 3303
     :pswitch_b
     iget-object v4, p0, Lcom/android/server/input/InputManagerService$InputManagerHandler;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -233,16 +214,14 @@
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayInputDrop(ZZZ)V
     invoke-static {v4, v6, v6, v5}, Lcom/android/server/input/InputManagerService;->access$1700(Lcom/android/server/input/InputManagerService;ZZZ)V
 
-    .line 3304
     const-string v4, "InputManager"
 
-    const-string/jumbo v5, "finished setDisplayInputDropForMillisecond : main dropped(false), sub dropped(false)"
+    const-string v5, "finished setDisplayInputDropForMillisecond : main dropped(false), sub dropped(false)"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3263
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

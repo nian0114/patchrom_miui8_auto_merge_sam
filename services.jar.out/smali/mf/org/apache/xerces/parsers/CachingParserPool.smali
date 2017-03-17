@@ -33,7 +33,6 @@
     .locals 2
 
     .prologue
-    .line 114
     new-instance v0, Lmf/org/apache/xerces/util/SymbolTable;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/util/SymbolTable;-><init>()V
@@ -44,7 +43,6 @@
 
     invoke-direct {p0, v0, v1}, Lmf/org/apache/xerces/parsers/CachingParserPool;-><init>(Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;)V
 
-    .line 115
     return-void
 .end method
 
@@ -56,30 +54,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     iput-boolean v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowSymbolTable:Z
 
-    .line 106
     iput-boolean v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowGrammarPool:Z
 
-    .line 125
     new-instance v0, Lmf/org/apache/xerces/util/SynchronizedSymbolTable;
 
     invoke-direct {v0, p1}, Lmf/org/apache/xerces/util/SynchronizedSymbolTable;-><init>(Lmf/org/apache/xerces/util/SymbolTable;)V
 
     iput-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedSymbolTable:Lmf/org/apache/xerces/util/SymbolTable;
 
-    .line 126
     new-instance v0, Lmf/org/apache/xerces/parsers/CachingParserPool$SynchronizedGrammarPool;
 
     invoke-direct {v0, p2}, Lmf/org/apache/xerces/parsers/CachingParserPool$SynchronizedGrammarPool;-><init>(Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;)V
 
     iput-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
-    .line 127
     return-void
 .end method
 
@@ -89,33 +81,28 @@
     .locals 3
 
     .prologue
-    .line 165
     iget-boolean v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowSymbolTable:Z
 
     if-eqz v2, :cond_0
 
-    .line 166
     new-instance v1, Lmf/org/apache/xerces/util/ShadowedSymbolTable;
 
     iget-object v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedSymbolTable:Lmf/org/apache/xerces/util/SymbolTable;
 
     invoke-direct {v1, v2}, Lmf/org/apache/xerces/util/ShadowedSymbolTable;-><init>(Lmf/org/apache/xerces/util/SymbolTable;)V
 
-    .line 168
     .local v1, "symbolTable":Lmf/org/apache/xerces/util/SymbolTable;
     :goto_0
     iget-boolean v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowGrammarPool:Z
 
     if-eqz v2, :cond_1
 
-    .line 169
     new-instance v0, Lmf/org/apache/xerces/parsers/CachingParserPool$ShadowedGrammarPool;
 
     iget-object v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     invoke-direct {v0, v2}, Lmf/org/apache/xerces/parsers/CachingParserPool$ShadowedGrammarPool;-><init>(Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;)V
 
-    .line 171
     .local v0, "grammarPool":Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
     :goto_1
     new-instance v2, Lmf/org/apache/xerces/parsers/DOMParser;
@@ -124,7 +111,6 @@
 
     return-object v2
 
-    .line 167
     .end local v0    # "grammarPool":Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
     .end local v1    # "symbolTable":Lmf/org/apache/xerces/util/SymbolTable;
     :cond_0
@@ -132,7 +118,6 @@
 
     goto :goto_0
 
-    .line 170
     .restart local v1    # "symbolTable":Lmf/org/apache/xerces/util/SymbolTable;
     :cond_1
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
@@ -144,33 +129,28 @@
     .locals 3
 
     .prologue
-    .line 176
     iget-boolean v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowSymbolTable:Z
 
     if-eqz v2, :cond_0
 
-    .line 177
     new-instance v1, Lmf/org/apache/xerces/util/ShadowedSymbolTable;
 
     iget-object v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedSymbolTable:Lmf/org/apache/xerces/util/SymbolTable;
 
     invoke-direct {v1, v2}, Lmf/org/apache/xerces/util/ShadowedSymbolTable;-><init>(Lmf/org/apache/xerces/util/SymbolTable;)V
 
-    .line 179
     .local v1, "symbolTable":Lmf/org/apache/xerces/util/SymbolTable;
     :goto_0
     iget-boolean v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowGrammarPool:Z
 
     if-eqz v2, :cond_1
 
-    .line 180
     new-instance v0, Lmf/org/apache/xerces/parsers/CachingParserPool$ShadowedGrammarPool;
 
     iget-object v2, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     invoke-direct {v0, v2}, Lmf/org/apache/xerces/parsers/CachingParserPool$ShadowedGrammarPool;-><init>(Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;)V
 
-    .line 182
     .local v0, "grammarPool":Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
     :goto_1
     new-instance v2, Lmf/org/apache/xerces/parsers/SAXParser;
@@ -179,7 +159,6 @@
 
     return-object v2
 
-    .line 178
     .end local v0    # "grammarPool":Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
     .end local v1    # "symbolTable":Lmf/org/apache/xerces/util/SymbolTable;
     :cond_0
@@ -187,7 +166,6 @@
 
     goto :goto_0
 
-    .line 181
     .restart local v1    # "symbolTable":Lmf/org/apache/xerces/util/SymbolTable;
     :cond_1
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
@@ -199,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedSymbolTable:Lmf/org/apache/xerces/util/SymbolTable;
 
     return-object v0
@@ -209,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fSynchronizedGrammarPool:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     return-object v0
@@ -220,9 +196,7 @@
     .param p1, "shadow"    # Z
 
     .prologue
-    .line 158
     iput-boolean p1, p0, Lmf/org/apache/xerces/parsers/CachingParserPool;->fShadowSymbolTable:Z
 
-    .line 159
     return-void
 .end method

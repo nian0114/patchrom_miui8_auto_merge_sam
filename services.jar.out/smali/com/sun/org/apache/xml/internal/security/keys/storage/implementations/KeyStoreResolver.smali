@@ -64,11 +64,11 @@
 
     new-instance v1, Ljava/io/FileInputStream;
 
-    const-string/jumbo v2, "data/com/sun/org/apache/xml/internal/security/samples/input/keystore.jks"
+    const-string v2, "data/com/sun/org/apache/xml/internal/security/samples/input/keystore.jks"
 
     invoke-direct {v1, v2}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v2, "xmlsecurity"
+    const-string v2, "xmlsecurity"
 
     invoke-virtual {v2}, Ljava/lang/String;->toCharArray()[C
 

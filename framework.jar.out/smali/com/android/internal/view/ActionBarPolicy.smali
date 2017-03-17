@@ -13,13 +13,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
-    .line 41
     return-void
 .end method
 
@@ -28,7 +25,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 36
     new-instance v0, Lcom/android/internal/view/ActionBarPolicy;
 
     invoke-direct {v0, p0}, Lcom/android/internal/view/ActionBarPolicy;-><init>(Landroid/content/Context;)V
@@ -42,7 +38,6 @@
     .locals 2
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -70,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -92,7 +86,6 @@
     .locals 2
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -112,7 +105,6 @@
     .locals 2
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -134,7 +126,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 67
     iget-object v6, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     const/4 v7, 0x0
@@ -147,7 +138,6 @@
 
     move-result-object v0
 
-    .line 69
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v6, 0x4
 
@@ -155,7 +145,6 @@
 
     move-result v3
 
-    .line 72
     .local v3, "height":I
     iget-object v6, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
@@ -163,16 +152,13 @@
 
     if-eqz v6, :cond_2
 
-    .line 73
     iget-object v1, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     check-cast v1, Landroid/app/Activity;
 
-    .line 74
     .local v1, "activity":Landroid/app/Activity;
     if-nez v1, :cond_0
 
-    .line 75
     new-instance v6, Ljava/lang/IllegalStateException;
 
     const-string v7, "activity is null!"
@@ -181,13 +167,11 @@
 
     throw v6
 
-    .line 78
     :cond_0
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBarTabSize()I
 
     move-result v2
 
-    .line 79
     .local v2, "customHeight":I
     invoke-virtual {v1}, Landroid/app/Activity;->checkNoEmbeddedTabs()Z
 
@@ -201,7 +185,6 @@
 
     const/4 v5, 0x1
 
-    .line 81
     .local v5, "useCustomHeight":Z
     :cond_1
     iget-object v6, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
@@ -210,14 +193,11 @@
 
     move-result-object v4
 
-    .line 82
     .local v4, "r":Landroid/content/res/Resources;
     if-eqz v5, :cond_3
 
-    .line 83
     move v3, v2
 
-    .line 93
     .end local v1    # "activity":Landroid/app/Activity;
     .end local v2    # "customHeight":I
     .end local v4    # "r":Landroid/content/res/Resources;
@@ -226,10 +206,8 @@
     :goto_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 94
     return v3
 
-    .line 85
     .restart local v1    # "activity":Landroid/app/Activity;
     .restart local v2    # "customHeight":I
     .restart local v4    # "r":Landroid/content/res/Resources;
@@ -241,7 +219,6 @@
 
     if-nez v6, :cond_2
 
-    .line 87
     const v6, 0x1050058
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -259,7 +236,6 @@
     .locals 3
 
     .prologue
-    .line 56
     iget-object v1, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -268,13 +244,11 @@
 
     iget v0, v1, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 57
     .local v0, "targetSdk":I
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 58
     iget-object v1, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -287,7 +261,6 @@
 
     move-result v1
 
-    .line 63
     :goto_0
     return v1
 
@@ -311,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;

@@ -39,37 +39,26 @@
 
     const/4 v0, 0x0
 
-    .line 1014
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
-    .line 1015
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1005
     iput-wide v2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->startTime:J
 
-    .line 1007
     iput-wide v2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->endTime:J
 
-    .line 1009
     iput-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->location:Ljava/lang/String;
 
-    .line 1011
     iput-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->description:Ljava/lang/String;
 
-    .line 1016
     iput-wide p2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->startTime:J
 
-    .line 1017
     iput-wide p4, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->endTime:J
 
-    .line 1018
     iput-object p6, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->location:Ljava/lang/String;
 
-    .line 1019
     iput-object p7, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->description:Ljava/lang/String;
 
-    .line 1020
     return-void
 .end method
 
@@ -79,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 1055
     iget-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->description:Ljava/lang/String;
 
     return-object v0
@@ -89,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 1037
     iget-wide v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->endTime:J
 
     return-wide v0
@@ -99,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 1046
     iget-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->location:Ljava/lang/String;
 
     return-object v0
@@ -109,7 +95,6 @@
     .locals 2
 
     .prologue
-    .line 1028
     iget-wide v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;->startTime:J
 
     return-wide v0

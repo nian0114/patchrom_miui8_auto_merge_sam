@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 702
     iput-object p1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl$ContentDispatcher;-><init>(Lmf/org/apache/xerces/impl/XMLDocumentScannerImpl;)V
@@ -39,7 +38,6 @@
 
     const/4 v3, 0x1
 
-    .line 751
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fDTDValidator:Lmf/org/apache/xerces/impl/dtd/XMLDTDValidatorFilter;
@@ -49,17 +47,14 @@
 
     if-nez v2, :cond_1
 
-    .line 752
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iput-boolean v3, v2, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fBindNamespaces:Z
 
-    .line 766
     :cond_0
     :goto_0
     return-void
 
-    .line 754
     :cond_1
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
@@ -74,12 +69,10 @@
 
     if-nez v2, :cond_0
 
-    .line 755
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iput-boolean v3, v2, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fBindNamespaces:Z
 
-    .line 756
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iget-object v3, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
@@ -95,7 +88,6 @@
 
     iput-boolean v3, v2, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fPerformValidation:Z
 
-    .line 758
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fDTDValidator:Lmf/org/apache/xerces/impl/dtd/XMLDTDValidatorFilter;
@@ -107,7 +99,6 @@
 
     move-result-object v1
 
-    .line 759
     .local v1, "source":Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
@@ -120,17 +111,13 @@
 
     move-result-object v0
 
-    .line 760
     .local v0, "handler":Lmf/org/apache/xerces/xni/XMLDocumentHandler;
     invoke-interface {v1, v0}, Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;->setDocumentHandler(Lmf/org/apache/xerces/xni/XMLDocumentHandler;)V
 
-    .line 761
     if-eqz v0, :cond_2
 
-    .line 762
     invoke-interface {v0, v1}, Lmf/org/apache/xerces/xni/XMLDocumentHandler;->setDocumentSource(Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;)V
 
-    .line 763
     :cond_2
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
@@ -141,7 +128,6 @@
 
     invoke-interface {v2, v4}, Lmf/org/apache/xerces/impl/dtd/XMLDTDValidatorFilter;->setDocumentSource(Lmf/org/apache/xerces/xni/parser/XMLDocumentSource;)V
 
-    .line 764
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     # getter for: Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fDTDValidator:Lmf/org/apache/xerces/impl/dtd/XMLDTDValidatorFilter;
@@ -170,7 +156,6 @@
 
     const/4 v0, 0x1
 
-    .line 721
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iget-object v1, v1, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fExternalSubsetResolver:Lmf/org/apache/xerces/impl/ExternalSubsetResolver;
@@ -183,7 +168,6 @@
 
     if-nez v1, :cond_1
 
-    .line 722
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iget-boolean v1, v1, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->fDisallowDoctype:Z
@@ -202,19 +186,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 723
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     invoke-virtual {v1}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->scanStartElementName()V
 
-    .line 724
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->resolveExternalSubsetAndRead()V
 
-    .line 725
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->reconfigurePipeline()V
 
-    .line 726
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     invoke-virtual {v1}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->scanStartElementAfterName()Z
@@ -223,12 +203,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 727
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->setScannerState(I)V
 
-    .line 728
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
@@ -237,15 +215,12 @@
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->setDispatcher(Lmf/org/apache/xerces/impl/XMLDocumentFragmentScannerImpl$Dispatcher;)V
 
-    .line 740
     :goto_0
     return v0
 
-    .line 733
     :cond_1
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->reconfigurePipeline()V
 
-    .line 734
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     invoke-virtual {v1}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->scanStartElement()Z
@@ -254,12 +229,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 735
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     invoke-virtual {v1, v2}, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;->setScannerState(I)V
 
-    .line 736
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
 
     iget-object v2, p0, Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher;->this$0:Lmf/org/apache/xerces/impl/XMLNSDocumentScannerImpl;
@@ -270,7 +243,6 @@
 
     goto :goto_0
 
-    .line 740
     :cond_2
     const/4 v0, 0x0
 

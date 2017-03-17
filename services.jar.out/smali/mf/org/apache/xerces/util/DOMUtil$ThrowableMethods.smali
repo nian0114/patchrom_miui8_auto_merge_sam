@@ -29,13 +29,10 @@
 
     const/4 v6, 0x0
 
-    .line 878
     sput-object v7, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableInitCauseMethod:Ljava/lang/reflect/Method;
 
-    .line 881
     sput-boolean v6, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableMethodsAvailable:Z
 
-    .line 888
     :try_start_0
     const-class v1, Ljava/lang/Throwable;
 
@@ -57,28 +54,23 @@
 
     sput-object v1, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableInitCauseMethod:Ljava/lang/reflect/Method;
 
-    .line 889
     const/4 v1, 0x1
 
     sput-boolean v1, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableMethodsAvailable:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 897
     .local v0, "exc":Ljava/lang/Exception;
     :goto_0
     return-void
 
-    .line 893
     .end local v0    # "exc":Ljava/lang/Exception;
     :catch_0
     move-exception v0
 
-    .line 894
     .restart local v0    # "exc":Ljava/lang/Exception;
     sput-object v7, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableInitCauseMethod:Ljava/lang/reflect/Method;
 
-    .line 895
     sput-boolean v6, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableMethodsAvailable:Z
 
     goto :goto_0
@@ -88,7 +80,6 @@
     .locals 0
 
     .prologue
-    .line 883
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -98,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 881
     sget-boolean v0, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableMethodsAvailable:Z
 
     return v0
@@ -108,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 878
     sget-object v0, Lmf/org/apache/xerces/util/DOMUtil$ThrowableMethods;->fgThrowableInitCauseMethod:Ljava/lang/reflect/Method;
 
     return-object v0

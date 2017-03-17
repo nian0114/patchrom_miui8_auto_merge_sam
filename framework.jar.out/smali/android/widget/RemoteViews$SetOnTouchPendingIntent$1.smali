@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4107
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetOnTouchPendingIntent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,18 +43,15 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 4109
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v7
 
-    .line 4110
     .local v7, "x":F
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v8
 
-    .line 4111
     .local v8, "y":F
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -63,36 +59,30 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 4146
     :goto_0
     return v9
 
-    .line 4114
     :pswitch_0
     :try_start_0
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 4115
     .local v2, "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "x_position"
+    const-string v0, "x_position"
 
     invoke-virtual {v2, v0, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
 
-    .line 4116
-    const-string/jumbo v0, "y_position"
+    const-string v0, "y_position"
 
     invoke-virtual {v2, v0, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
 
-    .line 4117
     const-string v0, "isUp"
 
     const/4 v1, 0x0
 
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4118
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -117,12 +107,10 @@
 
     goto :goto_0
 
-    .line 4123
     .end local v2    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v6
 
-    .line 4124
     .local v6, "e":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 
@@ -132,7 +120,6 @@
 
     goto :goto_0
 
-    .line 4129
     .end local v6    # "e":Landroid/content/IntentSender$SendIntentException;
     :pswitch_1
     :try_start_1
@@ -140,25 +127,21 @@
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 4130
     .restart local v2    # "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "x_position"
+    const-string v0, "x_position"
 
     invoke-virtual {v2, v0, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
 
-    .line 4131
-    const-string/jumbo v0, "y_position"
+    const-string v0, "y_position"
 
     invoke-virtual {v2, v0, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
 
-    .line 4132
     const-string v0, "isUp"
 
     const/4 v1, 0x1
 
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4133
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -183,12 +166,10 @@
 
     goto :goto_0
 
-    .line 4138
     .end local v2    # "intent":Landroid/content/Intent;
     :catch_1
     move-exception v6
 
-    .line 4139
     .restart local v6    # "e":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 
@@ -198,7 +179,6 @@
 
     goto :goto_0
 
-    .line 4111
     nop
 
     :pswitch_data_0

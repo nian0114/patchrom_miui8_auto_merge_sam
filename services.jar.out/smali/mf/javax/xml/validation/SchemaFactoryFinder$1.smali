@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/validation/SchemaFactoryFinder$1;->this$0:Lmf/javax/xml/validation/SchemaFactoryFinder;
 
-    .line 522
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;-><init>(Lmf/javax/xml/validation/SchemaFactoryFinder$SingleIterator;)V
@@ -40,14 +38,12 @@
     .locals 3
 
     .prologue
-    .line 524
     const-class v1, Lmf/javax/xml/validation/SchemaFactoryFinder;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 526
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     # getter for: Lmf/javax/xml/validation/SchemaFactoryFinder;->ss:Lmf/javax/xml/validation/SecuritySupport;
     invoke-static {}, Lmf/javax/xml/validation/SchemaFactoryFinder;->access$0()Lmf/javax/xml/validation/SecuritySupport;

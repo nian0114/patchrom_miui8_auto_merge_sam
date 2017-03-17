@@ -16,16 +16,12 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-object p1, p0, Lmf/org/apache/xerces/util/XMLErrorCode;->fDomain:Ljava/lang/String;
 
-    .line 48
     iput-object p2, p0, Lmf/org/apache/xerces/util/XMLErrorCode;->fKey:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -38,12 +34,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 68
     instance-of v2, p1, Lmf/org/apache/xerces/util/XMLErrorCode;
 
     if-nez v2, :cond_1
 
-    .line 71
     :cond_0
     :goto_0
     return v1
@@ -51,10 +45,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 70
     check-cast v0, Lmf/org/apache/xerces/util/XMLErrorCode;
 
-    .line 71
     .local v0, "err":Lmf/org/apache/xerces/util/XMLErrorCode;
     iget-object v2, p0, Lmf/org/apache/xerces/util/XMLErrorCode;->fDomain:Ljava/lang/String;
 
@@ -85,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 80
     iget-object v0, p0, Lmf/org/apache/xerces/util/XMLErrorCode;->fDomain:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -109,12 +100,9 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     iput-object p1, p0, Lmf/org/apache/xerces/util/XMLErrorCode;->fDomain:Ljava/lang/String;
 
-    .line 59
     iput-object p2, p0, Lmf/org/apache/xerces/util/XMLErrorCode;->fKey:Ljava/lang/String;
 
-    .line 60
     return-void
 .end method

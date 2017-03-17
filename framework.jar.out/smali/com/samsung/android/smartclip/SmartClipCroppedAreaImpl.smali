@@ -16,18 +16,14 @@
     .param p1, "rect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->mRect:Landroid/graphics/Rect;
 
-    .line 34
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->mRect:Landroid/graphics/Rect;
 
-    .line 35
     return-void
 .end method
 
@@ -36,36 +32,30 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 75
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 76
     .local v1, "screenPointOfView":Landroid/graphics/Point;
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
-    .line 77
     .local v0, "screenOffsetOfView":[I
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 78
     const/4 v2, 0x0
 
     aget v2, v0, v2
 
     iput v2, v1, Landroid/graphics/Point;->x:I
 
-    .line 79
     const/4 v2, 0x1
 
     aget v2, v0, v2
 
     iput v2, v1, Landroid/graphics/Point;->y:I
 
-    .line 80
     return-object v1
 .end method
 
@@ -74,29 +64,24 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 63
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 64
     .local v1, "screenRectOfView":Landroid/graphics/Rect;
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->getScreenPointOfView(Landroid/view/View;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 66
     .local v0, "screenPointOfView":Landroid/graphics/Point;
     iget v2, v0, Landroid/graphics/Point;->x:I
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 67
     iget v2, v0, Landroid/graphics/Point;->y:I
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 68
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -107,7 +92,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 69
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -118,7 +102,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 71
     return-object v1
 .end method
 
@@ -128,7 +111,6 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->mRect:Landroid/graphics/Rect;
@@ -143,18 +125,15 @@
     .param p1, "rect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 54
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->mRect:Landroid/graphics/Rect;
 
     if-nez v0, :cond_1
 
-    .line 55
     :cond_0
     const/4 v0, 0x0
 
-    .line 58
     :goto_0
     return v0
 
@@ -175,28 +154,23 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 44
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->mRect:Landroid/graphics/Rect;
 
     if-nez v1, :cond_1
 
-    .line 45
     :cond_0
     const/4 v1, 0x0
 
-    .line 49
     :goto_0
     return v1
 
-    .line 48
     :cond_1
     invoke-direct {p0, p1}, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->getScreenRectOfView(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 49
     .local v0, "viewRect":Landroid/graphics/Rect;
     invoke-virtual {p0, v0}, Lcom/samsung/android/smartclip/SmartClipCroppedAreaImpl;->intersects(Landroid/graphics/Rect;)Z
 

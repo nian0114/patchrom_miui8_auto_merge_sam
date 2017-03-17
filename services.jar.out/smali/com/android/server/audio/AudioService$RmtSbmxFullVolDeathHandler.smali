@@ -29,15 +29,12 @@
     .param p2, "cb"    # Landroid/os/IBinder;
 
     .prologue
-    .line 2754
     iput-object p1, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2755
     iput-object p2, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->mICallback:Landroid/os/IBinder;
 
-    .line 2757
     const/4 v1, 0x0
 
     :try_start_0
@@ -45,15 +42,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2761
     :goto_0
     return-void
 
-    .line 2758
     :catch_0
     move-exception v0
 
-    .line 2759
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AudioService"
 
@@ -70,7 +64,6 @@
     .locals 3
 
     .prologue
-    .line 2776
     const-string v0, "AudioService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -95,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2777
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     const/4 v1, 0x0
@@ -104,7 +96,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/audio/AudioService;->forceRemoteSubmixFullVolume(ZLandroid/os/IBinder;)V
 
-    .line 2778
     return-void
 .end method
 
@@ -112,7 +103,6 @@
     .locals 3
 
     .prologue
-    .line 2769
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->mICallback:Landroid/os/IBinder;
 
@@ -122,19 +112,16 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2773
     :goto_0
     return-void
 
-    .line 2770
     :catch_0
     move-exception v0
 
-    .line 2771
     .local v0, "e":Ljava/util/NoSuchElementException;
     const-string v1, "AudioService"
 
-    const-string/jumbo v2, "error unlinking to death"
+    const-string v2, "error unlinking to death"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -146,7 +133,6 @@
     .param p1, "cb"    # Landroid/os/IBinder;
 
     .prologue
-    .line 2764
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->mICallback:Landroid/os/IBinder;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z

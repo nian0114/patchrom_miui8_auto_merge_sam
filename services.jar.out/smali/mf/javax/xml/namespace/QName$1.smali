@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 132
     const-string v0, "com.sun.xml.namespace.QName.useCompatibleSerialVersionUID"
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;

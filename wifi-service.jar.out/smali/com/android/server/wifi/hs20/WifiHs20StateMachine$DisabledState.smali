@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1065
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,10 +36,8 @@
     .locals 3
 
     .prologue
-    .line 1068
     invoke-super {p0}, Lcom/android/internal/util/State;->enter()V
 
-    .line 1069
     const-string v0, "HS20StateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -67,7 +64,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1070
     return-void
 .end method
 
@@ -76,20 +72,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1074
     const/4 v0, 0x0
 
-    .line 1075
     .local v0, "bRetVal":Z
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 1108
     :goto_0
     return v0
 
-    .line 1077
     :sswitch_0
     const-string v2, "HS20StateMachine"
 
@@ -97,7 +89,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1078
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -110,13 +101,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$3000(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1079
     const/4 v0, 0x1
 
-    .line 1080
     goto :goto_0
 
-    .line 1082
     :sswitch_1
     const-string v2, "HS20StateMachine"
 
@@ -124,7 +112,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1083
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -137,13 +124,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$3200(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1084
     const/4 v0, 0x1
 
-    .line 1085
     goto :goto_0
 
-    .line 1088
     :sswitch_2
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -159,7 +143,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1092
     :goto_1
     const-string v2, "HS20StateMachine"
 
@@ -167,7 +150,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1093
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$DisabledState;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -180,23 +162,18 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$3300(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1094
     const/4 v0, 0x1
 
-    .line 1095
     goto :goto_0
 
-    .line 1089
     :catch_0
     move-exception v1
 
-    .line 1090
     .local v1, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1075
     :sswitch_data_0
     .sparse-switch
         0x1b5a -> :sswitch_2

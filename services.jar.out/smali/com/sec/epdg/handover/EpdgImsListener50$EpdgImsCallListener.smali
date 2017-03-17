@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 300
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/handover/EpdgImsListener50$1;
 
     .prologue
-    .line 300
     invoke-direct {p0, p1}, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;-><init>(Lcom/sec/epdg/handover/EpdgImsListener50;)V
 
     return-void
@@ -59,10 +57,8 @@
 
     const/4 v10, 0x0
 
-    .line 304
     if-nez p3, :cond_1
 
-    .line 305
     const-string v7, "[EpdgImsListener]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -85,20 +81,17 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 502
     :cond_0
     :goto_0
     return-void
 
-    .line 308
     :cond_1
-    const-string/jumbo v7, "sessionid"
+    const-string v7, "sessionid"
 
     invoke-virtual {p3, v7}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getInt(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 309
     .local v6, "sessionID":I
     const-string v7, "calltype"
 
@@ -106,11 +99,9 @@
 
     move-result v3
 
-    .line 311
     .local v3, "callType":I
     packed-switch p2, :pswitch_data_0
 
-    .line 499
     :cond_2
     :goto_1
     :pswitch_0
@@ -138,7 +129,6 @@
 
     goto :goto_0
 
-    .line 313
     :pswitch_1
     const-string v7, "[EpdgImsListener]"
 
@@ -146,7 +136,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onRinging: sessionId "
+    const-string v9, "onRinging: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -162,7 +152,6 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 314
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     invoke-virtual {v7}, Lcom/sec/epdg/handover/EpdgImsListener50;->getCallStatus()Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -173,26 +162,22 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 315
     const-string v7, "[EpdgImsListener]"
 
-    const-string/jumbo v8, "video call is ongoing and second call is coming, might be handover delayed case"
+    const-string v8, "video call is ongoing and second call is coming, might be handover delayed case"
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 317
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setIsHandoverDelayedCase(Z)V
     invoke-static {v7, v11}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$900(Lcom/sec/epdg/handover/EpdgImsListener50;Z)V
 
-    .line 318
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setHandoverDelayedSessionId(I)V
     invoke-static {v7, v6}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1000(Lcom/sec/epdg/handover/EpdgImsListener50;I)V
 
-    .line 321
     :cond_3
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -203,7 +188,6 @@
 
     goto :goto_0
 
-    .line 325
     :pswitch_2
     const-string v7, "[EpdgImsListener]"
 
@@ -211,7 +195,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onCalling: sessionId "
+    const-string v9, "onCalling: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -227,7 +211,6 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     sget-object v8, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_BLOCKHANDOFF:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -237,7 +220,6 @@
 
     goto/16 :goto_0
 
-    .line 331
     :pswitch_3
     const-string v7, "[EpdgImsListener]"
 
@@ -245,7 +227,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onCallEstablished: sessionId "
+    const-string v9, "onCallEstablished: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -271,10 +253,8 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     const/4 v0, 0x0
 
-    .line 333
     .local v0, "callCount":[I
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -283,17 +263,14 @@
 
     move-result-object v0
 
-    .line 334
     if-nez v0, :cond_4
 
-    .line 335
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "CALL_ESTABLISHED: callCount is null"
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     sget-object v8, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_IDLE:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -303,7 +280,6 @@
 
     goto/16 :goto_0
 
-    .line 339
     :cond_4
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -312,14 +288,12 @@
 
     move-result-object v2
 
-    .line 341
     .local v2, "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setCallStatus(Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
     invoke-static {v7, v2}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1100(Lcom/sec/epdg/handover/EpdgImsListener50;Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
 
-    .line 342
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->getIsHandoverDelayedCase()Z
@@ -329,19 +303,16 @@
 
     if-eqz v7, :cond_8
 
-    .line 343
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setIsHandoverDelayedCase(Z)V
     invoke-static {v7, v10}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$900(Lcom/sec/epdg/handover/EpdgImsListener50;Z)V
 
-    .line 344
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setHandoverDelayedSessionId(I)V
     invoke-static {v7, v10}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1000(Lcom/sec/epdg/handover/EpdgImsListener50;I)V
 
-    .line 345
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     invoke-virtual {v7}, Lcom/sec/epdg/handover/EpdgImsListener50;->getCallStatus()Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -362,7 +333,6 @@
 
     if-ne v7, v8, :cond_7
 
-    .line 347
     :cond_5
     const-string v7, "[EpdgImsListener]"
 
@@ -370,7 +340,6 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 348
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->isCallTypeAndDedicatedBearerTypeMatching()Z
@@ -380,7 +349,6 @@
 
     if-nez v7, :cond_6
 
-    .line 349
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "Appropriate dedicated bearer is not established"
@@ -389,7 +357,6 @@
 
     goto/16 :goto_0
 
-    .line 352
     :cond_6
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -398,7 +365,6 @@
 
     goto/16 :goto_0
 
-    .line 353
     :cond_7
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -410,14 +376,12 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 355
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "Newly established call is voice, need to inform handover delay"
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 357
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->informHandoverDelayToHandoverModule()V
@@ -425,7 +389,6 @@
 
     goto/16 :goto_0
 
-    .line 360
     :cond_8
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -436,7 +399,6 @@
 
     if-nez v7, :cond_9
 
-    .line 361
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "Appropriate dedicated bearer is not established"
@@ -445,7 +407,6 @@
 
     goto/16 :goto_0
 
-    .line 364
     :cond_9
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -454,7 +415,6 @@
 
     goto/16 :goto_0
 
-    .line 370
     .end local v0    # "callCount":[I
     .end local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     :pswitch_4
@@ -464,7 +424,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onCallSwitched: sessionId "
+    const-string v9, "onCallSwitched: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -490,10 +450,8 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 371
     const/4 v0, 0x0
 
-    .line 372
     .restart local v0    # "callCount":[I
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -502,17 +460,14 @@
 
     move-result-object v0
 
-    .line 373
     if-nez v0, :cond_a
 
-    .line 374
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "CALL_SWITCHED: callCount is null"
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     sget-object v8, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_IDLE:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -522,7 +477,6 @@
 
     goto/16 :goto_0
 
-    .line 378
     :cond_a
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -531,14 +485,12 @@
 
     move-result-object v2
 
-    .line 380
     .restart local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setCallStatus(Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
     invoke-static {v7, v2}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1100(Lcom/sec/epdg/handover/EpdgImsListener50;Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
 
-    .line 381
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->informCallStatusChangeToHandoverModule()V
@@ -546,7 +498,6 @@
 
     goto/16 :goto_0
 
-    .line 385
     .end local v0    # "callCount":[I
     .end local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     :pswitch_5
@@ -556,7 +507,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onCallHeld: sessionId "
+    const-string v9, "onCallHeld: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -572,7 +523,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "holdrequest"
+    const-string v9, "holdrequest"
 
     invoke-virtual {p3, v9}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getBoolean(Ljava/lang/String;)Z
 
@@ -590,7 +541,6 @@
 
     goto/16 :goto_0
 
-    .line 389
     :pswitch_6
     const-string v7, "[EpdgImsListener]"
 
@@ -598,7 +548,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onCallResumed: sessionId "
+    const-string v9, "onCallResumed: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -614,7 +564,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "resumerequest"
+    const-string v9, "resumerequest"
 
     invoke-virtual {p3, v9}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getBoolean(Ljava/lang/String;)Z
 
@@ -632,7 +582,6 @@
 
     goto/16 :goto_0
 
-    .line 393
     :pswitch_7
     const-string v7, "[EpdgImsListener]"
 
@@ -640,7 +589,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onCallEnded: sessionID "
+    const-string v9, "onCallEnded: sessionID "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -656,7 +605,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "reason"
+    const-string v9, "reason"
 
     invoke-virtual {p3, v9}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getInt(Ljava/lang/String;)I
 
@@ -672,20 +621,17 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 395
-    const-string/jumbo v7, "reason"
+    const-string v7, "reason"
 
     invoke-virtual {p3, v7}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 396
     .local v1, "callEndReason":I
     const/16 v7, 0x454
 
     if-ne v1, v7, :cond_b
 
-    .line 397
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "CALL_ENDED: do not consider this call end, as user is busy on other CS call"
@@ -694,11 +640,9 @@
 
     goto/16 :goto_0
 
-    .line 400
     :cond_b
     const/4 v0, 0x0
 
-    .line 401
     .restart local v0    # "callCount":[I
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -707,17 +651,14 @@
 
     move-result-object v0
 
-    .line 402
     if-nez v0, :cond_c
 
-    .line 403
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "CALL_ENDED: callCount is null"
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     sget-object v8, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_IDLE:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -727,14 +668,12 @@
 
     goto/16 :goto_0
 
-    .line 407
     :cond_c
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->checkForHandoverDelayedCase(I)V
     invoke-static {v7, v6}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1800(Lcom/sec/epdg/handover/EpdgImsListener50;I)V
 
-    .line 408
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->getFinalCallStatusFromCallCountList([IZ)Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -742,14 +681,12 @@
 
     move-result-object v2
 
-    .line 410
     .restart local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setCallStatus(Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
     invoke-static {v7, v2}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1100(Lcom/sec/epdg/handover/EpdgImsListener50;Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
 
-    .line 411
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->getIsHandoverDelayedCase()Z
@@ -759,7 +696,6 @@
 
     if-eqz v7, :cond_d
 
-    .line 412
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "This is handover delayed case, wait for 2nd call establish"
@@ -768,7 +704,6 @@
 
     goto/16 :goto_0
 
-    .line 415
     :cond_d
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -777,7 +712,6 @@
 
     goto/16 :goto_0
 
-    .line 420
     .end local v0    # "callCount":[I
     .end local v1    # "callEndReason":I
     .end local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -788,7 +722,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onChangeRequest: sessionId "
+    const-string v9, "onChangeRequest: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -816,7 +750,6 @@
 
     goto/16 :goto_0
 
-    .line 424
     :pswitch_9
     const-string v7, "[EpdgImsListener]"
 
@@ -824,7 +757,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onEarlyMediaStart: sessionId "
+    const-string v9, "onEarlyMediaStart: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -842,7 +775,6 @@
 
     goto/16 :goto_0
 
-    .line 428
     :pswitch_a
     const-string v7, "[EpdgImsListener]"
 
@@ -850,7 +782,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onError: sessionId "
+    const-string v9, "onError: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -866,7 +798,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "errorcode"
+    const-string v9, "errorcode"
 
     invoke-virtual {p3, v9}, Lcom/samsung/commonimsinterface/imscommon/IMSParameter;->getInt(Ljava/lang/String;)I
 
@@ -882,10 +814,8 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 429
     const/4 v0, 0x0
 
-    .line 430
     .restart local v0    # "callCount":[I
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -894,17 +824,14 @@
 
     move-result-object v0
 
-    .line 431
     if-nez v0, :cond_e
 
-    .line 432
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "CALL_ENDED: callCount is null"
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 433
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     sget-object v8, Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;->CALL_IDLE:Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -914,14 +841,12 @@
 
     goto/16 :goto_0
 
-    .line 436
     :cond_e
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->checkForHandoverDelayedCase(I)V
     invoke-static {v7, v6}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1800(Lcom/sec/epdg/handover/EpdgImsListener50;I)V
 
-    .line 437
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->getFinalCallStatusFromCallCountList([IZ)Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -929,14 +854,12 @@
 
     move-result-object v2
 
-    .line 439
     .restart local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setCallStatus(Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
     invoke-static {v7, v2}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$1100(Lcom/sec/epdg/handover/EpdgImsListener50;Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;)V
 
-    .line 440
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->getIsHandoverDelayedCase()Z
@@ -946,7 +869,6 @@
 
     if-eqz v7, :cond_f
 
-    .line 441
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "This is handover delayed case, wait for 2nd call establish"
@@ -955,7 +877,6 @@
 
     goto/16 :goto_0
 
-    .line 444
     :cond_f
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -966,7 +887,6 @@
 
     if-nez v7, :cond_10
 
-    .line 445
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "Appropriate dedicated bearer is not established"
@@ -975,7 +895,6 @@
 
     goto/16 :goto_0
 
-    .line 448
     :cond_10
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -984,7 +903,6 @@
 
     goto/16 :goto_0
 
-    .line 453
     .end local v0    # "callCount":[I
     .end local v2    # "callStatus":Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
     :pswitch_b
@@ -994,7 +912,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onConferenceCallParticipantAdded: sessionId "
+    const-string v9, "onConferenceCallParticipantAdded: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1012,7 +930,6 @@
 
     goto/16 :goto_0
 
-    .line 457
     :pswitch_c
     const-string v7, "[EpdgImsListener]"
 
@@ -1020,7 +937,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onConferenceCallParticipantRemoved: sessionId "
+    const-string v9, "onConferenceCallParticipantRemoved: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1038,7 +955,6 @@
 
     goto/16 :goto_0
 
-    .line 460
     :pswitch_d
     const-string v7, "bearerstate"
 
@@ -1046,7 +962,6 @@
 
     move-result v4
 
-    .line 461
     .local v4, "dedicatedBearerState":I
     const-string v7, "bearertype"
 
@@ -1054,7 +969,6 @@
 
     move-result v5
 
-    .line 462
     .local v5, "dedicatedBearerType":I
     const-string v7, "[EpdgImsListener]"
 
@@ -1062,7 +976,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "onDedicatedBearerChanged: sessionId "
+    const-string v9, "onDedicatedBearerChanged: sessionId "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1108,13 +1022,10 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 464
     if-nez v4, :cond_11
 
-    .line 465
     packed-switch v5, :pswitch_data_1
 
-    .line 473
     const-string v7, "[EpdgImsListener]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1139,7 +1050,6 @@
 
     goto/16 :goto_1
 
-    .line 467
     :pswitch_e
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -1148,7 +1058,6 @@
 
     goto/16 :goto_1
 
-    .line 470
     :pswitch_f
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -1157,11 +1066,9 @@
 
     goto/16 :goto_1
 
-    .line 478
     :cond_11
     packed-switch v5, :pswitch_data_2
 
-    .line 486
     const-string v7, "[EpdgImsListener]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1184,7 +1091,6 @@
 
     invoke-static {v7, v8}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 489
     :goto_2
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -1206,7 +1112,6 @@
 
     if-eq v7, v8, :cond_2
 
-    .line 491
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->isCallTypeAndDedicatedBearerTypeMatching()Z
@@ -1216,7 +1121,6 @@
 
     if-nez v7, :cond_12
 
-    .line 492
     const-string v7, "[EpdgImsListener]"
 
     const-string v8, "Appropriate dedicated bearer has not established yet"
@@ -1225,7 +1129,6 @@
 
     goto/16 :goto_0
 
-    .line 480
     :pswitch_10
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -1234,7 +1137,6 @@
 
     goto :goto_2
 
-    .line 483
     :pswitch_11
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -1243,7 +1145,6 @@
 
     goto :goto_2
 
-    .line 495
     :cond_12
     iget-object v7, p0, Lcom/sec/epdg/handover/EpdgImsListener50$EpdgImsCallListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
@@ -1252,7 +1153,6 @@
 
     goto/16 :goto_1
 
-    .line 311
     nop
 
     :pswitch_data_0
@@ -1291,14 +1191,12 @@
         :pswitch_d
     .end packed-switch
 
-    .line 465
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_e
         :pswitch_f
     .end packed-switch
 
-    .line 478
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_10

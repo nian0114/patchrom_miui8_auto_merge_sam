@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/movial/ipphone/EmergencyCallController$1;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     const-string v0, "EmergencyCallController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -100,7 +98,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController$1;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     # getter for: Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -116,7 +113,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 101
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController$1;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     sget-object v1, Lcom/movial/ipphone/IPUtils$EmergencyState;->CS_CALL_CONNECTED:Lcom/movial/ipphone/IPUtils$EmergencyState;
@@ -124,7 +120,6 @@
     # setter for: Lcom/movial/ipphone/EmergencyCallController;->mEmergencyState:Lcom/movial/ipphone/IPUtils$EmergencyState;
     invoke-static {v0, v1}, Lcom/movial/ipphone/EmergencyCallController;->access$002(Lcom/movial/ipphone/EmergencyCallController;Lcom/movial/ipphone/IPUtils$EmergencyState;)Lcom/movial/ipphone/IPUtils$EmergencyState;
 
-    .line 106
     :cond_0
     :goto_0
     const-string v0, "EmergencyCallController"
@@ -156,10 +151,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     return-void
 
-    .line 103
     :cond_1
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController$1;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
@@ -174,7 +167,6 @@
 
     if-nez p1, :cond_0
 
-    .line 104
     iget-object v0, p0, Lcom/movial/ipphone/EmergencyCallController$1;->this$0:Lcom/movial/ipphone/EmergencyCallController;
 
     # getter for: Lcom/movial/ipphone/EmergencyCallController;->mIPPhoneProxy:Lcom/movial/ipphone/IPPhoneProxy;

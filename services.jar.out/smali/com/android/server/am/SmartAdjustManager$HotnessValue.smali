@@ -26,12 +26,10 @@
     .param p2, "nHotnessType"    # I
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->this$0:Lcom/android/server/am/SmartAdjustManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -40,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
     const/4 v1, 0x1
@@ -49,7 +46,6 @@
 
     return-void
 
-    .line 74
     nop
 
     :array_0
@@ -66,7 +62,6 @@
     .param p1, "nHotnessType"    # I
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
     aget v1, v0, p1
@@ -83,7 +78,6 @@
     .param p1, "nHotnessType"    # I
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
     aget v0, v0, p1
@@ -96,7 +90,6 @@
     .param p1, "nHotnessType"    # I
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
     aget v1, v0, p1
@@ -113,7 +106,6 @@
     .param p1, "nHotnessType"    # I
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
     aget v1, v0, p1
@@ -131,7 +123,6 @@
     .param p2, "nHotnessType"    # I
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/am/SmartAdjustManager$HotnessValue;->nHotness:[I
 
     aput p1, v0, p2

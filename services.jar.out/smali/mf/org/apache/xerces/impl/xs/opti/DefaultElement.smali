@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -27,10 +25,8 @@
     .param p5, "nodeType"    # S
 
     .prologue
-    .line 43
     invoke-direct/range {p0 .. p5}, Lmf/org/apache/xerces/impl/xs/opti/NodeImpl;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V
 
-    .line 44
     return-void
 .end method
 
@@ -41,7 +37,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     return-object v0
@@ -53,7 +48,6 @@
     .param p2, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     return-object v0
@@ -64,7 +58,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return-object v0
@@ -76,7 +69,6 @@
     .param p2, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     return-object v0
@@ -87,7 +79,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     return-object v0
@@ -99,7 +90,6 @@
     .param p2, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return-object v0
@@ -109,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/4 v0, 0x0
 
     return-object v0
@@ -119,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 53
     const/4 v0, 0x0
 
     return-object v0
@@ -130,7 +118,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     const/4 v0, 0x0
 
     return v0
@@ -142,7 +129,6 @@
     .param p2, "localName"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -158,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 108
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -181,7 +166,6 @@
     .end annotation
 
     .prologue
-    .line 128
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -203,7 +187,6 @@
     .end annotation
 
     .prologue
-    .line 113
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -226,7 +209,6 @@
     .end annotation
 
     .prologue
-    .line 103
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -250,7 +232,6 @@
     .end annotation
 
     .prologue
-    .line 123
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -272,7 +253,6 @@
     .end annotation
 
     .prologue
-    .line 118
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -294,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 133
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -317,7 +296,6 @@
     .end annotation
 
     .prologue
-    .line 140
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -341,7 +319,6 @@
     .end annotation
 
     .prologue
-    .line 145
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -364,7 +341,6 @@
     .end annotation
 
     .prologue
-    .line 137
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9

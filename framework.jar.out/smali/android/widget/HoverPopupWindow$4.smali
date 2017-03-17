@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1134
     iput-object p1, p0, Landroid/widget/HoverPopupWindow$4;->this$0:Landroid/widget/HoverPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 1136
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$4;->this$0:Landroid/widget/HoverPopupWindow;
 
     # invokes: Landroid/widget/HoverPopupWindow;->dismissPopup()V
     invoke-static {v0}, Landroid/widget/HoverPopupWindow;->access$1600(Landroid/widget/HoverPopupWindow;)V
 
-    .line 1137
     return-void
 .end method

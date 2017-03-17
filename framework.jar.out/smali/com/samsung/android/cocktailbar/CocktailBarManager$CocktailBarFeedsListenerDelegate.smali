@@ -33,16 +33,12 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1688
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->this$0:Lcom/samsung/android/cocktailbar/CocktailBarManager;
 
-    .line 1689
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/ICocktailBarFeedsCallback$Stub;-><init>()V
 
-    .line 1690
     iput-object p2, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->mListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
-    .line 1691
     if-nez p3, :cond_0
 
     # getter for: Lcom/samsung/android/cocktailbar/CocktailBarManager;->mContext:Landroid/content/Context;
@@ -54,7 +50,6 @@
 
     move-result-object v0
 
-    .line 1693
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate$1;
@@ -63,10 +58,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 1706
     return-void
 
-    .line 1691
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -81,7 +74,6 @@
     .param p0, "x0"    # Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
     .prologue
-    .line 1680
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->mListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
     return-object v0
@@ -93,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 1709
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->mListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
 
     return-object v0
@@ -122,7 +113,6 @@
     .local p2, "feedsInfoList":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/cocktailbar/FeedsInfo;>;"
     const/4 v1, 0x0
 
-    .line 1715
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->mHandler:Landroid/os/Handler;
 
     invoke-static {v0, v1, p1, v1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;IIILjava/lang/Object;)Landroid/os/Message;
@@ -131,6 +121,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1717
     return-void
 .end method

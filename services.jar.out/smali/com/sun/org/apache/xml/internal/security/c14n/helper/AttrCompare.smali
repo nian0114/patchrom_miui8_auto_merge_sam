@@ -53,13 +53,13 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "http://www.w3.org/2000/xmlns/"
+    const-string v4, "http://www.w3.org/2000/xmlns/"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    const-string/jumbo v5, "http://www.w3.org/2000/xmlns/"
+    const-string v5, "http://www.w3.org/2000/xmlns/"
 
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -77,7 +77,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -88,7 +88,7 @@
     const-string v0, ""
 
     :cond_0
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

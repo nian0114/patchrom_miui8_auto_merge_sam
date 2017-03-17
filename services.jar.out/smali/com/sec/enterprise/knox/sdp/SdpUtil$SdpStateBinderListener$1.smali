@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 241
     iput-object p1, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener$1;->this$1:Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener;
 
     iput-object p2, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener$1;->val$this$0:Lcom/sec/enterprise/knox/sdp/SdpUtil;
@@ -42,12 +41,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 244
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpEvent;
 
-    .line 246
     .local v0, "e":Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpEvent;
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -57,10 +54,8 @@
 
     move-object v1, v0
 
-    .line 247
     check-cast v1, Lcom/sec/enterprise/knox/sdp/SdpUtil$StateChangeEvent;
 
-    .line 248
     .local v1, "ev":Lcom/sec/enterprise/knox/sdp/SdpUtil$StateChangeEvent;
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener$1;->this$1:Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener;
 
@@ -70,12 +65,10 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/enterprise/knox/sdp/SdpStateListener;->onStateChange(I)V
 
-    .line 254
     .end local v1    # "ev":Lcom/sec/enterprise/knox/sdp/SdpUtil$StateChangeEvent;
     :goto_0
     return-void
 
-    .line 249
     :cond_0
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -83,7 +76,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 250
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener$1;->this$1:Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener;
 
     iget-object v2, v2, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpStateBinderListener;->mListener:Lcom/sec/enterprise/knox/sdp/SdpStateListener;
@@ -92,7 +84,6 @@
 
     goto :goto_0
 
-    .line 252
     :cond_1
     const-string v2, "SdpUtil"
 

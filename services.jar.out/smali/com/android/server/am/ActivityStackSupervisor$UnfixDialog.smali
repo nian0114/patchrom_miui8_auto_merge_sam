@@ -42,31 +42,24 @@
 
     const/4 v3, 0x0
 
-    .line 7812
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 7813
     invoke-direct {p0, p2}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;)V
 
-    .line 7803
     iput v3, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->DO_NOTIHG_MSG:I
 
-    .line 7804
     iput v4, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->RELEASE_FIX_SCREEN_MODE_MSG:I
 
-    .line 7820
     new-instance v0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog$1;-><init>(Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->mHandler:Landroid/os/Handler;
 
-    .line 7814
     const-string v0, "Unfix application"
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 7815
     const/4 v0, -0x1
 
     const-string v1, "Unfix"
@@ -79,7 +72,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 7816
     const/4 v0, -0x2
 
     const-string v1, "Cancel"
@@ -92,7 +84,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 7817
     invoke-virtual {p0}, Lcom/android/server/am/ActivityStackSupervisor$UnfixDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -101,6 +92,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
-    .line 7818
     return-void
 .end method

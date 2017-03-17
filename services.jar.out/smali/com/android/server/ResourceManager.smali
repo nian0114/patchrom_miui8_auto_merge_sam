@@ -28,34 +28,28 @@
     .locals 1
 
     .prologue
-    .line 82
     const-string v0, "/data/security/whitelist"
 
     sput-object v0, Lcom/android/server/ResourceManager;->WHITELIST_SEANDROID_FOLDER:Ljava/lang/String;
 
-    .line 83
     const-string v0, "/data/security/whitelist/mac_permissions.xml"
 
     sput-object v0, Lcom/android/server/ResourceManager;->WHITELIST_MAC_PERM:Ljava/lang/String;
 
-    .line 84
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
-    .line 85
     const/4 v0, 0x1
 
     sput v0, Lcom/android/server/ResourceManager;->BT_TYPE:I
 
-    .line 86
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
-    .line 88
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/ResourceManager;->instance:Lcom/android/server/ResourceManager;
@@ -68,10 +62,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     return-void
 .end method
 
@@ -85,7 +77,6 @@
     .param p5, "resourceType"    # I
 
     .prologue
-    .line 987
     const-class v34, Lcom/android/server/ResourceManager;
 
     monitor-enter v34
@@ -97,7 +88,6 @@
 
     move-object/from16 v24, v0
 
-    .line 988
     .local v24, "seinfo":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -109,19 +99,16 @@
 
     move-result-object v6
 
-    .line 989
     .local v6, "category":Ljava/lang/String;
     move-object/from16 v0, p4
 
     iget-object v5, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 990
     .local v5, "allowcategory":Ljava/lang/String;
     move-object/from16 v0, p4
 
     iget-object v3, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 991
     .local v3, "allowContainerCategory":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -146,7 +133,6 @@
 
     move-result-object v16
 
-    .line 992
     .local v16, "issdcardsbaapp":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -171,15 +157,12 @@
 
     move-result-object v15
 
-    .line 993
     .local v15, "isbluetoothsbaapp":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 994
     .local v14, "isAddedMac":Z
     const/16 v17, 0x0
 
-    .line 996
     .local v17, "macPermExists":Z
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
     :try_end_0
@@ -187,18 +170,15 @@
 
     move-result-object v9
 
-    .line 997
     .local v9, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     const/4 v8, 0x0
 
-    .line 999
     .local v8, "doc":Lorg/w3c/dom/Document;
     :try_start_1
     invoke-virtual {v9}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v7
 
-    .line 1000
     .local v7, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -206,14 +186,12 @@
 
     if-eqz v33, :cond_c
 
-    .line 1004
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v33
 
     if-nez v33, :cond_0
 
-    .line 1005
     const/16 v33, 0x1
 
     move-object/from16 v0, p0
@@ -222,7 +200,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 1007
     :cond_0
     move-object/from16 v0, p0
 
@@ -230,10 +207,8 @@
 
     move-result-object v8
 
-    .line 1008
     const/16 v17, 0x1
 
-    .line 1024
     :goto_2
     invoke-interface {v8}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -241,8 +216,7 @@
 
     invoke-interface/range {v33 .. v33}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 1025
-    const-string/jumbo v33, "policy"
+    const-string v33, "policy"
 
     move-object/from16 v0, v33
 
@@ -250,11 +224,9 @@
 
     move-result-object v21
 
-    .line 1026
     .local v21, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/16 v20, 0x0
 
-    .line 1027
     .local v20, "policyElement":Lorg/w3c/dom/Element;
     const/16 v33, 0x0
 
@@ -269,9 +241,8 @@
     .end local v20    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v20, Lorg/w3c/dom/Element;
 
-    .line 1028
     .restart local v20    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v33, "signer"
+    const-string v33, "signer"
 
     move-object/from16 v0, v20
 
@@ -281,43 +252,34 @@
 
     move-result-object v26
 
-    .line 1029
     .local v26, "signer":Lorg/w3c/dom/NodeList;
     const/16 v28, 0x0
 
-    .line 1030
     .local v28, "signerElementCur":Lorg/w3c/dom/Element;
     const/16 v27, 0x0
 
-    .line 1031
     .local v27, "signerElement":Lorg/w3c/dom/Element;
     const/4 v4, 0x0
 
-    .line 1032
     .local v4, "allowallElement":Lorg/w3c/dom/Element;
     const/16 v18, 0x0
 
-    .line 1033
     .local v18, "newElement":Lorg/w3c/dom/Element;
     const/16 v25, 0x0
 
-    .line 1034
     .local v25, "seinfoElement":Lorg/w3c/dom/Element;
     const/16 v30, 0x0
 
-    .line 1035
     .local v30, "specialTag":Ljava/lang/String;
-    const-string/jumbo v30, "service"
+    const-string v30, "service"
 
-    .line 1036
     move-object/from16 v0, v30
 
     invoke-interface {v8, v0}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v18
 
-    .line 1037
-    const-string/jumbo v33, "name"
+    const-string v33, "name"
 
     move-object/from16 v0, v18
 
@@ -327,8 +289,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1038
-    const-string/jumbo v33, "seinfo"
+    const-string v33, "seinfo"
 
     move-object/from16 v0, v18
 
@@ -338,10 +299,8 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1039
     if-eqz v6, :cond_1
 
-    .line 1040
     const-string v33, "category"
 
     move-object/from16 v0, v18
@@ -350,11 +309,9 @@
 
     invoke-interface {v0, v1, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1042
     :cond_1
     if-eqz v5, :cond_2
 
-    .line 1043
     const-string v33, "allowcategory"
 
     move-object/from16 v0, v18
@@ -363,11 +320,9 @@
 
     invoke-interface {v0, v1, v5}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1045
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 1046
     const-string v33, "containerallowcategory"
 
     move-object/from16 v0, v18
@@ -376,12 +331,10 @@
 
     invoke-interface {v0, v1, v3}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1048
     :cond_3
     if-eqz v16, :cond_4
 
-    .line 1049
-    const-string/jumbo v33, "issdcardsbaapp"
+    const-string v33, "issdcardsbaapp"
 
     move-object/from16 v0, v18
 
@@ -391,12 +344,10 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1051
     :cond_4
     if-eqz v15, :cond_5
 
-    .line 1052
-    const-string/jumbo v33, "isbluetoothsbaapp"
+    const-string v33, "isbluetoothsbaapp"
 
     move-object/from16 v0, v18
 
@@ -404,7 +355,6 @@
 
     invoke-interface {v0, v1, v15}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1054
     :cond_5
     sget v33, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
@@ -414,8 +364,7 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 1055
-    const-string/jumbo v33, "sdcarduseridBL"
+    const-string v33, "sdcarduseridBL"
 
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -429,7 +378,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1060
     :cond_6
     sget v33, Lcom/android/server/ResourceManager;->BT_TYPE:I
 
@@ -439,7 +387,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 1061
     const-string v33, "bluetoothuseridBL"
 
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -454,9 +401,8 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1070
     :cond_7
-    const-string/jumbo v33, "signer"
+    const-string v33, "signer"
 
     move-object/from16 v0, v33
 
@@ -464,8 +410,7 @@
 
     move-result-object v27
 
-    .line 1071
-    const-string/jumbo v33, "seinfo"
+    const-string v33, "seinfo"
 
     move-object/from16 v0, v33
 
@@ -473,7 +418,6 @@
 
     move-result-object v25
 
-    .line 1072
     const-string v33, "allow-all"
 
     move-object/from16 v0, v33
@@ -482,8 +426,7 @@
 
     move-result-object v4
 
-    .line 1073
-    const-string/jumbo v33, "signature"
+    const-string v33, "signature"
 
     move-object/from16 v0, v27
 
@@ -493,8 +436,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1074
-    const-string/jumbo v33, "value"
+    const-string v33, "value"
 
     move-object/from16 v0, v25
 
@@ -504,10 +446,8 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1075
     if-eqz v6, :cond_8
 
-    .line 1076
     const-string v33, "category"
 
     move-object/from16 v0, v25
@@ -516,11 +456,9 @@
 
     invoke-interface {v0, v1, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1078
     :cond_8
     if-eqz v5, :cond_9
 
-    .line 1079
     const-string v33, "allowcategory"
 
     move-object/from16 v0, v25
@@ -529,7 +467,6 @@
 
     invoke-interface {v0, v1, v5}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1082
     :cond_9
     const/4 v13, 0x0
 
@@ -543,7 +480,6 @@
 
     if-ge v13, v0, :cond_f
 
-    .line 1083
     move-object/from16 v0, v26
 
     invoke-interface {v0, v13}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -553,9 +489,8 @@
     .end local v28    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v28, Lorg/w3c/dom/Element;
 
-    .line 1084
     .restart local v28    # "signerElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v33, "signature"
+    const-string v33, "signature"
 
     move-object/from16 v0, v28
 
@@ -575,7 +510,6 @@
 
     if-eqz v33, :cond_17
 
-    .line 1085
     move-object/from16 v0, v28
 
     move-object/from16 v1, p2
@@ -584,11 +518,9 @@
 
     move-result-object v12
 
-    .line 1086
     .local v12, "existElem":Lorg/w3c/dom/Element;
     if-eqz v12, :cond_16
 
-    .line 1090
     sget v33, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     move/from16 v0, p5
@@ -597,8 +529,7 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 1092
-    const-string/jumbo v33, "sdcarduseridBL"
+    const-string v33, "sdcarduseridBL"
 
     move-object/from16 v0, v33
 
@@ -627,10 +558,8 @@
 
     if-eqz v33, :cond_e
 
-    .line 1096
     const/16 v33, 0x0
 
-    .line 1167
     .end local v4    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v12    # "existElem":Lorg/w3c/dom/Element;
@@ -648,7 +577,6 @@
 
     return v33
 
-    .line 991
     .end local v8    # "doc":Lorg/w3c/dom/Document;
     .end local v9    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v14    # "isAddedMac":Z
@@ -660,14 +588,12 @@
 
     goto/16 :goto_0
 
-    .line 992
     .restart local v16    # "issdcardsbaapp":Ljava/lang/String;
     :cond_b
     const/16 v33, 0x0
 
     goto/16 :goto_1
 
-    .line 1014
     .restart local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v8    # "doc":Lorg/w3c/dom/Document;
     .restart local v9    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -685,7 +611,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1018
     :goto_5
     :try_start_3
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
@@ -694,7 +619,6 @@
 
     if-nez v33, :cond_d
 
-    .line 1019
     const/16 v33, 0x1
 
     move-object/from16 v0, p0
@@ -703,14 +627,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 1020
     :cond_d
     invoke-virtual {v7}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v8
 
-    .line 1021
-    const-string/jumbo v33, "policy"
+    const-string v33, "policy"
 
     move-object/from16 v0, v33
 
@@ -718,7 +640,6 @@
 
     move-result-object v23
 
-    .line 1022
     .local v23, "rootElement":Lorg/w3c/dom/Element;
     move-object/from16 v0, v23
 
@@ -733,32 +654,27 @@
 
     goto/16 :goto_2
 
-    .line 1156
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v23    # "rootElement":Lorg/w3c/dom/Element;
     :catch_0
     move-exception v11
 
-    .line 1157
     .local v11, "e1":Lorg/xml/sax/SAXException;
     :try_start_4
     invoke-virtual {v11}, Lorg/xml/sax/SAXException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1167
     .end local v11    # "e1":Lorg/xml/sax/SAXException;
     :goto_6
     const/16 v33, -0x1
 
     goto :goto_4
 
-    .line 1015
     .restart local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     :catch_1
     move-exception v10
 
-    .line 1016
     .local v10, "e":Ljava/io/IOException;
     :try_start_5
     invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
@@ -772,13 +688,11 @@
 
     goto :goto_5
 
-    .line 1158
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v10    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v11
 
-    .line 1159
     .local v11, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :try_start_6
     invoke-virtual {v11}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
@@ -787,7 +701,6 @@
 
     goto :goto_6
 
-    .line 987
     .end local v3    # "allowContainerCategory":Ljava/lang/String;
     .end local v5    # "allowcategory":Ljava/lang/String;
     .end local v6    # "category":Ljava/lang/String;
@@ -806,7 +719,6 @@
 
     throw v33
 
-    .line 1098
     .restart local v3    # "allowContainerCategory":Ljava/lang/String;
     .restart local v4    # "allowallElement":Lorg/w3c/dom/Element;
     .restart local v5    # "allowcategory":Ljava/lang/String;
@@ -832,10 +744,9 @@
     :cond_e
     const/16 v19, 0x0
 
-    .line 1099
     .local v19, "newValue":Ljava/lang/String;
     :try_start_7
-    const-string/jumbo v33, "sdcarduseridBL"
+    const-string v33, "sdcarduseridBL"
 
     move-object/from16 v0, v33
 
@@ -845,7 +756,7 @@
 
     if-eqz v33, :cond_12
 
-    const-string/jumbo v33, "sdcarduseridBL"
+    const-string v33, "sdcarduseridBL"
 
     move-object/from16 v0, v33
 
@@ -865,7 +776,6 @@
 
     if-nez v33, :cond_12
 
-    .line 1100
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -888,7 +798,7 @@
 
     move-result-object v33
 
-    const-string/jumbo v35, "sdcarduseridBL"
+    const-string v35, "sdcarduseridBL"
 
     move-object/from16 v0, v35
 
@@ -908,9 +818,8 @@
 
     move-result-object v19
 
-    .line 1104
     :goto_7
-    const-string/jumbo v33, "sdcarduseridBL"
+    const-string v33, "sdcarduseridBL"
 
     move-object/from16 v0, v33
 
@@ -918,43 +827,36 @@
 
     invoke-interface {v12, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1105
     const/4 v14, 0x1
 
-    .line 1135
     .end local v12    # "existElem":Lorg/w3c/dom/Element;
     .end local v19    # "newValue":Ljava/lang/String;
     :cond_f
     :goto_8
     if-nez v14, :cond_10
 
-    .line 1136
     move-object/from16 v0, v27
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1137
     move-object/from16 v0, v27
 
     move-object/from16 v1, v25
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1138
     move-object/from16 v0, v27
 
     move-object/from16 v1, v18
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1139
     move-object/from16 v0, v20
 
     move-object/from16 v1, v27
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1141
     :cond_10
     invoke-interface {v8}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -962,26 +864,21 @@
 
     invoke-interface/range {v33 .. v33}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 1142
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v32
 
-    .line 1143
     .local v32, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v32 .. v32}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v31
 
-    .line 1144
     .local v31, "transformer":Ljavax/xml/transform/Transformer;
     const/16 v29, 0x0
 
-    .line 1145
     .local v29, "source":Ljavax/xml/transform/dom/DOMSource;
     if-eqz v17, :cond_18
 
-    .line 1146
     new-instance v29, Ljavax/xml/transform/dom/DOMSource;
 
     .end local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
@@ -989,7 +886,6 @@
 
     invoke-direct {v0, v8}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 1150
     .restart local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     :goto_9
     new-instance v22, Ljavax/xml/transform/stream/StreamResult;
@@ -1000,7 +896,6 @@
 
     invoke-direct {v0, v1}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 1151
     .local v22, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v31
 
@@ -1010,14 +905,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 1152
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v33
 
     if-eqz v33, :cond_11
 
-    .line 1153
     const/16 v33, 0x0
 
     move-object/from16 v0, p0
@@ -1026,13 +919,11 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 1155
     :cond_11
     const/16 v33, 0x0
 
     goto/16 :goto_4
 
-    .line 1102
     .end local v22    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v31    # "transformer":Ljavax/xml/transform/Transformer;
@@ -1046,7 +937,6 @@
 
     goto :goto_7
 
-    .line 1108
     .end local v19    # "newValue":Ljava/lang/String;
     :cond_13
     sget v33, Lcom/android/server/ResourceManager;->BT_TYPE:I
@@ -1057,7 +947,6 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 1110
     const-string v33, "bluetoothuseridBL"
 
     move-object/from16 v0, v33
@@ -1080,16 +969,13 @@
 
     if-eqz v33, :cond_14
 
-    .line 1114
     const/16 v33, 0x0
 
     goto/16 :goto_4
 
-    .line 1116
     :cond_14
     const/16 v19, 0x0
 
-    .line 1117
     .restart local v19    # "newValue":Ljava/lang/String;
     const-string v33, "bluetoothuseridBL"
 
@@ -1121,7 +1007,6 @@
 
     if-nez v33, :cond_15
 
-    .line 1118
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -1164,7 +1049,6 @@
 
     move-result-object v19
 
-    .line 1122
     :goto_a
     const-string v33, "bluetoothuseridBL"
 
@@ -1174,13 +1058,10 @@
 
     invoke-interface {v12, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1123
     const/4 v14, 0x1
 
-    .line 1124
     goto/16 :goto_8
 
-    .line 1120
     :cond_15
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1188,7 +1069,6 @@
 
     goto :goto_a
 
-    .line 1127
     .end local v19    # "newValue":Ljava/lang/String;
     :cond_16
     move-object/from16 v0, v26
@@ -1203,20 +1083,16 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1131
     const/4 v14, 0x1
 
-    .line 1132
     goto/16 :goto_8
 
-    .line 1082
     .end local v12    # "existElem":Lorg/w3c/dom/Element;
     :cond_17
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_3
 
-    .line 1148
     .restart local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     .restart local v31    # "transformer":Ljavax/xml/transform/Transformer;
     .restart local v32    # "transformerFactory":Ljavax/xml/transform/TransformerFactory;
@@ -1240,7 +1116,6 @@
     .restart local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     goto/16 :goto_9
 
-    .line 1160
     .end local v4    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v13    # "i":I
@@ -1258,30 +1133,25 @@
     :catch_3
     move-exception v11
 
-    .line 1161
     .local v11, "e1":Ljavax/xml/transform/TransformerException;
     :try_start_8
     invoke-virtual {v11}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto/16 :goto_6
 
-    .line 1162
     .end local v11    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_4
     move-exception v11
 
-    .line 1163
     .local v11, "e1":Ljava/io/IOException;
     invoke-virtual {v11}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_6
 
-    .line 1164
     .end local v11    # "e1":Ljava/io/IOException;
     :catch_5
     move-exception v10
 
-    .line 1165
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_8
@@ -1300,7 +1170,6 @@
     .param p5, "resourceType"    # I
 
     .prologue
-    .line 337
     const-class v34, Lcom/android/server/ResourceManager;
 
     monitor-enter v34
@@ -1312,7 +1181,6 @@
 
     move-object/from16 v24, v0
 
-    .line 338
     .local v24, "seinfo":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -1324,19 +1192,16 @@
 
     move-result-object v6
 
-    .line 339
     .local v6, "category":Ljava/lang/String;
     move-object/from16 v0, p4
 
     iget-object v5, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 340
     .local v5, "allowcategory":Ljava/lang/String;
     move-object/from16 v0, p4
 
     iget-object v3, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 341
     .local v3, "allowContainerCategory":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -1361,7 +1226,6 @@
 
     move-result-object v16
 
-    .line 342
     .local v16, "issdcardsbaapp":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -1386,15 +1250,12 @@
 
     move-result-object v15
 
-    .line 343
     .local v15, "isbluetoothsbaapp":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 344
     .local v14, "isAddedMac":Z
     const/16 v17, 0x0
 
-    .line 346
     .local v17, "macPermExists":Z
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
     :try_end_0
@@ -1402,18 +1263,15 @@
 
     move-result-object v9
 
-    .line 347
     .local v9, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     const/4 v8, 0x0
 
-    .line 349
     .local v8, "doc":Lorg/w3c/dom/Document;
     :try_start_1
     invoke-virtual {v9}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v7
 
-    .line 350
     .local v7, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -1421,14 +1279,12 @@
 
     if-eqz v33, :cond_c
 
-    .line 354
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v33
 
     if-nez v33, :cond_0
 
-    .line 355
     const/16 v33, 0x1
 
     move-object/from16 v0, p0
@@ -1437,7 +1293,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 357
     :cond_0
     move-object/from16 v0, p0
 
@@ -1445,10 +1300,8 @@
 
     move-result-object v8
 
-    .line 358
     const/16 v17, 0x1
 
-    .line 374
     :goto_2
     invoke-interface {v8}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -1456,8 +1309,7 @@
 
     invoke-interface/range {v33 .. v33}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 375
-    const-string/jumbo v33, "policy"
+    const-string v33, "policy"
 
     move-object/from16 v0, v33
 
@@ -1465,11 +1317,9 @@
 
     move-result-object v21
 
-    .line 376
     .local v21, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/16 v20, 0x0
 
-    .line 377
     .local v20, "policyElement":Lorg/w3c/dom/Element;
     const/16 v33, 0x0
 
@@ -1484,9 +1334,8 @@
     .end local v20    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v20, Lorg/w3c/dom/Element;
 
-    .line 378
     .restart local v20    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v33, "signer"
+    const-string v33, "signer"
 
     move-object/from16 v0, v20
 
@@ -1496,43 +1345,34 @@
 
     move-result-object v26
 
-    .line 379
     .local v26, "signer":Lorg/w3c/dom/NodeList;
     const/16 v28, 0x0
 
-    .line 380
     .local v28, "signerElementCur":Lorg/w3c/dom/Element;
     const/16 v27, 0x0
 
-    .line 381
     .local v27, "signerElement":Lorg/w3c/dom/Element;
     const/4 v4, 0x0
 
-    .line 382
     .local v4, "allowallElement":Lorg/w3c/dom/Element;
     const/16 v18, 0x0
 
-    .line 383
     .local v18, "newElement":Lorg/w3c/dom/Element;
     const/16 v25, 0x0
 
-    .line 384
     .local v25, "seinfoElement":Lorg/w3c/dom/Element;
     const/16 v30, 0x0
 
-    .line 385
     .local v30, "specialTag":Ljava/lang/String;
-    const-string/jumbo v30, "service"
+    const-string v30, "service"
 
-    .line 386
     move-object/from16 v0, v30
 
     invoke-interface {v8, v0}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v18
 
-    .line 387
-    const-string/jumbo v33, "name"
+    const-string v33, "name"
 
     move-object/from16 v0, v18
 
@@ -1542,8 +1382,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
-    const-string/jumbo v33, "seinfo"
+    const-string v33, "seinfo"
 
     move-object/from16 v0, v18
 
@@ -1553,10 +1392,8 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 389
     if-eqz v6, :cond_1
 
-    .line 390
     const-string v33, "category"
 
     move-object/from16 v0, v18
@@ -1565,11 +1402,9 @@
 
     invoke-interface {v0, v1, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
     :cond_1
     if-eqz v5, :cond_2
 
-    .line 393
     const-string v33, "allowcategory"
 
     move-object/from16 v0, v18
@@ -1578,11 +1413,9 @@
 
     invoke-interface {v0, v1, v5}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 395
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 396
     const-string v33, "containerallowcategory"
 
     move-object/from16 v0, v18
@@ -1591,12 +1424,10 @@
 
     invoke-interface {v0, v1, v3}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 398
     :cond_3
     if-eqz v16, :cond_4
 
-    .line 399
-    const-string/jumbo v33, "issdcardsbaapp"
+    const-string v33, "issdcardsbaapp"
 
     move-object/from16 v0, v18
 
@@ -1606,12 +1437,10 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 401
     :cond_4
     if-eqz v15, :cond_5
 
-    .line 402
-    const-string/jumbo v33, "isbluetoothsbaapp"
+    const-string v33, "isbluetoothsbaapp"
 
     move-object/from16 v0, v18
 
@@ -1619,7 +1448,6 @@
 
     invoke-interface {v0, v1, v15}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
     :cond_5
     sget v33, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
@@ -1629,8 +1457,7 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 405
-    const-string/jumbo v33, "sdcarduserid"
+    const-string v33, "sdcarduserid"
 
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1644,7 +1471,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
     :cond_6
     sget v33, Lcom/android/server/ResourceManager;->BT_TYPE:I
 
@@ -1654,7 +1480,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 411
     const-string v33, "bluetoothuserid"
 
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1669,9 +1494,8 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 420
     :cond_7
-    const-string/jumbo v33, "signer"
+    const-string v33, "signer"
 
     move-object/from16 v0, v33
 
@@ -1679,8 +1503,7 @@
 
     move-result-object v27
 
-    .line 421
-    const-string/jumbo v33, "seinfo"
+    const-string v33, "seinfo"
 
     move-object/from16 v0, v33
 
@@ -1688,7 +1511,6 @@
 
     move-result-object v25
 
-    .line 422
     const-string v33, "allow-all"
 
     move-object/from16 v0, v33
@@ -1697,8 +1519,7 @@
 
     move-result-object v4
 
-    .line 423
-    const-string/jumbo v33, "signature"
+    const-string v33, "signature"
 
     move-object/from16 v0, v27
 
@@ -1708,8 +1529,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 424
-    const-string/jumbo v33, "value"
+    const-string v33, "value"
 
     move-object/from16 v0, v25
 
@@ -1719,10 +1539,8 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 425
     if-eqz v6, :cond_8
 
-    .line 426
     const-string v33, "category"
 
     move-object/from16 v0, v25
@@ -1731,11 +1549,9 @@
 
     invoke-interface {v0, v1, v6}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 428
     :cond_8
     if-eqz v5, :cond_9
 
-    .line 429
     const-string v33, "allowcategory"
 
     move-object/from16 v0, v25
@@ -1744,7 +1560,6 @@
 
     invoke-interface {v0, v1, v5}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
     :cond_9
     const/4 v13, 0x0
 
@@ -1758,7 +1573,6 @@
 
     if-ge v13, v0, :cond_f
 
-    .line 433
     move-object/from16 v0, v26
 
     invoke-interface {v0, v13}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -1768,9 +1582,8 @@
     .end local v28    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v28, Lorg/w3c/dom/Element;
 
-    .line 434
     .restart local v28    # "signerElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v33, "signature"
+    const-string v33, "signature"
 
     move-object/from16 v0, v28
 
@@ -1790,7 +1603,6 @@
 
     if-eqz v33, :cond_17
 
-    .line 435
     move-object/from16 v0, v28
 
     move-object/from16 v1, p2
@@ -1799,11 +1611,9 @@
 
     move-result-object v12
 
-    .line 436
     .local v12, "existElem":Lorg/w3c/dom/Element;
     if-eqz v12, :cond_16
 
-    .line 440
     sget v33, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     move/from16 v0, p5
@@ -1812,8 +1622,7 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 442
-    const-string/jumbo v33, "sdcarduserid"
+    const-string v33, "sdcarduserid"
 
     move-object/from16 v0, v33
 
@@ -1842,10 +1651,8 @@
 
     if-eqz v33, :cond_e
 
-    .line 446
     const/16 v33, 0x0
 
-    .line 517
     .end local v4    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v12    # "existElem":Lorg/w3c/dom/Element;
@@ -1863,7 +1670,6 @@
 
     return v33
 
-    .line 341
     .end local v8    # "doc":Lorg/w3c/dom/Document;
     .end local v9    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v14    # "isAddedMac":Z
@@ -1875,14 +1681,12 @@
 
     goto/16 :goto_0
 
-    .line 342
     .restart local v16    # "issdcardsbaapp":Ljava/lang/String;
     :cond_b
     const/16 v33, 0x0
 
     goto/16 :goto_1
 
-    .line 364
     .restart local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v8    # "doc":Lorg/w3c/dom/Document;
     .restart local v9    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -1900,7 +1704,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 368
     :goto_5
     :try_start_3
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
@@ -1909,7 +1712,6 @@
 
     if-nez v33, :cond_d
 
-    .line 369
     const/16 v33, 0x1
 
     move-object/from16 v0, p0
@@ -1918,14 +1720,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 370
     :cond_d
     invoke-virtual {v7}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v8
 
-    .line 371
-    const-string/jumbo v33, "policy"
+    const-string v33, "policy"
 
     move-object/from16 v0, v33
 
@@ -1933,7 +1733,6 @@
 
     move-result-object v23
 
-    .line 372
     .local v23, "rootElement":Lorg/w3c/dom/Element;
     move-object/from16 v0, v23
 
@@ -1948,32 +1747,27 @@
 
     goto/16 :goto_2
 
-    .line 506
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v23    # "rootElement":Lorg/w3c/dom/Element;
     :catch_0
     move-exception v11
 
-    .line 507
     .local v11, "e1":Lorg/xml/sax/SAXException;
     :try_start_4
     invoke-virtual {v11}, Lorg/xml/sax/SAXException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 517
     .end local v11    # "e1":Lorg/xml/sax/SAXException;
     :goto_6
     const/16 v33, -0x1
 
     goto :goto_4
 
-    .line 365
     .restart local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     :catch_1
     move-exception v10
 
-    .line 366
     .local v10, "e":Ljava/io/IOException;
     :try_start_5
     invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
@@ -1987,13 +1781,11 @@
 
     goto :goto_5
 
-    .line 508
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v10    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v11
 
-    .line 509
     .local v11, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :try_start_6
     invoke-virtual {v11}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
@@ -2002,7 +1794,6 @@
 
     goto :goto_6
 
-    .line 337
     .end local v3    # "allowContainerCategory":Ljava/lang/String;
     .end local v5    # "allowcategory":Ljava/lang/String;
     .end local v6    # "category":Ljava/lang/String;
@@ -2021,7 +1812,6 @@
 
     throw v33
 
-    .line 448
     .restart local v3    # "allowContainerCategory":Ljava/lang/String;
     .restart local v4    # "allowallElement":Lorg/w3c/dom/Element;
     .restart local v5    # "allowcategory":Ljava/lang/String;
@@ -2047,10 +1837,9 @@
     :cond_e
     const/16 v19, 0x0
 
-    .line 449
     .local v19, "newValue":Ljava/lang/String;
     :try_start_7
-    const-string/jumbo v33, "sdcarduserid"
+    const-string v33, "sdcarduserid"
 
     move-object/from16 v0, v33
 
@@ -2060,7 +1849,7 @@
 
     if-eqz v33, :cond_12
 
-    const-string/jumbo v33, "sdcarduserid"
+    const-string v33, "sdcarduserid"
 
     move-object/from16 v0, v33
 
@@ -2080,7 +1869,6 @@
 
     if-nez v33, :cond_12
 
-    .line 450
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -2103,7 +1891,7 @@
 
     move-result-object v33
 
-    const-string/jumbo v35, "sdcarduserid"
+    const-string v35, "sdcarduserid"
 
     move-object/from16 v0, v35
 
@@ -2123,9 +1911,8 @@
 
     move-result-object v19
 
-    .line 454
     :goto_7
-    const-string/jumbo v33, "sdcarduserid"
+    const-string v33, "sdcarduserid"
 
     move-object/from16 v0, v33
 
@@ -2133,43 +1920,36 @@
 
     invoke-interface {v12, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 455
     const/4 v14, 0x1
 
-    .line 485
     .end local v12    # "existElem":Lorg/w3c/dom/Element;
     .end local v19    # "newValue":Ljava/lang/String;
     :cond_f
     :goto_8
     if-nez v14, :cond_10
 
-    .line 486
     move-object/from16 v0, v27
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 487
     move-object/from16 v0, v27
 
     move-object/from16 v1, v25
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 488
     move-object/from16 v0, v27
 
     move-object/from16 v1, v18
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 489
     move-object/from16 v0, v20
 
     move-object/from16 v1, v27
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 491
     :cond_10
     invoke-interface {v8}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -2177,26 +1957,21 @@
 
     invoke-interface/range {v33 .. v33}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 492
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v32
 
-    .line 493
     .local v32, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v32 .. v32}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v31
 
-    .line 494
     .local v31, "transformer":Ljavax/xml/transform/Transformer;
     const/16 v29, 0x0
 
-    .line 495
     .local v29, "source":Ljavax/xml/transform/dom/DOMSource;
     if-eqz v17, :cond_18
 
-    .line 496
     new-instance v29, Ljavax/xml/transform/dom/DOMSource;
 
     .end local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
@@ -2204,7 +1979,6 @@
 
     invoke-direct {v0, v8}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 500
     .restart local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     :goto_9
     new-instance v22, Ljavax/xml/transform/stream/StreamResult;
@@ -2215,7 +1989,6 @@
 
     invoke-direct {v0, v1}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 501
     .local v22, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v31
 
@@ -2225,14 +1998,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 502
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v33
 
     if-eqz v33, :cond_11
 
-    .line 503
     const/16 v33, 0x0
 
     move-object/from16 v0, p0
@@ -2241,13 +2012,11 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 505
     :cond_11
     const/16 v33, 0x0
 
     goto/16 :goto_4
 
-    .line 452
     .end local v22    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v31    # "transformer":Ljavax/xml/transform/Transformer;
@@ -2261,7 +2030,6 @@
 
     goto :goto_7
 
-    .line 458
     .end local v19    # "newValue":Ljava/lang/String;
     :cond_13
     sget v33, Lcom/android/server/ResourceManager;->BT_TYPE:I
@@ -2272,7 +2040,6 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 460
     const-string v33, "bluetoothuserid"
 
     move-object/from16 v0, v33
@@ -2295,16 +2062,13 @@
 
     if-eqz v33, :cond_14
 
-    .line 464
     const/16 v33, 0x0
 
     goto/16 :goto_4
 
-    .line 466
     :cond_14
     const/16 v19, 0x0
 
-    .line 467
     .restart local v19    # "newValue":Ljava/lang/String;
     const-string v33, "bluetoothuserid"
 
@@ -2336,7 +2100,6 @@
 
     if-nez v33, :cond_15
 
-    .line 468
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -2379,7 +2142,6 @@
 
     move-result-object v19
 
-    .line 472
     :goto_a
     const-string v33, "bluetoothuserid"
 
@@ -2389,13 +2151,10 @@
 
     invoke-interface {v12, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 473
     const/4 v14, 0x1
 
-    .line 474
     goto/16 :goto_8
 
-    .line 470
     :cond_15
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2403,7 +2162,6 @@
 
     goto :goto_a
 
-    .line 477
     .end local v19    # "newValue":Ljava/lang/String;
     :cond_16
     move-object/from16 v0, v26
@@ -2418,20 +2176,16 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 481
     const/4 v14, 0x1
 
-    .line 482
     goto/16 :goto_8
 
-    .line 432
     .end local v12    # "existElem":Lorg/w3c/dom/Element;
     :cond_17
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_3
 
-    .line 498
     .restart local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     .restart local v31    # "transformer":Ljavax/xml/transform/Transformer;
     .restart local v32    # "transformerFactory":Ljavax/xml/transform/TransformerFactory;
@@ -2455,7 +2209,6 @@
     .restart local v29    # "source":Ljavax/xml/transform/dom/DOMSource;
     goto/16 :goto_9
 
-    .line 510
     .end local v4    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v7    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v13    # "i":I
@@ -2473,30 +2226,25 @@
     :catch_3
     move-exception v11
 
-    .line 511
     .local v11, "e1":Ljavax/xml/transform/TransformerException;
     :try_start_8
     invoke-virtual {v11}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto/16 :goto_6
 
-    .line 512
     .end local v11    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_4
     move-exception v11
 
-    .line 513
     .local v11, "e1":Ljava/io/IOException;
     invoke-virtual {v11}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_6
 
-    .line 514
     .end local v11    # "e1":Ljava/io/IOException;
     :catch_5
     move-exception v10
 
-    .line 515
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_8
@@ -2511,18 +2259,14 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 777
     if-nez p0, :cond_1
 
-    .line 781
     const/4 v1, 0x0
 
-    .line 797
     :cond_0
     :goto_0
     return-object v1
 
-    .line 784
     :cond_1
     invoke-interface {p0}, Lorg/w3c/dom/Element;->getFirstChild()Lorg/w3c/dom/Node;
 
@@ -2530,21 +2274,18 @@
 
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 785
     .local v0, "currTrustedPackageElem":Lorg/w3c/dom/Element;
     const/4 v1, 0x0
 
-    .line 787
     .local v1, "returnElem":Lorg/w3c/dom/Element;
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 788
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "seinfo"
+    const-string v3, "seinfo"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2552,7 +2293,7 @@
 
     if-nez v2, :cond_2
 
-    const-string/jumbo v2, "name"
+    const-string v2, "name"
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2564,13 +2305,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 792
     move-object v1, v0
 
-    .line 793
     goto :goto_0
 
-    .line 795
     :cond_2
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getNextSibling()Lorg/w3c/dom/Node;
 
@@ -2589,14 +2327,12 @@
     .param p1, "userId"    # Ljava/lang/String;
 
     .prologue
-    .line 706
     const-string v5, ","
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 707
     .local v0, "allowUsers":[Ljava/lang/String;
     move-object v1, v0
 
@@ -2612,7 +2348,6 @@
 
     aget-object v3, v1, v2
 
-    .line 708
     .local v3, "item":Ljava/lang/String;
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2620,22 +2355,18 @@
 
     if-eqz v5, :cond_0
 
-    .line 709
     const/4 v5, 0x1
 
-    .line 712
     .end local v3    # "item":Ljava/lang/String;
     :goto_1
     return v5
 
-    .line 707
     .restart local v3    # "item":Ljava/lang/String;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 712
     .end local v3    # "item":Ljava/lang/String;
     :cond_1
     const/4 v5, 0x0
@@ -2648,7 +2379,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 100
     const-class v1, Lcom/android/server/ResourceManager;
 
     monitor-enter v1
@@ -2658,14 +2388,12 @@
 
     if-nez v0, :cond_0
 
-    .line 101
     new-instance v0, Lcom/android/server/ResourceManager;
 
     invoke-direct {v0, p0}, Lcom/android/server/ResourceManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/ResourceManager;->instance:Lcom/android/server/ResourceManager;
 
-    .line 103
     :cond_0
     sget-object v0, Lcom/android/server/ResourceManager;->instance:Lcom/android/server/ResourceManager;
     :try_end_0
@@ -2675,7 +2403,6 @@
 
     return-object v0
 
-    .line 100
     :catchall_0
     move-exception v0
 
@@ -2703,27 +2430,22 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 750
     if-nez p0, :cond_1
 
     move-object v5, v6
 
-    .line 772
     :cond_0
     :goto_0
     return-object v5
 
-    .line 756
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 757
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, 0x0
 
-    .line 759
     .local v2, "pi":Landroid/content/pm/PackageInfo;
     const/16 v7, 0x40
 
@@ -2732,19 +2454,15 @@
 
     move-result-object v2
 
-    .line 760
     if-eqz v2, :cond_2
 
-    .line 761
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 762
     .local v4, "s":[Landroid/content/pm/Signature;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 763
     .local v5, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
@@ -2754,7 +2472,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 764
     aget-object v7, v4, v1
 
     invoke-virtual {v7}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
@@ -2765,7 +2482,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 763
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -2776,20 +2492,16 @@
     :cond_2
     move-object v5, v6
 
-    .line 768
     goto :goto_0
 
-    .line 770
     :catch_0
     move-exception v0
 
-    .line 771
     .local v0, "e1":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v5, v6
 
-    .line 772
     goto :goto_0
 .end method
 
@@ -2800,15 +2512,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 742
     if-nez p0, :cond_1
 
-    .line 746
     :cond_0
     :goto_0
     return-object v1
 
-    .line 742
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -2827,11 +2536,9 @@
 
     goto :goto_0
 
-    .line 743
     :catch_0
     move-exception v0
 
-    .line 744
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2852,7 +2559,6 @@
     .end annotation
 
     .prologue
-    .line 688
     .local p0, "hs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz p0, :cond_0
 
@@ -2862,15 +2568,12 @@
 
     if-nez v5, :cond_2
 
-    .line 692
     :cond_0
     const/4 v0, 0x0
 
-    .line 699
     :cond_1
     return-object v0
 
-    .line 694
     :cond_2
     invoke-virtual {p0}, Ljava/util/HashSet;->size()I
 
@@ -2878,11 +2581,9 @@
 
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 695
     .local v0, "array":[Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 696
     .local v1, "i":I
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -2902,7 +2603,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 697
     .local v4, "s":Ljava/lang/String;
     add-int/lit8 v2, v1, 0x1
 
@@ -2912,7 +2612,6 @@
 
     move v1, v2
 
-    .line 698
     .end local v2    # "i":I
     .restart local v1    # "i":I
     goto :goto_0
@@ -2925,35 +2624,30 @@
     .param p3, "appNotInstalled"    # Z
 
     .prologue
-    .line 804
     const/4 v0, -0x1
 
-    .line 805
     .local v0, "ret":I
     if-nez p1, :cond_0
 
-    .line 806
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
 
-    const-string/jumbo v4, "loadContainerSetting, packageName is null"
+    const-string v4, "loadContainerSetting, packageName is null"
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v0
 
-    .line 820
     .end local v0    # "ret":I
     .local v1, "ret":I
     :goto_0
     return v1
 
-    .line 812
     .end local v1    # "ret":I
     .restart local v0    # "ret":I
     :cond_0
-    const-string/jumbo v2, "package"
+    const-string v2, "package"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2963,7 +2657,6 @@
 
     iput-object v2, p0, Lcom/android/server/ResourceManager;->mPms:Lcom/android/server/pm/PackageManagerService;
 
-    .line 814
     iget-object v2, p0, Lcom/android/server/ResourceManager;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v2, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->updateAppInfoForPackage(Ljava/lang/String;IZ)Z
@@ -2972,13 +2665,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 818
     const/4 v0, 0x0
 
     :cond_1
     move v1, v0
 
-    .line 820
     .end local v0    # "ret":I
     .restart local v1    # "ret":I
     goto :goto_0
@@ -2992,18 +2683,15 @@
     .param p3, "resourceType"    # I
 
     .prologue
-    .line 1176
     const-class v23, Lcom/android/server/ResourceManager;
 
     monitor-enter v23
 
     const/4 v9, 0x0
 
-    .line 1177
     .local v9, "isRemoveSuccess":Z
     const/4 v15, 0x0
 
-    .line 1179
     .local v15, "seinfoElem":Lorg/w3c/dom/Element;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -3012,18 +2700,15 @@
 
     move-result-object v5
 
-    .line 1181
     .local v5, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     :try_start_1
     invoke-virtual {v5}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v3
 
-    .line 1182
     .local v3, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     const/4 v4, 0x0
 
-    .line 1183
     .local v4, "doc":Lorg/w3c/dom/Document;
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -3031,14 +2716,12 @@
 
     if-eqz v22, :cond_5
 
-    .line 1187
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v22
 
     if-nez v22, :cond_0
 
-    .line 1188
     const/16 v22, 0x1
 
     move-object/from16 v0, p0
@@ -3047,7 +2730,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 1190
     :cond_0
     move-object/from16 v0, p0
 
@@ -3055,15 +2737,13 @@
 
     move-result-object v4
 
-    .line 1197
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v22
 
     invoke-interface/range {v22 .. v22}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 1198
-    const-string/jumbo v22, "policy"
+    const-string v22, "policy"
 
     move-object/from16 v0, v22
 
@@ -3071,11 +2751,9 @@
 
     move-result-object v12
 
-    .line 1199
     .local v12, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/4 v11, 0x0
 
-    .line 1200
     .local v11, "policyElement":Lorg/w3c/dom/Element;
     const/16 v22, 0x0
 
@@ -3088,9 +2766,8 @@
     .end local v11    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v11, Lorg/w3c/dom/Element;
 
-    .line 1201
     .restart local v11    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v22, "signer"
+    const-string v22, "signer"
 
     move-object/from16 v0, v22
 
@@ -3098,15 +2775,12 @@
 
     move-result-object v17
 
-    .line 1202
     .local v17, "signer":Lorg/w3c/dom/NodeList;
     const/16 v18, 0x0
 
-    .line 1203
     .local v18, "signerElementCur":Lorg/w3c/dom/Element;
     const/4 v13, 0x0
 
-    .line 1210
     .local v13, "removeElem":Lorg/w3c/dom/Element;
     const/4 v8, 0x0
 
@@ -3120,7 +2794,6 @@
 
     if-ge v8, v0, :cond_2
 
-    .line 1211
     move-object/from16 v0, v17
 
     invoke-interface {v0, v8}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -3130,7 +2803,6 @@
     .end local v18    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v18, Lorg/w3c/dom/Element;
 
-    .line 1213
     .restart local v18    # "signerElementCur":Lorg/w3c/dom/Element;
     move-object/from16 v0, v18
 
@@ -3140,10 +2812,8 @@
 
     move-result-object v13
 
-    .line 1214
     if-eqz v13, :cond_c
 
-    .line 1216
     sget v22, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     move/from16 v0, p3
@@ -3152,8 +2822,7 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 1217
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
@@ -3163,8 +2832,7 @@
 
     if-eqz v22, :cond_7
 
-    .line 1221
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
@@ -3186,17 +2854,14 @@
 
     if-eqz v22, :cond_6
 
-    .line 1225
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0}, Lorg/w3c/dom/Element;->removeAttribute(Ljava/lang/String;)V
 
-    .line 1226
     const/4 v9, 0x1
 
-    .line 1227
     const-string v22, "bluetoothuseridBL"
 
     move-object/from16 v0, v22
@@ -3227,7 +2892,6 @@
 
     if-eqz v22, :cond_2
 
-    .line 1228
     :cond_1
     move-object/from16 v0, v17
 
@@ -3239,13 +2903,11 @@
 
     invoke-interface {v0, v13}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1295
     :cond_2
     :goto_1
     if-eqz v9, :cond_d
 
-    .line 1296
-    const-string/jumbo v22, "service"
+    const-string v22, "service"
 
     move-object/from16 v0, v18
 
@@ -3255,7 +2917,6 @@
 
     move-result-object v16
 
-    .line 1297
     .local v16, "servicePackageList":Lorg/w3c/dom/NodeList;
     invoke-interface/range {v16 .. v16}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -3263,12 +2924,10 @@
 
     if-nez v22, :cond_3
 
-    .line 1298
     move-object/from16 v0, v18
 
     invoke-interface {v11, v0}, Lorg/w3c/dom/Element;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1303
     :cond_3
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -3276,18 +2935,15 @@
 
     invoke-interface/range {v22 .. v22}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 1304
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v21
 
-    .line 1305
     .local v21, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v21 .. v21}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v20
 
-    .line 1306
     .local v20, "transformer":Ljavax/xml/transform/Transformer;
     new-instance v19, Ljavax/xml/transform/dom/DOMSource;
 
@@ -3295,7 +2951,6 @@
 
     invoke-direct {v0, v4}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 1307
     .local v19, "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v14, Ljavax/xml/transform/stream/StreamResult;
 
@@ -3303,7 +2958,6 @@
 
     invoke-direct {v14, v0}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 1308
     .local v14, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v20
 
@@ -3311,7 +2965,6 @@
 
     invoke-virtual {v0, v1, v14}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 1315
     .end local v14    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v16    # "servicePackageList":Lorg/w3c/dom/NodeList;
     .end local v19    # "source":Ljavax/xml/transform/dom/DOMSource;
@@ -3324,7 +2977,6 @@
 
     if-eqz v22, :cond_4
 
-    .line 1316
     const/16 v22, 0x0
 
     move-object/from16 v0, p0
@@ -3352,13 +3004,11 @@
     :goto_3
     move/from16 v22, v9
 
-    .line 1329
     :goto_4
     monitor-exit v23
 
     return v22
 
-    .line 1195
     .restart local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v4    # "doc":Lorg/w3c/dom/Document;
     :cond_5
@@ -3366,7 +3016,6 @@
 
     goto :goto_4
 
-    .line 1235
     .restart local v8    # "i":I
     .restart local v11    # "policyElement":Lorg/w3c/dom/Element;
     .restart local v12    # "policyNodeList":Lorg/w3c/dom/NodeList;
@@ -3375,7 +3024,7 @@
     .restart local v18    # "signerElementCur":Lorg/w3c/dom/Element;
     :cond_6
     :try_start_2
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
@@ -3395,31 +3044,25 @@
 
     move-result-object v10
 
-    .line 1236
     .local v10, "newVal":Ljava/lang/String;
     if-eqz v10, :cond_8
 
-    .line 1237
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0, v10}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1238
     const/4 v9, 0x1
 
-    .line 1239
     goto :goto_1
 
-    .line 1246
     .end local v10    # "newVal":Ljava/lang/String;
     :cond_7
     const/16 v22, 0x0
 
     goto :goto_4
 
-    .line 1250
     :cond_8
     sget v22, Lcom/android/server/ResourceManager;->BT_TYPE:I
 
@@ -3429,7 +3072,6 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 1251
     const-string v22, "bluetoothuseridBL"
 
     move-object/from16 v0, v22
@@ -3440,7 +3082,6 @@
 
     if-eqz v22, :cond_b
 
-    .line 1255
     const-string v22, "bluetoothuseridBL"
 
     move-object/from16 v0, v22
@@ -3463,18 +3104,15 @@
 
     if-eqz v22, :cond_a
 
-    .line 1259
     const-string v22, "bluetoothuseridBL"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0}, Lorg/w3c/dom/Element;->removeAttribute(Ljava/lang/String;)V
 
-    .line 1260
     const/4 v9, 0x1
 
-    .line 1261
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
@@ -3484,7 +3122,7 @@
 
     if-eqz v22, :cond_9
 
-    const-string/jumbo v22, "sdcarduseridBL"
+    const-string v22, "sdcarduseridBL"
 
     move-object/from16 v0, v22
 
@@ -3504,7 +3142,6 @@
 
     if-eqz v22, :cond_2
 
-    .line 1262
     :cond_9
     move-object/from16 v0, v17
 
@@ -3525,7 +3162,6 @@
 
     goto/16 :goto_1
 
-    .line 1318
     .end local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v4    # "doc":Lorg/w3c/dom/Document;
     .end local v8    # "i":I
@@ -3537,7 +3173,6 @@
     :catch_0
     move-exception v7
 
-    .line 1319
     .local v7, "e1":Lorg/xml/sax/SAXException;
     :try_start_3
     invoke-virtual {v7}, Lorg/xml/sax/SAXException;->printStackTrace()V
@@ -3546,7 +3181,6 @@
 
     goto/16 :goto_3
 
-    .line 1176
     .end local v5    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v7    # "e1":Lorg/xml/sax/SAXException;
     :catchall_0
@@ -3556,7 +3190,6 @@
 
     throw v22
 
-    .line 1269
     .restart local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v4    # "doc":Lorg/w3c/dom/Document;
     .restart local v5    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -3588,37 +3221,30 @@
 
     move-result-object v10
 
-    .line 1270
     .restart local v10    # "newVal":Ljava/lang/String;
     if-eqz v10, :cond_c
 
-    .line 1271
     const-string v22, "bluetoothuseridBL"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0, v10}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1272
     const/4 v9, 0x1
 
-    .line 1273
     goto/16 :goto_1
 
-    .line 1280
     .end local v10    # "newVal":Ljava/lang/String;
     :cond_b
     const/16 v22, 0x0
 
     goto/16 :goto_4
 
-    .line 1210
     :cond_c
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_0
 
-    .line 1313
     :cond_d
     sget-object v22, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -3669,7 +3295,6 @@
 
     goto/16 :goto_2
 
-    .line 1320
     .end local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v4    # "doc":Lorg/w3c/dom/Document;
     .end local v8    # "i":I
@@ -3681,41 +3306,34 @@
     :catch_1
     move-exception v7
 
-    .line 1321
     .local v7, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :try_start_5
     invoke-virtual {v7}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 1322
     .end local v7    # "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v7
 
-    .line 1323
     .local v7, "e1":Ljavax/xml/transform/TransformerException;
     invoke-virtual {v7}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 1324
     .end local v7    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_3
     move-exception v7
 
-    .line 1325
     .local v7, "e1":Ljava/io/IOException;
     invoke-virtual {v7}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 1326
     .end local v7    # "e1":Ljava/io/IOException;
     :catch_4
     move-exception v6
 
-    .line 1327
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
@@ -3730,10 +3348,8 @@
     .param p1, "userId"    # Ljava/lang/String;
 
     .prologue
-    .line 716
     const/4 v5, 0x0
 
-    .line 717
     .local v5, "returnCat":Ljava/lang/String;
     const-string v7, ","
 
@@ -3741,11 +3357,9 @@
 
     move-result-object v6
 
-    .line 718
     .local v6, "srcUsers":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 719
     .local v4, "matchFound":Z
     move-object v0, v6
 
@@ -3761,7 +3375,6 @@
 
     aget-object v2, v0, v1
 
-    .line 720
     .local v2, "item":Ljava/lang/String;
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3769,25 +3382,20 @@
 
     if-eqz v7, :cond_0
 
-    .line 721
     const/4 v4, 0x1
 
-    .line 719
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 723
     :cond_0
     if-nez v5, :cond_1
 
-    .line 724
     move-object v5, v2
 
     goto :goto_1
 
-    .line 726
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -3813,12 +3421,10 @@
 
     goto :goto_1
 
-    .line 730
     .end local v2    # "item":Ljava/lang/String;
     :cond_2
     if-eqz v4, :cond_3
 
-    .line 736
     .end local v5    # "returnCat":Ljava/lang/String;
     :goto_2
     return-object v5
@@ -3838,18 +3444,15 @@
     .param p3, "resourceType"    # I
 
     .prologue
-    .line 526
     const-class v23, Lcom/android/server/ResourceManager;
 
     monitor-enter v23
 
     const/4 v9, 0x0
 
-    .line 527
     .local v9, "isRemoveSuccess":Z
     const/4 v15, 0x0
 
-    .line 529
     .local v15, "seinfoElem":Lorg/w3c/dom/Element;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -3858,18 +3461,15 @@
 
     move-result-object v5
 
-    .line 531
     .local v5, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     :try_start_1
     invoke-virtual {v5}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v3
 
-    .line 532
     .local v3, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     const/4 v4, 0x0
 
-    .line 533
     .local v4, "doc":Lorg/w3c/dom/Document;
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -3877,14 +3477,12 @@
 
     if-eqz v22, :cond_5
 
-    .line 537
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v22
 
     if-nez v22, :cond_0
 
-    .line 538
     const/16 v22, 0x1
 
     move-object/from16 v0, p0
@@ -3893,7 +3491,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 540
     :cond_0
     move-object/from16 v0, p0
 
@@ -3901,15 +3498,13 @@
 
     move-result-object v4
 
-    .line 547
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v22
 
     invoke-interface/range {v22 .. v22}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 548
-    const-string/jumbo v22, "policy"
+    const-string v22, "policy"
 
     move-object/from16 v0, v22
 
@@ -3917,11 +3512,9 @@
 
     move-result-object v12
 
-    .line 549
     .local v12, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/4 v11, 0x0
 
-    .line 550
     .local v11, "policyElement":Lorg/w3c/dom/Element;
     const/16 v22, 0x0
 
@@ -3934,9 +3527,8 @@
     .end local v11    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v11, Lorg/w3c/dom/Element;
 
-    .line 551
     .restart local v11    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v22, "signer"
+    const-string v22, "signer"
 
     move-object/from16 v0, v22
 
@@ -3944,15 +3536,12 @@
 
     move-result-object v17
 
-    .line 552
     .local v17, "signer":Lorg/w3c/dom/NodeList;
     const/16 v18, 0x0
 
-    .line 553
     .local v18, "signerElementCur":Lorg/w3c/dom/Element;
     const/4 v13, 0x0
 
-    .line 560
     .local v13, "removeElem":Lorg/w3c/dom/Element;
     const/4 v8, 0x0
 
@@ -3966,7 +3555,6 @@
 
     if-ge v8, v0, :cond_2
 
-    .line 561
     move-object/from16 v0, v17
 
     invoke-interface {v0, v8}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -3976,7 +3564,6 @@
     .end local v18    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v18, Lorg/w3c/dom/Element;
 
-    .line 563
     .restart local v18    # "signerElementCur":Lorg/w3c/dom/Element;
     move-object/from16 v0, v18
 
@@ -3986,10 +3573,8 @@
 
     move-result-object v13
 
-    .line 564
     if-eqz v13, :cond_c
 
-    .line 566
     sget v22, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     move/from16 v0, p3
@@ -3998,8 +3583,7 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 567
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
@@ -4009,8 +3593,7 @@
 
     if-eqz v22, :cond_7
 
-    .line 571
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
@@ -4032,17 +3615,14 @@
 
     if-eqz v22, :cond_6
 
-    .line 575
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0}, Lorg/w3c/dom/Element;->removeAttribute(Ljava/lang/String;)V
 
-    .line 576
     const/4 v9, 0x1
 
-    .line 577
     const-string v22, "bluetoothuserid"
 
     move-object/from16 v0, v22
@@ -4073,7 +3653,6 @@
 
     if-eqz v22, :cond_2
 
-    .line 578
     :cond_1
     move-object/from16 v0, v17
 
@@ -4085,13 +3664,11 @@
 
     invoke-interface {v0, v13}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 647
     :cond_2
     :goto_1
     if-eqz v9, :cond_d
 
-    .line 648
-    const-string/jumbo v22, "service"
+    const-string v22, "service"
 
     move-object/from16 v0, v18
 
@@ -4101,7 +3678,6 @@
 
     move-result-object v16
 
-    .line 649
     .local v16, "servicePackageList":Lorg/w3c/dom/NodeList;
     invoke-interface/range {v16 .. v16}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -4109,12 +3685,10 @@
 
     if-nez v22, :cond_3
 
-    .line 650
     move-object/from16 v0, v18
 
     invoke-interface {v11, v0}, Lorg/w3c/dom/Element;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 655
     :cond_3
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -4122,18 +3696,15 @@
 
     invoke-interface/range {v22 .. v22}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 656
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v21
 
-    .line 657
     .local v21, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v21 .. v21}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v20
 
-    .line 658
     .local v20, "transformer":Ljavax/xml/transform/Transformer;
     new-instance v19, Ljavax/xml/transform/dom/DOMSource;
 
@@ -4141,7 +3712,6 @@
 
     invoke-direct {v0, v4}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 659
     .local v19, "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v14, Ljavax/xml/transform/stream/StreamResult;
 
@@ -4149,7 +3719,6 @@
 
     invoke-direct {v14, v0}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 660
     .local v14, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v20
 
@@ -4157,7 +3726,6 @@
 
     invoke-virtual {v0, v1, v14}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 667
     .end local v14    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v16    # "servicePackageList":Lorg/w3c/dom/NodeList;
     .end local v19    # "source":Ljavax/xml/transform/dom/DOMSource;
@@ -4170,7 +3738,6 @@
 
     if-eqz v22, :cond_4
 
-    .line 668
     const/16 v22, 0x0
 
     move-object/from16 v0, p0
@@ -4198,13 +3765,11 @@
     :goto_3
     move/from16 v22, v9
 
-    .line 681
     :goto_4
     monitor-exit v23
 
     return v22
 
-    .line 545
     .restart local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v4    # "doc":Lorg/w3c/dom/Document;
     :cond_5
@@ -4212,7 +3777,6 @@
 
     goto :goto_4
 
-    .line 585
     .restart local v8    # "i":I
     .restart local v11    # "policyElement":Lorg/w3c/dom/Element;
     .restart local v12    # "policyNodeList":Lorg/w3c/dom/NodeList;
@@ -4221,7 +3785,7 @@
     .restart local v18    # "signerElementCur":Lorg/w3c/dom/Element;
     :cond_6
     :try_start_2
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
@@ -4241,31 +3805,25 @@
 
     move-result-object v10
 
-    .line 586
     .local v10, "newVal":Ljava/lang/String;
     if-eqz v10, :cond_8
 
-    .line 587
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0, v10}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
     const/4 v9, 0x1
 
-    .line 589
     goto :goto_1
 
-    .line 596
     .end local v10    # "newVal":Ljava/lang/String;
     :cond_7
     const/16 v22, 0x0
 
     goto :goto_4
 
-    .line 602
     :cond_8
     sget v22, Lcom/android/server/ResourceManager;->BT_TYPE:I
 
@@ -4275,7 +3833,6 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 603
     const-string v22, "bluetoothuserid"
 
     move-object/from16 v0, v22
@@ -4286,7 +3843,6 @@
 
     if-eqz v22, :cond_b
 
-    .line 607
     const-string v22, "bluetoothuserid"
 
     move-object/from16 v0, v22
@@ -4309,18 +3865,15 @@
 
     if-eqz v22, :cond_a
 
-    .line 611
     const-string v22, "bluetoothuserid"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0}, Lorg/w3c/dom/Element;->removeAttribute(Ljava/lang/String;)V
 
-    .line 612
     const/4 v9, 0x1
 
-    .line 613
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
@@ -4330,7 +3883,7 @@
 
     if-eqz v22, :cond_9
 
-    const-string/jumbo v22, "sdcarduserid"
+    const-string v22, "sdcarduserid"
 
     move-object/from16 v0, v22
 
@@ -4350,7 +3903,6 @@
 
     if-eqz v22, :cond_2
 
-    .line 614
     :cond_9
     move-object/from16 v0, v17
 
@@ -4371,7 +3923,6 @@
 
     goto/16 :goto_1
 
-    .line 670
     .end local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v4    # "doc":Lorg/w3c/dom/Document;
     .end local v8    # "i":I
@@ -4383,7 +3934,6 @@
     :catch_0
     move-exception v7
 
-    .line 671
     .local v7, "e1":Lorg/xml/sax/SAXException;
     :try_start_3
     invoke-virtual {v7}, Lorg/xml/sax/SAXException;->printStackTrace()V
@@ -4392,7 +3942,6 @@
 
     goto/16 :goto_3
 
-    .line 526
     .end local v5    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v7    # "e1":Lorg/xml/sax/SAXException;
     :catchall_0
@@ -4402,7 +3951,6 @@
 
     throw v22
 
-    .line 621
     .restart local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v4    # "doc":Lorg/w3c/dom/Document;
     .restart local v5    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -4434,37 +3982,30 @@
 
     move-result-object v10
 
-    .line 622
     .restart local v10    # "newVal":Ljava/lang/String;
     if-eqz v10, :cond_c
 
-    .line 623
     const-string v22, "bluetoothuserid"
 
     move-object/from16 v0, v22
 
     invoke-interface {v13, v0, v10}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 624
     const/4 v9, 0x1
 
-    .line 625
     goto/16 :goto_1
 
-    .line 632
     .end local v10    # "newVal":Ljava/lang/String;
     :cond_b
     const/16 v22, 0x0
 
     goto/16 :goto_4
 
-    .line 560
     :cond_c
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_0
 
-    .line 665
     :cond_d
     sget-object v22, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4515,7 +4056,6 @@
 
     goto/16 :goto_2
 
-    .line 672
     .end local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v4    # "doc":Lorg/w3c/dom/Document;
     .end local v8    # "i":I
@@ -4527,41 +4067,34 @@
     :catch_1
     move-exception v7
 
-    .line 673
     .local v7, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :try_start_5
     invoke-virtual {v7}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 674
     .end local v7    # "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v7
 
-    .line 675
     .local v7, "e1":Ljavax/xml/transform/TransformerException;
     invoke-virtual {v7}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 676
     .end local v7    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_3
     move-exception v7
 
-    .line 677
     .local v7, "e1":Ljava/io/IOException;
     invoke-virtual {v7}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 678
     .end local v7    # "e1":Ljava/io/IOException;
     :catch_4
     move-exception v6
 
-    .line 679
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
@@ -4580,10 +4113,8 @@
     .param p4, "resourceType"    # I
 
     .prologue
-    .line 827
     const/4 v6, 0x0
 
-    .line 832
     .local v6, "appNotInstalled":Z
     :try_start_0
     sget v2, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
@@ -4594,14 +4125,11 @@
 
     if-eq p4, v2, :cond_0
 
-    .line 833
     const/4 v2, -0x1
 
-    .line 929
     :goto_0
     return v2
 
-    .line 835
     :cond_0
     new-instance v10, Ljava/io/File;
 
@@ -4609,7 +4137,6 @@
 
     invoke-direct {v10, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 836
     .local v10, "whitelistDir":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
@@ -4617,17 +4144,14 @@
 
     if-nez v2, :cond_1
 
-    .line 838
     invoke-virtual {v10}, Ljava/io/File;->mkdir()Z
 
-    .line 839
     const/4 v2, 0x1
 
     const/4 v3, 0x1
 
     invoke-virtual {v10, v2, v3}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 840
     const/4 v2, 0x1
 
     const/4 v3, 0x1
@@ -4636,16 +4160,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 847
     :cond_1
     invoke-static {p2}, Lcom/android/server/ResourceManager;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 848
     if-nez p2, :cond_2
 
-    .line 849
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
@@ -4654,17 +4175,14 @@
 
     invoke-virtual {v2, v3, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 850
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 842
     .end local v10    # "whitelistDir":Ljava/io/File;
     :catch_0
     move-exception v8
 
-    .line 843
     .local v8, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4674,52 +4192,41 @@
 
     invoke-virtual {v2, v3, v5, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 844
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 845
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 855
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v10    # "whitelistDir":Ljava/io/File;
     :cond_2
     const/4 v7, 0x0
 
-    .line 856
     .local v7, "certMatch":Z
     const/4 v1, 0x0
 
-    .line 857
     .local v1, "signature":Ljava/lang/String;
     invoke-static {p2, p1}, Lcom/android/server/ResourceManager;->getSignatureFromPackage(Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v9
 
-    .line 858
     .local v9, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez p3, :cond_3
 
-    .line 862
     const/16 v2, -0xe
 
     goto :goto_0
 
-    .line 863
     :cond_3
     if-nez v9, :cond_6
 
-    .line 865
     const/4 v2, 0x0
 
     aget-object v1, p3, v2
 
-    .line 866
     const/4 v6, 0x1
 
-    .line 887
     :cond_4
     new-instance v0, Ljava/io/File;
 
@@ -4727,20 +4234,17 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 896
     .local v0, "macPermFile":Ljava/io/File;
     :try_start_1
     invoke-static {p2, p3}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v4
 
-    .line 897
     .local v4, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v2, v4, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
     if-eqz v2, :cond_9
 
-    .line 898
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
@@ -4749,8 +4253,7 @@
 
     invoke-virtual {v2, v3, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 899
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     iget-object v3, v4, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
@@ -4760,8 +4263,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 900
-    const-string/jumbo v2, "untrusted"
+    const-string v2, "untrusted"
 
     iput-object v2, v4, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
@@ -4772,14 +4274,12 @@
 
     move v5, p4
 
-    .line 902
     invoke-static/range {v0 .. v5}, Lcom/android/server/ResourceManager;->addBlacklistEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;I)I
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 904
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
@@ -4790,12 +4290,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 905
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 868
     .end local v0    # "macPermFile":Ljava/io/File;
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_6
@@ -4808,7 +4306,6 @@
     .end local v1    # "signature":Ljava/lang/String;
     check-cast v1, Ljava/lang/String;
 
-    .line 871
     .restart local v1    # "signature":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -4820,19 +4317,15 @@
 
     if-eqz v2, :cond_7
 
-    .line 872
     const/4 v7, 0x1
 
-    .line 877
     :cond_7
     if-nez v7, :cond_4
 
-    .line 881
     const/16 v2, -0xd
 
     goto/16 :goto_0
 
-    .line 907
     .restart local v0    # "macPermFile":Ljava/io/File;
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_8
@@ -4845,34 +4338,28 @@
 
     if-ne v2, v3, :cond_a
 
-    .line 908
     invoke-static {v0, p2, p1, p4}, Lcom/android/server/ResourceManager;->removeBlacklistEntryFromMac(Ljava/io/File;Ljava/lang/String;II)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 909
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 918
     :cond_9
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 920
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :catch_1
     move-exception v8
 
-    .line 924
     .restart local v8    # "e":Ljava/lang/Exception;
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 929
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_a
@@ -4889,10 +4376,8 @@
     .param p4, "resourceType"    # I
 
     .prologue
-    .line 176
     const/4 v6, 0x0
 
-    .line 181
     .local v6, "appNotInstalled":Z
     :try_start_0
     sget v2, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
@@ -4903,14 +4388,11 @@
 
     if-eq p4, v2, :cond_0
 
-    .line 182
     const/4 v2, -0x1
 
-    .line 279
     :goto_0
     return v2
 
-    .line 184
     :cond_0
     new-instance v10, Ljava/io/File;
 
@@ -4918,7 +4400,6 @@
 
     invoke-direct {v10, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 185
     .local v10, "whitelistDir":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
@@ -4926,17 +4407,14 @@
 
     if-nez v2, :cond_1
 
-    .line 187
     invoke-virtual {v10}, Ljava/io/File;->mkdir()Z
 
-    .line 188
     const/4 v2, 0x1
 
     const/4 v3, 0x1
 
     invoke-virtual {v10, v2, v3}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 189
     const/4 v2, 0x1
 
     const/4 v3, 0x1
@@ -4945,16 +4423,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 196
     :cond_1
     invoke-static {p2}, Lcom/android/server/ResourceManager;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 197
     if-nez p2, :cond_2
 
-    .line 198
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
@@ -4963,17 +4438,14 @@
 
     invoke-virtual {v2, v3, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 199
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 191
     .end local v10    # "whitelistDir":Ljava/io/File;
     :catch_0
     move-exception v8
 
-    .line 192
     .local v8, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4983,57 +4455,45 @@
 
     invoke-virtual {v2, v3, v5, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 193
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 194
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 204
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v10    # "whitelistDir":Ljava/io/File;
     :cond_2
     const/4 v7, 0x0
 
-    .line 205
     .local v7, "certMatch":Z
     const/4 v1, 0x0
 
-    .line 206
     .local v1, "signature":Ljava/lang/String;
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 207
     .local v9, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {p2, p1}, Lcom/android/server/ResourceManager;->getSignatureFromPackage(Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v9
 
-    .line 208
     if-nez p3, :cond_3
 
-    .line 212
     const/16 v2, -0xe
 
     goto :goto_0
 
-    .line 213
     :cond_3
     if-nez v9, :cond_6
 
-    .line 215
     const/4 v2, 0x0
 
     aget-object v1, p3, v2
 
-    .line 216
     const/4 v6, 0x1
 
-    .line 237
     :cond_4
     new-instance v0, Ljava/io/File;
 
@@ -5041,20 +4501,17 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 246
     .local v0, "macPermFile":Ljava/io/File;
     :try_start_1
     invoke-static {p2, p3}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v4
 
-    .line 247
     .local v4, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v2, v4, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
     if-eqz v2, :cond_9
 
-    .line 248
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
@@ -5063,8 +4520,7 @@
 
     invoke-virtual {v2, v3, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
-    const-string/jumbo v2, "default"
+    const-string v2, "default"
 
     iget-object v3, v4, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
@@ -5074,8 +4530,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 250
-    const-string/jumbo v2, "untrusted"
+    const-string v2, "untrusted"
 
     iput-object v2, v4, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
@@ -5086,14 +4541,12 @@
 
     move v5, p4
 
-    .line 252
     invoke-static/range {v0 .. v5}, Lcom/android/server/ResourceManager;->addWhitelistEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;I)I
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 254
     sget-object v2, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v3, "BTSdcard"
@@ -5104,12 +4557,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 255
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 218
     .end local v0    # "macPermFile":Ljava/io/File;
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_6
@@ -5122,7 +4573,6 @@
     .end local v1    # "signature":Ljava/lang/String;
     check-cast v1, Ljava/lang/String;
 
-    .line 221
     .restart local v1    # "signature":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -5134,19 +4584,15 @@
 
     if-eqz v2, :cond_7
 
-    .line 222
     const/4 v7, 0x1
 
-    .line 227
     :cond_7
     if-nez v7, :cond_4
 
-    .line 231
     const/16 v2, -0xd
 
     goto/16 :goto_0
 
-    .line 257
     .restart local v0    # "macPermFile":Ljava/io/File;
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_8
@@ -5159,34 +4605,28 @@
 
     if-ne v2, v3, :cond_a
 
-    .line 258
     invoke-static {v0, p2, p1, p4}, Lcom/android/server/ResourceManager;->removeWhitelistEntryFromMac(Ljava/io/File;Ljava/lang/String;II)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 259
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 268
     :cond_9
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 270
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :catch_1
     move-exception v8
 
-    .line 274
     .restart local v8    # "e":Ljava/lang/Exception;
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 279
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_a
@@ -5203,7 +4643,6 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 1333
     sget v7, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     if-eq p2, v7, :cond_0
@@ -5212,31 +4651,25 @@
 
     if-eq p2, v7, :cond_0
 
-    .line 1351
     :goto_0
     return v6
 
-    .line 1336
     :cond_0
     const/4 v4, -0x1
 
-    .line 1338
     .local v4, "ret":I
     :try_start_0
     invoke-static {p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->getBlacklist(II)Ljava/util/HashSet;
 
     move-result-object v2
 
-    .line 1339
     .local v2, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz v2, :cond_2
 
-    .line 1340
     new-instance v5, Ljava/util/HashSet;
 
     invoke-direct {v5, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 1341
     .local v5, "templist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {v5}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -5256,7 +4689,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 1342
     .local v3, "packageName":Ljava/lang/String;
     invoke-virtual {p0, p1, v3, p2}, Lcom/android/server/ResourceManager;->removeAppFromSBABlacklist(ILjava/lang/String;I)I
     :try_end_0
@@ -5264,12 +4696,10 @@
 
     move-result v4
 
-    .line 1343
     if-eqz v4, :cond_1
 
     goto :goto_0
 
-    .line 1348
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .end local v3    # "packageName":Ljava/lang/String;
@@ -5277,7 +4707,6 @@
     :catch_0
     move-exception v0
 
-    .line 1349
     .local v0, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5287,7 +4716,6 @@
 
     invoke-virtual {v6, v7, v8, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1351
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     const/4 v6, 0x0
@@ -5303,7 +4731,6 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 130
     sget v7, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     if-eq p2, v7, :cond_0
@@ -5312,31 +4739,25 @@
 
     if-eq p2, v7, :cond_0
 
-    .line 149
     :goto_0
     return v6
 
-    .line 133
     :cond_0
     const/4 v4, -0x1
 
-    .line 136
     .local v4, "ret":I
     :try_start_0
     invoke-static {p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->getWhitelist(II)Ljava/util/HashSet;
 
     move-result-object v2
 
-    .line 137
     .local v2, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz v2, :cond_2
 
-    .line 138
     new-instance v5, Ljava/util/HashSet;
 
     invoke-direct {v5, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 139
     .local v5, "templist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {v5}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -5356,7 +4777,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 140
     .local v3, "packageName":Ljava/lang/String;
     invoke-virtual {p0, p1, v3, p2}, Lcom/android/server/ResourceManager;->removeAppFromWhitelist(ILjava/lang/String;I)I
     :try_end_0
@@ -5364,12 +4784,10 @@
 
     move-result v4
 
-    .line 141
     if-eqz v4, :cond_1
 
     goto :goto_0
 
-    .line 146
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .end local v3    # "packageName":Ljava/lang/String;
@@ -5377,7 +4795,6 @@
     :catch_0
     move-exception v0
 
-    .line 147
     .local v0, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -5387,7 +4804,6 @@
 
     invoke-virtual {v6, v7, v8, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 149
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     const/4 v6, 0x0
@@ -5401,7 +4817,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 1355
     sget v1, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     if-eq p2, v1, :cond_0
@@ -5410,20 +4825,16 @@
 
     if-eq p2, v1, :cond_0
 
-    .line 1356
     const/4 v1, 0x0
 
-    .line 1359
     :goto_0
     return-object v1
 
-    .line 1358
     :cond_0
     invoke-static {p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->getBlacklist(II)Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 1359
     .local v0, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-static {v0}, Lcom/android/server/ResourceManager;->hashset_to_str_array(Ljava/util/HashSet;)[Ljava/lang/String;
 
@@ -5437,7 +4848,6 @@
     .param p1, "resourceType"    # I
 
     .prologue
-    .line 153
     sget v1, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     if-eq p1, v1, :cond_0
@@ -5446,20 +4856,16 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 154
     const/4 v1, 0x0
 
-    .line 157
     :goto_0
     return-object v1
 
-    .line 156
     :cond_0
     invoke-static {p1}, Lcom/android/server/pm/SELinuxMMAC;->getSBAlist(I)Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 157
     .local v0, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-static {v0}, Lcom/android/server/ResourceManager;->hashset_to_str_array(Ljava/util/HashSet;)[Ljava/lang/String;
 
@@ -5474,7 +4880,6 @@
     .param p2, "resourceType"    # I
 
     .prologue
-    .line 107
     sget v1, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
     if-eq p2, v1, :cond_0
@@ -5483,20 +4888,16 @@
 
     if-eq p2, v1, :cond_0
 
-    .line 108
     const/4 v1, 0x0
 
-    .line 111
     :goto_0
     return-object v1
 
-    .line 110
     :cond_0
     invoke-static {p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->getWhitelist(II)Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 111
     .local v0, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-static {v0}, Lcom/android/server/ResourceManager;->hashset_to_str_array(Ljava/util/HashSet;)[Ljava/lang/String;
 
@@ -5513,7 +4914,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 162
     :try_start_0
     sget v3, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
@@ -5523,18 +4923,15 @@
 
     if-eq p2, v3, :cond_1
 
-    .line 172
     :cond_0
     :goto_0
     return v2
 
-    .line 165
     :cond_1
     invoke-static {p2}, Lcom/android/server/pm/SELinuxMMAC;->getSBAlist(I)Ljava/util/HashSet;
 
     move-result-object v1
 
-    .line 166
     .local v1, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz v1, :cond_0
 
@@ -5546,17 +4943,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 167
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 169
     .end local v1    # "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :catch_0
     move-exception v0
 
-    .line 170
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -5570,7 +4964,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 116
     :try_start_0
     sget v3, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
@@ -5580,18 +4973,15 @@
 
     if-eq p3, v3, :cond_1
 
-    .line 126
     :cond_0
     :goto_0
     return v2
 
-    .line 119
     :cond_1
     invoke-static {p1, p3}, Lcom/android/server/pm/SELinuxMMAC;->getWhitelist(II)Ljava/util/HashSet;
 
     move-result-object v1
 
-    .line 120
     .local v1, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz v1, :cond_0
 
@@ -5603,17 +4993,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 121
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 123
     .end local v1    # "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -5627,10 +5014,8 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 933
     const/4 v0, 0x0
 
-    .line 937
     .local v0, "appNotInstalled":Z
     sget v7, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
@@ -5640,21 +5025,17 @@
 
     if-eq p3, v7, :cond_1
 
-    .line 980
     :cond_0
     :goto_0
     return v6
 
-    .line 940
     :cond_1
     invoke-static {p2}, Lcom/android/server/ResourceManager;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 941
     if-nez p2, :cond_2
 
-    .line 942
     sget-object v7, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "BTSdcard"
@@ -5665,28 +5046,22 @@
 
     goto :goto_0
 
-    .line 945
     :cond_2
     const/4 v1, 0x0
 
-    .line 946
     .local v1, "certMatch":Z
     const/4 v4, 0x0
 
-    .line 947
     .local v4, "signature":Ljava/lang/String;
     invoke-static {p2, p1}, Lcom/android/server/ResourceManager;->getSignatureFromPackage(Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 948
     .local v5, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v5, :cond_3
 
-    .line 952
     const/4 v0, 0x1
 
-    .line 954
     :cond_3
     new-instance v3, Ljava/io/File;
 
@@ -5694,7 +5069,6 @@
 
     invoke-direct {v3, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 967
     .local v3, "macPermFile":Ljava/io/File;
     :try_start_0
     invoke-static {v3, p2, p1, p3}, Lcom/android/server/ResourceManager;->removeBlacklistEntryFromMac(Ljava/io/File;Ljava/lang/String;II)Z
@@ -5703,26 +5077,22 @@
 
     if-nez v7, :cond_4
 
-    .line 968
     sget-object v7, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "BTSdcard"
 
-    const-string/jumbo v9, "removeEntryFromMac failed"
+    const-string v9, "removeEntryFromMac failed"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 974
     :catch_0
     move-exception v2
 
-    .line 975
     .local v2, "e":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 971
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     invoke-direct {p0, p2, p1, v0}, Lcom/android/server/ResourceManager;->loadContainerSetting(Ljava/lang/String;IZ)I
@@ -5733,7 +5103,6 @@
 
     if-eq v7, v6, :cond_0
 
-    .line 980
     const/4 v6, 0x0
 
     goto :goto_0
@@ -5748,10 +5117,8 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 283
     const/4 v0, 0x0
 
-    .line 287
     .local v0, "appNotInstalled":Z
     sget v7, Lcom/android/server/ResourceManager;->SDCARD_TYPE:I
 
@@ -5761,21 +5128,17 @@
 
     if-eq p3, v7, :cond_1
 
-    .line 330
     :cond_0
     :goto_0
     return v6
 
-    .line 290
     :cond_1
     invoke-static {p2}, Lcom/android/server/ResourceManager;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 291
     if-nez p2, :cond_2
 
-    .line 292
     sget-object v7, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "BTSdcard"
@@ -5786,28 +5149,22 @@
 
     goto :goto_0
 
-    .line 295
     :cond_2
     const/4 v1, 0x0
 
-    .line 296
     .local v1, "certMatch":Z
     const/4 v4, 0x0
 
-    .line 297
     .local v4, "signature":Ljava/lang/String;
     invoke-static {p2, p1}, Lcom/android/server/ResourceManager;->getSignatureFromPackage(Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 298
     .local v5, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v5, :cond_3
 
-    .line 302
     const/4 v0, 0x1
 
-    .line 304
     :cond_3
     new-instance v3, Ljava/io/File;
 
@@ -5815,7 +5172,6 @@
 
     invoke-direct {v3, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 317
     .local v3, "macPermFile":Ljava/io/File;
     :try_start_0
     invoke-static {v3, p2, p1, p3}, Lcom/android/server/ResourceManager;->removeWhitelistEntryFromMac(Ljava/io/File;Ljava/lang/String;II)Z
@@ -5824,26 +5180,22 @@
 
     if-nez v7, :cond_4
 
-    .line 318
     sget-object v7, Lcom/android/server/ResourceManager;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v8, "BTSdcard"
 
-    const-string/jumbo v9, "removeEntryFromMac failed"
+    const-string v9, "removeEntryFromMac failed"
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 324
     :catch_0
     move-exception v2
 
-    .line 325
     .local v2, "e":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 321
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     invoke-direct {p0, p2, p1, v0}, Lcom/android/server/ResourceManager;->loadContainerSetting(Ljava/lang/String;IZ)I
@@ -5854,7 +5206,6 @@
 
     if-eq v7, v6, :cond_0
 
-    .line 330
     const/4 v6, 0x0
 
     goto :goto_0

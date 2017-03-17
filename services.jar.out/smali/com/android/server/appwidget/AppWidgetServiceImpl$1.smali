@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/16 v5, -0x2710
 
-    .line 164
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 166
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/appwidget/AppWidgetServiceImpl;->DEBUG:Z
     invoke-static {}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$000()Z
@@ -57,7 +54,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 167
     const-string v2, "AppWidgetServiceImpl"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -80,7 +76,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_0
     const-string v2, "android.intent.action.CONFIGURATION_CHANGED"
 
@@ -90,18 +85,15 @@
 
     if-eqz v2, :cond_2
 
-    .line 171
     iget-object v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     # invokes: Lcom/android/server/appwidget/AppWidgetServiceImpl;->onConfigurationChanged()V
     invoke-static {v2}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$100(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
 
-    .line 194
     :cond_1
     :goto_0
     return-void
 
-    .line 172
     :cond_2
     const-string v2, "android.intent.action.USER_STARTED"
 
@@ -111,7 +103,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 173
     iget-object v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     const-string v3, "android.intent.extra.user_handle"
@@ -125,7 +116,6 @@
 
     goto :goto_0
 
-    .line 175
     :cond_3
     const-string v2, "android.intent.action.USER_STOPPED"
 
@@ -135,7 +125,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 176
     iget-object v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     const-string v3, "android.intent.extra.user_handle"
@@ -149,7 +138,6 @@
 
     goto :goto_0
 
-    .line 178
     :cond_4
     const-string v2, "com.sec.knox.FIRST_SWITCH"
 
@@ -159,7 +147,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 179
     iget-object v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     const-string v3, "android.intent.extra.user_handle"
@@ -173,7 +160,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_5
     const-string v2, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
@@ -183,7 +169,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 183
     # getter for: Lcom/android/server/appwidget/AppWidgetServiceImpl;->EMERGENCY_MODE_ENABLED:Z
     invoke-static {}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$500()Z
 
@@ -191,20 +176,17 @@
 
     if-eqz v2, :cond_1
 
-    .line 184
-    const-string/jumbo v2, "reason"
+    const-string v2, "reason"
 
     invoke-virtual {p2, v2, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 185
     .local v1, "reason":I
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_1
 
-    .line 186
     iget-object v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     # invokes: Lcom/android/server/appwidget/AppWidgetServiceImpl;->onEmergencyDisabled(I)V
@@ -212,7 +194,6 @@
 
     goto :goto_0
 
-    .line 191
     .end local v1    # "reason":I
     :cond_6
     iget-object v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;

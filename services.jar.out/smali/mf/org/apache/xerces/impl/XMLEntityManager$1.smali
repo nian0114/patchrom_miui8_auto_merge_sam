@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 1582
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 1584
     const-string v0, "user.dir"
 
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;

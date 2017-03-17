@@ -55,7 +55,6 @@
 
     const/4 v3, 0x0
 
-    .line 2870
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "UTF-8"
@@ -64,7 +63,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UTF_8:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2873
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "UTF-8"
@@ -73,7 +71,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UTF_8_WITH_BOM:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2876
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "UTF-16"
@@ -84,7 +81,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UTF_16_BIG_ENDIAN:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2879
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "UTF-16"
@@ -95,7 +91,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UTF_16_BIG_ENDIAN_WITH_BOM:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2882
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "UTF-16"
@@ -106,7 +101,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UTF_16_LITTLE_ENDIAN:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2885
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "UTF-16"
@@ -117,7 +111,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UTF_16_LITTLE_ENDIAN_WITH_BOM:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2888
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "ISO-10646-UCS-4"
@@ -128,7 +121,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UCS_4_BIG_ENDIAN:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2891
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "ISO-10646-UCS-4"
@@ -139,7 +131,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UCS_4_LITTLE_ENDIAN:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2894
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "ISO-10646-UCS-4"
@@ -148,7 +139,6 @@
 
     sput-object v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->UCS_4_UNUSUAL_BYTE_ORDER:Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
-    .line 2897
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;
 
     const-string v1, "CP037"
@@ -167,18 +157,13 @@
     .param p3, "hasBOM"    # Z
 
     .prologue
-    .line 2903
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2904
     iput-object p1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->encoding:Ljava/lang/String;
 
-    .line 2905
     iput-object p2, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->isBigEndian:Ljava/lang/Boolean;
 
-    .line 2906
     iput-boolean p3, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$EncodingInfo;->hasBOM:Z
 
-    .line 2907
     return-void
 .end method

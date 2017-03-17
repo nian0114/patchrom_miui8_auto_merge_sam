@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 11280
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$41$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$41;
 
     invoke-direct {p0, p2, p3}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;I)V
@@ -40,7 +39,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 11296
     const/4 v0, 0x1
 
     return v0
@@ -51,7 +49,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 11284
     const/4 v0, 0x1
 
     return v0
@@ -62,7 +59,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 11287
     const/4 v0, 0x1
 
     return v0
@@ -73,7 +69,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 11300
     const/4 v0, 0x1
 
     return v0
@@ -84,7 +79,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 11290
     const/4 v0, 0x1
 
     return v0
@@ -95,7 +89,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 11293
     const/4 v0, 0x1
 
     return v0

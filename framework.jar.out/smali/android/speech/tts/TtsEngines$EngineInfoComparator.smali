@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 302
     new-instance v0, Landroid/speech/tts/TtsEngines$EngineInfoComparator;
 
     invoke-direct {v0}, Landroid/speech/tts/TtsEngines$EngineInfoComparator;-><init>()V
@@ -50,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +62,6 @@
     .param p2, "rhs"    # Landroid/speech/tts/TextToSpeech$EngineInfo;
 
     .prologue
-    .line 311
     iget-boolean v0, p1, Landroid/speech/tts/TextToSpeech$EngineInfo;->system:Z
 
     if-eqz v0, :cond_0
@@ -73,14 +70,11 @@
 
     if-nez v0, :cond_0
 
-    .line 312
     const/4 v0, -0x1
 
-    .line 321
     :goto_0
     return v0
 
-    .line 313
     :cond_0
     iget-boolean v0, p2, Landroid/speech/tts/TextToSpeech$EngineInfo;->system:Z
 
@@ -90,12 +84,10 @@
 
     if-nez v0, :cond_1
 
-    .line 314
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 321
     :cond_1
     iget v0, p2, Landroid/speech/tts/TextToSpeech$EngineInfo;->priority:I
 
@@ -112,7 +104,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 299
     check-cast p1, Landroid/speech/tts/TextToSpeech$EngineInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

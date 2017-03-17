@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 159
     new-instance v0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams$1;
 
     invoke-direct {v0}, Lcom/samsung/android/dualscreen/DualScreenLaunchParams$1;-><init>()V
@@ -58,24 +57,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
-    .line 41
     iput-boolean v1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
-    .line 66
     sget-object v0, Lcom/samsung/android/dualscreen/DualScreen;->UNKNOWN:Lcom/samsung/android/dualscreen/DualScreen;
 
     iput-object v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 67
     iput v1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
-    .line 68
     return-void
 .end method
 
@@ -86,19 +79,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
-    .line 41
     iput-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
-    .line 77
     invoke-virtual {p0, p1}, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 78
     return-void
 .end method
 
@@ -109,34 +97,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
-    .line 41
     iput-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
-    .line 71
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "screen is null"
+    const-string v1, "screen is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 72
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 73
     iput v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
-    .line 74
     return-void
 .end method
 
@@ -147,14 +128,12 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 93
     iget v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
-    .line 94
     return-void
 .end method
 
@@ -163,7 +142,6 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 101
     iget v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
     xor-int/lit8 v1, p1, -0x1
@@ -172,7 +150,6 @@
 
     iput v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
-    .line 102
     return-void
 .end method
 
@@ -180,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 122
     const/4 v0, 0x0
 
     return v0
@@ -190,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
     return v0
@@ -200,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
     return v0
@@ -210,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
     return v0
@@ -220,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
     return-object v0
@@ -233,14 +205,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 147
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 148
     sget-object v0, Lcom/samsung/android/dualscreen/DualScreen;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -251,7 +221,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 150
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -259,17 +228,14 @@
 
     iput v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
-    .line 151
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 152
     iput-boolean v1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
-    .line 154
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -277,10 +243,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 155
     iput-boolean v1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
-    .line 157
     :cond_2
     return-void
 .end method
@@ -290,10 +254,8 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
-    .line 98
     return-void
 .end method
 
@@ -302,10 +264,8 @@
     .param p1, "set"    # Z
 
     .prologue
-    .line 105
     iput-boolean p1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
-    .line 106
     return-void
 .end method
 
@@ -314,10 +274,8 @@
     .param p1, "set"    # Z
 
     .prologue
-    .line 113
     iput-boolean p1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
-    .line 114
     return-void
 .end method
 
@@ -326,10 +284,8 @@
     .param p1, "screen"    # Lcom/samsung/android/dualscreen/DualScreen;
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
-    .line 86
     return-void
 .end method
 
@@ -337,21 +293,18 @@
     .locals 3
 
     .prologue
-    .line 173
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 174
     .local v0, "b":Ljava/lang/StringBuilder;
     const-string v1, "DualScreenLaunchParams { "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 175
-    const-string/jumbo v1, "mScreen="
+    const-string v1, "mScreen="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -367,8 +320,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 176
-    const-string/jumbo v1, "mFlags="
+    const-string v1, "mFlags="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -378,12 +330,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 177
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 178
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -401,59 +351,47 @@
 
     const/4 v1, 0x0
 
-    .line 127
     iget-object v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
     if-eqz v0, :cond_0
 
-    .line 128
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 129
     iget-object v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mScreen:Lcom/samsung/android/dualscreen/DualScreen;
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/dualscreen/DualScreen;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 133
     :goto_0
     iget v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 134
     iget-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromDisplayChooser:Z
 
     if-eqz v0, :cond_1
 
-    .line 135
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 139
     :goto_1
     iget-boolean v0, p0, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->fromOppositeLaunchApp:Z
 
     if-eqz v0, :cond_2
 
-    .line 140
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 144
     :goto_2
     return-void
 
-    .line 131
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 137
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 142
     :cond_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 

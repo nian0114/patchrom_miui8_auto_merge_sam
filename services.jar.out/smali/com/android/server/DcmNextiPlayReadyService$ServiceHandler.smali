@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;->this$0:Lcom/android/server/DcmNextiPlayReadyService;
 
-    .line 121
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 122
     return-void
 .end method
 
@@ -41,6 +38,5 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 166
     return-void
 .end method

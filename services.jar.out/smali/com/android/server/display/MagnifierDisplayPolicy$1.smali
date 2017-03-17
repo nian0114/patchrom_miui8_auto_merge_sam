@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 392
     iput-object p1, p0, Lcom/android/server/display/MagnifierDisplayPolicy$1;->this$0:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 396
     iget-object v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy$1;->this$0:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     # getter for: Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
@@ -63,7 +61,6 @@
 
     const/4 v0, 0x1
 
-    .line 398
     .local v0, "isHoverZoom":Z
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy$1;->this$0:Lcom/android/server/display/MagnifierDisplayPolicy;
@@ -75,19 +72,16 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 399
     iget-object v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy$1;->this$0:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     # setter for: Lcom/android/server/display/MagnifierDisplayPolicy;->mIsHoverZoom:Z
     invoke-static {v1, v0}, Lcom/android/server/display/MagnifierDisplayPolicy;->access$502(Lcom/android/server/display/MagnifierDisplayPolicy;Z)Z
 
-    .line 400
     iget-object v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy$1;->this$0:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     # invokes: Lcom/android/server/display/MagnifierDisplayPolicy;->setPointMargin()V
     invoke-static {v1}, Lcom/android/server/display/MagnifierDisplayPolicy;->access$600(Lcom/android/server/display/MagnifierDisplayPolicy;)V
 
-    .line 402
     :cond_1
     return-void
 .end method

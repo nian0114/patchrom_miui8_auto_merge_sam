@@ -192,7 +192,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 50
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -211,7 +210,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4814
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$22;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 4817
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -54,14 +52,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4818
     const-string v0, "[EPDGService]"
 
     const-string v1, "WIFI_RSSI_INTENT_RECEIVED: Stopping and restarting wifi rssi intent delay timer"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4819
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -71,7 +67,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/EpdgTimers;->stopTimer(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)V
 
-    .line 4820
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2600()Lcom/sec/epdg/EpdgTimers;
 
@@ -81,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/EpdgTimers;->startTimer(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)Z
 
-    .line 4822
     :cond_0
     return-void
 .end method

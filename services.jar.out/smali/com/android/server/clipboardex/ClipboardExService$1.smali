@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 699
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 702
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 704
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.extra.user_handle"
 
@@ -54,7 +51,6 @@
 
     move-result v1
 
-    .line 705
     .local v1, "id":I
     const-string v3, "android.intent.action.USER_ADDED"
 
@@ -70,12 +66,10 @@
 
     if-nez v3, :cond_2
 
-    .line 706
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 707
     const-string v3, "ClipboardExService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -98,7 +92,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
     :cond_0
     iget-object v3, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -106,12 +99,10 @@
 
     invoke-virtual {v3, v1, v4}, Lcom/android/server/clipboardex/ClipboardExService;->multiUserMode(ILjava/lang/String;)V
 
-    .line 720
     :cond_1
     :goto_0
     return-void
 
-    .line 710
     :cond_2
     const-string v3, "android.intent.action.USER_REMOVED"
 
@@ -127,12 +118,10 @@
 
     if-nez v3, :cond_4
 
-    .line 711
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 712
     const-string v3, "ClipboardExService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -155,7 +144,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 714
     :cond_3
     iget-object v3, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -165,7 +153,6 @@
 
     goto :goto_0
 
-    .line 715
     :cond_4
     const-string v3, "android.intent.action.SECONTAINER_REMOVED"
 
@@ -183,15 +170,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 716
     :cond_5
-    const-string/jumbo v3, "secontainerid"
+    const-string v3, "secontainerid"
 
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 717
     .local v2, "secontainerID":I
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
@@ -229,7 +214,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 718
     :cond_6
     iget-object v3, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 

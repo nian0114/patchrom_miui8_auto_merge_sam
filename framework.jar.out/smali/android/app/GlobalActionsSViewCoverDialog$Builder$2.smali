@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 159
     iput-object p1, p0, Landroid/app/GlobalActionsSViewCoverDialog$Builder$2;->this$0:Landroid/app/GlobalActionsSViewCoverDialog$Builder;
 
     iput-object p2, p0, Landroid/app/GlobalActionsSViewCoverDialog$Builder$2;->val$dialog:Landroid/app/GlobalActionsSViewCoverDialog;
@@ -45,7 +44,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/app/GlobalActionsSViewCoverDialog$Builder$2;->this$0:Landroid/app/GlobalActionsSViewCoverDialog$Builder;
 
     # getter for: Landroid/app/GlobalActionsSViewCoverDialog$Builder;->negativeButtonClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -59,6 +57,5 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 162
     return-void
 .end method

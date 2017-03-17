@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 183
     iput-object p1, p0, Lcom/android/server/pm/PersonaPolicyManagerService$1;->this$0:Lcom/android/server/pm/PersonaPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 186
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 187
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -56,7 +53,6 @@
 
     move-result v1
 
-    .line 189
     .local v1, "userHandle":I
     const-string v2, "android.intent.action.USER_REMOVED"
 
@@ -66,7 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 190
     iget-object v2, p0, Lcom/android/server/pm/PersonaPolicyManagerService$1;->this$0:Lcom/android/server/pm/PersonaPolicyManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaPolicyManagerService;->getPersonaManagerService()Lcom/android/server/pm/PersonaManagerService;
@@ -89,13 +84,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 191
     iget-object v2, p0, Lcom/android/server/pm/PersonaPolicyManagerService$1;->this$0:Lcom/android/server/pm/PersonaPolicyManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaPolicyManagerService;->removePersonaData(I)V
     invoke-static {v2, v1}, Lcom/android/server/pm/PersonaPolicyManagerService;->access$100(Lcom/android/server/pm/PersonaPolicyManagerService;I)V
 
-    .line 194
     :cond_0
     return-void
 .end method

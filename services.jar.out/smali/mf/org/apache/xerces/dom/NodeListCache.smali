@@ -30,18 +30,13 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput v0, p0, Lmf/org/apache/xerces/dom/NodeListCache;->fLength:I
 
-    .line 41
     iput v0, p0, Lmf/org/apache/xerces/dom/NodeListCache;->fChildIndex:I
 
-    .line 54
     iput-object p1, p0, Lmf/org/apache/xerces/dom/NodeListCache;->fOwner:Lmf/org/apache/xerces/dom/ParentNode;
 
-    .line 55
     return-void
 .end method

@@ -20,9 +20,7 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgRilInterface$BaseRxRequest;-><init>(I)V
 
-    .line 61
     return-void
 .end method

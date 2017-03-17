@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 152
     iput-object p1, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v5, 0x0
 
-    .line 167
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 168
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -58,8 +55,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 169
-    const-string/jumbo v3, "networkType"
+    const-string v3, "networkType"
 
     const/4 v6, -0x1
 
@@ -67,11 +63,10 @@
 
     move-result v2
 
-    .line 172
     .local v2, "networkType":I
     iget-object v6, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
-    const-string/jumbo v3, "noConnectivity"
+    const-string v3, "noConnectivity"
 
     invoke-virtual {p2, v3, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
@@ -85,7 +80,6 @@
     # setter for: Lcom/android/server/job/controllers/ConnectivityController;->mNetworkConnected:Z
     invoke-static {v6, v3}, Lcom/android/server/job/controllers/ConnectivityController;->access$002(Lcom/android/server/job/controllers/ConnectivityController;Z)Z
 
-    .line 174
     iget-object v3, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # getter for: Lcom/android/server/job/controllers/ConnectivityController;->mHandler:Lcom/android/server/job/controllers/ConnectivityController$InternalHandler;
@@ -97,7 +91,6 @@
 
     move-result-object v1
 
-    .line 175
     .local v1, "msg":Landroid/os/Message;
     iget-object v3, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
@@ -111,10 +104,8 @@
     :goto_1
     iput v4, v1, Landroid/os/Message;->arg1:I
 
-    .line 176
     iput v2, v1, Landroid/os/Message;->arg2:I
 
-    .line 177
     iget-object v3, p0, Lcom/android/server/job/controllers/ConnectivityController$ConnectivityChangedReceiver;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     # getter for: Lcom/android/server/job/controllers/ConnectivityController;->mHandler:Lcom/android/server/job/controllers/ConnectivityController$InternalHandler;
@@ -124,7 +115,6 @@
 
     invoke-virtual {v3, v1}, Lcom/android/server/job/controllers/ConnectivityController$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 179
     .end local v1    # "msg":Landroid/os/Message;
     .end local v2    # "networkType":I
     :cond_0
@@ -134,13 +124,11 @@
     :cond_1
     move v3, v5
 
-    .line 172
     goto :goto_0
 
     .restart local v1    # "msg":Landroid/os/Message;
     :cond_2
     move v4, v5
 
-    .line 175
     goto :goto_1
 .end method

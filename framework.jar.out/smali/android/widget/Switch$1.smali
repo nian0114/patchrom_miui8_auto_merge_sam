@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1515
     iput-object p1, p0, Landroid/widget/Switch$1;->this$0:Landroid/widget/Switch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1528
     const-string v0, "Switch"
 
-    const-string/jumbo v1, "onAnimationCancel"
+    const-string v1, "onAnimationCancel"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1529
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1524
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1534
     return-void
 .end method
 
@@ -75,6 +70,5 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1519
     return-void
 .end method

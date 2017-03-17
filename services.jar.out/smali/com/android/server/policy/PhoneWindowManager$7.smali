@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2310
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 2313
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->alertToast:Landroid/widget/Toast;
@@ -50,7 +48,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2314
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->alertToast:Landroid/widget/Toast;
@@ -60,7 +57,6 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->cancel()V
 
-    .line 2316
     :cond_0
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
@@ -72,7 +68,6 @@
 
     invoke-direct {v0, v2, v3}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 2317
     .local v0, "context":Landroid/content/Context;
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -94,7 +89,6 @@
 
     move-result-object v1
 
-    .line 2319
     .local v1, "msg":Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -108,7 +102,6 @@
     # setter for: Lcom/android/server/policy/PhoneWindowManager;->alertToast:Landroid/widget/Toast;
     invoke-static {v2, v3}, Lcom/android/server/policy/PhoneWindowManager;->access$2602(Lcom/android/server/policy/PhoneWindowManager;Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 2320
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->alertToast:Landroid/widget/Toast;
@@ -118,7 +111,6 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->setShowForAllUsers()V
 
-    .line 2321
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$7;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->alertToast:Landroid/widget/Toast;
@@ -128,10 +120,8 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 2322
     return-void
 
-    .line 2317
     .end local v1    # "msg":Ljava/lang/String;
     :cond_1
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

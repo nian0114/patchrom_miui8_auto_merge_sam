@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mDeviceBinding:Ljava/lang/String;
 
     return-object v0
@@ -48,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mDeviceExpiryDate:Ljava/util/Date;
 
     return-object v0
@@ -58,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mIssueNo:Ljava/lang/String;
 
     return-object v0
@@ -68,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mManufacturer:Ljava/lang/String;
 
     return-object v0
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mModel:Ljava/lang/String;
 
     return-object v0
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mSerialNo:Ljava/lang/String;
 
     return-object v0
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mDeviceStartDate:Ljava/util/Date;
 
     return-object v0
@@ -108,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mUserId:Ljava/lang/String;
 
     return-object v0
@@ -119,10 +110,8 @@
     .param p1, "deviceBinding"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mDeviceBinding:Ljava/lang/String;
 
-    .line 65
     return-void
 .end method
 
@@ -131,18 +120,15 @@
     .param p1, "expiryDate"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     if-eqz p1, :cond_0
 
-    .line 104
     :try_start_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v2, "yyyy-MM-dd\'T\'HH:mm:ss\'Z\'"
+    const-string v2, "yyyy-MM-dd\'T\'HH:mm:ss\'Z\'"
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 105
     .local v1, "formatter":Ljava/text/SimpleDateFormat;
     const-string v2, "UTC"
 
@@ -152,7 +138,6 @@
 
     invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 106
     invoke-virtual {v1, p1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v2
@@ -161,17 +146,14 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
     .end local v1    # "formatter":Ljava/text/SimpleDateFormat;
     :cond_0
     :goto_0
     return-void
 
-    .line 107
     :catch_0
     move-exception v0
 
-    .line 108
     .local v0, "e":Ljava/text/ParseException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -205,10 +187,8 @@
     .param p1, "issueNo"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mIssueNo:Ljava/lang/String;
 
-    .line 57
     return-void
 .end method
 
@@ -217,10 +197,8 @@
     .param p1, "manufacturer"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mManufacturer:Ljava/lang/String;
 
-    .line 33
     return-void
 .end method
 
@@ -229,10 +207,8 @@
     .param p1, "model"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mModel:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -241,10 +217,8 @@
     .param p1, "serialNo"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mSerialNo:Ljava/lang/String;
 
-    .line 41
     return-void
 .end method
 
@@ -253,18 +227,15 @@
     .param p1, "startDate"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     if-eqz p1, :cond_0
 
-    .line 81
     :try_start_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v2, "yyyy-MM-dd\'T\'HH:mm:ss\'Z\'"
+    const-string v2, "yyyy-MM-dd\'T\'HH:mm:ss\'Z\'"
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 82
     .local v1, "formatter":Ljava/text/SimpleDateFormat;
     const-string v2, "UTC"
 
@@ -274,7 +245,6 @@
 
     invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 83
     invoke-virtual {v1, p1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v2
@@ -283,17 +253,14 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
     .end local v1    # "formatter":Ljava/text/SimpleDateFormat;
     :cond_0
     :goto_0
     return-void
 
-    .line 84
     :catch_0
     move-exception v0
 
-    .line 85
     .local v0, "e":Ljava/text/ParseException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -327,9 +294,7 @@
     .param p1, "userID"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;->mUserId:Ljava/lang/String;
 
-    .line 119
     return-void
 .end method

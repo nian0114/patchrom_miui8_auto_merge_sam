@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3193
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$33;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 3195
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$33;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->onToggleDatamode()V
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$800(Lcom/android/server/policy/GlobalActions;)V
 
-    .line 3196
     return-void
 .end method

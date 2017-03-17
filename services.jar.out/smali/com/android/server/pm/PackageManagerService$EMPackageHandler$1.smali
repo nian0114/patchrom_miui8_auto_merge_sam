@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2715
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler$1;->this$1:Lcom/android/server/pm/PackageManagerService$EMPackageHandler;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -49,21 +48,17 @@
     .end annotation
 
     .prologue
-    .line 2717
     const/4 v0, -0x1
 
-    .line 2718
     .local v0, "thisID":I
     if-nez p1, :cond_0
 
-    .line 2719
     const-string v1, "PackageManager"
 
-    const-string/jumbo v2, "intent is null!"
+    const-string v2, "intent is null!"
 
     invoke-static {v1, v2}, Lcom/sec/android/emergencymode/Elog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2723
     :goto_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler$1;->this$1:Lcom/android/server/pm/PackageManagerService$EMPackageHandler;
 
@@ -71,14 +66,13 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 2724
     const-string v1, "PackageManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "performReceive sending EM_SEND_PENDING_BROADCAST id["
+    const-string v3, "performReceive sending EM_SEND_PENDING_BROADCAST id["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,7 +94,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2725
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$EMPackageHandler$1;->this$1:Lcom/android/server/pm/PackageManagerService$EMPackageHandler;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -111,11 +104,9 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/pm/PackageManagerService$EMPackageHandler;->sendEmptyMessage(I)Z
 
-    .line 2729
     :goto_1
     return-void
 
-    .line 2721
     :cond_0
     const-string v1, "EM_PKG_HADNLER_ID"
 
@@ -127,7 +118,6 @@
 
     goto :goto_0
 
-    .line 2727
     :cond_1
     const-string v1, "PackageManager"
 
@@ -135,7 +125,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "performReceive canceled emID["
+    const-string v3, "performReceive canceled emID["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

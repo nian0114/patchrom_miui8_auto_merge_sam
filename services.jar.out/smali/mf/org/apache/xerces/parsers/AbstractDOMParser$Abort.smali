@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 166
     new-instance v0, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/parsers/AbstractDOMParser$Abort;-><init>()V
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 167
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
     return-void
@@ -51,6 +49,5 @@
     .locals 0
 
     .prologue
-    .line 169
     return-object p0
 .end method

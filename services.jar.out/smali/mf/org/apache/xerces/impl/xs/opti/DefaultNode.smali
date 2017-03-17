@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .end annotation
 
     .prologue
-    .line 166
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -47,7 +44,6 @@
     .param p1, "deep"    # Z
 
     .prologue
-    .line 107
     const/4 v0, 0x0
 
     return-object v0
@@ -58,7 +54,6 @@
     .param p1, "other"    # Lmf/org/w3c/dom/Node;
 
     .prologue
-    .line 175
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -74,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return-object v0
@@ -84,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
     return-object v0
@@ -94,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     return-object v0
@@ -106,7 +98,6 @@
     .param p2, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 205
     const/4 v0, 0x0
 
     return-object v0
@@ -116,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return-object v0
@@ -126,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     return-object v0
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 131
     const/4 v0, 0x0
 
     return-object v0
@@ -146,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 121
     const/4 v0, 0x0
 
     return-object v0
@@ -156,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 87
     const/4 v0, 0x0
 
     return-object v0
@@ -166,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     return-object v0
@@ -176,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, -0x1
 
     return v0
@@ -191,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return-object v0
@@ -201,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/4 v0, 0x0
 
     return-object v0
@@ -211,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 62
     const/4 v0, 0x0
 
     return-object v0
@@ -221,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 126
     const/4 v0, 0x0
 
     return-object v0
@@ -231,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
     return-object v0
@@ -246,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 179
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -263,7 +241,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 211
     const/4 v0, 0x0
 
     return-object v0
@@ -273,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 141
     const/4 v0, 0x0
 
     return v0
@@ -283,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 102
     const/4 v0, 0x0
 
     return v0
@@ -300,7 +275,6 @@
     .end annotation
 
     .prologue
-    .line 151
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -317,7 +291,6 @@
     .param p1, "namespaceURI"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -334,7 +307,6 @@
     .param p1, "arg"    # Lmf/org/w3c/dom/Node;
 
     .prologue
-    .line 200
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -351,7 +323,6 @@
     .param p1, "other"    # Lmf/org/w3c/dom/Node;
 
     .prologue
-    .line 185
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -369,7 +340,6 @@
     .param p2, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -380,7 +350,6 @@
     .param p1, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 196
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -397,7 +366,6 @@
     .param p1, "namespaceURI"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -413,7 +381,6 @@
     .locals 0
 
     .prologue
-    .line 112
     return-void
 .end method
 
@@ -427,7 +394,6 @@
     .end annotation
 
     .prologue
-    .line 161
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -450,7 +416,6 @@
     .end annotation
 
     .prologue
-    .line 156
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -472,7 +437,6 @@
     .end annotation
 
     .prologue
-    .line 146
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -494,7 +458,6 @@
     .end annotation
 
     .prologue
-    .line 171
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -516,7 +479,6 @@
     .end annotation
 
     .prologue
-    .line 182
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -535,7 +497,6 @@
     .param p3, "handler"    # Lmf/org/w3c/dom/UserDataHandler;
 
     .prologue
-    .line 208
     new-instance v0, Lmf/org/w3c/dom/DOMException;
 
     const/16 v1, 0x9

@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 528
     iput-object p1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;->val$q:Ljava/util/concurrent/BlockingQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 529
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;->mConnectedAtLeastOnce:Z
@@ -49,27 +47,22 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 533
     iget-boolean v1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;->mConnectedAtLeastOnce:Z
 
     if-nez v1, :cond_0
 
-    .line 534
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;->mConnectedAtLeastOnce:Z
 
-    .line 535
     const-string v1, "SCEPKeystoreProxyService"
 
     const-string v2, "Bind to keychain service happened"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
     if-eqz p2, :cond_0
 
-    .line 539
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;->val$q:Ljava/util/concurrent/BlockingQueue;
 
@@ -81,16 +74,13 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 546
     :cond_0
     :goto_0
     return-void
 
-    .line 540
     :catch_0
     move-exception v0
 
-    .line 543
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
@@ -102,6 +92,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 550
     return-void
 .end method

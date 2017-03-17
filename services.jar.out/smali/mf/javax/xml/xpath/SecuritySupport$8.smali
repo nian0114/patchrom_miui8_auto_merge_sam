@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/javax/xml/xpath/SecuritySupport$8;->this$0:Lmf/javax/xml/xpath/SecuritySupport;
 
     iput-object p2, p0, Lmf/javax/xml/xpath/SecuritySupport$8;->val$f:Ljava/io/File;
 
-    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 174
     new-instance v0, Ljava/lang/Boolean;
 
     iget-object v1, p0, Lmf/javax/xml/xpath/SecuritySupport$8;->val$f:Ljava/io/File;

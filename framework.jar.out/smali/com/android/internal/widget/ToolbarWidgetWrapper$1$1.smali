@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 202
     iput-object p1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1$1;->this$1:Lcom/android/internal/widget/ToolbarWidgetWrapper$1;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "resultData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 204
     iget-object v0, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1$1;->this$1:Lcom/android/internal/widget/ToolbarWidgetWrapper$1;
 
     iget-object v0, v0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
@@ -58,6 +56,5 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
-    .line 205
     return-void
 .end method

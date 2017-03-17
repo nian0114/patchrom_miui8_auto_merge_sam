@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 14857
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$11;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "rhs"    # Lcom/android/server/wm/WindowManagerService$WallpaperInnerState;
 
     .prologue
-    .line 14860
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$11;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mTmpGlobalWindowList:Lcom/android/server/wm/WindowList;
@@ -63,7 +61,6 @@
 
     move-result v0
 
-    .line 14861
     .local v0, "lhsIndex":I
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$11;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -75,7 +72,6 @@
 
     move-result v1
 
-    .line 14862
     .local v1, "rhsIndex":I
     sub-int v2, v1, v0
 
@@ -88,7 +84,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 14857
     check-cast p1, Lcom/android/server/wm/WindowManagerService$WallpaperInnerState;
 
     .end local p1    # "x0":Ljava/lang/Object;

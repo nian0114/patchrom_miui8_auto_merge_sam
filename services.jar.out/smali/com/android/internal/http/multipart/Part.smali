@@ -50,28 +50,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 31
     sput-object v0, Lcom/android/internal/http/multipart/Part;->BOUNDARY_BYTES:[B
 
-    .line 33
     sput-object v0, Lcom/android/internal/http/multipart/Part;->CHARSET_BYTES:[B
 
-    .line 35
     sput-object v0, Lcom/android/internal/http/multipart/Part;->CONTENT_DISPOSITION_BYTES:[B
 
-    .line 37
     sput-object v0, Lcom/android/internal/http/multipart/Part;->CONTENT_TRANSFER_ENCODING_BYTES:[B
 
-    .line 39
     sput-object v0, Lcom/android/internal/http/multipart/Part;->CONTENT_TYPE_BYTES:[B
 
-    .line 41
     sput-object v0, Lcom/android/internal/http/multipart/Part;->CRLF_BYTES:[B
 
-    .line 43
     sput-object v0, Lcom/android/internal/http/multipart/Part;->EXTRA_BYTES:[B
 
-    .line 45
     sput-object v0, Lcom/android/internal/http/multipart/Part;->QUOTE_BYTES:[B
 
     return-void
@@ -81,7 +73,6 @@
     .locals 2
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -99,7 +90,6 @@
     .end annotation
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -119,7 +109,6 @@
     .end annotation
 
     .prologue
-    .line 26
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -140,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 27
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -161,7 +149,6 @@
     .end annotation
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -183,7 +170,6 @@
     .end annotation
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -208,7 +194,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -225,7 +210,6 @@
     .locals 2
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -244,7 +228,6 @@
     .end annotation
 
     .prologue
-    .line 22
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -272,7 +255,6 @@
     .end annotation
 
     .prologue
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -292,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -320,7 +301,6 @@
     .end annotation
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -340,7 +320,6 @@
     .end annotation
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -360,7 +339,6 @@
     .end annotation
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -380,7 +358,6 @@
     .end annotation
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -400,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -414,7 +390,6 @@
     .locals 2
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

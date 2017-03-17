@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 35
     new-instance v0, Lcom/ipsec/client/CertKeyPair;
 
     invoke-direct {v0, p1}, Lcom/ipsec/client/CertKeyPair;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 32
     invoke-virtual {p0, p1}, Lcom/ipsec/client/CertKeyPair$1;->createFromParcel(Landroid/os/Parcel;)Lcom/ipsec/client/CertKeyPair;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 40
     new-array v0, p1, [Lcom/ipsec/client/CertKeyPair;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 32
     invoke-virtual {p0, p1}, Lcom/ipsec/client/CertKeyPair$1;->newArray(I)[Lcom/ipsec/client/CertKeyPair;
 
     move-result-object v0

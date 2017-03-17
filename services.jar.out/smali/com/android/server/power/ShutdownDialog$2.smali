@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 392
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$2;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "arg0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 394
     const-string v0, "ShutdownDialog"
 
     const-string v1, "!@onCompletion(MediaPlayer arg0) called !!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     return-void
 .end method

@@ -66,7 +66,6 @@
 
     const/4 v3, 0x0
 
-    .line 10
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "USER_LOCK"
@@ -75,7 +74,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->USER_LOCK:Landroid/content/pm/PersonaNewEvent;
 
-    .line 11
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "USER_UNLOCK"
@@ -84,7 +82,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->USER_UNLOCK:Landroid/content/pm/PersonaNewEvent;
 
-    .line 12
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "ADMIN_LOCK"
@@ -93,7 +90,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->ADMIN_LOCK:Landroid/content/pm/PersonaNewEvent;
 
-    .line 13
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "ADMIN_UNLOCK"
@@ -102,7 +98,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->ADMIN_UNLOCK:Landroid/content/pm/PersonaNewEvent;
 
-    .line 14
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "LICENSE_LOCK"
@@ -111,7 +106,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->LICENSE_LOCK:Landroid/content/pm/PersonaNewEvent;
 
-    .line 15
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "LICENSE_UNLOCK"
@@ -122,7 +116,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->LICENSE_UNLOCK:Landroid/content/pm/PersonaNewEvent;
 
-    .line 16
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "REMOVE"
@@ -133,7 +126,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->REMOVE:Landroid/content/pm/PersonaNewEvent;
 
-    .line 17
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "TIMA_COMPROMISED"
@@ -144,7 +136,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->TIMA_COMPROMISED:Landroid/content/pm/PersonaNewEvent;
 
-    .line 20
     new-instance v0, Landroid/content/pm/PersonaNewEvent;
 
     const-string v1, "URGENT_UPDATE"
@@ -155,7 +146,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->URGENT_UPDATE:Landroid/content/pm/PersonaNewEvent;
 
-    .line 8
     const/16 v0, 0x9
 
     new-array v0, v0, [Landroid/content/pm/PersonaNewEvent;
@@ -206,7 +196,6 @@
 
     sput-object v0, Landroid/content/pm/PersonaNewEvent;->$VALUES:[Landroid/content/pm/PersonaNewEvent;
 
-    .line 35
     new-instance v0, Landroid/content/pm/PersonaNewEvent$1;
 
     invoke-direct {v0}, Landroid/content/pm/PersonaNewEvent$1;-><init>()V
@@ -225,7 +214,6 @@
     .end annotation
 
     .prologue
-    .line 8
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -236,7 +224,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 8
     const-class v0, Landroid/content/pm/PersonaNewEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -252,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 8
     sget-object v0, Landroid/content/pm/PersonaNewEvent;->$VALUES:[Landroid/content/pm/PersonaNewEvent;
 
     invoke-virtual {v0}, [Landroid/content/pm/PersonaNewEvent;->clone()Ljava/lang/Object;
@@ -270,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const/4 v0, 0x0
 
     return v0
@@ -282,13 +267,11 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/content/pm/PersonaNewEvent;->name()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 33
     return-void
 .end method

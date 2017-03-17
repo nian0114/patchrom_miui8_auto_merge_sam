@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 450
     iput-object p1, p0, Lcom/samsung/cpp/CPPProvider$1$3;->this$1:Lcom/samsung/cpp/CPPProvider$1;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 453
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getState()I
 
     move-result v0
 
-    .line 454
     .local v0, "currentState":I
     const-string v1, "CPProvider"
 
@@ -67,6 +64,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     return-void
 .end method

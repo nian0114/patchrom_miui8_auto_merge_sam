@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2037
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2042
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4300()Z
 

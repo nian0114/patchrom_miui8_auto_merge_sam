@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 114
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;-><init>(Ljava/lang/String;ILcom/samsung/android/contextaware/utilbundle/logger/CaLogger$1;)V
@@ -36,7 +35,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 117
     # getter for: Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isConsoleLogging:Z
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->access$100()Z
 
@@ -57,7 +55,6 @@
 
     move v1, v2
 
-    .line 119
     .local v1, "usable":Z
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -81,20 +78,16 @@
 
     move-result-object v0
 
-    .line 120
     .local v0, "str":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 121
     const-string v2, "CAE"
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :cond_0
     return-object v0
 
-    .line 117
     .end local v0    # "str":Ljava/lang/String;
     .end local v1    # "usable":Z
     :cond_1
@@ -110,7 +103,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 128
     # getter for: Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isFileLogging:Z
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->access$400()Z
 
@@ -131,12 +123,10 @@
 
     move v0, v1
 
-    .line 130
     .local v0, "usable":Z
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 131
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->getInstance()Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     move-result-object v2
@@ -159,11 +149,9 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->logging(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 134
     :cond_0
     return-void
 
-    .line 128
     .end local v0    # "usable":Z
     :cond_1
     const/4 v0, 0x0

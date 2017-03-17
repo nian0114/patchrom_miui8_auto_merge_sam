@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 467
     iput-object p1, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 469
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 470
     .local v0, "action":Ljava/lang/String;
     const-string v2, "IPPhoneProxy"
 
@@ -70,7 +67,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 472
     const-string v2, "com.movial.ACTION_TERMINATE_STACK"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -79,7 +75,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 473
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     const-string v3, "restart_service"
@@ -91,12 +86,10 @@
     # invokes: Lcom/movial/ipphone/IPPhoneProxy;->unbindService(Z)V
     invoke-static {v2, v3}, Lcom/movial/ipphone/IPPhoneProxy;->access$000(Lcom/movial/ipphone/IPPhoneProxy;Z)V
 
-    .line 494
     :cond_0
     :goto_0
     return-void
 
-    .line 474
     :cond_1
     const-string v2, "android.provider.Telephony.SPN_STRINGS_UPDATED"
 
@@ -106,7 +99,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 475
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     # invokes: Lcom/movial/ipphone/IPPhoneProxy;->updateNetworkName(Landroid/content/Intent;)V
@@ -114,7 +106,6 @@
 
     goto :goto_0
 
-    .line 476
     :cond_2
     const-string v2, "com.movial.gba_initialized"
 
@@ -124,14 +115,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 477
     const-string v2, "IPPhoneProxy"
 
     const-string v3, "GBA init intent received"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 478
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-virtual {v2}, Lcom/movial/ipphone/IPPhoneProxy;->getContext()Landroid/content/Context;
@@ -148,14 +137,12 @@
 
     invoke-static {v2, v3, v4}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 479
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.movial.reg_check"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 480
     .local v1, "regIntent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
@@ -167,7 +154,6 @@
 
     goto :goto_0
 
-    .line 481
     .end local v1    # "regIntent":Landroid/content/Intent;
     :cond_3
     const-string v2, "com.movial.ACTION_REREAD_ISIM"
@@ -178,7 +164,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 483
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-virtual {v2}, Lcom/movial/ipphone/IPPhoneProxy;->getContext()Landroid/content/Context;
@@ -193,14 +178,12 @@
 
     invoke-static {v2, v3, v5}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 485
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.movial.ACTION_SHUTDDOWN"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 486
     .restart local v1    # "regIntent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
@@ -210,7 +193,6 @@
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 487
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-virtual {v2}, Lcom/movial/ipphone/IPPhoneProxy;->getIsimRecords()Lcom/android/internal/telephony/uicc/IsimRecords;
@@ -219,14 +201,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 488
     const-string v2, "IPPhoneProxy"
 
     const-string v3, "IPUtils.ACTION_REREAD_ISIM : reReadISimRecords: "
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     iget-object v2, p0, Lcom/movial/ipphone/IPPhoneProxy$1;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-virtual {v2}, Lcom/movial/ipphone/IPPhoneProxy;->getIsimRecords()Lcom/android/internal/telephony/uicc/IsimRecords;
@@ -239,7 +219,6 @@
 
     goto :goto_0
 
-    .line 491
     :cond_4
     const-string v2, "IPPhoneProxy"
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 508
     invoke-direct {p0}, Lcom/android/internal/telephony/cat/ResponseData;-><init>()V
 
     return-void
@@ -21,6 +20,5 @@
     .param p1, "buf"    # Ljava/io/ByteArrayOutputStream;
 
     .prologue
-    .line 512
     return-void
 .end method

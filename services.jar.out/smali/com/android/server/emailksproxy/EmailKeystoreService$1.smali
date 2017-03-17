@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 230
     iput-object p1, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$1;->this$0:Lcom/android/server/emailksproxy/EmailKeystoreService;
 
     iput p2, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$1;->val$uidscep:I
@@ -48,10 +47,8 @@
     .locals 6
 
     .prologue
-    .line 232
     const/4 v1, 0x0
 
-    .line 234
     .local v1, "keyChainConnection":Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$1;->this$0:Lcom/android/server/emailksproxy/EmailKeystoreService;
@@ -67,12 +64,10 @@
 
     move-result-object v1
 
-    .line 235
     invoke-virtual {v1}, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
 
     move-result-object v2
 
-    .line 236
     .local v2, "keyChainService":Landroid/security/IKeyChainService;
     const-string v3, "EmailKeystoreService"
 
@@ -80,7 +75,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "grantAccessForAKS call setGrant : uidscep = "
+    const-string v5, "grantAccessForAKS call setGrant : uidscep = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -110,7 +105,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     iget v3, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$1;->val$uidscep:I
 
     iget-object v4, p0, Lcom/android/server/emailksproxy/EmailKeystoreService$1;->val$alias:Ljava/lang/String;
@@ -124,67 +118,56 @@
     .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->close()V
 
-    .line 249
     .end local v2    # "keyChainService":Landroid/security/IKeyChainService;
     :cond_0
     :goto_0
     return-void
 
-    .line 238
     :catch_0
     move-exception v0
 
-    .line 240
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 247
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->close()V
 
     goto :goto_0
 
-    .line 241
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catch_1
     move-exception v0
 
-    .line 243
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 247
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->close()V
 
     goto :goto_0
 
-    .line 244
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v0
 
-    .line 245
     .local v0, "e":Ljava/lang/AssertionError;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/AssertionError;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 247
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/emailksproxy/EmailKeystoreService$KeyChainConnection;->close()V

@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 9
     const-string v0, "GS01"
 
     invoke-static {v0}, Lcom/carrieriq/iqagent/client/metrics/gs/GS01;->idFromString(Ljava/lang/String;)I
@@ -38,12 +37,10 @@
     .locals 1
 
     .prologue
-    .line 17
     sget v0, Lcom/carrieriq/iqagent/client/metrics/gs/GS01;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 18
     return-void
 .end method
 
@@ -54,12 +51,10 @@
     .param p3, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     sget v0, Lcom/carrieriq/iqagent/client/metrics/gs/GS01;->ID:I
 
     invoke-direct {p0, v0}, Lcom/carrieriq/iqagent/client/Metric;-><init>(I)V
 
-    .line 34
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 38
     const/4 v0, -0x1
 
     return v0
@@ -85,7 +79,6 @@
     .locals 0
 
     .prologue
-    .line 24
     return-void
 .end method
 
@@ -93,7 +86,6 @@
     .locals 0
 
     .prologue
-    .line 21
     return-void
 .end method
 
@@ -101,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 30
     return-void
 .end method
 
@@ -109,6 +100,5 @@
     .locals 0
 
     .prologue
-    .line 27
     return-void
 .end method

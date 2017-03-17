@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 27
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
@@ -24,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 30
     const-class v1, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
     monitor-enter v1
@@ -44,19 +41,16 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 31
     sget-object v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
     if-nez v0, :cond_0
 
-    .line 32
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
-    .line 34
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
     :try_end_0
@@ -66,7 +60,6 @@
 
     return-object v0
 
-    .line 30
     :catchall_0
     move-exception v0
 
@@ -84,19 +77,16 @@
     .param p3, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 165
     .local v1, "xmlBuffer":Ljava/lang/String;
     :try_start_0
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;-><init>()V
 
-    .line 166
     .local v0, "mXmlCreator":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
     invoke-virtual {v0, p2, p3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createKeyProvClientHelloXML(Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -104,12 +94,10 @@
 
     move-result-object v1
 
-    .line 167
     monitor-exit p0
 
     return-object v1
 
-    .line 164
     .end local v0    # "mXmlCreator":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
     :catchall_0
     move-exception v2
@@ -126,19 +114,16 @@
     .param p3, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 171
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 172
     .local v1, "xmlBuffer":Ljava/lang/String;
     :try_start_0
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;-><init>()V
 
-    .line 173
     .local v0, "mXmlCreator":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
     invoke-virtual {v0, p2, p3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createKeyProvServerFinishedXML(Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -146,12 +131,10 @@
 
     move-result-object v1
 
-    .line 174
     monitor-exit p0
 
     return-object v1
 
-    .line 171
     .end local v0    # "mXmlCreator":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
     :catchall_0
     move-exception v2
@@ -168,19 +151,16 @@
     .param p3, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 158
     .local v1, "xmlBuffer":Ljava/lang/String;
     :try_start_0
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;-><init>()V
 
-    .line 159
     .local v0, "mXmlCreator":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
     invoke-virtual {v0, p2, p3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;->createKeyProvTriggerXML(Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -188,12 +168,10 @@
 
     move-result-object v1
 
-    .line 160
     monitor-exit p0
 
     return-object v1
 
-    .line 157
     .end local v0    # "mXmlCreator":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLCreator;
     :catchall_0
     move-exception v2
@@ -211,7 +189,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 75
     monitor-enter p0
 
     :try_start_0
@@ -219,10 +196,8 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 76
     const/4 v1, 0x0
 
-    .line 77
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     new-instance v3, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLValidation;
 
@@ -234,7 +209,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 78
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPin;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPin;
 
     move-result-object v2
@@ -243,7 +217,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPin;->setKeyPin(Ljava/lang/String;)V
 
-    .line 81
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     const-string v2, "UTF-8"
@@ -258,18 +231,15 @@
 
     invoke-direct {v0, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 83
     .local v0, "inStream":Ljava/io/InputStream;
     new-instance v1, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     invoke-direct {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;-><init>()V
 
-    .line 84
     .restart local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v0, :cond_0
 
-    .line 85
     invoke-virtual {v1, v0}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->parse(Ljava/io/InputStream;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -277,14 +247,12 @@
     :cond_0
     move-object v2, v1
 
-    .line 91
     .end local v0    # "inStream":Ljava/io/InputStream;
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 88
     :cond_1
     :try_start_1
     const-string v3, "XMLHandler::parseDskppXMLBuffer: XML is not valid"
@@ -295,7 +263,6 @@
 
     goto :goto_0
 
-    .line 75
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -311,7 +278,6 @@
     .param p2, "dskppXMLFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 94
     monitor-enter p0
 
     :try_start_0
@@ -321,49 +287,40 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
     const/4 v3, 0x0
 
-    .line 96
     .local v3, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     const/4 v0, 0x0
 
-    .line 98
     .local v0, "dskppBuffer":Ljava/lang/String;
     :try_start_1
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, p2}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 99
     .local v2, "in":Ljava/io/InputStream;
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->inputStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 100
     invoke-virtual {p0, p1, v0}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLBuffer(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v3
 
-    .line 101
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 105
     .end local v2    # "in":Ljava/io/InputStream;
     :goto_0
     monitor-exit p0
 
     return-object v3
 
-    .line 102
     :catch_0
     move-exception v1
 
-    .line 103
     .local v1, "e":Ljava/io/IOException;
     :try_start_2
     new-instance v4, Ljava/lang/StringBuilder;
@@ -394,7 +351,6 @@
 
     goto :goto_0
 
-    .line 94
     .end local v0    # "dskppBuffer":Ljava/lang/String;
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
@@ -412,36 +368,30 @@
     .param p2, "dskppBuffer"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 110
     .local v0, "mKeyProvClientHello":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLBuffer(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v1
 
-    .line 111
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v1, :cond_0
 
-    .line 112
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->getKeyProvClientHello()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 113
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 109
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -457,36 +407,30 @@
     .param p2, "dskppXMLFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 118
     .local v0, "mKeyProvClientHello":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLFile(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v1
 
-    .line 119
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v1, :cond_0
 
-    .line 120
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->getKeyProvClientHello()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvClientHello;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 121
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 117
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -502,36 +446,30 @@
     .param p2, "dskppBuffer"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 142
     .local v0, "mKeyServerFinished":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLBuffer(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v1
 
-    .line 143
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v1, :cond_0
 
-    .line 144
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->getKeyProvServerFinished()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 145
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 141
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -547,36 +485,30 @@
     .param p2, "dskppXMLFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 149
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 150
     .local v0, "mKeyServerFinished":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLFile(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v1
 
-    .line 151
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v1, :cond_0
 
-    .line 152
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->getKeyProvServerFinished()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvServerFinished;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 153
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 149
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -592,36 +524,30 @@
     .param p2, "dskppBuffer"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 126
     .local v0, "mKeyProvTrigger":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLBuffer(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v1
 
-    .line 127
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v1, :cond_0
 
-    .line 128
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->getKeyProvTrigger()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 129
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 125
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -637,36 +563,30 @@
     .param p2, "dskppXMLFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 134
     .local v0, "mKeyProvTrigger":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->parseDskppXMLFile(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
 
     move-result-object v1
 
-    .line 135
     .local v1, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     if-eqz v1, :cond_0
 
-    .line 136
     invoke-virtual {v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;->getKeyProvTrigger()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 137
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 133
     .end local v1    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParser;
     :catchall_0
     move-exception v2
@@ -696,7 +616,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 38
     monitor-enter p0
 
     :try_start_0
@@ -704,14 +623,11 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 39
     const/4 v4, 0x0
 
-    .line 40
     .local v4, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;>;"
     const/4 v2, 0x0
 
-    .line 42
     .local v2, "keyContainer":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;
     new-instance v6, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLValidation;
 
@@ -723,7 +639,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 43
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPin;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPin;
 
     move-result-object v5
@@ -734,7 +649,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 47
     :try_start_1
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
@@ -750,20 +664,16 @@
 
     invoke-direct {v1, v5}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 49
     .local v1, "inStream":Ljava/io/InputStream;
     new-instance v3, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParserPskc;
 
     invoke-direct {v3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParserPskc;-><init>()V
 
-    .line 50
     .local v3, "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParserPskc;
     if-eqz v1, :cond_0
 
-    .line 51
     invoke-virtual {v3, v1}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParserPskc;->parse(Ljava/io/InputStream;)V
 
-    .line 52
     :cond_0
     invoke-virtual {v3}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParserPskc;->getKeyContainer()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;
     :try_end_1
@@ -772,23 +682,19 @@
 
     move-result-object v2
 
-    .line 63
     .end local v1    # "inStream":Ljava/io/InputStream;
     .end local v3    # "parser":Lcom/android/server/enterprise/otp/engine/handler/xml/XMLParserPskc;
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 64
     :try_start_2
     invoke-virtual {v2}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;->getKeys()Ljava/util/List;
 
     move-result-object v4
 
-    .line 66
     :cond_1
     if-eqz v4, :cond_3
 
-    .line 67
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -824,17 +730,14 @@
     :goto_1
     move-object v5, v4
 
-    .line 71
     :goto_2
     monitor-exit p0
 
     return-object v5
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     new-instance v5, Ljava/lang/StringBuilder;
@@ -865,7 +768,6 @@
 
     goto :goto_0
 
-    .line 38
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "keyContainer":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;
     .end local v4    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;>;"
@@ -876,7 +778,6 @@
 
     throw v5
 
-    .line 59
     .restart local v2    # "keyContainer":Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyContainer;
     .restart local v4    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;>;"
     :cond_2
@@ -887,7 +788,6 @@
 
     goto :goto_2
 
-    .line 69
     :cond_3
     const-string v5, "XMLHandler::parsePskc: EXIT [KeyPackage List is null]"
 

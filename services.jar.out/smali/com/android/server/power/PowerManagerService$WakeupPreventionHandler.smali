@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2182
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 2183
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 2184
     return-void
 .end method
 
@@ -45,17 +42,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2188
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2207
     :cond_0
     :goto_0
     return-void
 
-    .line 2190
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -66,14 +60,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2191
     const-string v0, "PowerManagerService"
 
-    const-string/jumbo v1, "mPocketHandler: MSG_REGISTER_POCKET_SENSOR"
+    const-string v1, "mPocketHandler: MSG_REGISTER_POCKET_SENSOR"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2193
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v1, 0x1
@@ -81,7 +73,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mIsPocketSensorEnabled:Z
     invoke-static {v0, v1}, Lcom/android/server/power/PowerManagerService;->access$1602(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 2194
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mSContextManager:Landroid/hardware/scontext/SContextManager;
@@ -113,7 +104,6 @@
 
     goto :goto_0
 
-    .line 2199
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -124,14 +114,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2200
     const-string v0, "PowerManagerService"
 
-    const-string/jumbo v1, "mPocketHandler: MSG_UNREGISTER_POCKET_SENSOR"
+    const-string v1, "mPocketHandler: MSG_UNREGISTER_POCKET_SENSOR"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2202
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v1, 0x0
@@ -139,7 +127,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mIsPocketSensorEnabled:Z
     invoke-static {v0, v1}, Lcom/android/server/power/PowerManagerService;->access$1602(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 2203
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeupPreventionHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mSContextManager:Landroid/hardware/scontext/SContextManager;
@@ -158,7 +145,6 @@
 
     goto :goto_0
 
-    .line 2188
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

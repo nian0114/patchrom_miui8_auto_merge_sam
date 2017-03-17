@@ -27,14 +27,12 @@
 
     const/16 v3, 0x1f
 
-    .line 2350
     const/16 v0, 0xd
 
     new-array v0, v0, [I
 
     const/4 v1, 0x1
 
-    .line 2351
     aput v3, v0, v1
 
     const/4 v1, 0x2
@@ -61,7 +59,6 @@
 
     const/4 v1, 0x7
 
-    .line 2352
     aput v3, v0, v1
 
     const/16 v1, 0x8
@@ -84,10 +81,8 @@
 
     aput v3, v0, v1
 
-    .line 2350
     sput-object v0, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl$DaysInMonth;->table:[I
 
-    .line 2352
     return-void
 .end method
 
@@ -95,7 +90,6 @@
     .locals 0
 
     .prologue
-    .line 2349
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -105,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 2350
     sget-object v0, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl$DaysInMonth;->table:[I
 
     return-object v0

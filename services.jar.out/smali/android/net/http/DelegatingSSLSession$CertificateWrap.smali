@@ -20,7 +20,6 @@
     .param p1, "certificate"    # Ljava/security/cert/Certificate;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Landroid/net/http/DelegatingSSLSession;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

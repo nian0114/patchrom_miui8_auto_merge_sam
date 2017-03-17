@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1793
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$17;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1803
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -49,14 +47,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1804
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeTrashAnimation() End of TranslateAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1805
     :cond_0
     return-void
 .end method
@@ -66,7 +62,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1800
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1795
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -83,14 +77,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1796
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeTrashAnimation() Start of TranslateAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1797
     :cond_0
     return-void
 .end method

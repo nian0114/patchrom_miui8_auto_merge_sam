@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 362
     iput-object p1, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 364
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 365
     .local v0, "action":Ljava/lang/String;
     const-string v4, "IPPhone"
 
@@ -70,7 +67,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     const-string v4, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -79,7 +75,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 368
     iget-object v4, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     const-string v5, "wifi_state"
@@ -93,12 +88,10 @@
     # invokes: Lcom/movial/ipphone/IPPhone;->showDialog(II)V
     invoke-static {v4, v7, v5}, Lcom/movial/ipphone/IPPhone;->access$600(Lcom/movial/ipphone/IPPhone;II)V
 
-    .line 388
     :cond_0
     :goto_0
     return-void
 
-    .line 369
     :cond_1
     const-string v4, "com.movial.ACTION_RADIO_ON"
 
@@ -108,7 +101,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 370
     iget-object v4, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     const-string v5, "com.movial.ACTION_RADIO_ON"
@@ -121,7 +113,6 @@
 
     goto :goto_0
 
-    .line 371
     :cond_2
     const-string v4, "com.movial.IMS_REGISTRATION"
 
@@ -131,7 +122,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 372
     iget-object v4, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     const-string v5, "IMS_REG_STATUS"
@@ -147,7 +137,6 @@
 
     goto :goto_0
 
-    .line 373
     :cond_3
     const-string v4, "android.intent.action.SERVICE_STATE"
 
@@ -157,18 +146,15 @@
 
     if-eqz v4, :cond_0
 
-    .line 374
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 375
     .local v1, "data":Landroid/os/Bundle;
     invoke-static {v1}, Landroid/telephony/ServiceState;->newFromBundle(Landroid/os/Bundle;)Landroid/telephony/ServiceState;
 
     move-result-object v3
 
-    .line 377
     .local v3, "serviceState":Landroid/telephony/ServiceState;
     invoke-virtual {v3}, Landroid/telephony/ServiceState;->getState()I
 
@@ -177,7 +163,6 @@
     # setter for: Lcom/movial/ipphone/IPPhone;->mState:I
     invoke-static {v4}, Lcom/movial/ipphone/IPPhone;->access$1702(I)I
 
-    .line 378
     const-string v4, "IPPhone"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -205,24 +190,20 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     iget-object v4, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # invokes: Lcom/movial/ipphone/IPPhone;->updateCellLocation()V
     invoke-static {v4}, Lcom/movial/ipphone/IPPhone;->access$1800(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 383
     new-instance v2, Landroid/content/Intent;
 
     const-string v4, "com.movial.ACTION_SERVICE_STATE_CHANGED"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 384
     .local v2, "intentForServiceState":Landroid/content/Intent;
     invoke-virtual {v2, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 385
     iget-object v4, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mContext:Landroid/content/Context;
@@ -232,7 +213,6 @@
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->removeStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 386
     iget-object v4, p0, Lcom/movial/ipphone/IPPhone$3;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mContext:Landroid/content/Context;

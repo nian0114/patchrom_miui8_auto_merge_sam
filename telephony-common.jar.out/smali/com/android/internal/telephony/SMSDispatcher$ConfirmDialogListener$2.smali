@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2280
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener$2;->this$1:Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2282
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener$2;->this$1:Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     # getter for: Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mPositiveButton:Landroid/widget/Button;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
-    .line 2283
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener$2;->this$1:Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     # getter for: Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mNegativeButton:Landroid/widget/Button;
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
-    .line 2284
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener$2;->this$1:Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     # getter for: Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
@@ -76,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2285
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener$2;->this$1:Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     # getter for: Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
@@ -88,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2286
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener$2;->this$1:Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
     # getter for: Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 2288
     :cond_0
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 190
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$4;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 195
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$4;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;->mHandler:Landroid/os/Handler;
@@ -53,7 +51,6 @@
 
     move-result-object v0
 
-    .line 196
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler$4;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingAsyncHandler;
 
@@ -64,6 +61,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 197
     return-void
 .end method

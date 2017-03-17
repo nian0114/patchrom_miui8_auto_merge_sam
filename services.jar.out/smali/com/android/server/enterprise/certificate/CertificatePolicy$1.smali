@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 253
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$1;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -46,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 255
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -60,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 253
     invoke-virtual {p0}, Lcom/android/server/enterprise/certificate/CertificatePolicy$1;->initialValue()Ljava/lang/Boolean;
 
     move-result-object v0

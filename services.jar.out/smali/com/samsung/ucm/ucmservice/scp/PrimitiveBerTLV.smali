@@ -21,10 +21,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 8
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;-><init>()V
 
-    .line 9
     const-string v0, "BERTLV::Prim"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -55,7 +53,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     invoke-virtual {p1}, Lcom/samsung/ucm/ucmservice/scp/Tag;->isConstructed()Z
 
     move-result v0
@@ -74,7 +71,6 @@
 
     if-nez v0, :cond_0
 
-    .line 11
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/BerTLV$BerTLVException;
 
     const-string v1, "Inconsistent tag"
@@ -83,33 +79,27 @@
 
     throw v0
 
-    .line 13
     :cond_0
     iput v3, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLevel:I
 
-    .line 14
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
-    .line 15
     array-length v0, p2
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLen:I
 
-    .line 16
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLen:I
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mValue:[B
 
-    .line 17
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mValue:[B
 
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLen:I
 
     invoke-static {p2, v3, v0, v3, v1}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 18
     return-void
 .end method
 
@@ -126,20 +116,16 @@
     .end annotation
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;-><init>()V
 
-    .line 21
     iput p4, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLevel:I
 
-    .line 22
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     invoke-direct {v0, p1, p2}, Lcom/samsung/ucm/ucmservice/scp/Tag;-><init>([BI)V
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
-    .line 23
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/Tag;->getLen()I
@@ -148,21 +134,18 @@
 
     add-int/2addr p2, v0
 
-    .line 24
     invoke-virtual {p0, p1, p2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->parseLength([BI)I
 
     move-result v0
 
     add-int/2addr p2, v0
 
-    .line 25
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getFullLen()I
 
     move-result v0
 
     if-le v0, p3, :cond_0
 
-    .line 26
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/BerTLV$BerTLVException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -207,7 +190,6 @@
 
     throw v0
 
-    .line 28
     :cond_0
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLen:I
 
@@ -215,7 +197,6 @@
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mValue:[B
 
-    .line 29
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mValue:[B
 
     const/4 v1, 0x0
@@ -224,7 +205,6 @@
 
     invoke-static {p1, p2, v0, v1, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 30
     return-void
 .end method
 
@@ -235,7 +215,6 @@
     .param p1, "tag"    # Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     invoke-virtual {v0, p1}, Lcom/samsung/ucm/ucmservice/scp/Tag;->equals(Lcom/samsung/ucm/ucmservice/scp/Tag;)Z
@@ -244,7 +223,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 69
     .end local p0    # "this":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     :goto_0
     return-object p0
@@ -260,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mValue:[B
 
     return-object v0
@@ -271,7 +248,6 @@
     .param p1, "tag"    # Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     .prologue
-    .line 75
     return-void
 .end method
 
@@ -279,18 +255,15 @@
     .locals 5
 
     .prologue
-    .line 34
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->updateLength()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     invoke-super {p0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 39
     .local v2, "ret":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -310,7 +283,6 @@
 
     move-result-object v2
 
-    .line 40
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -321,7 +293,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 41
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -340,27 +311,22 @@
 
     move-result-object v2
 
-    .line 40
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 35
     .end local v1    # "i":I
     .end local v2    # "ret":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 36
     .local v0, "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
-    .line 44
     .end local v0    # "e":Ljava/lang/Exception;
     :goto_1
     return-object v2
 
-    .line 43
     .restart local v1    # "i":I
     .restart local v2    # "ret":Ljava/lang/String;
     :cond_0
@@ -388,7 +354,6 @@
 
     move-result-object v2
 
-    .line 44
     goto :goto_1
 .end method
 
@@ -396,10 +361,8 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->updateLenLength()V
 
-    .line 63
     return-void
 .end method
 
@@ -414,13 +377,10 @@
     .end annotation
 
     .prologue
-    .line 52
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->updateLenLength()V
 
-    .line 53
     move v0, p2
 
-    .line 54
     .local v0, "offset":I
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
@@ -430,14 +390,12 @@
 
     add-int/2addr v0, v1
 
-    .line 55
     invoke-virtual {p0, p1, v0}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->writeLen([BI)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 56
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mValue:[B
 
     const/4 v2, 0x0
@@ -446,12 +404,10 @@
 
     invoke-static {v1, v2, p1, v0, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 57
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->mLen:I
 
     add-int/2addr v0, v1
 
-    .line 58
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getFullLen()I
 
     move-result v1

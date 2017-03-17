@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 73
     iput-object p1, p0, Lcom/android/server/cover/CoverDisabler$CoverDisablerHandler;->this$0:Lcom/android/server/cover/CoverDisabler;
 
-    .line 74
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 75
     return-void
 .end method
 
@@ -47,16 +44,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 79
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 84
     :goto_0
     return-void
 
-    .line 81
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/cover/CoverDisabler$CoverDisablerHandler;->this$0:Lcom/android/server/cover/CoverDisabler;
 
@@ -75,7 +69,6 @@
 
     goto :goto_1
 
-    .line 79
     nop
 
     :pswitch_data_0

@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$1;->this$0:Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry;
 
     iput-object p2, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$1;->val$implementations:Ljava/util/Vector;
 
-    .line 212
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget-object v0, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$1;->val$implementations:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
@@ -62,7 +59,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 214
     if-ltz p1, :cond_0
 
     iget-object v1, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$1;->val$implementations:Ljava/util/Vector;
@@ -73,7 +69,6 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 217
     :try_start_0
     iget-object v1, p0, Lmf/org/w3c/dom/bootstrap/DOMImplementationRegistry$1;->val$implementations:Ljava/util/Vector;
 
@@ -85,24 +80,20 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
     :goto_0
     return-object v1
 
-    .line 218
     :catch_0
     move-exception v0
 
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     move-object v1, v2
 
-    .line 219
     goto :goto_0
 
     .end local v0    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     :cond_0
     move-object v1, v2
 
-    .line 222
     goto :goto_0
 .end method

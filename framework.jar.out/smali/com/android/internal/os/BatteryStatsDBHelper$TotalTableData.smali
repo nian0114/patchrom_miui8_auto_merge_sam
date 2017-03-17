@@ -33,22 +33,16 @@
     .param p6, "oneDayDelta"    # I
 
     .prologue
-    .line 651
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 652
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneHour:D
 
-    .line 653
     iput p3, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneHour:I
 
-    .line 654
     iput-wide p4, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneDay:D
 
-    .line 655
     iput p6, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneDay:I
 
-    .line 656
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .param p7, "x4"    # Lcom/android/internal/os/BatteryStatsDBHelper$1;
 
     .prologue
-    .line 644
     invoke-direct/range {p0 .. p6}, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;-><init>(DIDI)V
 
     return-void
@@ -72,7 +65,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     .prologue
-    .line 644
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneDay:D
 
     return-wide v0
@@ -83,7 +75,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     .prologue
-    .line 644
     iget v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneDay:I
 
     return v0
@@ -94,7 +85,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     .prologue
-    .line 644
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->totalPowerForOneHour:D
 
     return-wide v0
@@ -105,7 +95,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;
 
     .prologue
-    .line 644
     iget v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$TotalTableData;->batteryDeltaForOneHour:I
 
     return v0

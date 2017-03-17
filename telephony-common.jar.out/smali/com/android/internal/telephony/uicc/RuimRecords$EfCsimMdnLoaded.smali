@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 701
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 701
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 704
     const-string v0, "EF_CSIM_MDN"
 
     return-object v0
@@ -63,7 +60,6 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 709
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [B
@@ -72,13 +68,11 @@
 
     check-cast v0, [B
 
-    .line 711
     .local v0, "data":[B
     sget-boolean v2, Lcom/android/internal/telephony/uicc/IccRecords;->SHIP_BUILD:Z
 
     if-nez v2, :cond_0
 
-    .line 712
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -105,7 +99,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 717
     :goto_0
     const/4 v2, 0x0
 
@@ -113,7 +106,6 @@
 
     and-int/lit8 v1, v2, 0xf
 
-    .line 718
     .local v1, "mdnDigitsNum":I
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -125,12 +117,10 @@
 
     iput-object v3, v2, Lcom/android/internal/telephony/uicc/RuimRecords;->mMdn:Ljava/lang/String;
 
-    .line 720
     sget-boolean v2, Lcom/android/internal/telephony/uicc/IccRecords;->SHIP_BUILD:Z
 
     if-nez v2, :cond_1
 
-    .line 721
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -157,11 +147,9 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 725
     :goto_1
     return-void
 
-    .line 714
     .end local v1    # "mdnDigitsNum":I
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
@@ -172,7 +160,6 @@
 
     goto :goto_0
 
-    .line 723
     .restart local v1    # "mdnDigitsNum":I
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimMdnLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;

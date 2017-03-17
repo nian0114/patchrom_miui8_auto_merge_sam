@@ -24,12 +24,10 @@
     .locals 1
 
     .prologue
-    .line 14
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgWfcProfileReader;->mEpdgWfcProfileInstance:Lcom/sec/epdg/EpdgWfcProfileReader;
 
-    .line 18
     const-string v0, "content://com.sec.sprint.wfc.provider/wfc_profiles"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -38,7 +36,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgWfcProfileReader;->CONTENT_URI_WFCPROFILE:Landroid/net/Uri;
 
-    .line 23
     const-string v0, "content://com.sec.sprint.wfc.provider/wfc_state"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -54,10 +51,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -65,7 +60,6 @@
     .locals 2
 
     .prologue
-    .line 30
     const-class v1, Lcom/sec/epdg/EpdgWfcProfileReader;
 
     monitor-enter v1
@@ -75,14 +69,12 @@
 
     if-nez v0, :cond_0
 
-    .line 31
     new-instance v0, Lcom/sec/epdg/EpdgWfcProfileReader;
 
     invoke-direct {v0}, Lcom/sec/epdg/EpdgWfcProfileReader;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/EpdgWfcProfileReader;->mEpdgWfcProfileInstance:Lcom/sec/epdg/EpdgWfcProfileReader;
 
-    .line 33
     :cond_0
     sget-object v0, Lcom/sec/epdg/EpdgWfcProfileReader;->mEpdgWfcProfileInstance:Lcom/sec/epdg/EpdgWfcProfileReader;
     :try_end_0
@@ -92,7 +84,6 @@
 
     return-object v0
 
-    .line 30
     :catchall_0
     move-exception v0
 
@@ -113,7 +104,6 @@
 
     const/4 v9, 0x0
 
-    .line 37
     monitor-enter p0
 
     :try_start_0
@@ -121,7 +111,6 @@
 
     move-result-object v0
 
-    .line 38
     .local v0, "cr":Landroid/content/ContentResolver;
     const/4 v1, 0x1
 
@@ -133,11 +122,9 @@
 
     aput-object v3, v2, v1
 
-    .line 41
     .local v2, "projection":[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 43
     .local v7, "status":I
     sget-object v1, Lcom/sec/epdg/EpdgWfcProfileReader;->CONTENT_URI_WFCPROFILE:Landroid/net/Uri;
 
@@ -163,7 +150,6 @@
 
     move-result-object v6
 
-    .line 49
     .local v6, "messagesCursor":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -174,7 +160,6 @@
 
     if-gtz v1, :cond_2
 
-    .line 51
     :cond_0
     const-string v1, "[EPDGWFCREADER]"
 
@@ -200,28 +185,23 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 60
     if-eqz v6, :cond_1
 
-    .line 61
     :try_start_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 62
     const/4 v6, 0x0
 
     :cond_1
     move v1, v9
 
-    .line 65
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 54
     :cond_2
     :goto_1
     :try_start_3
@@ -231,7 +211,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 55
     const-string v1, "ap_enabled"
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -242,14 +221,13 @@
 
     move-result v7
 
-    .line 57
     const-string v1, "[EPDGWFCREADER]"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "status of SSID "
+    const-string v4, "status of SSID "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -279,17 +257,14 @@
 
     goto :goto_1
 
-    .line 60
     :catchall_0
     move-exception v1
 
     if-eqz v6, :cond_3
 
-    .line 61
     :try_start_4
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 62
     const/4 v6, 0x0
 
     :cond_3
@@ -297,7 +272,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 37
     .end local v0    # "cr":Landroid/content/ContentResolver;
     .end local v2    # "projection":[Ljava/lang/String;
     .end local v6    # "messagesCursor":Landroid/database/Cursor;
@@ -309,7 +283,6 @@
 
     throw v1
 
-    .line 60
     .restart local v0    # "cr":Landroid/content/ContentResolver;
     .restart local v2    # "projection":[Ljava/lang/String;
     .restart local v6    # "messagesCursor":Landroid/database/Cursor;
@@ -317,16 +290,13 @@
     :cond_4
     if-eqz v6, :cond_5
 
-    .line 61
     :try_start_5
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 62
     const/4 v6, 0x0
 
-    .line 65
     :cond_5
     if-ne v7, v8, :cond_6
 
@@ -347,7 +317,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 69
     monitor-enter p0
 
     :try_start_0
@@ -355,7 +324,6 @@
 
     move-result-object v0
 
-    .line 70
     .local v0, "cr":Landroid/content/ContentResolver;
     const/4 v1, 0x1
 
@@ -363,15 +331,13 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v3, "state"
+    const-string v3, "state"
 
     aput-object v3, v2, v1
 
-    .line 73
     .local v2, "projection":[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 75
     .local v7, "status":I
     sget-object v1, Lcom/sec/epdg/EpdgWfcProfileReader;->CONTENT_URI_WFCSTATE:Landroid/net/Uri;
 
@@ -387,7 +353,6 @@
 
     move-result-object v6
 
-    .line 79
     .local v6, "messagesCursor":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -398,7 +363,6 @@
 
     if-gtz v1, :cond_2
 
-    .line 81
     :cond_0
     const-string v1, "[EPDGWFCREADER]"
 
@@ -408,28 +372,23 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 90
     if-eqz v6, :cond_1
 
-    .line 91
     :try_start_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 92
     const/4 v6, 0x0
 
     :cond_1
     move v1, v8
 
-    .line 95
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 84
     :cond_2
     :goto_1
     :try_start_3
@@ -439,8 +398,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 85
-    const-string/jumbo v1, "state"
+    const-string v1, "state"
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -450,14 +408,13 @@
 
     move-result v7
 
-    .line 87
     const-string v1, "[EPDGWFCREADER]"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "status of vowifi :"
+    const-string v4, "status of vowifi :"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -477,17 +434,14 @@
 
     goto :goto_1
 
-    .line 90
     :catchall_0
     move-exception v1
 
     if-eqz v6, :cond_3
 
-    .line 91
     :try_start_4
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 92
     const/4 v6, 0x0
 
     :cond_3
@@ -495,7 +449,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 69
     .end local v0    # "cr":Landroid/content/ContentResolver;
     .end local v2    # "projection":[Ljava/lang/String;
     .end local v6    # "messagesCursor":Landroid/database/Cursor;
@@ -507,7 +460,6 @@
 
     throw v1
 
-    .line 90
     .restart local v0    # "cr":Landroid/content/ContentResolver;
     .restart local v2    # "projection":[Ljava/lang/String;
     .restart local v6    # "messagesCursor":Landroid/database/Cursor;
@@ -515,18 +467,15 @@
     :cond_4
     if-eqz v6, :cond_5
 
-    .line 91
     :try_start_5
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 92
     const/4 v6, 0x0
 
     :cond_5
     move v1, v7
 
-    .line 95
     goto :goto_0
 .end method

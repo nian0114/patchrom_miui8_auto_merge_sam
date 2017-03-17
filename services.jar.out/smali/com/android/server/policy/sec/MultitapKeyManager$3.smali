@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 311
     iput-object p1, p0, Lcom/android/server/policy/sec/MultitapKeyManager$3;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 313
     iget-object v0, p0, Lcom/android/server/policy/sec/MultitapKeyManager$3;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     # getter for: Lcom/android/server/policy/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/policy/sec/MultitapKeyManager$3;->this$0:Lcom/android/server/policy/sec/MultitapKeyManager;
 
     const/4 v1, 0x0
@@ -58,7 +55,6 @@
     # setter for: Lcom/android/server/policy/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
     invoke-static {v0, v1}, Lcom/android/server/policy/sec/MultitapKeyManager;->access$302(Lcom/android/server/policy/sec/MultitapKeyManager;Z)Z
 
-    .line 316
     :cond_0
     return-void
 .end method

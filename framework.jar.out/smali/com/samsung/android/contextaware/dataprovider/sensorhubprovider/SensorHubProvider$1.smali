@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 251
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubSyntax$DATATYPE;
 
     move-result-object v0

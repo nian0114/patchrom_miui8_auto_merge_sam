@@ -39,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,21 +51,17 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 35
     const-string v3, "SessionData::addEntry Enter"
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 36
     const/4 v1, 0x0
 
-    .line 37
     .local v1, "ret":I
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 39
     .local v2, "row":Landroid/content/ContentValues;
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
@@ -80,7 +75,6 @@
 
     if-nez v3, :cond_1
 
-    .line 40
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -104,30 +98,25 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 41
     sget v3, Lcom/android/server/enterprise/otp/engine/common/OTPErrors;->DB_TOKENID_INVALID:I
 
-    .line 59
     :goto_0
     return v3
 
-    .line 44
     :cond_1
-    const-string/jumbo v3, "session_id"
+    const-string v3, "session_id"
 
     iget-object v4, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mSessionId:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
-    const-string/jumbo v3, "package_name"
+    const-string v3, "package_name"
 
     iget-object v4, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
-    const-string/jumbo v3, "current_step"
+    const-string v3, "current_step"
 
     iget v4, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mCurrStep:I
 
@@ -137,8 +126,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 47
-    const-string/jumbo v3, "next_step"
+    const-string v3, "next_step"
 
     iget v4, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
 
@@ -148,8 +136,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 48
-    const-string/jumbo v3, "timestamp"
+    const-string v3, "timestamp"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -161,7 +148,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 51
     :try_start_0
     const-string v3, "SessionTable"
 
@@ -175,22 +161,18 @@
 
     long-to-int v1, v4
 
-    .line 56
     :goto_1
     const/4 v3, -0x1
 
     if-ne v1, v3, :cond_2
 
-    .line 57
     sget v3, Lcom/android/server/enterprise/otp/engine/common/OTPErrors;->DB_NO_ROW_INSERTED:I
 
     goto :goto_0
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
     .local v0, "e":Landroid/database/sqlite/SQLiteConstraintException;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -218,7 +200,6 @@
 
     goto :goto_1
 
-    .line 59
     .end local v0    # "e":Landroid/database/sqlite/SQLiteConstraintException;
     :cond_2
     const/4 v3, 0x0
@@ -236,25 +217,20 @@
 
     const/4 v3, 0x0
 
-    .line 93
     const-string v4, "SessionData::deleteEntry Enter"
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 94
     const/4 v0, 0x0
 
-    .line 95
     .local v0, "val":I
-    const-string/jumbo v2, "package_name = ?"
+    const-string v2, "package_name = ?"
 
-    .line 96
     .local v2, "whereClause":Ljava/lang/String;
     new-array v1, v5, [Ljava/lang/String;
 
     aput-object p2, v1, v3
 
-    .line 98
     .local v1, "whereArgs":[Ljava/lang/String;
     const-string v4, "SessionTable"
 
@@ -262,14 +238,11 @@
 
     move-result v0
 
-    .line 100
     if-ne v0, v5, :cond_0
 
-    .line 104
     :goto_0
     return v3
 
-    .line 103
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -293,7 +266,6 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 104
     sget v3, Lcom/android/server/enterprise/otp/engine/common/OTPErrors;->DB_NO_ROW_DELETED:I
 
     goto :goto_0
@@ -305,15 +277,12 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     const-string v0, "SessionData::getEntry Enter"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 110
-    const-string/jumbo v3, "package_name = ?"
+    const-string v3, "package_name = ?"
 
-    .line 111
     .local v3, "whereClause":Ljava/lang/String;
     const/4 v0, 0x1
 
@@ -323,15 +292,12 @@
 
     aput-object p2, v4, v0
 
-    .line 112
     .local v4, "whereArgs":[Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 113
     .local v9, "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     const/4 v8, 0x0
 
-    .line 115
     .local v8, "c":Landroid/database/Cursor;
     if-eqz p2, :cond_0
 
@@ -341,7 +307,6 @@
 
     if-nez v0, :cond_1
 
-    .line 116
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -365,13 +330,11 @@
 
     move-object v10, v9
 
-    .line 141
     .end local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     .local v10, "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     :goto_0
     return-object v10
 
-    .line 121
     .end local v10    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     .restart local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     :cond_1
@@ -392,7 +355,6 @@
 
     move-result-object v8
 
-    .line 123
     if-eqz v8, :cond_2
 
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
@@ -401,7 +363,6 @@
 
     if-nez v0, :cond_4
 
-    .line 124
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -425,22 +386,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     :goto_1
     if-eqz v8, :cond_3
 
-    .line 137
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_3
     move-object v10, v9
 
-    .line 141
     .end local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     .restart local v10    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     goto :goto_0
 
-    .line 127
     .end local v10    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     .restart local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     :cond_4
@@ -451,11 +408,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 128
     .end local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     .restart local v10    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     :try_start_2
-    const-string/jumbo v0, "session_id"
+    const-string v0, "session_id"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -467,8 +423,7 @@
 
     iput-object v0, v10, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mSessionId:Ljava/lang/String;
 
-    .line 129
-    const-string/jumbo v0, "package_name"
+    const-string v0, "package_name"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -480,8 +435,7 @@
 
     iput-object v0, v10, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
-    .line 130
-    const-string/jumbo v0, "current_step"
+    const-string v0, "current_step"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -493,8 +447,7 @@
 
     iput v0, v10, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mCurrStep:I
 
-    .line 131
-    const-string/jumbo v0, "next_step"
+    const-string v0, "next_step"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -506,8 +459,7 @@
 
     iput v0, v10, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
 
-    .line 132
-    const-string/jumbo v0, "timestamp"
+    const-string v0, "timestamp"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -529,20 +481,17 @@
     .restart local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     goto :goto_1
 
-    .line 136
     :catchall_0
     move-exception v0
 
     :goto_2
     if-eqz v8, :cond_5
 
-    .line 137
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_5
     throw v0
 
-    .line 136
     .end local v9    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     .restart local v10    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     :catchall_1
@@ -562,12 +511,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 64
     const-string v5, "SessionData::updateEntry Enter"
 
     invoke-static {v5}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 66
     iget-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
     if-eqz v5, :cond_0
@@ -580,25 +527,20 @@
 
     if-nez v5, :cond_2
 
-    .line 67
     :cond_0
     const-string v4, "SessionData::updateEntry mPkgName is null"
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 68
     sget v4, Lcom/android/server/enterprise/otp/engine/common/OTPErrors;->DB_PACKAGE_NAME_INVALID:I
 
-    .line 88
     :cond_1
     :goto_0
     return v4
 
-    .line 71
     :cond_2
-    const-string/jumbo v3, "package_name = ?"
+    const-string v3, "package_name = ?"
 
-    .line 72
     .local v3, "whereClause":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -608,22 +550,19 @@
 
     aput-object v5, v2, v4
 
-    .line 74
     .local v2, "whereArgs":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 75
     .local v1, "row":Landroid/content/ContentValues;
-    const-string/jumbo v5, "session_id"
+    const-string v5, "session_id"
 
     iget-object v6, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mSessionId:Ljava/lang/String;
 
     invoke-virtual {v1, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
-    const-string/jumbo v5, "current_step"
+    const-string v5, "current_step"
 
     iget v6, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mCurrStep:I
 
@@ -633,8 +572,7 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 78
-    const-string/jumbo v5, "next_step"
+    const-string v5, "next_step"
 
     iget v6, p0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
 
@@ -644,8 +582,7 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 79
-    const-string/jumbo v5, "timestamp"
+    const-string v5, "timestamp"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -657,20 +594,17 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 81
     const-string v5, "SessionTable"
 
-    const-string/jumbo v6, "package_name = ?"
+    const-string v6, "package_name = ?"
 
     invoke-virtual {p1, v5, v1, v6, v2}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
-    .line 83
     .local v0, "retval":I
     if-nez v0, :cond_1
 
-    .line 84
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -693,7 +627,6 @@
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 85
     sget v4, Lcom/android/server/enterprise/otp/engine/common/OTPErrors;->DB_NO_ROW_FOUND:I
 
     goto :goto_0

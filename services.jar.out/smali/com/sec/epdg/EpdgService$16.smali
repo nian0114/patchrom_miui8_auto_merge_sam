@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1607
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$16;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1610
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -54,18 +52,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1615
     move-object v2, p1
 
     check-cast v2, Landroid/content/Intent;
 
-    .line 1616
     .local v2, "intent":Landroid/content/Intent;
     invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1617
     .local v0, "action":Ljava/lang/String;
     const-string v3, "[EPDGService]"
 
@@ -89,7 +84,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1618
     if-eqz v0, :cond_2
 
     const-string v3, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
@@ -100,25 +94,21 @@
 
     if-eqz v3, :cond_2
 
-    .line 1619
-    const-string/jumbo v3, "phoneinECMState"
+    const-string v3, "phoneinECMState"
 
     invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 1620
     .local v1, "ecmState":Z
     if-eqz v1, :cond_0
 
-    .line 1621
     invoke-static {}, Lcom/sec/epdg/EpdgService;->isEpdgAvailable()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 1622
     # getter for: Lcom/sec/epdg/EpdgService;->mImsListener:Lcom/sec/epdg/handover/EpdgImsListener;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1000()Lcom/sec/epdg/handover/EpdgImsListener;
 
@@ -128,13 +118,11 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/epdg/handover/EpdgImsListener;->setEcbmChanged(Z)V
 
-    .line 1644
     .end local v1    # "ecmState":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 1629
     .restart local v1    # "ecmState":Z
     :cond_1
     # getter for: Lcom/sec/epdg/EpdgService;->mImsListener:Lcom/sec/epdg/handover/EpdgImsListener;
@@ -144,7 +132,6 @@
 
     invoke-virtual {v3, v6}, Lcom/sec/epdg/handover/EpdgImsListener;->setEcbmChanged(Z)V
 
-    .line 1630
     # getter for: Lcom/sec/epdg/EpdgService;->mImsListener:Lcom/sec/epdg/handover/EpdgImsListener;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1000()Lcom/sec/epdg/handover/EpdgImsListener;
 
@@ -158,7 +145,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1631
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -207,7 +193,6 @@
 
     goto :goto_0
 
-    .line 1636
     .end local v1    # "ecmState":Z
     :cond_2
     if-eqz v0, :cond_0
@@ -220,18 +205,15 @@
 
     if-eqz v3, :cond_0
 
-    .line 1637
-    const-string/jumbo v3, "phoneinECMState"
+    const-string v3, "phoneinECMState"
 
     invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 1638
     .restart local v1    # "ecmState":Z
     if-nez v1, :cond_0
 
-    .line 1639
     # getter for: Lcom/sec/epdg/EpdgService;->mImsListener:Lcom/sec/epdg/handover/EpdgImsListener;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1000()Lcom/sec/epdg/handover/EpdgImsListener;
 
@@ -239,7 +221,6 @@
 
     invoke-virtual {v3, v6}, Lcom/sec/epdg/handover/EpdgImsListener;->setEcbmChanged(Z)V
 
-    .line 1640
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1500()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 

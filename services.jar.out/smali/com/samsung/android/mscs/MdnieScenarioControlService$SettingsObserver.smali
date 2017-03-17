@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 418
     iput-object p1, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$SettingsObserver;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
-    .line 419
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 420
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 423
     iget-object v0, p0, Lcom/samsung/android/mscs/MdnieScenarioControlService$SettingsObserver;->this$0:Lcom/samsung/android/mscs/MdnieScenarioControlService;
 
     # invokes: Lcom/samsung/android/mscs/MdnieScenarioControlService;->setting_is_changed()V
     invoke-static {v0}, Lcom/samsung/android/mscs/MdnieScenarioControlService;->access$2100(Lcom/samsung/android/mscs/MdnieScenarioControlService;)V
 
-    .line 424
     return-void
 .end method

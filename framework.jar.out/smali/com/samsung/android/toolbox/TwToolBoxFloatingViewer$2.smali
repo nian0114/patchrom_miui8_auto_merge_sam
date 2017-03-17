@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 425
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Landroid/content/pm/IKnoxModeChangeObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 429
     const-string v0, "toolbox"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -61,13 +59,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaId:I
     invoke-static {v0, p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$002(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 431
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -79,7 +75,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 432
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -91,6 +86,5 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 433
     return-void
 .end method

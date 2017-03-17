@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1313
     iput-object p1, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 1315
     iget-object v0, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
     invoke-virtual {v0}, Landroid/widget/Toolbar;->collapseActionView()V
 
-    .line 1316
     return-void
 .end method

@@ -55,67 +55,54 @@
     .locals 1
 
     .prologue
-    .line 1893
     iput-object p1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->this$1:Lcom/android/server/SdpManagerService$SdpEngineDatabase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1896
-    const-string/jumbo v0, "user"
+    const-string v0, "user"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ELEMENT_USER:Ljava/lang/String;
 
-    .line 1898
     const-string v0, "alias"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_ALIAS:Ljava/lang/String;
 
-    .line 1899
-    const-string/jumbo v0, "id"
+    const-string v0, "id"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_ID:Ljava/lang/String;
 
-    .line 1900
-    const-string/jumbo v0, "userid"
+    const-string v0, "userid"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_USERID:Ljava/lang/String;
 
-    .line 1901
-    const-string/jumbo v0, "flags"
+    const-string v0, "flags"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_FLAGS:Ljava/lang/String;
 
-    .line 1902
-    const-string/jumbo v0, "version"
+    const-string v0, "version"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_VERSION:Ljava/lang/String;
 
-    .line 1903
-    const-string/jumbo v0, "isMigrating"
+    const-string v0, "isMigrating"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_IS_MIGRATING:Ljava/lang/String;
 
-    .line 1904
     const-string v0, "chamberPath"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_CHAMBER_PATH:Ljava/lang/String;
 
-    .line 1905
-    const-string/jumbo v0, "pkgName"
+    const-string v0, "pkgName"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_PKG_NAME:Ljava/lang/String;
 
-    .line 1907
-    const-string/jumbo v0, "true"
+    const-string v0, "true"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_VAL_TRUE:Ljava/lang/String;
 
-    .line 1908
-    const-string/jumbo v0, "false"
+    const-string v0, "false"
 
     iput-object v0, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->ATTR_VAL_FALSE:Ljava/lang/String;
 
-    .line 1932
     return-void
 .end method
 
@@ -125,7 +112,6 @@
     .param p2, "x1"    # Lcom/android/server/SdpManagerService$1;
 
     .prologue
-    .line 1893
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;-><init>(Lcom/android/server/SdpManagerService$SdpEngineDatabase;)V
 
     return-void
@@ -137,7 +123,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 1893
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->getEngineInfoLocked(I)Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     move-result-object v0
@@ -151,7 +136,6 @@
     .param p1, "x1"    # Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     .prologue
-    .line 1893
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->updateEngineInfoLocked(Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;)I
 
     move-result v0
@@ -165,7 +149,6 @@
     .param p1, "x1"    # Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     .prologue
-    .line 1893
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->removeEngineInfoLocked(Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;)V
 
     return-void
@@ -176,12 +159,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 1920
     new-instance v1, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler$EngineXmlHandler;
 
     invoke-direct {v1, p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler$EngineXmlHandler;-><init>(Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;)V
 
-    .line 1923
     .local v1, "handler":Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler$EngineXmlHandler;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler;->this$1:Lcom/android/server/SdpManagerService$SdpEngineDatabase;
@@ -199,7 +180,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1929
     :goto_0
     # invokes: Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler$EngineXmlHandler;->getEngineInfoLocked()Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     invoke-static {v1}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler$EngineXmlHandler;->access$1400(Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineInfoXmlHandler$EngineXmlHandler;)Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
@@ -208,15 +188,12 @@
 
     return-object v2
 
-    .line 1924
     :catch_0
     move-exception v0
 
-    .line 1925
     .local v0, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
-    .line 1926
     const-string v2, "SdpManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -247,7 +224,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 1911
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -272,7 +248,6 @@
 
     move-result-object v1
 
-    .line 1912
     .local v1, "xmlPath":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
@@ -302,7 +277,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1913
     .local v0, "baseDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
@@ -310,7 +284,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1914
     const-string v2, "SdpManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -337,7 +310,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1916
     :cond_0
     new-instance v2, Ljava/io/File;
 
@@ -379,7 +351,6 @@
     .param p1, "info"    # Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     .prologue
-    .line 2085
     invoke-virtual {p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getId()I
 
     move-result v1
@@ -388,7 +359,6 @@
 
     move-result-object v0
 
-    .line 2087
     .local v0, "f":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -396,7 +366,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2088
     const-string v1, "SdpManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -423,7 +392,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2089
     :cond_0
     return-void
 .end method
@@ -433,7 +401,6 @@
     .param p1, "info"    # Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     .prologue
-    .line 2019
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getId()I
 
     move-result v21
@@ -446,28 +413,24 @@
 
     move-result-object v13
 
-    .line 2022
     .local v13, "f":Ljava/io/File;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v12
 
-    .line 2023
     .local v12, "docFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v12}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v11
 
-    .line 2025
     .local v11, "docBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v11}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v10
 
-    .line 2026
     .local v10, "doc":Lorg/w3c/dom/Document;
-    const-string/jumbo v21, "user"
+    const-string v21, "user"
 
     move-object/from16 v0, v21
 
@@ -475,20 +438,18 @@
 
     move-result-object v16
 
-    .line 2027
     .local v16, "rootElement":Lorg/w3c/dom/Element;
     move-object/from16 v0, v16
 
     invoke-interface {v10, v0}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2029
     const-string v21, "SdpManagerService"
 
     new-instance v22, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v22 .. v22}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v23, "updateEngine :: inserting \n"
+    const-string v23, "updateEngine :: inserting \n"
 
     invoke-virtual/range {v22 .. v23}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -508,7 +469,6 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2031
     const-string v21, "alias"
 
     move-object/from16 v0, v21
@@ -517,7 +477,6 @@
 
     move-result-object v3
 
-    .line 2032
     .local v3, "attrAlias":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
@@ -527,13 +486,11 @@
 
     invoke-interface {v3, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2033
     move-object/from16 v0, v16
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2035
-    const-string/jumbo v21, "pkgName"
+    const-string v21, "pkgName"
 
     move-object/from16 v0, v21
 
@@ -541,7 +498,6 @@
 
     move-result-object v7
 
-    .line 2036
     .local v7, "attrPkgName":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getPackageName()Ljava/lang/String;
 
@@ -551,13 +507,11 @@
 
     invoke-interface {v7, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2037
     move-object/from16 v0, v16
 
     invoke-interface {v0, v7}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2039
-    const-string/jumbo v21, "id"
+    const-string v21, "id"
 
     move-object/from16 v0, v21
 
@@ -565,7 +519,6 @@
 
     move-result-object v5
 
-    .line 2040
     .local v5, "attrId":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getId()I
 
@@ -579,13 +532,11 @@
 
     invoke-interface {v5, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2041
     move-object/from16 v0, v16
 
     invoke-interface {v0, v5}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2043
-    const-string/jumbo v21, "userid"
+    const-string v21, "userid"
 
     move-object/from16 v0, v21
 
@@ -593,7 +544,6 @@
 
     move-result-object v8
 
-    .line 2044
     .local v8, "attrUserId":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getUserId()I
 
@@ -607,13 +557,11 @@
 
     invoke-interface {v8, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2045
     move-object/from16 v0, v16
 
     invoke-interface {v0, v8}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2047
-    const-string/jumbo v21, "flags"
+    const-string v21, "flags"
 
     move-object/from16 v0, v21
 
@@ -621,7 +569,6 @@
 
     move-result-object v4
 
-    .line 2048
     .local v4, "attrFlags":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getFlag()I
 
@@ -635,13 +582,11 @@
 
     invoke-interface {v4, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2049
     move-object/from16 v0, v16
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2051
-    const-string/jumbo v21, "version"
+    const-string v21, "version"
 
     move-object/from16 v0, v21
 
@@ -649,7 +594,6 @@
 
     move-result-object v9
 
-    .line 2052
     .local v9, "attrVersion":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getVersion()I
 
@@ -663,13 +607,11 @@
 
     invoke-interface {v9, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2053
     move-object/from16 v0, v16
 
     invoke-interface {v0, v9}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2055
-    const-string/jumbo v21, "isMigrating"
+    const-string v21, "isMigrating"
 
     move-object/from16 v0, v21
 
@@ -677,7 +619,6 @@
 
     move-result-object v6
 
-    .line 2056
     .local v6, "attrIsMigrating":Lorg/w3c/dom/Attr;
     invoke-virtual/range {p1 .. p1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->isMigrating()Z
 
@@ -685,35 +626,30 @@
 
     if-eqz v21, :cond_0
 
-    .line 2057
-    const-string/jumbo v21, "true"
+    const-string v21, "true"
 
     move-object/from16 v0, v21
 
     invoke-interface {v6, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 2060
     :goto_0
     move-object/from16 v0, v16
 
     invoke-interface {v0, v6}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 2063
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v20
 
-    .line 2064
     .local v20, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v20 .. v20}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v19
 
-    .line 2065
     .local v19, "transformer":Ljavax/xml/transform/Transformer;
-    const-string/jumbo v21, "indent"
+    const-string v21, "indent"
 
-    const-string/jumbo v22, "yes"
+    const-string v22, "yes"
 
     move-object/from16 v0, v19
 
@@ -723,20 +659,17 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/xml/transform/Transformer;->setOutputProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2066
     new-instance v17, Ljavax/xml/transform/dom/DOMSource;
 
     move-object/from16 v0, v17
 
     invoke-direct {v0, v10}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 2067
     .local v17, "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v15, Ljavax/xml/transform/stream/StreamResult;
 
     invoke-direct {v15, v13}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 2069
     .local v15, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v19
 
@@ -744,7 +677,6 @@
 
     invoke-virtual {v0, v1, v15}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 2081
     const/16 v21, 0x0
 
     .end local v3    # "attrAlias":Lorg/w3c/dom/Attr;
@@ -765,7 +697,6 @@
     :goto_1
     return v21
 
-    .line 2059
     .restart local v3    # "attrAlias":Lorg/w3c/dom/Attr;
     .restart local v4    # "attrFlags":Lorg/w3c/dom/Attr;
     .restart local v5    # "attrId":Lorg/w3c/dom/Attr;
@@ -778,7 +709,7 @@
     .restart local v12    # "docFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .restart local v16    # "rootElement":Lorg/w3c/dom/Element;
     :cond_0
-    const-string/jumbo v21, "false"
+    const-string v21, "false"
 
     move-object/from16 v0, v21
 
@@ -789,7 +720,6 @@
 
     goto :goto_0
 
-    .line 2071
     .end local v3    # "attrAlias":Lorg/w3c/dom/Attr;
     .end local v4    # "attrFlags":Lorg/w3c/dom/Attr;
     .end local v5    # "attrId":Lorg/w3c/dom/Attr;
@@ -804,39 +734,32 @@
     :catch_0
     move-exception v14
 
-    .line 2072
     .local v14, "pce":Ljavax/xml/parsers/ParserConfigurationException;
     invoke-virtual {v14}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
-    .line 2073
     const-string v21, "SdpManagerService"
 
     const-string v22, " putPolicy failed"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2074
     const/16 v21, -0x63
 
     goto :goto_1
 
-    .line 2075
     .end local v14    # "pce":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_1
     move-exception v18
 
-    .line 2076
     .local v18, "tfe":Ljavax/xml/transform/TransformerException;
     invoke-virtual/range {v18 .. v18}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
-    .line 2077
     const-string v21, "SdpManagerService"
 
     const-string v22, " putPolicy failed"
 
     invoke-static/range {v21 .. v22}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2078
     const/16 v21, -0x63
 
     goto :goto_1

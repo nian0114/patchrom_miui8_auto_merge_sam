@@ -32,22 +32,18 @@
     .param p3, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lcom/sec/epdg/EpdgNetworkMgmtObserver$EpdgIfAddressRemovedRunnable;->this$0:Lcom/sec/epdg/EpdgNetworkMgmtObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     iput-object p2, p0, Lcom/sec/epdg/EpdgNetworkMgmtObserver$EpdgIfAddressRemovedRunnable;->mAddress:Landroid/net/LinkAddress;
 
-    .line 124
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgNetworkMgmtObserver$EpdgIfAddressRemovedRunnable;->mIface:Ljava/lang/String;
 
-    .line 125
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .locals 3
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/sec/epdg/EpdgNetworkMgmtObserver$EpdgIfAddressRemovedRunnable;->this$0:Lcom/sec/epdg/EpdgNetworkMgmtObserver;
 
     iget-object v1, p0, Lcom/sec/epdg/EpdgNetworkMgmtObserver$EpdgIfAddressRemovedRunnable;->mAddress:Landroid/net/LinkAddress;
@@ -66,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/epdg/EpdgNetworkMgmtObserver;->EpdgAddressRemoved(Landroid/net/LinkAddress;Ljava/lang/String;)V
 
-    .line 130
     return-void
 .end method

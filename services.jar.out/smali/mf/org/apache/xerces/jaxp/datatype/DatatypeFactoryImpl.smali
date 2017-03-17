@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lmf/javax/xml/datatype/DatatypeFactory;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p1, "durationInMilliseconds"    # J
 
     .prologue
-    .line 140
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/DurationImpl;
 
     invoke-direct {v0, p1, p2}, Lmf/org/apache/xerces/jaxp/datatype/DurationImpl;-><init>(J)V
@@ -34,7 +32,6 @@
     .param p1, "lexicalRepresentation"    # Ljava/lang/String;
 
     .prologue
-    .line 100
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/DurationImpl;
 
     invoke-direct {v0, p1}, Lmf/org/apache/xerces/jaxp/datatype/DurationImpl;-><init>(Ljava/lang/String;)V
@@ -53,7 +50,6 @@
     .param p7, "seconds"    # Ljava/math/BigDecimal;
 
     .prologue
-    .line 179
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/DurationImpl;
 
     move v1, p1
@@ -79,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 200
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;-><init>()V
@@ -99,8 +94,6 @@
     .param p8, "timezone"    # I
 
     .prologue
-    .line 336
-    .line 335
     invoke-static/range {p1 .. p8}, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;->createDateTime(IIIIIIII)Lmf/javax/xml/datatype/XMLGregorianCalendar;
 
     move-result-object v0
@@ -113,7 +106,6 @@
     .param p1, "lexicalRepresentation"    # Ljava/lang/String;
 
     .prologue
-    .line 230
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;
 
     invoke-direct {v0, p1}, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;-><init>(Ljava/lang/String;)V
@@ -133,7 +125,6 @@
     .param p8, "timezone"    # I
 
     .prologue
-    .line 381
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;
 
     move-object v1, p1
@@ -162,7 +153,6 @@
     .param p1, "cal"    # Ljava/util/GregorianCalendar;
 
     .prologue
-    .line 297
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;
 
     invoke-direct {v0, p1}, Lmf/org/apache/xerces/jaxp/datatype/XMLGregorianCalendarImpl;-><init>(Ljava/util/GregorianCalendar;)V

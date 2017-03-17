@@ -17,10 +17,8 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 15
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 34
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -43,7 +40,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 36
     return-void
 .end method
 

@@ -21,10 +21,8 @@
     .param p2, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 596
     invoke-direct {p0, p1, p2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 597
     return-void
 .end method
 
@@ -35,9 +33,7 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 601
     invoke-super {p0, p1}, Landroid/graphics/drawable/BitmapDrawable;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 602
     return-void
 .end method

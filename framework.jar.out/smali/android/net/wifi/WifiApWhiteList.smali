@@ -49,38 +49,30 @@
     .locals 1
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const-string v0, "/data/misc/wifi_hostapd/hostapd.accept"
 
     iput-object v0, p0, Landroid/net/wifi/WifiApWhiteList;->HOSTAPD_ACCEPT:Ljava/lang/String;
 
-    .line 41
     const-string v0, "/data/misc/wifi/hostapd.accept"
 
     iput-object v0, p0, Landroid/net/wifi/WifiApWhiteList;->HOSTAPD_ACCEPT_OLD:Ljava/lang/String;
 
-    .line 42
     const/16 v0, 0x40
 
     iput v0, p0, Landroid/net/wifi/WifiApWhiteList;->BUFFER_SIZE:I
 
-    .line 57
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
-    .line 58
     invoke-direct {p0}, Landroid/net/wifi/WifiApWhiteList;->createOrChangePermission()V
 
-    .line 59
     invoke-direct {p0}, Landroid/net/wifi/WifiApWhiteList;->readWhiteListFile()V
 
-    .line 60
     return-void
 .end method
 
@@ -88,14 +80,12 @@
     .locals 13
 
     .prologue
-    .line 70
     new-instance v3, Ljava/io/File;
 
     const-string v11, "/data/misc/wifi_hostapd/hostapd.accept"
 
     invoke-direct {v3, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 71
     .local v3, "file":Ljava/io/File;
     new-instance v4, Ljava/io/File;
 
@@ -103,7 +93,6 @@
 
     invoke-direct {v4, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 72
     .local v4, "fileold":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -111,20 +100,17 @@
 
     if-nez v11, :cond_1
 
-    .line 73
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v11
 
     if-nez v11, :cond_2
 
-    .line 75
     :try_start_0
     invoke-virtual {v3}, Ljava/io/File;->createNewFile()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
     :cond_0
     :goto_0
     const/4 v11, 0x3
@@ -150,7 +136,6 @@
 
     aput-object v12, v1, v11
 
-    .line 113
     .local v1, "cmd":[Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -162,51 +147,42 @@
 
     move-result-object v10
 
-    .line 115
     .local v10, "p":Ljava/lang/Process;
     :try_start_2
     invoke-virtual {v10}, Ljava/lang/Process;->waitFor()I
 
-    .line 116
     invoke-virtual {v10}, Ljava/lang/Process;->destroy()V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_8
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_9
 
-    .line 124
     .end local v1    # "cmd":[Ljava/lang/String;
     .end local v10    # "p":Ljava/lang/Process;
     :cond_1
     :goto_1
     return-void
 
-    .line 76
     :catch_0
     move-exception v2
 
-    .line 77
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 80
     .end local v2    # "e":Ljava/io/IOException;
     :cond_2
     const/4 v5, 0x0
 
-    .line 81
     .local v5, "in":Ljava/io/FileInputStream;
     const/4 v8, 0x0
 
-    .line 83
     .local v8, "out":Ljava/io/FileOutputStream;
     const/16 v11, 0x400
 
     :try_start_3
     new-array v0, v11, [B
 
-    .line 84
     .local v0, "buffer":[B
     new-instance v6, Ljava/io/FileInputStream;
 
@@ -217,7 +193,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_a
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 85
     .end local v5    # "in":Ljava/io/FileInputStream;
     .local v6, "in":Ljava/io/FileInputStream;
     :try_start_4
@@ -230,12 +205,10 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_b
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 86
     .end local v8    # "out":Ljava/io/FileOutputStream;
     .local v9, "out":Ljava/io/FileOutputStream;
     const/4 v7, -0x1
 
-    .line 87
     .local v7, "n":I
     :goto_2
     :try_start_5
@@ -247,7 +220,6 @@
 
     if-eq v7, v11, :cond_4
 
-    .line 88
     const/4 v11, 0x0
 
     invoke-virtual {v9, v0, v11, v7}, Ljava/io/FileOutputStream;->write([BII)V
@@ -257,7 +229,6 @@
 
     goto :goto_2
 
-    .line 92
     :catch_1
     move-exception v2
 
@@ -267,7 +238,6 @@
     .restart local v8    # "out":Ljava/io/FileOutputStream;
     move-object v5, v6
 
-    .line 93
     .end local v0    # "buffer":[B
     .end local v6    # "in":Ljava/io/FileInputStream;
     .end local v7    # "n":I
@@ -279,22 +249,18 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 95
     if-eqz v5, :cond_3
 
-    .line 97
     :try_start_7
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 102
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_3
     :goto_4
     if-eqz v8, :cond_0
 
-    .line 104
     :try_start_8
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
@@ -302,17 +268,14 @@
 
     goto :goto_0
 
-    .line 105
     :catch_2
     move-exception v2
 
-    .line 106
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 90
     .end local v2    # "e":Ljava/io/IOException;
     .end local v5    # "in":Ljava/io/FileInputStream;
     .end local v8    # "out":Ljava/io/FileOutputStream;
@@ -324,27 +287,22 @@
     :try_start_9
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
 
-    .line 91
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 95
     if-eqz v6, :cond_5
 
-    .line 97
     :try_start_a
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 102
     :cond_5
     :goto_5
     if-eqz v9, :cond_0
 
-    .line 104
     :try_start_b
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_b
@@ -352,28 +310,23 @@
 
     goto :goto_0
 
-    .line 105
     :catch_3
     move-exception v2
 
-    .line 106
     .restart local v2    # "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 98
     .end local v2    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v2
 
-    .line 99
     .restart local v2    # "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_5
 
-    .line 98
     .end local v0    # "buffer":[B
     .end local v6    # "in":Ljava/io/FileInputStream;
     .end local v7    # "n":I
@@ -384,13 +337,11 @@
     :catch_5
     move-exception v2
 
-    .line 99
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 95
     .end local v2    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v11
@@ -398,50 +349,41 @@
     :goto_6
     if-eqz v5, :cond_6
 
-    .line 97
     :try_start_c
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_6
 
-    .line 102
     :cond_6
     :goto_7
     if-eqz v8, :cond_7
 
-    .line 104
     :try_start_d
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_7
 
-    .line 107
     :cond_7
     :goto_8
     throw v11
 
-    .line 98
     :catch_6
     move-exception v2
 
-    .line 99
     .restart local v2    # "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_7
 
-    .line 105
     .end local v2    # "e":Ljava/io/IOException;
     :catch_7
     move-exception v2
 
-    .line 106
     .restart local v2    # "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_8
 
-    .line 117
     .end local v2    # "e":Ljava/io/IOException;
     .end local v5    # "in":Ljava/io/FileInputStream;
     .end local v8    # "out":Ljava/io/FileOutputStream;
@@ -450,7 +392,6 @@
     :catch_8
     move-exception v2
 
-    .line 118
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_e
     invoke-virtual {v2}, Ljava/lang/InterruptedException;->printStackTrace()V
@@ -459,20 +400,17 @@
 
     goto :goto_1
 
-    .line 120
     .end local v1    # "cmd":[Ljava/lang/String;
     .end local v2    # "e":Ljava/lang/InterruptedException;
     .end local v10    # "p":Ljava/lang/Process;
     :catch_9
     move-exception v2
 
-    .line 121
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 95
     .end local v2    # "e":Ljava/io/IOException;
     .restart local v0    # "buffer":[B
     .restart local v6    # "in":Ljava/io/FileInputStream;
@@ -504,7 +442,6 @@
     .restart local v5    # "in":Ljava/io/FileInputStream;
     goto :goto_6
 
-    .line 92
     .end local v0    # "buffer":[B
     .end local v7    # "n":I
     :catch_a
@@ -529,19 +466,16 @@
     .locals 1
 
     .prologue
-    .line 63
     sget-object v0, Landroid/net/wifi/WifiApWhiteList;->uniqueInstance:Landroid/net/wifi/WifiApWhiteList;
 
     if-nez v0, :cond_0
 
-    .line 64
     new-instance v0, Landroid/net/wifi/WifiApWhiteList;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiApWhiteList;-><init>()V
 
     sput-object v0, Landroid/net/wifi/WifiApWhiteList;->uniqueInstance:Landroid/net/wifi/WifiApWhiteList;
 
-    .line 66
     :cond_0
     sget-object v0, Landroid/net/wifi/WifiApWhiteList;->uniqueInstance:Landroid/net/wifi/WifiApWhiteList;
 
@@ -553,20 +487,17 @@
     .param p1, "macAddressCandidate"    # Ljava/lang/String;
 
     .prologue
-    .line 257
     const-string v2, "[0-9a-fA-F]{2}[-:][0-9a-fA-F]{2}[-:][0-9a-fA-F]{2}[-:][0-9a-fA-F]{2}[-:][0 -9a-fA-F]{2}[-:][0-9a-fA-F]{2}"
 
     invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
 
-    .line 258
     .local v1, "macPattern":Ljava/util/regex/Pattern;
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 259
     .local v0, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -579,15 +510,12 @@
     .locals 8
 
     .prologue
-    .line 127
     iget-object v6, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v6}, Ljava/util/Vector;->clear()V
 
-    .line 129
     const/4 v0, 0x0
 
-    .line 132
     .local v0, "buf":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
@@ -605,7 +533,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 133
     .end local v0    # "buf":Ljava/io/BufferedReader;
     .local v1, "buf":Ljava/io/BufferedReader;
     :cond_0
@@ -618,14 +545,11 @@
     .local v2, "bufReadLine":Ljava/lang/String;
     if-eqz v2, :cond_2
 
-    .line 134
     const/4 v4, 0x0
 
-    .line 135
     .local v4, "mac":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 136
     .local v5, "name":Ljava/lang/String;
     const-string v6, "#"
 
@@ -635,19 +559,16 @@
 
     if-eqz v6, :cond_0
 
-    .line 137
     const/4 v6, 0x1
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 138
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 139
     iget-object v6, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     new-instance v7, Landroid/net/wifi/WifiApWhiteList$WhiteList;
@@ -661,7 +582,6 @@
 
     goto :goto_0
 
-    .line 142
     .end local v2    # "bufReadLine":Ljava/lang/String;
     .end local v4    # "mac":Ljava/lang/String;
     .end local v5    # "name":Ljava/lang/String;
@@ -670,7 +590,6 @@
 
     move-object v0, v1
 
-    .line 143
     .end local v1    # "buf":Ljava/io/BufferedReader;
     .restart local v0    # "buf":Ljava/io/BufferedReader;
     .local v3, "e":Ljava/io/IOException;
@@ -680,29 +599,24 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 145
     if-eqz v0, :cond_1
 
-    .line 147
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 153
     .end local v3    # "e":Ljava/io/IOException;
     :cond_1
     :goto_2
     return-void
 
-    .line 145
     .end local v0    # "buf":Ljava/io/BufferedReader;
     .restart local v1    # "buf":Ljava/io/BufferedReader;
     .restart local v2    # "bufReadLine":Ljava/lang/String;
     :cond_2
     if-eqz v1, :cond_4
 
-    .line 147
     :try_start_4
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -710,39 +624,32 @@
 
     move-object v0, v1
 
-    .line 150
     .end local v1    # "buf":Ljava/io/BufferedReader;
     .restart local v0    # "buf":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 148
     .end local v0    # "buf":Ljava/io/BufferedReader;
     .restart local v1    # "buf":Ljava/io/BufferedReader;
     :catch_1
     move-exception v3
 
-    .line 149
     .restart local v3    # "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     move-object v0, v1
 
-    .line 150
     .end local v1    # "buf":Ljava/io/BufferedReader;
     .restart local v0    # "buf":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 148
     .end local v2    # "bufReadLine":Ljava/lang/String;
     :catch_2
     move-exception v3
 
-    .line 149
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 145
     .end local v3    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v6
@@ -750,28 +657,23 @@
     :goto_3
     if-eqz v0, :cond_3
 
-    .line 147
     :try_start_5
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 150
     :cond_3
     :goto_4
     throw v6
 
-    .line 148
     :catch_3
     move-exception v3
 
-    .line 149
     .restart local v3    # "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 145
     .end local v0    # "buf":Ljava/io/BufferedReader;
     .end local v3    # "e":Ljava/io/IOException;
     .restart local v1    # "buf":Ljava/io/BufferedReader;
@@ -784,7 +686,6 @@
     .restart local v0    # "buf":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 142
     :catch_4
     move-exception v3
 
@@ -805,10 +706,8 @@
     .locals 6
 
     .prologue
-    .line 156
     const/4 v1, 0x0
 
-    .line 158
     .local v1, "fw":Ljava/io/FileWriter;
     :try_start_0
     new-instance v2, Ljava/io/FileWriter;
@@ -820,7 +719,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 159
     .end local v1    # "fw":Ljava/io/FileWriter;
     .local v2, "fw":Ljava/io/FileWriter;
     :try_start_1
@@ -830,7 +728,6 @@
 
     move-result-object v3
 
-    .line 160
     .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -839,47 +736,40 @@
 
     if-eqz v5, :cond_2
 
-    .line 161
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/net/wifi/WifiApWhiteList$WhiteList;
 
-    .line 162
     .local v4, "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     const-string v5, "#"
 
     invoke-virtual {v2, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 163
     invoke-virtual {v4}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 164
     invoke-virtual {v4}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v2, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 165
     :cond_0
     const-string v5, "\n"
 
     invoke-virtual {v2, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 166
     invoke-virtual {v4}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getMac()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v2, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 167
     const-string v5, "\n"
 
     invoke-virtual {v2, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
@@ -889,7 +779,6 @@
 
     goto :goto_0
 
-    .line 169
     .end local v3    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     .end local v4    # "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     :catch_0
@@ -897,7 +786,6 @@
 
     move-object v1, v2
 
-    .line 170
     .end local v2    # "fw":Ljava/io/FileWriter;
     .local v0, "e":Ljava/io/IOException;
     .restart local v1    # "fw":Ljava/io/FileWriter;
@@ -907,29 +795,24 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 172
     if-eqz v1, :cond_1
 
-    .line 174
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 180
     .end local v0    # "e":Ljava/io/IOException;
     :cond_1
     :goto_2
     return-void
 
-    .line 172
     .end local v1    # "fw":Ljava/io/FileWriter;
     .restart local v2    # "fw":Ljava/io/FileWriter;
     .restart local v3    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :cond_2
     if-eqz v2, :cond_4
 
-    .line 174
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_4
@@ -937,39 +820,32 @@
 
     move-object v1, v2
 
-    .line 177
     .end local v2    # "fw":Ljava/io/FileWriter;
     .restart local v1    # "fw":Ljava/io/FileWriter;
     goto :goto_2
 
-    .line 175
     .end local v1    # "fw":Ljava/io/FileWriter;
     .restart local v2    # "fw":Ljava/io/FileWriter;
     :catch_1
     move-exception v0
 
-    .line 176
     .restart local v0    # "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     move-object v1, v2
 
-    .line 177
     .end local v2    # "fw":Ljava/io/FileWriter;
     .restart local v1    # "fw":Ljava/io/FileWriter;
     goto :goto_2
 
-    .line 175
     .end local v3    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :catch_2
     move-exception v0
 
-    .line 176
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 172
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v5
@@ -977,28 +853,23 @@
     :goto_3
     if-eqz v1, :cond_3
 
-    .line 174
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 177
     :cond_3
     :goto_4
     throw v5
 
-    .line 175
     :catch_3
     move-exception v0
 
-    .line 176
     .restart local v0    # "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 172
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "fw":Ljava/io/FileWriter;
     .restart local v2    # "fw":Ljava/io/FileWriter;
@@ -1011,7 +882,6 @@
     .restart local v1    # "fw":Ljava/io/FileWriter;
     goto :goto_3
 
-    .line 169
     :catch_4
     move-exception v0
 
@@ -1036,21 +906,17 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 183
     invoke-direct {p0, p1}, Landroid/net/wifi/WifiApWhiteList;->isMacAddress(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 184
     const/4 v1, 0x3
 
-    .line 194
     :goto_0
     return v1
 
-    .line 186
     :cond_0
     iget-object v1, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
@@ -1058,7 +924,6 @@
 
     move-result-object v0
 
-    .line 187
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :cond_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1067,7 +932,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 188
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1084,12 +948,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 189
     const/4 v1, 0x4
 
     goto :goto_0
 
-    .line 192
     :cond_2
     iget-object v1, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
@@ -1099,10 +961,8 @@
 
     invoke-virtual {v1, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 193
     invoke-direct {p0}, Landroid/net/wifi/WifiApWhiteList;->writeWhiteListFile()V
 
-    .line 194
     const/4 v1, 0x1
 
     goto :goto_0
@@ -1113,14 +973,12 @@
     .param p1, "mac"    # Ljava/lang/String;
 
     .prologue
-    .line 225
     iget-object v2, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 226
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1129,14 +987,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 227
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/net/wifi/WifiApWhiteList$WhiteList;
 
-    .line 228
     .local v1, "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     invoke-virtual {v1}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getMac()Ljava/lang/String;
 
@@ -1148,12 +1004,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 229
     invoke-virtual {v1}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 232
     .end local v1    # "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     :goto_0
     return-object v2
@@ -1177,7 +1031,6 @@
     .end annotation
 
     .prologue
-    .line 247
     iget-object v0, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
@@ -1186,10 +1039,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 248
     const/4 v0, 0x0
 
-    .line 249
     :goto_0
     return-object v0
 
@@ -1207,7 +1058,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
@@ -1222,14 +1072,12 @@
     .param p1, "mac"    # Ljava/lang/String;
 
     .prologue
-    .line 236
     iget-object v2, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 237
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1238,14 +1086,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 238
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/net/wifi/WifiApWhiteList$WhiteList;
 
-    .line 239
     .local v1, "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     invoke-virtual {v1}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getMac()Ljava/lang/String;
 
@@ -1257,10 +1103,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 240
     const/4 v2, 0x1
 
-    .line 243
     .end local v1    # "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     :goto_0
     return v2
@@ -1277,14 +1121,12 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 212
     iget-object v2, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 213
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1293,14 +1135,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 214
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/net/wifi/WifiApWhiteList$WhiteList;
 
-    .line 215
     .local v1, "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     invoke-virtual {v1}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getMac()Ljava/lang/String;
 
@@ -1312,16 +1152,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 216
     invoke-virtual {v1, p2}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->setName(Ljava/lang/String;)V
 
-    .line 217
     invoke-direct {p0}, Landroid/net/wifi/WifiApWhiteList;->writeWhiteListFile()V
 
-    .line 218
     const/4 v2, 0x1
 
-    .line 221
     .end local v1    # "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     :goto_0
     return v2
@@ -1337,14 +1173,12 @@
     .param p1, "mac"    # Ljava/lang/String;
 
     .prologue
-    .line 198
     iget-object v2, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 199
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/net/wifi/WifiApWhiteList$WhiteList;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1353,14 +1187,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 200
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/net/wifi/WifiApWhiteList$WhiteList;
 
-    .line 201
     .local v1, "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     invoke-virtual {v1}, Landroid/net/wifi/WifiApWhiteList$WhiteList;->getMac()Ljava/lang/String;
 
@@ -1372,18 +1204,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 202
     iget-object v2, p0, Landroid/net/wifi/WifiApWhiteList;->mWhiteList:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
-    .line 203
     invoke-direct {p0}, Landroid/net/wifi/WifiApWhiteList;->writeWhiteListFile()V
 
-    .line 204
     const/4 v2, 0x1
 
-    .line 208
     .end local v1    # "wl":Landroid/net/wifi/WifiApWhiteList$WhiteList;
     :goto_0
     return v2

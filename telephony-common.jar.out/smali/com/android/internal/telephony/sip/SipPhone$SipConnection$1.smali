@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 758
     iput-object p1, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     iget-object v0, p1, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
@@ -42,7 +41,6 @@
     .param p1, "cause"    # I
 
     .prologue
-    .line 761
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->getDisconnectCause()I
@@ -53,18 +51,15 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 762
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     invoke-virtual {v2, p1}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->setDisconnectCause(I)V
 
-    .line 764
     :cond_0
     const-class v3, Lcom/android/internal/telephony/sip/SipPhone;
 
     monitor-enter v3
 
-    .line 765
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -72,7 +67,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->setState(Lcom/android/internal/telephony/Call$State;)V
 
-    .line 766
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     # getter for: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->mSipAudioCall:Landroid/net/sip/SipAudioCall;
@@ -80,7 +74,6 @@
 
     move-result-object v1
 
-    .line 768
     .local v1, "sipAudioCall":Landroid/net/sip/SipAudioCall;
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -89,12 +82,10 @@
     # setter for: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->mSipAudioCall:Landroid/net/sip/SipAudioCall;
     invoke-static {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->access$602(Lcom/android/internal/telephony/sip/SipPhone$SipConnection;Landroid/net/sip/SipAudioCall;)Landroid/net/sip/SipAudioCall;
 
-    .line 769
     if-nez v1, :cond_2
 
     const-string v0, ""
 
-    .line 772
     .local v0, "sessionState":Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
@@ -173,18 +164,14 @@
     # invokes: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->log(Ljava/lang/String;)V
     invoke-static {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->access$800(Lcom/android/internal/telephony/sip/SipPhone$SipConnection;Ljava/lang/String;)V
 
-    .line 776
     if-eqz v1, :cond_1
 
-    .line 777
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/net/sip/SipAudioCall;->setListener(Landroid/net/sip/SipAudioCall$Listener;)V
 
-    .line 778
     invoke-virtual {v1}, Landroid/net/sip/SipAudioCall;->close()V
 
-    .line 780
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -197,13 +184,10 @@
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->onConnectionEnded(Lcom/android/internal/telephony/sip/SipPhone$SipConnection;)V
 
-    .line 781
     monitor-exit v3
 
-    .line 782
     return-void
 
-    .line 769
     .end local v0    # "sessionState":Ljava/lang/String;
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -230,7 +214,6 @@
 
     goto :goto_0
 
-    .line 781
     .end local v1    # "sipAudioCall":Landroid/net/sip/SipAudioCall;
     :catchall_0
     move-exception v2
@@ -247,10 +230,8 @@
     .param p1, "call"    # Landroid/net/sip/SipAudioCall;
 
     .prologue
-    .line 786
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->onChanged(Landroid/net/sip/SipAudioCall;)V
 
-    .line 788
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     # getter for: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->mState:Lcom/android/internal/telephony/Call$State;
@@ -264,7 +245,6 @@
 
     invoke-virtual {p1}, Landroid/net/sip/SipAudioCall;->startAudio()V
 
-    .line 789
     :cond_0
     return-void
 .end method
@@ -274,10 +254,8 @@
     .param p1, "call"    # Landroid/net/sip/SipAudioCall;
 
     .prologue
-    .line 793
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->onChanged(Landroid/net/sip/SipAudioCall;)V
 
-    .line 795
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     # getter for: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->mState:Lcom/android/internal/telephony/Call$State;
@@ -291,7 +269,6 @@
 
     invoke-virtual {p1}, Landroid/net/sip/SipAudioCall;->startAudio()V
 
-    .line 796
     :cond_0
     return-void
 .end method
@@ -301,19 +278,16 @@
     .param p1, "call"    # Landroid/net/sip/SipAudioCall;
 
     .prologue
-    .line 800
     const-class v3, Lcom/android/internal/telephony/sip/SipPhone;
 
     monitor-enter v3
 
-    .line 801
     :try_start_0
     # invokes: Lcom/android/internal/telephony/sip/SipPhone;->getCallStateFrom(Landroid/net/sip/SipAudioCall;)Lcom/android/internal/telephony/Call$State;
     invoke-static {p1}, Lcom/android/internal/telephony/sip/SipPhone;->access$1100(Landroid/net/sip/SipAudioCall;)Lcom/android/internal/telephony/Call$State;
 
     move-result-object v1
 
-    .line 802
     .local v1, "newState":Lcom/android/internal/telephony/Call$State;
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -326,17 +300,14 @@
 
     monitor-exit v3
 
-    .line 825
     :goto_0
     return-void
 
-    .line 803
     :cond_0
     sget-object v2, Lcom/android/internal/telephony/Call$State;->INCOMING:Lcom/android/internal/telephony/Call$State;
 
     if-ne v1, v2, :cond_1
 
-    .line 804
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     iget-object v4, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
@@ -352,7 +323,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->setState(Lcom/android/internal/telephony/Call$State;)V
 
-    .line 820
     :goto_1
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -365,7 +335,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->onConnectionStateChanged(Lcom/android/internal/telephony/sip/SipPhone$SipConnection;)V
 
-    .line 821
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -433,7 +402,6 @@
     # invokes: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->log(Ljava/lang/String;)V
     invoke-static {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->access$800(Lcom/android/internal/telephony/sip/SipPhone$SipConnection;Ljava/lang/String;)V
 
-    .line 824
     monitor-exit v3
 
     goto :goto_0
@@ -448,7 +416,6 @@
 
     throw v2
 
-    .line 806
     .restart local v1    # "newState":Lcom/android/internal/telephony/Call$State;
     :cond_1
     :try_start_1
@@ -470,7 +437,6 @@
 
     if-ne v2, v4, :cond_3
 
-    .line 807
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     iget-object v2, v2, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
@@ -490,7 +456,6 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 809
     :try_start_2
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -501,7 +466,6 @@
     .catch Lcom/android/internal/telephony/CallStateException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 816
     :cond_2
     :try_start_3
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
@@ -524,7 +488,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->switchWith(Lcom/android/internal/telephony/sip/SipPhone$SipCall;)V
 
-    .line 818
     :cond_3
     iget-object v2, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
@@ -532,17 +495,14 @@
 
     goto/16 :goto_1
 
-    .line 810
     :catch_0
     move-exception v0
 
-    .line 812
     .local v0, "e":Lcom/android/internal/telephony/CallStateException;
     const/4 v2, 0x3
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->onCallEnded(I)V
 
-    .line 813
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -555,7 +515,6 @@
     .param p1, "cause"    # I
 
     .prologue
-    .line 829
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->this$1:Lcom/android/internal/telephony/sip/SipPhone$SipConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -579,9 +538,7 @@
     # invokes: Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection;->access$800(Lcom/android/internal/telephony/sip/SipPhone$SipConnection;Ljava/lang/String;)V
 
-    .line 830
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/sip/SipPhone$SipConnection$1;->onCallEnded(I)V
 
-    .line 831
     return-void
 .end method

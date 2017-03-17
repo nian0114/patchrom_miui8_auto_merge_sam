@@ -24,46 +24,38 @@
     .param p2, "newCall"    # Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->uuid:Ljava/lang/String;
 
-    .line 25
     invoke-virtual {p2}, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->getAddress()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->address:Ljava/lang/String;
 
-    .line 26
     invoke-virtual {p2}, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->getDirection()I
 
     move-result v0
 
     iput v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->direction:I
 
-    .line 27
     invoke-virtual {p2}, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->getPhoneId()I
 
     move-result v0
 
     iput v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->phoneId:I
 
-    .line 28
     invoke-virtual {p2}, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->getSubscriptionId()I
 
     move-result v0
 
     iput v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->subId:I
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->started:Z
 
-    .line 30
     return-void
 .end method
 
@@ -76,30 +68,22 @@
     .param p5, "subId"    # I
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->uuid:Ljava/lang/String;
 
-    .line 16
     iput-object p2, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->address:Ljava/lang/String;
 
-    .line 17
     iput p3, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->direction:I
 
-    .line 18
     iput p4, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->phoneId:I
 
-    .line 19
     iput p5, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->subId:I
 
-    .line 20
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->started:Z
 
-    .line 21
     return-void
 .end method
 
@@ -109,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->address:Ljava/lang/String;
 
     return-object v0
@@ -119,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->direction:I
 
     return v0
@@ -129,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->phoneId:I
 
     return v0
@@ -139,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->subId:I
 
     return v0
@@ -149,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->uuid:Ljava/lang/String;
 
     return-object v0
@@ -160,7 +139,6 @@
     .param p1, "other"    # Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->address:Ljava/lang/String;
 
     if-nez v0, :cond_1
@@ -196,14 +174,11 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 74
     const/4 v0, 0x1
 
-    .line 76
     :goto_0
     return v0
 
-    .line 70
     :cond_1
     iget-object v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->address:Ljava/lang/String;
 
@@ -217,7 +192,6 @@
 
     if-nez v0, :cond_0
 
-    .line 76
     :cond_2
     const/4 v0, 0x0
 
@@ -228,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-boolean v0, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->started:Z
 
     return v0
@@ -239,10 +212,8 @@
     .param p1, "started"    # Z
 
     .prologue
-    .line 57
     iput-boolean p1, p0, Lcom/itsoninc/android/oemfw/impl/telephony/CallInfo;->started:Z
 
-    .line 58
     return-void
 .end method
 
@@ -250,7 +221,6 @@
     .locals 3
 
     .prologue
-    .line 62
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

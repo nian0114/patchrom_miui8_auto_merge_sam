@@ -8,12 +8,10 @@
     .locals 1
 
     .prologue
-    .line 10
     const-string v0, "SEF"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 11
     return-void
 .end method
 
@@ -21,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

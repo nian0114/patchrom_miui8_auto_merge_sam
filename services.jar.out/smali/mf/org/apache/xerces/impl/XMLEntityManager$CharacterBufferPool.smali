@@ -41,12 +41,10 @@
     .param p2, "internalBufferSize"    # I
 
     .prologue
-    .line 3003
     const/4 v0, 0x3
 
     invoke-direct {p0, v0, p1, p2}, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;-><init>(III)V
 
-    .line 3004
     return-void
 .end method
 
@@ -57,22 +55,16 @@
     .param p3, "internalBufferSize"    # I
 
     .prologue
-    .line 3006
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3007
     iput p2, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferSize:I
 
-    .line 3008
     iput p3, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalBufferSize:I
 
-    .line 3009
     iput p1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fPoolSize:I
 
-    .line 3010
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->init()V
 
-    .line 3011
     return-void
 .end method
 
@@ -82,27 +74,22 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 3015
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fPoolSize:I
 
     new-array v0, v0, [Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
-    .line 3016
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fPoolSize:I
 
     new-array v0, v0, [Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
-    .line 3017
     iput v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalTop:I
 
-    .line 3018
     iput v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalTop:I
 
-    .line 3019
     return-void
 .end method
 
@@ -115,15 +102,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 3023
     if-eqz p1, :cond_1
 
-    .line 3024
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalTop:I
 
     if-le v0, v1, :cond_0
 
-    .line 3025
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalTop:I
@@ -134,11 +118,9 @@
 
     aget-object v0, v0, v1
 
-    .line 3036
     :goto_0
     return-object v0
 
-    .line 3028
     :cond_0
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
@@ -150,13 +132,11 @@
 
     goto :goto_0
 
-    .line 3032
     :cond_1
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalTop:I
 
     if-le v0, v1, :cond_2
 
-    .line 3033
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalTop:I
@@ -169,7 +149,6 @@
 
     goto :goto_0
 
-    .line 3036
     :cond_2
     new-instance v0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
@@ -187,7 +166,6 @@
     .param p1, "buffer"    # Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     .prologue
-    .line 3043
     # getter for: Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;->isExternal:Z
     invoke-static {p1}, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;->access$1(Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;)Z
 
@@ -195,7 +173,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3044
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalTop:I
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
@@ -206,7 +183,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3045
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalTop:I
@@ -217,12 +193,10 @@
 
     aput-object p1, v0, v1
 
-    .line 3051
     :cond_0
     :goto_0
     return-void
 
-    .line 3048
     :cond_1
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalTop:I
 
@@ -234,7 +208,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3049
     iget-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fInternalTop:I
@@ -253,21 +226,17 @@
     .param p1, "bufferSize"    # I
 
     .prologue
-    .line 3055
     iput p1, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferSize:I
 
-    .line 3056
     iget v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fPoolSize:I
 
     new-array v0, v0, [Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalBufferPool:[Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBuffer;
 
-    .line 3057
     const/4 v0, -0x1
 
     iput v0, p0, Lmf/org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool;->fExternalTop:I
 
-    .line 3058
     return-void
 .end method

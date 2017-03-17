@@ -22,7 +22,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -58,7 +57,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -97,7 +95,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 7
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -138,7 +135,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 8
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -178,7 +174,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 9
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -220,7 +215,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 10
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
@@ -252,7 +246,6 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -266,7 +259,6 @@
     .locals 2
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -286,7 +278,6 @@
     .end annotation
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -306,7 +297,6 @@
     .end annotation
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

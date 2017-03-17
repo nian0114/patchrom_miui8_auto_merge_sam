@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3040
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$MainHandler$2;->this$1:Lcom/android/server/am/ActivityManagerService$MainHandler;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$MainHandler$2;->val$dumpCmd:Ljava/lang/String;
@@ -44,11 +43,9 @@
     .locals 1
 
     .prologue
-    .line 3042
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$MainHandler$2;->val$dumpCmd:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/os/Debug;->saveDumpstate(Ljava/lang/String;)V
 
-    .line 3043
     return-void
 .end method

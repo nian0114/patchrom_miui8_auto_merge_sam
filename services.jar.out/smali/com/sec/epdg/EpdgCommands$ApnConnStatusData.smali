@@ -36,25 +36,18 @@
     .param p5, "prop"    # Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput p1, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mCid:I
 
-    .line 78
     iput-object p2, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mApnType:Ljava/lang/String;
 
-    .line 79
     iput-boolean p3, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsConnSuccess:Z
 
-    .line 80
     iput-boolean p4, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsHandover:Z
 
-    .line 81
     iput-object p5, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mLinkProp:Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
-    .line 82
     return-void
 .end method
 
@@ -64,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mApnType:Ljava/lang/String;
 
     return-object v0
@@ -74,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mCid:I
 
     return v0
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mLinkProp:Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
     return-object v0
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsConnSuccess:Z
 
     return v0
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsHandover:Z
 
     return v0
@@ -114,7 +102,6 @@
     .locals 3
 
     .prologue
-    .line 99
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -131,6 +118,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 102
     return-void
 .end method

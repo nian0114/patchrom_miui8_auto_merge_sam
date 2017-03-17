@@ -66,7 +66,6 @@
 
     const/4 v4, 0x0
 
-    .line 48
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$1;
 
     const-string v1, "RAW_GPS"
@@ -81,7 +80,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->RAW_GPS:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 68
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$2;
 
     const-string v1, "RAW_WPS"
@@ -96,7 +94,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->RAW_WPS:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 88
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$3;
 
     const-string v1, "RAW_SATELLITE"
@@ -111,7 +108,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->RAW_SATELLITE:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 108
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$4;
 
     const-string v1, "BEST_LOCATION"
@@ -126,7 +122,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->BEST_LOCATION:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 128
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$5;
 
     const-string v1, "ACCELEROMETER_SENSOR"
@@ -141,7 +136,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->ACCELEROMETER_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 172
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$6;
 
     const-string v1, "ORIENTATION_SENSOR"
@@ -158,7 +152,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->ORIENTATION_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 216
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$7;
 
     const-string v1, "MAGNETIC_SENSOR"
@@ -175,7 +168,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->MAGNETIC_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 259
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList$8;
 
     const-string v1, "GYROSCOPE_SENSOR"
@@ -192,7 +184,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->GYROSCOPE_SENSOR:Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
-    .line 45
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
@@ -252,13 +243,10 @@
     .end annotation
 
     .prologue
-    .line 311
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 312
     iput-object p3, p0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->name:Ljava/lang/String;
 
-    .line 313
     return-void
 .end method
 
@@ -270,7 +258,6 @@
     .param p4, "x3"    # Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$1;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -281,7 +268,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     const-class v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -297,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 45
     sget-object v0, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->$VALUES:[Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->clone()Ljava/lang/Object;
@@ -316,7 +301,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 335
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->getObject()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -328,7 +312,6 @@
     .locals 1
 
     .prologue
-    .line 323
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->getObject()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -341,7 +324,6 @@
     .param p1, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 347
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator$AndroidRunnerList;->getObjectForSubCollection()Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
@@ -354,10 +336,8 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 359
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->removeObj(Ljava/lang/String;)Z
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/builtin/AndroidRunnerConcreteCreator;->access$12100(Ljava/lang/String;)Z
 
-    .line 360
     return-void
 .end method

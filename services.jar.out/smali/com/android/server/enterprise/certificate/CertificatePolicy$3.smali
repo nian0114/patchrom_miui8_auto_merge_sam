@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 1292
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     iput p2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->val$userId:I
@@ -49,17 +48,14 @@
     .locals 8
 
     .prologue
-    .line 1294
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1296
     .local v2, "token":J
     :try_start_0
     iget v1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->val$userId:I
 
-    .line 1297
     .local v1, "targetUserId":I
     iget v4, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->val$userId:I
 
@@ -69,7 +65,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1298
     iget-object v4, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # getter for: Lcom/android/server/enterprise/certificate/CertificatePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -83,13 +78,11 @@
 
     move-result v0
 
-    .line 1299
     .local v0, "adminUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 1302
     .end local v0    # "adminUid":I
     :cond_0
     const-string v4, "CertificatePolicy"
@@ -164,7 +157,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1307
     iget-object v4, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # getter for: Lcom/android/server/enterprise/certificate/CertificatePolicy;->mContext:Landroid/content/Context;
@@ -184,13 +176,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1310
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1312
     return-void
 
-    .line 1310
     .end local v1    # "targetUserId":I
     :catchall_0
     move-exception v4

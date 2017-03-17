@@ -40,23 +40,18 @@
     .param p3, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 5767
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 5768
     iput-object p2, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->mHandler:Landroid/os/Handler;
 
-    .line 5769
     iput-object p3, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->mSsid:Ljava/lang/String;
 
-    .line 5770
     sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgService$WfcProfileTask;->setDefaultExecutor(Ljava/util/concurrent/Executor;)V
 
-    .line 5771
     return-void
 .end method
 
@@ -64,15 +59,12 @@
     .locals 7
 
     .prologue
-    .line 5774
     const-class v4, Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
     monitor-enter v4
 
-    .line 5775
     const/4 v1, 0x0
 
-    .line 5777
     .local v1, "status":Z
     :try_start_0
     invoke-static {}, Lcom/sec/epdg/EpdgWfcProfileReader;->getInstance()Lcom/sec/epdg/EpdgWfcProfileReader;
@@ -88,7 +80,6 @@
 
     move-result v2
 
-    .line 5778
     .local v2, "wfc_state":I
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2500()Landroid/content/Context;
@@ -99,7 +90,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v5, "wifi_call_enable"
+    const-string v5, "wifi_call_enable"
 
     const/4 v6, -0x1
 
@@ -109,13 +100,11 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 5780
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->setVowifiSetting(I)V
     invoke-static {v3, v2}, Lcom/sec/epdg/EpdgService;->access$10900(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 5782
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgWfcProfileReader;->getInstance()Lcom/sec/epdg/EpdgWfcProfileReader;
 
@@ -136,7 +125,6 @@
 
     move-result v1
 
-    .line 5791
     .end local v2    # "wfc_state":I
     :goto_0
     :try_start_1
@@ -162,7 +150,6 @@
 
     invoke-static {v3, v5}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5792
     new-instance v3, Ljava/lang/Boolean;
 
     invoke-direct {v3, v1}, Ljava/lang/Boolean;-><init>(Z)V
@@ -171,11 +158,9 @@
 
     return-object v3
 
-    .line 5783
     :catch_0
     move-exception v0
 
-    .line 5784
     .local v0, "e":Landroid/database/CursorIndexOutOfBoundsException;
     const-string v3, "[EPDGService]"
 
@@ -183,12 +168,10 @@
 
     invoke-static {v3, v5}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5786
     invoke-virtual {v0}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 5793
     .end local v0    # "e":Landroid/database/CursorIndexOutOfBoundsException;
     :catchall_0
     move-exception v3
@@ -199,16 +182,13 @@
 
     throw v3
 
-    .line 5787
     :catch_1
     move-exception v0
 
-    .line 5788
     .local v0, "e":Ljava/lang/IllegalStateException;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
-    .line 5789
     const-string v3, "[EPDGService]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -243,14 +223,12 @@
     .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
-    .line 5798
     const-string v0, "[EPDGService]"
 
     const-string v1, "WfcProfileTask:doInBackground - started"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5799
     invoke-direct {p0}, Lcom/sec/epdg/EpdgService$WfcProfileTask;->doExec()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -263,7 +241,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 5764
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -279,7 +256,6 @@
     .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 5804
     const-string v1, "[EPDGService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -302,21 +278,18 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5808
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 5809
     const-string v1, "[EPDGService]"
 
     const-string v2, "AP WFC enable"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5813
     :goto_0
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1400()Landroid/os/Handler;
@@ -327,13 +300,11 @@
 
     move-result-object v0
 
-    .line 5814
     .local v0, "msg":Landroid/os/Message;
     const/16 v1, 0x4b
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 5815
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
@@ -345,19 +316,15 @@
     :goto_1
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 5816
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 5817
     const/4 v1, 0x0
 
     # setter for: Lcom/sec/epdg/EpdgService;->mWfcProfileTask:Lcom/sec/epdg/EpdgService$WfcProfileTask;
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$2902(Lcom/sec/epdg/EpdgService$WfcProfileTask;)Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
-    .line 5818
     return-void
 
-    .line 5811
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     const-string v1, "[EPDGService]"
@@ -368,7 +335,6 @@
 
     goto :goto_0
 
-    .line 5815
     .restart local v0    # "msg":Landroid/os/Message;
     :cond_1
     const/4 v1, 0x0
@@ -381,7 +347,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 5764
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "x0":Ljava/lang/Object;

@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 1174
     new-instance v0, Lmf/org/apache/xerces/parsers/DOMParserImpl$NullLSParserFilter;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/parsers/DOMParserImpl$NullLSParserFilter;-><init>()V
@@ -40,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 1175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "nodeArg"    # Lmf/org/w3c/dom/Node;
 
     .prologue
-    .line 1177
     const/4 v0, 0x1
 
     return v0
@@ -63,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 1180
     const/4 v0, -0x1
 
     return v0
@@ -74,7 +70,6 @@
     .param p1, "elementArg"    # Lmf/org/w3c/dom/Element;
 
     .prologue
-    .line 1183
     const/4 v0, 0x1
 
     return v0

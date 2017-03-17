@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 3050
     iput-object p1, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->this$0:Landroid/net/wifi/WifiManager;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Landroid/net/wifi/WifiManager$1;
 
     .prologue
-    .line 3050
     invoke-direct {p0, p1}, Landroid/net/wifi/WifiManager$PinningNetworkCallback;-><init>(Landroid/net/wifi/WifiManager;)V
 
     return-void
@@ -54,7 +52,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3064
     iget-object v0, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->mPinnedNetwork:Landroid/net/Network;
 
     invoke-virtual {p1, v0}, Landroid/net/Network;->equals(Ljava/lang/Object;)Z
@@ -76,13 +73,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 3065
     # getter for: Landroid/net/wifi/WifiManager;->sCM:Landroid/net/ConnectivityManager;
     invoke-static {}, Landroid/net/wifi/WifiManager;->access$500()Landroid/net/ConnectivityManager;
 
     invoke-static {v3}, Landroid/net/ConnectivityManager;->setProcessDefaultNetwork(Landroid/net/Network;)Z
 
-    .line 3066
     const-string v0, "WifiManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,16 +100,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3067
     iput-object v3, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->mPinnedNetwork:Landroid/net/Network;
 
-    .line 3068
     iget-object v0, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->this$0:Landroid/net/wifi/WifiManager;
 
     # invokes: Landroid/net/wifi/WifiManager;->unregisterPinningNetworkCallback()V
     invoke-static {v0}, Landroid/net/wifi/WifiManager;->access$600(Landroid/net/wifi/WifiManager;)V
 
-    .line 3070
     :cond_0
     return-void
 .end method
@@ -124,7 +116,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 3055
     # getter for: Landroid/net/wifi/WifiManager;->sCM:Landroid/net/ConnectivityManager;
     invoke-static {}, Landroid/net/wifi/WifiManager;->access$500()Landroid/net/ConnectivityManager;
 
@@ -138,16 +129,13 @@
 
     if-nez v0, :cond_0
 
-    .line 3056
     # getter for: Landroid/net/wifi/WifiManager;->sCM:Landroid/net/ConnectivityManager;
     invoke-static {}, Landroid/net/wifi/WifiManager;->access$500()Landroid/net/ConnectivityManager;
 
     invoke-static {p1}, Landroid/net/ConnectivityManager;->setProcessDefaultNetwork(Landroid/net/Network;)Z
 
-    .line 3057
     iput-object p1, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->mPinnedNetwork:Landroid/net/Network;
 
-    .line 3058
     const-string v0, "WifiManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -170,7 +158,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3060
     :cond_0
     return-void
 .end method

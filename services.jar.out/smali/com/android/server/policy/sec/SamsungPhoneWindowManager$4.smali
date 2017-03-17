@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 516
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 518
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 519
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.USER_SWITCHED"
 
@@ -56,14 +53,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 520
     invoke-static {p1}, Lcom/android/server/policy/sec/SamsungPolicyProperties;->hasSPenFeature(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 521
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -72,30 +67,27 @@
 
     move-result v1
 
-    .line 522
     .local v1, "penState":I
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_0
 
-    .line 523
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mPenInsertedIntentUserSwitch:Landroid/content/Intent;
 
-    const-string/jumbo v4, "penInsert"
+    const-string v4, "penInsert"
 
     if-ne v1, v2, :cond_1
 
     :goto_0
     invoke-virtual {v3, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 524
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mPenInsertedIntentUserSwitch:Landroid/content/Intent;
 
-    const-string/jumbo v3, "isScreenOn"
+    const-string v3, "isScreenOn"
 
     iget-object v4, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
@@ -107,12 +99,11 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 525
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mPenInsertedIntentUserSwitch:Landroid/content/Intent;
 
-    const-string/jumbo v3, "isKeyguardLocked"
+    const-string v3, "isKeyguardLocked"
 
     iget-object v4, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
@@ -124,7 +115,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 526
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$4;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -137,12 +127,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 530
     .end local v1    # "penState":I
     :cond_0
     return-void
 
-    .line 523
     .restart local v1    # "penState":I
     :cond_1
     const/4 v2, 0x0

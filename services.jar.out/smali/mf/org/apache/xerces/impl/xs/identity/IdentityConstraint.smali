@@ -34,24 +34,18 @@
     .param p3, "elemName"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
-    .line 77
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fNamespace:Ljava/lang/String;
 
-    .line 78
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fIdentityConstraintName:Ljava/lang/String;
 
-    .line 79
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fElementName:Ljava/lang/String;
 
-    .line 80
     return-void
 .end method
 
@@ -63,16 +57,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 159
     new-array v0, p1, [Lmf/org/apache/xerces/impl/xs/identity/Field;
 
-    .line 160
     .local v0, "newArray":[Lmf/org/apache/xerces/impl/xs/identity/Field;
     array-length v1, p0
 
     invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 161
     return-object v0
 .end method
 
@@ -85,27 +76,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 237
     if-nez p1, :cond_0
 
-    .line 247
     :goto_0
     return-void
 
-    .line 239
     :cond_0
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
     if-nez v1, :cond_2
 
-    .line 240
     const/4 v1, 0x2
 
     new-array v1, v1, [Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
     iput-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
-    .line 246
     :cond_1
     :goto_1
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
@@ -120,7 +106,6 @@
 
     goto :goto_0
 
-    .line 241
     :cond_2
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fNumAnnotations:I
 
@@ -130,14 +115,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 242
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fNumAnnotations:I
 
     shl-int/lit8 v1, v1, 0x1
 
     new-array v0, v1, [Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
-    .line 243
     .local v0, "newArray":[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
@@ -145,7 +128,6 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 244
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
 
     goto :goto_1
@@ -156,19 +138,16 @@
     .param p1, "field"    # Lmf/org/apache/xerces/impl/xs/identity/Field;
 
     .prologue
-    .line 103
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
 
     if-nez v0, :cond_1
 
-    .line 104
     const/4 v0, 0x4
 
     new-array v0, v0, [Lmf/org/apache/xerces/impl/xs/identity/Field;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
 
-    .line 107
     :cond_0
     :goto_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
@@ -181,10 +160,8 @@
 
     aput-object p1, v0, v1
 
-    .line 108
     return-void
 
-    .line 105
     :cond_1
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
 
@@ -194,7 +171,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 106
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
@@ -219,7 +195,6 @@
 
     const/4 v2, 0x0
 
-    .line 147
     iget-object v4, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fIdentityConstraintName:Ljava/lang/String;
 
     iget-object v5, p1, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fIdentityConstraintName:Ljava/lang/String;
@@ -228,16 +203,13 @@
 
     move-result v0
 
-    .line 148
     .local v0, "areEqual":Z
     if-nez v0, :cond_1
 
-    .line 155
     :cond_0
     :goto_0
     return v2
 
-    .line 149
     :cond_1
     iget-object v4, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fSelector:Lmf/org/apache/xerces/impl/xs/identity/Selector;
 
@@ -255,10 +227,8 @@
 
     move-result v0
 
-    .line 150
     if-eqz v0, :cond_0
 
-    .line 151
     iget v4, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
 
     iget v5, p1, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
@@ -267,11 +237,9 @@
 
     move v0, v3
 
-    .line 152
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 153
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -282,17 +250,14 @@
 
     move v2, v3
 
-    .line 155
     goto :goto_0
 
     .end local v1    # "i":I
     :cond_2
     move v0, v2
 
-    .line 151
     goto :goto_1
 
-    .line 154
     .restart local v1    # "i":I
     :cond_3
     iget-object v4, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
@@ -317,7 +282,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 153
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -327,7 +291,6 @@
     .locals 3
 
     .prologue
-    .line 225
     new-instance v0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     iget-object v1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fAnnotations:[Lmf/org/apache/xerces/impl/xs/XSAnnotationImpl;
@@ -343,7 +306,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget-short v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->type:S
 
     return v0
@@ -353,7 +315,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fElementName:Ljava/lang/String;
 
     return-object v0
@@ -364,7 +325,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 117
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
 
     aget-object v0, v0, p1
@@ -376,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
 
     return v0
@@ -386,12 +345,10 @@
     .locals 4
 
     .prologue
-    .line 206
     iget v2, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
 
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 207
     .local v1, "strs":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -401,7 +358,6 @@
 
     if-lt v0, v2, :cond_0
 
-    .line 209
     new-instance v2, Lmf/org/apache/xerces/impl/xs/util/StringListImpl;
 
     iget v3, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFieldCount:I
@@ -410,7 +366,6 @@
 
     return-object v2
 
-    .line 208
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fFields:[Lmf/org/apache/xerces/impl/xs/identity/Field;
 
@@ -422,7 +377,6 @@
 
     aput-object v2, v1, v0
 
-    .line 207
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -432,7 +386,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fIdentityConstraintName:Ljava/lang/String;
 
     return-object v0
@@ -442,7 +395,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fIdentityConstraintName:Ljava/lang/String;
 
     return-object v0
@@ -452,7 +404,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fNamespace:Ljava/lang/String;
 
     return-object v0
@@ -462,7 +413,6 @@
     .locals 1
 
     .prologue
-    .line 233
     const/4 v0, 0x0
 
     return-object v0
@@ -472,7 +422,6 @@
     .locals 1
 
     .prologue
-    .line 218
     const/4 v0, 0x0
 
     return-object v0
@@ -482,7 +431,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fSelector:Lmf/org/apache/xerces/impl/xs/identity/Selector;
 
     return-object v0
@@ -492,7 +440,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fSelector:Lmf/org/apache/xerces/impl/xs/identity/Selector;
 
     if-eqz v0, :cond_0
@@ -516,7 +463,6 @@
     .locals 1
 
     .prologue
-    .line 168
     const/16 v0, 0xa
 
     return v0
@@ -527,10 +473,8 @@
     .param p1, "selector"    # Lmf/org/apache/xerces/impl/xs/identity/Selector;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/identity/IdentityConstraint;->fSelector:Lmf/org/apache/xerces/impl/xs/identity/Selector;
 
-    .line 94
     return-void
 .end method
 
@@ -540,12 +484,10 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 131
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 132
     .local v2, "s":Ljava/lang/String;
     const/16 v3, 0x24
 
@@ -553,24 +495,20 @@
 
     move-result v0
 
-    .line 133
     .local v0, "index1":I
     if-eq v0, v4, :cond_1
 
-    .line 134
     add-int/lit8 v3, v0, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 140
     .end local v2    # "s":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 136
     .restart local v2    # "s":Ljava/lang/String;
     :cond_1
     const/16 v3, 0x2e
@@ -579,11 +517,9 @@
 
     move-result v1
 
-    .line 137
     .local v1, "index2":I
     if-eq v1, v4, :cond_0
 
-    .line 138
     add-int/lit8 v3, v1, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;

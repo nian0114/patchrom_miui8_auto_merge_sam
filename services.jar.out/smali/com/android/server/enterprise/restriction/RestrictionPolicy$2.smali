@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 450
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$2;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "proxy"    # Landroid/bluetooth/BluetoothProfile;
 
     .prologue
-    .line 452
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$2;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     check-cast p2, Landroid/bluetooth/BluetoothPan;
@@ -51,7 +49,6 @@
     # setter for: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mBluetoothPan:Landroid/bluetooth/BluetoothPan;
     invoke-static {v0, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$102(Lcom/android/server/enterprise/restriction/RestrictionPolicy;Landroid/bluetooth/BluetoothPan;)Landroid/bluetooth/BluetoothPan;
 
-    .line 453
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p1, "profile"    # I
 
     .prologue
-    .line 456
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$2;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     const/4 v1, 0x0
@@ -68,6 +64,5 @@
     # setter for: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mBluetoothPan:Landroid/bluetooth/BluetoothPan;
     invoke-static {v0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$102(Lcom/android/server/enterprise/restriction/RestrictionPolicy;Landroid/bluetooth/BluetoothPan;)Landroid/bluetooth/BluetoothPan;
 
-    .line 457
     return-void
 .end method

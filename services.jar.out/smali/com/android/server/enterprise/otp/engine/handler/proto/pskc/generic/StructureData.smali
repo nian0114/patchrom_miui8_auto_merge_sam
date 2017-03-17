@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->mEncryptedValue:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
     return-object v0
@@ -38,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->mPlainValue:Ljava/lang/String;
 
     return-object v0
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->mValueMac:[B
 
     return-object v0
@@ -59,10 +55,8 @@
     .param p1, "encryptedValue"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->mEncryptedValue:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;
 
-    .line 34
     return-void
 .end method
 
@@ -71,10 +65,8 @@
     .param p1, "plainValue"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->mPlainValue:Ljava/lang/String;
 
-    .line 26
     return-void
 .end method
 
@@ -83,7 +75,6 @@
     .param p1, "valueMAC"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
@@ -92,6 +83,5 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/StructureData;->mValueMac:[B
 
-    .line 42
     return-void
 .end method

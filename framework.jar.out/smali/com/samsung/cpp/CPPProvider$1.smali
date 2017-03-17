@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 290
     iput-object p1, p0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 293
     const-string v19, "CPProvider"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -66,7 +64,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     const-string v19, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -79,7 +76,6 @@
 
     if-eqz v19, :cond_a
 
-    .line 296
     const-string v19, "connectivity"
 
     move-object/from16 v0, p1
@@ -92,13 +88,11 @@
 
     check-cast v5, Landroid/net/ConnectivityManager;
 
-    .line 299
     .local v5, "conMan":Landroid/net/ConnectivityManager;
     invoke-virtual {v5}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v6
 
-    .line 300
     .local v6, "currentActiveNetworkInfo":Landroid/net/NetworkInfo;
     if-eqz v6, :cond_7
 
@@ -108,7 +102,6 @@
 
     if-eqz v19, :cond_7
 
-    .line 301
     invoke-virtual {v6}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v19
@@ -123,7 +116,6 @@
 
     const/16 v18, 0x1
 
-    .line 302
     .local v18, "wifiConnected":Z
     :goto_0
     invoke-virtual {v6}, Landroid/net/NetworkInfo;->getType()I
@@ -134,7 +126,6 @@
 
     const/4 v9, 0x1
 
-    .line 308
     .local v9, "mobileConnected":Z
     :goto_1
     const-string v19, "CPProvider"
@@ -181,7 +172,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
     if-eqz v18, :cond_8
 
     # getter for: Lcom/samsung/cpp/CPPProvider;->mWifiConnected:Z
@@ -191,14 +181,12 @@
 
     if-nez v19, :cond_8
 
-    .line 312
     const-string v19, "CPProvider"
 
     const-string v20, "CONNECTIVITY_ACTION : WIFI ON"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     const-string v19, "CPProvider"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -280,13 +268,11 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     const/16 v19, 0x1
 
     # setter for: Lcom/samsung/cpp/CPPProvider;->mWifiConnected:Z
     invoke-static/range {v19 .. v19}, Lcom/samsung/cpp/CPPProvider;->access$002(Z)Z
 
-    .line 316
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -300,14 +286,12 @@
 
     if-eqz v19, :cond_0
 
-    .line 317
     const-string v19, "CPProvider"
 
     const-string v20, "WIFI connected + flag_enableCPP --> sendRequest directly"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -316,7 +300,6 @@
 
     invoke-virtual/range {v19 .. v19}, Lcom/samsung/cpp/CPPProvider;->sendLargeRequest()V
 
-    .line 321
     :cond_0
     move-object/from16 v0, p0
 
@@ -358,7 +341,6 @@
 
     if-nez v19, :cond_2
 
-    .line 322
     :cond_1
     const-string v19, "CPProvider"
 
@@ -366,12 +348,10 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v11
 
-    .line 325
     .local v11, "reqMsg":Landroid/os/Message;
     const/16 v19, 0x7
 
@@ -379,14 +359,12 @@
 
     iput v0, v11, Landroid/os/Message;->what:I
 
-    .line 326
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     iput v0, v11, Landroid/os/Message;->arg1:I
 
-    .line 327
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -402,7 +380,6 @@
 
     invoke-virtual {v0, v11}, Lcom/samsung/cpp/CPPProvider$CPPEventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 336
     .end local v11    # "reqMsg":Landroid/os/Message;
     :cond_2
     :goto_2
@@ -415,14 +392,12 @@
 
     if-nez v19, :cond_9
 
-    .line 337
     const-string v19, "CPProvider"
 
     const-string v20, "CONNECTIVITY_ACTION : Mobile Data ON"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
     const-string v19, "CPProvider"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -483,13 +458,11 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     const/16 v19, 0x1
 
     # setter for: Lcom/samsung/cpp/CPPProvider;->mMobileConnected:Z
     invoke-static/range {v19 .. v19}, Lcom/samsung/cpp/CPPProvider;->access$502(Z)Z
 
-    .line 341
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -530,7 +503,6 @@
 
     if-nez v19, :cond_4
 
-    .line 342
     :cond_3
     const-string v19, "CPProvider"
 
@@ -538,12 +510,10 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v12
 
-    .line 345
     .local v12, "reqMsg1":Landroid/os/Message;
     const/16 v19, 0x7
 
@@ -551,14 +521,12 @@
 
     iput v0, v12, Landroid/os/Message;->what:I
 
-    .line 346
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     iput v0, v12, Landroid/os/Message;->arg1:I
 
-    .line 347
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -574,7 +542,6 @@
 
     invoke-virtual {v0, v12}, Lcom/samsung/cpp/CPPProvider$CPPEventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 469
     .end local v5    # "conMan":Landroid/net/ConnectivityManager;
     .end local v6    # "currentActiveNetworkInfo":Landroid/net/NetworkInfo;
     .end local v9    # "mobileConnected":Z
@@ -584,7 +551,6 @@
     :goto_3
     return-void
 
-    .line 301
     .restart local v5    # "conMan":Landroid/net/ConnectivityManager;
     .restart local v6    # "currentActiveNetworkInfo":Landroid/net/NetworkInfo;
     :cond_5
@@ -592,26 +558,22 @@
 
     goto/16 :goto_0
 
-    .line 302
     .restart local v18    # "wifiConnected":Z
     :cond_6
     const/4 v9, 0x0
 
     goto/16 :goto_1
 
-    .line 305
     .end local v18    # "wifiConnected":Z
     :cond_7
     const/16 v18, 0x0
 
-    .line 306
     .restart local v18    # "wifiConnected":Z
     const/4 v9, 0x0
 
     .restart local v9    # "mobileConnected":Z
     goto/16 :goto_1
 
-    .line 330
     :cond_8
     if-nez v18, :cond_2
 
@@ -622,14 +584,12 @@
 
     if-eqz v19, :cond_2
 
-    .line 331
     const-string v19, "CPProvider"
 
     const-string v20, "CONNECTIVITY_ACTION : WIFI OFF"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     const/16 v19, 0x0
 
     # setter for: Lcom/samsung/cpp/CPPProvider;->mWifiConnected:Z
@@ -637,7 +597,6 @@
 
     goto/16 :goto_2
 
-    .line 350
     :cond_9
     if-nez v9, :cond_4
 
@@ -648,14 +607,12 @@
 
     if-eqz v19, :cond_4
 
-    .line 351
     const-string v19, "CPProvider"
 
     const-string v20, "CONNECTIVITY_ACTION : Mobile Data OFF"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     const/16 v19, 0x0
 
     # setter for: Lcom/samsung/cpp/CPPProvider;->mMobileConnected:Z
@@ -663,7 +620,6 @@
 
     goto :goto_3
 
-    .line 355
     .end local v5    # "conMan":Landroid/net/ConnectivityManager;
     .end local v6    # "currentActiveNetworkInfo":Landroid/net/NetworkInfo;
     .end local v9    # "mobileConnected":Z
@@ -681,19 +637,16 @@
 
     if-eqz v19, :cond_b
 
-    .line 356
     const-string v19, "CPProvider"
 
     const-string v20, "received : android.intent.action.ACTION_SHUTDOWN"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v14
 
-    .line 358
     .local v14, "stopMsg":Landroid/os/Message;
     const/16 v19, 0x4
 
@@ -701,7 +654,6 @@
 
     iput v0, v14, Landroid/os/Message;->what:I
 
-    .line 359
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -719,7 +671,6 @@
 
     goto :goto_3
 
-    .line 360
     .end local v14    # "stopMsg":Landroid/os/Message;
     :cond_b
     const-string v19, "android.intent.action.ACTION_CLM_TT_START_BY_APP"
@@ -734,7 +685,6 @@
 
     if-eqz v19, :cond_d
 
-    .line 361
     const-string v19, "CPProvider"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -768,7 +718,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -782,7 +731,6 @@
 
     if-nez v19, :cond_c
 
-    .line 363
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -794,7 +742,6 @@
     # setter for: Lcom/samsung/cpp/CPPProvider;->flagEnableCPP:Z
     invoke-static/range {v19 .. v20}, Lcom/samsung/cpp/CPPProvider;->access$602(Lcom/samsung/cpp/CPPProvider;Z)Z
 
-    .line 364
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -812,7 +759,6 @@
 
     goto/16 :goto_3
 
-    .line 366
     :cond_c
     const-string v19, "CPProvider"
 
@@ -822,7 +768,6 @@
 
     goto/16 :goto_3
 
-    .line 368
     :cond_d
     const-string v19, "android.intent.action.ACTION_CLM_TT_STOP_BY_APP"
 
@@ -836,7 +781,6 @@
 
     if-eqz v19, :cond_f
 
-    .line 369
     const-string v19, "CPProvider"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -870,7 +814,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -884,7 +827,6 @@
 
     if-eqz v19, :cond_e
 
-    .line 371
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -896,7 +838,6 @@
     # setter for: Lcom/samsung/cpp/CPPProvider;->flagEnableCPP:Z
     invoke-static/range {v19 .. v20}, Lcom/samsung/cpp/CPPProvider;->access$602(Lcom/samsung/cpp/CPPProvider;Z)Z
 
-    .line 372
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -914,7 +855,6 @@
 
     goto/16 :goto_3
 
-    .line 374
     :cond_e
     const-string v19, "CPProvider"
 
@@ -924,7 +864,6 @@
 
     goto/16 :goto_3
 
-    .line 376
     :cond_f
     const-string v19, "sec.intent.action.UPDATE_POLICY"
 
@@ -938,7 +877,6 @@
 
     if-eqz v19, :cond_11
 
-    .line 377
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -956,12 +894,10 @@
 
     if-eqz v19, :cond_10
 
-    .line 378
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v11
 
-    .line 379
     .restart local v11    # "reqMsg":Landroid/os/Message;
     const/16 v19, 0x7
 
@@ -969,14 +905,12 @@
 
     iput v0, v11, Landroid/os/Message;->what:I
 
-    .line 380
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     iput v0, v11, Landroid/os/Message;->arg1:I
 
-    .line 381
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -992,7 +926,6 @@
 
     invoke-virtual {v0, v11}, Lcom/samsung/cpp/CPPProvider$CPPEventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 383
     .end local v11    # "reqMsg":Landroid/os/Message;
     :cond_10
     const-string v19, "CPProvider"
@@ -1003,7 +936,6 @@
 
     goto/16 :goto_3
 
-    .line 384
     :cond_11
     const-string v19, "android.intent.action.BOOT_COMPLETED"
 
@@ -1017,14 +949,12 @@
 
     if-eqz v19, :cond_12
 
-    .line 385
     const-string v19, "CPProvider"
 
     const-string v20, "Boot Completed, Clean Cell DB Req Table"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1040,7 +970,6 @@
 
     goto/16 :goto_3
 
-    .line 387
     :cond_12
     const-string v19, "android.net.wifi.STATE_CHANGE"
 
@@ -1054,7 +983,6 @@
 
     if-nez v19, :cond_4
 
-    .line 389
     const-string v19, "android.net.wifi.SCAN_RESULTS"
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -1067,7 +995,6 @@
 
     if-eqz v19, :cond_13
 
-    .line 390
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1081,7 +1008,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1106,7 +1032,6 @@
     # setter for: Lcom/samsung/cpp/CPPProvider;->wifiResults:Ljava/util/List;
     invoke-static/range {v19 .. v20}, Lcom/samsung/cpp/CPPProvider;->access$902(Lcom/samsung/cpp/CPPProvider;Ljava/util/List;)Ljava/util/List;
 
-    .line 392
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1118,7 +1043,6 @@
     # setter for: Lcom/samsung/cpp/CPPProvider;->mWifiScanning:Z
     invoke-static/range {v19 .. v20}, Lcom/samsung/cpp/CPPProvider;->access$802(Lcom/samsung/cpp/CPPProvider;Z)Z
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1148,7 +1072,6 @@
 
     check-cast v13, Landroid/net/wifi/ScanResult;
 
-    .line 394
     .local v13, "result":Landroid/net/wifi/ScanResult;
     const-string v19, "CPProvider"
 
@@ -1206,7 +1129,6 @@
 
     goto :goto_4
 
-    .line 397
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v13    # "result":Landroid/net/wifi/ScanResult;
     :cond_13
@@ -1222,7 +1144,6 @@
 
     if-eqz v19, :cond_14
 
-    .line 398
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1238,7 +1159,6 @@
 
     move-result-object v17
 
-    .line 400
     .local v17, "version":Ljava/lang/String;
     if-eqz v17, :cond_4
 
@@ -1254,7 +1174,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 401
     new-instance v7, Ljava/text/SimpleDateFormat;
 
     const-string v19, "yyyyMMdd-HH:mm"
@@ -1263,7 +1182,6 @@
 
     invoke-direct {v7, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 402
     .local v7, "dateFormat":Ljava/text/SimpleDateFormat;
     new-instance v10, Ljava/util/Date;
 
@@ -1275,13 +1193,11 @@
 
     invoke-direct {v10, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    .line 403
     .local v10, "nowDate":Ljava/util/Date;
     invoke-virtual {v7, v10}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 404
     .local v4, "checkedVersion":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1300,7 +1216,6 @@
 
     goto/16 :goto_3
 
-    .line 406
     .end local v4    # "checkedVersion":Ljava/lang/String;
     .end local v7    # "dateFormat":Ljava/text/SimpleDateFormat;
     .end local v10    # "nowDate":Ljava/util/Date;
@@ -1318,7 +1233,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 407
     const-string v19, "CPProvider"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -1379,7 +1293,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 409
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1420,7 +1333,6 @@
 
     if-nez v19, :cond_17
 
-    .line 410
     :cond_15
     const-string v19, "CPProvider"
 
@@ -1428,12 +1340,10 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v12
 
-    .line 413
     .restart local v12    # "reqMsg1":Landroid/os/Message;
     const/16 v19, 0x7
 
@@ -1441,14 +1351,12 @@
 
     iput v0, v12, Landroid/os/Message;->what:I
 
-    .line 414
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     iput v0, v12, Landroid/os/Message;->arg1:I
 
-    .line 416
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1468,7 +1376,6 @@
 
     invoke-virtual {v0, v12, v1, v2}, Lcom/samsung/cpp/CPPProvider$CPPEventHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 421
     .end local v12    # "reqMsg1":Landroid/os/Message;
     :goto_5
     const-string v19, "CPProvider"
@@ -1504,7 +1411,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1524,18 +1430,15 @@
 
     if-le v0, v1, :cond_1a
 
-    .line 424
     const/16 v19, 0x0
 
     invoke-static/range {v19 .. v19}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v15
 
-    .line 425
     .local v15, "subId":[I
     if-eqz v15, :cond_18
 
-    .line 426
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1557,7 +1460,6 @@
     # setter for: Lcom/samsung/cpp/CPPProvider;->mServiceStatelistener1:Landroid/telephony/PhoneStateListener;
     invoke-static/range {v19 .. v20}, Lcom/samsung/cpp/CPPProvider;->access$1202(Lcom/samsung/cpp/CPPProvider;Landroid/telephony/PhoneStateListener;)Landroid/telephony/PhoneStateListener;
 
-    .line 436
     :goto_6
     const/16 v19, 0x1
 
@@ -1565,10 +1467,8 @@
 
     move-result-object v15
 
-    .line 438
     if-eqz v15, :cond_19
 
-    .line 439
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1590,7 +1490,6 @@
     # setter for: Lcom/samsung/cpp/CPPProvider;->mServiceStatelistener2:Landroid/telephony/PhoneStateListener;
     invoke-static/range {v19 .. v20}, Lcom/samsung/cpp/CPPProvider;->access$1302(Lcom/samsung/cpp/CPPProvider;Landroid/telephony/PhoneStateListener;)Landroid/telephony/PhoneStateListener;
 
-    .line 460
     .end local v15    # "subId":[I
     :goto_7
     move-object/from16 v0, p0
@@ -1612,7 +1511,6 @@
 
     check-cast v16, Landroid/telephony/TelephonyManager;
 
-    .line 462
     .local v16, "teleMan":Landroid/telephony/TelephonyManager;
     move-object/from16 v0, p0
 
@@ -1627,7 +1525,6 @@
 
     if-eqz v19, :cond_16
 
-    .line 463
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1649,7 +1546,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 465
     :cond_16
     move-object/from16 v0, p0
 
@@ -1664,7 +1560,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 466
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPProvider$1;->this$0:Lcom/samsung/cpp/CPPProvider;
@@ -1688,7 +1583,6 @@
 
     goto/16 :goto_3
 
-    .line 419
     .end local v16    # "teleMan":Landroid/telephony/TelephonyManager;
     :cond_17
     move-object/from16 v0, p0
@@ -1706,7 +1600,6 @@
 
     goto/16 :goto_5
 
-    .line 434
     .restart local v15    # "subId":[I
     :cond_18
     const-string v19, "CPProvider"
@@ -1717,7 +1610,6 @@
 
     goto/16 :goto_6
 
-    .line 447
     :cond_19
     const-string v19, "CPProvider"
 
@@ -1727,7 +1619,6 @@
 
     goto :goto_7
 
-    .line 450
     .end local v15    # "subId":[I
     :cond_1a
     move-object/from16 v0, p0

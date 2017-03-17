@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 673
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +35,5 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 675
     return-void
 .end method

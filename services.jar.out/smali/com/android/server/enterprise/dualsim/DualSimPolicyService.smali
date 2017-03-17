@@ -28,20 +28,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 76
     invoke-direct {p0}, Landroid/app/enterprise/dualsim/IDualSimPolicy$Stub;-><init>()V
 
-    .line 77
     const-string v0, "DualSimPolicyService"
 
     const-string v1, "DualSimPolicy Constructor"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mContext:Landroid/content/Context;
 
-    .line 79
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mContext:Landroid/content/Context;
@@ -50,14 +46,12 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 80
     invoke-static {}, Lcom/android/server/enterprise/adapterlayer/DualSimAdapter;->getInstance()Lcom/android/server/enterprise/adapterlayer/DualSimAdapter;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mDualSimAdapter:Lcom/android/server/enterprise/adapterlayer/DualSimAdapter;
 
-    .line 81
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 99
     invoke-direct {p0}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -85,7 +78,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 104
     invoke-direct {p0}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -103,15 +95,13 @@
     .locals 2
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "enterprise_policy"
+    const-string v1, "enterprise_policy"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -121,7 +111,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 91
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -137,24 +126,19 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 213
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->enforceOwnerOnlyAndDualSimPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 214
     const/4 v2, 0x0
 
-    .line 216
     .local v2, "result":Z
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->getPreferredSimSlot(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 217
     .local v1, "mPreferSim":I
     if-eq v1, v3, :cond_0
 
-    .line 218
     iget-object v3, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "DualSim_Policy"
@@ -173,7 +157,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 220
     iget-object v3, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v4, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -190,17 +173,14 @@
 
     move-result v2
 
-    .line 228
     .end local v1    # "mPreferSim":I
     :cond_0
     :goto_0
     return v2
 
-    .line 225
     :catch_0
     move-exception v0
 
-    .line 226
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -214,10 +194,8 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 193
     const/4 v2, 0x0
 
-    .line 195
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -230,7 +208,6 @@
 
     move-result-object v2
 
-    .line 198
     if-eqz v2, :cond_1
 
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
@@ -239,7 +216,6 @@
 
     if-nez v5, :cond_1
 
-    .line 199
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -258,7 +234,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 200
     .local v3, "value":Ljava/lang/Integer;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -266,25 +241,21 @@
 
     if-eq v5, v4, :cond_0
 
-    .line 201
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v4
 
-    .line 209
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "value":Ljava/lang/Integer;
     :cond_1
     :goto_0
     return v4
 
-    .line 206
     :catch_0
     move-exception v0
 
-    .line 207
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -296,14 +267,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 121
     const-string v0, "DualSimPolicyService"
 
-    const-string/jumbo v1, "onAdminAdded"
+    const-string v1, "onAdminAdded"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     return-void
 .end method
 
@@ -312,14 +281,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 133
     const-string v0, "DualSimPolicyService"
 
-    const-string/jumbo v1, "onAdminRemoved"
+    const-string v1, "onAdminRemoved"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     return-void
 .end method
 
@@ -328,14 +295,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 127
     const-string v0, "DualSimPolicyService"
 
-    const-string/jumbo v1, "onPreAdminRemoval"
+    const-string v1, "onPreAdminRemoval"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     return-void
 .end method
 
@@ -347,25 +312,20 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 150
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->enforceOwnerOnlyAndDualSimPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 151
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->getPreferredSimSlot(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 152
     .local v1, "mPreferSim":I
     const/4 v2, 0x0
 
-    .line 154
     .local v2, "result":Z
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_2
 
-    .line 155
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -385,7 +345,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 157
     iget-object v3, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v4, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -398,27 +357,21 @@
 
     move-result v2
 
-    .line 159
     if-eqz v2, :cond_0
 
-    .line 161
     if-nez p2, :cond_1
 
-    .line 162
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->switchNetworkCustomizer(I)V
 
-    .line 189
     :cond_0
     :goto_0
     return v2
 
-    .line 164
     :cond_1
     if-ne p2, v7, :cond_0
 
-    .line 165
     const/4 v3, 0x1
 
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->switchNetworkCustomizer(I)V
@@ -427,17 +380,14 @@
 
     goto :goto_0
 
-    .line 186
     :catch_0
     move-exception v0
 
-    .line 187
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 173
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
@@ -453,24 +403,19 @@
 
     move-result v2
 
-    .line 175
     if-eqz v2, :cond_0
 
-    .line 177
     if-nez p2, :cond_3
 
-    .line 178
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->switchNetworkCustomizer(I)V
 
     goto :goto_0
 
-    .line 180
     :cond_3
     if-ne p2, v7, :cond_0
 
-    .line 181
     const/4 v3, 0x1
 
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->switchNetworkCustomizer(I)V
@@ -489,15 +434,12 @@
 
     const/4 v3, 0x0
 
-    .line 138
     if-nez p1, :cond_1
 
-    .line 139
     invoke-static {v3}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v0
 
-    .line 140
     .local v0, "subId":[I
     iget-object v2, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mContext:Landroid/content/Context;
 
@@ -509,22 +451,18 @@
 
     invoke-virtual {v2, v3}, Landroid/telephony/SubscriptionManager;->setDefaultDataSubId(I)V
 
-    .line 146
     .end local v0    # "subId":[I
     :cond_0
     :goto_0
     return-void
 
-    .line 141
     :cond_1
     if-ne p1, v2, :cond_0
 
-    .line 142
     invoke-static {v2}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v1
 
-    .line 143
     .local v1, "subId2":[I
     iget-object v2, p0, Lcom/android/server/enterprise/dualsim/DualSimPolicyService;->mContext:Landroid/content/Context;
 
@@ -543,13 +481,11 @@
     .locals 2
 
     .prologue
-    .line 115
     const-string v0, "DualSimPolicyService"
 
-    const-string/jumbo v1, "systemReady"
+    const-string v1, "systemReady"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     return-void
 .end method

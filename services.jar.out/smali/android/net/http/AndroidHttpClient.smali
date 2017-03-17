@@ -15,7 +15,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -38,7 +37,6 @@
     .end annotation
 
     .prologue
-    .line 22
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -53,7 +51,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -73,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -88,7 +84,6 @@
     .param p0, "request"    # Lorg/apache/http/HttpRequest;
 
     .prologue
-    .line 9
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -103,7 +98,6 @@
     .param p0, "userAgent"    # Ljava/lang/String;
 
     .prologue
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -119,7 +113,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -134,7 +127,6 @@
     .param p0, "dateString"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -150,7 +142,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -164,7 +155,6 @@
     .locals 2
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -180,7 +170,6 @@
     .param p2, "level"    # I
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -214,7 +203,6 @@
     .end annotation
 
     .prologue
-    .line 20
     .local p3, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -252,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 21
     .local p3, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -285,7 +272,6 @@
     .end annotation
 
     .prologue
-    .line 18
     .local p2, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -321,7 +307,6 @@
     .end annotation
 
     .prologue
-    .line 19
     .local p2, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<+TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -343,7 +328,6 @@
     .end annotation
 
     .prologue
-    .line 16
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -365,7 +349,6 @@
     .end annotation
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -385,7 +368,6 @@
     .end annotation
 
     .prologue
-    .line 14
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -406,7 +388,6 @@
     .end annotation
 
     .prologue
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -425,7 +406,6 @@
     .end annotation
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -439,7 +419,6 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"
@@ -453,7 +432,6 @@
     .locals 2
 
     .prologue
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

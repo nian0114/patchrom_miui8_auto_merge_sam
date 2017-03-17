@@ -42,36 +42,29 @@
     .param p2, "appToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 235
     iput-object p1, p0, Lcom/android/server/AppOpsService$ClientState;->this$0:Lcom/android/server/AppOpsService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 236
     iput-object p2, p0, Lcom/android/server/AppOpsService$ClientState;->mAppToken:Landroid/os/IBinder;
 
-    .line 237
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/AppOpsService$ClientState;->mPid:I
 
-    .line 238
     instance-of v0, p2, Landroid/os/Binder;
 
     if-eqz v0, :cond_0
 
-    .line 240
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$ClientState;->mStartedOps:Ljava/util/ArrayList;
 
-    .line 248
     :goto_0
     return-void
 
-    .line 242
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -79,7 +72,6 @@
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$ClientState;->mStartedOps:Ljava/util/ArrayList;
 
-    .line 244
     :try_start_0
     iget-object v0, p0, Lcom/android/server/AppOpsService$ClientState;->mAppToken:Landroid/os/IBinder;
 
@@ -91,7 +83,6 @@
 
     goto :goto_0
 
-    .line 245
     :catch_0
     move-exception v0
 
@@ -104,12 +95,10 @@
     .locals 4
 
     .prologue
-    .line 260
     iget-object v2, p0, Lcom/android/server/AppOpsService$ClientState;->this$0:Lcom/android/server/AppOpsService;
 
     monitor-enter v2
 
-    .line 261
     :try_start_0
     iget-object v1, p0, Lcom/android/server/AppOpsService$ClientState;->mStartedOps:Ljava/util/ArrayList;
 
@@ -123,7 +112,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 262
     iget-object v3, p0, Lcom/android/server/AppOpsService$ClientState;->this$0:Lcom/android/server/AppOpsService;
 
     iget-object v1, p0, Lcom/android/server/AppOpsService$ClientState;->mStartedOps:Ljava/util/ArrayList;
@@ -136,12 +124,10 @@
 
     invoke-virtual {v3, v1}, Lcom/android/server/AppOpsService;->finishOperationLocked(Lcom/android/server/AppOpsService$Op;)V
 
-    .line 261
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 264
     :cond_0
     iget-object v1, p0, Lcom/android/server/AppOpsService$ClientState;->this$0:Lcom/android/server/AppOpsService;
 
@@ -151,13 +137,10 @@
 
     invoke-virtual {v1, v3}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 265
     monitor-exit v2
 
-    .line 266
     return-void
 
-    .line 265
     .end local v0    # "i":I
     :catchall_0
     move-exception v1
@@ -173,7 +156,6 @@
     .locals 3
 
     .prologue
-    .line 252
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,7 +186,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "pid="
+    const-string v2, "pid="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -238,7 +220,7 @@
     return-object v0
 
     :cond_0
-    const-string/jumbo v0, "local"
+    const-string v0, "local"
 
     goto :goto_0
 .end method

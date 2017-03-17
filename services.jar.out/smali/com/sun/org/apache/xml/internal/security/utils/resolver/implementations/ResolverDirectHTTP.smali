@@ -55,37 +55,37 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "http.proxy.host"
+    const-string v2, "http.proxy.host"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "http.proxy.port"
+    const-string v2, "http.proxy.port"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string/jumbo v2, "http.proxy.username"
+    const-string v2, "http.proxy.username"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x3
 
-    const-string/jumbo v2, "http.proxy.password"
+    const-string v2, "http.proxy.password"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "http.basic.username"
+    const-string v2, "http.basic.username"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "http.basic.password"
+    const-string v2, "http.basic.password"
 
     aput-object v2, v0, v1
 
@@ -194,7 +194,7 @@
 
     sget-object v2, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v3, "quick fail, uri == null"
+    const-string v3, "quick fail, uri == null"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
@@ -238,7 +238,7 @@
 
     sget-object v2, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    const-string/jumbo v3, "quick fail for empty URIs and local ones"
+    const-string v3, "quick fail for empty URIs and local ones"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
@@ -280,7 +280,7 @@
     invoke-virtual {v2, v3, v4}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
     :cond_4
-    const-string/jumbo v2, "http:"
+    const-string v2, "http:"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -288,7 +288,7 @@
 
     if-nez v2, :cond_5
 
-    const-string/jumbo v2, "http:"
+    const-string v2, "http:"
 
     invoke-virtual {p2, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -426,7 +426,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http.proxySet"
+    const-string v1, "http.proxySet"
 
     invoke-virtual {v0, v1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -438,7 +438,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "http.proxyHost"
+    const-string v2, "http.proxyHost"
 
     invoke-virtual {v1, v2}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -450,7 +450,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v5, "http.proxyPort"
+    const-string v5, "http.proxyPort"
 
     invoke-virtual {v2, v5}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -518,9 +518,9 @@
 
     move-result-object v4
 
-    const-string/jumbo v6, "http.proxySet"
+    const-string v6, "http.proxySet"
 
-    const-string/jumbo v9, "true"
+    const-string v9, "true"
 
     invoke-virtual {v4, v6, v9}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -528,7 +528,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v6, "http.proxyHost"
+    const-string v6, "http.proxyHost"
 
     invoke-virtual {v4, v6, v7}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -536,7 +536,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v6, "http.proxyPort"
+    const-string v6, "http.proxyPort"
 
     invoke-virtual {v4, v6, v8}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -835,7 +835,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "http.proxySet"
+    const-string v5, "http.proxySet"
 
     invoke-virtual {v4, v5, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -843,7 +843,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v4, "http.proxyHost"
+    const-string v4, "http.proxyHost"
 
     invoke-virtual {v0, v4, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -851,7 +851,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http.proxyPort"
+    const-string v1, "http.proxyPort"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -866,7 +866,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0, p1, p2}, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;Lorg/w3c/dom/Attr;Ljava/lang/String;)V
 
@@ -877,7 +877,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;
 
-    const-string/jumbo v2, "generic.EmptyMessage"
+    const-string v2, "generic.EmptyMessage"
 
     invoke-direct {v1, v2, v0, p1, p2}, Lcom/sun/org/apache/xml/internal/security/utils/resolver/ResourceResolverException;-><init>(Ljava/lang/String;Ljava/lang/Exception;Lorg/w3c/dom/Attr;Ljava/lang/String;)V
 

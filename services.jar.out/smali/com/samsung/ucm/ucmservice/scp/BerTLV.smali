@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .param p0, "tagVal"    # B
 
     .prologue
-    .line 49
     const/16 v0, -0x50
 
     if-eq p0, v0, :cond_0
@@ -47,11 +44,9 @@
 
     if-ne p0, v0, :cond_1
 
-    .line 50
     :cond_0
     const/4 v0, 0x1
 
-    .line 52
     :goto_0
     return v0
 
@@ -71,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 19
     const/4 v0, 0x0
 
     array-length v1, p0
@@ -97,7 +91,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 24
     aget-byte v0, p0, p1
 
     invoke-static {v0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->isSpecialPrimitiveTag(B)Z
@@ -106,16 +99,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 25
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     invoke-direct {v0, p0, p1, p2, v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;-><init>([BIII)V
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 28
     :cond_0
     aget-byte v0, p0, p1
 
@@ -125,14 +115,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 29
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;
 
     invoke-direct {v0, p0, p1, p2, v2}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;-><init>([BIII)V
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
@@ -154,7 +142,6 @@
     .end annotation
 
     .prologue
-    .line 37
     aget-byte v0, p0, p1
 
     invoke-static {v0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->isSpecialPrimitiveTag(B)Z
@@ -163,18 +150,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 38
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     add-int/lit8 v1, p3, 0x1
 
     invoke-direct {v0, p0, p1, p2, v1}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;-><init>([BIII)V
 
-    .line 44
     :goto_0
     return-object v0
 
-    .line 41
     :cond_0
     aget-byte v0, p0, p1
 
@@ -184,7 +168,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 42
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;
 
     add-int/lit8 v1, p3, 0x1
@@ -193,7 +176,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_1
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
@@ -210,7 +192,6 @@
     .locals 2
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/Tag;->getLen()I
@@ -232,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     return v0
@@ -245,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     return-object v0
@@ -262,42 +241,35 @@
     .end annotation
 
     .prologue
-    .line 56
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
 
-    .line 57
     aget-byte v1, p1, p2
 
     and-int/lit16 v1, v1, 0xff
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
-    .line 58
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     const/16 v2, 0x7f
 
     if-le v1, v2, :cond_0
 
-    .line 59
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     and-int/lit16 v1, v1, -0x81
 
     int-to-short v0, v1
 
-    .line 60
     .local v0, "size":S
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
-    .line 61
     packed-switch v0, :pswitch_data_0
 
-    .line 76
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/BerTLV$BerTLVException;
 
     const-string v2, "Invalid format (size)"
@@ -306,11 +278,9 @@
 
     throw v1
 
-    .line 63
     :pswitch_0
     add-int/lit8 p2, p2, 0x1
 
-    .line 64
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     shl-int/lit8 v1, v1, 0x8
@@ -323,11 +293,9 @@
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
-    .line 66
     :pswitch_1
     add-int/lit8 p2, p2, 0x1
 
-    .line 67
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     shl-int/lit8 v1, v1, 0x8
@@ -340,11 +308,9 @@
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
-    .line 69
     :pswitch_2
     add-int/lit8 p2, p2, 0x1
 
-    .line 70
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     shl-int/lit8 v1, v1, 0x8
@@ -357,11 +323,9 @@
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
-    .line 72
     :pswitch_3
     add-int/lit8 p2, p2, 0x1
 
-    .line 73
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     shl-int/lit8 v1, v1, 0x8
@@ -374,21 +338,18 @@
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
-    .line 78
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
 
-    .line 80
     .end local v0    # "size":S
     :cond_0
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
 
     return v1
 
-    .line 61
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_3
@@ -406,10 +367,8 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 91
     iput p1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLevel:I
 
-    .line 92
     return-void
 .end method
 
@@ -417,14 +376,12 @@
     .locals 3
 
     .prologue
-    .line 137
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mTag:Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     invoke-virtual {v1}, Lcom/samsung/ucm/ucmservice/scp/Tag;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 138
     .local v0, "ret":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -484,7 +441,6 @@
 
     move-result-object v0
 
-    .line 139
     return-object v0
 .end method
 
@@ -492,24 +448,20 @@
     .locals 2
 
     .prologue
-    .line 108
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     const/16 v1, 0x80
 
     if-ge v0, v1, :cond_1
 
-    .line 109
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
 
-    .line 115
     :cond_0
     :goto_0
     return-void
 
-    .line 110
     :cond_1
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
@@ -517,14 +469,12 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 111
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
 
     goto :goto_0
 
-    .line 112
     :cond_2
     iget v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
@@ -532,7 +482,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 113
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLenLength:I
@@ -560,23 +509,19 @@
     .end annotation
 
     .prologue
-    .line 146
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->updateLength()V
 
-    .line 147
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->getFullLen()I
 
     move-result v1
 
     new-array v0, v1, [B
 
-    .line 148
     .local v0, "res":[B
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->write([BI)I
 
-    .line 149
     return-object v0
 .end method
 
@@ -591,14 +536,12 @@
     .end annotation
 
     .prologue
-    .line 118
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     const/16 v2, 0x80
 
     if-ge v1, v2, :cond_0
 
-    .line 119
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     and-int/lit16 v1, v1, 0xff
@@ -607,14 +550,11 @@
 
     aput-byte v1, p1, p2
 
-    .line 120
     const/4 v1, 0x1
 
-    .line 129
     :goto_0
     return v1
 
-    .line 121
     :cond_0
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
@@ -622,7 +562,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 122
     add-int/lit8 v0, p2, 0x1
 
     .end local p2    # "outoffset":I
@@ -631,7 +570,6 @@
 
     aput-byte v1, p1, p2
 
-    .line 123
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
     and-int/lit16 v1, v1, 0xff
@@ -640,7 +578,6 @@
 
     aput-byte v1, p1, v0
 
-    .line 124
     const/4 v1, 0x2
 
     move p2, v0
@@ -649,7 +586,6 @@
     .restart local p2    # "outoffset":I
     goto :goto_0
 
-    .line 125
     :cond_1
     iget v1, p0, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->mLen:I
 
@@ -657,7 +593,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 126
     add-int/lit8 v0, p2, 0x1
 
     .end local p2    # "outoffset":I
@@ -666,7 +601,6 @@
 
     aput-byte v1, p1, p2
 
-    .line 127
     add-int/lit8 p2, v0, 0x1
 
     .end local v0    # "outoffset":I
@@ -681,7 +615,6 @@
 
     aput-byte v1, p1, v0
 
-    .line 128
     add-int/lit8 v0, p2, 0x1
 
     .end local p2    # "outoffset":I
@@ -694,7 +627,6 @@
 
     aput-byte v1, p1, p2
 
-    .line 129
     const/4 v1, 0x3
 
     move p2, v0
@@ -703,11 +635,10 @@
     .restart local p2    # "outoffset":I
     goto :goto_0
 
-    .line 131
     :cond_2
     new-instance v1, Ljava/lang/Exception;
 
-    const-string/jumbo v2, "unsupported"
+    const-string v2, "unsupported"
 
     invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 

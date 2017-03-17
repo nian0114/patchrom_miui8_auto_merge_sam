@@ -16,13 +16,10 @@
     .param p1, "pool"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/validation/ReadOnlyGrammarPool;->core:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
-    .line 37
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .param p2, "grammars"    # [Lmf/org/apache/xerces/xni/grammars/Grammar;
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -42,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 45
     return-void
 .end method
 
@@ -50,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 49
     return-void
 .end method
 
@@ -59,7 +53,6 @@
     .param p1, "desc"    # Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/ReadOnlyGrammarPool;->core:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;->retrieveGrammar(Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;)Lmf/org/apache/xerces/xni/grammars/Grammar;
@@ -74,7 +67,6 @@
     .param p1, "grammarType"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/ReadOnlyGrammarPool;->core:Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/xni/grammars/XMLGrammarPool;->retrieveInitialGrammarSet(Ljava/lang/String;)[Lmf/org/apache/xerces/xni/grammars/Grammar;
@@ -88,6 +80,5 @@
     .locals 0
 
     .prologue
-    .line 61
     return-void
 .end method

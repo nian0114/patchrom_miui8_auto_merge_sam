@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 815
     iput-object p1, p0, Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate$1;->this$1:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate$1;->val$this$0:Lcom/samsung/android/sdk/cover/ScoverManager;
@@ -47,7 +46,6 @@
 
     const/4 v0, 0x1
 
-    .line 818
     iget-object v2, p0, Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate$1;->this$1:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate;
 
     # getter for: Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;
@@ -57,17 +55,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 819
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 828
     :cond_0
     :goto_0
     return-void
 
-    .line 821
     :pswitch_0
     iget-object v2, p0, Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate$1;->this$1:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate;
 
@@ -90,7 +85,6 @@
 
     goto :goto_1
 
-    .line 824
     :pswitch_1
     iget-object v2, p0, Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate$1;->this$1:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListenerDelegate;
 
@@ -113,7 +107,6 @@
 
     goto :goto_2
 
-    .line 819
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

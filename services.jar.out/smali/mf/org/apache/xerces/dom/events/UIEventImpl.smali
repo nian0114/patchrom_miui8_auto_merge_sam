@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/events/EventImpl;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget v0, p0, Lmf/org/apache/xerces/dom/events/UIEventImpl;->fDetail:I
 
     return v0
@@ -39,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget-object v0, p0, Lmf/org/apache/xerces/dom/events/UIEventImpl;->fView:Lmf/org/w3c/dom/views/AbstractView;
 
     return-object v0
@@ -54,15 +51,11 @@
     .param p5, "detailArg"    # I
 
     .prologue
-    .line 47
     iput-object p4, p0, Lmf/org/apache/xerces/dom/events/UIEventImpl;->fView:Lmf/org/w3c/dom/views/AbstractView;
 
-    .line 48
     iput p5, p0, Lmf/org/apache/xerces/dom/events/UIEventImpl;->fDetail:I
 
-    .line 49
     invoke-super {p0, p1, p2, p3}, Lmf/org/apache/xerces/dom/events/EventImpl;->initEvent(Ljava/lang/String;ZZ)V
 
-    .line 50
     return-void
 .end method

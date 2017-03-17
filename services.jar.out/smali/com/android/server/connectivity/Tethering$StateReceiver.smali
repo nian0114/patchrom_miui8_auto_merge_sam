@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1418
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/Tethering$1;
 
     .prologue
-    .line 1418
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Tethering$StateReceiver;-><init>(Lcom/android/server/connectivity/Tethering;)V
 
     return-void
@@ -51,22 +49,18 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1421
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1422
     .local v6, "action":Ljava/lang/String;
     if-nez v6, :cond_1
 
-    .line 1786
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1423
     :cond_1
     move-object/from16 v0, p0
 
@@ -83,7 +77,6 @@
 
     move-result-object v13
 
-    .line 1424
     .local v13, "cr":Landroid/content/ContentResolver;
     const-string v41, "android.hardware.usb.action.USB_STATE"
 
@@ -95,7 +88,6 @@
 
     if-eqz v41, :cond_4
 
-    .line 1425
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -109,7 +101,6 @@
 
     monitor-enter v42
 
-    .line 1426
     :try_start_0
     const-string v41, "connected"
 
@@ -125,7 +116,6 @@
 
     move-result v38
 
-    .line 1427
     .local v38, "usbConnected":Z
     move-object/from16 v0, p0
 
@@ -133,7 +123,7 @@
 
     move-object/from16 v41, v0
 
-    const-string/jumbo v43, "rndis"
+    const-string v43, "rndis"
 
     const/16 v44, 0x0
 
@@ -154,7 +144,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mRndisEnabled:Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$402(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1429
     if-eqz v38, :cond_2
 
     move-object/from16 v0, p0
@@ -183,7 +172,6 @@
 
     if-eqz v41, :cond_2
 
-    .line 1430
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -199,7 +187,6 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->tetherUsb(Z)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$600(Lcom/android/server/connectivity/Tethering;Z)V
 
-    .line 1432
     :cond_2
     move-object/from16 v0, p0
 
@@ -216,14 +203,13 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mUsbTetherRequested:Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$502(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1434
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
 
     move-object/from16 v41, v0
 
-    const-string/jumbo v43, "ncm"
+    const-string v43, "ncm"
 
     const/16 v44, 0x0
 
@@ -244,7 +230,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mNcmEnabled:Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$702(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1435
     if-eqz v38, :cond_3
 
     move-object/from16 v0, p0
@@ -273,7 +258,6 @@
 
     if-eqz v41, :cond_3
 
-    .line 1436
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -289,7 +273,6 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->tetherNcm(Z)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$900(Lcom/android/server/connectivity/Tethering;Z)V
 
-    .line 1438
     :cond_3
     move-object/from16 v0, p0
 
@@ -306,7 +289,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mNcmTetherRequested:Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$802(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1440
     monitor-exit v42
 
     goto/16 :goto_0
@@ -321,7 +303,6 @@
 
     throw v41
 
-    .line 1441
     :cond_4
     const-string v41, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -333,8 +314,7 @@
 
     if-eqz v41, :cond_5
 
-    .line 1442
-    const-string/jumbo v41, "networkInfo"
+    const-string v41, "networkInfo"
 
     move-object/from16 v0, p2
 
@@ -346,7 +326,6 @@
 
     check-cast v26, Landroid/net/NetworkInfo;
 
-    .line 1444
     .local v26, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v26, :cond_0
 
@@ -362,14 +341,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1446
     const-string v41, "Tethering"
 
     const-string v42, "Tethering got CONNECTIVITY_ACTION"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1447
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -393,7 +370,6 @@
 
     goto/16 :goto_0
 
-    .line 1449
     .end local v26    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_5
     const-string v41, "android.intent.action.CONFIGURATION_CHANGED"
@@ -406,7 +382,6 @@
 
     if-eqz v41, :cond_6
 
-    .line 1450
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -417,7 +392,6 @@
 
     goto/16 :goto_0
 
-    .line 1451
     :cond_6
     const-string v41, "android.intent.action.LOCALE_CHANGED"
 
@@ -429,7 +403,6 @@
 
     if-eqz v41, :cond_9
 
-    .line 1452
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -443,7 +416,6 @@
 
     if-eqz v41, :cond_7
 
-    .line 1453
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -455,7 +427,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->locale_changed_event:Z
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$1202(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1454
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -478,7 +449,6 @@
 
     goto/16 :goto_0
 
-    .line 1455
     :cond_7
     move-object/from16 v0, p0
 
@@ -493,7 +463,6 @@
 
     if-eqz v41, :cond_8
 
-    .line 1456
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -505,7 +474,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->locale_changed_event:Z
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$1202(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1457
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -528,7 +496,6 @@
 
     goto/16 :goto_0
 
-    .line 1458
     :cond_8
     move-object/from16 v0, p0
 
@@ -543,7 +510,6 @@
 
     if-eqz v41, :cond_0
 
-    .line 1459
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -555,7 +521,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->locale_changed_event:Z
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$1202(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1460
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -578,7 +543,6 @@
 
     goto/16 :goto_0
 
-    .line 1462
     :cond_9
     const-string v41, "com.samsung.android.net.wifi.WIFI_AP_STA_STATUS_CHANGED"
 
@@ -624,7 +588,6 @@
 
     if-nez v41, :cond_13
 
-    .line 1464
     const-string v41, "EVENT"
 
     move-object/from16 v0, p2
@@ -635,7 +598,6 @@
 
     move-result-object v37
 
-    .line 1465
     .local v37, "type":Ljava/lang/String;
     const-string v41, "Tethering"
 
@@ -663,10 +625,8 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1466
     if-eqz v37, :cond_0
 
-    .line 1467
     const-string v41, "NUM"
 
     const/16 v42, 0x0
@@ -681,13 +641,11 @@
 
     move-result v27
 
-    .line 1468
     .local v27, "numExtra":I
     if-gez v27, :cond_b
 
     const/16 v27, 0x0
 
-    .line 1469
     :cond_b
     # getter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$1900()I
@@ -700,7 +658,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1471
     # getter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$1900()I
 
@@ -709,11 +666,9 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mLastClients:I
     invoke-static/range {v41 .. v41}, Lcom/android/server/connectivity/Tethering;->access$2002(I)I
 
-    .line 1472
     # setter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static/range {v27 .. v27}, Lcom/android/server/connectivity/Tethering;->access$1902(I)I
 
-    .line 1473
     const-string v41, "Tethering"
 
     new-instance v42, Ljava/lang/StringBuilder;
@@ -741,7 +696,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1476
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -753,7 +707,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->add_client_event:Z
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$2102(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1478
     const-string v41, "VZW"
 
     sget-object v42, Lcom/android/server/connectivity/Tethering;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
@@ -764,7 +717,6 @@
 
     if-eqz v41, :cond_e
 
-    .line 1479
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -776,7 +728,7 @@
 
     move-result-object v41
 
-    const-string/jumbo v42, "statusbar"
+    const-string v42, "statusbar"
 
     invoke-virtual/range {v41 .. v42}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -784,11 +736,9 @@
 
     check-cast v36, Landroid/app/StatusBarManager;
 
-    .line 1480
     .local v36, "statusBar":Landroid/app/StatusBarManager;
     const/16 v19, 0x0
 
-    .line 1481
     .local v19, "iconId":I
     move-object/from16 v0, p0
 
@@ -801,7 +751,7 @@
 
     move-result-object v41
 
-    const-string/jumbo v42, "wifi"
+    const-string v42, "wifi"
 
     invoke-virtual/range {v41 .. v42}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -809,7 +759,6 @@
 
     check-cast v40, Landroid/net/wifi/WifiManager;
 
-    .line 1482
     .local v40, "wm":Landroid/net/wifi/WifiManager;
     invoke-virtual/range {v40 .. v40}, Landroid/net/wifi/WifiManager;->isWifiApEnabled()Z
 
@@ -817,7 +766,6 @@
 
     if-eqz v41, :cond_d
 
-    .line 1483
     # getter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$1900()I
 
@@ -837,7 +785,6 @@
 
     if-le v0, v1, :cond_c
 
-    .line 1484
     sget-object v41, Lcom/android/server/connectivity/Tethering;->WIFI_AP_ON_ICON:[I
 
     sget-object v42, Lcom/android/server/connectivity/Tethering;->WIFI_AP_ON_ICON:[I
@@ -852,9 +799,8 @@
 
     aget v19, v41, v42
 
-    .line 1488
     :goto_1
-    const-string/jumbo v41, "wifi_ap"
+    const-string v41, "wifi_ap"
 
     const/16 v42, 0x0
 
@@ -872,8 +818,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/app/StatusBarManager;->setIcon(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 1489
-    const-string/jumbo v41, "wifi_ap"
+    const-string v41, "wifi_ap"
 
     const/16 v42, 0x1
 
@@ -885,7 +830,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/StatusBarManager;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 1490
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -899,7 +843,6 @@
 
     goto/16 :goto_0
 
-    .line 1486
     :cond_c
     sget-object v41, Lcom/android/server/connectivity/Tethering;->WIFI_AP_ON_ICON:[I
 
@@ -912,7 +855,6 @@
 
     goto :goto_1
 
-    .line 1492
     :cond_d
     const-string v41, "Tethering"
 
@@ -920,8 +862,7 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1493
-    const-string/jumbo v41, "wifi_ap"
+    const-string v41, "wifi_ap"
 
     const/16 v42, 0x0
 
@@ -933,8 +874,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/StatusBarManager;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 1494
-    const-string/jumbo v41, "wifi_ap"
+    const-string v41, "wifi_ap"
 
     move-object/from16 v0, v36
 
@@ -944,7 +884,6 @@
 
     goto/16 :goto_0
 
-    .line 1496
     .end local v19    # "iconId":I
     .end local v36    # "statusBar":Landroid/app/StatusBarManager;
     .end local v40    # "wm":Landroid/net/wifi/WifiManager;
@@ -959,7 +898,6 @@
 
     if-eqz v41, :cond_f
 
-    .line 1497
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -973,7 +911,6 @@
 
     goto/16 :goto_0
 
-    .line 1498
     :cond_f
     const-string v41, "TMO"
 
@@ -995,7 +932,6 @@
 
     if-eqz v41, :cond_11
 
-    .line 1500
     :cond_10
     move-object/from16 v0, p0
 
@@ -1010,7 +946,6 @@
 
     goto/16 :goto_0
 
-    .line 1504
     :cond_11
     move-object/from16 v0, p0
 
@@ -1023,7 +958,6 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->showTetheredNotification(I)V
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$1400(Lcom/android/server/connectivity/Tethering;I)V
 
-    .line 1506
     const-string v41, "ATT"
 
     sget-object v42, Lcom/android/server/connectivity/Tethering;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
@@ -1040,14 +974,13 @@
 
     if-nez v41, :cond_0
 
-    .line 1507
     const-string v41, "Tethering"
 
     new-instance v42, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v42 .. v42}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v43, "createMaxApNotification(), clients = "
+    const-string v43, "createMaxApNotification(), clients = "
 
     invoke-virtual/range {v42 .. v43}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1068,7 +1001,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1508
     # getter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$1900()I
 
@@ -1085,7 +1017,6 @@
 
     if-lt v0, v1, :cond_12
 
-    .line 1509
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1096,7 +1027,6 @@
 
     goto/16 :goto_0
 
-    .line 1511
     :cond_12
     move-object/from16 v0, p0
 
@@ -1108,7 +1038,6 @@
 
     goto/16 :goto_0
 
-    .line 1516
     .end local v27    # "numExtra":I
     .end local v37    # "type":Ljava/lang/String;
     :cond_13
@@ -1132,7 +1061,6 @@
 
     if-eqz v41, :cond_14
 
-    .line 1517
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1143,7 +1071,6 @@
 
     goto/16 :goto_0
 
-    .line 1518
     :cond_14
     const-string v41, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
@@ -1155,8 +1082,7 @@
 
     if-eqz v41, :cond_15
 
-    .line 1519
-    const-string/jumbo v41, "wifi_state"
+    const-string v41, "wifi_state"
 
     const/16 v42, 0xe
 
@@ -1170,14 +1096,12 @@
 
     move-result v9
 
-    .line 1520
     .local v9, "apState":I
     packed-switch v9, :pswitch_data_0
 
     :pswitch_1
     goto/16 :goto_0
 
-    .line 1531
     :pswitch_2
     const-string v41, "ATT"
 
@@ -1195,7 +1119,6 @@
 
     if-nez v41, :cond_0
 
-    .line 1532
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1206,7 +1129,6 @@
 
     goto/16 :goto_0
 
-    .line 1536
     .end local v9    # "apState":I
     :cond_15
     const-string v41, "android.net.wifi.wifiap_power_mode_alarm"
@@ -1219,8 +1141,7 @@
 
     if-eqz v41, :cond_1d
 
-    .line 1537
-    const-string/jumbo v41, "wifiap_power_mode_alarm_option"
+    const-string v41, "wifiap_power_mode_alarm_option"
 
     const/16 v42, 0x3
 
@@ -1234,13 +1155,11 @@
 
     move-result v28
 
-    .line 1538
     .local v28, "option":I
     if-nez v28, :cond_19
 
-    .line 1541
     :try_start_1
-    const-string/jumbo v41, "wifi_ap_plugged_type"
+    const-string v41, "wifi_ap_plugged_type"
 
     move-object/from16 v0, v41
 
@@ -1250,7 +1169,6 @@
 
     move-result v30
 
-    .line 1545
     .local v30, "pluggedType":I
     :goto_2
     const-string v41, "TMO"
@@ -1265,9 +1183,8 @@
 
     if-nez v30, :cond_0
 
-    .line 1546
     :cond_16
-    const-string/jumbo v41, "wifi_ap_time_out_value"
+    const-string v41, "wifi_ap_time_out_value"
 
     # getter for: Lcom/android/server/connectivity/Tethering;->defaultTimeoutValue:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$2300()I
@@ -1282,7 +1199,6 @@
 
     move-result v32
 
-    .line 1547
     .local v32, "powermode_value":I
     const-string v41, "Tethering"
 
@@ -1316,10 +1232,8 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1548
     if-eqz v32, :cond_17
 
-    .line 1549
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v42
@@ -1338,7 +1252,6 @@
 
     add-long v16, v42, v44
 
-    .line 1551
     .local v16, "expireTime":J
     new-instance v7, Landroid/content/Intent;
 
@@ -1348,9 +1261,8 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1552
     .local v7, "alarm_intent":Landroid/content/Intent;
-    const-string/jumbo v41, "wifiap_power_mode_alarm_option"
+    const-string v41, "wifiap_power_mode_alarm_option"
 
     const/16 v42, 0x1
 
@@ -1360,7 +1272,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1553
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1386,7 +1297,6 @@
 
     move-result-object v29
 
-    .line 1555
     .local v29, "pending":Landroid/app/PendingIntent;
     move-object/from16 v0, p0
 
@@ -1407,7 +1317,6 @@
 
     check-cast v8, Landroid/app/AlarmManager;
 
-    .line 1556
     .local v8, "am":Landroid/app/AlarmManager;
     const/16 v41, 0x0
 
@@ -1419,13 +1328,11 @@
 
     invoke-virtual {v8, v0, v1, v2, v3}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 1558
     const/16 v41, 0x0
 
     # setter for: Lcom/android/server/connectivity/Tethering;->bExpireAlarm:Z
     invoke-static/range {v41 .. v41}, Lcom/android/server/connectivity/Tethering;->access$2402(Z)Z
 
-    .line 1559
     const/16 v41, 0x1
 
     # setter for: Lcom/android/server/connectivity/Tethering;->bStartAlarm:Z
@@ -1433,7 +1340,6 @@
 
     goto/16 :goto_0
 
-    .line 1542
     .end local v7    # "alarm_intent":Landroid/content/Intent;
     .end local v8    # "am":Landroid/app/AlarmManager;
     .end local v16    # "expireTime":J
@@ -1443,14 +1349,12 @@
     :catch_0
     move-exception v14
 
-    .line 1543
     .local v14, "e":Landroid/provider/Settings$SettingNotFoundException;
     const/16 v30, 0x0
 
     .restart local v30    # "pluggedType":I
     goto/16 :goto_2
 
-    .line 1561
     .end local v14    # "e":Landroid/provider/Settings$SettingNotFoundException;
     .restart local v32    # "powermode_value":I
     :cond_17
@@ -1461,7 +1365,6 @@
 
     if-eqz v41, :cond_18
 
-    .line 1562
     new-instance v7, Landroid/content/Intent;
 
     const-string v41, "android.net.wifi.wifiap_power_mode_alarm"
@@ -1470,9 +1373,8 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1563
     .restart local v7    # "alarm_intent":Landroid/content/Intent;
-    const-string/jumbo v41, "wifiap_power_mode_alarm_option"
+    const-string v41, "wifiap_power_mode_alarm_option"
 
     const/16 v42, 0x1
 
@@ -1482,7 +1384,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1564
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1508,7 +1409,6 @@
 
     move-result-object v29
 
-    .line 1566
     .restart local v29    # "pending":Landroid/app/PendingIntent;
     move-object/from16 v0, p0
 
@@ -1529,13 +1429,11 @@
 
     check-cast v8, Landroid/app/AlarmManager;
 
-    .line 1567
     .restart local v8    # "am":Landroid/app/AlarmManager;
     move-object/from16 v0, v29
 
     invoke-virtual {v8, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 1569
     .end local v7    # "alarm_intent":Landroid/content/Intent;
     .end local v8    # "am":Landroid/app/AlarmManager;
     .end local v29    # "pending":Landroid/app/PendingIntent;
@@ -1547,7 +1445,6 @@
 
     goto/16 :goto_0
 
-    .line 1572
     .end local v30    # "pluggedType":I
     .end local v32    # "powermode_value":I
     :cond_19
@@ -1559,7 +1456,6 @@
 
     if-ne v0, v1, :cond_1a
 
-    .line 1573
     const-string v41, "Tethering"
 
     new-instance v42, Ljava/lang/StringBuilder;
@@ -1587,7 +1483,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1574
     # getter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$1900()I
 
@@ -1595,14 +1490,12 @@
 
     if-nez v41, :cond_0
 
-    .line 1575
     const-string v41, "Tethering"
 
     const-string v42, "ALARM_START because of WIFIAP_POWER_MODE_VALUE_CHANGED"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1576
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1627,7 +1520,6 @@
 
     goto/16 :goto_0
 
-    .line 1578
     :cond_1a
     const/16 v41, 0x1
 
@@ -1637,26 +1529,22 @@
 
     if-ne v0, v1, :cond_1c
 
-    .line 1579
     const-string v41, "Tethering"
 
     const-string v42, "ALARM_EXPIRE"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1580
     const/16 v41, 0x1
 
     # setter for: Lcom/android/server/connectivity/Tethering;->bExpireAlarm:Z
     invoke-static/range {v41 .. v41}, Lcom/android/server/connectivity/Tethering;->access$2402(Z)Z
 
-    .line 1581
     const/16 v41, 0x0
 
     # setter for: Lcom/android/server/connectivity/Tethering;->bStartAlarm:Z
     invoke-static/range {v41 .. v41}, Lcom/android/server/connectivity/Tethering;->access$2502(Z)Z
 
-    .line 1584
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1668,7 +1556,7 @@
 
     move-result-object v41
 
-    const-string/jumbo v42, "power"
+    const-string v42, "power"
 
     invoke-virtual/range {v41 .. v42}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1676,7 +1564,6 @@
 
     check-cast v31, Landroid/os/PowerManager;
 
-    .line 1585
     .local v31, "pm":Landroid/os/PowerManager;
     const/16 v41, 0x1
 
@@ -1692,14 +1579,12 @@
 
     move-result-object v25
 
-    .line 1587
     .local v25, "mStopService":Landroid/os/PowerManager$WakeLock;
     :try_start_2
     invoke-virtual/range {v25 .. v25}, Landroid/os/PowerManager$WakeLock;->acquire()V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1592
     :goto_3
     move-object/from16 v0, p0
 
@@ -1712,7 +1597,7 @@
 
     move-result-object v41
 
-    const-string/jumbo v42, "wifi"
+    const-string v42, "wifi"
 
     invoke-virtual/range {v41 .. v42}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1720,15 +1605,13 @@
 
     check-cast v40, Landroid/net/wifi/WifiManager;
 
-    .line 1594
     .restart local v40    # "wm":Landroid/net/wifi/WifiManager;
     invoke-virtual/range {v40 .. v40}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
     move-result v39
 
-    .line 1595
     .local v39, "wifiApState":I
-    const-string/jumbo v41, "wifi_ap_time_out_value"
+    const-string v41, "wifi_ap_time_out_value"
 
     # getter for: Lcom/android/server/connectivity/Tethering;->defaultTimeoutValue:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$2300()I
@@ -1743,7 +1626,6 @@
 
     move-result v32
 
-    .line 1596
     .restart local v32    # "powermode_value":I
     const-string v41, "Tethering"
 
@@ -1751,7 +1633,7 @@
 
     invoke-direct/range {v42 .. v42}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v43, "powermode_value = "
+    const-string v43, "powermode_value = "
 
     invoke-virtual/range {v42 .. v43}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1771,7 +1653,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1597
     # getter for: Lcom/android/server/connectivity/Tethering;->clients:I
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$1900()I
 
@@ -1789,7 +1670,6 @@
 
     if-eqz v32, :cond_1b
 
-    .line 1598
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -1809,7 +1689,6 @@
 
     check-cast v23, Landroid/net/ConnectivityManager;
 
-    .line 1599
     .local v23, "mCm":Landroid/net/ConnectivityManager;
     const-string v41, "Tethering"
 
@@ -1817,44 +1696,37 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1601
     const-string v41, "Tethering"
 
     const-string v42, "--> ap disable"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1602
     const/16 v41, 0x0
 
     const/16 v42, 0x0
 
     invoke-virtual/range {v40 .. v42}, Landroid/net/wifi/WifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)Z
 
-    .line 1605
     .end local v23    # "mCm":Landroid/net/ConnectivityManager;
     :cond_1b
     if-eqz v25, :cond_0
 
-    .line 1607
     :try_start_3
     invoke-virtual/range {v25 .. v25}, Landroid/os/PowerManager$WakeLock;->release()V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1608
     const/16 v25, 0x0
 
     goto/16 :goto_0
 
-    .line 1588
     .end local v32    # "powermode_value":I
     .end local v39    # "wifiApState":I
     .end local v40    # "wm":Landroid/net/wifi/WifiManager;
     :catch_1
     move-exception v14
 
-    .line 1589
     .local v14, "e":Ljava/lang/Throwable;
     const-string v41, "Tethering"
 
@@ -1882,7 +1754,6 @@
 
     goto/16 :goto_3
 
-    .line 1609
     .end local v14    # "e":Ljava/lang/Throwable;
     .restart local v32    # "powermode_value":I
     .restart local v39    # "wifiApState":I
@@ -1890,7 +1761,6 @@
     :catch_2
     move-exception v14
 
-    .line 1610
     .restart local v14    # "e":Ljava/lang/Throwable;
     const-string v41, "Tethering"
 
@@ -1918,7 +1788,6 @@
 
     goto/16 :goto_0
 
-    .line 1613
     .end local v14    # "e":Ljava/lang/Throwable;
     .end local v25    # "mStopService":Landroid/os/PowerManager$WakeLock;
     .end local v31    # "pm":Landroid/os/PowerManager;
@@ -1934,14 +1803,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1614
     const-string v41, "Tethering"
 
     const-string v42, "ALARM_STOP"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1615
     # getter for: Lcom/android/server/connectivity/Tethering;->bExpireAlarm:Z
     invoke-static {}, Lcom/android/server/connectivity/Tethering;->access$2400()Z
 
@@ -1956,7 +1823,6 @@
 
     if-eqz v41, :cond_0
 
-    .line 1616
     new-instance v7, Landroid/content/Intent;
 
     const-string v41, "android.net.wifi.wifiap_power_mode_alarm"
@@ -1965,9 +1831,8 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1617
     .restart local v7    # "alarm_intent":Landroid/content/Intent;
-    const-string/jumbo v41, "wifiap_power_mode_alarm_option"
+    const-string v41, "wifiap_power_mode_alarm_option"
 
     const/16 v42, 0x1
 
@@ -1977,7 +1842,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1618
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2003,7 +1867,6 @@
 
     move-result-object v29
 
-    .line 1619
     .restart local v29    # "pending":Landroid/app/PendingIntent;
     move-object/from16 v0, p0
 
@@ -2024,13 +1887,11 @@
 
     check-cast v8, Landroid/app/AlarmManager;
 
-    .line 1620
     .restart local v8    # "am":Landroid/app/AlarmManager;
     move-object/from16 v0, v29
 
     invoke-virtual {v8, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 1621
     const/16 v41, 0x0
 
     # setter for: Lcom/android/server/connectivity/Tethering;->bStartAlarm:Z
@@ -2038,7 +1899,6 @@
 
     goto/16 :goto_0
 
-    .line 1624
     .end local v7    # "alarm_intent":Landroid/content/Intent;
     .end local v8    # "am":Landroid/app/AlarmManager;
     .end local v28    # "option":I
@@ -2054,7 +1914,6 @@
 
     if-eqz v41, :cond_1e
 
-    .line 1625
     const-string v41, "EVENT"
 
     move-object/from16 v0, p2
@@ -2065,11 +1924,9 @@
 
     move-result-object v37
 
-    .line 1626
     .restart local v37    # "type":Ljava/lang/String;
     if-eqz v37, :cond_0
 
-    .line 1627
     const-string v41, "Tethering"
 
     new-instance v42, Ljava/lang/StringBuilder;
@@ -2096,8 +1953,7 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1628
-    const-string/jumbo v41, "no_data"
+    const-string v41, "no_data"
 
     move-object/from16 v0, v37
 
@@ -2109,7 +1965,6 @@
 
     if-eqz v41, :cond_0
 
-    .line 1629
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2121,7 +1976,7 @@
 
     move-result-object v41
 
-    const-string/jumbo v42, "wifi"
+    const-string v42, "wifi"
 
     invoke-virtual/range {v41 .. v42}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2129,7 +1984,6 @@
 
     check-cast v40, Landroid/net/wifi/WifiManager;
 
-    .line 1630
     .restart local v40    # "wm":Landroid/net/wifi/WifiManager;
     const-string v41, "Tethering"
 
@@ -2137,7 +1991,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1631
     const/16 v41, 0x0
 
     const/16 v42, 0x0
@@ -2146,7 +1999,6 @@
 
     goto/16 :goto_0
 
-    .line 1634
     .end local v37    # "type":Ljava/lang/String;
     .end local v40    # "wm":Landroid/net/wifi/WifiManager;
     :cond_1e
@@ -2160,7 +2012,6 @@
 
     if-eqz v41, :cond_27
 
-    .line 1635
     const-string v41, "TMO"
 
     sget-object v42, Lcom/android/server/connectivity/Tethering;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
@@ -2181,9 +2032,8 @@
 
     if-eqz v41, :cond_0
 
-    .line 1637
     :cond_1f
-    const-string/jumbo v41, "level"
+    const-string v41, "level"
 
     const/16 v42, 0x0
 
@@ -2197,9 +2047,8 @@
 
     move-result v24
 
-    .line 1638
     .local v24, "mLevel":I
-    const-string/jumbo v41, "plugged"
+    const-string v41, "plugged"
 
     const/16 v42, 0x0
 
@@ -2213,7 +2062,6 @@
 
     move-result v30
 
-    .line 1639
     .restart local v30    # "pluggedType":I
     const-string v41, "Tethering"
 
@@ -2235,7 +2083,7 @@
 
     move-result-object v42
 
-    const-string/jumbo v43, "lowBatteryThreshold = "
+    const-string v43, "lowBatteryThreshold = "
 
     invoke-virtual/range {v42 .. v43}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2253,7 +2101,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1640
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2304,14 +2151,12 @@
 
     if-nez v41, :cond_25
 
-    .line 1642
     const-string v41, "Tethering"
 
-    const-string/jumbo v42, "showLowBatteryNotification"
+    const-string v42, "showLowBatteryNotification"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1643
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2321,7 +2166,6 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->showLowBatteryNotification()V
     invoke-static/range {v41 .. v41}, Lcom/android/server/connectivity/Tethering;->access$2800(Lcom/android/server/connectivity/Tethering;)V
 
-    .line 1651
     :cond_21
     :goto_4
     if-nez v30, :cond_22
@@ -2343,9 +2187,8 @@
 
     if-nez v41, :cond_0
 
-    .line 1652
     :cond_23
-    const-string/jumbo v41, "wifi_ap_plugged_type"
+    const-string v41, "wifi_ap_plugged_type"
 
     move-object/from16 v0, v41
 
@@ -2353,7 +2196,6 @@
 
     invoke-static {v13, v0, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1653
     new-instance v15, Landroid/content/Intent;
 
     const-string v41, "com.samsung.settings.wifi.PLUG_STATE_CHANGED"
@@ -2362,9 +2204,8 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1654
     .local v15, "i":Landroid/content/Intent;
-    const-string/jumbo v41, "wifiap_plug_state_changed_option"
+    const-string v41, "wifiap_plug_state_changed_option"
 
     move-object/from16 v0, v41
 
@@ -2372,7 +2213,6 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1655
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2386,7 +2226,6 @@
 
     if-eqz v41, :cond_24
 
-    .line 1656
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2402,18 +2241,15 @@
 
     invoke-virtual {v0, v15}, Landroid/content/Context;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 1658
     :cond_24
     if-nez v30, :cond_26
 
-    .line 1659
     const-string v41, "Tethering"
 
     const-string v42, "Unplugged"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1660
     const/16 v41, 0x0
 
     # setter for: Lcom/android/server/connectivity/Tethering;->mIsPlugged:Z
@@ -2421,7 +2257,6 @@
 
     goto/16 :goto_0
 
-    .line 1645
     .end local v15    # "i":Landroid/content/Intent;
     :cond_25
     move-object/from16 v0, p0
@@ -2437,14 +2272,12 @@
 
     if-eqz v41, :cond_21
 
-    .line 1646
     const-string v41, "Tethering"
 
     const-string v42, "clearLowBatteryNotification"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1647
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2456,7 +2289,6 @@
 
     goto :goto_4
 
-    .line 1675
     .restart local v15    # "i":Landroid/content/Intent;
     :cond_26
     const-string v41, "Tethering"
@@ -2465,7 +2297,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1676
     const/16 v41, 0x1
 
     # setter for: Lcom/android/server/connectivity/Tethering;->mIsPlugged:Z
@@ -2473,7 +2304,6 @@
 
     goto/16 :goto_0
 
-    .line 1689
     .end local v15    # "i":Landroid/content/Intent;
     .end local v24    # "mLevel":I
     .end local v30    # "pluggedType":I
@@ -2488,14 +2318,12 @@
 
     if-eqz v41, :cond_2a
 
-    .line 1690
     const-string v41, "Tethering"
 
     const-string v42, "Boot complete."
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1691
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2507,7 +2335,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mIsBootComplete:Z
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$3102(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 1695
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2521,7 +2348,6 @@
 
     if-nez v41, :cond_28
 
-    .line 1696
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2535,7 +2361,6 @@
     # setter for: Lcom/android/server/connectivity/Tethering;->mKnoxCustomSystemManager:Landroid/app/enterprise/knoxcustom/SystemManager;
     invoke-static/range {v41 .. v42}, Lcom/android/server/connectivity/Tethering;->access$3202(Lcom/android/server/connectivity/Tethering;Landroid/app/enterprise/knoxcustom/SystemManager;)Landroid/app/enterprise/knoxcustom/SystemManager;
 
-    .line 1698
     :cond_28
     move-object/from16 v0, p0
 
@@ -2581,14 +2406,12 @@
 
     if-nez v41, :cond_29
 
-    .line 1702
     const-string v41, "Tethering"
 
     const-string v42, "Activate USB Net on boot up"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1703
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2601,9 +2424,8 @@
 
     goto/16 :goto_0
 
-    .line 1707
     :cond_29
-    const-string/jumbo v41, "enabled"
+    const-string v41, "enabled"
 
     const-string v42, "TETHER_ALWAYS_ON_MODE"
 
@@ -2619,21 +2441,18 @@
 
     if-eqz v41, :cond_0
 
-    .line 1708
     const-string v41, "Tethering"
 
     const-string v42, "[Tethering always mode] call setUsbTethering()"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1709
-    const-string/jumbo v41, "net.tether.always"
+    const-string v41, "net.tether.always"
 
     const-string v42, "1"
 
     invoke-static/range {v41 .. v42}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1710
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2646,7 +2465,6 @@
 
     goto/16 :goto_0
 
-    .line 1725
     :cond_2a
     const-string v41, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
@@ -2658,14 +2476,12 @@
 
     if-eqz v41, :cond_2d
 
-    .line 1726
     const-string v41, "Tethering"
 
     const-string v42, "[ActiveSync] onReceive() ACTION_DEVICE_POLICY_MANAGER_STATE_CHANGED intent"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1728
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2679,27 +2495,23 @@
 
     if-eqz v41, :cond_2c
 
-    .line 1729
     const-string v41, "Tethering"
 
     const-string v42, "[ActiveSync] onReceive() Internet sharing has banned due to security policy."
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1731
-    const-string/jumbo v41, "network_management"
+    const-string v41, "network_management"
 
     invoke-static/range {v41 .. v41}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v11
 
-    .line 1732
     .local v11, "b":Landroid/os/IBinder;
     invoke-static {v11}, Landroid/os/INetworkManagementService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/INetworkManagementService;
 
     move-result-object v34
 
-    .line 1733
     .local v34, "service":Landroid/os/INetworkManagementService;
     const/16 v41, 0x0
 
@@ -2709,7 +2521,6 @@
 
     move-object/from16 v21, v0
 
-    .line 1736
     .local v21, "ifaces":[Ljava/lang/String;
     :try_start_4
     invoke-interface/range {v34 .. v34}, Landroid/os/INetworkManagementService;->listInterfaces()[Ljava/lang/String;
@@ -2718,7 +2529,6 @@
 
     move-result-object v21
 
-    .line 1742
     move-object/from16 v10, v21
 
     .local v10, "arr$":[Ljava/lang/String;
@@ -2739,7 +2549,6 @@
 
     aget-object v20, v10, v18
 
-    .line 1743
     .local v20, "iface":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2758,7 +2567,6 @@
 
     if-eqz v41, :cond_2b
 
-    .line 1744
     const-string v41, "Tethering"
 
     new-instance v42, Ljava/lang/StringBuilder;
@@ -2785,7 +2593,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1746
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2807,7 +2614,6 @@
 
     check-cast v35, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 1747
     .local v35, "sm":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     if-eqz v35, :cond_2b
 
@@ -2817,7 +2623,6 @@
 
     if-eqz v41, :cond_2b
 
-    .line 1748
     const-string v41, "Tethering"
 
     new-instance v42, Ljava/lang/StringBuilder;
@@ -2844,7 +2649,6 @@
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1749
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2858,14 +2662,12 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->blockInternetSharingByActiveSync(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$3600(Lcom/android/server/connectivity/Tethering;Ljava/lang/String;)V
 
-    .line 1742
     .end local v35    # "sm":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :cond_2b
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_5
 
-    .line 1737
     .end local v10    # "arr$":[Ljava/lang/String;
     .end local v18    # "i$":I
     .end local v20    # "iface":Ljava/lang/String;
@@ -2873,7 +2675,6 @@
     :catch_3
     move-exception v14
 
-    .line 1738
     .local v14, "e":Ljava/lang/Exception;
     const-string v41, "Tethering"
 
@@ -2901,7 +2702,6 @@
 
     goto/16 :goto_0
 
-    .line 1754
     .end local v11    # "b":Landroid/os/IBinder;
     .end local v14    # "e":Ljava/lang/Exception;
     .end local v21    # "ifaces":[Ljava/lang/String;
@@ -2915,7 +2715,6 @@
 
     goto/16 :goto_0
 
-    .line 1757
     :cond_2d
     const-string v41, "com.samsung.android.intent.action.TETHERING_DENIED"
 
@@ -2959,14 +2758,12 @@
 
     if-eqz v41, :cond_0
 
-    .line 1759
     const-string v41, "Tethering"
 
     const-string v42, "Tethering Denied"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1760
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -2977,7 +2774,6 @@
 
     move-result-object v21
 
-    .line 1761
     .restart local v21    # "ifaces":[Ljava/lang/String;
     move-object/from16 v10, v21
 
@@ -2999,7 +2795,6 @@
 
     aget-object v20, v10, v18
 
-    .line 1762
     .restart local v20    # "iface":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3017,7 +2812,6 @@
 
     if-eqz v41, :cond_2f
 
-    .line 1763
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -3029,7 +2823,7 @@
 
     move-result-object v41
 
-    const-string/jumbo v42, "wifi"
+    const-string v42, "wifi"
 
     invoke-virtual/range {v41 .. v42}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3037,7 +2831,6 @@
 
     check-cast v40, Landroid/net/wifi/WifiManager;
 
-    .line 1764
     .restart local v40    # "wm":Landroid/net/wifi/WifiManager;
     const/16 v41, 0x0
 
@@ -3045,7 +2838,6 @@
 
     invoke-virtual/range {v40 .. v42}, Landroid/net/wifi/WifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)Z
 
-    .line 1761
     .end local v40    # "wm":Landroid/net/wifi/WifiManager;
     :cond_2e
     :goto_7
@@ -3053,7 +2845,6 @@
 
     goto :goto_6
 
-    .line 1765
     :cond_2f
     move-object/from16 v0, p0
 
@@ -3071,7 +2862,6 @@
 
     if-eqz v41, :cond_32
 
-    .line 1766
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -3085,7 +2875,6 @@
 
     if-eqz v41, :cond_31
 
-    .line 1767
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$StateReceiver;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -3103,18 +2892,15 @@
 
     check-cast v12, Landroid/bluetooth/BluetoothPan;
 
-    .line 1768
     .local v12, "bluetoothPan":Landroid/bluetooth/BluetoothPan;
     if-eqz v12, :cond_30
 
-    .line 1769
     const-string v41, "Tethering"
 
-    const-string/jumbo v42, "setBluetoothTethering"
+    const-string v42, "setBluetoothTethering"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1770
     const/16 v41, 0x0
 
     move/from16 v0, v41
@@ -3123,7 +2909,6 @@
 
     goto :goto_7
 
-    .line 1772
     :cond_30
     const-string v41, "Tethering"
 
@@ -3133,18 +2918,16 @@
 
     goto :goto_7
 
-    .line 1775
     .end local v12    # "bluetoothPan":Landroid/bluetooth/BluetoothPan;
     :cond_31
     const-string v41, "Tethering"
 
-    const-string/jumbo v42, "mBluetoothPan is null"
+    const-string v42, "mBluetoothPan is null"
 
     invoke-static/range {v41 .. v42}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_7
 
-    .line 1778
     :cond_32
     move-object/from16 v0, p0
 
@@ -3160,11 +2943,9 @@
 
     move-result v33
 
-    .line 1779
     .local v33, "result":I
     if-eqz v33, :cond_2e
 
-    .line 1780
     const-string v41, "Tethering"
 
     const-string v42, "Tether off error"
@@ -3173,7 +2954,6 @@
 
     goto :goto_7
 
-    .line 1520
     nop
 
     :pswitch_data_0

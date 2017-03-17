@@ -33,22 +33,16 @@
     .param p4, "next"    # Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
 
     .prologue
-    .line 322
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 323
     iput p1, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->hash:I
 
-    .line 324
     iput-object p2, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->desc:Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
-    .line 325
     iput-object p3, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->grammar:Lmf/org/apache/xerces/xni/grammars/Grammar;
 
-    .line 326
     iput-object p4, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->next:Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
 
-    .line 327
     return-void
 .end method
 
@@ -60,26 +54,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 332
     iput-object v1, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->desc:Lmf/org/apache/xerces/xni/grammars/XMLGrammarDescription;
 
-    .line 333
     iput-object v1, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->grammar:Lmf/org/apache/xerces/xni/grammars/Grammar;
 
-    .line 334
     iget-object v0, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->next:Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
 
     if-eqz v0, :cond_0
 
-    .line 335
     iget-object v0, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->next:Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->clear()V
 
-    .line 336
     iput-object v1, p0, Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;->next:Lmf/org/apache/xerces/util/XMLGrammarPoolImpl$Entry;
 
-    .line 338
     :cond_0
     return-void
 .end method

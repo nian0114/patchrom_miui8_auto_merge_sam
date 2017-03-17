@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1106
     invoke-static {}, Landroid/os/PersonaManager$KnoxContainerVersion;->values()[Landroid/os/PersonaManager$KnoxContainerVersion;
 
     move-result-object v0

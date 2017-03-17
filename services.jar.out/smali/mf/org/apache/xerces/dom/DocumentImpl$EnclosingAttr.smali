@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1003
     iput-object p1, p0, Lmf/org/apache/xerces/dom/DocumentImpl$EnclosingAttr;->this$0:Lmf/org/apache/xerces/dom/DocumentImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -29,13 +29,10 @@
     .param p1, "external"    # Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     .prologue
-    .line 2901
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2902
     iput-object p1, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
-    .line 2903
     return-void
 .end method
 
@@ -46,12 +43,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2938
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->addId(Ljava/lang/String;)V
 
-    .line 2939
     return-void
 .end method
 
@@ -60,12 +55,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2942
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->addIdRef(Ljava/lang/String;)V
 
-    .line 2943
     return-void
 .end method
 
@@ -73,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 2959
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->getLocale()Ljava/util/Locale;
@@ -88,7 +80,6 @@
     .param p1, "symbol"    # Ljava/lang/String;
 
     .prologue
-    .line 2946
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->getSymbol(Ljava/lang/String;)Ljava/lang/String;
@@ -103,19 +94,16 @@
     .param p1, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 2950
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fNSContext:Lmf/org/apache/xerces/xni/NamespaceContext;
 
     if-nez v0, :cond_0
 
-    .line 2951
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->getURI(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2954
     :goto_0
     return-object v0
 
@@ -134,7 +122,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2926
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->isEntityDeclared(Ljava/lang/String;)Z
@@ -149,7 +136,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2930
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->isEntityUnparsed(Ljava/lang/String;)Z
@@ -164,7 +150,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2934
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->isIdDeclared(Ljava/lang/String;)Z
@@ -178,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 2915
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->needExtraChecking()Z
@@ -192,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 2911
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->needFacetChecking()Z
@@ -206,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 2918
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fExternal:Lmf/org/apache/xerces/impl/dv/ValidationContext;
 
     invoke-interface {v0}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->needToNormalize()Z
@@ -221,10 +203,8 @@
     .param p1, "nsContext"    # Lmf/org/apache/xerces/xni/NamespaceContext;
 
     .prologue
-    .line 2907
     iput-object p1, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$ValidationContextImpl;->fNSContext:Lmf/org/apache/xerces/xni/NamespaceContext;
 
-    .line 2908
     return-void
 .end method
 
@@ -232,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 2922
     const/4 v0, 0x1
 
     return v0

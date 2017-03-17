@@ -56,7 +56,6 @@
     .locals 3
 
     .prologue
-    .line 135
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.android.server.telecom"
@@ -75,28 +74,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 158
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 141
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mLock:Ljava/lang/Object;
 
-    .line 197
     const v0, 0x4000041
 
     iput v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->flags:I
 
-    .line 159
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
-    .line 160
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->registerDefaultAppProviders()V
 
-    .line 161
     return-void
 .end method
 
@@ -105,7 +98,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->connectToTelecom()V
 
     return-void
@@ -116,7 +108,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -127,7 +118,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -138,7 +128,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mDefaultSmsAppRequests:Landroid/util/IntArray;
 
     return-object v0
@@ -150,7 +139,6 @@
     .param p1, "x1"    # Landroid/util/IntArray;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mDefaultSmsAppRequests:Landroid/util/IntArray;
 
     return-object p1
@@ -161,7 +149,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mDefaultDialerAppRequests:Landroid/util/IntArray;
 
     return-object v0
@@ -173,7 +160,6 @@
     .param p1, "x1"    # Landroid/util/IntArray;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mDefaultDialerAppRequests:Landroid/util/IntArray;
 
     return-object p1
@@ -184,7 +170,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mDefaultSimCallManagerRequests:Landroid/util/IntArray;
 
     return-object v0
@@ -196,7 +181,6 @@
     .param p1, "x1"    # Landroid/util/IntArray;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mDefaultSimCallManagerRequests:Landroid/util/IntArray;
 
     return-object p1
@@ -207,7 +191,6 @@
     .param p0, "x0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceConnection:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
     return-object v0
@@ -220,7 +203,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p2}, Lcom/android/server/telecom/TelecomLoaderService;->updateSimCallManagerPermissions(Landroid/content/pm/PackageManagerInternal;I)V
 
     return-void
@@ -230,30 +212,25 @@
     .locals 6
 
     .prologue
-    .line 177
     iget-object v4, p0, Lcom/android/server/telecom/TelecomLoaderService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 178
     :try_start_0
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceConnection:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
     if-eqz v3, :cond_0
 
-    .line 180
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceConnection:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 181
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceConnection:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
-    .line 184
     :cond_0
     new-instance v2, Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
@@ -261,7 +238,6 @@
 
     invoke-direct {v2, p0, v3}, Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;-><init>(Lcom/android/server/telecom/TelecomLoaderService;Lcom/android/server/telecom/TelecomLoaderService$1;)V
 
-    .line 185
     .local v2, "serviceConnection":Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
     new-instance v1, Landroid/content/Intent;
 
@@ -269,16 +245,13 @@
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 186
     .local v1, "intent":Landroid/content/Intent;
     sget-object v3, Lcom/android/server/telecom/TelecomLoaderService;->SERVICE_COMPONENT:Landroid/content/ComponentName;
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 187
     const v0, 0x4000041
 
-    .line 191
     .local v0, "flags":I
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
@@ -290,17 +263,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 192
     iput-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceConnection:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
-    .line 194
     :cond_1
     monitor-exit v4
 
-    .line 195
     return-void
 
-    .line 194
     .end local v0    # "flags":I
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "serviceConnection":Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
@@ -320,7 +289,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 315
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -329,13 +297,11 @@
 
     check-cast v6, Landroid/content/pm/PackageManagerInternal;
 
-    .line 317
     .local v6, "packageManagerInternal":Landroid/content/pm/PackageManagerInternal;
     new-instance v1, Lcom/android/server/telecom/TelecomLoaderService$5;
 
     invoke-direct {v1, p0, v6}, Lcom/android/server/telecom/TelecomLoaderService$5;-><init>(Lcom/android/server/telecom/TelecomLoaderService;Landroid/content/pm/PackageManagerInternal;)V
 
-    .line 328
     .local v1, "receiver":Landroid/content/BroadcastReceiver;
     iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
@@ -351,7 +317,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 330
     return-void
 .end method
 
@@ -363,7 +328,6 @@
 
     const/4 v6, -0x1
 
-    .line 275
     const-class v1, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -372,23 +336,20 @@
 
     check-cast v4, Landroid/content/pm/PackageManagerInternal;
 
-    .line 279
     .local v4, "packageManagerInternal":Landroid/content/pm/PackageManagerInternal;
-    const-string/jumbo v1, "sms_default_application"
+    const-string v1, "sms_default_application"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 281
     .local v3, "defaultSmsAppUri":Landroid/net/Uri;
-    const-string/jumbo v1, "dialer_default_application"
+    const-string v1, "dialer_default_application"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 284
     .local v5, "defaultDialerAppUri":Landroid/net/Uri;
     new-instance v0, Lcom/android/server/telecom/TelecomLoaderService$4;
 
@@ -404,7 +365,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/telecom/TelecomLoaderService$4;-><init>(Lcom/android/server/telecom/TelecomLoaderService;Landroid/os/Handler;Landroid/net/Uri;Landroid/content/pm/PackageManagerInternal;Landroid/net/Uri;)V
 
-    .line 307
     .local v0, "contentObserver":Landroid/database/ContentObserver;
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
@@ -414,7 +374,6 @@
 
     invoke-virtual {v1, v3, v7, v0, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 309
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -423,7 +382,6 @@
 
     invoke-virtual {v1, v5, v7, v0, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 311
     return-void
 .end method
 
@@ -431,7 +389,6 @@
     .locals 2
 
     .prologue
-    .line 201
     const-class v1, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -440,7 +397,6 @@
 
     check-cast v0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 205
     .local v0, "packageManagerInternal":Landroid/content/pm/PackageManagerInternal;
     new-instance v1, Lcom/android/server/telecom/TelecomLoaderService$1;
 
@@ -448,21 +404,18 @@
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManagerInternal;->setSmsAppPackagesProvider(Landroid/content/pm/PackageManagerInternal$PackagesProvider;)V
 
-    .line 228
     new-instance v1, Lcom/android/server/telecom/TelecomLoaderService$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/telecom/TelecomLoaderService$2;-><init>(Lcom/android/server/telecom/TelecomLoaderService;)V
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManagerInternal;->setDialerAppPackagesProvider(Landroid/content/pm/PackageManagerInternal$PackagesProvider;)V
 
-    .line 250
     new-instance v1, Lcom/android/server/telecom/TelecomLoaderService$3;
 
     invoke-direct {v1, p0}, Lcom/android/server/telecom/TelecomLoaderService$3;-><init>(Lcom/android/server/telecom/TelecomLoaderService;)V
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManagerInternal;->setSimCallManagerPackagesProvider(Landroid/content/pm/PackageManagerInternal$PackagesProvider;)V
 
-    .line 272
     return-void
 .end method
 
@@ -472,10 +425,9 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 334
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "telecom"
+    const-string v4, "telecom"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -483,24 +435,21 @@
 
     check-cast v2, Landroid/telecom/TelecomManager;
 
-    .line 336
     .local v2, "telecomManager":Landroid/telecom/TelecomManager;
     invoke-virtual {v2, p2}, Landroid/telecom/TelecomManager;->getSimCallManager(I)Landroid/telecom/PhoneAccountHandle;
 
     move-result-object v1
 
-    .line 337
     .local v1, "phoneAccount":Landroid/telecom/PhoneAccountHandle;
     if-eqz v1, :cond_0
 
-    .line 338
     const-string v3, "TelecomLoaderService"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "updating sim call manager permissions for userId:"
+    const-string v5, "updating sim call manager permissions for userId:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -516,7 +465,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     invoke-virtual {v1}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v3
@@ -525,11 +473,9 @@
 
     move-result-object v0
 
-    .line 340
     .local v0, "packageName":Ljava/lang/String;
     invoke-virtual {p1, v0, p2}, Landroid/content/pm/PackageManagerInternal;->grantDefaultPermissionsToDefaultSimCallManager(Ljava/lang/String;I)V
 
-    .line 343
     .end local v0    # "packageName":Ljava/lang/String;
     :cond_0
     return-void
@@ -542,21 +488,16 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 169
     const/16 v0, 0x226
 
     if-ne p1, v0, :cond_0
 
-    .line 170
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->registerDefaultAppNotifier()V
 
-    .line 171
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->registerCarrierConfigChangedReceiver()V
 
-    .line 172
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->connectToTelecom()V
 
-    .line 174
     :cond_0
     return-void
 .end method
@@ -565,6 +506,5 @@
     .locals 0
 
     .prologue
-    .line 165
     return-void
 .end method

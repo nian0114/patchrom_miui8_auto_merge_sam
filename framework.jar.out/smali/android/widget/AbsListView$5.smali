@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 9720
     iput-object p1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 9722
     iget-object v0, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     # invokes: Landroid/widget/AbsListView;->playQCBtnFadeIn()V
     invoke-static {v0}, Landroid/widget/AbsListView;->access$6000(Landroid/widget/AbsListView;)V
 
-    .line 9723
     return-void
 .end method

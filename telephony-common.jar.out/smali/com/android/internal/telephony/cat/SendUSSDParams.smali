@@ -19,24 +19,20 @@
     .param p3, "ussdString"    # [B
 
     .prologue
-    .line 319
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/cat/DisplayTextParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;)V
 
-    .line 320
     array-length v1, p3
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Lcom/android/internal/telephony/cat/SendUSSDParams;->ussdLength:I
 
-    .line 321
     iget v1, p0, Lcom/android/internal/telephony/cat/SendUSSDParams;->ussdLength:I
 
     new-array v1, v1, [B
 
     iput-object v1, p0, Lcom/android/internal/telephony/cat/SendUSSDParams;->ussdString:[B
 
-    .line 322
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -45,7 +41,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 323
     iget-object v1, p0, Lcom/android/internal/telephony/cat/SendUSSDParams;->ussdString:[B
 
     add-int/lit8 v2, v0, 0x1
@@ -54,12 +49,10 @@
 
     aput-byte v2, v1, v0
 
-    .line 322
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 325
     :cond_0
     const/4 v1, 0x0
 
@@ -67,7 +60,6 @@
 
     iput v1, p0, Lcom/android/internal/telephony/cat/SendUSSDParams;->dcsCode:I
 
-    .line 326
     return-void
 .end method
 
@@ -79,12 +71,9 @@
     .param p4, "hasIcon"    # Z
 
     .prologue
-    .line 329
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/cat/SendUSSDParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;[B)V
 
-    .line 330
     invoke-virtual {p0, p4}, Lcom/android/internal/telephony/cat/SendUSSDParams;->setHasIconTag(Z)V
 
-    .line 331
     return-void
 .end method

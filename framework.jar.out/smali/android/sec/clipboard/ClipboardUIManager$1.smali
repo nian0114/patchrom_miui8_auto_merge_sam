@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 44
     iput-object p1, p0, Landroid/sec/clipboard/ClipboardUIManager$1;->this$0:Landroid/sec/clipboard/ClipboardUIManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 48
     iget-object v0, p0, Landroid/sec/clipboard/ClipboardUIManager$1;->this$0:Landroid/sec/clipboard/ClipboardUIManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardUIManager;->mClipboardEx:Landroid/sec/clipboard/ClipboardExManager;
@@ -50,7 +48,6 @@
 
     if-nez v0, :cond_0
 
-    .line 49
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardUIManager$1;->this$0:Landroid/sec/clipboard/ClipboardUIManager;
 
     iget-object v0, p0, Landroid/sec/clipboard/ClipboardUIManager$1;->this$0:Landroid/sec/clipboard/ClipboardUIManager;
@@ -71,7 +68,6 @@
     # setter for: Landroid/sec/clipboard/ClipboardUIManager;->mClipboardEx:Landroid/sec/clipboard/ClipboardExManager;
     invoke-static {v1, v0}, Landroid/sec/clipboard/ClipboardUIManager;->access$002(Landroid/sec/clipboard/ClipboardUIManager;Landroid/sec/clipboard/ClipboardExManager;)Landroid/sec/clipboard/ClipboardExManager;
 
-    .line 51
     :cond_0
     iget-object v0, p0, Landroid/sec/clipboard/ClipboardUIManager$1;->this$0:Landroid/sec/clipboard/ClipboardUIManager;
 
@@ -82,6 +78,5 @@
 
     invoke-virtual {v0}, Landroid/sec/clipboard/ClipboardExManager;->showUIDataDialog()V
 
-    .line 52
     return-void
 .end method

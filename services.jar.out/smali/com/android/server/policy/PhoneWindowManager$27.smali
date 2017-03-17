@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 9695
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 9697
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 9699
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iput-boolean v2, v0, Lcom/android/server/policy/PhoneWindowManager;->mPresentationFlag:Z
 
-    .line 9700
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-boolean v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mMouseDockedFlag:Z
@@ -72,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9701
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -81,19 +76,16 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mMouseDockedFlag:Z
 
-    .line 9702
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iput-boolean v2, v0, Lcom/android/server/policy/PhoneWindowManager;->mOldMouseDockedValue:Z
 
-    .line 9703
     const-string v0, "WindowManager"
 
     const-string v1, "SmartDock Presentation Stopped"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9706
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -101,11 +93,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->updateRotation(Z)V
 
-    .line 9707
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$27;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->updateOrientationListenerLp()V
 
-    .line 9708
     return-void
 .end method

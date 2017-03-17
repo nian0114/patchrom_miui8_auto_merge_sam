@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 23334
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$31;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$31;->val$vol:Landroid/os/storage/VolumeInfo;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 23337
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$31;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$31;->val$vol:Landroid/os/storage/VolumeInfo;
@@ -52,6 +50,5 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->loadPrivatePackagesInner(Landroid/os/storage/VolumeInfo;)V
     invoke-static {v0, v1}, Lcom/android/server/pm/PackageManagerService;->access$7000(Lcom/android/server/pm/PackageManagerService;Landroid/os/storage/VolumeInfo;)V
 
-    .line 23338
     return-void
 .end method

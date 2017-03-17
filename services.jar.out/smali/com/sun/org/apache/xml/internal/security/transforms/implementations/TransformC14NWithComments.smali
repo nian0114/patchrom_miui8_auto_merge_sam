@@ -20,7 +20,7 @@
 .method protected engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    const-string v0, "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
 
     return-object v0
 .end method

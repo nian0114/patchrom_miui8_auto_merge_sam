@@ -24,13 +24,10 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput p1, p0, Lcom/sec/epdg/EpdgRilInterface$BaseRxRequest;->mCid:I
 
-    .line 20
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 23
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$BaseRxRequest;->mCid:I
 
     return v0

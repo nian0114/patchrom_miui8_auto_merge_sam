@@ -34,13 +34,10 @@
     .end annotation
 
     .prologue
-    .line 684
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment$MySSLSocketFactory;->this$0:Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment;
 
-    .line 685
     invoke-direct {p0, p2}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/security/KeyStore;)V
 
-    .line 681
     const-string v8, "TLS"
 
     invoke-static {v8}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
@@ -49,10 +46,8 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment$MySSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
-    .line 686
     const/4 v3, 0x0
 
-    .line 689
     .local v3, "fis":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
@@ -61,7 +56,6 @@
 
     invoke-direct {v0, v8}, Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;-><init>(Landroid/content/Context;)V
 
-    .line 690
     .local v0, "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
     new-instance v2, Ljava/io/File;
 
@@ -100,11 +94,9 @@
 
     invoke-direct {v2, v8, v9}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 692
     .local v2, "file":Ljava/io/File;
     const/4 v5, 0x0
 
-    .line 693
     .local v5, "keyManager":Ljavax/net/ssl/KeyManagerFactory;
     const-string v8, "PKCS12"
 
@@ -112,7 +104,6 @@
 
     move-result-object v6
 
-    .line 694
     .local v6, "keyStore":Ljava/security/KeyStore;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -129,7 +120,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 695
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -137,7 +127,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 696
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .local v4, "fis":Ljava/io/FileInputStream;
     :try_start_1
@@ -152,7 +141,6 @@
 
     invoke-virtual {v6, v4, v8}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    .line 697
     const-string v8, "HS20CertificateEnrollment"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -179,7 +167,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 699
     invoke-static {}, Ljavax/net/ssl/KeyManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
     move-result-object v8
@@ -188,7 +175,6 @@
 
     move-result-object v5
 
-    .line 701
     # getter for: Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment;->keyPass:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment;->access$200(Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment;)Ljava/lang/String;
 
@@ -200,7 +186,6 @@
 
     invoke-virtual {v5, v6, v8}, Ljavax/net/ssl/KeyManagerFactory;->init(Ljava/security/KeyStore;[C)V
 
-    .line 702
     iget-object v8, p0, Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment$MySSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v5}, Ljavax/net/ssl/KeyManagerFactory;->getKeyManagers()[Ljavax/net/ssl/KeyManager;
@@ -217,7 +202,6 @@
 
     invoke-virtual {v8, v9, v10, v11}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
-    .line 703
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
@@ -225,7 +209,6 @@
 
     move-object v3, v4
 
-    .line 706
     .end local v4    # "fis":Ljava/io/FileInputStream;
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     :goto_0
@@ -236,7 +219,6 @@
 
     move-result-object v7
 
-    .line 707
     .local v7, "mSSLEngine":Ljavax/net/ssl/SSLEngine;
     invoke-virtual {v7}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
 
@@ -251,16 +233,13 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 713
     if-eqz v3, :cond_0
 
-    .line 714
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 720
     .end local v0    # "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
     .end local v2    # "file":Ljava/io/File;
     .end local v5    # "keyManager":Ljavax/net/ssl/KeyManagerFactory;
@@ -270,7 +249,6 @@
     :goto_1
     return-void
 
-    .line 705
     .restart local v0    # "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
     .restart local v2    # "file":Ljava/io/File;
     .restart local v5    # "keyManager":Ljavax/net/ssl/KeyManagerFactory;
@@ -296,7 +274,6 @@
 
     goto :goto_0
 
-    .line 708
     .end local v0    # "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
     .end local v2    # "file":Ljava/io/File;
     .end local v5    # "keyManager":Ljavax/net/ssl/KeyManagerFactory;
@@ -304,7 +281,6 @@
     :catch_0
     move-exception v1
 
-    .line 709
     .local v1, "e":Ljava/lang/Exception;
     :goto_2
     :try_start_5
@@ -314,15 +290,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 713
     if-eqz v3, :cond_0
 
-    .line 714
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -330,17 +303,14 @@
 
     goto :goto_1
 
-    .line 716
     :catch_1
     move-exception v1
 
-    .line 717
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 716
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v0    # "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
     .restart local v2    # "file":Ljava/io/File;
@@ -350,13 +320,11 @@
     :catch_2
     move-exception v1
 
-    .line 717
     .restart local v1    # "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 712
     .end local v0    # "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
     .end local v1    # "e":Ljava/io/IOException;
     .end local v2    # "file":Ljava/io/File;
@@ -366,32 +334,26 @@
     :catchall_0
     move-exception v8
 
-    .line 713
     :goto_3
     if-eqz v3, :cond_2
 
-    .line 714
     :try_start_7
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
-    .line 718
     :cond_2
     :goto_4
     throw v8
 
-    .line 716
     :catch_3
     move-exception v1
 
-    .line 717
     .restart local v1    # "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 712
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v0    # "certManager":Lcom/android/server/wifi/hs20/WifiHs20CertificateManager;
@@ -408,7 +370,6 @@
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 708
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
     :catch_4
@@ -432,7 +393,6 @@
     .end annotation
 
     .prologue
-    .line 730
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment$MySSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -460,7 +420,6 @@
     .end annotation
 
     .prologue
-    .line 725
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20CertificateEnrollment$MySSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;

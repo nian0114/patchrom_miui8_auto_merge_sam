@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 214
     new-instance v0, Lcom/samsung/android/hermes/KerykeionResult$1;
 
     invoke-direct {v0}, Lcom/samsung/android/hermes/KerykeionResult$1;-><init>()V
@@ -66,10 +65,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     return-void
 .end method
 
@@ -84,31 +81,22 @@
     .param p7, "mAccuracy"    # F
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput p1, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResultType:I
 
-    .line 58
     iput-object p2, p0, Lcom/samsung/android/hermes/KerykeionResult;->mSrc:Ljava/lang/String;
 
-    .line 59
     iput-object p3, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResult:Ljava/lang/Object;
 
-    .line 60
     iput-object p4, p0, Lcom/samsung/android/hermes/KerykeionResult;->mExtraDatas:Ljava/lang/Object;
 
-    .line 61
     iput p5, p0, Lcom/samsung/android/hermes/KerykeionResult;->mStartPos:I
 
-    .line 62
     iput p6, p0, Lcom/samsung/android/hermes/KerykeionResult;->mEndPos:I
 
-    .line 63
     iput p7, p0, Lcom/samsung/android/hermes/KerykeionResult;->mAccuracy:F
 
-    .line 64
     return-void
 .end method
 
@@ -125,37 +113,26 @@
     .param p9, "mUsingData"    # I
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput p1, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResultType:I
 
-    .line 84
     iput-object p2, p0, Lcom/samsung/android/hermes/KerykeionResult;->mSrc:Ljava/lang/String;
 
-    .line 85
     iput-object p3, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResult:Ljava/lang/Object;
 
-    .line 86
     iput-object p4, p0, Lcom/samsung/android/hermes/KerykeionResult;->mExtraDatas:Ljava/lang/Object;
 
-    .line 87
     iput p5, p0, Lcom/samsung/android/hermes/KerykeionResult;->mStartPos:I
 
-    .line 88
     iput p6, p0, Lcom/samsung/android/hermes/KerykeionResult;->mEndPos:I
 
-    .line 89
     iput p7, p0, Lcom/samsung/android/hermes/KerykeionResult;->mAccuracy:F
 
-    .line 90
     iput p8, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUIState:I
 
-    .line 91
     iput p9, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUsingData:I
 
-    .line 92
     return-void
 .end method
 
@@ -165,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 178
     const/4 v0, 0x0
 
     return v0
@@ -175,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mAccuracy:F
 
     return v0
@@ -185,17 +160,14 @@
     .locals 2
 
     .prologue
-    .line 156
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUsingData:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 157
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mExtraDatas:Ljava/lang/Object;
 
-    .line 159
     :goto_0
     return-object v0
 
@@ -209,7 +181,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mEndPos:I
 
     return v0
@@ -219,7 +190,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mExtraDatas:Ljava/lang/Object;
 
     return-object v0
@@ -229,7 +199,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResult:Ljava/lang/Object;
 
     return-object v0
@@ -239,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResultType:I
 
     return v0
@@ -249,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mSrc:Ljava/lang/String;
 
     return-object v0
@@ -259,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mStartPos:I
 
     return v0
@@ -271,12 +237,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 167
     iget v1, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUIState:I
 
     if-ne v1, v0, :cond_0
 
-    .line 170
     :goto_0
     return v0
 
@@ -291,21 +255,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 200
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResultType:I
 
-    .line 201
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mSrc:Ljava/lang/String;
 
-    .line 202
     const-class v0, Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -318,7 +279,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResult:Ljava/lang/Object;
 
-    .line 203
     const-class v0, Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -331,42 +291,36 @@
 
     iput-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mExtraDatas:Ljava/lang/Object;
 
-    .line 204
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mStartPos:I
 
-    .line 205
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mEndPos:I
 
-    .line 206
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mAccuracy:F
 
-    .line 207
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUIState:I
 
-    .line 208
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUsingData:I
 
-    .line 209
     return-void
 .end method
 
@@ -376,51 +330,41 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 185
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResultType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 186
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mSrc:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 187
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mResult:Ljava/lang/Object;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 188
     iget-object v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mExtraDatas:Ljava/lang/Object;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 189
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mStartPos:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 190
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mEndPos:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 191
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mAccuracy:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 192
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUIState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 193
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionResult;->mUsingData:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 194
     return-void
 .end method

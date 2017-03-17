@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3579
     iput-object p1, p0, Landroid/widget/RemoteViews$SetLaunchPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetLaunchPendingIntent;
 
     iput-object p2, p0, Landroid/widget/RemoteViews$SetLaunchPendingIntent$1;->val$handler:Landroid/widget/RemoteViews$OnClickHandler;
@@ -51,7 +50,6 @@
 
     const/high16 v6, 0x3f000000    # 0.5f
 
-    .line 3587
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -61,7 +59,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3601
     :goto_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -77,22 +74,18 @@
 
     iget v0, v4, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
-    .line 3603
     .local v0, "appScale":F
     const/4 v4, 0x2
 
     new-array v2, v4, [I
 
-    .line 3604
     .local v2, "pos":[I
     invoke-virtual {p1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 3606
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3607
     .local v3, "rect":Landroid/graphics/Rect;
     aget v4, v2, v5
 
@@ -106,7 +99,6 @@
 
     iput v4, v3, Landroid/graphics/Rect;->left:I
 
-    .line 3608
     aget v4, v2, v7
 
     int-to-float v4, v4
@@ -119,7 +111,6 @@
 
     iput v4, v3, Landroid/graphics/Rect;->top:I
 
-    .line 3609
     aget v4, v2, v5
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -138,7 +129,6 @@
 
     iput v4, v3, Landroid/graphics/Rect;->right:I
 
-    .line 3610
     aget v4, v2, v7
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -157,16 +147,13 @@
 
     iput v4, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 3612
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 3613
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    .line 3614
     iget-object v4, p0, Landroid/widget/RemoteViews$SetLaunchPendingIntent$1;->val$handler:Landroid/widget/RemoteViews$OnClickHandler;
 
     iget-object v5, p0, Landroid/widget/RemoteViews$SetLaunchPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetLaunchPendingIntent;
@@ -175,12 +162,11 @@
 
     invoke-virtual {v4, p1, v5, v1}, Landroid/widget/RemoteViews$OnClickHandler;->onClickHandler(Landroid/view/View;Landroid/app/PendingIntent;Landroid/content/Intent;)Z
 
-    .line 3617
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    const-string/jumbo v5, "statusbar"
+    const-string v5, "statusbar"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -190,10 +176,8 @@
 
     invoke-virtual {v4}, Landroid/app/StatusBarManager;->collapsePanels()V
 
-    .line 3619
     return-void
 
-    .line 3595
     .end local v0    # "appScale":F
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "pos":[I

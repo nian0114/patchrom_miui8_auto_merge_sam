@@ -323,7 +323,7 @@
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityRuntimeException;
 
-    const-string/jumbo v2, "signature.XMLSignatureInput.nodesetReference"
+    const-string v2, "signature.XMLSignatureInput.nodesetReference"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/exceptions/XMLSecurityRuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -673,7 +673,7 @@
     :cond_3
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v1, "getNodeSet() called but no input data present"
+    const-string v1, "getNodeSet() called but no input data present"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 

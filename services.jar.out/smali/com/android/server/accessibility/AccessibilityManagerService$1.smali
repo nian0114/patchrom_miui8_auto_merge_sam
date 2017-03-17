@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 321
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$1;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +40,5 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 323
     return-void
 .end method

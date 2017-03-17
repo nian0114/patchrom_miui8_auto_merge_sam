@@ -83,7 +83,6 @@
     .locals 2
 
     .prologue
-    .line 56
     const-string v0, "debug.hwui.imagefilter.log"
 
     const/4 v1, 0x0
@@ -101,12 +100,10 @@
     .locals 1
 
     .prologue
-    .line 205
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/graphics/ImageFilter;-><init>(I)V
 
-    .line 206
     return-void
 .end method
 
@@ -115,17 +112,14 @@
     .param p1, "filterType"    # I
 
     .prologue
-    .line 209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 210
     invoke-static {p1}, Landroid/graphics/ImageFilter;->native_init(I)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
-    .line 212
     return-void
 .end method
 
@@ -134,10 +128,8 @@
     .param p1, "filter"    # Landroid/graphics/ImageFilter;
 
     .prologue
-    .line 215
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     iget-wide v0, p1, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     invoke-static {v0, v1}, Landroid/graphics/ImageFilter;->native_copy(J)J
@@ -146,7 +138,6 @@
 
     iput-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
-    .line 217
     return-void
 .end method
 
@@ -154,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-boolean v0, Landroid/graphics/ImageFilter;->sLogingEnabled:Z
 
     return v0
@@ -166,17 +156,14 @@
     .param p1, "fragmentShaderCode"    # Ljava/lang/String;
 
     .prologue
-    .line 425
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 426
     new-instance v0, Landroid/graphics/ImageFilter$CustomFilter;
 
     invoke-direct {v0, p0, p1}, Landroid/graphics/ImageFilter$CustomFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 428
     :goto_0
     return-object v0
 
@@ -191,16 +178,13 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 378
     sparse-switch p0, :sswitch_data_0
 
-    .line 412
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 380
     :sswitch_0
     new-instance v0, Landroid/graphics/ImageFilter$GaussianBlurFilter;
 
@@ -208,7 +192,6 @@
 
     goto :goto_0
 
-    .line 382
     :sswitch_1
     new-instance v0, Landroid/graphics/ImageFilter$DirectionalBlurFilter;
 
@@ -216,7 +199,6 @@
 
     goto :goto_0
 
-    .line 384
     :sswitch_2
     new-instance v0, Landroid/graphics/ImageFilter$ZoomBlurFilter;
 
@@ -224,7 +206,6 @@
 
     goto :goto_0
 
-    .line 386
     :sswitch_3
     new-instance v0, Landroid/graphics/ImageFilter$CosineBlurFilter;
 
@@ -232,7 +213,6 @@
 
     goto :goto_0
 
-    .line 388
     :sswitch_4
     new-instance v0, Landroid/graphics/ImageFilter$SgiBlurFilter;
 
@@ -240,7 +220,6 @@
 
     goto :goto_0
 
-    .line 390
     :sswitch_5
     new-instance v0, Landroid/graphics/ImageFilter$ColorizeFilter;
 
@@ -248,7 +227,6 @@
 
     goto :goto_0
 
-    .line 392
     :sswitch_6
     new-instance v0, Landroid/graphics/ImageFilter$DesaturationFilter;
 
@@ -256,7 +234,6 @@
 
     goto :goto_0
 
-    .line 394
     :sswitch_7
     new-instance v0, Landroid/graphics/ImageFilter$ColorClampFilter;
 
@@ -264,7 +241,6 @@
 
     goto :goto_0
 
-    .line 396
     :sswitch_8
     new-instance v0, Landroid/graphics/ImageFilter$DistortionFilter;
 
@@ -272,7 +248,6 @@
 
     goto :goto_0
 
-    .line 398
     :sswitch_9
     new-instance v0, Landroid/graphics/ImageFilter$VignetteFilter;
 
@@ -280,7 +255,6 @@
 
     goto :goto_0
 
-    .line 400
     :sswitch_a
     new-instance v0, Landroid/graphics/ImageFilter$MosaicFilter;
 
@@ -288,7 +262,6 @@
 
     goto :goto_0
 
-    .line 402
     :sswitch_b
     new-instance v0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;
 
@@ -296,7 +269,6 @@
 
     goto :goto_0
 
-    .line 404
     :sswitch_c
     new-instance v0, Landroid/graphics/ImageFilter$BlendingFilter;
 
@@ -304,7 +276,6 @@
 
     goto :goto_0
 
-    .line 406
     :sswitch_d
     new-instance v0, Landroid/graphics/ImageFilter$BlurFilter;
 
@@ -312,7 +283,6 @@
 
     goto :goto_0
 
-    .line 408
     :sswitch_e
     new-instance v0, Landroid/graphics/ImageFilter$DropShadowFilter;
 
@@ -320,7 +290,6 @@
 
     goto :goto_0
 
-    .line 378
     nop
 
     :sswitch_data_0
@@ -351,7 +320,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 285
     :try_start_0
     const-string v4, "MD5"
 
@@ -359,7 +327,6 @@
 
     move-result-object v3
 
-    .line 286
     .local v3, "md":Ljava/security/MessageDigest;
     const-string v4, "UTF-8"
 
@@ -371,7 +338,6 @@
 
     move-result-object v2
 
-    .line 287
     .local v2, "hash":[B
     new-instance v0, Ljava/math/BigInteger;
 
@@ -379,7 +345,6 @@
 
     invoke-direct {v0, v4, v2}, Ljava/math/BigInteger;-><init>(I[B)V
 
-    .line 289
     .local v0, "bi":Ljava/math/BigInteger;
     const/16 v4, 0x20
 
@@ -392,14 +357,12 @@
 
     return-object v4
 
-    .line 291
     .end local v0    # "bi":Ljava/math/BigInteger;
     .end local v2    # "hash":[B
     .end local v3    # "md":Ljava/security/MessageDigest;
     :catch_0
     move-exception v1
 
-    .line 293
     .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -407,12 +370,10 @@
 
     throw v4
 
-    .line 295
     .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v1
 
-    .line 297
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -466,7 +427,6 @@
     .locals 1
 
     .prologue
-    .line 240
     new-instance v0, Landroid/graphics/ImageFilter;
 
     invoke-direct {v0, p0}, Landroid/graphics/ImageFilter;-><init>(Landroid/graphics/ImageFilter;)V
@@ -483,7 +443,6 @@
     .end annotation
 
     .prologue
-    .line 31
     invoke-virtual {p0}, Landroid/graphics/ImageFilter;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -495,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 228
     invoke-virtual {p0}, Landroid/graphics/ImageFilter;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -512,7 +470,6 @@
     .end annotation
 
     .prologue
-    .line 359
     :try_start_0
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
@@ -520,13 +477,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 361
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 363
     return-void
 
-    .line 361
     :catchall_0
     move-exception v0
 
@@ -539,7 +493,6 @@
     .locals 2
 
     .prologue
-    .line 258
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     invoke-static {v0, v1}, Landroid/graphics/ImageFilter;->native_getType(J)I
@@ -554,7 +507,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 353
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     invoke-static {v0, v1, p1}, Landroid/graphics/ImageFilter;->native_getValue(JI)F
@@ -569,14 +521,11 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 269
     if-eqz p1, :cond_0
 
-    .line 276
     :goto_0
     return-void
 
-    .line 274
     :cond_0
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
@@ -596,7 +545,6 @@
     .param p1, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 308
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     invoke-direct {p0, p1}, Landroid/graphics/ImageFilter;->getMd5FromStr(Ljava/lang/String;)Ljava/lang/String;
@@ -605,7 +553,6 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/graphics/ImageFilter;->native_setFragmentShader(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 309
     return-void
 .end method
 
@@ -616,14 +563,11 @@
     .param p3, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 343
     if-eqz p3, :cond_0
 
-    .line 349
     :goto_0
     return-void
 
-    .line 347
     :cond_0
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
@@ -650,7 +594,6 @@
 
     const/4 v0, 0x2
 
-    .line 333
     if-lt p2, v0, :cond_0
 
     if-gt p2, v1, :cond_0
@@ -659,7 +602,6 @@
 
     if-gt p3, v1, :cond_0
 
-    .line 334
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     move-object v2, p1
@@ -672,7 +614,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/ImageFilter;->native_setUniformMatrix(JLjava/lang/String;II[F)V
 
-    .line 339
     :cond_0
     return-void
 .end method
@@ -685,7 +626,6 @@
     .param p4, "value"    # [F
 
     .prologue
-    .line 313
     if-lez p2, :cond_0
 
     const/4 v0, 0x4
@@ -694,7 +634,6 @@
 
     if-lez p3, :cond_0
 
-    .line 314
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     move-object v2, p1
@@ -707,7 +646,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/ImageFilter;->native_setUniformf(JLjava/lang/String;II[F)V
 
-    .line 319
     :cond_0
     return-void
 .end method
@@ -720,7 +658,6 @@
     .param p4, "value"    # [I
 
     .prologue
-    .line 323
     if-lez p2, :cond_0
 
     const/4 v0, 0x4
@@ -729,7 +666,6 @@
 
     if-lez p3, :cond_0
 
-    .line 324
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     move-object v2, p1
@@ -742,7 +678,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/ImageFilter;->native_setUniformi(JLjava/lang/String;II[I)V
 
-    .line 329
     :cond_0
     return-void
 .end method
@@ -755,7 +690,6 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 280
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     move v2, p1
@@ -768,7 +702,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/ImageFilter;->native_setUpdateMargin(JIIII)V
 
-    .line 281
     return-void
 .end method
 
@@ -778,12 +711,10 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 263
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     invoke-static {v0, v1, p1, p2}, Landroid/graphics/ImageFilter;->native_setValue(JIF)V
 
-    .line 264
     return-void
 .end method
 
@@ -792,7 +723,6 @@
     .param p1, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 303
     iget-wide v0, p0, Landroid/graphics/ImageFilter;->mNativeImageFilter:J
 
     invoke-direct {p0, p1}, Landroid/graphics/ImageFilter;->getMd5FromStr(Ljava/lang/String;)Ljava/lang/String;
@@ -801,6 +731,5 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/graphics/ImageFilter;->native_setVertexShader(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 304
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1051
     invoke-static {}, Landroid/app/im/InjectionConstants$DispatchParentCall;->values()[Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     move-result-object v0

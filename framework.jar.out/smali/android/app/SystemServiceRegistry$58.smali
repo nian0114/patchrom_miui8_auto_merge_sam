@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 775
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 781
     new-instance v1, Landroid/view/WindowManagerImpl;
 
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getDisplay()Landroid/view/Display;
@@ -50,7 +48,6 @@
 
     invoke-direct {v1, v2}, Landroid/view/WindowManagerImpl;-><init>(Landroid/view/Display;)V
 
-    .line 782
     .local v1, "wm":Landroid/view/WindowManagerImpl;
     invoke-static {}, Lcom/samsung/android/multidisplay/common/ContextRelationManager;->getInstance()Lcom/samsung/android/multidisplay/common/ContextRelationManager;
 
@@ -58,12 +55,10 @@
 
     invoke-virtual {v2, p1, v1}, Lcom/samsung/android/multidisplay/common/ContextRelationManager;->createWindowManager(Landroid/content/Context;Landroid/view/WindowManagerImpl;)V
 
-    .line 783
     invoke-virtual {v1}, Landroid/view/WindowManagerImpl;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 784
     .local v0, "d":Landroid/view/Display;
     invoke-static {}, Lcom/samsung/android/multidisplay/common/ContextRelationManager;->getInstance()Lcom/samsung/android/multidisplay/common/ContextRelationManager;
 
@@ -71,7 +66,6 @@
 
     invoke-virtual {v2, p1, v0}, Lcom/samsung/android/multidisplay/common/ContextRelationManager;->createDisplay(Landroid/content/Context;Landroid/view/Display;)V
 
-    .line 785
     return-object v1
 .end method
 
@@ -80,7 +74,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 775
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$58;->createService(Landroid/app/ContextImpl;)Landroid/view/WindowManager;
 
     move-result-object v0

@@ -25,13 +25,10 @@
     .param p3, "mask"    # I
 
     .prologue
-    .line 63
     iput-object p1, p0, Lcom/android/server/SEDenialService$AuditFileObserver;->this$0:Lcom/android/server/SEDenialService;
 
-    .line 64
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
 
-    .line 65
     return-void
 .end method
 
@@ -43,8 +40,7 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 69
-    const-string/jumbo v6, "sys.boot_completed"
+    const-string v6, "sys.boot_completed"
 
     invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -58,19 +54,16 @@
 
     if-nez v6, :cond_1
 
-    .line 70
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     const-string v7, "Not Boot completed . No intent for this"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     const/4 v6, 0x2
 
@@ -86,14 +79,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 74
     const-string v6, "audit.ondenial"
 
     invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 75
     .local v5, "strProcessName":Ljava/lang/String;
     const-string v6, ""
 
@@ -103,7 +94,6 @@
 
     if-nez v6, :cond_2
 
-    .line 76
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -136,32 +126,27 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     new-instance v3, Landroid/content/Intent;
 
-    const-string/jumbo v6, "samsung.intent.action.knox.DENIAL_NOTIFICATION"
+    const-string v6, "samsung.intent.action.knox.DENIAL_NOTIFICATION"
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 78
     .local v3, "denialIntent":Landroid/content/Intent;
     const-string v6, "com.samsung.android.securitylogagent"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 79
-    const-string/jumbo v6, "isNotification"
+    const-string v6, "isNotification"
 
     const/4 v7, 0x1
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 80
     const-string v6, "PROC_INFO"
 
     invoke-virtual {v3, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 81
     iget-object v6, p0, Lcom/android/server/SEDenialService$AuditFileObserver;->this$0:Lcom/android/server/SEDenialService;
 
     # getter for: Lcom/android/server/SEDenialService;->mContext:Landroid/content/Context;
@@ -171,21 +156,18 @@
 
     invoke-virtual {v6, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 82
     const-string v6, "audit.ondenial"
 
     const-string v7, ""
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     const-string v7, "audit.ondenial set to 0 after sending samsung.intent.action.knox.DENIAL_NOTIFICATION intent"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     .end local v3    # "denialIntent":Landroid/content/Intent;
     .end local v5    # "strProcessName":Ljava/lang/String;
     :cond_2
@@ -194,7 +176,6 @@
 
     if-ne p1, v6, :cond_0
 
-    .line 97
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -217,7 +198,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     const-string v6, "audit.old"
 
     invoke-virtual {p2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -226,20 +206,17 @@
 
     if-eqz v6, :cond_0
 
-    .line 99
     new-instance v4, Landroid/content/Intent;
 
-    const-string/jumbo v6, "samsung.intent.action.knox.DENIAL_NOTIFICATION"
+    const-string v6, "samsung.intent.action.knox.DENIAL_NOTIFICATION"
 
     invoke-direct {v4, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 100
     .local v4, "denialZipIntent":Landroid/content/Intent;
     const-string v6, "com.samsung.android.securitylogagent"
 
     invoke-virtual {v4, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 101
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,13 +235,11 @@
 
     move-result-object v2
 
-    .line 103
     .local v2, "denialFilePath":Ljava/lang/String;
     const-string v6, "DENIAL_LOG_FILE"
 
     invoke-virtual {v4, v6, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 104
     iget-object v6, p0, Lcom/android/server/SEDenialService$AuditFileObserver;->this$0:Lcom/android/server/SEDenialService;
 
     # getter for: Lcom/android/server/SEDenialService;->mContext:Landroid/content/Context;
@@ -274,7 +249,6 @@
 
     invoke-virtual {v6, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 105
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     const-string v7, "Sending Denial Intent for zip"
@@ -283,7 +257,6 @@
 
     goto/16 :goto_0
 
-    .line 85
     .end local v2    # "denialFilePath":Ljava/lang/String;
     .end local v4    # "denialZipIntent":Landroid/content/Intent;
     :cond_3
@@ -291,7 +264,6 @@
 
     if-ne p1, v6, :cond_2
 
-    .line 86
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -314,7 +286,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     const-string v6, "ams.old"
 
     invoke-virtual {p2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -323,20 +294,17 @@
 
     if-eqz v6, :cond_2
 
-    .line 88
     new-instance v1, Landroid/content/Intent;
 
-    const-string/jumbo v6, "samsung.intent.action.knox.AMS_NOTIFICATION"
+    const-string v6, "samsung.intent.action.knox.AMS_NOTIFICATION"
 
     invoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 89
     .local v1, "amsZipIntent":Landroid/content/Intent;
     const-string v6, "com.samsung.android.securitylogagent"
 
     invoke-virtual {v1, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 90
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -355,13 +323,11 @@
 
     move-result-object v0
 
-    .line 91
     .local v0, "amsFilePath":Ljava/lang/String;
     const-string v6, "AMS_LOG_FILE"
 
     invoke-virtual {v1, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 92
     iget-object v6, p0, Lcom/android/server/SEDenialService$AuditFileObserver;->this$0:Lcom/android/server/SEDenialService;
 
     # getter for: Lcom/android/server/SEDenialService;->mContext:Landroid/content/Context;
@@ -371,7 +337,6 @@
 
     invoke-virtual {v6, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 93
     const-string v6, "SecurityLogAgent:SEDenialService"
 
     const-string v7, "Sending AMS Intent for zip"

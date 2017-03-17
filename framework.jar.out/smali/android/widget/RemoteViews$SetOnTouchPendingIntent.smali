@@ -33,20 +33,16 @@
     .param p3, "pendingIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 4087
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 4088
     iput p2, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->viewId:I
 
-    .line 4089
     iput-object p3, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->pendingIntent:Landroid/app/PendingIntent;
 
-    .line 4090
     return-void
 .end method
 
@@ -55,28 +51,24 @@
     .param p2, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 4092
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 4093
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->viewId:I
 
-    .line 4094
     invoke-static {p2}, Landroid/app/PendingIntent;->readPendingIntentOrNullFromParcel(Landroid/os/Parcel;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->pendingIntent:Landroid/app/PendingIntent;
 
-    .line 4095
     return-void
 .end method
 
@@ -89,14 +81,12 @@
     .param p3, "handler"    # Landroid/widget/RemoteViews$OnClickHandler;
 
     .prologue
-    .line 4105
     iget v2, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->viewId:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4106
     .local v0, "target":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -104,16 +94,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 4107
     new-instance v1, Landroid/widget/RemoteViews$SetOnTouchPendingIntent$1;
 
     invoke-direct {v1, p0}, Landroid/widget/RemoteViews$SetOnTouchPendingIntent$1;-><init>(Landroid/widget/RemoteViews$SetOnTouchPendingIntent;)V
 
-    .line 4149
     .local v1, "touchListener":Landroid/view/View$OnTouchListener;
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 4151
     .end local v1    # "touchListener":Landroid/view/View$OnTouchListener;
     :cond_0
     return-void
@@ -123,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 4154
     const-string v0, "SetOnTouchPendingIntent"
 
     return-object v0
@@ -135,23 +121,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 4098
     const/16 v0, 0x20
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4099
     iget v0, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4100
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnTouchPendingIntent;->pendingIntent:Landroid/app/PendingIntent;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 4101
     return-void
 .end method

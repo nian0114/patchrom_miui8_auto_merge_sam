@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1706
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 1709
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
@@ -71,7 +69,6 @@
 
     check-cast v0, Landroid/view/MenuItem;
 
-    .line 1710
     .local v0, "menuItem":Landroid/view/MenuItem;
     iget-object v1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
@@ -82,7 +79,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1711
     iget-object v1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;->mOnMenuItemClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -92,7 +88,6 @@
 
     invoke-interface {v1, v0}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
-    .line 1713
     :cond_0
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 71
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 73
     new-instance v0, Lcom/samsung/android/multidisplay/common/ContextRelationManager;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 71
     invoke-virtual {p0}, Lcom/samsung/android/multidisplay/common/ContextRelationManager$1;->create()Lcom/samsung/android/multidisplay/common/ContextRelationManager;
 
     move-result-object v0

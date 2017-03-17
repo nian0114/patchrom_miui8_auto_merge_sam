@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 523
     invoke-static {}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;->values()[Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
 
     move-result-object v0

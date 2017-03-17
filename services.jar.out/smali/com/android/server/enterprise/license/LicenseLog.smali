@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     return-void
 .end method
 
@@ -20,7 +18,6 @@
     .param p0, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-static {p0}, Lcom/android/server/enterprise/license/LicenseLogService;->deleteLog(Ljava/lang/String;)Z
 
     move-result v0
@@ -33,7 +30,6 @@
     .param p0, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-static {p0}, Lcom/android/server/enterprise/license/LicenseLogService;->getLog(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -47,9 +43,7 @@
     .param p1, "apiName"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     invoke-static {p0, p1}, Lcom/android/server/enterprise/license/LicenseLogService;->log(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method

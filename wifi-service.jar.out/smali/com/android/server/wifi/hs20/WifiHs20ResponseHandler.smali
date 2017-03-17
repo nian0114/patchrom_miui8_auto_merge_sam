@@ -18,22 +18,18 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Lorg/xml/sax/ext/DefaultHandler2;-><init>()V
 
-    .line 15
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
-    .line 18
     new-instance v0, Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-direct {v0}, Lcom/android/server/wifi/hs20/SppResponseObj;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
-    .line 19
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 149
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
     const-string v2, "sppError"
@@ -64,7 +59,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 150
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     new-instance v2, Ljava/lang/String;
@@ -73,7 +67,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->sppError:Ljava/lang/String;
 
-    .line 151
     const-string v1, "Hs20ResponseHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -100,12 +93,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     :cond_0
     :goto_0
     return-void
 
-    .line 152
     :cond_1
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -117,7 +108,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 153
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -126,7 +116,6 @@
 
     if-nez v1, :cond_2
 
-    .line 154
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -137,7 +126,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/execObj;->launchBrowserToURI:Ljava/lang/String;
 
-    .line 158
     :goto_1
     const-string v1, "Hs20ResponseHandler"
 
@@ -169,7 +157,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_2
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -205,7 +192,6 @@
 
     goto :goto_1
 
-    .line 160
     :cond_3
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -217,7 +203,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 161
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -228,7 +213,6 @@
 
     if-nez v1, :cond_4
 
-    .line 162
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -241,7 +225,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/getCertificateObj;->enrollmentServerURI:Ljava/lang/String;
 
-    .line 166
     :goto_2
     const-string v1, "Hs20ResponseHandler"
 
@@ -275,7 +258,6 @@
 
     goto/16 :goto_0
 
-    .line 164
     :cond_4
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -315,7 +297,6 @@
 
     goto :goto_2
 
-    .line 168
     :cond_5
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -327,7 +308,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 169
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -340,7 +320,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/getCertificateObj;->secureToken:Ljava/lang/String;
 
-    .line 170
     const-string v1, "Hs20ResponseHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -373,7 +352,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     :cond_6
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -385,7 +363,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 173
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -398,7 +375,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/getCertificateObj;->CACertificate:Ljava/lang/String;
 
-    .line 174
     const-string v1, "Hs20ResponseHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -431,7 +407,6 @@
 
     goto/16 :goto_0
 
-    .line 176
     :cond_7
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -443,7 +418,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 177
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -456,7 +430,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/getCertificateObj;->enrollDigestUseriD:Ljava/lang/String;
 
-    .line 178
     const-string v1, "Hs20ResponseHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -489,7 +462,6 @@
 
     goto/16 :goto_0
 
-    .line 180
     :cond_8
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -501,7 +473,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 181
     const-string v1, "Hs20ResponseHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -528,7 +499,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -539,7 +509,6 @@
 
     if-nez v1, :cond_9
 
-    .line 183
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -552,7 +521,6 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/hs20/getCertificateObj;->enrollDigestPWD:Ljava/lang/String;
 
-    .line 187
     :goto_3
     const-string v1, "Hs20ResponseHandler"
 
@@ -592,7 +560,6 @@
 
     goto/16 :goto_0
 
-    .line 185
     :cond_9
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -632,7 +599,6 @@
 
     goto :goto_3
 
-    .line 189
     :cond_a
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
@@ -644,12 +610,10 @@
 
     if-eqz v1, :cond_c
 
-    .line 190
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1, p2, p3}, Ljava/lang/String;-><init>([CII)V
 
-    .line 191
     .local v0, "temp":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -659,7 +623,6 @@
 
     if-lez v1, :cond_0
 
-    .line 192
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->addMo:Ljava/util/ArrayList;
@@ -674,7 +637,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 193
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->addMo:Ljava/util/ArrayList;
@@ -717,7 +679,6 @@
 
     goto/16 :goto_0
 
-    .line 195
     :cond_b
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -733,7 +694,6 @@
 
     goto/16 :goto_0
 
-    .line 197
     .end local v0    # "temp":Ljava/lang/String;
     :cond_c
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
@@ -746,12 +706,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 198
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1, p2, p3}, Ljava/lang/String;-><init>([CII)V
 
-    .line 199
     .restart local v0    # "temp":Ljava/lang/String;
     const-string v1, "Hs20ResponseHandler"
 
@@ -775,7 +733,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -784,7 +741,6 @@
 
     if-lez v1, :cond_0
 
-    .line 201
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->updateNode:Ljava/util/ArrayList;
@@ -809,7 +765,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 202
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v1, v1, Lcom/android/server/wifi/hs20/SppResponseObj;->updateNode:Ljava/util/ArrayList;
@@ -872,7 +827,6 @@
 
     goto/16 :goto_0
 
-    .line 205
     :cond_d
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -911,7 +865,6 @@
     .end annotation
 
     .prologue
-    .line 144
     const-string v0, "Hs20ResponseHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -934,7 +887,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     return-void
 .end method
 
@@ -942,7 +894,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     return-object v0
@@ -961,7 +912,6 @@
     .end annotation
 
     .prologue
-    .line 28
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -984,10 +934,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     iput-object p3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->currentElement:Ljava/lang/String;
 
-    .line 30
     const-string v3, "sppPostDevDataResponse"
 
     invoke-virtual {p3, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -996,12 +944,10 @@
 
     if-eqz v3, :cond_4
 
-    .line 31
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 32
     .local v1, "length":I
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -1009,14 +955,12 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->soapMethod:Ljava/lang/String;
 
-    .line 33
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v1, :cond_4
 
-    .line 34
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1029,7 +973,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 35
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1038,7 +981,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->sppVersion:Ljava/lang/String;
 
-    .line 36
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1065,14 +1007,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 37
     :cond_1
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -1086,7 +1026,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 38
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1095,7 +1034,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->sppStatus:Ljava/lang/String;
 
-    .line 39
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1124,7 +1062,6 @@
 
     goto :goto_1
 
-    .line 40
     :cond_2
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -1138,7 +1075,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 41
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1147,7 +1083,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->sessionID:Ljava/lang/String;
 
-    .line 42
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1176,7 +1111,6 @@
 
     goto :goto_1
 
-    .line 43
     :cond_3
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -1190,7 +1124,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 44
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1199,7 +1132,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->moreCommands:Ljava/lang/String;
 
-    .line 45
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1228,7 +1160,6 @@
 
     goto/16 :goto_1
 
-    .line 49
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_4
@@ -1240,12 +1171,10 @@
 
     if-eqz v3, :cond_8
 
-    .line 50
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 51
     .restart local v1    # "length":I
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -1253,14 +1182,12 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->soapMethod:Ljava/lang/String;
 
-    .line 52
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
     :goto_2
     if-ge v0, v1, :cond_9
 
-    .line 53
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1273,7 +1200,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 54
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1282,7 +1208,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->sppVersion:Ljava/lang/String;
 
-    .line 55
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1309,14 +1234,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     :cond_5
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 56
     :cond_6
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -1330,7 +1253,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 57
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1339,7 +1261,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->sppStatus:Ljava/lang/String;
 
-    .line 58
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1368,7 +1289,6 @@
 
     goto :goto_3
 
-    .line 59
     :cond_7
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -1382,7 +1302,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 60
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
@@ -1391,7 +1310,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->sessionID:Ljava/lang/String;
 
-    .line 61
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1420,7 +1338,6 @@
 
     goto :goto_3
 
-    .line 64
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_8
@@ -1432,19 +1349,16 @@
 
     if-eqz v3, :cond_a
 
-    .line 65
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     const/4 v4, 0x1
 
     iput-boolean v4, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->noMoUpdate:Z
 
-    .line 140
     :cond_9
     :goto_4
     return-void
 
-    .line 66
     :cond_a
     const-string v3, "exec"
 
@@ -1454,12 +1368,10 @@
 
     if-eqz v3, :cond_c
 
-    .line 67
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 68
     .restart local v1    # "length":I
     const/4 v0, 0x0
 
@@ -1467,7 +1379,6 @@
     :goto_5
     if-ge v0, v1, :cond_9
 
-    .line 69
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1480,7 +1391,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 70
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v3, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -1491,7 +1401,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/execObj;->moreCommands:Ljava/lang/String;
 
-    .line 71
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1520,13 +1429,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :cond_b
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
-    .line 74
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_c
@@ -1538,12 +1445,10 @@
 
     if-eqz v3, :cond_e
 
-    .line 75
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 76
     .restart local v1    # "length":I
     const/4 v0, 0x0
 
@@ -1551,7 +1456,6 @@
     :goto_6
     if-ge v0, v1, :cond_9
 
-    .line 77
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1564,7 +1468,6 @@
 
     if-eqz v3, :cond_d
 
-    .line 78
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v3, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -1577,7 +1480,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/getCertificateObj;->enrollmentProtocol:Ljava/lang/String;
 
-    .line 79
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1608,13 +1510,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_d
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 83
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_e
@@ -1626,12 +1526,10 @@
 
     if-eqz v3, :cond_11
 
-    .line 84
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 85
     .restart local v1    # "length":I
     const/4 v0, 0x0
 
@@ -1639,7 +1537,6 @@
     :goto_7
     if-ge v0, v1, :cond_9
 
-    .line 86
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1652,7 +1549,6 @@
 
     if-eqz v3, :cond_10
 
-    .line 87
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v3, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -1665,7 +1561,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/useClientCertTLSObj;->acceptMfgCerts:Ljava/lang/String;
 
-    .line 88
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1696,14 +1591,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :cond_f
     :goto_8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7
 
-    .line 90
     :cond_10
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -1717,7 +1610,6 @@
 
     if-eqz v3, :cond_f
 
-    .line 91
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v3, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -1730,7 +1622,6 @@
 
     iput-object v4, v3, Lcom/android/server/wifi/hs20/useClientCertTLSObj;->acceptProviderCerts:Ljava/lang/String;
 
-    .line 92
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1763,7 +1654,6 @@
 
     goto :goto_8
 
-    .line 96
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_11
@@ -1775,12 +1665,10 @@
 
     if-eqz v3, :cond_13
 
-    .line 97
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 98
     .restart local v1    # "length":I
     const/4 v0, 0x0
 
@@ -1788,7 +1676,6 @@
     :goto_9
     if-ge v0, v1, :cond_9
 
-    .line 99
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1801,12 +1688,10 @@
 
     if-eqz v3, :cond_12
 
-    .line 100
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 101
     .local v2, "temp":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -1822,7 +1707,6 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 103
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1845,14 +1729,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     .end local v2    # "temp":Ljava/lang/String;
     :cond_12
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_9
 
-    .line 106
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_13
@@ -1864,12 +1746,10 @@
 
     if-eqz v3, :cond_15
 
-    .line 107
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 108
     .restart local v1    # "length":I
     const/4 v0, 0x0
 
@@ -1877,7 +1757,6 @@
     :goto_a
     if-ge v0, v1, :cond_9
 
-    .line 109
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1890,12 +1769,10 @@
 
     if-eqz v3, :cond_14
 
-    .line 110
     new-instance v2, Lcom/android/server/wifi/hs20/uploadMoObj;
 
     invoke-direct {v2}, Lcom/android/server/wifi/hs20/uploadMoObj;-><init>()V
 
-    .line 111
     .local v2, "temp":Lcom/android/server/wifi/hs20/uploadMoObj;
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
@@ -1903,7 +1780,6 @@
 
     iput-object v3, v2, Lcom/android/server/wifi/hs20/uploadMoObj;->moURN:Ljava/lang/String;
 
-    .line 112
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v3, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->exec:Lcom/android/server/wifi/hs20/execObj;
@@ -1912,7 +1788,6 @@
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 113
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1937,14 +1812,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     .end local v2    # "temp":Lcom/android/server/wifi/hs20/uploadMoObj;
     :cond_14
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_a
 
-    .line 116
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_15
@@ -1956,18 +1829,15 @@
 
     if-eqz v3, :cond_19
 
-    .line 117
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 118
     .restart local v1    # "length":I
     new-instance v2, Lcom/android/server/wifi/hs20/addMoObj;
 
     invoke-direct {v2}, Lcom/android/server/wifi/hs20/addMoObj;-><init>()V
 
-    .line 119
     .local v2, "temp":Lcom/android/server/wifi/hs20/addMoObj;
     const/4 v0, 0x0
 
@@ -1975,7 +1845,6 @@
     :goto_b
     if-ge v0, v1, :cond_18
 
-    .line 120
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1988,14 +1857,12 @@
 
     if-eqz v3, :cond_17
 
-    .line 121
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v2, Lcom/android/server/wifi/hs20/addMoObj;->moURN:Ljava/lang/String;
 
-    .line 122
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2020,14 +1887,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_16
     :goto_c
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_b
 
-    .line 123
     :cond_17
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
@@ -2041,14 +1906,12 @@
 
     if-eqz v3, :cond_16
 
-    .line 124
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v2, Lcom/android/server/wifi/hs20/addMoObj;->managementTreeURI:Ljava/lang/String;
 
-    .line 125
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2075,7 +1938,6 @@
 
     goto :goto_c
 
-    .line 128
     :cond_18
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
@@ -2085,7 +1947,6 @@
 
     goto/16 :goto_4
 
-    .line 129
     .end local v0    # "i":I
     .end local v1    # "length":I
     .end local v2    # "temp":Lcom/android/server/wifi/hs20/addMoObj;
@@ -2098,12 +1959,10 @@
 
     if-eqz v3, :cond_9
 
-    .line 130
     invoke-interface {p4}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v1
 
-    .line 131
     .restart local v1    # "length":I
     const/4 v0, 0x0
 
@@ -2111,7 +1970,6 @@
     :goto_d
     if-ge v0, v1, :cond_9
 
-    .line 132
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -2124,12 +1982,10 @@
 
     if-eqz v3, :cond_1a
 
-    .line 133
     new-instance v2, Lcom/android/server/wifi/hs20/updateNodeObj;
 
     invoke-direct {v2}, Lcom/android/server/wifi/hs20/updateNodeObj;-><init>()V
 
-    .line 134
     .local v2, "temp":Lcom/android/server/wifi/hs20/updateNodeObj;
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
@@ -2137,14 +1993,12 @@
 
     iput-object v3, v2, Lcom/android/server/wifi/hs20/updateNodeObj;->managementTreeURI:Ljava/lang/String;
 
-    .line 135
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ResponseHandler;->responseObj:Lcom/android/server/wifi/hs20/SppResponseObj;
 
     iget-object v3, v3, Lcom/android/server/wifi/hs20/SppResponseObj;->updateNode:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 136
     const-string v3, "Hs20ResponseHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2169,7 +2023,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     .end local v2    # "temp":Lcom/android/server/wifi/hs20/updateNodeObj;
     :cond_1a
     add-int/lit8 v0, v0, 0x1

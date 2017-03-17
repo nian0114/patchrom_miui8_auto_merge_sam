@@ -21,7 +21,6 @@
     .param p2, "parent"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     return-void
@@ -49,7 +48,6 @@
     .end annotation
 
     .prologue
-    .line 30
     const-string v0, "com.lguplus.common_api_impl.permission.PermissionsImpl"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -62,7 +60,6 @@
 
     move-result-object v0
 
-    .line 31
     :goto_0
     return-object v0
 

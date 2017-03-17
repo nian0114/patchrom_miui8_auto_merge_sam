@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 375
     iput-object p1, p0, Lcom/android/server/am/SmartAdjustManager$2;->this$0:Lcom/android/server/am/SmartAdjustManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,24 +57,20 @@
 
     const/4 v0, -0x1
 
-    .line 378
     sget-boolean v3, Lcom/android/server/am/SmartAdjustManager;->SAMP_HOTNESS_ENABLE:Z
 
     if-eqz v3, :cond_4
 
-    .line 379
     iget v3, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     iget v4, p2, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     if-le v3, v4, :cond_1
 
-    .line 394
     :cond_0
     :goto_0
     return v0
 
-    .line 381
     :cond_1
     iget v3, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
@@ -85,10 +80,8 @@
 
     move v0, v1
 
-    .line 382
     goto :goto_0
 
-    .line 383
     :cond_2
     iget v3, p1, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
@@ -96,7 +89,6 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 385
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
     iget v3, p2, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
@@ -105,16 +97,13 @@
 
     move v0, v1
 
-    .line 386
     goto :goto_0
 
     :cond_3
     move v0, v2
 
-    .line 388
     goto :goto_0
 
-    .line 390
     :cond_4
     iget v3, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
@@ -122,7 +111,6 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 392
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     iget v3, p2, Lcom/android/server/am/ProcessRecord;->curAdj:I
@@ -131,13 +119,11 @@
 
     move v0, v1
 
-    .line 393
     goto :goto_0
 
     :cond_5
     move v0, v2
 
-    .line 394
     goto :goto_0
 .end method
 
@@ -147,7 +133,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 375
     check-cast p1, Lcom/android/server/am/ProcessRecord;
 
     .end local p1    # "x0":Ljava/lang/Object;

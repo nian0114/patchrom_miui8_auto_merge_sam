@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 124
     iget-object v4, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     iget-object v4, v4, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v5, "user"
+    const-string v5, "user"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -52,31 +50,26 @@
 
     check-cast v1, Landroid/os/UserManager;
 
-    .line 125
     .local v1, "um":Landroid/os/UserManager;
     invoke-virtual {v1}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v3
 
-    .line 126
     .local v3, "userInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-nez v3, :cond_1
 
-    .line 127
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
     move-result-object v4
 
-    const-string/jumbo v5, "userInfo list returned is null"
+    const-string v5, "userInfo list returned is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     :cond_0
     return-void
 
-    .line 130
     :cond_1
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -97,7 +90,6 @@
 
     check-cast v2, Landroid/content/pm/UserInfo;
 
-    .line 131
     .local v2, "user":Landroid/content/pm/UserInfo;
     iget v4, v2, Landroid/content/pm/UserInfo;->id:I
 
@@ -107,7 +99,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 132
     iget-object v4, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     const/4 v5, 0x1

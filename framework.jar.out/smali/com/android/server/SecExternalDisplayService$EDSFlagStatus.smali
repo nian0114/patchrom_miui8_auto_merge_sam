@@ -70,7 +70,6 @@
 
     const/4 v4, 0x0
 
-    .line 162
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_HDMI"
@@ -79,7 +78,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_HDMI:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 163
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_WFD"
@@ -88,7 +86,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_WFD:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 164
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_SMARTDOCK"
@@ -97,7 +94,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SMARTDOCK:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 165
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_RVF"
@@ -106,7 +102,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_RVF:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 166
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_SIDESYNC"
@@ -115,7 +110,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SIDESYNC:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 167
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_SCREENRECORDING"
@@ -128,7 +122,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_SCREENRECORDING:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 168
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_HOMETHEATRE"
@@ -141,7 +134,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_HOMETHEATRE:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 169
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_EVF"
@@ -154,7 +146,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_EVF:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 170
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_CAMERA_START"
@@ -167,7 +158,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_CAMERA_START:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 171
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_STATUS_CAMERA_ROTATION_SUPPORT"
@@ -180,7 +170,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_STATUS_CAMERA_ROTATION_SUPPORT:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 172
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_VIDEO"
@@ -193,7 +182,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_VIDEO:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 173
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     const-string v1, "EDS_CONNECTION_STATUS_KDDI_AUSHARELINK"
@@ -206,7 +194,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->EDS_CONNECTION_STATUS_KDDI_AUSHARELINK:Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
-    .line 161
     const/16 v0, 0xc
 
     new-array v0, v0, [Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
@@ -288,10 +275,8 @@
     .end annotation
 
     .prologue
-    .line 176
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 177
     iput p3, p0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->value:I
 
     return-void
@@ -302,10 +287,8 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 181
     const/4 v3, 0x0
 
-    .line 182
     .local v3, "retStatus":Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
     invoke-static {}, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->values()[Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
@@ -323,7 +306,6 @@
 
     aget-object v4, v0, v1
 
-    .line 183
     .local v4, "tempVal":Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
     invoke-virtual {v4}, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->getValue()I
 
@@ -331,15 +313,12 @@
 
     if-ne v5, p0, :cond_1
 
-    .line 184
     move-object v3, v4
 
-    .line 188
     .end local v4    # "tempVal":Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
     :cond_0
     return-object v3
 
-    .line 182
     .restart local v4    # "tempVal":Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -352,7 +331,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     const-class v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -368,7 +346,6 @@
     .locals 1
 
     .prologue
-    .line 161
     sget-object v0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->$VALUES:[Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;
 
     invoke-virtual {v0}, [Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->clone()Ljava/lang/Object;
@@ -386,7 +363,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget v0, p0, Lcom/android/server/SecExternalDisplayService$EDSFlagStatus;->value:I
 
     return v0

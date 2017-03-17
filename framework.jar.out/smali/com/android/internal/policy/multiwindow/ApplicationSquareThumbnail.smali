@@ -19,15 +19,12 @@
     .param p1, "a"    # Landroid/app/Activity;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/internal/policy/multiwindow/ApplicationThumbnail;-><init>(Landroid/app/Activity;)V
 
-    .line 14
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mFakeMinimize:Z
 
-    .line 38
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -40,7 +37,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mMinimizeBg:Landroid/graphics/drawable/Drawable;
 
-    .line 39
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -53,7 +49,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mIconSize:I
 
-    .line 40
     return-void
 .end method
 
@@ -63,15 +58,12 @@
     .param p2, "c"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/multiwindow/ApplicationThumbnail;-><init>(Landroid/app/Activity;Landroid/content/ComponentName;)V
 
-    .line 14
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mFakeMinimize:Z
 
-    .line 44
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -84,7 +76,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mMinimizeBg:Landroid/graphics/drawable/Drawable;
 
-    .line 45
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -97,7 +88,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mIconSize:I
 
-    .line 46
     return-void
 .end method
 
@@ -106,7 +96,6 @@
     .param p0, "a"    # Landroid/app/Activity;
 
     .prologue
-    .line 23
     new-instance v0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;-><init>(Landroid/app/Activity;)V
@@ -120,7 +109,6 @@
     .param p1, "c"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 33
     new-instance v0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;-><init>(Landroid/app/Activity;Landroid/content/ComponentName;)V
@@ -137,13 +125,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 50
     if-eqz p1, :cond_1
 
-    .line 51
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mMinimizeBgFocus:Landroid/graphics/drawable/Drawable;
 
-    .line 55
     .local v0, "bgDrawable":Landroid/graphics/drawable/Drawable;
     :goto_0
     iget v6, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mIconSize:I
@@ -156,13 +141,11 @@
 
     move-result-object v5
 
-    .line 57
     .local v5, "output":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v5}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 58
     .local v1, "canvas":Landroid/graphics/Canvas;
     new-instance v6, Landroid/graphics/Rect;
 
@@ -174,15 +157,12 @@
 
     invoke-virtual {v0, v6}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 59
     iget-boolean v6, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mFakeMinimize:Z
 
     if-nez v6, :cond_0
 
-    .line 60
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 62
     :cond_0
     iget v6, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mIconSize:I
 
@@ -202,17 +182,14 @@
 
     double-to-int v4, v6
 
-    .line 63
     .local v4, "iamgeSize":I
     iget v6, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mIconSize:I
 
     div-int/lit8 v2, v6, 0x2
 
-    .line 64
     .local v2, "center":I
     div-int/lit8 v3, v4, 0x2
 
-    .line 66
     .local v3, "halfSize":I
     iget-object v6, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mMinimizeIcon:Landroid/graphics/drawable/Drawable;
 
@@ -230,15 +207,12 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 67
     iget-object v6, p0, Lcom/android/internal/policy/multiwindow/ApplicationSquareThumbnail;->mMinimizeIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 69
     return-object v5
 
-    .line 53
     .end local v0    # "bgDrawable":Landroid/graphics/drawable/Drawable;
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     .end local v2    # "center":I

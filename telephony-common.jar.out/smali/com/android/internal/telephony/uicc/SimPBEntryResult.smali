@@ -66,52 +66,44 @@
     .param p8, "nextIndex"    # I
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     const/4 v4, 0x3
 
     new-array v4, v4, [I
 
     iput-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->lengthAlphas:[I
 
-    .line 57
     const/4 v4, 0x3
 
     new-array v4, v4, [I
 
     iput-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->dataTypeAlphas:[I
 
-    .line 58
     const/4 v4, 0x3
 
     new-array v4, v4, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
 
-    .line 60
     const/4 v4, 0x5
 
     new-array v4, v4, [I
 
     iput-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->lengthNumbers:[I
 
-    .line 61
     const/4 v4, 0x5
 
     new-array v4, v4, [I
 
     iput-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->dataTypeNumbers:[I
 
-    .line 62
     const/4 v4, 0x5
 
     new-array v4, v4, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->numbers:[Ljava/lang/String;
 
-    .line 64
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -120,54 +112,46 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 66
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->lengthAlphas:[I
 
     aget v5, p1, v3
 
     aput v5, v4, v3
 
-    .line 67
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->dataTypeAlphas:[I
 
     aget v5, p2, v3
 
     aput v5, v4, v3
 
-    .line 69
     aget-object v4, p3, v3
 
     invoke-static {v4}, Lcom/android/internal/telephony/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 71
     .local v1, "alphaTagByte":[B
     aget v4, p2, v3
 
     packed-switch v4, :pswitch_data_0
 
-    .line 95
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
 
     const-string v5, ""
 
     aput-object v5, v4, v3
 
-    .line 96
     const-string v4, "GSM"
 
     const-string v5, "SimPBEntryResult: default Unknown type"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 74
     :pswitch_0
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
 
@@ -175,7 +159,6 @@
 
     aput-object v5, v4, v3
 
-    .line 75
     const-string v4, "GSM"
 
     const-string v5, "Not supported encoding type"
@@ -184,7 +167,6 @@
 
     goto :goto_1
 
-    .line 78
     :pswitch_1
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
 
@@ -200,7 +182,6 @@
 
     goto :goto_1
 
-    .line 83
     :pswitch_2
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
@@ -221,11 +202,9 @@
 
     goto :goto_1
 
-    .line 85
     :catch_0
     move-exception v2
 
-    .line 86
     .local v2, "ex":Ljava/io/UnsupportedEncodingException;
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
 
@@ -233,7 +212,6 @@
 
     aput-object v5, v4, v3
 
-    .line 87
     const-string v4, "GSM"
 
     const-string v5, "SimPBEntryResult - implausible UnsupportedEncodingException"
@@ -242,7 +220,6 @@
 
     goto :goto_1
 
-    .line 91
     .end local v2    # "ex":Ljava/io/UnsupportedEncodingException;
     :pswitch_3
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->alphaTags:[Ljava/lang/String;
@@ -251,7 +228,6 @@
 
     aput-object v5, v4, v3
 
-    .line 92
     const-string v4, "GSM"
 
     const-string v5, "Not supported encoding type"
@@ -260,7 +236,6 @@
 
     goto :goto_1
 
-    .line 103
     .end local v1    # "alphaTagByte":[B
     :cond_0
     const/4 v3, 0x0
@@ -270,21 +245,18 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 104
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->lengthNumbers:[I
 
     aget v5, p4, v3
 
     aput v5, v4, v3
 
-    .line 105
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->dataTypeNumbers:[I
 
     aget v5, p5, v3
 
     aput v5, v4, v3
 
-    .line 107
     aget v4, p4, v3
 
     if-eqz v4, :cond_1
@@ -293,7 +265,6 @@
 
     if-nez v4, :cond_2
 
-    .line 108
     :cond_1
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->numbers:[Ljava/lang/String;
 
@@ -301,13 +272,11 @@
 
     aput-object v5, v4, v3
 
-    .line 103
     :goto_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 110
     :cond_2
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->numbers:[Ljava/lang/String;
 
@@ -317,21 +286,17 @@
 
     goto :goto_3
 
-    .line 113
     :cond_3
     move/from16 v0, p7
 
     iput v0, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->recordIndex:I
 
-    .line 114
     move/from16 v0, p8
 
     iput v0, p0, Lcom/android/internal/telephony/uicc/SimPBEntryResult;->nextIndex:I
 
-    .line 116
     return-void
 
-    .line 71
     nop
 
     :pswitch_data_0

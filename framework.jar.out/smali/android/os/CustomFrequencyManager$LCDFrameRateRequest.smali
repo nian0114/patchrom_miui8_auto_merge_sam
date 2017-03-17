@@ -29,20 +29,16 @@
     .param p6, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 396
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
-    .line 397
     invoke-direct/range {p0 .. p6}, Landroid/os/CustomFrequencyManager$FrequencyRequest;-><init>(Landroid/os/CustomFrequencyManager;IIJLjava/lang/String;)V
 
-    .line 400
     new-instance v0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest$1;
 
     invoke-direct {v0, p0}, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest$1;-><init>(Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;)V
 
     iput-object v0, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->mFrameRateReleaser:Ljava/lang/Runnable;
 
-    .line 398
     return-void
 .end method
 
@@ -52,12 +48,10 @@
     .locals 5
 
     .prologue
-    .line 432
     iget-object v2, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->mToken:Landroid/os/IBinder;
 
     monitor-enter v2
 
-    .line 434
     :try_start_0
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
@@ -67,7 +61,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 435
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     iget-object v1, v1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
@@ -78,7 +71,6 @@
 
     invoke-interface {v1, v3, v4}, Landroid/os/ICustomFrequencyManager;->restoreLCDFrameRate(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 436
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     const/4 v3, 0x0
@@ -89,26 +81,21 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 440
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 441
     return-void
 
-    .line 437
     :catch_0
     move-exception v0
 
-    .line 438
     .local v0, "e":Ljava/lang/Exception;
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
     invoke-static {v0}, Landroid/os/CustomFrequencyManager;->access$100(Ljava/lang/Exception;)V
 
     goto :goto_0
 
-    .line 440
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -124,7 +111,6 @@
     .locals 8
 
     .prologue
-    .line 408
     const-string v1, "CustomFrequencyManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -174,12 +160,10 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
     iget-object v2, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->mToken:Landroid/os/IBinder;
 
     monitor-enter v2
 
-    .line 413
     :try_start_0
     const-string v1, "CustomFrequencyManager"
 
@@ -230,7 +214,6 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v3}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 418
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     iget-object v1, v1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
@@ -243,7 +226,6 @@
 
     invoke-interface {v1, v3, v4, v5}, Landroid/os/ICustomFrequencyManager;->requestLCDFrameRate(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 419
     iget-wide v4, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->mTimeoutMs:J
 
     const-wide/16 v6, -0x1
@@ -252,7 +234,6 @@
 
     if-nez v1, :cond_0
 
-    .line 420
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     const/4 v3, 0x1
@@ -263,17 +244,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 428
     :goto_0
     :try_start_1
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 429
     return-void
 
-    .line 422
     :cond_0
     :try_start_2
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
@@ -286,7 +264,6 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 423
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$LCDFrameRateRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     const/4 v3, 0x0
@@ -299,11 +276,9 @@
 
     goto :goto_0
 
-    .line 425
     :catch_0
     move-exception v0
 
-    .line 426
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
@@ -311,7 +286,6 @@
 
     goto :goto_0
 
-    .line 428
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1

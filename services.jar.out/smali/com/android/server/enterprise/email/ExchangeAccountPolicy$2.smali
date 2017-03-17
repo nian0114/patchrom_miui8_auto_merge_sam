@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1611
     iput-object p1, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 1615
     const-string v9, "ExchangeAccountPolicy"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -65,24 +63,19 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1616
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 1650
     :goto_0
     return-void
 
-    .line 1618
     :pswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 1619
     .local v0, "containerId":I
     iget v8, p1, Landroid/os/Message;->arg2:I
 
-    .line 1620
     .local v8, "userID":I
     iget-object v9, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
@@ -93,7 +86,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 1621
     iget-object v9, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     # getter for: Lcom/android/server/enterprise/email/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -105,7 +97,6 @@
 
     move-result-object v4
 
-    .line 1622
     .local v4, "pm":Landroid/content/pm/PackageManager;
     new-instance v5, Landroid/content/ComponentName;
 
@@ -120,7 +111,6 @@
 
     invoke-direct {v5, v9, v10}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1624
     .local v5, "syncMgrCn":Landroid/content/ComponentName;
     const-string v9, "ExchangeAccountPolicy"
 
@@ -144,27 +134,22 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1626
     const/4 v9, 0x1
 
     invoke-virtual {v4, v5, v9, v12}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
-    .line 1628
     iget-object v9, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$2;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     # setter for: Lcom/android/server/enterprise/email/ExchangeAccountPolicy;->mExchangeServiceDisabled:Z
     invoke-static {v9, v12}, Lcom/android/server/enterprise/email/ExchangeAccountPolicy;->access$102(Lcom/android/server/enterprise/email/ExchangeAccountPolicy;Z)Z
 
-    .line 1630
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1632
     .local v6, "token":J
     const/4 v2, 0x0
 
-    .line 1633
     .local v2, "intent":Landroid/content/Intent;
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/email/SettingsUtils;->isSupportNewEmail()Z
@@ -173,7 +158,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 1634
     new-instance v3, Landroid/content/Intent;
 
     const-string v9, "com.samsung.android.emailsync.EXCHANGE_INTENT"
@@ -188,7 +172,6 @@
     .local v3, "intent":Landroid/content/Intent;
     move-object v2, v3
 
-    .line 1639
     .end local v3    # "intent":Landroid/content/Intent;
     .restart local v2    # "intent":Landroid/content/Intent;
     :goto_1
@@ -210,10 +193,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1643
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1646
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v4    # "pm":Landroid/content/pm/PackageManager;
     .end local v5    # "syncMgrCn":Landroid/content/ComponentName;
@@ -227,7 +208,6 @@
 
     goto :goto_0
 
-    .line 1637
     .restart local v2    # "intent":Landroid/content/Intent;
     .restart local v4    # "pm":Landroid/content/pm/PackageManager;
     .restart local v5    # "syncMgrCn":Landroid/content/ComponentName;
@@ -255,11 +235,9 @@
     .restart local v2    # "intent":Landroid/content/Intent;
     goto :goto_1
 
-    .line 1640
     :catch_0
     move-exception v1
 
-    .line 1641
     .local v1, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v9, "ExchangeAccountPolicy"
@@ -270,7 +248,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1643
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -283,7 +260,6 @@
 
     throw v9
 
-    .line 1616
     nop
 
     :pswitch_data_0

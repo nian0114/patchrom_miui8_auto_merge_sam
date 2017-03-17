@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4193
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "ignored"    # Ljava/lang/String;
 
     .prologue
-    .line 4196
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mEmergency:Lcom/android/server/policy/GlobalActions$ToggleAction;
@@ -49,7 +47,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4197
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mEmergency:Lcom/android/server/policy/GlobalActions$ToggleAction;
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/GlobalActions$ToggleAction;->updateState(Lcom/android/server/policy/GlobalActions$ToggleAction$State;)V
 
-    .line 4198
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
 
@@ -74,7 +70,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4199
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -91,7 +86,6 @@
     # invokes: Lcom/android/server/policy/GlobalActions;->updateActions(ILcom/android/server/policy/GlobalActions$ToggleAction$State;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/policy/GlobalActions;->access$8100(Lcom/android/server/policy/GlobalActions;ILcom/android/server/policy/GlobalActions$ToggleAction$State;)V
 
-    .line 4202
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -102,7 +96,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4203
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mDataModeToggle:Lcom/android/server/policy/GlobalActions$ToggleAction;
@@ -119,7 +112,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/GlobalActions$ToggleAction;->updateState(Lcom/android/server/policy/GlobalActions$ToggleAction$State;)V
 
-    .line 4204
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
 
@@ -127,7 +119,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4205
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -144,7 +135,6 @@
     # invokes: Lcom/android/server/policy/GlobalActions;->updateActions(ILcom/android/server/policy/GlobalActions$ToggleAction$State;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/policy/GlobalActions;->access$8100(Lcom/android/server/policy/GlobalActions;ILcom/android/server/policy/GlobalActions$ToggleAction$State;)V
 
-    .line 4208
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -155,7 +145,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 4209
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$35;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mAdapter:Lcom/android/server/policy/GlobalActions$MyAdapter;
@@ -165,7 +154,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/GlobalActions$MyAdapter;->notifyDataSetChanged()V
 
-    .line 4211
     :cond_2
     return-void
 .end method

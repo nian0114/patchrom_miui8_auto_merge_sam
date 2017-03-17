@@ -86,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 270
     new-instance v0, Landroid/bluetooth/le/ScanSettings$1;
 
     invoke-direct {v0}, Landroid/bluetooth/le/ScanSettings$1;-><init>()V
@@ -110,40 +109,28 @@
     .param p11, "scanLowRssiFilterValue"    # I
 
     .prologue
-    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 224
     iput p1, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
-    .line 225
     iput p2, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
-    .line 226
     iput p3, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
-    .line 227
     iput-wide p4, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
-    .line 228
     iput p7, p0, Landroid/bluetooth/le/ScanSettings;->mNumOfMatchesPerFilter:I
 
-    .line 229
     iput p6, p0, Landroid/bluetooth/le/ScanSettings;->mMatchMode:I
 
-    .line 230
     iput p8, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanInterval:I
 
-    .line 231
     iput p9, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanWindow:I
 
-    .line 232
     iput p10, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanHighRssiFilterValue:I
 
-    .line 233
     iput p11, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanLowRssiFilterValue:I
 
-    .line 235
     return-void
 .end method
 
@@ -162,7 +149,6 @@
     .param p12, "x10"    # Landroid/bluetooth/le/ScanSettings$1;
 
     .prologue
-    .line 27
     invoke-direct/range {p0 .. p11}, Landroid/bluetooth/le/ScanSettings;-><init>(IIIJIIIIII)V
 
     return-void
@@ -173,80 +159,68 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 237
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 238
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
-    .line 239
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
-    .line 240
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
-    .line 241
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
-    .line 242
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mMatchMode:I
 
-    .line 243
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mNumOfMatchesPerFilter:I
 
-    .line 244
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanInterval:I
 
-    .line 245
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanWindow:I
 
-    .line 246
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanHighRssiFilterValue:I
 
-    .line 247
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanLowRssiFilterValue:I
 
-    .line 248
     return-void
 .end method
 
@@ -256,7 +230,6 @@
     .param p2, "x1"    # Landroid/bluetooth/le/ScanSettings$1;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Landroid/bluetooth/le/ScanSettings;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -268,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 266
     const/4 v0, 0x0
 
     return v0
@@ -278,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
     return v0
@@ -288,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanHighRssiFilterValue:I
 
     return v0
@@ -298,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanInterval:I
 
     return v0
@@ -308,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanLowRssiFilterValue:I
 
     return v0
@@ -318,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 196
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanWindow:I
 
     return v0
@@ -328,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 175
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mMatchMode:I
 
     return v0
@@ -338,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mNumOfMatchesPerFilter:I
 
     return v0
@@ -348,7 +313,6 @@
     .locals 2
 
     .prologue
-    .line 219
     iget-wide v0, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
     return-wide v0
@@ -358,7 +322,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
     return v0
@@ -368,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
     return v0
@@ -380,56 +342,45 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 252
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 253
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCallbackType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 254
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mScanResultType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 255
     iget-wide v0, p0, Landroid/bluetooth/le/ScanSettings;->mReportDelayMillis:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 256
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mMatchMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 257
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mNumOfMatchesPerFilter:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanInterval:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 259
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanWindow:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 260
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanHighRssiFilterValue:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 261
     iget v0, p0, Landroid/bluetooth/le/ScanSettings;->mCustomScanLowRssiFilterValue:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 262
     return-void
 .end method

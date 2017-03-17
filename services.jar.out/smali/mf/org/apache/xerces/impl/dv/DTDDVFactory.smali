@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .end annotation
 
     .prologue
-    .line 45
     const-string v0, "mf.org.apache.xerces.impl.dv.dtd.DTDDVFactoryImpl"
 
     invoke-static {v0}, Lmf/org/apache/xerces/impl/dv/DTDDVFactory;->getInstance(Ljava/lang/String;)Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
@@ -47,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 60
     :try_start_0
     invoke-static {}, Lmf/org/apache/xerces/impl/dv/ObjectFactory;->findClassLoader()Ljava/lang/ClassLoader;
 
@@ -59,18 +56,15 @@
 
     move-result-object v1
 
-    .line 59
     check-cast v1, Lmf/org/apache/xerces/impl/dv/DTDDVFactory;
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v1
 
-    .line 62
     :catch_0
     move-exception v0
 
-    .line 63
     .local v0, "e":Ljava/lang/ClassCastException;
     new-instance v1, Lmf/org/apache/xerces/impl/dv/DVFactoryException;
 

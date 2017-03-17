@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$1;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPStateListener;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 72
     const-string v0, "WifiCallSwitchPreference"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,12 +72,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$1;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-virtual {v0, p2}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 74
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$1;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     # getter for: Lcom/movial/ipphone/WifiCallSwitchPreference;->mHandler:Landroid/os/Handler;
@@ -89,14 +85,11 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 75
     packed-switch p1, :pswitch_data_0
 
-    .line 82
     :goto_0
     return-void
 
-    .line 77
     :pswitch_0
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$1;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
@@ -111,7 +104,6 @@
 
     goto :goto_0
 
-    .line 75
     nop
 
     :pswitch_data_0

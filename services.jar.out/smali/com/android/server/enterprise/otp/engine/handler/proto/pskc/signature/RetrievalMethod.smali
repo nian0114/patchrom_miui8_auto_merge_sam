@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RetrievalMethod;->mUri:Ljava/lang/String;
 
     return-object v0
@@ -56,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RetrievalMethod;->mTransforms:Ljava/util/ArrayList;
 
     return-object v0
@@ -66,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RetrievalMethod;->mType:Ljava/lang/String;
 
     return-object v0
@@ -77,10 +73,8 @@
     .param p1, "mName"    # Ljava/lang/String;
 
     .prologue
-    .line 21
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RetrievalMethod;->mUri:Ljava/lang/String;
 
-    .line 22
     return-void
 .end method
 
@@ -97,11 +91,9 @@
     .end annotation
 
     .prologue
-    .line 37
     .local p1, "mTransforms":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/Transforms;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RetrievalMethod;->mTransforms:Ljava/util/ArrayList;
 
-    .line 38
     return-void
 .end method
 
@@ -110,9 +102,7 @@
     .param p1, "mType"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/signature/RetrievalMethod;->mType:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method

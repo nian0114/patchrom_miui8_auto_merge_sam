@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 257
     new-instance v0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;
 
     const-string v1, "TSP_CMDTYPE_EMPTY"
@@ -53,7 +52,6 @@
 
     sput-object v0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;->TSP_CMDTYPE_EMPTY:Landroid/hardware/input/InputManager$TSP_CMDTYPE;
 
-    .line 261
     new-instance v0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;
 
     const-string v1, "TSP_CMDTYPE_SPAY"
@@ -62,7 +60,6 @@
 
     sput-object v0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;->TSP_CMDTYPE_SPAY:Landroid/hardware/input/InputManager$TSP_CMDTYPE;
 
-    .line 252
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/hardware/input/InputManager$TSP_CMDTYPE;
@@ -90,13 +87,10 @@
     .end annotation
 
     .prologue
-    .line 265
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 266
     iput p3, p0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;->mvalue:I
 
-    .line 267
     return-void
 .end method
 
@@ -105,7 +99,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 252
     const-class v0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -121,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 252
     sget-object v0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;->$VALUES:[Landroid/hardware/input/InputManager$TSP_CMDTYPE;
 
     invoke-virtual {v0}, [Landroid/hardware/input/InputManager$TSP_CMDTYPE;->clone()Ljava/lang/Object;
@@ -139,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 271
     iget v0, p0, Landroid/hardware/input/InputManager$TSP_CMDTYPE;->mvalue:I
 
     return v0

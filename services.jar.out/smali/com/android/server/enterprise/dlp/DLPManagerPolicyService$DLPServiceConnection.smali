@@ -29,18 +29,14 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 524
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 522
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;->mDLPInterface:Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
-    .line 525
     iput p1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;->mUserInfoId:I
 
-    .line 526
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 561
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;->mDLPInterface:Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
     return-object v0
@@ -62,7 +57,6 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 530
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$200()Z
 
@@ -70,17 +64,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 531
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "onServiceConnected DLPServiceConnection"
+    const-string v1, "onServiceConnected DLPServiceConnection"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     :cond_0
     invoke-static {p2}, Lcom/sec/enterprise/knox/dlp/IFrameworkConnector$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
@@ -88,7 +80,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;->mDLPInterface:Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
-    .line 533
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1000()Ljava/util/Map;
 
@@ -106,7 +97,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 534
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1000()Ljava/util/Map;
 
@@ -120,7 +110,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 535
     :cond_1
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1000()Ljava/util/Map;
@@ -135,7 +124,6 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 536
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1100()Ljava/util/concurrent/CountDownLatch;
 
@@ -143,7 +131,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 537
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1100()Ljava/util/concurrent/CountDownLatch;
 
@@ -151,7 +138,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 539
     :cond_2
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
@@ -162,7 +148,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onServiceConnected DLPServiceConnection: Service connection: "
+    const-string v2, "onServiceConnected DLPServiceConnection: Service connection: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -194,7 +180,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
@@ -222,7 +207,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
@@ -252,7 +236,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     return-void
 .end method
 
@@ -261,7 +244,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 546
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$200()Z
 
@@ -269,23 +251,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 547
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "onServiceDisconnected DLPServiceConnection"
+    const-string v1, "onServiceDisconnected DLPServiceConnection"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 548
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;->mDLPInterface:Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
-    .line 549
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1100()Ljava/util/concurrent/CountDownLatch;
 
@@ -293,7 +272,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 550
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1100()Ljava/util/concurrent/CountDownLatch;
 
@@ -301,7 +279,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 552
     :cond_1
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1000()Ljava/util/Map;
@@ -320,7 +297,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 553
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
@@ -330,7 +306,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onServiceDisconnected: DLPServiceConnection Removing the Entry from MAPs for UID: "
+    const-string v2, "onServiceDisconnected: DLPServiceConnection Removing the Entry from MAPs for UID: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -348,7 +324,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$1000()Ljava/util/Map;
 
@@ -362,11 +337,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 558
     :goto_0
     return-void
 
-    .line 556
     :cond_2
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
@@ -377,7 +350,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onServiceDisconnected: DLPServiceConnection : Entry is not there for UID:"
+    const-string v2, "onServiceDisconnected: DLPServiceConnection : Entry is not there for UID:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

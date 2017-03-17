@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 540
     iput-object p1, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -38,13 +37,11 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 609
-    const-string/jumbo v1, "onKnoxContainerLaunch"
+    const-string v1, "onKnoxContainerLaunch"
 
     # invokes: Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->access$300(Ljava/lang/String;)I
 
-    .line 611
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -54,7 +51,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onKnoxContainerLaunch() called for personaId="
+    const-string v3, "onKnoxContainerLaunch() called for personaId="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -70,7 +67,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 614
     :try_start_0
     iget-object v1, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -83,23 +79,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 618
     :goto_0
     iget-object v1, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
-    const-string/jumbo v2, "samsung.knox.intent.action.MODE_SWITCH_CHANGED"
+    const-string v2, "samsung.knox.intent.action.MODE_SWITCH_CHANGED"
 
     # invokes: Lcom/android/server/RCPManagerService;->startKnoxModeSwitcher(Ljava/lang/String;I)V
     invoke-static {v1, v2, p1}, Lcom/android/server/RCPManagerService;->access$600(Lcom/android/server/RCPManagerService;Ljava/lang/String;I)V
 
-    .line 622
     return-void
 
-    .line 615
     :catch_0
     move-exception v0
 
-    .line 616
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -111,13 +103,11 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 543
-    const-string/jumbo v1, "onPersonaActive"
+    const-string v1, "onPersonaActive"
 
     # invokes: Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->access$300(Ljava/lang/String;)I
 
-    .line 544
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -143,7 +133,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     :try_start_0
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -154,7 +143,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     iget-object v1, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->mSimplePersonaInfos:Lcom/android/server/bridge/operations/SimplePersonaInfos;
@@ -164,22 +152,18 @@
 
     invoke-virtual {v1}, Lcom/android/server/bridge/operations/SimplePersonaInfos;->initialize()V
 
-    .line 550
     iget-object v1, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v1, p1}, Lcom/android/server/RCPManagerService;->scanAndStartRCPProxy(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 561
     :goto_0
     return-void
 
-    .line 551
     :catch_0
     move-exception v0
 
-    .line 552
     .local v0, "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -220,13 +204,11 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 565
-    const-string/jumbo v3, "onRemovePersona"
+    const-string v3, "onRemovePersona"
 
     # invokes: Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v3}, Lcom/android/server/RCPManagerService;->access$300(Ljava/lang/String;)I
 
-    .line 566
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -252,7 +234,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 568
     :try_start_0
     iget-object v3, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -265,18 +246,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 572
     :goto_0
     iget-object v3, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v3, p1}, Lcom/android/server/RCPManagerService;->deleteAllPersonaData(I)V
 
-    .line 574
     iget-object v3, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     iget-object v3, v3, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "persona"
+    const-string v4, "persona"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -284,13 +263,11 @@
 
     check-cast v2, Landroid/os/PersonaManager;
 
-    .line 576
     .local v2, "personaManager":Landroid/os/PersonaManager;
     invoke-virtual {v2, v6}, Landroid/os/PersonaManager;->getPersonasForUser(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 578
     .local v1, "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -301,7 +278,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onRemovePersona "
+    const-string v5, "onRemovePersona "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -327,7 +304,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     if-eqz v1, :cond_0
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -336,47 +312,39 @@
 
     if-gtz v3, :cond_0
 
-    .line 583
     iget-object v3, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v3, v6}, Lcom/android/server/RCPManagerService;->deleteAllPersonaData(I)V
 
-    .line 587
     :cond_0
     iget-object v3, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v3, p1}, Lcom/android/server/RCPManagerService;->unregisterObserver(I)V
 
-    .line 590
     const/4 v3, 0x0
 
     sput-object v3, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
-    .line 592
     sget-object v3, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
     if-eqz v3, :cond_1
 
-    .line 593
     sget-object v3, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
-    const-string/jumbo v4, "isKnoxKioskMode"
+    const-string v4, "isKnoxKioskMode"
 
-    const-string/jumbo v5, "false"
+    const-string v5, "false"
 
     invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 597
     :cond_1
     return-void
 
-    .line 569
     .end local v1    # "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     .end local v2    # "personaManager":Landroid/os/PersonaManager;
     :catch_0
     move-exception v0
 
-    .line 570
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -388,13 +356,11 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 601
-    const-string/jumbo v0, "onResetPersona"
+    const-string v0, "onResetPersona"
 
     # invokes: Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0}, Lcom/android/server/RCPManagerService;->access$300(Ljava/lang/String;)I
 
-    .line 602
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -420,12 +386,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 603
     iget-object v0, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/RCPManagerService;->deleteAllPersonaData(I)V
 
-    .line 604
     return-void
 .end method
 
@@ -436,7 +400,6 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 627
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -462,7 +425,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -472,7 +434,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "personastate newState: "
+    const-string v4, "personastate newState: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -492,7 +454,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -502,7 +463,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "personastate oldState: "
+    const-string v4, "personastate oldState: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -522,7 +483,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
     sget-object v2, Landroid/content/pm/PersonaState;->ADMIN_LOCKED:Landroid/content/pm/PersonaState;
 
     invoke-virtual {p3, v2}, Landroid/content/pm/PersonaState;->equals(Ljava/lang/Object;)Z
@@ -547,7 +507,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 638
     :cond_0
     iget-object v2, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -568,11 +527,9 @@
 
     check-cast v0, Landroid/content/ISyncCallBack;
 
-    .line 640
     .local v0, "callback":Landroid/content/ISyncCallBack;
     if-eqz v0, :cond_1
 
-    .line 642
     :try_start_0
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -599,12 +556,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
     invoke-interface {v0, p1}, Landroid/content/ISyncCallBack;->deletePersonaData(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 656
     :cond_1
     :goto_0
     iget-object v2, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
@@ -616,14 +571,12 @@
 
     monitor-enter v3
 
-    .line 657
     :try_start_1
     iget-object v2, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     # invokes: Lcom/android/server/RCPManagerService;->unregisterBridgeProxy(I)V
     invoke-static {v2, p1}, Lcom/android/server/RCPManagerService;->access$1000(Lcom/android/server/RCPManagerService;I)V
 
-    .line 658
     iget-object v2, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->mBridgeProxyAliveList:Ljava/util/HashMap;
@@ -637,12 +590,10 @@
 
     invoke-virtual {v2, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 659
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 666
     .end local v0    # "callback":Landroid/content/ISyncCallBack;
     :cond_2
     sget-object v2, Landroid/content/pm/PersonaState;->LOCKED:Landroid/content/pm/PersonaState;
@@ -661,21 +612,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 668
     iget-object v2, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v2, p1}, Lcom/android/server/RCPManagerService;->scanAndStartRCPProxy(I)V
 
-    .line 670
     :cond_3
     return-void
 
-    .line 646
     .restart local v0    # "callback":Landroid/content/ISyncCallBack;
     :catch_0
     move-exception v1
 
-    .line 647
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -704,7 +651,6 @@
 
     goto :goto_0
 
-    .line 659
     .end local v1    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v2

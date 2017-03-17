@@ -72,7 +72,6 @@
     .locals 4
 
     .prologue
-    .line 55
     new-instance v0, Lcom/samsung/android/telephony/SecSmsManager;
 
     const-wide/16 v2, -0x3ea
@@ -89,13 +88,10 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     iput-wide p1, p0, Lcom/samsung/android/telephony/SecSmsManager;->mSubId:J
 
-    .line 99
     return-void
 .end method
 
@@ -106,14 +102,12 @@
     .param p2, "encodingType"    # I
 
     .prologue
-    .line 338
     const-string v0, "SecSmsManager"
 
     const-string v1, "SecSmsManager.calculateLength"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     invoke-static {p0, p1, p2}, Landroid/telephony/SmsMessage;->calculateLength(Ljava/lang/CharSequence;ZI)[I
 
     move-result-object v0
@@ -127,7 +121,6 @@
     .param p1, "apiName"    # Ljava/lang/String;
 
     .prologue
-    .line 426
     const-string v0, "SecSmsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,7 +143,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -163,20 +155,17 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 459
     const-string v0, "SecSmsManager"
 
     const-string v1, "NOT Supported API. Need to add API"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     const-string v0, "NOT Supported API"
 
     :goto_1
     return-object v0
 
-    .line 427
     :sswitch_0
     const-string v1, "getLanguageCode"
 
@@ -372,7 +361,6 @@
 
     goto/16 :goto_0
 
-    .line 429
     :pswitch_0
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getLanguageCode()Ljava/lang/String;
 
@@ -380,7 +368,6 @@
 
     goto/16 :goto_1
 
-    .line 431
     :pswitch_1
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getMessageBody()Ljava/lang/String;
 
@@ -388,7 +375,6 @@
 
     goto/16 :goto_1
 
-    .line 433
     :pswitch_2
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getMessageFormat()I
 
@@ -400,7 +386,6 @@
 
     goto/16 :goto_1
 
-    .line 435
     :pswitch_3
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getSerialNumber()I
 
@@ -412,7 +397,6 @@
 
     goto/16 :goto_1
 
-    .line 437
     :pswitch_4
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getServiceCategory()I
 
@@ -424,7 +408,6 @@
 
     goto/16 :goto_1
 
-    .line 439
     :pswitch_5
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasMessageID()I
 
@@ -436,7 +419,6 @@
 
     goto/16 :goto_1
 
-    .line 441
     :pswitch_6
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasCertainty()I
 
@@ -448,7 +430,6 @@
 
     goto/16 :goto_1
 
-    .line 443
     :pswitch_7
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasUrgency()I
 
@@ -460,7 +441,6 @@
 
     goto/16 :goto_1
 
-    .line 445
     :pswitch_8
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasSeverity()I
 
@@ -472,7 +452,6 @@
 
     goto/16 :goto_1
 
-    .line 447
     :pswitch_9
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasResponseType()I
 
@@ -484,7 +463,6 @@
 
     goto/16 :goto_1
 
-    .line 449
     :pswitch_a
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasCategory()I
 
@@ -496,7 +474,6 @@
 
     goto/16 :goto_1
 
-    .line 451
     :pswitch_b
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasAlertHandling()I
 
@@ -508,7 +485,6 @@
 
     goto/16 :goto_1
 
-    .line 453
     :pswitch_c
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasMsgExpires()J
 
@@ -520,7 +496,6 @@
 
     goto/16 :goto_1
 
-    .line 455
     :pswitch_d
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasRecordTypeFirstExists()Z
 
@@ -532,7 +507,6 @@
 
     goto/16 :goto_1
 
-    .line 457
     :pswitch_e
     invoke-virtual {p0}, Landroid/telephony/SmsCbMessage;->getCmasRecordTypeSecondExists()Z
 
@@ -544,7 +518,6 @@
 
     goto/16 :goto_1
 
-    .line 427
     :sswitch_data_0
     .sparse-switch
         -0x760e8710 -> :sswitch_5
@@ -588,7 +561,6 @@
     .locals 1
 
     .prologue
-    .line 94
     sget-object v0, Lcom/samsung/android/telephony/SecSmsManager;->sInstance:Lcom/samsung/android/telephony/SecSmsManager;
 
     return-object v0
@@ -600,27 +572,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 176
     if-nez p1, :cond_0
 
-    .line 177
     const-string v1, "SecSmsManager"
 
     const-string v2, "context is null"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :cond_0
     invoke-static {p0, p1}, Lcom/android/internal/telephony/SmsApplication;->getSmsApplicationData(Ljava/lang/String;Landroid/content/Context;)Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
     move-result-object v0
 
-    .line 180
     .local v0, "smsdata":Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     if-eqz v0, :cond_1
 
-    .line 181
     const-string v1, "SecSmsManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -645,10 +612,8 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     iget-object v1, v0, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mApplicationName:Ljava/lang/String;
 
-    .line 184
     :goto_0
     return-object v1
 
@@ -663,14 +628,12 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 314
     const-string v0, "SecSmsManager"
 
     const-string v1, "SecSmsManager.getSmsManagerForSubscriber"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     invoke-static {p0, p1}, Landroid/telephony/SmsManager;->getSmsManagerForSubscriber(J)Landroid/telephony/SmsManager;
@@ -686,14 +649,12 @@
     .param p1, "format"    # Ljava/lang/String;
 
     .prologue
-    .line 378
     const-string v0, "SecSmsManager"
 
     const-string v1, "SecSmsManager.getSmsMessage"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     invoke-static {p0, p1}, Landroid/telephony/SmsMessage;->createFromPdu([BLjava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v0
@@ -707,7 +668,6 @@
     .param p1, "apiName"    # Ljava/lang/String;
 
     .prologue
-    .line 389
     const-string v0, "SecSmsManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -730,7 +690,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -743,20 +702,17 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 412
     const-string v0, "SecSmsManager"
 
     const-string v1, "NOT Supported API. Need to add API"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
     const-string v0, "NOT Supported API"
 
     :goto_1
     return-object v0
 
-    .line 390
     :sswitch_0
     const-string v1, "getCallbackNumber"
 
@@ -887,7 +843,6 @@
 
     goto :goto_0
 
-    .line 392
     :pswitch_0
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getCallbackNumber()Ljava/lang/String;
 
@@ -895,7 +850,6 @@
 
     goto :goto_1
 
-    .line 394
     :pswitch_1
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getlinkUrl()Ljava/lang/String;
 
@@ -903,7 +857,6 @@
 
     goto :goto_1
 
-    .line 396
     :pswitch_2
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getSharedAppId()Ljava/lang/String;
 
@@ -911,7 +864,6 @@
 
     goto :goto_1
 
-    .line 398
     :pswitch_3
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getSharedPayLoad()Ljava/lang/String;
 
@@ -919,7 +871,6 @@
 
     goto :goto_1
 
-    .line 400
     :pswitch_4
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getSharedCmd()Ljava/lang/String;
 
@@ -927,7 +878,6 @@
 
     goto :goto_1
 
-    .line 402
     :pswitch_5
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getTeleserviceId()I
 
@@ -939,7 +889,6 @@
 
     goto/16 :goto_1
 
-    .line 404
     :pswitch_6
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getMessagePriority()I
 
@@ -951,7 +900,6 @@
 
     goto/16 :goto_1
 
-    .line 406
     :pswitch_7
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getSafeMessageIndication()Z
 
@@ -963,7 +911,6 @@
 
     goto/16 :goto_1
 
-    .line 408
     :pswitch_8
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getDestPortAddr()I
 
@@ -975,7 +922,6 @@
 
     goto/16 :goto_1
 
-    .line 410
     :pswitch_9
     invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getReadConfirmId()I
 
@@ -987,7 +933,6 @@
 
     goto/16 :goto_1
 
-    .line 390
     :sswitch_data_0
     .sparse-switch
         -0x6faba189 -> :sswitch_9
@@ -1028,28 +973,24 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 353
     const-string v2, "SecSmsManager"
 
     const-string v3, "SecSmsManager.getTextEncoding"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     if-ne p4, v4, :cond_0
 
     invoke-static {p0, p1, p3}, Lcom/android/internal/telephony/cdma/SmsMessage;->calculateLengthWithEmail(Ljava/lang/CharSequence;ZI)Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;
 
     move-result-object v1
 
-    .line 357
     .local v1, "ted":Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;
     :goto_0
     const/4 v2, 0x6
 
     new-array v0, v2, [I
 
-    .line 358
     .local v0, "ret":[I
     const/4 v2, 0x0
 
@@ -1057,43 +998,36 @@
 
     aput v3, v0, v2
 
-    .line 359
     const/4 v2, 0x1
 
     iget v3, v1, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->codeUnitCount:I
 
     aput v3, v0, v2
 
-    .line 360
     iget v2, v1, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->codeUnitsRemaining:I
 
     aput v2, v0, v4
 
-    .line 361
     const/4 v2, 0x3
 
     iget v3, v1, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->codeUnitSize:I
 
     aput v3, v0, v2
 
-    .line 362
     const/4 v2, 0x4
 
     iget v3, v1, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->languageTable:I
 
     aput v3, v0, v2
 
-    .line 363
     const/4 v2, 0x5
 
     iget v3, v1, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->languageShiftTable:I
 
     aput v3, v0, v2
 
-    .line 364
     return-object v0
 
-    .line 354
     .end local v0    # "ret":[I
     .end local v1    # "ted":Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;
     :cond_0
@@ -1110,17 +1044,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 165
     const-string v0, "SecSmsManager"
 
     const-string v1, "setDefautApplication"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     invoke-static {p0, p1}, Lcom/android/internal/telephony/SmsApplication;->setDefaultApplication(Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 167
     return-void
 .end method
 
@@ -1135,14 +1066,12 @@
     .param p5, "date"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     const-string v0, "SecSmsManager"
 
     const-string v1, "MakeSimPdu"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1180,14 +1109,12 @@
     .end annotation
 
     .prologue
-    .line 112
     const-string v0, "SecSmsManager"
 
     const-string v1, "divideMessage"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1216,14 +1143,12 @@
     .end annotation
 
     .prologue
-    .line 124
     const-string v0, "SecSmsManager"
 
     const-string v1, "divideMessage with encoding type"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1239,14 +1164,12 @@
     .locals 2
 
     .prologue
-    .line 155
     const-string v0, "SecSmsManager"
 
     const-string v1, "getCbSettings"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1262,14 +1185,12 @@
     .locals 2
 
     .prologue
-    .line 206
     const-string v0, "SecSmsManager"
 
     const-string v1, "getSMSPAvailable"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1285,14 +1206,12 @@
     .locals 2
 
     .prologue
-    .line 195
     const-string v0, "SecSmsManager"
 
     const-string v1, "getSmsc"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1315,14 +1234,12 @@
     .param p7, "deliveryIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 244
     const-string v0, "SecSmsManager"
 
     const-string v1, "SecSmsManager.sendDataMessage"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1343,7 +1260,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/telephony/SmsManager;->sendDataMessage(Ljava/lang/String;Ljava/lang/String;SS[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    .line 247
     return-void
 .end method
 
@@ -1376,7 +1292,6 @@
     .end annotation
 
     .prologue
-    .line 256
     .local p3, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p4, "sentIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     .local p5, "deliveryIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
@@ -1386,7 +1301,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1407,7 +1321,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;I)V
 
-    .line 259
     return-void
 .end method
 
@@ -1440,7 +1353,6 @@
     .end annotation
 
     .prologue
-    .line 290
     .local p3, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p4, "sentIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     .local p5, "deliveryIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
@@ -1450,7 +1362,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1475,7 +1386,6 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;ZIII)V
 
-    .line 293
     return-void
 .end method
 
@@ -1509,7 +1419,6 @@
     .end annotation
 
     .prologue
-    .line 273
     .local p3, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p4, "sentIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     .local p5, "deliveryIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
@@ -1519,7 +1428,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1546,7 +1454,6 @@
 
     invoke-virtual/range {v0 .. v10}, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;ZIIII)V
 
-    .line 276
     return-void
 .end method
 
@@ -1574,7 +1481,6 @@
     .end annotation
 
     .prologue
-    .line 301
     .local p6, "sentIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     .local p7, "deliveryIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     const-string v0, "SecSmsManager"
@@ -1583,7 +1489,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -1604,6 +1509,5 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/telephony/SmsManager;->sendscptResultMessage(Ljava/lang/String;IIIILjava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 304
     return-void
 .end method

@@ -37,10 +37,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 44
     sput-boolean v0, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sQueriedTypeCocktail:Z
 
-    .line 46
     sput v0, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sCocktailFeature:I
 
     return-void
@@ -50,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,27 +60,21 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 54
     sget-boolean v1, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sQueriedTypeCocktail:Z
 
     if-nez v1, :cond_1
 
-    .line 55
     sput-boolean v2, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sQueriedTypeCocktail:Z
 
-    .line 56
     const/4 v0, 0x0
 
-    .line 57
     .local v0, "pm":Landroid/content/pm/PackageManager;
     if-eqz p0, :cond_0
 
-    .line 58
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 61
     :cond_0
     const/4 v1, 0x1
 
@@ -96,12 +87,10 @@
 
     sput v1, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sCocktailFeature:I
 
-    .line 63
     sget v1, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sCocktailFeature:I
 
     if-nez v1, :cond_1
 
-    .line 64
     const/4 v1, 0x2
 
     const-string v2, "com.sec.feature.cocktailpanel"
@@ -114,13 +103,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     .end local v0    # "pm":Landroid/content/pm/PackageManager;
     :cond_1
     :goto_0
     return-void
 
-    .line 67
     .restart local v0    # "pm":Landroid/content/pm/PackageManager;
     :catch_0
     move-exception v1
@@ -144,7 +131,6 @@
     .end annotation
 
     .prologue
-    .line 138
     const-class v6, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;
 
     monitor-enter v6
@@ -154,14 +140,12 @@
 
     if-nez v5, :cond_0
 
-    .line 139
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v5, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->mCategoryFilter:Ljava/util/ArrayList;
 
-    .line 140
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -172,11 +156,9 @@
 
     move-result-object v4
 
-    .line 142
     .local v4, "strings":[Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 143
     move-object v0, v4
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -191,18 +173,15 @@
 
     aget-object v3, v0, v1
 
-    .line 144
     .local v3, "string":Ljava/lang/String;
     sget-object v5, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->mCategoryFilter:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 143
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 149
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -217,7 +196,6 @@
 
     return-object v5
 
-    .line 138
     :catchall_0
     move-exception v5
 
@@ -232,15 +210,12 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     sget-object v0, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->mCategoryFilter:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 126
     invoke-static {p0}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->getCategroyFilters(Landroid/content/Context;)Ljava/util/ArrayList;
 
-    .line 129
     :cond_0
     sget-object v0, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->mCategoryFilter:Ljava/util/ArrayList;
 
@@ -258,11 +233,9 @@
 
     if-eqz v0, :cond_2
 
-    .line 130
     :cond_1
     const/4 v0, 0x1
 
-    .line 133
     :goto_0
     return v0
 
@@ -279,10 +252,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 93
     invoke-static {p0}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->ensureCocktailFeature(Landroid/content/Context;)V
 
-    .line 95
     sget v1, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sCocktailFeature:I
 
     if-ne v1, v0, :cond_0
@@ -303,10 +274,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 106
     invoke-static {p0}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->ensureCocktailFeature(Landroid/content/Context;)V
 
-    .line 108
     sget v1, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->sCocktailFeature:I
 
     if-eq v1, v0, :cond_0
@@ -334,7 +303,6 @@
     .end annotation
 
     .prologue
-    .line 120
     invoke-static {p0}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->isSupportCocktailBar(Landroid/content/Context;)Z
 
     move-result v0
@@ -351,14 +319,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 74
     const/4 v1, 0x0
 
-    .line 75
     .local v1, "result":I
     if-eqz p0, :cond_1
 
-    .line 76
     invoke-virtual {p0, p2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v3
@@ -367,23 +332,20 @@
 
     move v1, p1
 
-    .line 82
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 76
     goto :goto_0
 
-    .line 79
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "system/etc/permissions/"
+    const-string v4, "system/etc/permissions/"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -403,7 +365,6 @@
 
     move-result-object v0
 
-    .line 80
     .local v0, "fileName":Ljava/lang/String;
     new-instance v3, Ljava/io/File;
 

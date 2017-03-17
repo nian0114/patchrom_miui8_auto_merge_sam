@@ -24,13 +24,10 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 1758
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$ExpressionTarget;-><init>()V
 
-    .line 1759
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$StringTarget;->target:Ljava/lang/String;
 
-    .line 1760
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1767
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$StringTarget;->target:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->charAt(I)C
@@ -60,15 +56,12 @@
     .param p5, "partlen"    # I
 
     .prologue
-    .line 1780
     sub-int v0, p3, p2
 
     if-ge v0, p5, :cond_0
 
-    .line 1781
     const/4 v0, 0x0
 
-    .line 1783
     :goto_0
     return v0
 
@@ -93,7 +86,6 @@
 
     goto :goto_0
 
-    .line 1784
     :cond_1
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$StringTarget;->target:Ljava/lang/String;
 
@@ -117,12 +109,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1772
     sub-int v0, p3, p2
 
     if-ge v0, p5, :cond_0
 
-    .line 1775
     :goto_0
     return v4
 
@@ -163,9 +153,7 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 1763
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$StringTarget;->target:Ljava/lang/String;
 
-    .line 1764
     return-void
 .end method

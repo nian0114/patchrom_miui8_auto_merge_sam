@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3405
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 3409
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
     # getter for: Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;->mSafeLock:Ljava/lang/Object;
@@ -52,7 +50,6 @@
 
     monitor-enter v3
 
-    .line 3410
     :try_start_0
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
@@ -67,10 +64,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3411
     if-ne p3, v5, :cond_0
 
-    .line 3412
     :try_start_1
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
@@ -81,7 +76,6 @@
 
     invoke-virtual {v2, p2}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 3413
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
     # getter for: Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;->mFgActivities:Landroid/util/SparseBooleanArray;
@@ -93,34 +87,28 @@
 
     invoke-virtual {v2, p2, v5}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 3416
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 3417
     .local v0, "nowRtc":J
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
 
     invoke-virtual {v2, p2, v0, v1}, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;->ForegroundAppsCheckLocked(IJ)V
 
-    .line 3424
     .end local v0    # "nowRtc":J
     :goto_0
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3425
     :try_start_2
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 3426
     return-void
 
-    .line 3421
     :cond_0
     :try_start_3
     iget-object v2, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer$2;->this$2:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$TrafficAnalyzer;
@@ -134,7 +122,6 @@
 
     goto :goto_0
 
-    .line 3424
     :catchall_0
     move-exception v2
 
@@ -145,7 +132,6 @@
     :try_start_4
     throw v2
 
-    .line 3425
     :catchall_1
     move-exception v2
 
@@ -162,7 +148,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 3434
     return-void
 .end method
 
@@ -173,6 +158,5 @@
     .param p3, "procState"    # I
 
     .prologue
-    .line 3430
     return-void
 .end method

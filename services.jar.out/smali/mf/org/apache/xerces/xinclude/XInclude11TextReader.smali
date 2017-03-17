@@ -16,10 +16,8 @@
     .end annotation
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2, p3}, Lmf/org/apache/xerces/xinclude/XIncludeTextReader;-><init>(Lmf/org/apache/xerces/xni/parser/XMLInputSource;Lmf/org/apache/xerces/xinclude/XIncludeHandler;I)V
 
-    .line 51
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .param p1, "ch"    # I
 
     .prologue
-    .line 60
     invoke-static {p1}, Lmf/org/apache/xerces/util/XML11Char;->isXML11Valid(I)Z
 
     move-result v0

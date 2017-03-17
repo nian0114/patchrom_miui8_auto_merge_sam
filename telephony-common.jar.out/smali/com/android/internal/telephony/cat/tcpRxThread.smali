@@ -22,19 +22,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 450
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 376
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
-    .line 377
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->terminatedByException:Z
 
-    .line 451
     iput-object p1, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
-    .line 452
     return-void
 .end method
 
@@ -46,14 +41,12 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 381
     :cond_0
     :goto_0
     iget-boolean v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
     if-nez v5, :cond_6
 
-    .line 383
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
@@ -61,12 +54,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 384
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
-    .line 387
     :cond_1
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
@@ -84,12 +75,10 @@
 
     if-nez v5, :cond_5
 
-    .line 390
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     iget v4, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->bufferSize:I
 
-    .line 392
     .local v4, "size":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -111,10 +100,8 @@
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 394
     new-array v0, v4, [B
 
-    .line 396
     .local v0, "dataReceived":[B
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
@@ -124,7 +111,6 @@
 
     move-result v3
 
-    .line 397
     .local v3, "oneByte":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -146,12 +132,10 @@
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 398
     const/4 v5, -0x1
 
     if-eq v3, v5, :cond_3
 
-    .line 399
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     iget-object v5, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->rxBuf:Ljava/io/ByteArrayOutputStream;
@@ -160,7 +144,6 @@
 
     invoke-virtual {v5, v0, v6, v3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
-    .line 401
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     iget-object v5, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->mCatBIPManager:Lcom/android/internal/telephony/cat/CatBIPManager;
@@ -169,7 +152,6 @@
 
     invoke-virtual {v5, v6}, Lcom/android/internal/telephony/cat/CatBIPManager;->sendDataAvailableEvent(Lcom/android/internal/telephony/cat/CatBIPConnection;)V
 
-    .line 402
     const-string v5, "Read Data!!"
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
@@ -177,7 +159,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 439
     .end local v0    # "dataReceived":[B
     .end local v3    # "oneByte":I
     .end local v4    # "size":I
@@ -223,10 +204,8 @@
 
     if-eqz v5, :cond_0
 
-    .line 443
     iput-boolean v8, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
-    .line 444
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     iget-object v5, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->mCatBIPManager:Lcom/android/internal/telephony/cat/CatBIPManager;
@@ -235,7 +214,6 @@
 
     goto/16 :goto_0
 
-    .line 404
     .restart local v0    # "dataReceived":[B
     .restart local v3    # "oneByte":I
     .restart local v4    # "size":I
@@ -247,7 +225,6 @@
 
     iput-boolean v6, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->isLinkEstablished:Z
 
-    .line 405
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     iget-object v5, v5, Lcom/android/internal/telephony/cat/CatBIPConnection;->uiccTerminalIface:Lcom/android/internal/telephony/cat/TransportLevel;
@@ -258,14 +235,12 @@
 
     if-eqz v5, :cond_4
 
-    .line 406
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     const/4 v6, 0x5
 
     iput-byte v6, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->linkStateCause:B
 
-    .line 407
     iget-object v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->conn:Lcom/android/internal/telephony/cat/CatBIPClientConnection;
 
     iget-object v5, v5, Lcom/android/internal/telephony/cat/CatBIPClientConnection;->mCatBIPManager:Lcom/android/internal/telephony/cat/CatBIPManager;
@@ -274,13 +249,11 @@
 
     invoke-virtual {v5, v6}, Lcom/android/internal/telephony/cat/CatBIPManager;->sendChannelStatusEvent(Lcom/android/internal/telephony/cat/CatBIPConnection;)V
 
-    .line 409
     :cond_4
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
-    .line 410
     const-string v5, "Connection terminated by BIP Server"
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
@@ -290,14 +263,12 @@
 
     goto :goto_1
 
-    .line 421
     .end local v0    # "dataReceived":[B
     .end local v3    # "oneByte":I
     .end local v4    # "size":I
     :catch_0
     move-exception v1
 
-    .line 423
     .local v1, "e":Ljava/io/IOException;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -323,25 +294,20 @@
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 424
     iput-boolean v8, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->terminatedByException:Z
 
-    .line 425
     invoke-static {}, Ljava/lang/Thread;->yield()V
 
-    .line 426
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 427
     iput-boolean v8, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
     goto/16 :goto_1
 
-    .line 414
     .end local v1    # "e":Ljava/io/IOException;
     :cond_5
     const-wide/16 v6, 0x64
@@ -355,18 +321,15 @@
 
     goto/16 :goto_1
 
-    .line 415
     :catch_1
     move-exception v1
 
-    .line 416
     .local v1, "e":Ljava/lang/InterruptedException;
     :try_start_3
     const-string v5, "Interrupt Received!"
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 417
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
@@ -376,12 +339,10 @@
 
     goto/16 :goto_1
 
-    .line 429
     .end local v1    # "e":Ljava/lang/InterruptedException;
     :catch_2
     move-exception v2
 
-    .line 431
     .local v2, "ee":Ljava/lang/Exception;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -407,25 +368,20 @@
 
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 432
     iput-boolean v8, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->terminatedByException:Z
 
-    .line 433
     invoke-static {}, Ljava/lang/Thread;->yield()V
 
-    .line 434
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 435
     iput-boolean v8, p0, Lcom/android/internal/telephony/cat/tcpRxThread;->stopRequestTCP:Z
 
     goto/16 :goto_1
 
-    .line 448
     .end local v2    # "ee":Ljava/lang/Exception;
     :cond_6
     return-void

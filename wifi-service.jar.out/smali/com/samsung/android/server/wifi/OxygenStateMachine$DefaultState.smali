@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/samsung/android/server/wifi/OxygenStateMachine$DefaultState;->this$0:Lcom/samsung/android/server/wifi/OxygenStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 176
     # getter for: Lcom/samsung/android/server/wifi/OxygenStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/OxygenStateMachine;->access$000()Z
 
@@ -80,13 +78,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 195
     :pswitch_0
     const-string v0, "OxygenStateMachine"
 
@@ -110,13 +106,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     :pswitch_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 177
     nop
 
     :pswitch_data_0

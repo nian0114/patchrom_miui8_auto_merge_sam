@@ -21,10 +21,8 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p1, "x0"    # Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler$1;
 
     .prologue
-    .line 13
     invoke-direct {p0}, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;-><init>()V
 
     return-void
@@ -44,15 +41,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 45
     sget-object v0, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 46
     sput-object p0, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;->mContext:Landroid/content/Context;
 
-    .line 47
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler$InstanceHolder;->INSTANCE:Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;
 
@@ -67,12 +61,10 @@
     .param p2, "isTwoPass"    # Z
 
     .prologue
-    .line 16
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;-><init>()V
 
-    .line 17
     .local v0, "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->generateSessionId()Ljava/lang/String;
 
@@ -80,23 +72,18 @@
 
     iput-object v1, v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mSessionId:Ljava/lang/String;
 
-    .line 18
     iput-object p1, v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
-    .line 19
     const/16 v1, 0x350
 
     iput v1, v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mCurrStep:I
 
-    .line 20
     if-eqz p2, :cond_0
 
-    .line 21
     const/16 v1, 0x353
 
     iput v1, v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
 
-    .line 24
     :goto_0
     sget-object v1, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;->mContext:Landroid/content/Context;
 
@@ -110,7 +97,6 @@
 
     return-object v1
 
-    .line 23
     :cond_0
     const/16 v1, 0x352
 
@@ -124,7 +110,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 35
     sget-object v0, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -144,19 +129,15 @@
     .param p2, "step"    # I
 
     .prologue
-    .line 28
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;-><init>()V
 
-    .line 29
     .local v0, "data":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     iput-object p1, v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
-    .line 30
     iput p2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
 
-    .line 31
     sget-object v1, Lcom/android/server/enterprise/otp/engine/handler/proto/dskpp/DSKPPSessionHandler;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;

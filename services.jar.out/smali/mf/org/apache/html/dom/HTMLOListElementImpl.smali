@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "compact"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLOListElementImpl;->getBinary(Ljava/lang/String;)Z
@@ -44,8 +41,7 @@
     .locals 1
 
     .prologue
-    .line 49
-    const-string/jumbo v0, "start"
+    const-string v0, "start"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLOListElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -62,8 +58,7 @@
     .locals 1
 
     .prologue
-    .line 61
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLOListElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -77,12 +72,10 @@
     .param p1, "compact"    # Z
 
     .prologue
-    .line 43
     const-string v0, "compact"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLOListElementImpl;->setAttribute(Ljava/lang/String;Z)V
 
-    .line 44
     return-void
 .end method
 
@@ -91,8 +84,7 @@
     .param p1, "start"    # I
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "start"
+    const-string v0, "start"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -100,7 +92,6 @@
 
     invoke-virtual {p0, v0, v1}, Lmf/org/apache/html/dom/HTMLOListElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -109,11 +100,9 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLOListElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

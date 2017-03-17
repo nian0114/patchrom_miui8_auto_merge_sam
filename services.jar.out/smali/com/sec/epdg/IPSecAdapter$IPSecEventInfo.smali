@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1903
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p1, "x0"    # Lcom/sec/epdg/IPSecAdapter$1;
 
     .prologue
-    .line 1903
     invoke-direct {p0}, Lcom/sec/epdg/IPSecAdapter$IPSecEventInfo;-><init>()V
 
     return-void

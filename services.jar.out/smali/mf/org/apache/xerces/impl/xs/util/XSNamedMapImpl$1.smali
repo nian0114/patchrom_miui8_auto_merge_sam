@@ -27,14 +27,12 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1;->this$0:Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl;
 
     iput p2, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1;->val$length:I
 
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1;->val$entries:[Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;
 
-    .line 235
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     return-void
@@ -46,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 237
     new-instance v0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1$1;
 
     iget v1, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1;->val$length:I
@@ -62,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 254
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/util/XSNamedMapImpl$1;->val$length:I
 
     return v0

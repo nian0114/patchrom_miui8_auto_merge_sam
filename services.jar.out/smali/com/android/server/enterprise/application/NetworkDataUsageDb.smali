@@ -29,18 +29,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->mContext:Landroid/content/Context;
 
-    .line 118
     iput-object p1, p0, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->mContext:Landroid/content/Context;
 
-    .line 120
     return-void
 .end method
 
@@ -49,17 +45,15 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 417
     :try_start_0
     const-string v1, " (_id integer primary key , mobiledatausagercv long, wifidatausagesendrcv long, mobiledatausagesend long, wifidatausagesend long );"
 
-    .line 427
     .local v1, "s":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "create table NetworkDataUsage"
+    const-string v3, "create table NetworkDataUsage"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,7 +69,6 @@
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 429
     const-string v2, "NetworkDataUsageDb"
 
     const-string v3, "::createDmAppMgrTable: Table is Created "
@@ -84,16 +77,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 437
     .end local v1    # "s":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 431
     :catch_0
     move-exception v0
 
-    .line 433
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "NetworkDataUsageDb"
 
@@ -109,14 +99,11 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 383
     const/4 v0, 0x0
 
-    .line 385
     .local v0, "dmappmgrDB":Landroid/database/sqlite/SQLiteDatabase;
-    const-string/jumbo v1, "dmappmgr.db"
+    const-string v1, "dmappmgr.db"
 
-    .line 389
     .local v1, "dmappmgrDBPath":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -127,7 +114,6 @@
 
     move-result-object v0
 
-    .line 393
     const-string v3, "NetworkDataUsageDb"
 
     const-string v4, "::getAppControlDB: DB is Created "
@@ -136,7 +122,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 401
     :goto_0
     if-eqz v0, :cond_0
 
@@ -148,18 +133,14 @@
 
     if-nez v3, :cond_0
 
-    .line 403
     invoke-static {v0}, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->createDmAppMgrTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 407
     :cond_0
     return-object v0
 
-    .line 395
     :catch_0
     move-exception v2
 
-    .line 397
     .local v2, "e":Ljava/lang/Exception;
     const-string v3, "NetworkDataUsageDb"
 
@@ -176,10 +157,8 @@
     .param p1, "table"    # Ljava/lang/String;
 
     .prologue
-    .line 443
     const/4 v1, 0x0
 
-    .line 445
     .local v1, "exists":Z
     if-eqz p0, :cond_0
 
@@ -195,7 +174,6 @@
 
     if-lez v2, :cond_0
 
-    .line 449
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -223,10 +201,8 @@
 
     invoke-virtual {p0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 451
     const/4 v1, 0x1
 
-    .line 453
     const-string v2, "NetworkDataUsageDb"
 
     const-string v3, "::isTableExists: Table exists "
@@ -235,20 +211,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 465
     :cond_0
     :goto_0
     return v1
 
-    .line 455
     :catch_0
     move-exception v0
 
-    .line 457
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
-    .line 459
     const-string v2, "NetworkDataUsageDb"
 
     const-string v3, "::isTableExists:Table Does not exists "
@@ -276,18 +248,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 289
     const/4 v8, 0x0
 
-    .line 291
     .local v8, "cursor":Landroid/database/Cursor;
     const/4 v0, 0x0
 
-    .line 293
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v10, 0x0
 
-    .line 299
     .local v10, "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->mContext:Landroid/content/Context;
@@ -299,28 +267,21 @@
 
     move-result-object v0
 
-    .line 301
     if-nez v0, :cond_2
 
-    .line 359
     if-eqz v8, :cond_0
 
-    .line 361
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 363
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 365
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 373
     :cond_1
     :goto_0
     return-object v1
 
-    .line 307
     :cond_2
     :try_start_1
     const-string v1, "NetworkDataUsage"
@@ -341,10 +302,8 @@
 
     move-result-object v8
 
-    .line 311
     if-eqz v8, :cond_5
 
-    .line 313
     new-instance v11, Ljava/util/Hashtable;
 
     invoke-direct {v11}, Ljava/util/Hashtable;-><init>()V
@@ -352,7 +311,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 315
     .end local v10    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     .local v11, "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     :try_start_2
@@ -362,13 +320,11 @@
 
     if-eqz v1, :cond_4
 
-    .line 319
     :cond_3
     new-instance v12, Landroid/app/enterprise/NetworkStats;
 
     invoke-direct {v12}, Landroid/app/enterprise/NetworkStats;-><init>()V
 
-    .line 321
     .local v12, "networkStats":Landroid/app/enterprise/NetworkStats;
     const-string v1, "_id"
 
@@ -382,8 +338,7 @@
 
     iput v1, v12, Landroid/app/enterprise/NetworkStats;->uid:I
 
-    .line 325
-    const-string/jumbo v1, "mobiledatausagesend"
+    const-string v1, "mobiledatausagesend"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -395,8 +350,7 @@
 
     iput-wide v2, v12, Landroid/app/enterprise/NetworkStats;->mobileTxBytes:J
 
-    .line 329
-    const-string/jumbo v1, "mobiledatausagercv"
+    const-string v1, "mobiledatausagercv"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -408,8 +362,7 @@
 
     iput-wide v2, v12, Landroid/app/enterprise/NetworkStats;->mobileRxBytes:J
 
-    .line 333
-    const-string/jumbo v1, "wifidatausagesend"
+    const-string v1, "wifidatausagesend"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -421,8 +374,7 @@
 
     iput-wide v2, v12, Landroid/app/enterprise/NetworkStats;->wifiTxBytes:J
 
-    .line 337
-    const-string/jumbo v1, "wifidatausagesendrcv"
+    const-string v1, "wifidatausagesendrcv"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -434,7 +386,6 @@
 
     iput-wide v2, v12, Landroid/app/enterprise/NetworkStats;->wifiRxBytes:J
 
-    .line 341
     const-string v1, "_id"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -451,7 +402,6 @@
 
     invoke-virtual {v11, v1, v12}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 345
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -465,34 +415,27 @@
     :cond_4
     move-object v10, v11
 
-    .line 359
     .end local v11    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     .restart local v10    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     :cond_5
     if-eqz v8, :cond_6
 
-    .line 361
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 363
     :cond_6
     if-eqz v0, :cond_7
 
-    .line 365
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_7
     :goto_1
     move-object v1, v10
 
-    .line 373
     goto/16 :goto_0
 
-    .line 351
     :catch_0
     move-exception v9
 
-    .line 353
     .local v9, "e":Ljava/lang/Exception;
     :goto_2
     :try_start_3
@@ -502,7 +445,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "getMobileDataUsage "
+    const-string v3, "getMobileDataUsage "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -520,22 +463,17 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 359
     if-eqz v8, :cond_8
 
-    .line 361
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 363
     :cond_8
     if-eqz v0, :cond_7
 
-    .line 365
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     goto :goto_1
 
-    .line 359
     .end local v9    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -543,20 +481,16 @@
     :goto_3
     if-eqz v8, :cond_9
 
-    .line 361
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 363
     :cond_9
     if-eqz v0, :cond_a
 
-    .line 365
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_a
     throw v1
 
-    .line 359
     .end local v10    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     .restart local v11    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     :catchall_1
@@ -568,7 +502,6 @@
     .restart local v10    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     goto :goto_3
 
-    .line 351
     .end local v10    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     .restart local v11    # "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     :catch_1
@@ -595,19 +528,15 @@
     .end annotation
 
     .prologue
-    .line 128
     .local p1, "map":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/Integer;Landroid/app/enterprise/NetworkStats;>;"
     const/16 v17, 0x0
 
-    .line 130
     .local v17, "success":Z
     const/4 v6, 0x0
 
-    .line 132
     .local v6, "cursor":Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 136
     .local v7, "db":Landroid/database/sqlite/SQLiteDatabase;
     :try_start_0
     move-object/from16 v0, p0
@@ -620,18 +549,15 @@
 
     move-result-object v7
 
-    .line 138
     if-nez v7, :cond_0
 
     move/from16 v18, v17
 
-    .line 281
     .end local v17    # "success":Z
     .local v18, "success":I
     :goto_0
     return v18
 
-    .line 144
     .end local v18    # "success":I
     .restart local v17    # "success":Z
     :cond_0
@@ -643,12 +569,10 @@
 
     if-nez v26, :cond_3
 
-    .line 146
     invoke-virtual/range {p1 .. p1}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
 
     move-result-object v11
 
-    .line 150
     .local v11, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-interface {v11}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -671,7 +595,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 154
     .local v10, "key":Ljava/lang/Integer;
     :try_start_1
     move-object/from16 v0, p1
@@ -682,7 +605,6 @@
 
     check-cast v16, Landroid/app/enterprise/NetworkStats;
 
-    .line 156
     .local v16, "networkStats":Landroid/app/enterprise/NetworkStats;
     new-instance v26, Ljava/lang/StringBuilder;
 
@@ -720,21 +642,18 @@
 
     move-result-object v6
 
-    .line 162
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v26
 
     if-eqz v26, :cond_5
 
-    .line 164
     new-instance v19, Landroid/content/ContentValues;
 
     invoke-direct/range {v19 .. v19}, Landroid/content/ContentValues;-><init>()V
 
-    .line 168
     .local v19, "values":Landroid/content/ContentValues;
-    const-string/jumbo v26, "mobiledatausagesend"
+    const-string v26, "mobiledatausagesend"
 
     move-object/from16 v0, v26
 
@@ -748,7 +667,6 @@
 
     move-result-wide v14
 
-    .line 172
     .local v14, "mobileSendDataUsageInDb":J
     move-object/from16 v0, v16
 
@@ -758,9 +676,8 @@
 
     add-long v20, v26, v14
 
-    .line 174
     .local v20, "value":J
-    const-string/jumbo v26, "mobiledatausagesend"
+    const-string v26, "mobiledatausagesend"
 
     invoke-static/range {v20 .. v21}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -774,8 +691,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 178
-    const-string/jumbo v26, "mobiledatausagercv"
+    const-string v26, "mobiledatausagercv"
 
     move-object/from16 v0, v26
 
@@ -789,7 +705,6 @@
 
     move-result-wide v12
 
-    .line 182
     .local v12, "mobileRcvDataUsageInDb":J
     move-object/from16 v0, v16
 
@@ -799,8 +714,7 @@
 
     add-long v20, v26, v12
 
-    .line 184
-    const-string/jumbo v26, "mobiledatausagercv"
+    const-string v26, "mobiledatausagercv"
 
     invoke-static/range {v20 .. v21}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -814,8 +728,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 188
-    const-string/jumbo v26, "wifidatausagesend"
+    const-string v26, "wifidatausagesend"
 
     move-object/from16 v0, v26
 
@@ -829,7 +742,6 @@
 
     move-result-wide v24
 
-    .line 192
     .local v24, "wifiSendDataUsageInDb":J
     move-object/from16 v0, v16
 
@@ -839,8 +751,7 @@
 
     add-long v20, v26, v24
 
-    .line 194
-    const-string/jumbo v26, "wifidatausagesend"
+    const-string v26, "wifidatausagesend"
 
     invoke-static/range {v20 .. v21}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -854,8 +765,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 198
-    const-string/jumbo v26, "wifidatausagesendrcv"
+    const-string v26, "wifidatausagesendrcv"
 
     move-object/from16 v0, v26
 
@@ -869,7 +779,6 @@
 
     move-result-wide v22
 
-    .line 202
     .local v22, "wifiRcvDataUsageInDb":J
     move-object/from16 v0, v16
 
@@ -879,8 +788,7 @@
 
     add-long v20, v26, v22
 
-    .line 204
-    const-string/jumbo v26, "wifidatausagesendrcv"
+    const-string v26, "wifidatausagesendrcv"
 
     invoke-static/range {v20 .. v21}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -894,7 +802,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 208
     const-string v26, "NetworkDataUsage"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -940,14 +847,11 @@
 
     move-result v4
 
-    .line 212
     .local v4, "count":I
     if-lez v4, :cond_2
 
-    .line 214
     const/16 v17, 0x1
 
-    .line 256
     .end local v4    # "count":I
     .end local v12    # "mobileRcvDataUsageInDb":J
     .end local v14    # "mobileSendDataUsageInDb":J
@@ -958,7 +862,6 @@
     :goto_2
     if-eqz v6, :cond_1
 
-    .line 257
     :try_start_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -966,7 +869,6 @@
 
     goto/16 :goto_1
 
-    .line 269
     .end local v9    # "i$":Ljava/util/Iterator;
     .end local v10    # "key":Ljava/lang/Integer;
     .end local v11    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
@@ -975,26 +877,21 @@
     :catch_0
     move-exception v8
 
-    .line 271
     .local v8, "e":Ljava/lang/Exception;
     const/16 v17, 0x0
 
-    .line 275
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_3
     if-eqz v7, :cond_4
 
-    .line 277
     invoke-virtual {v7}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_4
     move/from16 v18, v17
 
-    .line 281
     .restart local v18    # "success":I
     goto/16 :goto_0
 
-    .line 222
     .end local v18    # "success":I
     .restart local v9    # "i$":Ljava/util/Iterator;
     .restart local v10    # "key":Ljava/lang/Integer;
@@ -1006,7 +903,6 @@
 
     invoke-direct/range {v19 .. v19}, Landroid/content/ContentValues;-><init>()V
 
-    .line 224
     .restart local v19    # "values":Landroid/content/ContentValues;
     const-string v26, "_id"
 
@@ -1016,8 +912,7 @@
 
     invoke-virtual {v0, v1, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 226
-    const-string/jumbo v26, "mobiledatausagesend"
+    const-string v26, "mobiledatausagesend"
 
     move-object/from16 v0, v16
 
@@ -1037,8 +932,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 230
-    const-string/jumbo v26, "mobiledatausagercv"
+    const-string v26, "mobiledatausagercv"
 
     move-object/from16 v0, v16
 
@@ -1058,8 +952,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 234
-    const-string/jumbo v26, "wifidatausagesend"
+    const-string v26, "wifidatausagesend"
 
     move-object/from16 v0, v16
 
@@ -1079,8 +972,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 238
-    const-string/jumbo v26, "wifidatausagesendrcv"
+    const-string v26, "wifidatausagesendrcv"
 
     move-object/from16 v0, v16
 
@@ -1100,7 +992,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 242
     const-string v26, "NetworkDataUsage"
 
     const/16 v27, 0x0
@@ -1118,7 +1009,6 @@
 
     move-result-wide v4
 
-    .line 244
     .local v4, "count":J
     const-wide/16 v26, 0x0
 
@@ -1126,19 +1016,16 @@
 
     if-gez v26, :cond_2
 
-    .line 246
     const/16 v17, 0x1
 
     goto/16 :goto_2
 
-    .line 253
     .end local v4    # "count":J
     .end local v16    # "networkStats":Landroid/app/enterprise/NetworkStats;
     .end local v19    # "values":Landroid/content/ContentValues;
     :catch_1
     move-exception v8
 
-    .line 254
     .restart local v8    # "e":Ljava/lang/Exception;
     :try_start_4
     const-string v26, "NetworkDataUsageDb"
@@ -1147,7 +1034,7 @@
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v28, "exception occurred "
+    const-string v28, "exception occurred "
 
     invoke-virtual/range {v27 .. v28}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1169,23 +1056,19 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 256
     if-eqz v6, :cond_1
 
-    .line 257
     :try_start_5
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_1
 
-    .line 256
     .end local v8    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v26
 
     if-eqz v6, :cond_6
 
-    .line 257
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_6

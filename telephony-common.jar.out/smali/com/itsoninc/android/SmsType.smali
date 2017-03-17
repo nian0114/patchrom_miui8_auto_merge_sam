@@ -35,7 +35,6 @@
 
     const/4 v2, 0x0
 
-    .line 4
     new-instance v0, Lcom/itsoninc/android/SmsType;
 
     const-string v1, "SMS"
@@ -44,7 +43,6 @@
 
     sput-object v0, Lcom/itsoninc/android/SmsType;->SMS:Lcom/itsoninc/android/SmsType;
 
-    .line 5
     new-instance v0, Lcom/itsoninc/android/SmsType;
 
     const-string v1, "VMI"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/itsoninc/android/SmsType;->VMI:Lcom/itsoninc/android/SmsType;
 
-    .line 6
     new-instance v0, Lcom/itsoninc/android/SmsType;
 
     const-string v1, "WAP_PUSH"
@@ -62,7 +59,6 @@
 
     sput-object v0, Lcom/itsoninc/android/SmsType;->WAP_PUSH:Lcom/itsoninc/android/SmsType;
 
-    .line 3
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/itsoninc/android/SmsType;
@@ -93,7 +89,6 @@
     .end annotation
 
     .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -104,7 +99,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/itsoninc/android/SmsType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -120,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/itsoninc/android/SmsType;->$VALUES:[Lcom/itsoninc/android/SmsType;
 
     invoke-virtual {v0}, [Lcom/itsoninc/android/SmsType;->clone()Ljava/lang/Object;

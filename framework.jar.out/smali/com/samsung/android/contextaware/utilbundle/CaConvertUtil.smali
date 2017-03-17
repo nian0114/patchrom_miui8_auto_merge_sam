@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,33 +18,27 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 191
     if-eqz p0, :cond_0
 
     array-length v5, p0
 
     if-gtz v5, :cond_1
 
-    .line 192
     :cond_0
     const-string v5, "Data is null"
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 193
     const/4 v5, 0x0
 
-    .line 204
     :goto_0
     return-object v5
 
-    .line 196
     :cond_1
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 197
     .local v4, "str":Ljava/lang/StringBuffer;
     move-object v0, p0
 
@@ -61,7 +54,6 @@
 
     aget-byte v2, v0, v1
 
-    .line 198
     .local v2, "k":B
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -83,12 +75,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 197
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 200
     .end local v2    # "k":B
     :cond_2
     invoke-virtual {v4}, Ljava/lang/StringBuffer;->length()I
@@ -99,7 +89,6 @@
 
     if-le v5, v6, :cond_3
 
-    .line 201
     invoke-virtual {v4}, Ljava/lang/StringBuffer;->length()I
 
     move-result v5
@@ -112,7 +101,6 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
 
-    .line 204
     :cond_3
     invoke-virtual {v4}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -126,19 +114,15 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 257
     move v0, p0
 
-    .line 258
     .local v0, "complete":I
     if-gez p0, :cond_0
 
-    .line 259
     add-int/lit16 v1, p0, 0xff
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 261
     :cond_0
     return v0
 .end method
@@ -149,23 +133,18 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 163
     const/4 v4, 0x4
 
     if-le p1, v4, :cond_1
 
-    .line 164
     const/4 v3, 0x0
 
-    .line 180
     :cond_0
     return-object v3
 
-    .line 167
     :cond_1
     new-array v0, p1, [B
 
-    .line 169
     .local v0, "bytes":[B
     const/4 v1, 0x0
 
@@ -173,7 +152,6 @@
     :goto_0
     if-ge v1, p1, :cond_2
 
-    .line 170
     mul-int/lit8 v4, v1, 0x8
 
     shr-int v4, p0, v4
@@ -184,20 +162,16 @@
 
     aput-byte v4, v0, v1
 
-    .line 169
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 173
     :cond_2
     new-array v3, p1, [B
 
-    .line 174
     .local v3, "result":[B
     array-length v2, v0
 
-    .line 176
     .local v2, "len":I
     const/4 v1, 0x0
 
@@ -206,14 +180,12 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 177
     add-int/lit8 v2, v2, -0x1
 
     aget-byte v4, v0, v2
 
     aput-byte v4, v3, v1
 
-    .line 176
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -226,20 +198,16 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 134
     if-nez p0, :cond_0
 
     move-wide v2, v4
 
-    .line 150
     :goto_0
     return-wide v2
 
-    .line 138
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 141
     .local v2, "resultDouble":D
     :try_start_0
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -251,31 +219,25 @@
 
     goto :goto_0
 
-    .line 142
     :catch_0
     move-exception v0
 
-    .line 143
     .local v0, "e":Ljava/lang/NumberFormatException;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move-wide v2, v4
 
-    .line 144
     goto :goto_0
 
-    .line 145
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v0
 
-    .line 146
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move-wide v2, v4
 
-    .line 147
     goto :goto_0
 .end method
 
@@ -286,20 +248,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 68
     if-nez p0, :cond_0
 
     move v4, v5
 
-    .line 92
     :goto_0
     return v4
 
-    .line 72
     :cond_0
     const/4 v4, 0x0
 
-    .line 75
     .local v4, "resultFloat":F
     :try_start_0
     const-string v6, "/"
@@ -310,14 +268,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 76
     const/16 v6, 0x2f
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
-    .line 77
     .local v2, "index":I
     const/4 v6, 0x0
 
@@ -329,7 +285,6 @@
 
     move-result v3
 
-    .line 78
     .local v3, "numerator":I
     add-int/lit8 v6, v2, 0x1
 
@@ -341,7 +296,6 @@
 
     move-result v0
 
-    .line 80
     .local v0, "denominator":I
     int-to-float v5, v3
 
@@ -349,10 +303,8 @@
 
     div-float v4, v5, v6
 
-    .line 81
     goto :goto_0
 
-    .line 82
     .end local v0    # "denominator":I
     .end local v2    # "index":I
     .end local v3    # "numerator":I
@@ -366,31 +318,25 @@
 
     goto :goto_0
 
-    .line 84
     :catch_0
     move-exception v1
 
-    .line 85
     .local v1, "e":Ljava/lang/NumberFormatException;
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move v4, v5
 
-    .line 86
     goto :goto_0
 
-    .line 87
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v1
 
-    .line 88
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move v4, v5
 
-    .line 89
     goto :goto_0
 .end method
 
@@ -401,20 +347,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 34
     if-nez p0, :cond_0
 
     move v3, v4
 
-    .line 57
     :goto_0
     return v3
 
-    .line 38
     :cond_0
     const/4 v3, 0x0
 
-    .line 40
     .local v3, "resultInt":I
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -429,14 +371,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 41
     const/4 v5, 0x2
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 42
     .local v2, "hexValue":Ljava/lang/String;
     const/16 v5, 0x10
 
@@ -444,7 +384,6 @@
 
     move-result v3
 
-    .line 43
     goto :goto_0
 
     .end local v2    # "hexValue":Ljava/lang/String;
@@ -457,7 +396,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 44
     const/4 v5, 0x0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -470,7 +408,6 @@
 
     move-result-object v0
 
-    .line 45
     .local v0, "binValue":Ljava/lang/String;
     const/4 v5, 0x2
 
@@ -478,10 +415,8 @@
 
     move-result v3
 
-    .line 46
     goto :goto_0
 
-    .line 47
     .end local v0    # "binValue":Ljava/lang/String;
     :cond_2
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -493,31 +428,25 @@
 
     goto :goto_0
 
-    .line 49
     :catch_0
     move-exception v1
 
-    .line 50
     .local v1, "e":Ljava/lang/NumberFormatException;
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move v3, v4
 
-    .line 51
     goto :goto_0
 
-    .line 52
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v1
 
-    .line 53
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move v3, v4
 
-    .line 54
     goto :goto_0
 .end method
 
@@ -528,20 +457,16 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 103
     if-nez p0, :cond_0
 
     move-wide v2, v4
 
-    .line 123
     :goto_0
     return-wide v2
 
-    .line 107
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 109
     .local v2, "resultLong":J
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -556,14 +481,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 110
     const/4 v6, 0x2
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 111
     .local v1, "hexValue":Ljava/lang/String;
     const/16 v6, 0x10
 
@@ -571,10 +494,8 @@
 
     move-result-wide v2
 
-    .line 112
     goto :goto_0
 
-    .line 113
     .end local v1    # "hexValue":Ljava/lang/String;
     :cond_1
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -586,31 +507,25 @@
 
     goto :goto_0
 
-    .line 115
     :catch_0
     move-exception v0
 
-    .line 116
     .local v0, "e":Ljava/lang/NumberFormatException;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move-wide v2, v4
 
-    .line 117
     goto :goto_0
 
-    .line 118
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v0
 
-    .line 119
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move-wide v2, v4
 
-    .line 120
     goto :goto_0
 .end method
 
@@ -623,7 +538,6 @@
 
     const/16 v9, 0x2c
 
-    .line 215
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
@@ -632,33 +546,26 @@
 
     if-eqz v7, :cond_2
 
-    .line 216
     :cond_0
     const/4 v0, 0x0
 
-    .line 246
     :cond_1
     return-object v0
 
-    .line 219
     :cond_2
     const/4 v6, 0x0
 
-    .line 220
     .local v6, "startIdx":I
     const/4 v1, 0x0
 
-    .line 222
     .local v1, "endIdx":I
     const/4 v3, 0x0
 
-    .line 223
     .local v3, "len":I
     invoke-virtual {p0, v9, v6}, Ljava/lang/String;->indexOf(II)I
 
     move-result v1
 
-    .line 224
     :cond_3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -666,35 +573,26 @@
 
     if-gt v1, v7, :cond_4
 
-    .line 225
     add-int/lit8 v6, v1, 0x1
 
-    .line 226
     add-int/lit8 v3, v3, 0x1
 
-    .line 227
     invoke-virtual {p0, v9, v6}, Ljava/lang/String;->indexOf(II)I
 
     move-result v1
 
-    .line 228
     if-gez v1, :cond_3
 
-    .line 233
     :cond_4
     new-array v0, v3, [B
 
-    .line 234
     .local v0, "arr":[B
     const/4 v6, 0x0
 
-    .line 235
     const/4 v1, 0x0
 
-    .line 236
     const/4 v4, 0x0
 
-    .line 238
     .local v4, "size":I
     const/4 v2, 0x0
 
@@ -706,12 +604,10 @@
     :goto_0
     if-ge v2, v3, :cond_1
 
-    .line 239
     invoke-virtual {p0, v9, v6}, Ljava/lang/String;->indexOf(II)I
 
     move-result v1
 
-    .line 240
     invoke-virtual {p0, v6, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v7
@@ -732,10 +628,8 @@
     .restart local v4    # "size":I
     invoke-static {v7, v8, v0, v5, v10}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 243
     add-int/lit8 v6, v1, 0x2
 
-    .line 238
     add-int/lit8 v2, v2, 0x1
 
     move v5, v4

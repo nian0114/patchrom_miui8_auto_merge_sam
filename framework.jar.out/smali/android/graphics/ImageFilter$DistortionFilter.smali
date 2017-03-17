@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 1923
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform float filterParams[16];\nvoid main(void) {\n   vec2 xy = 2.0 * outTexCoords.xy - 1.0;\n   vec2 uv;\n   float d = length(xy);\n   if ( d < 1.0 ) {\n       float theta = atan(xy.y, xy.x);\n       float radius = length(xy);\n       radius = pow(radius, filterParams[0]+1.0);\n       xy.x = radius * cos(theta);\n       xy.y = radius * sin(theta);\n       uv = 0.5 * (xy + 1.0);\n   } else {\n       uv = outTexCoords.xy;\n   }\n   gl_FragColor = texture2D(baseSampler, uv);\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$DistortionFilter;->mFragmentShaderCode:Ljava/lang/String;
@@ -43,19 +42,16 @@
     .locals 2
 
     .prologue
-    .line 1953
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     sget-object v1, Landroid/graphics/ImageFilter$DistortionFilter;->mFragmentShaderCode:Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1948
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 
-    .line 1954
     return-void
 .end method
 
@@ -70,24 +66,20 @@
 
     const/4 v1, 0x0
 
-    .line 1965
     iget v0, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 1967
     iget v0, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 
     cmpl-float v0, v0, v2
 
     if-lez v0, :cond_1
 
-    .line 1968
     iput v2, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 
-    .line 1974
     :goto_0
     const/4 v0, 0x0
 
@@ -95,14 +87,11 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$DistortionFilter;->setParam(IF)V
 
-    .line 1975
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DistortionFilter;->notifyWorkerFilters()V
 
-    .line 1977
     :cond_0
     return-void
 
-    .line 1969
     :cond_1
     iget v0, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 
@@ -110,12 +99,10 @@
 
     if-gez v0, :cond_2
 
-    .line 1970
     iput v1, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 
     goto :goto_0
 
-    .line 1972
     :cond_2
     iput p1, p0, Landroid/graphics/ImageFilter$DistortionFilter;->mRadius:F
 

@@ -30,30 +30,25 @@
     .locals 2
 
     .prologue
-    .line 36
     const/4 v1, 0x0
 
     sput-object v1, Lcom/android/server/DLPManagerService;->sContext:Landroid/content/Context;
 
-    .line 42
     :try_start_0
-    const-string/jumbo v1, "dlp_sdk"
+    const-string v1, "dlp_sdk"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 46
     .local v0, "ule":Ljava/lang/UnsatisfiedLinkError;
     :goto_0
     return-void
 
-    .line 43
     .end local v0    # "ule":Ljava/lang/UnsatisfiedLinkError;
     :catch_0
     move-exception v0
 
-    .line 44
     .restart local v0    # "ule":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -67,19 +62,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 49
     invoke-direct {p0}, Landroid/content/IDLPManager$Stub;-><init>()V
 
-    .line 33
     iput-object v0, p0, Lcom/android/server/DLPManagerService;->mDLPHandler:Lcom/android/server/DLPManagerService$DLPHandler;
 
-    .line 34
     iput-object v0, p0, Lcom/android/server/DLPManagerService;->handlerThread:Landroid/os/HandlerThread;
 
-    .line 50
     sput-object p1, Lcom/android/server/DLPManagerService;->sContext:Landroid/content/Context;
 
-    .line 51
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DLPManagerService"
@@ -90,12 +80,10 @@
 
     iput-object v0, p0, Lcom/android/server/DLPManagerService;->handlerThread:Landroid/os/HandlerThread;
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/DLPManagerService;->handlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 54
     new-instance v0, Lcom/android/server/DLPManagerService$DLPHandler;
 
     iget-object v1, p0, Lcom/android/server/DLPManagerService;->handlerThread:Landroid/os/HandlerThread;
@@ -108,7 +96,6 @@
 
     iput-object v0, p0, Lcom/android/server/DLPManagerService;->mDLPHandler:Lcom/android/server/DLPManagerService$DLPHandler;
 
-    .line 55
     return-void
 .end method
 
@@ -126,7 +113,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-static {p0}, Lcom/android/server/DLPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
     move-result v0
@@ -138,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 29
     sget-object v0, Lcom/android/server/DLPManagerService;->sContext:Landroid/content/Context;
 
     return-object v0
@@ -149,10 +134,8 @@
     .param p0, "methodName"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     const-string v1, "DLPManagerService"
 
-    .line 59
     .local v1, "serviceName":Ljava/lang/String;
     sget-object v2, Lcom/android/server/DLPManagerService;->sContext:Landroid/content/Context;
 
@@ -170,7 +153,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 60
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -237,11 +219,9 @@
 
     invoke-direct {v0, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
-    .line 63
     .local v0, "e":Ljava/lang/SecurityException;
     throw v0
 
-    .line 65
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_0
     const/4 v2, 0x0
@@ -253,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 86
     const/4 v0, 0x1
 
     return v0
@@ -266,10 +245,8 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 200
     const/4 v1, 0x0
 
-    .line 201
     .local v1, "res":Z
     const-string v3, "DLPManagerService"
 
@@ -293,7 +270,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :try_start_0
     invoke-static {p1}, Lcom/android/server/DLPManagerService;->Native_Dlp_LockDLP(I)I
 
@@ -301,7 +277,6 @@
 
     if-nez v3, :cond_0
 
-    .line 205
     const-string v3, "DLPManagerService"
 
     const-string v4, "Error to handle DLP_lockDLP"
@@ -311,21 +286,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 214
     :goto_0
     return v1
 
-    .line 207
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 209
     :catch_0
     move-exception v0
 
-    .line 210
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DLPManagerService"
 
@@ -335,12 +306,10 @@
 
     goto :goto_0
 
-    .line 211
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 212
     .local v2, "ule":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v2}, Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
 
@@ -353,10 +322,8 @@
     .param p2, "expiry"    # I
 
     .prologue
-    .line 150
     const/4 v1, 0x0
 
-    .line 151
     .local v1, "res":Z
     const-string v3, "DLPManagerService"
 
@@ -390,7 +357,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     :try_start_0
     invoke-static {p1, p2}, Lcom/android/server/DLPManagerService;->Native_Dlp_SetDLPExpiry(II)I
 
@@ -398,7 +364,6 @@
 
     if-nez v3, :cond_0
 
-    .line 155
     const-string v3, "DLPManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -424,21 +389,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 164
     :goto_0
     return v1
 
-    .line 157
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 159
     :catch_0
     move-exception v0
 
-    .line 160
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DLPManagerService"
 
@@ -448,12 +409,10 @@
 
     goto :goto_0
 
-    .line 161
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 162
     .local v2, "ule":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v2}, Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
 
@@ -464,25 +423,21 @@
     .locals 3
 
     .prologue
-    .line 70
     invoke-direct {p0}, Lcom/android/server/DLPManagerService;->isSupportedDevice()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 71
     const-string v1, "DLPManagerService"
 
-    const-string/jumbo v2, "systemReady DLP not supported"
+    const-string v2, "systemReady DLP not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     :goto_0
     return-void
 
-    .line 75
     :cond_0
     const-string v1, "DLPManagerService"
 
@@ -490,19 +445,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
-    const-string/jumbo v1, "systemReady"
+    const-string v1, "systemReady"
 
     invoke-static {v1}, Lcom/android/server/DLPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 77
     const-string v1, "DLPManagerService"
 
-    const-string/jumbo v2, "sending message MSG_SYSTEM_READY to handler."
+    const-string v2, "sending message MSG_SYSTEM_READY to handler."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     iget-object v1, p0, Lcom/android/server/DLPManagerService;->mDLPHandler:Lcom/android/server/DLPManagerService$DLPHandler;
 
     const/4 v2, 0x1
@@ -511,16 +463,14 @@
 
     move-result-object v0
 
-    .line 79
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/DLPManagerService;->mDLPHandler:Lcom/android/server/DLPManagerService$DLPHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/DLPManagerService$DLPHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 81
     const-string v1, "DLPManagerService"
 
-    const-string/jumbo v2, "systemReady done."
+    const-string v2, "systemReady done."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -532,10 +482,8 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 175
     const/4 v1, 0x0
 
-    .line 176
     .local v1, "res":Z
     const-string v3, "DLPManagerService"
 
@@ -559,7 +507,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :try_start_0
     invoke-static {p1}, Lcom/android/server/DLPManagerService;->Native_Dlp_UnlockDLP(I)I
 
@@ -567,7 +514,6 @@
 
     if-nez v3, :cond_0
 
-    .line 180
     const-string v3, "DLPManagerService"
 
     const-string v4, "Error to handle SDP_unlockDLP"
@@ -577,21 +523,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 189
     :goto_0
     return v1
 
-    .line 182
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 184
     :catch_0
     move-exception v0
 
-    .line 185
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DLPManagerService"
 
@@ -601,12 +543,10 @@
 
     goto :goto_0
 
-    .line 186
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 187
     .local v2, "ule":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v2}, Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
 

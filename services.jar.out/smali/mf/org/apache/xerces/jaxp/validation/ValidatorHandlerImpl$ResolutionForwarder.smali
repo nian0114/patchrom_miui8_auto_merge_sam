@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1049
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,13 +40,10 @@
     .param p1, "entityResolver"    # Lmf/org/w3c/dom/ls/LSResourceResolver;
 
     .prologue
-    .line 1052
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1053
     invoke-virtual {p0, p1}, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->setEntityResolver(Lmf/org/w3c/dom/ls/LSResourceResolver;)V
 
-    .line 1054
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .param p2, "baseURI"    # Ljava/lang/String;
 
     .prologue
-    .line 1131
     const/4 v1, 0x0
 
     :try_start_0
@@ -67,17 +62,14 @@
 
     move-result-object p1
 
-    .line 1137
     .end local p1    # "systemId":Ljava/lang/String;
     :goto_0
     return-object p1
 
-    .line 1136
     .restart local p1    # "systemId":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1137
     .local v0, "ex":Lmf/org/apache/xerces/util/URI$MalformedURIException;
     goto :goto_0
 .end method
@@ -88,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 1067
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->fEntityResolver:Lmf/org/w3c/dom/ls/LSResourceResolver;
 
     return-object v0
@@ -106,7 +97,6 @@
     .end annotation
 
     .prologue
-    .line 1075
     const/4 v0, 0x0
 
     return-object v0
@@ -126,7 +116,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1125
     invoke-virtual {p0, v0, p1, v0, p2}, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->resolveEntity(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;
 
     move-result-object v0
@@ -148,12 +137,10 @@
     .end annotation
 
     .prologue
-    .line 1084
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->fEntityResolver:Lmf/org/w3c/dom/ls/LSResourceResolver;
 
     if-eqz v0, :cond_4
 
-    .line 1085
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->fEntityResolver:Lmf/org/w3c/dom/ls/LSResourceResolver;
 
     const-string v1, "http://www.w3.org/TR/REC-xml"
@@ -170,62 +157,51 @@
 
     move-result-object v12
 
-    .line 1086
     .local v12, "lsInput":Lmf/org/w3c/dom/ls/LSInput;
     if-eqz v12, :cond_4
 
-    .line 1087
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getPublicId()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 1088
     .local v13, "pubId":Ljava/lang/String;
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getSystemId()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 1089
     .local v14, "sysId":Ljava/lang/String;
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getBaseURI()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1090
     .local v6, "baseSystemId":Ljava/lang/String;
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getCharacterStream()Ljava/io/Reader;
 
     move-result-object v8
 
-    .line 1091
     .local v8, "charStream":Ljava/io/Reader;
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getByteStream()Ljava/io/InputStream;
 
     move-result-object v7
 
-    .line 1092
     .local v7, "byteStream":Ljava/io/InputStream;
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getStringData()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1093
     .local v9, "data":Ljava/lang/String;
     invoke-interface {v12}, Lmf/org/w3c/dom/ls/LSInput;->getEncoding()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1102
     .local v10, "encoding":Ljava/lang/String;
     new-instance v11, Lorg/xml/sax/InputSource;
 
     invoke-direct {v11}, Lorg/xml/sax/InputSource;-><init>()V
 
-    .line 1103
     .local v11, "inputSource":Lorg/xml/sax/InputSource;
     invoke-virtual {v11, v13}, Lorg/xml/sax/InputSource;->setPublicId(Ljava/lang/String;)V
 
-    .line 1104
     if-eqz v6, :cond_0
 
     invoke-direct {p0, v14, v6}, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->resolveSystemId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -236,18 +212,14 @@
     :cond_0
     invoke-virtual {v11, v14}, Lorg/xml/sax/InputSource;->setSystemId(Ljava/lang/String;)V
 
-    .line 1106
     if-eqz v8, :cond_2
 
-    .line 1107
     invoke-virtual {v11, v8}, Lorg/xml/sax/InputSource;->setCharacterStream(Ljava/io/Reader;)V
 
-    .line 1115
     :cond_1
     :goto_0
     invoke-virtual {v11, v10}, Lorg/xml/sax/InputSource;->setEncoding(Ljava/lang/String;)V
 
-    .line 1119
     .end local v6    # "baseSystemId":Ljava/lang/String;
     .end local v7    # "byteStream":Ljava/io/InputStream;
     .end local v8    # "charStream":Ljava/io/Reader;
@@ -259,7 +231,6 @@
     :goto_1
     return-object v11
 
-    .line 1109
     .restart local v6    # "baseSystemId":Ljava/lang/String;
     .restart local v7    # "byteStream":Ljava/io/InputStream;
     .restart local v8    # "charStream":Ljava/io/Reader;
@@ -271,12 +242,10 @@
     :cond_2
     if-eqz v7, :cond_3
 
-    .line 1110
     invoke-virtual {v11, v7}, Lorg/xml/sax/InputSource;->setByteStream(Ljava/io/InputStream;)V
 
     goto :goto_0
 
-    .line 1112
     :cond_3
     if-eqz v9, :cond_1
 
@@ -286,7 +255,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1113
     new-instance v0, Ljava/io/StringReader;
 
     invoke-direct {v0, v9}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
@@ -295,7 +263,6 @@
 
     goto :goto_0
 
-    .line 1119
     .end local v6    # "baseSystemId":Ljava/lang/String;
     .end local v7    # "byteStream":Ljava/io/InputStream;
     .end local v8    # "charStream":Ljava/io/Reader;
@@ -315,9 +282,7 @@
     .param p1, "entityResolver"    # Lmf/org/w3c/dom/ls/LSResourceResolver;
 
     .prologue
-    .line 1062
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/validation/ValidatorHandlerImpl$ResolutionForwarder;->fEntityResolver:Lmf/org/w3c/dom/ls/LSResourceResolver;
 
-    .line 1063
     return-void
 .end method

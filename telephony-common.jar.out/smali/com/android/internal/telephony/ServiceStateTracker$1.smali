@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 526
     iput-object p1, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 529
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v2, v2, Lcom/android/internal/telephony/ServiceStateTracker;->mPhoneBase:Lcom/android/internal/telephony/PhoneBase;
@@ -48,7 +46,6 @@
 
     if-nez v2, :cond_0
 
-    .line 530
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v2, v2, Lcom/android/internal/telephony/ServiceStateTracker;->mPhoneBase:Lcom/android/internal/telephony/PhoneBase;
@@ -69,7 +66,6 @@
 
     move-result v1
 
-    .line 532
     .local v1, "phone1On":I
     const-string v2, "true"
 
@@ -87,7 +83,6 @@
 
     move-result v0
 
-    .line 533
     .local v0, "mHasEverSwitchedToGsm":Z
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
@@ -121,19 +116,16 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/ServiceStateTracker;->loge(Ljava/lang/String;)V
 
-    .line 534
     if-nez v1, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 535
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     const-string v3, "switchToGsmInCdmaRoamingArea() is breaked off by slot1 off, reset PROPERTY_2ND_NETSEL_CNF_WAITING to false"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/ServiceStateTracker;->loge(Ljava/lang/String;)V
 
-    .line 536
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v2, v2, Lcom/android/internal/telephony/ServiceStateTracker;->mPhoneBase:Lcom/android/internal/telephony/PhoneBase;
@@ -144,7 +136,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/PhoneBase;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 539
     .end local v0    # "mHasEverSwitchedToGsm":Z
     .end local v1    # "phone1On":I
     :cond_0
@@ -184,11 +175,9 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/ServiceStateTracker;->loge(Ljava/lang/String;)V
 
-    .line 540
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/ServiceStateTracker;->updateSpnDisplay()V
 
-    .line 541
     return-void
 .end method

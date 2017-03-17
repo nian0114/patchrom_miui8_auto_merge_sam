@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 453
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnOemApi$2;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 455
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/itsoninc/android/ItsOnOemApi$2;->this$0:Lcom/itsoninc/android/ItsOnOemApi;
@@ -49,45 +47,37 @@
 
     move-result-object v8
 
-    .line 456
     .local v8, "rawSms":Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;
     const/4 v1, 0x0
 
     .local v1, "cnt":I
     const/4 v9, 0x0
 
-    .line 457
     .local v9, "reinject":I
     :goto_0
     if-eqz v8, :cond_1
 
-    .line 458
     add-int/lit8 v1, v1, 0x1
 
-    .line 459
     invoke-virtual {v8}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;->getPdu()[B
 
     move-result-object v5
 
-    .line 460
     .local v5, "pdu":[B
     invoke-virtual {v8}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;->getEncoding()Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
 
     move-result-object v4
 
-    .line 461
     .local v4, "encoding":Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
     invoke-virtual {v8}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;->getPhoneId()I
 
     move-result v7
 
-    .line 462
     .local v7, "phoneId":I
     invoke-virtual {v8}, Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms;->getSubId()I
 
     move-result v11
 
-    .line 463
     .local v11, "subId":I
     move-object/from16 v0, p0
 
@@ -99,10 +89,8 @@
 
     if-eqz v12, :cond_0
 
-    .line 466
     add-int/lit8 v9, v9, 0x1
 
-    .line 467
     const/4 v12, 0x1
 
     new-array v6, v12, [[B
@@ -111,7 +99,6 @@
 
     aput-object v5, v6, v12
 
-    .line 470
     .local v6, "pdus":[[B
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->smsApplication_getDefaultMmsApplication:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$500()Ljava/lang/reflect/Method;
@@ -120,7 +107,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 472
     :try_start_0
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->smsApplication_getDefaultMmsApplication:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$500()Ljava/lang/reflect/Method;
@@ -153,7 +139,6 @@
 
     check-cast v2, Landroid/content/ComponentName;
 
-    .line 476
     .local v2, "componentName":Landroid/content/ComponentName;
     new-instance v10, Landroid/content/Intent;
 
@@ -161,16 +146,13 @@
 
     invoke-direct {v10, v12}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 477
     .local v10, "sendIntent":Landroid/content/Intent;
     invoke-virtual {v10, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 478
     const-string v12, "pdus"
 
     invoke-virtual {v10, v12, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 479
     const-string v12, "format"
 
     move-object/from16 v0, p0
@@ -184,7 +166,6 @@
 
     invoke-virtual {v10, v12, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_putPhoneIdAndSubIdExtra:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$700()Ljava/lang/reflect/Method;
     :try_end_0
@@ -194,7 +175,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 482
     :try_start_1
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_putPhoneIdAndSubIdExtra:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$700()Ljava/lang/reflect/Method;
@@ -231,7 +211,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 491
     :goto_1
     :try_start_2
     const-string v12, "android.permission.RECEIVE_SMS"
@@ -242,7 +221,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 515
     .end local v2    # "componentName":Landroid/content/ComponentName;
     .end local v6    # "pdus":[[B
     .end local v10    # "sendIntent":Landroid/content/Intent;
@@ -257,17 +235,14 @@
 
     move-result-object v8
 
-    .line 516
     goto/16 :goto_0
 
-    .line 484
     .restart local v2    # "componentName":Landroid/content/ComponentName;
     .restart local v6    # "pdus":[[B
     .restart local v10    # "sendIntent":Landroid/content/Intent;
     :catch_0
     move-exception v3
 
-    .line 485
     .local v3, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v12, "ItsOnOemAPI"
@@ -280,14 +255,12 @@
 
     goto :goto_1
 
-    .line 493
     .end local v2    # "componentName":Landroid/content/ComponentName;
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v10    # "sendIntent":Landroid/content/Intent;
     :catch_1
     move-exception v3
 
-    .line 494
     .restart local v3    # "e":Ljava/lang/Exception;
     const-string v12, "ItsOnOemAPI"
 
@@ -295,7 +268,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v4    # "encoding":Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
     .end local v5    # "pdu":[B
@@ -305,7 +277,6 @@
     :cond_1
     return-void
 
-    .line 489
     .restart local v2    # "componentName":Landroid/content/ComponentName;
     .restart local v4    # "encoding":Lcom/itsoninc/android/oemfw/api/v17/ParcelableRawSms$Encoding;
     .restart local v5    # "pdu":[B
@@ -325,7 +296,6 @@
 
     goto :goto_1
 
-    .line 498
     .end local v2    # "componentName":Landroid/content/ComponentName;
     .end local v10    # "sendIntent":Landroid/content/Intent;
     :cond_3
@@ -335,13 +305,11 @@
 
     invoke-direct {v10, v12}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 499
     .restart local v10    # "sendIntent":Landroid/content/Intent;
     const-string v12, "pdus"
 
     invoke-virtual {v10, v12, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 500
     const-string v12, "format"
 
     move-object/from16 v0, p0
@@ -355,7 +323,6 @@
 
     invoke-virtual {v10, v12, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 501
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_putPhoneIdAndSubIdExtra:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$700()Ljava/lang/reflect/Method;
 
@@ -363,7 +330,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 503
     :try_start_5
     # getter for: Lcom/itsoninc/android/ItsOnOemApi;->subscriptionManager_putPhoneIdAndSubIdExtra:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->access$700()Ljava/lang/reflect/Method;
@@ -400,7 +366,6 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 512
     :goto_3
     const-string v12, "android.permission.RECEIVE_SMS"
 
@@ -410,11 +375,9 @@
 
     goto :goto_2
 
-    .line 505
     :catch_2
     move-exception v3
 
-    .line 506
     .restart local v3    # "e":Ljava/lang/Exception;
     const-string v12, "ItsOnOemAPI"
 
@@ -424,7 +387,6 @@
 
     goto :goto_3
 
-    .line 510
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_4
     const-string v12, "simId"

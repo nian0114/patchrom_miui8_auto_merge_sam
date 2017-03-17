@@ -43,17 +43,14 @@
     .locals 1
 
     .prologue
-    .line 2449
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2450
     const-string v0, "SendHoverEnterAndMoveDelayed"
 
     iput-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->LOG_TAG_SEND_HOVER_DELAYED:Ljava/lang/String;
 
-    .line 2452
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -68,7 +65,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;
 
     .prologue
-    .line 2449
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->isPending()Z
 
     move-result v0
@@ -80,24 +76,20 @@
     .locals 3
 
     .prologue
-    .line 2482
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mPointerIdBits:I
 
-    .line 2483
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mPolicyFlags:I
 
-    .line 2484
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2485
     .local v0, "eventCount":I
     add-int/lit8 v1, v0, -0x1
 
@@ -105,7 +97,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 2486
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -116,12 +107,10 @@
 
     invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 2485
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 2488
     :cond_0
     return-void
 .end method
@@ -130,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 2478
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -152,7 +140,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2467
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
 
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
@@ -161,7 +148,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2468
     return-void
 .end method
 
@@ -169,14 +155,12 @@
     .locals 1
 
     .prologue
-    .line 2471
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->isPending()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2472
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -186,10 +170,8 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2473
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->clear()V
 
-    .line 2475
     :cond_0
     return-void
 .end method
@@ -198,20 +180,16 @@
     .locals 1
 
     .prologue
-    .line 2491
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->isPending()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2492
     invoke-virtual {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->run()V
 
-    .line 2493
     invoke-virtual {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->cancel()V
 
-    .line 2495
     :cond_0
     return-void
 .end method
@@ -224,19 +202,14 @@
     .param p4, "policyFlags"    # I
 
     .prologue
-    .line 2459
     invoke-virtual {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->cancel()V
 
-    .line 2460
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->addEvent(Landroid/view/MotionEvent;)V
 
-    .line 2461
     iput p3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mPointerIdBits:I
 
-    .line 2462
     iput p4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mPolicyFlags:I
 
-    .line 2463
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -255,7 +228,6 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2464
     return-void
 .end method
 
@@ -263,14 +235,12 @@
     .locals 7
 
     .prologue
-    .line 2498
     const-string v2, "SendHoverEnterAndMoveDelayed"
 
     const-string v3, "Run called"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2500
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     const/16 v3, 0x200
@@ -278,7 +248,6 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendAccessibilityEvent(I)V
     invoke-static {v2, v3}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$2000(Lcom/android/server/accessibility/SamsungTouchExplorer;I)V
 
-    .line 2502
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
@@ -287,7 +256,6 @@
 
     if-nez v2, :cond_0
 
-    .line 2504
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
@@ -309,14 +277,12 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendMotionEvent(Landroid/view/MotionEvent;III)V
     invoke-static {v3, v2, v4, v5, v6}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3800(Lcom/android/server/accessibility/SamsungTouchExplorer;Landroid/view/MotionEvent;III)V
 
-    .line 2512
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2513
     .local v0, "eventCount":I
     const/4 v1, 0x1
 
@@ -324,7 +290,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2514
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->mEvents:Ljava/util/List;
@@ -344,17 +309,14 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendMotionEvent(Landroid/view/MotionEvent;III)V
     invoke-static {v3, v2, v4, v5, v6}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3800(Lcom/android/server/accessibility/SamsungTouchExplorer;Landroid/view/MotionEvent;III)V
 
-    .line 2513
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2522
     .end local v0    # "eventCount":I
     .end local v1    # "i":I
     :cond_0
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$SendHoverEnterAndMoveDelayed;->clear()V
 
-    .line 2523
     return-void
 .end method

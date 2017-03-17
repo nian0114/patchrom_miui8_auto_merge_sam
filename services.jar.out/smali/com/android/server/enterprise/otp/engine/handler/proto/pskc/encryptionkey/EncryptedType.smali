@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mAlgorithm:Ljava/lang/String;
 
     return-object v0
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mCipherData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/CipherData;
 
     return-object v0
@@ -67,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mEncoding:Ljava/lang/String;
 
     return-object v0
@@ -77,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 26
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mEncryptedMethod:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedMethod;
 
     return-object v0
@@ -96,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mEncryptionProperties:Ljava/util/ArrayList;
 
     return-object v0
@@ -106,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mId:Ljava/lang/String;
 
     return-object v0
@@ -116,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mMimeType:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mType:Ljava/lang/String;
 
     return-object v0
@@ -137,10 +128,8 @@
     .param p1, "algorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mAlgorithm:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -149,10 +138,8 @@
     .param p1, "mCipherData"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/CipherData;
 
     .prologue
-    .line 38
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mCipherData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/CipherData;
 
-    .line 39
     return-void
 .end method
 
@@ -161,10 +148,8 @@
     .param p1, "mEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mEncoding:Ljava/lang/String;
 
-    .line 79
     return-void
 .end method
 
@@ -173,10 +158,8 @@
     .param p1, "mEncryptedMethod"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedMethod;
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mEncryptedMethod:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedMethod;
 
-    .line 31
     return-void
 .end method
 
@@ -193,11 +176,9 @@
     .end annotation
 
     .prologue
-    .line 46
     .local p1, "mEncryptionProperties":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptionProperty;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mEncryptionProperties:Ljava/util/ArrayList;
 
-    .line 47
     return-void
 .end method
 
@@ -206,10 +187,8 @@
     .param p1, "mId"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mId:Ljava/lang/String;
 
-    .line 55
     return-void
 .end method
 
@@ -218,10 +197,8 @@
     .param p1, "mMimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mMimeType:Ljava/lang/String;
 
-    .line 71
     return-void
 .end method
 
@@ -230,9 +207,7 @@
     .param p1, "mType"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/encryptionkey/EncryptedType;->mType:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method

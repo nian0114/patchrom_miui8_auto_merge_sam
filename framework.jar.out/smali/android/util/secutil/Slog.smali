@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -23,17 +21,14 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 59
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 60
     invoke-static {v1, v1, p0, p1}, Landroid/util/secutil/Log;->println_native(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 62
     :goto_0
     return v0
 
@@ -52,12 +47,10 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 73
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +81,6 @@
 
     move-result v0
 
-    .line 77
     :goto_0
     return v0
 
@@ -104,12 +96,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 162
     const/4 v0, 0x3
 
     const/4 v1, 0x6
@@ -118,7 +108,6 @@
 
     move-result v0
 
-    .line 164
     :goto_0
     return v0
 
@@ -135,12 +124,10 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 175
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 176
     const/4 v0, 0x3
 
     const/4 v1, 0x6
@@ -175,7 +162,6 @@
 
     move-result v0
 
-    .line 179
     :goto_0
     return v0
 
@@ -191,12 +177,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 89
     const/4 v0, 0x3
 
     const/4 v1, 0x4
@@ -205,7 +189,6 @@
 
     move-result v0
 
-    .line 91
     :goto_0
     return v0
 
@@ -222,12 +205,10 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 102
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 103
     const/4 v0, 0x3
 
     const/4 v1, 0x4
@@ -262,7 +243,6 @@
 
     move-result v0
 
-    .line 106
     :goto_0
     return v0
 
@@ -279,19 +259,16 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 246
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 247
     const/4 v0, 0x3
 
     invoke-static {v0, p0, p1, p2}, Landroid/util/secutil/Log;->println_native(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 249
     :goto_0
     return v0
 
@@ -307,17 +284,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecDLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 67
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 69
     :goto_0
     return v0
 
@@ -334,17 +308,14 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 81
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecDLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 82
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 84
     :goto_0
     return v0
 
@@ -360,17 +331,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 168
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecELog:Z
 
     if-eqz v0, :cond_0
 
-    .line 169
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 171
     :goto_0
     return v0
 
@@ -387,17 +355,14 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 183
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecELog:Z
 
     if-eqz v0, :cond_0
 
-    .line 184
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 186
     :goto_0
     return v0
 
@@ -413,17 +378,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecILog:Z
 
     if-eqz v0, :cond_0
 
-    .line 96
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 98
     :goto_0
     return v0
 
@@ -440,17 +402,14 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 110
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecILog:Z
 
     if-eqz v0, :cond_0
 
-    .line 111
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 113
     :goto_0
     return v0
 
@@ -467,17 +426,14 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 253
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 254
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 256
     :goto_0
     return v0
 
@@ -493,17 +449,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecVLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 38
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 40
     :goto_0
     return v0
 
@@ -520,17 +473,14 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 52
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecVLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 53
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 55
     :goto_0
     return v0
 
@@ -546,17 +496,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 125
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 127
     :goto_0
     return v0
 
@@ -573,17 +520,14 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 139
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 140
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 142
     :goto_0
     return v0
 
@@ -599,17 +543,14 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 154
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 155
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 157
     :goto_0
     return v0
 
@@ -625,17 +566,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 197
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 198
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 200
     :goto_0
     return v0
 
@@ -652,17 +590,14 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 239
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 240
     invoke-static {p0, p1, p2}, Landroid/util/secutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 242
     :goto_0
     return v0
 
@@ -678,17 +613,14 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 225
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 226
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v0
 
-    .line 228
     :goto_0
     return v0
 
@@ -704,17 +636,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 211
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 212
     invoke-static {p0, p1}, Landroid/util/secutil/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 214
     :goto_0
     return v0
 
@@ -730,12 +659,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 31
     const/4 v0, 0x3
 
     const/4 v1, 0x2
@@ -744,7 +671,6 @@
 
     move-result v0
 
-    .line 33
     :goto_0
     return v0
 
@@ -761,12 +687,10 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 44
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 45
     const/4 v0, 0x3
 
     const/4 v1, 0x2
@@ -801,7 +725,6 @@
 
     move-result v0
 
-    .line 48
     :goto_0
     return v0
 
@@ -817,12 +740,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 118
     const/4 v0, 0x3
 
     const/4 v1, 0x5
@@ -831,7 +752,6 @@
 
     move-result v0
 
-    .line 120
     :goto_0
     return v0
 
@@ -848,12 +768,10 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 131
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 132
     const/4 v0, 0x3
 
     const/4 v1, 0x5
@@ -888,7 +806,6 @@
 
     move-result v0
 
-    .line 135
     :goto_0
     return v0
 
@@ -904,12 +821,10 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 147
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 148
     const/4 v0, 0x3
 
     const/4 v1, 0x5
@@ -922,7 +837,6 @@
 
     move-result v0
 
-    .line 150
     :goto_0
     return v0
 
@@ -940,12 +854,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 190
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 191
     const/4 v0, 0x3
 
     const/4 v3, 0x0
@@ -960,7 +872,6 @@
 
     move-result v4
 
-    .line 193
     :cond_0
     return v4
 .end method
@@ -974,12 +885,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 232
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 233
     const/4 v0, 0x3
 
     const/4 v5, 0x1
@@ -994,7 +903,6 @@
 
     move-result v4
 
-    .line 235
     :cond_0
     return v4
 .end method
@@ -1007,12 +915,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 218
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 219
     const/4 v0, 0x3
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -1029,7 +935,6 @@
 
     move-result v4
 
-    .line 221
     :cond_0
     return v4
 .end method
@@ -1042,12 +947,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 204
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 205
     const/4 v0, 0x3
 
     const/4 v3, 0x0
@@ -1062,7 +965,6 @@
 
     move-result v0
 
-    .line 207
     :goto_0
     return v0
 

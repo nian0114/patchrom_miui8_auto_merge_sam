@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/dtd/IDREFDatatypeValidator;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -32,21 +30,18 @@
 
     const/4 v3, 0x0
 
-    .line 65
     invoke-interface {p2}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->useNamespaces()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 66
     invoke-static {p1}, Lmf/org/apache/xerces/util/XML11Char;->isXML11ValidNCName(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 67
     new-instance v0, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v1, "IDREFInvalidWithNamespaces"
@@ -59,7 +54,6 @@
 
     throw v0
 
-    .line 71
     :cond_0
     invoke-static {p1}, Lmf/org/apache/xerces/util/XML11Char;->isXML11ValidName(Ljava/lang/String;)Z
 
@@ -67,7 +61,6 @@
 
     if-nez v0, :cond_1
 
-    .line 72
     new-instance v0, Lmf/org/apache/xerces/impl/dv/InvalidDatatypeValueException;
 
     const-string v1, "IDREFInvalid"
@@ -80,10 +73,8 @@
 
     throw v0
 
-    .line 76
     :cond_1
     invoke-interface {p2, p1}, Lmf/org/apache/xerces/impl/dv/ValidationContext;->addIdRef(Ljava/lang/String;)V
 
-    .line 78
     return-void
 .end method

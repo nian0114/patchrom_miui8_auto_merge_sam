@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4489
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v9, 0x1
 
-    .line 4493
     const-string v6, "PersonaManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -70,7 +68,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4494
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
@@ -83,14 +80,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 4496
-    const-string/jumbo v6, "source"
+    const-string v6, "source"
 
     invoke-virtual {p2, v6, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 4497
     .local v5, "source":I
     const-string v6, "containerId"
 
@@ -98,7 +93,6 @@
 
     move-result v2
 
-    .line 4498
     .local v2, "personaId":I
     const-string v6, "PersonaManagerService"
 
@@ -132,14 +126,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4500
     if-eqz v5, :cond_0
 
     const/4 v6, 0x2
 
     if-ne v5, v6, :cond_3
 
-    .line 4502
     :cond_0
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -147,19 +139,15 @@
 
     move-result-object v4
 
-    .line 4503
     .local v4, "pi":Landroid/content/pm/PersonaInfo;
     if-eqz v4, :cond_1
 
-    .line 4504
     iget-boolean v6, v4, Landroid/content/pm/PersonaInfo;->canUseExtSdcard:Z
 
     if-eqz v6, :cond_2
 
-    .line 4505
     iput-boolean v9, v4, Landroid/content/pm/PersonaInfo;->needsRestart:Z
 
-    .line 4506
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaDbLock:Ljava/lang/Object;
@@ -169,25 +157,21 @@
 
     monitor-enter v7
 
-    .line 4507
     :try_start_0
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->writeUserLocked(Landroid/content/pm/PersonaInfo;)V
     invoke-static {v6, v4}, Lcom/android/server/pm/PersonaManagerService;->access$1100(Lcom/android/server/pm/PersonaManagerService;Landroid/content/pm/PersonaInfo;)V
 
-    .line 4508
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4509
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->notifyNeedRestartMsg(I)V
     invoke-static {v6, v2}, Lcom/android/server/pm/PersonaManagerService;->access$1200(Lcom/android/server/pm/PersonaManagerService;I)V
 
-    .line 4510
     const-string v6, "PersonaManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -210,7 +194,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4534
     .end local v2    # "personaId":I
     .end local v4    # "pi":Landroid/content/pm/PersonaInfo;
     .end local v5    # "source":I
@@ -218,7 +201,6 @@
     :goto_0
     return-void
 
-    .line 4508
     .restart local v2    # "personaId":I
     .restart local v4    # "pi":Landroid/content/pm/PersonaInfo;
     .restart local v5    # "source":I
@@ -232,7 +214,6 @@
 
     throw v6
 
-    .line 4512
     :cond_2
     const-string v6, "PersonaManagerService"
 
@@ -264,19 +245,16 @@
 
     goto :goto_0
 
-    .line 4515
     .end local v4    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_3
     if-ne v5, v9, :cond_1
 
-    .line 4517
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {v6, v9}, Lcom/android/server/pm/PersonaManagerService;->getPersonas(Z)Ljava/util/List;
 
     move-result-object v3
 
-    .line 4518
     .local v3, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -297,19 +275,15 @@
 
     check-cast v1, Landroid/content/pm/PersonaInfo;
 
-    .line 4519
     .local v1, "pInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v1, :cond_4
 
-    .line 4520
     iget-boolean v6, v1, Landroid/content/pm/PersonaInfo;->canUseExtSdcard:Z
 
     if-eqz v6, :cond_5
 
-    .line 4521
     iput-boolean v9, v1, Landroid/content/pm/PersonaInfo;->needsRestart:Z
 
-    .line 4522
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaDbLock:Ljava/lang/Object;
@@ -319,19 +293,16 @@
 
     monitor-enter v7
 
-    .line 4523
     :try_start_2
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->writeUserLocked(Landroid/content/pm/PersonaInfo;)V
     invoke-static {v6, v1}, Lcom/android/server/pm/PersonaManagerService;->access$1100(Lcom/android/server/pm/PersonaManagerService;Landroid/content/pm/PersonaInfo;)V
 
-    .line 4524
     monitor-exit v7
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4525
     iget-object v6, p0, Lcom/android/server/pm/PersonaManagerService$ExtSdcardPolicyUpdateReceiver;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iget v7, v1, Landroid/content/pm/PersonaInfo;->id:I
@@ -339,7 +310,6 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->notifyNeedRestartMsg(I)V
     invoke-static {v6, v7}, Lcom/android/server/pm/PersonaManagerService;->access$1200(Lcom/android/server/pm/PersonaManagerService;I)V
 
-    .line 4526
     const-string v6, "PersonaManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -366,7 +336,6 @@
 
     goto :goto_1
 
-    .line 4524
     :catchall_1
     move-exception v6
 
@@ -377,7 +346,6 @@
 
     throw v6
 
-    .line 4528
     :cond_5
     const-string v6, "PersonaManagerService"
 

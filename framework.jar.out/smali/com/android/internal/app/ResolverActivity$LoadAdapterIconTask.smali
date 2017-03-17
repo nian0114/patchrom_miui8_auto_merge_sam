@@ -24,13 +24,10 @@
     .param p2, "dri"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 2437
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
-    .line 2438
     invoke-direct {p0, p1, p2}, Lcom/android/internal/app/ResolverActivity$LoadIconTask;-><init>(Lcom/android/internal/app/ResolverActivity;Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;)V
 
-    .line 2439
     return-void
 .end method
 
@@ -41,10 +38,8 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 2443
     invoke-super {p0, p1}, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->onPostExecute(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2444
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mProfileView:Landroid/view/View;
@@ -69,12 +64,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2445
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->bindProfileView()V
 
-    .line 2447
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -85,7 +78,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->notifyDataSetChanged()V
 
-    .line 2448
     return-void
 .end method
 
@@ -94,7 +86,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 2436
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     .end local p1    # "x0":Ljava/lang/Object;

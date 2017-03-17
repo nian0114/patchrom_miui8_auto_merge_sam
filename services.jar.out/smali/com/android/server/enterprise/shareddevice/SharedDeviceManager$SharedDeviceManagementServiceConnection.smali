@@ -30,12 +30,10 @@
     .locals 1
 
     .prologue
-    .line 168
     iput-object p1, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->this$0:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mIsConnected:Z
@@ -49,7 +47,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$1;
 
     .prologue
-    .line 168
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;-><init>(Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;)V
 
     return-void
@@ -61,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 194
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mSharedDeviceManagementService:Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
 
     return-object v0
@@ -71,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-boolean v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mIsConnected:Z
 
     return v0
@@ -83,19 +78,16 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 175
     invoke-static {p2}, Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mSharedDeviceManagementService:Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
 
-    .line 176
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mIsConnected:Z
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->this$0:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     # getter for: Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
@@ -105,7 +97,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->this$0:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     # getter for: Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
@@ -115,7 +106,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->this$0:Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;
 
     const/4 v1, 0x0
@@ -123,7 +113,6 @@
     # setter for: Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->mLatch:Ljava/util/concurrent/CountDownLatch;
     invoke-static {v0, v1}, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;->access$102(Lcom/android/server/enterprise/shareddevice/SharedDeviceManager;Ljava/util/concurrent/CountDownLatch;)Ljava/util/concurrent/CountDownLatch;
 
-    .line 181
     :cond_0
     return-void
 .end method
@@ -133,16 +122,13 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 185
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mSharedDeviceManagementService:Lcom/sec/enterprise/knox/shareddevice/aidl/ISharedDeviceManagementService;
 
-    .line 186
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/shareddevice/SharedDeviceManager$SharedDeviceManagementServiceConnection;->mIsConnected:Z
 
-    .line 187
     return-void
 .end method

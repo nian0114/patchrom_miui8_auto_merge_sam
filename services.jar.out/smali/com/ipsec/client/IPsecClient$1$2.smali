@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 504
     iput-object p1, p0, Lcom/ipsec/client/IPsecClient$1$2;->this$1:Lcom/ipsec/client/IPsecClient$1;
 
     iput-object p2, p0, Lcom/ipsec/client/IPsecClient$1$2;->val$eventListener:Lcom/ipsec/client/IIPsecListener;
@@ -52,7 +51,6 @@
     .locals 3
 
     .prologue
-    .line 508
     iget-object v0, p0, Lcom/ipsec/client/IPsecClient$1$2;->val$eventListener:Lcom/ipsec/client/IIPsecListener;
 
     iget-object v1, p0, Lcom/ipsec/client/IPsecClient$1$2;->val$eventError:Lcom/ipsec/client/IPsecError;
@@ -61,6 +59,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/ipsec/client/IIPsecListener;->onServiceStatusChanged(Lcom/ipsec/client/IPsecError;Lcom/ipsec/client/IPsecEventData;)V
 
-    .line 511
     return-void
 .end method

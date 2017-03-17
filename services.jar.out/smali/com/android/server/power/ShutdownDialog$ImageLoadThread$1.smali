@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 473
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread$1;->this$1:Lcom/android/server/power/ShutdownDialog$ImageLoadThread;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 476
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
     move-result v0
 
-    .line 477
     .local v0, "newCoverState":Z
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread$1;->this$1:Lcom/android/server/power/ShutdownDialog$ImageLoadThread;
 
@@ -56,7 +53,6 @@
 
     if-eq v1, v0, :cond_0
 
-    .line 478
     const-string v1, "ShutdownDialog"
 
     const-string v2, "cover state : %b"
@@ -77,19 +73,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread$1;->this$1:Lcom/android/server/power/ShutdownDialog$ImageLoadThread;
 
     # setter for: Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->coverStateDirty:Z
     invoke-static {v1, v6}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->access$1902(Lcom/android/server/power/ShutdownDialog$ImageLoadThread;Z)Z
 
-    .line 481
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread$1;->this$1:Lcom/android/server/power/ShutdownDialog$ImageLoadThread;
 
     # setter for: Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->coverOpen:Z
     invoke-static {v1, v0}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->access$1802(Lcom/android/server/power/ShutdownDialog$ImageLoadThread;Z)Z
 
-    .line 482
     return-void
 .end method

@@ -21,23 +21,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 451
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 446
     const-string v0, "TtmlRegion"
 
     iput-object v0, p0, Landroid/media/TtmlRegionTag;->TAG:Ljava/lang/String;
 
-    .line 452
     iput-object p1, p0, Landroid/media/TtmlRegionTag;->mRegionName:Ljava/lang/String;
 
-    .line 453
     iput-object v1, p0, Landroid/media/TtmlRegionTag;->mOriginInfo:Ljava/lang/String;
 
-    .line 454
     iput-object v1, p0, Landroid/media/TtmlRegionTag;->mExtentInfo:Ljava/lang/String;
 
-    .line 455
     return-void
 .end method

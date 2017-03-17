@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2098
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions$19;->val$tempView:Landroid/view/View;
@@ -57,19 +56,16 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 2101
     invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 2191
     :cond_0
     :goto_0
     return-void
 
-    .line 2102
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->isFocusable()Z
 
@@ -77,7 +73,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 2104
     const v6, 0x1020006
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -86,7 +81,6 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    .line 2105
     .local v2, "imageView":Landroid/widget/ImageView;
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->val$tempView:Landroid/view/View;
 
@@ -98,7 +92,6 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 2106
     .local v4, "messageView":Landroid/widget/TextView;
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->val$tempView:Landroid/view/View;
 
@@ -110,7 +103,6 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 2108
     .local v5, "statusView":Landroid/widget/TextView;
     if-eqz v2, :cond_8
 
@@ -120,7 +112,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 2109
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isTSafeLock()Z
@@ -155,7 +146,6 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 2110
     invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v6
@@ -172,7 +162,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 2111
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -197,7 +186,6 @@
 
     goto :goto_0
 
-    .line 2116
     :cond_2
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -256,7 +244,6 @@
 
     if-ne v6, v7, :cond_6
 
-    .line 2119
     :cond_3
     invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -274,7 +261,6 @@
 
     if-ne v6, v7, :cond_4
 
-    .line 2120
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -299,7 +285,6 @@
 
     goto/16 :goto_0
 
-    .line 2121
     :cond_4
     invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -317,7 +302,6 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 2122
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -342,7 +326,6 @@
 
     goto/16 :goto_0
 
-    .line 2123
     :cond_5
     invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -360,7 +343,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 2124
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -385,7 +367,6 @@
 
     goto/16 :goto_0
 
-    .line 2129
     :cond_6
     invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -419,7 +400,6 @@
 
     if-ne v6, v7, :cond_8
 
-    .line 2130
     :cond_7
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -428,7 +408,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "enterprise_policy"
+    const-string v7, "enterprise_policy"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -436,7 +416,6 @@
 
     check-cast v1, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 2132
     .local v1, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v1, :cond_8
 
@@ -452,21 +431,18 @@
 
     if-nez v6, :cond_8
 
-    .line 2133
     sget-boolean v6, Lcom/android/server/policy/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v6, :cond_0
 
-    .line 2134
     const-string v6, "GlobalActions"
 
-    const-string/jumbo v7, "power or restart : restricted by MDM "
+    const-string v7, "power or restart : restricted by MDM "
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 2140
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :cond_8
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -483,7 +459,6 @@
 
     invoke-virtual {v6, p1, v7}, Lcom/android/server/policy/GlobalActions;->calculateDescritionViewHeight(Landroid/view/View;I)V
 
-    .line 2142
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4300()Z
 
@@ -504,7 +479,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 2143
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v7, p0, Lcom/android/server/policy/GlobalActions$19;->val$tempView:Landroid/view/View;
@@ -516,7 +490,6 @@
 
     goto/16 :goto_0
 
-    .line 2144
     :cond_9
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmLandDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4400()Z
@@ -538,7 +511,6 @@
 
     if-nez v6, :cond_a
 
-    .line 2145
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v7, p0, Lcom/android/server/policy/GlobalActions$19;->val$tempView:Landroid/view/View;
@@ -550,7 +522,6 @@
 
     goto/16 :goto_0
 
-    .line 2147
     :cond_a
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -559,7 +530,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mDisplayConfirm:Z
     invoke-static {v6, v7}, Lcom/android/server/policy/GlobalActions;->access$3902(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 2150
     if-eqz v2, :cond_c
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
@@ -600,12 +570,10 @@
 
     if-eq v6, v7, :cond_c
 
-    .line 2152
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->val$action:Lcom/android/server/policy/GlobalActions$Action;
 
     invoke-interface {v6}, Lcom/android/server/policy/GlobalActions$Action;->onPress()V
 
-    .line 2153
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
 
@@ -620,7 +588,6 @@
 
     if-nez v6, :cond_b
 
-    .line 2154
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mGlobalActionsFrameLayoutSViewCover:Landroid/app/GlobalActionsFrameLayoutSViewCover;
@@ -632,7 +599,6 @@
 
     invoke-virtual {v6, v7}, Landroid/app/GlobalActionsFrameLayoutSViewCover;->hideAllView(Landroid/view/View;)V
 
-    .line 2158
     :goto_1
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -647,7 +613,6 @@
 
     goto/16 :goto_0
 
-    .line 2156
     :cond_b
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -662,11 +627,9 @@
 
     goto :goto_1
 
-    .line 2160
     :cond_c
     const/4 v3, 0x0
 
-    .line 2161
     .local v3, "ll":Landroid/widget/LinearLayout;
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsCoverOpen:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$6300()Z
@@ -682,7 +645,6 @@
 
     if-nez v6, :cond_d
 
-    .line 2162
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mGlobalActionsFrameLayoutSViewCover:Landroid/app/GlobalActionsFrameLayoutSViewCover;
@@ -699,7 +661,6 @@
     .end local v3    # "ll":Landroid/widget/LinearLayout;
     check-cast v3, Landroid/widget/LinearLayout;
 
-    .line 2166
     .restart local v3    # "ll":Landroid/widget/LinearLayout;
     :goto_2
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->val$tempView:Landroid/view/View;
@@ -722,7 +683,6 @@
 
     invoke-virtual {v6}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 2167
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mDescriptionlayout:Landroid/widget/LinearLayout;
@@ -748,7 +708,6 @@
 
     invoke-virtual {v6}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 2168
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
@@ -765,7 +724,6 @@
 
     move-result-object v0
 
-    .line 2169
     .local v0, "backgroundalpha":Landroid/animation/ObjectAnimator;
     const-wide/16 v6, 0x12c
 
@@ -775,7 +733,6 @@
 
     invoke-virtual {v6}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 2170
     new-instance v6, Lcom/android/server/policy/GlobalActions$19$1;
 
     invoke-direct {v6, p0}, Lcom/android/server/policy/GlobalActions$19$1;-><init>(Lcom/android/server/policy/GlobalActions$19;)V
@@ -784,7 +741,6 @@
 
     goto/16 :goto_0
 
-    .line 2164
     .end local v0    # "backgroundalpha":Landroid/animation/ObjectAnimator;
     :cond_d
     iget-object v6, p0, Lcom/android/server/policy/GlobalActions$19;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -806,7 +762,6 @@
     .restart local v3    # "ll":Landroid/widget/LinearLayout;
     goto :goto_2
 
-    .line 2168
     :array_0
     .array-data 4
         0x99

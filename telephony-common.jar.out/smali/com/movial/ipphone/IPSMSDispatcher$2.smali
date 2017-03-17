@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 269
     iput-object p1, p0, Lcom/movial/ipphone/IPSMSDispatcher$2;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 271
     const-string v9, "IPSMSDispatcher"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -63,12 +61,10 @@
 
     invoke-static {v9, v10}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 313
     const-string v9, "IPSMSDispatcher"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -91,12 +87,10 @@
 
     invoke-static {v9, v10}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     :cond_0
     :goto_0
     return-void
 
-    .line 274
     :pswitch_0
     iget-object v9, p0, Lcom/movial/ipphone/IPSMSDispatcher$2;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
@@ -107,25 +101,21 @@
 
     move-result-object v4
 
-    .line 275
     .local v4, "iptracker":Lcom/movial/ipphone/IPSMSDispatcher$IPSmsTracker;
     if-eqz v4, :cond_0
 
-    .line 276
     iget v9, p1, Landroid/os/Message;->arg2:I
 
     invoke-virtual {v4, v9}, Lcom/movial/ipphone/IPSMSDispatcher$IPSmsTracker;->send(I)V
 
     goto :goto_0
 
-    .line 281
     .end local v4    # "iptracker":Lcom/movial/ipphone/IPSMSDispatcher$IPSmsTracker;
     :pswitch_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 282
     .local v2, "bundle":Landroid/os/Bundle;
     const-class v9, Lcom/movial/ipphone/IPSMSDispatcher;
 
@@ -135,12 +125,10 @@
 
     invoke-virtual {v2, v9}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 284
     const/4 v9, 0x2
 
     new-array v0, v9, [Ljava/lang/String;
 
-    .line 285
     .local v0, "a":[Ljava/lang/String;
     const/4 v9, 0x1
 
@@ -156,18 +144,15 @@
 
     aput-object v10, v0, v9
 
-    .line 287
     invoke-static {v0}, Lcom/android/internal/telephony/gsm/SmsMessage;->newFromCMT([Ljava/lang/String;)Lcom/android/internal/telephony/gsm/SmsMessage;
 
     move-result-object v7
 
-    .line 290
     .local v7, "sms":Lcom/android/internal/telephony/gsm/SmsMessage;
     invoke-virtual {v7}, Lcom/android/internal/telephony/gsm/SmsMessage;->isStatusReportMessage()Z
 
     move-result v5
 
-    .line 291
     .local v5, "isStatusReport":Z
     const-string v9, "IPSMSDispatcher"
 
@@ -191,10 +176,8 @@
 
     invoke-static {v9, v10}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     if-eqz v5, :cond_1
 
-    .line 293
     iget-object v9, p0, Lcom/movial/ipphone/IPSMSDispatcher$2;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     const/16 v10, 0x64
@@ -203,7 +186,6 @@
 
     move-result-object v6
 
-    .line 295
     .local v6, "pmsg":Landroid/os/Message;
     new-instance v1, Landroid/os/AsyncResult;
 
@@ -217,16 +199,13 @@
 
     invoke-direct {v1, v9, v10, v11}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    .line 296
     .local v1, "ar":Landroid/os/AsyncResult;
     iput-object v1, v6, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 297
     invoke-virtual {v6}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 300
     .end local v1    # "ar":Landroid/os/AsyncResult;
     .end local v6    # "pmsg":Landroid/os/Message;
     :cond_1
@@ -234,7 +213,6 @@
 
     new-array v3, v9, [Ljava/lang/String;
 
-    .line 301
     .local v3, "dummy":[Ljava/lang/String;
     const/4 v9, 0x1
 
@@ -242,16 +220,13 @@
 
     aput-object v10, v3, v9
 
-    .line 304
     invoke-static {v3}, Landroid/telephony/SmsMessage;->newFromCMT([Ljava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v8
 
-    .line 305
     .local v8, "wrappedSmsMessage":Landroid/telephony/SmsMessage;
     iput-object v7, v8, Landroid/telephony/SmsMessage;->mWrappedSmsMessage:Lcom/android/internal/telephony/SmsMessageBase;
 
-    .line 306
     new-instance v1, Landroid/os/AsyncResult;
 
     const/4 v9, 0x0
@@ -260,7 +235,6 @@
 
     invoke-direct {v1, v9, v8, v10}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    .line 308
     .restart local v1    # "ar":Landroid/os/AsyncResult;
     iget-object v9, p0, Lcom/movial/ipphone/IPSMSDispatcher$2;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
@@ -275,7 +249,6 @@
 
     goto/16 :goto_0
 
-    .line 272
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

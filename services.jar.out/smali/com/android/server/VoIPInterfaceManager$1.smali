@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1974
     invoke-static {}, Lcom/android/server/VoIPInterfaceManager$CallState;->values()[Lcom/android/server/VoIPInterfaceManager$CallState;
 
     move-result-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1295
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;
 
     .prologue
-    .line 1295
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
     return-void
@@ -49,14 +47,12 @@
     .locals 2
 
     .prologue
-    .line 1298
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     const-string v1, "DefaultState: enter"
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1299
     return-void
 .end method
 
@@ -64,14 +60,12 @@
     .locals 2
 
     .prologue
-    .line 1302
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     const-string v1, "DefaultState: exit"
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1303
     return-void
 .end method
 
@@ -80,16 +74,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1306
     const/4 v0, 0x1
 
-    .line 1307
     .local v0, "retVal":Z
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1317
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -122,12 +113,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1320
     :cond_0
     :goto_0
     return v0
 
-    .line 1309
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -138,7 +127,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1310
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->showNotification()V
@@ -146,7 +134,6 @@
 
     goto :goto_0
 
-    .line 1314
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$DefaultState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -157,7 +144,6 @@
 
     goto :goto_0
 
-    .line 1307
     :pswitch_data_0
     .packed-switch 0x3f4
         :pswitch_1

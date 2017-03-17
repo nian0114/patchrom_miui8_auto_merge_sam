@@ -90,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 110
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -111,37 +110,30 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 114
     invoke-direct {p0}, Landroid/net/wifi/hs20/IWifiHs20Manager$Stub;-><init>()V
 
-    .line 83
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mUtilityHandler:Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl$UtilityHandler;
 
-    .line 108
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20ConnNotiId:I
 
-    .line 406
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl$1;-><init>(Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;)V
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 115
     const-string v0, "WifiHs20Service"
 
     const-string v1, "Service created"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
-    .line 117
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
@@ -158,7 +150,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
-    .line 119
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
@@ -167,7 +158,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
-    .line 120
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "Hs20UtilityHandlerThread"
@@ -176,12 +166,10 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mUtilityHandlerThread:Ljava/lang/Thread;
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mUtilityHandlerThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 122
     new-instance v1, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl$UtilityHandler;
 
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mUtilityHandlerThread:Ljava/lang/Thread;
@@ -196,7 +184,6 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mUtilityHandler:Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl$UtilityHandler;
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "notification"
@@ -209,17 +196,14 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 126
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->registerForBroadcasts()V
 
-    .line 127
     invoke-static {}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->readSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mSales_code:Ljava/lang/String;
 
-    .line 128
     return-void
 .end method
 
@@ -228,7 +212,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;
 
     .prologue
-    .line 66
     iget v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20ConnNotiId:I
 
     return v0
@@ -239,7 +222,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -249,7 +231,6 @@
     .locals 3
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.ACCESS_WIFI_STATE"
@@ -258,7 +239,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
     return-void
 .end method
 
@@ -266,7 +246,6 @@
     .locals 3
 
     .prologue
-    .line 198
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.ACCESS_WIFI_SECURED_INFO"
@@ -275,7 +254,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 200
     return-void
 .end method
 
@@ -283,7 +261,6 @@
     .locals 3
 
     .prologue
-    .line 193
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CHANGE_WIFI_STATE"
@@ -292,7 +269,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
     return-void
 .end method
 
@@ -300,10 +276,8 @@
     .locals 4
 
     .prologue
-    .line 149
     const-string v1, ""
 
-    .line 151
     .local v1, "sales_code":Ljava/lang/String;
     :try_start_0
     const-string v2, "ril.sales_code"
@@ -312,14 +286,12 @@
 
     move-result-object v1
 
-    .line 152
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 153
     const-string v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -328,7 +300,6 @@
 
     move-result-object v1
 
-    .line 160
     :cond_0
     :goto_0
     const/4 v2, -0x1
@@ -343,15 +314,12 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
-    .line 174
     :goto_2
     return-object v1
 
-    .line 155
     :catch_0
     move-exception v0
 
-    .line 156
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "WifiHs20Service"
 
@@ -361,7 +329,6 @@
 
     goto :goto_0
 
-    .line 160
     .end local v0    # "e":Ljava/lang/Exception;
     :sswitch_0
     const-string v3, "SPR"
@@ -454,20 +421,16 @@
 
     goto :goto_1
 
-    .line 167
     :pswitch_0
     const-string v1, "SPR"
 
-    .line 168
     goto :goto_2
 
-    .line 171
     :pswitch_1
     const-string v1, "SKT"
 
     goto :goto_2
 
-    .line 160
     nop
 
     :sswitch_data_0
@@ -497,50 +460,41 @@
     .locals 3
 
     .prologue
-    .line 138
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 139
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 140
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 141
     const-string v1, "com.android.server.wifi.hs20.blacklist_alarm"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 142
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 143
     const-string v1, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 144
     const-string v1, "android.net.wifi.CONFIGURED_NETWORKS_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 145
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 146
     return-void
 .end method
 
@@ -549,10 +503,8 @@
     .param p1, "info"    # Ljava/lang/String;
 
     .prologue
-    .line 356
     const-string v3, "/data/misc/wifi/"
 
-    .line 358
     .local v3, "filePath":Ljava/lang/String;
     :try_start_0
     new-instance v6, Ljava/io/File;
@@ -577,7 +529,6 @@
 
     invoke-direct {v6, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 359
     .local v6, "newFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -585,18 +536,15 @@
 
     if-eqz v8, :cond_0
 
-    .line 360
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 363
     :cond_0
     :try_start_1
     invoke-virtual {v6}, Ljava/io/File;->createNewFile()Z
 
-    .line 364
     const-string v8, "WifiHs20Service"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -623,7 +571,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -650,7 +597,6 @@
 
     move-result-object v0
 
-    .line 366
     .local v0, "command":Ljava/lang/String;
     const-string v8, "WifiHs20Service"
 
@@ -674,7 +620,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v8
@@ -686,25 +631,21 @@
 
     move-result-object v7
 
-    .line 369
     .local v7, "p":Ljava/lang/Process;
     :try_start_2
     invoke-virtual {v7}, Ljava/lang/Process;->waitFor()I
 
-    .line 370
     invoke-virtual {v7}, Ljava/lang/Process;->destroy()V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 377
     .end local v0    # "command":Ljava/lang/String;
     .end local v7    # "p":Ljava/lang/Process;
     :goto_0
     const/4 v4, 0x0
 
-    .line 379
     .local v4, "fw":Ljava/io/FileOutputStream;
     :try_start_3
     new-instance v5, Ljava/io/FileOutputStream;
@@ -714,7 +655,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 380
     .end local v4    # "fw":Ljava/io/FileOutputStream;
     .local v5, "fw":Ljava/io/FileOutputStream;
     :try_start_4
@@ -727,7 +667,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_5
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 384
     :try_start_5
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -736,20 +675,17 @@
 
     move-object v4, v5
 
-    .line 391
     .end local v5    # "fw":Ljava/io/FileOutputStream;
     .end local v6    # "newFile":Ljava/io/File;
     :goto_1
     return-void
 
-    .line 371
     .restart local v0    # "command":Ljava/lang/String;
     .restart local v6    # "newFile":Ljava/io/File;
     .restart local v7    # "p":Ljava/lang/Process;
     :catch_0
     move-exception v1
 
-    .line 372
     .local v1, "e":Ljava/lang/InterruptedException;
     :try_start_6
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
@@ -759,14 +695,12 @@
 
     goto :goto_0
 
-    .line 374
     .end local v0    # "command":Ljava/lang/String;
     .end local v1    # "e":Ljava/lang/InterruptedException;
     .end local v7    # "p":Ljava/lang/Process;
     :catch_1
     move-exception v1
 
-    .line 375
     .local v1, "e":Ljava/io/IOException;
     :try_start_7
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
@@ -776,13 +710,11 @@
 
     goto :goto_0
 
-    .line 386
     .end local v1    # "e":Ljava/io/IOException;
     .end local v6    # "newFile":Ljava/io/File;
     :catch_2
     move-exception v1
 
-    .line 387
     .local v1, "e":Ljava/io/FileNotFoundException;
     const-string v8, "WifiHs20Service"
 
@@ -792,14 +724,12 @@
 
     goto :goto_1
 
-    .line 381
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     .restart local v4    # "fw":Ljava/io/FileOutputStream;
     .restart local v6    # "newFile":Ljava/io/File;
     :catch_3
     move-exception v2
 
-    .line 382
     .local v2, "e1":Ljava/lang/Exception;
     :goto_2
     :try_start_8
@@ -831,7 +761,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 384
     :try_start_9
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_9
@@ -840,14 +769,12 @@
 
     goto :goto_1
 
-    .line 388
     .end local v2    # "e1":Ljava/lang/Exception;
     .end local v4    # "fw":Ljava/io/FileOutputStream;
     .end local v6    # "newFile":Ljava/io/File;
     :catch_4
     move-exception v1
 
-    .line 389
     .local v1, "e":Ljava/io/IOException;
     const-string v8, "WifiHs20Service"
 
@@ -877,7 +804,6 @@
 
     goto :goto_1
 
-    .line 384
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v4    # "fw":Ljava/io/FileOutputStream;
     .restart local v6    # "newFile":Ljava/io/File;
@@ -904,7 +830,6 @@
     .restart local v4    # "fw":Ljava/io/FileOutputStream;
     goto :goto_3
 
-    .line 381
     .end local v4    # "fw":Ljava/io/FileOutputStream;
     .restart local v5    # "fw":Ljava/io/FileOutputStream;
     :catch_5
@@ -923,18 +848,14 @@
     .locals 1
 
     .prologue
-    .line 217
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessPermission()V
 
-    .line 218
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceChangePermission()V
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->cancelSubscription()V
 
-    .line 220
     return-void
 .end method
 
@@ -943,10 +864,8 @@
     .param p1, "hsId"    # I
 
     .prologue
-    .line 245
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->syncDeleteSubscription(I)Z
@@ -963,7 +882,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 395
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DUMP"
@@ -974,7 +892,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 397
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1013,17 +930,14 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 405
     :goto_0
     return-void
 
-    .line 403
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 404
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     goto :goto_0
@@ -1035,13 +949,10 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 239
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessPermission()V
 
-    .line 240
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceChangePermission()V
 
-    .line 241
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->syncEnableSubscription(IZ)Z
@@ -1056,17 +967,14 @@
     .param p1, "credentialID"    # I
 
     .prologue
-    .line 337
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 338
     new-instance v1, Lcom/android/server/wifi/hs20/WifiHs20DBHandler;
 
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20DBHandler;-><init>(Landroid/content/Context;)V
 
-    .line 339
     .local v1, "mDB":Lcom/android/server/wifi/hs20/WifiHs20DBHandler;
     const/4 v2, 0x0
 
@@ -1074,7 +982,6 @@
 
     move-result-object v0
 
-    .line 340
     .local v0, "mCredential":Lcom/android/server/wifi/hs20/WifiHs20PPSMO$Credential;
     iget-object v2, v0, Lcom/android/server/wifi/hs20/WifiHs20PPSMO$Credential;->digitalCertificateObj:Lcom/android/server/wifi/hs20/WifiHs20PPSMO$DigitalCertificate;
 
@@ -1090,34 +997,27 @@
     .param p3, "subscriptionType"    # Ljava/lang/String;
 
     .prologue
-    .line 325
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 326
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v2, p1, p2, p3}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->getCredentials(IILjava/lang/String;)Landroid/net/wifi/hs20/WifiHs20DMData;
 
     move-result-object v1
 
-    .line 328
     .local v1, "credentials":Landroid/net/wifi/hs20/WifiHs20DMData;
     if-nez v1, :cond_0
 
-    .line 329
     const/4 v0, 0x0
 
-    .line 333
     :goto_0
     return-object v0
 
-    .line 330
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 331
     .local v0, "credData":Landroid/os/Bundle;
     const-string v2, "Username"
 
@@ -1125,7 +1025,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     const-string v2, "Password"
 
     iget-object v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->password:[B
@@ -1146,15 +1045,12 @@
 
     const/4 v5, 0x1
 
-    .line 250
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 251
     new-instance v0, Landroid/net/wifi/hs20/WifiHs20DMData;
 
     invoke-direct {v0}, Landroid/net/wifi/hs20/WifiHs20DMData;-><init>()V
 
-    .line 252
     .local v0, "data":Landroid/net/wifi/hs20/WifiHs20DMData;
     const-string v2, "Uri"
 
@@ -1164,17 +1060,14 @@
 
     iput-object v2, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->uri:Ljava/lang/String;
 
-    .line 253
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v2, v0}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->getDMData(Landroid/net/wifi/hs20/WifiHs20DMData;)Z
 
-    .line 254
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 255
     .local v1, "dmBundle":Landroid/os/Bundle;
     const-string v2, "WifiHs20Service"
 
@@ -1200,19 +1093,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     iget v2, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-nez v2, :cond_1
 
-    .line 257
     const-string v2, "data"
 
     iget-wide v4, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->intData:J
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 258
     const-string v2, "WifiHs20Service"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1237,32 +1127,27 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     const-string v2, "Format"
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 275
     :cond_0
     :goto_0
     return-object v1
 
-    .line 260
     :cond_1
     iget v2, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-ne v2, v6, :cond_2
 
-    .line 261
     const-string v2, "data"
 
     iget-boolean v3, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->booleanData:Z
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 262
     const-string v2, "WifiHs20Service"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1287,27 +1172,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     const-string v2, "Format"
 
     invoke-virtual {v1, v2, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 264
     :cond_2
     iget v2, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-ne v2, v5, :cond_3
 
-    .line 265
     const-string v2, "data"
 
     iget-object v3, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->charData:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
     const-string v2, "WifiHs20Service"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1332,12 +1213,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     const-string v2, "Format"
 
     invoke-virtual {v1, v2, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 268
     const-string v2, "dataLen"
 
     iget v3, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->charDataLen:I
@@ -1346,20 +1225,17 @@
 
     goto :goto_0
 
-    .line 269
     :cond_3
     iget v2, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-ne v2, v7, :cond_0
 
-    .line 270
     const-string v2, "data"
 
     iget-object v3, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->byteData:[B
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 271
     const-string v2, "WifiHs20Service"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1384,12 +1260,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     const-string v2, "Format"
 
     invoke-virtual {v1, v2, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 273
     const-string v2, "dataLen"
 
     iget v3, v0, Landroid/net/wifi/hs20/WifiHs20DMData;->byteDataLen:I
@@ -1404,10 +1278,8 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 320
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 321
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->getFormatType(Ljava/lang/String;)I
@@ -1421,17 +1293,14 @@
     .locals 2
 
     .prologue
-    .line 344
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 345
     new-instance v0, Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;
 
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;-><init>(Landroid/content/Context;)V
 
-    .line 346
     .local v0, "hs20PasswordGenerator":Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;
     invoke-virtual {v0}, Lcom/android/server/wifi/hs20/WifiHs20PasswordGenerator;->genPasswd1()Ljava/lang/String;
 
@@ -1448,13 +1317,10 @@
     .locals 2
 
     .prologue
-    .line 182
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessPermission()V
 
-    .line 183
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceChangePermission()V
 
-    .line 184
     new-instance v0, Landroid/os/Messenger;
 
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -1481,7 +1347,6 @@
     .end annotation
 
     .prologue
-    .line 229
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->syncGetSubscribedSpList()Ljava/util/List;
@@ -1504,15 +1369,12 @@
 
     const/4 v3, 0x1
 
-    .line 279
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 280
     new-instance v1, Landroid/net/wifi/hs20/WifiHs20DMData;
 
     invoke-direct {v1}, Landroid/net/wifi/hs20/WifiHs20DMData;-><init>()V
 
-    .line 281
     .local v1, "data":Landroid/net/wifi/hs20/WifiHs20DMData;
     const-string v4, "Action"
 
@@ -1520,7 +1382,6 @@
 
     move-result v0
 
-    .line 282
     .local v0, "action":I
     const-string v4, "Format"
 
@@ -1528,27 +1389,22 @@
 
     move-result v2
 
-    .line 283
     .local v2, "format":I
     if-ne v0, v3, :cond_1
 
-    .line 284
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v3}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->startSession()Z
 
     move-result v3
 
-    .line 316
     :cond_0
     :goto_0
     return v3
 
-    .line 285
     :cond_1
     if-ne v0, v5, :cond_2
 
-    .line 286
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     const-string v4, "status"
@@ -1563,17 +1419,14 @@
 
     goto :goto_0
 
-    .line 287
     :cond_2
     if-eq v0, v6, :cond_3
 
     if-ne v0, v7, :cond_9
 
-    .line 289
     :cond_3
     iput v2, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
-    .line 290
     const-string v4, "Uri"
 
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1582,12 +1435,10 @@
 
     iput-object v4, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->uri:Ljava/lang/String;
 
-    .line 291
     iget v4, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-nez v4, :cond_5
 
-    .line 292
     const-string v3, "data"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -1596,12 +1447,10 @@
 
     iput-wide v4, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->intData:J
 
-    .line 302
     :cond_4
     :goto_1
     if-ne v0, v6, :cond_8
 
-    .line 303
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v3, v1}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->addDMData(Landroid/net/wifi/hs20/WifiHs20DMData;)Z
@@ -1610,13 +1459,11 @@
 
     goto :goto_0
 
-    .line 293
     :cond_5
     iget v4, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-ne v4, v5, :cond_6
 
-    .line 294
     const-string v3, "data"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1627,13 +1474,11 @@
 
     goto :goto_1
 
-    .line 295
     :cond_6
     iget v4, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-ne v4, v3, :cond_7
 
-    .line 296
     const-string v3, "data"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1642,7 +1487,6 @@
 
     iput-object v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->charData:Ljava/lang/String;
 
-    .line 297
     const-string v3, "dataLen"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -1653,13 +1497,11 @@
 
     goto :goto_1
 
-    .line 298
     :cond_7
     iget v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
     if-ne v3, v7, :cond_4
 
-    .line 299
     const-string v3, "data"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
@@ -1668,7 +1510,6 @@
 
     iput-object v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->byteData:[B
 
-    .line 300
     const-string v3, "dataLen"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -1679,7 +1520,6 @@
 
     goto :goto_1
 
-    .line 305
     :cond_8
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
@@ -1689,16 +1529,13 @@
 
     goto :goto_0
 
-    .line 307
     :cond_9
     const/4 v4, 0x6
 
     if-ne v0, v4, :cond_a
 
-    .line 308
     iput v2, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->fmt:I
 
-    .line 309
     const-string v3, "Uri"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1707,7 +1544,6 @@
 
     iput-object v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->uri:Ljava/lang/String;
 
-    .line 310
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v3, v1}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->deleteDMData(Landroid/net/wifi/hs20/WifiHs20DMData;)Z
@@ -1716,13 +1552,11 @@
 
     goto/16 :goto_0
 
-    .line 311
     :cond_a
     const/4 v4, 0x7
 
     if-ne v0, v4, :cond_0
 
-    .line 312
     const-string v3, "Command"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1731,7 +1565,6 @@
 
     iput-object v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->command:Ljava/lang/String;
 
-    .line 313
     const-string v3, "execData"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1740,7 +1573,6 @@
 
     iput-object v3, v1, Landroid/net/wifi/hs20/WifiHs20DMData;->execData:Ljava/lang/String;
 
-    .line 314
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mWifiHs20DMHandler:Lcom/android/server/wifi/hs20/WifiHs20DMHandler;
 
     invoke-virtual {v3, v1}, Lcom/android/server/wifi/hs20/WifiHs20DMHandler;->exec(Landroid/net/wifi/hs20/WifiHs20DMData;)Z
@@ -1754,7 +1586,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->isSubscrptionInProgress()Z
@@ -1769,10 +1600,8 @@
     .param p1, "credInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 350
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessSecuredPermission()V
 
-    .line 352
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->syncLoadCred(Ljava/lang/String;)I
@@ -1795,17 +1624,14 @@
 
     const/4 v1, 0x0
 
-    .line 566
     const-string v0, "WifiHs20Service"
 
     const-string v3, "showHS20WifiNotification"
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 568
     if-eqz p1, :cond_9
 
-    .line 569
     const-string v0, "WifiHs20Service"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1830,7 +1656,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     const-string v0, "SPR"
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mSales_code:Ljava/lang/String;
@@ -1841,12 +1666,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 637
     :cond_0
     :goto_0
     return-void
 
-    .line 575
     :cond_1
     const-string v0, "SKT"
 
@@ -1858,18 +1681,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 576
     iget v0, p1, Landroid/net/wifi/WifiConfiguration;->isHS20Home:I
 
     if-eq v0, v10, :cond_0
 
-    .line 581
     :cond_2
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20NotiBuilder:Landroid/app/Notification$Builder;
 
     if-nez v0, :cond_3
 
-    .line 582
     new-instance v0, Landroid/app/Notification$Builder;
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
@@ -1888,12 +1708,10 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20NotiBuilder:Landroid/app/Notification$Builder;
 
-    .line 585
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 586
     .local v2, "wifiSettingsIntent":Landroid/content/Intent;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -1907,20 +1725,17 @@
 
     if-eqz v0, :cond_4
 
-    .line 588
     const-string v0, "com.android.settings"
 
     const-string v3, "com.android.settings.Settings$AdvancedWifiSettingsActivity"
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 594
     :goto_1
     const v0, 0x10008000
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 596
     iget-object v9, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20NotiBuilder:Landroid/app/Notification$Builder;
 
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
@@ -1937,7 +1752,6 @@
 
     invoke-virtual {v9, v0}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 599
     .end local v2    # "wifiSettingsIntent":Landroid/content/Intent;
     :cond_3
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mContext:Landroid/content/Context;
@@ -1946,35 +1760,28 @@
 
     move-result-object v7
 
-    .line 600
     .local v7, "r":Landroid/content/res/Resources;
     const/4 v8, 0x0
 
-    .line 601
     .local v8, "title":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 602
     .local v6, "message":Ljava/lang/String;
     iget v0, p1, Landroid/net/wifi/WifiConfiguration;->isHS20Home:I
 
     if-ne v0, v10, :cond_5
 
-    .line 603
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20NotiBuilder:Landroid/app/Notification$Builder;
 
     invoke-virtual {v0, v11}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 604
     iput v11, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20ConnNotiId:I
 
-    .line 609
     :goto_2
     iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->HS20VenueName:Ljava/lang/String;
 
     if-nez v0, :cond_6
 
-    .line 610
     const v0, 0x1040a60
 
     invoke-virtual {v7, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1991,13 +1798,11 @@
 
     move-result-object v8
 
-    .line 616
     :goto_3
     iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->HS20OperatorName:Ljava/lang/String;
 
     if-eqz v0, :cond_7
 
-    .line 617
     const v0, 0x1040a62
 
     new-array v3, v10, [Ljava/lang/Object;
@@ -2016,7 +1821,6 @@
 
     move-result-object v6
 
-    .line 629
     :goto_4
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20NotiBuilder:Landroid/app/Notification$Builder;
 
@@ -2030,7 +1834,6 @@
 
     invoke-virtual {v0, v8}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 630
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mNotificationManager:Landroid/app/NotificationManager;
 
     const-string v1, "HS20_CONNECTED_NOTIFICATION"
@@ -2049,7 +1852,6 @@
 
     goto/16 :goto_0
 
-    .line 591
     .end local v6    # "message":Ljava/lang/String;
     .end local v7    # "r":Landroid/content/res/Resources;
     .end local v8    # "title":Ljava/lang/String;
@@ -2063,7 +1865,6 @@
 
     goto :goto_1
 
-    .line 606
     .end local v2    # "wifiSettingsIntent":Landroid/content/Intent;
     .restart local v6    # "message":Ljava/lang/String;
     .restart local v7    # "r":Landroid/content/res/Resources;
@@ -2073,12 +1874,10 @@
 
     invoke-virtual {v0, v12}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 607
     iput v12, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20ConnNotiId:I
 
     goto :goto_2
 
-    .line 613
     :cond_6
     const v0, 0x1040a61
 
@@ -2106,7 +1905,6 @@
 
     goto :goto_3
 
-    .line 621
     :cond_7
     const-string v0, "SKT"
 
@@ -2118,7 +1916,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 622
     const v0, 0x1040a63
 
     new-array v3, v10, [Ljava/lang/Object;
@@ -2139,7 +1936,6 @@
 
     goto :goto_4
 
-    .line 626
     :cond_8
     const v0, 0x1040a64
 
@@ -2149,7 +1945,6 @@
 
     goto :goto_4
 
-    .line 633
     .end local v6    # "message":Ljava/lang/String;
     .end local v7    # "r":Landroid/content/res/Resources;
     .end local v8    # "title":Ljava/lang/String;
@@ -2164,7 +1959,6 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
-    .line 635
     iput v1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHs20ConnNotiId:I
 
     goto/16 :goto_0
@@ -2175,16 +1969,12 @@
     .param p1, "selectedOsuProvider"    # Landroid/net/wifi/hs20/WifiHs20OsuProvider;
 
     .prologue
-    .line 203
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessPermission()V
 
-    .line 204
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceChangePermission()V
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mOsuProvider:Landroid/net/wifi/hs20/WifiHs20OsuProvider;
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mOsuProvider:Landroid/net/wifi/hs20/WifiHs20OsuProvider;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -2201,12 +1991,10 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->friendlyName:Ljava/lang/String;
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->startOSUProcess(Landroid/net/wifi/hs20/WifiHs20OsuProvider;)V
 
-    .line 208
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -2221,7 +2009,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mCurrentOsuIconFile:Ljava/lang/String;
 
-    .line 210
     return-void
 .end method
 
@@ -2230,18 +2017,14 @@
     .param p1, "fqdn"    # Ljava/lang/String;
 
     .prologue
-    .line 223
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessPermission()V
 
-    .line 224
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceChangePermission()V
 
-    .line 225
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->startPolicyUpdate(Ljava/lang/String;)V
 
-    .line 226
     return-void
 .end method
 
@@ -2249,14 +2032,12 @@
     .locals 4
 
     .prologue
-    .line 131
     const-string v2, "wifi"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 132
     .local v0, "s":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/net/wifi/IWifiManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/wifi/IWifiManager;
 
@@ -2264,7 +2045,6 @@
 
     check-cast v1, Lcom/android/server/wifi/WifiServiceImpl;
 
-    .line 133
     .local v1, "wifiServiceImpl":Lcom/android/server/wifi/WifiServiceImpl;
     invoke-virtual {v1}, Lcom/android/server/wifi/WifiServiceImpl;->getWifiMonitor()Lcom/android/server/wifi/WifiMonitor;
 
@@ -2274,12 +2054,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiMonitor;->setStateMachine2(Lcom/android/internal/util/StateMachine;)V
 
-    .line 134
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->systemServiceReady()V
 
-    .line 135
     return-void
 .end method
 
@@ -2288,13 +2066,10 @@
     .param p1, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 233
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceAccessPermission()V
 
-    .line 234
     invoke-direct {p0}, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->enforceChangePermission()V
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20ServiceImpl;->mHS20StateMachine:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->syncUpdateCredPriorities(Landroid/os/Bundle;)Z

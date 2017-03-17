@@ -53,7 +53,7 @@
 
     new-instance v0, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v1, "envelopedSignatureTransformNotInSignatureElement"
+    const-string v1, "envelopedSignatureTransformNotInSignatureElement"
 
     invoke-direct {v0, v1}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;)V
 
@@ -68,7 +68,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "http://www.w3.org/2000/09/xmldsig#"
+    const-string v4, "http://www.w3.org/2000/09/xmldsig#"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -113,7 +113,7 @@
 .method protected engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+    const-string v0, "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
 
     return-object v0
 .end method

@@ -20,16 +20,12 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaException;->key:Ljava/lang/String;
 
-    .line 41
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaException;->args:[Ljava/lang/Object;
 
-    .line 42
     return-void
 .end method
 
@@ -39,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaException;->args:[Ljava/lang/Object;
 
     return-object v0
@@ -49,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/XMLSchemaException;->key:Ljava/lang/String;
 
     return-object v0

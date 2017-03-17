@@ -68,34 +68,26 @@
     .prologue
     const-wide/16 v2, 0x3e8
 
-    .line 268
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$Constants;->this$0:Lcom/android/server/AlarmManagerService;
 
-    .line 269
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 249
     iput-wide v2, p0, Lcom/android/server/AlarmManagerService$Constants;->MIN_FUTURITY:J
 
-    .line 252
     const-wide/32 v0, 0xea60
 
     iput-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->MIN_INTERVAL:J
 
-    .line 255
     iput-wide v2, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_SHORT_TIME:J
 
-    .line 258
     const-wide/32 v0, 0x83d60
 
     iput-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_LONG_TIME:J
 
-    .line 261
     const-wide/16 v0, 0x2710
 
     iput-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_WHITELIST_DURATION:J
 
-    .line 265
     new-instance v0, Landroid/util/KeyValueListParser;
 
     const/16 v1, 0x2c
@@ -104,18 +96,14 @@
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
-    .line 266
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->mLastAllowWhileIdleWhitelistDuration:J
 
-    .line 270
     invoke-virtual {p0}, Lcom/android/server/AlarmManagerService$Constants;->updateAllowWhileIdleMinTimeLocked()V
 
-    .line 271
     invoke-virtual {p0}, Lcom/android/server/AlarmManagerService$Constants;->updateAllowWhileIdleWhitelistDurationLocked()V
 
-    .line 272
     return-void
 .end method
 
@@ -123,14 +111,12 @@
     .locals 6
 
     .prologue
-    .line 301
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v2, v1, Lcom/android/server/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 303
     :try_start_0
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
@@ -147,12 +133,11 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 311
     :goto_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
-    const-string/jumbo v3, "min_futurity"
+    const-string v3, "min_futurity"
 
     const-wide/16 v4, 0x3e8
 
@@ -162,10 +147,9 @@
 
     iput-wide v4, p0, Lcom/android/server/AlarmManagerService$Constants;->MIN_FUTURITY:J
 
-    .line 312
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
-    const-string/jumbo v3, "min_interval"
+    const-string v3, "min_interval"
 
     const-wide/32 v4, 0xea60
 
@@ -175,7 +159,6 @@
 
     iput-wide v4, p0, Lcom/android/server/AlarmManagerService$Constants;->MIN_INTERVAL:J
 
-    .line 313
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v3, "allow_while_idle_short_time"
@@ -188,7 +171,6 @@
 
     iput-wide v4, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_SHORT_TIME:J
 
-    .line 315
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v3, "allow_while_idle_long_time"
@@ -201,7 +183,6 @@
 
     iput-wide v4, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_LONG_TIME:J
 
-    .line 317
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v3, "allow_while_idle_whitelist_duration"
@@ -214,23 +195,17 @@
 
     iput-wide v4, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_WHITELIST_DURATION:J
 
-    .line 321
     invoke-virtual {p0}, Lcom/android/server/AlarmManagerService$Constants;->updateAllowWhileIdleMinTimeLocked()V
 
-    .line 322
     invoke-virtual {p0}, Lcom/android/server/AlarmManagerService$Constants;->updateAllowWhileIdleWhitelistDurationLocked()V
 
-    .line 323
     monitor-exit v2
 
-    .line 324
     return-void
 
-    .line 305
     :catch_0
     move-exception v0
 
-    .line 308
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v1, "AlarmManager"
 
@@ -240,7 +215,6 @@
 
     goto :goto_0
 
-    .line 323
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catchall_0
     move-exception v1
@@ -259,17 +233,15 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 327
     const-string v0, "  Settings:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 329
     const-string v0, "    "
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "min_futurity"
+    const-string v0, "min_futurity"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -277,20 +249,17 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 330
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->MIN_FUTURITY:J
 
     invoke-static {v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 331
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 333
     const-string v0, "    "
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "min_interval"
+    const-string v0, "min_interval"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -298,15 +267,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 334
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->MIN_INTERVAL:J
 
     invoke-static {v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 335
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 337
     const-string v0, "    "
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -319,15 +285,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 338
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_SHORT_TIME:J
 
     invoke-static {v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 339
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 341
     const-string v0, "    "
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -340,15 +303,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 342
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_LONG_TIME:J
 
     invoke-static {v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 343
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 345
     const-string v0, "    "
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -361,15 +321,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 346
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_WHITELIST_DURATION:J
 
     invoke-static {v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 347
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 348
     return-void
 .end method
 
@@ -379,10 +336,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 297
     invoke-direct {p0}, Lcom/android/server/AlarmManagerService$Constants;->updateConstants()V
 
-    .line 298
     return-void
 .end method
 
@@ -391,10 +346,8 @@
     .param p1, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 275
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$Constants;->mResolver:Landroid/content/ContentResolver;
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$Constants;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "alarm_manager_constants"
@@ -407,10 +360,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 278
     invoke-direct {p0}, Lcom/android/server/AlarmManagerService$Constants;->updateConstants()V
 
-    .line 279
     return-void
 .end method
 
@@ -418,7 +369,6 @@
     .locals 3
 
     .prologue
-    .line 282
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$Constants;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$Constants;->this$0:Lcom/android/server/AlarmManagerService;
@@ -432,10 +382,8 @@
     :goto_0
     iput-wide v0, v2, Lcom/android/server/AlarmManagerService;->mAllowWhileIdleMinTime:J
 
-    .line 284
     return-void
 
-    .line 282
     :cond_0
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_SHORT_TIME:J
 
@@ -446,7 +394,6 @@
     .locals 6
 
     .prologue
-    .line 287
     iget-wide v2, p0, Lcom/android/server/AlarmManagerService$Constants;->mLastAllowWhileIdleWhitelistDuration:J
 
     iget-wide v4, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_WHITELIST_DURATION:J
@@ -455,23 +402,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 288
     iget-wide v2, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_WHITELIST_DURATION:J
 
     iput-wide v2, p0, Lcom/android/server/AlarmManagerService$Constants;->mLastAllowWhileIdleWhitelistDuration:J
 
-    .line 289
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v0
 
-    .line 290
     .local v0, "opts":Landroid/app/BroadcastOptions;
     iget-wide v2, p0, Lcom/android/server/AlarmManagerService$Constants;->ALLOW_WHILE_IDLE_WHITELIST_DURATION:J
 
     invoke-virtual {v0, v2, v3}, Landroid/app/BroadcastOptions;->setTemporaryAppWhitelistDuration(J)V
 
-    .line 291
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$Constants;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-virtual {v0}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
@@ -480,7 +423,6 @@
 
     iput-object v2, v1, Lcom/android/server/AlarmManagerService;->mIdleOptions:Landroid/os/Bundle;
 
-    .line 293
     .end local v0    # "opts":Landroid/app/BroadcastOptions;
     :cond_0
     return-void

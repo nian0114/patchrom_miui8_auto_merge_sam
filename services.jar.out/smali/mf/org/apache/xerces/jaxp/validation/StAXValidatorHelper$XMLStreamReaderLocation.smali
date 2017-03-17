@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 647
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 694
     iget-object v0, p0, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->reader:Lmf/javax/xml/stream/XMLStreamReader;
 
     if-eqz v0, :cond_0
@@ -62,21 +60,17 @@
     .locals 2
 
     .prologue
-    .line 650
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->getLocation()Lmf/javax/xml/stream/Location;
 
     move-result-object v0
 
-    .line 651
     .local v0, "loc":Lmf/javax/xml/stream/Location;
     if-eqz v0, :cond_0
 
-    .line 652
     invoke-interface {v0}, Lmf/javax/xml/stream/Location;->getCharacterOffset()I
 
     move-result v1
 
-    .line 654
     :goto_0
     return v1
 
@@ -90,21 +84,17 @@
     .locals 2
 
     .prologue
-    .line 658
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->getLocation()Lmf/javax/xml/stream/Location;
 
     move-result-object v0
 
-    .line 659
     .local v0, "loc":Lmf/javax/xml/stream/Location;
     if-eqz v0, :cond_0
 
-    .line 660
     invoke-interface {v0}, Lmf/javax/xml/stream/Location;->getColumnNumber()I
 
     move-result v1
 
-    .line 662
     :goto_0
     return v1
 
@@ -118,21 +108,17 @@
     .locals 2
 
     .prologue
-    .line 666
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->getLocation()Lmf/javax/xml/stream/Location;
 
     move-result-object v0
 
-    .line 667
     .local v0, "loc":Lmf/javax/xml/stream/Location;
     if-eqz v0, :cond_0
 
-    .line 668
     invoke-interface {v0}, Lmf/javax/xml/stream/Location;->getLineNumber()I
 
     move-result v1
 
-    .line 670
     :goto_0
     return v1
 
@@ -146,21 +132,17 @@
     .locals 2
 
     .prologue
-    .line 674
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->getLocation()Lmf/javax/xml/stream/Location;
 
     move-result-object v0
 
-    .line 675
     .local v0, "loc":Lmf/javax/xml/stream/Location;
     if-eqz v0, :cond_0
 
-    .line 676
     invoke-interface {v0}, Lmf/javax/xml/stream/Location;->getPublicId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 678
     :goto_0
     return-object v1
 
@@ -174,21 +156,17 @@
     .locals 2
 
     .prologue
-    .line 682
     invoke-direct {p0}, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->getLocation()Lmf/javax/xml/stream/Location;
 
     move-result-object v0
 
-    .line 683
     .local v0, "loc":Lmf/javax/xml/stream/Location;
     if-eqz v0, :cond_0
 
-    .line 684
     invoke-interface {v0}, Lmf/javax/xml/stream/Location;->getSystemId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 686
     :goto_0
     return-object v1
 
@@ -203,9 +181,7 @@
     .param p1, "reader"    # Lmf/javax/xml/stream/XMLStreamReader;
 
     .prologue
-    .line 690
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/validation/StAXValidatorHelper$XMLStreamReaderLocation;->reader:Lmf/javax/xml/stream/XMLStreamReader;
 
-    .line 691
     return-void
 .end method

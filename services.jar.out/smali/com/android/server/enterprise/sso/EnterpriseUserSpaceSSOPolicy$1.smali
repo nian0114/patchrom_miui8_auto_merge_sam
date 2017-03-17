@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 160
     iput-object p1, p0, Lcom/android/server/enterprise/sso/EnterpriseUserSpaceSSOPolicy$1;->this$0:Lcom/android/server/enterprise/sso/EnterpriseUserSpaceSSOPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,16 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 163
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 164
     .local v0, "action":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 166
     .local v1, "result":I
     const-string v2, "android.intent.action.PACKAGE_REPLACED"
 
@@ -58,7 +54,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 169
     :cond_0
     return-void
 .end method

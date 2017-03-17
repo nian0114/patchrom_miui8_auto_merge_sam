@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 9684
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 9687
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 9688
     .local v0, "action":Ljava/lang/String;
     const-string v3, "ActivityManager"
 
@@ -52,7 +49,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "mIntentRecvWidget Action : "
+    const-string v5, "mIntentRecvWidget Action : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -68,7 +65,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9690
     const-string v3, "android.intent.WIDGETSSR.WIDGETADD"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,20 +73,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 9691
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 9692
     .local v1, "bundle":Landroid/os/Bundle;
-    const-string/jumbo v3, "pkgname"
+    const-string v3, "pkgname"
 
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 9693
     .local v2, "pkgName":Ljava/lang/String;
     const-string v3, "ActivityManager"
 
@@ -98,7 +91,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "mIntentRecvWidget widget add : "
+    const-string v5, "mIntentRecvWidget widget add : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,7 +107,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9694
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mWidgetOnHomescreen:Ljava/util/HashSet;
@@ -125,7 +117,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 9695
     const-string v3, "ActivityManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -154,14 +145,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9701
     .end local v1    # "bundle":Landroid/os/Bundle;
     .end local v2    # "pkgName":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 9697
     .restart local v1    # "bundle":Landroid/os/Bundle;
     .restart local v2    # "pkgName":Ljava/lang/String;
     :cond_1
@@ -193,7 +182,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9698
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mWidgetOnHomescreen:Ljava/util/HashSet;

@@ -28,7 +28,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 13
     sput-object v0, Lorg/apache/http/HttpVersion;->HTTP_0_9:Lorg/apache/http/HttpVersion;
 
     sput-object v0, Lorg/apache/http/HttpVersion;->HTTP_1_0:Lorg/apache/http/HttpVersion;
@@ -46,7 +45,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 7
     const/4 v0, 0x0
 
     check-cast v0, Ljava/lang/String;
@@ -70,7 +68,6 @@
     .param p2, "minor"    # I
 
     .prologue
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

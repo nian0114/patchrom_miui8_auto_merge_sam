@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 11239
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$40;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 11242
     const-string v0, "WindowManager"
 
     const-string v1, "Shared devices on boot completed dismiss keyguard"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11243
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$40;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-virtual {v0, v2, v2}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->keyguardDone(ZZ)V
 
-    .line 11244
     return-void
 .end method

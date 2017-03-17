@@ -79,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/NetworkTimeUpdateService;->POLL_REQUEST:I
@@ -96,56 +95,44 @@
 
     const/4 v3, 0x0
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput-wide v4, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzTimeSetTime:J
 
-    .line 74
     iput-wide v4, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzZoneSetTime:J
 
-    .line 85
     iput-wide v4, p0, Lcom/android/server/NetworkTimeUpdateService;->mLastNtpFetchTime:J
 
-    .line 103
     iput-boolean v3, p0, Lcom/android/server/NetworkTimeUpdateService;->mNtpSetByMDM:Z
 
-    .line 104
     iput-boolean v3, p0, Lcom/android/server/NetworkTimeUpdateService;->mBootCompleted:Z
 
-    .line 270
     new-instance v1, Lcom/android/server/NetworkTimeUpdateService$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/NetworkTimeUpdateService$2;-><init>(Lcom/android/server/NetworkTimeUpdateService;)V
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 305
     new-instance v1, Lcom/android/server/NetworkTimeUpdateService$3;
 
     invoke-direct {v1, p0}, Lcom/android/server/NetworkTimeUpdateService$3;-><init>(Lcom/android/server/NetworkTimeUpdateService;)V
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 370
     new-instance v1, Lcom/android/server/NetworkTimeUpdateService$4;
 
     invoke-direct {v1, p0}, Lcom/android/server/NetworkTimeUpdateService$4;-><init>(Lcom/android/server/NetworkTimeUpdateService;)V
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mMDMReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
-    .line 109
     invoke-static {p1}, Landroid/util/NtpTrustedTime;->getInstance(Landroid/content/Context;)Landroid/util/NtpTrustedTime;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
 
-    .line 110
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     const-string v2, "alarm"
@@ -158,7 +145,6 @@
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 111
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.server.NetworkTimeUpdateService.action.POLL"
@@ -167,7 +153,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 112
     .local v0, "pollIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
@@ -179,7 +164,6 @@
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mPendingPollIntent:Landroid/app/PendingIntent;
 
-    .line 114
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -196,7 +180,6 @@
 
     iput-wide v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
 
-    .line 116
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -213,7 +196,6 @@
 
     iput-wide v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalShorterMs:J
 
-    .line 118
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -228,7 +210,6 @@
 
     iput v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainTimesMax:I
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -243,8 +224,7 @@
 
     iput v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mTimeErrorThresholdMs:I
 
-    .line 123
-    const-string/jumbo v1, "power"
+    const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -262,7 +242,6 @@
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 125
     return-void
 .end method
 
@@ -271,7 +250,6 @@
     .param p0, "x0"    # Lcom/android/server/NetworkTimeUpdateService;
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -283,7 +261,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 57
     iput p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainCounter:I
 
     return p1
@@ -295,7 +272,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 57
     iput-wide p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzTimeSetTime:J
 
     return-wide p1
@@ -307,7 +283,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 57
     iput-boolean p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mBootCompleted:Z
 
     return p1
@@ -319,7 +294,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 57
     iput-wide p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzZoneSetTime:J
 
     return-wide p1
@@ -330,7 +304,6 @@
     .param p0, "x0"    # Lcom/android/server/NetworkTimeUpdateService;
 
     .prologue
-    .line 57
     iget-boolean v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mNtpSetByMDM:Z
 
     return v0
@@ -342,7 +315,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 57
     iput-boolean p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mNtpSetByMDM:Z
 
     return p1
@@ -353,7 +325,6 @@
     .param p0, "x0"    # Lcom/android/server/NetworkTimeUpdateService;
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
 
     return-object v0
@@ -364,7 +335,6 @@
     .param p0, "x0"    # Lcom/android/server/NetworkTimeUpdateService;
 
     .prologue
-    .line 57
     iget v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mTimeErrorThresholdMs:I
 
     return v0
@@ -376,7 +346,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 57
     iput p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mTimeErrorThresholdMs:I
 
     return p1
@@ -388,7 +357,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 57
     invoke-direct {p0, p1}, Lcom/android/server/NetworkTimeUpdateService;->onPollNetworkTime(I)V
 
     return-void
@@ -400,7 +368,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 57
     iput-wide p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
 
     return-wide p1
@@ -412,7 +379,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 57
     iput-wide p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalShorterMs:J
 
     return-wide p1
@@ -424,7 +390,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 57
     iput p1, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainTimesMax:I
 
     return p1
@@ -436,7 +401,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 265
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -462,7 +426,6 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 173
     invoke-direct {p0}, Lcom/android/server/NetworkTimeUpdateService;->isAutomaticTimeRequested()Z
 
     move-result v0
@@ -473,23 +436,19 @@
 
     if-nez v0, :cond_0
 
-    .line 181
     :goto_0
     return-void
 
-    .line 175
     :cond_0
     iget-object v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 177
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/NetworkTimeUpdateService;->onPollNetworkTimeUnderWakeLock(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -517,12 +476,10 @@
 
     const-wide/16 v10, -0x1
 
-    .line 184
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 187
     .local v4, "refTime":J
     iget-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzTimeSetTime:J
 
@@ -544,23 +501,19 @@
 
     if-nez v6, :cond_1
 
-    .line 189
     iget-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
 
     invoke-direct {p0, v6, v7}, Lcom/android/server/NetworkTimeUpdateService;->resetAlarm(J)V
 
-    .line 247
     :cond_0
     :goto_0
     return-void
 
-    .line 192
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 195
     .local v0, "currentTime":J
     iget-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mLastNtpFetchTime:J
 
@@ -584,7 +537,6 @@
 
     if-ne p1, v13, :cond_7
 
-    .line 201
     :cond_2
     iget-object v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
 
@@ -600,13 +552,11 @@
 
     if-ne p1, v13, :cond_4
 
-    .line 203
     :cond_3
     iget-object v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
 
     invoke-interface {v6}, Landroid/util/TrustedTime;->forceRefresh()Z
 
-    .line 207
     :cond_4
     iget-object v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
 
@@ -620,18 +570,15 @@
 
     if-gez v6, :cond_8
 
-    .line 208
     iget-object v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
 
     invoke-interface {v6}, Landroid/util/TrustedTime;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 209
     .local v2, "ntp":J
     iput v12, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainCounter:I
 
-    .line 212
     sub-long v6, v2, v0
 
     invoke-static {v6, v7}, Ljava/lang/Math;->abs(J)J
@@ -652,7 +599,6 @@
 
     if-nez v6, :cond_6
 
-    .line 221
     :cond_5
     const-wide/16 v6, 0x3e8
 
@@ -664,10 +610,8 @@
 
     if-gez v6, :cond_6
 
-    .line 222
     invoke-static {v2, v3}, Landroid/os/SystemClock;->setCurrentTimeMillis(J)Z
 
-    .line 227
     :cond_6
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -675,7 +619,6 @@
 
     iput-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mLastNtpFetchTime:J
 
-    .line 246
     .end local v2    # "ntp":J
     :cond_7
     iget-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
@@ -684,7 +627,6 @@
 
     goto :goto_0
 
-    .line 230
     :cond_8
     iget v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainCounter:I
 
@@ -692,7 +634,6 @@
 
     iput v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainCounter:I
 
-    .line 231
     iget v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainTimesMax:I
 
     if-ltz v6, :cond_9
@@ -703,7 +644,6 @@
 
     if-gt v6, v7, :cond_a
 
-    .line 232
     :cond_9
     iget-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalShorterMs:J
 
@@ -711,21 +651,17 @@
 
     goto/16 :goto_0
 
-    .line 235
     :cond_a
     iput v12, p0, Lcom/android/server/NetworkTimeUpdateService;->mTryAgainCounter:I
 
-    .line 236
     iget-wide v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mPollingIntervalMs:J
 
     invoke-direct {p0, v6, v7}, Lcom/android/server/NetworkTimeUpdateService;->resetAlarm(J)V
 
-    .line 238
     iget-boolean v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mBootCompleted:Z
 
     if-eqz v6, :cond_0
 
-    .line 239
     iget-object v6, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     new-instance v7, Landroid/content/Intent;
@@ -743,7 +679,6 @@
     .locals 4
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     new-instance v1, Lcom/android/server/NetworkTimeUpdateService$1;
@@ -758,7 +693,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 163
     return-void
 .end method
 
@@ -766,25 +700,21 @@
     .locals 3
 
     .prologue
-    .line 166
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 167
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 168
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 169
     return-void
 .end method
 
@@ -792,30 +722,25 @@
     .locals 3
 
     .prologue
-    .line 149
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 150
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.NETWORK_SET_TIME"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 151
     const-string v1, "android.intent.action.NETWORK_SET_TIMEZONE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mNitzReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 153
     return-void
 .end method
 
@@ -823,30 +748,25 @@
     .locals 3
 
     .prologue
-    .line 363
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 364
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "com.samsung.edm.intent.action.UPDATE_NTP_PARAMETERS"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 365
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 366
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mMDMReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 367
     return-void
 .end method
 
@@ -855,23 +775,19 @@
     .param p1, "interval"    # J
 
     .prologue
-    .line 255
     iget-object v4, p0, Lcom/android/server/NetworkTimeUpdateService;->mAlarmManager:Landroid/app/AlarmManager;
 
     iget-object v5, p0, Lcom/android/server/NetworkTimeUpdateService;->mPendingPollIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 256
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 257
     .local v2, "now":J
     add-long v0, v2, p1
 
-    .line 258
     .local v0, "next":J
     iget-object v4, p0, Lcom/android/server/NetworkTimeUpdateService;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -881,7 +797,6 @@
 
     invoke-virtual {v4, v5, v0, v1, v6}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 259
     return-void
 .end method
 
@@ -891,30 +806,23 @@
     .locals 4
 
     .prologue
-    .line 129
     invoke-direct {p0}, Lcom/android/server/NetworkTimeUpdateService;->registerForTelephonyIntents()V
 
-    .line 130
     invoke-direct {p0}, Lcom/android/server/NetworkTimeUpdateService;->registerForAlarms()V
 
-    .line 131
     invoke-direct {p0}, Lcom/android/server/NetworkTimeUpdateService;->registerForConnectivityIntents()V
 
-    .line 134
     invoke-direct {p0}, Lcom/android/server/NetworkTimeUpdateService;->registerMDMReceiver()V
 
-    .line 138
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "NetworkTimeUpdateService"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 139
     .local v0, "thread":Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 140
     new-instance v1, Lcom/android/server/NetworkTimeUpdateService$MyHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -925,7 +833,6 @@
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mHandler:Landroid/os/Handler;
 
-    .line 142
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x2
@@ -936,7 +843,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 144
     new-instance v1, Lcom/android/server/NetworkTimeUpdateService$SettingsObserver;
 
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mHandler:Landroid/os/Handler;
@@ -947,13 +853,11 @@
 
     iput-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mSettingsObserver:Lcom/android/server/NetworkTimeUpdateService$SettingsObserver;
 
-    .line 145
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService;->mSettingsObserver:Lcom/android/server/NetworkTimeUpdateService$SettingsObserver;
 
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v2}, Lcom/android/server/NetworkTimeUpdateService$SettingsObserver;->observe(Landroid/content/Context;)V
 
-    .line 146
     return-void
 .end method

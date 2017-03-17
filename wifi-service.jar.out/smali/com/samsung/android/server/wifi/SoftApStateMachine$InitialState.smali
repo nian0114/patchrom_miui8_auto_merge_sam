@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 716
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,14 +36,12 @@
     .locals 5
 
     .prologue
-    .line 719
     const-string v1, "SoftApStateMachine"
 
     const-string v2, "inside Initial state enter"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 720
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiApConfigChannel:Lcom/android/internal/util/AsyncChannel;
@@ -54,7 +51,6 @@
 
     if-nez v1, :cond_0
 
-    .line 721
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     new-instance v2, Lcom/android/internal/util/AsyncChannel;
@@ -64,7 +60,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiApConfigChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {v1, v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1802(Lcom/samsung/android/server/wifi/SoftApStateMachine;Lcom/android/internal/util/AsyncChannel;)Lcom/android/internal/util/AsyncChannel;
 
-    .line 722
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mContext:Landroid/content/Context;
@@ -82,11 +77,9 @@
 
     move-result-object v0
 
-    .line 724
     .local v0, "wifiApConfigStore":Lcom/android/server/wifi/WifiApConfigStore;
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiApConfigStore;->loadApConfiguration()V
 
-    .line 725
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiApConfigChannel:Lcom/android/internal/util/AsyncChannel;
@@ -113,7 +106,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/internal/util/AsyncChannel;->connectSync(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Messenger;)I
 
-    .line 729
     .end local v0    # "wifiApConfigStore":Lcom/android/server/wifi/WifiApConfigStore;
     :cond_0
     return-void
@@ -132,7 +124,6 @@
 
     const/4 v3, 0x0
 
-    .line 732
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1200()Z
 
@@ -174,7 +165,6 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 733
     :cond_0
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -182,11 +172,9 @@
 
     move v2, v3
 
-    .line 781
     :goto_0
     return v2
 
-    .line 735
     :sswitch_0
     const-string v2, "SoftApStateMachine"
 
@@ -194,12 +182,10 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 736
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-virtual {v2, v8, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->setWifiApState(II)V
 
-    .line 737
     iget-object v5, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -209,7 +195,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiConfig:Landroid/net/wifi/WifiConfiguration;
     invoke-static {v5, v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1902(Lcom/samsung/android/server/wifi/SoftApStateMachine;Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
-    .line 738
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mSoftApReset:Z
@@ -219,7 +204,6 @@
 
     if-nez v2, :cond_4
 
-    .line 739
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -231,7 +215,6 @@
 
     move-result v1
 
-    .line 740
     .local v1, "wifiState":I
     iget v2, p1, Landroid/os/Message;->arg1:I
 
@@ -242,14 +225,12 @@
 
     if-ne v2, v7, :cond_2
 
-    .line 741
     const-string v2, "SoftApStateMachine"
 
     const-string v3, "Setting mode START_WIFI_FUNCTIONALITY_WITH_MHS_ON_MODE to enable Wifi and Mobileap"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -269,10 +250,8 @@
     :goto_1
     move v2, v4
 
-    .line 781
     goto :goto_0
 
-    .line 744
     .restart local v1    # "wifiState":I
     :cond_2
     const/4 v2, 0x3
@@ -283,14 +262,12 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 745
     const-string v2, "SoftApStateMachine"
 
     const-string v3, "Wifi state disabling or disabled. Sending CMD_START_WIFI_FROM_MHS"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 746
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -304,7 +281,6 @@
 
     goto :goto_1
 
-    .line 748
     :cond_3
     const-string v2, "SoftApStateMachine"
 
@@ -312,7 +288,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -326,7 +301,6 @@
 
     goto :goto_1
 
-    .line 752
     .end local v1    # "wifiState":I
     :cond_4
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
@@ -334,7 +308,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mSoftApReset:Z
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$2002(Lcom/samsung/android/server/wifi/SoftApStateMachine;Z)Z
 
-    .line 753
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
@@ -347,7 +320,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$2300(Lcom/samsung/android/server/wifi/SoftApStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 754
     const-string v2, "SoftApStateMachine"
 
     const-string v3, "handling softapreset "
@@ -356,7 +328,6 @@
 
     goto :goto_1
 
-    .line 759
     :sswitch_1
     const-string v2, "SoftApStateMachine"
 
@@ -364,7 +335,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 760
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -374,7 +344,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/server/wifi/WifiStateMachine;->setWifiApIface(Z)V
 
-    .line 762
     const-wide/16 v2, 0x12c
 
     :try_start_0
@@ -382,7 +351,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 766
     :goto_2
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -396,7 +364,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$2400(Lcom/samsung/android/server/wifi/SoftApStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 767
     const-string v2, "SoftApStateMachine"
 
     const-string v3, "send cmd_start_msg"
@@ -405,17 +372,14 @@
 
     goto :goto_1
 
-    .line 763
     :catch_0
     move-exception v0
 
-    .line 764
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 771
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :sswitch_2
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
@@ -426,14 +390,12 @@
 
     if-ne v2, v8, :cond_1
 
-    .line 772
     const-string v2, "SoftApStateMachine"
 
     const-string v3, "MHS is in enabling state and waiting for CMD_WIFI_STARTED_FROM_MHSand we got disable request since Airplane mode turned ON"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 774
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$InitialState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->deferMessage(Landroid/os/Message;)V
@@ -441,7 +403,6 @@
 
     goto/16 :goto_1
 
-    .line 733
     :sswitch_data_0
     .sparse-switch
         0x20015 -> :sswitch_0

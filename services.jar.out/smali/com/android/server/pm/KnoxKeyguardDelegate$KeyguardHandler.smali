@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 93
     iput-object p1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->this$0:Lcom/android/server/pm/KnoxKeyguardDelegate;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/KnoxKeyguardDelegate$1;
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;-><init>(Lcom/android/server/pm/KnoxKeyguardDelegate;)V
 
     return-void
@@ -50,22 +48,19 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 96
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 97
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 115
     const-string v2, "KnoxKeyguardDelegate"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "unknown msg type "
+    const-string v4, "unknown msg type "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -83,15 +78,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     :goto_0
     return-void
 
-    .line 99
     :pswitch_0
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 100
     .local v1, "userId":I
     iget-object v2, p0, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->this$0:Lcom/android/server/pm/KnoxKeyguardDelegate;
 
@@ -100,16 +92,13 @@
 
     goto :goto_0
 
-    .line 104
     .end local v1    # "userId":I
     :pswitch_1
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 105
     .restart local v1    # "userId":I
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    .line 106
     .local v0, "flags":I
     iget-object v2, p0, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->this$0:Lcom/android/server/pm/KnoxKeyguardDelegate;
 
@@ -118,13 +107,11 @@
 
     goto :goto_0
 
-    .line 110
     .end local v0    # "flags":I
     .end local v1    # "userId":I
     :pswitch_2
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 111
     .restart local v1    # "userId":I
     iget-object v2, p0, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->this$0:Lcom/android/server/pm/KnoxKeyguardDelegate;
 
@@ -133,7 +120,6 @@
 
     goto :goto_0
 
-    .line 97
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

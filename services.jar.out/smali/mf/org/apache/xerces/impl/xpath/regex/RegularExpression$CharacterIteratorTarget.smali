@@ -24,13 +24,10 @@
     .param p1, "target"    # Ljava/text/CharacterIterator;
 
     .prologue
-    .line 1884
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$ExpressionTarget;-><init>()V
 
-    .line 1885
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$CharacterIteratorTarget;->target:Ljava/text/CharacterIterator;
 
-    .line 1886
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p4, "partlen"    # I
 
     .prologue
-    .line 1944
     move v0, p3
 
     .local v0, "i":I
@@ -56,7 +52,6 @@
     .local v3, "partlen":I
     move v2, p1
 
-    .line 1945
     .end local p1    # "offset":I
     .local v2, "offset":I
     :goto_0
@@ -66,7 +61,6 @@
     .restart local p4    # "partlen":I
     if-gtz v3, :cond_0
 
-    .line 1950
     const/4 v4, 0x1
 
     move v0, v1
@@ -80,7 +74,6 @@
     :goto_1
     return v4
 
-    .line 1946
     .end local v0    # "i":I
     .end local p1    # "offset":I
     .restart local v1    # "i":I
@@ -108,7 +101,6 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 1947
     const/4 v4, 0x0
 
     goto :goto_1
@@ -137,7 +129,6 @@
     .param p4, "partlen"    # I
 
     .prologue
-    .line 1906
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -151,7 +142,6 @@
     .local v3, "partlen":I
     move v2, p1
 
-    .line 1907
     .end local p1    # "offset":I
     .local v2, "offset":I
     :goto_0
@@ -161,7 +151,6 @@
     .restart local p4    # "partlen":I
     if-gtz v3, :cond_0
 
-    .line 1912
     const/4 v4, 0x1
 
     move v0, v1
@@ -175,7 +164,6 @@
     :goto_1
     return v4
 
-    .line 1908
     .end local v0    # "i":I
     .end local p1    # "offset":I
     .restart local v1    # "i":I
@@ -201,7 +189,6 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 1909
     const/4 v4, 0x0
 
     goto :goto_1
@@ -230,7 +217,6 @@
     .param p4, "partlen"    # I
 
     .prologue
-    .line 1954
     move v2, p3
 
     .local v2, "i":I
@@ -244,7 +230,6 @@
     .local v5, "partlen":I
     move v4, p1
 
-    .line 1955
     .end local p1    # "offset":I
     .local v4, "offset":I
     :goto_0
@@ -254,7 +239,6 @@
     .restart local p4    # "partlen":I
     if-gtz v5, :cond_0
 
-    .line 1970
     const/4 v8, 0x1
 
     move v2, v3
@@ -268,7 +252,6 @@
     :goto_1
     return v8
 
-    .line 1956
     .end local v2    # "i":I
     .end local p1    # "offset":I
     .restart local v3    # "i":I
@@ -284,7 +267,6 @@
 
     move-result v0
 
-    .line 1957
     .local v0, "ch1":C
     iget-object v8, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$CharacterIteratorTarget;->target:Ljava/text/CharacterIterator;
 
@@ -296,7 +278,6 @@
 
     move-result v1
 
-    .line 1958
     .local v1, "ch2":C
     if-ne v0, v1, :cond_1
 
@@ -310,12 +291,10 @@
     .restart local v5    # "partlen":I
     move v4, p1
 
-    .line 1959
     .end local p1    # "offset":I
     .restart local v4    # "offset":I
     goto :goto_0
 
-    .line 1961
     .end local v3    # "i":I
     .end local v4    # "offset":I
     .end local v5    # "partlen":I
@@ -327,13 +306,11 @@
 
     move-result v6
 
-    .line 1962
     .local v6, "uch1":C
     invoke-static {v1}, Ljava/lang/Character;->toUpperCase(C)C
 
     move-result v7
 
-    .line 1963
     .local v7, "uch2":C
     if-ne v6, v7, :cond_2
 
@@ -347,12 +324,10 @@
     .restart local v5    # "partlen":I
     move v4, p1
 
-    .line 1964
     .end local p1    # "offset":I
     .restart local v4    # "offset":I
     goto :goto_0
 
-    .line 1966
     .end local v3    # "i":I
     .end local v4    # "offset":I
     .end local v5    # "partlen":I
@@ -370,7 +345,6 @@
 
     if-eq v8, v9, :cond_3
 
-    .line 1967
     const/4 v8, 0x0
 
     goto :goto_1
@@ -399,7 +373,6 @@
     .param p4, "partlen"    # I
 
     .prologue
-    .line 1916
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -413,7 +386,6 @@
     .local v5, "partlen":I
     move v4, p1
 
-    .line 1917
     .end local p1    # "offset":I
     .local v4, "offset":I
     :goto_0
@@ -423,7 +395,6 @@
     .restart local p4    # "partlen":I
     if-gtz v5, :cond_0
 
-    .line 1932
     const/4 v8, 0x1
 
     move v2, v3
@@ -437,7 +408,6 @@
     :goto_1
     return v8
 
-    .line 1918
     .end local v2    # "i":I
     .end local p1    # "offset":I
     .restart local v3    # "i":I
@@ -453,7 +423,6 @@
 
     move-result v0
 
-    .line 1919
     .local v0, "ch1":C
     add-int/lit8 v2, v3, 0x1
 
@@ -463,7 +432,6 @@
 
     move-result v1
 
-    .line 1920
     .local v1, "ch2":C
     if-ne v0, v1, :cond_1
 
@@ -477,12 +445,10 @@
     .restart local v5    # "partlen":I
     move v4, p1
 
-    .line 1921
     .end local p1    # "offset":I
     .restart local v4    # "offset":I
     goto :goto_0
 
-    .line 1923
     .end local v3    # "i":I
     .end local v4    # "offset":I
     .end local v5    # "partlen":I
@@ -494,13 +460,11 @@
 
     move-result v6
 
-    .line 1924
     .local v6, "uch1":C
     invoke-static {v1}, Ljava/lang/Character;->toUpperCase(C)C
 
     move-result v7
 
-    .line 1925
     .local v7, "uch2":C
     if-ne v6, v7, :cond_2
 
@@ -514,12 +478,10 @@
     .restart local v5    # "partlen":I
     move v4, p1
 
-    .line 1926
     .end local p1    # "offset":I
     .restart local v4    # "offset":I
     goto :goto_0
 
-    .line 1928
     .end local v3    # "i":I
     .end local v4    # "offset":I
     .end local v5    # "partlen":I
@@ -537,7 +499,6 @@
 
     if-eq v8, v9, :cond_3
 
-    .line 1929
     const/4 v8, 0x0
 
     goto :goto_1
@@ -565,7 +526,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1893
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$CharacterIteratorTarget;->target:Ljava/text/CharacterIterator;
 
     invoke-interface {v0, p1}, Ljava/text/CharacterIterator;->setIndex(I)C
@@ -584,18 +544,15 @@
     .param p5, "partlen"    # I
 
     .prologue
-    .line 1936
     if-ltz p2, :cond_0
 
     sub-int v0, p3, p2
 
     if-ge v0, p5, :cond_1
 
-    .line 1937
     :cond_0
     const/4 v0, 0x0
 
-    .line 1939
     :goto_0
     return v0
 
@@ -608,7 +565,6 @@
 
     goto :goto_0
 
-    .line 1940
     :cond_2
     invoke-direct {p0, p2, p3, p4, p5}, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$CharacterIteratorTarget;->regionMatches(IIII)Z
 
@@ -626,18 +582,15 @@
     .param p5, "partlen"    # I
 
     .prologue
-    .line 1898
     if-ltz p2, :cond_0
 
     sub-int v0, p3, p2
 
     if-ge v0, p5, :cond_1
 
-    .line 1899
     :cond_0
     const/4 v0, 0x0
 
-    .line 1901
     :goto_0
     return v0
 
@@ -650,7 +603,6 @@
 
     goto :goto_0
 
-    .line 1902
     :cond_2
     invoke-direct {p0, p2, p3, p4, p5}, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$CharacterIteratorTarget;->regionMatches(IILjava/lang/String;I)Z
 
@@ -664,9 +616,7 @@
     .param p1, "target"    # Ljava/text/CharacterIterator;
 
     .prologue
-    .line 1889
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/regex/RegularExpression$CharacterIteratorTarget;->target:Ljava/text/CharacterIterator;
 
-    .line 1890
     return-void
 .end method

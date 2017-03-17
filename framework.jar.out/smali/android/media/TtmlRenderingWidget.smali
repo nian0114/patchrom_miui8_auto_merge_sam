@@ -43,12 +43,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 953
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/media/TtmlRenderingWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 954
     return-void
 .end method
 
@@ -58,12 +56,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 957
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/media/TtmlRenderingWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 958
     return-void
 .end method
 
@@ -74,12 +70,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 961
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/media/TtmlRenderingWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 962
     return-void
 .end method
 
@@ -91,24 +85,20 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 966
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 946
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v1, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
-    .line 968
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2}, Landroid/media/TtmlRenderingWidget;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 979
     const-string v1, "captioning"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -119,7 +109,6 @@
 
     iput-object v1, p0, Landroid/media/TtmlRenderingWidget;->mCaptionManager:Landroid/view/accessibility/CaptioningManager;
 
-    .line 982
     iget-object v1, p0, Landroid/media/TtmlRenderingWidget;->mCaptionManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager;->getUserStyle()Landroid/view/accessibility/CaptioningManager$CaptionStyle;
@@ -128,23 +117,19 @@
 
     iput-object v1, p0, Landroid/media/TtmlRenderingWidget;->mCaptionStyle:Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
-    .line 985
     new-instance v0, Landroid/media/TtmlRenderingWidget$CustomTextView;
 
     invoke-direct {v0, p1}, Landroid/media/TtmlRenderingWidget$CustomTextView;-><init>(Landroid/content/Context;)V
 
-    .line 986
     .local v0, "customTextView":Landroid/media/TtmlRenderingWidget$CustomTextView;
     const/16 v1, 0x51
 
     invoke-virtual {v0, v1}, Landroid/media/TtmlRenderingWidget$CustomTextView;->setGravity(I)V
 
-    .line 988
     iget-object v1, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    .line 990
     return-void
 .end method
 
@@ -156,7 +141,6 @@
     .param p2, "opacity"    # I
 
     .prologue
-    .line 1042
     mul-int/lit16 v0, p2, 0xff
 
     div-int/lit8 v0, v0, 0x64
@@ -184,10 +168,8 @@
     .locals 0
 
     .prologue
-    .line 1017
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
-    .line 1018
     return-void
 .end method
 
@@ -195,10 +177,8 @@
     .locals 0
 
     .prologue
-    .line 1022
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
-    .line 1023
     return-void
 .end method
 
@@ -211,17 +191,13 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 1033
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    .line 1035
     sub-int v1, p4, p2
 
-    .line 1036
     .local v1, "viewportWidth":I
     sub-int v0, p5, p3
 
-    .line 1039
     .local v0, "viewportHeight":I
     return-void
 .end method
@@ -232,10 +208,8 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 1028
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 1029
     return-void
 .end method
 
@@ -252,18 +226,15 @@
     .end annotation
 
     .prologue
-    .line 1061
     .local p1, "activeCues":Ljava/util/Vector;, "Ljava/util/Vector<Landroid/media/SubtitleTrack$Cue;>;"
     invoke-virtual {p0}, Landroid/media/TtmlRenderingWidget;->removeAllViews()V
 
-    .line 1063
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     invoke-virtual {v10}, Ljava/util/LinkedList;->size()I
 
     move-result v9
 
-    .line 1064
     .local v9, "viewCount":I
     const/4 v4, 0x0
 
@@ -273,45 +244,37 @@
 
     if-ge v4, v10, :cond_0
 
-    .line 1065
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     invoke-virtual {v10}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
-    .line 1064
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 1068
     :cond_0
     invoke-virtual {p1}, Ljava/util/Vector;->size()I
 
     move-result v1
 
-    .line 1070
     .local v1, "count":I
     const-string v5, ""
 
-    .line 1072
     .local v5, "subtitleText":Ljava/lang/String;
     const/4 v4, 0x0
 
     :goto_1
     if-ge v4, v1, :cond_2
 
-    .line 1074
     invoke-virtual {p1, v4}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/media/TtmlCue;
 
-    .line 1076
     .local v2, "cue":Landroid/media/TtmlCue;
     if-lez v4, :cond_1
 
-    .line 1077
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -330,7 +293,6 @@
 
     move-result-object v5
 
-    .line 1079
     :cond_1
     iget-object v10, v2, Landroid/media/TtmlCue;->mText:Ljava/lang/String;
 
@@ -340,7 +302,6 @@
 
     move-result-object v6
 
-    .line 1080
     .local v6, "text":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -358,7 +319,6 @@
 
     move-result-object v5
 
-    .line 1083
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,18 +337,15 @@
 
     move-result-object v5
 
-    .line 1084
     new-instance v7, Landroid/text/SpannableString;
 
     invoke-direct {v7, v5}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1085
     .local v7, "textSpan":Landroid/text/Spannable;
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mCaptionStyle:Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
     iget v0, v10, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
 
-    .line 1086
     .local v0, "color":I
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mCaptionManager:Landroid/view/accessibility/CaptioningManager;
 
@@ -408,7 +365,6 @@
 
     mul-float v3, v10, v11
 
-    .line 1087
     .local v3, "fontSize":F
     new-instance v10, Landroid/text/style/BackgroundColorSpan;
 
@@ -424,7 +380,6 @@
 
     invoke-interface {v7, v10, v11, v12, v13}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 1089
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     const/4 v11, 0x0
@@ -439,7 +394,6 @@
 
     invoke-virtual {v10, v11}, Landroid/media/TtmlRenderingWidget$CustomTextView;->setGravity(I)V
 
-    .line 1090
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     const/4 v11, 0x0
@@ -452,7 +406,6 @@
 
     invoke-virtual {v10, v7}, Landroid/media/TtmlRenderingWidget$CustomTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1091
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     const/4 v11, 0x0
@@ -465,7 +418,6 @@
 
     invoke-virtual {v10, v3}, Landroid/media/TtmlRenderingWidget$CustomTextView;->setTextSize(F)V
 
-    .line 1092
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     const/4 v11, 0x0
@@ -480,7 +432,6 @@
 
     move-result v8
 
-    .line 1093
     .local v8, "tmpTextSize":F
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
@@ -498,7 +449,6 @@
 
     invoke-virtual {v10, v11}, Landroid/media/TtmlRenderingWidget$CustomTextView;->setTextSize(F)V
 
-    .line 1094
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     const/4 v11, 0x0
@@ -515,7 +465,6 @@
 
     invoke-virtual {v10, v11}, Landroid/media/TtmlRenderingWidget$CustomTextView;->setTextColor(I)V
 
-    .line 1095
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mTextViewSet:Ljava/util/LinkedList;
 
     const/4 v11, 0x0
@@ -532,12 +481,10 @@
 
     invoke-virtual {p0, v10, v11, v12}, Landroid/media/TtmlRenderingWidget;->addView(Landroid/view/View;II)V
 
-    .line 1072
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_1
 
-    .line 1098
     .end local v0    # "color":I
     .end local v2    # "cue":Landroid/media/TtmlCue;
     .end local v3    # "fontSize":F
@@ -555,17 +502,14 @@
 
     invoke-virtual {p0, v10, v11}, Landroid/media/TtmlRenderingWidget;->setSize(II)V
 
-    .line 1100
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mListener:Landroid/media/SubtitleTrack$RenderingWidget$OnChangedListener;
 
     if-eqz v10, :cond_3
 
-    .line 1101
     iget-object v10, p0, Landroid/media/TtmlRenderingWidget;->mListener:Landroid/media/SubtitleTrack$RenderingWidget$OnChangedListener;
 
     invoke-interface {v10, p0}, Landroid/media/SubtitleTrack$RenderingWidget$OnChangedListener;->onChanged(Landroid/media/SubtitleTrack$RenderingWidget;)V
 
-    .line 1103
     :cond_3
     return-void
 .end method
@@ -575,10 +519,8 @@
     .param p1, "listener"    # Landroid/media/SubtitleTrack$RenderingWidget$OnChangedListener;
 
     .prologue
-    .line 994
     iput-object p1, p0, Landroid/media/TtmlRenderingWidget;->mListener:Landroid/media/SubtitleTrack$RenderingWidget$OnChangedListener;
 
-    .line 995
     return-void
 .end method
 
@@ -592,25 +534,20 @@
 
     const/4 v2, 0x0
 
-    .line 999
     invoke-static {p1, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
-    .line 1000
     .local v1, "widthSpec":I
     invoke-static {p2, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
 
-    .line 1002
     .local v0, "heightSpec":I
     invoke-virtual {p0, v1, v0}, Landroid/media/TtmlRenderingWidget;->measure(II)V
 
-    .line 1003
     invoke-virtual {p0, v2, v2, p1, p2}, Landroid/media/TtmlRenderingWidget;->layout(IIII)V
 
-    .line 1004
     return-void
 .end method
 
@@ -619,19 +556,15 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 1008
     if-eqz p1, :cond_0
 
-    .line 1009
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/media/TtmlRenderingWidget;->setVisibility(I)V
 
-    .line 1013
     :goto_0
     return-void
 
-    .line 1011
     :cond_0
     const/16 v0, 0x8
 

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fPublicId:Ljava/lang/String;
 
     iput-object p2, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fExpandedSystemId:Ljava/lang/String;
@@ -41,7 +40,6 @@
 
     iput p4, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fLineNumber:I
 
-    .line 211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 214
     const/4 v0, 0x0
 
     return-object v0
@@ -63,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 218
     const/4 v0, -0x1
 
     return v0
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget v0, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fColumnNumber:I
 
     return v0
@@ -83,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 219
     const/4 v0, 0x0
 
     return-object v0
@@ -93,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget-object v0, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fExpandedSystemId:Ljava/lang/String;
 
     return-object v0
@@ -103,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget v0, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fLineNumber:I
 
     return v0
@@ -113,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 215
     const/4 v0, 0x0
 
     return-object v0
@@ -123,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Lmf/org/apache/xerces/util/ErrorHandlerWrapper$1;->val$fPublicId:Ljava/lang/String;
 
     return-object v0
@@ -133,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 220
     const/4 v0, 0x0
 
     return-object v0

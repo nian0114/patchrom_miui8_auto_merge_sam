@@ -31,41 +31,33 @@
     .param p5, "aboveSystem"    # Z
 
     .prologue
-    .line 54
     invoke-direct {p0, p2}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
-    .line 151
     new-instance v9, Lcom/android/server/am/AppNotRespondingDialog$2;
 
     invoke-direct {v9, p0}, Lcom/android/server/am/AppNotRespondingDialog$2;-><init>(Lcom/android/server/am/AppNotRespondingDialog;)V
 
     iput-object v9, p0, Lcom/android/server/am/AppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/am/AppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 57
     move-object/from16 v0, p3
 
     iput-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
-    .line 58
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    .line 60
     .local v6, "res":Landroid/content/res/Resources;
     const/4 v9, 0x0
 
     invoke-virtual {p0, v9}, Lcom/android/server/am/AppNotRespondingDialog;->setCancelable(Z)V
 
-    .line 63
     const-string v2, "-k -t -z -d -o /data/log/dumpstate_app_anr"
 
-    .line 64
     .local v2, "dumpCmd":Ljava/lang/String;
-    const-string/jumbo v9, "user"
+    const-string v9, "user"
 
     sget-object v10, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
@@ -75,20 +67,18 @@
 
     if-eqz v9, :cond_4
 
-    .line 65
     new-instance v9, Ljava/lang/Thread;
 
     new-instance v10, Lcom/android/server/am/AppNotRespondingDialog$1;
 
     invoke-direct {v10, p0}, Lcom/android/server/am/AppNotRespondingDialog$1;-><init>(Lcom/android/server/am/AppNotRespondingDialog;)V
 
-    const-string/jumbo v11, "dumpstate"
+    const-string v11, "dumpstate"
 
     invoke-direct {v9, v10, v11}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     invoke-virtual {v9}, Ljava/lang/Thread;->start()V
 
-    .line 76
     :goto_0
     if-eqz p4, :cond_5
 
@@ -104,12 +94,10 @@
 
     move-result-object v4
 
-    .line 79
     .local v4, "name1":Ljava/lang/CharSequence;
     :goto_1
     const/4 v5, 0x0
 
-    .line 80
     .local v5, "name2":Ljava/lang/CharSequence;
     move-object/from16 v0, p3
 
@@ -137,13 +125,10 @@
 
     if-eqz v5, :cond_7
 
-    .line 82
     if-eqz v4, :cond_6
 
-    .line 83
     const v7, 0x1040371
 
-    .line 100
     .local v7, "resid":I
     :goto_2
     const-string v9, "com.android.phone"
@@ -158,14 +143,12 @@
 
     if-eqz v9, :cond_0
 
-    .line 101
     const-string v9, "PA"
 
     const-string v10, "AR"
 
     invoke-static {v9, v10}, Landroid/os/Debug;->dumpResetReason(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     :cond_0
     if-eqz v5, :cond_9
 
@@ -196,7 +179,6 @@
     :goto_3
     invoke-virtual {p0, v9}, Lcom/android/server/am/AppNotRespondingDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 109
     const/4 v9, -0x1
 
     const v10, 0x1040375
@@ -215,7 +197,6 @@
 
     invoke-virtual {p0, v9, v10, v11}, Lcom/android/server/am/AppNotRespondingDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 112
     const/4 v9, -0x2
 
     const v10, 0x1040377
@@ -234,19 +215,16 @@
 
     invoke-virtual {p0, v9, v10, v11}, Lcom/android/server/am/AppNotRespondingDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 116
     move-object/from16 v0, p3
 
     iget-object v9, v0, Lcom/android/server/am/ProcessRecord;->errorReportReceiver:Landroid/content/ComponentName;
 
     if-eqz v9, :cond_2
 
-    .line 118
     const/4 v8, 0x0
 
-    .line 119
     .local v8, "rp":Landroid/app/enterprise/RestrictionPolicy;
-    const-string/jumbo v9, "enterprise_policy"
+    const-string v9, "enterprise_policy"
 
     invoke-virtual {p2, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -254,16 +232,13 @@
 
     check-cast v3, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 121
     .local v3, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v3, :cond_1
 
-    .line 122
     invoke-virtual {v3}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
     move-result-object v8
 
-    .line 125
     :cond_1
     if-eqz v8, :cond_2
 
@@ -277,7 +252,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 126
     const/4 v9, -0x3
 
     const v10, 0x1040376
@@ -296,7 +270,6 @@
 
     invoke-virtual {p0, v9, v10, v11}, Lcom/android/server/am/AppNotRespondingDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 137
     .end local v3    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v8    # "rp":Landroid/app/enterprise/RestrictionPolicy;
     :cond_2
@@ -308,10 +281,8 @@
 
     invoke-virtual {p0, v9}, Lcom/android/server/am/AppNotRespondingDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 138
     if-eqz p5, :cond_3
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/am/AppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v9
@@ -320,7 +291,6 @@
 
     invoke-virtual {v9, v10}, Landroid/view/Window;->setType(I)V
 
-    .line 141
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/am/AppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
@@ -330,7 +300,6 @@
 
     move-result-object v1
 
-    .line 142
     .local v1, "attrs":Landroid/view/WindowManager$LayoutParams;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -358,22 +327,18 @@
 
     invoke-virtual {v1, v9}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 143
     const/16 v9, 0x110
 
     iput v9, v1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 145
     invoke-virtual {p0}, Lcom/android/server/am/AppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v9
 
     invoke-virtual {v9, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 146
     return-void
 
-    .line 71
     .end local v1    # "attrs":Landroid/view/WindowManager$LayoutParams;
     .end local v4    # "name1":Ljava/lang/CharSequence;
     .end local v5    # "name2":Ljava/lang/CharSequence;
@@ -385,59 +350,49 @@
 
     goto/16 :goto_0
 
-    .line 76
     :cond_5
     const/4 v4, 0x0
 
     goto/16 :goto_1
 
-    .line 85
     .restart local v4    # "name1":Ljava/lang/CharSequence;
     .restart local v5    # "name2":Ljava/lang/CharSequence;
     :cond_6
     move-object v4, v5
 
-    .line 86
     move-object/from16 v0, p3
 
     iget-object v5, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 87
     const v7, 0x1040373
 
     .restart local v7    # "resid":I
     goto/16 :goto_2
 
-    .line 90
     .end local v7    # "resid":I
     :cond_7
     if-eqz v4, :cond_8
 
-    .line 91
     move-object/from16 v0, p3
 
     iget-object v5, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 92
     const v7, 0x1040372
 
     .restart local v7    # "resid":I
     goto/16 :goto_2
 
-    .line 94
     .end local v7    # "resid":I
     :cond_8
     move-object/from16 v0, p3
 
     iget-object v4, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 95
     const v7, 0x1040374
 
     .restart local v7    # "resid":I
     goto/16 :goto_2
 
-    .line 105
     :cond_9
     const/4 v9, 0x1
 
@@ -463,7 +418,6 @@
     .param p0, "x0"    # Lcom/android/server/am/AppNotRespondingDialog;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     return-object v0
@@ -474,7 +428,6 @@
     .param p0, "x0"    # Lcom/android/server/am/AppNotRespondingDialog;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -486,7 +439,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     if-eqz v0, :cond_0
@@ -508,6 +460,5 @@
     .locals 0
 
     .prologue
-    .line 149
     return-void
 .end method

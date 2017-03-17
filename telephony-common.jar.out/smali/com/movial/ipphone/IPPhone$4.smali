@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 485
     iput-object p1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 488
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 504
     iget-object v2, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -69,11 +66,9 @@
     # invokes: Lcom/movial/ipphone/IPPhone;->log(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/movial/ipphone/IPPhone;->access$2000(Lcom/movial/ipphone/IPPhone;Ljava/lang/String;)V
 
-    .line 507
     :goto_0
     return-void
 
-    .line 490
     :pswitch_0
     iget-object v2, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -82,7 +77,6 @@
     # invokes: Lcom/movial/ipphone/IPPhone;->log(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/movial/ipphone/IPPhone;->access$2000(Lcom/movial/ipphone/IPPhone;Ljava/lang/String;)V
 
-    .line 491
     iget-object v2, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mContext:Landroid/content/Context;
@@ -98,14 +92,12 @@
 
     invoke-static {v2, v3, v4}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 492
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.VIEW"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 493
     .local v1, "newintent":Landroid/content/Intent;
     const-string v2, "com.movial.ipservice"
 
@@ -113,17 +105,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 494
     const-string v2, "dialog_type"
 
     invoke-virtual {v1, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 495
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 497
     :try_start_0
     iget-object v2, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -136,7 +125,6 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 501
     :goto_1
     iget-object v2, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -147,11 +135,9 @@
 
     goto :goto_0
 
-    .line 498
     :catch_0
     move-exception v0
 
-    .line 499
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "IPPhone"
 
@@ -177,7 +163,6 @@
 
     goto :goto_1
 
-    .line 488
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v1, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-static {v0, v1, p1}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->createElementForFamily(Lorg/w3c/dom/Document;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;
 

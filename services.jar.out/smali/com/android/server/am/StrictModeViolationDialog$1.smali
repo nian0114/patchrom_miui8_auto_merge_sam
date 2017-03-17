@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     # getter for: Lcom/android/server/am/StrictModeViolationDialog;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -48,7 +46,6 @@
 
     monitor-enter v1
 
-    .line 110
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
@@ -72,7 +69,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     # getter for: Lcom/android/server/am/StrictModeViolationDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -84,13 +80,11 @@
 
     iput-object v2, v0, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
 
-    .line 113
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     # getter for: Lcom/android/server/am/StrictModeViolationDialog;->mResult:Lcom/android/server/am/AppErrorResult;
@@ -102,15 +96,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-virtual {v0}, Lcom/android/server/am/StrictModeViolationDialog;->dismiss()V
 
-    .line 119
     return-void
 
-    .line 113
     :catchall_0
     move-exception v0
 

@@ -18,15 +18,12 @@
     .locals 1
 
     .prologue
-    .line 1737
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1749
     const/4 v0, 0x0
 
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/traversers/Container;->pos:I
 
-    .line 1737
     return-void
 .end method
 
@@ -35,17 +32,14 @@
     .param p0, "size"    # I
 
     .prologue
-    .line 1740
     const/4 v0, 0x5
 
     if-le p0, v0, :cond_0
 
-    .line 1741
     new-instance v0, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;
 
     invoke-direct {v0, p0}, Lmf/org/apache/xerces/impl/xs/traversers/LargeContainer;-><init>(I)V
 
-    .line 1743
     :goto_0
     return-object v0
 

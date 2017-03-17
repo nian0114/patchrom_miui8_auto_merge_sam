@@ -36,24 +36,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 297
     iput-object p1, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->this$0:Lmf/org/apache/xerces/util/NamespaceSupport;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 291
     iput v0, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->counter:I
 
-    .line 292
     iput v0, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->size:I
 
-    .line 298
     iput-object p2, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->prefixes:[Ljava/lang/String;
 
-    .line 299
     iput p3, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->size:I
 
-    .line 300
     return-void
 .end method
 
@@ -63,7 +57,6 @@
     .locals 2
 
     .prologue
-    .line 306
     iget v0, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->counter:I
 
     iget v1, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->size:I
@@ -85,14 +78,12 @@
     .locals 3
 
     .prologue
-    .line 313
     iget v0, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->counter:I
 
     iget v1, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->size:I
 
     if-ge v0, v1, :cond_0
 
-    .line 314
     iget-object v0, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->this$0:Lmf/org/apache/xerces/util/NamespaceSupport;
 
     iget-object v0, v0, Lmf/org/apache/xerces/util/NamespaceSupport;->fPrefixes:[Ljava/lang/String;
@@ -107,7 +98,6 @@
 
     return-object v0
 
-    .line 316
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -122,12 +112,10 @@
     .locals 3
 
     .prologue
-    .line 320
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 321
     .local v0, "buf":Ljava/lang/StringBuffer;
     const/4 v1, 0x0
 
@@ -137,14 +125,12 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 326
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 322
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/util/NamespaceSupport$Prefixes;->prefixes:[Ljava/lang/String;
 
@@ -152,12 +138,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 323
     const/16 v2, 0x20
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 321
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

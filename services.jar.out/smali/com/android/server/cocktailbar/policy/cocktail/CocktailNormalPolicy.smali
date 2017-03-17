@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 12
     const-class v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualPolicy;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -29,10 +28,8 @@
     .param p1, "listener"    # Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/AbsCocktailPolicy;-><init>(Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;)V
 
-    .line 16
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 20
     const/4 v0, 0x1
 
     return v0
@@ -55,17 +51,14 @@
     .param p3, "isUpdated"    # Z
 
     .prologue
-    .line 34
     if-eqz p3, :cond_0
 
     const/16 v0, 0x64
 
     if-lt p2, v0, :cond_0
 
-    .line 35
     const/4 v0, 0x1
 
-    .line 37
     :goto_0
     return v0
 
@@ -84,7 +77,6 @@
     .param p5, "isUpdated"    # Z
 
     .prologue
-    .line 26
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result v0
@@ -97,10 +89,8 @@
 
     if-eqz p5, :cond_0
 
-    .line 27
     const/4 v0, 0x1
 
-    .line 29
     :goto_0
     return v0
 
@@ -117,39 +107,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 42
     if-nez p1, :cond_1
 
-    .line 43
     sget-object v2, Lcom/android/server/cocktailbar/policy/cocktail/CocktailNormalPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "isMatchedPolicy: cocktail is null"
+    const-string v3, "isMatchedPolicy: cocktail is null"
 
     invoke-static {v2, v3}, Landroid/util/secutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     :cond_0
     :goto_0
     return v1
 
-    .line 46
     :cond_1
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getProviderInfo()Lcom/samsung/android/cocktailbar/CocktailProviderInfo;
 
     move-result-object v0
 
-    .line 47
     .local v0, "pInfo":Lcom/samsung/android/cocktailbar/CocktailProviderInfo;
     if-eqz v0, :cond_0
 
-    .line 48
     iget v2, v0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     and-int/lit8 v2, v2, 0x1
 
     if-eqz v2, :cond_0
 
-    .line 49
     const/4 v1, 0x1
 
     goto :goto_0

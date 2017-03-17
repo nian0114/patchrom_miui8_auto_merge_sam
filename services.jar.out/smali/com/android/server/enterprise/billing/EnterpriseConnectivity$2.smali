@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 357
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 359
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -65,13 +63,11 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 360
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->onMobileDataEnabledChanged()V
 
     goto :goto_0
 
-    .line 362
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :cond_0
     return-void

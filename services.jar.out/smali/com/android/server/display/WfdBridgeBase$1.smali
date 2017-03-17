@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 482
     invoke-static {}, Lcom/android/server/display/CmdInfo$CmdType;->values()[Lcom/android/server/display/CmdInfo$CmdType;
 
     move-result-object v0

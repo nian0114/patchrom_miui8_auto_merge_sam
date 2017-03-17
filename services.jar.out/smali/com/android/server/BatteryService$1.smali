@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 342
     iput-object p1, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 345
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 346
     .local v0, "action":Ljava/lang/String;
     const-string v5, "android.intent.action.SCREEN_ON"
 
@@ -56,7 +53,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 347
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -70,12 +66,10 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 460
     :cond_0
     :goto_0
     return-void
 
-    .line 356
     :cond_1
     const-string v5, "android.intent.action.SCREEN_OFF"
 
@@ -85,7 +79,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 357
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -101,7 +94,6 @@
 
     goto :goto_0
 
-    .line 366
     :cond_2
     const-string v5, "android.intent.action.USER_SWITCHED"
 
@@ -111,7 +103,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 367
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -127,7 +118,6 @@
 
     goto :goto_0
 
-    .line 386
     :cond_3
     const-string v5, "com.android.systemui.power.action.POWER_SHARING"
 
@@ -137,14 +127,12 @@
 
     if-eqz v5, :cond_4
 
-    .line 387
-    const-string/jumbo v5, "power_sharing_enable"
+    const-string v5, "power_sharing_enable"
 
     invoke-virtual {p2, v5, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 388
     .local v3, "powerSharingEnable":Z
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
@@ -161,7 +149,6 @@
 
     goto :goto_0
 
-    .line 402
     .end local v3    # "powerSharingEnable":Z
     :cond_4
     const-string v5, "com.samsung.systemui.power.action.WIRELESS_POWER_SHARING"
@@ -172,16 +159,14 @@
 
     if-eqz v5, :cond_6
 
-    .line 403
-    const-string/jumbo v5, "power_sharing_enable"
+    const-string v5, "power_sharing_enable"
 
     invoke-virtual {p2, v5, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v4
 
-    .line 404
     .local v4, "wirelessPowerSharingEnable":Z
-    const-string/jumbo v5, "power_share_level"
+    const-string v5, "power_share_level"
 
     invoke-virtual {p2, v5, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -190,7 +175,6 @@
     # setter for: Lcom/android/server/BatteryService;->mWirelessPowerSharing_UserLevel:I
     invoke-static {v5}, Lcom/android/server/BatteryService;->access$802(I)I
 
-    .line 406
     # getter for: Lcom/android/server/BatteryService;->mWirelessPowerSharing_UserLevel:I
     invoke-static {}, Lcom/android/server/BatteryService;->access$800()I
 
@@ -205,7 +189,6 @@
 
     if-ge v5, v6, :cond_5
 
-    .line 407
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -221,7 +204,6 @@
 
     goto :goto_0
 
-    .line 419
     :cond_5
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
@@ -234,7 +216,6 @@
 
     goto/16 :goto_0
 
-    .line 426
     .end local v4    # "wirelessPowerSharingEnable":Z
     :cond_6
     const-string v5, "android.intent.action.REQUEST_OTG_CHARGE_BLOCK"
@@ -245,18 +226,15 @@
 
     if-eqz v5, :cond_9
 
-    .line 427
     const-string v5, "OTG_CHARGE_BLOCK"
 
     invoke-virtual {p2, v5, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 428
     .local v1, "otgEnable":Z
     const/4 v2, 0x0
 
-    .line 431
     .local v2, "otgSendPermission":Z
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
@@ -279,10 +257,8 @@
 
     if-nez v5, :cond_7
 
-    .line 432
     const/4 v2, 0x1
 
-    .line 433
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -292,11 +268,9 @@
 
     invoke-static {v5, v6}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     :cond_7
     if-eqz v2, :cond_8
 
-    .line 437
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -312,7 +286,6 @@
 
     goto/16 :goto_0
 
-    .line 450
     :cond_8
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
@@ -325,7 +298,6 @@
 
     goto/16 :goto_0
 
-    .line 456
     .end local v1    # "otgEnable":Z
     .end local v2    # "otgSendPermission":Z
     :cond_9
@@ -337,7 +309,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 457
     iget-object v5, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandlerForBatteryInfoBackUp:Landroid/os/Handler;

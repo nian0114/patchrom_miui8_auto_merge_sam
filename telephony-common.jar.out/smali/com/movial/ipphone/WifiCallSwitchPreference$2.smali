@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$2;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 88
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 93
     :goto_0
     return-void
 
-    .line 90
     :pswitch_0
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$2;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 88
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

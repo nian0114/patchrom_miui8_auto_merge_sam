@@ -34,17 +34,14 @@
     .locals 1
 
     .prologue
-    .line 1149
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1150
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
-    .line 1215
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/firewall/DomainFilter$1;
 
     .prologue
-    .line 1149
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;-><init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
     return-void
@@ -66,22 +62,19 @@
     .locals 2
 
     .prologue
-    .line 1154
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "onDaemonConnected - connected to netd"
+    const-string v1, "onDaemonConnected - connected to netd"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1155
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
-    .line 1156
     return-void
 .end method
 
@@ -91,27 +84,23 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1160
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$000()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "onDaemonDisconnected - disconnected from netd"
+    const-string v2, "onDaemonDisconnected - disconnected from netd"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1161
     iget-boolean v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
     if-eqz v1, :cond_0
 
-    .line 1164
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    .line 1165
     .local v0, "timer":Ljava/util/Timer;
     new-instance v1, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver$ScheduleReInitializationOfDaemonCache;
 
@@ -121,18 +110,15 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 1166
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
-    .line 1167
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # setter for: Lcom/android/server/enterprise/firewall/DomainFilter;->mThread:Ljava/lang/Thread;
     invoke-static {v1, v4}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$802(Lcom/android/server/enterprise/firewall/DomainFilter;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 1169
     .end local v0    # "timer":Ljava/util/Timer;
     :cond_0
     return-void
@@ -145,10 +131,8 @@
     .param p3, "cooked"    # [Ljava/lang/String;
 
     .prologue
-    .line 1173
     packed-switch p1, :pswitch_data_0
 
-    .line 1210
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$000()Ljava/lang/String;
 
@@ -176,13 +160,11 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1212
     :goto_0
     const/4 v13, 0x1
 
     return v13
 
-    .line 1175
     :pswitch_0
     move-object/from16 v0, p3
 
@@ -192,7 +174,6 @@
 
     if-ne v13, v14, :cond_3
 
-    .line 1179
     const/4 v13, 0x3
 
     :try_start_0
@@ -204,14 +185,12 @@
 
     move-result v11
 
-    .line 1184
     .local v11, "uid":I
     :goto_1
     invoke-static {v11}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v12
 
-    .line 1185
     .local v12, "userId":I
     move-object/from16 v0, p0
 
@@ -230,25 +209,21 @@
 
     move-result-object v2
 
-    .line 1186
     .local v2, "ctx":Landroid/content/Context;
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v10
 
-    .line 1187
     .local v10, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {v10, v11}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1188
     .local v7, "packages":[Ljava/lang/String;
     const/4 v13, 0x5
 
     aget-object v6, p3, v13
 
-    .line 1189
     .local v6, "packageName":Ljava/lang/String;
     move-object v1, v7
 
@@ -264,7 +239,6 @@
 
     aget-object v9, v1, v4
 
-    .line 1191
     .local v9, "pkg":Ljava/lang/String;
     const/16 v13, 0x80
 
@@ -273,7 +247,6 @@
 
     move-result-object v8
 
-    .line 1193
     .local v8, "pi":Landroid/content/pm/PackageInfo;
     const/4 v13, 0x5
 
@@ -323,11 +296,9 @@
 
     if-eqz v13, :cond_2
 
-    .line 1197
     :cond_0
     move-object v6, v9
 
-    .line 1204
     .end local v8    # "pi":Landroid/content/pm/PackageInfo;
     .end local v9    # "pkg":Ljava/lang/String;
     :cond_1
@@ -354,7 +325,6 @@
 
     goto :goto_0
 
-    .line 1180
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "ctx":Landroid/content/Context;
     .end local v4    # "i$":I
@@ -367,7 +337,6 @@
     :catch_0
     move-exception v3
 
-    .line 1181
     .local v3, "e":Ljava/lang/NumberFormatException;
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$000()Ljava/lang/String;
@@ -378,13 +347,11 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1182
     const/4 v11, 0x0
 
     .restart local v11    # "uid":I
     goto :goto_1
 
-    .line 1200
     .end local v3    # "e":Ljava/lang/NumberFormatException;
     .restart local v1    # "arr$":[Ljava/lang/String;
     .restart local v2    # "ctx":Landroid/content/Context;
@@ -398,13 +365,11 @@
     :catch_1
     move-exception v3
 
-    .line 1189
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 1206
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "ctx":Landroid/content/Context;
     .end local v4    # "i$":I
@@ -421,13 +386,12 @@
 
     move-result-object v13
 
-    const-string/jumbo v14, "invalid number of arguments "
+    const-string v14, "invalid number of arguments "
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 1173
     nop
 
     :pswitch_data_0

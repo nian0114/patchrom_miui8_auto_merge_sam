@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 4527
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$WakeupPreventionObserver;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
-    .line 4528
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 4529
     return-void
 .end method
 
@@ -44,7 +41,6 @@
 
     const/4 v2, -0x1
 
-    .line 4533
     iget-object v1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$WakeupPreventionObserver;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -53,9 +49,8 @@
 
     move-result-object v0
 
-    .line 4535
     .local v0, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v1, "wakeup_prevention"
+    const-string v1, "wakeup_prevention"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -63,8 +58,7 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 4536
-    const-string/jumbo v1, "wakeup_prevention_packages"
+    const-string v1, "wakeup_prevention_packages"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -72,12 +66,10 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 4538
     iget-object v1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$WakeupPreventionObserver;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->updateWakeupPrevention()V
 
-    .line 4539
     return-void
 .end method
 
@@ -86,11 +78,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 4542
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$WakeupPreventionObserver;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->updateWakeupPrevention()V
 
-    .line 4543
     return-void
 .end method

@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1646
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$4;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,21 +51,17 @@
     .param p2, "p2"    # Lcom/android/server/am/MARsPackageStatus;
 
     .prologue
-    .line 1649
     iget v0, p1, Lcom/android/server/am/MARsPackageStatus;->score:I
 
     iget v1, p2, Lcom/android/server/am/MARsPackageStatus;->score:I
 
     if-ge v0, v1, :cond_0
 
-    .line 1650
     const/4 v0, -0x1
 
-    .line 1653
     :goto_0
     return v0
 
-    .line 1651
     :cond_0
     iget v0, p1, Lcom/android/server/am/MARsPackageStatus;->score:I
 
@@ -74,12 +69,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 1652
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1653
     :cond_1
     const/4 v0, 0x0
 
@@ -92,7 +85,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1646
     check-cast p1, Lcom/android/server/am/MARsPackageStatus;
 
     .end local p1    # "x0":Ljava/lang/Object;

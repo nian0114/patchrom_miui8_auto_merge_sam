@@ -23,16 +23,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object v0, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fLocale:Ljava/util/Locale;
 
-    .line 41
     iput-object v0, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fResourceBundle:Ljava/util/ResourceBundle;
 
-    .line 34
     return-void
 .end method
 
@@ -50,21 +46,17 @@
     .end annotation
 
     .prologue
-    .line 64
     if-nez p1, :cond_0
 
-    .line 65
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p1
 
-    .line 67
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fLocale:Ljava/util/Locale;
 
     if-eq p1, v2, :cond_1
 
-    .line 69
     const-string v2, "mf.org.apache.xerces.impl.msg.XPointerMessages"
 
     invoke-static {v2, p1}, Ljava/util/ResourceBundle;->getBundle(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;
@@ -73,10 +65,8 @@
 
     iput-object v2, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fResourceBundle:Ljava/util/ResourceBundle;
 
-    .line 71
     iput-object p1, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fLocale:Ljava/util/Locale;
 
-    .line 74
     :cond_1
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fResourceBundle:Ljava/util/ResourceBundle;
 
@@ -84,11 +74,9 @@
 
     move-result-object v1
 
-    .line 75
     .local v1, "msg":Ljava/lang/String;
     if-eqz p3, :cond_2
 
-    .line 77
     :try_start_0
     invoke-static {v1, p3}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     :try_end_0
@@ -96,12 +84,10 @@
 
     move-result-object v1
 
-    .line 84
     :cond_2
     :goto_0
     if-nez v1, :cond_3
 
-    .line 85
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fResourceBundle:Ljava/util/ResourceBundle;
 
     const-string v3, "BadMessageKey"
@@ -110,22 +96,17 @@
 
     move-result-object v1
 
-    .line 87
     new-instance v2, Ljava/util/MissingResourceException;
 
-    .line 88
     const-string v3, "mf.org.apache.xerces.impl.msg.XPointerMessages"
 
-    .line 87
     invoke-direct {v2, v1, v3, p2}, Ljava/util/MissingResourceException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     throw v2
 
-    .line 78
     :catch_0
     move-exception v0
 
-    .line 79
     .local v0, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lmf/org/apache/xerces/xpointer/XPointerMessageFormatter;->fResourceBundle:Ljava/util/ResourceBundle;
 
@@ -135,7 +116,6 @@
 
     move-result-object v1
 
-    .line 80
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -166,7 +146,6 @@
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     return-object v1

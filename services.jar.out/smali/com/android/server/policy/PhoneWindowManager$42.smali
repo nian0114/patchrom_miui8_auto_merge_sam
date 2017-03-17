@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 11964
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$42;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iput p2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$displayId:I
@@ -56,7 +55,6 @@
     .locals 6
 
     .prologue
-    .line 11968
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -64,16 +62,13 @@
 
     move-result-object v1
 
-    .line 11969
     .local v1, "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     if-eqz v1, :cond_0
 
-    .line 11971
     iget v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$displayId:I
 
     if-nez v2, :cond_1
 
-    .line 11973
     iget v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$visibility:I
 
     const/4 v3, -0x1
@@ -86,18 +81,15 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService;->setSystemUiVisibility(IILjava/lang/String;)V
 
-    .line 11974
     iget-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$needsMenu:Z
 
     invoke-interface {v1, v2}, Lcom/android/internal/statusbar/IStatusBarService;->topAppWindowChanged(Z)V
 
-    .line 11987
     .end local v1    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     :cond_0
     :goto_0
     return-void
 
-    .line 11978
     .restart local v1    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     :cond_1
     iget v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$visibility:I
@@ -114,7 +106,6 @@
 
     invoke-interface {v1, v2, v3, v4, v5}, Lcom/android/internal/statusbar/IStatusBarService;->setSystemUiVisibilityToDisplay(IILjava/lang/String;I)V
 
-    .line 11979
     iget-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$needsMenu:Z
 
     iget v3, p0, Lcom/android/server/policy/PhoneWindowManager$42;->val$displayId:I
@@ -125,12 +116,10 @@
 
     goto :goto_0
 
-    .line 11983
     .end local v1    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     :catch_0
     move-exception v0
 
-    .line 11985
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$42;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 

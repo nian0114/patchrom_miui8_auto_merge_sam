@@ -41,17 +41,14 @@
     .locals 1
 
     .prologue
-    .line 437
     iput-object p1, p0, Lcom/android/server/FMRadioService$6;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 439
     const/16 v0, 0x12c
 
     iput v0, p0, Lcom/android/server/FMRadioService$6;->TIREDTIME:I
 
-    .line 445
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService$6;->isTired:Z
@@ -70,7 +67,6 @@
 
     const-wide/16 v4, 0x3e8
 
-    .line 448
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,12 +101,10 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 450
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 474
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -150,16 +144,13 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 476
     return-void
 
-    .line 455
     :sswitch_0
     iget-boolean v0, p0, Lcom/android/server/FMRadioService$6;->isTired:Z
 
     if-eqz v0, :cond_0
 
-    .line 456
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -186,7 +177,6 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 457
     iget v0, p1, Landroid/os/Message;->what:I
 
     iget v1, p0, Lcom/android/server/FMRadioService$6;->TIREDTIME:I
@@ -197,7 +187,6 @@
 
     goto :goto_0
 
-    .line 459
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService$6;->this$0:Lcom/android/server/FMRadioService;
 
@@ -206,7 +195,6 @@
     # invokes: Lcom/android/server/FMRadioService;->responedFocusEvent(I)V
     invoke-static {v0, v1}, Lcom/android/server/FMRadioService;->access$2000(Lcom/android/server/FMRadioService;I)V
 
-    .line 460
     iget-object v0, p0, Lcom/android/server/FMRadioService$6;->this$0:Lcom/android/server/FMRadioService;
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -214,22 +202,18 @@
     # invokes: Lcom/android/server/FMRadioService;->respondAudioFocusChangeForDns(I)V
     invoke-static {v0, v1}, Lcom/android/server/FMRadioService;->access$2100(Lcom/android/server/FMRadioService;I)V
 
-    .line 461
     invoke-virtual {p0, v2}, Lcom/android/server/FMRadioService$6;->removeMessages(I)V
 
-    .line 462
     iget v0, p0, Lcom/android/server/FMRadioService$6;->TIREDTIME:I
 
     int-to-long v0, v0
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/FMRadioService$6;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 463
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService$6;->isTired:Z
 
-    .line 464
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,7 +242,6 @@
 
     goto/16 :goto_0
 
-    .line 468
     :sswitch_1
     const/4 v0, 0x0
 
@@ -266,7 +249,6 @@
 
     goto/16 :goto_0
 
-    .line 450
     nop
 
     :sswitch_data_0

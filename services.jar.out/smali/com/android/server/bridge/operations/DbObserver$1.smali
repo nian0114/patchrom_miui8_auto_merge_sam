@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/android/server/bridge/operations/DbObserver$1;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 60
     iget-object v2, p0, Lcom/android/server/bridge/operations/DbObserver$1;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     # invokes: Lcom/android/server/bridge/operations/DbObserver;->getRecentlyUpdateRawContactIDList()Ljava/util/ArrayList;
@@ -48,7 +46,6 @@
 
     move-result-object v0
 
-    .line 61
     .local v0, "mRawConatctIDList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v2, p0, Lcom/android/server/bridge/operations/DbObserver$1;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
@@ -57,7 +54,6 @@
 
     move-result v1
 
-    .line 62
     .local v1, "present_no_of_contacts":I
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/operations/DbObserver;->access$200()Ljava/lang/String;
@@ -68,7 +64,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mContactRunnable , no_of_contact_last_synced :"
+    const-string v4, "mContactRunnable , no_of_contact_last_synced :"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,7 +97,6 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -120,7 +115,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 66
     :cond_1
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/operations/DbObserver;->access$200()Ljava/lang/String;
@@ -154,7 +148,6 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object v2, p0, Lcom/android/server/bridge/operations/DbObserver$1;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->mRCPManager:Landroid/os/RCPManager;
@@ -173,7 +166,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/RCPManager;->doSyncForSyncer(Ljava/lang/String;I)V
 
-    .line 68
     iget-object v2, p0, Lcom/android/server/bridge/operations/DbObserver$1;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -183,7 +175,6 @@
     # setter for: Lcom/android/server/bridge/operations/DbObserver;->contact_last_synced_timeStamp:J
     invoke-static {v2, v4, v5}, Lcom/android/server/bridge/operations/DbObserver;->access$602(Lcom/android/server/bridge/operations/DbObserver;J)J
 
-    .line 69
     # getter for: Lcom/android/server/bridge/operations/DbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/operations/DbObserver;->access$200()Ljava/lang/String;
 
@@ -193,7 +184,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mContactRunnable , contact_last_synced_timeStamp :"
+    const-string v4, "mContactRunnable , contact_last_synced_timeStamp :"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -216,13 +207,11 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v2, p0, Lcom/android/server/bridge/operations/DbObserver$1;->this$0:Lcom/android/server/bridge/operations/DbObserver;
 
     # setter for: Lcom/android/server/bridge/operations/DbObserver;->no_of_contact_last_synced:I
     invoke-static {v2, v1}, Lcom/android/server/bridge/operations/DbObserver;->access$302(Lcom/android/server/bridge/operations/DbObserver;I)I
 
-    .line 73
     :cond_2
     return-void
 .end method

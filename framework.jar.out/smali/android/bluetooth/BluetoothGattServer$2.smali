@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 341
     iput-object p1, p0, Landroid/bluetooth/BluetoothGattServer$2;->this$0:Landroid/bluetooth/BluetoothGattServer;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,14 +37,13 @@
     .param p1, "up"    # Z
 
     .prologue
-    .line 343
     const-string v2, "BluetoothGattServer"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onBluetoothStateChange: up="
+    const-string v4, "onBluetoothStateChange: up="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,10 +59,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     if-nez p1, :cond_0
 
-    .line 345
     iget-object v2, p0, Landroid/bluetooth/BluetoothGattServer$2;->this$0:Landroid/bluetooth/BluetoothGattServer;
 
     # getter for: Landroid/bluetooth/BluetoothGattServer;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -78,14 +74,12 @@
 
     if-nez v2, :cond_1
 
-    .line 346
     const-string v2, "BluetoothGattServer"
 
     const-string v3, "Bluetooth is turned off, disconnect all server connections"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     iget-object v2, p0, Landroid/bluetooth/BluetoothGattServer$2;->this$0:Landroid/bluetooth/BluetoothGattServer;
 
     # getter for: Landroid/bluetooth/BluetoothGattServer;->mConnectedDevices:Ljava/util/List;
@@ -111,7 +105,6 @@
 
     check-cast v0, Landroid/bluetooth/BluetoothDevice;
 
-    .line 348
     .local v0, "device":Landroid/bluetooth/BluetoothDevice;
     iget-object v2, p0, Landroid/bluetooth/BluetoothGattServer$2;->this$0:Landroid/bluetooth/BluetoothGattServer;
 
@@ -119,17 +112,15 @@
 
     goto :goto_0
 
-    .line 352
     .end local v0    # "device":Landroid/bluetooth/BluetoothDevice;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     const-string v2, "BluetoothGattServer"
 
-    const-string/jumbo v3, "onBluetoothStateChange: Bluetooth is on"
+    const-string v3, "onBluetoothStateChange: Bluetooth is on"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     :cond_1
     return-void
 .end method

@@ -29,17 +29,13 @@
     .param p3, "log"    # Landroid/util/LocalLog;
 
     .prologue
-    .line 1249
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory$RequestLogger;->this$1:Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1250
     iput-object p2, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory$RequestLogger;->request:Landroid/net/NetworkRequest;
 
-    .line 1251
     iput-object p3, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory$RequestLogger;->log:Landroid/util/LocalLog;
 
-    .line 1252
     return-void
 .end method

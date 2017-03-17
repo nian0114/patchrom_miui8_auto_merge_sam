@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 370
     iput-object p1, p0, Lcom/android/server/enterprise/log/LogManagerService$2;->this$0:Lcom/android/server/enterprise/log/LogManagerService;
 
     iput-object p2, p0, Lcom/android/server/enterprise/log/LogManagerService$2;->val$file:Landroid/os/ParcelFileDescriptor;
@@ -56,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 404
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
-    .line 405
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 370
     check-cast p1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -92,10 +88,8 @@
     .end annotation
 
     .prologue
-    .line 391
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->flush()V
 
-    .line 392
     return-void
 .end method
 
@@ -109,7 +103,6 @@
     .end annotation
 
     .prologue
-    .line 370
     check-cast p1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -127,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 375
     new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     iget-object v1, p0, Lcom/android/server/enterprise/log/LogManagerService$2;->val$file:Landroid/os/ParcelFileDescriptor;
@@ -146,7 +138,6 @@
     .end annotation
 
     .prologue
-    .line 370
     invoke-virtual {p0}, Lcom/android/server/enterprise/log/LogManagerService$2;->open()Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     move-result-object v0
@@ -164,7 +155,6 @@
     .end annotation
 
     .prologue
-    .line 383
     iget-object v0, p0, Lcom/android/server/enterprise/log/LogManagerService$2;->this$0:Lcom/android/server/enterprise/log/LogManagerService;
 
     const/4 v1, 0x2
@@ -178,7 +168,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/log/FileLogger;->copyLogs(Ljava/io/FileOutputStream;)V
 
-    .line 386
     return-void
 .end method
 
@@ -192,7 +181,6 @@
     .end annotation
 
     .prologue
-    .line 370
     check-cast p1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -211,14 +199,12 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 398
     return-void
 .end method
 
@@ -232,7 +218,6 @@
     .end annotation
 
     .prologue
-    .line 370
     check-cast p1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     .end local p1    # "x0":Ljava/lang/Object;

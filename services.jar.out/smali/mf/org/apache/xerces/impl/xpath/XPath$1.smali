@@ -24,10 +24,8 @@
     .param p2, "$anonymous0"    # Lmf/org/apache/xerces/util/SymbolTable;
 
     .prologue
-    .line 1
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xpath/XPath$1;->this$0:Lmf/org/apache/xerces/impl/xpath/XPath;
 
-    .line 157
     invoke-direct {p0, p2}, Lmf/org/apache/xerces/impl/xpath/XPath$Scanner;-><init>(Lmf/org/apache/xerces/util/SymbolTable;)V
 
     return-void
@@ -46,69 +44,55 @@
     .end annotation
 
     .prologue
-    .line 161
     const/4 v0, 0x6
 
     if-eq p2, v0, :cond_0
 
-    .line 162
     const/16 v0, 0xb
 
     if-eq p2, v0, :cond_0
 
-    .line 163
     const/16 v0, 0x15
 
     if-eq p2, v0, :cond_0
 
-    .line 164
     const/4 v0, 0x4
 
     if-eq p2, v0, :cond_0
 
-    .line 165
     const/16 v0, 0x9
 
     if-eq p2, v0, :cond_0
 
-    .line 166
     const/16 v0, 0xa
 
     if-eq p2, v0, :cond_0
 
-    .line 167
     const/16 v0, 0x16
 
     if-eq p2, v0, :cond_0
 
-    .line 168
     const/16 v0, 0x17
 
     if-eq p2, v0, :cond_0
 
-    .line 169
     const/16 v0, 0x24
 
     if-eq p2, v0, :cond_0
 
-    .line 170
     const/16 v0, 0x23
 
     if-eq p2, v0, :cond_0
 
-    .line 171
     const/16 v0, 0x8
 
     if-ne p2, v0, :cond_1
 
-    .line 174
     :cond_0
     invoke-super {p0, p1, p2}, Lmf/org/apache/xerces/impl/xpath/XPath$Scanner;->addToken(Lmf/org/apache/xerces/impl/xpath/XPath$Tokens;I)V
 
-    .line 175
     return-void
 
-    .line 177
     :cond_1
     new-instance v0, Lmf/org/apache/xerces/impl/xpath/XPathException;
 

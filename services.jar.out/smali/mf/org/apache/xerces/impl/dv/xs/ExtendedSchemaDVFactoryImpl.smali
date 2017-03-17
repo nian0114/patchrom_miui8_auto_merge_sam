@@ -12,17 +12,14 @@
     .locals 1
 
     .prologue
-    .line 36
     new-instance v0, Lmf/org/apache/xerces/util/SymbolHash;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/util/SymbolHash;-><init>()V
 
     sput-object v0, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
-    .line 38
     invoke-static {}, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->createBuiltInTypes()V
 
-    .line 39
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/dv/xs/BaseSchemaDVFactory;-><init>()V
 
     return-void
@@ -44,22 +40,17 @@
 
     const/4 v5, 0x0
 
-    .line 43
     const-string v10, "anyAtomicType"
 
-    .line 44
     .local v10, "ANYATOMICTYPE":Ljava/lang/String;
     const-string v12, "duration"
 
-    .line 45
     .local v12, "DURATION":Ljava/lang/String;
     const-string v13, "yearMonthDuration"
 
-    .line 46
     .local v13, "YEARMONTHDURATION":Ljava/lang/String;
     const-string v11, "dayTimeDuration"
 
-    .line 48
     .local v11, "DAYTIMEDURATION":Ljava/lang/String;
     sget-object v0, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
@@ -67,7 +58,6 @@
 
     invoke-static {v0, v2}, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->createBuiltInTypes(Lmf/org/apache/xerces/util/SymbolHash;Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;)V
 
-    .line 51
     sget-object v0, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
     const-string v2, "anyAtomicType"
@@ -76,7 +66,6 @@
 
     invoke-virtual {v0, v2, v3}, Lmf/org/apache/xerces/util/SymbolHash;->put(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 54
     sget-object v0, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
     const-string v2, "duration"
@@ -87,7 +76,6 @@
 
     check-cast v1, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
 
-    .line 55
     .local v1, "durationDV":Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl;
     sget-object v14, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
@@ -111,7 +99,6 @@
 
     invoke-virtual {v14, v15, v0}, Lmf/org/apache/xerces/util/SymbolHash;->put(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 56
     sget-object v14, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
     const-string v15, "dayTimeDuration"
@@ -134,7 +121,6 @@
 
     invoke-virtual {v14, v15, v0}, Lmf/org/apache/xerces/util/SymbolHash;->put(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 57
     return-void
 .end method
 
@@ -145,7 +131,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     sget-object v0, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
     invoke-virtual {v0, p1}, Lmf/org/apache/xerces/util/SymbolHash;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -161,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 81
     sget-object v0, Lmf/org/apache/xerces/impl/dv/xs/ExtendedSchemaDVFactoryImpl;->fBuiltInTypes:Lmf/org/apache/xerces/util/SymbolHash;
 
     invoke-virtual {v0}, Lmf/org/apache/xerces/util/SymbolHash;->makeClone()Lmf/org/apache/xerces/util/SymbolHash;

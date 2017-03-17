@@ -23,29 +23,23 @@
     .locals 8
 
     .prologue
-    .line 608
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 609
     const/16 v2, 0x8
 
-    .line 610
     .local v2, "len":I
     const-string v0, "0123456789abcdefghijklmnopqrstuvwxyz"
 
-    .line 611
     .local v0, "AB":Ljava/lang/String;
     new-instance v3, Ljava/util/Random;
 
     invoke-direct {v3}, Ljava/util/Random;-><init>()V
 
-    .line 612
     .local v3, "rnd":Ljava/util/Random;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 613
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -53,7 +47,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 614
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -68,18 +61,15 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 613
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 615
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 616
     .local v5, "str":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -103,7 +93,6 @@
 
     iput-object v6, p0, Lcom/android/server/wifi/WifiMaliciousHotspotDetector$SpecialSsid;->mSsid:Ljava/lang/String;
 
-    .line 617
     return-void
 .end method
 
@@ -112,10 +101,8 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 620
     const/4 v2, 0x0
 
-    .line 621
     .local v2, "sum":C
     const/4 v0, 0x0
 
@@ -127,7 +114,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 622
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -136,12 +122,10 @@
 
     int-to-char v2, v3
 
-    .line 621
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 623
     :cond_0
     const-string v3, "%02x"
 
@@ -161,7 +145,6 @@
 
     move-result-object v1
 
-    .line 624
     .local v1, "s":Ljava/lang/String;
     return-object v1
 .end method
@@ -175,10 +158,8 @@
 
     const/4 v3, 0x0
 
-    .line 628
     move-object v1, p0
 
-    .line 629
     .local v1, "val":Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -204,7 +185,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 630
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -215,7 +195,6 @@
 
     move-result-object v1
 
-    .line 631
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -225,11 +204,9 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 634
     :goto_0
     return v3
 
-    .line 633
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -245,7 +222,6 @@
 
     move-result-object v0
 
-    .line 634
     .local v0, "sum":Ljava/lang/String;
     invoke-virtual {v1, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 

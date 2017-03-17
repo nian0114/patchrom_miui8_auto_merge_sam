@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 132
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 135
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 149
     const-string v1, "FingerprintService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,12 +65,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     :cond_0
     :goto_0
     return-void
 
-    .line 137
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -83,7 +78,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -93,7 +87,6 @@
 
     move-result v0
 
-    .line 141
     .local v0, "removedUser":I
     # getter for: Lcom/android/server/fingerprint/FingerprintService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/fingerprint/FingerprintService;->access$000()Z
@@ -102,14 +95,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 142
     const-string v1, "FingerprintService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "removed User = "
+    const-string v3, "removed User = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -125,11 +117,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     :cond_1
     if-eqz v0, :cond_0
 
-    .line 145
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     const/4 v2, -0x1
@@ -141,7 +131,6 @@
 
     goto :goto_0
 
-    .line 135
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_0

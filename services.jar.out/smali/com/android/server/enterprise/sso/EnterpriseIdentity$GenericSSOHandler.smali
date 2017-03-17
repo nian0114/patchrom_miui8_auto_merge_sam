@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
-    .line 444
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 445
     return-void
 .end method
 
@@ -41,39 +38,32 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 448
     if-eqz p1, :cond_0
 
-    .line 449
     iget v8, p1, Landroid/os/Message;->arg1:I
 
-    .line 450
     .local v8, "userId":I
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 530
     .end local v8    # "userId":I
     :cond_0
     :goto_0
     :sswitch_0
     return-void
 
-    .line 453
     .restart local v8    # "userId":I
     :pswitch_0
     iget-object v5, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/app/enterprise/sso/AuthenticationRequest;
 
-    .line 454
     .local v5, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-virtual {v5}, Landroid/app/enterprise/sso/AuthenticationRequest;->getAuthenticatorPkgName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 455
     .local v4, "packageName":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
@@ -82,7 +72,6 @@
 
     move-result-object v1
 
-    .line 458
     .local v1, "authenticator":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     const-string v9, "EnterpriseIdentity"
 
@@ -90,10 +79,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     if-nez v1, :cond_1
 
-    .line 460
     const-string v9, "EnterpriseIdentity"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -118,7 +105,6 @@
 
     goto :goto_0
 
-    .line 465
     :cond_1
     :try_start_0
     iget-object v9, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/EnterpriseIdentity;
@@ -129,36 +115,30 @@
 
     if-eqz v9, :cond_2
 
-    .line 466
     invoke-virtual {v5}, Landroid/app/enterprise/sso/AuthenticationRequest;->getRequestConfig()Landroid/os/Bundle;
 
     move-result-object v9
 
     invoke-interface {v1, v9}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->pushAuthenticatorConfig(Landroid/os/Bundle;)I
 
-    .line 467
     iget-object v9, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
     const/4 v10, 0x0
 
     invoke-virtual {v9, v10, v8}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->setUnEnrollSetting(ZI)V
 
-    .line 469
     :cond_2
     invoke-interface {v1, v5}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireToken(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v6
 
-    .line 471
     .local v6, "retFromAuthenticator":Landroid/app/enterprise/sso/TokenInfo;
     if-eqz v6, :cond_4
 
-    .line 472
     invoke-virtual {v6}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 474
     .local v0, "authVerificationBundle":Landroid/os/Bundle;
     sget-object v9, Landroid/app/enterprise/sso/GenericSSOConstants;->AUTHENTICATION_STATUS:Ljava/lang/String;
 
@@ -166,7 +146,6 @@
 
     move-result v7
 
-    .line 476
     .local v7, "status":I
     const-string v9, "EnterpriseIdentity"
 
@@ -190,7 +169,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     sget-object v9, Landroid/os/PersonaManager$KnoxContainerVersion;->KNOX_CONTAINER_VERSION_2_5_0:Landroid/os/PersonaManager$KnoxContainerVersion;
 
     invoke-static {v9}, Landroid/os/PersonaManager;->isKnoxVersionSupported(Landroid/os/PersonaManager$KnoxContainerVersion;)Z
@@ -203,20 +181,16 @@
 
     if-ne v7, v9, :cond_3
 
-    .line 482
     const/4 v7, -0x1
 
-    .line 484
     :cond_3
     sparse-switch v7, :sswitch_data_0
 
     goto :goto_0
 
-    .line 500
     :sswitch_1
     const/4 v3, 0x0
 
-    .line 501
     .local v3, "isSdpMinor":Z
     iget-object v9, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
@@ -238,10 +212,8 @@
 
     if-eqz v9, :cond_0
 
-    .line 502
     const/4 v3, 0x1
 
-    .line 503
     iget-object v9, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
     const/4 v10, 0x1
@@ -253,7 +225,6 @@
 
     goto/16 :goto_0
 
-    .line 522
     .end local v0    # "authVerificationBundle":Landroid/os/Bundle;
     .end local v3    # "isSdpMinor":Z
     .end local v6    # "retFromAuthenticator":Landroid/app/enterprise/sso/TokenInfo;
@@ -261,7 +232,6 @@
     :catch_0
     move-exception v2
 
-    .line 523
     .local v2, "e":Landroid/os/RemoteException;
     const-string v9, "EnterpriseIdentity"
 
@@ -271,7 +241,6 @@
 
     goto/16 :goto_0
 
-    .line 519
     .end local v2    # "e":Landroid/os/RemoteException;
     .restart local v6    # "retFromAuthenticator":Landroid/app/enterprise/sso/TokenInfo;
     :cond_4
@@ -286,7 +255,6 @@
 
     goto/16 :goto_0
 
-    .line 450
     nop
 
     :pswitch_data_0
@@ -294,7 +262,6 @@
         :pswitch_0
     .end packed-switch
 
-    .line 484
     :sswitch_data_0
     .sparse-switch
         -0x12 -> :sswitch_0

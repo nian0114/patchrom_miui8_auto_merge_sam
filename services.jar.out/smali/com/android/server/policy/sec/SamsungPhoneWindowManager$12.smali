@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3145
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$12;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 3147
     iget-object v1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$12;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -49,7 +47,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "torchlight_timeout"
+    const-string v2, "torchlight_timeout"
 
     const/16 v3, 0x7530
 
@@ -59,7 +57,6 @@
 
     move-result v0
 
-    .line 3148
     .local v0, "torchTimeOut":I
     iget-object v1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$12;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
@@ -67,12 +64,10 @@
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 3149
     iget-object v1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$12;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->TorchModeFlashSet(I)V
     invoke-static {v1, v0}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$400(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;I)V
 
-    .line 3150
     return-void
 .end method

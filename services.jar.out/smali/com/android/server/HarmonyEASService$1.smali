@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcom/android/server/HarmonyEASService$1;->this$0:Lcom/android/server/HarmonyEASService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 115
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 116
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -56,7 +53,6 @@
 
     move-result v1
 
-    .line 119
     .local v1, "userHandle":I
     const-string v2, "HarmonyEASService"
 
@@ -64,7 +60,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onReceive : "
+    const-string v4, "onReceive : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,7 +86,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     const-string v2, "android.intent.action.USER_STARTED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -99,17 +94,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 121
     iget-object v2, p0, Lcom/android/server/HarmonyEASService$1;->this$0:Lcom/android/server/HarmonyEASService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/HarmonyEASService;->handleUserChanged(I)V
 
-    .line 131
     :cond_0
     :goto_0
     return-void
 
-    .line 123
     :cond_1
     const-string v2, "android.intent.action.USER_REMOVED"
 
@@ -119,14 +111,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 124
     iget-object v2, p0, Lcom/android/server/HarmonyEASService$1;->this$0:Lcom/android/server/HarmonyEASService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/HarmonyEASService;->clearDataForUser(I)V
 
     goto :goto_0
 
-    .line 126
     :cond_2
     const-string v2, "android.intent.action.PACKAGE_REMOVED"
 
@@ -144,7 +134,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 129
     :cond_3
     iget-object v2, p0, Lcom/android/server/HarmonyEASService$1;->this$0:Lcom/android/server/HarmonyEASService;
 

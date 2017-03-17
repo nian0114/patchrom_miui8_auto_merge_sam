@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +29,10 @@
     .param p1, "connection"    # Landroid/content/ServiceConnection;
 
     .prologue
-    .line 42
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 43
     .local v0, "serviceIntent":Landroid/content/Intent;
     const-string v1, "com.ipsec.service"
 
@@ -43,7 +40,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 46
     const-string v1, "VPNC"
 
     const-string v2, "ProfileServiceInterface"
@@ -76,7 +72,6 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/ipsec/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 55
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
@@ -91,7 +86,6 @@
     .param p0, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 34
     invoke-static {p0}, Lcom/ipsec/service/IProfileService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/ipsec/service/IProfileService;
 
     move-result-object v0

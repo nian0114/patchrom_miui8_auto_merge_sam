@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/server/cover/LedCoverController$1;->this$0:Lcom/android/server/cover/LedCoverController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 3
 
     .prologue
-    .line 232
     const/4 v1, 0x1
 
     new-array v0, v1, [B
 
-    .line 233
     .local v0, "data":[B
     const/4 v1, 0x0
 
@@ -60,13 +57,11 @@
 
     aput-byte v2, v0, v1
 
-    .line 234
     iget-object v1, p0, Lcom/android/server/cover/LedCoverController$1;->this$0:Lcom/android/server/cover/LedCoverController;
 
     const/16 v2, 0x10
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/cover/LedCoverController;->sendDataToLedCover(I[B)Z
 
-    .line 235
     return-void
 .end method

@@ -110,7 +110,7 @@
 .method public static getEncryptionSpecNSprefix()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-static {v0}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->getDefaultPrefix(Ljava/lang/String;)Ljava/lang/String;
 
@@ -127,7 +127,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "http://www.w3.org/2001/04/xmlenc#"
+    const-string v0, "http://www.w3.org/2001/04/xmlenc#"
 
     invoke-static {v0, p0}, Lcom/sun/org/apache/xml/internal/security/utils/ElementProxy;->setDefaultPrefix(Ljava/lang/String;Ljava/lang/String;)V
 

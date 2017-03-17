@@ -69,7 +69,6 @@
 
     const/4 v3, 0x0
 
-    .line 20
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_NONE"
@@ -78,7 +77,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_NONE:Lcom/ipsec/client/IPsecEvent;
 
-    .line 26
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_NOT_READY"
@@ -87,7 +85,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_NOT_READY:Lcom/ipsec/client/IPsecEvent;
 
-    .line 32
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_NOT_OWNER"
@@ -96,7 +93,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_NOT_OWNER:Lcom/ipsec/client/IPsecEvent;
 
-    .line 38
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_PREPARING"
@@ -105,7 +101,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_PREPARING:Lcom/ipsec/client/IPsecEvent;
 
-    .line 44
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_READY"
@@ -114,7 +109,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_READY:Lcom/ipsec/client/IPsecEvent;
 
-    .line 50
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_CREATING_CONNECTION"
@@ -125,7 +119,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_CREATING_CONNECTION:Lcom/ipsec/client/IPsecEvent;
 
-    .line 56
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_CONNECTED"
@@ -136,7 +129,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_CONNECTED:Lcom/ipsec/client/IPsecEvent;
 
-    .line 62
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_DISCONNECTING"
@@ -147,7 +139,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_DISCONNECTING:Lcom/ipsec/client/IPsecEvent;
 
-    .line 68
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_CONNECTION_ACTIVE"
@@ -158,7 +149,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_CONNECTION_ACTIVE:Lcom/ipsec/client/IPsecEvent;
 
-    .line 72
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_PEER_DISCONNECTED"
@@ -169,7 +159,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_PEER_DISCONNECTED:Lcom/ipsec/client/IPsecEvent;
 
-    .line 78
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_DISCONNECTED"
@@ -180,7 +169,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_DISCONNECTED:Lcom/ipsec/client/IPsecEvent;
 
-    .line 84
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_CANCELLING_CONNECTION"
@@ -191,7 +179,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_CANCELLING_CONNECTION:Lcom/ipsec/client/IPsecEvent;
 
-    .line 90
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_CONNECTION_SETUP_FAILURE"
@@ -202,7 +189,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_CONNECTION_SETUP_FAILURE:Lcom/ipsec/client/IPsecEvent;
 
-    .line 96
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_CONNECTION_RESET"
@@ -213,7 +199,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_CONNECTION_RESET:Lcom/ipsec/client/IPsecEvent;
 
-    .line 102
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_MISSING_DATA"
@@ -224,7 +209,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_MISSING_DATA:Lcom/ipsec/client/IPsecEvent;
 
-    .line 108
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_QUERY_DATA"
@@ -235,7 +219,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_QUERY_DATA:Lcom/ipsec/client/IPsecEvent;
 
-    .line 114
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_UNKNOWN"
@@ -246,7 +229,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_UNKNOWN:Lcom/ipsec/client/IPsecEvent;
 
-    .line 120
     new-instance v0, Lcom/ipsec/client/IPsecEvent;
 
     const-string v1, "IPSEC_EVENT_ERROR"
@@ -257,7 +239,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecEvent;->IPSEC_EVENT_ERROR:Lcom/ipsec/client/IPsecEvent;
 
-    .line 13
     const/16 v0, 0x12
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecEvent;
@@ -374,7 +355,6 @@
     .end annotation
 
     .prologue
-    .line 13
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -385,7 +365,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     const-class v0, Lcom/ipsec/client/IPsecEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -401,7 +380,6 @@
     .locals 1
 
     .prologue
-    .line 13
     sget-object v0, Lcom/ipsec/client/IPsecEvent;->$VALUES:[Lcom/ipsec/client/IPsecEvent;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecEvent;->clone()Ljava/lang/Object;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1145
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$2;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1148
     iget-object v4, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$2;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # invokes: Lcom/android/server/enterprise/certificate/CertificatePolicy;->getPackageName(Landroid/content/Intent;)Ljava/lang/String;
@@ -47,15 +45,13 @@
 
     move-result-object v3
 
-    .line 1149
     .local v3, "pkgName":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1150
     .local v2, "pkgAction":Ljava/lang/String;
-    const-string/jumbo v4, "isMarketInstallation"
+    const-string v4, "isMarketInstallation"
 
     const/4 v5, 0x0
 
@@ -63,7 +59,6 @@
 
     move-result v1
 
-    .line 1153
     .local v1, "isMarketApp":Z
     if-eqz v3, :cond_0
 
@@ -90,7 +85,6 @@
 
     if-lez v4, :cond_0
 
-    .line 1156
     const-string v4, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -101,7 +95,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1157
     iget-object v4, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$2;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # invokes: Lcom/android/server/enterprise/certificate/CertificatePolicy;->displayAppSignature(Ljava/lang/String;)V
@@ -109,16 +102,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1163
     :cond_0
     :goto_0
     return-void
 
-    .line 1160
     :catch_0
     move-exception v0
 
-    .line 1161
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

@@ -20,10 +20,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 45
     sput-object v0, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionClass:Ljava/lang/Class;
 
-    .line 46
     sput-object v0, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionObj:Ljava/lang/Object;
 
     return-void
@@ -33,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,14 +43,12 @@
     .param p2, "xtStats"    # Landroid/net/NetworkStats;
 
     .prologue
-    .line 50
     invoke-static {}, Lcom/android/server/net/NetPluginDelegate;->loadTetherExtJar()V
 
-    .line 52
     :try_start_0
     sget-object v1, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionClass:Ljava/lang/Class;
 
-    const-string/jumbo v2, "getTetherStats"
+    const-string v2, "getTetherStats"
 
     const/4 v3, 0x3
 
@@ -103,22 +98,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 59
     :goto_0
     return-void
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 57
     const-string v1, "ConnectivityExtension"
 
-    const-string/jumbo v2, "error in invoke method"
+    const-string v2, "error in invoke method"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -129,14 +120,11 @@
     .locals 6
 
     .prologue
-    .line 74
     const-string v2, "com.qualcomm.qti.tetherstatsextension.TetherStatsReporting"
 
-    .line 75
     .local v2, "realProvider":Ljava/lang/String;
     const-string v3, "/system/framework/ConnectivityExt.jar"
 
-    .line 76
     .local v3, "realProviderPath":Ljava/lang/String;
     sget-object v4, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionClass:Ljava/lang/Class;
 
@@ -146,7 +134,6 @@
 
     if-nez v4, :cond_0
 
-    .line 80
     :try_start_0
     new-instance v0, Ldalvik/system/PathClassLoader;
 
@@ -158,7 +145,6 @@
 
     invoke-direct {v0, v4, v5}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 83
     .local v0, "classLoader":Ldalvik/system/PathClassLoader;
     const-string v4, "com.qualcomm.qti.tetherstatsextension.TetherStatsReporting"
 
@@ -168,7 +154,6 @@
 
     sput-object v4, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionClass:Ljava/lang/Class;
 
-    .line 84
     sget-object v4, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionClass:Ljava/lang/Class;
 
     invoke-virtual {v4}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
@@ -179,24 +164,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 92
     .end local v0    # "classLoader":Ldalvik/system/PathClassLoader;
     :cond_0
     :goto_0
     return-void
 
-    .line 87
     :catch_0
     move-exception v1
 
-    .line 88
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 89
     const-string v4, "ConnectivityExtension"
 
-    const-string/jumbo v5, "unable to ConnectivityExt jar"
+    const-string v5, "unable to ConnectivityExt jar"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -209,14 +190,12 @@
     .param p1, "quota"    # J
 
     .prologue
-    .line 62
     invoke-static {}, Lcom/android/server/net/NetPluginDelegate;->loadTetherExtJar()V
 
-    .line 64
     :try_start_0
     sget-object v1, Lcom/android/server/net/NetPluginDelegate;->tetherExtensionClass:Ljava/lang/Class;
 
-    const-string/jumbo v2, "setQuota"
+    const-string v2, "setQuota"
 
     const/4 v3, 0x2
 
@@ -260,15 +239,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
     :goto_0
     return-void
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "ex":Ljava/lang/Exception;
     const-string v1, "ConnectivityExtension"
 

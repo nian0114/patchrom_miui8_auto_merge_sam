@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 182
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$2;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 185
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$2;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v1, "interface_state"
@@ -53,7 +51,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mInterfaceState:I
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$002(Lcom/samsung/android/server/wifi/SoftApStateMachine;I)I
 
-    .line 187
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$2;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mInterfaceState:I
@@ -63,14 +60,12 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 188
     const-string v0, "SoftApStateMachine"
 
     const-string v1, "WIFI_AP_INTERFACE_STATE_ERRORED - send CMD_START_AP_FAILURE"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     iget-object v0, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$2;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$2;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
@@ -92,7 +87,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->sendMessage(Landroid/os/Message;)V
 
-    .line 192
     :cond_0
     return-void
 .end method

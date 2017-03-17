@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mAuthenticationData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     return-object v0
@@ -48,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mDeviceInfo:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
     return-object v0
@@ -58,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mKeyID:[B
 
     const/4 v1, 0x0
@@ -74,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mPrefixDSKPP:Ljava/lang/String;
 
     return-object v0
@@ -84,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mPrefixPSKC:Ljava/lang/String;
 
     return-object v0
@@ -94,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mServerURL:Ljava/lang/String;
 
     return-object v0
@@ -104,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mTokenPlatformInfo:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
 
     return-object v0
@@ -114,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mVersion:Ljava/lang/String;
 
     return-object v0
@@ -125,10 +116,8 @@
     .param p1, "mAuthenticationData"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mAuthenticationData:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/AuthenticationData;
 
-    .line 75
     return-void
 .end method
 
@@ -137,10 +126,8 @@
     .param p1, "mDeviceInfo"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
     .prologue
-    .line 49
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mDeviceInfo:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/DeviceInfo;
 
-    .line 50
     return-void
 .end method
 
@@ -149,7 +136,6 @@
     .param p1, "mKeyID"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     const-string v1, "UTF-8"
 
     invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -160,7 +146,6 @@
 
     move-result-object v0
 
-    .line 58
     .local v0, "keyID":[B
     const/4 v1, 0x0
 
@@ -170,7 +155,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mKeyID:[B
 
-    .line 59
     return-void
 .end method
 
@@ -179,10 +163,8 @@
     .param p1, "mPrefixDSKPP"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mPrefixDSKPP:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -191,10 +173,8 @@
     .param p1, "mPrefixPSKC"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mPrefixPSKC:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -203,10 +183,8 @@
     .param p1, "mServerURL"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mServerURL:Ljava/lang/String;
 
-    .line 83
     return-void
 .end method
 
@@ -215,10 +193,8 @@
     .param p1, "mTokenPlatformInfo"    # Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
 
     .prologue
-    .line 66
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mTokenPlatformInfo:Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/TokenPlatformInfo;
 
-    .line 67
     return-void
 .end method
 
@@ -227,9 +203,7 @@
     .param p1, "mVersion"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyProvTrigger;->mVersion:Ljava/lang/String;
 
-    .line 26
     return-void
 .end method

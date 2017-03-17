@@ -42,46 +42,35 @@
     .param p6, "annotation"    # Lmf/org/apache/xerces/xs/XSAnnotation;
 
     .prologue
-    .line 3266
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3267
     iput-short p1, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->kind:S
 
-    .line 3268
     iput-object p2, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->svalue:Ljava/lang/String;
 
-    .line 3269
     iput p3, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->ivalue:I
 
-    .line 3270
     iput-object p4, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->avalue:Ljava/lang/Object;
 
-    .line 3271
     iput-boolean p5, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->fixed:Z
 
-    .line 3273
     if-eqz p6, :cond_0
 
-    .line 3274
     new-instance v0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->annotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
-    .line 3275
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->annotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     check-cast v0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
     invoke-virtual {v0, p6}, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->addXSObject(Lmf/org/apache/xerces/xs/XSObject;)V
 
-    .line 3280
     :goto_0
     return-void
 
-    .line 3278
     :cond_0
     sget-object v0, Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;->EMPTY_LIST:Lmf/org/apache/xerces/impl/xs/util/XSObjectListImpl;
 
@@ -96,31 +85,26 @@
     .locals 2
 
     .prologue
-    .line 3321
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->avalue:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 3322
     iget-short v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->kind:S
 
     const/16 v1, 0x10
 
     if-ne v0, v1, :cond_1
 
-    .line 3323
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->svalue:Ljava/lang/String;
 
     iput-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->avalue:Ljava/lang/Object;
 
-    .line 3330
     :cond_0
     :goto_0
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->avalue:Ljava/lang/Object;
 
     return-object v0
 
-    .line 3327
     :cond_1
     iget v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->ivalue:I
 
@@ -139,7 +123,6 @@
     .locals 2
 
     .prologue
-    .line 3291
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->annotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     const/4 v1, 0x0
@@ -157,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 3303
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->annotations:Lmf/org/apache/xerces/xs/XSObjectList;
 
     return-object v0
@@ -167,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 3310
     iget-short v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->kind:S
 
     return v0
@@ -177,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 3341
     iget-boolean v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->fixed:Z
 
     return v0
@@ -187,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 3334
     iget v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->ivalue:I
 
     return v0
@@ -197,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 3317
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/xs/XSSimpleTypeDecl$XSFacetImpl;->svalue:Ljava/lang/String;
 
     return-object v0
@@ -207,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 3348
     const/4 v0, 0x0
 
     return-object v0
@@ -217,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 3355
     const/4 v0, 0x0
 
     return-object v0
@@ -227,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 3363
     const/4 v0, 0x0
 
     return-object v0
@@ -237,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 3370
     const/16 v0, 0xd
 
     return v0

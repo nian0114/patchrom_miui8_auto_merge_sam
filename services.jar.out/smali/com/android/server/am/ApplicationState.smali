@@ -23,22 +23,18 @@
     .locals 1
 
     .prologue
-    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 379
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
 
-    .line 380
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
-    .line 381
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .param p1, "processId"    # I
 
     .prologue
-    .line 388
     iget-object v0, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -58,7 +53,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 389
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .locals 2
 
     .prologue
-    .line 384
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->APP_TERM_REASONS:[Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
@@ -82,7 +75,6 @@
     .param p2, "stopReason"    # I
 
     .prologue
-    .line 392
     iget v0, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
 
     invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
@@ -91,7 +83,6 @@
 
     iput v0, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -100,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z

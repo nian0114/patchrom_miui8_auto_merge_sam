@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 3330
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
     const-string v1, "IPSEC_LIFE_TYPE_SECONDS"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;->IPSEC_LIFE_TYPE_SECONDS:Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
-    .line 3339
     new-instance v0, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
     const-string v1, "IPSEC_LIFE_TYPE_KILOBYTES"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;->IPSEC_LIFE_TYPE_KILOBYTES:Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
-    .line 3323
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 3323
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3323
     const-class v0, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 3323
     sget-object v0, Lcom/ipsec/client/IPsecConnection$IPsecLifeType;->$VALUES:[Lcom/ipsec/client/IPsecConnection$IPsecLifeType;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$IPsecLifeType;->clone()Ljava/lang/Object;

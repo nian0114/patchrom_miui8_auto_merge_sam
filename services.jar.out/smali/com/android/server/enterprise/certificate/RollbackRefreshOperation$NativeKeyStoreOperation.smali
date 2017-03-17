@@ -77,26 +77,20 @@
     .end annotation
 
     .prologue
-    .line 653
     .local p4, "deleteAliases":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .local p5, "installCerts":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 654
     iput p2, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mOperation:I
 
-    .line 655
     iput p3, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mKeystoreUid:I
 
-    .line 656
     iput-object p4, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mAliases:Ljava/util/Set;
 
-    .line 657
     iput-object p5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mCerts:Ljava/util/Map;
 
-    .line 658
     return-void
 .end method
 
@@ -110,7 +104,6 @@
     .param p6, "x5"    # Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$1;
 
     .prologue
-    .line 646
     invoke-direct/range {p0 .. p5}, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;-><init>(Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;IILjava/util/Set;Ljava/util/Map;)V
 
     return-void
@@ -134,13 +127,11 @@
     .end annotation
 
     .prologue
-    .line 703
     .local p1, "certMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 705
     .local v8, "ret":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;[B>;"
     new-instance v4, Ljava/util/HashSet;
 
@@ -150,7 +141,6 @@
 
     invoke-direct {v4, v10}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 708
     .local v4, "entrySetCopy":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;>;"
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -174,7 +164,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 709
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -186,19 +175,16 @@
 
     move-result-object v0
 
-    .line 710
     .local v0, "alias1":Ljava/lang/String;
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 711
     .local v7, "list":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
     new-instance v9, Ljava/util/HashSet;
 
     invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
 
-    .line 714
     .local v9, "toRemove":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;>;"
     invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -219,7 +205,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 715
     .local v3, "entry2":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -231,7 +216,6 @@
 
     move-result-object v1
 
-    .line 716
     .local v1, "alias2":Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -239,19 +223,16 @@
 
     if-eqz v10, :cond_1
 
-    .line 717
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v10
 
     invoke-interface {v7, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 718
     invoke-virtual {v9, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 722
     .end local v1    # "alias2":Ljava/lang/String;
     .end local v3    # "entry2":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     :cond_2
@@ -261,19 +242,16 @@
 
     if-lez v10, :cond_0
 
-    .line 723
     invoke-static {v7}, Lcom/android/server/enterprise/utils/CertificateUtil;->convertX509ListToPem(Ljava/util/List;)[B
 
     move-result-object v10
 
     invoke-interface {v8, v0, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 725
     invoke-virtual {v4, v9}, Ljava/util/HashSet;->removeAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 728
     .end local v0    # "alias1":Ljava/lang/String;
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
@@ -288,20 +266,17 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 693
     const-string v1, "_#_"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 694
     .local v0, "index":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 695
     const-string v1, "_#_"
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -320,14 +295,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 696
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 699
     .end local p1    # "alias":Ljava/lang/String;
     :cond_0
     return-object p1
@@ -342,7 +315,6 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 661
     const/4 v5, 0x0
 
     aget-object v5, p1, v5
@@ -351,13 +323,11 @@
 
     move-result v4
 
-    .line 662
     .local v4, "userId":I
     iget v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mOperation:I
 
     packed-switch v5, :pswitch_data_0
 
-    .line 689
     :goto_0
     invoke-static {v11}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -365,7 +335,6 @@
 
     return-object v5
 
-    .line 664
     :pswitch_0
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
@@ -376,7 +345,6 @@
 
     monitor-enter v7
 
-    .line 665
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
@@ -387,14 +355,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 666
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mCerts:Ljava/util/Map;
 
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->getPemMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v3
 
-    .line 667
     .local v3, "pemMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;[B>;"
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -418,7 +384,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 668
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[B>;"
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
@@ -451,7 +416,6 @@
 
     goto :goto_1
 
-    .line 673
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[B>;"
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "pemMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;[B>;"
@@ -472,7 +436,6 @@
 
     goto :goto_0
 
-    .line 676
     :pswitch_1
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
@@ -483,7 +446,6 @@
 
     monitor-enter v6
 
-    .line 677
     :try_start_2
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
@@ -494,7 +456,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 678
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->mAliases:Ljava/util/Set;
 
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -515,13 +476,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 679
     .local v0, "alias":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->removeAliasSeparator(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 680
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
     # getter for: Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;->mKeyStore:Landroid/security/KeyStore;
@@ -539,7 +498,6 @@
 
     goto :goto_2
 
-    .line 684
     .end local v0    # "alias":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     :catchall_1
@@ -559,7 +517,6 @@
 
     goto/16 :goto_0
 
-    .line 662
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -572,7 +529,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 646
     check-cast p1, [Ljava/lang/Integer;
 
     .end local p1    # "x0":[Ljava/lang/Object;

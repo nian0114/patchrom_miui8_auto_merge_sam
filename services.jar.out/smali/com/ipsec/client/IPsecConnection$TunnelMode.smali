@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 3081
     new-instance v0, Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
     const-string v1, "IPSEC_RAC"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$TunnelMode;->IPSEC_RAC:Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
-    .line 3087
     new-instance v0, Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
     const-string v1, "L2TP_OVER_IPSEC"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/ipsec/client/IPsecConnection$TunnelMode;->L2TP_OVER_IPSEC:Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
-    .line 3074
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/ipsec/client/IPsecConnection$TunnelMode;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 3074
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3074
     const-class v0, Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 3074
     sget-object v0, Lcom/ipsec/client/IPsecConnection$TunnelMode;->$VALUES:[Lcom/ipsec/client/IPsecConnection$TunnelMode;
 
     invoke-virtual {v0}, [Lcom/ipsec/client/IPsecConnection$TunnelMode;->clone()Ljava/lang/Object;

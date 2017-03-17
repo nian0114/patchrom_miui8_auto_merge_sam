@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 364
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 368
     const-string v0, "LppFusion"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +62,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     return-void
 .end method
 
@@ -72,7 +69,6 @@
     .locals 3
 
     .prologue
-    .line 456
     const-string v0, "LppFusion"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -99,7 +95,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
     return-void
 .end method
 
@@ -108,7 +103,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 376
     const-string v7, "LppFusion"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -151,7 +145,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     sget-object v7, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$1;->$SwitchMap$com$samsung$android$contextaware$aggregator$lpp$LppFusion$StateMsg:[I
 
     sget-object v8, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->vals:[Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$StateMsg;
@@ -168,7 +161,6 @@
 
     packed-switch v7, :pswitch_data_0
 
-    .line 447
     :pswitch_0
     const-string v7, "LppFusion"
 
@@ -176,14 +168,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 448
     const/4 v7, 0x0
 
-    .line 451
     :goto_0
     return v7
 
-    .line 382
     :pswitch_1
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
@@ -200,12 +189,10 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;->LogData(ILjava/lang/String;)V
 
-    .line 387
     iget-object v6, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 388
     .local v6, "listLoc":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     const-string v7, "LppFusion"
 
@@ -233,14 +220,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
     new-array v3, v7, [Landroid/location/Location;
 
-    .line 391
     .local v3, "larray":[Landroid/location/Location;
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -249,7 +234,6 @@
     .end local v3    # "larray":[Landroid/location/Location;
     check-cast v3, [Landroid/location/Location;
 
-    .line 392
     .restart local v3    # "larray":[Landroid/location/Location;
     move-object v0, v3
 
@@ -265,7 +249,6 @@
 
     aget-object v2, v0, v1
 
-    .line 393
     .local v2, "l":Landroid/location/Location;
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
@@ -282,12 +265,10 @@
 
     invoke-virtual {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->deliverLocationData(Landroid/location/Location;)V
 
-    .line 392
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 398
     .end local v2    # "l":Landroid/location/Location;
     :cond_0
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
@@ -302,13 +283,11 @@
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->access$1200(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;Lcom/android/internal/util/IState;)V
 
-    .line 399
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->goToSleep()V
     invoke-static {v7}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->access$900(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;)V
 
-    .line 451
     .end local v0    # "arr$":[Landroid/location/Location;
     .end local v1    # "i$":I
     .end local v3    # "larray":[Landroid/location/Location;
@@ -319,13 +298,11 @@
 
     goto :goto_0
 
-    .line 406
     :pswitch_2
     iget-object v6, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 412
     .restart local v6    # "listLoc":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     const-string v7, "LppFusion"
 
@@ -353,14 +330,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
     new-array v4, v7, [Landroid/location/Location;
 
-    .line 415
     .local v4, "larray2":[Landroid/location/Location;
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -369,7 +344,6 @@
     .end local v4    # "larray2":[Landroid/location/Location;
     check-cast v4, [Landroid/location/Location;
 
-    .line 416
     .restart local v4    # "larray2":[Landroid/location/Location;
     move-object v0, v4
 
@@ -385,7 +359,6 @@
 
     aget-object v2, v0, v1
 
-    .line 417
     .restart local v2    # "l":Landroid/location/Location;
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
@@ -402,12 +375,10 @@
 
     invoke-virtual {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->deliverLocationData(Landroid/location/Location;)V
 
-    .line 416
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
-    .line 420
     .end local v2    # "l":Landroid/location/Location;
     :cond_1
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
@@ -422,7 +393,6 @@
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->access$1300(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;Lcom/android/internal/util/IState;)V
 
-    .line 421
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->goToSleep()V
@@ -430,7 +400,6 @@
 
     goto :goto_2
 
-    .line 427
     .end local v0    # "arr$":[Landroid/location/Location;
     .end local v1    # "i$":I
     .end local v4    # "larray2":[Landroid/location/Location;
@@ -452,7 +421,6 @@
 
     invoke-interface {v8, v7}, Lcom/samsung/android/contextaware/aggregator/lpp/ILppDataProvider;->onLocationChanged(Landroid/location/Location;)V
 
-    .line 428
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     iget-object v8, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
@@ -465,7 +433,6 @@
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->access$1500(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;Lcom/android/internal/util/IState;)V
 
-    .line 429
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->goToSleep()V
@@ -473,7 +440,6 @@
 
     goto :goto_2
 
-    .line 434
     :pswitch_4
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
@@ -487,7 +453,6 @@
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->access$1600(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;Lcom/android/internal/util/IState;)V
 
-    .line 435
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->goToSleep()V
@@ -495,7 +460,6 @@
 
     goto/16 :goto_2
 
-    .line 439
     :pswitch_5
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
@@ -508,7 +472,6 @@
 
     invoke-virtual {v7}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->stop()V
 
-    .line 440
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     iget-object v7, v7, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -520,7 +483,6 @@
 
     invoke-virtual {v7}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->stop()V
 
-    .line 441
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     iget-object v7, v7, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -532,7 +494,6 @@
 
     invoke-virtual {v7}, Lcom/samsung/android/contextaware/aggregator/lpp/log/LppLogManager;->stop()V
 
-    .line 442
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     iget-object v8, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
@@ -545,7 +506,6 @@
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v7, v8}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->access$1700(Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;Lcom/android/internal/util/IState;)V
 
-    .line 443
     iget-object v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM$LFWaitLocState;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;
 
     iget-object v7, v7, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$LppFusionSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -559,7 +519,6 @@
 
     goto/16 :goto_2
 
-    .line 379
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_2

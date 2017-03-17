@@ -24,9 +24,7 @@
     .param p1, "m"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 15
     return-void
 .end method

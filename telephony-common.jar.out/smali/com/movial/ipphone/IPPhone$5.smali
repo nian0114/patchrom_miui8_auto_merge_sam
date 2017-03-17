@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 590
     iput-object p1, p0, Lcom/movial/ipphone/IPPhone$5;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 592
     iget-object v0, p0, Lcom/movial/ipphone/IPPhone$5;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # invokes: Lcom/movial/ipphone/IPPhone;->bindToIPService()V
     invoke-static {v0}, Lcom/movial/ipphone/IPPhone;->access$2100(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 593
     return-void
 .end method

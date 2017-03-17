@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .param p4, "result"    # I
 
     .prologue
-    .line 23
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,40 +68,32 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 26
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 27
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "OTP_TOKEN_ID"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 28
     const-string v2, "OTP_CALL_STATUS"
 
     invoke-virtual {v0, v2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 29
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 30
     const-string v2, "com.samsung.action.knox.otp.OTP_CALLBACK_STATUS"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 31
     new-instance v1, Landroid/os/UserHandle;
 
     invoke-direct {v1, p3}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 32
     .local v1, "usr":Landroid/os/UserHandle;
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 33
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .param p4, "result"    # I
 
     .prologue
-    .line 37
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,7 +152,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 40
     new-instance v0, Lcom/android/server/enterprise/otp/OtpCallback$1;
 
     move-object v1, p1
@@ -180,6 +168,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/otp/OtpCallback$1;->start()V
 
-    .line 51
     return-void
 .end method

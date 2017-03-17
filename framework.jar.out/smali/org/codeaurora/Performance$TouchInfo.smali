@@ -37,27 +37,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 109
     iput-object p1, p0, Lorg/codeaurora/Performance$TouchInfo;->this$0:Lorg/codeaurora/Performance;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mStartX:I
 
-    .line 112
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mStartY:I
 
-    .line 115
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
 
-    .line 116
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurY:I
 
-    .line 119
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragW:I
 
-    .line 120
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragH:I
 
     return-void
@@ -68,7 +61,6 @@
     .param p0, "x0"    # Lorg/codeaurora/Performance$TouchInfo;
 
     .prologue
-    .line 109
     invoke-direct {p0}, Lorg/codeaurora/Performance$TouchInfo;->reset()V
 
     return-void
@@ -81,7 +73,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lorg/codeaurora/Performance$TouchInfo;->setStartXY(II)V
 
     return-void
@@ -94,7 +85,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lorg/codeaurora/Performance$TouchInfo;->setDragWH(II)V
 
     return-void
@@ -105,7 +95,6 @@
     .param p0, "x0"    # Lorg/codeaurora/Performance$TouchInfo;
 
     .prologue
-    .line 109
     iget v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
 
     return v0
@@ -116,7 +105,6 @@
     .param p0, "x0"    # Lorg/codeaurora/Performance$TouchInfo;
 
     .prologue
-    .line 109
     iget v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurY:I
 
     return v0
@@ -129,7 +117,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lorg/codeaurora/Performance$TouchInfo;->setXY(II)V
 
     return-void
@@ -140,7 +127,6 @@
     .param p0, "x0"    # Lorg/codeaurora/Performance$TouchInfo;
 
     .prologue
-    .line 109
     iget v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragW:I
 
     return v0
@@ -151,7 +137,6 @@
     .param p0, "x0"    # Lorg/codeaurora/Performance$TouchInfo;
 
     .prologue
-    .line 109
     iget v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragH:I
 
     return v0
@@ -163,7 +148,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 124
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurY:I
 
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
@@ -172,16 +156,13 @@
 
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mStartX:I
 
-    .line 125
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragW:I
 
     iput v0, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragH:I
 
-    .line 126
     # setter for: Lorg/codeaurora/Performance;->isFlingEnabled:Z
     invoke-static {v0}, Lorg/codeaurora/Performance;->access$002(Z)Z
 
-    .line 127
     return-void
 .end method
 
@@ -191,13 +172,10 @@
     .param p2, "dh"    # I
 
     .prologue
-    .line 135
     iput p1, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragW:I
 
-    .line 136
     iput p2, p0, Lorg/codeaurora/Performance$TouchInfo;->mMinDragH:I
 
-    .line 137
     return-void
 .end method
 
@@ -207,17 +185,14 @@
     .param p2, "dy"    # I
 
     .prologue
-    .line 139
     iput p1, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
 
     iput p1, p0, Lorg/codeaurora/Performance$TouchInfo;->mStartX:I
 
-    .line 140
     iput p2, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurY:I
 
     iput p2, p0, Lorg/codeaurora/Performance$TouchInfo;->mStartY:I
 
-    .line 141
     return-void
 .end method
 
@@ -227,12 +202,9 @@
     .param p2, "dy"    # I
 
     .prologue
-    .line 130
     iput p1, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
 
-    .line 131
     iput p2, p0, Lorg/codeaurora/Performance$TouchInfo;->mCurY:I
 
-    .line 132
     return-void
 .end method

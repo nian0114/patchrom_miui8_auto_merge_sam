@@ -56,7 +56,7 @@
 
     iget-object v1, p0, Lcom/sun/org/apache/xml/internal/security/c14n/implementations/NameSpaceSymbTable;->symb:Lcom/sun/org/apache/xml/internal/security/c14n/implementations/SymbMap;
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-virtual {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/c14n/implementations/SymbMap;->put(Ljava/lang/String;Lcom/sun/org/apache/xml/internal/security/c14n/implementations/NameSpaceSymbEntry;)V
 
@@ -285,7 +285,7 @@
 
     if-lt v2, v3, :cond_1
 
-    const-string/jumbo v2, "xmlns"
+    const-string v2, "xmlns"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

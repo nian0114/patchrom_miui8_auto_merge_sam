@@ -27,14 +27,12 @@
     .end annotation
 
     .prologue
-    .line 119
     invoke-static {p1}, Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;->normalize(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {p0, v2, p2, p3}, Lmf/org/apache/xerces/impl/xpath/XPath;-><init>(Ljava/lang/String;Lmf/org/apache/xerces/util/SymbolTable;Lmf/org/apache/xerces/xni/NamespaceContext;)V
 
-    .line 121
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -45,10 +43,8 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 129
     return-void
 
-    .line 123
     :cond_0
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/identity/Selector$XPath;->fLocationPaths:[Lmf/org/apache/xerces/impl/xpath/XPath$LocationPath;
 
@@ -70,7 +66,6 @@
 
     iget-object v0, v2, Lmf/org/apache/xerces/impl/xpath/XPath$Step;->axis:Lmf/org/apache/xerces/impl/xpath/XPath$Axis;
 
-    .line 124
     .local v0, "axis":Lmf/org/apache/xerces/impl/xpath/XPath$Axis;
     iget-short v2, v0, Lmf/org/apache/xerces/impl/xpath/XPath$Axis;->type:S
 
@@ -78,7 +73,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 125
     new-instance v2, Lmf/org/apache/xerces/impl/xpath/XPathException;
 
     const-string v3, "c-selector-xpath"
@@ -87,7 +81,6 @@
 
     throw v2
 
-    .line 121
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -99,7 +92,6 @@
     .param p0, "xpath"    # Ljava/lang/String;
 
     .prologue
-    .line 139
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -110,11 +102,9 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 140
     .local v0, "modifiedXPath":Ljava/lang/StringBuffer;
     const/4 v1, -0x1
 
-    .line 142
     .local v1, "unionIndex":I
     :goto_0
     invoke-static {p0}, Lmf/org/apache/xerces/util/XMLChar;->trim(Ljava/lang/String;)Ljava/lang/String;
@@ -141,12 +131,10 @@
 
     if-nez v2, :cond_0
 
-    .line 143
     const-string v2, "./"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 145
     :cond_0
     const/16 v2, 0x7c
 
@@ -154,22 +142,18 @@
 
     move-result v1
 
-    .line 146
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 147
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 153
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 150
     :cond_1
     const/4 v2, 0x0
 
@@ -181,7 +165,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 151
     add-int/lit8 v2, v1, 0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -192,6 +175,5 @@
 
     move-result-object p0
 
-    .line 152
     goto :goto_0
 .end method

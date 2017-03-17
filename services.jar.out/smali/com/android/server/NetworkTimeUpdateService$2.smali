@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 270
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService$2;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 274
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 275
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.NETWORK_SET_TIME"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 276
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$2;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -64,7 +60,6 @@
     # setter for: Lcom/android/server/NetworkTimeUpdateService;->mNitzTimeSetTime:J
     invoke-static {v1, v6, v7}, Lcom/android/server/NetworkTimeUpdateService;->access$102(Lcom/android/server/NetworkTimeUpdateService;J)J
 
-    .line 281
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$2;->this$0:Lcom/android/server/NetworkTimeUpdateService;
@@ -76,7 +71,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 283
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$2;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     # getter for: Lcom/android/server/NetworkTimeUpdateService;->mTime:Landroid/util/TrustedTime;
@@ -94,12 +88,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 284
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 285
     .local v2, "currentTime":J
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$2;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
@@ -112,7 +104,6 @@
 
     move-result-wide v4
 
-    .line 288
     .local v4, "ntp":J
     sub-long v6, v4, v2
 
@@ -133,7 +124,6 @@
 
     if-lez v1, :cond_4
 
-    .line 290
     const-wide/16 v6, 0x3e8
 
     div-long v6, v4, v6
@@ -144,17 +134,14 @@
 
     if-gez v1, :cond_3
 
-    .line 291
     invoke-static {v4, v5}, Landroid/os/SystemClock;->setCurrentTimeMillis(J)Z
 
-    .line 301
     .end local v2    # "currentTime":J
     .end local v4    # "ntp":J
     :cond_1
     :goto_1
     return-void
 
-    .line 277
     :cond_2
     const-string v1, "android.intent.action.NETWORK_SET_TIMEZONE"
 
@@ -164,7 +151,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 278
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$2;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -176,19 +162,17 @@
 
     goto :goto_0
 
-    .line 293
     .restart local v2    # "currentTime":J
     .restart local v4    # "ntp":J
     :cond_3
     const-string v1, "NetworkTimeUpdateService"
 
-    const-string/jumbo v6, "ntp time overflow not set"
+    const-string v6, "ntp time overflow not set"
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 296
     :cond_4
     const-string v1, "NetworkTimeUpdateService"
 

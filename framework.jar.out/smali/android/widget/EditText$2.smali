@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 280
     iput-object p1, p0, Landroid/widget/EditText$2;->this$0:Landroid/widget/EditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "arg0"    # Landroid/text/Editable;
 
     .prologue
-    .line 283
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p4, "arg3"    # I
 
     .prologue
-    .line 287
     return-void
 .end method
 
@@ -65,10 +62,8 @@
     .param p4, "arg3"    # I
 
     .prologue
-    .line 291
     if-eqz p1, :cond_0
 
-    .line 292
     iget-object v0, p0, Landroid/widget/EditText$2;->this$0:Landroid/widget/EditText;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -78,13 +73,11 @@
     # setter for: Landroid/widget/EditText;->mSipTextLen:I
     invoke-static {v0, v1}, Landroid/widget/EditText;->access$402(Landroid/widget/EditText;I)I
 
-    .line 293
     iget-object v0, p0, Landroid/widget/EditText$2;->this$0:Landroid/widget/EditText;
 
     # invokes: Landroid/widget/EditText;->updateSipFocusStatus()V
     invoke-static {v0}, Landroid/widget/EditText;->access$300(Landroid/widget/EditText;)V
 
-    .line 295
     :cond_0
     return-void
 .end method

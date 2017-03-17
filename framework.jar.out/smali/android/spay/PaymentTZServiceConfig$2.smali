@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 57
     new-instance v0, Landroid/spay/PaymentTZServiceConfig;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Landroid/spay/PaymentTZServiceConfig$2;->createFromParcel(Landroid/os/Parcel;)Landroid/spay/PaymentTZServiceConfig;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 61
     new-array v0, p1, [Landroid/spay/PaymentTZServiceConfig;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Landroid/spay/PaymentTZServiceConfig$2;->newArray(I)[Landroid/spay/PaymentTZServiceConfig;
 
     move-result-object v0

@@ -29,15 +29,12 @@
     .param p2, "observer"    # Landroid/app/backup/IFullBackupRestoreObserver;
 
     .prologue
-    .line 3838
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3839
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
-    .line 3840
     return-void
 .end method
 
@@ -47,12 +44,10 @@
     .locals 3
 
     .prologue
-    .line 3867
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
     if-eqz v1, :cond_0
 
-    .line 3869
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
@@ -60,24 +55,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3875
     :cond_0
     :goto_0
     return-void
 
-    .line 3870
     :catch_0
     move-exception v0
 
-    .line 3871
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BackupManagerService"
 
-    const-string/jumbo v2, "full backup observer went away: endBackup"
+    const-string v2, "full backup observer went away: endBackup"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3872
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
@@ -90,12 +81,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3855
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
     if-eqz v1, :cond_0
 
-    .line 3858
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
@@ -103,24 +92,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3864
     :cond_0
     :goto_0
     return-void
 
-    .line 3859
     :catch_0
     move-exception v0
 
-    .line 3860
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BackupManagerService"
 
-    const-string/jumbo v2, "full backup observer went away: backupPackage"
+    const-string v2, "full backup observer went away: backupPackage"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3861
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
@@ -132,12 +117,10 @@
     .locals 3
 
     .prologue
-    .line 3844
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
     if-eqz v1, :cond_0
 
-    .line 3846
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
@@ -145,24 +128,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3852
     :cond_0
     :goto_0
     return-void
 
-    .line 3847
     :catch_0
     move-exception v0
 
-    .line 3848
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BackupManagerService"
 
-    const-string/jumbo v2, "full backup observer went away: startBackup"
+    const-string v2, "full backup observer went away: startBackup"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3849
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;

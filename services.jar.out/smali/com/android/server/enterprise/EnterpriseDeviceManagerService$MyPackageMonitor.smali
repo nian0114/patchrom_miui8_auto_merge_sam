@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 362
     iput-object p1, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -39,14 +38,13 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 409
     const-string v6, "EnterpriseDeviceManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onPackageUpdateFinished - packageName: "
+    const-string v8, "onPackageUpdateFinished - packageName: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,15 +70,12 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     monitor-enter v7
 
-    .line 412
     const/4 v5, 0x0
 
-    .line 413
     .local v5, "updatedAdmin":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
@@ -109,7 +104,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 415
     .local v2, "admin":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Landroid/app/enterprise/EnterpriseDeviceAdminInfo;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -123,7 +117,6 @@
 
     if-nez v6, :cond_0
 
-    .line 418
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -160,14 +153,12 @@
 
     if-ne p2, v6, :cond_0
 
-    .line 420
     const-string v6, "EnterpriseDeviceManagerService"
 
     const-string v8, "Admin found on map with same package name!"
 
     invoke-static {v6, v8}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -180,15 +171,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 426
     .end local v2    # "admin":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Landroid/app/enterprise/EnterpriseDeviceAdminInfo;>;"
     :cond_1
     if-eqz v5, :cond_3
 
-    .line 427
     const/4 v1, 0x0
 
-    .line 429
     .local v1, "admin":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     :try_start_1
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
@@ -209,11 +197,9 @@
 
     move-result-object v1
 
-    .line 433
     :goto_0
     if-nez v1, :cond_2
 
-    .line 434
     :try_start_2
     const-string v6, "EnterpriseDeviceManagerService"
 
@@ -221,7 +207,6 @@
 
     invoke-static {v6, v8}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 436
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     new-instance v8, Landroid/app/enterprise/ContextInfo;
@@ -242,7 +227,6 @@
 
     invoke-virtual {v6, v8, v9, v10}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->setAdminRemovable(Landroid/app/enterprise/ContextInfo;ZLjava/lang/String;)Z
 
-    .line 437
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     invoke-virtual {v5}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
@@ -264,26 +248,21 @@
     # invokes: Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->removeActiveAdminDelayed(Landroid/content/ComponentName;I)V
     invoke-static {v6, v8, v9}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->access$000(Lcom/android/server/enterprise/EnterpriseDeviceManagerService;Landroid/content/ComponentName;I)V
 
-    .line 440
     monitor-exit v7
 
-    .line 453
     .end local v1    # "admin":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     :goto_1
     return-void
 
-    .line 430
     .restart local v1    # "admin":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     :catch_0
     move-exception v3
 
-    .line 431
     .local v3, "e":Ljava/lang/IllegalArgumentException;
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 442
     .end local v3    # "e":Ljava/lang/IllegalArgumentException;
     :cond_2
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
@@ -292,7 +271,6 @@
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 443
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     iget-object v6, v6, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->mAdminMap:Ljava/util/HashMap;
@@ -311,14 +289,12 @@
 
     invoke-virtual {v6, v8}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 445
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     iget-object v6, v6, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 446
     iget-object v6, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     iget-object v6, v6, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->mAdminMap:Ljava/util/HashMap;
@@ -337,19 +313,16 @@
 
     invoke-virtual {v6, v8, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 449
     .end local v1    # "admin":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     :cond_3
     monitor-exit v7
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 452
     invoke-static {}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->updateAdminPermissions()V
 
     goto :goto_1
 
-    .line 449
     .end local v4    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v6
@@ -366,18 +339,15 @@
     .locals 12
 
     .prologue
-    .line 365
     iget-object v8, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     monitor-enter v8
 
-    .line 366
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->getChangingUserId()I
 
     move-result v6
 
-    .line 367
     .local v6, "userId":I
     const-string v7, "EnterpriseDeviceManagerService"
 
@@ -401,7 +371,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 369
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     iget-object v7, v7, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->mAdminList:Ljava/util/ArrayList;
@@ -416,7 +385,6 @@
     :goto_0
     if-ltz v3, :cond_4
 
-    .line 370
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     iget-object v7, v7, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->mAdminList:Ljava/util/ArrayList;
@@ -427,7 +395,6 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
 
-    .line 372
     .local v0, "adm":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->isProxy()Z
 
@@ -449,20 +416,17 @@
 
     if-eq v7, v6, :cond_1
 
-    .line 369
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    .line 376
     :cond_1
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 377
     .local v5, "packageName":Ljava/lang/String;
     const-string v7, "EnterpriseDeviceManagerService"
 
@@ -486,12 +450,10 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 379
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->isPackageDisappearing(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 380
     .local v1, "change":I
     const/4 v7, 0x3
 
@@ -501,7 +463,6 @@
 
     if-ne v1, v7, :cond_3
 
-    .line 381
     :cond_2
     const-string v7, "EnterpriseDeviceManagerService"
 
@@ -529,7 +490,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 383
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     new-instance v9, Landroid/app/enterprise/ContextInfo;
@@ -550,7 +510,6 @@
 
     invoke-virtual {v7, v9, v10, v11}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->setAdminRemovable(Landroid/app/enterprise/ContextInfo;ZLjava/lang/String;)Z
 
-    .line 384
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
@@ -562,7 +521,6 @@
 
     goto :goto_1
 
-    .line 404
     .end local v0    # "adm":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     .end local v1    # "change":I
     .end local v3    # "i":I
@@ -577,7 +535,6 @@
 
     throw v7
 
-    .line 385
     .restart local v0    # "adm":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     .restart local v1    # "change":I
     .restart local v3    # "i":I
@@ -593,10 +550,8 @@
 
     if-eqz v7, :cond_0
 
-    .line 386
     const/4 v4, 0x0
 
-    .line 388
     .local v4, "info":Landroid/content/pm/ActivityInfo;
     :try_start_2
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
@@ -616,11 +571,9 @@
 
     move-result-object v4
 
-    .line 395
     :goto_2
     if-nez v4, :cond_0
 
-    .line 396
     :try_start_3
     const-string v7, "EnterpriseDeviceManagerService"
 
@@ -648,7 +601,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 399
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     new-instance v9, Landroid/app/enterprise/ContextInfo;
@@ -669,7 +621,6 @@
 
     invoke-virtual {v7, v9, v10, v11}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->setAdminRemovable(Landroid/app/enterprise/ContextInfo;ZLjava/lang/String;)Z
 
-    .line 400
     iget-object v7, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerService$MyPackageMonitor;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
@@ -681,11 +632,9 @@
 
     goto/16 :goto_1
 
-    .line 389
     :catch_0
     move-exception v2
 
-    .line 390
     .local v2, "e":Ljava/lang/Exception;
     const-string v7, "EnterpriseDeviceManagerService"
 
@@ -693,7 +642,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onSomePackagesChanged EX:"
+    const-string v10, "onSomePackagesChanged EX:"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -713,12 +662,10 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 404
     .end local v0    # "adm":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     .end local v1    # "change":I
     .end local v2    # "e":Ljava/lang/Exception;
@@ -729,6 +676,5 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 405
     return-void
 .end method

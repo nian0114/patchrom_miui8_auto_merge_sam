@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 228
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaGpsPositionManager$4;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaGpsPositionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 231
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaGpsPositionManager$4;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaGpsPositionManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/utilbundle/CaGpsPositionManager;->disable()V
 
-    .line 232
     return-void
 .end method

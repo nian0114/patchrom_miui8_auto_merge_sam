@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 367
     iput-object p1, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 370
     iget-object v2, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     new-instance v3, Lcom/android/server/lights/LightsService$SvcLEDHandler;
@@ -63,7 +61,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mSvcLEDHandler:Lcom/android/server/lights/LightsService$SvcLEDHandler;
     invoke-static {v2, v3}, Lcom/android/server/lights/LightsService;->access$802(Lcom/android/server/lights/LightsService;Lcom/android/server/lights/LightsService$SvcLEDHandler;)Lcom/android/server/lights/LightsService$SvcLEDHandler;
 
-    .line 371
     iget-object v2, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mSvcLEDThread:Landroid/os/HandlerThread;
@@ -73,7 +70,6 @@
 
     monitor-enter v2
 
-    .line 372
     :try_start_0
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -82,7 +78,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mInitCompleteForSvcLED:Z
     invoke-static {v3, v4}, Lcom/android/server/lights/LightsService;->access$1502(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 373
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mSvcLEDThread:Landroid/os/HandlerThread;
@@ -92,7 +87,6 @@
 
     invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
 
-    .line 375
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mContext:Landroid/content/Context;
@@ -104,7 +98,6 @@
 
     move-result-object v0
 
-    .line 376
     .local v0, "resources":Landroid/content/res/Resources;
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -117,7 +110,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mUsePatternLED:Z
     invoke-static {v3, v4}, Lcom/android/server/lights/LightsService;->access$002(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 378
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     const v4, 0x1120029
@@ -129,7 +121,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mUseSoftwareAutoBrightness:Z
     invoke-static {v3, v4}, Lcom/android/server/lights/LightsService;->access$1702(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 380
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mUseSoftwareAutoBrightness:Z
@@ -146,7 +137,6 @@
 
     if-nez v3, :cond_0
 
-    .line 381
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v4, 0x1
@@ -154,7 +144,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mUseLEDAutoBrightness:Z
     invoke-static {v3, v4}, Lcom/android/server/lights/LightsService;->access$1902(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 383
     :cond_0
     # getter for: Lcom/android/server/lights/LightsService;->model:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/lights/LightsService;->access$2000()Ljava/lang/String;
@@ -208,7 +197,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 385
     :cond_1
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -217,7 +205,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mUseLEDAutoBrightness:Z
     invoke-static {v3, v4}, Lcom/android/server/lights/LightsService;->access$1902(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 386
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v4, 0x0
@@ -225,7 +212,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mUsePatternLED:Z
     invoke-static {v3, v4}, Lcom/android/server/lights/LightsService;->access$002(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 390
     :cond_2
     iget-object v3, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -244,7 +230,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mDelayForcedSvcLEDTask:I
     invoke-static {v3, v1}, Lcom/android/server/lights/LightsService;->access$902(Lcom/android/server/lights/LightsService;I)I
 
-    .line 392
     const-string v1, "LightsService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -337,13 +322,10 @@
 
     invoke-static {v1, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     monitor-exit v2
 
-    .line 398
     return-void
 
-    .line 397
     .end local v0    # "resources":Landroid/content/res/Resources;
     :catchall_0
     move-exception v1

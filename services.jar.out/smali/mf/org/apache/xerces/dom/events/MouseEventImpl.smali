@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Lmf/org/apache/xerces/dom/events/UIEventImpl;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-boolean v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fAltKey:Z
 
     return v0
@@ -55,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-short v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fButton:S
 
     return v0
@@ -65,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fClientX:I
 
     return v0
@@ -75,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fClientY:I
 
     return v0
@@ -85,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-boolean v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fCtrlKey:Z
 
     return v0
@@ -95,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-boolean v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fMetaKey:Z
 
     return v0
@@ -105,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fRelatedTarget:Lmf/org/w3c/dom/events/EventTarget;
 
     return-object v0
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fScreenX:I
 
     return v0
@@ -125,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fScreenY:I
 
     return v0
@@ -135,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-boolean v0, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fShiftKey:Z
 
     return v0
@@ -160,39 +149,27 @@
     .param p15, "relatedTargetArg"    # Lmf/org/w3c/dom/events/EventTarget;
 
     .prologue
-    .line 90
     iput p6, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fScreenX:I
 
-    .line 91
     iput p7, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fScreenY:I
 
-    .line 92
     iput p8, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fClientX:I
 
-    .line 93
     iput p9, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fClientY:I
 
-    .line 94
     iput-boolean p10, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fCtrlKey:Z
 
-    .line 95
     iput-boolean p11, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fAltKey:Z
 
-    .line 96
     iput-boolean p12, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fShiftKey:Z
 
-    .line 97
     iput-boolean p13, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fMetaKey:Z
 
-    .line 98
     iput-short p14, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fButton:S
 
-    .line 99
     iput-object p15, p0, Lmf/org/apache/xerces/dom/events/MouseEventImpl;->fRelatedTarget:Lmf/org/w3c/dom/events/EventTarget;
 
-    .line 100
     invoke-super/range {p0 .. p5}, Lmf/org/apache/xerces/dom/events/UIEventImpl;->initUIEvent(Ljava/lang/String;ZZLmf/org/w3c/dom/views/AbstractView;I)V
 
-    .line 101
     return-void
 .end method

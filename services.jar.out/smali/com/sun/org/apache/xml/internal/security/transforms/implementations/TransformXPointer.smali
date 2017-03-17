@@ -20,7 +20,7 @@
 .method protected engineGetURI()Ljava/lang/String;
     .locals 1
 
-    const-string/jumbo v0, "http://www.w3.org/TR/2001/WD-xptr-20010108"
+    const-string v0, "http://www.w3.org/TR/2001/WD-xptr-20010108"
 
     return-object v0
 .end method
@@ -39,13 +39,13 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "http://www.w3.org/TR/2001/WD-xptr-20010108"
+    const-string v2, "http://www.w3.org/TR/2001/WD-xptr-20010108"
 
     aput-object v2, v0, v1
 
     new-instance v1, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;
 
-    const-string/jumbo v2, "signature.Transform.NotYetImplemented"
+    const-string v2, "signature.Transform.NotYetImplemented"
 
     invoke-direct {v1, v2, v0}, Lcom/sun/org/apache/xml/internal/security/transforms/TransformationException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 

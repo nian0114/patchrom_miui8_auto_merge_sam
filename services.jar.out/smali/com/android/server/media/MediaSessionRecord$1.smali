@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 467
     iput-object p1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     iput p2, p0, Lcom/android/server/media/MediaSessionRecord$1;->val$streamType:I
@@ -60,7 +59,6 @@
     .locals 6
 
     .prologue
-    .line 470
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     # getter for: Lcom/android/server/media/MediaSessionRecord;->mAudioManagerInternal:Landroid/media/AudioManagerInternal;
@@ -80,6 +78,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/AudioManagerInternal;->adjustSuggestedStreamVolumeForUid(IIILjava/lang/String;I)V
 
-    .line 472
     return-void
 .end method

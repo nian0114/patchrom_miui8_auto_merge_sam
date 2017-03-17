@@ -23,22 +23,16 @@
     .param p4, "scope"    # S
 
     .prologue
-    .line 1267
     invoke-direct {p0}, Lmf/org/apache/xerces/impl/xs/XSAttributeDecl;-><init>()V
 
-    .line 1269
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/SchemaGrammar$BuiltinAttrDecl;->fName:Ljava/lang/String;
 
-    .line 1270
     iput-object p2, p0, Lmf/org/apache/xerces/impl/xs/XSAttributeDecl;->fTargetNamespace:Ljava/lang/String;
 
-    .line 1271
     iput-object p3, p0, Lmf/org/apache/xerces/impl/xs/SchemaGrammar$BuiltinAttrDecl;->fType:Lmf/org/apache/xerces/impl/dv/XSSimpleType;
 
-    .line 1272
     iput-short p4, p0, Lmf/org/apache/xerces/impl/xs/SchemaGrammar$BuiltinAttrDecl;->fScope:S
 
-    .line 1273
     return-void
 .end method
 
@@ -48,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 1286
     const/4 v0, 0x0
 
     return-object v0
@@ -58,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 1290
     sget-object v0, Lmf/org/apache/xerces/impl/xs/SchemaGrammar;->SG_XSI:Lmf/org/apache/xerces/impl/xs/SchemaGrammar$BuiltinSchemaGrammar;
 
     return-object v0
@@ -68,7 +60,6 @@
     .locals 0
 
     .prologue
-    .line 1283
     return-void
 .end method
 
@@ -83,6 +74,5 @@
     .param p7, "enclosingCT"    # Lmf/org/apache/xerces/impl/xs/XSComplexTypeDecl;
 
     .prologue
-    .line 1279
     return-void
 .end method

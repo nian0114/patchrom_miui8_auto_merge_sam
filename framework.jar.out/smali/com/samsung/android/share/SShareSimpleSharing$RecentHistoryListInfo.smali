@@ -36,29 +36,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 774
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 775
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 776
     iput-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->extraInfo:Ljava/lang/CharSequence;
 
-    .line 777
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->iconType:I
 
-    .line 778
     iput-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->photoIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 779
     iput-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->deviceInfo:Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;
 
-    .line 780
     return-void
 .end method
 
@@ -70,29 +63,22 @@
     .param p5, "pExtraInfo"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 782
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 783
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 784
     iput p3, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->iconType:I
 
-    .line 785
     iput-object p4, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->photoIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 786
     iput-object p5, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->extraInfo:Ljava/lang/CharSequence;
 
-    .line 787
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->deviceInfo:Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;
 
-    .line 788
     return-void
 .end method
 
@@ -105,26 +91,19 @@
     .param p6, "pDeviceInfo"    # Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;
 
     .prologue
-    .line 790
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 791
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 792
     iput p3, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->iconType:I
 
-    .line 793
     iput-object p4, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->photoIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 794
     iput-object p5, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->extraInfo:Ljava/lang/CharSequence;
 
-    .line 795
     iput-object p6, p0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->deviceInfo:Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;
 
-    .line 796
     return-void
 .end method

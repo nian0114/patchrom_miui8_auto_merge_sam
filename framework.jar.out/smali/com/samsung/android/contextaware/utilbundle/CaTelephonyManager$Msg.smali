@@ -48,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 43
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
     const-string v1, "IDLE"
@@ -59,7 +58,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->IDLE:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
-    .line 44
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
     const-string v1, "INCOMING_RINGING"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->INCOMING_RINGING:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
-    .line 45
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
     const-string v1, "OFF_HOOK"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->OFF_HOOK:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
-    .line 40
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
@@ -115,13 +111,10 @@
     .end annotation
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 51
     iput-object p3, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->val:Ljava/lang/String;
 
-    .line 52
     return-void
 .end method
 
@@ -130,7 +123,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     const-class v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 40
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->$VALUES:[Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->clone()Ljava/lang/Object;

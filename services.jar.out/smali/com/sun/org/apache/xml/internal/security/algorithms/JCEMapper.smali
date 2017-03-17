@@ -250,7 +250,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "http://www.xmlsecurity.org/NS/#configuration"
+    const-string v1, "http://www.xmlsecurity.org/NS/#configuration"
 
     const-string v2, "Algorithm"
 

@@ -22,7 +22,6 @@
 
     const/4 v4, 0x0
 
-    .line 27
     const/16 v0, 0x1d
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -429,7 +428,6 @@
 
     sput-object v0, Landroid/database/sqlite/SQLiteException;->errString:[[Ljava/lang/String;
 
-    .line 57
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "SQLITE_ROW"
@@ -449,10 +447,8 @@
     .locals 0
 
     .prologue
-    .line 59
     invoke-direct {p0}, Landroid/database/SQLException;-><init>()V
 
-    .line 60
     return-void
 .end method
 
@@ -461,7 +457,6 @@
     .param p1, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -484,7 +479,6 @@
 
     invoke-direct {p0, v0}, Landroid/database/SQLException;-><init>(Ljava/lang/String;)V
 
-    .line 64
     return-void
 .end method
 
@@ -494,7 +488,6 @@
     .param p2, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -517,7 +510,6 @@
 
     invoke-direct {p0, v0, p2}, Landroid/database/SQLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 68
     return-void
 .end method
 
@@ -529,10 +521,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 86
     sparse-switch p0, :sswitch_data_0
 
-    .line 100
     :cond_0
     sget-object v0, Landroid/database/sqlite/SQLiteException;->errString:[[Ljava/lang/String;
 
@@ -543,7 +533,6 @@
     :goto_0
     return-object v0
 
-    .line 88
     :sswitch_0
     if-lez p1, :cond_0
 
@@ -553,7 +542,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 89
     sget-object v0, Landroid/database/sqlite/SQLiteReadOnlyDatabaseException;->errString:[[Ljava/lang/String;
 
     aget-object v0, v0, p1
@@ -562,7 +550,6 @@
 
     goto :goto_0
 
-    .line 92
     :sswitch_1
     if-lez p1, :cond_0
 
@@ -572,14 +559,12 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 93
     invoke-static {p1}, Landroid/database/sqlite/SQLiteDiskIOException;->makeCausedBy(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 96
     :sswitch_2
     const/4 v0, 0x4
 
@@ -591,7 +576,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 98
     sget-object v0, Landroid/database/sqlite/SQLiteCantOpenDatabaseException;->errString:[[Ljava/lang/String;
 
     aget-object v0, v0, p1
@@ -600,7 +584,6 @@
 
     goto :goto_0
 
-    .line 86
     :sswitch_data_0
     .sparse-switch
         0x8 -> :sswitch_0
@@ -617,10 +600,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 104
     sparse-switch p0, :sswitch_data_0
 
-    .line 122
     :cond_0
     sget-object v0, Landroid/database/sqlite/SQLiteException;->errString:[[Ljava/lang/String;
 
@@ -631,7 +612,6 @@
     :goto_0
     return-object v0
 
-    .line 106
     :sswitch_0
     if-lez p1, :cond_0
 
@@ -641,7 +621,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 107
     sget-object v0, Landroid/database/sqlite/SQLiteReadOnlyDatabaseException;->errString:[[Ljava/lang/String;
 
     aget-object v0, v0, p1
@@ -650,7 +629,6 @@
 
     goto :goto_0
 
-    .line 110
     :sswitch_1
     if-lez p1, :cond_0
 
@@ -660,7 +638,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 111
     sget-object v0, Landroid/database/sqlite/SQLiteDiskIOException;->errString:[[Ljava/lang/String;
 
     aget-object v0, v0, p1
@@ -669,7 +646,6 @@
 
     goto :goto_0
 
-    .line 114
     :sswitch_2
     if-lez p1, :cond_0
 
@@ -679,7 +655,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 116
     sget-object v0, Landroid/database/sqlite/SQLiteCantOpenDatabaseException;->errString:[[Ljava/lang/String;
 
     aget-object v0, v0, p1
@@ -688,7 +663,6 @@
 
     goto :goto_0
 
-    .line 119
     :sswitch_3
     if-lez p1, :cond_0
 
@@ -698,14 +672,12 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 120
     sget-object v0, Landroid/database/sqlite/SQLiteConstraintException;->errString:[Ljava/lang/String;
 
     aget-object v0, v0, p1
 
     goto :goto_0
 
-    .line 104
     nop
 
     :sswitch_data_0
@@ -722,20 +694,17 @@
     .param p0, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     new-instance v0, Landroid/database/sqlite/SQLiteExceptionLog;
 
     const/4 v3, -0x1
 
     invoke-direct {v0, v3, p0}, Landroid/database/sqlite/SQLiteExceptionLog;-><init>(ILjava/lang/String;)V
 
-    .line 72
     .local v0, "logAdder":Landroid/database/sqlite/SQLiteExceptionLog;
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteExceptionLog;->getMajorCode()I
 
     move-result v1
 
-    .line 73
     .local v1, "majorCode":I
     const/16 v3, 0x64
 
@@ -745,7 +714,6 @@
 
     if-gt v1, v3, :cond_0
 
-    .line 74
     sget-object v3, Landroid/database/sqlite/SQLiteException;->errString2:[Ljava/lang/String;
 
     add-int/lit8 v4, v1, -0x64
@@ -754,18 +722,15 @@
 
     invoke-virtual {v0, v3}, Landroid/database/sqlite/SQLiteExceptionLog;->setErrString(Ljava/lang/String;)V
 
-    .line 75
     const-string v3, ""
 
     invoke-virtual {v0, v3}, Landroid/database/sqlite/SQLiteExceptionLog;->makeSQLiteExceptionLog(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 82
     :goto_0
     return-object v3
 
-    .line 77
     :cond_0
     if-ltz v1, :cond_1
 
@@ -775,12 +740,10 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 78
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteExceptionLog;->getMinorCode()I
 
     move-result v2
 
-    .line 79
     .local v2, "minorCode":I
     invoke-static {v1, v2}, Landroid/database/sqlite/SQLiteException;->getErrString(II)Ljava/lang/String;
 
@@ -788,7 +751,6 @@
 
     invoke-virtual {v0, v3}, Landroid/database/sqlite/SQLiteExceptionLog;->setErrString(Ljava/lang/String;)V
 
-    .line 80
     invoke-static {v1, v2}, Landroid/database/sqlite/SQLiteException;->getCausedBy(II)Ljava/lang/String;
 
     move-result-object v3
@@ -799,7 +761,6 @@
 
     goto :goto_0
 
-    .line 82
     .end local v2    # "minorCode":I
     :cond_1
     const-string v3, ""

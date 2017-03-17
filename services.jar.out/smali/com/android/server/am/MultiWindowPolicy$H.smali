@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 459
     iput-object p1, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -54,16 +53,13 @@
 
     const/4 v9, 0x1
 
-    .line 466
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 517
     :goto_0
     return-void
 
-    .line 468
     :pswitch_0
     const-string v4, "MultiWindowPolicy"
 
@@ -71,7 +67,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     iget-object v5, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -82,7 +77,6 @@
 
     goto :goto_0
 
-    .line 472
     :pswitch_1
     const-string v4, "MultiWindowPolicy"
 
@@ -90,14 +84,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-virtual {v4}, Lcom/android/server/am/MultiWindowPolicy;->closePenWindow()V
 
     goto :goto_0
 
-    .line 477
     :pswitch_2
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -108,7 +100,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 478
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
@@ -122,7 +113,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 484
     .local v0, "context":Landroid/content/Context;
     :goto_1
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
@@ -134,7 +124,6 @@
 
     if-le v4, v9, :cond_1
 
-    .line 485
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->mContext:Landroid/content/Context;
@@ -200,7 +189,6 @@
     # setter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {v4}, Lcom/android/server/am/MultiWindowPolicy;->access$302(Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 488
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {}, Lcom/android/server/am/MultiWindowPolicy;->access$300()Landroid/widget/Toast;
 
@@ -208,7 +196,6 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->setShowForAllUsers()V
 
-    .line 489
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {}, Lcom/android/server/am/MultiWindowPolicy;->access$300()Landroid/widget/Toast;
 
@@ -218,7 +205,6 @@
 
     goto/16 :goto_0
 
-    .line 481
     .end local v0    # "context":Landroid/content/Context;
     :cond_0
     new-instance v0, Landroid/view/ContextThemeWrapper;
@@ -237,7 +223,6 @@
     .restart local v0    # "context":Landroid/content/Context;
     goto :goto_1
 
-    .line 490
     :cond_1
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -248,7 +233,6 @@
 
     if-ne v4, v9, :cond_2
 
-    .line 491
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->mContext:Landroid/content/Context;
@@ -299,7 +283,6 @@
     # setter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {v4}, Lcom/android/server/am/MultiWindowPolicy;->access$302(Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 494
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {}, Lcom/android/server/am/MultiWindowPolicy;->access$300()Landroid/widget/Toast;
 
@@ -307,7 +290,6 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->setShowForAllUsers()V
 
-    .line 495
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {}, Lcom/android/server/am/MultiWindowPolicy;->access$300()Landroid/widget/Toast;
 
@@ -317,7 +299,6 @@
 
     goto/16 :goto_0
 
-    .line 497
     :cond_2
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -369,7 +350,6 @@
     # setter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {v4}, Lcom/android/server/am/MultiWindowPolicy;->access$302(Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 500
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {}, Lcom/android/server/am/MultiWindowPolicy;->access$300()Landroid/widget/Toast;
 
@@ -377,7 +357,6 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->setShowForAllUsers()V
 
-    .line 501
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->toastAlert:Landroid/widget/Toast;
     invoke-static {}, Lcom/android/server/am/MultiWindowPolicy;->access$300()Landroid/widget/Toast;
 
@@ -387,14 +366,12 @@
 
     goto/16 :goto_0
 
-    .line 505
     .end local v0    # "context":Landroid/content/Context;
     :pswitch_3
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/samsung/android/multiwindow/ITaskController;
 
-    .line 506
     .local v1, "taskController":Lcom/samsung/android/multiwindow/ITaskController;
     iget v4, p1, Landroid/os/Message;->arg1:I
 
@@ -402,7 +379,6 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 507
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
@@ -422,7 +398,6 @@
 
     move-result-object v2
 
-    .line 508
     .local v2, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -438,7 +413,6 @@
 
     goto/16 :goto_0
 
-    .line 510
     .end local v2    # "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     :cond_3
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
@@ -454,7 +428,6 @@
 
     move-result-object v3
 
-    .line 511
     .local v3, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$H;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -469,7 +442,6 @@
 
     goto/16 :goto_0
 
-    .line 466
     nop
 
     :pswitch_data_0

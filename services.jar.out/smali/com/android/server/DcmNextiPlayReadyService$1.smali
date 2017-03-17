@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/android/server/DcmNextiPlayReadyService$1;->this$0:Lcom/android/server/DcmNextiPlayReadyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,8 +43,7 @@
 
     const-wide/16 v6, 0x0
 
-    .line 275
-    const-string/jumbo v4, "gsm.nitz.time"
+    const-string v4, "gsm.nitz.time"
 
     const-string v5, "NONE"
 
@@ -63,7 +61,6 @@
 
     div-long v0, v4, v8
 
-    .line 276
     .local v0, "nitzTime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -71,7 +68,6 @@
 
     div-long v2, v4, v8
 
-    .line 277
     .local v2, "recvElapsedTime":J
     cmp-long v4, v0, v6
 
@@ -81,7 +77,6 @@
 
     if-lez v4, :cond_0
 
-    .line 278
     const-string v4, "DcmNextiPlayReadyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -98,7 +93,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "recvElapsedTime"
+    const-string v6, "recvElapsedTime"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,11 +109,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     # invokes: Lcom/android/server/DcmNextiPlayReadyService;->nitzReceived(JJ)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/DcmNextiPlayReadyService;->access$000(JJ)V
 
-    .line 281
     :cond_0
     return-void
 .end method

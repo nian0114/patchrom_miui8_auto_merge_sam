@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 838
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$6;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 843
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 844
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.extra.UID"
 
@@ -54,16 +51,13 @@
 
     move-result v2
 
-    .line 845
     .local v2, "uid":I
     if-ne v2, v4, :cond_1
 
-    .line 862
     :cond_0
     :goto_0
     return-void
 
-    .line 847
     :cond_1
     const-string v3, "android.intent.action.PACKAGE_ADDED"
 
@@ -73,20 +67,17 @@
 
     if-eqz v3, :cond_2
 
-    .line 851
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$6;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v4, v3, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 852
     :try_start_0
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$6;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v3, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForUidLocked(I)V
 
-    .line 853
     monitor-exit v4
 
     goto :goto_0
@@ -100,7 +91,6 @@
 
     throw v3
 
-    .line 854
     :cond_2
     const-string v3, "android.intent.action.PACKAGE_REMOVED"
 
@@ -110,7 +100,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 855
     const-string v3, "android.intent.extra.REPLACING"
 
     const/4 v4, 0x0
@@ -119,11 +108,9 @@
 
     move-result v1
 
-    .line 856
     .local v1, "isReplacing":Z
     if-nez v1, :cond_0
 
-    .line 857
     const-string v3, "NetworkPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -146,21 +133,18 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 858
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$6;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v4, v3, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 859
     :try_start_1
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$6;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->removeFirewallPolicyLocked(I)V
     invoke-static {v3, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$700(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 860
     monitor-exit v4
 
     goto :goto_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 273
     iput-object p1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 275
     const-string v2, "com.samsung.accessory.authentication.action.TEST_AUTHENTICATION_REQUEST"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,12 +50,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 276
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 277
     .local v0, "data":Landroid/os/Bundle;
     iget-object v2, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
@@ -72,11 +68,9 @@
 
     move-result-object v1
 
-    .line 278
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 279
     iget-object v2, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     # getter for: Lcom/samsung/accessory/manager/SAccessoryManager;->mAuthHandler:Landroid/os/Handler;
@@ -86,7 +80,6 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 281
     .end local v0    # "data":Landroid/os/Bundle;
     .end local v1    # "msg":Landroid/os/Message;
     :cond_0

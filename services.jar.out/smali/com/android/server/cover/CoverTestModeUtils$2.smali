@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/cover/CoverTestModeUtils$2;->this$0:Lcom/android/server/cover/CoverTestModeUtils;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 50
     iget-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils$2;->this$0:Lcom/android/server/cover/CoverTestModeUtils;
 
     # getter for: Lcom/android/server/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
@@ -48,11 +46,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "onChange()"
+    const-string v2, "onChange()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     iget-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils$2;->this$0:Lcom/android/server/cover/CoverTestModeUtils;
 
     # invokes: Lcom/android/server/cover/CoverTestModeUtils;->getTestModeFromSetting()I
@@ -60,13 +57,11 @@
 
     move-result v0
 
-    .line 53
     .local v0, "testMode":I
     iget-object v1, p0, Lcom/android/server/cover/CoverTestModeUtils$2;->this$0:Lcom/android/server/cover/CoverTestModeUtils;
 
     # invokes: Lcom/android/server/cover/CoverTestModeUtils;->updateCoverTestMode(I)V
     invoke-static {v1, v0}, Lcom/android/server/cover/CoverTestModeUtils;->access$400(Lcom/android/server/cover/CoverTestModeUtils;I)V
 
-    .line 54
     return-void
 .end method

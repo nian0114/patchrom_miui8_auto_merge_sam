@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 225
     iput-object p1, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
-    .line 226
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 227
     return-void
 .end method
 
@@ -40,18 +37,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 231
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 327
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 233
     :pswitch_1
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 236
     :pswitch_2
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -69,11 +62,9 @@
 
     goto :goto_0
 
-    .line 239
     :pswitch_3
     const/4 v0, 0x3
 
-    .line 241
     .local v0, "columns":I
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -84,7 +75,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 242
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     iget-object v10, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -99,19 +89,16 @@
 
     goto :goto_0
 
-    .line 246
     .end local v0    # "columns":I
     :pswitch_4
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 247
     .local v1, "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 248
-    const-string/jumbo v9, "packageName"
+    const-string v9, "packageName"
 
     const/4 v10, 0x0
 
@@ -119,9 +106,8 @@
 
     move-result-object v3
 
-    .line 249
     .local v3, "pkgName":Ljava/lang/String;
-    const-string/jumbo v9, "time"
+    const-string v9, "time"
 
     const-wide/16 v10, 0x0
 
@@ -129,9 +115,8 @@
 
     move-result-wide v6
 
-    .line 250
     .local v6, "time":J
-    const-string/jumbo v9, "strExtras"
+    const-string v9, "strExtras"
 
     const-string v10, "0"
 
@@ -139,7 +124,6 @@
 
     move-result-object v4
 
-    .line 252
     .local v4, "strExtras":Ljava/lang/String;
     if-eqz v3, :cond_0
 
@@ -149,10 +133,8 @@
 
     if-eqz v9, :cond_0
 
-    .line 253
     const/4 v0, 0x3
 
-    .line 254
     .restart local v0    # "columns":I
     new-instance v5, Lcom/android/server/am/MARsDBManager$SMDBValue;
 
@@ -164,7 +146,6 @@
 
     invoke-direct {v5, v9, v3, v10, v4}, Lcom/android/server/am/MARsDBManager$SMDBValue;-><init>(Lcom/android/server/am/MARsDBManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
     .local v5, "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -173,7 +154,6 @@
 
     goto :goto_0
 
-    .line 260
     .end local v0    # "columns":I
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v3    # "pkgName":Ljava/lang/String;
@@ -185,12 +165,10 @@
 
     move-result-object v1
 
-    .line 261
     .restart local v1    # "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 262
-    const-string/jumbo v9, "onUpgrade"
+    const-string v9, "onUpgrade"
 
     const/4 v10, 0x0
 
@@ -198,7 +176,6 @@
 
     move-result v2
 
-    .line 263
     .local v2, "onUpgrade":Z
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -208,7 +185,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 264
     const-string v9, "MARsDBManager"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -248,11 +224,9 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     :cond_1
     if-nez v2, :cond_2
 
-    .line 270
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     # getter for: Lcom/android/server/am/MARsDBManager;->mDBUpdated:Z
@@ -262,7 +236,6 @@
 
     if-nez v9, :cond_0
 
-    .line 271
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     const/4 v10, 0x0
@@ -274,7 +247,6 @@
     # invokes: Lcom/android/server/am/MARsDBManager;->updateDBForApp(ZLjava/util/ArrayList;Z)V
     invoke-static {v9, v10, v11, v12}, Lcom/android/server/am/MARsDBManager;->access$700(Lcom/android/server/am/MARsDBManager;ZLjava/util/ArrayList;Z)V
 
-    .line 272
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     const/4 v10, 0x1
@@ -284,7 +256,6 @@
 
     goto/16 :goto_0
 
-    .line 275
     :cond_2
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -292,7 +263,6 @@
 
     iput-boolean v10, v9, Lcom/android/server/am/MARsDBManager;->mOldVersion:Z
 
-    .line 276
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     const/4 v10, 0x0
@@ -306,7 +276,6 @@
 
     goto/16 :goto_0
 
-    .line 281
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v2    # "onUpgrade":Z
     :pswitch_6
@@ -318,7 +287,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 282
     const-string v9, "MARsDBManager"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -352,7 +320,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_3
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -367,12 +334,10 @@
 
     if-lez v9, :cond_0
 
-    .line 287
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 288
     .local v8, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MARsDBManager$SMDBValue;>;"
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -387,7 +352,6 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 289
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     const/4 v10, 0x4
@@ -395,7 +359,6 @@
     # invokes: Lcom/android/server/am/MARsDBManager;->updateDBAll(ILjava/util/ArrayList;)V
     invoke-static {v9, v10, v8}, Lcom/android/server/am/MARsDBManager;->access$400(Lcom/android/server/am/MARsDBManager;ILjava/util/ArrayList;)V
 
-    .line 291
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     # getter for: Lcom/android/server/am/MARsDBManager;->mPreviousPackages:Landroid/util/ArrayMap;
@@ -407,7 +370,6 @@
 
     goto/16 :goto_0
 
-    .line 297
     .end local v8    # "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MARsDBManager$SMDBValue;>;"
     :pswitch_7
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -416,17 +378,14 @@
 
     if-nez v9, :cond_0
 
-    .line 298
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 299
     .restart local v1    # "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 300
-    const-string/jumbo v9, "packageName"
+    const-string v9, "packageName"
 
     const/4 v10, 0x0
 
@@ -434,11 +393,9 @@
 
     move-result-object v3
 
-    .line 301
     .restart local v3    # "pkgName":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 302
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     # invokes: Lcom/android/server/am/MARsDBManager;->insertPackage(Ljava/lang/String;)V
@@ -446,7 +403,6 @@
 
     goto/16 :goto_0
 
-    .line 308
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v3    # "pkgName":Ljava/lang/String;
     :pswitch_8
@@ -456,17 +412,14 @@
 
     if-nez v9, :cond_0
 
-    .line 309
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 310
     .restart local v1    # "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 311
-    const-string/jumbo v9, "packageName"
+    const-string v9, "packageName"
 
     const/4 v10, 0x0
 
@@ -474,11 +427,9 @@
 
     move-result-object v3
 
-    .line 312
     .restart local v3    # "pkgName":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 313
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     # invokes: Lcom/android/server/am/MARsDBManager;->deletePackage(Ljava/lang/String;)V
@@ -486,7 +437,6 @@
 
     goto/16 :goto_0
 
-    .line 319
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v3    # "pkgName":Ljava/lang/String;
     :pswitch_9
@@ -496,7 +446,6 @@
 
     if-nez v9, :cond_0
 
-    .line 320
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
     # invokes: Lcom/android/server/am/MARsDBManager;->updateAutoRunTargetXmlToDB()V
@@ -504,7 +453,6 @@
 
     goto/16 :goto_0
 
-    .line 324
     :pswitch_a
     iget-object v9, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
@@ -513,7 +461,6 @@
 
     goto/16 :goto_0
 
-    .line 231
     nop
 
     :pswitch_data_0

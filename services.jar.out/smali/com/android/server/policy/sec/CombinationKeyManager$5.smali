@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 811
     iput-object p1, p0, Lcom/android/server/policy/sec/CombinationKeyManager$5;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 813
     # getter for: Lcom/android/server/policy/sec/CombinationKeyManager;->SAFE_DEBUG:Z
     invoke-static {}, Lcom/android/server/policy/sec/CombinationKeyManager;->access$000()Z
 
@@ -50,17 +48,15 @@
 
     const-string v2, "CombinationKeyManager"
 
-    const-string/jumbo v3, "mFactoryTestChordLongPress : startActivity"
+    const-string v3, "mFactoryTestChordLongPress : startActivity"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 815
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "com.sec.factory"
 
@@ -68,12 +64,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 817
     const/high16 v2, 0x34000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 821
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/sec/CombinationKeyManager$5;->this$0:Lcom/android/server/policy/sec/CombinationKeyManager;
 
@@ -83,15 +77,12 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 825
     :goto_0
     return-void
 
-    .line 822
     :catch_0
     move-exception v0
 
-    .line 823
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "CombinationKeyManager"
 

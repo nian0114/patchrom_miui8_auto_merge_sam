@@ -20,13 +20,10 @@
     .param p1, "lexicalValue"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lmf/org/apache/xerces/jaxp/datatype/SerializedXMLGregorianCalendar;->lexicalValue:Ljava/lang/String;
 
-    .line 36
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .end annotation
 
     .prologue
-    .line 39
     new-instance v0, Lmf/org/apache/xerces/jaxp/datatype/DatatypeFactoryImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/jaxp/datatype/DatatypeFactoryImpl;-><init>()V

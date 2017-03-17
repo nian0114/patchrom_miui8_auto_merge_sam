@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 250
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$1;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 254
     const/4 v0, 0x0
 
     return v0
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 252
     const/4 v0, 0x0
 
     return v0
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 253
     const/4 v0, 0x0
 
     return v0
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 251
     const/4 v0, 0x0
 
     return v0

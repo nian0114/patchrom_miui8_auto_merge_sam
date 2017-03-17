@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 27
     iput-object p1, p0, Lcom/samsung/android/privatemode/PrivateModeListener$1;->this$0:Lcom/samsung/android/privatemode/PrivateModeListener;
 
     invoke-direct {p0}, Lcom/samsung/android/privatemode/IPrivateModeClient$Stub;-><init>()V
@@ -44,11 +43,9 @@
     .end annotation
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcom/samsung/android/privatemode/PrivateModeListener$1;->this$0:Lcom/samsung/android/privatemode/PrivateModeListener;
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/privatemode/PrivateModeListener;->onStateChanged(II)V
 
-    .line 32
     return-void
 .end method

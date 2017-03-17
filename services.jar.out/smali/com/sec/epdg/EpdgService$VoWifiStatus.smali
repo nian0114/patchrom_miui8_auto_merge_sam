@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 360
     new-instance v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
     const-string v1, "UNKNOWN"
@@ -65,7 +64,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->UNKNOWN:Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
-    .line 361
     new-instance v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
     const-string v1, "VOWIFI_ENABLE"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->VOWIFI_ENABLE:Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
-    .line 362
     new-instance v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
     const-string v1, "VOWIFI_VIDEO_ONLY"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->VOWIFI_VIDEO_ONLY:Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
-    .line 363
     new-instance v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
     const-string v1, "VOWIFI_DISABLE"
@@ -98,7 +94,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->VOWIFI_DISABLE:Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
-    .line 359
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/sec/epdg/EpdgService$VoWifiStatus;
@@ -137,16 +132,12 @@
     .end annotation
 
     .prologue
-    .line 368
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 369
     iput p3, p0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->mStatus:I
 
-    .line 370
     iput-object p4, p0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->mText:Ljava/lang/String;
 
-    .line 371
     return-void
 .end method
 
@@ -155,7 +146,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 359
     const-class v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -171,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 359
     sget-object v0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->$VALUES:[Lcom/sec/epdg/EpdgService$VoWifiStatus;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/EpdgService$VoWifiStatus;->clone()Ljava/lang/Object;
@@ -189,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$VoWifiStatus;->mText:Ljava/lang/String;
 
     return-object v0

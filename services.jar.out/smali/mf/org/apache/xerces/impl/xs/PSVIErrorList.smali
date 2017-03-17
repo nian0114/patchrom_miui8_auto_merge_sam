@@ -21,13 +21,10 @@
     .param p2, "even"    # Z
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fArray:[Ljava/lang/String;
 
-    .line 41
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fArray:[Ljava/lang/String;
 
     array-length v0, v0
@@ -36,7 +33,6 @@
 
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fLength:I
 
-    .line 42
     if-eqz p2, :cond_0
 
     const/4 v0, 0x0
@@ -44,10 +40,8 @@
     :goto_0
     iput v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fOffset:I
 
-    .line 43
     return-void
 
-    .line 42
     :cond_0
     const/4 v0, 0x1
 
@@ -63,10 +57,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 46
     if-nez p1, :cond_3
 
-    .line 47
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -75,14 +67,12 @@
 
     if-lt v0, v2, :cond_2
 
-    .line 60
     :cond_0
     const/4 v1, 0x0
 
     :cond_1
     return v1
 
-    .line 48
     :cond_2
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fArray:[Ljava/lang/String;
 
@@ -96,12 +86,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 47
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 54
     .end local v0    # "i":I
     :cond_3
     const/4 v0, 0x0
@@ -112,7 +100,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 55
     iget-object v2, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fArray:[Ljava/lang/String;
 
     shl-int/lit8 v3, v0, 0x1
@@ -129,7 +116,6 @@
 
     if-nez v2, :cond_1
 
-    .line 54
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -140,14 +126,12 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 79
     if-ltz p1, :cond_0
 
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fLength:I
 
     if-ge p1, v0, :cond_0
 
-    .line 80
     iget-object v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fArray:[Ljava/lang/String;
 
     shl-int/lit8 v1, p1, 0x1
@@ -160,7 +144,6 @@
 
     return-object v0
 
-    .line 82
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -187,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fLength:I
 
     return v0
@@ -198,18 +180,15 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 68
     if-ltz p1, :cond_0
 
     iget v0, p0, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->fLength:I
 
     if-lt p1, v0, :cond_1
 
-    .line 69
     :cond_0
     const/4 v0, 0x0
 
-    .line 71
     :goto_0
     return-object v0
 
@@ -231,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 86
     invoke-virtual {p0}, Lmf/org/apache/xerces/impl/xs/PSVIErrorList;->getLength()I
 
     move-result v0

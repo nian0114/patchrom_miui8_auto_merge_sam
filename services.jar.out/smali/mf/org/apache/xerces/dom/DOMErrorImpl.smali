@@ -27,28 +27,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     const/4 v0, 0x1
 
     iput-short v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fSeverity:S
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fMessage:Ljava/lang/String;
 
-    .line 55
     new-instance v0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/dom/DOMLocatorImpl;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fLocator:Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
-    .line 56
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fException:Ljava/lang/Exception;
 
-    .line 68
     return-void
 .end method
 
@@ -60,41 +54,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     const/4 v0, 0x1
 
     iput-short v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fSeverity:S
 
-    .line 54
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fMessage:Ljava/lang/String;
 
-    .line 55
     new-instance v0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
     invoke-direct {v0}, Lmf/org/apache/xerces/dom/DOMLocatorImpl;-><init>()V
 
     iput-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fLocator:Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
-    .line 56
     iput-object v1, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fException:Ljava/lang/Exception;
 
-    .line 72
     iput-short p1, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fSeverity:S
 
-    .line 73
     iput-object p2, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fException:Ljava/lang/Exception;
 
-    .line 74
     invoke-direct {p0, p2}, Lmf/org/apache/xerces/dom/DOMErrorImpl;->createDOMLocator(Lmf/org/apache/xerces/xni/parser/XMLParseException;)Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fLocator:Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
-    .line 75
     return-void
 .end method
 
@@ -103,29 +88,24 @@
     .param p1, "exception"    # Lmf/org/apache/xerces/xni/parser/XMLParseException;
 
     .prologue
-    .line 105
     new-instance v0, Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
     invoke-virtual {p1}, Lmf/org/apache/xerces/xni/parser/XMLParseException;->getLineNumber()I
 
     move-result v1
 
-    .line 106
     invoke-virtual {p1}, Lmf/org/apache/xerces/xni/parser/XMLParseException;->getColumnNumber()I
 
     move-result v2
 
-    .line 107
     invoke-virtual {p1}, Lmf/org/apache/xerces/xni/parser/XMLParseException;->getCharacterOffset()I
 
     move-result v3
 
-    .line 108
     invoke-virtual {p1}, Lmf/org/apache/xerces/xni/parser/XMLParseException;->getExpandedSystemId()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 105
     invoke-direct {v0, v1, v2, v3, v4}, Lmf/org/apache/xerces/dom/DOMLocatorImpl;-><init>(IIILjava/lang/String;)V
 
     return-object v0
@@ -137,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fLocator:Lmf/org/apache/xerces/dom/DOMLocatorImpl;
 
     return-object v0
@@ -147,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fMessage:Ljava/lang/String;
 
     return-object v0
@@ -157,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fRelatedData:Ljava/lang/Object;
 
     return-object v0
@@ -167,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fException:Ljava/lang/Exception;
 
     return-object v0
@@ -177,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-short v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fSeverity:S
 
     return v0
@@ -187,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fType:Ljava/lang/String;
 
     return-object v0
@@ -197,16 +171,13 @@
     .locals 1
 
     .prologue
-    .line 122
     const/4 v0, 0x1
 
     iput-short v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fSeverity:S
 
-    .line 123
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmf/org/apache/xerces/dom/DOMErrorImpl;->fException:Ljava/lang/Exception;
 
-    .line 124
     return-void
 .end method

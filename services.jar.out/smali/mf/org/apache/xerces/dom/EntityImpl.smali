@@ -35,18 +35,14 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     invoke-direct {p0, p1}, Lmf/org/apache/xerces/dom/ParentNode;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;)V
 
-    .line 107
     iput-object p2, p0, Lmf/org/apache/xerces/dom/EntityImpl;->name:Ljava/lang/String;
 
-    .line 108
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lmf/org/apache/xerces/dom/EntityImpl;->isReadOnly(Z)V
 
-    .line 109
     return-void
 .end method
 
@@ -57,20 +53,17 @@
     .param p1, "deep"    # Z
 
     .prologue
-    .line 135
     invoke-super {p0, p1}, Lmf/org/apache/xerces/dom/ParentNode;->cloneNode(Z)Lmf/org/w3c/dom/Node;
 
     move-result-object v0
 
     check-cast v0, Lmf/org/apache/xerces/dom/EntityImpl;
 
-    .line 136
     .local v0, "newentity":Lmf/org/apache/xerces/dom/EntityImpl;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1}, Lmf/org/apache/xerces/dom/EntityImpl;->setReadOnly(ZZ)V
 
-    .line 137
     return-object v0
 .end method
 
@@ -78,17 +71,14 @@
     .locals 1
 
     .prologue
-    .line 324
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 325
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 327
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->baseURI:Ljava/lang/String;
 
@@ -117,17 +107,14 @@
     .locals 1
 
     .prologue
-    .line 256
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 257
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 259
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->inputEncoding:Ljava/lang/String;
 
@@ -138,17 +125,14 @@
     .locals 1
 
     .prologue
-    .line 127
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 128
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 130
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->name:Ljava/lang/String;
 
@@ -159,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 120
     const/4 v0, 0x6
 
     return v0
@@ -169,17 +152,14 @@
     .locals 1
 
     .prologue
-    .line 210
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 211
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 213
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->notationName:Ljava/lang/String;
 
@@ -190,17 +170,14 @@
     .locals 1
 
     .prologue
-    .line 150
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 151
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 153
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->publicId:Ljava/lang/String;
 
@@ -211,17 +188,14 @@
     .locals 1
 
     .prologue
-    .line 163
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 164
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 166
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->systemId:Ljava/lang/String;
 
@@ -232,17 +206,14 @@
     .locals 1
 
     .prologue
-    .line 190
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 191
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 194
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->encoding:Ljava/lang/String;
 
@@ -253,17 +224,14 @@
     .locals 1
 
     .prologue
-    .line 176
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 177
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 179
     :cond_0
     iget-object v0, p0, Lmf/org/apache/xerces/dom/EntityImpl;->version:Ljava/lang/String;
 
@@ -275,21 +243,17 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 332
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 333
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 335
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->baseURI:Ljava/lang/String;
 
-    .line 336
     return-void
 .end method
 
@@ -298,21 +262,17 @@
     .param p1, "inputEncoding"    # Ljava/lang/String;
 
     .prologue
-    .line 266
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 267
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 269
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->inputEncoding:Ljava/lang/String;
 
-    .line 270
     return-void
 .end method
 
@@ -321,21 +281,17 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 305
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 306
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 308
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->notationName:Ljava/lang/String;
 
-    .line 310
     return-void
 .end method
 
@@ -344,21 +300,17 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 226
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 227
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 229
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->publicId:Ljava/lang/String;
 
-    .line 231
     return-void
 .end method
 
@@ -367,21 +319,17 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 291
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 292
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 294
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->systemId:Ljava/lang/String;
 
-    .line 296
     return-void
 .end method
 
@@ -390,21 +338,17 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 241
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 242
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 244
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->encoding:Ljava/lang/String;
 
-    .line 245
     return-void
 .end method
 
@@ -413,20 +357,16 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 279
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->needsSyncData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 280
     invoke-virtual {p0}, Lmf/org/apache/xerces/dom/EntityImpl;->synchronizeData()V
 
-    .line 282
     :cond_0
     iput-object p1, p0, Lmf/org/apache/xerces/dom/EntityImpl;->version:Ljava/lang/String;
 
-    .line 283
     return-void
 .end method

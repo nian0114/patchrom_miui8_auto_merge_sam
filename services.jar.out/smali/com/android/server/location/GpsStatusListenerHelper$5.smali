@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     iput-wide p2, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->val$timestamp:J
@@ -54,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 109
     :try_start_0
     iget-wide v2, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->val$timestamp:J
 
@@ -64,19 +62,15 @@
     :try_end_0
     .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 114
     :goto_0
     return-void
 
-    .line 110
     :catch_0
     move-exception v0
 
-    .line 111
     .local v0, "e":Landroid/os/DeadObjectException;
     invoke-virtual {v0}, Landroid/os/DeadObjectException;->printStackTrace()V
 
-    .line 112
     iget-object v1, p0, Lcom/android/server/location/GpsStatusListenerHelper$5;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     invoke-virtual {v1, p1}, Lcom/android/server/location/GpsStatusListenerHelper;->removeListener(Landroid/os/IInterface;)V
@@ -94,7 +88,6 @@
     .end annotation
 
     .prologue
-    .line 105
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     .end local p1    # "x0":Landroid/os/IInterface;

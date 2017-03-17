@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 1346
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform float filterParams[16];\nvoid main(void) {\n  vec4 color = texture2D(baseSampler, outTexCoords);\n  vec4 minVal = vec4(filterParams[0], filterParams[1], filterParams[2], filterParams[3]);\n  vec4 maxVal = vec4(filterParams[4], filterParams[5], filterParams[6], filterParams[7]);\n  gl_FragColor = clamp(color, minVal, maxVal);\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$ColorClampFilter;->mFragmentShaderCode:Ljava/lang/String;
@@ -55,23 +54,18 @@
 
     const/4 v2, 0x0
 
-    .line 1373
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     sget-object v1, Landroid/graphics/ImageFilter$ColorClampFilter;->mFragmentShaderCode:Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1374
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$ColorClampFilter;->useFilterParams()V
 
-    .line 1375
     invoke-virtual {p0, v2, v2, v2, v2}, Landroid/graphics/ImageFilter$ColorClampFilter;->setMinColor(FFFF)V
 
-    .line 1376
     invoke-virtual {p0, v3, v3, v3, v3}, Landroid/graphics/ImageFilter$ColorClampFilter;->setMaxColor(FFFF)V
 
-    .line 1377
     return-void
 .end method
 
@@ -89,7 +83,6 @@
 
     const/4 v3, 0x0
 
-    .line 1440
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x4
@@ -104,7 +97,6 @@
 
     aput v2, v0, v1
 
-    .line 1441
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x5
@@ -119,7 +111,6 @@
 
     aput v2, v0, v1
 
-    .line 1442
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x6
@@ -134,7 +125,6 @@
 
     aput v2, v0, v1
 
-    .line 1443
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x7
@@ -149,13 +139,10 @@
 
     aput v2, v0, v1
 
-    .line 1444
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$ColorClampFilter;->setFilterParamsChanged()V
 
-    .line 1445
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$ColorClampFilter;->notifyWorkerFilters()V
 
-    .line 1446
     return-void
 .end method
 
@@ -166,7 +153,6 @@
     .prologue
     const/high16 v4, 0x437f0000    # 255.0f
 
-    .line 1421
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -201,7 +187,6 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/graphics/ImageFilter$ColorClampFilter;->setMaxColor(FFFF)V
 
-    .line 1427
     return-void
 .end method
 
@@ -217,7 +202,6 @@
 
     const/4 v3, 0x0
 
-    .line 1405
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x0
@@ -232,7 +216,6 @@
 
     aput v2, v0, v1
 
-    .line 1406
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x1
@@ -247,7 +230,6 @@
 
     aput v2, v0, v1
 
-    .line 1407
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x2
@@ -262,7 +244,6 @@
 
     aput v2, v0, v1
 
-    .line 1408
     iget-object v0, p0, Landroid/graphics/ImageFilter$ColorClampFilter;->mParams:[F
 
     const/4 v1, 0x3
@@ -277,13 +258,10 @@
 
     aput v2, v0, v1
 
-    .line 1409
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$ColorClampFilter;->setFilterParamsChanged()V
 
-    .line 1410
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$ColorClampFilter;->notifyWorkerFilters()V
 
-    .line 1411
     return-void
 .end method
 
@@ -294,7 +272,6 @@
     .prologue
     const/high16 v4, 0x437f0000    # 255.0f
 
-    .line 1387
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -329,6 +306,5 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/graphics/ImageFilter$ColorClampFilter;->setMinColor(FFFF)V
 
-    .line 1393
     return-void
 .end method

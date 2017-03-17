@@ -30,39 +30,28 @@
     .locals 0
 
     .prologue
-    .line 3653
     iput-object p1, p0, Lcom/absolute/android/persistservice/e;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3654
     iput-object p2, p0, Lcom/absolute/android/persistservice/e;->b:Ljava/lang/String;
 
-    .line 3655
     iput p3, p0, Lcom/absolute/android/persistservice/e;->c:I
 
-    .line 3656
     iput-object p4, p0, Lcom/absolute/android/persistservice/e;->d:Ljava/lang/String;
 
-    .line 3657
     iput-object p5, p0, Lcom/absolute/android/persistservice/e;->e:Ljava/lang/String;
 
-    .line 3658
     iput-object p6, p0, Lcom/absolute/android/persistservice/e;->f:Ljava/lang/String;
 
-    .line 3659
     iput-object p7, p0, Lcom/absolute/android/persistservice/e;->g:Ljava/lang/String;
 
-    .line 3660
     iput-object p8, p0, Lcom/absolute/android/persistservice/e;->h:Lcom/absolute/android/persistence/IABTDownloadReceiver;
 
-    .line 3661
     iput p9, p0, Lcom/absolute/android/persistservice/e;->i:I
 
-    .line 3662
     iput-boolean p10, p0, Lcom/absolute/android/persistservice/e;->j:Z
 
-    .line 3663
     return-void
 .end method
 
@@ -70,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-object v0, p0, Lcom/absolute/android/persistservice/e;->b:Ljava/lang/String;
 
     return-object v0
@@ -80,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget v0, p0, Lcom/absolute/android/persistservice/e;->c:I
 
     return v0
@@ -90,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-object v0, p0, Lcom/absolute/android/persistservice/e;->d:Ljava/lang/String;
 
     return-object v0
@@ -100,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-object v0, p0, Lcom/absolute/android/persistservice/e;->e:Ljava/lang/String;
 
     return-object v0
@@ -110,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-object v0, p0, Lcom/absolute/android/persistservice/e;->g:Ljava/lang/String;
 
     return-object v0
@@ -120,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-object v0, p0, Lcom/absolute/android/persistservice/e;->f:Ljava/lang/String;
 
     return-object v0
@@ -130,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-object v0, p0, Lcom/absolute/android/persistservice/e;->h:Lcom/absolute/android/persistence/IABTDownloadReceiver;
 
     return-object v0
@@ -140,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget v0, p0, Lcom/absolute/android/persistservice/e;->i:I
 
     return v0
@@ -150,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 3612
     iget-boolean v0, p0, Lcom/absolute/android/persistservice/e;->j:Z
 
     return v0

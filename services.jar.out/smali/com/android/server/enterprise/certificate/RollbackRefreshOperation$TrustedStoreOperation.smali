@@ -75,26 +75,20 @@
     .end annotation
 
     .prologue
-    .line 579
     .local p3, "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p4, "installCerts":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 580
     iput p2, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;->mOperation:I
 
-    .line 581
     iput-object p3, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;->mAliases:Ljava/util/List;
 
-    .line 582
     iput-object p4, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;->mCerts:Ljava/util/List;
 
-    .line 583
     iput p5, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;->mUserId:I
 
-    .line 584
     return-void
 .end method
 
@@ -108,7 +102,6 @@
     .param p6, "x5"    # Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$1;
 
     .prologue
-    .line 572
     invoke-direct/range {p0 .. p5}, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;-><init>(Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;ILjava/util/List;Ljava/util/List;I)V
 
     return-void
@@ -121,16 +114,13 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 587
     const/4 v6, 0x0
 
-    .line 588
     .local v6, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 591
     .local v8, "token":J
     :try_start_0
     iget-object v7, p0, Lcom/android/server/enterprise/certificate/RollbackRefreshOperation$TrustedStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/RollbackRefreshOperation;
@@ -150,20 +140,16 @@
 
     move-result-object v4
 
-    .line 593
     .local v4, "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     invoke-virtual {v4}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
 
     move-result-object v5
 
-    .line 594
     .local v5, "keyChainService":Landroid/security/IKeyChainService;
     if-nez v5, :cond_0
 
-    .line 595
     invoke-virtual {v4}, Landroid/security/KeyChain$KeyChainConnection;->close()V
 
-    .line 596
     const/4 v7, 0x0
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -175,16 +161,13 @@
 
     move-result-object v7
 
-    .line 636
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 638
     .end local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :goto_0
     return-object v7
 
-    .line 600
     .restart local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .restart local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :cond_0
@@ -198,11 +181,9 @@
 
     packed-switch v7, :pswitch_data_0
 
-    .line 615
     :cond_1
     const/4 v6, 0x1
 
-    .line 623
     :try_start_2
     invoke-virtual {v4}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_2
@@ -211,11 +192,9 @@
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 636
     :goto_1
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 638
     .end local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :goto_2
@@ -225,7 +204,6 @@
 
     goto :goto_0
 
-    .line 602
     .restart local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .restart local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :pswitch_0
@@ -250,7 +228,6 @@
 
     check-cast v1, Ljava/security/cert/X509Certificate;
 
-    .line 603
     .local v1, "cert":Ljava/security/cert/X509Certificate;
     const/4 v7, 0x1
 
@@ -273,13 +250,11 @@
 
     goto :goto_3
 
-    .line 616
     .end local v1    # "cert":Ljava/security/cert/X509Certificate;
     .end local v3    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
-    .line 617
     .local v2, "e":Landroid/os/RemoteException;
     :try_start_4
     const-string v7, "RollbackRefreshOperation"
@@ -306,7 +281,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 623
     :try_start_5
     invoke-virtual {v4}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_5
@@ -317,14 +291,12 @@
 
     goto :goto_1
 
-    .line 625
     .end local v2    # "e":Landroid/os/RemoteException;
     .end local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :catch_1
     move-exception v2
 
-    .line 626
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_6
     const-string v7, "RollbackRefreshOperation"
@@ -351,12 +323,10 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 636
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 608
     .end local v2    # "e":Ljava/lang/InterruptedException;
     .restart local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .restart local v5    # "keyChainService":Landroid/security/IKeyChainService;
@@ -382,7 +352,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 609
     .local v0, "alias":Ljava/lang/String;
     invoke-interface {v5, v0}, Landroid/security/IKeyChainService;->deleteCaCertificate(Ljava/lang/String;)Z
     :try_end_7
@@ -393,13 +362,11 @@
 
     goto :goto_4
 
-    .line 618
     .end local v0    # "alias":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
     :catch_2
     move-exception v2
 
-    .line 619
     .local v2, "e":Ljava/security/cert/CertificateException;
     :try_start_8
     const-string v7, "RollbackRefreshOperation"
@@ -426,7 +393,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 623
     :try_start_9
     invoke-virtual {v4}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_9
@@ -437,14 +403,12 @@
 
     goto/16 :goto_1
 
-    .line 627
     .end local v2    # "e":Ljava/security/cert/CertificateException;
     .end local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :catch_3
     move-exception v2
 
-    .line 630
     .local v2, "e":Ljava/lang/AssertionError;
     :try_start_a
     const-string v7, "RollbackRefreshOperation"
@@ -483,19 +447,16 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 636
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_2
 
-    .line 620
     .end local v2    # "e":Ljava/lang/AssertionError;
     .restart local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .restart local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :catch_4
     move-exception v2
 
-    .line 621
     .local v2, "e":Ljava/io/IOException;
     :try_start_b
     const-string v7, "RollbackRefreshOperation"
@@ -522,7 +483,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 623
     :try_start_c
     invoke-virtual {v4}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_c
@@ -533,14 +493,12 @@
 
     goto/16 :goto_1
 
-    .line 631
     .end local v2    # "e":Ljava/io/IOException;
     .end local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :catch_5
     move-exception v2
 
-    .line 634
     .local v2, "e":Ljava/lang/RuntimeException;
     :try_start_d
     const-string v7, "RollbackRefreshOperation"
@@ -579,12 +537,10 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
-    .line 636
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_2
 
-    .line 623
     .end local v2    # "e":Ljava/lang/RuntimeException;
     .restart local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .restart local v5    # "keyChainService":Landroid/security/IKeyChainService;
@@ -601,7 +557,6 @@
     .catch Ljava/lang/RuntimeException; {:try_start_e .. :try_end_e} :catch_5
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 636
     .end local v4    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v5    # "keyChainService":Landroid/security/IKeyChainService;
     :catchall_1
@@ -611,7 +566,6 @@
 
     throw v7
 
-    .line 600
     nop
 
     :pswitch_data_0
@@ -626,7 +580,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 572
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 730
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$1;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 733
     const-string v0, "android.net.netmon.launchCaptivePortalApp"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,14 +50,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 734
     const-string v0, "NetworkMonitor"
 
-    const-string/jumbo v1, "mCaptivePortalReceiver - Launch Captive portal activity"
+    const-string v1, "mCaptivePortalReceiver - Launch Captive portal activity"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 735
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$1;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$1;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -72,12 +68,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(Landroid/os/Message;)V
 
-    .line 742
     :cond_0
     :goto_0
     return-void
 
-    .line 736
     :cond_1
     const-string v0, "com.samsung.android.net.wifi.CAPTIVE_PORTAL_AUTHENTICATED"
 
@@ -91,7 +85,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 737
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$1;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->getCurrentState()Lcom/android/internal/util/IState;
@@ -108,14 +101,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 738
     const-string v0, "NetworkMonitor"
 
-    const-string/jumbo v1, "mCaptivePortalReceiver - CAPTIVE_PORTAL_AUTHENTICATED"
+    const-string v1, "mCaptivePortalReceiver - CAPTIVE_PORTAL_AUTHENTICATED"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 739
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$1;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v1, 0x8200c

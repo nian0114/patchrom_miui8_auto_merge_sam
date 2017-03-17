@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 40
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/common/OTPEnums$KeyUsage;->values()[Lcom/android/server/enterprise/otp/engine/common/OTPEnums$KeyUsage;
 
     move-result-object v0

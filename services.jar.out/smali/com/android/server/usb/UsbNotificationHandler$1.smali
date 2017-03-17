@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/android/server/usb/UsbNotificationHandler$1;->this$0:Lcom/android/server/usb/UsbNotificationHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/usb/UsbNotificationHandler$1;->this$0:Lcom/android/server/usb/UsbNotificationHandler;
 
     # getter for: Lcom/android/server/usb/UsbNotificationHandler;->TAG:Ljava/lang/String;
@@ -51,11 +49,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/usb/UsbNotificationHandler$1;->this$0:Lcom/android/server/usb/UsbNotificationHandler;
 
     invoke-virtual {v0}, Lcom/android/server/usb/UsbNotificationHandler;->readyNotification()V
 
-    .line 64
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1023
     iput-object p1, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v4, 0x1
 
-    .line 1025
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     invoke-virtual {v5}, Landroid/widget/SearchView;->getContext()Landroid/content/Context;
@@ -86,12 +84,10 @@
 
     move v2, v4
 
-    .line 1029
     .local v2, "isFolderTypeFeature":Z
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 1030
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     invoke-virtual {v5}, Landroid/widget/SearchView;->getContext()Landroid/content/Context;
@@ -106,19 +102,15 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 1032
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
     const/16 v5, 0x17
 
     if-ne p2, v5, :cond_0
 
-    .line 1033
     invoke-virtual {v1, p1}, Landroid/view/inputmethod/InputMethodManager;->viewClicked(Landroid/view/View;)V
 
-    .line 1034
     invoke-virtual {v1, p1, v4}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    .line 1038
     .end local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
@@ -130,7 +122,6 @@
 
     if-nez v5, :cond_3
 
-    .line 1076
     :cond_1
     :goto_1
     return v3
@@ -139,10 +130,8 @@
     :cond_2
     move v2, v3
 
-    .line 1025
     goto :goto_0
 
-    .line 1049
     .restart local v2    # "isFolderTypeFeature":Z
     :cond_3
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
@@ -173,7 +162,6 @@
 
     if-eq v5, v6, :cond_4
 
-    .line 1051
     iget-object v3, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     # invokes: Landroid/widget/SearchView;->onSuggestionsKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
@@ -183,7 +171,6 @@
 
     goto :goto_1
 
-    .line 1056
     :cond_4
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
@@ -205,22 +192,18 @@
 
     if-eqz v5, :cond_1
 
-    .line 1057
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v5
 
     if-ne v5, v4, :cond_5
 
-    .line 1058
     const/16 v5, 0x42
 
     if-ne p2, v5, :cond_5
 
-    .line 1059
     invoke-virtual {p1}, Landroid/view/View;->cancelLongPress()V
 
-    .line 1062
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     const/4 v6, 0x0
@@ -245,10 +228,8 @@
 
     move v3, v4
 
-    .line 1064
     goto :goto_1
 
-    .line 1067
     :cond_5
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -256,7 +237,6 @@
 
     if-nez v5, :cond_1
 
-    .line 1068
     iget-object v5, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     # getter for: Landroid/widget/SearchView;->mSearchable:Landroid/app/SearchableInfo;
@@ -268,7 +248,6 @@
 
     move-result-object v0
 
-    .line 1069
     .local v0, "actionKey":Landroid/app/SearchableInfo$ActionKeyInfo;
     if-eqz v0, :cond_1
 
@@ -278,7 +257,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 1070
     iget-object v3, p0, Landroid/widget/SearchView$7;->this$0:Landroid/widget/SearchView;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo$ActionKeyInfo;->getQueryActionMsg()Ljava/lang/String;
@@ -305,6 +283,5 @@
 
     move v3, v4
 
-    .line 1072
     goto/16 :goto_1
 .end method

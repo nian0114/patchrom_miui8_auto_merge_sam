@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iput p2, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->val$connectedMode:I
@@ -44,14 +43,12 @@
     .locals 2
 
     .prologue
-    .line 274
     iget v0, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->val$connectedMode:I
 
     const/16 v1, 0xa
 
     if-ne v0, v1, :cond_0
 
-    .line 275
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     const/4 v1, 0x1
@@ -59,7 +56,6 @@
     # setter for: Lcom/android/server/display/IpRemoteDisplayController;->mDisconnectByUser:Z
     invoke-static {v0, v1}, Lcom/android/server/display/IpRemoteDisplayController;->access$1102(Lcom/android/server/display/IpRemoteDisplayController;Z)Z
 
-    .line 277
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
@@ -68,6 +64,5 @@
     # invokes: Lcom/android/server/display/IpRemoteDisplayController;->disableWifiDisplay(I)V
     invoke-static {v0, v1}, Lcom/android/server/display/IpRemoteDisplayController;->access$1200(Lcom/android/server/display/IpRemoteDisplayController;I)V
 
-    .line 278
     return-void
 .end method

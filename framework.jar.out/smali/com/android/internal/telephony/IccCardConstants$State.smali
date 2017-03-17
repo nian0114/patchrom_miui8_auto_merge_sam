@@ -68,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 89
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "UNKNOWN"
@@ -77,7 +76,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->UNKNOWN:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 90
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "ABSENT"
@@ -86,7 +84,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->ABSENT:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 91
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "PIN_REQUIRED"
@@ -95,7 +92,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 92
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "PUK_REQUIRED"
@@ -104,7 +100,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 93
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "NETWORK_LOCKED"
@@ -113,7 +108,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 94
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "READY"
@@ -124,7 +118,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->READY:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 95
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "NOT_READY"
@@ -135,7 +128,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NOT_READY:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 96
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "PERM_DISABLED"
@@ -146,7 +138,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 97
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "CARD_IO_ERROR"
@@ -157,7 +148,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->CARD_IO_ERROR:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 99
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "PERSO_LOCKED"
@@ -168,7 +158,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 100
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "NETWORK_SUBSET_LOCKED"
@@ -179,7 +168,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NETWORK_SUBSET_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 101
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "SIM_SERVICE_PROVIDER_LOCKED"
@@ -190,7 +178,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->SIM_SERVICE_PROVIDER_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 102
     new-instance v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     const-string v1, "DETECTED"
@@ -201,7 +188,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->DETECTED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 88
     const/16 v0, 0xd
 
     new-array v0, v0, [Lcom/android/internal/telephony/IccCardConstants$State;
@@ -288,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 88
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -304,97 +289,80 @@
     .end annotation
 
     .prologue
-    .line 124
     packed-switch p0, :pswitch_data_0
 
-    .line 141
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 125
     :pswitch_0
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->UNKNOWN:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 138
     :goto_0
     return-object v0
 
-    .line 126
     :pswitch_1
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->ABSENT:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 127
     :pswitch_2
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 128
     :pswitch_3
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 129
     :pswitch_4
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 130
     :pswitch_5
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->READY:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 131
     :pswitch_6
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NOT_READY:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 132
     :pswitch_7
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 133
     :pswitch_8
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->CARD_IO_ERROR:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 135
     :pswitch_9
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 136
     :pswitch_a
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NETWORK_SUBSET_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 137
     :pswitch_b
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->SIM_SERVICE_PROVIDER_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 138
     :pswitch_c
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->DETECTED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     goto :goto_0
 
-    .line 124
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -418,7 +386,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     const-class v0, Lcom/android/internal/telephony/IccCardConstants$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -434,7 +401,6 @@
     .locals 1
 
     .prologue
-    .line 88
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->$VALUES:[Lcom/android/internal/telephony/IccCardConstants$State;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/IccCardConstants$State;->clone()Ljava/lang/Object;
@@ -452,7 +418,6 @@
     .locals 1
 
     .prologue
-    .line 115
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     if-eq p0, v0, :cond_0
@@ -505,7 +470,6 @@
 
     const/4 v0, 0x0
 
-    .line 106
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -518,7 +482,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 108
     sget-object v2, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     if-eq p0, v2, :cond_0
@@ -534,7 +497,6 @@
     :cond_0
     move v0, v1
 
-    .line 110
     :cond_1
     :goto_0
     return v0

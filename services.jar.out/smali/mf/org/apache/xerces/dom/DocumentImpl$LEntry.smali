@@ -39,21 +39,15 @@
     .param p4, "useCapture"    # Z
 
     .prologue
-    .line 632
     iput-object p1, p0, Lmf/org/apache/xerces/dom/DocumentImpl$LEntry;->this$0:Lmf/org/apache/xerces/dom/DocumentImpl;
 
-    .line 631
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 633
     iput-object p2, p0, Lmf/org/apache/xerces/dom/DocumentImpl$LEntry;->type:Ljava/lang/String;
 
-    .line 634
     iput-object p3, p0, Lmf/org/apache/xerces/dom/DocumentImpl$LEntry;->listener:Lmf/org/w3c/dom/events/EventListener;
 
-    .line 635
     iput-boolean p4, p0, Lmf/org/apache/xerces/dom/DocumentImpl$LEntry;->useCapture:Z
 
-    .line 636
     return-void
 .end method

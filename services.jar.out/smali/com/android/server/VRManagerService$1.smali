@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 72
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 82
     :goto_0
     return-void
 
-    .line 74
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
@@ -58,7 +54,6 @@
 
     monitor-enter v1
 
-    .line 75
     :try_start_0
     const-string v0, "VRManagerService"
 
@@ -66,13 +61,11 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
     # invokes: Lcom/android/server/VRManagerService;->stopVR()V
     invoke-static {v0}, Lcom/android/server/VRManagerService;->access$100(Lcom/android/server/VRManagerService;)V
 
-    .line 77
     monitor-exit v1
 
     goto :goto_0
@@ -86,7 +79,6 @@
 
     throw v0
 
-    .line 72
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

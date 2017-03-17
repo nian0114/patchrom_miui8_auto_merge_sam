@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 487
     iput-object p1, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
-    .line 488
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 489
     return-void
 .end method
 
@@ -44,10 +41,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 493
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 495
     iget-object v0, p0, Lcom/android/server/BatteryService$AdaptiveFastChargingSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -61,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 507
     return-void
 .end method

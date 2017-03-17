@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 679
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$1;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 683
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 684
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
@@ -59,7 +56,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "mIntentRecvNetwork Action : "
+    const-string v4, "mIntentRecvNetwork Action : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,7 +72,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 686
     :cond_0
     const-string v2, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -85,7 +81,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 688
     iget-object v2, p0, Lcom/android/server/LpnetManagerService$1;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mConnManagerDoNotUseDirectly:Landroid/net/ConnectivityManager;
@@ -97,7 +92,6 @@
 
     move-result-object v1
 
-    .line 689
     .local v1, "networkInfo":Landroid/net/NetworkInfo;
     iget-object v3, p0, Lcom/android/server/LpnetManagerService$1;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -114,7 +108,6 @@
     :goto_0
     iput-boolean v2, v3, Lcom/android/server/LpnetManagerService;->mDataConnectionIsConnected:Z
 
-    .line 690
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -148,12 +141,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 692
     .end local v1    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_1
     return-void
 
-    .line 689
     .restart local v1    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_2
     const/4 v2, 0x0

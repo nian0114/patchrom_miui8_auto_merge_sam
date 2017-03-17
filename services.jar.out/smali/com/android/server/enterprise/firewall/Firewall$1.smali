@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 104
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,22 +50,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 105
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    const-string/jumbo v2, "noConnectivity"
+    const-string v2, "noConnectivity"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 106
     .local v0, "isNotConnected":Z
     if-nez v0, :cond_0
 
-    .line 107
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/android/server/enterprise/firewall/Firewall$1$1;
@@ -78,13 +73,11 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 135
     .end local v0    # "isNotConnected":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -98,7 +91,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 129
     # getter for: Lcom/android/server/enterprise/firewall/Firewall;->mIsDatabaseReady:Z
     invoke-static {}, Lcom/android/server/enterprise/firewall/Firewall;->access$000()Z
 
@@ -106,7 +98,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 130
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
 
     # getter for: Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
@@ -116,13 +107,11 @@
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->setRulesStatusAfterReboot()V
 
-    .line 131
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall$1;->this$0:Lcom/android/server/enterprise/firewall/Firewall;
 
     # invokes: Lcom/android/server/enterprise/firewall/Firewall;->createChains()V
     invoke-static {v1}, Lcom/android/server/enterprise/firewall/Firewall;->access$200(Lcom/android/server/enterprise/firewall/Firewall;)V
 
-    .line 132
     const/4 v1, 0x0
 
     # setter for: Lcom/android/server/enterprise/firewall/Firewall;->mIsDatabaseReady:Z

@@ -34,34 +34,28 @@
     .param p5, "pcscfReq"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgRilInterface$BaseRxRequest;-><init>(I)V
 
-    .line 37
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mApnName:Ljava/lang/String;
 
-    .line 38
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mIpv4Addr:Ljava/lang/String;
 
-    .line 39
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p4}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mIpv6Addr:Ljava/lang/String;
 
-    .line 40
     iput p5, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mPcscfReq:I
 
-    .line 41
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mApnName:Ljava/lang/String;
 
     return-object v0
@@ -81,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mIpv4Addr:Ljava/lang/String;
 
     return-object v0
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mIpv6Addr:Ljava/lang/String;
 
     return-object v0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget v0, p0, Lcom/sec/epdg/EpdgRilInterface$ApnAttachRequest;->mPcscfReq:I
 
     return v0

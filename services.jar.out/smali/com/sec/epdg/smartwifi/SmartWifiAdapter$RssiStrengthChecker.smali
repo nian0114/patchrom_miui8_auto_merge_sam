@@ -29,13 +29,10 @@
     .prologue
     const-wide/16 v0, 0x7d0
 
-    .line 1806
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
-    .line 1807
     invoke-direct {p0, v0, v1, v0, v1}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
-    .line 1808
     return-void
 .end method
 
@@ -45,14 +42,12 @@
     .locals 8
 
     .prologue
-    .line 1815
     const-string v5, "[SMARTWIFI]"
 
     const-string v6, "RssiStrengthChecker finished"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1816
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->isRssiStrengthCheckerRunning()Z
@@ -62,19 +57,16 @@
 
     if-nez v5, :cond_1
 
-    .line 1817
     const-string v5, "[SMARTWIFI]"
 
     const-string v6, "RssiStrengthChecker is already finished"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1855
     :cond_0
     :goto_0
     return-void
 
-    .line 1820
     :cond_1
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -83,7 +75,6 @@
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mRssiStrengthChecker:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;
     invoke-static {v5, v6}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$5202(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;)Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;
 
-    .line 1821
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mContext:Landroid/content/Context;
@@ -91,7 +82,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "wifi"
+    const-string v6, "wifi"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -99,17 +90,14 @@
 
     check-cast v4, Landroid/net/wifi/WifiManager;
 
-    .line 1823
     .local v4, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v3
 
-    .line 1824
     .local v3, "wifiInfo":Landroid/net/wifi/WifiInfo;
     const/4 v0, 0x0
 
-    .line 1825
     .local v0, "currentRssi":I
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiGoodDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2400()I
@@ -118,14 +106,12 @@
 
     add-int/lit8 v1, v5, -0x1
 
-    .line 1826
     .local v1, "mMaxRssiValue":I
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiBadDbValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2500()I
 
     move-result v2
 
-    .line 1828
     .local v2, "mMinRssiValue":I
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -136,7 +122,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 1829
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiGoodDbWifiOnlyValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$5400()I
 
@@ -144,22 +129,18 @@
 
     add-int/lit8 v1, v5, -0x1
 
-    .line 1830
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiBadDbWifiOnlyValue:I
     invoke-static {}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$5500()I
 
     move-result v2
 
-    .line 1833
     :cond_2
     if-eqz v3, :cond_0
 
-    .line 1834
     invoke-virtual {v3}, Landroid/net/wifi/WifiInfo;->getRssi()I
 
     move-result v0
 
-    .line 1835
     const-string v5, "[SMARTWIFI]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -182,7 +163,6 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1837
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->isRssiInHystersisZone(I)Z
@@ -192,19 +172,16 @@
 
     if-eqz v5, :cond_3
 
-    .line 1838
     const-string v5, "[SMARTWIFI]"
 
     const-string v6, "RssiStrengthChecker check again after 2 sec"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1839
     sget-boolean v5, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_WIFI_RSSI_POLLING:Z
 
     if-eqz v5, :cond_0
 
-    .line 1840
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->startRssiStrengthChecker()V
@@ -212,11 +189,9 @@
 
     goto :goto_0
 
-    .line 1842
     :cond_3
     if-ge v1, v0, :cond_4
 
-    .line 1843
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mWifiSignalStrengthHistory:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;
@@ -230,7 +205,6 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$WifiSignalStrengthHistory;->addReading(Ljava/lang/Integer;)V
 
-    .line 1844
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->stopRssiStrengthChecker()V
@@ -238,11 +212,9 @@
 
     goto/16 :goto_0
 
-    .line 1845
     :cond_4
     if-le v2, v0, :cond_0
 
-    .line 1846
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->isWifiOnlyCase()Z
@@ -252,13 +224,11 @@
 
     if-eqz v5, :cond_5
 
-    .line 1847
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->startImsDeRegister()V
     invoke-static {v5}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$5900(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;)V
 
-    .line 1851
     :goto_1
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -267,7 +237,6 @@
 
     goto/16 :goto_0
 
-    .line 1849
     :cond_5
     iget-object v5, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$RssiStrengthChecker;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -290,13 +259,11 @@
     .param p1, "millisUntilFinished"    # J
 
     .prologue
-    .line 1811
     const-string v0, "[SMARTWIFI]"
 
     const-string v1, "RssiStrengthChecker tick"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1812
     return-void
 .end method

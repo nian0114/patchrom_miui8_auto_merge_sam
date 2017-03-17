@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 79
     new-instance v0, Lcom/movial/ipphone/SessionCall$1;
 
     invoke-direct {v0}, Lcom/movial/ipphone/SessionCall$1;-><init>()V
@@ -70,10 +69,8 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-direct {p0}, Lcom/android/internal/telephony/DriverCall;-><init>()V
 
-    .line 90
     return-void
 .end method
 
@@ -82,13 +79,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Lcom/android/internal/telephony/DriverCall;-><init>()V
 
-    .line 93
     invoke-virtual {p0, p1}, Lcom/movial/ipphone/SessionCall;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 94
     return-void
 .end method
 
@@ -98,7 +92,6 @@
     .param p2, "x1"    # Lcom/movial/ipphone/SessionCall$1;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Lcom/movial/ipphone/SessionCall;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -110,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0
@@ -125,14 +117,12 @@
 
     const/4 v1, 0x1
 
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/movial/ipphone/SessionCall;->index:I
 
-    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -144,7 +134,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/movial/ipphone/SessionCall;->isMT:Z
 
-    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -154,28 +143,24 @@
     :goto_1
     iput-boolean v1, p0, Lcom/movial/ipphone/SessionCall;->inConf:Z
 
-    .line 117
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movial/ipphone/SessionCall;->number:Ljava/lang/String;
 
-    .line 118
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movial/ipphone/SessionCall;->name:Ljava/lang/String;
 
-    .line 119
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/movial/ipphone/SessionCall;->numberPresentation:I
 
-    .line 120
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -184,33 +169,28 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/SessionCall;->state:Lcom/movial/ipphone/SessionCall$State;
 
-    .line 121
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/movial/ipphone/SessionCall;->cause:I
 
-    .line 122
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movial/ipphone/SessionCall;->inviteDisplayName:Ljava/lang/String;
 
-    .line 123
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 115
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 116
     goto :goto_1
 .end method
 
@@ -224,12 +204,10 @@
 
     const/4 v2, 0x0
 
-    .line 102
     iget v0, p0, Lcom/movial/ipphone/SessionCall;->index:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget-boolean v0, p0, Lcom/movial/ipphone/SessionCall;->isMT:Z
 
     if-eqz v0, :cond_0
@@ -239,7 +217,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 104
     iget-boolean v0, p0, Lcom/movial/ipphone/SessionCall;->inConf:Z
 
     if-eqz v0, :cond_1
@@ -247,48 +224,39 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 105
     iget-object v0, p0, Lcom/movial/ipphone/SessionCall;->number:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 106
     iget-object v0, p0, Lcom/movial/ipphone/SessionCall;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 107
     iget v0, p0, Lcom/movial/ipphone/SessionCall;->numberPresentation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 108
     iget-object v0, p0, Lcom/movial/ipphone/SessionCall;->state:Lcom/movial/ipphone/SessionCall$State;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    .line 109
     iget v0, p0, Lcom/movial/ipphone/SessionCall;->cause:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 110
     iget-object v0, p0, Lcom/movial/ipphone/SessionCall;->inviteDisplayName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 111
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 103
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 104
     goto :goto_1
 .end method

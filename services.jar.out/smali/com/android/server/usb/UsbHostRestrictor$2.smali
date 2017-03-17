@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 209
     iput-object p1, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,19 +40,16 @@
     .prologue
     const/4 v6, 0x5
 
-    .line 212
     const-string v4, "UsbHostRestrictor"
 
-    const-string/jumbo v5, "mTelephonyIntentReceiver2 onReceive"
+    const-string v5, "mTelephonyIntentReceiver2 onReceive"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 216
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -63,14 +59,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 218
     const/4 v4, 0x0
 
     invoke-static {v4}, Lcom/samsung/android/telephony/MultiSimManager;->getSimState(I)I
 
     move-result v2
 
-    .line 219
     .local v2, "state_slot1":I
     const/4 v4, 0x1
 
@@ -78,7 +72,6 @@
 
     move-result v3
 
-    .line 225
     .local v3, "state_slot2":I
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
@@ -95,7 +88,6 @@
 
     move-result v1
 
-    .line 229
     .local v1, "cardCount":I
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
@@ -114,7 +106,6 @@
     :cond_0
     if-lez v1, :cond_5
 
-    .line 232
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->getUsbHostDisableSysNodeWritable()Z
@@ -124,7 +115,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 233
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->readDisableSysNodefromFile()Ljava/lang/String;
@@ -140,7 +130,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 234
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     const-string v5, "OFF"
@@ -148,7 +137,6 @@
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->writeDisableSysNodetoFile(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/usb/UsbHostRestrictor;->access$500(Lcom/android/server/usb/UsbHostRestrictor;Ljava/lang/String;)V
 
-    .line 236
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
@@ -158,7 +146,6 @@
 
     invoke-virtual {v4}, Lcom/android/server/usb/UsbDeviceManager;->updateUsbNotificationRefresh()V
 
-    .line 257
     .end local v1    # "cardCount":I
     .end local v2    # "state_slot1":I
     .end local v3    # "state_slot2":I
@@ -166,7 +153,6 @@
     :goto_0
     return-void
 
-    .line 237
     .restart local v1    # "cardCount":I
     .restart local v2    # "state_slot1":I
     .restart local v3    # "state_slot2":I
@@ -186,14 +172,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 238
     const-string v4, "UsbHostRestrictor"
 
     const-string v5, "USB is blocked by both. Unblock by SIM"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     const-string v5, "ON_ALL_UPSM"
@@ -201,7 +185,6 @@
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->writeDisableSysNodetoFile(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/usb/UsbHostRestrictor;->access$500(Lcom/android/server/usb/UsbHostRestrictor;Ljava/lang/String;)V
 
-    .line 242
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
@@ -209,13 +192,12 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "none"
+    const-string v5, "none"
 
     invoke-virtual {v4, v5}, Lcom/android/server/usb/UsbDeviceManager;->setCurrentFunctions(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 243
     :cond_3
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
@@ -232,7 +214,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 244
     const-string v4, "UsbHostRestrictor"
 
     const-string v5, "Receiver2 USB is already UNBLOCKED"
@@ -241,7 +222,6 @@
 
     goto :goto_0
 
-    .line 246
     :cond_4
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
@@ -252,7 +232,6 @@
 
     if-nez v4, :cond_1
 
-    .line 247
     const-string v4, "UsbHostRestrictor"
 
     const-string v5, "Receiver2 Cannot write for USB DISABLE"
@@ -261,7 +240,6 @@
 
     goto :goto_0
 
-    .line 249
     :cond_5
     iget-object v4, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
@@ -280,7 +258,6 @@
     :cond_6
     if-nez v1, :cond_7
 
-    .line 250
     const-string v4, "UsbHostRestrictor"
 
     const-string v5, "Receiver2 Newly inserted SIM CARD is not recognized. SIM needs to be checked."
@@ -289,7 +266,6 @@
 
     goto :goto_0
 
-    .line 252
     :cond_7
     const-string v4, "UsbHostRestrictor"
 

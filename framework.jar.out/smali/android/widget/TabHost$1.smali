@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 164
     iput-object p1, p0, Landroid/widget/TabHost$1;->this$0:Landroid/widget/TabHost;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 166
     sparse-switch p2, :sswitch_data_0
 
-    .line 185
     iget-object v0, p0, Landroid/widget/TabHost$1;->this$0:Landroid/widget/TabHost;
 
     # getter for: Landroid/widget/TabHost;->mTabContent:Landroid/widget/FrameLayout;
@@ -58,7 +55,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->requestFocus(I)Z
 
-    .line 186
     iget-object v0, p0, Landroid/widget/TabHost$1;->this$0:Landroid/widget/TabHost;
 
     # getter for: Landroid/widget/TabHost;->mTabContent:Landroid/widget/FrameLayout;
@@ -73,13 +69,11 @@
     :goto_0
     return v0
 
-    .line 173
     :sswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 176
     :sswitch_1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -87,7 +81,6 @@
 
     if-nez v0, :cond_1
 
-    .line 177
     iget-object v0, p0, Landroid/widget/TabHost$1;->this$0:Landroid/widget/TabHost;
 
     iget v0, v0, Landroid/widget/TabHost;->mCurrentTab:I
@@ -107,7 +100,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 178
     iget-object v0, p0, Landroid/widget/TabHost$1;->this$0:Landroid/widget/TabHost;
 
     # getter for: Landroid/widget/TabHost;->mTabWidget:Landroid/widget/TabWidget;
@@ -127,7 +119,6 @@
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 180
     :cond_0
     iget-object v0, p0, Landroid/widget/TabHost$1;->this$0:Landroid/widget/TabHost;
 
@@ -135,13 +126,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TabHost;->playSoundEffect(I)V
 
-    .line 182
     :cond_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 166
     nop
 
     :sswitch_data_0

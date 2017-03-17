@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 12
     sget-boolean v0, Lcom/android/server/spay/PaymentManagerService;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/spay/MasterTAController;->DEBUG:Z
@@ -36,10 +35,8 @@
     .param p2, "config"    # Landroid/spay/PaymentTZServiceConfig$TAConfig;
 
     .prologue
-    .line 17
     invoke-direct {p0, p1, p2}, Lcom/android/server/spay/TAController;-><init>(ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 18
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 10
     invoke-super {p0}, Lcom/android/server/spay/TAController;->clearDeviceCertificates()Z
 
     move-result v0
@@ -66,19 +62,16 @@
     .end annotation
 
     .prologue
-    .line 71
     const-string v2, "copyMctoRst"
 
     invoke-static {v2}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 72
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/efs/mc/mc.dat"
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 73
     .local v1, "f":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -86,14 +79,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 74
     const-string v2, "/efs/mc/mc.dat"
 
     invoke-static {v2}, Lcom/android/server/spay/Utils;->readFile(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 75
     .local v0, "certsign":[B
     const-string v2, "/efs/mc/rst.dat"
 
@@ -101,7 +92,6 @@
 
     move-result v2
 
-    .line 77
     .end local v0    # "certsign":[B
     :goto_0
     return v2
@@ -121,19 +111,16 @@
     .end annotation
 
     .prologue
-    .line 25
-    const-string/jumbo v7, "getCertInfo"
+    const-string v7, "getCertInfo"
 
     invoke-static {v7}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 27
     new-instance v4, Ljava/io/File;
 
     const-string v7, "/efs/mc/rst.dat"
 
     invoke-direct {v4, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 28
     .local v4, "newf":Ljava/io/File;
     new-instance v3, Ljava/io/File;
 
@@ -141,7 +128,6 @@
 
     invoke-direct {v3, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 29
     .local v3, "f":Ljava/io/File;
     new-instance v6, Ljava/io/File;
 
@@ -149,13 +135,11 @@
 
     invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 30
     .local v6, "x509f":Ljava/io/File;
     new-instance v0, Landroid/spay/CertInfo;
 
     invoke-direct {v0}, Landroid/spay/CertInfo;-><init>()V
 
-    .line 32
     .local v0, "certInfo":Landroid/spay/CertInfo;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -163,32 +147,27 @@
 
     if-nez v7, :cond_0
 
-    .line 33
     const-string v7, "PaymentManagerService"
 
     const-string v8, "MCTAController::getCertInfo: MC X.509 certificate files do not exist. Lets create them"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     const-string v7, "MC_PAY"
 
     invoke-virtual {p0, v7}, Lcom/android/server/spay/MasterTAController;->generateDeviceCertificates(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 35
     .local v5, "ret":Z
     if-nez v5, :cond_0
 
-    .line 36
     const-string v7, "PaymentManagerService"
 
     const-string v8, "MC X.509 certificate creation failed"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     .end local v5    # "ret":Z
     :cond_0
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
@@ -197,14 +176,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 41
     const-string v7, "/efs/prov_data/mc_pay/mc_pay_sign.dat"
 
     invoke-static {v7}, Lcom/android/server/spay/Utils;->readFile(Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 42
     .local v2, "certsignNew":[B
     iget-object v7, v0, Landroid/spay/CertInfo;->mCerts:Ljava/util/Map;
 
@@ -212,7 +189,6 @@
 
     invoke-interface {v7, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     .end local v2    # "certsignNew":[B
     :cond_1
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
@@ -221,14 +197,12 @@
 
     if-eqz v7, :cond_3
 
-    .line 46
     const-string v7, "/efs/mc/rst.dat"
 
     invoke-static {v7}, Lcom/android/server/spay/Utils;->readFile(Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 47
     .restart local v2    # "certsignNew":[B
     iget-object v7, v0, Landroid/spay/CertInfo;->mCerts:Ljava/util/Map;
 
@@ -236,7 +210,6 @@
 
     invoke-interface {v7, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     .end local v2    # "certsignNew":[B
     :goto_0
     iget-object v7, v0, Landroid/spay/CertInfo;->mCerts:Ljava/util/Map;
@@ -247,15 +220,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 56
     const/4 v0, 0x0
 
-    .line 58
     .end local v0    # "certInfo":Landroid/spay/CertInfo;
     :cond_2
     return-object v0
 
-    .line 48
     .restart local v0    # "certInfo":Landroid/spay/CertInfo;
     :cond_3
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
@@ -264,14 +234,12 @@
 
     if-eqz v7, :cond_4
 
-    .line 49
     const-string v7, "/efs/mc/mc.dat"
 
     invoke-static {v7}, Lcom/android/server/spay/Utils;->readFile(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 50
     .local v1, "certsign":[B
     iget-object v7, v0, Landroid/spay/CertInfo;->mCerts:Ljava/util/Map;
 
@@ -281,7 +249,6 @@
 
     goto :goto_0
 
-    .line 52
     .end local v1    # "certsign":[B
     :cond_4
     const-string v7, "PaymentManagerService"
@@ -305,7 +272,6 @@
     .end annotation
 
     .prologue
-    .line 10
     invoke-super/range {p0 .. p5}, Lcom/android/server/spay/TAController;->loadTA(Landroid/os/ParcelFileDescriptor;JJ)Z
 
     move-result v0
@@ -318,7 +284,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 10
     invoke-super {p0, p1}, Lcom/android/server/spay/TAController;->makeSystemCall(I)Z
 
     move-result v0
@@ -331,7 +296,6 @@
     .param p1, "x0"    # Landroid/spay/TACommandRequest;
 
     .prologue
-    .line 10
     invoke-super {p0, p1}, Lcom/android/server/spay/TAController;->processTACommand(Landroid/spay/TACommandRequest;)Landroid/spay/TACommandResponse;
 
     move-result-object v0
@@ -349,12 +313,10 @@
     .end annotation
 
     .prologue
-    .line 64
-    const-string/jumbo v1, "setCertInfo"
+    const-string v1, "setCertInfo"
 
     invoke-static {v1}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 65
     iget-object v1, p1, Landroid/spay/CertInfo;->mCerts:Ljava/util/Map;
 
     const-string v2, "/efs/mc/rst.dat"
@@ -365,7 +327,6 @@
 
     check-cast v0, [B
 
-    .line 66
     .local v0, "cert":[B
     const-string v1, "/efs/mc/rst.dat"
 
@@ -385,7 +346,6 @@
     .end annotation
 
     .prologue
-    .line 10
     invoke-super {p0}, Lcom/android/server/spay/TAController;->unloadTA()V
 
     return-void

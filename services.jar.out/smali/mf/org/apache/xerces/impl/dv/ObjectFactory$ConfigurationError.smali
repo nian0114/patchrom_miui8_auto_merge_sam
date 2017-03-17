@@ -29,13 +29,10 @@
     .param p2, "x"    # Ljava/lang/Exception;
 
     .prologue
-    .line 530
     invoke-direct {p0, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
-    .line 531
     iput-object p2, p0, Lmf/org/apache/xerces/impl/dv/ObjectFactory$ConfigurationError;->exception:Ljava/lang/Exception;
 
-    .line 532
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 540
     iget-object v0, p0, Lmf/org/apache/xerces/impl/dv/ObjectFactory$ConfigurationError;->exception:Ljava/lang/Exception;
 
     return-object v0

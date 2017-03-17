@@ -29,15 +29,12 @@
     .prologue
     const/high16 v1, -0x40800000    # -1.0f
 
-    .line 2573
     const/4 v0, -0x1
 
     sput v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->action:I
 
-    .line 2574
     sput v1, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->x:F
 
-    .line 2575
     sput v1, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->y:F
 
     return-void
@@ -47,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 2571
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,37 +56,30 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2578
     if-nez p0, :cond_0
 
-    .line 2579
     const/4 v4, -0x1
 
     sput v4, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->action:I
 
-    .line 2593
     :goto_0
     return v3
 
-    .line 2583
     :cond_0
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2584
     .local v0, "newAction":I
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
 
-    .line 2585
     .local v1, "newX":F
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
 
-    .line 2587
     .local v2, "newY":F
     sget v4, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->action:I
 
@@ -108,19 +97,15 @@
 
     if-eqz v4, :cond_2
 
-    .line 2588
     :cond_1
     sput v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->action:I
 
-    .line 2589
     sput v1, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->x:F
 
-    .line 2590
     sput v2, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->y:F
 
     goto :goto_0
 
-    .line 2593
     :cond_2
     const/4 v3, 0x1
 

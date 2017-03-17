@@ -41,25 +41,20 @@
     .param p1, "service"    # Landroid/app/IBarBeamService;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     const-string v0, "BarBeamCommandImpl"
 
     iput-object v0, p0, Landroid/app/BarBeamCommandImpl;->TAG:Ljava/lang/String;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
-    .line 53
     iput-object p1, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
-    .line 54
     const-string v0, "BarBeamCommandImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -84,7 +79,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     return-void
 .end method
 
@@ -95,15 +89,12 @@
     .param p1, "listener"    # Landroid/app/BarBeamListener;
 
     .prologue
-    .line 62
     if-eqz p1, :cond_0
 
-    .line 63
     iget-object v5, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 64
     :try_start_0
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
@@ -111,7 +102,6 @@
 
     move-result v3
 
-    .line 65
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -119,7 +109,6 @@
     :goto_0
     if-ge v1, v3, :cond_2
 
-    .line 66
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -128,7 +117,6 @@
 
     check-cast v2, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
 
-    .line 67
     .local v2, "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     invoke-virtual {v2}, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;->getBarBeamListener()Landroid/app/BarBeamListener;
 
@@ -136,7 +124,6 @@
 
     if-ne v4, p1, :cond_1
 
-    .line 68
     const-string v4, "BarBeamCommandImpl"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -175,10 +162,8 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     monitor-exit v5
 
-    .line 85
     .end local v1    # "i":I
     .end local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     .end local v3    # "size":I
@@ -186,7 +171,6 @@
     :goto_1
     return-void
 
-    .line 65
     .restart local v1    # "i":I
     .restart local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     .restart local v3    # "size":I
@@ -195,14 +179,12 @@
 
     goto :goto_0
 
-    .line 73
     .end local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     :cond_2
     new-instance v2, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
 
     invoke-direct {v2, p0, p1}, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;-><init>(Landroid/app/BarBeamCommandImpl;Landroid/app/BarBeamListener;)V
 
-    .line 74
     .restart local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
@@ -210,7 +192,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 76
     :try_start_1
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -219,7 +200,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 82
     :goto_2
     :try_start_2
     const-string v4, "BarBeamCommandImpl"
@@ -270,7 +250,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     monitor-exit v5
 
     goto :goto_1
@@ -287,14 +266,12 @@
 
     throw v4
 
-    .line 77
     .restart local v1    # "i":I
     .restart local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     .restart local v3    # "size":I
     :catch_0
     move-exception v0
 
-    .line 78
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v4, "BarBeamCommandImpl"
@@ -317,10 +294,8 @@
     .end annotation
 
     .prologue
-    .line 167
     const/4 v1, 0x1
 
-    .line 169
     .local v1, "ret":Z
     :try_start_0
     iget-object v2, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
@@ -331,14 +306,11 @@
 
     move-result v1
 
-    .line 175
     return v1
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v2, Landroid/app/BarBeamException;
 
@@ -358,10 +330,8 @@
     .end annotation
 
     .prologue
-    .line 236
     const/4 v1, 0x0
 
-    .line 238
     .local v1, "ret":Z
     :try_start_0
     iget-object v2, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
@@ -372,18 +342,15 @@
 
     move-result v1
 
-    .line 243
     return v1
 
-    .line 240
     :catch_0
     move-exception v0
 
-    .line 241
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v2, Landroid/app/BarBeamException;
 
-    const-string/jumbo v3, "isImplementationCompatible in setBarcode: "
+    const-string v3, "isImplementationCompatible in setBarcode: "
 
     invoke-direct {v2, v3, v0}, Landroid/app/BarBeamException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -395,12 +362,10 @@
     .param p1, "listener"    # Landroid/app/BarBeamListener;
 
     .prologue
-    .line 92
     iget-object v5, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 93
     :try_start_0
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
@@ -408,7 +373,6 @@
 
     move-result v3
 
-    .line 95
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -416,7 +380,6 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 96
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -425,19 +388,16 @@
 
     check-cast v4, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
 
-    .line 95
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 101
     :cond_0
     const/4 v1, 0x0
 
     :goto_1
     if-ge v1, v3, :cond_1
 
-    .line 102
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -446,7 +406,6 @@
 
     check-cast v2, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
 
-    .line 103
     .local v2, "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     invoke-virtual {v2}, Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;->getBarBeamListener()Landroid/app/BarBeamListener;
 
@@ -454,14 +413,12 @@
 
     if-ne v4, p1, :cond_2
 
-    .line 104
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->sListenerDelegates:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 106
     :try_start_1
     iget-object v4, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -470,7 +427,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 114
     .end local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     :cond_1
     :goto_2
@@ -523,18 +479,14 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     monitor-exit v5
 
-    .line 117
     return-void
 
-    .line 107
     .restart local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     :catch_0
     move-exception v0
 
-    .line 108
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "BarBeamCommandImpl"
 
@@ -544,7 +496,6 @@
 
     goto :goto_2
 
-    .line 115
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i":I
     .end local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
@@ -558,7 +509,6 @@
 
     throw v4
 
-    .line 101
     .restart local v1    # "i":I
     .restart local v2    # "l":Landroid/app/BarBeamCommandImpl$BarBeamListenerDelegate;
     .restart local v3    # "size":I
@@ -578,14 +528,12 @@
     .end annotation
 
     .prologue
-    .line 220
     const-string v1, "BarBeamCommandImpl"
 
-    const-string/jumbo v2, "sendDataTable"
+    const-string v2, "sendDataTable"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     :try_start_0
     iget-object v1, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -593,14 +541,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
     return-void
 
-    .line 225
     :catch_0
     move-exception v0
 
-    .line 226
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Landroid/app/BarBeamException;
 
@@ -621,14 +566,12 @@
     .end annotation
 
     .prologue
-    .line 202
     array-length v3, p1
 
     mul-int/lit8 v3, v3, 0x7
 
     new-array v2, v3, [B
 
-    .line 203
     .local v2, "tempbuffer":[B
     const/4 v1, 0x0
 
@@ -638,19 +581,16 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 204
     aget-object v3, p1, v1
 
     mul-int/lit8 v4, v1, 0x7
 
     invoke-virtual {p0, v3, v2, v4}, Landroid/app/BarBeamCommandImpl;->writeHop2ByteArray(Landroid/app/Hop;[BI)I
 
-    .line 203
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 206
     :cond_0
     const-string v3, "BarBeamCommandImpl"
 
@@ -658,7 +598,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "sendHopSequenceTable "
+    const-string v5, "sendHopSequenceTable "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -676,7 +616,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     :try_start_0
     iget-object v3, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -688,14 +627,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 213
     return-void
 
-    .line 210
     :catch_0
     move-exception v0
 
-    .line 211
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v3, Landroid/app/BarBeamException;
 
@@ -715,14 +651,12 @@
     .end annotation
 
     .prologue
-    .line 124
     const-string v1, "BarBeamCommandImpl"
 
-    const-string/jumbo v2, "startBeaming"
+    const-string v2, "startBeaming"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     :try_start_0
     iget-object v1, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -730,14 +664,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 131
     return-void
 
-    .line 128
     :catch_0
     move-exception v0
 
-    .line 129
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Landroid/app/BarBeamException;
 
@@ -758,14 +689,12 @@
     .end annotation
 
     .prologue
-    .line 138
     const-string v1, "BarBeamCommandImpl"
 
-    const-string/jumbo v2, "startBeaming"
+    const-string v2, "startBeaming"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     :try_start_0
     iget-object v1, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -773,14 +702,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 145
     return-void
 
-    .line 142
     :catch_0
     move-exception v0
 
-    .line 143
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Landroid/app/BarBeamException;
 
@@ -800,14 +726,12 @@
     .end annotation
 
     .prologue
-    .line 152
     const-string v1, "BarBeamCommandImpl"
 
-    const-string/jumbo v2, "stopBeaming"
+    const-string v2, "stopBeaming"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     :try_start_0
     iget-object v1, p0, Landroid/app/BarBeamCommandImpl;->mService:Landroid/app/IBarBeamService;
 
@@ -815,14 +739,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 159
     return-void
 
-    .line 156
     :catch_0
     move-exception v0
 
-    .line 157
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Landroid/app/BarBeamException;
 
@@ -840,7 +761,6 @@
     .param p3, "offset"    # I
 
     .prologue
-    .line 187
     add-int/lit8 v0, p3, 0x1
 
     .end local p3    # "offset":I
@@ -851,7 +771,6 @@
 
     aput-byte v1, p2, p3
 
-    .line 188
     add-int/lit8 p3, v0, 0x1
 
     .end local v0    # "offset":I
@@ -862,7 +781,6 @@
 
     aput-byte v1, p2, v0
 
-    .line 189
     add-int/lit8 v0, p3, 0x1
 
     .end local p3    # "offset":I
@@ -875,7 +793,6 @@
 
     aput-byte v1, p2, p3
 
-    .line 190
     add-int/lit8 p3, v0, 0x1
 
     .end local v0    # "offset":I
@@ -886,7 +803,6 @@
 
     aput-byte v1, p2, v0
 
-    .line 191
     add-int/lit8 v0, p3, 0x1
 
     .end local p3    # "offset":I
@@ -897,7 +813,6 @@
 
     aput-byte v1, p2, p3
 
-    .line 192
     add-int/lit8 p3, v0, 0x1
 
     .end local v0    # "offset":I
@@ -910,7 +825,6 @@
 
     aput-byte v1, p2, v0
 
-    .line 193
     add-int/lit8 v0, p3, 0x1
 
     .end local p3    # "offset":I
@@ -921,7 +835,6 @@
 
     aput-byte v1, p2, p3
 
-    .line 194
     const/4 v1, 0x7
 
     return v1

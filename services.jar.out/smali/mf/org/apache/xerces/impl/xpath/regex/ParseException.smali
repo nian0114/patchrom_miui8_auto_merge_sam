@@ -18,13 +18,10 @@
     .param p2, "location"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 43
     iput p2, p0, Lmf/org/apache/xerces/impl/xpath/regex/ParseException;->location:I
 
-    .line 44
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Lmf/org/apache/xerces/impl/xpath/regex/ParseException;->location:I
 
     return v0
